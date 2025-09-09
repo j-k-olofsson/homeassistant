@@ -1,0 +1,24 @@
+# Device specific substitutions
+substitutions:
+  node_id: "29"
+  node_name: esphome29
+  node_friendly_name: Poolbelysning & temp
+  node_comment: Sonoff TH16 (VLAN IoT)
+  log_level: INFO
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.device_sonoff_basic_light.yaml
+
+one_wire:
+  - platform: gpio
+    pin: 14
+
+sensor:
+  - platform: dallas_temp
+    address: 0x1B3C01D6078CAF28
+    resolution: 12
+    accuracy_decimals: 1
+    name: ${node_name} Temperature
+    filters:
+          - offset: 0.6

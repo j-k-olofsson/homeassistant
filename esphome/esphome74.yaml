@@ -1,0 +1,38 @@
+# Device specific substitutions
+substitutions:
+  node_id: "74"
+  node_name: esphome74
+  node_friendly_name: Vattennivå (hönshuset)
+  node_comment: Lolin32 (BTPrxy) (VLAN IoT)
+  log_level: INFO
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.board_esp32_lolin32.yaml
+  proxy: !include common/.blueprint_bluetooth_proxy.yaml
+
+sensor:
+  - platform: hx711
+    name: ${node_name} Water level
+    dout_pin: GPIO21
+    clk_pin: GPIO22
+    accuracy_decimals: 0
+    state_class: "measurement"
+    gain: 128
+    update_interval: 60s
+    unit_of_measurement: "%"
+    filters:
+      - median
+      - calibrate_linear:
+         - -422267 -> 0 # Tara empty bucket
+         - 160000 -> 10 # 10 liter of 
+      - lambda: |-
+          if (x < 10) {
+            if (x > 1) {
+              return (x - 1) / 10 * 100;
+            } else {
+              return 0;
+            }
+          } else {
+            return 100;
+          }

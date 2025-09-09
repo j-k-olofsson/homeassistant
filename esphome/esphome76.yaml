@@ -1,0 +1,101 @@
+# Device specific substitutions
+substitutions:
+  node_id: "76"
+  node_name: esphome76
+  node_friendly_name: IR gateway
+  node_comment: Tuya IR (VLAN IoT)
+  log_level: INFO
+  
+# Node info
+esphome:
+  name: ${node_name}
+  comment: ${node_comment}
+  friendly_name: ${node_friendly_name}
+
+esp8266:
+  board: esp01_1m
+  framework:
+    version: recommended
+
+packages:
+  device_base: !include common/.base.yaml
+
+# GPIO	Component	Description
+# 04	LED1i (52)	Blue LED - Link status
+# 05	IRrecv (51)	IR Receiver
+# 13	Button1 (17)	Button
+# 14	IRsend (8)	IR Transmitter
+
+button:
+  - platform: template
+    name: "Lexicon - Volume UP"
+    on_press:
+      - remote_transmitter.transmit_pronto:
+          data: "0000 006c 0022 0002 0157 00ab 0016 0015 0015 0040 0016 0015 0015 0015 0016 0015 0016 0015 0015 0015 0016 0040 0015 0040 0016 0040 0016 0015 0016 0040 0016 0015 0016 0015 0015 0015 0016 0015 0016 0040 0016 0040 0015 0040 0016 0015 0015 0040 0016 0015 0015 0015 0016 0015 0016 0015 0015 0015 0016 0015 0016 0040 0016 0015 0016 0040 0016 0040 0015 0040 0016 066f 0157 0056 0015 0e4b"
+  - platform: template
+    name: "Lexicon - Volume DOWN"
+    on_press:
+      - remote_transmitter.transmit_pronto:
+          data: "0000 006c 0022 0002 0156 00ac 0015 0015 0016 0040 0015 0015 0016 0015 0016 0015 0015 0015 0016 0015 0016 0040 0016 0040 0015 0040 0016 0015 0015 0040 0016 0015 0015 0015 0016 0015 0016 0015 0015 0015 0016 0040 0015 0040 0016 0015 0015 0040 0016 0015 0015 0015 0016 0015 0016 0040 0016 0015 0016 0015 0015 0040 0016 0015 0015 0040 0016 0040 0016 0040 0015 0670 0156 0056 0016 0e4b"
+  - platform: template
+    name: "Lexicon - DVD1"
+    on_press:
+      - remote_transmitter.transmit_pronto:
+          data: "0000 006c 0022 0002 0157 00ac 0015 0015 0015 0041 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0041 0015 0041 0015 0041 0015 0015 0015 0041 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0041 0015 0015 0015 0015 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0015 0015 0041 0015 0041 0015 068a 0157 0057 0015 0e68"
+  - platform: template
+    name: "Lexicon - DVD2"
+    on_press:
+      - remote_transmitter.transmit_pronto:
+          data: "0000 006c 0022 0002 0157 00ac 0015 0015 0015 0041 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0041 0015 0041 0015 0041 0015 0015 0015 0041 0015 0015 0015 0015 0015 0015 0015 0015 0015 0041 0015 0015 0015 0015 0015 0015 0015 0015 0015 0041 0015 0015 0015 0015 0015 0015 0015 0041 0015 0041 0015 0041 0015 0041 0015 0015 0015 0041 0015 0041 0015 068a 0157 0057 0015 0e68"
+  - platform: template
+    name: "Lexicon - Playstation"
+    on_press:
+      - remote_transmitter.transmit_pronto:
+          data: "0000 006c 0022 0002 0157 00ac 0015 0015 0015 0041 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0041 0015 0041 0015 0041 0015 0015 0015 0041 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0041 0015 0015 0015 0041 0015 0015 0015 0015 0015 0041 0015 0041 0015 0041 0015 0015 0015 0041 0015 0015 0015 0041 0015 0041 0015 068a 0157 0057 0015 0e68"
+# NEC protocol
+  # - platform: template
+  #   name: "Benq ON"
+  #   on_press:
+  #     - remote_transmitter.transmit_pronto:
+  #         data: "0000 006D 0022 0002 0157 00AB 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0040 0016 0040 0016 0015 0016 0015 0016 0040 0016 0040 0016 0040 0016 0040 0016 0015 0016 0015 0016 0040 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0040 0016 0040 0016 0015 0016 0040 0016 05E7 0157 0055 0016 0E3B"
+  # - platform: template
+  #   name: "Benq OFF"
+  #   on_press:
+  #     - remote_transmitter.transmit_pronto:
+  #         data: "0000 006D 0022 0002 0157 00AB 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0040 0016 0040 0016 0015 0016 0015 0016 0015 0016 0040 0016 0040 0016 0040 0016 0015 0016 0015 0016 0040 0016 0015 0016 0040 0016 0015 0016 0015 0016 0015 0016 0040 0016 0040 0016 0015 0016 0040 0016 05E7 0157 0055 0016 0E3B"
+  - platform: template
+    name: "Benq ON"
+    on_press:
+      - remote_transmitter.transmit_nec:
+          address: 0x3000
+          command: 0xB04F
+          command_repeats: 1
+  - platform: template
+    name: "Benq OFF"
+    on_press:
+      - remote_transmitter.transmit_nec:
+          address: 0x3000
+          command: 0xB14E
+          command_repeats: 1
+  - platform: template
+    name: "Benq Mute"
+    on_press:
+      - remote_transmitter.transmit_nec:
+          address: 0x3000
+          command: 0xEB14
+          command_repeats: 1
+switch:
+  - platform: restart
+    id: myRestartSwitch
+
+remote_transmitter:
+  id: ir_transmitter
+  pin: GPIO14
+  carrier_duty_percent: 50%
+  
+remote_receiver:
+  id: ir_reciever
+  pin:
+    number: GPIO5
+    inverted: True
+  dump: all

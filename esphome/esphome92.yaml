@@ -1,0 +1,11 @@
+# Device specific substitutions
+substitutions:
+  node_id: "92"
+  node_name: esphome92
+  node_friendly_name: Btprxy (sovrum)
+  node_comment: Esp32 D1 mini (BTPrxy) (VLAN IoT)
+  log_level: INFO
+
+packages:
+  file: !include common/.board_d1_mini32.yaml
+  proxy: !include common/.blueprint_bluetooth_proxy.yaml

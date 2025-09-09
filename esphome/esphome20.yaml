@@ -1,0 +1,14 @@
+# Substitutions
+substitutions:
+  node_id: "20"
+  node_name: esphome20
+  node_friendly_name: Termostat (kontoret)
+  node_comment: Sonoff TH16 (VLAN IoT)
+  log_level: INFO
+  home_target_temp: "20"
+  comfort_target_temp: "18"
+  away_target_temp: "16"
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.device_sonoff_th16_climate.yaml

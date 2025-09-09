@@ -1,0 +1,257 @@
+notifera_enheter:
+  alias: Notifiera enheter
+  mode: single
+  icon: mdi:message-badge-outline
+  fields:
+    title:
+      name: Title
+      description: Rubrik för meddelandet
+    message:
+      name: Message
+      description: Text för meddelandet
+  sequence:
+  - data:
+      message: '{{message}}'
+      title: '{{title}}'
+    action: notify.mobile_app_pixel_9_pro_xl
+  - action: notify.android_tv_fire_tv
+    data:
+      data:
+        duration: 10
+        position: top-right
+        fontsize: small
+        transparency: 25%
+        color: teal
+        interrupt: 0
+        image: /config/file_notifications/Granny.ico
+      message: '{{ message | default("Glömde bort vad jag skulle säga...") }}'
+      title: '&nbsp;'
+meddelande_via_hogtalare:
+  alias: Meddelande via högtalare
+  fields:
+    message:
+      name: Message
+      description: Text för meddelandet
+  sequence:
+  - condition: time
+    after: 07:00:00
+    before: '21:00:00'
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+    - sat
+    - sun
+    enabled: true
+  - condition: not
+    conditions:
+    - condition: state
+      state: playing
+      entity_id: media_player.nya_tvn
+    enabled: true
+  - action: tts.cloud_say
+    data:
+      cache: false
+      message: '{{ message }}'
+      entity_id: media_player.ha_notifiering
+  mode: single
+  icon: mdi:account-voice
+persistent_varning:
+  alias: Persistent varning
+  fields:
+    title:
+      name: Title
+      description: Rubrik för meddelandet
+    message:
+      name: Message
+      description: Text för meddelandet
+  sequence:
+  - data:
+      message: '{{ message }}'
+      title: '{{ title }}'
+    action: notify.persistent_notification
+  - data:
+      message: '{{ message }} '
+      title: '{{ title }}'
+    action: notify.mobile_app_pixel_9_pro_xl
+  icon: mdi:home-alert-outline
+logga_arbetsuppgift:
+  alias: Logga arbetsuppgift
+  sequence:
+  - service: todo.add_item
+    data:
+      item: '{{ item }}'
+      description: '{{ description }}'
+      due_datetime: '{{ now() }}'
+    target:
+      entity_id: todo.ha_loggade_arbetsuppgifter
+  mode: queued
+  icon: mdi:math-log
+  max: 50
+  fields:
+    item:
+      selector:
+        text:
+      name: Item
+      description: Rubrik för loggad arbetsuppgift
+      required: true
+    description:
+      selector:
+        text:
+      name: Description
+ange_starttid_for_bilvarmen:
+  alias: Ange starttid för bilvärmen
+  sequence:
+  - service: input_datetime.set_datetime
+    metadata: {}
+    data:
+      datetime: '{{ starttid }}'
+    target:
+      entity_id: input_datetime.starta_bilvarmen
+  mode: single
+  icon: mdi:clock-time-five-outline
+  fields:
+    starttid:
+      selector:
+        datetime: {}
+      name: starttid
+      required: true
+rescan_wifi_on_esphome_nodes:
+  alias: Rescan wifi on all esphome nodes
+  description: ''
+  sequence:
+  - repeat:
+      for_each: '{{ integration_entities(''esphome'') | select(''search'', ''_wifi_bssid$'')
+        | list | sort }}'
+      sequence:
+      - action: esphome.esphome{{ repeat.item[14:16] }}_scan_wifi
+        continue_on_error: true
+      - action: notify.send_message
+        continue_on_error: true
+        data:
+          message: 'Rescan wifi: esphome{{ repeat.item[14:16] }}'
+        target:
+          entity_id: notify.file
+entity_recover_update_retry:
+  alias: Entity recover (update + retry)
+  description: Försök uppdatera en entitet upp till 3 gånger; larma om den fortfarande
+    är unavailable/unknown.
+  mode: queued
+  max: 10
+  fields:
+    entity_id:
+      name: Target entity
+      description: Entitet att återställa (t.ex. sensor.xyz)
+      example: sensor.vardagsrum_temperatur
+      selector:
+        entity: {}
+  sequence:
+  - variables:
+      _entity: '{{ entity_id }}'
+  - repeat:
+      count: 3
+      sequence:
+      - target:
+          entity_id: '{{ _entity }}'
+        action: homeassistant.update_entity
+      - delay: 00:00:20
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ states(_entity) in [''unavailable'',''unknown''] }}'
+      sequence:
+      - data:
+          title: 'Watchdog: fortfarande offline'
+          message: '{{ _entity }} är fortfarande {{ states(_entity) }} efter 3 försök.
+            Åtgärda manuellt (kontrollera nät/el/integration).'
+        action: persistent_notification.create
+    default:
+    - data:
+        name: Watchdog
+        message: '{{ _entity }} återställdes inom 3 försök.'
+        entity_id: '{{ _entity }}'
+      action: logbook.log
+komponera_ai_prompt:
+  sequence:
+  - variables:
+      persona: "Du spelar rollen “Granny” från filmerna om Ice Age:\n  - Personlighet:
+        Butter, smågrinig, ironisk, överdriver ibland (“man fryser ihjäl”, “vinden
+        blåser bort löständerna”) men med varm botten.\n  - Röst: Kort, rapp, syrligt
+        rolig. Aldrig elak mot personer; skämten riktas mot situationen.\n  - Stilregler:
+        \n    - Fakta får aldrig förvanskas. Humor ska ALDRIG motsäga data eller intensifiera
+        mer än tillåtet.\n    - Svensk vardagstongång. Använd gärna färgstarka ord,
+        men håll dig saklig i fakta.\n  - Outputdisciplin: \n    - Följ uppgifts-promptens
+        fält och format exakt.\n    - Om data saknas/otydlig: säg det rakt ut (“uppgift
+        saknas”), hitta inte på."
+      prompt: '[Roll]
+
+        {{ persona }}
+
+
+        [Uppgift]
+
+        {{ task }}
+
+
+        [Regler]
+
+        {{ rules }}
+
+
+        [Output Format]
+
+        {{ output_format }}'
+  - data:
+      task_name: Grannyfierad prompt
+      instructions: '{{ prompt }}'
+      entity_id: ai_task.ollama_ai_task_llama3_1_8b
+    action: ai_task.generate_data
+    response_variable: grannys_message
+  - data:
+      cache: false
+      message: '{{ grannys_message.data | default("Hallå där era sömntutor! Stäng
+        balkongdörren innan en mammut kliver in!") }}'
+      entity_id: '{{ tts_media_player }}'
+    action: tts.cloud_say
+  fields:
+    task:
+      selector:
+        text:
+      name: task
+      description: Uppgiften
+    rules:
+      selector:
+        text:
+      name: rules
+      description: Extra regler
+    output_format:
+      selector:
+        text:
+      name: output_format
+      description: Formatering av svaret
+    tts_media_player:
+      selector:
+        entity:
+          domain: media_player
+      name: tts_media_player
+      description: Media spelare för uppspelning av meddelandet
+  alias: TTS Grannyfierat meddelande
+  description: Läseer upp Grannyfierat meddelande från AI/LLM i valda högtalare
+godnatt_halsningar_till_manni_och_diego:
+  sequence:
+  - action: script.komponera_ai_prompt
+    metadata: {}
+    data:
+      task: Skriv en ny, kort och rolig godnatt-hälsning till Manni och Diego varje
+        gång de går och lägger sig.
+      rules: '- Texten ska låta som om Granny står i rummet och muttrar. - Hälsningen
+        måste vara unik varje gång. Återanvänd inte tidigare meddelanden. - Svara
+        endast med själva hälsningen, inga förklaringar eller extra text. - Inga svordomar.'
+      output_format: En kort godnatt-hälsning på svenska som är mindre än 255 tecken
+        och maximalt består av tre meningar.
+      tts_media_player: media_player.toalettens_hogtalare
+  alias: TEST - TTS Grannyfierat meddelande på vald media enhet
+  description: En script som genererar unika, korta godnatt-hälsningar till Manni
+    och Diego varje gång de går och lägger sig.

@@ -1,0 +1,46 @@
+# Device specific substitutions
+# 22-GRÖN
+# 21-BLÅ
+# 17-SVART
+# 16-BRUN
+# GND-GUL
+# VCC-ORANGE
+# GND-VIT
+# 3.3-GRÅ
+
+substitutions:
+  node_id: "71"
+  node_name: esphome71
+  node_friendly_name: Temp/Hyg (gamla verkstan)
+  node_comment: Esp32 D1 mini (VLAN IoT)
+  log_level: INFO
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.board_d1_mini32.yaml
+
+i2c:
+  - id: bus_a
+    sda: 22
+    scl: 21
+    scan: true
+  - id: bus_b
+    sda: 17
+    scl: 16
+    scan: true
+
+sensor:
+  - platform: shtcx
+    i2c_id: bus_a
+    temperature:
+      name: ${node_name} Room Temperature
+    humidity:
+      name: ${node_name} Room Humidity
+    address: 0x70
+  - platform: shtcx
+    i2c_id: bus_b
+    temperature:
+      name: ${node_name} Box Temperature
+    humidity:
+      name: ${node_name} Box Humidity
+    address: 0x70

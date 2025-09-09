@@ -1,0 +1,12 @@
+# Device specific substitutions
+substitutions:
+  node_id: "91"
+  node_name: esphome91
+  node_friendly_name: Btprxy (verandan)
+  node_comment: Esp32 C3 (BTPrxy) (VLAN IoT)
+  log_level: INFO
+
+packages:
+  board: !include common/.board_esp32_c3.yaml
+  proxy: !include common/.blueprint_bluetooth_proxy.yaml
+  # esphome.bluetooth-proxy: github://esphome/bluetooth-proxies/esp32-generic/esp32-generic-c3.yaml@main

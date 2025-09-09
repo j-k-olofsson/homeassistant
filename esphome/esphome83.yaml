@@ -1,0 +1,15 @@
+# Substitutions
+substitutions:
+  node_id: "83"
+  node_name: esphome83
+  node_friendly_name: Termostat (toaletten)
+  node_comment: Shelly 1 (VLAN IoT)
+  log_level: INFO
+  home_target_temp: "35"
+  comfort_target_temp: "25"
+  away_target_temp: "16"
+  dallas_address: "0x340416A45770FF28"
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.device_shelly_1_climate.yaml

@@ -1,0 +1,13 @@
+# Device specific substitutions
+substitutions:
+  node_id: "46"
+  node_name: esphome46
+  node_friendly_name: Ledstrip (ateljé norra)
+  node_comment: Lolin32 (VLAN IoT)
+  log_level: INFO
+  num_leds: "50"
+  gpio_pin: "GPIO13"
+  night_brightness: "60%"
+
+packages:
+  file: !include common/.device_lolin32_ledstrip_window.yaml

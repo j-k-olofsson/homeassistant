@@ -1,0 +1,16 @@
+# Device specific substitutions
+substitutions:
+  node_id: "62"
+  node_name: esphome62
+  node_friendly_name: Ledstrip backlight + Btprxy (trappan)
+  node_comment: Esp32 D1 mini (VLAN IoT)
+  log_level: INFO
+  num_leds: "60"
+  gpio_pin: "GPIO16"
+  night_brightness: "30%"
+  day_brightness: "50%"
+
+# Include packages for this device specific type
+packages:
+  ledstrip: !include common/.device_d1_mini32_ledstrip_indoors.yaml
+  proxy: !include common/.blueprint_bluetooth_proxy.yaml

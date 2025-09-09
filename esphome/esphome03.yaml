@@ -1,0 +1,12 @@
+# Device specific substitutions
+substitutions:
+  node_id: "03"
+  node_name: esphome03
+  node_friendly_name: Blomlampa 2 (verandan)
+  node_comment: Sonoff Basic (VLAN IoT)
+  log_level: INFO
+  late_on: "false"
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.device_sonoff_basic_flower_light.yaml

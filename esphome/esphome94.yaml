@@ -1,0 +1,164 @@
+# Device specific substitutions
+substitutions:
+  node_id: "94"
+  node_name: esphome94
+  node_friendly_name: RF bridge
+  node_comment: Sonoff RF Bridge (VLAN IoT)
+  log_level: INFO
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.device_sonoff_rf_bridge_2.yaml
+  
+logger:
+  level: INFO
+  baud_rate: 0
+
+remote_receiver:
+  pin: 
+    number: GPIO04
+    mode: INPUT_PULLUP
+  dump:
+    - rc_switch
+  tolerance: 50%
+  filter: 35us
+  idle: 3ms
+  buffer_size: 2kb
+
+remote_transmitter:
+  pin: GPIO05
+  carrier_duty_percent: 100%
+
+binary_sensor:
+    - platform: remote_receiver
+      name: RfWallSwitch1
+      rc_switch_raw:
+        protocol: 1
+        code: '010011100001011001000100'
+      filters:
+        - delayed_off: 1000ms
+      on_press:
+        - homeassistant.action:
+            action: homeassistant.toggle
+            data:
+              entity_id: light.shellypro3_ec626089edbc_switch_0
+    - platform: remote_receiver
+      name: RfWallSwitch2
+      rc_switch_raw:
+        protocol: 1
+        code: '111101101111111101100100'
+      filters:
+        - delayed_off: 1000ms
+      on_press:
+        - homeassistant.action:
+            action: homeassistant.toggle
+            data:
+              entity_id: light.shellypro3_ec626089edbc_switch_0
+    - platform: remote_receiver
+      name: RfWallSwitch3
+      rc_switch_raw:
+        protocol: 1
+        code: '001011111000011000000100'
+      filters:
+        - delayed_off: 1000ms
+      on_press:
+        - homeassistant.action:
+            action: homeassistant.toggle
+            data:
+              entity_id: light.shellypro3_ec626089edbc_switch_0
+    - platform: remote_receiver
+      name: RfRemoteR1C1
+      rc_switch_raw:
+        protocol: 1
+        code: '110011110010010110101000'
+      filters:
+        - delayed_off: 1000ms
+      on_press:
+        - homeassistant.action:
+            action: homeassistant.turn_on
+            data:
+              entity_id: light.shellypro3_ec626089edbc_switch_0
+    - platform: remote_receiver
+      name: RfRemoteR1C2
+      rc_switch_raw:
+        protocol: 1
+        code: '110011110010010110101100'
+      filters:
+        - delayed_off: 1000ms
+      on_press:
+        - homeassistant.action:
+            action: homeassistant.turn_off
+            data:
+              entity_id: light.shellypro3_ec626089edbc_switch_0
+    - platform: remote_receiver
+      name: RfRemoteR2C1
+      rc_switch_raw:
+        protocol: 1
+        code: '110011110010010110100100'
+      filters:
+        - delayed_off: 1000ms
+      on_press:
+        - homeassistant.action:
+            action: homeassistant.turn_on
+            data:
+              entity_id: switch.shelly_pro_3_verkstaden_switch_2
+    - platform: remote_receiver
+      name: RfRemoteR2C2
+      rc_switch_raw:
+        protocol: 1
+        code: '110011110010010110101001'
+      filters:
+        - delayed_off: 1000ms
+      on_press:
+        - homeassistant.action:
+            action: homeassistant.turn_off
+            data:
+              entity_id: switch.shelly_pro_3_verkstaden_switch_2
+    - platform: remote_receiver
+      name: RfRemoteR3C1
+      rc_switch_raw:
+        protocol: 1
+        code: '110011110010010110100010'
+      filters:
+        - delayed_off: 1000ms
+      on_press:
+        - homeassistant.action:
+            action: homeassistant.turn_on
+            data:
+              entity_id: switch.shelly_pro_3_verkstaden_switch_1
+    - platform: remote_receiver
+      name: RfRemoteR3C2
+      rc_switch_raw:
+        protocol: 1
+        code: '110011110010010110100101'
+      filters:
+        - delayed_off: 1000ms
+      on_press:
+        - homeassistant.action:
+            action: homeassistant.turn_off
+            data:
+              entity_id: switch.shelly_pro_3_verkstaden_switch_1
+    - platform: remote_receiver
+      name: RfRemoteR4C1
+      rc_switch_raw:
+        protocol: 1
+        code: '110011110010010110100001'
+      filters:
+        - delayed_off: 1000ms
+      on_press:
+        - homeassistant.action:
+            action: homeassistant.turn_on
+            data:
+              entity_id: light.shellyplug_s_083a8dc344dd
+    - platform: remote_receiver
+      name: RfRemoteR4C2
+      rc_switch_raw:
+        protocol: 1
+        code: '110011110010010110100011'
+      filters:
+        - delayed_off: 1000ms
+      on_press:
+        - homeassistant.action:
+            action: homeassistant.turn_off
+            data:
+              entity_id: light.shellyplug_s_083a8dc344dd

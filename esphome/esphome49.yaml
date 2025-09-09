@@ -1,0 +1,14 @@
+# Device specific substitutions
+substitutions:
+  node_id: "49"
+  node_name: esphome49
+  node_friendly_name: Ledstrip (kök småfönster)
+  node_comment: Lolin32 (VLAN IoT)
+  log_level: INFO
+  num_leds: "98"
+  gpio_pin: "GPIO13"
+  night_brightness: "25%"
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.device_lolin32_ledstrip_window.yaml

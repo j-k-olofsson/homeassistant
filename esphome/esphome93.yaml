@@ -1,0 +1,85 @@
+# Device specific substitutions
+substitutions:
+  node_id: "93"
+  node_name: esphome93
+  node_friendly_name: Markis (utomhus)
+  node_comment: Esp32 D1 mini (VLAN IoT)
+  log_level: INFO
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.board_d1_mini32.yaml
+
+output:
+  - platform: gpio
+    id: outputOUT
+    pin:
+      number: GPIO22
+      inverted: true
+      mode:
+        output: true
+        pullup: true
+  - platform: gpio
+    id: outputSTOP
+    pin:
+      number: GPIO21
+      inverted: true
+      mode:
+        output: true
+        pullup: true
+  - platform: gpio
+    id: outputIN
+    pin:
+      number: GPIO17
+      inverted: true
+      mode:
+        output: true
+        pullup: true
+  - platform: gpio
+    id: outputLED
+    pin:
+      number: GPIO16
+      inverted: true
+      mode:
+        output: true
+        pullup: true
+  - platform: gpio
+    id: outputNULL
+    pin: GPIO27
+
+button:
+  - platform: output
+    id: myButtonLED
+    internal: true
+    output: outputLED
+    duration: 100ms 
+
+light:
+  - platform: binary
+    name: ${node_name} LED
+    output: outputNULL
+    restore_mode: RESTORE_DEFAULT_OFF
+    on_turn_on:
+      - button.press: myButtonLED
+    on_turn_off:
+      - button.press: myButtonLED
+
+cover:
+  - platform: time_based
+    device_class: awning
+    name: ${node_name} markis
+    has_built_in_endstop: false
+    open_action:
+      - output.turn_on: outputOUT
+      - delay: 100ms
+      - output.turn_off: outputOUT
+    open_duration: 40s
+    close_action:
+      - output.turn_on: outputIN
+      - delay: 100ms
+      - output.turn_off: outputIN
+    close_duration: 45s
+    stop_action:
+      - output.turn_on: outputSTOP
+      - delay: 100ms
+      - output.turn_off: outputSTOP

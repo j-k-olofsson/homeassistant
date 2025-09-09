@@ -1,0 +1,37 @@
+# Device specific substitutions
+substitutions:
+  node_id: "73"
+  node_name: esphome73
+  node_friendly_name: Gasol (utomhus)
+  node_comment: Lolin32 (VLAN IoT)
+  log_level: INFO
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.board_esp32_lolin32.yaml
+
+sensor:
+  - platform: hx711
+    name: ${node_name} LPG level
+    dout_pin: GPIO21
+    clk_pin: GPIO22
+    accuracy_decimals: 0
+    gain: 128
+    update_interval: 60s
+    unit_of_measurement: "%"
+    state_class: "measurement"
+    filters:
+      - median
+      - calibrate_linear:
+         - 144454 -> 0
+         - 497972 -> 16.7
+      - lambda: |-
+          if (x < 16.7) {
+            if (x > 6.7) {
+              return (x - 6.7) / 10 * 100;
+            } else {
+              return 0;
+            }
+          } else {
+            return 100;
+          }

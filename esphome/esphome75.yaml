@@ -1,0 +1,99 @@
+# Device specific substitutions
+substitutions:
+  node_id: "75"
+  node_name: esphome75
+  node_friendly_name: Lucka (Hönshuset)
+  node_comment: Lolin32 (VLAN IoT)
+  log_level: INFO
+
+# Device type specific file for Lolin32 Cover
+
+packages:
+  device_esp32_lolin32: !include common/.board_esp32_lolin32.yaml
+
+switch:
+  # The switch that turns the UP direction on
+  - platform: gpio
+    pin: GPIO12
+    id: up_pin
+    name: ${node_name} Up pin
+    internal: true
+    # Use interlocking to keep at most one of the two directions on
+    interlock: &interlock_group [up_pin, down_pin]
+    # If ESP reboots, do not attempt to restore switch state
+    restore_mode: always off
+  # The switch that turns the DOWN direction on
+  - platform: gpio
+    pin: GPIO13
+    id: down_pin
+    internal: true
+    name: ${node_name} Down pin
+    interlock: *interlock_group
+    restore_mode: always off
+
+binary_sensor:
+  - platform: gpio
+    id: manual_control_button
+    name: ${node_name} Manual Control Button
+    internal: true
+    pin:
+      number: GPIO16
+      mode: INPUT_PULLUP
+      inverted: True
+    on_press:
+      then:
+        - lambda: |-
+            ESP_LOGD("lambda", "1");
+            if (id(myCover).position == COVER_OPEN) {
+              ESP_LOGD("lambda", "2");
+              // Check status of up_pin (true == moving up)
+              if (id(up_pin).state) {
+                ESP_LOGD("lambda", "3");
+                // COVER_OPEN and moving upwards - stop it!
+                auto call = id(myCover).make_call();
+                call.set_command_stop();
+                call.perform();
+              } else {
+                ESP_LOGD("lambda", "4");
+                // Cover is in state COVER_OPEN but no movment - close it!
+                auto call = id(myCover).make_call();
+                call.set_command_close();
+                call.perform();
+              }
+            } else {
+              ESP_LOGD("lambda", "5");
+              // Check status of down_pin (true == moving down)
+              if (id(down_pin).state) {
+                ESP_LOGD("lambda", "6");
+                // COVER_CLOSE and moving down - stop it!
+                auto call = id(myCover).make_call();
+                call.set_command_stop();
+                call.perform();
+              } else {
+                ESP_LOGD("lambda", "7");
+                // Cover is in state COVER_CLOSE but no movment - Open it!
+                auto call = id(myCover).make_call();
+                call.set_command_open();
+                call.perform();
+              }
+            }
+            ESP_LOGD("lambda", "8");
+
+cover:
+  - platform: time_based
+    device_class: door
+    name: ${node_name} Cover
+    id: myCover
+    has_built_in_endstop: false
+    
+    open_action:
+      - switch.turn_on: up_pin
+    open_duration: 40s
+    
+    close_action:
+      - switch.turn_on: down_pin
+    close_duration: 40s
+    
+    stop_action:
+      - switch.turn_off: up_pin
+      - switch.turn_off: down_pin

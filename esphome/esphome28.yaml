@@ -1,0 +1,13 @@
+# Device specific substitutions
+substitutions:
+  node_id: "28"
+  node_name: esphome28
+  node_friendly_name: Poolvärmepump (poolen)
+  node_comment: Sonoff S55 (VLAN IoT)
+  log_level: INFO
+  active: "true"
+
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.device_sonoff_basic_switch.yaml

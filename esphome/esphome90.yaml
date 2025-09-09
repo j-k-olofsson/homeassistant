@@ -1,0 +1,72 @@
+# Device specific substitutions
+substitutions:
+  node_id: "90"
+  node_name: esphome90
+  node_friendly_name: Salt (verkstan)
+  node_comment: Esp32 D1 mini (BTPrxy) (VLAN IoT)
+  log_level: DEBUG
+
+# Include packages for this device specific type
+packages:
+  device: !include common/.board_d1_mini32.yaml
+  proxy: !include common/.blueprint_bluetooth_proxy.yaml
+
+api:
+
+i2c:
+  sda: 17
+  scl: 16
+  scan: true
+  
+sensor:
+  - platform: vl53l0x
+    name: "${node_name} Salt level"
+    id: myVL53L0x
+    address: 0x29
+    update_interval: 60s
+    state_class: measurement
+    unit_of_measurement: "%"
+    accuracy_decimals: 0
+    filters:
+      - filter_out: nan
+      - calibrate_linear:
+          - 0.240 -> 100
+          - 0.340 -> 0
+      - clamp:
+          min_value: 0
+          max_value: 100
+      - median:
+  - platform: wifi_signal
+    name: ESP WIFI Signal
+    internal: false
+    update_interval: 60s
+    unit_of_measurement: 'dBm'
+    device_class: signal_strength
+
+text_sensor:
+  - platform: version
+    internal: True
+    name: ESPHome version
+    hide_timestamp: true
+  - platform: wifi_info
+    ip_address:
+      name: ESP IP Address
+      internal: True
+      address_0:
+        name: ESP IP Address 0
+        internal: True
+    ssid:
+      name: ESP Connected SSID
+      internal: True
+    bssid:
+      name: ESP Connected BSSID
+      internal: True
+    mac_address:
+      name: ESP Mac Wifi Address
+      internal: True
+    scan_results:
+      name: ESP Latest Scan Results
+      internal: True
+    dns_address:
+      name: ESP DNS Address
+      internal: True

@@ -1,0 +1,15 @@
+# Device specific substitutions
+substitutions:
+  node_id: "44"
+  node_name: esphome44
+  node_friendly_name: Ledstrip (sovrum norra)
+  node_comment: Lolin32 (VLAN IoT)
+  log_level: INFO
+  num_leds: "50"
+  gpio_pin: "GPIO13"
+  wakeuplight: "false"
+  night_brightness: "50%"
+  max_morning_brightness: "0.15"
+
+packages:
+  file: !include common/.device_lolin32_wakeup_ledstrip_window.yaml

@@ -1,0 +1,756 @@
+
+shelly_1pm_kitchen_floor_heating_local:
+  name: shelly-1pm-kitchen-floor-heating.local
+  mac: A0:DD:6C:29:B1:34
+  icon:
+  picture:
+  track: true
+
+henhouse_cam_local:
+  name: henhouse-cam.local
+  mac: E0:B9:4D:20:C9:86
+  icon:
+  picture:
+  track: true
+
+chromecast_verkstadens_speaker_local:
+  name: chromecast-verkstadens-speaker.local
+  mac: 80:C5:F2:3E:08:43
+  icon:
+  picture:
+  track: true
+
+hp_printer_local:
+  name: hp-printer.local
+  mac: 84:2A:FD:F9:97:90
+  icon:
+  picture:
+  track: true
+
+chromecast_mannis_screen_local:
+  name: chromecast-mannis-screen.local
+  mac: D8:EB:46:96:63:E4
+  icon:
+  picture:
+  track: true
+
+chromecast_diegos_screen_local:
+  name: chromecast-diegos-screen.local
+  mac: D8:EB:46:81:A7:F3
+  icon:
+  picture:
+  track: true
+
+chromecast_duschens_speaker_local:
+  name: chromecast-duschens-speaker.local
+  mac: 6C:47:60:0B:55:77
+  icon:
+  picture:
+  track: true
+
+chromecast_stereo_right_speaker_local:
+  name: chromecast-stereo-right-speaker.local
+  mac: 54:60:09:E8:FC:56
+  icon:
+  picture:
+  track: true
+
+chromecast_gamla_tv_local:
+  name: chromecast-gamla-tv.local
+  mac: F4:F5:D8:9D:B9:62
+  icon:
+  picture:
+  track: true
+
+78_32_1b_6c_58_9d:
+  name: 78_32_1b_6c_58_9d
+  mac: 78:32:1B:6C:58:9D
+  icon:
+  picture:
+  track: true
+
+68_f7_28_79_0e_04:
+  name: 68_f7_28_79_0e_04
+  mac: 68:F7:28:79:0E:04
+  icon:
+  picture:
+  track: true
+
+smarthomecontrolpanel_local:
+  name: SmartHomeControlPanel.local
+  mac: 88:12:AC:7F:8C:0D
+  icon:
+  picture:
+  track: true
+
+bosch_diskmaskin_local:
+  name: bosch-diskmaskin.local
+  mac: 68:A4:0E:0C:1A:5C
+  icon:
+  picture:
+  track: true
+
+levoit_humidifier_verandan_local:
+  name: levoit-humidifier-verandan.local
+  mac: 1C:69:20:5B:B6:00
+  icon:
+  picture:
+  track: true
+
+playstation4_local:
+  name: playstation4.local
+  mac: 70:9E:29:44:47:8D
+  icon:
+  picture:
+  track: true
+
+chromecast_toans_speaker_local:
+  name: chromecast-toans-speaker.local
+  mac: 6C:47:60:1A:87:36
+  icon:
+  picture:
+  track: true
+
+00_00_5e_00_01_6f:
+  name: 00_00_5e_00_01_6f
+  mac: 00:00:5E:00:01:6F
+  icon:
+  picture:
+  track: true
+
+chromecast_kokets_screen_local:
+  name: chromecast-kokets-screen.local
+  mac: 00:F4:8D:97:D9:B5
+  icon:
+  picture:
+  track: true
+
+chromecast_stereo_left_speaker_local:
+  name: chromecast-stereo-left-speaker.local
+  mac: 54:60:09:D6:4F:22
+  icon:
+  picture:
+  track: true
+
+chromecast_vaxtskapets_speaker_local:
+  name: chromecast-vaxtskapets-speaker.local
+  mac: 80:C5:F2:67:AA:69
+  icon:
+  picture:
+  track: true
+
+gw_august_connect_local:
+  name: gw-august-connect.local
+  mac: 78:9C:85:2A:70:AF
+  icon:
+  picture:
+  track: true
+
+chromecast_tv_soundbar_local:
+  name: chromecast-tv-soundbar.local
+  mac: 2C:FD:B3:12:5C:49
+  icon:
+  picture:
+  track: true
+
+roborock_max_local:
+  name: roborock-max.local
+  mac: B0:4A:39:24:A4:CB
+  icon:
+  picture:
+  track: true
+
+samsung_tvattmaskin_local:
+  name: samsung-tvattmaskin.local
+  mac: 40:CA:63:2A:67:33
+  icon:
+  picture:
+  track: true
+
+2c_c3_e6_0d_c6_20:
+  name: 2c_c3_e6_0d_c6_20
+  mac: 2C:C3:E6:0D:C6:20
+  icon:
+  picture:
+  track: true
+
+hp_pavilion_local:
+  name: hp-pavilion.local
+  mac: 00:8C:FA:B1:9A:E3
+  icon:
+  picture:
+  track: true
+
+sony_tv_local:
+  name: sony-tv.local
+  mac: 14:3F:A6:03:6B:40
+  icon:
+  picture:
+  track: true
+
+chromecast_kontorets_speaker_local:
+  name: chromecast-kontorets-speaker.local
+  mac: 30:58:90:17:03:E4
+  icon:
+  picture:
+  track: true
+
+0a_80_2d_cd_7a_31:
+  name: 0a_80_2d_cd_7a_31
+  mac: 0A:80:2D:CD:7A:31
+  icon:
+  picture:
+  track: true
+
+3c_e9_0e_d8_1a_b8:
+  name: 3c_e9_0e_d8_1a_b8
+  mac: 3C:E9:0E:D8:1A:B8
+  icon:
+  picture:
+  track: true
+
+2e_de_49_d0_d5_dc:
+  name: 2e_de_49_d0_d5_dc
+  mac: 2E:DE:49:D0:D5:DC
+  icon:
+  picture:
+  track: true
+
+4e_ab_6d_a3_ce_1d:
+  name: 4e_ab_6d_a3_ce_1d
+  mac: 4E:AB:6D:A3:CE:1D
+  icon:
+  picture:
+  track: true
+
+ea_ad_e0_29_56_64:
+  name: ea_ad_e0_29_56_64
+  mac: EA:AD:E0:29:56:64
+  icon:
+  picture:
+  track: true
+
+36_b7_9b_2b_3d_90:
+  name: 36_b7_9b_2b_3d_90
+  mac: 36:B7:9B:2B:3D:90
+  icon:
+  picture:
+  track: true
+
+shelly_1pm_celler_floor_heating_local:
+  name: shelly-1pm-celler-floor-heating.local
+  mac: 80:64:6F:E3:BE:F0
+  icon:
+  picture:
+  track: true
+
+shelly_1pm_porch_floor_heating:
+  name: shelly-1pm-porch-floor-heating
+  mac: C4:D8:D5:54:CC:80
+  icon:
+  picture:
+  track: true
+
+42_8a_07_f6_64_43:
+  name: 42_8a_07_f6_64_43
+  mac: 42:8A:07:F6:64:43
+  icon:
+  picture:
+  track: true
+
+shellypro_3_shop_central_local:
+  name: shellypro-3-shop-central.local
+  mac: FC:E8:C0:DB:40:20
+  icon:
+  picture:
+  track: true
+
+shellyplug_s_diego_bed_lamp_local:
+  name: shellyplug-s-diego-bed-lamp.local
+  mac: 08:3A:8D:C1:7E:B4
+  icon:
+  picture:
+  track: true
+
+shelly_1pm_entry_floor_heating:
+  name: shelly-1pm-entry-floor-heating
+  mac: C4:D8:D5:54:F8:A4
+  icon:
+  picture:
+  track: true
+
+shellyplug_s_manni_bed_lamp_local:
+  name: shellyplug-s-manni-bed-lamp.local
+  mac: 08:3A:8D:C1:7E:39
+  icon:
+  picture:
+  track: true
+
+shellyplug_s_shop_roof_lamps_local:
+  name: shellyplug-s-shop-roof-lamps.local
+  mac: 08:3A:8D:C3:44:DD
+  icon:
+  picture:
+  track: true
+
+e8_6b_ea_0f_84_30:
+  name: e8_6b_ea_0f_84_30
+  mac: E8:6B:EA:0F:84:30
+  icon:
+  picture:
+  track: true
+
+shelly_1pm_studio_floor_heating:
+  name: shelly-1pm-studio-floor-heating
+  mac: A0:DD:6C:2B:31:4C
+  icon:
+  picture:
+  track: true
+
+shellyflood_dryercabinet_local:
+  name: shellyflood-dryercabinet.local
+  mac: 4C:75:25:06:BC:9C
+  icon:
+  picture:
+  track: true
+
+20_f8_3b_09_64_60:
+  name: 20_f8_3b_09_64_60
+  mac: 20:F8:3B:09:64:60
+  icon:
+  picture:
+  track: true
+
+72_0e_b3_71_8f_ef:
+  name: 72_0e_b3_71_8f_ef
+  mac: 72:0E:B3:71:8F:EF
+  icon:
+  picture:
+  track: true
+
+56_5c_fc_d5_d8_cc:
+  name: 56_5c_fc_d5_d8_cc
+  mac: 56:5C:FC:D5:D8:CC
+  icon:
+  picture:
+  track: true
+
+00_e0_4c_6d_67_7c:
+  name: 00_e0_4c_6d_67_7c
+  mac: 00:E0:4C:6D:67:7C
+  icon:
+  picture:
+  track: true
+
+ee_82_08_e5_fe_b2:
+  name: ee_82_08_e5_fe_b2
+  mac: EE:82:08:E5:FE:B2
+  icon:
+  picture:
+  track: true
+
+ac_16_2d_04_99_b2:
+  name: ac_16_2d_04_99_b2
+  mac: AC:16:2D:04:99:B2
+  icon:
+  picture:
+  track: true
+
+da_86_d9_a7_6f_8e:
+  name: da_86_d9_a7_6f_8e
+  mac: DA:86:D9:A7:6F:8E
+  icon:
+  picture:
+  track: true
+
+gs1900_24e_local:
+  name: gs1900-24e.local
+  mac: 98:0D:67:01:EB:9B
+  icon:
+  picture:
+  track: true
+
+1e_7e_df_81_36_be:
+  name: 1e_7e_df_81_36_be
+  mac: 1E:7E:DF:81:36:BE
+  icon:
+  picture:
+  track: true
+
+prusa_esp32cam_160_local:
+  name: prusa-esp32cam-160.local
+  mac: E4:65:B8:4B:93:DC
+  icon:
+  picture:
+  track: true
+
+prusa_xl_local:
+  name: prusa-xl.local
+  mac: 10:9C:70:27:D7:1A
+  icon:
+  picture:
+  track: true
+
+28_39_26_d3_14_5f:
+  name: 28_39_26_d3_14_5f
+  mac: 28:39:26:D3:14:5F
+  icon:
+  picture:
+  track: true
+
+00_68_eb_e4_b9_01:
+  name: 00_68_eb_e4_b9_01
+  mac: 00:68:EB:E4:B9:01
+  icon:
+  picture:
+  track: true
+
+bosch_torktumlare_local:
+  name: bosch-torktumlare.local
+  mac: 68:A4:0E:3A:22:DF
+  icon:
+  picture:
+  track: true
+
+f0_fe_6b_c1_a0_06:
+  name: f0_fe_6b_c1_a0_06
+  mac: F0:FE:6B:C1:A0:06
+  icon:
+  picture:
+  track: true
+
+3c_01_ef_1c_e8_f0:
+  name: 3c_01_ef_1c_e8_f0
+  mac: 3C:01:EF:1C:E8:F0
+  icon:
+  picture:
+  track: true
+
+60_f2_62_30_7a_32:
+  name: 60_f2_62_30_7a_32
+  mac: 60:F2:62:30:7A:32
+  icon:
+  picture:
+  track: true
+
+f4_cf_a2_15_d0_e3:
+  name: f4_cf_a2_15_d0_e3
+  mac: F4:CF:A2:15:D0:E3
+  icon:
+  picture:
+  track: true
+
+7c_87_ce_b5_08_fd:
+  name: 7c_87_ce_b5_08_fd
+  mac: 7C:87:CE:B5:08:FD
+  icon:
+  picture:
+  track: true
+
+00_e0_4c_81_41_80:
+  name: 00_e0_4c_81_41_80
+  mac: 00:E0:4C:81:41:80
+  icon:
+  picture:
+  track: true
+
+c2_7c_bd_25_de_50:
+  name: c2_7c_bd_25_de_50
+  mac: C2:7C:BD:25:DE:50
+  icon:
+  picture:
+  track: true
+
+9a_35_a8_25_94_da:
+  name: 9a_35_a8_25_94_da
+  mac: 9A:35:A8:25:94:DA
+  icon:
+  picture:
+  track: true
+
+48_55_19_f4_de_04:
+  name: 48_55_19_f4_de_04
+  mac: 48:55:19:F4:DE:04
+  icon:
+  picture:
+  track: true
+
+4c_1d_96_14_64_f0:
+  name: 4c_1d_96_14_64_f0
+  mac: 4C:1D:96:14:64:F0
+  icon:
+  picture:
+  track: true
+
+aa_e2_53_6c_c4_01:
+  name: aa_e2_53_6c_c4_01
+  mac: AA:E2:53:6C:C4:01
+  icon:
+  picture:
+  track: true
+
+fa_87_2c_85_c7_73:
+  name: fa_87_2c_85_c7_73
+  mac: FA:87:2C:85:C7:73
+  icon:
+  picture:
+  track: true
+
+ee_17_6d_dc_e9_1c:
+  name: ee_17_6d_dc_e9_1c
+  mac: EE:17:6D:DC:E9:1C
+  icon:
+  picture:
+  track: true
+
+06_a7_e5_de_94_d6:
+  name: 06_a7_e5_de_94_d6
+  mac: 06:A7:E5:DE:94:D6
+  icon:
+  picture:
+  track: true
+
+00_e0_4c_9c_79_8f:
+  name: 00_e0_4c_9c_79_8f
+  mac: 00:E0:4C:9C:79:8F
+  icon:
+  picture:
+  track: true
+
+16_a5_a4_79_3f_b5:
+  name: 16_a5_a4_79_3f_b5
+  mac: 16:A5:A4:79:3F:B5
+  icon:
+  picture:
+  track: true
+
+d6_15_0d_6c_82_fd:
+  name: d6_15_0d_6c_82_fd
+  mac: D6:15:0D:6C:82:FD
+  icon:
+  picture:
+  track: true
+
+fe_10_d9_e8_e2_f7:
+  name: fe_10_d9_e8_e2_f7
+  mac: FE:10:D9:E8:E2:F7
+  icon:
+  picture:
+  track: true
+
+2e_5e_1d_c0_75_e6:
+  name: 2e_5e_1d_c0_75_e6
+  mac: 2E:5E:1D:C0:75:E6
+  icon:
+  picture:
+  track: true
+
+f6_4f_f1_5e_01_5f:
+  name: f6_4f_f1_5e_01_5f
+  mac: F6:4F:F1:5E:01:5F
+  icon:
+  picture:
+  track: true
+
+da_90_ef_78_91_04:
+  name: da_90_ef_78_91_04
+  mac: DA:90:EF:78:91:04
+  icon:
+  picture:
+  track: true
+
+ca_c3_81_00_7b_16:
+  name: ca_c3_81_00_7b_16
+  mac: CA:C3:81:00:7B:16
+  icon:
+  picture:
+  track: true
+
+08_b6_1f_38_2a_20:
+  name: 08_b6_1f_38_2a_20
+  mac: 08:B6:1F:38:2A:20
+  icon:
+  picture:
+  track: true
+
+48_e7_29_8b_7f_d0:
+  name: 48_e7_29_8b_7f_d0
+  mac: 48:E7:29:8B:7F:D0
+  icon:
+  picture:
+  track: true
+
+76_6f_be_6b_1b_b9:
+  name: 76_6f_be_6b_1b_b9
+  mac: 76:6F:BE:6B:1B:B9
+  icon:
+  picture:
+  track: true
+
+f0_08_d1_f2_b8_08:
+  name: f0_08_d1_f2_b8_08
+  mac: F0:08:D1:F2:B8:08
+  icon:
+  picture:
+  track: true
+
+0c_b8_15_22_91_d4:
+  name: 0c_b8_15_22_91_d4
+  mac: 0C:B8:15:22:91:D4
+  icon:
+  picture:
+  track: true
+
+08_b6_1f_34_55_50:
+  name: 08_b6_1f_34_55_50
+  mac: 08:B6:1F:34:55:50
+  icon:
+  picture:
+  track: true
+
+c8_c9_a3_25_b7_f7:
+  name: c8_c9_a3_25_b7_f7
+  mac: C8:C9:A3:25:B7:F7
+  icon:
+  picture:
+  track: true
+
+24_a1_60_10_5f_96:
+  name: 24_a1_60_10_5f_96
+  mac: 24:A1:60:10:5F:96
+  icon:
+  picture:
+  track: true
+
+c8_2b_96_07_35_26:
+  name: c8_2b_96_07_35_26
+  mac: C8:2B:96:07:35:26
+  icon:
+  picture:
+  track: true
+
+46_20_5f_9b_3b_ec:
+  name: 46_20_5f_9b_3b_ec
+  mac: 46:20:5F:9B:3B:EC
+  icon:
+  picture:
+  track: true
+
+2e_76_1d_1e_ed_ac:
+  name: 2e_76_1d_1e_ed_ac
+  mac: 2E:76:1D:1E:ED:AC
+  icon:
+  picture:
+  track: true
+
+fe_f8_f9_2f_5d_1d:
+  name: fe_f8_f9_2f_5d_1d
+  mac: FE:F8:F9:2F:5D:1D
+  icon:
+  picture:
+  track: true
+
+26_2c_dd_1a_86_8c:
+  name: 26_2c_dd_1a_86_8c
+  mac: 26:2C:DD:1A:86:8C
+  icon:
+  picture:
+  track: true
+
+c4_4f_33_72_7c_01:
+  name: c4_4f_33_72_7c_01
+  mac: C4:4F:33:72:7C:01
+  icon:
+  picture:
+  track: true
+
+00_2b_67_01_db_4e:
+  name: 00_2b_67_01_db_4e
+  mac: 00:2B:67:01:DB:4E
+  icon:
+  picture:
+  track: true
+
+00_e0_4c_41_17_30:
+  name: 00_e0_4c_41_17_30
+  mac: 00:E0:4C:41:17:30
+  icon:
+  picture:
+  track: true
+
+dc_06_75_9d_65_c0:
+  name: dc_06_75_9d_65_c0
+  mac: DC:06:75:9D:65:C0
+  icon:
+  picture:
+  track: true
+
+c4_4f_33_72_73_e1:
+  name: c4_4f_33_72_73_e1
+  mac: C4:4F:33:72:73:E1
+  icon:
+  picture:
+  track: true
+
+c4_4f_33_7a_2e_79:
+  name: c4_4f_33_7a_2e_79
+  mac: C4:4F:33:7A:2E:79
+  icon:
+  picture:
+  track: true
+
+8a_f9_23_f4_9b_d5:
+  name: 8a_f9_23_f4_9b_d5
+  mac: 8A:F9:23:F4:9B:D5
+  icon:
+  picture:
+  track: true
+
+00_e0_4c_3c_60_7c:
+  name: 00_e0_4c_3c_60_7c
+  mac: 00:E0:4C:3C:60:7C
+  icon:
+  picture:
+  track: true
+
+7c_9e_bd_ee_d0_98:
+  name: 7c_9e_bd_ee_d0_98
+  mac: 7C:9E:BD:EE:D0:98
+  icon:
+  picture:
+  track: true
+
+00_e0_4c_72_90_6b:
+  name: 00_e0_4c_72_90_6b
+  mac: 00:E0:4C:72:90:6B
+  icon:
+  picture:
+  track: true
+
+08_b6_1f_38_2c_4c:
+  name: 08_b6_1f_38_2c_4c
+  mac: 08:B6:1F:38:2C:4C
+  icon:
+  picture:
+  track: true
+
+48_e7_29_8b_8b_10:
+  name: 48_e7_29_8b_8b_10
+  mac: 48:E7:29:8B:8B:10
+  icon:
+  picture:
+  track: true
+
+c4_4f_33_7a_34_a5:
+  name: c4_4f_33_7a_34_a5
+  mac: C4:4F:33:7A:34:A5
+  icon:
+  picture:
+  track: true
+
+c4_4f_33_7a_51_11:
+  name: c4_4f_33_7a_51_11
+  mac: C4:4F:33:7A:51:11
+  icon:
+  picture:
+  track: true

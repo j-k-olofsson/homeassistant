@@ -1,0 +1,12 @@
+# Device specific substitutions
+substitutions:
+  node_id: "26"
+  node_name: esphome26
+  node_friendly_name: Utomhusbelysning (friggan)
+  node_comment: Sonoff Mini (VLAN IoT)
+  log_level: INFO
+  active: "true"
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.device_sonoff_mini_night_light.yaml

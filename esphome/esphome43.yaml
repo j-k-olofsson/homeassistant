@@ -1,0 +1,13 @@
+# Device specific substitutions
+substitutions:
+  node_id: "43"
+  node_name: esphome43
+  node_friendly_name: Ledstrip (balkongdörrar)
+  node_comment: ESP32 C3 (VLAN IoT)
+  log_level: INFO
+  num_leds: "86"
+  gpio_pin: "GPIO4"
+  night_brightness: "40%"
+  
+packages:
+  file: !include common/.device_esp32_c3_ledstrip_window.yaml

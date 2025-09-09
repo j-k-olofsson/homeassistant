@@ -1,0 +1,14 @@
+# Substitutions
+substitutions:
+  node_id: "57"
+  node_name: esphome57
+  node_friendly_name: Taklampor (källaren)
+  node_comment: Shelly Dimmer 2 (VLAN IoT)
+  log_level: INFO
+  stm_fw_update: "false"
+  node_min_brightness: "450"
+  node_preset_tripple_tap: "1%"
+  transition_period: 3s
+
+packages:
+  file: !include common/.device_shelly_dimmer_2.yaml

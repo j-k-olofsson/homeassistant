@@ -1,0 +1,14 @@
+# Device specific substitutions
+substitutions:
+  node_id: "89"
+  node_name: esphome89
+  node_friendly_name: Esp32 kamera
+  node_comment: ESP32-CAM (WLAN IoT)
+  log_level: INFO
+  resolution: 640x480
+  vertical_flip: "True"
+  horizontal_mirror: "True"
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.board_esp32cam.yaml

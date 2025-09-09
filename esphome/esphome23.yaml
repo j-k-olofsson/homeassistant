@@ -1,0 +1,12 @@
+# Device specific substitutions
+substitutions:
+  node_id: "23"
+  node_name: esphome23
+  node_friendly_name: Julbelysning (utomhus)
+  node_comment: Sonoff S55 (VLAN IoT)
+  log_level: INFO
+
+# Device type specifik file for SonOff Basic Night Lights
+
+packages:
+  device_sonoff_basic: !include common/.device_sonoff_basic_winter_light.yaml

@@ -1,0 +1,11 @@
+# Device specific substitutions
+substitutions:
+  node_id: "81"
+  node_name: esphome81
+  node_friendly_name: Golvvärme (sovrum/kontor)
+  node_comment: Sonoff POW2 (VLAN IoT)
+  log_level: INFO
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.device_sonoff_pow2.yaml

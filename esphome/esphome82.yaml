@@ -1,0 +1,124 @@
+# Device specific substitutions
+substitutions:
+  node_id: "82"
+  node_name: esphome82
+  node_friendly_name: Huvudströmbrytaren Prusa XL
+  node_comment: Sonoff POW2 (VLAN IoT)
+  log_level: INFO
+
+# Include packages for this device specific type
+# packages:
+#   file: !include common/.device_sonoff_pow2.yaml
+# Node info
+esphome:
+  name: ${node_name}
+  comment: ${node_comment}
+  friendly_name: ${node_friendly_name}
+  
+esp8266:
+  board: esp8285
+  framework:
+    version: recommended
+
+packages:
+  device_base: !include common/.base.yaml
+
+status_led:
+  pin:
+    number: GPIO13
+    inverted: true
+
+switch:
+  - platform: gpio
+    name: ${node_name} Relay State
+    pin: GPIO12
+    id: myRelay
+    restore_mode: RESTORE_DEFAULT_ON
+  - platform: restart
+    id: myRestart
+    name: ${node_name} Restart
+    internal: true
+
+binary_sensor:
+  - platform: gpio
+    id: device_button
+    internal: true
+    pin:
+      number: GPIO0
+      mode: INPUT_PULLUP
+      inverted: true
+    # on_click:
+    #   min_length: 3s
+    #   max_length: 10s
+    #   then:
+    #     - switch.toggle: myRelay
+    on_multi_click:
+      # single click
+      - timing:
+        - ON for at least 3s
+        then:
+          - switch.toggle: myRelay
+    # on_press:
+    #   - switch.toggle: myRelay
+    # on_double_click:
+    #   min_length: 50ms
+    #   max_length: 350ms
+    #   then:
+    #     - switch.turn_on: myRestart
+
+logger:
+  baud_rate: 0
+
+uart:
+  rx_pin: RX
+  baud_rate: 4800
+  parity: EVEN
+
+sensor:
+  - platform: cse7766
+    current:
+      name: ${node_name} Current
+      id: a_sensor
+      filters:
+        - throttle_average: 60s
+    voltage:
+      name: ${node_name} Voltage
+      id: v_sensor
+      filters:
+        - throttle_average: 60s
+    power:
+      name: ${node_name} Power
+      id: w_sensor
+      filters:
+        - throttle_average: 60s
+    energy:
+      name: ${node_name} Energy
+      id: wh_sensor
+      filters:
+        - throttle_average: 60s
+    apparent_power:
+      name: ${node_name} Apparent Power
+      id: ap_sensor
+      filters:
+        - throttle_average: 60s
+    reactive_power:
+      name: ${node_name} Reactive Power
+      id: rp_sensor
+      filters:
+        - throttle_average: 60s
+    power_factor:
+      name: ${node_name} Power Factor
+      id: pf_sensor
+      filters:
+        - throttle_average: 60s
+  - platform: total_daily_energy
+    name: ${node_name} Daily Energy
+    power_id: w_sensor
+    unit_of_measurement: W
+  - platform: homeassistant
+    id: myExternalTemp
+    entity_id: sensor.termostat_kontoret_esphome20_temperature
+
+time:
+  - platform: homeassistant
+    id: homeassistant_time
