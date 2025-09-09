@@ -1,20 +1,38 @@
-# Example .gitignore file for your config dir.
-# An * ensures that everything will be ignored.
-*
-# You can whitelist files/folders with !, these will not be ignored.
-!*
-!*.yaml
-!.gitignore
-!*.md
-
-# Ignore folders.
-.cache
-.cloud
-.ssh
-.storage
-esphome/.esphome
-esphome/.vscode
-
-# Ensure these files are ignored
+# --- Hemligheter ---
 secrets.yaml
-*.log*
+
+# --- Databaser (lagras runtime av HA) ---
+*.db
+*.db-shm
+*.db-wal
+home-assistant_v2.db
+home-assistant_v2.db-shm
+home-assistant_v2.db-wal
+
+# --- HA runtime & cache ---
+.storage/
+deps/
+tts/
+media/
+www/.storage/
+
+# --- Loggar ---
+home-assistant.log
+home-assistant.log.*
+*.log
+*.log.*
+
+# --- OS / editorfiler ---
+*.pyc
+__pycache__/
+.vscode/
+.idea/
+.DS_Store
+*.swp
+
+# --- Backupfiler ---
+*.tar
+*.tar.gz
+*.zip
+*.bak
+*.tmp
