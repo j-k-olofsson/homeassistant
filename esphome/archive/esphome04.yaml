@@ -1,0 +1,34 @@
+# Device specific substitutions
+substitutions:
+  node_id: "04"
+  node_name: esphome04
+  node_friendly_name: Bordslampa (entrén)
+  node_comment: Sonoff Basic (VLAN IoT)
+  log_level: INFO
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.device_sonoff_basic_light.yaml
+
+logger:
+  baud_rate: 0
+  
+# GPIO1=TX, GPIO3=RX
+i2c:
+  sda: GPIO1
+  scl: GPIO3
+  scan: true
+
+sensor:
+  - platform: bh1750
+    name: ${node_name} Illuminance
+    address: 0x23
+    on_value:
+      if:
+        condition:
+          - lambda: |-
+              return x < 20;
+        then:
+          - light.turn_on: myLight
+        else:
+          - light.turn_off: myLight

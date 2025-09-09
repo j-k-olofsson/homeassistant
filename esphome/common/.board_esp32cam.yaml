@@ -1,0 +1,54 @@
+# Root file for ESP32-CAM board specific stuff
+
+# Node info
+esphome:
+  name: ${node_name}
+  comment: ${node_comment}
+  friendly_name: ${node_friendly_name}
+
+esp32:
+  board: esp32dev
+
+packages:
+  device_base: !include .base.yaml
+
+switch:
+  - platform: gpio
+    id: myOnboardFlash
+    pin: GPIO4
+    internal: true
+  - platform: restart
+    id: myRestartSwitch
+    internal: true
+
+# light:
+#   - platform: status_led
+#     id: myOnboardStatusLed
+#     internal: true
+#     pin:
+#       number: GPIO33
+#       inverted: true
+
+esp32_camera:
+  name: ${node_name} Camera
+  id: myCam
+  external_clock:
+    pin: GPIO0
+    frequency: 20MHz
+  i2c_pins:
+    sda: GPIO26
+    scl: GPIO27
+  data_pins: [GPIO5, GPIO18, GPIO19, GPIO21, GPIO36, GPIO39, GPIO34, GPIO35]
+  vsync_pin: GPIO25
+  href_pin: GPIO23
+  pixel_clock_pin: GPIO22
+  power_down_pin: GPIO32
+  vertical_flip: ${vertical_flip}
+  resolution: ${resolution}
+  horizontal_mirror: ${horizontal_mirror}
+
+esp32_camera_web_server:
+  - port: 8080
+    mode: stream
+  - port: 8081
+    mode: snapshot

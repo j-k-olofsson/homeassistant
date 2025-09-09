@@ -1,0 +1,30 @@
+# Root file for ESP32 D1 mini specific stuff
+
+# Node info
+esphome:
+  name: ${node_name}
+  comment: ${node_comment}
+  friendly_name: ${node_friendly_name}
+
+esp32:
+  board: esp32-c3-devkitm-1  # Pinout: https://www.sudo.is/docs/esphome/boards/esp32c3supermini/#pinout
+  variant: ESP32C3
+  framework:
+    type: esp-idf
+    version: recommended
+
+packages:
+  device_base: !include .base.yaml
+
+switch:
+  - platform: restart
+    id: myRestartSwitch
+    internal: true
+
+# light:
+#   - platform: status_led
+#     id: myOnboardStatusLed
+#     internal: true
+#     pin:
+#       number: GPIO8
+#       inverted: false

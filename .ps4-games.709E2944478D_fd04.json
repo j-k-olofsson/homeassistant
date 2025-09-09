@@ -1,0 +1,44 @@
+{
+  "CUSA00126": {
+    "media_title": "Amazon Video",
+    "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/titlecontainer/se/en/999/CUSA00126_00/image",
+    "media_content_type": "app",
+    "locked": false
+  },
+  "CUSA31344": {
+    "media_title": "HBO Max",
+    "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/titlecontainer/se/en/999/CUSA31344_00/image",
+    "media_content_type": "app",
+    "locked": false
+  },
+  "CUSA01116": {
+    "media_title": "YouTube",
+    "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/titlecontainer/se/en/999/CUSA01116_00/image",
+    "media_content_type": "app",
+    "locked": false
+  },
+  "CUSA15362": {
+    "media_title": "Disney+",
+    "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/titlecontainer/se/en/999/CUSA15362_00/image",
+    "media_content_type": "app",
+    "locked": false
+  },
+  "CUSA24386": {
+    "media_title": "Apple TV",
+    "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/titlecontainer/se/en/999/CUSA24386_00/image",
+    "media_content_type": "app",
+    "locked": false
+  },
+  "CUSA00124": {
+    "media_title": "Viaplay",
+    "media_image_url": null,
+    "media_content_type": null,
+    "locked": false
+  },
+  "CUSA00127": {
+    "media_title": "Netflix",
+    "media_image_url": null,
+    "media_content_type": null,
+    "locked": false
+  }
+}

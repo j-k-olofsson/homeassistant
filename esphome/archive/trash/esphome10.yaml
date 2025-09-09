@@ -1,0 +1,214 @@
+# Device specific substitutions
+substitutions:
+  node_id: "10"
+  node_name: esphome10
+  node_friendly_name: Termostat (pumphuset)
+  node_comment: Sonoff THR316D
+  log_level: DEBUG
+  target_temp: "5"
+  away_target_temp: "5"
+
+
+# Node info
+esphome:
+  name: ${node_name}
+  comment: ${node_comment}
+  friendly_name: ${node_friendly_name}
+  on_boot:
+    - priority: 90
+      then:
+        - switch.turn_on: mySensorPower 
+
+packages:
+  device_base: !include common/.base.yaml
+
+logger:
+  level: ${log_level}
+  baud_rate: 0
+
+esp32:
+  board: nodemcu-32s
+  framework:
+    type: esp-idf
+
+time:
+  - platform: homeassistant
+    id: homeassistant_time
+
+display:
+  platform: tm1621
+  id: tm1621_display
+  cs_pin: GPIO17
+  data_pin: GPIO5
+  read_pin: GPIO23
+  write_pin: GPIO18
+  lambda: |-
+    it.printf(0, "%.1f", id(myTemp).state);
+    it.display_celsius(true);
+    it.display_humidity(false);
+
+dallas:
+  - pin: GPIO25
+    update_interval: 10s
+  
+sensor:
+  - platform: dallas
+    # address: 0x1B3C01D6078CAF28
+    index: 0
+    name: ${node_name} Temperature
+    id: myTemp
+    filters:
+      - filter_out: nan
+
+binary_sensor:
+  - platform: gpio
+    pin: GPIO00
+    id: myButton
+    internal: true
+    filters:
+      - invert:
+      - delayed_off: 10ms
+    on_click:
+      - max_length: 350ms # short press to toggle the relay
+        then:
+          - switch.toggle: myRelay
+          # Turn off climate control
+          - climate.control:
+              id: myThermostat
+              mode: "OFF"
+      - min_length: 360ms # long press to toggle climate control
+        max_length: 3s
+        then:
+          - if:
+              condition:
+                lambda: |-
+                  return id(myThermostat).mode == CLIMATE_MODE_OFF;
+              then:
+                # We need to turn off realy due to a bug in the climate
+                # component. If the relay is on and climate control is
+                # turned on in idle mode (target temp < set temp) the relay
+                # will not be turned off automatically. It works fine if
+                # the climate control is turned on in heat mode (target temp >
+                # set temp), i.e. the relay will be turned on.
+                - switch.turn_off: myRelay
+                - climate.control:
+                    id: myThermostat
+                    mode: "HEAT"
+              else:
+                climate.control:
+                  id: myThermostat
+                  mode: "OFF"
+
+switch:
+  - platform: gpio
+    name: ${node_name} Relay State
+    pin: GPIO21
+    id: myRelay
+    restore_mode: RESTORE_DEFAULT_OFF
+    on_turn_on:
+      - light.turn_on: power_led
+    on_turn_off:
+      - light.turn_off: power_led
+  - platform: restart
+    id: myRestartSwitch
+  # This is needed to power the external sensor.
+  # It receives 3v3 from this pin, which is pulled up on boot.
+  - platform: gpio
+    pin: GPIO27
+    id: mySensorPower
+    restore_mode: ALWAYS_ON
+  - platform: gpio
+    id: dryContRelay
+    name: ${node_name} Dry Contact Relay
+    pin:
+      number: GPIO4
+      inverted: true
+    on_turn_on:
+      light.turn_on: green_led
+    on_turn_off:
+      light.turn_off: green_led
+
+output:
+  # Power LED
+  - id: power_led_output
+    platform: gpio
+    pin: 16
+    inverted: True
+
+  # GREEN LED 
+  - id: green_led_output
+    platform: gpio
+    pin: 13
+    inverted: True
+  
+### LIGHT ###
+
+light:
+  # Power LED
+  - platform: binary
+    id: power_led
+    output: power_led_output
+    internal: true
+
+  # Green LED
+  - platform: binary
+    id: green_led
+    output: green_led_output
+    internal: true
+
+  # Blue LED (middle). Used as wifi status indicator.
+  - platform: status_led
+    pin:
+      number: GPIO15
+      inverted: true
+    id: wifi_status_led  
+    internal: true   
+
+interval:
+  - interval: 30s
+    then:
+      if:
+        condition:
+          wifi.connected:
+        then:
+          - light.turn_on: wifi_status_led
+        else:
+          - light.turn_off: wifi_status_led
+
+climate:
+  - platform: thermostat
+    name: ${node_name} Thermostat
+    id: myThermostat
+    visual:
+      min_temperature: 0
+      max_temperature: 15
+      temperature_step: 1.0
+    sensor: myTemp
+    min_idle_time: 10s
+    min_heating_off_time: 10s
+    min_heating_run_time: 10s
+    default_preset: Home
+    preset:
+      - name: Home
+        default_target_temperature_low: ${target_temp}
+      - name: Away
+        default_target_temperature_low: ${away_target_temp}
+    heat_action:
+      - switch.turn_on: myRelay
+    idle_action:
+      - switch.turn_off: myRelay
+    off_mode:
+      - switch.turn_off: myRelay
+    on_state:
+      - if:
+          condition:
+            lambda: |-
+              return id(myThermostat).mode == CLIMATE_MODE_OFF;
+          then:
+            - light.turn_off: power_led
+      - if:
+          condition:
+            lambda: |-
+              return id(myThermostat).mode == CLIMATE_MODE_HEAT;
+          then:
+            - light.turn_on: power_led

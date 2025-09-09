@@ -1,0 +1,41 @@
+# Device specific substitutions
+substitutions:
+  node_id: "72"
+  node_name: esphome72
+  node_friendly_name: Fodernivå (hönshuset) (Ej installerad)
+  node_comment: Lolin32 Level
+  log_level: DEBUG
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.board_esp32_lolin32.yaml
+
+i2c:
+  sda: 21
+  scl: 22
+  scan: false
+  
+sensor:
+  - platform: vl53l0x
+    name: ${node_name} Distance1
+    id: distance1
+    address: 0x41
+    enable_pin: GPIO19
+    unit_of_measurement: "%"
+    update_interval: 6s
+    long_range: True
+    accuracy_decimals: 0
+    filters:
+      - median
+      - multiply: 1000
+      - lambda: |-
+          if (x < 950) {
+            if (x > 70) {
+              return (950 - x + 70) / 950 * 100;
+            } else {
+              return 100;
+            }
+          } else {
+            return 0;
+          }
+      - filter_out: nan

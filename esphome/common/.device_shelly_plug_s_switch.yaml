@@ -1,0 +1,114 @@
+# Root file for Shelly Plug S Light specific stuff
+
+packages:
+  file: !include .blueprint_shelly_plug_s.yaml
+
+switch:
+  - platform: output
+    name: ${node_name} Relay State
+    id: myRelay
+    output: myOutput
+    restore_mode: RESTORE_DEFAULT_ON
+    on_turn_on:
+      - output.turn_on: myLed
+    on_turn_off:
+      - output.turn_off: myLed
+
+binary_sensor:
+  # Button GPIO13
+  - platform: gpio
+    pin:
+      number: GPIO13
+      inverted: True
+    internal: true
+    name: myButton
+    on_press:
+      - switch.toggle: myRelay
+
+sensor:
+  # NTC Temperature
+  - platform: ntc
+    sensor: myTempResistance
+    id: myTemp
+    unit_of_measurement: "°C"
+    accuracy_decimals: 1
+    icon: "mdi:thermometer"
+    calibration:
+      b_constant: 3350
+      reference_resistance: 10kOhm
+      reference_temperature: 298.15K
+    on_value_range:
+      - above: ${max_temp}
+        then:
+          - switch.turn_off: myRelay
+          - homeassistant.action:
+              action: persistent_notification.create
+              data:
+                title: Message from ${node_name}
+              data_template:
+                message: Switch turned off because temperature exceeded ${max_temp}°C
+  - platform: resistance
+    id: myTempResistance
+    sensor: myTempAnalog
+    configuration: DOWNSTREAM
+    resistor: 32kOhm
+  - platform: adc
+    id: myTempAnalog
+    pin: A0
+
+  - platform: hlw8012
+    model: BL0937
+    sel_pin:
+      number: GPIO12
+      inverted: true
+    cf_pin: GPIO05
+    cf1_pin: GPIO14
+    current_resistor: ${current_res}
+    voltage_divider: ${voltage_div}
+    current:
+      name: "${node_name} Current"
+      unit_of_measurement: "A"
+      accuracy_decimals: 3
+      icon: mdi:flash-outline
+      on_value_range:
+        - above: ${max_current}
+          then:
+            - switch.turn_off: myRelay
+            - homeassistant.action:
+                action: persistent_notification.create
+                data:
+                  title: Message from ${node_name}
+                data_template:
+                  message: Switch turned off because current exceeded ${max_current}A
+    voltage:
+      name: "${node_name} Voltage"
+      unit_of_measurement: "V"
+      icon: mdi:flash-outline
+    power:
+      name: "${node_name} Power"
+      id: power
+      unit_of_measurement: "W"
+      filters:
+        - calibrate_linear:
+          - 0.0 -> 0.0
+          - ${power_cal_meas} -> ${power_cal_real}
+      icon: mdi:flash-outline
+      on_value_range:
+        - above: ${max_power}
+          then:
+            - switch.turn_off: myRelay
+            - homeassistant.action:
+                action: persistent_notification.create
+                data:
+                  title: Message from ${node_name}
+                data_template:
+                  message: Switch turned off because power exceeded ${max_power}W
+    update_interval: 10s
+
+  - platform: total_daily_energy
+    name: "${node_name} Daily energy"
+    power_id: power
+    filters:
+      # Multiplication factor from W to kW is 0.001
+      - multiply: 0.001
+    unit_of_measurement: kWh

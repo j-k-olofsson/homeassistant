@@ -1,0 +1,5 @@
+sensor:
+  - platform: temperature_feels_like
+    name: 'SMHI temp (inkl vindfaktor)'
+    unique_id: outside_temp_feels_like
+    source: weather.smhi_home

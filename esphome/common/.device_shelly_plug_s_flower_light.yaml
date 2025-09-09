@@ -1,0 +1,5 @@
+# Device type specific file for Shelly Plug S Flower Lights
+
+packages:
+  device_sonoff_basic: !include .device_shelly_plug_s_light.yaml
+  flower_light: !include .blueprint_flower_light.yaml

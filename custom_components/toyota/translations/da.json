@@ -1,0 +1,141 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "Angiv venligst din email og adgangskode til MyT nedenfor.",
+        "data": {
+          "email": "Email",
+          "password": "Adgangskode",
+          "use_metric_values": "Brug metriske enheder (f.eks. km i stedet for miles)"
+        }
+      }
+    },
+    "error": {
+      "invalid_username": "Email skal indeholde @.",
+      "invalid_auth": "Email/Adgangskode er forkert.",
+      "unknown": "Uventet fejl."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "use_liters": "Vis i liter (L/100 mil) i stedet for MPG. Gælder kun for biler der reportere deres data i mil."
+        }
+      }
+    }
+  },
+  "entity": {
+    "device_tracker": {
+      "parking_location": {
+        "name": "Lokation"
+      }
+    },
+    "sensor": {
+      "vin": {
+        "name": "Vehicle-Identify-Number"
+      },
+      "odometer": {
+        "name": "Odometer"
+      },
+      "fuel_level": {
+        "name": "Brændstof niveau"
+      },
+      "fuel_range": {
+        "name": "Fuel range"
+      },
+      "battery_level": {
+        "name": "Battery level"
+      },
+      "battery_range": {
+        "name": "Battery range"
+      },
+      "battery_range_ac": {
+        "name": "Battery range with AC"
+      },
+      "total_range": {
+        "name": "Total range"
+      },
+      "current_day_statistics": {
+        "name": "Statistik for denne dag"
+      },
+      "current_week_statistics": {
+        "name": "Statistik for denne uge"
+      },
+      "current_month_statistics": {
+        "name": "Statistik for denne måned"
+      },
+      "current_year_statistics": {
+        "name": "Statistik for dette år"
+      }
+    },
+    "binary_sensor": {
+      "over_all_status": {
+        "name": "Status"
+      },
+      "hood": {
+        "name": "Kølerhjelm"
+      },
+      "key_in_car": {
+        "name": "Nøgle sidder i bilen"
+      },
+      "front_defogger": {
+        "name": "Afrimer forrude"
+      },
+      "rear_defogger": {
+        "name": "Afrimer bagrude"
+      },
+      "driverseat_window": {
+        "name": "Føreside vindue"
+      },
+      "passengerseat_window": {
+        "name": "Passagererside vindue"
+      },
+      "leftrearseat_window": {
+        "name": "Venstre bagsæde vindue"
+      },
+      "rightrearseat_window": {
+        "name": "Højre bagsæde vindue"
+      },
+      "driverseat_door": {
+        "name": "Føreside dør"
+      },
+      "driverseat_lock": {
+        "name": "Føreside lås"
+      },
+      "passengerseat_door": {
+        "name": "Passagererside dør"
+      },
+      "passengerseat_lock": {
+        "name": "Passagererside lås"
+      },
+      "leftrearseat_door": {
+        "name": "Venstre bagsæde dør"
+      },
+      "leftrearseat_lock": {
+        "name": "Venstre bagsæde lås"
+      },
+      "rightrearseat_door": {
+        "name": "Højre bagsæde dør"
+      },
+      "rightrearseat_lock": {
+        "name": "Højre bagsæde lås"
+      },
+      "trunk_door": {
+        "name": "Baggagerum"
+      },
+      "trunk_lock": {
+        "name": "Baggagerum lås"
+      },
+      "hazardlights": {
+        "name": "Katastrofeblink"
+      },
+      "headlights": {
+        "name": "Forlygter"
+      },
+      "taillights": {
+        "name": "Baglygter"
+      }
+    }
+  }
+}

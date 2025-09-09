@@ -1,0 +1,12 @@
+# Device specific substitutions
+substitutions:
+  node_id: "11"
+  node_name: esphome11
+  node_friendly_name: Blomlampa (verandan)
+  node_comment: Shelly Plug S (VLAN IoT)
+  log_level: INFO
+  late_on: "false"
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.device_shelly_plug_s_flower_light.yaml

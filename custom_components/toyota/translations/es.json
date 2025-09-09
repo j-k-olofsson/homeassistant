@@ -1,0 +1,132 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "Ingrese su dirección de correo electrónico y contraseña para la aplicación de MyT abajo",
+        "data": {
+          "email": "Dirección de correo electrónico",
+          "password": "Contraseña",
+          "use_metric_values": "Utilizar unidades métricas (por ejemplo, km en lugar de millas)"
+        }
+      }
+    },
+    "error": {
+      "invalid_username": "La dirección de correo electrónico debe contener un @",
+      "invalid_auth": "Correo electrónico/Contraseña incorrecta.",
+      "unknown": "Error inesperado."
+    }
+  },
+  "entity": {
+    "device_tracker": {
+      "parking_location": {
+        "name": "Aparcamiento"
+      }
+    },
+    "sensor": {
+      "vin": {
+        "name": "Vehicle-Identify-Number"
+      },
+      "odometer": {
+        "name": "Odómetro"
+      },
+      "fuel_level": {
+        "name": "Nivel de combustible"
+      },
+      "fuel_range": {
+        "name": "Autonomía de combustible"
+      },
+      "battery_level": {
+        "name": "Nivel de batería"
+      },
+      "battery_range": {
+        "name": "Autonomía de la batería"
+      },
+      "battery_range_ac": {
+        "name": "Autonomía de la batería con AC"
+      },
+      "total_range": {
+        "name": "Total range"
+      },
+      "current_day_statistics": {
+        "name": "Estadísticas de hoy"
+      },
+      "current_week_statistics": {
+        "name": "Estadísticas de esta semana"
+      },
+      "current_month_statistics": {
+        "name": "Estadísticas de este mes"
+      },
+      "current_year_statistics": {
+        "name": "Estadísticas de este año"
+      }
+    },
+    "binary_sensor": {
+      "over_all_status": {
+        "name": "Estado general"
+      },
+      "hood": {
+        "name": "Capó"
+      },
+      "key_in_car": {
+        "name": "Llave en el coche"
+      },
+      "front_defogger": {
+        "name": "Desempañador delantero"
+      },
+      "rear_defogger": {
+        "name": "Desempañador trasero"
+      },
+      "driverseat_window": {
+        "name": "Ventanilla conductor"
+      },
+      "passengerseat_window": {
+        "name": "Ventanilla pasajero"
+      },
+      "leftrearseat_window": {
+        "name": "Ventanilla trasera izquierda"
+      },
+      "rightrearseat_window": {
+        "name": "Ventanilla trasera derecha"
+      },
+      "driverseat_door": {
+        "name": "Puerta conductor"
+      },
+      "driverseat_lock": {
+        "name": "Bloqueo puerta conductor"
+      },
+      "passengerseat_door": {
+        "name": "Puerta pasajero"
+      },
+      "passengerseat_lock": {
+        "name": "Bloqueo puerta pasajero"
+      },
+      "leftrearseat_door": {
+        "name": "Puerta trasera izquierda"
+      },
+      "leftrearseat_lock": {
+        "name": "Bloqueo puerta trasera izquierda"
+      },
+      "rightrearseat_door": {
+        "name": "Puerta trasera derecha"
+      },
+      "rightrearseat_lock": {
+        "name": "Bloqueo puerta trasera derecha"
+      },
+      "trunk_door": {
+        "name": "Maletero"
+      },
+      "trunk_lock": {
+        "name": "Bloqueo del maletero"
+      },
+      "hazardlights": {
+        "name": "Luces de emergencia"
+      },
+      "headlights": {
+        "name": "Faros delanteros"
+      },
+      "taillights": {
+        "name": "Faros traseros"
+      }
+    }
+  }
+}

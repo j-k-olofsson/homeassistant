@@ -1,0 +1,141 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "Bitte gebe unten deine E-Mail-Adresse und dein Passwort für MyT ein.",
+        "data": {
+          "email": "E-Mail",
+          "password": "Passwort",
+          "use_metric_values": "Benutze metrische Einheiten (bspw. km anstatt Meilen)"
+        }
+      }
+    },
+    "error": {
+      "invalid_username": "E-Mail muss @ enthalten.",
+      "invalid_auth": "E-Mail/Passwort ist falsch.",
+      "unknown": "Unerwarteter Fehler."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "use_liters": "Verwende Liter (L/100 Meilen) anstelle von MPG. Nur anwendbar, wenn dein Fahrzeug Daten in Meilen (imperiales Einheitensystem) meldet."
+        }
+      }
+    }
+  },
+  "entity": {
+    "device_tracker": {
+      "parking_location": {
+        "name": "Parkposition"
+      }
+    },
+    "sensor": {
+      "vin": {
+        "name": "Fahrzeug-Identifizierungsnummer"
+      },
+      "odometer": {
+        "name": "Kilometerzähler"
+      },
+      "fuel_level": {
+        "name": "Kraftstoffstand"
+      },
+      "fuel_range": {
+        "name": "Tankreichweite"
+      },
+      "battery_level": {
+        "name": "Batteriestand"
+      },
+      "battery_range": {
+        "name": "Batteriereichweite"
+      },
+      "battery_range_ac": {
+        "name": "Batteriereichweite mit AC"
+      },
+      "total_range": {
+        "name": "Gesamtreichweite"
+      },
+      "current_day_statistics": {
+        "name": "Aktuelle Tagesstatistiken"
+      },
+      "current_week_statistics": {
+        "name": "Aktuelle Wochenstatistiken"
+      },
+      "current_month_statistics": {
+        "name": "Aktuelle Monatsstatistiken"
+      },
+      "current_year_statistics": {
+        "name": "Aktuelle Jahresstatistiken"
+      }
+    },
+    "binary_sensor": {
+      "over_all_status": {
+        "name": "Gesamtstatus"
+      },
+      "hood": {
+        "name": "Motorhaube"
+      },
+      "key_in_car": {
+        "name": "Schlüssel im Auto"
+      },
+      "front_defogger": {
+        "name": "Enteisungsanlage vorne"
+      },
+      "rear_defogger": {
+        "name": "Enteisungsanlage hinten"
+      },
+      "driverseat_window": {
+        "name": "Seitenscheibe Fahrerseite"
+      },
+      "passengerseat_window": {
+        "name": "Seitenscheibe Beifahrerseite"
+      },
+      "leftrearseat_window": {
+        "name": "Seitenscheibe Fahrerseite hinten"
+      },
+      "rightrearseat_window": {
+        "name": "Seitenscheibe Beifahrerseite hinten"
+      },
+      "driverseat_door": {
+        "name": "Fahrertür"
+      },
+      "driverseat_lock": {
+        "name": "Verriegelung Fahrertür"
+      },
+      "passengerseat_door": {
+        "name": "Beifahrertür"
+      },
+      "passengerseat_lock": {
+        "name": "Verriegelung Beifahrertür"
+      },
+      "leftrearseat_door": {
+        "name": "Fahrertür hinten"
+      },
+      "leftrearseat_lock": {
+        "name": "Verriegelung Fahrertür hinten"
+      },
+      "rightrearseat_door": {
+        "name": "Beifahrertür hinten"
+      },
+      "rightrearseat_lock": {
+        "name": "Verriegelung Beifahrertür hinten"
+      },
+      "trunk_door": {
+        "name": "Heckklappe"
+      },
+      "trunk_lock": {
+        "name": "Verriegelung Heckklappe"
+      },
+      "hazardlights": {
+        "name": "Warnleuchten"
+      },
+      "headlights": {
+        "name": "Hauptscheinwerfer"
+      },
+      "taillights": {
+        "name": "Rückleuchten"
+      }
+    }
+  }
+}

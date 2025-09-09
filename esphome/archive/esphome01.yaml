@@ -1,0 +1,41 @@
+# Device specific substitutions
+substitutions:
+  node_id: "01"
+  node_name: esphome01
+  node_friendly_name: Lampa i redet (Hönshuset)
+  node_comment: Sonoff Basic (VLAN IoT)
+  log_level: INFO
+
+# Include packages for this device specific type
+packages:
+  device_sonoff_basic: !include common/.device_sonoff_basic_light.yaml
+
+# Control light on/off from /system/scene/state
+text_sensor:
+  - platform: homeassistant
+    id: light_scene
+    entity_id: input_select.light_scene
+    internal: true
+    on_value:
+      - if:
+          condition:
+            or:
+              - text_sensor.state:
+                  id: light_scene
+                  state: "NIGHT"
+              - text_sensor.state:
+                  id: light_scene
+                  state: "DUSK"
+          then:
+            - light.turn_on: myLight
+      - if:
+          condition:
+            or:
+              - text_sensor.state:
+                  id: light_scene
+                  state: "DAWN"
+              - text_sensor.state:
+                  id: light_scene
+                  state: "DAY"   
+          then:
+            - light.turn_off: myLight

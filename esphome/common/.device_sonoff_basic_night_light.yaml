@@ -1,0 +1,39 @@
+# Device type specific file for SonOff Basic Night Lights
+
+packages:
+  device_sonoff_basic: !include .device_sonoff_basic_light.yaml
+
+# Control light on/off from /system/scene/state
+text_sensor:
+  - platform: homeassistant
+    # Possible scene values are "DAY", "DAWN", "DUSK", "NIGHT", "ALARM", "XMAS", "PARTY"
+    id: myLightScen
+    entity_id: input_select.light_scene
+    internal: true
+    on_value:
+      - if:
+          condition:
+            or:
+              - text_sensor.state:
+                  id: myLightScen
+                  state: "DAWN"
+              - text_sensor.state:
+                  id: myLightScen
+                  state: "NIGHT"
+              - text_sensor.state:
+                  id: myLightScen
+                  state: "DUSK"
+          then:
+            - if:
+                condition:
+                  lambda: |-
+                    return ${active};
+                then:
+                  - light.turn_on: myLight
+      - if:
+          condition:
+            - text_sensor.state:
+                id: myLightScen
+                state: "DAY"   
+          then:
+            - light.turn_off: myLight

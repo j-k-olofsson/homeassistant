@@ -1,0 +1,41 @@
+light:
+  - platform: esp32_rmt_led_strip
+    chipset: WS2812
+    name: ${node_name} LED strip (${num_leds} st)
+    pin: ${gpio_pin}
+    num_leds: ${num_leds}
+    rgb_order: GRB
+    id: myLED
+    internal: false
+    restore_mode: RESTORE_DEFAULT_ON
+    default_transition_length: 3s
+    on_turn_on:
+      - script.execute: apply_scene
+    effects:
+      - addressable_random_twinkle:
+          name: xmas
+          twinkle_probability: 50%
+          progress_interval: 20ms
+      - addressable_fireworks:
+          name: party
+          update_interval: 32ms
+          spark_probability: 10%
+          use_random_color: false
+          fade_out_rate: 120
+      - lambda:
+          name: alarm
+          update_interval: 1s
+          lambda: |-
+            static int state = 0;
+            auto call = id(myLED).turn_on();
+            call.set_transition_length(1000);
+            call.set_rgb(1.0, 0.0, 0.0);
+            if (state == 0) {
+              call.set_brightness(1.0);
+            } else {
+              call.set_brightness(0.0);
+            }
+            call.perform();
+            state += 1;
+            if (state == 2)
+              state = 0;

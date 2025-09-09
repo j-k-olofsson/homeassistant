@@ -1,0 +1,90 @@
+# Root file for alla devices, only to be included by device specific package-files
+# Requires the following substitutions:
+#   - node_id
+#   - log_level
+
+# Enable WIFI
+wifi:
+  ssid: !secret IOT_SSID
+  password: !secret IOT_PWD
+  fast_connect: false
+  power_save_mode: none
+  domain: .local
+  manual_ip:
+    static_ip: 192.168.30.1${node_id}
+    gateway: 192.168.30.1
+    subnet: 255.255.255.0
+
+# Enable logging, disableing consol log
+logger:
+  level: ${log_level}
+
+# Enable web server
+web_server:
+  port: 80
+  include_internal: true
+  version: 2
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: !secret ENCRYPTION_KEY
+  actions:
+    - action: scan_wifi
+      then:
+        - lambda: |-
+            for (auto &scan : wifi::global_wifi_component->get_scan_result()) {
+              if (wifi::global_wifi_component->has_sta_priority(scan.get_bssid())) {
+                wifi::global_wifi_component->set_sta_priority(scan.get_bssid(), 0);
+              }
+            }
+            wifi::global_wifi_component->start_scanning();
+
+# Enable OTA
+ota:
+  - platform: esphome
+    password: !secret OTA_PWD
+
+# Enable generic sensors
+
+sensor:
+  - platform: wifi_signal
+    name: Wifi RSSI
+    internal: false
+    update_interval: 60s
+    unit_of_measurement: 'dBm'
+    device_class: signal_strength
+
+globals:
+  id: first_update
+  type: int
+  restore_value: no
+  initial_value: "0"
+
+text_sensor:
+  - platform: version
+    internal: True
+    name: ESPHome version
+    hide_timestamp: True
+  - platform: wifi_info
+    ip_address:
+      name: ESP IP Address
+      internal: True
+      address_0:
+        name: ESP IP Address 0
+        internal: True
+    ssid:
+      name: ESP Connected SSID
+      internal: True
+    bssid:
+      name: Wifi BSSID
+      internal: False
+    mac_address:
+      name: Wifi mac-address
+      internal: True
+    scan_results:
+      name: ESP Latest Scan Results
+      internal: True
+    dns_address:
+      name: ESP DNS Address
+      internal: True

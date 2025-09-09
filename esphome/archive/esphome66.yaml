@@ -1,0 +1,12 @@
+# Device specific substitutions
+substitutions:
+  node_id: "66"
+  node_name: esphome66
+  node_friendly_name: Voice Assistent (Köket)
+  node_comment: M5Stack Atom Echo (VLAN IoT)
+  log_level: INFO
+  micro_wake_word_model: hey_jarvis  # okay_nabu, alexa, hey_jarvis, hey_mycroft are also supported
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.device_m5stack_atom_echo.yaml

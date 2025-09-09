@@ -1,0 +1,43 @@
+# Substitutions
+substitutions:
+  node_id: "87"
+  node_name: esphome87
+  node_friendly_name: Egg Incubator Temp/Hum
+  node_comment: M5Stack Atom Echo
+  log_level: INFO
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.base.yaml
+
+# Node info
+esphome:
+  name: ${node_name}
+  comment: ${node_comment}
+  friendly_name: ${node_friendly_name}
+  name_add_mac_suffix: false
+
+esp32:
+  board: m5stack-atom
+  framework:
+    type: esp-idf
+
+i2c:
+  - id: bus_a
+    sda: 25
+    scl: 21
+    scan: true
+
+sensor:
+  - platform: shtcx
+    i2c_id: bus_a
+    temperature:
+      name: ${node_name} Temperature
+    humidity:
+      name: ${node_name} Humidity
+    address: 0x70
+
+switch:
+  - platform: restart
+    id: myRestartSwitch
+    internal: true

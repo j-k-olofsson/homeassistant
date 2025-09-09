@@ -1,0 +1,8 @@
+shell_command:
+  openwrt_backup: /config/shell_commands/openwrt-backup.sh
+
+script:
+  backup_all_openwrt_devices:
+    alias: OpenWRT backup - Backup av alla OpenWRT enheter i Tailscale-natverket
+    sequence:
+      service: shell_command.openwrt_backup

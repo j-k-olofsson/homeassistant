@@ -1,0 +1,160 @@
+packages:
+  ledstrip: !include .base_ledstrip.yaml
+
+# ------------------ SCENE-INPUT FRÅN HA ------------------
+text_sensor:
+  - platform: homeassistant
+    # Possible scene values are "DAY", "DAWN", "DUSK", "NIGHT", "ALARM", "XMAS", "PARTY"
+    id: myLightScen
+    entity_id: input_select.light_scene
+    internal: true
+    on_value:
+      then:
+        - script.execute: apply_scene
+
+# ------------------ SCENLOGIK ------------------
+script:
+  - id: apply_scene
+    mode: restart
+    then:
+      # DAY/DAWN/DUSK
+      - if:
+          condition:
+            or:
+              - text_sensor.state: { id: myLightScen, state: "DAY" }
+              - text_sensor.state: { id: myLightScen, state: "DAWN" }
+              - text_sensor.state: { id: myLightScen, state: "DUSK" }
+          then:
+            - light.turn_on:
+                id: myLED
+                effect: none
+            - light.turn_on:
+                id: myLED
+                brightness: ${day_brightness}
+                red: 80%
+                green: 70%
+                blue: 30%
+      # NIGHT
+      - if:
+          condition:
+            text_sensor.state: { id: myLightScen, state: "NIGHT" }
+          then:
+            - light.turn_on:
+                id: myLED
+                effect: none
+            - light.turn_on:
+                id: myLED
+                brightness: ${night_brightness}
+                red: 100%
+                green: 0%
+                blue: 0%
+      # XMAS
+      - if:
+          condition:
+            text_sensor.state: { id: myLightScen, state: "XMAS" }
+          then:
+            - light.turn_on:
+                id: myLED
+                brightness: 100%
+                effect: xmas
+      # ALARM
+      - if:
+          condition:
+            text_sensor.state: { id: myLightScen, state: "ALARM" }
+          then:
+            - light.turn_on:
+                id: myLED
+                brightness: 100%
+                effect: alarm
+      # PARTY
+      - if:
+          condition:
+            text_sensor.state: { id: myLightScen, state: "PARTY" }
+          then:
+            - light.turn_on:
+                id: myLED
+                brightness: 100%
+                effect: party
+
+
+
+
+
+
+# # Device type specific file for Ledstrip Indoors
+
+# packages:
+#   ledstrip: !include .base_ledstrip.yaml
+
+# text_sensor:
+#   - platform: homeassistant
+#     # Possible scene values are "DAY", "DAWN", "DUSK", "NIGHT", "ALARM", "XMAS", "PARTY"
+#     id: myLightScen
+#     entity_id: input_select.light_scene
+#     internal: true
+#     on_value:
+#       then :
+#         - if:
+#             condition:
+#               or:
+#                 - text_sensor.state:
+#                     id: myLightScen
+#                     state: "DAY"  
+#                 - text_sensor.state:
+#                     id: myLightScen
+#                     state: "DAWN"  
+#                 - text_sensor.state:
+#                     id: myLightScen
+#                     state: "DUSK"  
+#             then:
+#               - light.turn_on:
+#                   id: myLED
+#                   effect: "None"
+#               - light.turn_on:
+#                   id: myLED
+#                   brightness: ${day_brightness}
+#                   red: 80%
+#                   green: 70%
+#                   blue: 30%
+#         - if:
+#             condition:
+#               text_sensor.state:
+#                 id: myLightScen
+#                 state: "NIGHT"        
+#             then:
+#               - light.turn_on:
+#                   id: myLED
+#                   brightness: ${night_brightness}
+#                   red: 100%
+#                   green: 0%
+#                   blue: 0%
+#         - if:
+#             condition:
+#               text_sensor.state:
+#                 id: myLightScen
+#                 state: "XMAS"        
+#             then:
+#               - light.turn_on:
+#                   id: myLED
+#                   brightness: 100%
+#                   effect: xmas
+#         - if:
+#             condition:
+#               text_sensor.state:
+#                 id: myLightScen
+#                 state: "ALARM"        
+#             then:
+#               - light.turn_on:
+#                   id: myLED
+#                   brightness: 100%
+#                   effect: alarm
+#         - if:
+#             condition:
+#               text_sensor.state:
+#                 id: myLightScen
+#                 state: "PARTY"        
+#             then:
+#               - light.turn_on:
+#                   id: myLED
+#                   brightness: 100%
+#                   effect: party

@@ -1,0 +1,215 @@
+# Device type specific file for Lolin32 Wakeup Ledstrip Windows
+
+packages:
+  device_esp32_lolin32: !include .board_esp32_lolin32.yaml
+
+binary_sensor:
+  - platform: homeassistant
+    id: myGuestMode
+    entity_id: input_boolean.guest_mode
+    internal: true
+
+text_sensor:
+  - platform: homeassistant
+    # Possible scene values are "DAY", "DAWN", "DUSK", "NIGHT", "ALARM", "XMAS", "PARTY"
+    id: myLightScen
+    entity_id: input_select.light_scene
+    internal: true
+    on_value:
+      then :
+        - logger.log: ${node_name} Scene new value
+        - if:
+            condition:
+              - text_sensor.state:
+                  id: myLightScen
+                  state: "DAY"        
+            then:
+              - logger.log: ${node_name} DAY
+              - switch.template.publish:
+                  id: myRelay
+                  state: OFF
+              - light.turn_off:
+                  id: led_rgb
+        - if:
+            condition:
+              and:
+                - text_sensor.state:
+                    id: myLightScen
+                    state: "DUSK"
+                - binary_sensor.is_off: myGuestMode
+            then:
+              - logger.log: ${node_name} DUSK
+              - switch.template.publish:
+                  id: myRelay
+                  state: ON
+              - light.turn_on:
+                  id: led_rgb
+                  effect: "None"
+              - light.turn_on:
+                  id: led_rgb
+                  brightness: ${night_brightness}
+                  red: 80%
+                  green: 70%
+                  blue: 30%
+                  transition_length: 1s
+        - if:
+            condition:
+              and:
+                - text_sensor.state:
+                    id: myLightScen
+                    state: "DAWN"  
+                - lambda: |-
+                      return ${wakeuplight};  
+            then:
+              - logger.log: ${node_name} DAWN
+              - switch.template.publish:
+                  id: myRelay
+                  state: ON
+              - light.turn_on:
+                  id: led_rgb
+                  effect: "None"
+              - light.turn_on:
+                  id: led_rgb
+                  brightness: 20%
+                  effect: morning
+        - if:
+            condition:
+              text_sensor.state:
+                id: myLightScen
+                state: "XMAS"        
+            then:
+              - switch.template.publish:
+                  id: myRelay
+                  state: ON
+              - light.turn_on:
+                  id: led_rgb
+                  brightness: 100%
+                  effect: xmas
+        - if:
+            condition:
+              text_sensor.state:
+                id: myLightScen
+                state: "ALARM"        
+            then:
+              - switch.template.publish:
+                  id: myRelay
+                  state: ON
+              - light.turn_on:
+                  id: led_rgb
+                  brightness: 100%
+                  effect: alarm
+        - if:
+            condition:
+              text_sensor.state:
+                id: myLightScen
+                state: "PARTY"        
+            then:
+              - switch.template.publish:
+                  id: myRelay
+                  state: ON
+              - light.turn_on:
+                  id: led_rgb
+                  brightness: 100%
+                  effect: party
+  
+switch:
+  - platform: template
+    id: myRelay
+    internal: true
+    turn_on_action:
+      - switch.template.publish:
+            id: myRelay
+            state: ON
+      - light.turn_on:
+          id: led_rgb
+          effect: "None"
+      - light.turn_on:
+          id: led_rgb
+          brightness: ${night_brightness}
+          red: 80%
+          green: 70%
+          blue: 30%
+          transition_length: 1s
+    turn_off_action:
+      - switch.template.publish:
+          id: myRelay
+          state: OFF
+      - light.turn_off:
+          id: led_rgb
+
+light:
+  - platform: esp32_rmt_led_strip
+    chipset: WS2812
+    pin: ${gpio_pin}
+    num_leds: ${num_leds}
+    rgb_order: GRB
+    id: led_rgb
+    name: ${node_name} Light
+    internal: false
+    restore_mode: RESTORE_DEFAULT_ON
+    default_transition_length: 3s
+    effects:
+      - addressable_random_twinkle:
+          name: xmas
+          twinkle_probability: 50%
+          progress_interval: 20ms
+      - addressable_fireworks:
+          name: party
+          update_interval: 32ms
+          spark_probability: 10%
+          use_random_color: false
+          fade_out_rate: 120
+      - lambda:
+          name: alarm
+          update_interval: 1s
+          lambda: |-
+            static int state = 0;
+            auto call = id(led_rgb).turn_on();
+            call.set_transition_length(1000);
+            call.set_rgb(1.0, 0.0, 0.0);
+            if (state == 0) {
+              call.set_brightness(1.0);
+            } else {
+              call.set_brightness(0.0);
+            }
+            call.perform();
+            state += 1;
+            if (state == 2)
+              state = 0;
+      - addressable_lambda:
+          name: morning
+          update_interval: 10s
+          lambda: |-
+            static int i = 0;
+            if (initial_run) {
+              i = 0;
+            }
+            if ( i < it.size() ) {
+              ESP_LOGD("morning-a", "i: %d", i);
+              it[i] = ESPColor(204, 178, 76);
+              i++;
+            } 
+            if ( i == it.size() ) {
+              ESP_LOGD("morning-b", "i: %d", i);
+              auto call = id(led_rgb).turn_on();
+              call.set_brightness(0.2);
+              call.set_rgb(.8, 0.7, 0.3);
+              call.set_effect("morning2");
+              call.perform();
+            }
+      - lambda:
+          name: morning2
+          update_interval: 10s
+          lambda: |-
+            static float bright = 0.2;
+            if (initial_run) {
+              static float bright = 0.2;
+            }
+            if (bright < ${max_morning_brightness}) {
+              ESP_LOGD("morning2-c", "bright: %d", bright);
+              auto call = id(led_rgb).turn_on();
+              call.set_rgb(0.8, 0.7, 0.3);
+              call.set_brightness(bright);
+              call.perform();
+              bright = bright + 0.01;
+            }

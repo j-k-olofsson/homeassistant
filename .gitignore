@@ -2,15 +2,16 @@
 # An * ensures that everything will be ignored.
 *
 # You can whitelist files/folders with !, these will not be ignored.
+!*
 !*.yaml
-!esphome*
 !.gitignore
 !*.md
 
 # Ignore folders.
-.storage
+.cache
 .cloud
 .ssh
+.storage
 esphome/.esphome
 esphome/.vscode
 

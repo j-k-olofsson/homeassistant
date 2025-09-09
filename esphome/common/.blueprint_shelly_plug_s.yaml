@@ -1,0 +1,59 @@
+# Blueprint for Shelly Plug S
+
+substitutions:
+  # Higher value gives lower watt readout
+  # current_res: "0.000943" (16) -> 0.001033 ~ 12.3w
+  current_res: "0.001033"
+  # Lower value gives lower voltage readout
+  # voltage_div: "2066" (282.5) -> 1700 ~ 238.8v
+  voltage_div: "1700"
+  # measure a relatively strong load and enter values measured by the device vs the values your reference measurement provided here
+  power_cal_meas: "1710.0"
+  power_cal_real: "1685.0"
+  # max values
+  max_current: "10"
+  max_power: "2400"
+  max_temp: "70.0"
+
+# Node info
+esphome:
+  name: ${node_name}
+  comment: ${node_comment}
+  friendly_name: ${node_friendly_name}
+
+esp8266:
+  board: esp8285
+  framework:
+    version: recommended
+
+packages:
+  device_base: !include .base.yaml
+
+output:
+  # Relay GPIO15
+  - platform: gpio
+    pin: GPIO15
+    id: myOutput
+  # Red LED
+  - platform: gpio
+    pin: GPIO00
+    inverted: true
+    id: myLed
+
+status_led:
+  # Blue LED GPIO02
+  pin:
+    number: GPIO02
+    inverted: True
+
+switch:
+  - platform: restart
+    id: myRestartSwitch
+    internal: true
+
+time:
+  - platform: sntp
+    id: myTime
+    timezone: Europe/Stockholm
+    servers:
+     - 192.168.30.1

@@ -1,0 +1,20 @@
+template:
+  - sensor:
+      - name: Granny CarCharger Data
+        unique_id: granny_carcharger_data
+        state: "{{ states('input_datetime.granny_charger_trigger') }}"
+        attributes:
+          granny_data: >
+            {{
+              {
+                "carBatteryLevel": states("sensor.sef_42h_battery_level"),
+                "carManualOverride": states("input_boolean.car_man_override"),
+                "carFuelPrice": states("sensor.bensinpris_95"),
+                "carEnergyPer10km": states("input_number.car_energy_per_10km"),
+                "carFuelPer10km": states("input_number.car_fuel_per_10km"),
+                "carParkingLocation": states("device_tracker.sef_42h_parking_location"),
+                "carDoorsLocked": states("binary_sensor.car_doors_locked"),
+                "carBatteryCapacity": states("input_number.car_bat_capacity"),
+                "carChargerCapacity": states("input_number.car_charger_capacity")
+              } | tojson
+            }}

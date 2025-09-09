@@ -1,0 +1,141 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "Merci d'insérer vos identifiant et mot de passe MyT ci-dessous.",
+        "data": {
+          "email": "Email",
+          "password": "Mot de passe",
+          "use_metric_values": "Utiliser des unités métriques (par exemple, km au lieu de miles)"
+        }
+      }
+    },
+    "error": {
+      "invalid_username": "L'adresse Email doit contenir un @.",
+      "invalid_auth": "Email ou mot de passe incorrect.",
+      "unknown": "Erreur inattendue."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "use_liters": "Utiliser les littres (L/100 miles) au lieu de MPG. Applicable uniquement si votre voiture rapporte les données en miles (Système d'unités impériales)."
+        }
+      }
+    }
+  },
+  "entity": {
+    "device_tracker": {
+      "parking_location": {
+        "name": "Emplacement de stationnement"
+      }
+    },
+    "sensor": {
+      "vin": {
+        "name": "Numéro d'identification du véhicule"
+      },
+      "odometer": {
+        "name": "Odomètre"
+      },
+      "fuel_level": {
+        "name": "Niveau de carburant"
+      },
+      "fuel_range": {
+        "name": "Autonomie d'essence"
+      },
+      "battery_level": {
+        "name": "Niveau de batterie"
+      },
+      "battery_range": {
+        "name": "Autonomie électrique"
+      },
+      "battery_range_ac": {
+        "name": "Autonomie électrique avec AC"
+      },
+      "total_range": {
+        "name": "Autonomie totale"
+      },
+      "current_day_statistics": {
+        "name": "Statistiques aujourd'hui"
+      },
+      "current_week_statistics": {
+        "name": "Statistiques semaine en cours"
+      },
+      "current_month_statistics": {
+        "name": "Statistiques mois en cours"
+      },
+      "current_year_statistics": {
+        "name": "Statistiques année en cours"
+      }
+    },
+    "binary_sensor": {
+      "over_all_status": {
+        "name": "Situation globale"
+      },
+      "hood": {
+        "name": "Capot"
+      },
+      "key_in_car": {
+        "name": "Clé dans la voiture"
+      },
+      "front_defogger": {
+        "name": "Dégivrage avant"
+      },
+      "rear_defogger": {
+        "name": "Dégivrage arrière"
+      },
+      "driverseat_window": {
+        "name": "Fenêtre siège conducteur"
+      },
+      "passengerseat_window": {
+        "name": "Fenêtre siège passager"
+      },
+      "leftrearseat_window": {
+        "name": "Fenêtre arrière gauche"
+      },
+      "rightrearseat_window": {
+        "name": "Fenêtre arrière droite"
+      },
+      "driverseat_door": {
+        "name": "Porte siège conducteur"
+      },
+      "driverseat_lock": {
+        "name": "Verrouillage siège conducteur"
+      },
+      "passengerseat_door": {
+        "name": "Porte siège passager"
+      },
+      "passengerseat_lock": {
+        "name": "Verrouillage siège passager"
+      },
+      "leftrearseat_door": {
+        "name": "Porte arrière gauche"
+      },
+      "leftrearseat_lock": {
+        "name": "Verrouillage siège arrière gauche"
+      },
+      "rightrearseat_door": {
+        "name": "Porte arrière droite"
+      },
+      "rightrearseat_lock": {
+        "name": "Verrouillage siège arrière droit"
+      },
+      "trunk_door": {
+        "name": "Coffre"
+      },
+      "trunk_lock": {
+        "name": "Coffre fermé"
+      },
+      "hazardlights": {
+        "name": "Feux de détresse"
+      },
+      "headlights": {
+        "name": "Feux avants"
+      },
+      "taillights": {
+        "name": "Feux arrières"
+      }
+    }
+  }
+}

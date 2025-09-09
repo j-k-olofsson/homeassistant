@@ -1,0 +1,40 @@
+# Control light on/off from input_select.growlight_scene
+
+text_sensor:
+  - platform: homeassistant
+    id: myGrowlightPhase
+    entity_id: input_select.growlight_scene
+    internal: true
+    on_value:
+      - button.press: myButtonApplyScene
+
+button:
+  - platform: template
+    name: ${node_name} Apply Scene
+    id: myButtonApplyScene
+    on_press:
+      - if:
+          condition:
+            and:
+              - text_sensor.state:
+                  id: myGrowlightPhase
+                  state: "ON"   
+              - lambda: |-
+                      return !${late_on};
+          then:
+            - light.turn_on: myLight
+      - if:
+          condition:
+            and:
+              - text_sensor.state:
+                  id: myGrowlightPhase
+                  state: "LATE_ON"
+          then:
+            - light.turn_on: myLight
+      - if:
+          condition:
+            - text_sensor.state:
+                id: myGrowlightPhase
+                state: "OFF"   
+          then:
+            - light.turn_off: myLight

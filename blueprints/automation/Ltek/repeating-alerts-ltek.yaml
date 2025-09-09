@@ -1,0 +1,347 @@
+blueprint:
+  name: ⚠️ Repeating Alert Notifications by LTek
+  description: "\nRepeating Alert Notifications ideal for doors, windows, locks, etc\n\U0001F680
+    Version 2025.05.02.3\nAuthor : LTek\n\U0001F4D6 Features:\n- Repeat notifications
+    with several user confurible options : max count limit, time delay between alerts,
+    etc\n- Bypass entities to suppress notifications\n- Customizable alerts with rich
+    notifications\n- Automatic notification clearing\n"
+  domain: automation
+  source_url: https://gist.github.com/Ltek/0d88ed720f635a7579849aac93b9ff93
+  input:
+    trigger_entity:
+      name: "\U0001F916 Triggering Entity"
+      description: binary_sensor or input_boolean
+      selector:
+        entity:
+          domain:
+          - binary_sensor
+          - input_boolean
+          multiple: true
+    issue_state:
+      name: ⚠️ Triggering State
+      description: Entity state to trigger the Notification
+      default: 'on'
+      selector:
+        select:
+          options:
+          - 'on'
+          - 'off'
+          custom_value: false
+          multiple: false
+          sort: false
+    duration_issue_state:
+      name: ⏰ Time Delay before Alert is Sent
+      description: How long (in minutes) entity must be in the triggering state before
+        alerting starts. This delay can be used to only notify about sustained issues
+        (e.g., a door left open for 10 minutes).
+      default:
+        minutes: 0
+      selector:
+        duration:
+          enable_day: true
+    condition_send_notification:
+      name: "\U0001F50D Secondary Trigger Condition"
+      description: Condition is checked after the Triggering Entity. Useful for custom
+        triggers.
+      default: []
+      selector:
+        condition: {}
+    delete_notification:
+      name: "\U0001F5D1️ Clear Alert when Trigger ends?"
+      description: Delete notification when state changes from issue state
+      default: true
+      selector:
+        boolean: {}
+    duration_from_issue_state:
+      name: ⏳ Time Delay before Clearing Alert
+      description: How long the entity must be out of the trigger state before clearing
+        / deleting the notification. This delay can add stability when the issue resolves
+        (e.g., ignoring momentary door closings before clearing the alert).
+      default:
+        seconds: 0
+      selector:
+        duration:
+          enable_day: true
+    friendly_name:
+      name: "\U0001F3F7️ Custom Friendly Name"
+      description: Override the Friendly Name variable (Fridge, Snickerdoodle, etc)
+      default: ''
+      selector:
+        text:
+          multiline: false
+          multiple: false
+    notify_services_string:
+      name: "\U0001F4F2 Notify Services"
+      description: HA Services sending notifications. Supports multiple with a comma
+        separated list(e.g., notify.mobile_app_my_phone,notify.mobile_app_spouse_phone).
+      default: notify.mobile_app_<your_device_id>
+      selector:
+        text:
+          multiline: false
+          multiple: false
+    notification_click_url:
+      name: "\U0001F517 Open URL with tap"
+      description: URL opens when tapping the notification.
+      default: /dashboard-ROOM
+      selector:
+        text:
+          multiline: false
+          multiple: false
+    notification_title:
+      name: "\U0001F4E2 Notification Title"
+      description: Allows variables. Default is {{ friendly_name }}
+      default: '{{ friendly_name }} is Open'
+      selector:
+        text:
+          multiline: false
+          multiple: false
+    notification_message:
+      name: "\U0001F4EC Notification Message"
+      description: Allows variables like... {{ as_timestamp(states[trigger.entity_id].last_updated)
+        | timestamp_custom("%I:%M:%S %p") }}
+      default: Last Change was {{ as_timestamp(states[trigger.entity_id].last_updated)
+        | timestamp_custom("%I:%M:%S %p") }}
+      selector:
+        text:
+          multiline: false
+          multiple: false
+    repeat_notification:
+      name: "\U0001F501 Repeat Alerts"
+      description: Repeat at specific time intervals
+      default: false
+      selector:
+        boolean: {}
+    max_repeat_count:
+      name: "\U0001F554 Maximum Repeat Count"
+      description: Maximum number repeats for a single notification (0 for unlimited)
+      default: 0
+      selector:
+        number:
+          min: 0.0
+          max: 100.0
+          step: 1.0
+          mode: box
+    time_between_repeat_notification:
+      name: ⏳ Delay Between Repeats
+      description: Time between repeat notifications.
+      default:
+        minutes: 1
+      selector:
+        duration:
+          enable_day: true
+    bypass_entities:
+      name: "\U0001F6E1️ Bypass Entities"
+      description: When these Entities are "On" notifications will not be sent
+      default: []
+      selector:
+        entity:
+          domain:
+          - binary_sensor
+          - input_boolean
+          multiple: true
+    notification_icon_warning:
+      name: "\U0001F6A8 Notification Icon (Android Only)"
+      description: The icon that is shown when the issue is reported.
+      default: alert
+      selector:
+        select:
+          options:
+          - alert
+          - alert-circle
+          - door
+          - door-open
+          - motion-sensor
+          - fridge
+          - fridge-alert
+          - home
+          - home-alert
+          - home-assistant
+          - window-closed
+          - window-open
+          - window-open-variant
+          custom_value: false
+          multiple: false
+          sort: false
+    notification_color:
+      name: "\U0001F308 Notification Color (Android Only)"
+      description: The color of the notification.
+      default: red
+      selector:
+        select:
+          options:
+          - red
+          - orange
+          - yellow
+          - green
+          - blue
+          - purple
+          custom_value: false
+          multiple: false
+          sort: false
+    notification_persistent:
+      name: "\U0001F4CC Persistent Notification (Android Only)"
+      description: Notification cannot be closed manually, stays until the trigger
+        clears. Can be used with Repeats Alerts.
+      default: false
+      selector:
+        boolean: {}
+    notification_interruption_level:
+      name: "\U0001F514 Interruption Level (iOS Only)"
+      description: Intrusiveness of the notification received.
+      default: active
+      selector:
+        select:
+          options:
+          - passive
+          - active
+          - time-sensitive
+          - critical
+          custom_value: false
+          multiple: false
+          sort: false
+    custom_action_issue_state:
+      name: ⚙️ Custom Action - Entering Trigger State
+      description: Custom actions when trigger occurs
+      default: []
+      selector:
+        action: {}
+    custom_action_from_issue_state:
+      name: ⚙️ Custom Action - Exiting Trigger State
+      description: Custom actions when trigger ends
+      default: []
+      selector:
+        action: {}
+mode: restart
+max_exceeded: silent
+variables:
+  custom_friendly_name: !input friendly_name
+  trigger_entity: !input trigger_entity
+  issue_state: !input issue_state
+  duration_issue_state: !input duration_issue_state
+  condition_send_notification: !input condition_send_notification
+  delete_notification: !input delete_notification
+  duration_from_issue_state: !input duration_from_issue_state
+  notify_services_string: !input notify_services_string
+  notification_click_url: !input notification_click_url
+  notification_title: !input notification_title
+  notification_message: !input notification_message
+  repeat_notification: !input repeat_notification
+  max_repeat_count: !input max_repeat_count
+  time_between_repeat_notification: !input time_between_repeat_notification
+  bypass_entities: !input bypass_entities
+  notification_icon_warning: !input notification_icon_warning
+  notification_color: !input notification_color
+  notification_persistent: !input notification_persistent
+  notification_interruption_level: !input notification_interruption_level
+  custom_action_issue_state: !input custom_action_issue_state
+  custom_action_from_issue_state: !input custom_action_from_issue_state
+  repeat_count: 0
+trigger:
+- platform: state
+  entity_id: !input trigger_entity
+  to: !input issue_state
+  for: !input duration_issue_state
+  id: send_notification
+- platform: state
+  entity_id: !input trigger_entity
+  from: !input issue_state
+  for: !input duration_from_issue_state
+  id: delete_notification
+action:
+- variables:
+    notify_services_list: '{{ notify_services_string.split('','') }}'
+    number_of_notify_services: '{{ notify_services_list | count }}'
+    notification_tag: '{{ trigger_entity[-20:] }}-{{ custom_friendly_name[-20:] }}-{{
+      notify_services_string[-20:] }}'
+    initially_triggered_at: '{{ now() }}'
+- choose:
+  - conditions:
+    - condition: trigger
+      id: send_notification
+    - condition: template
+      value_template: "{% if bypass_entities | length > 0 %}\n  {{ not (bypass_entities
+        | selectattr('state', 'eq', 'on') | list | count > 0) }}\n{% else %}\n  true\n{%
+        endif %}"
+    - condition: !input condition_send_notification
+    sequence:
+    - variables:
+        friendly_name: "{% if custom_friendly_name != '' %}\n  {{ custom_friendly_name
+          }}\n{% else %}\n  {% set expanded_trigger_entity_list = expand(trigger_entity)\n
+          \   | selectattr('state', 'eq', issue_state)\n    | map(attribute='name')
+          | join(', ') %}\n  {{ ' & '.join(expanded_trigger_entity_list.rsplit(',
+          ', 1)) }}\n{% endif %}"
+    - parallel:
+      - repeat:
+          count: '{{ number_of_notify_services }}'
+          sequence:
+          - service: '{{ notify_services_list[repeat.index-1] }}'
+            data:
+              message: !input notification_message
+              title: !input notification_title
+              data:
+                clickAction: !input notification_click_url
+                url: !input notification_click_url
+                tag: '{{ notification_tag }}'
+                color: !input notification_color
+                notification_icon: mdi:{{ notification_icon_warning }}
+                push:
+                  interruption-level: !input notification_interruption_level
+                persistent: !input notification_persistent
+                sticky: !input notification_persistent
+      - choose: []
+        default: !input custom_action_issue_state
+    - if:
+      - condition: template
+        value_template: '{{ repeat_notification and (max_repeat_count == 0 or repeat_count
+          < max_repeat_count) and states(trigger_entity) == issue_state }}'
+      then:
+      - variables:
+          repeat_count: '{{ repeat_count + 1 }}'
+      - delay: !input time_between_repeat_notification
+      - repeat:
+          while:
+          - '{{ repeat_notification and (max_repeat_count == 0 or repeat_count < max_repeat_count)
+            and states(trigger_entity) == issue_state }}'
+          sequence:
+          - parallel:
+            - repeat:
+                count: '{{ number_of_notify_services }}'
+                sequence:
+                - service: '{{ notify_services_list[repeat.index-1] }}'
+                  data:
+                    message: !input notification_message
+                    title: !input notification_title
+                    data:
+                      clickAction: !input notification_click_url
+                      url: !input notification_click_url
+                      tag: '{{ notification_tag }}'
+                      color: !input notification_color
+                      notification_icon: mdi:{{ notification_icon_warning }}
+                      push:
+                        interruption-level: !input notification_interruption_level
+                      persistent: !input notification_persistent
+                      sticky: !input notification_persistent
+            - choose: []
+              default: !input custom_action_issue_state
+          - variables:
+              repeat_count: '{{ repeat_count + 1 }}'
+          - delay: !input time_between_repeat_notification
+  - conditions:
+    - condition: trigger
+      id: delete_notification
+    - condition: template
+      value_template: '{{ delete_notification }}'
+    sequence:
+    - variables:
+        repeat_count: 0
+    - parallel:
+      - repeat:
+          count: '{{ number_of_notify_services }}'
+          sequence:
+          - service: '{{ notify_services_list[repeat.index-1] }}'
+            data:
+              message: clear_notification
+              data:
+                tag: '{{ notification_tag }}'
+      - choose: []
+        default: !input custom_action_from_issue_state

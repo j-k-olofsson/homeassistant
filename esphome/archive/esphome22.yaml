@@ -1,0 +1,56 @@
+# Device specific substitutions
+substitutions:
+  node_id: "22"
+  node_name: esphhome22
+  node_friendly_name: Huvudströmbrytare Hippo (Ej aktiv)
+  node_comment: Sonoff TH10
+  log_level: INFO
+
+esphome:
+  name: ${node_name}
+  comment: ${node_comment}
+  friendly_name: ${node_friendly_name}
+
+esp8288:
+  board: esp8285
+
+packages:
+  device_base: !include common/.base.yaml
+
+status_led:
+  pin:
+    number: GPIO13
+    inverted: true
+
+switch:
+  - platform: gpio
+    name: ${node_name} Relay State
+    pin: GPIO12
+    id: myRelay
+    restore_mode: RESTORE_DEFAULT_OFF
+  - platform: restart
+    id: myRestart
+    name: ${node_name} Restart
+    internal: true
+
+binary_sensor:
+  - platform: gpio
+    id: device_button
+    internal: true
+    pin:
+      number: GPIO0
+      mode: INPUT_PULLUP
+      inverted: true
+    # on_press:
+    #   - switch.toggle: myRelay
+    on_multi_click:
+      - timing:
+        - ON for at least 3s
+        then:
+          - switch.toggle: myRelay
+    # on_double_click:
+    #   min_length: 50ms
+    #   max_length: 350ms
+    #   then:
+    #     - switch.turn_on: myRestart
+

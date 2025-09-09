@@ -1,0 +1,11 @@
+# Device specific substitutions
+substitutions:
+  node_id: "12"
+  node_name: esphome12
+  node_friendly_name: Luftpump (Hydroponi)
+  node_comment: Sonoff Basic as Pump (VLAN IoT)
+  log_level: INFO
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.device_sonoff_basic_switch.yaml

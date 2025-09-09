@@ -1,0 +1,11 @@
+# Device specific substitutions
+substitutions:
+  node_id: "06"
+  node_name: esphome06
+  node_friendly_name: Kompressor (Verkstan)
+  node_comment: Sonoff Basic
+  log_level: INFO
+
+# Include packages for this device specific type
+packages:
+  device_sonoff_basic: !include common/.device_sonoff_basic_switch.yaml

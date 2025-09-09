@@ -1,0 +1,98 @@
+# Device specific substitutions
+substitutions:
+  node_comment: BATTERY Lolin32 Lux/UV - Testrigg
+  node_name: deepsleep100
+  log_level: DEBUG
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.board_esp32_lolin32.yaml
+  
+esphome:
+  includes: 
+    - common/veml6075.h
+  libraries:
+    - SPI
+    - Wire
+    - "https://github.com/adafruit/Adafruit_BusIO"
+    - "https://github.com/adafruit/Adafruit_VEML6075"
+
+deep_sleep:
+  run_duration: 10s
+  sleep_duration: 10min
+  id: deep_sleep_1
+
+binary_sensor:
+  - platform: homeassistant
+    id: deep_sleep_prevent
+    entity_id: input_boolean.deep_sleep_prevent
+    on_value:
+      - if:
+          condition:
+            binary_sensor.is_on: deep_sleep_prevent
+          then:
+            - deep_sleep.prevent: deep_sleep_1
+  - platform: homeassistant
+    id: deep_sleep_mode
+    entity_id: input_boolean.deep_sleep_mode
+    on_value:
+      - if:
+          condition:
+            binary_sensor.is_on: deep_sleep_mode
+          then:
+            - deep_sleep.enter: deep_sleep_1
+
+i2c:
+   - id: bus_a
+     sda: 21
+     scl: 22
+     scan: false
+   - id: bus_b
+     sda: 16
+     scl: 17
+     scan: false
+  
+sensor:
+  - platform: adc
+    pin: GPIO36
+    id: voltage_sensor
+    name: ${node_name} Battery Voltage
+    update_interval: 10s
+    filters:
+      - multiply: 4.8828125
+    on_value:
+      then:
+        - sensor.template.publish:
+            id: battery_level
+            state: !lambda 
+              uint8_t percentage = 100;
+              float voltage = x / 0.2;
+              percentage = 4984.6172*pow(voltage,3) - 48287.7528*pow(voltage,2) + 155490.3329 * voltage - 166375.8607;
+              if (voltage > 3.7) 
+                percentage = 100;
+              else if (voltage <= 3.00)
+                percentage = 0;
+              return percentage;
+  - platform: template
+    name: ${node_name} Battery Level
+    id: battery_level
+    unit_of_measurement: "%"
+  - platform: bh1750
+    name: ${node_name} BH1750 Illuminance
+    i2c_id: bus_b
+    address: 0x23
+    update_interval: 10s
+  - platform: custom
+    lambda: |-
+      auto veml6075 = new VEML6075CustomSensor();
+      App.register_component(veml6075);
+      return {veml6075->uva_sensor, veml6075->uvb_sensor, veml6075->uvi_sensor};  
+    sensors:
+    - name: ${node_name} UVA
+      unit_of_measurement: "µW/cm²"
+      accuracy_decimals: 0
+    - name: ${node_name} UVB
+      unit_of_measurement: "µW/cm²"
+      accuracy_decimals: 0
+    - name: ${node_name} UVI
+      accuracy_decimals: 2

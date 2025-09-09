@@ -1,0 +1,67 @@
+# Device type specific file for Shelly 1 Climate
+
+# Node info
+esphome:
+  name: ${node_name}
+  comment: ${node_comment}
+  friendly_name: ${node_friendly_name}
+  on_boot:
+    priority: 500
+    then:
+      - climate.control:
+          id: myThermostat
+          mode: "HEAT"
+
+esp8266:
+  board: esp01_1m
+  framework:
+    version: recommended
+
+packages:
+  device_base: !include .base.yaml
+
+switch:
+  - platform: gpio
+    pin: GPIO04
+    id: myRelay
+    internal: true
+  - platform: restart
+    id: myRestartSwitch
+    internal: true
+
+shelly_dallas:
+  pin_a: GPIO3
+  pin_b: GPIO0
+
+sensor:
+  - platform: shelly_dallas
+    address: ${dallas_address}
+    id: myTemp
+    device_class: temperature
+    internal: false
+    name: ${node_name} Temperature
+
+climate:
+  - platform: thermostat
+    visual:
+      min_temperature: 0
+      max_temperature: 40
+      temperature_step: 0.5
+    name: ${node_name} Thermostat
+    id: myThermostat
+    sensor: myTemp
+    min_idle_time: 10s
+    min_heating_off_time: 10s
+    min_heating_run_time: 10s
+    default_preset: Away
+    preset:
+      - name: Home
+        default_target_temperature_low: ${home_target_temp}
+      - name: Comfort
+        default_target_temperature_low: ${comfort_target_temp}
+      - name: Away
+        default_target_temperature_low: ${away_target_temp}
+    heat_action:
+      - switch.turn_on: myRelay
+    idle_action:
+      - switch.turn_off: myRelay

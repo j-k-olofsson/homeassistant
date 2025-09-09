@@ -1,0 +1,26 @@
+# Device specific substitutions
+substitutions:
+  node_id: "32"
+  node_name: esphome32
+  node_friendly_name: Prusa XL Relay
+  node_comment: Sonoff PowR3 16D Elite
+  log_level: INFO
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.device_sonoff_powr316d.yaml
+
+binary_sensor:
+  - platform: gpio
+    id: device_button
+    internal: true
+    pin:
+      number: GPIO0
+      mode: INPUT_PULLUP
+      inverted: true
+    on_multi_click:
+      # single click
+      - timing:
+        - ON for at least 3s
+        then:
+          - switch.toggle: myRelay

@@ -1,0 +1,78 @@
+# Device specific substitutions
+substitutions:
+  node_id: "99"
+  node_name: esphome99
+  node_friendly_name: Hydroponi (Fläkt & Temp/Hyg)
+  node_comment: ESP32dev (VLAN IoT)
+  log_level: INFO
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.board_esp32dev.yaml
+
+i2c:
+  - id: bus_a
+    sda: 17
+    scl: 16
+    scan: true
+
+sensor:
+  - platform: shtcx
+    i2c_id: bus_a
+    address: 0x70
+    update_interval: 60s
+    temperature:
+      name: ${node_name} Temperatur
+      filters:
+        - filter_out: nan
+      on_value:
+        then :
+          - if:
+              condition:
+                lambda: 'return x < 18;'
+              then:
+                - fan.turn_off:
+                    id: evaq_fan
+              else:
+                - fan.turn_on:
+                    id: evaq_fan
+                    speed: !lambda |-
+                      if(x > 23)
+                        return 100;
+                      else
+                        return pow((x - 18),2) / 23 * 100;
+    humidity:
+      name: ${node_name} Luftfuktighet
+      filters:
+        - filter_out: nan
+    
+  - platform: pulse_counter
+    pin: GPIO26
+    name: ${node_name} Utblåsfläkt varvtal
+    unit_of_measurement: 'rpm'
+    accuracy_decimals: 0
+    filters:
+      - multiply: 0.5
+    count_mode:
+      rising_edge: INCREMENT
+      falling_edge: DISABLE
+    update_interval: 10s
+
+output:
+  - platform: ledc
+    pin: 
+      number: GPIO25
+      mode: OUTPUT
+    frequency: 25000Hz
+    id: evaq_pwm
+    min_power: 0.24
+    max_power: 1.0
+    zero_means_zero: true
+
+fan:
+  - platform: speed
+    id: evaq_fan
+    output: evaq_pwm
+    speed_count: 100
+    name: ${node_name} Utblåsfläkt fart
+    restore_mode: RESTORE_DEFAULT_ON 

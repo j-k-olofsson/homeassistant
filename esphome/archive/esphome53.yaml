@@ -1,0 +1,48 @@
+# Device specific substitutions
+substitutions:
+  node_id: "53"
+  node_name: esphome53
+  node_friendly_name: Julgran
+  node_comment: Esp32 D1 mini (VLAN IoT)
+  log_level: INFO
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.board_esp32_lolin32.yaml
+
+output:
+  - platform: ledc
+    pin: GPIO13
+    frequency: "1220Hz"
+    id: ledc_output
+
+light:
+  - platform: monochromatic
+    output: ledc_output
+    name: ${node_name} Light
+    id: mono_light
+    effects:
+      - pulse:
+          name: "Slow Pulse"
+          transition_length: 10s
+          update_interval: 10s
+      - pulse:
+          name: "Fast Pulse"
+          transition_length: 1s
+          update_interval: 1s
+
+# Control light on/off from /system/scene/state
+text_sensor:
+  - platform: homeassistant
+    id: light_scene
+    entity_id: input_select.light_scene
+    name: ${node_name} Light Scene
+    internal: true
+    on_value:
+      - if:
+          condition:
+            - text_sensor.state:
+                id: light_scene
+                state: "NIGHT"   
+          then:
+            - light.turn_off: mono_light

@@ -1,0 +1,13 @@
+# Device type specific file for M5stack Atom Echo
+
+# Node info
+esphome:
+  name: ${node_name}
+  comment: ${node_comment}
+  friendly_name: ${node_friendly_name}
+  name_add_mac_suffix: false
+
+packages:
+#   m5stack.atom-echo-voice-assistant: github://esphome/firmware/voice-assistant/m5stack-atom-echo.adopted.yaml@main
+  m5stack.atom-echo-voice-assistant: github://esphome/wake-word-voice-assistants/m5stack-atom-echo/m5stack-atom-echo.yaml@main
+  device_base: !include .base.yaml

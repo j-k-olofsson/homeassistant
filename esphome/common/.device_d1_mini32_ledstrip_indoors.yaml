@@ -1,0 +1,5 @@
+# Device type specific file for D1 Mini32 Ledstrip Indoors
+
+packages:
+  board: !include .board_d1_mini32.yaml
+  blueprint: !include .blueprint_ledstrip_indoors.yaml

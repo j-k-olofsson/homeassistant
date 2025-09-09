@@ -1,0 +1,8 @@
+disable_clock: true
+am_pm_clock: false
+disable_welcome_message: true
+v2_mode: false
+disable_sensor_graph: false
+invert_cover: false
+weather_entity: weather.smhi_home
+alarm_entity: ''

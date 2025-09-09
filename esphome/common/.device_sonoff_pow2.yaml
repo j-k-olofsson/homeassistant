@@ -1,0 +1,63 @@
+# Root file for SonOff POW2 specific stuff
+
+packages:
+  sonoff_basic: !include .blueprint_sonoff_basic_switch.yaml
+
+logger:
+  baud_rate: 0
+
+uart:
+  rx_pin: RX
+  baud_rate: 4800
+  parity: EVEN
+
+sensor:
+  - platform: cse7766
+    current:
+      name: ${node_name} Current
+      id: a_sensor
+      filters:
+        - throttle_average: 60s
+    voltage:
+      name: ${node_name} Voltage
+      id: v_sensor
+      filters:
+        - throttle_average: 60s
+    power:
+      name: ${node_name} Power
+      id: w_sensor
+      filters:
+        - throttle_average: 60s
+    energy:
+      name: ${node_name} Energy
+      id: wh_sensor
+      filters:
+        - throttle_average: 60s
+    apparent_power:
+      name: ${node_name} Apparent Power
+      id: ap_sensor
+      filters:
+        - throttle_average: 60s
+    reactive_power:
+      name: ${node_name} Reactive Power
+      id: rp_sensor
+      filters:
+        - throttle_average: 60s
+    power_factor:
+      name: ${node_name} Power Factor
+      id: pf_sensor
+      filters:
+        - throttle_average: 60s  
+  - platform: total_daily_energy
+    name: ${node_name} Daily Energy
+    power_id: w_sensor
+    unit_of_measurement: "kWh"
+    state_class: total_increasing
+    device_class: energy
+    accuracy_decimals: 3
+    filters:
+      # Multiplication factor from W to kW is 0.001
+      - multiply: 0.001
+time:
+  - platform: homeassistant
+    id: homeassistant_time

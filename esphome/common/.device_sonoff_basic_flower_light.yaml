@@ -1,0 +1,5 @@
+# Device type specific file for SonOff Basic Flower Lights
+
+packages:
+  device_sonoff_basic: !include .device_sonoff_basic_light.yaml
+  flower_light: !include .blueprint_flower_light.yaml

@@ -1,0 +1,34 @@
+# Device specific substitutions
+substitutions:
+  node_id: "33"
+  node_name: esphome33
+  node_friendly_name: Prusa Cam På/Av
+  node_comment: Shelly Plug S (VLAN IoT)
+  log_level: INFO
+  late_on: "false"
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.device_shelly_plug_s_switch.yaml
+
+text_sensor:
+  - platform: homeassistant
+    id: myPrusaxlStatus
+    entity_id: sensor.prusaxl
+    internal: true
+    on_value:
+      - if:
+          condition:
+            - not:
+              - text_sensor.state:
+                  id: myPrusaxlStatus
+                  state: "unavailable"   
+          then:
+            - switch.turn_on: myRelay
+      - if:
+          condition:
+            - text_sensor.state:
+                id: myPrusaxlStatus
+                state: "unavailable"
+          then:
+            - switch.turn_off: myRelay

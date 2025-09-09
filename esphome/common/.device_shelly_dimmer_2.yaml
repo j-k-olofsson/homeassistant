@@ -1,0 +1,120 @@
+# Device type specific file for Shelly Dimmer 2
+
+# Node info
+esphome:
+  name: ${node_name}
+  comment: ${node_comment}
+  friendly_name: ${node_friendly_name}
+  
+esp8266:
+  board: esp01_1m
+  framework:
+    version: recommended
+
+packages:
+  device_base: !include .base.yaml
+
+logger:
+    baud_rate: 0
+
+uart:
+    tx_pin: 1
+    rx_pin: 3
+    baud_rate: 115200
+
+# Required, even if empty
+sensor:
+
+light:
+  - platform: shelly_dimmer
+    name: ${node_name} Light
+    id: myLight
+    leading_edge: false
+    # warmup_brightness: ${node_min_brightness}
+    gamma_correct: 0
+    min_brightness: ${node_min_brightness}
+    default_transition_length: ${transition_period}
+    restore_mode: RESTORE_DEFAULT_OFF
+    power:
+      name: ${node_name} Light Power
+    voltage:
+      name: ${node_name} Light Voltage
+    current:
+      name: ${node_name} Light Current
+    firmware:
+      version: "51.6"
+      update: ${stm_fw_update}
+
+switch:
+  - platform: restart
+    id: myRestartSwitch
+    internal: true
+
+binary_sensor:
+  - platform: gpio
+    id: mySwitch
+    internal: true
+    pin:
+      number: GPIO14
+      mode: INPUT
+    filters:
+      - delayed_on_off: 25ms
+    on_multi_click:
+      # single click
+      - timing:
+        - ON for at most 0.5s
+        - OFF for at least 0.5s
+        then:
+          - light.toggle: 
+              id: myLight
+      # double click
+      - timing: 
+        - ON for at most 0.5s
+        - OFF for at most 0.5s
+        - ON for at most 0.5s
+        - OFF for at least 0.5s
+        then:
+          - light.turn_on:
+              id: myLight
+              brightness: 100%
+      # triple click
+      - timing: 
+        - ON for at most 0.5s
+        - OFF for at most 0.5s
+        - ON for at most 0.5s
+        - OFF for at most 0.5s
+        - ON for at most 0.5s
+        - OFF for at least 0.5s
+        then:
+          - light.turn_on:
+              id: myLight
+              brightness: ${node_preset_tripple_tap}
+      # Press then Hold button
+      - timing: 
+        - ON for at most 0.5s
+        - OFF for at most 0.5s
+        - ON for at least 0.25s
+        then:
+          - while:
+                condition:
+                  - binary_sensor.is_on: 
+                      id: mySwitch
+                then:
+                  - light.dim_relative:
+                      id: myLight
+                      relative_brightness: -1%
+                      transition_length: 0.05s
+                  - delay: 0.05s
+      # Hold button
+      - timing: 
+        - ON for at least 0.25s
+        then:
+          - while:
+                condition:
+                  - binary_sensor.is_on: mySwitch
+                then:
+                  - light.dim_relative:
+                      id: myLight
+                      relative_brightness: +1%
+                      transition_length: 0.05s
+                  - delay: 0.05s

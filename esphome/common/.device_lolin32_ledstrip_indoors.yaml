@@ -1,0 +1,5 @@
+# Device type specific file for Lolin32 Ledstrip Windows
+
+packages:
+  device_esp32_lolin32: !include .board_esp32_lolin32.yaml
+  ledstrip: !include .blueprint_ledstrip_indoors.yaml

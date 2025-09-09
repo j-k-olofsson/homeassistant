@@ -1,0 +1,104 @@
+# Device specific substitutions
+substitutions:
+  node_id: "13"
+  node_name: esphome13
+  node_friendly_name: Fönsterlampa (Kontoret)
+  node_comment: Biltema BK7231t (VLAN IoT)
+  log_level: INFO
+  night_brightness: 20%
+
+# Node info
+esphome:
+  name: ${node_name}
+  comment: ${node_comment}
+  friendly_name: ${node_friendly_name}
+
+bk72xx:
+  board: generic-bk7231t-qfn32-tuya
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.base.yaml
+
+# Control light on/off from /system/scene/state
+text_sensor:
+  - platform: homeassistant
+    # Possible scene values are "DAY", "DAWN", "DUSK", "NIGHT", "ALARM", "XMAS", "PARTY"
+    id: light_scene
+    entity_id: input_select.light_scene
+    name: SCEN helper Light Scene
+    internal: true
+    on_value:
+      - if:
+          condition:
+            # or:
+            - text_sensor.state:
+                id: light_scene
+                state: "DUSK"
+              # - text_sensor.state:
+              #     id: light_scene
+              #     state: "NIGHT"
+              # - text_sensor.state:
+              #     id: light_scene
+              #     state: "DAWN"
+          then:
+            - light.turn_on: 
+                id: myLight
+                brightness: ${night_brightness}
+      - if:
+          condition:
+            and:
+              - text_sensor.state:
+                  id: light_scene
+                  state: "NIGHT"
+              - text_sensor.state:
+                  id: guest_mode
+                  state: "on"
+          then:
+            - light.turn_off: 
+                id: myLight
+      - if:
+          condition:
+            - text_sensor.state:
+                id: light_scene
+                state: "DAY"   
+          then:
+            - light.turn_off: myLight
+  - platform: homeassistant
+    id: guest_mode
+    entity_id: input_boolean.guest_mode
+    name: Guest mode
+    internal: true
+  - platform: debug
+    reset_reason:
+      name: Reset Reason
+  - platform: libretiny
+    version:
+      name: LibreTiny Version
+
+switch:
+  - platform: restart
+    id: myRestart
+    name: ${node_name} Restart
+    internal: true
+
+debug:
+  update_interval: 30s
+
+output:
+  - platform: libretiny_pwm
+    id: output_cold
+    pin: P26
+  - platform: libretiny_pwm
+    id: output_warm
+    pin: P7
+
+light:
+  - platform: cwww
+    id: myLight
+    name: ${node_name} Light
+    cold_white_color_temperature: 6500 K
+    warm_white_color_temperature: 2700 K
+    cold_white: output_cold
+    warm_white: output_warm
+    restore_mode: RESTORE_DEFAULT_OFF

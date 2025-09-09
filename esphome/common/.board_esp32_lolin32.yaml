@@ -1,0 +1,29 @@
+# Root file for ESP32 Lolin32 specific stuff
+
+# Node info
+esphome:
+  name: ${node_name}
+  comment: ${node_comment}
+  friendly_name: ${node_friendly_name}
+
+esp32:
+  board: lolin32
+  framework:
+    type: esp-idf
+    version: recommended
+
+packages:
+  device_base: !include .base.yaml
+
+switch:
+  - platform: restart
+    internal: true
+    id: myRestartSwitch
+    
+# light:
+#   - platform: status_led
+#     id: myOnboardStatusLed
+#     internal: true
+#     pin:
+#       number: GPIO5
+#       inverted: true

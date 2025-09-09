@@ -1,0 +1,191 @@
+# Device specific substitutions
+substitutions:
+  node_id: "98"
+  node_name: esphome98
+  node_friendly_name: Testbänk (labbet) EJ INSTALLERAD
+  node_comment: Lolin32
+  log_level: INFO
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.board_esp32_lolin32.yaml
+
+sensor:
+  - platform: rotary_encoder
+    name: "Rotary Encoder"
+    id: myRotaryEncoder
+    pin_a: GPIO01
+    pin_b: GPIO03
+    resolution: 1
+    publish_initial_value: True
+    restore_mode: ALWAYS_ZERO
+    filters:
+      - debounce: 0.1s
+    on_clockwise: 
+      then:
+        # - homeassistant.action:
+        #     action: light.turn_on
+        #     data:
+        #       entity_id: light.taklampor_kallaren_esphome57_light
+        #       brightness_step_pct: '-5'
+        #       transition: '0.1'
+        - homeassistant.action:
+            action: media_player.volume_down
+            data:
+              entity_id: media_player.kokets_skarm
+    on_anticlockwise: 
+      then:
+        # - homeassistant.action:
+        #     action: light.turn_on
+        #     data:
+        #       entity_id: light.taklampor_kallaren_esphome57_light
+        #       brightness_step_pct: '5'
+        #       transition: '0.1'
+        - homeassistant.action:
+            action: media_player.volume_up
+            data:
+              entity_id: media_player.kokets_skarm
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO22
+      mode: INPUT_PULLUP
+      inverted: true
+    name: "Rotary Switch Button"
+    on_click: 
+      then:
+        # - homeassistant.action:
+        #     action: light.toggle
+        #     data:
+        #       entity_id: light.taklampor_kallaren_esphome57_light
+        - homeassistant.action:
+            action: media_player.media_play_pause
+            data:
+              entity_id: media_player.kokets_skarm
+
+
+# i2c:
+#   sda: 22
+#   scl: 21
+#   scan: true
+#   id: bus_a
+
+# display:
+#   platform: tm1638
+#   id: tm1638_display
+#   stb_pin: 19
+#   clk_pin: 18
+#   dio_pin: 23
+#   intensity: 4
+#   update_interval: 2s
+#   lambda: |-
+#       static int i = 0;
+#       i++;
+#       if ((i % 2) == 0) {
+#         it.strftime(0, "%H.%M", id(homeassistant_time).now());
+#         //it.printf(5, "%2.1f", id(room_temp).state);
+#         }
+#       else {
+#         it.printf(0, "EL.  ");
+#         it.printf(4, " %2.2f", id(energy_price).state);
+#         }
+
+# time:
+#   - platform: homeassistant
+#     id: homeassistant_time
+#     on_time_sync:
+#       then:
+#         - logger.log: "Synchronized system clock"
+
+# sensor:
+#   - platform: homeassistant
+#     id: room_temp
+#     entity_id: sensor.termostat_kontoret_esphome20_temperature
+#   - platform: homeassistant
+#     id: energy_price
+#     entity_id: sensor.nordpool
+  # - platform: shtcx
+  #   temperature:
+  #     name: ${node_name} SHTC3 Temperature
+  #     id: room_temp2
+  #   humidity:
+  #     name: ${node_name} SHTC3 Humidity
+  #   address: 0x70
+
+# text_sensor:
+#   - platform: homeassistant
+#     id: hippo_switch
+#     entity_id: switch.3d_skrivaren_esphhome22_relay_state
+#     on_value:
+#       - if:
+#           condition:
+#               text_sensor.state:
+#                 id: hippo_switch
+#                 state: "on"
+#           then:
+#             switch.turn_on: TM1638Led8
+#       - if:
+#           condition:
+#               text_sensor.state:
+#                 id: hippo_switch
+#                 state: "off"
+#           then:
+#             switch.turn_off: TM1638Led8
+
+# switch:
+#   - platform: tm1638
+#     id: TM1638Led1
+#     led: 0
+#   - platform: tm1638
+#     id: TM1638Led2
+#     led: 1
+#   - platform: tm1638
+#     id: TM1638Led3
+#     led: 2
+#   - platform: tm1638
+#     id: TM1638Led4
+#     led: 3
+#   - platform: tm1638
+#     id: TM1638Led5
+#     led: 4
+#   - platform: tm1638
+#     id: TM1638Led6
+#     led: 5
+#   - platform: tm1638
+#     id: TM1638Led7
+#     led: 6
+#   - platform: tm1638
+#     id: TM1638Led8
+#     led: 7
+
+# binary_sensor:
+#   - platform: tm1638
+#     id: TM1638Button1
+#     key: 0
+#     filters:
+#       - delayed_on: 10ms
+#     on_press:
+#      then:
+#         - switch.toggle: TM1638Led1
+#   - platform: tm1638
+#     id: TM1638Button2
+#     key: 1
+#     filters:
+#       - delayed_on: 10ms
+#     on_press:
+#      then:
+#         - switch.turn_on: TM1638Led2
+#     on_release:
+#       then:
+#         - switch.turn_off: TM1638Led2
+#   - platform: tm1638
+#     id: TM1638Button8
+#     key: 7
+#     filters:
+#       - delayed_on: 1000ms
+#     on_press:
+#      then:
+#         - homeassistant.action:
+#             action: switch.turn_on
+#             data:
+#                 entity_id: switch.3d_skrivaren_esphhome22_relay_state

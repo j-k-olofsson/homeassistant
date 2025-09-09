@@ -1,0 +1,15 @@
+# Root file for SonOff Mini specific stuff
+
+packages:
+  sonoff_basic_night_light: !include .device_sonoff_basic_night_light.yaml
+
+binary_sensor:
+  - platform: gpio
+    pin: GPIO04
+    id: sw_switch
+    on_press:
+      then:
+        - light.turn_on: myLight
+    on_release:
+      then:
+        - light.turn_off: myLight

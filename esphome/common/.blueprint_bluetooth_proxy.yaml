@@ -1,0 +1,26 @@
+bluetooth_proxy:
+  active: true
+
+wifi:
+  power_save_mode: LIGHT
+
+esp32_ble_tracker:
+  scan_parameters:
+    interval: 1100ms
+    window: 1100ms
+
+button:
+- platform: safe_mode
+  id: mySafeModeBoot
+  entity_category: diagnostic
+  internal: true
+
+time:
+  - platform: homeassistant
+    on_time:
+      - seconds: 00
+        minutes: 00
+        hours: /6
+        days_of_week: MON-SUN
+        then:
+           - switch.toggle: myRestartSwitch

@@ -1,0 +1,72 @@
+# Device type specific file for SonOff Basic Night Lights
+
+packages:
+  device_sonoff_basic: !include .device_sonoff_basic_light.yaml
+
+# Control light on/off from /system/scene/state and /system/winter/state
+text_sensor:
+  - platform: homeassistant
+    # Possible scene values are "DAWN", "DAY", "DUSK" and "NIGHT"
+    id: myLightScen
+    entity_id: input_select.light_scene
+    name: SCEN helper Light Scene
+    internal: true
+    on_value:
+      - if:
+          condition:
+            or:
+              - text_sensor.state:
+                  id: myLightScen
+                  state: "DAWN"
+              - text_sensor.state:
+                  id: myLightScen
+                  state: "NIGHT"
+              - text_sensor.state:
+                  id: myLightScen
+                  state: "DUSK"
+          then:
+            - if:
+                condition:
+                  binary_sensor.is_on: myWinterEquipment
+                then:
+                  - light.turn_on: myLight
+      - if:
+          condition:
+            - text_sensor.state:
+                id: myLightScen
+                state: "DAY"   
+          then:
+            - light.turn_off: myLight
+
+binary_sensor:
+  - platform: homeassistant
+    # Possible scene values are "ON", "OFF"
+    id: myWinterEquipment
+    entity_id: input_boolean.winter_equipment
+    internal: true
+    on_state:
+      - if:
+          condition:
+            or:
+              - text_sensor.state:
+                  id: myLightScen
+                  state: "DAWN"
+              - text_sensor.state:
+                  id: myLightScen
+                  state: "NIGHT"
+              - text_sensor.state:
+                  id: myLightScen
+                  state: "DUSK"
+          then:
+            - if:
+                condition:
+                  binary_sensor.is_on: myWinterEquipment
+                then:
+                  - light.turn_on: myLight
+      - if:
+          condition:
+            - text_sensor.state:
+                id: myLightScen
+                state: "DAY"   
+          then:
+            - light.turn_off: myLight

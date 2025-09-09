@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/house-of-abbey/GarminHomeAssistant/main/config.schema.json",
+  "title": "Home",
+  "items": [
+    {
+      "entity": "sensor,sef_42h_battery",
+      "name": "Bilbatteri",
+      "type": "sensor"
+    },
+    {
+      "entity": "light.grupp_lampor_vid_tvn",
+      "name": "TV lampor",
+      "type": "toggle"
+    },
+    {
+      "entity": "switch.Billaddning",
+      "name": "Billaddning",
+      "type": "toggle"
+    },
+    {
+      "entity": "switch.poolpump",
+      "name": "Poolpump",
+      "type": "toggle"
+    },
+    {
+      "entity": "light.pool_lampor",
+      "name": "Poolbelysning",
+      "type": "toggle"
+    }
+  ]
+}

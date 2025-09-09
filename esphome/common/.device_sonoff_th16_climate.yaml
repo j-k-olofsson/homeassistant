@@ -1,0 +1,54 @@
+# Device type specific file for SonOff TH16 Climate
+
+# Node info
+esphome:
+ on_boot:
+   priority: 500
+   then:
+     - climate.control:
+         id: myThermostat
+         mode: "HEAT"
+
+packages:
+  device_sonoff_basic: !include .blueprint_sonoff_basic_switch.yaml
+
+sensor:
+  - platform: dht
+    pin: GPIO14
+    model: SI7021
+    update_interval: 60s
+    temperature:
+      name: ${node_name} Temperature
+      id: myTemp
+      filters:
+        - filter_out: nan
+    humidity:
+      name: ${node_name} Humidity
+      id: myHumidity
+      filters:
+        - filter_out: nan
+
+climate:
+  - platform: thermostat
+    visual:
+      min_temperature: 0
+      max_temperature: 30
+      temperature_step: 0.5
+    name: ${node_name} Thermostat
+    id: myThermostat
+    sensor: myTemp
+    min_idle_time: 10s
+    min_heating_off_time: 10s
+    min_heating_run_time: 10s
+    default_preset: Away
+    preset:
+      - name: Home
+        default_target_temperature_low: ${home_target_temp}
+      - name: Comfort
+        default_target_temperature_low: ${comfort_target_temp}
+      - name: Away
+        default_target_temperature_low: ${away_target_temp}
+    heat_action:
+      - switch.turn_on: myRelay
+    idle_action:
+      - switch.turn_off: myRelay

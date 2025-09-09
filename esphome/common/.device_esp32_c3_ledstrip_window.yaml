@@ -1,0 +1,149 @@
+# Device type specific file for Lolin32 Ledstrip Windows
+
+packages:
+  device_esp32_lolin32: !include .board_esp32_c3.yaml
+
+text_sensor:
+  - platform: homeassistant
+    # Possible scene values are "DAY", "DAWN", "DUSK", "NIGHT", "ALARM", "XMAS", "PARTY"
+    id: myLightScen
+    entity_id: input_select.light_scene
+    internal: true
+    on_value:
+      then :
+        - switch.turn_on: myRelay
+        
+switch:
+  - platform: template
+    id: myRelay
+    internal: true
+    turn_on_action:
+        - light.turn_off:
+            id: led_rgb
+        - if:
+            condition:
+              or:
+                - text_sensor.state:
+                    id: myLightScen
+                    state: "DAY"        
+                - text_sensor.state:
+                    id: myLightScen
+                    state: ""        
+            then:
+              - switch.template.publish:
+                  id: myRelay
+                  state: OFF
+              - light.turn_off:
+                  id: led_rgb
+        - if:
+            condition:
+              or:
+                - text_sensor.state:
+                    id: myLightScen
+                    state: "NIGHT"  
+                - text_sensor.state:
+                    id: myLightScen
+                    state: "DAWN"  
+                - text_sensor.state:
+                    id: myLightScen
+                    state: "DUSK"  
+            then:
+              - switch.template.publish:
+                  id: myRelay
+                  state: ON
+              - light.turn_on:
+                  id: led_rgb
+                  effect: "None"
+              - light.turn_on:
+                  id: led_rgb
+                  brightness: ${night_brightness}
+                  red: 80%
+                  green: 70%
+                  blue: 30%
+                  transition_length: 3s
+        - if:
+            condition:
+              text_sensor.state:
+                id: myLightScen
+                state: "XMAS"        
+            then:
+              - switch.template.publish:
+                  id: myRelay
+                  state: ON
+              - light.turn_on:
+                  id: led_rgb
+                  brightness: 100%
+                  effect: xmas
+        - if:
+            condition:
+              text_sensor.state:
+                id: myLightScen
+                state: "ALARM"        
+            then:
+              - switch.template.publish:
+                  id: myRelay
+                  state: ON
+              - light.turn_on:
+                  id: led_rgb
+                  brightness: 100%
+                  effect: alarm
+        - if:
+            condition:
+              text_sensor.state:
+                id: myLightScen
+                state: "PARTY"        
+            then:
+              - switch.template.publish:
+                  id: myRelay
+                  state: ON
+              - light.turn_on:
+                  id: led_rgb
+                  brightness: 100%
+                  effect: party
+    turn_off_action:
+        - switch.template.publish:
+            id: myRelay
+            state: OFF
+        - light.turn_off: 
+            id: led_rgb
+
+light:
+  - platform: esp32_rmt_led_strip
+    chipset: WS2812
+    name: ${node_name} Light
+    pin: ${gpio_pin}
+    num_leds: ${num_leds}
+    rgb_order: GRB
+    id: led_rgb
+    internal: false
+    restore_mode: RESTORE_DEFAULT_ON
+    default_transition_length: 3s
+    effects:
+      - addressable_random_twinkle:
+          name: xmas
+          twinkle_probability: 50%
+          progress_interval: 20ms
+      - addressable_fireworks:
+          name: party
+          update_interval: 32ms
+          spark_probability: 10%
+          use_random_color: false
+          fade_out_rate: 120
+      - lambda:
+          name: alarm
+          update_interval: 1s
+          lambda: |-
+            static int state = 0;
+            auto call = id(led_rgb).turn_on();
+            // Transtion of 1000ms = 1s
+            call.set_transition_length(1000);
+            call.set_rgb(1.0, 0.0, 0.0);
+            if (state == 0) {
+              call.set_brightness(1.0);
+            } else {
+              call.set_brightness(0.0);
+            }
+            call.perform();
+            state += 1;
+            if (state == 2)
+              state = 0;

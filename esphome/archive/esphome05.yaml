@@ -1,0 +1,82 @@
+# Device specific substitutions
+substitutions:
+  node_id: "05"
+  node_name: esphome05
+  node_friendly_name: Växtbelysning (Hydroponi)
+  node_comment: Sonoff Basic (VLAN IoT)
+  log_level: INFO
+  late_on: "false"
+
+# Include packages for this device specific type
+packages:
+  # file: !include common/.device_sonoff_basic_flower_light.yaml
+  device_sonoff_basic: !include common/.device_sonoff_basic_light.yaml
+  
+# OVERRIDE
+# Control light on/off from input_select.growlight_scene
+text_sensor:
+  - platform: homeassistant
+    id: growlight_phase
+    name: SCEN helper growlight_phase
+    entity_id: input_select.growlight_scene
+    internal: true
+    on_value:
+      - if:
+          condition:
+            and:
+              - text_sensor.state:
+                  id: growlight_phase
+                  state: "ON"   
+              - lambda: |-
+                      return !${late_on};
+              - binary_sensor.is_on: hydrophonic_equipment
+          then:
+            - light.turn_on: myLight
+      - if:
+          condition:
+            and:
+              - text_sensor.state:
+                  id: growlight_phase
+                  state: "LATE_ON"
+              - binary_sensor.is_on: hydrophonic_equipment   
+          then:
+            - light.turn_on: myLight
+      - if:
+          condition:
+            - text_sensor.state:
+                id: growlight_phase
+                state: "OFF"   
+          then:
+            - light.turn_off: myLight
+
+binary_sensor:
+  - platform: homeassistant
+    # Possible scene values are "ON", "OFF"
+    id: hydrophonic_equipment
+    entity_id: input_boolean.tillstand_hydrofoniprylar
+    name: SCEN helper Hydrophonic equipments
+    internal: true
+    on_state:
+      - if:
+          condition:
+            and:
+              - text_sensor.state:
+                  id: growlight_phase
+                  state: "ON"  
+              - binary_sensor.is_on: hydrophonic_equipment
+          then:
+            - light.turn_on: myLight
+      - if:
+          condition:
+            and:
+              - text_sensor.state:
+                  id: growlight_phase
+                  state: "LATE_ON"  
+              - binary_sensor.is_on: hydrophonic_equipment
+          then:
+            - light.turn_on: myLight
+      - if:
+          condition:
+            - binary_sensor.is_off: hydrophonic_equipment
+          then:
+            - light.turn_off: myLight

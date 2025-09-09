@@ -1,0 +1,4 @@
+# Device file for SonOff Basic Switch specific stuff
+
+packages:
+  device_blueprint: !include .blueprint_sonoff_basic_switch.yaml

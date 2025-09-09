@@ -1,0 +1,11 @@
+binary_sensor:
+  - platform: gpio
+    id: myKillButton
+    internal: true
+    pin:
+      number: ${kill_button_pin}
+      mode: INPUT_PULLUP
+      inverted: True
+    on_press:
+      then:
+        - light.toggle: myLED
