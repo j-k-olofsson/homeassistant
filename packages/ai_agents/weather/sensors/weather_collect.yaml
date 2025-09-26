@@ -8,7 +8,7 @@ template:
       - platform: time_pattern
         minutes: "/15"
       - platform: state
-        entity_id: weather.smhi
+        entity_id: weather.vaderprognos_hem
     sensor:
       - name: weather_today_temp_max
         unique_id: weather_today_temp_max
