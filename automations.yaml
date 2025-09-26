@@ -1621,136 +1621,6 @@
   - set_conversation_response: All värme på övervåningen är nu inställd på 16 grader
   mode: queued
   max: 10
-- &id001
-  id: esphome_install_updates_button
-  alias: Uppdatera ESPHome-enheter
-  description: Denna automation startar en process för att uppdatera alla ESPHome-enheter
-    i högst tre pass. En notifiering skapas för varje pass som visar status för uppdateringarna.
-  triggers:
-  - entity_id: input_button.uppgradera_esphome_enheter
-    trigger: state
-  conditions: []
-  actions:
-  - data:
-      title: ESPHome – uppdatering pågår
-      message: Startar ESPHome‑uppdateringar (upp till {{ max_passes }} pass).
-      notification_id: '{{ notif_id }}'
-    action: persistent_notification.create
-  - data:
-      name: Updater
-      message: Startar ESPHome‑uppdateringar (upp till {{ max_passes }} pass).
-    action: logbook.log
-  - repeat:
-      count: '{{ max_passes }}'
-      sequence:
-      - variables:
-          updates_this_pass: "{%- set ns = namespace(items=[]) -%} {%- for s in states.update
-            -%}\n  {%- set dev = device_id(s.entity_id) -%}\n  {%- set ids = device_attr(dev,
-            'identifiers') -%}\n  {%- if ids and ('esphome' in ids|string) and is_state(s.entity_id,
-            'on') -%}\n    {%- set ns.items = ns.items + [ s.entity_id ] -%}\n  {%-
-            endif -%}\n{%- endfor -%} {{ ns.items }}"
-          pass_index: '{{ repeat.index }}'
-      - data:
-          title: ESPHome – uppdatering (pass {{ pass_index }} / {{ max_passes }})
-          message: Pass {{ pass_index }} startar. Hittade {{ updates_this_pass | length
-            }} ESPHome‑uppdateringar. Automation kör igenom alla enheter en gång.
-            Se Loggbok för detaljer.
-          notification_id: '{{ notif_id }}'
-        action: persistent_notification.create
-      - data:
-          name: Updater
-          message: 'Pass {{ pass_index }}: hittade {{ updates_this_pass | length }}
-            ESPHome‑uppdateringar.'
-        action: logbook.log
-      - if:
-        - condition: template
-          value_template: '{{ updates_this_pass | length == 0 }}'
-        then:
-        - data:
-            title: ESPHome – inget att installera
-            message: Inget att installera i pass {{ pass_index }}. Avslutar i förtid.
-            notification_id: '{{ notif_id }}'
-          action: persistent_notification.create
-        - data:
-            name: Updater
-            message: 'Pass {{ pass_index }}: inget att installera – avslutar i förtid.'
-          action: logbook.log
-        - stop: Klar – inget att installera i detta och följande pass.
-      - repeat:
-          for_each: '{{ updates_this_pass }}'
-          sequence:
-          - variables:
-              entity: '{{ repeat.item }}'
-          - data:
-              name: Updater
-              message: 'Pass {{ pass_index }}: försöker installera {{ entity }}.'
-            action: logbook.log
-          - data:
-              title: ESPHome – uppdatering (pass {{ pass_index }} / {{ max_passes
-                }})
-              message: 'Installerar: {{ entity }}. Kvar i detta pass: {{ (updates_this_pass
-                | length) - repeat.index }} st.'
-              notification_id: '{{ notif_id }}'
-            action: persistent_notification.create
-          - target:
-              entity_id: '{{ entity }}'
-            data:
-              backup: true
-            action: update.install
-          - delay: 00:00:02
-      - delay: '{{ settle_delay }}'
-      - variables:
-          preview_remaining: "{%- set ns = namespace(items=[]) -%} {%- for s in states.update
-            -%}\n  {%- set dev = device_id(s.entity_id) -%}\n  {%- set ids = device_attr(dev,
-            'identifiers') -%}\n  {%- if ids and ('esphome' in ids|string) and is_state(s.entity_id,
-            'on') -%}\n    {%- set ns.items = ns.items + [ s.entity_id ] -%}\n  {%-
-            endif -%}\n{%- endfor -%} {{ ns.items }}"
-      - data:
-          title: ESPHome – pass {{ pass_index }} klart
-          message: 'Pass {{ pass_index }} klart. Återstående uppdateringar just nu:
-            {{ preview_remaining | length }}. {{- ''\n'' -}} {{- ''Fortsätter till
-            nästa pass...'' if pass_index < max_passes else ''Summerar resultat...''
-            -}}'
-          notification_id: '{{ notif_id }}'
-        action: persistent_notification.create
-  - variables:
-      remaining: "{%- set ns = namespace(items=[]) -%} {%- for s in states.update
-        -%}\n  {%- set dev = device_id(s.entity_id) -%}\n  {%- set ids = device_attr(dev,
-        'identifiers') -%}\n  {%- if ids and ('esphome' in ids|string) and is_state(s.entity_id,
-        'on') -%}\n    {%- set ns.items = ns.items + [ s.entity_id ] -%}\n  {%- endif
-        -%}\n{%- endfor -%} {{ ns.items }}"
-  - choose:
-    - conditions:
-      - condition: template
-        value_template: '{{ remaining | length > 0 }}'
-      sequence:
-      - data:
-          title: ESPHome – uppdateringar kvar efter {{ max_passes }} pass
-          message: 'Följande ESPHome‑uppdateringar kvarstår ({{ remaining | length
-            }} st): {{ remaining | join('', '') }}. Kontrollera respektive enhet (kan
-            kräva omstart eller manuell åtgärd).'
-          notification_id: '{{ notif_id }}'
-        action: persistent_notification.create
-      - data:
-          name: Updater
-          message: 'Klart efter {{ max_passes }} pass – återstående ESPHome‑uppdateringar:
-            {{ remaining | join('', '') }}'
-        action: logbook.log
-    default:
-    - data:
-        title: ESPHome – klart
-        message: Alla ESPHome‑uppdateringar installerade inom {{ max_passes }} pass.
-        notification_id: '{{ notif_id }}'
-      action: persistent_notification.create
-    - data:
-        name: Updater
-        message: Klart – alla ESPHome‑uppdateringar installerade.
-      action: logbook.log
-  mode: single
-  variables:
-    max_passes: 3
-    settle_delay: 00:00:20
-    notif_id: esphome_update_progress
 - id: '1747115239605'
   alias: SCEN - TV och Belysning
   description: Denna automation styr belysningen i rummet baserat på TV:ns status.
@@ -2089,149 +1959,137 @@
           entity_id: light.esphome62_led_strip
         action: light.turn_on
   mode: single
-- *id001
-- *id001
-- id: '1756027866669'
-  alias: Uppdatera ESPHome-enheter (med omförsök + logg + summering)
-  description: Uppdaterar alla ESPHome update.*_firmware som är 'on' enligt din befintliga
-    filtrering, med upp till 2 omförsök. Loggar och notifierar fel/summering.
+- &id001
+  id: esphome_install_updates_button
+  alias: Uppdatera ESPHome-enheter
+  description: Denna automation startar en process för att uppdatera alla ESPHome-enheter
+    i högst tre pass. En notifiering skapas för varje pass som visar status för uppdateringarna.
   triggers:
   - entity_id: input_button.uppgradera_esphome_enheter
     trigger: state
+  conditions: []
   actions:
-  - choose:
-    - conditions:
-      - condition: template
-        value_template: '{{ total_count == 0 }}'
-      sequence:
-      - action: persistent_notification.create
-        data:
-          title: ESPHome – Summering
-          message: Inga ESPHome‑uppdateringar hittades (alla är redan uppdaterade).
-          notification_id: '{{ notif_id_summary }}'
-      - action: logbook.log
-        data:
-          name: ESPHome Update
-          message: Inget att uppdatera. Avslutar.
-      - stop: 'Klart: inget att uppdatera.'
-    default: []
-  - action: persistent_notification.create
-    data:
-      title: ESPHome – Startar uppdateringar
-      message: 'Hittade {{ total_count }} enhet(er) med tillgänglig firmware: {{ to_update_initial
-        | map(''replace'',''update.'','''') | map(''replace'',''_firmware'','''')
-        | list | sort | join('', '') }}. Försöker upp till {{ max_attempts }} gång(er).'
-      notification_id: '{{ notif_id_summary }}'
-  - action: logbook.log
-    data:
-      name: ESPHome Update
-      message: Startar uppdatering av {{ total_count }} enhet(er). Max {{ max_attempts
-        }} försök.
+  - data:
+      title: ESPHome – uppdatering pågår
+      message: Startar ESPHome‑uppdateringar (upp till {{ max_passes }} pass).
+      notification_id: '{{ notif_id }}'
+    action: persistent_notification.create
+  - data:
+      name: Updater
+      message: Startar ESPHome‑uppdateringar (upp till {{ max_passes }} pass).
+    action: logbook.log
   - repeat:
-      while:
-      - condition: template
-        value_template: '{{ attempt <= max_attempts }}'
-      - condition: template
-        value_template: '{{ failed_list | length > 0 }}'
+      count: '{{ max_passes }}'
       sequence:
-      - action: logbook.log
-        data:
-          name: ESPHome Update
-          message: 'Försök {{ attempt }} av {{ max_attempts }}. Återstår: {{ failed_list
-            | length }}.'
+      - variables:
+          updates_this_pass: "{%- set ns = namespace(items=[]) -%} {%- for s in states.update
+            -%}\n  {%- set dev = device_id(s.entity_id) -%}\n  {%- set ids = device_attr(dev,
+            'identifiers') -%}\n  {%- if ids and ('esphome' in ids|string) and is_state(s.entity_id,
+            'on') -%}\n    {%- set ns.items = ns.items + [ s.entity_id ] -%}\n  {%-
+            endif -%}\n{%- endfor -%} {{ ns.items }}"
+          pass_index: '{{ repeat.index }}'
+      - data:
+          title: ESPHome – uppdatering (pass {{ pass_index }} / {{ max_passes }})
+          message: Pass {{ pass_index }} startar. Hittade {{ updates_this_pass | length
+            }} ESPHome‑uppdateringar. Automation kör igenom alla enheter en gång.
+            Se Loggbok för detaljer.
+          notification_id: '{{ notif_id }}'
+        action: persistent_notification.create
+      - data:
+          name: Updater
+          message: 'Pass {{ pass_index }}: hittade {{ updates_this_pass | length }}
+            ESPHome‑uppdateringar.'
+        action: logbook.log
+      - if:
+        - condition: template
+          value_template: '{{ updates_this_pass | length == 0 }}'
+        then:
+        - data:
+            title: ESPHome – inget att installera
+            message: Inget att installera i pass {{ pass_index }}. Avslutar i förtid.
+            notification_id: '{{ notif_id }}'
+          action: persistent_notification.create
+        - data:
+            name: Updater
+            message: 'Pass {{ pass_index }}: inget att installera – avslutar i förtid.'
+          action: logbook.log
+        - stop: Klar – inget att installera i detta och följande pass.
       - repeat:
-          for_each: '{{ failed_list }}'
+          for_each: '{{ updates_this_pass }}'
           sequence:
-          - action: logbook.log
+          - variables:
+              entity: '{{ repeat.item }}'
+          - data:
+              name: Updater
+              message: 'Pass {{ pass_index }}: försöker installera {{ entity }}.'
+            action: logbook.log
+          - data:
+              title: ESPHome – uppdatering (pass {{ pass_index }} / {{ max_passes
+                }})
+              message: 'Installerar: {{ entity }}. Kvar i detta pass: {{ (updates_this_pass
+                | length) - repeat.index }} st.'
+              notification_id: '{{ notif_id }}'
+            action: persistent_notification.create
+          - target:
+              entity_id: '{{ entity }}'
             data:
-              name: ESPHome Update
-              message: 'Startar uppdatering: {{ repeat.item }}'
-          - action: update.install
-            continue_on_error: true
-            data:
-              entity_id: '{{ repeat.item }}'
-      - delay: '{{ per_attempt_wait }}'
+              backup: true
+            action: update.install
+          - delay: 00:00:02
+      - delay: '{{ settle_delay }}'
       - variables:
-          failed_list: "{%- set ns = namespace(items=[]) -%} {%- for s in states.update
-            -%}\n  {%- if s.entity_id.endswith('_firmware') and is_state(s.entity_id,
-            'on') -%}\n    {%- if s.entity_id in to_update_initial -%}\n      {%-
-            set ns.items = ns.items + [ s.entity_id ] -%}\n    {%- endif -%}\n  {%-
-            endif -%}\n{%- endfor -%} {{ ns.items | sort }}"
-      - choose:
-        - conditions:
-          - condition: template
-            value_template: '{{ failed_list | length > 0 and attempt < max_attempts
-              }}'
-          sequence:
-          - action: persistent_notification.create
-            data:
-              title: ESPHome – Omförsök krävs
-              message: 'Efter försök {{ attempt }} återstår {{ failed_list | length
-                }} enhet(er): {{ failed_list | map(''replace'',''update.'','''') |
-                map(''replace'',''_firmware'','''') | list | join('', '') }}. Försöker
-                igen.'
-              notification_id: '{{ notif_id_error }}'
-          - action: logbook.log
-            data:
-              name: ESPHome Update
-              message: 'Omförsök: kvar {{ failed_list | length }} enhet(er): {{ failed_list
-                | join('', '') }}'
-      - variables:
-          attempt: '{{ attempt + 1 }}'
+          preview_remaining: "{%- set ns = namespace(items=[]) -%} {%- for s in states.update
+            -%}\n  {%- set dev = device_id(s.entity_id) -%}\n  {%- set ids = device_attr(dev,
+            'identifiers') -%}\n  {%- if ids and ('esphome' in ids|string) and is_state(s.entity_id,
+            'on') -%}\n    {%- set ns.items = ns.items + [ s.entity_id ] -%}\n  {%-
+            endif -%}\n{%- endfor -%} {{ ns.items }}"
+      - data:
+          title: ESPHome – pass {{ pass_index }} klart
+          message: 'Pass {{ pass_index }} klart. Återstående uppdateringar just nu:
+            {{ preview_remaining | length }}. {{- ''\n'' -}} {{- ''Fortsätter till
+            nästa pass...'' if pass_index < max_passes else ''Summerar resultat...''
+            -}}'
+          notification_id: '{{ notif_id }}'
+        action: persistent_notification.create
   - variables:
-      remaining: '{{ failed_list | length }}'
-      succeeded: '{{ total_count - remaining }}'
+      remaining: "{%- set ns = namespace(items=[]) -%} {%- for s in states.update
+        -%}\n  {%- set dev = device_id(s.entity_id) -%}\n  {%- set ids = device_attr(dev,
+        'identifiers') -%}\n  {%- if ids and ('esphome' in ids|string) and is_state(s.entity_id,
+        'on') -%}\n    {%- set ns.items = ns.items + [ s.entity_id ] -%}\n  {%- endif
+        -%}\n{%- endfor -%} {{ ns.items }}"
   - choose:
     - conditions:
       - condition: template
-        value_template: '{{ remaining > 0 }}'
+        value_template: '{{ remaining | length > 0 }}'
       sequence:
-      - action: persistent_notification.create
-        data:
-          title: ESPHome – Summering (med fel)
-          message: 'Klart med ESPHome‑uppdateringar. Lyckades: {{ succeeded }} av
-            {{ total_count }}. Följande {{ remaining }} enhet(er) misslyckades efter
-            {{ max_attempts }} försök: {{ failed_list | map(''replace'',''update.'','''')
-            | map(''replace'',''_firmware'','''') | list | join('', '') }}. Kontrollera
-            nät/ström och prova igen senare.'
-          notification_id: '{{ notif_id_summary }}'
-      - action: persistent_notification.create
-        data:
-          title: ESPHome – Fel vid uppdatering
-          message: 'Misslyckade enheter (entity_id): {{ failed_list | join('', '')
-            }}'
-          notification_id: '{{ notif_id_error }}'
-      - action: logbook.log
-        data:
-          name: ESPHome Update
-          message: 'KLART: {{ succeeded }}/{{ total_count }} lyckades. Misslyckades:
-            {{ failed_list | join('', '') }}'
+      - data:
+          title: ESPHome – uppdateringar kvar efter {{ max_passes }} pass
+          message: 'Följande ESPHome‑uppdateringar kvarstår ({{ remaining | length
+            }} st): {{ remaining | join('', '') }}. Kontrollera respektive enhet (kan
+            kräva omstart eller manuell åtgärd).'
+          notification_id: '{{ notif_id }}'
+        action: persistent_notification.create
+      - data:
+          name: Updater
+          message: 'Klart efter {{ max_passes }} pass – återstående ESPHome‑uppdateringar:
+            {{ remaining | join('', '') }}'
+        action: logbook.log
     default:
-    - action: persistent_notification.create
-      data:
-        title: ESPHome – Summering
-        message: "Klart! Uppdaterade {{ succeeded }} av {{ total_count }} enhet(er).
-          Inga fel kvarstående \U0001F389"
-        notification_id: '{{ notif_id_summary }}'
-    - action: logbook.log
-      data:
-        name: ESPHome Update
-        message: 'KLART: {{ succeeded }}/{{ total_count }} lyckades. Inga kvarstående
-          fel.'
+    - data:
+        title: ESPHome – klart
+        message: Alla ESPHome‑uppdateringar installerade inom {{ max_passes }} pass.
+        notification_id: '{{ notif_id }}'
+      action: persistent_notification.create
+    - data:
+        name: Updater
+        message: Klart – alla ESPHome‑uppdateringar installerade.
+      action: logbook.log
   mode: single
   variables:
-    notif_id_summary: esphome_update_summary
-    notif_id_error: esphome_update_errors
-    max_attempts: 3
-    attempt: 1
-    per_attempt_wait: 00:03:00
-    esphome_updates_on: "{%- set ns = namespace(items=[]) -%} {%- for s in states.update
-      -%}\n  {%- if s.entity_id.endswith('_firmware') and is_state(s.entity_id, 'on')
-      -%}\n    {%- set ns.items = ns.items + [ s.entity_id ] -%}\n  {%- endif -%}\n{%-
-      endfor -%} {{ ns.items | sort }}"
-    to_update_initial: '{{ esphome_updates_on }}'
-    total_count: '{{ to_update_initial | length }}'
-    failed_list: '{{ to_update_initial }}'
+    max_passes: 3
+    settle_delay: 00:00:20
+    notif_id: esphome_update_progress
+- *id001
 - id: '1758871167291'
   alias: Synka Blomlampa ⇄ LED-strip i trappan
   description: Släcker LED-strip när blomlampa tänds, tänder LED-strip när blomlampa
@@ -2259,3 +2117,132 @@
           entity_id: light.esphome62_led_strip
         action: light.turn_on
   mode: single
+- id: '1758882999525'
+  alias: ESPhome - Uppdatera alla enheter
+  description: Startar en process för att uppdatera alla ESPHome-enheter i högst tre
+    pass.
+  triggers:
+  - entity_id: input_button.uppgradera_esphome_enheter
+    trigger: state
+  conditions: []
+  actions:
+  - data:
+      title: ESPHome – uppdatering pågår
+      message: Startar ESPHome‑uppdateringar (upp till {{ max_passes }} pass).
+      notification_id: '{{ notif_id }}'
+    action: persistent_notification.create
+  - data:
+      name: Updater
+      message: Startar ESPHome‑uppdateringar (upp till {{ max_passes }} pass).
+    action: logbook.log
+  - repeat:
+      count: '{{ max_passes }}'
+      sequence:
+      - variables:
+          updates_this_pass: "{%- set ns = namespace(items=[]) -%} {%- for s in states.update
+            -%}\n  {%- set dev = device_id(s.entity_id) -%}\n  {%- set ids = device_attr(dev,
+            'identifiers') -%}\n  {%- if ids and ('esphome' in ids|string) and is_state(s.entity_id,
+            'on') -%}\n    {%- set ns.items = ns.items + [ s.entity_id ] -%}\n  {%-
+            endif -%}\n{%- endfor -%} {{ ns.items }}"
+          pass_index: '{{ repeat.index }}'
+      - data:
+          title: ESPHome – uppdatering (pass {{ pass_index }} / {{ max_passes }})
+          message: Pass {{ pass_index }} startar. Hittade {{ updates_this_pass | length
+            }} ESPHome‑uppdateringar. Automation kör igenom alla enheter en gång.
+            Se Loggbok för detaljer.
+          notification_id: '{{ notif_id }}'
+        action: persistent_notification.create
+      - data:
+          name: Updater
+          message: 'Pass {{ pass_index }}: hittade {{ updates_this_pass | length }}
+            ESPHome‑uppdateringar.'
+        action: logbook.log
+      - if:
+        - condition: template
+          value_template: '{{ updates_this_pass | length == 0 }}'
+        then:
+        - data:
+            title: ESPHome – inget att installera
+            message: Inget att installera i pass {{ pass_index }}. Avslutar i förtid.
+            notification_id: '{{ notif_id }}'
+          action: persistent_notification.create
+        - data:
+            name: Updater
+            message: 'Pass {{ pass_index }}: inget att installera – avslutar i förtid.'
+          action: logbook.log
+        - stop: Klar – inget att installera i detta och följande pass.
+      - repeat:
+          for_each: '{{ updates_this_pass }}'
+          sequence:
+          - variables:
+              entity: '{{ repeat.item }}'
+          - data:
+              name: Updater
+              message: 'Pass {{ pass_index }}: försöker installera {{ entity }}.'
+            action: logbook.log
+          - data:
+              title: ESPHome – uppdatering (pass {{ pass_index }} / {{ max_passes
+                }})
+              message: 'Installerar: {{ entity }}. Kvar i detta pass: {{ (updates_this_pass
+                | length) - repeat.index }} st.'
+              notification_id: '{{ notif_id }}'
+            action: persistent_notification.create
+          - target:
+              entity_id: '{{ entity }}'
+            data:
+              backup: true
+            action: update.install
+          - delay: 00:00:02
+      - delay: '{{ settle_delay }}'
+      - variables:
+          preview_remaining: "{%- set ns = namespace(items=[]) -%} {%- for s in states.update
+            -%}\n  {%- set dev = device_id(s.entity_id) -%}\n  {%- set ids = device_attr(dev,
+            'identifiers') -%}\n  {%- if ids and ('esphome' in ids|string) and is_state(s.entity_id,
+            'on') -%}\n    {%- set ns.items = ns.items + [ s.entity_id ] -%}\n  {%-
+            endif -%}\n{%- endfor -%} {{ ns.items }}"
+      - data:
+          title: ESPHome – pass {{ pass_index }} klart
+          message: 'Pass {{ pass_index }} klart. Återstående uppdateringar just nu:
+            {{ preview_remaining | length }}. {{- ''\n'' -}} {{- ''Fortsätter till
+            nästa pass...'' if pass_index < max_passes else ''Summerar resultat...''
+            -}}'
+          notification_id: '{{ notif_id }}'
+        action: persistent_notification.create
+  - variables:
+      remaining: "{%- set ns = namespace(items=[]) -%} {%- for s in states.update
+        -%}\n  {%- set dev = device_id(s.entity_id) -%}\n  {%- set ids = device_attr(dev,
+        'identifiers') -%}\n  {%- if ids and ('esphome' in ids|string) and is_state(s.entity_id,
+        'on') -%}\n    {%- set ns.items = ns.items + [ s.entity_id ] -%}\n  {%- endif
+        -%}\n{%- endfor -%} {{ ns.items }}"
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ remaining | length > 0 }}'
+      sequence:
+      - data:
+          title: ESPHome – uppdateringar kvar efter {{ max_passes }} pass
+          message: 'Följande ESPHome‑uppdateringar kvarstår ({{ remaining | length
+            }} st): {{ remaining | join('', '') }}. Kontrollera respektive enhet (kan
+            kräva omstart eller manuell åtgärd).'
+          notification_id: '{{ notif_id }}'
+        action: persistent_notification.create
+      - data:
+          name: Updater
+          message: 'Klart efter {{ max_passes }} pass – återstående ESPHome‑uppdateringar:
+            {{ remaining | join('', '') }}'
+        action: logbook.log
+    default:
+    - data:
+        title: ESPHome – klart
+        message: Alla ESPHome‑uppdateringar installerade inom {{ max_passes }} pass.
+        notification_id: '{{ notif_id }}'
+      action: persistent_notification.create
+    - data:
+        name: Updater
+        message: Klart – alla ESPHome‑uppdateringar installerade.
+      action: logbook.log
+  mode: single
+  variables:
+    max_passes: 3
+    settle_delay: 00:00:20
+    notif_id: esphome_update_progress
