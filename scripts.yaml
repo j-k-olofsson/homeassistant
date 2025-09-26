@@ -25,7 +25,7 @@ notifera_enheter:
         interrupt: 0
         image: /config/file_notifications/Granny.ico
       message: '{{ message | default("Glömde bort vad jag skulle säga...") }}'
-      title: '&nbsp;'
+      title: Granny informerar
 meddelande_via_hogtalare:
   alias: Meddelande via högtalare
   fields:

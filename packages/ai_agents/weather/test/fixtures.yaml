@@ -1,0 +1,48 @@
+# Test-fixtures för väderagenten.
+# När input_boolean.weather_test_mode = on används dessa värden i stället för live data.
+
+input_boolean:
+  weather_test_mode:
+    name: "Väderagent testläge"
+    icon: mdi:test-tube
+
+input_number:
+  fixture_today_temp_max:
+    name: "Fixture: Dagens max-temp"
+    min: -30
+    max: 45
+    step: 0.1
+    unit_of_measurement: "°C"
+    icon: mdi:thermometer-high
+    mode: box
+    initial: 21.5
+
+  fixture_today_temp_min:
+    name: "Fixture: Dagens min-temp"
+    min: -40
+    max: 35
+    step: 0.1
+    unit_of_measurement: "°C"
+    icon: mdi:thermometer-low
+    mode: box
+    initial: 12.3
+
+  fixture_today_precip_total_mm:
+    name: "Fixture: Dagens nederbörd (mm)"
+    min: 0
+    max: 100
+    step: 0.1
+    unit_of_measurement: "mm"
+    icon: mdi:weather-rainy
+    mode: box
+    initial: 2.5
+
+  fixture_today_wind_max_ms:
+    name: "Fixture: Dagens maxvind (m/s)"
+    min: 0
+    max: 40
+    step: 0.1
+    unit_of_measurement: "m/s"
+    icon: mdi:weather-windy
+    mode: box
+    initial: 8.0

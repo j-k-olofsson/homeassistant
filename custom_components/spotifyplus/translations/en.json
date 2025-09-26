@@ -2,24 +2,36 @@
   "config": {
     "step": {
       "pick_implementation": {
-        "title": "Select SpotifyPlus OAuth Credential"
+        "title": "Select SpotifyPlus OAuth Credential",
+        "data": {
+          "implementation": "SpotifyPlus Application Credentials"
+        },
+        "data_description": {
+          "implementation": "Select an application credential to authenticate to Spotify."
+        }
       },
       "reauth_confirm": {
         "title": "SpotifyPlus Re-Authentication Required",
-        "description": "The Spotify integration needs to re-authenticate with Spotify for account: {account}"
+        "description": "The SpotifyPlus integration needs to re-authenticate with Spotify for account: {account}"
       }
     },
     "abort": {
+      "_comment_01": " ***** IMPORTANT ***** some of these resources are not referenced in our config_flow, but are still required by OAuth2 processing!",
+      "already_configured": "Service is already configured for \"SpotifyPlus {userinfo}\".  Please modify the existing service entry.",
       "authorize_url_timeout": "Timeout generating authorize URL.",
-      "missing_configuration": "The Spotify integration is not configured. Please follow the documentation.",
-      "no_url_available": "[%key:common::config_flow::abort::oauth2_no_url_available%]",
-      "reauth_account_mismatch": "Spotify account authenticated with does not match the account needing re-authentication for the SpotifyPlus integration; please check the System Log for further information.",
+      "connection_error": "Could not retrieve Spotify account information. Is the user registered in the Spotify Developer Dashboard?",
       "invalid_access_token": "OAuth access token is invalid for the SpotifyPlus integration; please check the System Log for further information.",
+      "missing_configuration": "The Spotify integration is not configured. Please follow the documentation.",
+      "missing_credentials": "The integration requires application credentials.",
+      "no_url_available": "Redirect URL is not available; URL is required since you have not configured an external URL in Home Assistant.",
       "oauth_error": "OAuth error occurred while processing SpotifyPlus OAuth Application Credentials; please check the System Log for further information.",
+      "oauth_failed": "OAuth request failed while processing SpotifyPlus OAuth Application Credentials; please check the System Log for further information.",
       "oauth_timeout": "OAuth timeout error occurred while processing SpotifyPlus OAuth Application Credentials.  This usually indicates a temporary condition; please check the System Log for further information.",
       "oauth_unauthorized": "OAuth Application Credentials are unauthorized for use by the SpotifyPlus integration; please check the System Log for further information.",
-      "oauth_failed": "OAuth request failed while processing SpotifyPlus OAuth Application Credentials; please check the System Log for further information.",
-      "setauthtoken_error": "SpotifyClient authorization token could not be set from OAuth2 session token; please check the System Log for further information."
+      "reauth_account_mismatch": "Spotify account authenticated with does not match the account needing re-authentication for the SpotifyPlus integration; please check the System Log for further information.",
+      "reauth_successful": "Re-authentication was successful",
+      "setauthtoken_error": "SpotifyClient authorization token could not be set from OAuth2 session token; please check the System Log for further information.",
+      "user_rejected_authorize": "Account linking rejected: {error}"
     },
     "create_entry": {
       "default": "Successfully authenticated with Spotify."
@@ -750,6 +762,40 @@
         }
       }
     },
+    "get_image_palette_colors": {
+      "name": "Get Image Palette Colors",
+      "description": "Get color palette RGB values from the specified image source.",
+      "fields": {
+        "entity_id": {
+          "name": "Entity ID",
+          "description": "Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API."
+        },
+        "image_source": {
+          "name": "Image Source",
+          "description": "The image source to extract color palette information from.  If the prefix of the value is `http:` or `https:`, then the image is downloaded from the url.  This can also point to a filename on the local file system.  If null, the currently playing Spotify track image url is used.  Example = `https://i.scdn.co/image/ab67616d0000b2733deaee5f76ab2da15dd8db86`, `c:/image1.jpg`"
+        },
+        "color_count": {
+          "name": "Color Count",
+          "description": "The size of the palette (max number of colors).  Default is 10.  Range is 1 to 256."
+        },
+        "color_quality": {
+          "name": "Color Quality",
+          "description": "Controls the processing time and quality of the palette generation.  A lower value (e.g. 1) results in higher quality but takes more processing time, while a higher value (e.g. 5) is faster but may result in a lower-quality palette.  Default is 5; Range is 1 to 10."
+        },
+        "brightness_filter_low": {
+          "name": "Brightness Filter Low",
+          "description": "Removes colors that are too dark based on their brightness value.  Range is 0 to 765.  Default is None."
+        },
+        "brightness_filter_high": {
+          "name": "Brightness Filter High",
+          "description": "Removes colors that are too light based on their brightness value.  Range is 0 to 765.  Default is None."
+        },
+        "hue_distance_filter": {
+          "name": "Hue Distance Filter",
+          "description": "Remove colors that are too close to each other for the specified hue.  This keeps the colors looking fairly distinct.  Range is 0 to 360.  Default is None."
+        }
+      }
+    },
     "get_image_vibrant_colors": {
       "name": "Get Image Vibrant Colors",
       "description": "Get vibrant color palette values from the specified image source.",
@@ -1467,6 +1513,24 @@
         "sort_result": {
           "name": "Sort Result?",
           "description": "True to sort result items by name prior to returning to the caller; otherwise, False to return results in the order that the Spotify Web API returned them."
+        }
+      }
+    },
+    "list_application_credential_mappings": {
+      "name": "List Application Credential Mappings",
+      "description": "List Home Assistant application credential mappings to determine which configuration entitys use which credential.",
+      "fields": {
+        "filter_domain": {
+          "name": "Domain Name Filter",
+          "description": "Limit entries displayed to the specified domain name (e.g. 'spotifyplus', 'spotify', etc)."
+        },
+        "filter_credentials_only": {
+          "name": "Application Credentials Filter?",
+          "description": "True (default) to limit entries displayed to those that have Application Credentials defined; otherwise, False to include all entries."
+        },
+        "list_domain_entities": {
+          "name": "List Domain Entities",
+          "description": "True to list entities that are children of the domain; otherwise, False (default) to exclude domain entity details."
         }
       }
     },

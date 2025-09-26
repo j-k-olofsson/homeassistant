@@ -25,7 +25,7 @@ logger:
 recorder:
   db_url: mysql://homeassistant:IceAgeRulesMDB@core-mariadb/homeassistant?charset=utf8mb4
   auto_purge: true
-  purge_keep_days: 5
+  purge_keep_days: 35
   commit_interval: 5
 
   exclude:
@@ -77,9 +77,6 @@ recorder:
       - panels_updated
       - core_config_updated
       - lovelace_updated
-
-
-
 
 # Load frontend themes from the themes folder
 frontend:

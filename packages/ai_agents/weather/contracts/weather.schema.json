@@ -1,0 +1,91 @@
+{
+  "$id": "https://example.local/ai_agents/weather/contract/v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WeatherAgent Output v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "language",
+    "generated_at",
+    "headline",
+    "summary",
+    "risks",
+    "confidence",
+    "audience"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "const": "1.0",
+      "description": "Contract version"
+    },
+    "language": {
+      "type": "string",
+      "const": "sv",
+      "description": "Language code (Swedish)"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp in local time"
+    },
+    "headline": {
+      "type": "string",
+      "maxLength": 120,
+      "description": "Short headline, e.g. 'Mild morgon – regn efter lunch'"
+    },
+    "summary": {
+      "type": "string",
+      "maxLength": 800,
+      "description": "Narrative forecast for today (and optionally tomorrow). Keep it concise and actionable."
+    },
+    "risks": {
+      "type": "array",
+      "description": "0–5 concise risk items",
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["label", "level"],
+        "properties": {
+          "label": {
+            "type": "string",
+            "maxLength": 120,
+            "description": "Short description of the risk (e.g., 'Regnspik 13–15')."
+          },
+          "level": {
+            "type": "string",
+            "enum": ["notice", "yellow", "orange", "red"],
+            "description": "Severity band"
+          },
+          "when": {
+            "type": "string",
+            "maxLength": 60,
+            "description": "Optional time window, e.g., '07–10' or 'kväll'."
+          },
+          "advice": {
+            "type": "string",
+            "maxLength": 120,
+            "description": "Optional practical tip (e.g., 'Ta regnjacka')."
+          }
+        }
+      }
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["low", "medium", "high"],
+      "description": "Overall confidence in the forecast"
+    },
+    "audience": {
+      "type": "string",
+      "enum": ["family", "commute", "outdoor_work", "generic"],
+      "description": "Intended audience"
+    },
+    "dominant": {
+      "type": "string",
+      "maxLength": 40,
+      "description": "Optional dominant condition label: e.g., 'Regnigt', 'Blåsigt', 'Varmt', 'Frostnära'."
+    }
+  }
+}

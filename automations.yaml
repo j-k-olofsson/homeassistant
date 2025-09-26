@@ -392,117 +392,6 @@
         action: input_select.select_option
   mode: queued
   max: 10
-- id: '1670243599271'
-  alias: Automatisk bilvärme
-  description: Denna automation aktiverar bilvärmaren under kalla morgnar. Den kontrollerar
-    utomhustemperaturen och om det är en arbetsdag för att optimera energiförbrukningen.
-    Automation aktiveras vid flera tidpunkter under morgonen, och stänger av bilen
-    värmaren om temperaturen är tillräckligt hög.
-  triggers:
-  - at: 03:00:00
-    id: 03:00
-    trigger: time
-  - at: 04:00:00
-    id: 04:00
-    trigger: time
-  - at: 05:00:00
-    id: 05:00
-    trigger: time
-  - at: 08:00:00
-    id: 08:00
-    trigger: time
-  - at: input_datetime.starta_bilvarmen
-    id: time
-    trigger: time
-  conditions:
-  - condition: or
-    conditions:
-    - condition: state
-      entity_id: input_boolean.automatisk_bilvarme
-      state: 'on'
-    - condition: trigger
-      id:
-      - time
-  actions:
-  - choose:
-    - conditions:
-      - condition: trigger
-        id:
-        - time
-      - condition: numeric_state
-        entity_id: sensor.temp_hum_utomhus_temperature
-        below: 15
-      sequence:
-      - type: turn_on
-        device_id: 4ae492a1cd478fcf72734fce99c6c62c
-        entity_id: switch.bilvarmare_utomhus_esphome24_relay_state
-        domain: switch
-    - conditions:
-      - condition: trigger
-        id: 03:00
-      - condition: numeric_state
-        entity_id: sensor.temp_hum_utomhus_temperature
-        below: 1
-      - condition: state
-        entity_id: binary_sensor.workday_sensor
-        state: 'on'
-      - condition: numeric_state
-        entity_id: sensor.template_nordpool_base_cost_current_hour
-        below: 1
-      sequence:
-      - type: turn_on
-        device_id: 4ae492a1cd478fcf72734fce99c6c62c
-        entity_id: switch.bilvarmare_utomhus_esphome24_relay_state
-        domain: switch
-    - conditions:
-      - condition: trigger
-        id: 04:00
-      - condition: numeric_state
-        entity_id: sensor.temp_hum_utomhus_temperature
-        below: 10
-      - condition: state
-        entity_id: binary_sensor.workday_sensor
-        state: 'on'
-      - condition: numeric_state
-        entity_id: sensor.template_nordpool_base_cost_current_hour
-        below: 1
-      sequence:
-      - type: turn_on
-        device_id: 4ae492a1cd478fcf72734fce99c6c62c
-        entity_id: switch.bilvarmare_utomhus_esphome24_relay_state
-        domain: switch
-    - conditions:
-      - condition: trigger
-        id: 05:00
-      - condition: numeric_state
-        entity_id: sensor.temp_hum_utomhus_temperature
-        below: 15
-      - condition: state
-        entity_id: binary_sensor.workday_sensor
-        state: 'on'
-      - condition: numeric_state
-        entity_id: sensor.template_nordpool_base_cost_current_hour
-        below: 1
-      sequence:
-      - type: turn_on
-        device_id: 4ae492a1cd478fcf72734fce99c6c62c
-        entity_id: switch.bilvarmare_utomhus_esphome24_relay_state
-        domain: switch
-    - conditions:
-      - condition: trigger
-        id: 09:00
-      - condition: device
-        type: is_on
-        device_id: 4ae492a1cd478fcf72734fce99c6c62c
-        entity_id: switch.bilvarmare_utomhus_esphome24_relay_state
-        domain: switch
-      sequence:
-      - type: turn_off
-        device_id: 4ae492a1cd478fcf72734fce99c6c62c
-        entity_id: switch.bilvarmare_utomhus_esphome24_relay_state
-        domain: switch
-  mode: queued
-  max: 10
 - id: '1673173615791'
   alias: Kontrollera saltnivå
   description: Meddela mobilen att saltet håller på att ta slut. Dags att fylla på
@@ -523,15 +412,14 @@
   mode: queued
   max: 10
 - id: '1673428919960'
-  alias: Tvättmaskin Klar
+  alias: Tvätt/tork - Färdig
   description: När tvättmaskinen har avslutat sitt program, skickas en notification
     och meddelande via högtalare för att påminna om att tömma tvätten.
   triggers:
-  - entity_id:
-    - sensor.tvattmaskin_washer_machine_state
-    to: stop
-    from: run
-    trigger: state
+  - device_id: f16f2d8a7234951574cdd787c8fcebef
+    domain: home_connect_alt
+    type: program_finished
+    trigger: device
   conditions: []
   actions:
   - data:
@@ -633,43 +521,6 @@
           entity_id: cover.honsluckan_esphome75_cover
   mode: queued
   max: 10
-- id: '1673781726036'
-  alias: Automatisk Poolbelysning
-  description: Denna automation slår på poolbelysningen vid solnedgång och stänger
-    av den vid midnatt, förutsatt att poolutrustningen är på.
-  triggers:
-  - entity_id:
-    - input_select.sun_phase
-    id: poollight_on
-    to: SUNPHASE_SUNSET
-    trigger: state
-  - at: 00:00:00
-    id: poollight_off
-    trigger: time
-  conditions:
-  - condition: state
-    entity_id: input_boolean.pool_equipment
-    state: 'on'
-  actions:
-  - choose:
-    - conditions:
-      - condition: trigger
-        id: poollight_on
-      sequence:
-      - type: turn_on
-        device_id: 73f2a688b49860119e41a6bb00fd60ed
-        entity_id: light.poolbelysning_temp_esphome29_light
-        domain: light
-    - conditions:
-      - condition: trigger
-        id: poollight_off
-      sequence:
-      - type: turn_off
-        device_id: 73f2a688b49860119e41a6bb00fd60ed
-        entity_id: light.poolbelysning_temp_esphome29_light
-        domain: light
-  mode: queued
-  max: 10
 - id: '1674139073169'
   alias: Hissmusik
   description: Spela hissmusik på morgonen eller när knappen trycks in. Automationen
@@ -732,15 +583,7 @@
             continue_on_error: true
             data:
               entity_id: media_player.spotifyplus_mammaochpapppa
-              context_uri: spotify:playlist:6UeICirSSI3iH5fHyGlS0X?si=E9v4UfpOT7mKSnOoe7v-og
-              device_id: 502e110e3653a9ec3bade927714d8bbc
-              shuffle: true
-            enabled: false
-          - action: spotifyplus.player_media_play_context
-            continue_on_error: true
-            data:
-              entity_id: media_player.spotifyplus_mammaochpapppa
-              context_uri: spotify:playlist:66oeOdZOJ6XYP92kkibWYm?si=quU3YzRKSGauEN5VZOKwbg
+              context_uri: spotify:playlist:1NL3k4V4XXj4mOOr2e6JGQ
               device_id: 502e110e3653a9ec3bade927714d8bbc
               shuffle: true
           - delay: 00:00:03
@@ -796,11 +639,13 @@
   triggers:
   - id: diegosalarm
     value_template: '{{ now().strftime("%a %h %d %H:%M %Z %Y") == (as_timestamp(states("sensor.diegos_vackarklocka_alarms"))
-      - 15*60) |  timestamp_custom("%a %h %d %H:%M %Z %Y") }}'
+      - 15*60) |  as_timestamp(default=0) | timestamp_custom("%a %h %d %H:%M %Z %Y")
+      }}'
     trigger: template
   - id: mannisalarm
     value_template: '{{ now().strftime("%a %h %d %H:%M %Z %Y") == (as_timestamp(states("sensor.mannis_vackarklocka_alarms"))
-      - 15*60) |  timestamp_custom("%a %h %d %H:%M %Z %Y") }}'
+      - 15*60) |  as_timestamp(default=0) | timestamp_custom("%a %h %d %H:%M %Z %Y")
+      }}'
     trigger: template
   conditions: []
   actions:
@@ -858,13 +703,16 @@
     - action: script.komponera_ai_prompt
       metadata: {}
       data:
-        task: Skriv en ny, kort och rolig godnatt-hälsning.
-        rules: '- Texten ska låta som om Granny står i rummet och muttrar. - Hälsningen
-          måste vara unik varje gång. Återanvänd inte tidigare meddelanden. - Svara
-          endast med själva hälsningen, inga förklaringar eller extra text. - Inga
-          svordomar.'
-        output_format: En kort godnatt-hälsning på svenska som är mindre än 255 tecken
-          och maximalt består av två meningar.
+        task: Skriv ett kort meddelande, max en till två meningar där Granny önskar
+          oss godnatt.
+        rules: '- Texten ska låta som om Granny i filmerna om IceAge och hur hin brukar
+          snacka med Manny och Diego. - Hälsningen måste vara unik varje gång. Återanvänd
+          inte tidigare meddelanden. - Svara endast med själva hälsningen, inga förklaringar
+          eller extra text. - Inga svordomar. - Texten måste vara på svenska, grammatiskt
+          korrekt. - Alla ord måste vara korrekt använda och existera, inga påhittade
+          ord tillåts. - Meningsuppbyggnaden ska vara enligt normal samtalsstandard.'
+        output_format: En kort text som får oss att småle när vi lägger huvudena på
+          kuddarna.
         tts_media_player: media_player.diegos_vackarklocka
   - target:
       entity_id: light.grupp_godnatt
@@ -975,14 +823,13 @@
   mode: queued
   max: 10
 - id: '1693323915636'
-  alias: Diskmaskinen Klar
+  alias: Diskmaskinen - Färdig
   description: Notifierar när diskmaskinen är klar med att diska och torka disken.
   triggers:
-  - entity_id:
-    - sensor.bosch_smu88ts06s_68a40e0c1a5c_bsh_common_status_operationstate
-    to: 'off'
-    from: Run
-    trigger: state
+  - device_id: 626db3476001e814560aa9dd7f751fae
+    domain: home_connect_alt
+    type: program_finished
+    trigger: device
   conditions: []
   actions:
   - data:
@@ -1512,33 +1359,6 @@
         action: notify.persistent_notification
   mode: queued
   max: 10
-- id: '1722603718895'
-  alias: Torktumlaren Klar
-  description: Notifierar när torktumlaren har avslutat sin cykel och tvätten är klar
-    för tömning. För att påminna om att ta ut den torra tvätten och vik den.
-  triggers:
-  - entity_id:
-    - sensor.bosch_wtx8hkl9sn_68a40e3a22df_bsh_common_status_operationstate
-    from: Run
-    trigger: state
-  conditions: []
-  actions:
-  - data:
-      message: '{{ grannys_message.data | default("Torktumlaren är klar för tömmning")
-        }}'
-    action: script.meddelande_via_hogtalare
-  - action: script.komponera_ai_prompt
-    metadata: {}
-    data:
-      rules: '- Texten ska låta som om Granny står i rummet och muttrar. - Hälsningen
-        måste vara unik varje gång. Återanvänd inte tidigare meddelanden. - Svara
-        endast med själva hälsningen, inga förklaringar eller extra text. - Inga svordomar.'
-      output_format: En kort instruktion som maximalt består av två meningar.
-      tts_media_player: media_player.ha_notifiering
-      task: Skriv ett kort meddelande, max en mening som gör oss uppmärksamma på att
-        torktumlaren nu gjort sitt och är klar för tömmning.
-  mode: queued
-  max: 10
 - id: '1727787103629'
   alias: Kontrollera hönsluckans stängning
   description: Denna automation kontrollerar om hönsluckan är stängd och ger en varning
@@ -1678,67 +1498,6 @@
       - light.grupp_taklampor_kok
   mode: queued
   max: 10
-- id: '1738231666925'
-  alias: Automatiserat backup av OpenWRT-enheter
-  description: Denna automation säkerställer att alla OpenWRT-enheter i Tailscalenätverket
-    säkerhetskopieras dagligen vid en specifik tidpunkt. Genom att köra skriptet och
-    kommandon skapas en säkerhetskopiering för att garantera att inga inställningar
-    går förlorade. Automation aktiveras vid 02:02:02 varje natt.
-  triggers:
-  - trigger: time
-    at: 02:02:02
-  conditions: []
-  actions:
-  - action: script.backup_all_openwrt_devices
-    metadata: {}
-    data: {}
-    enabled: false
-  - action: shell_command.openwrt_backup
-    metadata: {}
-    data: {}
-  mode: queued
-  max: 10
-- id: '1739608458815'
-  alias: SCEN - Ledbelysning i Trappen
-  description: Denna automation släcker och tänder ledstrippen i trappen baserat på
-    om blommampan är på eller av. Om blommampan tänds släcks ledstrippen, och om den
-    släcks tänds ledstrippen igen.
-  triggers:
-  - type: turned_on
-    device_id: 59dfa01985c8b3965287d04661f4dd58
-    entity_id: 47a057a920c0bb9f2fc2db68849b3c5b
-    domain: light
-    trigger: device
-    id: flower_lamp_on
-  - type: turned_on
-    device_id: 59dfa01985c8b3965287d04661f4dd58
-    entity_id: 47a057a920c0bb9f2fc2db68849b3c5b
-    domain: light
-    trigger: device
-    id: flower_lamp_off
-  conditions: []
-  actions:
-  - choose:
-    - conditions:
-      - condition: trigger
-        id:
-        - flower_lamp_on
-      sequence:
-      - type: turn_off
-        device_id: 27f38e84b435153b94a7b860c2c37f97
-        entity_id: 9c376e4bac0595e12bba3ada2917e6e5
-        domain: light
-    - conditions:
-      - condition: trigger
-        id:
-        - flower_lamp_off
-      sequence:
-      - type: turn_on
-        device_id: 27f38e84b435153b94a7b860c2c37f97
-        entity_id: 9c376e4bac0595e12bba3ada2917e6e5
-        domain: light
-  mode: queued
-  max: 10
 - id: '1743592851261'
   alias: Värmeinställningar
   description: Automatiska värmeinställningar baserade på hem-, komfort- eller bortaläge.
@@ -1862,7 +1621,7 @@
   - set_conversation_response: All värme på övervåningen är nu inställd på 16 grader
   mode: queued
   max: 10
-- &id002
+- &id001
   id: esphome_install_updates_button
   alias: Uppdatera ESPHome-enheter
   description: Denna automation startar en process för att uppdatera alla ESPHome-enheter
@@ -2304,8 +2063,7 @@
         action: script.entity_recover_update_retry
   mode: queued
   max: 10
-- &id001
-  id: sync_ledstrip_with_growlight
+- id: sync_ledstrip_with_growlight
   alias: '[Blomlampa⇄LED] Synka LED-strip med blomlampa'
   description: Släcker LED-strip när blomlampa tänds, tänder LED-strip när blomlampa
     släcks.
@@ -2332,44 +2090,7 @@
         action: light.turn_on
   mode: single
 - *id001
-- id: '1755085293997'
-  alias: PERSISTENT VARNING - Ha-Kiwis Anslutning
-  description: Skapar en notifikation när ha-kiwi är ansluten till nätverket.
-  triggers:
-  - trigger: state
-    entity_id:
-    - binary_sensor.192_168_12_2
-    to: 'on'
-    id: connected
-  - trigger: state
-    entity_id:
-    - binary_sensor.192_168_12_2
-    to: 'off'
-    id: disconnected
-  conditions: []
-  actions:
-  - choose:
-    - conditions:
-      - condition: trigger
-        id:
-        - connected
-      sequence:
-      - data:
-          message: ha-kiwi är ansluten till Tailscale
-          title: INFO Tailscale
-        action: script.persistent_varning
-    - conditions:
-      - condition: trigger
-        id:
-        - disconnected
-      sequence:
-      - data:
-          message: ha-kiwi är bortkopplad från Tailscale
-          title: INFO Tailscale
-        action: script.persistent_varning
-  mode: single
-- *id002
-- *id002
+- *id001
 - id: '1756027866669'
   alias: Uppdatera ESPHome-enheter (med omförsök + logg + summering)
   description: Uppdaterar alla ESPHome update.*_firmware som är 'on' enligt din befintliga
@@ -2511,3 +2232,30 @@
     to_update_initial: '{{ esphome_updates_on }}'
     total_count: '{{ to_update_initial | length }}'
     failed_list: '{{ to_update_initial }}'
+- id: '1758871167291'
+  alias: Synka Blomlampa ⇄ LED-strip i trappan
+  description: Släcker LED-strip när blomlampa tänds, tänder LED-strip när blomlampa
+    släcks.
+  triggers:
+  - entity_id: light.blomlampa_trappan_esphome02_light
+    trigger: state
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: light.blomlampa_trappan_esphome02_light
+        state: 'on'
+      sequence:
+      - target:
+          entity_id: light.esphome62_led_strip
+        action: light.turn_off
+    - conditions:
+      - condition: state
+        entity_id: light.blomlampa_trappan_esphome02_light
+        state: 'off'
+      sequence:
+      - target:
+          entity_id: light.esphome62_led_strip
+        action: light.turn_on
+  mode: single

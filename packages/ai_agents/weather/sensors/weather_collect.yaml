@@ -1,0 +1,179 @@
+# Package-fragment: Hjälpsensorer för väderagenten
+# Läser primärt från weather.smhi (byt entity_id här om du har en annan primär källa).
+# Om input_boolean.weather_test_mode = on används fixtures istället för live-data.
+
+template:
+  - trigger:
+      # Uppdatera regelbundet och vid förändring i väder-entiteten
+      - platform: time_pattern
+        minutes: "/15"
+      - platform: state
+        entity_id: weather.smhi
+    sensor:
+      - name: weather_today_temp_max
+        unique_id: weather_today_temp_max
+        unit_of_measurement: "°C"
+        device_class: temperature
+        state: >
+          {% if is_state('input_boolean.weather_test_mode','on') %}
+            {{ states('input_number.fixture_today_temp_max') }}
+          {% else %}
+            {% set fc = state_attr('weather.smhi','forecast') or [] %}
+            {% set today = now().date() %}
+            {% set temps = [] %}
+            {% for x in fc %}
+              {% if (x.datetime is defined) and (x.temperature is defined) %}
+                {% set dt = as_datetime(x.datetime) %}
+                {% if dt and dt.date() == today and x.temperature is number %}
+                  {% set temps = temps + [ x.temperature ] %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+            {% if temps|count == 0 %}
+              {{ state_attr('weather.smhi','temperature') | float(0) }}
+            {% else %}
+              {{ (temps|max) | round(1) }}
+            {% endif %}
+          {% endif %}
+
+      - name: weather_today_temp_min
+        unique_id: weather_today_temp_min
+        unit_of_measurement: "°C"
+        device_class: temperature
+        state: >
+          {% if is_state('input_boolean.weather_test_mode','on') %}
+            {{ states('input_number.fixture_today_temp_min') }}
+          {% else %}
+            {% set fc = state_attr('weather.smhi','forecast') or [] %}
+            {% set today = now().date() %}
+            {% set temps = [] %}
+            {% for x in fc %}
+              {% if (x.datetime is defined) and (x.temperature is defined) %}
+                {% set dt = as_datetime(x.datetime) %}
+                {% if dt and dt.date() == today and x.temperature is number %}
+                  {% set temps = temps + [ x.temperature ] %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+            {% if temps|count == 0 %}
+              {{ state_attr('weather.smhi','temperature') | float(0) }}
+            {% else %}
+              {{ (temps|min) | round(1) }}
+            {% endif %}
+          {% endif %}
+
+      - name: weather_today_precip_total_mm
+        unique_id: weather_today_precip_total_mm
+        unit_of_measurement: "mm"
+        icon: mdi:weather-rainy
+        state: >
+          {% if is_state('input_boolean.weather_test_mode','on') %}
+            {{ states('input_number.fixture_today_precip_total_mm') }}
+          {% else %}
+            {% set fc = state_attr('weather.smhi','forecast') or [] %}
+            {% set today = now().date() %}
+            {% set tot = 0.0 %}
+            {% for x in fc %}
+              {% if (x.datetime is defined) and (x.precipitation is defined) %}
+                {% set dt = as_datetime(x.datetime) %}
+                {% if dt and dt.date() == today and (x.precipitation is number) %}
+                  {% set tot = tot + x.precipitation %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+            {{ tot | round(1) }}
+          {% endif %}
+
+      - name: weather_today_wind_max_ms
+        unique_id: weather_today_wind_max_ms
+        unit_of_measurement: "m/s"
+        icon: mdi:weather-windy
+        state: >
+          {% if is_state('input_boolean.weather_test_mode','on') %}
+            {{ states('input_number.fixture_today_wind_max_ms') }}
+          {% else %}
+            {% set fc = state_attr('weather.smhi','forecast') or [] %}
+            {% set today = now().date() %}
+            {% set winds = [] %}
+            {% for x in fc %}
+              {% if (x.datetime is defined) and (x.wind_speed is defined) %}
+                {% set dt = as_datetime(x.datetime) %}
+                {% if dt and dt.date() == today and x.wind_speed is number %}
+                  {% set winds = winds + [ x.wind_speed ] %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+            {% if winds|count == 0 %}
+              {{ state_attr('weather.smhi','wind_speed') | float(0) }}
+            {% else %}
+              {{ (winds|max) | round(1) }}
+            {% endif %}
+          {% endif %}
+
+      - name: weather_dominant_condition
+        unique_id: weather_dominant_condition
+        icon: mdi:weather-partly-cloudy
+        state: >
+          {# Enkel regel: regn går före blåst, blåst före temp-extremer, annars nuvarande conditions. #}
+          {% set rain = states('sensor.weather_today_precip_total_mm') | float(0) %}
+          {% set wind = states('sensor.weather_today_wind_max_ms') | float(0) %}
+          {% set tmax = states('sensor.weather_today_temp_max') | float(0) %}
+          {% set tmin = states('sensor.weather_today_temp_min') | float(0) %}
+          {% if rain >= 2.0 %}
+            Regnigt
+          {% elif wind >= 12.0 %}
+            Blåsigt
+          {% elif tmax >= 25.0 %}
+            Varmt
+          {% elif tmin <= 0.0 %}
+            Frostnära
+          {% else %}
+            {{ states('weather.smhi') | title }}
+          {% endif %}
+
+  - binary_sensor:
+      - name: weather_risk_rain
+        unique_id: weather_risk_rain
+        device_class: safety
+        state: >
+          {{ (states('sensor.weather_today_precip_total_mm') | float(0)) >= 4.0 }}
+        attributes:
+          level: >
+            {% set mm = states('sensor.weather_today_precip_total_mm') | float(0) %}
+            {% if mm >= 15 %} orange
+            {% elif mm >= 10 %} yellow
+            {% elif mm >= 4 %} notice
+            {% else %} none
+            {% endif %}
+          # Attribut måste vara strängar i template-kontekst:
+          threshold_mm: "[4, 10, 15]"
+
+      - name: weather_risk_wind
+        unique_id: weather_risk_wind
+        device_class: safety
+        state: >
+          {{ (states('sensor.weather_today_wind_max_ms') | float(0)) >= 12.0 }}
+        attributes:
+          level: >
+            {% set w = states('sensor.weather_today_wind_max_ms') | float(0) %}
+            {% if w >= 17 %} orange
+            {% elif w >= 12 %} yellow
+            {% else %} none
+            {% endif %}
+          threshold_ms: "[12, 17]"
+
+      - name: weather_risk_frost
+        unique_id: weather_risk_frost
+        device_class: cold
+        state: >
+          {{ (states('sensor.weather_today_temp_min') | float(99)) <= 0.0 }}
+        attributes:
+          threshold_c: "0"
+
+      - name: weather_risk_heat
+        unique_id: weather_risk_heat
+        device_class: heat
+        state: >
+          {{ (states('sensor.weather_today_temp_max') | float(-99)) >= 27.0 }}
+        attributes:
+          threshold_c: "27"

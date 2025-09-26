@@ -37,8 +37,8 @@
   },
   "CUSA00127": {
     "media_title": "Netflix",
-    "media_image_url": null,
-    "media_content_type": null,
+    "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/titlecontainer/se/en/999/CUSA00127_00/image",
+    "media_content_type": "app",
     "locked": false
   }
 }
