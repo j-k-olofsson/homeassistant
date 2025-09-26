@@ -239,19 +239,212 @@ komponera_ai_prompt:
       description: Media spelare för uppspelning av meddelandet
   alias: TTS Grannyfierat meddelande
   description: Läseer upp Grannyfierat meddelande från AI/LLM i valda högtalare
-godnatt_halsningar_till_manni_och_diego:
+granny_broadcast:
+  alias: Granny Broadcast (kanalneutral)
+  description: Grannifiera en uppgift och skicka till valda kanaler (GUI)
+  mode: parallel
+  max: 50
+  fields:
+    task:
+      name: task
+      description: Kort instruktion till Granny
+      required: true
+      selector:
+        text: {}
+    tts_media_player:
+      name: tts_media_player
+      description: Högtalare för TTS
+      selector:
+        entity:
+          domain: media_player
+      default: media_player.toalettens_hogtalare
+    tv_media_player:
+      name: tv_media_player
+      description: TV att kontrollera om den är på
+      selector:
+        entity:
+          domain: media_player
+      default: media_player.vardagsrum_tv
+    send_tts:
+      selector:
+        boolean: {}
+      default: true
+    send_mobile:
+      selector:
+        boolean: {}
+      default: true
+    send_tv:
+      selector:
+        boolean: {}
+      default: true
+    send_ha_persistent:
+      selector:
+        boolean: {}
+      default: true
+    severity:
+      selector:
+        select:
+          options:
+          - info
+          - warn
+          - crit
+      default: info
+    humor_level:
+      selector:
+        number:
+          min: 0
+          max: 3
+          step: 1
+      default: 2
+    mobile_notify_service:
+      name: mobile_notify_service
+      selector:
+        text: {}
+      default: notify.mobile_app_pixel_9_pro_xl
+    tv_notify_service:
+      name: tv_notify_service
+      selector:
+        text: {}
+      default: notify.android_tv_fire_tv
+    recipient:
+      name: recipient
+      description: Namn att tilltala (t.ex. Diego)
+      selector:
+        text: {}
   sequence:
-  - action: script.komponera_ai_prompt
-    metadata: {}
-    data:
-      task: Skriv en ny, kort och rolig godnatt-hälsning till Manni och Diego varje
-        gång de går och lägger sig.
-      rules: '- Texten ska låta som om Granny står i rummet och muttrar. - Hälsningen
-        måste vara unik varje gång. Återanvänd inte tidigare meddelanden. - Svara
-        endast med själva hälsningen, inga förklaringar eller extra text. - Inga svordomar.'
-      output_format: En kort godnatt-hälsning på svenska som är mindre än 255 tecken
-        och maximalt består av tre meningar.
-      tts_media_player: media_player.toalettens_hogtalare
-  alias: TEST - TTS Grannyfierat meddelande på vald media enhet
-  description: En script som genererar unika, korta godnatt-hälsningar till Manni
-    och Diego varje gång de går och lägger sig.
+  - variables:
+      is_weekend: '{{ now().weekday() in [5,6] }}'
+      quiet_start: '22:00:00'
+      quiet_end_weekday: 05:30:00
+      quiet_end_weekend: 07:00:00
+      now_hms: '{{ now().strftime(''%H:%M:%S'') }}'
+      in_quiet_hours: "{% if is_weekend %}\n  {{ (now_hms >= quiet_start) or (now_hms
+        <= quiet_end_weekend) }}\n{% else %}\n  {{ (now_hms >= quiet_start) or (now_hms
+        <= quiet_end_weekday) }}\n{% endif %}"
+      sev: '{{ severity }}'
+      humor_eff: '{{ 0 if severity == ''crit'' else humor_level | int }}'
+      fallback_message: Hallå där era sömntutor! Stäng balkongdörren innan en mammut
+        kliver in!
+  - variables:
+      persona: "Du spelar rollen ”Granny” från Ice Age.\n- Personlighet: Butter, smågrinig,
+        ironisk men med varm botten.\n- Röst: Kort, rapp, syrligt rolig. Aldrig elak
+        mot personer; skämten riktas mot situationen.\n- Stil:\n  - Svensk vardagston.
+        Fakta får inte hittas på.\n  - Vid oklarhet: skriv exakt \"uppgift saknas\".\n-
+        Regler:\n  - Alltid på svenska.\n  - Vid severity=\"crit\": neutral ton (ingen
+        humor)."
+      instructions: "[System] {{ persona }} Kontrakt: Returnera strikt JSON, ingen
+        prosa, inget markdown.\n[Uppgift] {% if recipient %}Adressat: {{ recipient
+        }}.{% endif %} {{ task }}\n[Reglage] humor_level: {{ humor_eff }} severity:
+        {{ sev }} längder:\n  mobile.title: 50\n  mobile.body : 200\n  tv.title    :
+        50\n  tv.body     : 200\n\n[Output JSON schema] {\n  \"message\": \"kort,
+        1 mening, kanalneutral\",\n  \"ssml\": \"valfri SSML, lämna tom om tveksamheter\",\n
+        \ \"mobile\": { \"title\": \"max 50 tecken\", \"body\": \"max 200 tecken\"
+        },\n  \"tv\": { \"title\": \"max 50 tecken\", \"body\": \"max 200 tecken\"
+        },\n  \"severity\": \"info|warn|crit\",\n  \"emoji\": \"valfri emoji\",\n
+        \ \"meta\": { \"humor\": 0-3, \"lang\": \"sv\", \"persona\": \"granny:1.0\"
+        }\n}\n[Regler] - Svara ENBART med giltig JSON enligt schemat ovan. - Respektera
+        längdgränser (klipp hellre än att överskrida). - Inga personangrepp, inga
+        svordomar. - Vid severity=\"crit\": meta.humor=0 och neutral ton. - Vid oklarhet:
+        skriv \"uppgift saknas\" i relevanta fält. - Kontrollera att inget motsäger
+        input."
+  - data:
+      task_name: Grannyfierad prompt
+      instructions: '{{ instructions }}'
+      entity_id: ai_task.ollama_ai_task_llama3_1_8b
+    response_variable: granny_primary
+    action: ai_task.generate_data
+  - variables:
+      raw_primary: '{{ granny_primary.data | default('''') }}'
+      granny_json: "{% if raw_primary is string %}\n  {% set s = raw_primary | trim
+        %}\n  {% if s|length > 0 and s.startswith('{') and s.endswith('}') %}\n    {{
+        s | from_json }}\n  {% else %}\n    {{ dict() }}\n  {% endif %}\n{% elif raw_primary
+        %}\n  {{ raw_primary }}\n{% else %}\n  {{ dict() }}\n{% endif %}"
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ (granny_json is mapping) and (granny_json | length ==
+          0) }}'
+      sequence:
+      - data:
+          task_name: Grannyfierad prompt (fallback)
+          instructions: '{{ instructions }}'
+          entity_id: ai_task.ollama_ai_task_mistral_nemo_12b
+        response_variable: granny_fallback
+        action: ai_task.generate_data
+      - variables:
+          raw_fallback: '{{ granny_fallback.data | default('''') }}'
+          granny_json: "{% if raw_fallback is string %}\n  {% set s = raw_fallback
+            | trim %}\n  {% if s|length > 0 and s.startswith('{') and s.endswith('}')
+            %}\n    {{ s | from_json }}\n  {% else %}\n    {{ dict() }}\n  {% endif
+            %}\n{% elif raw_fallback %}\n  {{ raw_fallback }}\n{% else %}\n  {{ dict()
+            }}\n{% endif %}"
+  - variables:
+      msg: "{% if granny_json and (granny_json is mapping) %}\n  {{ granny_json.get('message','')
+        }}\n{% else %}\n  {% if raw_primary is string %}{{ raw_primary }}{% elif raw_primary
+        %}{{ raw_primary }}{% else %}{{ raw_fallback | default('') }}{% endif %}\n{%
+        endif %}"
+      mobile_title: "{% if granny_json and (granny_json is mapping) %}\n  {{ (granny_json.get('mobile',{})).get('title','')
+        }}\n{% else %}{{ '' }}{% endif %}"
+      mobile_body: "{% if granny_json and (granny_json is mapping) %}\n  {{ (granny_json.get('mobile',{})).get('body','')
+        }}\n{% else %}{{ '' }}{% endif %}"
+      tv_title: "{% if granny_json and (granny_json is mapping) %}\n  {{ (granny_json.get('tv',{})).get('title','')
+        }}\n{% else %}{{ '' }}{% endif %}"
+      tv_body: "{% if granny_json and (granny_json is mapping) %}\n  {{ (granny_json.get('tv',{})).get('body','')
+        }}\n{% else %}{{ '' }}{% endif %}"
+      final_message: '{% set base = (msg | trim) %} {{ base if base|length>0 else
+        fallback_message }}'
+  - data:
+      level: info
+      message: '[granny_broadcast] sev={{ sev }} humor={{ humor_eff }} quiet={{ in_quiet_hours
+        }} instructions={{ instructions }} primary_raw={{ raw_primary | default('''')
+        }} parsed={{ granny_json | default({}) }}
+
+        '
+    action: system_log.write
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ send_tts }}'
+      - condition: template
+        value_template: '{{ not in_quiet_hours }}'
+      sequence:
+      - target:
+          entity_id: '{{ tts_media_player }}'
+        data:
+          media_player_entity_id: '{{ tts_media_player }}'
+          cache: false
+          message: '{{ final_message }}'
+        action: tts.speak
+    - conditions:
+      - condition: template
+        value_template: '{{ send_mobile }}'
+      sequence:
+      - data:
+          title: '{{ (mobile_title if mobile_title|length>0 else final_message) |
+            truncate(50, true) }}'
+          message: '{{ (mobile_body if mobile_body|length>0 else final_message) |
+            truncate(200, true) }}'
+          data:
+            tag: granny
+        action: '{{ mobile_notify_service }}'
+    - conditions:
+      - condition: template
+        value_template: '{{ send_tv }}'
+      - condition: template
+        value_template: '{{ states(tv_media_player) in [''on'',''playing'',''idle'']
+          }}'
+      sequence:
+      - data:
+          title: '{{ (tv_title if tv_title|length>0 else final_message) | truncate(50,
+            true) }}'
+          message: '{{ (tv_body if tv_body|length>0 else final_message) | truncate(200,
+            true) }}'
+        action: '{{ tv_notify_service }}'
+    - conditions:
+      - condition: template
+        value_template: '{{ send_ha_persistent }}'
+      sequence:
+      - data:
+          title: Granny
+          message: '{{ final_message }}'
+        action: persistent_notification.create

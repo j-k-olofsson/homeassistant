@@ -1378,7 +1378,7 @@
   - data:
       title: Varning
       message: Klockan är efter 20:00 och hönsluckan är fortfarande öppen!
-    enabled: false
+    enabled: true
     action: script.notifera_enheter
   mode: queued
   max: 10
@@ -1465,20 +1465,6 @@
         data:
           item: Kontakten med Internet har återställts
           description: OpenWRT gw.local har återfått kontakten med WAN
-  mode: queued
-  max: 10
-- id: '1735501219202'
-  alias: Stäng av lampan i redet
-  description: Automatiskt stänger av lampan i redet vid midnatt för att spara energi.
-  triggers:
-  - trigger: time
-    at: 00:00:00
-  conditions: []
-  actions:
-  - type: turn_off
-    device_id: 01bf206d70319793afffd5b58d6edeaa
-    entity_id: 41f0cb1141d6b1ea1ac1004e576b29d7
-    domain: light
   mode: queued
   max: 10
 - id: '1735998434886'
@@ -1933,32 +1919,6 @@
         action: script.entity_recover_update_retry
   mode: queued
   max: 10
-- id: sync_ledstrip_with_growlight
-  alias: '[Blomlampa⇄LED] Synka LED-strip med blomlampa'
-  description: Släcker LED-strip när blomlampa tänds, tänder LED-strip när blomlampa
-    släcks.
-  triggers:
-  - entity_id: light.blomlampa_trappan_esphome02_light
-    trigger: state
-  actions:
-  - choose:
-    - conditions:
-      - condition: state
-        entity_id: light.blomlampa_trappan_esphome02_light
-        state: 'on'
-      sequence:
-      - target:
-          entity_id: light.esphome62_led_strip
-        action: light.turn_off
-    - conditions:
-      - condition: state
-        entity_id: light.blomlampa_trappan_esphome02_light
-        state: 'off'
-      sequence:
-      - target:
-          entity_id: light.esphome62_led_strip
-        action: light.turn_on
-  mode: single
 - &id001
   id: esphome_install_updates_button
   alias: Uppdatera ESPHome-enheter
