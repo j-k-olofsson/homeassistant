@@ -3,7 +3,7 @@
   "wake_word": "hai_gran_nee",
   "author": "Tater Totterson",
   "website": "https://github.com/TaterTotterson/microWakeWord-Trainer-Nvidia-Docker.git",
-  "model": "hai_gran_nee.tflite",
+  "model": "https://raw.githubusercontent.com/j-k-olofsson/homeassistant/main/esphome/packages/models/hai_gran_nee/hai_gran_nee.tflite",
   "trained_languages": [
     "en"
   ],
