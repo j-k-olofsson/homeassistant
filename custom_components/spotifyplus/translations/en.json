@@ -16,7 +16,7 @@
       }
     },
     "abort": {
-      "_comment_01": " ***** IMPORTANT ***** some of these resources are not referenced in our config_flow, but are still required by OAuth2 processing!",
+      "_comment_01": "***** IMPORTANT ***** some of these resources are not referenced in our config_flow, but are still required by OAuth2 processing!",
       "already_configured": "Service is already configured for \"SpotifyPlus {userinfo}\".  Please modify the existing service entry.",
       "authorize_url_timeout": "Timeout generating authorize URL.",
       "connection_error": "Could not retrieve Spotify account information. Is the user registered in the Spotify Developer Dashboard?",
@@ -1241,6 +1241,14 @@
         "sort_result": {
           "name": "Sort Result?",
           "description": "True to sort result items by name prior to returning to the caller; otherwise, False to return results in the order that the Spotify Web API returned them."
+        },
+        "filter_artist": {
+          "name": "Filter By Artist",
+          "description": "Filter returned entries by an artist name.  Value can be the full name of the artist (e.g. \"Jeremy Camp\"), or a partial name (e.g. \"Camp\")."
+        },
+        "filter_album": {
+          "name": "Filter By Album",
+          "description": "Filter returned entries by an album name.  Value can be the full name of the album (e.g. \"Carried Me\"), or a partial name (e.g. \"Carried\")."
         }
       }
     },
@@ -1456,6 +1464,20 @@
         }
       }
     },
+    "get_id_from_uri": {
+      "name": "Get Id From Uri",
+      "description": "Gets the Id portion of a Spotify URI value.",
+      "fields": {
+        "entity_id": {
+          "name": "Entity ID",
+          "description": "Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API."
+        },
+        "uri": {
+          "name": "Spotify URI Value",
+          "description": "Spotify URI value to parse. Example: `spotify:track:6vc9OTcyd3hyzabCmsdnwE`."
+        }
+      }
+    },
     "get_users_top_artists": {
       "name": "Get Users Top Artists",
       "description": "Get the current user's top artists based on calculated affinity.",
@@ -1617,6 +1639,14 @@
         "limit_total": {
           "name": "Limit Total",
           "description": "The maximum number of items to retrieve from favorites.  Default is 200; Range is 1 - 750."
+        },
+        "filter_artist": {
+          "name": "Filter By Artist",
+          "description": "Filter returned entries by an artist name.  Value can be the full name of the artist (e.g. \"Jeremy Camp\"), or a partial name (e.g. \"Camp\")."
+        },
+        "filter_album": {
+          "name": "Filter By Album",
+          "description": "Filter returned entries by an album name.  Value can be the full name of the album (e.g. \"Carried Me\"), or a partial name (e.g. \"Carried\")."
         }
       }
     },
@@ -2635,6 +2665,10 @@
         "level": {
           "name": "Level",
           "description": "Level percentage to adjust the volume by. Default is 0.10 (e.g. 10 percent), range is 0.01 to 1.00 (e.g. 1 to 100 percent)."
+        },
+        "level_percent": {
+          "name": "Level Percentage",
+          "description": "Level percentage to adjust the volume by. Default is 10, range is 1 to 100 (e.g. percent). level argument is ignored if this argument is specified."
         }
       }
     }

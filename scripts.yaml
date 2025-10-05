@@ -1,106 +1,3 @@
-notifera_enheter:
-  alias: Notifiera enheter
-  mode: single
-  icon: mdi:message-badge-outline
-  fields:
-    title:
-      name: Title
-      description: Rubrik för meddelandet
-    message:
-      name: Message
-      description: Text för meddelandet
-  sequence:
-  - data:
-      message: '{{message}}'
-      title: '{{title}}'
-    action: notify.mobile_app_pixel_9_pro_xl
-  - action: notify.android_tv_fire_tv
-    data:
-      data:
-        duration: 10
-        position: top-right
-        fontsize: small
-        transparency: 25%
-        color: teal
-        interrupt: 0
-        image: /config/file_notifications/Granny.ico
-      message: '{{ message | default("Glömde bort vad jag skulle säga...") }}'
-      title: Granny informerar
-meddelande_via_hogtalare:
-  alias: Meddelande via högtalare
-  fields:
-    message:
-      name: Message
-      description: Text för meddelandet
-  sequence:
-  - condition: time
-    after: 07:00:00
-    before: '21:00:00'
-    weekday:
-    - mon
-    - tue
-    - wed
-    - thu
-    - fri
-    - sat
-    - sun
-    enabled: true
-  - condition: not
-    conditions:
-    - condition: state
-      state: playing
-      entity_id: media_player.nya_tvn
-    enabled: true
-  - action: tts.cloud_say
-    data:
-      cache: false
-      message: '{{ message }}'
-      entity_id: media_player.ha_notifiering
-  mode: single
-  icon: mdi:account-voice
-persistent_varning:
-  alias: Persistent varning
-  fields:
-    title:
-      name: Title
-      description: Rubrik för meddelandet
-    message:
-      name: Message
-      description: Text för meddelandet
-  sequence:
-  - data:
-      message: '{{ message }}'
-      title: '{{ title }}'
-    action: notify.persistent_notification
-  - data:
-      message: '{{ message }} '
-      title: '{{ title }}'
-    action: notify.mobile_app_pixel_9_pro_xl
-  icon: mdi:home-alert-outline
-logga_arbetsuppgift:
-  alias: Logga arbetsuppgift
-  sequence:
-  - service: todo.add_item
-    data:
-      item: '{{ item }}'
-      description: '{{ description }}'
-      due_datetime: '{{ now() }}'
-    target:
-      entity_id: todo.ha_loggade_arbetsuppgifter
-  mode: queued
-  icon: mdi:math-log
-  max: 50
-  fields:
-    item:
-      selector:
-        text:
-      name: Item
-      description: Rubrik för loggad arbetsuppgift
-      required: true
-    description:
-      selector:
-        text:
-      name: Description
 ange_starttid_for_bilvarmen:
   alias: Ange starttid för bilvärmen
   sequence:
@@ -134,154 +31,21 @@ rescan_wifi_on_esphome_nodes:
           message: 'Rescan wifi: esphome{{ repeat.item[14:16] }}'
         target:
           entity_id: notify.file
-entity_recover_update_retry:
-  alias: Entity recover (update + retry)
-  description: Försök uppdatera en entitet upp till 3 gånger; larma om den fortfarande
-    är unavailable/unknown.
-  mode: queued
-  max: 10
-  fields:
-    entity_id:
-      name: Target entity
-      description: Entitet att återställa (t.ex. sensor.xyz)
-      example: sensor.vardagsrum_temperatur
-      selector:
-        entity: {}
-  sequence:
-  - variables:
-      _entity: '{{ entity_id }}'
-  - repeat:
-      count: 3
-      sequence:
-      - target:
-          entity_id: '{{ _entity }}'
-        action: homeassistant.update_entity
-      - delay: 00:00:20
-  - choose:
-    - conditions:
-      - condition: template
-        value_template: '{{ states(_entity) in [''unavailable'',''unknown''] }}'
-      sequence:
-      - data:
-          title: 'Watchdog: fortfarande offline'
-          message: '{{ _entity }} är fortfarande {{ states(_entity) }} efter 3 försök.
-            Åtgärda manuellt (kontrollera nät/el/integration).'
-        action: persistent_notification.create
-    default:
-    - data:
-        name: Watchdog
-        message: '{{ _entity }} återställdes inom 3 försök.'
-        entity_id: '{{ _entity }}'
-      action: logbook.log
-komponera_ai_prompt:
-  sequence:
-  - variables:
-      persona: "Du spelar rollen “Granny” från filmerna om Ice Age:\n  - Personlighet:
-        Butter, smågrinig, ironisk, överdriver ibland (“man fryser ihjäl”, “vinden
-        blåser bort löständerna”) men med varm botten.\n  - Röst: Kort, rapp, syrligt
-        rolig. Aldrig elak mot personer; skämten riktas mot situationen.\n  - Stilregler:
-        \n    - Fakta får aldrig förvanskas. Humor ska ALDRIG motsäga data eller intensifiera
-        mer än tillåtet.\n    - Svensk vardagstongång. Använd gärna färgstarka ord,
-        men håll dig saklig i fakta.\n  - Outputdisciplin: \n    - Följ uppgifts-promptens
-        fält och format exakt.\n    - Om data saknas/otydlig: säg det rakt ut (“uppgift
-        saknas”), hitta inte på."
-      prompt: '[Roll]
-
-        {{ persona }}
-
-
-        [Uppgift]
-
-        {{ task }}
-
-
-        [Regler]
-
-        {{ rules }}
-
-
-        [Output Format]
-
-        {{ output_format }}'
-  - data:
-      task_name: Grannyfierad prompt
-      instructions: '{{ prompt }}'
-      entity_id: ai_task.ollama_ai_task_llama3_1_8b
-    action: ai_task.generate_data
-    response_variable: grannys_message
-  - data:
-      cache: false
-      message: '{{ grannys_message.data | default("Hallå där era sömntutor! Stäng
-        balkongdörren innan en mammut kliver in!") }}'
-      entity_id: '{{ tts_media_player }}'
-    action: tts.cloud_say
-  fields:
-    task:
-      selector:
-        text:
-      name: task
-      description: Uppgiften
-    rules:
-      selector:
-        text:
-      name: rules
-      description: Extra regler
-    output_format:
-      selector:
-        text:
-      name: output_format
-      description: Formatering av svaret
-    tts_media_player:
-      selector:
-        entity:
-          domain: media_player
-      name: tts_media_player
-      description: Media spelare för uppspelning av meddelandet
-  alias: TTS Grannyfierat meddelande
-  description: Läseer upp Grannyfierat meddelande från AI/LLM i valda högtalare
 granny_broadcast:
   alias: Granny Broadcast (kanalneutral)
-  description: Grannifiera en uppgift och skicka till valda kanaler (GUI)
+  description: Grannifiera en uppgift och (valfritt) skicka till valda kanaler. Returnerar
+    alltid final_message.
   mode: parallel
   max: 50
   fields:
     task:
       name: task
-      description: Kort instruktion till Granny
+      description: Kort instruktion till Granny (obligatorisk)
       required: true
       selector:
         text: {}
-    tts_media_player:
-      name: tts_media_player
-      description: Högtalare för TTS
-      selector:
-        entity:
-          domain: media_player
-      default: media_player.toalettens_hogtalare
-    tv_media_player:
-      name: tv_media_player
-      description: TV att kontrollera om den är på
-      selector:
-        entity:
-          domain: media_player
-      default: media_player.vardagsrum_tv
-    send_tts:
-      selector:
-        boolean: {}
-      default: true
-    send_mobile:
-      selector:
-        boolean: {}
-      default: true
-    send_tv:
-      selector:
-        boolean: {}
-      default: true
-    send_ha_persistent:
-      selector:
-        boolean: {}
-      default: true
     severity:
+      name: severity
       selector:
         select:
           options:
@@ -290,63 +54,79 @@ granny_broadcast:
           - crit
       default: info
     humor_level:
+      name: humor_level
       selector:
         number:
           min: 0
           max: 3
           step: 1
       default: 2
-    mobile_notify_service:
-      name: mobile_notify_service
-      selector:
-        text: {}
-      default: notify.mobile_app_pixel_9_pro_xl
-    tv_notify_service:
-      name: tv_notify_service
-      selector:
-        text: {}
-      default: notify.android_tv_fire_tv
     recipient:
       name: recipient
       description: Namn att tilltala (t.ex. Diego)
       selector:
         text: {}
+    channels:
+      name: Kanaler
+      description: Välj en eller flera kanaler (lämna tom för att inte skicka något)
+      selector:
+        select:
+          multiple: true
+          options:
+          - label: TTS (högtalare/grupp)
+            value: tts
+          - label: Mobil (notify.mobile_app_pixel_9_pro_xl)
+            value: mobile
+          - label: TV (notify.android_tv_fire_tv)
+            value: tv
+          - label: HA-notis (persistent_notification)
+            value: ha
+    tts_media_player:
+      name: tts_media_player
+      description: Högtalare eller grupp för TTS (fallback = media_player.grupp_grannys_hogtalare)
+      selector:
+        entity:
+          domain: media_player
+      default: media_player.grupp_grannys_hogtalare
   sequence:
   - variables:
+      sev: '{{ severity | default(''info'') }}'
+      hum_in: '{{ humor_level | default(2) }}'
+      humor_eff: '{{ 0 if (sev == ''crit'') else (hum_in | int) }}'
       is_weekend: '{{ now().weekday() in [5,6] }}'
-      quiet_start: '22:00:00'
+      quiet_start: '23:00:00'
       quiet_end_weekday: 05:30:00
       quiet_end_weekend: 07:00:00
       now_hms: '{{ now().strftime(''%H:%M:%S'') }}'
       in_quiet_hours: "{% if is_weekend %}\n  {{ (now_hms >= quiet_start) or (now_hms
         <= quiet_end_weekend) }}\n{% else %}\n  {{ (now_hms >= quiet_start) or (now_hms
         <= quiet_end_weekday) }}\n{% endif %}"
-      sev: '{{ severity }}'
-      humor_eff: '{{ 0 if severity == ''crit'' else humor_level | int }}'
-      fallback_message: Hallå där era sömntutor! Stäng balkongdörren innan en mammut
-        kliver in!
+      sev_title: '{% if sev == ''crit'' %}Viktigt meddelande från Granny {% elif sev
+        == ''warn'' %}Granny varnar {% else %}Granny säger{% endif %}'
+      tv_color: '{% if sev == ''crit'' %}red {% elif sev == ''warn'' %}orange {% else
+        %}teal{% endif %}'
+      _channels: '{{ channels | default([]) }}'
+      use_tts: '{{ ''tts'' in _channels }}'
+      use_mobile: '{{ ''mobile'' in _channels }}'
+      use_tv: '{{ ''tv'' in _channels }}'
+      use_ha: '{{ ''ha'' in _channels }}'
+      fallback_message: Hallå där, detta är Granny - som dessvärre glömt bort vad
+        jag skulle säga
   - variables:
       persona: "Du spelar rollen ”Granny” från Ice Age.\n- Personlighet: Butter, smågrinig,
         ironisk men med varm botten.\n- Röst: Kort, rapp, syrligt rolig. Aldrig elak
-        mot personer; skämten riktas mot situationen.\n- Stil:\n  - Svensk vardagston.
-        Fakta får inte hittas på.\n  - Vid oklarhet: skriv exakt \"uppgift saknas\".\n-
-        Regler:\n  - Alltid på svenska.\n  - Vid severity=\"crit\": neutral ton (ingen
-        humor)."
-      instructions: "[System] {{ persona }} Kontrakt: Returnera strikt JSON, ingen
-        prosa, inget markdown.\n[Uppgift] {% if recipient %}Adressat: {{ recipient
-        }}.{% endif %} {{ task }}\n[Reglage] humor_level: {{ humor_eff }} severity:
-        {{ sev }} längder:\n  mobile.title: 50\n  mobile.body : 200\n  tv.title    :
-        50\n  tv.body     : 200\n\n[Output JSON schema] {\n  \"message\": \"kort,
-        1 mening, kanalneutral\",\n  \"ssml\": \"valfri SSML, lämna tom om tveksamheter\",\n
-        \ \"mobile\": { \"title\": \"max 50 tecken\", \"body\": \"max 200 tecken\"
-        },\n  \"tv\": { \"title\": \"max 50 tecken\", \"body\": \"max 200 tecken\"
-        },\n  \"severity\": \"info|warn|crit\",\n  \"emoji\": \"valfri emoji\",\n
+        mot personer; skämten riktas mot situationen.\n- Stil: Svensk vardagston.
+        Fakta får inte hittas på. Vid oklarhet: skriv \"uppgift saknas\".\n- Humor-skala:\n
+        \ 0: neutral; 1: lätt syrligt ordval; 2: syrligt rolig, kort punchline;\n
+        \ 3: tydlig humor men strikt on-topic.\n- Regler: Alltid svenska. Vid severity=\"crit\":
+        humor=0."
+      instructions: "[System] {{ persona }} Returnera strikt JSON, ingen prosa, inget
+        markdown.\n[Uppgift] {% if (recipient | default('') | trim) %}Adressat: {{
+        recipient }}.{% endif %} {{ task }}\n[Reglage] humor_level: {{ humor_eff }}
+        severity: {{ sev }}\n[Output JSON schema] {\n  \"message\": \"OBLIGATORISKT:
+        icke-tomt, 1 mening, kanalneutral\",\n  \"severity\": \"info|warn|crit\",\n
         \ \"meta\": { \"humor\": 0-3, \"lang\": \"sv\", \"persona\": \"granny:1.0\"
-        }\n}\n[Regler] - Svara ENBART med giltig JSON enligt schemat ovan. - Respektera
-        längdgränser (klipp hellre än att överskrida). - Inga personangrepp, inga
-        svordomar. - Vid severity=\"crit\": meta.humor=0 och neutral ton. - Vid oklarhet:
-        skriv \"uppgift saknas\" i relevanta fält. - Kontrollera att inget motsäger
-        input."
+        }\n}"
   - data:
       task_name: Grannyfierad prompt
       instructions: '{{ instructions }}'
@@ -357,8 +137,8 @@ granny_broadcast:
       raw_primary: '{{ granny_primary.data | default('''') }}'
       granny_json: "{% if raw_primary is string %}\n  {% set s = raw_primary | trim
         %}\n  {% if s|length > 0 and s.startswith('{') and s.endswith('}') %}\n    {{
-        s | from_json }}\n  {% else %}\n    {{ dict() }}\n  {% endif %}\n{% elif raw_primary
-        %}\n  {{ raw_primary }}\n{% else %}\n  {{ dict() }}\n{% endif %}"
+        s | from_json }}\n  {% else %}{{ dict() }}{% endif %}\n{% elif raw_primary
+        %}{{ raw_primary }} {% else %}{{ dict() }}{% endif %}"
   - choose:
     - conditions:
       - condition: template
@@ -368,83 +148,80 @@ granny_broadcast:
       - data:
           task_name: Grannyfierad prompt (fallback)
           instructions: '{{ instructions }}'
-          entity_id: ai_task.ollama_ai_task_mistral_nemo_12b
+          entity_id: ai_task.ollama_ai_task_llama3_1_8b
         response_variable: granny_fallback
         action: ai_task.generate_data
       - variables:
           raw_fallback: '{{ granny_fallback.data | default('''') }}'
           granny_json: "{% if raw_fallback is string %}\n  {% set s = raw_fallback
             | trim %}\n  {% if s|length > 0 and s.startswith('{') and s.endswith('}')
-            %}\n    {{ s | from_json }}\n  {% else %}\n    {{ dict() }}\n  {% endif
-            %}\n{% elif raw_fallback %}\n  {{ raw_fallback }}\n{% else %}\n  {{ dict()
-            }}\n{% endif %}"
+            %}\n    {{ s | from_json }}\n  {% else %}{{ dict() }}{% endif %}\n{% elif
+            raw_fallback %}{{ raw_fallback }} {% else %}{{ dict() }}{% endif %}"
   - variables:
       msg: "{% if granny_json and (granny_json is mapping) %}\n  {{ granny_json.get('message','')
-        }}\n{% else %}\n  {% if raw_primary is string %}{{ raw_primary }}{% elif raw_primary
-        %}{{ raw_primary }}{% else %}{{ raw_fallback | default('') }}{% endif %}\n{%
-        endif %}"
-      mobile_title: "{% if granny_json and (granny_json is mapping) %}\n  {{ (granny_json.get('mobile',{})).get('title','')
-        }}\n{% else %}{{ '' }}{% endif %}"
-      mobile_body: "{% if granny_json and (granny_json is mapping) %}\n  {{ (granny_json.get('mobile',{})).get('body','')
-        }}\n{% else %}{{ '' }}{% endif %}"
-      tv_title: "{% if granny_json and (granny_json is mapping) %}\n  {{ (granny_json.get('tv',{})).get('title','')
-        }}\n{% else %}{{ '' }}{% endif %}"
-      tv_body: "{% if granny_json and (granny_json is mapping) %}\n  {{ (granny_json.get('tv',{})).get('body','')
-        }}\n{% else %}{{ '' }}{% endif %}"
+        }}\n{% else %}{{ raw_primary | string }}{% endif %}"
       final_message: '{% set base = (msg | trim) %} {{ base if base|length>0 else
         fallback_message }}'
   - data:
       level: info
       message: '[granny_broadcast] sev={{ sev }} humor={{ humor_eff }} quiet={{ in_quiet_hours
-        }} instructions={{ instructions }} primary_raw={{ raw_primary | default('''')
-        }} parsed={{ granny_json | default({}) }}
+        }} title="{{ sev_title }}" tv_color={{ tv_color }} final="{{ final_message
+        }}" tts_target={{ tts_media_player | default(''media_player.grupp_grannys_hogtalare'')
+        }} channels={{ _channels }} -> send: ha={{ use_ha }} mobile={{ use_mobile
+        }} tv={{ use_tv }} tts={{ use_tts }}
 
         '
     action: system_log.write
   - choose:
     - conditions:
       - condition: template
-        value_template: '{{ send_tts }}'
-      - condition: template
-        value_template: '{{ not in_quiet_hours }}'
-      sequence:
-      - target:
-          entity_id: '{{ tts_media_player }}'
-        data:
-          media_player_entity_id: '{{ tts_media_player }}'
-          cache: false
-          message: '{{ final_message }}'
-        action: tts.speak
-    - conditions:
-      - condition: template
-        value_template: '{{ send_mobile }}'
+        value_template: '{{ use_ha }}'
       sequence:
       - data:
-          title: '{{ (mobile_title if mobile_title|length>0 else final_message) |
-            truncate(50, true) }}'
-          message: '{{ (mobile_body if mobile_body|length>0 else final_message) |
-            truncate(200, true) }}'
-          data:
-            tag: granny
-        action: '{{ mobile_notify_service }}'
-    - conditions:
-      - condition: template
-        value_template: '{{ send_tv }}'
-      - condition: template
-        value_template: '{{ states(tv_media_player) in [''on'',''playing'',''idle'']
-          }}'
-      sequence:
-      - data:
-          title: '{{ (tv_title if tv_title|length>0 else final_message) | truncate(50,
-            true) }}'
-          message: '{{ (tv_body if tv_body|length>0 else final_message) | truncate(200,
-            true) }}'
-        action: '{{ tv_notify_service }}'
-    - conditions:
-      - condition: template
-        value_template: '{{ send_ha_persistent }}'
-      sequence:
-      - data:
-          title: Granny
+          title: '{{ sev_title }}'
           message: '{{ final_message }}'
         action: persistent_notification.create
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ use_mobile }}'
+      sequence:
+      - data:
+          title: '{{ sev_title }}'
+          message: '{{ final_message | truncate(200, true) }}'
+          data:
+            tag: granny
+        action: notify.mobile_app_pixel_9_pro_xl
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ use_tv }}'
+      sequence:
+      - data:
+          data:
+            duration: 10
+            position: top-right
+            fontsize: small
+            transparency: 25%
+            color: '{{ tv_color }}'
+            interrupt: 0
+            image: /config/file_notifications/Granny.ico
+          title: '{{ sev_title }}'
+          message: '{{ final_message | truncate(200, true) }}'
+        action: notify.android_tv_fire_tv
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ use_tts and not in_quiet_hours }}'
+      sequence:
+      - data:
+          cache: false
+          message: '{{ final_message }}'
+          entity_id: '{{ tts_media_player | default(''media_player.grupp_grannys_hogtalare'')
+            }}'
+        action: tts.cloud_say
+  - variables:
+      return_final_message: '{{ final_message }}'
+      return_severity_title: '{{ sev_title }}'
+      return_severity: '{{ sev }}'
+      return_humor_level: '{{ humor_eff }}'

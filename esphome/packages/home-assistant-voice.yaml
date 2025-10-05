@@ -1,0 +1,6 @@
+packages:
+  base: github://esphome/home-assistant-voice-pe/home-assistant-voice.yaml
+
+micro_wake_word:
+  models:
+    - model: "/config/esphome/models/hai_gran_nee/hai_gran_nee.json"

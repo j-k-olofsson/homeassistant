@@ -117,6 +117,7 @@ SERVICE_SPOTIFY_GET_COVER_IMAGE_FILE:str = 'get_cover_image_file'
 SERVICE_SPOTIFY_GET_EPISODE:str = 'get_episode'
 SERVICE_SPOTIFY_GET_EPISODE_FAVORITES:str = 'get_episode_favorites'
 SERVICE_SPOTIFY_GET_FEATURED_PLAYLISTS:str = 'get_featured_playlists'
+SERVICE_SPOTIFY_GET_ID_FROM_URI:str = 'get_id_from_uri'
 SERVICE_SPOTIFY_GET_IMAGE_PALETTE_COLORS:str = 'get_image_palette_colors'
 SERVICE_SPOTIFY_GET_IMAGE_VIBRANT_COLORS:str = 'get_image_vibrant_colors'
 SERVICE_SPOTIFY_GET_PLAYER_DEVICES:str = 'get_player_devices'
@@ -471,6 +472,13 @@ SERVICE_SPOTIFY_GET_FEATURED_PLAYLISTS_SCHEMA = vol.Schema(
     }
 )
 
+SERVICE_SPOTIFY_GET_ID_FROM_URI_SCHEMA = vol.Schema(
+    {
+        vol.Required("entity_id"): cv.entity_id,
+        vol.Optional("uri"): cv.string,
+    }
+)
+
 SERVICE_SPOTIFY_GET_IMAGE_PALETTE_COLORS_SCHEMA = vol.Schema(
     {
         vol.Required("entity_id"): cv.entity_id,
@@ -662,6 +670,8 @@ SERVICE_SPOTIFY_GET_TRACK_FAVORITES_SCHEMA = vol.Schema(
         vol.Optional("market"): cv.string,
         vol.Optional("limit_total", default=0): vol.All(vol.Range(min=0,max=9999)),
         vol.Optional("sort_result"): cv.boolean,
+        vol.Optional("filter_artist"): cv.string,
+        vol.Optional("filter_album"): cv.string,
     }
 )
 
@@ -776,6 +786,8 @@ SERVICE_SPOTIFY_PLAYER_MEDIA_PLAY_TRACK_FAVORITES_SCHEMA = vol.Schema(
         vol.Optional("delay", default=0.50): vol.All(vol.Range(min=0,max=10.0)),
         vol.Optional("resolve_device_id"): cv.boolean,
         vol.Optional("limit_total", default=0): vol.All(vol.Range(min=0,max=999999)),
+        vol.Optional("filter_artist"): cv.string,
+        vol.Optional("filter_album"): cv.string,
     }
 )
 
@@ -1187,11 +1199,8 @@ SERVICE_VOLUME_SET_STEP:str = 'volume_set_step'
 SERVICE_VOLUME_SET_STEP_SCHEMA = vol.Schema(
     {
         vol.Required("entity_id"): cv.entity_id,
-        vol.Required("level", default=0.10): vol.All(vol.Range(min=0.01,max=1.00)),
-        #vol.Required("level", default=0.10): vol.All(float, vol.Range(min=.01,max=.99)),
-        #vol.Required("level", default=0.10): vol.All(vol.Range(min=0.01,max=0.99)),
-        #vol.Required("level", default=0.10): vol.All(float, vol.Range(min=0.01,max=1.00)),
-        #vol.Required("level", default=0.10): vol.All(vol.Coerce(float), vol.Range(min=0.01,max=1.00)),
+        vol.Optional("level", default=None): vol.Any(None, vol.All(vol.Coerce(float), vol.Range(min=0.01, max=1.00))),
+        vol.Optional("level_percent", default=None): vol.Any(None, vol.All(vol.Coerce(int), vol.Range(min=1, max=100)))
     }
 )
 
@@ -1400,8 +1409,10 @@ async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
                     delay = service.data.get("delay")
                     resolve_device_id = service.data.get("resolve_device_id")
                     limit_total = service.data.get("limit_total")
+                    filter_artist = service.data.get("filter_artist")
+                    filter_album = service.data.get("filter_album")
                     _logsi.LogVerbose(STAppMessages.MSG_SERVICE_EXECUTE % (service.service, entity.name))
-                    await hass.async_add_executor_job(entity.service_spotify_player_media_play_track_favorites, device_id, shuffle, delay, resolve_device_id, limit_total)
+                    await hass.async_add_executor_job(entity.service_spotify_player_media_play_track_favorites, device_id, shuffle, delay, resolve_device_id, limit_total, filter_artist, filter_album)
 
                 elif service.service == SERVICE_SPOTIFY_PLAYER_MEDIA_PLAY_TRACKS:
 
@@ -1615,7 +1626,8 @@ async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
                     # test token expiration.
                     _logsi.LogVerbose(STAppMessages.MSG_SERVICE_EXECUTE % (service.service, entity.name))
                     level = service.data.get("level")
-                    await hass.async_add_executor_job(entity.service_volume_set_step, level)
+                    level_percent = service.data.get("level_percent")
+                    await hass.async_add_executor_job(entity.service_volume_set_step, level, level_percent)
 
                 else:
                     
@@ -1906,6 +1918,13 @@ async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
                     _logsi.LogVerbose(STAppMessages.MSG_SERVICE_EXECUTE % (service.service, entity.name))
                     response = await hass.async_add_executor_job(entity.service_spotify_get_featured_playlists, limit, offset, country, locale, timestamp, limit_total, sort_result)
 
+                elif service.service == SERVICE_SPOTIFY_GET_ID_FROM_URI:
+
+                    # get id from uri.
+                    uri = service.data.get("uri")
+                    _logsi.LogVerbose(STAppMessages.MSG_SERVICE_EXECUTE % (service.service, entity.name))
+                    response = await hass.async_add_executor_job(entity.service_spotify_get_id_from_uri, uri)
+
                 elif service.service == SERVICE_SPOTIFY_GET_IMAGE_PALETTE_COLORS:
 
                     # get image palette colors.
@@ -2098,8 +2117,10 @@ async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
                     market = service.data.get("market")
                     limit_total = service.data.get("limit_total")
                     sort_result = service.data.get("sort_result")
+                    filter_artist = service.data.get("filter_artist")
+                    filter_album = service.data.get("filter_album")
                     _logsi.LogVerbose(STAppMessages.MSG_SERVICE_EXECUTE % (service.service, entity.name))
-                    response = await hass.async_add_executor_job(entity.service_spotify_get_track_favorites, limit, offset, market, limit_total, sort_result)
+                    response = await hass.async_add_executor_job(entity.service_spotify_get_track_favorites, limit, offset, market, limit_total, sort_result, filter_artist, filter_album)
 
                 elif service.service == SERVICE_SPOTIFY_GET_TRACK_RECOMMENDATIONS:
 
@@ -2963,6 +2984,15 @@ async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
             SERVICE_SPOTIFY_GET_FEATURED_PLAYLISTS,
             service_handle_spotify_serviceresponse,
             schema=SERVICE_SPOTIFY_GET_FEATURED_PLAYLISTS_SCHEMA,
+            supports_response=SupportsResponse.ONLY,
+        )
+
+        _logsi.LogObject(SILevel.Verbose, STAppMessages.MSG_SERVICE_REQUEST_REGISTER % SERVICE_SPOTIFY_GET_ID_FROM_URI, SERVICE_SPOTIFY_GET_ID_FROM_URI_SCHEMA)
+        hass.services.async_register(
+            DOMAIN,
+            SERVICE_SPOTIFY_GET_ID_FROM_URI,
+            service_handle_spotify_serviceresponse,
+            schema=SERVICE_SPOTIFY_GET_ID_FROM_URI_SCHEMA,
             supports_response=SupportsResponse.ONLY,
         )
 

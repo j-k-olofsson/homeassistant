@@ -10,16 +10,19 @@
     entity_id: sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature
     above: -10
   actions:
-  - data:
-      title: '{{ [ "Värmebölja!", "Slut på istiden!", "Kritiskt larm!", "Mer kyla
-        tack!" ] | random }}
-
-        '
-      message: '{{ [ "Frysboxen är för varm!", "Slut på isen i frysboxen?", "För häg
-        temperatur i frysboxen!", "Är frysboxens lucka öppen?" ] | random }}
-
-        '
-    action: script.persistent_varning
+  - action: script.granny_broadcast
+    metadata: {}
+    data:
+      severity: crit
+      humor_level: 2
+      tts_media_player: media_player.grupp_grannys_hogtalare
+      task: Meddela att frysboxen i gamla verkstaden blivit för varm och att den behöver
+        kontrolleras
+      channels:
+      - tts
+      - mobile
+      - tv
+      - ha
   mode: queued
   max: 10
 - id: '1669463948653'
@@ -33,11 +36,16 @@
     entity_id: sensor.gasol_utomhus_esphome73_lpg_level
     below: 5
   actions:
-  - metadata: {}
+  - action: script.granny_broadcast
+    metadata: {}
     data:
-      description: Dags att byta gasolflaska
-      item: Låg nivå i gasolflaskan
-    action: script.logga_arbetsuppgift
+      severity: info
+      humor_level: 2
+      tts_media_player: media_player.grupp_grannys_hogtalare
+      task: Meddela att gasolen börjar ta slut och att det är dags att byta flaska
+      channels:
+      - mobile
+      - ha
   mode: queued
   max: 10
 - id: '1669464348939'
@@ -73,6 +81,26 @@
         %} För mycket näring!{% endif %}\n  {% if loop.last %}{{ \"\\n\" }}{% endif
         %}\n{% endfor %}"
     action: script.logga_arbetsuppgift
+    enabled: false
+  - action: script.granny_broadcast
+    metadata: {}
+    data:
+      severity: info
+      humor_level: 0
+      tts_media_player: media_player.grupp_grannys_hogtalare
+      task: 'Meddela att en eller flera av plantorna som beskrivs här behöver hjälp
+        och vad det är för hjälp de behöver.
+
+        {% for plant in states.plant if plant.state == ''problem'' %}   {{- plant.name
+        }}:    {%- if ''Low'' in plant.attributes.moisture_status %} Behöver vattnas.{%
+        endif %}   {%- if ''High'' in plant.attributes.moisture_status %} För mycket
+        vatten!{% endif %}   {%- if ''Low'' in plant.attributes.conductivity_status
+        %} Behöver näring.{% endif %}   {%- if ''High'' in plant.attributes.conductivity_status
+        %} För mycket näring!{% endif %}   {% if loop.last %}{{ "\n" }}{% endif %}
+        {% endfor %}'
+      channels:
+      - mobile
+      - ha
   mode: queued
   max: 10
 - id: '1669464498470'
@@ -87,11 +115,16 @@
     entity_id: sensor.vattenniva_honshuset_esphome74_water_level
     below: 25
   actions:
-  - metadata: {}
+  - action: script.granny_broadcast
+    metadata: {}
     data:
-      description: Dags att vattna hönsen
-      item: Låg nivå i hönsens vatten
-    action: script.logga_arbetsuppgift
+      severity: info
+      humor_level: 2
+      tts_media_player: media_player.grupp_grannys_hogtalare
+      task: Meddela att hönsens vatten börjar ta slut
+      channels:
+      - mobile
+      - ha
   mode: queued
   max: 10
 - id: '1669464923530'
@@ -109,11 +142,16 @@
   actions:
   - choose: []
     default:
-    - metadata: {}
+    - action: script.granny_broadcast
+      metadata: {}
       data:
-        description: '{{ sensors }}'
-        item: Låg batterinivå
-      action: script.logga_arbetsuppgift
+        severity: warn
+        humor_level: 2
+        tts_media_player: media_player.grupp_grannys_hogtalare
+        task: 'Låg batterinivå: {{ sensors }}'
+        channels:
+        - mobile
+        - ha
   variables:
     day: 0
     threshold: 15
@@ -404,11 +442,16 @@
     entity_id: sensor.esphome90_esphome90_salt_level
     below: 20
   actions:
-  - metadata: {}
+  - action: script.granny_broadcast
+    metadata: {}
     data:
-      description: Dags att fylla på salt
-      item: Låg nivå i saltreningen
-    action: script.logga_arbetsuppgift
+      severity: info
+      humor_level: 2
+      tts_media_player: media_player.grupp_grannys_hogtalare
+      task: Meddela att salttabletterna i vattenfiltret är på en låg nivå
+      channels:
+      - mobile
+      - ha
   mode: queued
   max: 10
 - id: '1673428919960'
@@ -422,20 +465,14 @@
     trigger: device
   conditions: []
   actions:
-  - data:
-      title: Tvättmaskinen
-      message: Tvätten är klar!
-    action: script.notifera_enheter
-  - action: script.komponera_ai_prompt
-    metadata: {}
+  - action: script.granny_broadcast
     data:
-      task: Skriv ett kort meddelande, max en mening som gör oss uppmärksamma på att
-        tvättmaskinen nu gjort sitt och är klar för tömmning.
-      rules: '- Texten ska låta som om Granny står i rummet och muttrar. - Hälsningen
-        måste vara unik varje gång. Återanvänd inte tidigare meddelanden. - Svara
-        endast med själva hälsningen, inga förklaringar eller extra text. - Inga svordomar.'
-      output_format: En kort instruktion som maximalt består av två meningar.
-      tts_media_player: media_player.ha_notifiering
+      task: Meddela att tvättmaskinen nu är färdig och kan nu tömmas
+      severity: info
+      humor_level: 2
+      channels:
+      - tts
+      - tv
   mode: queued
   max: 10
 - id: '1673780941087'
@@ -686,34 +723,25 @@
         entity_id: binary_sensor.shelly_blu_door_window_2a6d_window
         state: 'on'
       sequence:
-      - action: script.komponera_ai_prompt
-        metadata: {}
+      - action: script.granny_broadcast
         data:
-          task: Skriv en kort text på 1-2 meningar, rolig och barsk tillsägelse om
-            att     balkongörren är öppen och borde stängas – gärna med en liten känga.
-          rules: '- Texten ska låta som om Granny står i rummet och muttrar. - Hälsningen
-            måste vara unik varje gång. Återanvänd inte tidigare meddelanden. - Svara
-            endast med själva hälsningen, inga förklaringar eller extra text. - Inga
-            svordomar.'
-          output_format: En kort godnatt-hälsning på svenska som är mindre än 255
-            tecken och maximalt består av tre meningar.
+          task: Meddela att balkongdörren är öppen trots att ni verkar redo för att
+            sova
+          severity: warn
+          humor_level: 2
           tts_media_player: media_player.diegos_vackarklocka
+          channels:
+          - tts
       - stop: Balkongdörren är öppen
     default:
-    - action: script.komponera_ai_prompt
-      metadata: {}
+    - action: script.granny_broadcast
       data:
-        task: Skriv ett kort meddelande, max en till två meningar där Granny önskar
-          oss godnatt.
-        rules: '- Texten ska låta som om Granny i filmerna om IceAge och hur hin brukar
-          snacka med Manny och Diego. - Hälsningen måste vara unik varje gång. Återanvänd
-          inte tidigare meddelanden. - Svara endast med själva hälsningen, inga förklaringar
-          eller extra text. - Inga svordomar. - Texten måste vara på svenska, grammatiskt
-          korrekt. - Alla ord måste vara korrekt använda och existera, inga påhittade
-          ord tillåts. - Meningsuppbyggnaden ska vara enligt normal samtalsstandard.'
-        output_format: En kort text som får oss att småle när vi lägger huvudena på
-          kuddarna.
+        task: Säg godnatt med ett kort och fyndigt rim
+        severity: info
+        humor_level: 2
         tts_media_player: media_player.diegos_vackarklocka
+        channels:
+        - tts
   - target:
       entity_id: light.grupp_godnatt
     action: light.turn_off
@@ -776,50 +804,17 @@
     trigger: state
   conditions: []
   actions:
-  - data:
-      title: INFO
-      message: Elpriserna för nästa dygn är nu tillgängliga
-    enabled: false
-    action: script.notifera_enheter
-  - data:
-      message: '{{ [ "El priserna för imorgon har anlänt",  "Nästa dygns elpriser
-        har publicerats" ] | random }}
-
-        '
-    enabled: true
-    action: script.meddelande_via_hogtalare
-  - action: notify.mobile_app_pixel_9_pro_xl
+  - action: script.granny_broadcast
+    metadata: {}
     data:
-      message: 'Nästa dygns elpriser har publicerats '
-      title: Info
-      data:
-        clickAction: /dashboard-elpris/0
-  mode: queued
-  max: 10
-- id: '1683640093909'
-  alias: Uppdatera UV-index
-  description: Uppdaterar UV-index för att säkerställa att informationen är aktuell
-    när solen är ovanför horisonten och på dagtid.
-  triggers:
-  - trigger: state
-    entity_id:
-    - sensor.current_uv_index
-    to: unavailable
-  conditions:
-  - condition: numeric_state
-    entity_id: sun.sun
-    attribute: elevation
-    above: 0
-  - condition: time
-    after: 05:00:00
-    before: '20:00:00'
-  actions:
-  - data:
-      entity_id:
-      - sensor.current_uv_index
-    target:
-      entity_id: sensor.current_uv_index
-    action: homeassistant.update_entity
+      severity: info
+      humor_level: 1
+      tts_media_player: media_player.grupp_grannys_hogtalare
+      task: Meddela att nästa dygns elpriser nu finns tillgängliga
+      channels:
+      - tts
+      - mobile
+      - tv
   mode: queued
   max: 10
 - id: '1693323915636'
@@ -832,20 +827,15 @@
     trigger: device
   conditions: []
   actions:
-  - data:
-      title: Diskmaskinen
-      message: Disken är klar!
-    action: script.notifera_enheter
-  - action: script.komponera_ai_prompt
-    metadata: {}
+  - action: script.granny_broadcast
     data:
-      rules: '- Texten ska låta som om Granny står i rummet och muttrar. - Hälsningen
-        måste vara unik varje gång. Återanvänd inte tidigare meddelanden. - Svara
-        endast med själva hälsningen, inga förklaringar eller extra text. - Inga svordomar.'
-      output_format: En kort instruktion som maximalt består av två meningar.
-      tts_media_player: media_player.ha_notifiering
-      task: Skriv ett kort meddelande, max en mening som gör oss uppmärksamma på att
-        diskmaskinen nu gjort sitt och är klar för tömmning.
+      task: Meddela att diskmaskinen nu är färdig och klar för tömmning
+      severity: info
+      humor_level: 2
+      channels:
+      - mobile
+      - tts
+      - tv
   mode: queued
   max: 10
 - id: '1694445009947'
@@ -860,15 +850,14 @@
     trigger: device
   conditions: []
   actions:
-  - data:
-      message: Någon står vid dörren och ringer på låset!
-      title: Varning från ytterdörren!
-    action: script.persistent_varning
-  - action: script.notifera_enheter
-    metadata: {}
+  - action: script.granny_broadcast
     data:
-      message: Någon står vid dörren och ringer på låset!
-      title: Varning från ytterdörren!
+      severity: info
+      humor_level: 0
+      task: Meddela att det är någon som ringer på klockan vid ytterdörren
+      channels:
+      - tts
+      - tv
   mode: queued
   max: 10
 - id: '1694445280116'
@@ -883,15 +872,18 @@
     trigger: device
   conditions: []
   actions:
-  - data:
-      message: Ytterdörren krånglar, kan ej låsas!
-      title: Varning!
-    action: script.persistent_varning
-  - action: script.notifera_enheter
+  - action: script.granny_broadcast
     metadata: {}
     data:
-      message: Ytterdörren krånglar, kan ej låsas!
-      title: Varning!
+      severity: crit
+      humor_level: 0
+      tts_media_player: media_player.grupp_grannys_hogtalare
+      task: Meddela att ytterdörren krånglar och inte kan låsas automatiskt
+      channels:
+      - tts
+      - mobile
+      - tv
+      - ha
   mode: queued
   max: 10
 - id: '1694862579300'
@@ -908,15 +900,15 @@
     entity_id: binary_sensor.shelly_blu_door_window_2a6d_window
     state: 'on'
   actions:
-  - data:
-      message: Ytterdörren har låsts manuellt från utsidan men balkongdörren är öppen!
-      title: Varning!
-    action: script.persistent_varning
-  - action: script.notifera_enheter
-    metadata: {}
+  - action: script.granny_broadcast
     data:
-      message: Ytterdörren har låsts manuellt från utsidan men balkongdörren är öppen!
-      title: Varning!
+      severity: crit
+      humor_level: 0
+      channels:
+      - mobile
+      - ha
+      task: Meddela att balkongdörren är öppen nu när det verkar som att sista personen
+        lämnar hemmet
   mode: queued
   max: 10
 - id: '1695105133463'
@@ -931,16 +923,19 @@
     trigger: state
   conditions: []
   actions:
-  - data:
-      title: '{{ [ "Vattenvarning!", "Varning!", "Kritiskt larm!",  "Läckage!" ] |
-        random }}
-
-        '
-      message: '{{ [ "Vattenläcka upptäckt under torkskåpet!", "Läckage under torkskåpet!",  "Torkskåpet
-        läcker vatten!", "Torkskåpet håller inte tätt!" ] | random }}
-
-        '
-    action: script.persistent_varning
+  - action: script.granny_broadcast
+    metadata: {}
+    data:
+      severity: crit
+      humor_level: 0
+      tts_media_player: media_player.grupp_grannys_hogtalare
+      task: Meddela att det verkar läcka vatten under torkskåpet och att det behöver
+        kontrolleras
+      channels:
+      - tts
+      - mobile
+      - tv
+      - ha
   mode: queued
   max: 10
 - id: '1697022749995'
@@ -1375,11 +1370,18 @@
     entity_id: 62308c484dad120c22035d7c068bb0c4
     type: is_open
   actions:
-  - data:
-      title: Varning
-      message: Klockan är efter 20:00 och hönsluckan är fortfarande öppen!
-    enabled: true
-    action: script.notifera_enheter
+  - action: script.granny_broadcast
+    metadata: {}
+    data:
+      severity: info
+      humor_level: 2
+      tts_media_player: media_player.grupp_grannys_hogtalare
+      task: Meddela att hönshusets lucka är öppen trots att klockan är efter 20:00
+      channels:
+      - tts
+      - mobile
+      - tv
+      - ha
   mode: queued
   max: 10
 - id: '1730208179783'
@@ -1407,22 +1409,21 @@
         id:
         - out-of-water-on
       sequence:
-      - action: script.logga_arbetsuppgift
+      - action: script.granny_broadcast
         metadata: {}
         data:
-          item: Slut på vatten
-          description: Luftfuktaren har slut på vatten!
+          severity: info
+          humor_level: 2
+          tts_media_player: media_player.grupp_grannys_hogtalare
+          task: Meddela att luftfuktaren har slut på vatten
+          channels:
+          - mobile
+          - ha
     - conditions:
       - condition: trigger
         id:
         - out-off-water-off
-      sequence:
-      - action: todo.remove_item
-        metadata: {}
-        data:
-          item: Slut på vatten
-        target:
-          entity_id: todo.ha_loggade_arbetsuppgifter
+      sequence: []
   mode: queued
   max: 10
 - id: '1733728812594'
@@ -1450,21 +1451,35 @@
         id:
         - disconnected
       sequence:
-      - action: script.logga_arbetsuppgift
+      - action: script.granny_broadcast
         metadata: {}
         data:
-          item: Ingen kontakt med Internet
-          description: OpenWRT gw.local har ingen kontakt med WAN
+          severity: info
+          humor_level: 2
+          tts_media_player: media_player.grupp_grannys_hogtalare
+          task: Meddela att kontakten med Internet verkar har gått ner
+          channels:
+          - tts
+          - mobile
+          - tv
+          - ha
     - conditions:
       - condition: trigger
         id:
         - connected
       sequence:
-      - action: script.logga_arbetsuppgift
+      - action: script.granny_broadcast
         metadata: {}
         data:
-          item: Kontakten med Internet har återställts
-          description: OpenWRT gw.local har återfått kontakten med WAN
+          severity: info
+          humor_level: 2
+          tts_media_player: media_player.grupp_grannys_hogtalare
+          task: Kontakten med Internet är återställd
+          channels:
+          - tts
+          - mobile
+          - tv
+          - ha
   mode: queued
   max: 10
 - id: '1735998434886'
@@ -1708,6 +1723,10 @@
         domain: button
         entity_id: 5723b8a358bb8d606331b71603330914
         type: press
+      - device_id: a18a14f4449708ee9639186c386887ce
+        domain: button
+        entity_id: e2b64021359c7349e8ebf2240dbbb0e5
+        type: press
   mode: queued
   max: 10
 - id: '1751524387243'
@@ -1759,11 +1778,6 @@
       datetime: '{{ now().isoformat() }}'
     target:
       entity_id: input_datetime.granny_charger_trigger
-  - action: script.persistent_varning
-    metadata: {}
-    data:
-      message: Bilen är hemma och alla dörrar är låsta - uträkning av laddningsschema
-        kan starta
   mode: queued
   max: 10
 - id: '1751907475273'
@@ -1795,11 +1809,6 @@
         data: {}
         target:
           entity_id: switch.billaddare
-      - action: persistent_notification.create
-        metadata: {}
-        data:
-          message: Startat laddning av bilens batteri
-          title: DEBUG
     - conditions:
       - condition: trigger
         id:
@@ -1810,11 +1819,6 @@
         data: {}
         target:
           entity_id: switch.billaddare
-      - action: persistent_notification.create
-        metadata: {}
-        data:
-          message: Avslutat laddning av bilens batteri
-          title: DEBUG
   mode: queued
   max: 10
 - id: '1751962308890'
@@ -1845,10 +1849,6 @@
     data: {}
     target:
       entity_id: input_boolean.car_man_override
-  - action: script.persistent_varning
-    metadata: {}
-    data:
-      message: Bilens laddning är klar
   mode: queued
   max: 10
 - id: '1752130874333'
@@ -1893,162 +1893,299 @@
           entity_id: input_boolean.ha_ready
   mode: queued
   max: 10
-- id: watchdog_critical_entities_unavailable
-  alias: Watchdog – Kritiska entiteter blir unavailable
-  description: Denna automation övervakar kritiska entiteter och vidtar åtgärder när
-    de blir otillgängliga. Om en entitet blir 'unavailable' eller 'unknown', startas
-    en återställningsprocess för att säkerställa att systemet fungerar korrekt. Automation
-    aktiveras enbart när underhållsläget är inaktiverat.
-  triggers:
-  - value_template: "{{ expand('group.kritiska_entiteter_styrning_larm')\n   | selectattr('state','in',['unavailable','unknown'])\n
-      \  | list | count > 0 }}\n"
-    trigger: template
-  conditions:
-  - condition: state
-    entity_id: input_boolean.underhallslage
-    state: 'off'
-  actions:
-  - variables:
-      targets: "{{ expand('group.kritiska_entiteter_styrning_larm')\n   | selectattr('state','in',['unavailable','unknown'])\n
-        \  | map(attribute='entity_id') | list }}\n"
-  - repeat:
-      for_each: '{{ targets }}'
-      sequence:
-      - data:
-          entity_id: '{{ repeat.item }}'
-        action: script.entity_recover_update_retry
-  mode: queued
-  max: 10
 - &id001
   id: esphome_install_updates_button
   alias: Uppdatera ESPHome-enheter
-  description: Denna automation startar en process för att uppdatera alla ESPHome-enheter
-    i högst tre pass. En notifiering skapas för varje pass som visar status för uppdateringarna.
+  description: 'Uppdaterar alla ESPHome-firmware som har uppdatering tillgänglig,
+    i upp till tre pass. Visar progress + ETA under körning. Ger alltid en slutrapport
+    med: - Antal lyckade - Antal misslyckade (om några) - Total tid
+
+    '
   triggers:
   - entity_id: input_button.uppgradera_esphome_enheter
     trigger: state
   conditions: []
   actions:
-  - data:
+  - variables:
+      esphome_entities_all: '{{ integration_entities(''esphome'') | list }}'
+      initial_updates: "{%- set out = namespace(items=[]) -%} {%- for s in states.update
+        -%}\n  {%- if s.entity_id in esphome_entities_all\n        and (s.attributes.device_class|default('')
+        in ['firmware',''])\n        and s.state == 'on' -%}\n    {%- set out.items
+        = out.items + [ s.entity_id ] -%}\n  {%- endif -%}\n{%- endfor -%} {{ out.items
+        }}\n"
+      initial_total: '{{ initial_updates | length }}'
+      start_ts: '{{ as_timestamp(now()) }}'
+      done_count: 0
+      ewma_avg: 0
+      perf_log: []
+  - action: persistent_notification.create
+    data:
       title: ESPHome – uppdatering pågår
-      message: Startar ESPHome‑uppdateringar (upp till {{ max_passes }} pass).
+      message: 'Startar ESPHome-uppdateringar (upp till {{ max_passes }} pass). Förhandskontroll:
+        totalt {{ initial_total }} enheter planerade att uppdateras.
+
+        '
       notification_id: '{{ notif_id }}'
-    action: persistent_notification.create
-  - data:
+  - action: logbook.log
+    data:
       name: Updater
-      message: Startar ESPHome‑uppdateringar (upp till {{ max_passes }} pass).
-    action: logbook.log
+      message: 'Startar ESPHome-uppdateringar. Förhandskontroll: {{ initial_total
+        }} enheter.'
+  - if:
+    - condition: template
+      value_template: '{{ initial_total | int == 0 }}'
+    then:
+    - variables:
+        total_elapsed_sec: '{{ (as_timestamp(now()) - start_ts) | int }}'
+        total_elapsed_str: '{{ (total_elapsed_sec // 3600) }}h {{ ((total_elapsed_sec
+          % 3600)//60) }}m {{ (total_elapsed_sec % 60) }}s'
+    - action: persistent_notification.create
+      data:
+        title: ESPHome – klart
+        message: 'Ingen enhet behövde uppdateras. Total tid: {{ total_elapsed_str
+          }}.
+
+          '
+        notification_id: '{{ notif_id }}'
+    - action: logbook.log
+      data:
+        name: Updater
+        message: Klar – inget att uppdatera.
+    - stop: Klar – inga uppdateringar.
   - repeat:
       count: '{{ max_passes }}'
       sequence:
       - variables:
-          updates_this_pass: "{%- set ns = namespace(items=[]) -%} {%- for s in states.update
-            -%}\n  {%- set dev = device_id(s.entity_id) -%}\n  {%- set ids = device_attr(dev,
-            'identifiers') -%}\n  {%- if ids and ('esphome' in ids|string) and is_state(s.entity_id,
-            'on') -%}\n    {%- set ns.items = ns.items + [ s.entity_id ] -%}\n  {%-
-            endif -%}\n{%- endfor -%} {{ ns.items }}"
           pass_index: '{{ repeat.index }}'
-      - data:
-          title: ESPHome – uppdatering (pass {{ pass_index }} / {{ max_passes }})
-          message: Pass {{ pass_index }} startar. Hittade {{ updates_this_pass | length
-            }} ESPHome‑uppdateringar. Automation kör igenom alla enheter en gång.
-            Se Loggbok för detaljer.
-          notification_id: '{{ notif_id }}'
-        action: persistent_notification.create
-      - data:
-          name: Updater
-          message: 'Pass {{ pass_index }}: hittade {{ updates_this_pass | length }}
-            ESPHome‑uppdateringar.'
-        action: logbook.log
-      - if:
-        - condition: template
-          value_template: '{{ updates_this_pass | length == 0 }}'
-        then:
-        - data:
-            title: ESPHome – inget att installera
-            message: Inget att installera i pass {{ pass_index }}. Avslutar i förtid.
-            notification_id: '{{ notif_id }}'
-          action: persistent_notification.create
-        - data:
-            name: Updater
-            message: 'Pass {{ pass_index }}: inget att installera – avslutar i förtid.'
-          action: logbook.log
-        - stop: Klar – inget att installera i detta och följande pass.
-      - repeat:
-          for_each: '{{ updates_this_pass }}'
+          pass_start_ts: '{{ as_timestamp(now()) }}'
+          esphome_entities: '{{ integration_entities(''esphome'') | list }}'
+          updates_this_pass: "{%- set ids = namespace(items=[]) -%} {%- for s in states.update
+            -%}\n  {%- if s.entity_id in esphome_entities\n        and (s.attributes.device_class|default('')
+            in ['firmware',''])\n        and s.state == 'on' -%}\n    {%- set ids.items
+            = ids.items + [ s.entity_id ] -%}\n  {%- endif -%}\n{%- endfor -%} {{
+            ids.items }}\n"
+          total_in_this_pass: '{{ updates_this_pass | length }}'
+      - choose:
+        - conditions:
+          - condition: template
+            value_template: '{{ total_in_this_pass | int == 0 }}'
           sequence:
           - variables:
-              entity: '{{ repeat.item }}'
-          - data:
-              name: Updater
-              message: 'Pass {{ pass_index }}: försöker installera {{ entity }}.'
-            action: logbook.log
-          - data:
-              title: ESPHome – uppdatering (pass {{ pass_index }} / {{ max_passes
-                }})
-              message: 'Installerar: {{ entity }}. Kvar i detta pass: {{ (updates_this_pass
-                | length) - repeat.index }} st.'
-              notification_id: '{{ notif_id }}'
-            action: persistent_notification.create
-          - target:
-              entity_id: '{{ entity }}'
+              remaining: "{%- set ids = namespace(items=[]) -%} {%- for s in states.update
+                -%}\n  {%- if s.entity_id in esphome_entities\n        and (s.attributes.device_class|default('')
+                in ['firmware',''])\n        and s.state == 'on' -%}\n    {%- set
+                ids.items = ids.items + [ s.entity_id ] -%}\n  {%- endif -%}\n{%-
+                endfor -%} {{ ids.items }}\n"
+              success_entities_final: "{%- set out = [] -%} {%- for e in initial_updates
+                -%}\n  {%- if e not in remaining -%}\n    {%- set _ = out.append(e)
+                -%}\n  {%- endif -%}\n{%- endfor -%} {{ out }}"
+              success_count: '{{ success_entities_final | length }}'
+              failure_entities_final: '{{ remaining }}'
+              failure_count: '{{ failure_entities_final | length }}'
+              total_elapsed_sec: '{{ (as_timestamp(now()) - start_ts) | int }}'
+              total_elapsed_str: '{{ (total_elapsed_sec // 3600) }}h {{ ((total_elapsed_sec
+                % 3600)//60) }}m {{ (total_elapsed_sec % 60) }}s'
+              avg_dur_sec: "{%- set ns = namespace(sum=0.0) -%} {%- for it in perf_log
+                -%}\n  {%- set ns.sum = ns.sum + (it.d | float(0)) -%}\n{%- endfor
+                -%} {%- set n = (perf_log | length) -%} {{ (ns.sum / (n if n>0 else
+                1)) }}"
+              avg_dur_i: '{{ (avg_dur_sec | int) }}'
+              avg_dur_str: '{{ (avg_dur_i // 3600) }}h {{ ((avg_dur_i % 3600)//60)
+                }}m {{ (avg_dur_i % 60) }}s'
+          - action: persistent_notification.create
             data:
-              backup: true
-            action: update.install
-          - delay: 00:00:02
-      - delay: '{{ settle_delay }}'
-      - variables:
-          preview_remaining: "{%- set ns = namespace(items=[]) -%} {%- for s in states.update
-            -%}\n  {%- set dev = device_id(s.entity_id) -%}\n  {%- set ids = device_attr(dev,
-            'identifiers') -%}\n  {%- if ids and ('esphome' in ids|string) and is_state(s.entity_id,
-            'on') -%}\n    {%- set ns.items = ns.items + [ s.entity_id ] -%}\n  {%-
-            endif -%}\n{%- endfor -%} {{ ns.items }}"
-      - data:
-          title: ESPHome – pass {{ pass_index }} klart
-          message: 'Pass {{ pass_index }} klart. Återstående uppdateringar just nu:
-            {{ preview_remaining | length }}. {{- ''\n'' -}} {{- ''Fortsätter till
-            nästa pass...'' if pass_index < max_passes else ''Summerar resultat...''
-            -}}'
-          notification_id: '{{ notif_id }}'
-        action: persistent_notification.create
+              title: ESPHome – klart
+              message: 'Slutrapport efter pass {{ pass_index - 1 if pass_index>1 else
+                1 }}: {{ ''\n'' -}} Lyckade: {{ success_count }} · Misslyckade: {{
+                failure_count }} · Total tid: {{ total_elapsed_str }} {%- if failure_count
+                | int > 0 -%} {{ ''\n'' -}} Misslyckade enheter: {{ failure_entities_final
+                | join('', '') }} {%- endif -%} {%- if (perf_log | length) > 0 -%}
+                {{ ''\n'' -}} Medeltid per enhet (loggad): {{ avg_dur_str }} {%- endif
+                -%}
+
+                '
+              notification_id: '{{ notif_id }}'
+          - action: logbook.log
+            data:
+              name: Updater
+              message: 'Slutrapport – Lyckade: {{ success_count }}, Misslyckade: {{
+                failure_count }}, Total tid: {{ total_elapsed_str }}.
+
+                '
+          - stop: Klar – slutrapport skapad.
+        default:
+        - action: persistent_notification.create
+          data:
+            title: ESPHome – uppdatering (pass {{ pass_index }} / {{ max_passes }})
+            message: 'Pass {{ pass_index }} startar. Hittade {{ total_in_this_pass
+              }} ESPHome-uppdateringar i detta pass. (Förhandskontroll: {{ initial_total
+              }} totalt.) Automation kör igenom alla enheter en gång. Se Loggbok för
+              detaljer.
+
+              '
+            notification_id: '{{ notif_id }}'
+        - action: logbook.log
+          data:
+            name: Updater
+            message: 'Pass {{ pass_index }}: hittade {{ total_in_this_pass }} ESPHome-uppdateringar.'
+        - repeat:
+            for_each: '{{ updates_this_pass }}'
+            sequence:
+            - variables:
+                entity: '{{ repeat.item }}'
+                idx: '{{ repeat.index }}'
+                total: '{{ total_in_this_pass }}'
+                remaining_after: '{{ total_in_this_pass - repeat.index }}'
+                last_start_ts: '{{ as_timestamp(now()) }}'
+                elapsed_sec_pre: '{{ (as_timestamp(now()) - start_ts) | float(0) }}'
+                planned_total: '{{ initial_total | int if (initial_total | int) >
+                  0 else ((done_count | int) + (total_in_this_pass | int)) }}'
+                avg_for_eta_pre: "{% if (done_count | int) > 0 and (ewma_avg | float(0))
+                  > 0 %}\n  {{ ewma_avg }}\n{% elif (done_count | int) > 0 %}\n  {{
+                  (elapsed_sec_pre / (done_count | int)) }}\n{% else %}\n  {{ bootstrap_guess_sec
+                  }}\n{% endif %}"
+                est_total_sec_pre: '{{ (avg_for_eta_pre | float(0)) * (planned_total
+                  | int) }}'
+                remaining_raw_pre: '{{ (est_total_sec_pre - elapsed_sec_pre) | float(0)
+                  }}'
+                remaining_sec_pre: '{{ 0.0 if (remaining_raw_pre < 0) else remaining_raw_pre
+                  }}'
+                eta_ts_pre: '{{ (as_timestamp(now()) + (remaining_sec_pre | float(0)))
+                  | float(0) }}'
+                _elp_i_pre: '{{ elapsed_sec_pre | int }}'
+                _rem_i_pre: '{{ remaining_sec_pre | int }}'
+                _tot_i_pre: '{{ est_total_sec_pre | int }}'
+                elapsed_str_pre: '{{ (_elp_i_pre // 3600) }}h {{ ((_elp_i_pre % 3600)//60)
+                  }}m {{ (_elp_i_pre % 60) }}s'
+                remaining_str_pre: '{{ (_rem_i_pre // 3600) }}h {{ ((_rem_i_pre %
+                  3600)//60) }}m {{ (_rem_i_pre % 60) }}s'
+                est_total_str_pre: '{{ (_tot_i_pre // 3600) }}h {{ ((_tot_i_pre %
+                  3600)//60) }}m {{ (_tot_i_pre % 60) }}s'
+                eta_str_pre: '{{ eta_ts_pre | timestamp_custom(''%Y-%m-%d %H:%M:%S'',
+                  true, ''N/A'') }}'
+            - action: persistent_notification.create
+              data:
+                title: ESPHome – uppdatering (pass {{ pass_index }} / {{ max_passes
+                  }})
+                message: 'Installerar: {{ entity }} ({{ idx }}/{{ total }} i detta
+                  pass). Kvar efter denna: {{ remaining_after }} st. {{ ''\n'' -}}
+                  (Preliminärt) Tid hittills: {{ elapsed_str_pre }} · Prognos total:
+                  {{ est_total_str_pre }} {{ ''\n'' -}} (Preliminärt) Återstående:
+                  {{ remaining_str_pre }} · ETA: {{ eta_str_pre }}
+
+                  '
+                notification_id: '{{ notif_id }}'
+            - action: update.install
+              continue_on_error: true
+              target:
+                entity_id: '{{ entity }}'
+            - delay: 00:00:02
+            - variables:
+                last_dur: '{{ (as_timestamp(now()) - last_start_ts) | float(0) }}'
+                ewma_next: "{% if (done_count | int) == 0 %}\n  {{ last_dur }}\n{%
+                  else %}\n  {{ (ewma_avg | float(0)) * (1 - (ewma_alpha | float(0)))
+                  + (last_dur | float(0)) * (ewma_alpha | float(0)) }}\n{% endif %}"
+                ewma_avg: '{{ ewma_next }}'
+                done_count: '{{ (done_count | int) + 1 }}'
+                perf_log: '{{ (perf_log | default([])) + [ {''e'': entity, ''d'':
+                  last_dur } ] }}'
+                elapsed_sec: '{{ (as_timestamp(now()) - start_ts) | float(0) }}'
+                avg_for_eta_post: '{{ (ewma_avg | float(0)) if (ewma_avg | float(0))
+                  > 0 else (elapsed_sec / (done_count | int)) }}'
+                est_total_sec: '{{ (avg_for_eta_post | float(0)) * (initial_total
+                  | int(0)) }}'
+                remaining_raw: '{{ (est_total_sec - elapsed_sec) | float(0) }}'
+                remaining_sec: '{{ 0.0 if (remaining_raw < 0) else remaining_raw }}'
+                eta_ts: '{{ (as_timestamp(now()) + (remaining_sec | float(0))) | float(0)
+                  }}'
+                _elp_i: '{{ (elapsed_sec | int) }}'
+                _rem_i: '{{ (remaining_sec | int) }}'
+                _tot_i: '{{ (est_total_sec | int) }}'
+                elapsed_str: '{{ (_elp_i // 3600) }}h {{ ((_elp_i % 3600)//60) }}m
+                  {{ (_elp_i % 60) }}s'
+                remaining_str: '{{ (_rem_i // 3600) }}h {{ ((_rem_i % 3600)//60) }}m
+                  {{ (_rem_i % 60) }}s'
+                est_total_str: '{{ (_tot_i // 3600) }}h {{ ((_tot_i % 3600)//60) }}m
+                  {{ (_tot_i % 60) }}s'
+                eta_str: '{{ eta_ts | timestamp_custom(''%Y-%m-%d %H:%M:%S'', true,
+                  ''N/A'') }}'
+            - action: persistent_notification.create
+              data:
+                title: ESPHome – uppdatering (pass {{ pass_index }} / {{ max_passes
+                  }})
+                message: 'Installerad: {{ entity }} ({{ idx }}/{{ total }} i passet).
+                  {{ ''\n'' -}} Totalt planerat: {{ initial_total }} enheter. Klart
+                  hittills: {{ done_count }} / {{ initial_total }}. {{ ''\n'' -}}
+                  Tid hittills: {{ elapsed_str }} · Beräknad total tid: {{ est_total_str
+                  }} {{ ''\n'' -}} Beräknad återstående tid: {{ remaining_str }} ·
+                  ETA: {{ eta_str }}
+
+                  '
+                notification_id: '{{ notif_id }}'
+        - delay: '{{ settle_delay }}'
+        - variables:
+            pass_elapsed_i: '{{ (as_timestamp(now()) - pass_start_ts) | int }}'
+            pass_avg_i: '{{ (pass_elapsed_i // (total_in_this_pass if total_in_this_pass>0
+              else 1)) | int }}'
+            pass_avg_str: '{{ (pass_avg_i // 3600) }}h {{ ((pass_avg_i % 3600)//60)
+              }}m {{ (pass_avg_i % 60) }}s'
+        - action: persistent_notification.create
+          data:
+            title: ESPHome – pass {{ pass_index }} klart
+            message: 'Pass {{ pass_index }} klart. Enheter i passet: {{ total_in_this_pass
+              }}. Medeltid per enhet i passet: {{ pass_avg_str }}. {{ ''\n'' -}} {{
+              ''Fortsätter till nästa pass...'' if pass_index < max_passes else ''Summerar
+              resultat...'' }}
+
+              '
+            notification_id: '{{ notif_id }}'
   - variables:
-      remaining: "{%- set ns = namespace(items=[]) -%} {%- for s in states.update
-        -%}\n  {%- set dev = device_id(s.entity_id) -%}\n  {%- set ids = device_attr(dev,
-        'identifiers') -%}\n  {%- if ids and ('esphome' in ids|string) and is_state(s.entity_id,
-        'on') -%}\n    {%- set ns.items = ns.items + [ s.entity_id ] -%}\n  {%- endif
-        -%}\n{%- endfor -%} {{ ns.items }}"
-  - choose:
-    - conditions:
-      - condition: template
-        value_template: '{{ remaining | length > 0 }}'
-      sequence:
-      - data:
-          title: ESPHome – uppdateringar kvar efter {{ max_passes }} pass
-          message: 'Följande ESPHome‑uppdateringar kvarstår ({{ remaining | length
-            }} st): {{ remaining | join('', '') }}. Kontrollera respektive enhet (kan
-            kräva omstart eller manuell åtgärd).'
-          notification_id: '{{ notif_id }}'
-        action: persistent_notification.create
-      - data:
-          name: Updater
-          message: 'Klart efter {{ max_passes }} pass – återstående ESPHome‑uppdateringar:
-            {{ remaining | join('', '') }}'
-        action: logbook.log
-    default:
-    - data:
-        title: ESPHome – klart
-        message: Alla ESPHome‑uppdateringar installerade inom {{ max_passes }} pass.
-        notification_id: '{{ notif_id }}'
-      action: persistent_notification.create
-    - data:
-        name: Updater
-        message: Klart – alla ESPHome‑uppdateringar installerade.
-      action: logbook.log
+      esphome_entities: '{{ integration_entities(''esphome'') | list }}'
+      remaining: "{%- set ids = namespace(items=[]) -%} {%- for s in states.update
+        -%}\n  {%- if s.entity_id in esphome_entities\n        and (s.attributes.device_class|default('')
+        in ['firmware',''])\n        and s.state == 'on' -%}\n    {%- set ids.items
+        = ids.items + [ s.entity_id ] -%}\n  {%- endif -%}\n{%- endfor -%} {{ ids.items
+        }}\n"
+      success_entities_final: "{%- set out = [] -%} {%- for e in initial_updates -%}\n
+        \ {%- if e not in remaining -%}\n    {%- set _ = out.append(e) -%}\n  {%-
+        endif -%}\n{%- endfor -%} {{ out }}"
+      success_count: '{{ success_entities_final | length }}'
+      failure_entities_final: '{{ remaining }}'
+      failure_count: '{{ failure_entities_final | length }}'
+      total_elapsed_sec: '{{ (as_timestamp(now()) - start_ts) | int }}'
+      total_elapsed_str: '{{ (total_elapsed_sec // 3600) }}h {{ ((total_elapsed_sec
+        % 3600)//60) }}m {{ (total_elapsed_sec % 60) }}s'
+      avg_dur_sec: "{%- set ns = namespace(sum=0.0) -%} {%- for it in perf_log -%}\n
+        \ {%- set ns.sum = ns.sum + (it.d | float(0)) -%}\n{%- endfor -%} {%- set
+        n = (perf_log | length) -%} {{ (ns.sum / (n if n>0 else 1)) }}"
+      avg_dur_i: '{{ (avg_dur_sec | int) }}'
+      avg_dur_str: '{{ (avg_dur_i // 3600) }}h {{ ((avg_dur_i % 3600)//60) }}m {{
+        (avg_dur_i % 60) }}s'
+  - action: persistent_notification.create
+    data:
+      title: ESPHome – klart
+      message: 'Slutrapport: {{ ''\n'' -}} Lyckade: {{ success_count }} · Misslyckade:
+        {{ failure_count }} · Total tid: {{ total_elapsed_str }} {%- if failure_count
+        | int > 0 -%} {{ ''\n'' -}} Misslyckade enheter: {{ failure_entities_final
+        | join('', '') }} {%- endif -%} {%- if (perf_log | length) > 0 -%} {{ ''\n''
+        -}} Medeltid per enhet (loggad): {{ avg_dur_str }} {%- endif -%}
+
+        '
+      notification_id: '{{ notif_id }}'
+  - action: logbook.log
+    data:
+      name: Updater
+      message: 'Slutrapport – Lyckade: {{ success_count }}, Misslyckade: {{ failure_count
+        }}, Total tid: {{ total_elapsed_str }}.
+
+        '
   mode: single
   variables:
     max_passes: 3
     settle_delay: 00:00:20
     notif_id: esphome_update_progress
+    ewma_alpha: 0.3
+    bootstrap_guess_sec: 120
 - *id001
 - id: '1758871167291'
   alias: Synka Blomlampa ⇄ LED-strip i trappan
@@ -2077,132 +2214,3 @@
           entity_id: light.esphome62_led_strip
         action: light.turn_on
   mode: single
-- id: '1758882999525'
-  alias: ESPhome - Uppdatera alla enheter
-  description: Startar en process för att uppdatera alla ESPHome-enheter i högst tre
-    pass.
-  triggers:
-  - entity_id: input_button.uppgradera_esphome_enheter
-    trigger: state
-  conditions: []
-  actions:
-  - data:
-      title: ESPHome – uppdatering pågår
-      message: Startar ESPHome‑uppdateringar (upp till {{ max_passes }} pass).
-      notification_id: '{{ notif_id }}'
-    action: persistent_notification.create
-  - data:
-      name: Updater
-      message: Startar ESPHome‑uppdateringar (upp till {{ max_passes }} pass).
-    action: logbook.log
-  - repeat:
-      count: '{{ max_passes }}'
-      sequence:
-      - variables:
-          updates_this_pass: "{%- set ns = namespace(items=[]) -%} {%- for s in states.update
-            -%}\n  {%- set dev = device_id(s.entity_id) -%}\n  {%- set ids = device_attr(dev,
-            'identifiers') -%}\n  {%- if ids and ('esphome' in ids|string) and is_state(s.entity_id,
-            'on') -%}\n    {%- set ns.items = ns.items + [ s.entity_id ] -%}\n  {%-
-            endif -%}\n{%- endfor -%} {{ ns.items }}"
-          pass_index: '{{ repeat.index }}'
-      - data:
-          title: ESPHome – uppdatering (pass {{ pass_index }} / {{ max_passes }})
-          message: Pass {{ pass_index }} startar. Hittade {{ updates_this_pass | length
-            }} ESPHome‑uppdateringar. Automation kör igenom alla enheter en gång.
-            Se Loggbok för detaljer.
-          notification_id: '{{ notif_id }}'
-        action: persistent_notification.create
-      - data:
-          name: Updater
-          message: 'Pass {{ pass_index }}: hittade {{ updates_this_pass | length }}
-            ESPHome‑uppdateringar.'
-        action: logbook.log
-      - if:
-        - condition: template
-          value_template: '{{ updates_this_pass | length == 0 }}'
-        then:
-        - data:
-            title: ESPHome – inget att installera
-            message: Inget att installera i pass {{ pass_index }}. Avslutar i förtid.
-            notification_id: '{{ notif_id }}'
-          action: persistent_notification.create
-        - data:
-            name: Updater
-            message: 'Pass {{ pass_index }}: inget att installera – avslutar i förtid.'
-          action: logbook.log
-        - stop: Klar – inget att installera i detta och följande pass.
-      - repeat:
-          for_each: '{{ updates_this_pass }}'
-          sequence:
-          - variables:
-              entity: '{{ repeat.item }}'
-          - data:
-              name: Updater
-              message: 'Pass {{ pass_index }}: försöker installera {{ entity }}.'
-            action: logbook.log
-          - data:
-              title: ESPHome – uppdatering (pass {{ pass_index }} / {{ max_passes
-                }})
-              message: 'Installerar: {{ entity }}. Kvar i detta pass: {{ (updates_this_pass
-                | length) - repeat.index }} st.'
-              notification_id: '{{ notif_id }}'
-            action: persistent_notification.create
-          - target:
-              entity_id: '{{ entity }}'
-            data:
-              backup: true
-            action: update.install
-          - delay: 00:00:02
-      - delay: '{{ settle_delay }}'
-      - variables:
-          preview_remaining: "{%- set ns = namespace(items=[]) -%} {%- for s in states.update
-            -%}\n  {%- set dev = device_id(s.entity_id) -%}\n  {%- set ids = device_attr(dev,
-            'identifiers') -%}\n  {%- if ids and ('esphome' in ids|string) and is_state(s.entity_id,
-            'on') -%}\n    {%- set ns.items = ns.items + [ s.entity_id ] -%}\n  {%-
-            endif -%}\n{%- endfor -%} {{ ns.items }}"
-      - data:
-          title: ESPHome – pass {{ pass_index }} klart
-          message: 'Pass {{ pass_index }} klart. Återstående uppdateringar just nu:
-            {{ preview_remaining | length }}. {{- ''\n'' -}} {{- ''Fortsätter till
-            nästa pass...'' if pass_index < max_passes else ''Summerar resultat...''
-            -}}'
-          notification_id: '{{ notif_id }}'
-        action: persistent_notification.create
-  - variables:
-      remaining: "{%- set ns = namespace(items=[]) -%} {%- for s in states.update
-        -%}\n  {%- set dev = device_id(s.entity_id) -%}\n  {%- set ids = device_attr(dev,
-        'identifiers') -%}\n  {%- if ids and ('esphome' in ids|string) and is_state(s.entity_id,
-        'on') -%}\n    {%- set ns.items = ns.items + [ s.entity_id ] -%}\n  {%- endif
-        -%}\n{%- endfor -%} {{ ns.items }}"
-  - choose:
-    - conditions:
-      - condition: template
-        value_template: '{{ remaining | length > 0 }}'
-      sequence:
-      - data:
-          title: ESPHome – uppdateringar kvar efter {{ max_passes }} pass
-          message: 'Följande ESPHome‑uppdateringar kvarstår ({{ remaining | length
-            }} st): {{ remaining | join('', '') }}. Kontrollera respektive enhet (kan
-            kräva omstart eller manuell åtgärd).'
-          notification_id: '{{ notif_id }}'
-        action: persistent_notification.create
-      - data:
-          name: Updater
-          message: 'Klart efter {{ max_passes }} pass – återstående ESPHome‑uppdateringar:
-            {{ remaining | join('', '') }}'
-        action: logbook.log
-    default:
-    - data:
-        title: ESPHome – klart
-        message: Alla ESPHome‑uppdateringar installerade inom {{ max_passes }} pass.
-        notification_id: '{{ notif_id }}'
-      action: persistent_notification.create
-    - data:
-        name: Updater
-        message: Klart – alla ESPHome‑uppdateringar installerade.
-      action: logbook.log
-  mode: single
-  variables:
-    max_passes: 3
-    settle_delay: 00:00:20
-    notif_id: esphome_update_progress
