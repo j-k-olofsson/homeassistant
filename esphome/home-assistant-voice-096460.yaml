@@ -16,5 +16,5 @@ api:
     key: mtTivd9Buk2BkbIF2bae6RPJPXCWKnRkYf+el3o8JAA=
 
 wifi:
-  ssid: !secret wifi_ssid
-  password: !secret wifi_password
+  ssid: !secret WIFI_SSID
+  password: !secret WIFI_PWD

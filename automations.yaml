@@ -671,18 +671,20 @@
   max: 10
 - id: '1674477126105'
   alias: SCEN - Morgonljus före väckarklockan
-  description: Denna automation tänder mjukt morgonljus 15 minuter före att väckarklockan
+  description: 'Denna automation tänder mjukt morgonljus 15 minuter före att väckarklockan
     ringer för att hjälpa användaren att vakna mer naturligt.
+
+    '
   triggers:
   - id: diegosalarm
-    value_template: '{{ now().strftime("%a %h %d %H:%M %Z %Y") == (as_timestamp(states("sensor.diegos_vackarklocka_alarms"))
-      - 15*60) |  as_timestamp(default=0) | timestamp_custom("%a %h %d %H:%M %Z %Y")
-      }}'
+    value_template: "{% set t = states('sensor.diegos_vackarklocka_alarms') | as_datetime(default=None)
+      %} {{ t is not none\n   and now() >= (t - timedelta(minutes=15))\n   and now()
+      <  (t - timedelta(minutes=14)) }}"
     trigger: template
   - id: mannisalarm
-    value_template: '{{ now().strftime("%a %h %d %H:%M %Z %Y") == (as_timestamp(states("sensor.mannis_vackarklocka_alarms"))
-      - 15*60) |  as_timestamp(default=0) | timestamp_custom("%a %h %d %H:%M %Z %Y")
-      }}'
+    value_template: "{% set t = states('sensor.mannis_vackarklocka_alarms') | as_datetime(default=None)
+      %} {{ t is not none\n   and now() >= (t - timedelta(minutes=15))\n   and now()
+      <  (t - timedelta(minutes=14)) }}"
     trigger: template
   conditions: []
   actions:
@@ -691,19 +693,19 @@
       - condition: trigger
         id: diegosalarm
       sequence:
-      - data:
-          effect: morning
-        target:
+      - target:
           entity_id: light.ledstrip_sovrum_ostra_esphome40_light
+        data:
+          effect: morning
         action: light.turn_on
     - conditions:
       - condition: trigger
         id: mannisalarm
       sequence:
-      - data:
-          effect: morning
-        target:
+      - target:
           entity_id: light.ledstrip_sovrum_norra_esphome44_light
+        data:
+          effect: morning
         action: light.turn_on
   mode: queued
   max: 3
@@ -736,9 +738,11 @@
     default:
     - action: script.granny_broadcast
       data:
-        task: Säg godnatt med ett kort och fyndigt rim
+        task: Du är Granny och ska säga godnatt till Manny och Diego. Använd ett nuikt
+          meddleande varje dag och se till att inte upprepa ett som du använt de senaste
+          tio gångerna.
         severity: info
-        humor_level: 2
+        humor_level: 1
         tts_media_player: media_player.diegos_vackarklocka
         channels:
         - tts
@@ -809,12 +813,53 @@
     data:
       severity: info
       humor_level: 1
-      tts_media_player: media_player.grupp_grannys_hogtalare
-      task: Meddela att nästa dygns elpriser nu finns tillgängliga
+      task: "SYSTEM Du är \"Granny\", en varm och vardaglig hushållsrådgivare som
+        pratar till familjen i hemmet. Du ska låta personlig, kortfattad och lättsam,
+        inte som en teknisk rapport. Svara på svenska med naturligt språk, utan siffror
+        eller tabeller.\n\n  USER Nedanstående data är elpris per timme för NÄSTA
+        DYGN i SE3. Varje rad är: YYYY-MM-DDTHH:00±ZZZZ=pris;kategori\n  Kategorier:\n
+        \   - green: < 1,65 SEK/kWh\n    - yellow: 1,66–3,00 SEK/kWh\n    - red: >
+        3,00 SEK/kWh\n\n  Uppgift:\n    1) Analysera prisnivåerna och avgör om morgondagen
+        ser billig, normal eller dyr ut som helhet.\n    2) Om det finns tydliga undantag
+        (t.ex. dyrare morgon eller kväll) nämn dem kort.\n    3) Skriv ett vänligt
+        och mänskligt meddelande som passar att läsas upp av Granny, t.ex.:\n       -
+        “Morgondagens elpriser ser fina ut, mest gröna nivåer hela dagen.”\n       -
+        “Det ser ut att bli dyrt imorgon, särskilt på morgonen och kvällen.”\n    4)
+        Undvik siffror och tekniska detaljer. Fokusera på hur hushållet kan tänka
+        kring sin vardag (tvätt, laddning, matlagning).\n    5) Max 60 ord, ingen
+        punktlista. Bara ett kort och naturligt stycke text.\n\n  DATA\n{# ===== PROD:
+        nästa dygn när tomorrow_valid: true ===== #}\n{%- set e = 'sensor.nordpool'
+        -%}\n{%- set currency = state_attr(e,'currency') or 'SEK' -%}\n{%- set unit
+        = currency ~ '/kWh' -%}\n{%- set area = state_attr(e,'region') or state_attr(e,'area')
+        or 'SE?' -%}\n{%- set nowts = now() -%}\n{%- set base_today = today_at() -%}\n{%-
+        set base_tomorrow = base_today + timedelta(days=1) -%}\n{%- set tm  = state_attr(e,'tomorrow')
+        \    | default([], true) -%}\n{%- set rtm = state_attr(e,'raw_tomorrow') |
+        default([], true) -%}\n\n{%- macro cat(v) -%}\n  {%- set x = (v|float) -%}\n
+        \ {%- if x > 3 -%}red{%- elif x >= 1.66 -%}yellow{%- else -%}green{%- endif
+        -%}\n{%- endmacro -%}\n\n# PRICES\ntz={{ now().tzinfo }}\narea={{ area }}\ncurrency={{
+        currency }}\nunit={{ unit }}\nvat={{ state_attr(e,'vat') if state_attr(e,'vat')
+        is not none else 'unknown' }}\nsource=nordpool\ngenerated={{ as_local(nowts).strftime('%Y-%m-%dT%H:%M%z')
+        }}\n\n# DATA (start_hour=value;cat)\n{%- if not state_attr(e,'tomorrow_valid')
+        -%}\nNO DATA: tomorrow_valid=false\n{%- elif tm|length == 24 -%}\n{%- for
+        i in range(0,24) -%}\n{{ as_local(base_tomorrow + timedelta(hours=i)).strftime('%Y-%m-%dT%H:00%z')
+        }}={{ (tm[i]|float)|round(3) }};{{ cat(tm[i]) }}\n{%- endfor -%}\n{%- elif
+        tm|length == 96 -%}\n{%- for i in range(0,24) -%}\n{%- set j = i*4 -%}\n{%-
+        set v = ((tm[j]|float)+(tm[j+1]|float)+(tm[j+2]|float)+(tm[j+3]|float))/4
+        -%}\n{{ as_local(base_tomorrow + timedelta(hours=i)).strftime('%Y-%m-%dT%H:00%z')
+        }}={{ v|round(3) }};{{ cat(v) }}\n{%- endfor -%}\n{%- elif rtm|length > 0
+        -%}\n{%- for i in range(0,24) -%}\n{%- set h_start = base_tomorrow + timedelta(hours=i)
+        -%}\n{%- set h_end   = h_start + timedelta(hours=1) -%}\n{%- set sumv = 0.0
+        -%}{%- set cnt = 0 -%}\n{%- for q in rtm -%}\n{%- set qs = as_datetime(q['start'])
+        -%}\n{%- if qs >= h_start and qs < h_end -%}\n{%- set sumv = sumv + (q['value']|float)
+        -%}\n{%- set cnt = cnt + 1 -%}\n{%- endif -%}\n{%- endfor -%}\n{%- if cnt
+        > 0 -%}\n{%- set v = (sumv / cnt) -%}\n{{ as_local(h_start).strftime('%Y-%m-%dT%H:00%z')
+        }}={{ v|round(3) }};{{ cat(v) }}\n{%- endif -%}\n{%- endfor -%}\n{%- endif
+        -%}\n"
       channels:
+      - ha
       - tts
       - mobile
-      - tv
+      tts_media_player: media_player.grupp_grannys_hogtalare
   mode: queued
   max: 10
 - id: '1693323915636'
@@ -1180,9 +1225,9 @@
       volume_level: 0.5
     target:
       entity_id:
-      - media_player.jbl_link_500
       - media_player.jbl_link_kontoret
       - media_player.kokets_skarm
+      - media_player.jbl_link_500_67aa69
   - action: media_player.volume_set
     data:
       volume_level: 0.4
@@ -1196,7 +1241,7 @@
     target:
       entity_id:
       - media_player.stereo_hoger
-      - media_player.stereo_vanster
+      - media_player.chromecastaudio4733
   - action: media_player.volume_set
     data:
       volume_level: 0.3
@@ -1207,8 +1252,8 @@
       volume_level: 0.15
     target:
       entity_id:
-      - media_player.duschens_hogtalare
       - media_player.toalettens_hogtalare
+      - media_player.duschen
   mode: queued
   max: 10
 - id: '1708002644944'
@@ -2213,4 +2258,25 @@
       - target:
           entity_id: light.esphome62_led_strip
         action: light.turn_on
+  mode: single
+- id: '1759825373004'
+  alias: Av/På Prusa XL via "longpush" på Voice PE
+  description: Växlar Av/På för huvudströmbrytaren till Prusa XL vid långtryck på
+    Voice PE
+  triggers:
+  - trigger: state
+    entity_id:
+    - event.home_assistant_voice_096460_button_press
+    attribute: event_type
+    to: long_press
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 3
+  conditions: []
+  actions:
+  - type: toggle
+    device_id: 9eb512d5a7378320ca8a581b38b8edff
+    entity_id: 95de524d3e20624a14ab5de38b34ad4c
+    domain: switch
   mode: single

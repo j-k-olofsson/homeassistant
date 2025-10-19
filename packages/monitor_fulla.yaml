@@ -1,0 +1,439 @@
+homeassistant:
+  customize:
+    sensor.fulla_status_summary:
+      icon: mdi:server
+    binary_sensor.fulla_host_healthy:
+      icon: mdi:check-network
+
+binary_sensor:
+  - platform: command_line
+    name: Fulla Reachable
+    unique_id: fulla_reachable_command_ping
+    device_class: connectivity
+    command: >-
+      ping -c 1 -W 1 !secret monitor_fulla_ping_host >/dev/null 2>&1 && echo success || echo fail
+    command_timeout: 10
+    scan_interval: 60
+    value_template: "{{ value == 'success' }}"
+
+sensor:
+  - platform: rest
+    name: Fulla Glances Telemetry
+    unique_id: fulla_glances_payload
+    resource: !secret monitor_fulla_glances_all_url
+    timeout: 15
+    scan_interval: 30
+    value_template: >
+      {% set quicklook = value_json.get('quicklook') %}
+      {{ quicklook.get('cpu', 0.0) if quicklook is mapping else 0.0 }}
+    json_attributes:
+      - quicklook
+      - mem
+      - load
+      - uptime
+      - sensors
+
+  - platform: command_line
+    name: Fulla Root Disk Used
+    unique_id: fulla_root_disk_used_pct
+    command: >-
+      ssh !secret monitor_fulla_ssh 'df --output=pcent / | tail -n 1'
+    command_timeout: 15
+    scan_interval: 300
+    unit_of_measurement: "%"
+    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
+    value_template: >
+      {% set pct = value | regex_findall_index('([0-9]+)') %}
+      {% if pct %}
+        {{ pct | int }}
+      {% else %}
+        unknown
+      {% endif %}
+
+  - platform: command_line
+    name: Fulla Disk /mnt/1t Used
+    unique_id: fulla_disk_1t_used_pct
+    command: >-
+      ssh !secret monitor_fulla_ssh 'df --output=pcent /mnt/1t | tail -n 1'
+    command_timeout: 15
+    scan_interval: 600
+    unit_of_measurement: "%"
+    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
+    value_template: >
+      {% set pct = value | regex_findall_index('([0-9]+)') %}
+      {% if pct %}
+        {{ pct | int }}
+      {% else %}
+        unknown
+      {% endif %}
+
+  - platform: command_line
+    name: Fulla Disk /mnt/4t Used
+    unique_id: fulla_disk_4t_used_pct
+    command: >-
+      ssh !secret monitor_fulla_ssh 'df --output=pcent /mnt/4t | tail -n 1'
+    command_timeout: 15
+    scan_interval: 600
+    unit_of_measurement: "%"
+    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
+    value_template: >
+      {% set pct = value | regex_findall_index('([0-9]+)') %}
+      {% if pct %}
+        {{ pct | int }}
+      {% else %}
+        unknown
+      {% endif %}
+
+  - platform: command_line
+    name: Fulla GPU Utilization
+    unique_id: fulla_gpu_utilization_pct
+    command: >-
+      ssh !secret monitor_fulla_ssh 'nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits'
+    command_timeout: 20
+    scan_interval: 60
+    unit_of_measurement: "%"
+    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
+    value_template: >
+      {% set trimmed = value.strip().split('\n')[0] %}
+      {% if trimmed %}
+        {{ trimmed | float(0) }}
+      {% else %}
+        unknown
+      {% endif %}
+
+  - platform: command_line
+    name: Fulla GPU Memory Usage Raw
+    unique_id: fulla_gpu_memory_usage_raw
+    command: >-
+      ssh !secret monitor_fulla_ssh 'nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits'
+    command_timeout: 20
+    scan_interval: 60
+    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
+    value_template: "{{ value.strip() }}"
+
+  - platform: command_line
+    name: Fulla Glances Container Status
+    unique_id: fulla_glances_container_status
+    command: >-
+      ssh !secret monitor_fulla_ssh "docker ps --filter 'label=com.docker.compose.service=glances' --format '{{.Status}}' | head -n 1"
+    command_timeout: 15
+    scan_interval: 120
+    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
+    value_template: >
+      {% set line = value.strip().split('\n')[0] %}
+      {{ line if line else 'unavailable' }}
+
+  - platform: command_line
+    name: Fulla Portainer Container Status
+    unique_id: fulla_portainer_container_status
+    command: >-
+      ssh !secret monitor_fulla_ssh "docker ps --filter 'label=com.docker.compose.service=portainer' --format '{{.Status}}' | head -n 1"
+    command_timeout: 15
+    scan_interval: 120
+    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
+    value_template: >
+      {% set line = value.strip().split('\n')[0] %}
+      {{ line if line else 'unavailable' }}
+
+  - platform: command_line
+    name: Fulla OpenWRT Backup Container Status
+    unique_id: fulla_openwrt_backup_container_status
+    command: >-
+      ssh !secret monitor_fulla_ssh "docker ps --filter 'label=com.docker.compose.service=openwrt-backup' --format '{{.Status}}' | head -n 1"
+    command_timeout: 15
+    scan_interval: 120
+    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
+    value_template: >
+      {% set line = value.strip().split('\n')[0] %}
+      {{ line if line else 'unavailable' }}
+
+  - platform: command_line
+    name: Fulla Wyoming Whisper Container Status
+    unique_id: fulla_wyoming_whisper_container_status
+    command: >-
+      ssh !secret monitor_fulla_ssh "docker ps --filter 'label=com.docker.compose.service=wyoming-whisper' --format '{{.Status}}' | head -n 1"
+    command_timeout: 15
+    scan_interval: 120
+    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
+    value_template: >
+      {% set line = value.strip().split('\n')[0] %}
+      {{ line if line else 'unavailable' }}
+
+  - platform: command_line
+    name: Fulla Open WebUI Container Status
+    unique_id: fulla_openwebui_container_status
+    command: >-
+      ssh !secret monitor_fulla_ssh "docker ps --filter 'label=com.docker.compose.service=openwebui' --format '{{.Status}}' | head -n 1"
+    command_timeout: 15
+    scan_interval: 120
+    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
+    value_template: >
+      {% set line = value.strip().split('\n')[0] %}
+      {{ line if line else 'unavailable' }}
+
+  - platform: command_line
+    name: Fulla Tailscale Service State
+    unique_id: fulla_tailscale_service_state
+    command: >-
+      ssh !secret monitor_fulla_ssh 'systemctl is-active tailscaled'
+    command_timeout: 15
+    scan_interval: 120
+    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
+    value_template: "{{ value.strip() if value else 'unknown' }}"
+
+  - platform: command_line
+    name: Fulla SMB Service State
+    unique_id: fulla_smb_service_state
+    command: >-
+      ssh !secret monitor_fulla_ssh 'systemctl is-active smbd'
+    command_timeout: 15
+    scan_interval: 180
+    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
+    value_template: "{{ value.strip() if value else 'unknown' }}"
+
+  - platform: command_line
+    name: Fulla NFS Service State
+    unique_id: fulla_nfs_service_state
+    command: >-
+      ssh !secret monitor_fulla_ssh 'systemctl is-active nfs-server'
+    command_timeout: 15
+    scan_interval: 180
+    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
+    value_template: "{{ value.strip() if value else 'unknown' }}"
+
+  - platform: command_line
+    name: Fulla Time Sync State
+    unique_id: fulla_time_sync_state
+    command: >-
+      ssh !secret monitor_fulla_ssh 'timedatectl show -p NTPSynchronized --value'
+    command_timeout: 15
+    scan_interval: 600
+    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
+    value_template: "{{ value.strip() if value else 'unknown' }}"
+
+  - platform: command_line
+    name: Fulla OpenWRT Backup Last Log Line
+    unique_id: fulla_openwrt_backup_last_log
+    command: >-
+      ssh !secret monitor_fulla_ssh 'tail -n 1 /var/log/openwrt-backup.log'
+    command_timeout: 15
+    scan_interval: 900
+    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
+    value_template: "{{ value.strip() if value else 'unavailable' }}"
+
+template:
+  - sensor:
+      - name: Fulla CPU Usage
+        unique_id: fulla_cpu_usage_pct
+        unit_of_measurement: "%"
+        state: >
+          {% set quicklook = state_attr('sensor.fulla_glances_telemetry', 'quicklook') %}
+          {% if quicklook %}
+            {{ quicklook.get('cpu', 0.0) | float(0) }}
+          {% else %}
+            unknown
+          {% endif %}
+
+      - name: Fulla Memory Usage
+        unique_id: fulla_memory_usage_pct
+        unit_of_measurement: "%"
+        state: >
+          {% set quicklook = state_attr('sensor.fulla_glances_telemetry', 'quicklook') %}
+          {% if quicklook %}
+            {{ quicklook.get('mem', 0.0) | float(0) }}
+          {% else %}
+            unknown
+          {% endif %}
+
+      - name: Fulla Load Average 1m
+        unique_id: fulla_load_avg_1m
+        state: >
+          {% set load = state_attr('sensor.fulla_glances_telemetry', 'load') %}
+          {% if load %}
+            {{ load.get('min1', 0.0) | float(0) }}
+          {% else %}
+            unknown
+          {% endif %}
+
+      - name: Fulla Load Average 5m
+        unique_id: fulla_load_avg_5m
+        state: >
+          {% set load = state_attr('sensor.fulla_glances_telemetry', 'load') %}
+          {% if load %}
+            {{ load.get('min5', 0.0) | float(0) }}
+          {% else %}
+            unknown
+          {% endif %}
+
+      - name: Fulla Load Average 15m
+        unique_id: fulla_load_avg_15m
+        state: >
+          {% set load = state_attr('sensor.fulla_glances_telemetry', 'load') %}
+          {% if load %}
+            {{ load.get('min15', 0.0) | float(0) }}
+          {% else %}
+            unknown
+          {% endif %}
+
+      - name: Fulla System Uptime
+        unique_id: fulla_system_uptime
+        state: >
+          {% set uptime = state_attr('sensor.fulla_glances_telemetry', 'uptime') %}
+          {% if uptime %}
+            {{ uptime }}
+          {% else %}
+            unknown
+          {% endif %}
+
+      - name: Fulla GPU Memory Usage
+        unique_id: fulla_gpu_memory_usage_pct
+        unit_of_measurement: "%"
+        state: >
+          {% set raw = states('sensor.fulla_gpu_memory_usage_raw') %}
+          {% if raw in ['unknown', 'unavailable'] %}
+            unknown
+          {% else %}
+            {% set parts = raw.split(',') %}
+            {% if parts | length >= 2 %}
+              {% set used = parts[0] | float(0) %}
+              {% set total = parts[1] | float(0) %}
+              {% if total > 0 %}
+                {{ (used / total * 100) | round(1) }}
+              {% else %}
+                0
+              {% endif %}
+            {% else %}
+              unknown
+            {% endif %}
+          {% endif %}
+
+      - name: Fulla Status Summary
+        unique_id: fulla_status_summary
+        state: >
+          {% if is_state('binary_sensor.fulla_host_healthy', 'on') %}
+            OK
+          {% elif is_state('binary_sensor.fulla_reachable', 'off') %}
+            Offline
+          {% else %}
+            {% set issues = [] %}
+            {% if not is_state('binary_sensor.fulla_glances_running', 'on') %}
+              {% set issues = issues + ['glances'] %}
+            {% endif %}
+            {% if not is_state('binary_sensor.fulla_portainer_running', 'on') %}
+              {% set issues = issues + ['portainer'] %}
+            {% endif %}
+            {% if not is_state('binary_sensor.fulla_openwrt_backup_running', 'on') %}
+              {% set issues = issues + ['openwrt_backup'] %}
+            {% endif %}
+            {% if not is_state('binary_sensor.fulla_wyoming_whisper_running', 'on') %}
+              {% set issues = issues + ['wyoming_whisper'] %}
+            {% endif %}
+            {% if not is_state('binary_sensor.fulla_openwebui_running', 'on') %}
+              {% set issues = issues + ['openwebui'] %}
+            {% endif %}
+            {% if not is_state('binary_sensor.fulla_tailscale_active', 'on') %}
+              {% set issues = issues + ['tailscale'] %}
+            {% endif %}
+            {% if not is_state('binary_sensor.fulla_smb_active', 'on') %}
+              {% set issues = issues + ['smbd'] %}
+            {% endif %}
+            {% if not is_state('binary_sensor.fulla_nfs_active', 'on') %}
+              {% set issues = issues + ['nfs'] %}
+            {% endif %}
+            {% if not is_state('binary_sensor.fulla_time_sync_ok', 'on') %}
+              {% set issues = issues + ['timesync'] %}
+            {% endif %}
+            {% if issues %}
+              {{ ('Check: ' + issues | join(', ')) | title }}
+            {% else %}
+              Attention
+            {% endif %}
+          {% endif %}
+
+  - binary_sensor:
+      - name: Fulla Telemetry Fresh
+        unique_id: fulla_telemetry_fresh
+        state: >
+          {% set entity = states.sensor.fulla_glances_telemetry %}
+          {% if entity and entity.state not in ['unknown', 'unavailable'] %}
+            {{ (now() - entity.last_changed).total_seconds() < 180 }}
+          {% else %}
+            false
+          {% endif %}
+        availability: "{{ states('sensor.fulla_glances_telemetry') not in ['unknown', 'unavailable'] }}"
+
+      - name: Fulla Glances Running
+        unique_id: fulla_glances_running
+        state: >
+          {% set status = states('sensor.fulla_glances_container_status') | lower %}
+          {{ 'up' in status or 'running' in status }}
+        availability: "{{ states('sensor.fulla_glances_container_status') not in ['unknown', 'unavailable'] }}"
+
+      - name: Fulla Portainer Running
+        unique_id: fulla_portainer_running
+        state: >
+          {% set status = states('sensor.fulla_portainer_container_status') | lower %}
+          {{ 'up' in status or 'running' in status }}
+        availability: "{{ states('sensor.fulla_portainer_container_status') not in ['unknown', 'unavailable'] }}"
+
+      - name: Fulla OpenWRT Backup Running
+        unique_id: fulla_openwrt_backup_running
+        state: >
+          {% set status = states('sensor.fulla_openwrt_backup_container_status') | lower %}
+          {{ 'up' in status or 'running' in status }}
+        availability: "{{ states('sensor.fulla_openwrt_backup_container_status') not in ['unknown', 'unavailable'] }}"
+
+      - name: Fulla Wyoming Whisper Running
+        unique_id: fulla_wyoming_whisper_running
+        state: >
+          {% set status = states('sensor.fulla_wyoming_whisper_container_status') | lower %}
+          {{ 'up' in status or 'running' in status }}
+        availability: "{{ states('sensor.fulla_wyoming_whisper_container_status') not in ['unknown', 'unavailable'] }}"
+
+      - name: Fulla Open WebUI Running
+        unique_id: fulla_openwebui_running
+        state: >
+          {% set status = states('sensor.fulla_openwebui_container_status') | lower %}
+          {{ 'up' in status or 'running' in status }}
+        availability: "{{ states('sensor.fulla_openwebui_container_status') not in ['unknown', 'unavailable'] }}"
+
+      - name: Fulla Tailscale Active
+        unique_id: fulla_tailscale_active
+        state: >
+          {{ states('sensor.fulla_tailscale_service_state') | lower == 'active' }}
+        availability: "{{ states('sensor.fulla_tailscale_service_state') not in ['unknown', 'unavailable'] }}"
+
+      - name: Fulla SMB Active
+        unique_id: fulla_smb_active
+        state: >
+          {{ states('sensor.fulla_smb_service_state') | lower == 'active' }}
+        availability: "{{ states('sensor.fulla_smb_service_state') not in ['unknown', 'unavailable'] }}"
+
+      - name: Fulla NFS Active
+        unique_id: fulla_nfs_active
+        state: >
+          {{ states('sensor.fulla_nfs_service_state') | lower == 'active' }}
+        availability: "{{ states('sensor.fulla_nfs_service_state') not in ['unknown', 'unavailable'] }}"
+
+      - name: Fulla Time Sync OK
+        unique_id: fulla_time_sync_ok
+        state: >
+          {{ states('sensor.fulla_time_sync_state') | lower in ['yes', 'true', '1'] }}
+        availability: "{{ states('sensor.fulla_time_sync_state') not in ['unknown', 'unavailable'] }}"
+
+      - name: Fulla Host Healthy
+        unique_id: fulla_host_healthy
+        state: >
+          {{
+            is_state('binary_sensor.fulla_reachable', 'on')
+            and is_state('binary_sensor.fulla_telemetry_fresh', 'on')
+            and is_state('binary_sensor.fulla_glances_running', 'on')
+            and is_state('binary_sensor.fulla_portainer_running', 'on')
+            and is_state('binary_sensor.fulla_openwrt_backup_running', 'on')
+            and is_state('binary_sensor.fulla_wyoming_whisper_running', 'on')
+            and is_state('binary_sensor.fulla_openwebui_running', 'on')
+            and is_state('binary_sensor.fulla_tailscale_active', 'on')
+            and is_state('binary_sensor.fulla_smb_active', 'on')
+            and is_state('binary_sensor.fulla_nfs_active', 'on')
+            and is_state('binary_sensor.fulla_time_sync_ok', 'on')
+          }}

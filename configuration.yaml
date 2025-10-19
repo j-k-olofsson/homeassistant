@@ -1,6 +1,12 @@
 # Loads default set of integrations. Do not remove.
 default_config:
 
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 172.19.0.0/16       # täcker Docker bridge (säkert och enkelt)
+    - 192.168.10.200      # frigg hostens LAN-IP (valfritt, bra att ha)
+
 # Define global log-level
 logger:
   default: info

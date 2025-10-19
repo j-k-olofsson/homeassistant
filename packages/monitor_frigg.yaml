@@ -1,0 +1,304 @@
+homeassistant:
+  customize:
+    sensor.frigg_status_summary:
+      icon: mdi:server
+    binary_sensor.frigg_host_healthy:
+      icon: mdi:check-network
+
+binary_sensor:
+  - platform: command_line
+    name: Frigg Reachable
+    unique_id: frigg_reachable_command_ping
+    device_class: connectivity
+    command: >-
+      ping -c 1 -W 1 !secret monitor_frigg_ping_host >/dev/null 2>&1 && echo success || echo fail
+    command_timeout: 10
+    scan_interval: 60
+    value_template: "{{ value == 'success' }}"
+
+sensor:
+  - platform: rest
+    name: Frigg Glances Telemetry
+    unique_id: frigg_glances_payload
+    resource: !secret monitor_frigg_glances_all_url
+    timeout: 15
+    scan_interval: 30
+    value_template: >
+      {% set quicklook = value_json.get('quicklook') %}
+      {{ quicklook.get('cpu', 0.0) if quicklook is mapping else 0.0 }}
+    json_attributes:
+      - quicklook
+      - mem
+      - load
+      - uptime
+      - sensors
+
+  - platform: command_line
+    name: Frigg Root Disk Used
+    unique_id: frigg_root_disk_used_pct
+    command: >-
+      ssh !secret monitor_frigg_ssh 'df --output=pcent / | tail -n 1'
+    command_timeout: 15
+    scan_interval: 300
+    unit_of_measurement: "%"
+    availability: "{{ is_state('binary_sensor.frigg_reachable', 'on') }}"
+    value_template: >
+      {% set pct = value | regex_findall_index('([0-9]+)') %}
+      {% if pct %}
+        {{ pct | int }}
+      {% else %}
+        unknown
+      {% endif %}
+
+  - platform: command_line
+    name: Frigg Caddy Container Status
+    unique_id: frigg_caddy_container_status
+    command: >-
+      ssh !secret monitor_frigg_ssh "docker ps --filter 'label=com.docker.compose.service=caddy' --format '{{.Status}}' | head -n 1"
+    command_timeout: 15
+    scan_interval: 120
+    availability: "{{ is_state('binary_sensor.frigg_reachable', 'on') }}"
+    value_template: >
+      {% set line = value.strip().split('\n')[0] %}
+      {{ line if line else 'unavailable' }}
+
+  - platform: command_line
+    name: Frigg Home Assistant Container Status
+    unique_id: frigg_home_assistant_container_status
+    command: >-
+      ssh !secret monitor_frigg_ssh "docker ps --filter 'label=com.docker.compose.service=ha' --format '{{.Status}}' | head -n 1"
+    command_timeout: 15
+    scan_interval: 120
+    availability: "{{ is_state('binary_sensor.frigg_reachable', 'on') }}"
+    value_template: >
+      {% set line = value.strip().split('\n')[0] %}
+      {{ line if line else 'unavailable' }}
+
+  - platform: command_line
+    name: Frigg ESPHome Container Status
+    unique_id: frigg_esphome_container_status
+    command: >-
+      ssh !secret monitor_frigg_ssh "docker ps --filter 'label=com.docker.compose.service=esphome' --format '{{.Status}}' | head -n 1"
+    command_timeout: 15
+    scan_interval: 120
+    availability: "{{ is_state('binary_sensor.frigg_reachable', 'on') }}"
+    value_template: >
+      {% set line = value.strip().split('\n')[0] %}
+      {{ line if line else 'unavailable' }}
+
+  - platform: command_line
+    name: Frigg Ollama Container Status
+    unique_id: frigg_ollama_container_status
+    command: >-
+      ssh !secret monitor_frigg_ssh "docker ps --filter 'label=com.docker.compose.service=ollama' --format '{{.Status}}' | head -n 1"
+    command_timeout: 15
+    scan_interval: 120
+    availability: "{{ is_state('binary_sensor.frigg_reachable', 'on') }}"
+    value_template: >
+      {% set line = value.strip().split('\n')[0] %}
+      {{ line if line else 'unavailable' }}
+
+  - platform: command_line
+    name: Frigg Portainer Agent Container Status
+    unique_id: frigg_portainer_agent_container_status
+    command: >-
+      ssh !secret monitor_frigg_ssh "docker ps --filter 'label=com.docker.compose.service=portainer_agent' --format '{{.Status}}' | head -n 1"
+    command_timeout: 15
+    scan_interval: 120
+    availability: "{{ is_state('binary_sensor.frigg_reachable', 'on') }}"
+    value_template: >
+      {% set line = value.strip().split('\n')[0] %}
+      {{ line if line else 'unavailable' }}
+
+  - platform: command_line
+    name: Frigg Tailscale Service State
+    unique_id: frigg_tailscale_service_state
+    command: >-
+      ssh !secret monitor_frigg_ssh 'systemctl is-active tailscaled'
+    command_timeout: 15
+    scan_interval: 120
+    availability: "{{ is_state('binary_sensor.frigg_reachable', 'on') }}"
+    value_template: "{{ value.strip() if value else 'unknown' }}"
+
+template:
+  - sensor:
+      - name: Frigg CPU Usage
+        unique_id: frigg_cpu_usage_pct
+        unit_of_measurement: "%"
+        state: >
+          {% set quicklook = state_attr('sensor.frigg_glances_telemetry', 'quicklook') %}
+          {% if quicklook %}
+            {{ quicklook.get('cpu', 0.0) | float(0) }}
+          {% else %}
+            unknown
+          {% endif %}
+
+      - name: Frigg Memory Usage
+        unique_id: frigg_memory_usage_pct
+        unit_of_measurement: "%"
+        state: >
+          {% set quicklook = state_attr('sensor.frigg_glances_telemetry', 'quicklook') %}
+          {% if quicklook %}
+            {{ quicklook.get('mem', 0.0) | float(0) }}
+          {% else %}
+            unknown
+          {% endif %}
+
+      - name: Frigg Load Average 1m
+        unique_id: frigg_load_avg_1m
+        state: >
+          {% set load = state_attr('sensor.frigg_glances_telemetry', 'load') %}
+          {% if load %}
+            {{ load.get('min1', 0.0) | float(0) }}
+          {% else %}
+            unknown
+          {% endif %}
+
+      - name: Frigg Load Average 5m
+        unique_id: frigg_load_avg_5m
+        state: >
+          {% set load = state_attr('sensor.frigg_glances_telemetry', 'load') %}
+          {% if load %}
+            {{ load.get('min5', 0.0) | float(0) }}
+          {% else %}
+            unknown
+          {% endif %}
+
+      - name: Frigg Load Average 15m
+        unique_id: frigg_load_avg_15m
+        state: >
+          {% set load = state_attr('sensor.frigg_glances_telemetry', 'load') %}
+          {% if load %}
+            {{ load.get('min15', 0.0) | float(0) }}
+          {% else %}
+            unknown
+          {% endif %}
+
+      - name: Frigg System Uptime
+        unique_id: frigg_system_uptime
+        state: >
+          {% set uptime = state_attr('sensor.frigg_glances_telemetry', 'uptime') %}
+          {% if uptime %}
+            {{ uptime }}
+          {% else %}
+            unknown
+          {% endif %}
+
+      - name: Frigg CPU Temperature
+        unique_id: frigg_cpu_temperature
+        unit_of_measurement: "°C"
+        device_class: temperature
+        state: >
+          {% set sensors = state_attr('sensor.frigg_glances_telemetry', 'sensors') %}
+          {% if sensors %}
+            {% set match = sensors | selectattr('label', 'equalto', 'Tctl') | list %}
+            {% if match %}
+              {{ match[0].get('value') | float(0) }}
+            {% else %}
+              {% set composite = sensors | selectattr('label', 'equalto', 'Composite') | list %}
+              {{ composite[0].get('value') | float(0) if composite else 'unknown' }}
+            {% endif %}
+          {% else %}
+            unknown
+          {% endif %}
+
+      - name: Frigg Status Summary
+        unique_id: frigg_status_summary
+        state: >
+          {% if is_state('binary_sensor.frigg_host_healthy', 'on') %}
+            OK
+          {% elif is_state('binary_sensor.frigg_reachable', 'off') %}
+            Offline
+          {% else %}
+            {% set issues = [] %}
+            {% if not is_state('binary_sensor.frigg_caddy_running', 'on') %}
+              {% set issues = issues + ['caddy'] %}
+            {% endif %}
+            {% if not is_state('binary_sensor.frigg_home_assistant_running', 'on') %}
+              {% set issues = issues + ['home_assistant'] %}
+            {% endif %}
+            {% if not is_state('binary_sensor.frigg_esphome_running', 'on') %}
+              {% set issues = issues + ['esphome'] %}
+            {% endif %}
+            {% if not is_state('binary_sensor.frigg_ollama_running', 'on') %}
+              {% set issues = issues + ['ollama'] %}
+            {% endif %}
+            {% if not is_state('binary_sensor.frigg_portainer_agent_running', 'on') %}
+              {% set issues = issues + ['portainer_agent'] %}
+            {% endif %}
+            {% if not is_state('binary_sensor.frigg_tailscale_active', 'on') %}
+              {% set issues = issues + ['tailscale'] %}
+            {% endif %}
+            {% if issues %}
+              {{ ('Check: ' + issues | join(', ')) | title }}
+            {% else %}
+              Attention
+            {% endif %}
+          {% endif %}
+
+  - binary_sensor:
+      - name: Frigg Telemetry Fresh
+        unique_id: frigg_telemetry_fresh
+        state: >
+          {% set entity = states.sensor.frigg_glances_telemetry %}
+          {% if entity and entity.state not in ['unknown', 'unavailable'] %}
+            {{ (now() - entity.last_changed).total_seconds() < 180 }}
+          {% else %}
+            false
+          {% endif %}
+        availability: "{{ states('sensor.frigg_glances_telemetry') not in ['unknown', 'unavailable'] }}"
+
+      - name: Frigg Caddy Running
+        unique_id: frigg_caddy_running
+        state: >
+          {% set status = states('sensor.frigg_caddy_container_status') | lower %}
+          {{ 'up' in status or 'running' in status }}
+        availability: "{{ states('sensor.frigg_caddy_container_status') not in ['unknown', 'unavailable'] }}"
+
+      - name: Frigg Home Assistant Running
+        unique_id: frigg_home_assistant_running
+        state: >
+          {% set status = states('sensor.frigg_home_assistant_container_status') | lower %}
+          {{ 'up' in status or 'running' in status }}
+        availability: "{{ states('sensor.frigg_home_assistant_container_status') not in ['unknown', 'unavailable'] }}"
+
+      - name: Frigg ESPHome Running
+        unique_id: frigg_esphome_running
+        state: >
+          {% set status = states('sensor.frigg_esphome_container_status') | lower %}
+          {{ 'up' in status or 'running' in status }}
+        availability: "{{ states('sensor.frigg_esphome_container_status') not in ['unknown', 'unavailable'] }}"
+
+      - name: Frigg Ollama Running
+        unique_id: frigg_ollama_running
+        state: >
+          {% set status = states('sensor.frigg_ollama_container_status') | lower %}
+          {{ 'up' in status or 'running' in status }}
+        availability: "{{ states('sensor.frigg_ollama_container_status') not in ['unknown', 'unavailable'] }}"
+
+      - name: Frigg Portainer Agent Running
+        unique_id: frigg_portainer_agent_running
+        state: >
+          {% set status = states('sensor.frigg_portainer_agent_container_status') | lower %}
+          {{ 'up' in status or 'running' in status }}
+        availability: "{{ states('sensor.frigg_portainer_agent_container_status') not in ['unknown', 'unavailable'] }}"
+
+      - name: Frigg Tailscale Active
+        unique_id: frigg_tailscale_active
+        state: >
+          {{ states('sensor.frigg_tailscale_service_state') | lower == 'active' }}
+        availability: "{{ states('sensor.frigg_tailscale_service_state') not in ['unknown', 'unavailable'] }}"
+
+      - name: Frigg Host Healthy
+        unique_id: frigg_host_healthy
+        state: >
+          {{
+            is_state('binary_sensor.frigg_reachable', 'on')
+            and is_state('binary_sensor.frigg_telemetry_fresh', 'on')
+            and is_state('binary_sensor.frigg_caddy_running', 'on')
+            and is_state('binary_sensor.frigg_home_assistant_running', 'on')
+            and is_state('binary_sensor.frigg_esphome_running', 'on')
+            and is_state('binary_sensor.frigg_ollama_running', 'on')
+            and is_state('binary_sensor.frigg_portainer_agent_running', 'on')
+            and is_state('binary_sensor.frigg_tailscale_active', 'on')
+          }}
