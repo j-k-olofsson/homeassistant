@@ -41,13 +41,16 @@ sensor:
     command_timeout: 15
     scan_interval: 300
     unit_of_measurement: "%"
-    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
     value_template: >
-      {% set pct = value | regex_findall_index('([0-9]+)') %}
-      {% if pct %}
-        {{ pct | int }}
+      {% if not is_state('binary_sensor.fulla_reachable', 'on') %}
+        unavailable
       {% else %}
-        unknown
+        {% set pct = value | regex_findall_index('([0-9]+)') %}
+        {% if pct %}
+          {{ pct | int }}
+        {% else %}
+          unknown
+        {% endif %}
       {% endif %}
 
   - platform: command_line
@@ -58,13 +61,16 @@ sensor:
     command_timeout: 15
     scan_interval: 600
     unit_of_measurement: "%"
-    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
     value_template: >
-      {% set pct = value | regex_findall_index('([0-9]+)') %}
-      {% if pct %}
-        {{ pct | int }}
+      {% if not is_state('binary_sensor.fulla_reachable', 'on') %}
+        unavailable
       {% else %}
-        unknown
+        {% set pct = value | regex_findall_index('([0-9]+)') %}
+        {% if pct %}
+          {{ pct | int }}
+        {% else %}
+          unknown
+        {% endif %}
       {% endif %}
 
   - platform: command_line
@@ -75,13 +81,16 @@ sensor:
     command_timeout: 15
     scan_interval: 600
     unit_of_measurement: "%"
-    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
     value_template: >
-      {% set pct = value | regex_findall_index('([0-9]+)') %}
-      {% if pct %}
-        {{ pct | int }}
+      {% if not is_state('binary_sensor.fulla_reachable', 'on') %}
+        unavailable
       {% else %}
-        unknown
+        {% set pct = value | regex_findall_index('([0-9]+)') %}
+        {% if pct %}
+          {{ pct | int }}
+        {% else %}
+          unknown
+        {% endif %}
       {% endif %}
 
   - platform: command_line
@@ -92,13 +101,16 @@ sensor:
     command_timeout: 20
     scan_interval: 60
     unit_of_measurement: "%"
-    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
     value_template: >
-      {% set trimmed = value.strip().split('\n')[0] %}
-      {% if trimmed %}
-        {{ trimmed | float(0) }}
+      {% if not is_state('binary_sensor.fulla_reachable', 'on') %}
+        unavailable
       {% else %}
-        unknown
+        {% set trimmed = value.strip().split('\n')[0] %}
+        {% if trimmed %}
+          {{ trimmed | float(0) }}
+        {% else %}
+          unknown
+        {% endif %}
       {% endif %}
 
   - platform: command_line
@@ -108,8 +120,12 @@ sensor:
       ssh !secret monitor_fulla_ssh 'nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits'
     command_timeout: 20
     scan_interval: 60
-    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
-    value_template: "{{ value.strip() }}"
+    value_template: >
+      {% if not is_state('binary_sensor.fulla_reachable', 'on') %}
+        unavailable
+      {% else %}
+        {{ value.strip() }}
+      {% endif %}
 
   - platform: command_line
     name: Fulla Glances Container Status
@@ -118,10 +134,13 @@ sensor:
       ssh !secret monitor_fulla_ssh "docker ps --filter 'label=com.docker.compose.service=glances' --format '{{.Status}}' | head -n 1"
     command_timeout: 15
     scan_interval: 120
-    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
     value_template: >
-      {% set line = value.strip().split('\n')[0] %}
-      {{ line if line else 'unavailable' }}
+      {% if not is_state('binary_sensor.fulla_reachable', 'on') %}
+        unavailable
+      {% else %}
+        {% set line = value.strip().split('\n')[0] %}
+        {{ line if line else 'unavailable' }}
+      {% endif %}
 
   - platform: command_line
     name: Fulla Portainer Container Status
@@ -130,10 +149,13 @@ sensor:
       ssh !secret monitor_fulla_ssh "docker ps --filter 'label=com.docker.compose.service=portainer' --format '{{.Status}}' | head -n 1"
     command_timeout: 15
     scan_interval: 120
-    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
     value_template: >
-      {% set line = value.strip().split('\n')[0] %}
-      {{ line if line else 'unavailable' }}
+      {% if not is_state('binary_sensor.fulla_reachable', 'on') %}
+        unavailable
+      {% else %}
+        {% set line = value.strip().split('\n')[0] %}
+        {{ line if line else 'unavailable' }}
+      {% endif %}
 
   - platform: command_line
     name: Fulla OpenWRT Backup Container Status
@@ -142,10 +164,13 @@ sensor:
       ssh !secret monitor_fulla_ssh "docker ps --filter 'label=com.docker.compose.service=openwrt-backup' --format '{{.Status}}' | head -n 1"
     command_timeout: 15
     scan_interval: 120
-    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
     value_template: >
-      {% set line = value.strip().split('\n')[0] %}
-      {{ line if line else 'unavailable' }}
+      {% if not is_state('binary_sensor.fulla_reachable', 'on') %}
+        unavailable
+      {% else %}
+        {% set line = value.strip().split('\n')[0] %}
+        {{ line if line else 'unavailable' }}
+      {% endif %}
 
   - platform: command_line
     name: Fulla Wyoming Whisper Container Status
@@ -154,10 +179,13 @@ sensor:
       ssh !secret monitor_fulla_ssh "docker ps --filter 'label=com.docker.compose.service=wyoming-whisper' --format '{{.Status}}' | head -n 1"
     command_timeout: 15
     scan_interval: 120
-    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
     value_template: >
-      {% set line = value.strip().split('\n')[0] %}
-      {{ line if line else 'unavailable' }}
+      {% if not is_state('binary_sensor.fulla_reachable', 'on') %}
+        unavailable
+      {% else %}
+        {% set line = value.strip().split('\n')[0] %}
+        {{ line if line else 'unavailable' }}
+      {% endif %}
 
   - platform: command_line
     name: Fulla Open WebUI Container Status
@@ -166,10 +194,13 @@ sensor:
       ssh !secret monitor_fulla_ssh "docker ps --filter 'label=com.docker.compose.service=openwebui' --format '{{.Status}}' | head -n 1"
     command_timeout: 15
     scan_interval: 120
-    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
     value_template: >
-      {% set line = value.strip().split('\n')[0] %}
-      {{ line if line else 'unavailable' }}
+      {% if not is_state('binary_sensor.fulla_reachable', 'on') %}
+        unavailable
+      {% else %}
+        {% set line = value.strip().split('\n')[0] %}
+        {{ line if line else 'unavailable' }}
+      {% endif %}
 
   - platform: command_line
     name: Fulla Tailscale Service State
@@ -178,8 +209,12 @@ sensor:
       ssh !secret monitor_fulla_ssh 'systemctl is-active tailscaled'
     command_timeout: 15
     scan_interval: 120
-    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
-    value_template: "{{ value.strip() if value else 'unknown' }}"
+    value_template: >
+      {% if not is_state('binary_sensor.fulla_reachable', 'on') %}
+        unavailable
+      {% else %}
+        {{ value.strip() if value else 'unknown' }}
+      {% endif %}
 
   - platform: command_line
     name: Fulla SMB Service State
@@ -188,8 +223,12 @@ sensor:
       ssh !secret monitor_fulla_ssh 'systemctl is-active smbd'
     command_timeout: 15
     scan_interval: 180
-    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
-    value_template: "{{ value.strip() if value else 'unknown' }}"
+    value_template: >
+      {% if not is_state('binary_sensor.fulla_reachable', 'on') %}
+        unavailable
+      {% else %}
+        {{ value.strip() if value else 'unknown' }}
+      {% endif %}
 
   - platform: command_line
     name: Fulla NFS Service State
@@ -198,8 +237,12 @@ sensor:
       ssh !secret monitor_fulla_ssh 'systemctl is-active nfs-server'
     command_timeout: 15
     scan_interval: 180
-    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
-    value_template: "{{ value.strip() if value else 'unknown' }}"
+    value_template: >
+      {% if not is_state('binary_sensor.fulla_reachable', 'on') %}
+        unavailable
+      {% else %}
+        {{ value.strip() if value else 'unknown' }}
+      {% endif %}
 
   - platform: command_line
     name: Fulla Time Sync State
@@ -208,8 +251,12 @@ sensor:
       ssh !secret monitor_fulla_ssh 'timedatectl show -p NTPSynchronized --value'
     command_timeout: 15
     scan_interval: 600
-    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
-    value_template: "{{ value.strip() if value else 'unknown' }}"
+    value_template: >
+      {% if not is_state('binary_sensor.fulla_reachable', 'on') %}
+        unavailable
+      {% else %}
+        {{ value.strip() if value else 'unknown' }}
+      {% endif %}
 
   - platform: command_line
     name: Fulla OpenWRT Backup Last Log Line
@@ -218,8 +265,12 @@ sensor:
       ssh !secret monitor_fulla_ssh 'tail -n 1 /var/log/openwrt-backup.log'
     command_timeout: 15
     scan_interval: 900
-    availability: "{{ is_state('binary_sensor.fulla_reachable', 'on') }}"
-    value_template: "{{ value.strip() if value else 'unavailable' }}"
+    value_template: >
+      {% if not is_state('binary_sensor.fulla_reachable', 'on') %}
+        unavailable
+      {% else %}
+        {{ value.strip() if value else 'unavailable' }}
+      {% endif %}
 
 template:
   - sensor:
