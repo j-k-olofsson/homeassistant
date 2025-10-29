@@ -61,7 +61,7 @@
       state: problem
       entity_id: plant.paraplyaralia
     - condition: state
-      entity_id: plant.fredskalla
+      entity_id: plant.coffea_arabica
       state: problem
     - condition: state
       state: problem
@@ -459,7 +459,7 @@
   description: När tvättmaskinen har avslutat sitt program, skickas en notification
     och meddelande via högtalare för att påminna om att tömma tvätten.
   triggers:
-  - device_id: f16f2d8a7234951574cdd787c8fcebef
+  - device_id: f9e630bbd6684eb02e3254460fb1921c
     domain: home_connect_alt
     type: program_finished
     trigger: device
@@ -584,7 +584,7 @@
     - sun
     id: 0700-weekends
   - trigger: time
-    at: 09:00:00
+    at: 08:00:00
     id: 0900-alldays
   - trigger: time
     at: '20:00:00'

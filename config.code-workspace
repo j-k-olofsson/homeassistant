@@ -1,0 +1,21 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.associations": {
+            "*.yaml": "home-assistant"
+        }
+    },
+    "settings": {
+    "window.title": "Home Assistant • ${rootName}",
+    "workbench.colorCustomizations": {
+      "statusBar.background": "#9704ec",
+      "statusBar.foreground": "#ffffff",
+      "titleBar.activeBackground": "#9704ec",
+      "titleBar.activeForeground": "#ffffff"
+    }
+  }
+}
