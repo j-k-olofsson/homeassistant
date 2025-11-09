@@ -11,6 +11,14 @@ text_sensor:
     on_value:
       then:
         - script.execute: apply_scene
+  - platform: homeassistant
+    # Possible scene values are "ON", "LATE_ON", "OFF"
+    id: myGrowlightPhase
+    entity_id: input_select.growlight_scene
+    internal: true
+    on_value:
+      then:
+        - script.execute: apply_scene
 
 # ------------------ SCENLOGIK ------------------
 script:
@@ -25,15 +33,24 @@ script:
               - text_sensor.state: { id: myLightScen, state: "DAWN" }
               - text_sensor.state: { id: myLightScen, state: "DUSK" }
           then:
-            - light.turn_on:
-                id: myLED
-                effect: none
-            - light.turn_on:
-                id: myLED
-                brightness: ${day_brightness}
-                red: 80%
-                green: 70%
-                blue: 30%
+            - if:
+                condition:
+                  or:
+                  - text_sensor.state: { id: myGrowlightPhase, state: "ON" }
+                  - text_sensor.state: { id: myGrowlightPhase, state: "LATE_ON" }
+                then:
+                  - light.turn_off:
+                      id: myLED
+                else:
+                  - light.turn_on:
+                      id: myLED
+                      effect: none
+                  - light.turn_on:
+                      id: myLED
+                      brightness: ${day_brightness}
+                      red: 80%
+                      green: 70%
+                      blue: 30%
       # NIGHT
       - if:
           condition:

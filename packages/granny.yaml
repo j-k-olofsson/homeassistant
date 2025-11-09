@@ -18,3 +18,50 @@ template:
                 "carChargerCapacity": states("input_number.car_charger_capacity")
               } | tojson
             }}
+
+input_boolean:
+  car_ai_planning_enabled:
+    name: AI-planerad billaddning
+    icon: mdi:robot-happy
+    initial: true
+
+input_number:
+  car_target_soc:
+    name: Bilens mål-SOC
+    icon: mdi:flag-checkered
+    min: 50
+    max: 100
+    step: 1
+    mode: slider
+    unit_of_measurement: "%"
+    initial: 100
+  car_charger_efficiency:
+    name: Laddverkningsgrad
+    icon: mdi:battery-heart
+    min: 0.7
+    max: 1
+    step: 0.01
+    mode: slider
+    unit_of_measurement: ""
+    initial: 0.92
+  car_bat_capacity:
+    name: Bilens batterikapacitet
+    icon: mdi:car-battery
+    min: 5
+    max: 120
+    step: 0.1
+    mode: slider
+    unit_of_measurement: "kWh"
+    initial: 18
+  car_charger_capacity:
+    name: Laddareffekt
+    icon: mdi:ev-station
+    min: 0.5
+    max: 22
+    step: 0.1
+    mode: slider
+    unit_of_measurement: "kW"
+    initial: 3.6
+
+shell_command:
+  granny_update_charge_calendar: "python3 /config/tools/granny_update_charge_calendar.py --calendar {{ calendar_entity }} --window-start \"{{ window_start }}\" --window-end \"{{ window_end }}\" --plan '{{ plan_json }}'"

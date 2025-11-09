@@ -7,10 +7,10 @@ substitutions:
   log_level: INFO
   num_leds: "60"
   gpio_pin: "GPIO16"
-  night_brightness: "30%"
+  night_brightness: "50%"
   day_brightness: "50%"
 
 # Include packages for this device specific type
 packages:
-  ledstrip: !include common/.device_d1_mini32_ledstrip_indoors.yaml
+  ledstrip: !include common/.device_d1_mini32_ledstrip_alterning_flowerlamp.yaml
   proxy: !include common/.blueprint_bluetooth_proxy.yaml

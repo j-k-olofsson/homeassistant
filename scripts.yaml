@@ -192,3 +192,621 @@ granny_broadcast:
           message: '{{ final_message }}'
   - stop: '{{ final_message }}'
     response_variable: final_message
+
+granny_car_charge_plan:
+  alias: Granny Bil-laddningsplan (AI)
+  description: Planerar bilens laddning via den lokala LLM:n och uppdaterar kalendern.
+  mode: single
+  sequence:
+  - variables:
+      log_prefix: '[Granny AI-Laddning]'
+      status_notification_id: granny_plan_status
+      slot_minutes: 15
+      now_dt: '{{ now() }}'
+      now_iso: '{{ now().isoformat() }}'
+      deadline_iso: >-
+        {% set base = today_at('05:30:00') %}
+        {{ (base if now() < base else (base + timedelta(days=1))).isoformat() }}
+      deadline_local_iso: '{{ as_local(as_datetime(deadline_iso)).isoformat() }}'
+      cleanup_end_iso: >-
+        {{ (today_at('23:59:59') + timedelta(days=1)).isoformat() }}
+      car_soc: '{{ states("sensor.sef_42h_battery_level") | float(0) }}'
+      car_target: '{{ states("input_number.car_target_soc") | float(100) }}'
+      car_capacity_kwh: '{{ states("input_number.car_bat_capacity") | float(0) }}'
+      car_charger_kw: '{{ states("input_number.car_charger_capacity") | float(0) }}'
+      car_efficiency: '{{ states("input_number.car_charger_efficiency") | float(1) }}'
+      energy_needed_kwh: >-
+        {% set diff = (car_target | float(0)) - (car_soc | float(0)) %}
+        {% if diff <= 0 or (car_capacity_kwh | float(0)) <= 0 %}
+          {{ 0.0 }}
+        {% else %}
+          {{ ((diff / 100) * (car_capacity_kwh | float(0))) | float(0) }}
+        {% endif %}
+      slot_energy_kwh: >-
+        {% set kw = car_charger_kw | float(0) %}
+        {% set eff = car_efficiency | float(1) %}
+        {% set minutes = slot_minutes | float(0) %}
+        {% set duration = minutes / 60 %}
+        {% if kw <= 0 or duration <= 0 or eff <= 0 %}
+          {{ 0.0 }}
+        {% else %}
+          {{ (kw * duration * eff) | float(0) }}
+        {% endif %}
+      min_slots_required: >-
+        {% set needed = energy_needed_kwh | float(0) %}
+        {% set per_slot = slot_energy_kwh | float(0) %}
+        {% if needed <= 0 or per_slot <= 0 %}
+          0
+        {% else %}
+          {{ (needed / per_slot) | round(0, 'ceil') | int }}
+        {% endif %}
+      price_payload: >-
+        {% set sensor = 'sensor.nordpool' %}
+        {% set raw_today = state_attr(sensor, 'raw_today') or [] %}
+        {% set raw_tomorrow = state_attr(sensor, 'raw_tomorrow') or [] %}
+        {% set window_start = as_datetime(now_iso) %}
+        {% set window_end = as_datetime(deadline_iso) %}
+        {% set today_ns = namespace(items=[]) %}
+        {% for item in raw_today %}
+          {% if item is mapping %}
+            {% set start = item.get('start') %}
+            {% set end = item.get('end') %}
+            {% set value = item.get('value') %}
+          {% else %}
+            {% set start = item[0] %}
+            {% set end = item[1] %}
+            {% set value = item[2] %}
+          {% endif %}
+          {% set start_dt = as_datetime(start) if start is not none else none %}
+          {% set end_dt = as_datetime(end) if end is not none else none %}
+          {% if start_dt is none or end_dt is none %}
+            {% continue %}
+          {% endif %}
+          {% if end_dt <= window_start or start_dt >= window_end %}
+            {% continue %}
+          {% endif %}
+          {% set today_ns.items = today_ns.items + [{
+            "start": start_dt.isoformat(),
+            "end": end_dt.isoformat(),
+            "value": value | float(0)
+          }] %}
+        {% endfor %}
+        {% set tomorrow_ns = namespace(items=[]) %}
+        {% for item in raw_tomorrow %}
+          {% if item is mapping %}
+            {% set start = item.get('start') %}
+            {% set end = item.get('end') %}
+            {% set value = item.get('value') %}
+          {% else %}
+            {% set start = item[0] %}
+            {% set end = item[1] %}
+            {% set value = item[2] %}
+          {% endif %}
+          {% set start_dt = as_datetime(start) if start is not none else none %}
+          {% set end_dt = as_datetime(end) if end is not none else none %}
+          {% if start_dt is none or end_dt is none %}
+            {% continue %}
+          {% endif %}
+          {% if end_dt <= window_start or start_dt >= window_end %}
+            {% continue %}
+          {% endif %}
+          {% set tomorrow_ns.items = tomorrow_ns.items + [{
+            "start": start_dt.isoformat(),
+            "end": end_dt.isoformat(),
+            "value": value | float(0)
+          }] %}
+        {% endfor %}
+        {{
+          {
+            "currency": state_attr(sensor, "currency"),
+            "vat": state_attr(sensor, "vat"),
+            "today": today_ns.items,
+            "tomorrow": tomorrow_ns.items
+          } | tojson
+        }}
+      ai_context: >-
+        {{
+          {
+            "fakta": {
+              "nuvarande_soc_procent": car_soc,
+              "mal_soc_procent": car_target,
+              "batterikapacitet_kwh": car_capacity_kwh,
+            "laddare_kw": car_charger_kw,
+            "verkningsgrad": car_efficiency,
+            "slot_langd_minuter": slot_minutes,
+            "starttid_iso": now_iso,
+            "deadlinetid_iso": deadline_iso,
+            "deadlinetid_local": deadline_local_iso,
+            "energi_behov_kwh": energy_needed_kwh | float(0),
+            "energi_per_slot_kwh": slot_energy_kwh | float(0),
+            "min_antal_slotar": min_slots_required,
+          },
+          "prisdata": price_payload | from_json
+        } | tojson
+        }}
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ car_capacity_kwh | float(0) <= 0 }}'
+      sequence:
+      - action: logbook.log
+        data:
+          name: '{{ log_prefix }}'
+          message: 'Planeringen stoppad: sätt ett värde på input_number.car_bat_capacity.'
+      - action: persistent_notification.create
+        data:
+          title: Laddningsplan saknar batterikapacitet
+          message: >-
+            Ange bilens batterikapacitet i input_number.car_bat_capacity för att kunna planera laddningen.
+          notification_id: granny_car_charge_plan_config_error
+      - stop: Saknar batterikapacitet.
+    - conditions:
+      - condition: template
+        value_template: '{{ car_charger_kw | float(0) <= 0 }}'
+      sequence:
+      - action: logbook.log
+        data:
+          name: '{{ log_prefix }}'
+          message: 'Planeringen stoppad: sätt ett värde på input_number.car_charger_capacity.'
+      - action: persistent_notification.create
+        data:
+          title: Laddningsplan saknar laddareffekt
+          message: >-
+            Ange laddarens effekt i input_number.car_charger_capacity för att kunna planera laddningen.
+          notification_id: granny_car_charge_plan_config_error
+      - stop: Saknar laddareffekt.
+  - action: logbook.log
+    data:
+      name: '{{ log_prefix }}'
+      message: 'Startar AI-planering av bilens laddning.'
+  - action: ai_task.generate_data
+    data:
+      entity_id: ai_task.ollama_ai_task
+      task_name: granny_charge_plan
+      instructions: >-
+        SYSTEM Du är Granny-planeraren, bilens energiboss. Tala enbart svenska och
+        var kortfattad men rak.
+
+        DATA_JSON {{ ai_context }}
+
+        KRAV
+        - Arbeta strikt inom tidsfönstret [starttid_iso, deadlinetid_iso). Inga slotar
+          får sluta efter deadlinetid_iso.
+        - Varje slot är {{ slot_minutes }} minuter och ger ungefär {{ slot_energy_kwh
+          | float(0) | round(3) }} kWh.
+        - Energi att fylla på: {{ energy_needed_kwh | float(0) | round(3) }} kWh,
+          minst {{ min_slots_required }} slotar.
+        - Använd prisdata.currency som valuta (pris och kostnad per kWh, inkl. moms
+          om prisdata.vat är true).
+        - Svara alltid på svenska och håll sammanfattningen max 60 ord.
+
+        UPPDRAG
+        1. Om energibehovet är <= 0, markera status "klar" och returnera tom schedule.
+        2. Dela upp prisintervallen i {{ slot_minutes }}-minutersslotar inom fönstret
+           och välj de billigaste tills energibehovet uppfylls senast deadlinetid_iso.
+        3. För varje slot: ange start, slut, energy_kwh (≈ {{ slot_energy_kwh | float(0) | round(3) }}),
+           price_sek_kwh och cost_sek (energy_kwh * pris). Ange källa (id från
+           prislistan, t.ex. "nordpool.today").
+        4. Summera status, inkludera om deadlinen hålls, och ge korta noter.
+
+        SVARFORMAT
+        Svara ENBART med JSON. Ingen text före eller efter. Följ exakt detta schema:
+        {
+          "status": "kort status",
+          "summary": "kort svensk text",
+          "notes": "extra info eller tom sträng",
+          "deadline_met": true,
+          "slots_planned": 0,
+          "schedule": [
+            {
+              "start": "ISO8601",
+              "end": "ISO8601",
+              "energy_kwh": 0.0,
+              "price_sek_kwh": 0.0,
+              "cost_sek": 0.0,
+              "source": "text"
+            }
+          ]
+        }
+        Alla fält måste finnas. schedule får vara tom men ska då vara []. Använd decimalpunkt.
+        Kontrollera att starttid >= starttid_iso och sluttid <= deadlinetid_iso.
+    response_variable: ai_plan
+  - action: system_log.write
+    data:
+      message: 'AI-plan debug: {{ ai_plan | tojson }}'
+      level: info
+      logger: granny_car_charge_plan
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: "{{ ai_plan.error | default('') | string | length > 0 }}"
+      sequence:
+      - action: logbook.log
+        data:
+          name: '{{ log_prefix }}'
+          message: 'AI-samtalet misslyckades: {{ ai_plan.error }}'
+      - action: persistent_notification.create
+        data:
+          title: Bil-laddningsplan misslyckades
+          message: 'AI-samtalet misslyckades: {{ ai_plan.error }}'
+          notification_id: granny_car_charge_plan_error
+      - stop: AI-samtalet misslyckades.
+  - variables:
+      ai_raw: '{{ ai_plan.data | default("") | string | trim }}'
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ ai_raw | length > 0 }}'
+      sequence: []
+    default:
+    - action: logbook.log
+      data:
+        name: '{{ log_prefix }}'
+        message: 'AI svarade tomt. Avbryter.'
+    - action: persistent_notification.create
+      data:
+        title: Ingen laddningsplan skapades
+        message: 'AI svarade tomt eller utan data. Se loggboken för detaljer.'
+        notification_id: granny_car_charge_plan_empty
+    - stop: AI gav inget svar.
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: "{{ (ai_raw | trim)[:1] == '{' }}"
+      sequence: []
+    default:
+    - action: logbook.log
+      data:
+        name: '{{ log_prefix }}'
+        message: 'AI svarade inte i JSON-format: {{ ai_raw }}'
+    - action: persistent_notification.create
+      data:
+        title: AI-svar saknar JSON
+        message: 'AI gav svaret: {{ ai_raw }}. Förväntade giltig JSON. Kontrollera instruktionen.'
+        notification_id: granny_car_charge_plan_format_error
+    - stop: AI gav ogiltigt format.
+  - variables:
+      plan_data: '{{ ai_raw | from_json(default={}) }}'
+      plan_schedule_raw: >-
+        {% if plan_data is mapping %}
+          {{ plan_data.get('schedule', plan_data.get('planned_schedule', [])) }}
+        {% else %}
+          []
+        {% endif %}
+      plan_schedule_initial: >-
+        {% set raw = plan_schedule_raw %}
+        {% if raw is string %}
+          {{ raw | from_json(default=[]) }}
+        {% elif raw is mapping %}
+          {{ [raw] | tojson | from_json }}
+        {% elif raw is iterable %}
+          {{ raw | tojson | from_json }}
+        {% else %}
+          []
+        {% endif %}
+      plan_schedule_initial_len: '{{ plan_schedule_initial | length }}'
+      plan_schedule: '{{ plan_schedule_initial | selectattr("start", "defined") | list }}'
+      plan_status: >-
+        {% if plan_data is mapping %}
+          {{ plan_data.get('status', '') }}
+        {% else %}
+          ''
+        {% endif %}
+      plan_summary: >-
+        {% if plan_data is mapping %}
+          {{ plan_data.get('summary', '') }}
+        {% else %}
+          ''
+        {% endif %}
+      plan_notes: >-
+        {% if plan_data is mapping %}
+          {{ plan_data.get('notes', plan_data.get('summary', '')) }}
+        {% else %}
+          ''
+        {% endif %}
+      plan_deadline_met: >-
+        {% if plan_data is mapping %}
+          {% set raw = plan_data.get('deadline_met', plan_data.get('deadline_ok', None)) %}
+        {% else %}
+          {% set raw = None %}
+        {% endif %}
+        {{ raw in [True, 'True', 'true', 1, '1'] }}
+      plan_slots_planned: >-
+        {% if plan_data is mapping %}
+          {% set raw = plan_data.get('slots_planned') %}
+        {% else %}
+          {% set raw = None %}
+        {% endif %}
+        {% if raw is number %}
+          {{ raw | int }}
+        {% elif raw in [None, ''] %}
+          {{ plan_schedule_initial_len }}
+        {% else %}
+          {{ (raw | int(0)) if raw is not none else plan_schedule_initial_len }}
+        {% endif %}
+      plan_schedule_filtered_json: >-
+        {% set window_start_dt = as_datetime(now_iso) %}
+        {% set window_end_dt = as_datetime(deadline_iso) %}
+        {% set kept = namespace(items=[]) %}
+        {% for slot in plan_schedule %}
+          {% set start_val = slot.get('start') %}
+          {% set end_val = slot.get('end') %}
+          {% set start_dt = as_datetime(start_val) if start_val else None %}
+          {% set end_dt = as_datetime(end_val) if end_val else None %}
+          {% if start_dt is not none and end_dt is not none and start_dt >= window_start_dt and end_dt <= window_end_dt %}
+            {% set kept.items = kept.items + [slot] %}
+          {% endif %}
+        {% endfor %}
+        {{ kept.items | tojson }}
+      plan_schedule_effective: "{{ plan_schedule_filtered_json | from_json(default=[]) }}"
+      plan_schedule_filter_debug: >-
+        {% set window_start_dt = as_datetime(now_iso) %}
+        {% set window_end_dt = as_datetime(deadline_iso) %}
+        {% set ns = namespace(lines=[]) %}
+        {% for slot in plan_schedule %}
+          {% set start_val = slot.get('start') %}
+          {% set end_val = slot.get('end') %}
+          {% set start_dt = as_datetime(start_val) if start_val else None %}
+          {% set end_dt = as_datetime(end_val) if end_val else None %}
+          {% set keep = (start_dt is not none and end_dt is not none and start_dt >= window_start_dt and end_dt <= window_end_dt) %}
+          {% set ns.lines = ns.lines + ['slot=' ~ (slot | tojson) ~ ', start_dt=' ~ (start_dt.isoformat() if start_dt else 'none') ~ ', end_dt=' ~ (end_dt.isoformat() if end_dt else 'none') ~ ', keep=' ~ keep|string] %}
+        {% endfor %}
+        {{ ns.lines | join(' | ') }}
+      schedule_removed_count: >-
+        {{ plan_schedule_initial_len - (plan_schedule_effective | length) }}
+      schedule_start_failed: >-
+        {{ (plan_schedule_initial_len > 0) and (plan_schedule_effective | length == 0) }}
+      plan_energy_total: >-
+        {% set total = 0.0 %}
+        {% for slot in plan_schedule_effective %}
+          {% if slot.energy_kwh is defined %}
+            {% set total = total + (slot.energy_kwh | float(0)) %}
+          {% endif %}
+        {% endfor %}
+        {{ total }}
+      energy_goal_met: >-
+        {% set needed = energy_needed_kwh | float(0) %}
+        {% set total = plan_energy_total | float(0) %}
+        {% if needed <= 0 %}
+          true
+        {% else %}
+          {{ (total + 0.001) >= needed }}
+        {% endif %}
+      schedule_deadline_ok: >-
+        {% set deadline_dt = as_datetime(deadline_iso) %}
+        {% set deadline_ts = as_timestamp(deadline_dt) %}
+        {% set ns = namespace(ok=true) %}
+        {% for slot in plan_schedule %}
+          {% set start = slot.start if slot.start is defined else slot.get('start') %}
+          {% set end = slot.end if slot.end is defined else slot.get('end') %}
+          {% if start in [None, ''] or end in [None, ''] %}
+            {% set ns.ok = false %}
+          {% else %}
+            {% set start_dt = as_datetime(start) %}
+            {% set end_dt = as_datetime(end) %}
+            {% set start_ts = as_timestamp(start_dt) if start_dt else None %}
+            {% set end_ts = as_timestamp(end_dt) if end_dt else None %}
+            {% if start_ts is none or end_ts is none or start_ts >= end_ts or end_ts > deadline_ts %}
+              {% set ns.ok = false %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+        {{ ns.ok }}
+      deadline_check_failed: >-
+        {% set meets = plan_deadline_met in [True, 'True', 'true', 1, '1'] %}
+        {% set ok = schedule_deadline_ok in [True, 'True', 'true', 1, '1'] %}
+        {{ not (meets and ok) }}
+      energy_check_failed: >-
+        {% set met = energy_goal_met in [True, 'True', 'true', 1, '1'] %}
+        {{ not met }}
+      plan_json: >-
+        {% if plan_data is mapping %}
+          {% set base = {
+            "status": plan_status,
+            "summary": plan_summary,
+            "notes": plan_notes,
+            "deadline_met": plan_deadline_met,
+            "slots_planned": plan_slots_planned,
+            "schedule": plan_schedule_effective
+          } %}
+          {{ base | tojson }}
+        {% else %}
+          {{ {
+            "status": plan_status,
+            "summary": plan_summary,
+            "notes": plan_notes,
+            "deadline_met": plan_deadline_met,
+            "slots_planned": plan_slots_planned,
+            "schedule": plan_schedule_effective
+          } | tojson }}
+        {% endif %}
+      calendar_entity: calendar.billaddning
+  - action: system_log.write
+    data:
+      level: info
+      logger: granny_car_charge_plan
+      message: >-
+        AI-plan stats:
+        initial={{ plan_schedule_initial_len }},
+        filtered={{ plan_schedule_effective | length }},
+        removed={{ schedule_removed_count }},
+        start_failed={{ schedule_start_failed }},
+        initial_slots={{ plan_schedule_initial }},
+        first={{ plan_schedule_effective[0].start if plan_schedule_effective | length > 0 else 'none' }}–{{ plan_schedule_effective[0].end if plan_schedule_effective | length > 0 else 'none' }},
+        window={{ now_iso }}–{{ deadline_iso }},
+        filtered={{ plan_schedule_effective | tojson }},
+        plan_schedule={{ plan_schedule | tojson }},
+        per_slot={{ plan_schedule_filter_debug }}
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ schedule_start_failed in [True, "True", "true", 1, "1"] }}'
+      sequence:
+      - action: logbook.log
+        data:
+          name: '{{ log_prefix }}'
+          message: 'AI-planen filtrerades bort eftersom alla slotar låg före nuvarande tidsfönster. Status: {{ plan_status }}.'
+      - action: persistent_notification.create
+        data:
+          title: Laddningsplan ogiltig (tidsfönster)
+          message: >-
+            AI-planen innehöll endast slotar utanför fönstret {{ as_local(as_datetime(now_iso)).strftime('%d %b %H:%M') }}
+            – {{ as_local(as_datetime(deadline_iso)).strftime('%d %b %H:%M') }}. Planeringen stoppades.
+          notification_id: granny_car_charge_plan_time_error
+      - stop: AI-plan låg utanför tidsfönstret.
+    - conditions:
+      - condition: template
+        value_template: '{{ schedule_removed_count | int(0) > 0 }}'
+      sequence:
+      - action: logbook.log
+        data:
+          name: '{{ log_prefix }}'
+          message: '{{ schedule_removed_count }} slot(ar) togs bort eftersom de låg utanför tidsfönstret. Fortsätter med {{ plan_schedule_effective | length }} slot(ar).'
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ deadline_check_failed in [True, "True", "true", 1, "1"] }}'
+      sequence:
+      - action: logbook.log
+        data:
+          name: '{{ log_prefix }}'
+          message: 'AI-planen bryter mot deadlinen eller saknar tider inom fönstret. Status: {{ plan_status }}.'
+      - action: persistent_notification.create
+        data:
+          title: Laddningsplan ogiltig (deadline)
+          message: >-
+            AI-planen passer inte deadlinetiden {{ as_local(as_datetime(deadline_iso)).strftime('%d %b %H:%M') }}.
+            Kontrollera AI-konfigurationen och prisdata.
+          notification_id: granny_car_charge_plan_deadline_error
+      - stop: AI-plan uppfyllde inte deadlinetiden.
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ energy_check_failed in [True, "True", "true", 1, "1"] }}'
+      sequence:
+      - action: logbook.log
+        data:
+          name: '{{ log_prefix }}'
+          message: 'Planens energi {{ plan_energy_total | float(0) | round(2) }} kWh räcker inte för behovet {{ energy_needed_kwh | float(0) | round(2) }} kWh.'
+      - action: persistent_notification.create
+        data:
+          title: Laddningsplan ogiltig (energi)
+          message: >-
+            AI-planen levererar endast {{ plan_energy_total | float(0) | round(2) }} kWh.
+            Behovet är {{ energy_needed_kwh | float(0) | round(2) }} kWh. Planen stoppades.
+          notification_id: granny_car_charge_plan_energy_error
+      - stop: AI-plan levererade för lite energi.
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ plan_schedule_effective | length == 0 }}'
+      sequence:
+      - action: logbook.log
+        data:
+          name: '{{ log_prefix }}'
+          message: 'AI-plan saknar slotar (status: {{ plan_status | default("ok") }}). Kalendern töms i det aktuella fönstret.'
+  - action: shell_command.granny_update_charge_calendar
+    data:
+      calendar_entity: '{{ calendar_entity }}'
+      window_start: '{{ now_iso }}'
+      window_end: '{{ cleanup_end_iso }}'
+      plan_json: '{{ plan_json }}'
+  - action: calendar.get_events
+    target:
+      entity_id: '{{ calendar_entity }}'
+    data:
+      start_date_time: '{{ now_iso }}'
+      end_date_time: '{{ cleanup_end_iso }}'
+    response_variable: calendar_window
+  - variables:
+      updated_events: '{{ calendar_window.events | default([]) }}'
+      updated_event_count: '{{ updated_events | length }}'
+      total_energy_kwh: >-
+        {% set total = 0 %}
+        {% for slot in plan_schedule_effective %}
+          {% if slot.energy_kwh is defined %}
+            {% set total = total + (slot.energy_kwh | float(0)) %}
+          {% endif %}
+        {% endfor %}
+        {{ total }}
+      total_cost_sek: >-
+        {% set total = 0 %}
+        {% for slot in plan_schedule_effective %}
+          {% if slot.cost_sek is defined %}
+            {% set total = total + (slot.cost_sek | float(0)) %}
+          {% endif %}
+        {% endfor %}
+        {{ total }}
+  - action: logbook.log
+    data:
+      name: '{{ log_prefix }}'
+      message: 'Kalender uppdaterad. {{ updated_event_count }} slotar aktiva. Status: {{ plan_status }}.'
+  - action: input_datetime.set_datetime
+    data:
+      datetime: '{{ now_iso }}'
+    target:
+      entity_id: input_datetime.granny_charger_trigger
+  - variables:
+      schedule_lines: >-
+        {% if plan_schedule_effective | length == 0 %}
+        - Inga laddningsslotar behövs just nu.
+        {% else %}
+        {%- for slot in plan_schedule_effective %}
+        - {{ as_local(as_datetime(slot.start)).strftime('%d %b %H:%M') }}–{{ as_local(as_datetime(slot.end)).strftime('%H:%M') }} (≈{{ slot.energy_kwh | default(0) | round(2) }} kWh)
+        {%- endfor %}
+        {% endif %}
+      granny_task: >-
+        SYSTEM Du är "Granny", familjens hjärtliga rådgivare. Tala svenska, max 60 ord,
+        varm men rak.
+
+        DATA
+        Status: {{ plan_status if plan_status | length > 0 else 'ok' }}
+        Sammanfattning: {{ plan_summary if plan_summary | length > 0 else 'Ingen sammanfattning från AI.' }}
+        Total energi: {{ total_energy_kwh | float(0) | round(2) }} kWh
+        Total kostnad: {{ total_cost_sek | float(0) | round(2) }} SEK
+        Tidsluckor:
+        {{ schedule_lines }}
+
+        UPPDRAG
+        Förklara planen kort, peppa familjen och påminn om tidsluckorna.
+      broadcast_fallback: >-
+        {% if plan_notes | length > 0 %}
+          {{ plan_notes }}
+        {% elif plan_summary | length > 0 %}
+          {{ plan_summary }}
+        {% else %}
+          Laddningsplanen är uppdaterad men AI gav ingen text.
+        {% endif %}
+      status_notification_body: >-
+        {% set ns = namespace(parts=[]) %}
+        {% if plan_schedule_effective | length == 0 %}
+          {% set ns.parts = ns.parts + ['Ingen laddning planerad just nu.'] %}
+        {% else %}
+          {% set ns.parts = ns.parts + ['Plan klar: ' ~ (plan_schedule_effective | length) ~ ' slotar, energi ≈ ' ~ (total_energy_kwh | float(0) | round(2)) ~ ' kWh, kostnad ≈ ' ~ (total_cost_sek | float(0) | round(2)) ~ ' SEK.'] %}
+        {% endif %}
+        {% if plan_summary | length > 0 %}
+          {% set ns.parts = ns.parts + [plan_summary] %}
+        {% elif plan_notes | length > 0 %}
+          {% set ns.parts = ns.parts + [plan_notes] %}
+        {% endif %}
+        {% for slot in plan_schedule_effective %}
+          {% set ns.parts = ns.parts + ['- ' ~ as_local(as_datetime(slot.start)).strftime('%d %b %H:%M') ~ '–' ~ as_local(as_datetime(slot.end)).strftime('%H:%M') ~ ' (≈' ~ (slot.energy_kwh | default(0) | round(2)) ~ ' kWh)'] %}
+        {% endfor %}
+        {{ ns.parts | join('\n') }}
+  - action: script.granny_broadcast
+    data:
+      severity: info
+      humor_level: 2
+      channels:
+      - ha
+      task: '{{ granny_task }}'
+      fallback_message: '{{ broadcast_fallback }}'
+  - action: persistent_notification.create
+    data:
+      title: Granny-plan klar
+      message: '{{ status_notification_body }}'
+      notification_id: '{{ status_notification_id }}'
+  - action: logbook.log
+    data:
+      name: '{{ log_prefix }}'
+      message: 'Laddningsplan klar: {{ updated_event_count }} slotar, energi ≈ {{ total_energy_kwh | float(0) | round(2) }} kWh, kostnad ≈ {{ total_cost_sek | float(0) | round(2) }} SEK.'

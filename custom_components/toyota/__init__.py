@@ -19,7 +19,7 @@ from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, Upda
 from loguru import logger
 from pydantic import ValidationError
 
-from .const import CONF_METRIC_VALUES, DOMAIN, PLATFORMS, STARTUP_MESSAGE
+from .const import CONF_BRAND, CONF_METRIC_VALUES, DOMAIN, PLATFORMS, STARTUP_MESSAGE
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -52,6 +52,8 @@ from pytoyoda.exceptions import (  # noqa: E402
 )
 
 if TYPE_CHECKING:
+    from collections.abc import Coroutine
+
     from homeassistant.config_entries import ConfigEntry
     from homeassistant.core import HomeAssistant
     from pytoyoda.models.summary import Summary
@@ -75,6 +77,15 @@ class VehicleData(TypedDict):
     metric_values: bool
 
 
+def _run_pytoyoda_sync(coro: Coroutine) -> Any:  # noqa : ANN401
+    """Run a pytoyoda coroutine in a new event loop."""
+    loop = asyncio.new_event_loop()
+    try:
+        return loop.run_until_complete(coro)
+    finally:
+        loop.close()
+
+
 async def async_setup_entry(  # pylint: disable=too-many-statements # noqa: PLR0915, C901
     hass: HomeAssistant, entry: ConfigEntry
 ) -> bool:
@@ -86,9 +97,24 @@ async def async_setup_entry(  # pylint: disable=too-many-statements # noqa: PLR0
     email = entry.data[CONF_EMAIL]
     password = entry.data[CONF_PASSWORD]
     metric_values = entry.data[CONF_METRIC_VALUES]
+    brand = entry.data.get(
+        CONF_BRAND, "toyota"
+    )  # Get brand from config, default to toyota
+
+    # Map brand selection to API brand code
+    brand_map = {"toyota": "T", "lexus": "L"}
+    brand_code = brand_map.get(brand, "T")
+
+    _LOGGER.info("Setting up %s integration (brand code: %s)", brand, brand_code)
 
     client = await hass.async_add_executor_job(
-        partial(MyT, username=email, password=password, use_metric=metric_values)
+        partial(
+            MyT,
+            username=email,
+            password=password,
+            use_metric=metric_values,
+            brand=brand_code,  # Pass brand code to API client
+        )
     )
 
     try:
@@ -112,12 +138,17 @@ async def async_setup_entry(  # pylint: disable=too-many-statements # noqa: PLR0
     async def async_get_vehicle_data() -> list[VehicleData] | None:  # noqa: C901
         """Fetch vehicle data from Toyota API."""
         try:
-            vehicles = await asyncio.wait_for(client.get_vehicles(), 15)
+            vehicles = await asyncio.wait_for(
+                hass.async_add_executor_job(_run_pytoyoda_sync, client.get_vehicles()),
+                15,
+            )
             vehicle_informations: list[VehicleData] = []
             if vehicles:
                 for vehicle in vehicles:
                     if vehicle:
-                        await vehicle.update()
+                        await hass.async_add_executor_job(
+                            _run_pytoyoda_sync, vehicle.update()
+                        )
                         vehicle_data = VehicleData(
                             data=vehicle, statistics=None, metric_values=metric_values
                         )
@@ -125,10 +156,22 @@ async def async_setup_entry(  # pylint: disable=too-many-statements # noqa: PLR0
                         if vehicle.vin is not None:
                             # Use parallel request to get car statistics.
                             driving_statistics = await asyncio.gather(
-                                vehicle.get_current_day_summary(),
-                                vehicle.get_current_week_summary(),
-                                vehicle.get_current_month_summary(),
-                                vehicle.get_current_year_summary(),
+                                hass.async_add_executor_job(
+                                    _run_pytoyoda_sync,
+                                    vehicle.get_current_day_summary(),
+                                ),
+                                hass.async_add_executor_job(
+                                    _run_pytoyoda_sync,
+                                    vehicle.get_current_week_summary(),
+                                ),
+                                hass.async_add_executor_job(
+                                    _run_pytoyoda_sync,
+                                    vehicle.get_current_month_summary(),
+                                ),
+                                hass.async_add_executor_job(
+                                    _run_pytoyoda_sync,
+                                    vehicle.get_current_year_summary(),
+                                ),
                             )
 
                             vehicle_data["statistics"] = StatisticsData(

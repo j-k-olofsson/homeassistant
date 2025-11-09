@@ -261,6 +261,7 @@
       - condition: state
         entity_id: input_boolean.guest_mode
         state: 'off'
+        enabled: false
       - metadata: {}
         data: {}
         target:
@@ -738,8 +739,8 @@
     default:
     - action: script.granny_broadcast
       data:
-        task: Du är Granny och ska säga godnatt till Manny och Diego. Använd ett nuikt
-          meddleande varje dag och se till att inte upprepa ett som du använt de senaste
+        task: Önska god natt på i två korta meningar - max 20 ord. Använd ett unikt
+          meddelande varje dag och se till att inte upprepa ett som du använt de senaste
           tio gångerna.
         severity: info
         humor_level: 1
@@ -826,7 +827,7 @@
         “Morgondagens elpriser ser fina ut, mest gröna nivåer hela dagen.”\n       -
         “Det ser ut att bli dyrt imorgon, särskilt på morgonen och kvällen.”\n    4)
         Undvik siffror och tekniska detaljer. Fokusera på hur hushållet kan tänka
-        kring sin vardag (tvätt, laddning, matlagning).\n    5) Max 60 ord, ingen
+        kring sin vardag (tvätt, laddning, matlagning).\n    5) Max 25 ord, ingen
         punktlista. Bara ett kort och naturligt stycke text.\n\n  DATA\n{# ===== PROD:
         nästa dygn när tomorrow_valid: true ===== #}\n{%- set e = 'sensor.nordpool'
         -%}\n{%- set currency = state_attr(e,'currency') or 'SEK' -%}\n{%- set unit
@@ -1086,9 +1087,9 @@
         entity_id: b7174089bed6ae52fba5dab87817494f
         type: press
       - type: turn_off
-        device_id: 59dfa01985c8b3965287d04661f4dd58
-        entity_id: 47a057a920c0bb9f2fc2db68849b3c5b
-        domain: light
+        device_id: f9d1287bc61f4cff4e138eb78408dcb7
+        entity_id: e91f51fad1a2f24d641f187f56d21221
+        domain: switch
       - type: turn_off
         device_id: 475cf4bfa38f96d9d9d5f37c1fbf7952
         entity_id: b5cf67e3b6938e441d88418849c91fd3
@@ -1111,10 +1112,10 @@
         id:
         - bio_off
       sequence:
-      - type: turn_on
-        device_id: 59dfa01985c8b3965287d04661f4dd58
-        entity_id: 47a057a920c0bb9f2fc2db68849b3c5b
-        domain: light
+      - type: turn_off
+        device_id: f9d1287bc61f4cff4e138eb78408dcb7
+        entity_id: e91f51fad1a2f24d641f187f56d21221
+        domain: switch
       - type: turn_off
         device_id: 475cf4bfa38f96d9d9d5f37c1fbf7952
         entity_id: b5cf67e3b6938e441d88418849c91fd3
@@ -1776,55 +1777,118 @@
   max: 10
 - id: '1751524387243'
   alias: Starta Granny Bil-laddning
-  description: Automationen initierar bil-laddning när bilen är parkerad hemma, dörrarna
-    är låsta, och bearbetningen av elkostnader är giltig för kommande dag. Den registrerar
-    också tidpunkten för laddningsstarten.
+  description: Startar AI-planeringen av bilens laddning och överlåter schemaläggningen
+    till skriptet granny_car_charge_plan.
   triggers:
+  - trigger: homeassistant
+    event: start
+  - trigger: template
+    value_template: '{{ state_attr(''sensor.nordpool'', ''tomorrow_valid'') in [True,
+      1, ''true'', ''True''] }}'
+  - trigger: state
+    entity_id:
+    - sensor.nordpool
+    attribute: raw_tomorrow
   - trigger: state
     entity_id:
     - device_tracker.sef_42h_parking_location
     to: home
-    from: not_home
-  - trigger: state
-    entity_id:
-    - binary_sensor.car_doors_locked
-    from: 'on'
-    to: 'off'
-  - trigger: state
-    entity_id:
-    - sensor.nordpool
-    attribute: tomorrow_valid
-    to: 'true'
-    from: 'false'
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+  - trigger: template
+    value_template: "{{ states('sensor.sef_42h_battery_level') | float(999) <\n   states('input_number.car_target_soc')
+      | float(999) }}\n"
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
   conditions:
+  - condition: template
+    value_template: '{% set loc = states(''device_tracker.sef_42h_parking_location'')
+      %} {{ loc in [''home'', ''Hemma''] }}
+
+      '
   - condition: state
-    entity_id: device_tracker.sef_42h_parking_location
-    state: home
-  - condition: state
-    entity_id: binary_sensor.car_doors_locked
-    state: 'off'
-  - condition: state
-    entity_id: sensor.nordpool
-    attribute: tomorrow_valid
-    state: 'true'
+    entity_id: input_boolean.car_ai_planning_enabled
+    state: 'on'
   - condition: state
     entity_id: input_boolean.car_man_override
     state: 'off'
-  - condition: numeric_state
-    entity_id: sensor.sef_42h_battery_level
-    below: 100
-  actions:
+  - condition: template
+    value_template: "{{ states('sensor.sef_42h_battery_level') | float(0) <\n   states('input_number.car_target_soc')
+      | float(100) }}\n"
   - condition: state
     entity_id: input_boolean.ha_ready
     state: 'on'
-  - action: input_datetime.set_datetime
-    metadata: {}
+  actions:
+  - action: persistent_notification.create
     data:
-      datetime: '{{ now().isoformat() }}'
-    target:
-      entity_id: input_datetime.granny_charger_trigger
-  mode: queued
-  max: 10
+      title: Granny-planering
+      message: 'Automationen startades {{ now().strftime(''%d %b %H:%M'') }} via {{
+        trigger.description | default(trigger.id | default(trigger.platform | default(''ok'')))
+        }}. Batteri: {{ states(''sensor.sef_42h_battery_level'') }} %, mål: {{ states(''input_number.car_target_soc'')
+        }} %.'
+      notification_id: granny_plan_status
+  - variables:
+      granny_window_end_iso: '{% set window_start = now() %} {% set deadline = today_at(''05:30:00'')
+        %} {% set window_end = deadline if window_start < deadline else (deadline
+        + timedelta(days=1)) %} {{ window_end.isoformat() }}'
+      granny_tomorrow_valid: '{{ state_attr(''sensor.nordpool'', ''tomorrow_valid'')
+        in [True, 1, ''true''] }}'
+      granny_price_slots: "{% set sensor = 'sensor.nordpool' %} {% set raw_today =
+        state_attr(sensor, 'raw_today') or [] %} {% set raw_tomorrow = state_attr(sensor,
+        'raw_tomorrow') or [] %} {% set window_start = now() %} {% set deadline =
+        today_at('05:30:00') %} {% set window_end = deadline if window_start < deadline
+        else (deadline + timedelta(days=1)) %} {% set slots = namespace(count=0) %}
+        {% for item in raw_today + raw_tomorrow %}\n  {% if item is mapping %}\n    {%
+        set start = item.get('start') %}\n    {% set end = item.get('end') %}\n  {%
+        else %}\n    {% set start = item[0] %}\n    {% set end = item[1] %}\n  {%
+        endif %}\n  {% set start_dt = as_datetime(start) if start is not none else
+        none %}\n  {% set end_dt = as_datetime(end) if end is not none else none %}\n
+        \ {% if start_dt is none or end_dt is none %}\n    {% continue %}\n  {% endif
+        %}\n  {% if end_dt > window_start and start_dt < window_end %}\n    {% set
+        slots.count = slots.count + 1 %}\n  {% endif %}\n{% endfor %} {{ slots.count
+        }}"
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ not granny_tomorrow_valid }}'
+      sequence:
+      - action: logbook.log
+        data:
+          name: '[Granny AI-Laddning]'
+          message: 'Planeringen stoppad: tomorrow_valid är False. Trigger: {{ trigger.description
+            | default(trigger.id | default(trigger.platform | default("ok"))) }}.'
+      - action: persistent_notification.create
+        data:
+          title: Granny-planering väntar
+          message: Morgondagens elpriser är ännu inte bekräftade. Väntar på att sensor.nordpool:s
+            attribut tomorrow_valid ska bli sant innan planen tas fram.
+          notification_id: granny_plan_status
+      - stop: Väntar på morgondagens priser.
+    - conditions:
+      - condition: template
+        value_template: '{{ granny_price_slots | int(0) == 0 }}'
+      sequence:
+      - action: logbook.log
+        data:
+          name: '[Granny AI-Laddning]'
+          message: 'Planeringen stoppad: inga prisintervall överlappar fönstret. Trigger:
+            {{ trigger.description | default(trigger.id | default(trigger.platform
+            | default("ok"))) }}.'
+      - action: persistent_notification.create
+        data:
+          title: Granny-planering väntar
+          message: Inga prisintervall täcker fönstret fram till {{ as_local(as_datetime(granny_window_end_iso)).strftime('%d
+            %b %H:%M') }}. Automationen avvaktar nya elpriser innan plan tas fram.
+          notification_id: granny_plan_status
+      - stop: Väntar på prisdata.
+  - action: script.granny_car_charge_plan
+    metadata: {}
+    data: {}
+  mode: single
 - id: '1751907475273'
   alias: Av/På Bilutladdning
   description: Automationen startar och stänger av laddningen av bilens batteri baserat
@@ -1864,36 +1928,6 @@
         data: {}
         target:
           entity_id: switch.billaddare
-  mode: queued
-  max: 10
-- id: '1751962308890'
-  alias: Granny Bil-laddning Klar
-  description: Denna automation meddelar att bilens laddning är klar när batterinivån
-    är över 99.99%, bilen är hemma och dörrarna är olåsta.
-  triggers:
-  - trigger: numeric_state
-    entity_id:
-    - sensor.sef_42h_battery_level
-    above: 99.99
-  conditions:
-  - condition: state
-    entity_id: device_tracker.sef_42h_parking_location
-    state: home
-  - condition: state
-    entity_id: binary_sensor.car_doors_locked
-    state: 'off'
-  actions:
-  - action: input_datetime.set_datetime
-    metadata: {}
-    data:
-      datetime: '{{ now().isoformat() }}'
-    target:
-      entity_id: input_datetime.granny_charger_done_trigger
-  - action: input_boolean.turn_off
-    metadata: {}
-    data: {}
-    target:
-      entity_id: input_boolean.car_man_override
   mode: queued
   max: 10
 - id: '1752130874333'
@@ -2232,33 +2266,6 @@
     ewma_alpha: 0.3
     bootstrap_guess_sec: 120
 - *id001
-- id: '1758871167291'
-  alias: Synka Blomlampa ⇄ LED-strip i trappan
-  description: Släcker LED-strip när blomlampa tänds, tänder LED-strip när blomlampa
-    släcks.
-  triggers:
-  - entity_id: light.blomlampa_trappan_esphome02_light
-    trigger: state
-  conditions: []
-  actions:
-  - choose:
-    - conditions:
-      - condition: state
-        entity_id: light.blomlampa_trappan_esphome02_light
-        state: 'on'
-      sequence:
-      - target:
-          entity_id: light.esphome62_led_strip
-        action: light.turn_off
-    - conditions:
-      - condition: state
-        entity_id: light.blomlampa_trappan_esphome02_light
-        state: 'off'
-      sequence:
-      - target:
-          entity_id: light.esphome62_led_strip
-        action: light.turn_on
-  mode: single
 - id: '1759825373004'
   alias: Av/På Prusa XL via "longpush" på Voice PE
   description: Växlar Av/På för huvudströmbrytaren till Prusa XL vid långtryck på
