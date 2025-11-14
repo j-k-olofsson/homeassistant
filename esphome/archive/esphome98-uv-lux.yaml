@@ -1,0 +1,16 @@
+# Device specific substitutions
+substitutions:
+  node_id: "98"
+  node_name: esphome98
+  node_friendly_name: Lux & UV (labbet)
+  node_comment: Lolin32 (lux/UV sensor) (VLAN IoT)
+  log_level: INFO
+  i2c_sda_pin: GPIO21
+  i2c_scl_pin: GPIO22
+  bh1750_update_interval: 30s
+  uv_update_interval: 30s
+
+# Include packages for this device specific type
+packages:
+  board: !include common/.board_esp32_lolin32_arduino.yaml
+  sensors: !include common/.device_lolin32_lux_uv.yaml

@@ -1,4 +1,4 @@
-# Device type specific file for Lolin32 based lux + UV sensor nodes
+# Shared paket för VEML7700 (lux) + VEML6075 (UV)
 
 external_components:
   - source:
@@ -7,22 +7,33 @@ external_components:
     components: [veml6075_custom]
 
 i2c:
-  sda: ${i2c_sda_pin}
-  scl: ${i2c_scl_pin}
-  frequency: 100kHz
-  scan: true
+  - id: veml7700_bus
+    sda: ${veml7700_sda_pin}
+    scl: ${veml7700_scl_pin}
+    frequency: 100kHz
+    scan: true
+  - id: veml6075_bus
+    sda: ${veml6075_sda_pin}
+    scl: ${veml6075_scl_pin}
+    frequency: 100kHz
+    scan: true
 
 sensor:
-  - platform: bh1750
-    name: ${node_name} BH1750 Illuminance
-    id: bh1750_illuminance
-    address: 0x23
-    update_interval: ${bh1750_update_interval}
-    unit_of_measurement: lx
-    state_class: measurement
-    device_class: illuminance
-    accuracy_decimals: 1
+  - platform: veml7700
+    i2c_id: veml7700_bus
+    update_interval: ${veml7700_update_interval}
+    ambient_light:
+      name: ${node_name} Illuminance
+      device_class: illuminance
+      state_class: measurement
+      accuracy_decimals: 1
+    infrared:
+      name: ${node_name} Infrared
+      accuracy_decimals: 1
+    integration_time: 100ms
+    gain: 1X
   - platform: veml6075_custom
+    i2c_id: veml6075_bus
     update_interval: ${uv_update_interval}
     uva:
       name: ${node_name} UVA

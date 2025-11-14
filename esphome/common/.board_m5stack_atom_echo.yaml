@@ -1,0 +1,21 @@
+# Root file for M5Stack Atom Echo devices
+
+# Node info
+esphome:
+  name: ${node_name}
+  comment: ${node_comment}
+  friendly_name: ${node_friendly_name}
+
+esp32:
+  board: m5stack-atom
+  framework:
+    type: arduino
+    version: recommended
+
+packages:
+  device_base: !include .base.yaml
+
+switch:
+  - platform: restart
+    internal: true
+    id: myRestartSwitch
