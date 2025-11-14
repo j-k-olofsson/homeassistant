@@ -1,0 +1,32 @@
+# Device type specific file for Lolin32 based lux + UV sensor nodes
+
+external_components:
+  - source:
+      type: local
+      path: custom_components
+    components: [veml6075_custom]
+
+i2c:
+  sda: ${i2c_sda_pin}
+  scl: ${i2c_scl_pin}
+  frequency: 100kHz
+  scan: true
+
+sensor:
+  - platform: bh1750
+    name: ${node_name} BH1750 Illuminance
+    id: bh1750_illuminance
+    address: 0x23
+    update_interval: ${bh1750_update_interval}
+    unit_of_measurement: lx
+    state_class: measurement
+    device_class: illuminance
+    accuracy_decimals: 1
+  - platform: veml6075_custom
+    update_interval: ${uv_update_interval}
+    uva:
+      name: ${node_name} UVA
+    uvb:
+      name: ${node_name} UVB
+    uvi:
+      name: ${node_name} UVI

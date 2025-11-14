@@ -55,6 +55,7 @@ def read_calendar(path: Path) -> Tuple[List[str], List[List[str]], List[str]]:
     buffer: List[str] = []
     in_event = False
     events_started = False
+    has_events = False
 
     for raw_line in lines:
         line = raw_line.rstrip()
@@ -68,6 +69,7 @@ def read_calendar(path: Path) -> Tuple[List[str], List[List[str]], List[str]]:
             events.append(buffer)
             buffer = []
             in_event = False
+            has_events = True
             continue
         if in_event:
             buffer.append(line)
@@ -81,6 +83,12 @@ def read_calendar(path: Path) -> Tuple[List[str], List[List[str]], List[str]]:
         header = DEFAULT_HEADER.copy()
     if not footer:
         footer = DEFAULT_FOOTER.copy()
+
+    if not has_events:
+        return DEFAULT_HEADER.copy(), [], DEFAULT_FOOTER.copy()
+
+    while header and header[-1].strip().upper() == "END:VCALENDAR":
+        footer.insert(0, header.pop())
 
     return header, events, footer
 
@@ -161,17 +169,10 @@ def build_event_lines(
     summary_text: str,
     plan_status: str,
     plan_summary: str,
+    plan_currency: str,
 ) -> List[str]:
-    start = datetime.fromisoformat(slot["start"])
-    end = datetime.fromisoformat(slot["end"])
-    if start.tzinfo is None:
-        start = start.replace(tzinfo=local_tz)
-    else:
-        start = start.astimezone(local_tz)
-    if end.tzinfo is None:
-        end = end.replace(tzinfo=local_tz)
-    else:
-        end = end.astimezone(local_tz)
+    start = slot["start_dt"].astimezone(local_tz)
+    end = slot["end_dt"].astimezone(local_tz)
 
     dtstamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     start_str = start.strftime("%Y%m%dT%H%M%S")
@@ -180,17 +181,20 @@ def build_event_lines(
     energy = slot.get("energy_kwh")
     cost = slot.get("cost_sek")
     price = slot.get("price_sek_kwh")
+    slot_count = slot.get("slot_count", 1)
     source = slot.get("source")
+    currency = slot.get("currency") or plan_currency or "SEK"
 
     description_parts = []
     if plan_summary:
         description_parts.append(plan_summary)
+    description_parts.append(f"Slotar: {slot_count}")
     if energy is not None:
         description_parts.append(f"Energi ≈ {float(energy):.2f} kWh")
     if cost is not None:
-        description_parts.append(f"Kostnad ≈ {float(cost):.2f} SEK")
+        description_parts.append(f"Kostnad ≈ {float(cost):.2f} {currency}")
     if price is not None:
-        description_parts.append(f"Pris ≈ {float(price):.3f} SEK/kWh")
+        description_parts.append(f"Pris ≈ {float(price):.3f} {currency}/kWh")
     if source:
         description_parts.append(f"Källa: {source}")
     if plan_status:
@@ -260,6 +264,7 @@ def main() -> int:
     schedule: list = plan.get("schedule") or []
     plan_status: str = str(plan.get("status", ""))
     plan_summary: str = str(plan.get("summary", ""))
+    plan_currency: str = str(plan.get("currency", "SEK") or "SEK")
 
     calendar_path = get_calendar_path(args.calendar)
     calendar_path.parent.mkdir(parents=True, exist_ok=True)
@@ -269,12 +274,59 @@ def main() -> int:
         event for event in events if should_keep_event(event, window_start, window_end, local_tz)
     ]
 
+    def normalize_slot(raw: dict) -> dict:
+        start = datetime.fromisoformat(raw["start"])
+        end = datetime.fromisoformat(raw["end"])
+        if start.tzinfo is None:
+            start = start.replace(tzinfo=local_tz)
+        else:
+            start = start.astimezone(local_tz)
+        if end.tzinfo is None:
+            end = end.replace(tzinfo=local_tz)
+        else:
+            end = end.astimezone(local_tz)
+
+        slot_copy = dict(raw)
+        slot_copy["start_dt"] = start
+        slot_copy["end_dt"] = end
+        slot_copy["energy_kwh"] = float(slot_copy.get("energy_kwh") or 0.0)
+        slot_copy["cost_sek"] = float(slot_copy.get("cost_sek") or 0.0)
+        price = slot_copy.get("price_sek_kwh")
+        slot_copy["price_sek_kwh"] = float(price) if price not in (None, "") else None
+        slot_copy["slot_count"] = 1
+        return slot_copy
+
+    def merge_adjacent(slots: List[dict]) -> List[dict]:
+        merged: List[dict] = []
+        tolerance = 1  # seconds
+        for slot in sorted(slots, key=lambda item: item["start_dt"]):
+            if not merged:
+                merged.append(slot)
+                continue
+            current = merged[-1]
+            delta = (slot["start_dt"] - current["end_dt"]).total_seconds()
+            if abs(delta) <= tolerance:  # directly adjacent
+                current["end_dt"] = slot["end_dt"]
+                current["energy_kwh"] += slot.get("energy_kwh", 0.0) or 0.0
+                current["cost_sek"] += slot.get("cost_sek", 0.0) or 0.0
+                if current.get("price_sek_kwh") is None and slot.get("price_sek_kwh") is not None:
+                    current["price_sek_kwh"] = slot["price_sek_kwh"]
+                current["slot_count"] += slot.get("slot_count", 1)
+                continue
+            merged.append(slot)
+        return merged
+
+    normalized_slots = [normalize_slot(slot) for slot in schedule if slot.get("start") and slot.get("end")]
+    merged_slots = merge_adjacent(normalized_slots)
+
     new_events: List[List[str]] = []
     summary_text = "Bil-laddning (Granny-plan)"
-    for slot in sorted(schedule, key=lambda item: item.get("start", "")):
+    for slot in merged_slots:
         try:
             new_events.append(
-                build_event_lines(slot, local_tz, summary_text, plan_status, plan_summary)
+                build_event_lines(
+                    slot, local_tz, summary_text, plan_status, plan_summary, plan_currency
+                )
             )
         except Exception as err:  # pragma: no cover - defensive
             print(f"Skipping slot due to error: {err}", file=sys.stderr)

@@ -411,6 +411,13 @@
         target:
           entity_id: input_select.growlight_scene
         action: input_select.select_option
+      - action: light.turn_on
+        metadata: {}
+        data: {}
+        target:
+          entity_id:
+          - light.blomlampa_trappan
+          - light.vaxtlampa_frosadd_koket_shpls
     - conditions:
       - condition: trigger
         id: late_on
@@ -429,6 +436,13 @@
         target:
           entity_id: input_select.growlight_scene
         action: input_select.select_option
+      - action: light.turn_off
+        metadata: {}
+        data: {}
+        target:
+          entity_id:
+          - light.blomlampa_trappan
+          - light.vaxtlampa_frosadd_koket_shpls
   mode: queued
   max: 10
 - id: '1673173615791'
@@ -739,9 +753,9 @@
     default:
     - action: script.granny_broadcast
       data:
-        task: Önska god natt på i två korta meningar - max 20 ord. Använd ett unikt
-          meddelande varje dag och se till att inte upprepa ett som du använt de senaste
-          tio gångerna.
+        task: Bekräfta att dörrarna är stängda och låsta så att vi nu kan sova en
+          gott. Max 20 ord.. Använd ett unikt meddelande varje dag och se till att
+          inte upprepa ett som du använt de senaste tio gångerna.
         severity: info
         humor_level: 1
         tts_media_player: media_player.diegos_vackarklocka
@@ -766,7 +780,7 @@
     data:
       entity_id: media_player.spotifyplus_mammaochpapppa
     enabled: true
-  mode: single
+  mode: restart
 - id: '1678110729020'
   alias: Starta diskmaskinen vid lägsta elpris
   description: Automationen startar diskmaskinen när elpriset är som lägst, för att
@@ -1782,13 +1796,11 @@
   triggers:
   - trigger: homeassistant
     event: start
-  - trigger: template
-    value_template: '{{ state_attr(''sensor.nordpool'', ''tomorrow_valid'') in [True,
-      1, ''true'', ''True''] }}'
   - trigger: state
     entity_id:
     - sensor.nordpool
-    attribute: raw_tomorrow
+    attribute: tomorrow_valid
+    to: 1
   - trigger: state
     entity_id:
     - device_tracker.sef_42h_parking_location
@@ -1888,9 +1900,9 @@
   - action: script.granny_car_charge_plan
     metadata: {}
     data: {}
-  mode: single
+  mode: restart
 - id: '1751907475273'
-  alias: Av/På Bilutladdning
+  alias: Av/På Bil-laddning
   description: Automationen startar och stänger av laddningen av bilens batteri baserat
     på schemalagda tider i kalendern. Den skickar även notifieringar när laddningen
     inleds och avslutas.
