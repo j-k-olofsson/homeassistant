@@ -33,6 +33,7 @@ from ..const import (
     RESPONSE_ERROR_FAILED_TO_HANDLE,
     RESPONSE_PLAYER_FEATURES_NOT_SUPPORTED,
     RESPONSE_PLAYER_NOT_MATCHED,
+    RESPONSE_PLAYER_NOT_MATCHED_AREA,
     RESPONSE_SPOTIFY_PREMIUM_REQUIRED,
     SLOT_AREA,
     SLOT_ERROR_FEATURES,
@@ -280,9 +281,9 @@ class SpotifyPlusIntentHandler(IntentHandler):
                 if matchResult.no_match_reason == MatchFailedReason.AREA:
 
                     # media player entity not found for specified area.
-                    raise MatchFailedError(result=matchResult, constraints=matchConstraints)
-                    # intentResponse = await self.ReturnResponseByKey(intentObj, intentResponse, RESPONSE_PLAYER_NOT_MATCHED_AREA, IntentResponseErrorCode.NO_VALID_TARGETS)
-                    # return None
+                    #raise MatchFailedError(result=matchResult, constraints=matchConstraints)
+                    intentResponse = await self.ReturnResponseByKey(intentObj, intentResponse, RESPONSE_PLAYER_NOT_MATCHED_AREA, IntentResponseErrorCode.NO_VALID_TARGETS)
+                    return None
 
                 elif matchResult.no_match_reason == MatchFailedReason.ASSISTANT:
 
@@ -562,6 +563,113 @@ class SpotifyPlusIntentHandler(IntentHandler):
 
             # ignore exceptions
             return "Could not find intent resource message for response key \"%s\" (language=\"%s\", platform=\"%s\")." % (responseKey, intentObj.language, self._IntentLoader._Platform)
+        
+        finally:
+
+            # trace.
+            _logsi.LeaveMethod(SILevel.Debug, colorValue=SIColors.Khaki)
+
+
+    async def GetTextSlotListInValue(
+        self,
+        intentObj:Intent,
+        listName:str,
+        outValue:str,
+        defaultValue:str=None,
+    ) -> str | None:
+        """
+        Queries a TextSlotList of values for the specified "out" value, returning its
+        corresponding "in" value if found.
+
+        Args:
+            intentObj (Intent|None):
+                Intent object that is handling the request.
+            listName (str):
+                Intent list name to query; must be a TextSlotList of "in" / "out" values.
+            outValue (str):
+                TextSlotList "out" value to find.
+            defaultValue (str):
+                Default value to return if TextSlotList "out" value could not be found.
+
+        Returns:
+            A TextSlotList "in" value assigned to the found "out" value if found; otherwise, None.
+
+        This method does NOT include the built-in intent "lists", only the lists that 
+        were loaded by this integration!
+        """
+        methodParms:SIMethodParmListContext = None
+        result:str = defaultValue
+
+        try:
+
+            # trace.
+            methodParms = _logsi.EnterMethodParmList(SILevel.Debug, colorValue=SIColors.Khaki)
+            methodParms.AppendKeyValue("listName", listName)
+            methodParms.AppendKeyValue("outValue", outValue)
+            methodParms.AppendKeyValue("defaultValue", defaultValue)
+            _logsi.LogMethodParmList(SILevel.Verbose, "Querying TextSlotList IN value for OUT value key: \"%s\"" % (outValue), methodParms, colorValue=SIColors.Khaki)
+
+            # validations.
+            if (not isinstance(intentObj, Intent)):
+                return None
+            if (not isinstance(listName, str)):
+                return None
+            if (not isinstance(outValue, str)):
+                return None
+
+            language = intentObj.language
+
+            # get intent data; if none found, then we are done.
+            langIntents:LanguageIntents = await self._IntentLoader.async_get_or_load_intents(language)
+            if (langIntents is None):
+                return None
+
+            # example "lists" dictionary for "spotifyplus_playlist_names" list:
+            # 'lists': {
+            #     'spotifyplus_playlist_names': {
+            #         'values': [{
+            #                 'in': 'Daily Mix (1|One)',
+            #                 'out': 'spotify:playlist:37i9dQZF1E39vTG3GurFPW'
+            #             },
+            #             {
+            #                 'in': 'Daily Mix (2|Two)',
+            #                 'out': 'spotify:playlist:37i874jngdjhg8577kjjss'
+            #             }
+            #         ]
+            #     }
+            # }
+
+            # query the global "lists" dictionary for the specified list name, returning
+            # it's underlying list of values.
+            slotListValuesArray:list = langIntents.intents_dict.get("lists",{}).get(listName,{}).get("values",[])
+
+            # trace.
+            if (self.logsi.IsOn(SILevel.Verbose)):
+                self.logsi.LogArray(SILevel.Verbose, "TextSlotList list of values: \"%s\"" % (listName), slotListValuesArray, colorValue=SIColors.Khaki)
+
+            # prepare for comparison.
+            outValueLower = outValue.lower()
+
+            # check for a matching "out" key value.
+            # if found, then return the "in" value.
+            slotValueDict:dict = None
+            for slotValueDict in slotListValuesArray:
+                outValue = slotValueDict.get("out", "")
+                if (outValue.lower() == outValueLower):
+                    result = slotValueDict.get("in", None)
+                    self.logsi.LogVerbose("Matched TextSlotList OUT value \"%s\" - IN value: \"%s\"" % (outValue, result), colorValue=SIColors.Khaki)
+                    break
+
+            # return result to caller.
+            return result
+
+        except Exception as ex:
+            
+            # trace.
+            _logsi.LogException("Intent handler GetTextSlotListInValue exception: %s" % (str(ex)), ex, logToSystemLogger=False, colorValue=SIColors.Khaki)
+
+            # ignore exceptions.
+            return result
         
         finally:
 
