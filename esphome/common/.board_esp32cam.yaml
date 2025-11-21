@@ -10,8 +10,10 @@ esp32:
   board: esp32cam
   framework:
     type: arduino
-  # Camera streams need PSRAM enabled to satisfy esp32_camera
-  psram: true
+
+# Ensure PSRAM is configured so the esp32_camera component can allocate buffers
+psram:
+  ignore_not_found: false
 
 packages:
   device_base: !include .base.yaml
