@@ -138,11 +138,12 @@ switch:
           id: led_rgb
 
 light:
-  - platform: esp32_rmt_led_strip
-    chipset: WS2812
+  - platform: neopixelbus
+    variant: WS2812
+    type: GRB
+    method: ESP32_RMT_0
     pin: ${gpio_pin}
     num_leds: ${num_leds}
-    rgb_order: GRB
     id: led_rgb
     name: ${node_name} Light
     internal: false
@@ -186,7 +187,7 @@ light:
             }
             if ( i < it.size() ) {
               ESP_LOGD("morning-a", "i: %d", i);
-              it[i] = ESPColor(204, 178, 76);
+              it[i] = Color(204, 178, 76);
               i++;
             } 
             if ( i == it.size() ) {

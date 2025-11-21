@@ -1863,6 +1863,11 @@
         %}\n  {% if end_dt > window_start and start_dt < window_end %}\n    {% set
         slots.count = slots.count + 1 %}\n  {% endif %}\n{% endfor %} {{ slots.count
         }}"
+      granny_calendar_entity: calendar.billaddning
+      granny_calendar_next_start: '{{ state_attr(granny_calendar_entity, ''start_time'')
+        }}'
+      granny_calendar_has_plan: '{{ granny_calendar_next_start not in [None, '''',
+        ''unknown'', ''unavailable''] }}'
   - choose:
     - conditions:
       - condition: template
@@ -1897,6 +1902,25 @@
             %b %H:%M') }}. Automationen avvaktar nya elpriser innan plan tas fram.
           notification_id: granny_plan_status
       - stop: Väntar på prisdata.
+    - conditions:
+      - condition: template
+        value_template: '{{ granny_calendar_has_plan }}'
+      sequence:
+      - action: logbook.log
+        data:
+          name: '[Granny AI-Laddning]'
+          message: >-
+            Planeringen hoppades över eftersom kalendern redan innehåller en laddningsplan
+            som startar {{ as_local(as_datetime(granny_calendar_next_start)).strftime('%d
+            %b %H:%M') if granny_calendar_next_start not in [None, '', 'unknown',
+            'unavailable'] else 'inom fönstret' }}.
+      - action: persistent_notification.create
+        data:
+          title: Laddningsplan finns redan
+          message: Det finns redan en aktiv laddningsplan i kalendern. Rensa eller
+            justera kalendern manuellt för att skapa en ny plan.
+          notification_id: granny_plan_status
+      - stop: Laddningsplan finns redan.
   - action: script.granny_car_charge_plan
     metadata: {}
     data: {}
