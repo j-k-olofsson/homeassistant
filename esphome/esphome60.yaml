@@ -3,7 +3,7 @@ substitutions:
   node_id: "60"
   node_name: esphome60
   node_friendly_name: Taklampor (köket)
-  node_comment: Shelly Dimmer 2
+  node_comment: Shelly Dimmer 2 (VLAN IoT)
   log_level: INFO
   stm_fw_update: "false"
   node_min_brightness: "440"
