@@ -2,10 +2,10 @@
 substitutions:
   node_id: "02"
   node_name: esphome02
-  node_friendly_name: Blomlampa (trappan)
+  node_friendly_name: Blomlampor (bion)
   node_comment: Sonoff Basic (VLAN IoT)
   log_level: DEBUG
-  late_on: "true"
+  late_on: "false"
 
 # Include packages for this device specific type
 packages:
