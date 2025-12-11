@@ -83,6 +83,8 @@ granny_broadcast:
             value: tv
           - label: HA-notis (persistent_notification)
             value: ha
+          - label: Slack (notify.flocken)
+            value: slack
     tts_media_player:
       name: tts_media_player
       description: 'Högtalare eller grupp för TTS (fallback = media_player.grupp_grannys_hogtalare)
@@ -95,6 +97,14 @@ granny_broadcast:
       name: fallback_message
       description: 'Eget fallbackmeddelande om AI inte svarar. Lämna tomt för neutral
         standardfras.
+
+        '
+      selector:
+        text: {}
+    slack_channel:
+      name: Slack-kanal
+      description: 'Valfri Slack-kanal eller användare, t.ex. #allmant eller @diego.
+        Lämna tomt för integrationens standardmål.
 
         '
       selector:
@@ -120,6 +130,7 @@ granny_broadcast:
       _channels: '{{ channels if channels is defined else [] }}
 
         '
+      _slack_channel: '{{ (slack_channel | default('''', true)) | trim }}'
       _base_task: '{{ task }}'
       _prompt: 'Du är "Granny": varm, saklig, kvick och surmulen. Svara alltid på
         svenska. Humor-nivå: {{ _humor }} (0=ingen, 3=lekfull men kort). Allvar: {{
@@ -190,141 +201,87 @@ granny_broadcast:
         data:
           title: Granny ({{ _severity }})
           message: '{{ final_message }}'
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ ''slack'' in _channels }}'
+      sequence:
+      - action: notify.flocken
+        data:
+          title: Granny ({{ _severity }})
+          message: '{{ final_message }}'
+          target: '{{ [_slack_channel] if _slack_channel|length > 0 else [] }}
+
+            '
   - stop: '{{ final_message }}'
     response_variable: final_message
-
 granny_car_charge_plan:
-  alias: Granny Bil-laddningsplan (AI)
-  description: Planerar bilens laddning via den lokala LLM:n och uppdaterar kalendern.
+  alias: Granny Bil-laddningsplan
+  description: Planerar bilens laddning via en lokal prisoptimering och uppdaterar
+    kalendern.
   mode: restart
   sequence:
   - variables:
-      log_prefix: '[Granny AI-Laddning]'
+      log_prefix: '[Granny Laddning]'
       status_notification_id: granny_plan_status
       slot_minutes: 15
       now_dt: '{{ now() }}'
       now_iso: '{{ now().isoformat() }}'
-      deadline_iso: >-
-        {% set base = today_at('05:30:00') %}
-        {{ (base if now() < base else (base + timedelta(days=1))).isoformat() }}
+      deadline_iso: '{% set base = today_at(''05:30:00'') %} {{ (base if now() < base
+        else (base + timedelta(days=1))).isoformat() }}'
       deadline_local_iso: '{{ as_local(as_datetime(deadline_iso)).isoformat() }}'
-      cleanup_end_iso: >-
-        {{ (today_at('23:59:59') + timedelta(days=1)).isoformat() }}
+      cleanup_end_iso: '{{ (today_at(''23:59:59'') + timedelta(days=1)).isoformat()
+        }}'
       car_soc: '{{ states("sensor.sef_42h_battery_level") | float(0) }}'
       car_target: '{{ states("input_number.car_target_soc") | float(100) }}'
       car_capacity_kwh: '{{ states("input_number.car_bat_capacity") | float(0) }}'
       car_charger_kw: '{{ states("input_number.car_charger_capacity") | float(0) }}'
-      car_efficiency: '{{ states("input_number.car_charger_efficiency") | float(1) }}'
-      energy_needed_kwh: >-
-        {% set diff = (car_target | float(0)) - (car_soc | float(0)) %}
-        {% if diff <= 0 or (car_capacity_kwh | float(0)) <= 0 %}
-          {{ 0.0 }}
-        {% else %}
-          {{ ((diff / 100) * (car_capacity_kwh | float(0))) | float(0) }}
-        {% endif %}
-      slot_energy_kwh: >-
-        {% set kw = car_charger_kw | float(0) %}
-        {% set eff = car_efficiency | float(1) %}
-        {% set minutes = slot_minutes | float(0) %}
-        {% set duration = minutes / 60 %}
-        {% if kw <= 0 or duration <= 0 or eff <= 0 %}
-          {{ 0.0 }}
-        {% else %}
-          {{ (kw * duration * eff) | float(0) }}
-        {% endif %}
-      min_slots_required: >-
-        {% set needed = energy_needed_kwh | float(0) %}
-        {% set per_slot = slot_energy_kwh | float(0) %}
-        {% if needed <= 0 or per_slot <= 0 %}
-          0
-        {% else %}
-          {{ (needed / per_slot) | round(0, 'ceil') | int }}
-        {% endif %}
-      price_payload: >-
-        {% set sensor = 'sensor.nordpool' %}
-        {% set raw_today = state_attr(sensor, 'raw_today') or [] %}
-        {% set raw_tomorrow = state_attr(sensor, 'raw_tomorrow') or [] %}
-        {% set window_start = as_datetime(now_iso) %}
-        {% set window_end = as_datetime(deadline_iso) %}
-        {% set today_ns = namespace(items=[]) %}
-        {% for item in raw_today %}
-          {% if item is mapping %}
-            {% set start = item.get('start') %}
-            {% set end = item.get('end') %}
-            {% set value = item.get('value') %}
-          {% else %}
-            {% set start = item[0] %}
-            {% set end = item[1] %}
-            {% set value = item[2] %}
-          {% endif %}
-          {% set start_dt = as_datetime(start) if start is not none else none %}
-          {% set end_dt = as_datetime(end) if end is not none else none %}
-          {% if start_dt is none or end_dt is none %}
-            {% continue %}
-          {% endif %}
-          {% if end_dt <= window_start or start_dt >= window_end %}
-            {% continue %}
-          {% endif %}
-          {% set today_ns.items = today_ns.items + [{
-            "start": start_dt.isoformat(),
-            "end": end_dt.isoformat(),
-            "value": value | float(0)
-          }] %}
-        {% endfor %}
-        {% set tomorrow_ns = namespace(items=[]) %}
-        {% for item in raw_tomorrow %}
-          {% if item is mapping %}
-            {% set start = item.get('start') %}
-            {% set end = item.get('end') %}
-            {% set value = item.get('value') %}
-          {% else %}
-            {% set start = item[0] %}
-            {% set end = item[1] %}
-            {% set value = item[2] %}
-          {% endif %}
-          {% set start_dt = as_datetime(start) if start is not none else none %}
-          {% set end_dt = as_datetime(end) if end is not none else none %}
-          {% if start_dt is none or end_dt is none %}
-            {% continue %}
-          {% endif %}
-          {% if end_dt <= window_start or start_dt >= window_end %}
-            {% continue %}
-          {% endif %}
-          {% set tomorrow_ns.items = tomorrow_ns.items + [{
-            "start": start_dt.isoformat(),
-            "end": end_dt.isoformat(),
-            "value": value | float(0)
-          }] %}
-        {% endfor %}
-        {{
-          {
-            "currency": state_attr(sensor, "currency"),
-            "vat": state_attr(sensor, "vat"),
-            "today": today_ns.items,
-            "tomorrow": tomorrow_ns.items
-          } | tojson
-        }}
-      price_currency: "{{ state_attr('sensor.nordpool', 'currency') | default('SEK') }}"
-      ai_context: >-
-        {{
-          {
-            "fakta": {
-              "nuvarande_soc_procent": car_soc,
-              "mal_soc_procent": car_target,
-              "batterikapacitet_kwh": car_capacity_kwh,
-            "laddare_kw": car_charger_kw,
-            "verkningsgrad": car_efficiency,
-            "slot_langd_minuter": slot_minutes,
-            "starttid_iso": now_iso,
-            "deadlinetid_iso": deadline_iso,
-            "deadlinetid_local": deadline_local_iso,
-            "energi_behov_kwh": energy_needed_kwh | float(0),
-            "energi_per_slot_kwh": slot_energy_kwh | float(0),
-            "min_antal_slotar": min_slots_required,
-          },
-          "prisdata": price_payload | from_json
-        } | tojson
-        }}
+      car_efficiency: '{{ states("input_number.car_charger_efficiency") | float(1)
+        }}'
+      energy_needed_kwh: "{% set diff = (car_target | float(0)) - (car_soc | float(0))
+        %} {% if diff <= 0 or (car_capacity_kwh | float(0)) <= 0 %}\n  {{ 0.0 }}\n{%
+        else %}\n  {{ ((diff / 100) * (car_capacity_kwh | float(0))) | float(0) }}\n{%
+        endif %}"
+      slot_energy_kwh: "{% set kw = car_charger_kw | float(0) %} {% set eff = car_efficiency
+        | float(1) %} {% set minutes = slot_minutes | float(0) %} {% set duration
+        = minutes / 60 %} {% if kw <= 0 or duration <= 0 or eff <= 0 %}\n  {{ 0.0
+        }}\n{% else %}\n  {{ (kw * duration * eff) | float(0) }}\n{% endif %}"
+      min_slots_required: "{% set needed = energy_needed_kwh | float(0) %} {% set
+        per_slot = slot_energy_kwh | float(0) %} {% if needed <= 0 or per_slot <=
+        0 %}\n  0\n{% else %}\n  {{ (needed / per_slot) | round(0, 'ceil') | int }}\n{%
+        endif %}"
+      price_payload: "{% set sensor = 'sensor.nordpool' %} {% set raw_today = state_attr(sensor,
+        'raw_today') or [] %} {% set raw_tomorrow = state_attr(sensor, 'raw_tomorrow')
+        or [] %} {% set window_start = as_datetime(now_iso) %} {% set window_end =
+        as_datetime(deadline_iso) %} {% set today_ns = namespace(items=[]) %} {% for
+        item in raw_today %}\n  {% if item is mapping %}\n    {% set start = item.get('start')
+        %}\n    {% set end = item.get('end') %}\n    {% set value = item.get('value')
+        %}\n  {% else %}\n    {% set start = item[0] %}\n    {% set end = item[1]
+        %}\n    {% set value = item[2] %}\n  {% endif %}\n  {% set start_dt = as_datetime(start)
+        if start is not none else none %}\n  {% set end_dt = as_datetime(end) if end
+        is not none else none %}\n  {% if start_dt is none or end_dt is none %}\n
+        \   {% continue %}\n  {% endif %}\n  {% if end_dt <= window_start or start_dt
+        >= window_end %}\n    {% continue %}\n  {% endif %}\n  {% set today_ns.items
+        = today_ns.items + [{\n    \"start\": start_dt.isoformat(),\n    \"end\":
+        end_dt.isoformat(),\n    \"value\": value | float(0),\n    \"source\": \"nordpool.today\"\n
+        \ }] %}\n{% endfor %} {% set tomorrow_ns = namespace(items=[]) %} {% for item
+        in raw_tomorrow %}\n  {% if item is mapping %}\n    {% set start = item.get('start')
+        %}\n    {% set end = item.get('end') %}\n    {% set value = item.get('value')
+        %}\n  {% else %}\n    {% set start = item[0] %}\n    {% set end = item[1]
+        %}\n    {% set value = item[2] %}\n  {% endif %}\n  {% set start_dt = as_datetime(start)
+        if start is not none else none %}\n  {% set end_dt = as_datetime(end) if end
+        is not none else none %}\n  {% if start_dt is none or end_dt is none %}\n
+        \   {% continue %}\n  {% endif %}\n  {% if end_dt <= window_start or start_dt
+        >= window_end %}\n    {% continue %}\n  {% endif %}\n  {% set tomorrow_ns.items
+        = tomorrow_ns.items + [{\n    \"start\": start_dt.isoformat(),\n    \"end\":
+        end_dt.isoformat(),\n    \"value\": value | float(0),\n    \"source\": \"nordpool.tomorrow\"\n
+        \ }] %}\n{% endfor %} {{\n  {\n    \"currency\": state_attr(sensor, \"currency\"),\n
+        \   \"vat\": state_attr(sensor, \"vat\"),\n    \"today\": today_ns.items,\n
+        \   \"tomorrow\": tomorrow_ns.items\n  } | tojson\n}}"
+      price_currency_attr: '{{ state_attr(''sensor.nordpool'', ''currency'') | default(''SEK'')
+        }}'
+      price_currency: "{% set attr = price_currency_attr | string | upper %} {% if
+        'SEK' in attr %}\n  SEK\n{% else %}\n  SEK\n{% endif %}"
   - choose:
     - conditions:
       - condition: template
@@ -337,8 +294,8 @@ granny_car_charge_plan:
       - action: persistent_notification.create
         data:
           title: Laddningsplan saknar batterikapacitet
-          message: >-
-            Ange bilens batterikapacitet i input_number.car_bat_capacity för att kunna planera laddningen.
+          message: Ange bilens batterikapacitet i input_number.car_bat_capacity för
+            att kunna planera laddningen.
           notification_id: granny_car_charge_plan_config_error
       - stop: Saknar batterikapacitet.
     - conditions:
@@ -352,585 +309,309 @@ granny_car_charge_plan:
       - action: persistent_notification.create
         data:
           title: Laddningsplan saknar laddareffekt
-          message: >-
-            Ange laddarens effekt i input_number.car_charger_capacity för att kunna planera laddningen.
+          message: Ange laddarens effekt i input_number.car_charger_capacity för att
+            kunna planera laddningen.
           notification_id: granny_car_charge_plan_config_error
       - stop: Saknar laddareffekt.
   - action: logbook.log
     data:
       name: '{{ log_prefix }}'
-      message: 'Startar AI-planering av bilens laddning.'
-  - action: ai_task.generate_data
-    data:
-      entity_id: ai_task.ollama_ai_task
-      task_name: granny_charge_plan
-      instructions: >-
-        SYSTEM Du är Granny-planeraren, bilens energiboss. Tala enbart svenska och
-        var kortfattad men rak.
-
-        DATA_JSON {{ ai_context }}
-
-        KRAV
-        - Arbeta strikt inom tidsfönstret [starttid_iso, deadlinetid_iso). Inga slotar
-          får sluta efter deadlinetid_iso.
-        - Varje slot är {{ slot_minutes }} minuter och ger ungefär {{ slot_energy_kwh
-          | float(0) | round(3) }} kWh.
-        - Energi att fylla på: {{ energy_needed_kwh | float(0) | round(3) }} kWh,
-          minst {{ min_slots_required }} slotar.
-        - Använd ALLTID valutan {{ price_currency }} i både text och JSON (skriv
-          t.ex. \"{{ price_currency }}\" eller \"{{ price_currency }}/kWh\", aldrig
-          €, $, eller andra valutor). Belopp ska anges i {{ price_currency }} och per
-          slot även som \"price_sek_kwh\" och \"cost_sek\".
-        - Svara alltid på svenska och håll sammanfattningen max 60 ord.
-
-        UPPDRAG
-        1. Om energibehovet är <= 0, markera status "klar" och returnera tom schedule.
-        2. Dela upp prisintervallen i {{ slot_minutes }}-minutersslotar inom fönstret
-           och välj de billigaste tills energibehovet uppfylls senast deadlinetid_iso.
-        3. För varje slot: ange start, slut, energy_kwh (≈ {{ slot_energy_kwh | float(0) | round(3) }}),
-           price_sek_kwh och cost_sek (energy_kwh * pris). Ange källa (id från
-           prislistan, t.ex. "nordpool.today").
-        4. Summera status, inkludera om deadlinen hålls, och ge korta noter.
-
-        SVARFORMAT
-        Svara ENBART med JSON. Ingen text före eller efter. Följ exakt detta schema:
-        {
-          "status": "kort status",
-          "summary": "kort svensk text",
-          "notes": "extra info eller tom sträng",
-          "deadline_met": true,
-          "slots_planned": 0,
-          "schedule": [
-            {
-              "start": "ISO8601",
-              "end": "ISO8601",
-              "energy_kwh": 0.0,
-              "price_sek_kwh": 0.0,
-              "cost_sek": 0.0,
-              "source": "text"
-            }
-          ]
-        }
-        Alla fält måste finnas. schedule får vara tom men ska då vara []. Använd decimalpunkt.
-        Kontrollera att starttid >= starttid_iso och sluttid <= deadlinetid_iso.
-    response_variable: ai_plan
-  - action: system_log.write
-    data:
-      message: 'AI-plan debug: {{ ai_plan | tojson }}'
-      level: info
-      logger: granny_car_charge_plan
-  - choose:
-    - conditions:
-      - condition: template
-        value_template: "{{ ai_plan.error | default('') | string | length > 0 }}"
-      sequence:
-      - action: logbook.log
-        data:
-          name: '{{ log_prefix }}'
-          message: 'AI-samtalet misslyckades: {{ ai_plan.error }}'
-      - action: persistent_notification.create
-        data:
-          title: Bil-laddningsplan misslyckades
-          message: 'AI-samtalet misslyckades: {{ ai_plan.error }}'
-          notification_id: granny_car_charge_plan_error
-      - stop: AI-samtalet misslyckades.
+      message: Startar prisoptimerad planering av bilens laddning.
   - variables:
-      ai_raw: '{{ ai_plan.data | default("") | string | trim }}'
-      ai_clean: >-
-        {% set raw = ai_raw | trim %}
-        {% if raw[:1] == '"' %}
-          {{ raw | from_json(default=raw) | string | trim }}
-        {% else %}
-          {{ raw }}
-        {% endif %}
-      ai_json_text: >-
-        {% set text = ai_clean | trim %}
-        {% set text = text | replace('```', '') %}
-        {% set text = text | regex_replace('(?i)^json\\s*', '') %}
-        {% set text = text | regex_replace('^[:=\\s]+', '') %}
-        {% set stripped = text | regex_replace('^\\s+', '') %}
-        {% if stripped.startswith('{') %}
-          {% set text = stripped | regex_replace('(?is)^.*?(\\{)', '\\1') %}
-          {% set text = text | regex_replace('(?is)(\\})[^\\}]*$', '\\1') %}
-        {% elif stripped.startswith('[') %}
-          {% set text = stripped | regex_replace('(?is)^.*?(\\[)', '\\1') %}
-          {% set text = text | regex_replace('(?is)(\\])[^\\]]*$', '\\1') %}
-        {% elif '{' in text %}
-          {% set text = text | regex_replace('(?is)^.*?(\\{)', '\\1') %}
-          {% set text = text | regex_replace('(?is)(\\})[^\\}]*$', '\\1') %}
-        {% elif '[' in text %}
-          {% set text = text | regex_replace('(?is)^.*?(\\[)', '\\1') %}
-          {% set text = text | regex_replace('(?is)(\\])[^\\]]*$', '\\1') %}
-        {% endif %}
-        {{ text | trim }}
+      planner_candidates: "{% set price_obj = price_payload | from_json %} {% set
+        today_list = price_obj.get('today', []) if price_obj is mapping else [] %}
+        {% set tomorrow_list = price_obj.get('tomorrow', []) if price_obj is mapping
+        else [] %} {% set buckets = today_list + tomorrow_list %} {% set now_dt =
+        as_datetime(now_iso) %} {% set slot_len = slot_minutes | int(15) %} {% set
+        slot_secs = slot_len * 60 %} {% set start_ts = as_timestamp(now_dt) %} {%
+        set remainder = start_ts % slot_secs %} {% if remainder == 0 %}\n  {% set
+        window_start_dt = now_dt %}\n{% else %}\n  {% set window_start_dt = as_datetime(start_ts
+        - remainder + slot_secs) %}\n{% endif %} {% set window_end_dt = as_datetime(deadline_iso)
+        %} {% set total_slots = (((as_timestamp(window_end_dt) - as_timestamp(window_start_dt))
+        / 60) // slot_len) | int(0) + 2 %} {% set slots = namespace(items=[]) %} {%
+        for idx in range(0, total_slots) %}\n  {% set slot_start_dt = window_start_dt
+        + timedelta(minutes=slot_len * idx) %}\n  {% set slot_end_dt = slot_start_dt
+        + timedelta(minutes=slot_len) %}\n  {% if slot_start_dt >= window_end_dt or
+        slot_end_dt > window_end_dt %}\n    {% break %}\n  {% endif %}\n  {% set found
+        = namespace(price=None, source='nordpool.unknown') %}\n  {% for bucket in
+        buckets %}\n    {% set bucket_start = as_datetime(bucket.get('start')) %}\n
+        \   {% set bucket_end = as_datetime(bucket.get('end')) %}\n    {% if slot_start_dt
+        >= bucket_start and slot_end_dt <= bucket_end %}\n      {% set found.price
+        = bucket.get('value') | float(0) %}\n      {% set found.source = bucket.get('source',
+        'nordpool.today' if bucket in today_list else 'nordpool.tomorrow') %}\n      {%
+        break %}\n    {% endif %}\n  {% endfor %}\n  {% if found.price is not none
+        %}\n    {% set energy = slot_energy_kwh | float(0) %}\n    {% set slot_dict
+        = {\n      'start': slot_start_dt.isoformat(),\n      'end': slot_end_dt.isoformat(),\n
+        \     'energy_kwh': energy,\n      'price_sek_kwh': found.price,\n      'cost_sek':
+        (found.price | float(0)) * energy,\n      'source': found.source,\n      'currency':
+        price_currency\n    } %}\n    {% set slots.items = slots.items + [slot_dict]
+        %}\n  {% endif %}\n{% endfor %} {{ slots.items | tojson | from_json }}"
+      planner_candidate_count: '{{ planner_candidates | length }}'
+      planner_needed_slots: '{{ min_slots_required | int(0) }}'
+      planner_selected_slots: "{% if energy_needed_kwh | float(0) <= 0 or planner_needed_slots
+        | int(0) <= 0 %}\n  {{ [] }}\n{% else %}\n  {% set sorted = planner_candidates
+        | sort(attribute='start') | sort(attribute='price_sek_kwh') %}\n  {% set picked
+        = namespace(items=[]) %}\n  {% for slot in sorted %}\n    {% if picked.items
+        | length < (planner_needed_slots | int(0)) %}\n      {% set picked.items =
+        picked.items + [slot] %}\n    {% else %}\n      {% break %}\n    {% endif
+        %}\n  {% endfor %}\n  {{ picked.items | sort(attribute='start') }}\n{% endif
+        %}"
+      planner_selected_count: '{{ planner_selected_slots | length }}'
+      planner_deadline_ok: "{% if planner_selected_slots | length == 0 %}\n  true\n{%
+        else %}\n  {% set last_end_dt = as_datetime(planner_selected_slots[-1].end)
+        %}\n  {% set deadline_dt = as_datetime(deadline_iso) %}\n  {{ last_end_dt
+        <= deadline_dt }}\n{% endif %}"
+      planner_total_energy_kwh: "{% set total = namespace(value=0.0) %} {% for slot
+        in planner_selected_slots %}\n  {% set total.value = total.value + (slot.energy_kwh
+        | float(0)) %}\n{% endfor %} {{ total.value }}"
+      planner_total_cost_sek: "{% set total = namespace(value=0.0) %} {% for slot
+        in planner_selected_slots %}\n  {% set total.value = total.value + (slot.cost_sek
+        | float(0)) %}\n{% endfor %} {{ total.value }}"
+      plan_data: "{% set need = energy_needed_kwh | float(0) %} {% set slots = planner_selected_slots
+        %} {% if need <= 0 %}\n  {% set status = 'klar' %}\n  {% set summary = 'Batteriet
+        är redan över målet. Ingen laddning planeras.' %}\n{% elif slots | length
+        == 0 %}\n  {% set status = 'saknar_slotar' %}\n  {% set summary = 'Inga slotar
+        kunde tas fram – saknar prisdata i tidsfönstret.' %}\n{% else %}\n  {% set
+        status = 'planerad' %}\n  {% set summary = 'Planerade ' ~ (slots | length)
+        ~ ' slotar med lägsta timpriser i nuvarande fönster.' %}\n{% endif %} {{ {\n
+        \ 'status': status,\n  'summary': summary,\n  'notes': 'Automatisk prisplan
+        framräknad lokalt.',\n  'deadline_met': planner_deadline_ok,\n  'slots_planned':
+        slots | length,\n  'currency': price_currency,\n  'schedule': slots,\n  'total_energy_kwh':
+        planner_total_energy_kwh | float(0),\n  'total_cost_sek': planner_total_cost_sek
+        | float(0)\n} | tojson | from_json }}"
+      plan_schedule_raw: '{{ plan_data.get(''schedule'', []) }}'
+      plan_currency: "{% if plan_data is mapping %}\n  {{ plan_data.get('currency',
+        price_currency) | default(price_currency) }}\n{% else %}\n  {{ price_currency
+        }}\n{% endif %}"
   - action: system_log.write
     data:
       level: info
       logger: granny_car_charge_plan
-      message: >-
-        AI-plan cleaned payload (preview): {{ ai_json_text | truncate(400, True, '...') }}
-  - choose:
-    - conditions:
-      - condition: template
-        value_template: '{{ ai_raw | length > 0 }}'
-      sequence: []
-    default:
-    - action: logbook.log
-      data:
-        name: '{{ log_prefix }}'
-        message: 'AI svarade tomt. Avbryter.'
-    - action: persistent_notification.create
-      data:
-        title: Ingen laddningsplan skapades
-        message: 'AI svarade tomt eller utan data. Se loggboken för detaljer.'
-        notification_id: granny_car_charge_plan_empty
-    - stop: AI gav inget svar.
-  - variables:
-      plan_data_raw: '{{ ai_json_text | from_json(default=None) }}'
-  - choose:
-    - conditions:
-      - condition: template
-        value_template: '{{ plan_data_raw is not none }}'
-      sequence: []
-    default:
-    - action: logbook.log
-      data:
-        name: '{{ log_prefix }}'
-        message: 'AI-svaret kunde inte tolkas som JSON: {{ ai_json_text }}'
-    - action: persistent_notification.create
-      data:
-        title: AI-svar saknar JSON
-        message: 'AI gav svaret: {{ ai_raw }}. Förväntade giltig JSON. Kontrollera instruktionen.'
-        notification_id: granny_car_charge_plan_format_error
-    - action: system_log.write
-      data:
-        level: warning
-        logger: granny_car_charge_plan
-        message: 'AI-plan JSON kunde inte parsas. Rådata: {{ ai_json_text }}'
-    - stop: AI gav ogiltigt format.
-  - variables:
-      plan_data: >-
-        {% set result = {} %}
-        {% if plan_data_raw is mapping %}
-          {% set result = plan_data_raw %}
-        {% elif plan_data_raw is iterable and plan_data_raw is not string %}
-          {% set result = {'schedule': plan_data_raw} %}
-        {% endif %}
-        {% if plan_data_raw is string %}
-          {% set parsed = plan_data_raw | from_json(default=None) %}
-          {% if parsed is mapping %}
-            {% set result = parsed %}
-          {% elif parsed is iterable and parsed is not string %}
-            {% set result = {'schedule': parsed} %}
-          {% endif %}
-        {% endif %}
-        {{ result | tojson | from_json }}
-  - variables:
-      plan_schedule_raw: >-
-        {% set keys = ['schedule', 'planned_schedule', 'time', 'slots', 'chargeSessions', 'sessions', 'windows'] %}
-        {% set candidates = [] %}
-        {% set state = namespace(found=None) %}
-        {% if plan_data is mapping %}
-          {% set candidates = candidates + [plan_data] %}
-          {% set data_field = plan_data.get('data') %}
-          {% if data_field is string %}
-            {% set parsed = data_field | from_json(default={}) %}
-            {% if parsed is mapping %}
-              {% set candidates = candidates + [parsed] %}
-            {% elif parsed is iterable and parsed is not string %}
-              {% set candidates = candidates + [{'schedule': parsed}] %}
-            {% endif %}
-          {% elif data_field is mapping %}
-            {% set candidates = candidates + [data_field] %}
-          {% endif %}
-          {% set result_field = plan_data.get('result') %}
-          {% if result_field is string %}
-            {% set parsed = result_field | from_json(default={}) %}
-            {% if parsed is mapping %}
-              {% set candidates = candidates + [parsed] %}
-            {% elif parsed is iterable and parsed is not string %}
-              {% set candidates = candidates + [{'schedule': parsed}] %}
-            {% endif %}
-          {% elif result_field is mapping %}
-            {% set candidates = candidates + [result_field] %}
-          {% endif %}
-        {% elif plan_data is iterable and plan_data is not string %}
-          {% set candidates = candidates + [{'schedule': plan_data}] %}
-        {% endif %}
-        {% for cand in candidates %}
-          {% if cand is mapping %}
-            {% for key in keys %}
-              {% set value = cand.get(key) %}
-              {% if value is not none %}
-                {% set state.found = value %}
-                {% break %}
-              {% endif %}
-            {% endfor %}
-          {% endif %}
-          {% if state.found is not none %}
-            {% break %}
-          {% endif %}
-        {% endfor %}
-        {% set result = state.found %}
-        {% if result is string %}
-          {% set result = result | from_json(default=result) %}
-        {% endif %}
-        {% if result is none %}
-          {{ [] }}
-        {% else %}
-          {{ result }}
-        {% endif %}
-      plan_currency: >-
-        {% if plan_data is mapping %}
-          {{ plan_data.get('currency', price_currency) | default(price_currency) }}
-        {% else %}
-          {{ price_currency }}
-        {% endif %}
+      message: 'Planner debug: price_currency={{ price_currency }}, attr={{ price_currency_attr
+        }}, candidates={{ planner_candidate_count }}, needed={{ planner_needed_slots
+        }}, selected={{ planner_selected_count }}, total_energy={{ planner_total_energy_kwh
+        | float(0) }}, total_cost={{ planner_total_cost_sek | float(0) }}'
   - action: system_log.write
     data:
       level: info
       logger: granny_car_charge_plan
-      message: 'AI-plan parsed data: {{ plan_data }}'
+      message: 'Plan data (auto): {{ plan_data }}'
   - action: system_log.write
     data:
       level: info
       logger: granny_car_charge_plan
-      message: 'AI-plan raw schedule: {{ plan_schedule_raw }}'
+      message: 'Plan raw schedule (auto): {{ plan_schedule_raw }}'
   - variables:
-      plan_schedule_initial: >-
-        {% set raw = plan_schedule_raw %}
-        {% if raw is string %}
-          {% set raw = raw | from_json(default=[]) %}
-        {% endif %}
-        {% if raw is mapping %}
-          {% set raw = raw.get('time', raw.get('slots', raw.get('schedule', raw.get('planned_schedule', raw.get('chargeSessions', raw.get('sessions', raw.get('windows', []))))))) %}
-        {% endif %}
-        {% if raw is string %}
-          {% set raw = raw | from_json(default=[]) %}
-        {% endif %}
-        {% if raw is mapping %}
-          {% set raw = raw.get('time', raw.get('slots', raw.get('schedule', raw.get('planned_schedule', raw.get('chargeSessions', raw.get('sessions', raw.get('windows', []))))))) %}
-        {% endif %}
-        {% if raw is iterable %}
-          {% set raw_list = raw | list %}
-        {% else %}
-          {% set raw_list = [] %}
-        {% endif %}
-        {% set normalized = namespace(items=[]) %}
-        {% for slot in raw_list %}
-          {% set item = slot %}
-          {% if item is string %}
-            {% set item = item | from_json(default={}) %}
-          {% endif %}
-          {% if item is mapping %}
-            {% set interval = item.get('time_interval') %}
-            {% set start = item.get('start') %}
-            {% set end = item.get('end') %}
-            {% if interval %}
-              {% set start = start or interval.get('start') %}
-              {% set end = end or interval.get('end') %}
-            {% endif %}
-            {% set start = start or item.get('startTime') or item.get('start_time') or item.get('timeStart') or item.get('time_start') or item.get('slot_start_time') or item.get('slot_start') %}
-            {% set end = end or item.get('endTime') or item.get('end_time') or item.get('timeEnd') or item.get('time_end') or item.get('timeStop') or item.get('slot_end_time') or item.get('slot_end') %}
-            {% if start %}
-              {% if start | string | length == 15 and 'T' not in start %}
-                {% set start = start | replace(' ', 'T') %}
-              {% endif %}
-            {% endif %}
-            {% if end %}
-              {% if end | string | length == 15 and 'T' not in end %}
-                {% set end = end | replace(' ', 'T') %}
-              {% endif %}
-            {% endif %}
-            {% set energy = item.get('energy_kwh') %}
-            {% if energy is none %}
-              {% set energy = item.get('energy') %}
-            {% endif %}
-            {% if energy is none %}
-              {% set energy = item.get('kwh', item.get('kWh')) %}
-            {% endif %}
-            {% if energy is none %}
-              {% set energy = item.get('consumption_kwh', item.get('consumption_KWh', item.get('consumption'))) %}
-            {% endif %}
-            {% set price = item.get('price_sek_kwh') %}
-            {% for key in [
-              'price_SEK_per_kWh', 'price_SEK_per_kwh', 'price_sek_per_kwh', 'price_per_kwh', 'price_per_kWh',
-              'price_per_kw', 'price_perKWh', 'price_per_unit', 'price_per_unit_sek', 'price_per_kW',
-              'price_per', 'price', 'price_per_hour', 'price_kwh', 'price_SEK'
-            ] %}
-              {% if price is none and item.get(key) is not none %}
-                {% set price = item.get(key) %}
-              {% endif %}
-            {% endfor %}
-            {% set cost = item.get('cost_sek') %}
-            {% if cost is none %}
-              {% set cost = item.get('cost_SEK') %}
-            {% endif %}
-            {% if cost is none %}
-              {% set cost = item.get('cost') %}
-            {% endif %}
-            {% if cost is none %}
-              {% set cost = item.get('price_total', item.get('total_cost')) %}
-            {% endif %}
-            {% if cost is none and price is not none and energy is not none %}
-              {% set cost = (price | float(0)) * (energy | float(0)) %}
-            {% endif %}
-            {% set norm = {
-              "start": start,
-              "end": end,
-              "energy_kwh": energy,
-              "price_sek_kwh": price,
-              "cost_sek": cost,
-              "source": item.get('source'),
-              "currency": item.get('currency', plan_currency)
-            } %}
-            {% set normalized.items = normalized.items + [norm] %}
-          {% endif %}
-        {% endfor %}
-        {{ normalized.items | tojson | from_json }}
+      plan_schedule_initial: "{% set raw = plan_schedule_raw %} {% if raw is string
+        %}\n  {% set raw = raw | from_json(default=[]) %}\n{% endif %} {% if raw is
+        mapping %}\n  {% set raw = raw.get('time', raw.get('slots', raw.get('schedule',
+        raw.get('planned_schedule', raw.get('chargeSessions', raw.get('sessions',
+        raw.get('windows', []))))))) %}\n{% endif %} {% if raw is string %}\n  {%
+        set raw = raw | from_json(default=[]) %}\n{% endif %} {% if raw is mapping
+        %}\n  {% set raw = raw.get('time', raw.get('slots', raw.get('schedule', raw.get('planned_schedule',
+        raw.get('chargeSessions', raw.get('sessions', raw.get('windows', [])))))))
+        %}\n{% endif %} {% if raw is iterable %}\n  {% set raw_list = raw | list %}\n{%
+        else %}\n  {% set raw_list = [] %}\n{% endif %} {% set normalized = namespace(items=[])
+        %} {% for slot in raw_list %}\n  {% set item = slot %}\n  {% if item is string
+        %}\n    {% set item = item | from_json(default={}) %}\n  {% endif %}\n  {%
+        if item is mapping %}\n    {% set interval = item.get('time_interval') %}\n
+        \   {% set start = item.get('start') %}\n    {% set end = item.get('end')
+        %}\n    {% if interval %}\n      {% set start = start or interval.get('start')
+        %}\n      {% set end = end or interval.get('end') %}\n    {% endif %}\n    {%
+        set start = start or item.get('startTime') or item.get('start_time') or item.get('timeStart')
+        or item.get('time_start') or item.get('slot_start_time') or item.get('slot_start')
+        %}\n    {% set end = end or item.get('endTime') or item.get('end_time') or
+        item.get('timeEnd') or item.get('time_end') or item.get('timeStop') or item.get('slot_end_time')
+        or item.get('slot_end') %}\n    {% if start %}\n      {% if start | string
+        | length == 15 and 'T' not in start %}\n        {% set start = start | replace('
+        ', 'T') %}\n      {% endif %}\n    {% endif %}\n    {% if end %}\n      {%
+        if end | string | length == 15 and 'T' not in end %}\n        {% set end =
+        end | replace(' ', 'T') %}\n      {% endif %}\n    {% endif %}\n    {% set
+        energy = item.get('energy_kwh') %}\n    {% if energy is none %}\n      {%
+        set energy = item.get('energy') %}\n    {% endif %}\n    {% if energy is none
+        %}\n      {% set energy = item.get('kwh', item.get('kWh')) %}\n    {% endif
+        %}\n    {% if energy is none %}\n      {% set energy = item.get('consumption_kwh',
+        item.get('consumption_KWh', item.get('consumption'))) %}\n    {% endif %}\n
+        \   {% set price = item.get('price_sek_kwh') %}\n    {% for key in [\n      'price_SEK_per_kWh',
+        'price_SEK_per_kwh', 'price_sek_per_kwh', 'price_per_kwh', 'price_per_kWh',\n
+        \     'price_per_kw', 'price_perKWh', 'price_per_unit', 'price_per_unit_sek',
+        'price_per_kW',\n      'price_per', 'price', 'price_per_hour', 'price_kwh',
+        'price_SEK'\n    ] %}\n      {% if price is none and item.get(key) is not
+        none %}\n        {% set price = item.get(key) %}\n      {% endif %}\n    {%
+        endfor %}\n    {% set cost = item.get('cost_sek') %}\n    {% if cost is none
+        %}\n      {% set cost = item.get('cost_SEK') %}\n    {% endif %}\n    {% if
+        cost is none %}\n      {% set cost = item.get('cost') %}\n    {% endif %}\n
+        \   {% if cost is none %}\n      {% set cost = item.get('price_total', item.get('total_cost'))
+        %}\n    {% endif %}\n    {% if cost is none and price is not none and energy
+        is not none %}\n      {% set cost = (price | float(0)) * (energy | float(0))
+        %}\n    {% endif %}\n    {% set norm = {\n      \"start\": start,\n      \"end\":
+        end,\n      \"energy_kwh\": energy,\n      \"price_sek_kwh\": price,\n      \"cost_sek\":
+        cost,\n      \"source\": item.get('source'),\n      \"currency\": item.get('currency',
+        plan_currency)\n    } %}\n    {% set normalized.items = normalized.items +
+        [norm] %}\n  {% endif %}\n{% endfor %} {{ normalized.items | tojson | from_json
+        }}"
       plan_schedule_initial_len: '{{ plan_schedule_initial | length }}'
-      plan_schedule: '{{ plan_schedule_initial | selectattr("start", "defined") | list }}'
-      plan_status: >-
-        {% if plan_data is mapping %}
-          {{ plan_data.get('status', '') }}
-        {% else %}
-          ''
-        {% endif %}
-      plan_summary: >-
-        {% if plan_data is mapping %}
-          {{ plan_data.get('summary', '') }}
-        {% else %}
-          ''
-        {% endif %}
-      plan_notes: >-
-        {% if plan_data is mapping %}
-          {{ plan_data.get('notes', plan_data.get('summary', '')) }}
-        {% else %}
-          ''
-        {% endif %}
-      plan_summary_clean: '{{ plan_summary | replace("€", plan_currency) | replace("EUR", plan_currency) }}'
-      plan_notes_clean: '{{ plan_notes | replace("€", plan_currency) | replace("EUR", plan_currency) }}'
-      plan_deadline_met: >-
-        {% if plan_data is mapping %}
-          {% set raw = plan_data.get('deadline_met', plan_data.get('deadline_ok', None)) %}
-        {% else %}
-          {% set raw = None %}
-        {% endif %}
-        {{ raw in [True, 'True', 'true', 1, '1'] }}
-      plan_slots_planned: >-
-        {% if plan_data is mapping %}
-          {% set raw = plan_data.get('slots_planned') %}
-        {% else %}
-          {% set raw = None %}
-        {% endif %}
-        {% if raw is number %}
-          {{ raw | int }}
-        {% elif raw in [None, ''] %}
-          {{ plan_schedule_initial_len }}
-        {% else %}
-          {{ (raw | int(0)) if raw is not none else plan_schedule_initial_len }}
-        {% endif %}
-      plan_schedule_filtered_json: >-
-        {% set window_start_dt = as_datetime(now_iso) %}
-        {% set window_end_dt = as_datetime(deadline_iso) %}
-        {% set window_start_ts = as_timestamp(window_start_dt) %}
-        {% set window_end_ts = as_timestamp(window_end_dt) %}
-        {% set kept = namespace(items=[]) %}
-        {% for slot in plan_schedule %}
-          {% set start_val = slot.get('start') %}
-          {% set end_val = slot.get('end') %}
-          {% set start_dt = as_datetime(start_val) if start_val else None %}
-          {% set end_dt = as_datetime(end_val) if end_val else None %}
-          {% set start_ts = as_timestamp(start_dt) if start_dt else None %}
-          {% set end_ts = as_timestamp(end_dt) if end_dt else None %}
-          {% if start_ts is not none and end_ts is not none and start_ts >= window_start_ts and end_ts <= window_end_ts %}
-            {% set kept.items = kept.items + [slot] %}
-          {% endif %}
-        {% endfor %}
-        {{ kept.items | tojson }}
-      plan_schedule_filter_debug: >-
-        {% set window_start_dt = as_datetime(now_iso) %}
-        {% set window_end_dt = as_datetime(deadline_iso) %}
-        {% set window_start_ts = as_timestamp(window_start_dt) %}
-        {% set window_end_ts = as_timestamp(window_end_dt) %}
-        {% set ns = namespace(lines=[]) %}
-        {% for slot in plan_schedule %}
-          {% set start_val = slot.get('start') %}
-          {% set end_val = slot.get('end') %}
-          {% set start_dt = as_datetime(start_val) if start_val else None %}
-          {% set end_dt = as_datetime(end_val) if end_val else None %}
-          {% set start_ts = as_timestamp(start_dt) if start_dt else None %}
-          {% set end_ts = as_timestamp(end_dt) if end_dt else None %}
-          {% set keep = (start_ts is not none and end_ts is not none and start_ts >= window_start_ts and end_ts <= window_end_ts) %}
-          {% set ns.lines = ns.lines + ['slot=' ~ (slot | tojson) ~ ', start_ts=' ~ (start_ts|string if start_ts is not none else 'none') ~ ', end_ts=' ~ (end_ts|string if end_ts is not none else 'none') ~ ', keep=' ~ keep|string] %}
-        {% endfor %}
-        {{ ns.lines | join(' | ') }}
-      plan_schedule_candidate_valid: >-
-        {% set window_start_dt = as_datetime(now_iso) %}
-        {% set window_end_dt = as_datetime(deadline_iso) %}
-        {% set window_start_ts = as_timestamp(window_start_dt) %}
-        {% set window_end_ts = as_timestamp(window_end_dt) %}
-        {% set ns = namespace(valid=true) %}
-        {% for slot in plan_schedule %}
-          {% set start_val = slot.get('start') %}
-          {% set end_val = slot.get('end') %}
-          {% set start_dt = as_datetime(start_val) if start_val else None %}
-          {% set end_dt = as_datetime(end_val) if end_val else None %}
-          {% set start_ts = as_timestamp(start_dt) if start_dt else None %}
-          {% set end_ts = as_timestamp(end_dt) if end_dt else None %}
-          {% if start_ts is none or end_ts is none or start_ts < window_start_ts or end_ts > window_end_ts %}
-            {% set ns.valid = false %}
-          {% endif %}
-        {% endfor %}
-        {{ ns.valid }}
+      plan_schedule: '{{ plan_schedule_initial | selectattr("start", "defined") |
+        list }}'
+      plan_status: "{% if plan_data is mapping %}\n  {{ plan_data.get('status', '')
+        }}\n{% else %}\n  ''\n{% endif %}"
+      plan_summary: "{% if plan_data is mapping %}\n  {{ plan_data.get('summary',
+        '') }}\n{% else %}\n  ''\n{% endif %}"
+      plan_notes: "{% if plan_data is mapping %}\n  {{ plan_data.get('notes', plan_data.get('summary',
+        '')) }}\n{% else %}\n  ''\n{% endif %}"
+      plan_summary_clean: '{{ plan_summary | replace("€", plan_currency) | replace("EUR",
+        plan_currency) }}'
+      plan_notes_clean: '{{ plan_notes | replace("€", plan_currency) | replace("EUR",
+        plan_currency) }}'
+      plan_deadline_met: "{% if plan_data is mapping %}\n  {% set raw = plan_data.get('deadline_met',
+        plan_data.get('deadline_ok', None)) %}\n{% else %}\n  {% set raw = None %}\n{%
+        endif %} {{ raw in [True, 'True', 'true', 1, '1'] }}"
+      plan_slots_planned: "{% if plan_data is mapping %}\n  {% set raw = plan_data.get('slots_planned')
+        %}\n{% else %}\n  {% set raw = None %}\n{% endif %} {% if raw is number %}\n
+        \ {{ raw | int }}\n{% elif raw in [None, ''] %}\n  {{ plan_schedule_initial_len
+        }}\n{% else %}\n  {{ (raw | int(0)) if raw is not none else plan_schedule_initial_len
+        }}\n{% endif %}"
+      plan_schedule_filtered_json: "{% set window_start_dt = as_datetime(now_iso)
+        %} {% set window_end_dt = as_datetime(deadline_iso) %} {% set window_start_ts
+        = as_timestamp(window_start_dt) %} {% set window_end_ts = as_timestamp(window_end_dt)
+        %} {% set kept = namespace(items=[]) %} {% for slot in plan_schedule %}\n
+        \ {% set start_val = slot.get('start') %}\n  {% set end_val = slot.get('end')
+        %}\n  {% set start_dt = as_datetime(start_val) if start_val else None %}\n
+        \ {% set end_dt = as_datetime(end_val) if end_val else None %}\n  {% set start_ts
+        = as_timestamp(start_dt) if start_dt else None %}\n  {% set end_ts = as_timestamp(end_dt)
+        if end_dt else None %}\n  {% if start_ts is not none and end_ts is not none
+        and start_ts >= window_start_ts and end_ts <= window_end_ts %}\n    {% set
+        kept.items = kept.items + [slot] %}\n  {% endif %}\n{% endfor %} {{ kept.items
+        | tojson }}"
+      plan_schedule_filter_debug: "{% set window_start_dt = as_datetime(now_iso) %}
+        {% set window_end_dt = as_datetime(deadline_iso) %} {% set window_start_ts
+        = as_timestamp(window_start_dt) %} {% set window_end_ts = as_timestamp(window_end_dt)
+        %} {% set ns = namespace(lines=[]) %} {% for slot in plan_schedule %}\n  {%
+        set start_val = slot.get('start') %}\n  {% set end_val = slot.get('end') %}\n
+        \ {% set start_dt = as_datetime(start_val) if start_val else None %}\n  {%
+        set end_dt = as_datetime(end_val) if end_val else None %}\n  {% set start_ts
+        = as_timestamp(start_dt) if start_dt else None %}\n  {% set end_ts = as_timestamp(end_dt)
+        if end_dt else None %}\n  {% set keep = (start_ts is not none and end_ts is
+        not none and start_ts >= window_start_ts and end_ts <= window_end_ts) %}\n
+        \ {% set ns.lines = ns.lines + ['slot=' ~ (slot | tojson) ~ ', start_ts='
+        ~ (start_ts|string if start_ts is not none else 'none') ~ ', end_ts=' ~ (end_ts|string
+        if end_ts is not none else 'none') ~ ', keep=' ~ keep|string] %}\n{% endfor
+        %} {{ ns.lines | join(' | ') }}"
+      plan_schedule_candidate_valid: "{% set window_start_dt = as_datetime(now_iso)
+        %} {% set window_end_dt = as_datetime(deadline_iso) %} {% set window_start_ts
+        = as_timestamp(window_start_dt) %} {% set window_end_ts = as_timestamp(window_end_dt)
+        %} {% set ns = namespace(valid=true) %} {% for slot in plan_schedule %}\n
+        \ {% set start_val = slot.get('start') %}\n  {% set end_val = slot.get('end')
+        %}\n  {% set start_dt = as_datetime(start_val) if start_val else None %}\n
+        \ {% set end_dt = as_datetime(end_val) if end_val else None %}\n  {% set start_ts
+        = as_timestamp(start_dt) if start_dt else None %}\n  {% set end_ts = as_timestamp(end_dt)
+        if end_dt else None %}\n  {% if start_ts is none or end_ts is none or start_ts
+        < window_start_ts or end_ts > window_end_ts %}\n    {% set ns.valid = false
+        %}\n  {% endif %}\n{% endfor %} {{ ns.valid }}"
   - variables:
-      plan_schedule_effective_raw: "{{ plan_schedule_filtered_json | from_json(default=[]) }}"
-      plan_schedule_effective: >-
-        {% set filtered = plan_schedule_filtered_json | from_json(default=[]) %}
-        {% set fallback_ok = (plan_schedule_initial_len > 0) and (filtered | length == 0) and (plan_schedule_candidate_valid in [True, 'True', 'true', 1, '1']) %}
-        {% set chosen = plan_schedule if fallback_ok else filtered %}
-        {{ chosen | tojson | from_json }}
-      schedule_removed_count: >-
-        {{ plan_schedule_initial_len - (plan_schedule_effective | length) }}
-      schedule_fallback_used: >-
-        {{ (plan_schedule_effective_raw | length == 0) and (plan_schedule_effective | length > 0) }}
-      schedule_start_failed: >-
-        {{ (plan_schedule_initial_len > 0) and (plan_schedule_effective | length == 0) }}
-      plan_energy_total: >-
-        {% set total = namespace(value=0.0) %}
-        {% for slot in plan_schedule_effective %}
-          {% set slot_obj = slot %}
-          {% if slot_obj is string %}
-            {% set slot_obj = slot_obj | from_json(default={}) %}
-          {% endif %}
-          {% if slot_obj is mapping %}
-            {% if 'energy_kwh' in slot_obj %}
-              {% set energy = slot_obj['energy_kwh'] %}
-            {% elif 'energy' in slot_obj %}
-              {% set energy = slot_obj['energy'] %}
-            {% else %}
-              {% set energy = None %}
-            {% endif %}
-            {% if energy is not none %}
-              {% set total.value = total.value + (energy | float(0)) %}
-            {% endif %}
-          {% endif %}
-        {% endfor %}
-        {{ total.value }}
-      energy_goal_met: >-
-        {% set needed = energy_needed_kwh | float(0) %}
-        {% set total = plan_energy_total | float(0) %}
-        {% if needed <= 0 %}
-          true
-        {% else %}
-          {{ (total + 0.001) >= needed }}
-        {% endif %}
-      schedule_deadline_ok: >-
-        {% set deadline_dt = as_datetime(deadline_iso) %}
-        {% set deadline_ts = as_timestamp(deadline_dt) %}
-        {% set ns = namespace(ok=true) %}
-        {% for slot in plan_schedule_effective %}
-          {% set start = slot.start if slot.start is defined else slot.get('start') %}
-          {% set end = slot.end if slot.end is defined else slot.get('end') %}
-          {% if start in [None, ''] or end in [None, ''] %}
-            {% set ns.ok = false %}
-          {% else %}
-            {% set start_dt = as_datetime(start) %}
-            {% set end_dt = as_datetime(end) %}
-            {% set start_ts = as_timestamp(start_dt) if start_dt else None %}
-            {% set end_ts = as_timestamp(end_dt) if end_dt else None %}
-            {% if start_ts is none or end_ts is none or start_ts >= end_ts or end_ts > deadline_ts %}
-              {% set ns.ok = false %}
-            {% endif %}
-          {% endif %}
-        {% endfor %}
-        {{ ns.ok }}
-      deadline_check_failed: >-
-        {% set meets = plan_deadline_met in [True, 'True', 'true', 1, '1'] %}
-        {% set ok = schedule_deadline_ok in [True, 'True', 'true', 1, '1'] %}
-        {{ not (meets and ok) }}
-      energy_check_failed: >-
-        {% set met = energy_goal_met in [True, 'True', 'true', 1, '1'] %}
-        {{ not met }}
-      plan_json: >-
-        {% if plan_data is mapping %}
-          {% set base = {
-            "status": plan_status,
-            "summary": plan_summary_clean,
-            "notes": plan_notes_clean,
-            "deadline_met": plan_deadline_met,
-            "slots_planned": plan_slots_planned,
-            "currency": plan_currency,
-            "schedule": plan_schedule_effective
-          } %}
-          {{ base | tojson }}
-        {% else %}
-          {{ {
-            "status": plan_status,
-            "summary": plan_summary_clean,
-            "notes": plan_notes_clean,
-            "deadline_met": plan_deadline_met,
-            "slots_planned": plan_slots_planned,
-            "currency": plan_currency,
-            "schedule": plan_schedule_effective
-          } | tojson }}
-        {% endif %}
+      plan_schedule_effective_raw: '{{ plan_schedule_filtered_json | from_json(default=[])
+        }}'
+      plan_schedule_effective: '{% set filtered = plan_schedule_filtered_json | from_json(default=[])
+        %} {% set fallback_ok = (plan_schedule_initial_len > 0) and (filtered | length
+        == 0) and (plan_schedule_candidate_valid in [True, ''True'', ''true'', 1,
+        ''1'']) %} {% set chosen = plan_schedule if fallback_ok else filtered %} {{
+        chosen | tojson | from_json }}'
+      schedule_removed_count: '{{ plan_schedule_initial_len - (plan_schedule_effective
+        | length) }}'
+      schedule_fallback_used: '{{ (plan_schedule_effective_raw | length == 0) and
+        (plan_schedule_effective | length > 0) }}'
+      schedule_start_failed: '{{ (plan_schedule_initial_len > 0) and (plan_schedule_effective
+        | length == 0) }}'
+      plan_energy_total: "{% set total = namespace(value=0.0) %} {% for slot in plan_schedule_effective
+        %}\n  {% set slot_obj = slot %}\n  {% if slot_obj is string %}\n    {% set
+        slot_obj = slot_obj | from_json(default={}) %}\n  {% endif %}\n  {% if slot_obj
+        is mapping %}\n    {% if 'energy_kwh' in slot_obj %}\n      {% set energy
+        = slot_obj['energy_kwh'] %}\n    {% elif 'energy' in slot_obj %}\n      {%
+        set energy = slot_obj['energy'] %}\n    {% else %}\n      {% set energy =
+        None %}\n    {% endif %}\n    {% if energy is not none %}\n      {% set total.value
+        = total.value + (energy | float(0)) %}\n    {% endif %}\n  {% endif %}\n{%
+        endfor %} {{ total.value }}"
+      energy_goal_met: "{% set needed = energy_needed_kwh | float(0) %} {% set total
+        = plan_energy_total | float(0) %} {% if needed <= 0 %}\n  true\n{% else %}\n
+        \ {{ (total + 0.001) >= needed }}\n{% endif %}"
+      schedule_deadline_ok: "{% set deadline_dt = as_datetime(deadline_iso) %} {%
+        set deadline_ts = as_timestamp(deadline_dt) %} {% set ns = namespace(ok=true)
+        %} {% for slot in plan_schedule_effective %}\n  {% set start = slot.start
+        if slot.start is defined else slot.get('start') %}\n  {% set end = slot.end
+        if slot.end is defined else slot.get('end') %}\n  {% if start in [None, '']
+        or end in [None, ''] %}\n    {% set ns.ok = false %}\n  {% else %}\n    {%
+        set start_dt = as_datetime(start) %}\n    {% set end_dt = as_datetime(end)
+        %}\n    {% set start_ts = as_timestamp(start_dt) if start_dt else None %}\n
+        \   {% set end_ts = as_timestamp(end_dt) if end_dt else None %}\n    {% if
+        start_ts is none or end_ts is none or start_ts >= end_ts or end_ts > deadline_ts
+        %}\n      {% set ns.ok = false %}\n    {% endif %}\n  {% endif %}\n{% endfor
+        %} {{ ns.ok }}"
+      deadline_check_failed: '{% set meets = plan_deadline_met in [True, ''True'',
+        ''true'', 1, ''1''] %} {% set ok = schedule_deadline_ok in [True, ''True'',
+        ''true'', 1, ''1''] %} {{ not (meets and ok) }}'
+      energy_check_failed: '{% set met = energy_goal_met in [True, ''True'', ''true'',
+        1, ''1''] %} {{ not met }}'
+      plan_json: "{% if plan_data is mapping %}\n  {% set base = {\n    \"status\":
+        plan_status,\n    \"summary\": plan_summary_clean,\n    \"notes\": plan_notes_clean,\n
+        \   \"deadline_met\": plan_deadline_met,\n    \"slots_planned\": plan_slots_planned,\n
+        \   \"currency\": plan_currency,\n    \"schedule\": plan_schedule_effective\n
+        \ } %}\n  {{ base | tojson }}\n{% else %}\n  {{ {\n    \"status\": plan_status,\n
+        \   \"summary\": plan_summary_clean,\n    \"notes\": plan_notes_clean,\n    \"deadline_met\":
+        plan_deadline_met,\n    \"slots_planned\": plan_slots_planned,\n    \"currency\":
+        plan_currency,\n    \"schedule\": plan_schedule_effective\n  } | tojson }}\n{%
+        endif %}"
       calendar_entity: calendar.billaddning
-      calendar_config_entry_id: "01K9SK9EBYXG8KJ74JF2J13C00"
+      calendar_config_entry_id: 01K9SK9EBYXG8KJ74JF2J13C00
   - action: system_log.write
     data:
       level: info
       logger: granny_car_charge_plan
-      message: >-
-        AI-plan stats:
-        initial={{ plan_schedule_initial_len }},
-        filtered={{ plan_schedule_effective | length }},
-        removed={{ schedule_removed_count }},
-        start_failed={{ schedule_start_failed }},
-        fallback={{ schedule_fallback_used }},
-        initial_slots={{ plan_schedule_initial }},
-        first={{ plan_schedule_effective[0].start if plan_schedule_effective | length > 0 else 'none' }}–{{ plan_schedule_effective[0].end if plan_schedule_effective | length > 0 else 'none' }},
-        window={{ now_iso }}–{{ deadline_iso }},
-        filtered={{ plan_schedule_effective | tojson }},
-        plan_schedule={{ plan_schedule | tojson }},
-        per_slot={{ plan_schedule_filter_debug }}
+      message: 'Planeringsstatistik: initial={{ plan_schedule_initial_len }}, filtered={{
+        plan_schedule_effective | length }}, removed={{ schedule_removed_count }},
+        start_failed={{ schedule_start_failed }}, fallback={{ schedule_fallback_used
+        }}, initial_slots={{ plan_schedule_initial }}, first={{ plan_schedule_effective[0].start
+        if plan_schedule_effective | length > 0 else ''none'' }}–{{ plan_schedule_effective[0].end
+        if plan_schedule_effective | length > 0 else ''none'' }}, window={{ now_iso
+        }}–{{ deadline_iso }}, filtered={{ plan_schedule_effective | tojson }}, plan_schedule={{
+        plan_schedule | tojson }}, per_slot={{ plan_schedule_filter_debug }}'
   - action: system_log.write
     data:
       level: info
       logger: granny_car_charge_plan
-      message: >-
-        AI-plan energy check: needed={{ energy_needed_kwh | float(0) | round(3) }} kWh,
-        per_slot={{ slot_energy_kwh | float(0) | round(3) }} kWh,
-        slots={{ plan_schedule_effective | length }},
-        total={{ plan_energy_total | float(0) | round(3) }} kWh,
-        goal_met={{ energy_goal_met }}
+      message: 'Plan energikontroll: needed={{ energy_needed_kwh | float(0) | round(3)
+        }} kWh, per_slot={{ slot_energy_kwh | float(0) | round(3) }} kWh, slots={{
+        plan_schedule_effective | length }}, total={{ plan_energy_total | float(0)
+        | round(3) }} kWh, goal_met={{ energy_goal_met }}'
   - choose:
     - conditions:
       - condition: template
-        value_template: '{{ schedule_fallback_used in [True, "True", "true", 1, "1"] }}'
+        value_template: '{{ schedule_fallback_used in [True, "True", "true", 1, "1"]
+          }}'
       sequence:
       - action: logbook.log
         data:
           name: '{{ log_prefix }}'
-          message: 'AI-planens tider låg redan inom fönstret {{ as_local(as_datetime(now_iso)).strftime(''%d %b %H:%M'') }}
-            – {{ as_local(as_datetime(deadline_iso)).strftime(''%d %b %H:%M'') }}, så hela
-            planen behölls ofiltrerad.'
+          message: Planens tider låg redan inom fönstret {{ as_local(as_datetime(now_iso)).strftime('%d
+            %b %H:%M') }} – {{ as_local(as_datetime(deadline_iso)).strftime('%d %b
+            %H:%M') }}, så hela planen behölls ofiltrerad.
     - conditions:
       - condition: template
-        value_template: '{{ schedule_start_failed in [True, "True", "true", 1, "1"] }}'
+        value_template: '{{ schedule_start_failed in [True, "True", "true", 1, "1"]
+          }}'
       sequence:
       - action: logbook.log
         data:
           name: '{{ log_prefix }}'
-          message: 'AI-planen filtrerades bort eftersom alla slotar låg före nuvarande tidsfönster. Status: {{ plan_status }}.'
+          message: 'Planen filtrerades bort eftersom alla slotar låg före nuvarande
+            tidsfönster. Status: {{ plan_status }}.'
       - action: persistent_notification.create
         data:
           title: Laddningsplan ogiltig (tidsfönster)
-          message: >-
-            AI-planen innehöll endast slotar utanför fönstret {{ as_local(as_datetime(now_iso)).strftime('%d %b %H:%M') }}
-            – {{ as_local(as_datetime(deadline_iso)).strftime('%d %b %H:%M') }}. Planeringen stoppades.
+          message: Planen innehöll endast slotar utanför fönstret {{ as_local(as_datetime(now_iso)).strftime('%d
+            %b %H:%M') }} – {{ as_local(as_datetime(deadline_iso)).strftime('%d %b
+            %H:%M') }}. Planeringen stoppades.
           notification_id: granny_car_charge_plan_time_error
-      - stop: AI-plan låg utanför tidsfönstret.
+      - stop: Planen låg utanför tidsfönstret.
     - conditions:
       - condition: template
         value_template: '{{ schedule_removed_count | int(0) > 0 }}'
@@ -938,41 +619,47 @@ granny_car_charge_plan:
       - action: logbook.log
         data:
           name: '{{ log_prefix }}'
-          message: '{{ schedule_removed_count }} slot(ar) togs bort eftersom de låg utanför tidsfönstret. Fortsätter med {{ plan_schedule_effective | length }} slot(ar).'
+          message: '{{ schedule_removed_count }} slot(ar) togs bort eftersom de låg
+            utanför tidsfönstret. Fortsätter med {{ plan_schedule_effective | length
+            }} slot(ar).'
   - choose:
     - conditions:
       - condition: template
-        value_template: '{{ deadline_check_failed in [True, "True", "true", 1, "1"] }}'
+        value_template: '{{ deadline_check_failed in [True, "True", "true", 1, "1"]
+          }}'
       sequence:
       - action: logbook.log
         data:
           name: '{{ log_prefix }}'
-          message: 'AI-planen bryter mot deadlinen eller saknar tider inom fönstret. Status: {{ plan_status }}.'
+          message: 'Planen bryter mot deadlinen eller saknar tider inom fönstret.
+            Status: {{ plan_status }}.'
       - action: persistent_notification.create
         data:
           title: Laddningsplan ogiltig (deadline)
-          message: >-
-            AI-planen passer inte deadlinetiden {{ as_local(as_datetime(deadline_iso)).strftime('%d %b %H:%M') }}.
-            Kontrollera AI-konfigurationen och prisdata.
+          message: Planen passer inte deadlinetiden {{ as_local(as_datetime(deadline_iso)).strftime('%d
+            %b %H:%M') }}. Kontrollera prisdata och inställningarna.
           notification_id: granny_car_charge_plan_deadline_error
-      - stop: AI-plan uppfyllde inte deadlinetiden.
+      - stop: Planen uppfyllde inte deadlinetiden.
   - choose:
     - conditions:
       - condition: template
-        value_template: '{{ energy_check_failed in [True, "True", "true", 1, "1"] }}'
+        value_template: '{{ energy_check_failed in [True, "True", "true", 1, "1"]
+          }}'
       sequence:
       - action: logbook.log
         data:
           name: '{{ log_prefix }}'
-          message: 'Planens energi {{ plan_energy_total | float(0) | round(2) }} kWh räcker inte för behovet {{ energy_needed_kwh | float(0) | round(2) }} kWh.'
+          message: Planens energi {{ plan_energy_total | float(0) | round(2) }} kWh
+            räcker inte för behovet {{ energy_needed_kwh | float(0) | round(2) }}
+            kWh.
       - action: persistent_notification.create
         data:
           title: Laddningsplan ogiltig (energi)
-          message: >-
-            AI-planen levererar endast {{ plan_energy_total | float(0) | round(2) }} kWh.
-            Behovet är {{ energy_needed_kwh | float(0) | round(2) }} kWh. Planen stoppades.
+          message: Planen levererar endast {{ plan_energy_total | float(0) | round(2)
+            }} kWh. Behovet är {{ energy_needed_kwh | float(0) | round(2) }} kWh.
+            Planen stoppades.
           notification_id: granny_car_charge_plan_energy_error
-      - stop: AI-plan levererade för lite energi.
+      - stop: Planen levererade för lite energi.
   - choose:
     - conditions:
       - condition: template
@@ -981,7 +668,8 @@ granny_car_charge_plan:
       - action: logbook.log
         data:
           name: '{{ log_prefix }}'
-          message: 'AI-plan saknar slotar (status: {{ plan_status | default("ok") }}). Kalendern töms i det aktuella fönstret.'
+          message: 'Planen saknar slotar (status: {{ plan_status | default("ok") }}).
+            Kalendern töms i det aktuella fönstret.'
   - action: shell_command.granny_update_charge_calendar
     data:
       calendar_entity: '{{ calendar_entity }}'
@@ -999,9 +687,9 @@ granny_car_charge_plan:
   - action: homeassistant.update_entity
     target:
       entity_id: '{{ calendar_entity }}'
-  - wait_template: >-
-      {{ states(calendar_entity) not in ['unavailable', 'unknown', None] }}
-    timeout: '00:00:20'
+  - wait_template: '{{ states(calendar_entity) not in [''unavailable'', ''unknown'',
+      None] }}'
+    timeout: 00:00:20
     continue_on_timeout: true
   - action: calendar.get_events
     target:
@@ -1013,143 +701,88 @@ granny_car_charge_plan:
   - variables:
       updated_events: '{{ calendar_window.events | default([]) }}'
       updated_event_count: '{{ updated_events | length }}'
-      total_energy_kwh: >-
-        {% set total = namespace(value=0.0) %}
-        {% for slot in plan_schedule_effective %}
-          {% set slot_obj = slot %}
-          {% if slot_obj is string %}
-            {% set slot_obj = slot_obj | from_json(default={}) %}
-          {% endif %}
-          {% if slot_obj is mapping %}
-            {% if 'energy_kwh' in slot_obj %}
-              {% set energy = slot_obj['energy_kwh'] %}
-            {% elif 'energy' in slot_obj %}
-              {% set energy = slot_obj['energy'] %}
-            {% else %}
-              {% set energy = None %}
-            {% endif %}
-            {% if energy is not none %}
-              {% set total.value = total.value + (energy | float(0)) %}
-            {% endif %}
-          {% endif %}
-        {% endfor %}
-        {{ total.value }}
-      total_cost_value: >-
-        {% set total = namespace(value=0.0) %}
-        {% for slot in plan_schedule_effective %}
-          {% set slot_obj = slot %}
-          {% if slot_obj is string %}
-            {% set slot_obj = slot_obj | from_json(default={}) %}
-          {% endif %}
-          {% if slot_obj is mapping %}
-            {% if 'cost_sek' in slot_obj %}
-              {% set cost = slot_obj['cost_sek'] %}
-            {% elif 'cost' in slot_obj %}
-              {% set cost = slot_obj['cost'] %}
-            {% else %}
-              {% set cost = None %}
-            {% endif %}
-            {% if 'price_sek_kwh' in slot_obj %}
-              {% set price = slot_obj['price_sek_kwh'] %}
-            {% elif 'price' in slot_obj %}
-              {% set price = slot_obj['price'] %}
-            {% else %}
-              {% set price = None %}
-            {% endif %}
-            {% if 'energy_kwh' in slot_obj %}
-              {% set energy = slot_obj['energy_kwh'] %}
-            {% elif 'energy' in slot_obj %}
-              {% set energy = slot_obj['energy'] %}
-            {% else %}
-              {% set energy = None %}
-            {% endif %}
-            {% if cost is not none %}
-              {% set total.value = total.value + (cost | float(0)) %}
-            {% elif price is not none and energy is not none %}
-              {% set total.value = total.value + ((price | float(0)) * (energy | float(0))) %}
-            {% endif %}
-          {% endif %}
-        {% endfor %}
-        {% set summed = total.value %}
-        {% if (summed | float(0)) <= 0 and plan_data is mapping %}
-          {% if plan_data.get('total_cost_sek') is not none %}
-            {{ plan_data.get('total_cost_sek') | float(0) }}
-          {% elif plan_data.get('total_cost') is not none %}
-            {{ plan_data.get('total_cost') | float(0) }}
-          {% elif plan_data.get('total_cost_eur') is not none %}
-            {{ plan_data.get('total_cost_eur') | float(0) }}
-          {% else %}
-            {{ summed }}
-          {% endif %}
-        {% else %}
-          {{ summed }}
-        {% endif %}
+      total_energy_kwh: "{% set total = namespace(value=0.0) %} {% for slot in plan_schedule_effective
+        %}\n  {% set slot_obj = slot %}\n  {% if slot_obj is string %}\n    {% set
+        slot_obj = slot_obj | from_json(default={}) %}\n  {% endif %}\n  {% if slot_obj
+        is mapping %}\n    {% if 'energy_kwh' in slot_obj %}\n      {% set energy
+        = slot_obj['energy_kwh'] %}\n    {% elif 'energy' in slot_obj %}\n      {%
+        set energy = slot_obj['energy'] %}\n    {% else %}\n      {% set energy =
+        None %}\n    {% endif %}\n    {% if energy is not none %}\n      {% set total.value
+        = total.value + (energy | float(0)) %}\n    {% endif %}\n  {% endif %}\n{%
+        endfor %} {{ total.value }}"
+      total_cost_value: "{% set total = namespace(value=0.0) %} {% for slot in plan_schedule_effective
+        %}\n  {% set slot_obj = slot %}\n  {% if slot_obj is string %}\n    {% set
+        slot_obj = slot_obj | from_json(default={}) %}\n  {% endif %}\n  {% if slot_obj
+        is mapping %}\n    {% if 'cost_sek' in slot_obj %}\n      {% set cost = slot_obj['cost_sek']
+        %}\n    {% elif 'cost' in slot_obj %}\n      {% set cost = slot_obj['cost']
+        %}\n    {% else %}\n      {% set cost = None %}\n    {% endif %}\n    {% if
+        'price_sek_kwh' in slot_obj %}\n      {% set price = slot_obj['price_sek_kwh']
+        %}\n    {% elif 'price' in slot_obj %}\n      {% set price = slot_obj['price']
+        %}\n    {% else %}\n      {% set price = None %}\n    {% endif %}\n    {%
+        if 'energy_kwh' in slot_obj %}\n      {% set energy = slot_obj['energy_kwh']
+        %}\n    {% elif 'energy' in slot_obj %}\n      {% set energy = slot_obj['energy']
+        %}\n    {% else %}\n      {% set energy = None %}\n    {% endif %}\n    {%
+        if cost is not none %}\n      {% set total.value = total.value + (cost | float(0))
+        %}\n    {% elif price is not none and energy is not none %}\n      {% set
+        total.value = total.value + ((price | float(0)) * (energy | float(0))) %}\n
+        \   {% endif %}\n  {% endif %}\n{% endfor %} {% set summed = total.value %}
+        {% if (summed | float(0)) <= 0 and plan_data is mapping %}\n  {% if plan_data.get('total_cost_sek')
+        is not none %}\n    {{ plan_data.get('total_cost_sek') | float(0) }}\n  {%
+        elif plan_data.get('total_cost') is not none %}\n    {{ plan_data.get('total_cost')
+        | float(0) }}\n  {% elif plan_data.get('total_cost_eur') is not none %}\n
+        \   {{ plan_data.get('total_cost_eur') | float(0) }}\n  {% else %}\n    {{
+        summed }}\n  {% endif %}\n{% else %}\n  {{ summed }}\n{% endif %}"
   - action: logbook.log
     data:
       name: '{{ log_prefix }}'
-      message: 'Kalender uppdaterad. {{ updated_event_count }} slotar aktiva. Status: {{ plan_status }}.'
+      message: 'Kalender uppdaterad. {{ updated_event_count }} slotar aktiva. Status:
+        {{ plan_status }}.'
   - action: input_datetime.set_datetime
     data:
       datetime: '{{ now_iso }}'
     target:
       entity_id: input_datetime.granny_charger_trigger
   - variables:
-      schedule_lines: >-
-        {% if plan_schedule_effective | length == 0 %}
-        - Inga laddningsslotar behövs just nu.
-        {% else %}
-        {%- for slot in plan_schedule_effective %}
-        {% set slot_obj = slot %}
-        {% if slot_obj is string %}
-          {% set slot_obj = slot_obj | from_json(default={}) %}
-        {% endif %}
-        {% set slot_start = slot_obj.get('start') %}
-        {% set slot_end = slot_obj.get('end') %}
-        {% set slot_energy = slot_obj.get('energy_kwh', slot_obj.get('energy')) %}
-        - {{ as_local(as_datetime(slot_start)).strftime('%d %b %H:%M') if slot_start else 'okänd' }}–{{ as_local(as_datetime(slot_end)).strftime('%H:%M') if slot_end else 'okänd' }} (≈{{ slot_energy | float(0) | round(2) }} kWh)
-        {%- endfor %}
-        {% endif %}
-      granny_task: >-
-        SYSTEM Du är "Granny", familjens hjärtliga rådgivare. Tala svenska, max 60 ord,
-        varm men rak.
+      schedule_lines: "{% if plan_schedule_effective | length == 0 %} - Inga laddningsslotar
+        behövs just nu. {% else %} {%- for slot in plan_schedule_effective %} {% set
+        slot_obj = slot %} {% if slot_obj is string %}\n  {% set slot_obj = slot_obj
+        | from_json(default={}) %}\n{% endif %} {% set slot_start = slot_obj.get('start')
+        %} {% set slot_end = slot_obj.get('end') %} {% set slot_energy = slot_obj.get('energy_kwh',
+        slot_obj.get('energy')) %} - {{ as_local(as_datetime(slot_start)).strftime('%d
+        %b %H:%M') if slot_start else 'okänd' }}–{{ as_local(as_datetime(slot_end)).strftime('%H:%M')
+        if slot_end else 'okänd' }} (≈{{ slot_energy | float(0) | round(2) }} kWh)
+        {%- endfor %} {% endif %}"
+      granny_task: 'SYSTEM Du är "Granny", familjens hjärtliga rådgivare. Tala svenska,
+        max 60 ord, varm men rak.
 
-        DATA
-        Status: {{ plan_status if plan_status | length > 0 else 'ok' }}
-        Sammanfattning: {{ plan_summary_clean if plan_summary_clean | length > 0 else 'Ingen sammanfattning från AI.' }}
-        Total energi: {{ total_energy_kwh | float(0) | round(2) }} kWh
-        Total kostnad: {{ total_cost_value | float(0) | round(2) }} {{ plan_currency }}
-        Tidsluckor:
-        {{ schedule_lines }}
+        DATA Status: {{ plan_status if plan_status | length > 0 else ''ok'' }} Sammanfattning:
+        {{ plan_summary_clean if plan_summary_clean | length > 0 else ''Ingen sammanfattning
+        tillgänglig.'' }} Total energi: {{ total_energy_kwh | float(0) | round(2)
+        }} kWh Total kostnad: {{ total_cost_value | float(0) | round(2) }} {{ plan_currency
+        }} Tidsluckor: {{ schedule_lines }}
 
-        UPPDRAG
-        Förklara planen kort, peppa familjen och påminn om tidsluckorna.
-      broadcast_fallback: >-
-        {% if plan_notes_clean | length > 0 %}
-          {{ plan_notes_clean }}
-        {% elif plan_summary_clean | length > 0 %}
-          {{ plan_summary_clean }}
-        {% else %}
-          Laddningsplanen är uppdaterad men AI gav ingen text.
-        {% endif %}
-      status_notification_body: >-
-        {% set ns = namespace(parts=[]) %}
-        {% if plan_schedule_effective | length == 0 %}
-          {% set ns.parts = ns.parts + ['Ingen laddning planerad just nu.'] %}
-        {% else %}
-          {% set ns.parts = ns.parts + ['Plan klar: ' ~ (plan_schedule_effective | length) ~ ' slotar, energi ≈ ' ~ (total_energy_kwh | float(0) | round(2)) ~ ' kWh, kostnad ≈ ' ~ (total_cost_value | float(0) | round(2)) ~ ' ' ~ plan_currency ~ '.'] %}
-        {% endif %}
-        {% set ns.parts = ns.parts + ['Total energi ≈ ' ~ (total_energy_kwh | float(0) | round(2)) ~ ' kWh, total kostnad ≈ ' ~ (total_cost_value | float(0) | round(2)) ~ ' ' ~ plan_currency ~ '.'] %}
-        {% for slot in plan_schedule_effective %}
-          {% set slot_obj = slot %}
-          {% if slot_obj is string %}
-            {% set slot_obj = slot_obj | from_json(default={}) %}
-          {% endif %}
-          {% set slot_start = slot_obj.get('start') %}
-          {% set slot_end = slot_obj.get('end') %}
-          {% set slot_energy = slot_obj.get('energy_kwh', slot_obj.get('energy')) %}
-          {% set ns.parts = ns.parts + ['- ' ~ (as_local(as_datetime(slot_start)).strftime('%d %b %H:%M') if slot_start else 'okänd') ~ '–' ~ (as_local(as_datetime(slot_end)).strftime('%H:%M') if slot_end else 'okänd') ~ ' (≈' ~ (slot_energy | float(0) | round(2)) ~ ' kWh)'] %}
-        {% endfor %}
-        {{ ns.parts | join('\n') }}
+        UPPDRAG Förklara planen kort, peppa familjen och påminn om tidsluckorna.'
+      broadcast_fallback: "{% if plan_notes_clean | length > 0 %}\n  {{ plan_notes_clean
+        }}\n{% elif plan_summary_clean | length > 0 %}\n  {{ plan_summary_clean }}\n{%
+        else %}\n  Laddningsplanen är uppdaterad men ingen text genererades.\n{% endif
+        %}"
+      status_notification_body: "{% set ns = namespace(parts=[]) %} {% if plan_schedule_effective
+        | length == 0 %}\n  {% set ns.parts = ns.parts + ['Ingen laddning planerad
+        just nu.'] %}\n{% else %}\n  {% set ns.parts = ns.parts + ['Plan klar: ' ~
+        (plan_schedule_effective | length) ~ ' slotar, energi ≈ ' ~ (total_energy_kwh
+        | float(0) | round(2)) ~ ' kWh, kostnad ≈ ' ~ (total_cost_value | float(0)
+        | round(2)) ~ ' ' ~ plan_currency ~ '.'] %}\n{% endif %} {% set ns.parts =
+        ns.parts + ['Total energi ≈ ' ~ (total_energy_kwh | float(0) | round(2)) ~
+        ' kWh, total kostnad ≈ ' ~ (total_cost_value | float(0) | round(2)) ~ ' '
+        ~ plan_currency ~ '.'] %} {% for slot in plan_schedule_effective %}\n  {%
+        set slot_obj = slot %}\n  {% if slot_obj is string %}\n    {% set slot_obj
+        = slot_obj | from_json(default={}) %}\n  {% endif %}\n  {% set slot_start
+        = slot_obj.get('start') %}\n  {% set slot_end = slot_obj.get('end') %}\n  {%
+        set slot_energy = slot_obj.get('energy_kwh', slot_obj.get('energy')) %}\n
+        \ {% set ns.parts = ns.parts + ['- ' ~ (as_local(as_datetime(slot_start)).strftime('%d
+        %b %H:%M') if slot_start else 'okänd') ~ '–' ~ (as_local(as_datetime(slot_end)).strftime('%H:%M')
+        if slot_end else 'okänd') ~ ' (≈' ~ (slot_energy | float(0) | round(2)) ~
+        ' kWh)'] %}\n{% endfor %} {{ ns.parts | join('\\n') }}"
   - action: script.granny_broadcast
     data:
       severity: info
@@ -1166,4 +799,6 @@ granny_car_charge_plan:
   - action: logbook.log
     data:
       name: '{{ log_prefix }}'
-      message: 'Laddningsplan klar: {{ updated_event_count }} slotar, energi ≈ {{ total_energy_kwh | float(0) | round(2) }} kWh, kostnad ≈ {{ total_cost_value | float(0) | round(2) }} {{ plan_currency }}.'
+      message: 'Laddningsplan klar: {{ updated_event_count }} slotar, energi ≈ {{
+        total_energy_kwh | float(0) | round(2) }} kWh, kostnad ≈ {{ total_cost_value
+        | float(0) | round(2) }} {{ plan_currency }}.'

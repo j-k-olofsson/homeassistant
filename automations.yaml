@@ -69,19 +69,15 @@
     - condition: state
       state: problem
       entity_id: plant.citron
+    - condition: state
+      state:
+      - problem
+      entity_id: plant.kaffir_lime
+    - condition: state
+      state:
+      - problem
+      entity_id: plant.monstera
   actions:
-  - metadata: {}
-    data:
-      item: Växterna klagar
-      description: "{% for plant in states.plant if plant.state == 'problem' %}\n
-        \ {{- plant.name }}: \n  {%- if 'Low' in plant.attributes.moisture_status
-        %} Behöver vattnas.{% endif %}\n  {%- if 'High' in plant.attributes.moisture_status
-        %} För mycket vatten!{% endif %}\n  {%- if 'Low' in plant.attributes.conductivity_status
-        %} Behöver näring.{% endif %}\n  {%- if 'High' in plant.attributes.conductivity_status
-        %} För mycket näring!{% endif %}\n  {% if loop.last %}{{ \"\\n\" }}{% endif
-        %}\n{% endfor %}"
-    action: script.logga_arbetsuppgift
-    enabled: false
   - action: script.granny_broadcast
     metadata: {}
     data:
@@ -874,7 +870,9 @@
       - ha
       - tts
       - mobile
+      - slack
       tts_media_player: media_player.grupp_grannys_hogtalare
+      slack_channel: '#elpriser'
   mode: queued
   max: 10
 - id: '1693323915636'
@@ -1909,9 +1907,8 @@
       - action: logbook.log
         data:
           name: '[Granny AI-Laddning]'
-          message: >-
-            Planeringen hoppades över eftersom kalendern redan innehåller en laddningsplan
-            som startar {{ as_local(as_datetime(granny_calendar_next_start)).strftime('%d
+          message: Planeringen hoppades över eftersom kalendern redan innehåller en
+            laddningsplan som startar {{ as_local(as_datetime(granny_calendar_next_start)).strftime('%d
             %b %H:%M') if granny_calendar_next_start not in [None, '', 'unknown',
             'unavailable'] else 'inom fönstret' }}.
       - action: persistent_notification.create

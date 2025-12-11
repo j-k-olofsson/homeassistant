@@ -6,7 +6,7 @@ substitutions:
   node_comment: Shelly Dimmer 2 (VLAN IoT)
   log_level: INFO
   stm_fw_update: "false"
-  node_min_brightness: "600"
+  node_min_brightness: "435"
   node_preset_tripple_tap: "1%"
   transition_period: 1s
 

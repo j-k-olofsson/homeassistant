@@ -21,4 +21,5 @@ sensor:
     accuracy_decimals: 1
     name: ${node_name} Temperature
     filters:
-          - offset: 0.6
+      - offset: 0.6
+      - round: 1  # will round to 1 decimal place

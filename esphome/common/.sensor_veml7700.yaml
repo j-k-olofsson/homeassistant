@@ -1,15 +1,8 @@
 # Shared package for the VEML7700 ambient light sensor
 
-i2c:
-  - id: veml7700_bus
-    sda: ${veml7700_sda_pin}
-    scl: ${veml7700_scl_pin}
-    frequency: 100kHz
-    scan: true
-
 sensor:
   - platform: veml7700
-    i2c_id: veml7700_bus
+    i2c_id: ${sensor_i2c_bus_id}
     update_interval: ${veml7700_update_interval}
     ambient_light:
       name: ${node_name} Illuminance

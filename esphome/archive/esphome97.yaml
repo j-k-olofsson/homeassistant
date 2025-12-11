@@ -8,4 +8,4 @@ substitutions:
 
 packages:
   file: !include common/.board_d1_mini32.yaml
-  proxy: !include common/.blueprint_bluetooth_proxy.yaml
+  # proxy: !include common/.blueprint_bluetooth_proxy.yaml

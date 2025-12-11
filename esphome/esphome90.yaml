@@ -3,13 +3,13 @@ substitutions:
   node_id: "90"
   node_name: esphome90
   node_friendly_name: Salt (verkstan)
-  node_comment: Esp32 D1 mini (BTPrxy) (VLAN IoT)
+  node_comment: Esp32 D1 mini (VLAN IoT)
   log_level: DEBUG
 
 # Include packages for this device specific type
 packages:
   device: !include common/.board_d1_mini32.yaml
-  proxy: !include common/.blueprint_bluetooth_proxy.yaml
+  # proxy: !include common/.blueprint_bluetooth_proxy.yaml
 
 api:
 

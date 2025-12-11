@@ -4,12 +4,25 @@ substitutions:
   node_name: esphome98
   node_friendly_name: Ljussensor
   node_comment: ESP32-C3 (lux/UV sensor) (VLAN IoT)
-  log_level: INFO
-  veml7700_sda_pin: GPIO5
-  veml7700_scl_pin: GPIO6
+  log_level: DEBUG
+  sensor_i2c_bus_id: sensor_bus
+  sensor_i2c_sda_pin: GPIO5
+  sensor_i2c_scl_pin: GPIO6
   veml7700_update_interval: 30s
+  ltr390_update_interval: 30s
+  ltr390_gain: X3
+  ltr390_resolution: 18
+  ltr390_window_correction: 1.0
 
 # Include packages for this device specific type
 packages:
   board: !include common/.board_esp32_c3_arduino.yaml
   veml7700: !include common/.sensor_veml7700.yaml
+  ltr390: !include common/.sensor_ltr390.yaml
+
+i2c:
+  - id: ${sensor_i2c_bus_id}
+    sda: ${sensor_i2c_sda_pin}
+    scl: ${sensor_i2c_scl_pin}
+    frequency: 100kHz
+    scan: true

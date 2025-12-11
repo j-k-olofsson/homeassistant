@@ -1,0 +1,18 @@
+# Shared package for the LTR390 UV + ambient light sensor
+
+sensor:
+  - platform: ltr390
+    i2c_id: ${sensor_i2c_bus_id}
+    update_interval: ${ltr390_update_interval}
+    gain: ${ltr390_gain}
+    resolution: ${ltr390_resolution}
+    window_correction_factor: ${ltr390_window_correction}
+    uv_index:
+      name: ${node_name} UV Index
+      icon: mdi:weather-sunny-alert
+      accuracy_decimals: 2
+    ambient_light:
+      name: ${node_name} UV Ambient
+      device_class: illuminance
+      state_class: measurement
+      accuracy_decimals: 1

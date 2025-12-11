@@ -46,3 +46,12 @@ text_sensor:
                 state: "NIGHT"   
           then:
             - light.turn_off: mono_light
+      - if:
+          condition:
+            - text_sensor.state:
+                id: light_scene
+                state: "DAWN"   
+          then:
+            - light.turn_on: 
+                id: mono_light
+                brightness: 50%
