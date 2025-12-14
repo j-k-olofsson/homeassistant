@@ -2,7 +2,7 @@
 substitutions:
   node_comment: BATTERY Lolin32 Lux/UV - Testrigg
   node_name: deepsleep100
-  log_level: DEBUG
+  log_level: INFO
 
 # Include packages for this device specific type
 packages:

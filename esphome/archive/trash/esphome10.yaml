@@ -4,7 +4,7 @@ substitutions:
   node_name: esphome10
   node_friendly_name: Termostat (pumphuset)
   node_comment: Sonoff THR316D
-  log_level: DEBUG
+  log_level: INFO
   target_temp: "5"
   away_target_temp: "5"
 

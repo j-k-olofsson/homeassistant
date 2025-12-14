@@ -4,7 +4,7 @@ substitutions:
   node_name: esphome98
   node_friendly_name: Ljussensor
   node_comment: ESP32-C3 (lux/UV sensor) (VLAN IoT)
-  log_level: DEBUG
+  log_level: INFO
   sensor_i2c_bus_id: sensor_bus
   sensor_i2c_sda_pin: GPIO5
   sensor_i2c_scl_pin: GPIO6

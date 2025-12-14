@@ -4,7 +4,7 @@ substitutions:
   node_name: esphome90
   node_friendly_name: Salt (verkstan)
   node_comment: Esp32 D1 mini (VLAN IoT)
-  log_level: DEBUG
+  log_level: INFO
 
 # Include packages for this device specific type
 packages:

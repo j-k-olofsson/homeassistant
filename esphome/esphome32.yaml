@@ -4,7 +4,7 @@ substitutions:
   node_name: esphome32
   node_friendly_name: Blomlampa (Shelly Plus RGBW PM)
   node_comment: Shelly Plus RGBW PM (VLAN IoT)
-  log_level: DEBUG
+  log_level: INFO
   late_on: "false"
   growlight_light_id: growlight_rgbw
   sunrise_start_brightness: "1%"
