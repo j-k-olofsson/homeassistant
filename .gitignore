@@ -38,3 +38,4 @@ __pycache__/
 *.tmp
 # Lokala hemligheter för Granny-trigger
 tools/granny_plan.env
+zigbee.*
