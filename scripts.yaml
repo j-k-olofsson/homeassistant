@@ -23,14 +23,20 @@ rescan_wifi_on_esphome_nodes:
       for_each: '{{ integration_entities(''esphome'') | select(''search'', ''_wifi_bssid$'')
         | list | sort }}'
       sequence:
-      - action: esphome.esphome{{ repeat.item[14:16] }}_scan_wifi
-        continue_on_error: true
-      - action: notify.send_message
-        continue_on_error: true
-        data:
-          message: 'Rescan wifi: esphome{{ repeat.item[14:16] }}'
-        target:
-          entity_id: notify.file
+      - variables:
+          _esphome_node: "{% set dev = device_id(repeat.item) %}\n            {% set ns = namespace(node='') %}\n            {% if 'esphome' in repeat.item %}\n              {% set matches = repeat.item | regex_findall('esphome\\\\d{2}') %}\n              {% if matches %}\n                {% set ns.node = matches[0] %}\n              {% endif %}\n            {% endif %}\n            {% if dev and ns.node == '' %}\n              {% for ent in device_entities(dev) %}\n                {% set matches = ent | regex_findall('esphome\\\\d{2}') %}\n                {% if matches %}\n                  {% set ns.node = matches[0] %}\n                  {% break %}\n                {% endif %}\n              {% endfor %}\n            {% endif %}\n            {{ ns.node }}\n"
+      - if:
+        - condition: template
+          value_template: '{{ _esphome_node | length > 0 }}'
+        then:
+        - action: esphome.{{ _esphome_node }}_scan_wifi
+          continue_on_error: true
+        - action: notify.send_message
+          continue_on_error: true
+          data:
+            message: 'Rescan wifi: {{ _esphome_node }}'
+          target:
+            entity_id: notify.file
 granny_broadcast:
   alias: Granny Broadcast (kanalneutral)
   description: 'Grannifiera en uppgift och (valfritt) skicka till valda kanaler. Returnerar

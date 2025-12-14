@@ -8,7 +8,7 @@ substitutions:
   stm_fw_update: "false"
   node_min_brightness: "450"
   node_preset_tripple_tap: "1%"
-  transition_period: 3s
+  transition_period: 1s
 
 packages:
   file: !include common/.device_shelly_dimmer_2.yaml

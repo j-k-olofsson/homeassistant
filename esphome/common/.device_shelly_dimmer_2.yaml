@@ -32,6 +32,7 @@ light:
     leading_edge: false
     # warmup_brightness: ${node_min_brightness}
     gamma_correct: 0
+    max_brightness: 95%
     min_brightness: ${node_min_brightness}
     default_transition_length: ${transition_period}
     restore_mode: RESTORE_DEFAULT_OFF

@@ -1,0 +1,110 @@
+# Quarter-based electricity cost tooling
+input_number:
+  nordpool_monthly_fee:
+    name: Månadsavgifter elhandel + nät
+    icon: mdi:cash-multiple
+    unit_of_measurement: ":-"
+    min: 0
+    max: 10000
+    step: 10
+    mode: box
+    initial: 1300
+
+template:
+  - trigger:
+      - platform: time_pattern
+        minutes: "/15"
+    sensor:
+      - name: Förbrukning per kvart
+        unique_id: quarter_energy_consumed
+        unit_of_measurement: "kWh"
+        device_class: energy
+        state_class: measurement
+        icon: mdi:lightning-bolt
+        state: >-
+          {% set total = states('sensor.elmatare_elstolpen_energy_consumed_luxembourg') | float(0) %}
+          {% set previous = this.attributes.last_total | default(total) | float(0) %}
+          {% set delta = total - previous %}
+          {{ 0 if delta < 0 else delta | round(4) }}
+        attributes:
+          last_total: "{{ states('sensor.elmatare_elstolpen_energy_consumed_luxembourg') | float(0) }}"
+          quarter_start: >-
+            {{ now().replace(minute=(now().minute//15)*15, second=0, microsecond=0).isoformat() }}
+      - name: Elpris per kvart
+        unique_id: quarter_energy_price
+        unit_of_measurement: "SEK/kWh"
+        device_class: monetary
+        state_class: measurement
+        icon: mdi:cash-clock
+        state: >-
+          {% set base = states('sensor.template_nordpool_base_cost_current_hour') | float(0) %}
+          {% set trade = states('input_number.nordpool_trade_fee') | float(0) %}
+          {% set spot_fee = states('input_number.nordpool_spot_fee') | float(0) %}
+          {% set certificate = states('input_number.nordpool_certificate_fee') | float(0) %}
+          {% set transfer = states('input_number.nordpool_energy_transfer_fee') | float(0) %}
+          {% set tax = states('input_number.nordpool_energy_tax') | float(0) %}
+          {% set vat = states('input_number.nordpool_vat') | float(25) %}
+          {% set subtotal = base + trade + spot_fee + certificate + transfer + tax %}
+          {{ (subtotal * (1 + vat / 100)) | round(5) }}
+        attributes:
+          quarter_start: >-
+            {{ now().replace(minute=(now().minute//15)*15, second=0, microsecond=0).isoformat() }}
+
+sql:
+  - name: Kvartbaserad elkostnadsprognos
+    unique_id: quarter_based_cost_forecast
+    db_url: mysql://homeassistant:IceAgeRulesMDB@core-mariadb/homeassistant?charset=utf8mb4
+    unit_of_measurement: ":-"
+    column: forecast
+    query: >-
+      WITH params AS (
+        SELECT
+          UNIX_TIMESTAMP(DATE_FORMAT(NOW(), '%Y-%m-01 00:00:00')) AS month_start_ts,
+          DAYOFMONTH(LAST_DAY(NOW())) AS days_in_month
+      ),
+      energy AS (
+        SELECT
+          FLOOR(last_updated_ts / 900) * 900 AS quarter_ts,
+          MAX(CAST(state AS DECIMAL(10,6))) AS kwh
+        FROM states
+        WHERE metadata_id = (SELECT metadata_id FROM states_meta WHERE entity_id = 'sensor.forbrukning_per_kvart')
+          AND last_updated_ts >= (SELECT month_start_ts FROM params)
+        GROUP BY quarter_ts
+      ),
+      price AS (
+        SELECT
+          FLOOR(last_updated_ts / 900) * 900 AS quarter_ts,
+          MAX(CAST(state AS DECIMAL(10,6))) AS price
+        FROM states
+        WHERE metadata_id = (SELECT metadata_id FROM states_meta WHERE entity_id = 'sensor.elpris_per_kvart')
+          AND last_updated_ts >= (SELECT month_start_ts FROM params)
+        GROUP BY quarter_ts
+      ),
+      joined AS (
+        SELECT e.quarter_ts, e.kwh, p.price
+        FROM energy e
+        JOIN price p ON p.quarter_ts = e.quarter_ts
+      ),
+      summary AS (
+        SELECT
+          SUM(price * kwh) AS cost_so_far,
+          COUNT(*) AS measured_quarters
+        FROM joined
+      ),
+      monthly_fee AS (
+        SELECT CAST(state AS DECIMAL(10,2)) AS fee
+        FROM states
+        WHERE metadata_id = (SELECT metadata_id FROM states_meta WHERE entity_id = 'input_number.nordpool_monthly_fee')
+        ORDER BY state_id DESC
+        LIMIT 1
+      )
+      SELECT ROUND(
+        COALESCE(
+          (
+            SELECT (cost_so_far / NULLIF(measured_quarters, 0)) * ((SELECT days_in_month FROM params) * 96)
+            FROM summary
+          ),
+          0
+        ) + COALESCE((SELECT fee FROM monthly_fee), 0),
+        0
+      ) AS forecast;

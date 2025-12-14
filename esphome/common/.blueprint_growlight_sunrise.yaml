@@ -1,0 +1,105 @@
+# Blueprint for growlight scenes w/ sunrise & sunset fades
+# Expects the following substitutions to exist in parent files:
+#   - growlight_light_id : light entity id
+#   - sunrise_start_brightness : e.g. "5%"
+#   - sunrise_end_brightness   : e.g. "100%"
+#   - sunrise_duration         : e.g. "3600s"
+#   - sunrise_pre_transition   : e.g. "5s"
+#   - manual_transition        : e.g. "5s"
+#   - manual_brightness        : e.g. "90%"
+#   - sunset_duration          : e.g. "3600s"
+#   - sunrise_red/green/blue/white : channel mix during sunrise
+#   - night_red_brightness     : e.g. "10%"
+#   - late_on                  : bool string ("true"/"false")
+
+esphome:
+  on_boot:
+    priority: -50
+    then:
+      - delay: 5s
+      - script.execute: apply_growlight_scene
+
+text_sensor:
+  - platform: homeassistant
+    id: myGrowlightScene
+    entity_id: input_select.growlight_scene
+    internal: true
+    on_value:
+      - script.execute: apply_growlight_scene
+
+button:
+  - platform: template
+    id: growlight_apply_scene
+    name: ${node_name} Apply Growlight Scene
+    entity_category: config
+    on_press:
+      - script.execute: apply_growlight_scene
+
+script:
+  - id: apply_growlight_scene
+    mode: restart
+    then:
+      - if:
+          condition:
+            and:
+              - text_sensor.state:
+                  id: myGrowlightScene
+                  state: "ON"
+              - lambda: |-
+                  return !${late_on};
+          then:
+            - script.execute: growlight_sunrise
+      - if:
+          condition:
+            text_sensor.state:
+              id: myGrowlightScene
+              state: "LATE_ON"
+          then:
+            - script.execute: growlight_manual_on
+      - if:
+          condition:
+            text_sensor.state:
+              id: myGrowlightScene
+              state: "OFF"
+          then:
+            - script.execute: growlight_sunset
+
+  - id: growlight_sunrise
+    mode: restart
+    then:
+      - light.turn_on:
+          id: ${growlight_light_id}
+          transition_length: ${sunrise_pre_transition}
+          brightness: ${sunrise_start_brightness}
+          red: ${sunrise_red}
+          green: ${sunrise_green}
+          blue: ${sunrise_blue}
+          white: ${sunrise_white}
+      - light.turn_on:
+          id: ${growlight_light_id}
+          transition_length: ${sunrise_duration}
+          brightness: ${sunrise_end_brightness}
+
+  - id: growlight_manual_on
+    mode: restart
+    then:
+      - light.turn_on:
+          id: ${growlight_light_id}
+          transition_length: ${manual_transition}
+          brightness: ${manual_brightness}
+          red: ${sunrise_red}
+          green: ${sunrise_green}
+          blue: ${sunrise_blue}
+          white: ${sunrise_white}
+
+  - id: growlight_sunset
+    mode: restart
+    then:
+      - light.turn_on:
+          id: ${growlight_light_id}
+          transition_length: ${sunset_duration}
+          brightness: ${night_red_brightness}
+          red: 100%
+          green: 0%
+          blue: 0%
+          white: 0%

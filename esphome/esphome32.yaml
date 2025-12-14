@@ -1,0 +1,25 @@
+# Device specific substitutions
+substitutions:
+  node_id: "32"
+  node_name: esphome32
+  node_friendly_name: Blomlampa (Shelly Plus RGBW PM)
+  node_comment: Shelly Plus RGBW PM (VLAN IoT)
+  log_level: DEBUG
+  late_on: "false"
+  growlight_light_id: growlight_rgbw
+  sunrise_start_brightness: "1%"
+  sunrise_end_brightness: "50%"
+  sunrise_duration: 3600s
+  sunrise_pre_transition: 5s
+  manual_transition: 8s
+  manual_brightness: "100%"
+  sunset_duration: 3600s
+  night_red_brightness: "10%"
+  sunrise_red: "0%"
+  sunrise_green: "0%"
+  sunrise_blue: "0%"
+  sunrise_white: "100%"
+
+# Include packages for this device type
+packages:
+  file: !include common/.device_shelly_plus_rgbw_pm_growlight.yaml
