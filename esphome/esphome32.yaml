@@ -8,12 +8,12 @@ substitutions:
   late_on: "false"
   growlight_light_id: growlight_rgbw
   sunrise_start_brightness: "1%"
-  sunrise_end_brightness: "50%"
-  sunrise_duration: 3600s
+  sunrise_end_brightness: "100%"
+  sunrise_duration: 60s
   sunrise_pre_transition: 5s
   manual_transition: 8s
   manual_brightness: "100%"
-  sunset_duration: 3600s
+  sunset_duration: 60s
   night_red_brightness: "10%"
   sunrise_red: "0%"
   sunrise_green: "0%"

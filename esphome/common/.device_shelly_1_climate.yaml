@@ -20,6 +20,12 @@ esp8266:
 packages:
   device_base: !include .base.yaml
 
+external_components:
+  - source:
+      type: local
+      path: /config/esphome/external_components
+    components: [shelly_dallas]
+
 switch:
   - platform: gpio
     pin: GPIO04

@@ -35,15 +35,18 @@ switch:
 #       number: GPIO33
 #       inverted: true
 
+i2c:
+  - id: cam_i2c
+    sda: GPIO26
+    scl: GPIO27
+
 esp32_camera:
   name: ${node_name} Camera
   id: myCam
   external_clock:
     pin: GPIO0
     frequency: 20MHz
-  i2c_pins:
-    sda: GPIO26
-    scl: GPIO27
+  i2c_id: cam_i2c
   data_pins: [GPIO5, GPIO18, GPIO19, GPIO21, GPIO36, GPIO39, GPIO34, GPIO35]
   vsync_pin: GPIO25
   href_pin: GPIO23

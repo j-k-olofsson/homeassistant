@@ -42,6 +42,8 @@ logger:
 
 # Enable Home Assistant API
 api:
+  encryption:
+    key: !secret ENCRYPTION_KEY
   actions:
     - action: set_dsmr_key
       variables:

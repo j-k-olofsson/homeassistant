@@ -307,11 +307,6 @@
       - condition: state
         entity_id: input_boolean.guest_mode
         state: 'off'
-      - metadata: {}
-        data: {}
-        target:
-          entity_id: light.grupp_sanglampor
-        action: light.turn_on
   mode: queued
   max: 10
 - id: '1670242070937'
@@ -412,7 +407,6 @@
         data: {}
         target:
           entity_id:
-          - light.blomlampa_trappan
           - light.vaxtlampa_frosadd_koket_shpls
     - conditions:
       - condition: trigger
@@ -437,7 +431,6 @@
         data: {}
         target:
           entity_id:
-          - light.blomlampa_trappan
           - light.vaxtlampa_frosadd_koket_shpls
   mode: queued
   max: 10
@@ -448,10 +441,18 @@
   triggers:
   - at: 06:00:00
     trigger: time
+    weekday:
+    - sun
+    - sat
+    - fri
+    - thu
+    - wed
+    - tue
+    - mon
   conditions:
   - condition: numeric_state
     entity_id: sensor.esphome90_esphome90_salt_level
-    below: 20
+    below: 30
   actions:
   - action: script.granny_broadcast
     metadata: {}
@@ -1099,9 +1100,9 @@
         entity_id: b7174089bed6ae52fba5dab87817494f
         type: press
       - type: turn_off
-        device_id: f9d1287bc61f4cff4e138eb78408dcb7
-        entity_id: e91f51fad1a2f24d641f187f56d21221
-        domain: switch
+        device_id: f6384d84be3c05b7a1f2f88a939e3238
+        entity_id: 8f2695d0115bb41a3ee1326795219c7f
+        domain: light
       - type: turn_off
         device_id: 475cf4bfa38f96d9d9d5f37c1fbf7952
         entity_id: b5cf67e3b6938e441d88418849c91fd3
@@ -1124,10 +1125,10 @@
         id:
         - bio_off
       sequence:
-      - type: turn_off
-        device_id: f9d1287bc61f4cff4e138eb78408dcb7
-        entity_id: e91f51fad1a2f24d641f187f56d21221
-        domain: switch
+      - device_id: f6384d84be3c05b7a1f2f88a939e3238
+        domain: button
+        entity_id: dac6a63307fc76c20bba76a1aba6c722
+        type: press
       - type: turn_off
         device_id: 475cf4bfa38f96d9d9d5f37c1fbf7952
         entity_id: b5cf67e3b6938e441d88418849c91fd3
@@ -2299,24 +2300,3 @@
     ewma_alpha: 0.3
     bootstrap_guess_sec: 120
 - *id001
-- id: '1759825373004'
-  alias: Av/På Prusa XL via "longpush" på Voice PE
-  description: Växlar Av/På för huvudströmbrytaren till Prusa XL vid långtryck på
-    Voice PE
-  triggers:
-  - trigger: state
-    entity_id:
-    - event.home_assistant_voice_096460_button_press
-    attribute: event_type
-    to: long_press
-    for:
-      hours: 0
-      minutes: 0
-      seconds: 3
-  conditions: []
-  actions:
-  - type: toggle
-    device_id: 9eb512d5a7378320ca8a581b38b8edff
-    entity_id: 95de524d3e20624a14ab5de38b34ad4c
-    domain: switch
-  mode: single

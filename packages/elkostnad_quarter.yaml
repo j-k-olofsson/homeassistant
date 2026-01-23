@@ -15,21 +15,6 @@ template:
       - platform: time_pattern
         minutes: "/15"
     sensor:
-      - name: Förbrukning per kvart
-        unique_id: quarter_energy_consumed
-        unit_of_measurement: "kWh"
-        device_class: energy
-        state_class: measurement
-        icon: mdi:lightning-bolt
-        state: >-
-          {% set total = states('sensor.elmatare_elstolpen_energy_consumed_luxembourg') | float(0) %}
-          {% set previous = this.attributes.last_total | default(total) | float(0) %}
-          {% set delta = total - previous %}
-          {{ 0 if delta < 0 else delta | round(4) }}
-        attributes:
-          last_total: "{{ states('sensor.elmatare_elstolpen_energy_consumed_luxembourg') | float(0) }}"
-          quarter_start: >-
-            {{ now().replace(minute=(now().minute//15)*15, second=0, microsecond=0).isoformat() }}
       - name: Elpris per kvart
         unique_id: quarter_energy_price
         unit_of_measurement: "SEK/kWh"
@@ -64,12 +49,20 @@ sql:
       ),
       energy AS (
         SELECT
-          FLOOR(last_updated_ts / 900) * 900 AS quarter_ts,
-          MAX(CAST(state AS DECIMAL(10,6))) AS kwh
-        FROM states
-        WHERE metadata_id = (SELECT metadata_id FROM states_meta WHERE entity_id = 'sensor.forbrukning_per_kvart')
-          AND last_updated_ts >= (SELECT month_start_ts FROM params)
+          FLOOR(st.start_ts / 900) * 900 AS quarter_ts,
+          GREATEST(
+            MAX(CAST(st.state AS DECIMAL(16,6))) - MIN(CAST(st.state AS DECIMAL(16,6))),
+            0
+          ) AS kwh
+        FROM statistics_short_term st
+        WHERE st.metadata_id = (
+            SELECT id
+            FROM statistics_meta
+            WHERE statistic_id = 'sensor.elmatare_elstolpen_energy_consumed_luxembourg'
+          )
+          AND st.start_ts >= (SELECT month_start_ts FROM params)
         GROUP BY quarter_ts
+        HAVING kwh > 0 AND kwh < 20
       ),
       price AS (
         SELECT

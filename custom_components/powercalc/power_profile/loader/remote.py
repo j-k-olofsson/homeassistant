@@ -11,10 +11,13 @@ from typing import Any, NotRequired, TypedDict, cast
 import aiohttp
 from aiohttp import ClientError
 import async_timeout
+from awesomeversion import AwesomeVersion
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers.storage import STORAGE_DIR
+from homeassistant.loader import async_get_integration
 
+from custom_components.powercalc.const import API_URL, DOMAIN
 from custom_components.powercalc.helpers import async_cache
 from custom_components.powercalc.power_profile.error import LibraryLoadingError, ProfileDownloadError
 from custom_components.powercalc.power_profile.loader.protocol import Loader
@@ -22,9 +25,8 @@ from custom_components.powercalc.power_profile.power_profile import DeviceType
 
 _LOGGER = logging.getLogger(__name__)
 
-DOWNLOAD_PROXY = "https://api.powercalc.nl"
-ENDPOINT_LIBRARY = f"{DOWNLOAD_PROXY}/library"
-ENDPOINT_DOWNLOAD = f"{DOWNLOAD_PROXY}/download"
+ENDPOINT_LIBRARY = f"{API_URL}/library"
+ENDPOINT_DOWNLOAD = f"{API_URL}/download"
 
 TIMEOUT_SECONDS = 30
 
@@ -57,6 +59,8 @@ class RemoteLoader(Loader):
     async def initialize(self) -> None:
         """Initialize the loader."""
 
+        powercalc_version = (await async_get_integration(self.hass, DOMAIN)).version
+
         self.library_contents = await self.load_library_json()
 
         self.profile_hashes = await self.hass.async_add_executor_job(self.load_profile_hashes)
@@ -75,10 +79,23 @@ class RemoteLoader(Loader):
 
             # Store model info and group models by manufacturer
             self.model_infos.update({f"{manufacturer_name}/{model.get('id')!s}": model for model in models})
-            self.manufacturer_models[manufacturer_name] = models
+            self.manufacturer_models[manufacturer_name] = []
 
             model_lookup: dict[str, list[LibraryModel]] = {}
             for model in models:
+                min_version = model.get("min_version")
+                if min_version and powercalc_version and powercalc_version < AwesomeVersion(min_version):
+                    _LOGGER.debug(
+                        "Skipping model %s/%s as it requires powercalc version %s (current: %s)",
+                        manufacturer_name,
+                        model.get("id"),
+                        min_version,
+                        powercalc_version,
+                    )
+                    continue
+
+                self.manufacturer_models[manufacturer_name].append(model)
+
                 model_id = str(model.get("id")).lower()
 
                 # Exact match → append first (high priority)
@@ -179,27 +196,10 @@ class RemoteLoader(Loader):
         }
 
     @async_cache
-    async def find_model(self, manufacturer: str, search: set[str], skip_aliases: bool = False) -> set[str]:
+    async def find_model(self, manufacturer: str, search: set[str]) -> list[str]:
         """Find matching model IDs in the library."""
-
         models = self.model_lookup.get(manufacturer, {})
-        search_lower = {s.lower() for s in search}
-        result = set()
-
-        for phrase_lower in search_lower:
-            if phrase_lower not in models:
-                continue
-
-            for model in models[phrase_lower]:
-                model_id = model["id"]
-                if model_id.lower() != phrase_lower and skip_aliases:
-                    aliases = {a.lower() for a in model.get("aliases", [])}
-                    if search_lower & aliases:
-                        continue
-
-                result.add(model_id)
-
-        return result
+        return [model["id"] for phrase in search if (phrase_lower := phrase.lower()) in models for model in models[phrase_lower]]
 
     @async_cache
     async def load_model(

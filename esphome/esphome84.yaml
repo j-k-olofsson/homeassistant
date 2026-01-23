@@ -1,0 +1,11 @@
+# Device specific substitutions
+substitutions:
+  node_id: "84"
+  node_name: esphome84
+  node_friendly_name: Huvudströmbrytaren Prusa XL
+  node_comment: Sonoff POWR316D (VLAN IoT)
+  log_level: INFO
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.device_sonoff_powr316d_prusa_xl.yaml

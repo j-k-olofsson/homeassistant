@@ -31,7 +31,7 @@ light:
     id: myLight
     leading_edge: false
     gamma_correct: 0
-    max_brightness: 950
+    max_brightness: 1000
     min_brightness: ${node_min_brightness}
     default_transition_length: ${transition_period}
     restore_mode: RESTORE_DEFAULT_OFF

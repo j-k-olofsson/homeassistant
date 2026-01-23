@@ -11,6 +11,9 @@ esphome:
 
 esp32:
   board: nodemcu-32s
+  framework:
+    type: arduino
+    version: recommended
 
 logger:
   level: INFO
@@ -112,7 +115,7 @@ binary_sensor:
                   state: ON
   - platform: template # this is a fake sensor to tell the screen which info to show on display
     id: page
-    publish_initial_state: true
+    trigger_on_initial_state: true
     internal: True
 
 display:

@@ -2,7 +2,7 @@
 substitutions:
   node_id: "81"
   node_name: esphome81
-  node_friendly_name: Golvvärme (sovrum/kontor)
+  node_friendly_name: Golvvärme (sovrum och kontor)
   node_comment: Sonoff POW2 (VLAN IoT)
   log_level: INFO
 

@@ -4,7 +4,7 @@ substitutions:
   node_name: esphome90
   node_friendly_name: Salt (verkstan)
   node_comment: Esp32 D1 mini (VLAN IoT)
-  log_level: INFO
+  log_level: DEBUG
 
 # Include packages for this device specific type
 packages:
@@ -12,6 +12,8 @@ packages:
   # proxy: !include common/.blueprint_bluetooth_proxy.yaml
 
 api:
+  encryption:
+    key: !secret ENCRYPTION_KEY
 
 i2c:
   sda: 17
@@ -29,9 +31,10 @@ sensor:
     accuracy_decimals: 0
     filters:
       - filter_out: nan
+      # Full saltbehållare = 0.087
       - calibrate_linear:
-          - 0.240 -> 100
-          - 0.340 -> 0
+          - 0.100 -> 100
+          - 0.400 -> 0
       - clamp:
           min_value: 0
           max_value: 100
