@@ -16,6 +16,7 @@ tts/
 media/
 www/.storage/
 .esphome/
+**/.esphome/
 
 # --- Loggar ---
 home-assistant.log
