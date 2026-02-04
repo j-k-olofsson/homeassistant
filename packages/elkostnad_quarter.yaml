@@ -1,15 +1,4 @@
 # Quarter-based electricity cost tooling
-input_number:
-  nordpool_monthly_fee:
-    name: Månadsavgifter elhandel + nät
-    icon: mdi:cash-multiple
-    unit_of_measurement: ":-"
-    min: 0
-    max: 10000
-    step: 10
-    mode: box
-    initial: 1300
-
 template:
   - trigger:
       - platform: time_pattern
