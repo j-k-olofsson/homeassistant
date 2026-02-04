@@ -47,22 +47,19 @@ sql:
           UNIX_TIMESTAMP(DATE_FORMAT(NOW(), '%Y-%m-01 00:00:00')) AS month_start_ts,
           DAYOFMONTH(LAST_DAY(NOW())) AS days_in_month
       ),
-      energy AS (
+      power_q AS (
         SELECT
           FLOOR(st.start_ts / 900) * 900 AS quarter_ts,
-          GREATEST(
-            MAX(CAST(st.state AS DECIMAL(16,6))) - MIN(CAST(st.state AS DECIMAL(16,6))),
-            0
-          ) AS kwh
+          AVG(CAST(st.mean AS DECIMAL(16,6))) AS avg_kw
         FROM statistics_short_term st
         WHERE st.metadata_id = (
             SELECT id
             FROM statistics_meta
-            WHERE statistic_id = 'sensor.elmatare_elstolpen_energy_consumed_luxembourg'
+            WHERE statistic_id = 'sensor.power_consumed'
           )
           AND st.start_ts >= (SELECT month_start_ts FROM params)
         GROUP BY quarter_ts
-        HAVING kwh > 0 AND kwh < 20
+        HAVING avg_kw > 0
       ),
       price AS (
         SELECT
@@ -74,9 +71,12 @@ sql:
         GROUP BY quarter_ts
       ),
       joined AS (
-        SELECT e.quarter_ts, e.kwh, p.price
-        FROM energy e
-        JOIN price p ON p.quarter_ts = e.quarter_ts
+        SELECT
+          pwr.quarter_ts,
+          (pwr.avg_kw * 0.25) AS kwh,
+          pr.price
+        FROM power_q pwr
+        JOIN price pr ON pr.quarter_ts = pwr.quarter_ts
       ),
       summary AS (
         SELECT
