@@ -23,6 +23,16 @@ home-assistant.log.*
 *.log
 *.log.*
 
+# --- Cache / temp ---
+**/.cache/
+**/.temp/
+**/.tmp/
+**/cache/
+**/temp/
+**/tmp/
+**/Cache/
+**/Temp/
+
 # --- OS / editorfiler ---
 *.pyc
 __pycache__/
