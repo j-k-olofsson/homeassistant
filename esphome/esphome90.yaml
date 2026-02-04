@@ -32,13 +32,16 @@ sensor:
     filters:
       - filter_out: nan
       # Full saltbehållare = 0.087
+      - sliding_window_moving_average:
+          window_size: 8
+          send_every: 1
+          send_first_at: 1
       - calibrate_linear:
           - 0.08 -> 100
           - 0.400 -> 0
       - clamp:
           min_value: 0
           max_value: 100
-      # - median:
   - platform: wifi_signal
     name: ESP WIFI Signal
     internal: false
