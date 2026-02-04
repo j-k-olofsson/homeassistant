@@ -33,7 +33,7 @@ sensor:
       - filter_out: nan
       # Full saltbehållare = 0.087
       - calibrate_linear:
-          - 0.100 -> 100
+          - 0.08 -> 100
           - 0.400 -> 0
       - clamp:
           min_value: 0

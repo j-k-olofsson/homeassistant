@@ -63,3 +63,6 @@ Notes:
 - Added external_components include for shelly_dallas in /config/esphome/common/.device_shelly_1_climate.yaml.
 - Updated shelly_dallas set_timeout usage to const char* overload (pre-2026.7.0 fix).
 - Moved unused external components to /config/esphome/archive/external_components_unused.
+- Standardized secrets to /config/esphome/secrets.yaml with /config/esphome/common/secrets.yaml as a symlink.
+- Archived legacy unused files to /config/esphome/archive/legacy_unused.
+- Normalized ownership/permissions under /config/esphome (dirs 755, files 644, secrets 600).

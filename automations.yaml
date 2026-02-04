@@ -1090,6 +1090,40 @@
         id:
         - bio_on
       sequence:
+      - choose:
+        - conditions:
+          - condition: state
+            entity_id: humidifier.bions_hygrostat
+            state: 'on'
+          sequence:
+          - action: input_boolean.turn_on
+            metadata: {}
+            data: {}
+            target:
+              entity_id: input_boolean.hemmabio_restore_hygrostat
+        default:
+        - action: input_boolean.turn_off
+          metadata: {}
+          data: {}
+          target:
+            entity_id: input_boolean.hemmabio_restore_hygrostat
+      - action: light.turn_off
+        metadata: {}
+        data: {}
+        target:
+          entity_id: light.grupp_bordslampor_bion
+      - action: light.turn_off
+        metadata: {}
+        data: {}
+        target:
+          entity_id:
+          - light.blomlampor_bion
+          - light.vaxtlampa_frosadd_koket_shpls
+      - action: humidifier.turn_off
+        metadata: {}
+        data: {}
+        target:
+          entity_id: humidifier.bions_hygrostat
       - metadata: {}
         data:
           entity_id: media_player.playstation_4
@@ -1103,14 +1137,6 @@
         device_id: f6384d84be3c05b7a1f2f88a939e3238
         entity_id: 8f2695d0115bb41a3ee1326795219c7f
         domain: light
-      - type: turn_off
-        device_id: 475cf4bfa38f96d9d9d5f37c1fbf7952
-        entity_id: b5cf67e3b6938e441d88418849c91fd3
-        domain: light
-      - type: turn_off
-        device_id: 7ba599234c2c109d3fe7d9aa2c9254c2
-        entity_id: e5d4ba3bf86ea1d43c6cee983d58fee1
-        domain: fan
       - delay:
           hours: 0
           minutes: 0
@@ -1129,10 +1155,11 @@
         domain: button
         entity_id: dac6a63307fc76c20bba76a1aba6c722
         type: press
-      - type: turn_off
-        device_id: 475cf4bfa38f96d9d9d5f37c1fbf7952
-        entity_id: b5cf67e3b6938e441d88418849c91fd3
-        domain: light
+      - action: button.press
+        metadata: {}
+        data: {}
+        target:
+          entity_id: button.esphome02_esphome02_apply_scene
       - device_id: 503fbae0fc47a65837b6e0966cfd696b
         domain: button
         entity_id: 067869c482e9824ff5e57fb6ae888b07
@@ -1146,10 +1173,55 @@
         domain: button
         entity_id: 067869c482e9824ff5e57fb6ae888b07
         type: press
-      - type: turn_on
-        device_id: 7ba599234c2c109d3fe7d9aa2c9254c2
-        entity_id: e5d4ba3bf86ea1d43c6cee983d58fee1
-        domain: fan
+      - choose:
+        - conditions:
+          - condition: state
+            entity_id: input_select.growlight_scene
+            state: 'ON'
+          sequence:
+          - action: light.turn_on
+            metadata: {}
+            data: {}
+            target:
+              entity_id: light.vaxtlampa_frosadd_koket_shpls
+        - conditions:
+          - condition: state
+            entity_id: input_select.growlight_scene
+            state: LATE_ON
+          sequence:
+          - action: light.turn_on
+            metadata: {}
+            data: {}
+            target:
+              entity_id: light.vaxtlampa_frosadd_koket_shpls
+        default:
+        - action: light.turn_off
+          metadata: {}
+          data: {}
+          target:
+            entity_id: light.vaxtlampa_frosadd_koket_shpls
+      - action: light.turn_on
+        metadata: {}
+        data: {}
+        target:
+          entity_id: light.grupp_bordslampor_bion
+      - choose:
+        - conditions:
+          - condition: state
+            entity_id: input_boolean.hemmabio_restore_hygrostat
+            state: 'on'
+          sequence:
+          - action: humidifier.turn_on
+            metadata: {}
+            data: {}
+            target:
+              entity_id: humidifier.bions_hygrostat
+        default:
+        - action: humidifier.turn_off
+          metadata: {}
+          data: {}
+          target:
+            entity_id: humidifier.bions_hygrostat
       - target:
           entity_id:
           - media_player.playstation_4
@@ -1490,18 +1562,18 @@
   description: Denna automation övervakar internetanslutningen och loggar status när
     den tappar eller återfår kontakt.
   triggers:
-  - type: not_connected
-    device_id: ed75858fca4c44f2b0b5a8a61000e346
-    entity_id: a3aaa880caf002a69171b9f7a7349ffa
-    domain: binary_sensor
-    trigger: device
-    id: disconnected
   - type: connected
     device_id: ed75858fca4c44f2b0b5a8a61000e346
     entity_id: a3aaa880caf002a69171b9f7a7349ffa
     domain: binary_sensor
     trigger: device
     id: connected
+  - type: not_connected
+    device_id: ed75858fca4c44f2b0b5a8a61000e346
+    entity_id: a3aaa880caf002a69171b9f7a7349ffa
+    domain: binary_sensor
+    trigger: device
+    id: disconnected
   conditions: []
   actions:
   - choose:
@@ -2300,3 +2372,321 @@
     ewma_alpha: 0.3
     bootstrap_guess_sec: 120
 - *id001
+- id: '1769682852305'
+  alias: Hemmabio - bordslampor att/dag & bio av/på
+  description: Styr bordslampor utifrån input_select.light_scene och släcker vid hemmabio.
+  triggers:
+  - entity_id: input_select.light_scene
+    to: DAY
+    id: scene_day
+    trigger: state
+  - entity_id: input_select.light_scene
+    to: DAWN
+    id: scene_dawn
+    trigger: state
+  - entity_id: input_select.light_scene
+    to: DUSK
+    id: scene_dusk
+    trigger: state
+  - entity_id: input_select.light_scene
+    to: NIGHT
+    id: scene_night
+    trigger: state
+  - entity_id: switch.grupp_hemmabio
+    to: 'on'
+    id: bio_on
+    trigger: state
+  - entity_id: switch.grupp_hemmabio
+    to: 'off'
+    id: bio_off
+    trigger: state
+  - event_type: test_bordslampor_bio_on
+    id: bio_on
+    trigger: event
+  - event_type: test_bordslampor_bio_off
+    id: bio_off
+    trigger: event
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ trigger.id == ''bio_on'' }}'
+      sequence:
+      - action: light.turn_off
+        target:
+          entity_id:
+          - light.bordslampa_vanster
+          - light.bordslampa_hoger
+    - conditions:
+      - condition: template
+        value_template: '{{ trigger.id == ''bio_off'' }}'
+      sequence:
+      - choose:
+        - conditions:
+          - condition: state
+            entity_id: input_select.light_scene
+            state: NIGHT
+          sequence:
+          - action: light.turn_on
+            target:
+              entity_id:
+              - light.bordslampa_vanster
+              - light.bordslampa_hoger
+            data:
+              rgb_color:
+              - 255
+              - 0
+              - 0
+              brightness_pct: 15
+              transition: 1
+        - conditions:
+          - condition: state
+            entity_id: input_select.light_scene
+            state: DAY
+          sequence:
+          - action: light.turn_on
+            target:
+              entity_id:
+              - light.bordslampa_vanster
+              - light.bordslampa_hoger
+            data:
+              color_temp_kelvin: 3000
+              brightness_pct: 50
+              transition: 1
+        - conditions:
+          - condition: state
+            entity_id: input_select.light_scene
+            state: DAWN
+          sequence:
+          - action: light.turn_on
+            target:
+              entity_id:
+              - light.bordslampa_vanster
+              - light.bordslampa_hoger
+            data:
+              color_temp_kelvin: 3000
+              brightness_pct: 50
+              transition: 1
+        - conditions:
+          - condition: state
+            entity_id: input_select.light_scene
+            state: DUSK
+          sequence:
+          - action: light.turn_on
+            target:
+              entity_id:
+              - light.bordslampa_vanster
+              - light.bordslampa_hoger
+            data:
+              color_temp_kelvin: 3000
+              brightness_pct: 50
+              transition: 1
+    - conditions:
+      - condition: template
+        value_template: '{{ trigger.id in [''scene_day'',''scene_dawn'',''scene_dusk'',''scene_night'']
+          and is_state(''switch.grupp_hemmabio'',''off'') }}'
+      sequence:
+      - choose:
+        - conditions:
+          - condition: template
+            value_template: '{{ trigger.to_state is not none and trigger.from_state
+              is not none and trigger.to_state.state == ''DAY'' and trigger.from_state.state
+              == ''NIGHT'' }}'
+          sequence:
+          - variables:
+              steps: 20
+              start_brightness: 15
+              end_brightness: 50
+              start_rgb:
+              - 255
+              - 0
+              - 0
+              end_rgb:
+              - 255
+              - 214
+              - 170
+          - repeat:
+              count: '{{ steps }}'
+              sequence:
+              - variables:
+                  i: '{{ repeat.index }}'
+                  t: '{{ (i - 1) / (steps - 1) }}'
+                  r: '{{ (start_rgb[0] + (end_rgb[0] - start_rgb[0]) * t) | int }}'
+                  g: '{{ (start_rgb[1] + (end_rgb[1] - start_rgb[1]) * t) | int }}'
+                  b: '{{ (start_rgb[2] + (end_rgb[2] - start_rgb[2]) * t) | int }}'
+                  bri: '{{ (start_brightness + (end_brightness - start_brightness)
+                    * t) | int }}'
+              - action: light.turn_on
+                target:
+                  entity_id:
+                  - light.bordslampa_vanster
+                  - light.bordslampa_hoger
+                data:
+                  rgb_color: '{{ [r, g, b] }}'
+                  brightness_pct: '{{ bri }}'
+                  transition: 30
+              - delay: 00:00:30
+          - action: light.turn_on
+            target:
+              entity_id:
+              - light.bordslampa_vanster
+              - light.bordslampa_hoger
+            data:
+              color_temp_kelvin: 3000
+              brightness_pct: 50
+              transition: 30
+        - conditions:
+          - condition: state
+            entity_id: input_select.light_scene
+            state: NIGHT
+          sequence:
+          - action: light.turn_on
+            target:
+              entity_id:
+              - light.bordslampa_vanster
+              - light.bordslampa_hoger
+            data:
+              rgb_color:
+              - 255
+              - 0
+              - 0
+              brightness_pct: 15
+              transition: 1
+        - conditions:
+          - condition: state
+            entity_id: input_select.light_scene
+            state: DAY
+          sequence:
+          - action: light.turn_on
+            target:
+              entity_id:
+              - light.bordslampa_vanster
+              - light.bordslampa_hoger
+            data:
+              color_temp_kelvin: 3000
+              brightness_pct: 50
+              transition: 1
+        - conditions:
+          - condition: state
+            entity_id: input_select.light_scene
+            state: DAWN
+          sequence:
+          - action: light.turn_on
+            target:
+              entity_id:
+              - light.bordslampa_vanster
+              - light.bordslampa_hoger
+            data:
+              color_temp_kelvin: 3000
+              brightness_pct: 50
+              transition: 1
+        - conditions:
+          - condition: state
+            entity_id: input_select.light_scene
+            state: DUSK
+          sequence:
+          - action: light.turn_on
+            target:
+              entity_id:
+              - light.bordslampa_vanster
+              - light.bordslampa_hoger
+            data:
+              color_temp_kelvin: 3000
+              brightness_pct: 50
+              transition: 1
+  mode: restart
+- id: '1769691569990'
+  alias: Ateljén – bordslampa kväll/natt (mjuk morgonfade)
+  description: Justerar bordslampans färg och ljusstyrka mellan kväll, natt och morgon
+    med en mjuk fade‑övergång.
+  triggers:
+  - trigger: state
+    entity_id: input_select.light_scene
+    to: DUSK
+    id: scene_dusk
+  - trigger: state
+    entity_id: input_select.light_scene
+    to: NIGHT
+    id: scene_night
+  - trigger: state
+    entity_id: input_select.light_scene
+    to: DAY
+    id: scene_day
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: scene_dusk
+      sequence:
+      - action: light.turn_on
+        target:
+          entity_id: light.bordslampa_ateljen
+        data:
+          color_temp_kelvin: '{{ state_attr(''light.bordslampa_ateljen'', ''min_color_temp_kelvin'')
+            or 2000 }}'
+          brightness_pct: 50
+          transition: 1
+    - conditions:
+      - condition: trigger
+        id: scene_night
+      sequence:
+      - action: light.turn_on
+        target:
+          entity_id: light.bordslampa_ateljen
+        data:
+          color_temp_kelvin: '{{ state_attr(''light.bordslampa_ateljen'', ''min_color_temp_kelvin'')
+            or 2000 }}'
+          brightness_pct: 5
+          transition: 1
+    - conditions:
+      - condition: trigger
+        id: scene_day
+      sequence:
+      - choose:
+        - conditions:
+          - condition: template
+            value_template: "{{ trigger.from_state is not none\n   and trigger.from_state.state
+              == 'NIGHT' }}\n"
+          sequence:
+          - variables:
+              steps: 20
+              start_brightness: 5
+              end_brightness: 50
+          - repeat:
+              count: '{{ steps }}'
+              sequence:
+              - variables:
+                  i: '{{ repeat.index }}'
+                  t: '{{ (i - 1) / (steps - 1) }}'
+                  bri: '{{ (start_brightness + (end_brightness - start_brightness)
+                    * t) | int }}'
+              - action: light.turn_on
+                target:
+                  entity_id: light.bordslampa_ateljen
+                data:
+                  color_temp_kelvin: '{{ state_attr(''light.bordslampa_ateljen'',
+                    ''min_color_temp_kelvin'') or 2000 }}'
+                  brightness_pct: '{{ bri }}'
+                  transition: 30
+              - delay: 00:00:30
+          - action: light.turn_on
+            target:
+              entity_id: light.bordslampa_ateljen
+            data:
+              color_temp_kelvin: '{{ state_attr(''light.bordslampa_ateljen'', ''min_color_temp_kelvin'')
+                or 2000 }}'
+              brightness_pct: 50
+              transition: 30
+        default:
+        - action: light.turn_on
+          target:
+            entity_id: light.bordslampa_ateljen
+          data:
+            color_temp_kelvin: '{{ state_attr(''light.bordslampa_ateljen'', ''min_color_temp_kelvin'')
+              or 2000 }}'
+            brightness_pct: 50
+            transition: 1
+    default: []
+  mode: restart

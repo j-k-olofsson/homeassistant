@@ -426,6 +426,7 @@ class GroupedSensor(BaseEntity, SensorEntity):
     _attr_should_poll = False
     _unrecorded_attributes = frozenset({ATTR_ENTITIES, ATTR_IS_GROUP})
     _is_energy_sensor = False
+    _attr_force_update = True
 
     def __init__(
         self,
@@ -475,7 +476,8 @@ class GroupedSensor(BaseEntity, SensorEntity):
 
         self.async_on_remove(start.async_at_start(self.hass, self.on_start))
 
-        self._async_hide_members(self._sensor_config.get(CONF_HIDE_MEMBERS) or False)
+        if CONF_HIDE_MEMBERS in self._sensor_config:
+            self._async_hide_members(bool(self._sensor_config.get(CONF_HIDE_MEMBERS)))
 
     async def async_will_remove_from_hass(self) -> None:
         """
