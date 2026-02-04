@@ -4,3 +4,4 @@
 /.esphome/
 /secrets.yaml
 /common/secrets.yaml
+/external_components/
