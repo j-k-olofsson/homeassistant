@@ -1,0 +1,230 @@
+# Example Lovelace cards
+# Uses Flex Table Card (HACS) to render per-AP client lists from attributes.
+
+- type: entities
+  title: OpenWrt AP Clients
+  entities:
+    - entity: sensor.router_wi_fi_clients
+      name: Router
+    - entity: sensor.ap_192_168_10_1_wifi_clients
+      name: AP 192.168.10.1
+    - entity: sensor.ap_192_168_10_4_wifi_clients
+      name: AP 192.168.10.4
+    - entity: sensor.ap_192_168_10_5_wifi_clients
+      name: AP 192.168.10.5
+    - entity: sensor.ap_192_168_10_6_wifi_clients
+      name: AP 192.168.10.6
+    - entity: sensor.ap_192_168_10_7_wifi_clients
+      name: AP 192.168.10.7
+    - entity: sensor.ap_192_168_10_8_wifi_clients
+      name: AP 192.168.10.8
+    - entity: sensor.ap_192_168_10_9_wifi_clients
+      name: AP 192.168.10.9
+    - entity: sensor.ap_192_168_10_10_wifi_clients
+      name: AP 192.168.10.10
+    - entity: sensor.openwrt_wifi_clients_all
+      name: Total clients
+
+# One card per AP, sorted by worst RSSI (lowest value first), color-coded.
+- type: grid
+  title: Wi-Fi Clients per AP
+  columns: 2
+  square: false
+  cards:
+    - type: custom:flex-table-card
+      title: Router
+      entities:
+        - sensor.router_wi_fi_clients
+      sort_by: rssi_raw
+      sort_desc: false
+      columns:
+        - name: Name
+          attr_as_list: clients
+          modify: x.hostname
+        - name: RSSI
+          attr_as_list: clients
+          modify: x.rssi_html
+        - name: rssi_raw
+          attr_as_list: clients
+          modify: x.rssi
+          hidden: true
+      css:
+        table+: 'width: 100%;'
+        th+: 'text-align: left;'
+        td:nth-child(2)+: 'text-align: right;'
+
+    - type: custom:flex-table-card
+      title: AP 192.168.10.1
+      entities:
+        - sensor.ap_192_168_10_1_wifi_clients
+      sort_by: rssi_raw
+      sort_desc: false
+      columns:
+        - name: Name
+          attr_as_list: clients
+          modify: x.hostname
+        - name: RSSI
+          attr_as_list: clients
+          modify: x.rssi_html
+        - name: rssi_raw
+          attr_as_list: clients
+          modify: x.rssi
+          hidden: true
+      css:
+        table+: 'width: 100%;'
+        th+: 'text-align: left;'
+        td:nth-child(2)+: 'text-align: right;'
+
+    - type: custom:flex-table-card
+      title: AP 192.168.10.4
+      entities:
+        - sensor.ap_192_168_10_4_wifi_clients
+      sort_by: rssi_raw
+      sort_desc: false
+      columns:
+        - name: Name
+          attr_as_list: clients
+          modify: x.hostname
+        - name: RSSI
+          attr_as_list: clients
+          modify: x.rssi_html
+        - name: rssi_raw
+          attr_as_list: clients
+          modify: x.rssi
+          hidden: true
+      css:
+        table+: 'width: 100%;'
+        th+: 'text-align: left;'
+        td:nth-child(2)+: 'text-align: right;'
+
+    - type: custom:flex-table-card
+      title: AP 192.168.10.5
+      entities:
+        - sensor.ap_192_168_10_5_wifi_clients
+      sort_by: rssi_raw
+      sort_desc: false
+      columns:
+        - name: Name
+          attr_as_list: clients
+          modify: x.hostname
+        - name: RSSI
+          attr_as_list: clients
+          modify: x.rssi_html
+        - name: rssi_raw
+          attr_as_list: clients
+          modify: x.rssi
+          hidden: true
+      css:
+        table+: 'width: 100%;'
+        th+: 'text-align: left;'
+        td:nth-child(2)+: 'text-align: right;'
+
+    - type: custom:flex-table-card
+      title: AP 192.168.10.6
+      entities:
+        - sensor.ap_192_168_10_6_wifi_clients
+      sort_by: rssi_raw
+      sort_desc: false
+      columns:
+        - name: Name
+          attr_as_list: clients
+          modify: x.hostname
+        - name: RSSI
+          attr_as_list: clients
+          modify: x.rssi_html
+        - name: rssi_raw
+          attr_as_list: clients
+          modify: x.rssi
+          hidden: true
+      css:
+        table+: 'width: 100%;'
+        th+: 'text-align: left;'
+        td:nth-child(2)+: 'text-align: right;'
+
+    - type: custom:flex-table-card
+      title: AP 192.168.10.7
+      entities:
+        - sensor.ap_192_168_10_7_wifi_clients
+      sort_by: rssi_raw
+      sort_desc: false
+      columns:
+        - name: Name
+          attr_as_list: clients
+          modify: x.hostname
+        - name: RSSI
+          attr_as_list: clients
+          modify: x.rssi_html
+        - name: rssi_raw
+          attr_as_list: clients
+          modify: x.rssi
+          hidden: true
+      css:
+        table+: 'width: 100%;'
+        th+: 'text-align: left;'
+        td:nth-child(2)+: 'text-align: right;'
+
+    - type: custom:flex-table-card
+      title: AP 192.168.10.8
+      entities:
+        - sensor.ap_192_168_10_8_wifi_clients
+      sort_by: rssi_raw
+      sort_desc: false
+      columns:
+        - name: Name
+          attr_as_list: clients
+          modify: x.hostname
+        - name: RSSI
+          attr_as_list: clients
+          modify: x.rssi_html
+        - name: rssi_raw
+          attr_as_list: clients
+          modify: x.rssi
+          hidden: true
+      css:
+        table+: 'width: 100%;'
+        th+: 'text-align: left;'
+        td:nth-child(2)+: 'text-align: right;'
+
+    - type: custom:flex-table-card
+      title: AP 192.168.10.9
+      entities:
+        - sensor.ap_192_168_10_9_wifi_clients
+      sort_by: rssi_raw
+      sort_desc: false
+      columns:
+        - name: Name
+          attr_as_list: clients
+          modify: x.hostname
+        - name: RSSI
+          attr_as_list: clients
+          modify: x.rssi_html
+        - name: rssi_raw
+          attr_as_list: clients
+          modify: x.rssi
+          hidden: true
+      css:
+        table+: 'width: 100%;'
+        th+: 'text-align: left;'
+        td:nth-child(2)+: 'text-align: right;'
+
+    - type: custom:flex-table-card
+      title: AP 192.168.10.10
+      entities:
+        - sensor.ap_192_168_10_10_wifi_clients
+      sort_by: rssi_raw
+      sort_desc: false
+      columns:
+        - name: Name
+          attr_as_list: clients
+          modify: x.hostname
+        - name: RSSI
+          attr_as_list: clients
+          modify: x.rssi_html
+        - name: rssi_raw
+          attr_as_list: clients
+          modify: x.rssi
+          hidden: true
+      css:
+        table+: 'width: 100%;'
+        th+: 'text-align: left;'
+        td:nth-child(2)+: 'text-align: right;'

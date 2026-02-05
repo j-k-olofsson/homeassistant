@@ -1,0 +1,10 @@
+{
+  "domain": "openwrt_wifi_clients",
+  "name": "OpenWrt Wi-Fi Clients",
+  "version": "0.1.0",
+  "documentation": "https://www.home-assistant.io",
+  "config_flow": true,
+  "codeowners": [],
+  "iot_class": "local_polling",
+  "requirements": []
+}

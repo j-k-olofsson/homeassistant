@@ -1,0 +1,45 @@
+{
+  "title": "OpenWrt Wi-Fi Clients",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Globala inställningar",
+        "description": "Ange polling-intervall och valfria mappingar.",
+        "data": {
+          "scan_interval": "Uppdateringsintervall (sekunder)",
+          "client_name_map_yaml": "Klientnamn-map (YAML-dict)",
+          "ignore_macs_yaml": "Ignorera MAC (YAML-lista)"
+        }
+      },
+      "ap": {
+        "title": "Lägg till AP",
+        "description": "Ange uppgifter för en OpenWrt-AP.",
+        "data": {
+          "name": "AP-namn",
+          "host": "Värd/IP",
+          "username": "Användarnamn",
+          "password": "Lösenord",
+          "scheme": "Schema",
+          "verify_ssl": "Verifiera SSL",
+          "timeout": "Timeout (sekunder)",
+          "interfaces": "Interface (kommaseparerat)",
+          "add_another": "Lägg till fler"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Alternativ",
+        "description": "Uppdatera intervall, mappingar eller AP-lista.",
+        "data": {
+          "scan_interval": "Uppdateringsintervall (sekunder)",
+          "client_name_map_yaml": "Klientnamn-map (YAML-dict)",
+          "ignore_macs_yaml": "Ignorera MAC (YAML-lista)",
+          "aps_yaml": "AP-lista (YAML-lista av dict)"
+        }
+      }
+    }
+  }
+}

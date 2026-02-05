@@ -1,0 +1,45 @@
+{
+  "title": "OpenWrt Wi-Fi Clients",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Global Settings",
+        "description": "Configure polling interval and optional mappings.",
+        "data": {
+          "scan_interval": "Scan interval (seconds)",
+          "client_name_map_yaml": "Client name map (YAML dict)",
+          "ignore_macs_yaml": "Ignore MACs (YAML list)"
+        }
+      },
+      "ap": {
+        "title": "Add Access Point",
+        "description": "Enter details for an OpenWrt AP.",
+        "data": {
+          "name": "AP name",
+          "host": "Host/IP",
+          "username": "Username",
+          "password": "Password",
+          "scheme": "Scheme",
+          "verify_ssl": "Verify SSL",
+          "timeout": "Timeout (seconds)",
+          "interfaces": "Interfaces (comma-separated)",
+          "add_another": "Add another AP"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options",
+        "description": "Update polling interval, mappings, or AP list.",
+        "data": {
+          "scan_interval": "Scan interval (seconds)",
+          "client_name_map_yaml": "Client name map (YAML dict)",
+          "ignore_macs_yaml": "Ignore MACs (YAML list)",
+          "aps_yaml": "AP list (YAML list of dicts)"
+        }
+      }
+    }
+  }
+}
