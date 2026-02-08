@@ -37,6 +37,8 @@ Add to `configuration.yaml`:
 ```yaml
 openwrt_wifi_clients:
   scan_interval: 30
+  # Optional: use this AP/router for DHCP lease lookups (IP/hostname mapping)
+  dhcp_host: "192.168.10.1"
   client_name_map:
     "AA:BB:CC:DD:EE:FF": "Carolas iPhone"
     "11:22:33:44:55:66": "Roborock"
@@ -107,7 +109,7 @@ Aggregated:
   - Attributes: `by_ap`, `clients`
 
 Each client object:
-- `mac`, `hostname`, `ifname`, `rssi`, `last_seen`, `ap_name`
+- `mac`, `hostname`, `ip`, `ifname`, `rssi`, `last_seen`, `ap_name`
 
 ## Troubleshooting
 - Verify ubus endpoint:
@@ -125,3 +127,19 @@ logger:
   - Wrong credentials or missing ubus permissions
   - `uhttpd-mod-ubus` not installed or `/ubus` not exposed
   - HTTPS with invalid certs (set `verify_ssl: false` if needed)
+
+## RSSI color thresholds (Lovelace)
+The current WiFi table color mapping in `ha_admin` uses these thresholds:
+
+- `rssi <= -75`: red (`bad`)
+- `-75 < rssi <= -67`: amber (`warn`)
+- `rssi > -67`: green (`ok/good`)
+
+These thresholds are currently defined in the Lovelace dashboard config file:
+
+- `/config/.storage/lovelace.ha_admin`
+
+Look for the `custom:flex-table-card` `modify` expressions that contain:
+
+- `Number(x.rssi) <= -75`
+- `Number(x.rssi) <= -67`

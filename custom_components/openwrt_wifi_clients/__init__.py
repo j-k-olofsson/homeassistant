@@ -4,6 +4,7 @@ import asyncio
 from dataclasses import dataclass
 from datetime import timedelta
 import logging
+import re
 from typing import Any
 
 import aiohttp
@@ -11,8 +12,8 @@ import voluptuous as vol
 
 from homeassistant.config_entries import ConfigEntry, SOURCE_IMPORT
 from homeassistant.const import CONF_HOST, CONF_PASSWORD, CONF_USERNAME
-from homeassistant.core import HomeAssistant
-from homeassistant.helpers import aiohttp_client
+from homeassistant.core import HomeAssistant, ServiceCall, SupportsResponse
+from homeassistant.helpers import aiohttp_client, service
 from homeassistant.helpers.device_registry import async_get as async_get_device_registry
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 from homeassistant.util import dt as dt_util
@@ -27,6 +28,7 @@ from .const import (
     CONF_APS,
     CONF_AP_NAME,
     CONF_CLIENT_NAME_MAP,
+    CONF_DHCP_HOST,
     CONF_IGNORE_MACS,
     CONF_INTERFACES,
     CONF_SCAN_INTERVAL,
@@ -44,6 +46,15 @@ from .const import (
 )
 
 _LOGGER = logging.getLogger(__name__)
+_MAC_RE = re.compile(r"[0-9a-f]{2}(?::[0-9a-f]{2}){5}")
+
+SERVICE_DISCONNECT_CLIENT = "disconnect_client"
+SERVICE_ATTR_CLIENT_MAC = "client_mac"
+SERVICE_ATTR_AP_IP = "ap_ip"
+SERVICE_ATTR_INTERFACE = "interface"
+SERVICE_ATTR_REASON = "reason"
+SERVICE_ATTR_BAN_TIME = "ban_time"
+SERVICE_ATTR_DEAUTH = "deauth"
 
 CONFIG_SCHEMA = vol.Schema(
     {
@@ -62,6 +73,67 @@ CONFIG_SCHEMA = vol.Schema(
 
 async def async_setup(hass: HomeAssistant, config: dict[str, Any]) -> bool:
     """Handle YAML import."""
+    async def async_disconnect_client(call: ServiceCall) -> dict[str, Any] | None:
+        raw_client_mac = call.data.get(SERVICE_ATTR_CLIENT_MAC)
+        mac = _normalize_mac(raw_client_mac)
+        ap_ip = call.data.get(SERVICE_ATTR_AP_IP)
+        interface = call.data.get(SERVICE_ATTR_INTERFACE)
+        reason = int(call.data.get(SERVICE_ATTR_REASON, 5))
+        ban_time = int(call.data.get(SERVICE_ATTR_BAN_TIME, 0))
+        deauth = bool(call.data.get(SERVICE_ATTR_DEAUTH, True))
+
+        if not mac:
+            _LOGGER.warning(
+                "disconnect_client rejected: invalid client_mac payload=%r",
+                raw_client_mac,
+            )
+            raise vol.Invalid("client_mac is required")
+        _LOGGER.info(
+            "disconnect_client request: mac=%s ap_ip=%s interface=%s reason=%s ban_time=%s deauth=%s",
+            mac,
+            ap_ip,
+            interface,
+            reason,
+            ban_time,
+            deauth,
+        )
+
+        extracted_entry_ids = await service.async_extract_config_entry_ids(hass, call)
+        entry_ids = list(extracted_entry_ids)
+        if not entry_ids:
+            entry_ids = [entry.entry_id for entry in hass.config_entries.async_entries(DOMAIN)]
+
+        response: dict[str, Any] = {}
+        for entry_id in entry_ids:
+            coordinator: OpenWrtWifiDataCoordinator | None = hass.data.get(DOMAIN, {}).get(entry_id)
+            if coordinator is None:
+                continue
+            try:
+                result = await coordinator.async_disconnect_client(
+                    mac=mac,
+                    ap_ip=ap_ip,
+                    interface=interface,
+                    reason=reason,
+                    ban_time=ban_time,
+                    deauth=deauth,
+                )
+            except Exception as err:  # pragma: no cover - runtime safety
+                _LOGGER.warning("disconnect_client failed for entry %s: %s", entry_id, err)
+                result = {"ok": False, "error": str(err)}
+            response[entry_id] = result
+
+        if len(entry_ids) == 1:
+            return response.get(entry_ids[0])
+        return response
+
+    if not hass.services.has_service(DOMAIN, SERVICE_DISCONNECT_CLIENT):
+        hass.services.async_register(
+            DOMAIN,
+            SERVICE_DISCONNECT_CLIENT,
+            async_disconnect_client,
+            supports_response=SupportsResponse.OPTIONAL,
+        )
+
     if DOMAIN not in config:
         return True
 
@@ -138,8 +210,30 @@ class OpenWrtWifiDataCoordinator(DataUpdateCoordinator[dict[str, Any]]):
         self._reload_config()
 
         aps = [_normalize_ap(ap) for ap in self._config[CONF_APS]]
-        tasks = [self._fetch_ap_data(ap) for ap in aps]
-        results = await asyncio.gather(*tasks, return_exceptions=True)
+        leases_by_mac: dict[str, dict[str, str | None]] | None = None
+        dhcp_host = self._config.get(CONF_DHCP_HOST) or ""
+        if dhcp_host:
+            dhcp_ap = next((ap for ap in aps if ap.host == dhcp_host), None)
+            if dhcp_ap is None:
+                _LOGGER.warning(
+                    "DHCP host %s not found in AP list; falling back to per-AP leases",
+                    dhcp_host,
+                )
+            else:
+                try:
+                    dhcp_client = UbusClient(self.session, dhcp_ap)
+                    leases_by_mac = await dhcp_client.get_dhcp_leases()
+                except Exception as err:
+                    _LOGGER.warning(
+                        "Failed to fetch DHCP leases from %s: %s",
+                        dhcp_host,
+                        err,
+                    )
+
+        results = await asyncio.gather(
+            *[self._fetch_ap_data(ap, leases_by_mac) for ap in aps],
+            return_exceptions=True,
+        )
 
         prev = self.data or {}
         prev_aps = prev.get("aps", {})
@@ -176,6 +270,41 @@ class OpenWrtWifiDataCoordinator(DataUpdateCoordinator[dict[str, Any]]):
             if aps_data[ap_id]["available"]:
                 all_clients.extend(clients)
 
+        # De-duplicate clients by MAC across all APs.
+        # A station should only be shown on one AP; when duplicates occur,
+        # keep the row with strongest RSSI (closest to 0).
+        best_by_mac: dict[str, tuple[str, dict[str, Any]]] = {}
+        for ap_id, ap_data in aps_data.items():
+            for client in ap_data.get(ATTR_CLIENTS, []):
+                mac = _normalize_mac(client.get("mac"))
+                if not mac:
+                    continue
+                prev = best_by_mac.get(mac)
+                if prev is None:
+                    best_by_mac[mac] = (ap_id, client)
+                    continue
+                _, prev_client = prev
+                if _rssi_value(client.get("rssi")) > _rssi_value(prev_client.get("rssi")):
+                    best_by_mac[mac] = (ap_id, client)
+
+        allowed_mac_by_ap: dict[str, set[str]] = {}
+        for mac, (ap_id, _) in best_by_mac.items():
+            allowed_mac_by_ap.setdefault(ap_id, set()).add(mac)
+
+        all_clients = []
+        by_ap = {}
+        for ap_id, ap_data in aps_data.items():
+            allowed = allowed_mac_by_ap.get(ap_id, set())
+            filtered_clients = [
+                client
+                for client in ap_data.get(ATTR_CLIENTS, [])
+                if _normalize_mac(client.get("mac")) in allowed
+            ]
+            ap_data[ATTR_CLIENTS] = filtered_clients
+            by_ap[ap_data[ATTR_AP_NAME]] = len(filtered_clients)
+            if ap_data["available"]:
+                all_clients.extend(filtered_clients)
+
         return {
             "aps": aps_data,
             "all": {
@@ -184,11 +313,18 @@ class OpenWrtWifiDataCoordinator(DataUpdateCoordinator[dict[str, Any]]):
             },
         }
 
-    async def _fetch_ap_data(self, ap: APConfig) -> dict[str, Any]:
+    async def _fetch_ap_data(
+        self,
+        ap: APConfig,
+        leases_by_mac: dict[str, dict[str, str | None]] | None = None,
+    ) -> dict[str, Any]:
         client = UbusClient(self.session, ap)
         interfaces = ap.interfaces
         if not interfaces:
             interfaces = await client.list_hostapd_interfaces()
+
+        if leases_by_mac is None:
+            leases_by_mac = await client.get_dhcp_leases()
 
         clients: list[dict[str, Any]] = []
         for iface in interfaces:
@@ -201,6 +337,7 @@ class OpenWrtWifiDataCoordinator(DataUpdateCoordinator[dict[str, Any]]):
                     iface_clients,
                     self._config[CONF_CLIENT_NAME_MAP],
                     self._config[CONF_IGNORE_MACS],
+                    leases_by_mac,
                 )
             )
 
@@ -208,6 +345,161 @@ class OpenWrtWifiDataCoordinator(DataUpdateCoordinator[dict[str, Any]]):
             ATTR_INTERFACES: interfaces,
             ATTR_CLIENTS: clients,
         }
+
+    async def async_disconnect_client(
+        self,
+        mac: str,
+        ap_ip: str | None = None,
+        interface: str | None = None,
+        reason: int = 5,
+        ban_time: int = 0,
+        deauth: bool = True,
+    ) -> dict[str, Any]:
+        self._reload_config()
+        mac = _normalize_mac(mac)
+        if not mac:
+            raise RuntimeError("Invalid MAC address")
+
+        aps = [_normalize_ap(ap) for ap in self._config[CONF_APS]]
+        aps_by_ip = {ap.host: ap for ap in aps}
+
+        # Build candidate AP/interface pairs from current state first.
+        candidates: list[tuple[APConfig, str | None]] = []
+        live_candidates: list[tuple[APConfig, str]] = []
+
+        def add_candidate(dst: list[tuple[APConfig, str | None]], ap_cfg: APConfig, iface_name: str | None) -> None:
+            item = (ap_cfg, iface_name)
+            if item not in dst:
+                dst.append(item)
+
+        def add_live_candidate(ap_cfg: APConfig, iface_name: str) -> None:
+            item = (ap_cfg, iface_name)
+            if item not in live_candidates:
+                live_candidates.append(item)
+
+        if ap_ip:
+            ap_cfg = aps_by_ip.get(ap_ip)
+            if ap_cfg is None:
+                _LOGGER.warning(
+                    "disconnect_client: AP IP %s not found in configuration, falling back to MAC lookup",
+                    ap_ip,
+                )
+            else:
+                add_candidate(candidates, ap_cfg, interface)
+        if not candidates:
+            for ap_data in (self.data or {}).get("aps", {}).values():
+                for sta in ap_data.get(ATTR_CLIENTS, []):
+                    if _normalize_mac(sta.get("mac")) == mac:
+                        ap_cfg = aps_by_ip.get(ap_data.get(ATTR_AP_IP))
+                        if ap_cfg is not None:
+                            add_candidate(candidates, ap_cfg, sta.get("ifname") or interface)
+            # Fallback: try all APs if no match in current snapshot
+            if not candidates:
+                for ap_cfg in aps:
+                    add_candidate(candidates, ap_cfg, interface)
+
+        # Prefer AP/interface pairs where the MAC is confirmed present right now.
+        for ap_cfg, hinted_iface in list(candidates):
+            iface_candidates = []
+            if hinted_iface:
+                iface_candidates = [hinted_iface]
+            elif interface:
+                iface_candidates = [interface]
+            else:
+                iface_candidates = list(ap_cfg.interfaces or [])
+                if not iface_candidates:
+                    try:
+                        iface_candidates = await UbusClient(
+                            self.session, ap_cfg
+                        ).list_hostapd_interfaces()
+                    except Exception as err:  # pragma: no cover - runtime safety
+                        _LOGGER.debug(
+                            "Failed to list interfaces while locating client %s on %s: %s",
+                            mac,
+                            ap_cfg.host,
+                            err,
+                        )
+                        iface_candidates = []
+
+            for iface_name in dict.fromkeys(iface_candidates):
+                try:
+                    clients_now = await UbusClient(self.session, ap_cfg).get_clients(iface_name)
+                except Exception as err:  # pragma: no cover - runtime safety
+                    _LOGGER.debug(
+                        "Failed to read clients for %s/%s while locating %s: %s",
+                        ap_cfg.host,
+                        iface_name,
+                        mac,
+                        err,
+                    )
+                    continue
+                if _normalize_mac(mac) in {_normalize_mac(k) for k in clients_now.keys()}:
+                    add_live_candidate(ap_cfg, iface_name)
+
+        tried: list[str] = []
+        last_error: Exception | None = None
+
+        ordered_candidates: list[tuple[APConfig, str | None]] = []
+        for ap_cfg, iface_name in live_candidates:
+            add_candidate(ordered_candidates, ap_cfg, iface_name)
+        for ap_cfg, iface_name in candidates:
+            add_candidate(ordered_candidates, ap_cfg, iface_name)
+
+        for ap_cfg, hinted_iface in ordered_candidates:
+            if hinted_iface:
+                iface_candidates = [hinted_iface]
+            else:
+                iface_candidates = ap_cfg.interfaces or []
+                if not iface_candidates:
+                    try:
+                        iface_candidates = await UbusClient(
+                            self.session, ap_cfg
+                        ).list_hostapd_interfaces()
+                    except Exception as err:  # pragma: no cover - runtime safety
+                        last_error = err
+                        continue
+
+            for iface_name in dict.fromkeys(iface_candidates):
+                tried.append(f"{ap_cfg.host}/{iface_name}")
+                try:
+                    client = UbusClient(self.session, ap_cfg)
+                    ubus_result = await client.disconnect_client(
+                        iface=iface_name,
+                        mac=mac,
+                        reason=reason,
+                        ban_time=ban_time,
+                        deauth=deauth,
+                    )
+                    _LOGGER.info(
+                        "disconnect_client success: mac=%s ap=%s interface=%s method=%s",
+                        mac,
+                        ap_cfg.host,
+                        iface_name,
+                        ubus_result.get("method"),
+                    )
+                    await self.async_request_refresh()
+                    return {
+                        "ok": True,
+                        "ap_name": ap_cfg.name,
+                        "ap_ip": ap_cfg.host,
+                        "interface": iface_name,
+                        "mac": mac,
+                        "ubus": ubus_result,
+                        "tried": tried,
+                    }
+                except Exception as err:  # pragma: no cover - runtime safety
+                    last_error = err
+                    _LOGGER.debug(
+                        "Disconnect attempt failed for %s/%s mac=%s: %s",
+                        ap_cfg.host,
+                        iface_name,
+                        mac,
+                        err,
+                    )
+
+        if last_error:
+            raise RuntimeError(f"Disconnect failed after tries {tried}: {last_error}") from last_error
+        raise RuntimeError(f"Disconnect failed after tries {tried}")
 
 
 def _merge_config(entry: ConfigEntry) -> dict[str, Any]:
@@ -218,6 +510,7 @@ def _merge_config(entry: ConfigEntry) -> dict[str, Any]:
         CONF_SCAN_INTERVAL: options.get(
             CONF_SCAN_INTERVAL, data.get(CONF_SCAN_INTERVAL, DEFAULT_SCAN_INTERVAL)
         ),
+        CONF_DHCP_HOST: options.get(CONF_DHCP_HOST, data.get(CONF_DHCP_HOST, "")),
         CONF_CLIENT_NAME_MAP: options.get(
             CONF_CLIENT_NAME_MAP, data.get(CONF_CLIENT_NAME_MAP, {})
         ),
@@ -247,7 +540,12 @@ def _normalize_ap(ap: dict[str, Any]) -> APConfig:
 def _normalize_mac(mac: str | None) -> str:
     if not mac:
         return ""
-    return mac.strip().lower()
+    normalized = str(mac).strip().lower().replace("-", ":")
+    # Accept raw MAC and strings that contain a MAC token (e.g. table cell text)
+    match = _MAC_RE.search(normalized)
+    if not match:
+        return ""
+    return match.group(0)
 
 
 def _device_name_from_mac(hass: HomeAssistant, mac: str) -> str | None:
@@ -273,6 +571,14 @@ def _rssi_meta(rssi: int | float | None) -> dict[str, str | None]:
     return {"rssi_level": "good", "rssi_color": "#1f4f2f"}
 
 
+def _rssi_value(rssi: Any) -> float:
+    """Comparable RSSI score where larger is better (e.g. -50 > -80)."""
+    try:
+        return float(rssi)
+    except (TypeError, ValueError):
+        return -9999.0
+
+
 def _normalize_clients(
     hass: HomeAssistant,
     ap: APConfig,
@@ -280,6 +586,7 @@ def _normalize_clients(
     clients_raw: dict[str, Any],
     client_name_map: dict[str, str],
     ignore_macs: list[str],
+    leases_by_mac: dict[str, dict[str, str | None]] | None = None,
 ) -> list[dict[str, Any]]:
     normalized: list[dict[str, Any]] = []
     ignore_set = {_normalize_mac(m) for m in ignore_macs}
@@ -291,11 +598,16 @@ def _normalize_clients(
             continue
 
         raw_hostname = info.get("hostname") or info.get("name")
+        lease_info = (leases_by_mac or {}).get(mac_norm, {})
+        lease_hostname = lease_info.get("hostname")
+        lease_ip = lease_info.get("ip")
         mapped_name = map_norm.get(mac_norm)
         if mapped_name:
             hostname = mapped_name
         elif raw_hostname:
             hostname = raw_hostname
+        elif lease_hostname:
+            hostname = lease_hostname
         else:
             device_name = _device_name_from_mac(hass, mac_norm)
             hostname = device_name or mac_norm
@@ -314,6 +626,8 @@ def _normalize_clients(
             "hostname": hostname,
             "ifname": info.get("ifname") or iface,
             "rssi": rssi,
+            "ip": lease_ip,
+            "ap_ip": ap.host,
             "last_seen": dt_util.utcnow().isoformat(),
             ATTR_AP_NAME: ap.name,
             **rssi_meta,
@@ -372,6 +686,144 @@ class UbusClient:
         if isinstance(data, dict):
             return data
         return {}
+
+    async def get_dhcp_leases(self) -> dict[str, dict[str, str | None]]:
+        await self._ensure_login()
+        leases_by_mac: dict[str, dict[str, str | None]] = {}
+
+        for service in ("dhcp", "odhcpd", "luci-rpc"):
+            for method in ("ipv4leases", "leases", "getDHCPLeases", "getHostHints"):
+                payload = {
+                    "method": "call",
+                    "params": [
+                        self._ubus_session,
+                        service,
+                        method,
+                        {},
+                    ],
+                }
+                try:
+                    response = await self._request(payload, allow_reauth=True)
+                except RuntimeError as err:
+                    continue
+
+                data = _extract_result_data(response)
+                if not isinstance(data, dict):
+                    continue
+
+                leases = (
+                    data.get("ipv4leases")
+                    or data.get("leases")
+                    or data.get("dhcp_leases")
+                    or data.get("hosts")
+                )
+                if not isinstance(leases, list):
+                    continue
+
+                for lease in leases:
+                    if not isinstance(lease, dict):
+                        continue
+                    mac = _normalize_mac(
+                        lease.get("mac")
+                        or lease.get("macaddr")
+                        or lease.get("hwaddr")
+                        or lease.get("address")
+                    )
+                    if not mac:
+                        continue
+
+                    ip = (
+                        lease.get("ip")
+                        or lease.get("address")
+                        or lease.get("ipaddr")
+                        or lease.get("addr")
+                    )
+                    hostname = (
+                        lease.get("hostname")
+                        or lease.get("name")
+                        or lease.get("host")
+                        or lease.get("hint")
+                    )
+
+                    existing = leases_by_mac.get(mac, {})
+                    merged = {
+                        "ip": existing.get("ip") or ip,
+                        "hostname": existing.get("hostname") or hostname,
+                    }
+                    leases_by_mac[mac] = merged
+
+        return leases_by_mac
+
+    async def disconnect_client(
+        self,
+        iface: str,
+        mac: str,
+        reason: int = 5,
+        ban_time: int = 0,
+        deauth: bool = True,
+    ) -> dict[str, Any]:
+        await self._ensure_login()
+        mac = _normalize_mac(mac)
+        if not mac:
+            raise RuntimeError("Invalid MAC address")
+
+        base_params = {
+            "addr": mac,
+            "reason": int(reason),
+            "deauth": bool(deauth),
+        }
+        if ban_time > 0:
+            base_params["ban_time"] = int(ban_time)
+
+        attempts: list[tuple[str, dict[str, Any]]] = [
+            ("del_client", dict(base_params)),
+            ("del_client", {**base_params, "mac": mac}),
+            ("deauth", {"addr": mac, "reason": int(reason)}),
+            ("deauth", {"sta": mac, "reason": int(reason)}),
+        ]
+
+        last_error: Exception | None = None
+        for method, params in attempts:
+            payload = {
+                "method": "call",
+                "params": [
+                    self._ubus_session,
+                    f"hostapd.{iface}",
+                    method,
+                    params,
+                ],
+            }
+            try:
+                response = await self._request(payload, allow_reauth=True)
+                # ubus call result for "call" is usually [code, data]
+                result = response.get("result")
+                if (
+                    isinstance(result, list)
+                    and result
+                    and isinstance(result[0], int)
+                    and result[0] != 0
+                ):
+                    raise RuntimeError(
+                        f"Ubus call failed code={result[0]} data={result[1] if len(result) > 1 else None}"
+                    )
+                return {
+                    "method": method,
+                    "params": params,
+                    "result": _extract_result_data(response),
+                }
+            except RuntimeError as err:
+                last_error = err
+                _LOGGER.debug(
+                    "Disconnect attempt failed (%s on %s/%s): %s",
+                    method,
+                    self._ap.host,
+                    iface,
+                    err,
+                )
+
+        if last_error:
+            raise last_error
+        raise RuntimeError("Failed to disconnect client")
 
     async def _ensure_login(self) -> None:
         if self._ubus_session:
