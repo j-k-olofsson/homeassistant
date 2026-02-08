@@ -7,6 +7,7 @@
         "description": "Configure polling interval and optional mappings.",
         "data": {
           "scan_interval": "Scan interval (seconds)",
+          "dhcp_host": "DHCP host (AP IP used for IP/hostname lookups)",
           "client_name_map_yaml": "Client name map (YAML dict)",
           "ignore_macs_yaml": "Ignore MACs (YAML list)"
         }
@@ -32,12 +33,102 @@
     "step": {
       "init": {
         "title": "Options",
-        "description": "Update polling interval, mappings, or AP list.",
+        "description": "Choose what to edit.",
+        "menu_options": {
+          "edit_globals": "Edit globals",
+          "manage_aps": "Manage APs"
+        }
+      },
+      "edit_globals": {
+        "title": "Global Options",
+        "description": "Update polling interval and mappings.",
         "data": {
           "scan_interval": "Scan interval (seconds)",
+          "dhcp_host": "DHCP host (AP IP used for IP/hostname lookups)",
           "client_name_map_yaml": "Client name map (YAML dict)",
-          "ignore_macs_yaml": "Ignore MACs (YAML list)",
-          "aps_yaml": "AP list (YAML list of dicts)"
+          "ignore_macs_yaml": "Ignore MACs (YAML list)"
+        }
+      },
+      "manage_aps": {
+        "title": "Manage APs",
+        "description": "Add, edit, remove, or save APs.",
+        "data": {
+          "action": "Action"
+        }
+      },
+      "ap": {
+        "title": "Add Access Point",
+        "description": "Enter details for an OpenWrt AP.",
+        "data": {
+          "name": "AP name",
+          "host": "Host/IP",
+          "username": "Username",
+          "password": "Password",
+          "scheme": "Scheme",
+          "verify_ssl": "Verify SSL",
+          "timeout": "Timeout (seconds)",
+          "interfaces": "Interfaces (comma-separated)",
+          "add_another": "Add another AP"
+        }
+      },
+      "remove_ap": {
+        "title": "Remove AP",
+        "description": "Select an AP to remove.",
+        "data": {
+          "ap_index": "AP"
+        }
+      },
+      "select_ap_to_edit": {
+        "title": "Edit AP",
+        "description": "Select an AP to edit.",
+        "data": {
+          "ap_index": "AP"
+        }
+      },
+      "edit_ap": {
+        "title": "Edit Access Point",
+        "description": "Update AP details.",
+        "data": {
+          "name": "AP name",
+          "host": "Host/IP",
+          "username": "Username",
+          "password": "Password",
+          "scheme": "Scheme",
+          "verify_ssl": "Verify SSL",
+          "timeout": "Timeout (seconds)",
+          "interfaces": "Interfaces (comma-separated)"
+        }
+      }
+    }
+  },
+  "services": {
+    "disconnect_client": {
+      "name": "Disconnect Wi-Fi client",
+      "description": "Disconnect a selected client from an AP via hostapd ubus.",
+      "fields": {
+        "client_mac": {
+          "name": "Client MAC",
+          "description": "MAC address of the client to disconnect."
+        },
+        "ap_ip": {
+          "name": "AP IP",
+          "description": "Optional AP host/IP. If omitted, the integration tries to auto-resolve from current client data."
+        },
+        "interface": {
+          "name": "Interface",
+          "description": "Optional hostapd interface name (for example wlan0 or wlan1-1)."
+        },
+        "reason": {
+          "name": "Reason code",
+          "description": "802.11 reason code used for deauth/disconnect."
+        },
+        "ban_time": {
+          "name": "Ban time",
+          "description": "Optional ban time in milliseconds (0 disables ban)."
+        },
+        "deauth": {
+          "name": "Deauth",
+          "description": "If true, deauthentication is requested when supported."
         }
       }
     }

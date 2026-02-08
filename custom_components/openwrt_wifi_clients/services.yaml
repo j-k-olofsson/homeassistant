@@ -1,0 +1,54 @@
+disconnect_client:
+  name: Disconnect Wi-Fi client
+  description: Disconnect a selected client from an AP via hostapd ubus.
+  target:
+    entity:
+      integration: openwrt_wifi_clients
+  fields:
+    client_mac:
+      name: Client MAC
+      description: MAC address of the client to disconnect.
+      required: true
+      example: "AA:BB:CC:DD:EE:FF"
+      selector:
+        text: {}
+    ap_ip:
+      name: AP IP
+      description: Optional AP host/IP. If omitted, the integration tries to auto-resolve from current client data.
+      required: false
+      example: "192.168.10.5"
+      selector:
+        text: {}
+    interface:
+      name: Interface
+      description: Optional hostapd interface name (for example wlan0 or wlan1-1).
+      required: false
+      selector:
+        text: {}
+    reason:
+      name: Reason code
+      description: 802.11 reason code used for deauth/disconnect.
+      required: false
+      default: 5
+      selector:
+        number:
+          min: 1
+          max: 99
+          mode: box
+    ban_time:
+      name: Ban time
+      description: Optional ban time in milliseconds (0 disables ban).
+      required: false
+      default: 0
+      selector:
+        number:
+          min: 0
+          max: 600000
+          mode: box
+    deauth:
+      name: Deauth
+      description: If true, deauthentication is requested when supported.
+      required: false
+      default: true
+      selector:
+        boolean: {}

@@ -157,13 +157,6 @@ text_sensor:
     #   name: "DSMR Version"
     # p1_version_be:
     #   name: "DSMR Version Belgium"
-  - platform: wifi_info
-    ip_address:
-      name: "SlimmeLezer IP Address"
-    ssid:
-      name: "SlimmeLezer Wi-Fi SSID"
-    bssid:
-      name: "SlimmeLezer Wi-Fi BSSID"
   - platform: version
     name: "ESPHome Version"
     hide_timestamp: true

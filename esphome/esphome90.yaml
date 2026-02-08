@@ -42,37 +42,9 @@ sensor:
       - clamp:
           min_value: 0
           max_value: 100
-  - platform: wifi_signal
-    name: ESP WIFI Signal
-    internal: false
-    update_interval: 60s
-    unit_of_measurement: 'dBm'
-    device_class: signal_strength
 
 text_sensor:
   - platform: version
     internal: True
     name: ESPHome version
     hide_timestamp: true
-  - platform: wifi_info
-    ip_address:
-      name: ESP IP Address
-      internal: True
-      address_0:
-        name: ESP IP Address 0
-        internal: True
-    ssid:
-      name: ESP Connected SSID
-      internal: True
-    bssid:
-      name: ESP Connected BSSID
-      internal: True
-    mac_address:
-      name: ESP Mac Wifi Address
-      internal: True
-    scan_results:
-      name: ESP Latest Scan Results
-      internal: True
-    dns_address:
-      name: ESP DNS Address
-      internal: True

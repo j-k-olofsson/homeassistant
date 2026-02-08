@@ -10,6 +10,9 @@ http:
 # Define global log-level
 logger:
   default: info
+  logs:
+    custom_components.openwrt_wifi_clients: debug
+
 # logger:
 #   default: info
 #   logs:

@@ -19,7 +19,34 @@
           "wifi_devices": "Wi-Fi device names (comma-separated)",
           "mesh_devices": "Mesh device names (comma-separated)"
         }
+      },
+      "reconfigure": {
+        "title": "Reconfigure OpenWrt device",
+        "data": {
+          "id": "Device name (unique)",
+          "address": "Hostname or IP address",
+          "username": "Username with access to the Ubus",
+          "password": "Password",
+          "https": "Use HTTPS",
+          "verify_cert": "Verify HTTPS certificate",
+          "port": "Custom port ('0' to use the default one)",
+          "path": "Ubus endpoint URI path",
+          "interval": "Data fetch interval in seconds",
+          "wps": "WPS support",
+          "wan_devices": "WAN device names (comma-separated)",
+          "wifi_devices": "Wi-Fi device names (comma-separated)",
+          "mesh_devices": "Mesh device names (comma-separated)"
+        }
       }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect",
+      "invalid_auth": "Invalid authentication",
+      "unknown": "Unexpected error"
+    },
+    "abort": {
+      "already_configured": "Device is already configured",
+      "reconfigure_successful": "Configuration updated"
     }
   }
 }

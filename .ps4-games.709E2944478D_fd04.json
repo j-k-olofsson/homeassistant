@@ -29,15 +29,21 @@
     "media_content_type": "app",
     "locked": false
   },
+  "CUSA00127": {
+    "media_title": "Netflix",
+    "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/titlecontainer/se/en/999/CUSA00127_00/image",
+    "media_content_type": "app",
+    "locked": false
+  },
   "CUSA00124": {
     "media_title": "Viaplay",
     "media_image_url": null,
     "media_content_type": null,
     "locked": false
   },
-  "CUSA00127": {
-    "media_title": "Netflix",
-    "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/titlecontainer/se/en/999/CUSA00127_00/image",
+  "CUSA41487": {
+    "media_title": "HBO Max",
+    "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/titlecontainer/se/en/999/CUSA41487_00/image",
     "media_content_type": "app",
     "locked": false
   }

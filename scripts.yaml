@@ -136,6 +136,9 @@ granny_broadcast:
       _channels: '{{ channels if channels is defined else [] }}
 
         '
+      _tts_quiet_start: '{{ today_at(''21:30:00'') }}'
+      _tts_quiet_end: '{{ today_at(''06:00:00'') }}'
+      _tts_in_quiet_hours: '{{ now() >= _tts_quiet_start or now() < _tts_quiet_end }}'
       _slack_channel: '{{ (slack_channel | default('''', true)) | trim }}'
       _base_task: '{{ task }}'
       _prompt: 'Du är "Granny": varm, saklig, kvick och surmulen. Svara alltid på
@@ -170,7 +173,7 @@ granny_broadcast:
   - choose:
     - conditions:
       - condition: template
-        value_template: '{{ ''tts'' in _channels }}'
+        value_template: '{{ ''tts'' in _channels and not _tts_in_quiet_hours }}'
       sequence:
       - action: tts.speak
         continue_on_error: true

@@ -7,6 +7,7 @@
         "description": "Ange polling-intervall och valfria mappingar.",
         "data": {
           "scan_interval": "Uppdateringsintervall (sekunder)",
+          "dhcp_host": "DHCP-värd (AP-IP för IP/hostname-uppslag)",
           "client_name_map_yaml": "Klientnamn-map (YAML-dict)",
           "ignore_macs_yaml": "Ignorera MAC (YAML-lista)"
         }
@@ -32,12 +33,102 @@
     "step": {
       "init": {
         "title": "Alternativ",
-        "description": "Uppdatera intervall, mappingar eller AP-lista.",
+        "description": "Välj vad du vill redigera.",
+        "menu_options": {
+          "edit_globals": "Redigera globalt",
+          "manage_aps": "Hantera AP:er"
+        }
+      },
+      "edit_globals": {
+        "title": "Globala alternativ",
+        "description": "Uppdatera intervall och mappingar.",
         "data": {
           "scan_interval": "Uppdateringsintervall (sekunder)",
+          "dhcp_host": "DHCP-värd (AP-IP för IP/hostname-uppslag)",
           "client_name_map_yaml": "Klientnamn-map (YAML-dict)",
-          "ignore_macs_yaml": "Ignorera MAC (YAML-lista)",
-          "aps_yaml": "AP-lista (YAML-lista av dict)"
+          "ignore_macs_yaml": "Ignorera MAC (YAML-lista)"
+        }
+      },
+      "manage_aps": {
+        "title": "Hantera AP:er",
+        "description": "Lägg till, redigera, ta bort eller spara AP:er.",
+        "data": {
+          "action": "Åtgärd"
+        }
+      },
+      "ap": {
+        "title": "Lägg till AP",
+        "description": "Ange uppgifter för en OpenWrt-AP.",
+        "data": {
+          "name": "AP-namn",
+          "host": "Värd/IP",
+          "username": "Användarnamn",
+          "password": "Lösenord",
+          "scheme": "Schema",
+          "verify_ssl": "Verifiera SSL",
+          "timeout": "Timeout (sekunder)",
+          "interfaces": "Interface (kommaseparerat)",
+          "add_another": "Lägg till fler"
+        }
+      },
+      "remove_ap": {
+        "title": "Ta bort AP",
+        "description": "Välj en AP att ta bort.",
+        "data": {
+          "ap_index": "AP"
+        }
+      },
+      "select_ap_to_edit": {
+        "title": "Redigera AP",
+        "description": "Välj en AP att redigera.",
+        "data": {
+          "ap_index": "AP"
+        }
+      },
+      "edit_ap": {
+        "title": "Redigera AP",
+        "description": "Uppdatera AP-uppgifter.",
+        "data": {
+          "name": "AP-namn",
+          "host": "Värd/IP",
+          "username": "Användarnamn",
+          "password": "Lösenord",
+          "scheme": "Schema",
+          "verify_ssl": "Verifiera SSL",
+          "timeout": "Timeout (sekunder)",
+          "interfaces": "Interface (kommaseparerat)"
+        }
+      }
+    }
+  },
+  "services": {
+    "disconnect_client": {
+      "name": "Koppla från Wi-Fi-klient",
+      "description": "Koppla från vald klient från en AP via hostapd ubus.",
+      "fields": {
+        "client_mac": {
+          "name": "Klient-MAC",
+          "description": "MAC-adress för klienten som ska kopplas från."
+        },
+        "ap_ip": {
+          "name": "AP-IP",
+          "description": "Valfri AP-värd/IP. Om tom försöker integrationen hitta rätt AP från aktuell klientdata."
+        },
+        "interface": {
+          "name": "Interface",
+          "description": "Valfritt hostapd-interface (t.ex. wlan0 eller wlan1-1)."
+        },
+        "reason": {
+          "name": "Reason-kod",
+          "description": "802.11 reason-kod för deauth/disconnect."
+        },
+        "ban_time": {
+          "name": "Ban-tid",
+          "description": "Valfri blockeringstid i millisekunder (0 = ingen blockering)."
+        },
+        "deauth": {
+          "name": "Deauth",
+          "description": "Om true begärs deauth när det stöds."
         }
       }
     }

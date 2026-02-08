@@ -1562,18 +1562,22 @@
   description: Denna automation övervakar internetanslutningen och loggar status när
     den tappar eller återfår kontakt.
   triggers:
-  - type: connected
-    device_id: ed75858fca4c44f2b0b5a8a61000e346
-    entity_id: a3aaa880caf002a69171b9f7a7349ffa
-    domain: binary_sensor
-    trigger: device
+  - trigger: state
+    entity_id:
+    - sensor.wan_status_status
+    from:
+    - down
+    to:
+    - up
     id: connected
-  - type: not_connected
-    device_id: ed75858fca4c44f2b0b5a8a61000e346
-    entity_id: a3aaa880caf002a69171b9f7a7349ffa
-    domain: binary_sensor
-    trigger: device
+  - trigger: state
+    entity_id:
+    - sensor.wan_status_status
     id: disconnected
+    from:
+    - up
+    to:
+    - down
   conditions: []
   actions:
   - choose:

@@ -36,16 +36,6 @@ ota:
   - platform: esphome
     password: !secret OTA_PWD
 
-# Enable generic sensors
-
-sensor:
-  - platform: wifi_signal
-    name: Wifi RSSI
-    internal: false
-    update_interval: 60s
-    unit_of_measurement: 'dBm'
-    device_class: signal_strength
-
 globals:
   id: first_update
   type: int
@@ -57,25 +47,3 @@ text_sensor:
     internal: True
     name: ESPHome version
     hide_timestamp: True
-  - platform: wifi_info
-    ip_address:
-      name: ESP IP Address
-      internal: True
-      address_0:
-        name: ESP IP Address 0
-        internal: True
-    ssid:
-      name: ESP Connected SSID
-      internal: True
-    bssid:
-      name: Wifi BSSID
-      internal: False
-    mac_address:
-      name: Wifi mac-address
-      internal: True
-    scan_results:
-      name: ESP Latest Scan Results
-      internal: True
-    dns_address:
-      name: ESP DNS Address
-      internal: True
