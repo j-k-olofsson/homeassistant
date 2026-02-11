@@ -122,7 +122,7 @@ granny_broadcast:
       _humor: '{{ humor_level | int(2) }}'
       _recipient: '{{ (recipient | default('''', true)) | trim }}'
       _tts_player: "{{ tts_media_player\n   if tts_media_player is defined and tts_media_player|length
-        > 0\n   else 'media_player.grupp_grannys_hogtalare' }}\n"
+        > 0\n   else 'media_player.grannys_hogtalare' }}\n"
       _tts_engine: "{% if states('tts.piper') not in ['unknown','unavailable','']
         %}\n  tts.piper\n{% elif states('tts.cloud') not in ['unknown','unavailable','']
         %}\n  tts.cloud\n{% else %}\n  tts.cloud\n{% endif %}\n"
@@ -136,9 +136,11 @@ granny_broadcast:
       _channels: '{{ channels if channels is defined else [] }}
 
         '
-      _tts_quiet_start: '{{ today_at(''21:30:00'') }}'
-      _tts_quiet_end: '{{ today_at(''06:00:00'') }}'
-      _tts_in_quiet_hours: '{{ now() >= _tts_quiet_start or now() < _tts_quiet_end }}'
+      _tts_quiet_start_ts: '{{ as_timestamp(today_at(''21:30:00'')) | float(0) }}'
+      _tts_quiet_end_ts: '{{ as_timestamp(today_at(''06:00:00'')) | float(0) }}'
+      _tts_in_quiet_hours: '{{ (as_timestamp(now()) | float(0)) >= (_tts_quiet_start_ts
+        | float(0)) or (as_timestamp(now()) | float(0)) < (_tts_quiet_end_ts | float(0))
+        }}'
       _slack_channel: '{{ (slack_channel | default('''', true)) | trim }}'
       _base_task: '{{ task }}'
       _prompt: 'Du är "Granny": varm, saklig, kvick och surmulen. Svara alltid på

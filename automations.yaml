@@ -471,7 +471,7 @@
   description: När tvättmaskinen har avslutat sitt program, skickas en notification
     och meddelande via högtalare för att påminna om att tömma tvätten.
   triggers:
-  - device_id: f9e630bbd6684eb02e3254460fb1921c
+  - device_id: f16f2d8a7234951574cdd787c8fcebef
     domain: home_connect_alt
     type: program_finished
     trigger: device
@@ -485,6 +485,7 @@
       channels:
       - tts
       - tv
+      - ha
   mode: queued
   max: 10
 - id: '1673780941087'

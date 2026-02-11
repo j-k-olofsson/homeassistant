@@ -326,6 +326,8 @@ class OpenWrtWifiDataCoordinator(DataUpdateCoordinator[dict[str, Any]]):
         if leases_by_mac is None:
             leases_by_mac = await client.get_dhcp_leases()
 
+        iface_band_map = await client.get_interface_band_map()
+
         clients: list[dict[str, Any]] = []
         for iface in interfaces:
             iface_clients = await client.get_clients(iface)
@@ -338,6 +340,7 @@ class OpenWrtWifiDataCoordinator(DataUpdateCoordinator[dict[str, Any]]):
                     self._config[CONF_CLIENT_NAME_MAP],
                     self._config[CONF_IGNORE_MACS],
                     leases_by_mac,
+                    iface_band_map=iface_band_map,
                 )
             )
 
@@ -579,6 +582,75 @@ def _rssi_value(rssi: Any) -> float:
         return -9999.0
 
 
+def _to_int(value: Any) -> int | None:
+    """Best-effort int coercion."""
+    if value is None:
+        return None
+    try:
+        return int(str(value).strip())
+    except (TypeError, ValueError):
+        return None
+
+
+def _band_from_freq_channel(freq: int | None, channel: int | None) -> str | None:
+    """Map frequency/channel to a human-readable Wi-Fi band."""
+    if freq is not None:
+        # 2.4 GHz
+        if 2400 <= freq <= 2500:
+            return "2.4 GHz"
+        # 5 GHz
+        if 5000 <= freq <= 5895:
+            return "5 GHz"
+        # 6 GHz (Wi-Fi 6E/7)
+        if 5925 <= freq <= 7125:
+            return "6 GHz"
+
+    if channel is not None:
+        if 1 <= channel <= 14:
+            return "2.4 GHz"
+        if 36 <= channel <= 177:
+            return "5 GHz"
+        if 1 <= channel <= 233:
+            return "6 GHz"
+
+    return None
+
+
+def _infer_band(info: dict[str, Any], ifname: str) -> tuple[str | None, str | None]:
+    """Infer Wi-Fi band from hostapd client metadata."""
+    freq = None
+    for key in ("freq", "frequency", "chan_freq", "center_freq1", "center_freq"):
+        freq = _to_int(info.get(key))
+        if freq is not None:
+            break
+
+    channel = None
+    for key in ("channel", "chan", "primary_channel", "op_channel"):
+        channel = _to_int(info.get(key))
+        if channel is not None:
+            break
+
+    band = _band_from_freq_channel(freq, channel)
+
+    # Last-resort hint from interface naming convention.
+    if band is None:
+        ifname_l = (ifname or "").lower()
+        if any(token in ifname_l for token in ("2g", "2.4", "24g")):
+            band = "2.4 GHz"
+        elif any(token in ifname_l for token in ("5g", "5ghz")):
+            band = "5 GHz"
+        elif any(token in ifname_l for token in ("6g", "6ghz")):
+            band = "6 GHz"
+
+    if band == "2.4 GHz":
+        return band, "2G"
+    if band == "5 GHz":
+        return band, "5G"
+    if band == "6 GHz":
+        return band, "6G"
+    return None, None
+
+
 def _normalize_clients(
     hass: HomeAssistant,
     ap: APConfig,
@@ -587,6 +659,7 @@ def _normalize_clients(
     client_name_map: dict[str, str],
     ignore_macs: list[str],
     leases_by_mac: dict[str, dict[str, str | None]] | None = None,
+    iface_band_map: dict[str, tuple[str | None, str | None]] | None = None,
 ) -> list[dict[str, Any]]:
     normalized: list[dict[str, Any]] = []
     ignore_set = {_normalize_mac(m) for m in ignore_macs}
@@ -621,12 +694,21 @@ def _normalize_clients(
 
         rssi_meta = _rssi_meta(rssi)
 
+        ifname = info.get("ifname") or iface
+        band, band_short = _infer_band(info, ifname)
+        if (band is None or band_short is None) and iface_band_map:
+            fb_band, fb_short = iface_band_map.get(ifname, (None, None))
+            band = band or fb_band
+            band_short = band_short or fb_short
+
         client_entry = {
             "mac": mac_norm,
             "hostname": hostname,
-            "ifname": info.get("ifname") or iface,
+            "ifname": ifname,
             "rssi": rssi,
             "ip": lease_ip,
+            "band": band,
+            "band_short": band_short,
             "ap_ip": ap.host,
             "last_seen": dt_util.utcnow().isoformat(),
             ATTR_AP_NAME: ap.name,
@@ -753,6 +835,76 @@ class UbusClient:
                     leases_by_mac[mac] = merged
 
         return leases_by_mac
+
+    async def get_interface_band_map(self) -> dict[str, tuple[str | None, str | None]]:
+        """Map interface ifname -> (band, band_short) using network.wireless status."""
+        await self._ensure_login()
+        payload = {
+            "method": "call",
+            "params": [
+                self._ubus_session,
+                "network.wireless",
+                "status",
+                {},
+            ],
+        }
+        try:
+            response = await self._request(payload, allow_reauth=True)
+        except RuntimeError:
+            return {}
+
+        data = _extract_result_data(response)
+        if not isinstance(data, dict):
+            return {}
+
+        def band_tuple(raw_band: Any, freq: Any = None, channel: Any = None) -> tuple[str | None, str | None]:
+            band_val = str(raw_band).strip().lower() if raw_band is not None else ""
+            if band_val in ("2g", "2.4g", "2.4ghz"):
+                return "2.4 GHz", "2G"
+            if band_val in ("5g", "5ghz"):
+                return "5 GHz", "5G"
+            if band_val in ("6g", "6ghz"):
+                return "6 GHz", "6G"
+            freq_i = _to_int(freq)
+            chan_i = _to_int(channel)
+            band = _band_from_freq_channel(freq_i, chan_i)
+            if band == "2.4 GHz":
+                return band, "2G"
+            if band == "5 GHz":
+                return band, "5G"
+            if band == "6 GHz":
+                return band, "6G"
+            return None, None
+
+        band_map: dict[str, tuple[str | None, str | None]] = {}
+
+        for radio in data.values():
+            if not isinstance(radio, dict):
+                continue
+            radio_cfg = radio.get("config") if isinstance(radio.get("config"), dict) else {}
+            radio_band = radio_cfg.get("band")
+            radio_chan = radio_cfg.get("channel")
+            radio_freq = radio_cfg.get("frequency")
+            radio_tuple = band_tuple(radio_band, radio_freq, radio_chan)
+
+            interfaces = radio.get("interfaces")
+            if not isinstance(interfaces, list):
+                continue
+            for iface in interfaces:
+                if not isinstance(iface, dict):
+                    continue
+                ifname = iface.get("ifname")
+                if not ifname:
+                    continue
+                iface_cfg = iface.get("config") if isinstance(iface.get("config"), dict) else {}
+                iface_tuple = band_tuple(
+                    iface_cfg.get("band"),
+                    iface_cfg.get("frequency"),
+                    iface_cfg.get("channel"),
+                )
+                band_map[str(ifname)] = iface_tuple if iface_tuple != (None, None) else radio_tuple
+
+        return band_map
 
     async def disconnect_client(
         self,
