@@ -36,12 +36,6 @@ ota:
   - platform: esphome
     password: !secret OTA_PWD
 
-globals:
-  id: first_update
-  type: int
-  restore_value: no
-  initial_value: "0"
-
 text_sensor:
   - platform: version
     internal: True

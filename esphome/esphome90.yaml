@@ -9,11 +9,6 @@ substitutions:
 # Include packages for this device specific type
 packages:
   device: !include common/.board_d1_mini32.yaml
-  # proxy: !include common/.blueprint_bluetooth_proxy.yaml
-
-api:
-  encryption:
-    key: !secret ENCRYPTION_KEY
 
 i2c:
   sda: 17
@@ -42,9 +37,3 @@ sensor:
       - clamp:
           min_value: 0
           max_value: 100
-
-text_sensor:
-  - platform: version
-    internal: True
-    name: ESPHome version
-    hide_timestamp: true

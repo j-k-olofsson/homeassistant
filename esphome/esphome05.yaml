@@ -9,5 +9,4 @@ substitutions:
 
 # Include packages for this device specific type
 packages:
-  # file: !include common/.device_sonoff_basic_flower_light.yaml
   file: !include common/.device_sonoff_basic_flower_light.yaml

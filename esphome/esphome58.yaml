@@ -9,12 +9,10 @@ substitutions:
   gpio_pin: "GPIO16"
   night_brightness: "20%"
   day_brightness: "40%"
-  # kill_button_pin: GPIO27
 
 # Include packages for this device specific type
 packages:
   ledstrip: !include common/.device_d1_mini32_ledstrip_indoors.yaml
-  # killbutton: !include common/.blueprint_ledstrip_kill_button.yaml
 
 safe_mode:
 

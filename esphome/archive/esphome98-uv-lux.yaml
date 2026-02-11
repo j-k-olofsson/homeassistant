@@ -5,12 +5,24 @@ substitutions:
   node_friendly_name: Lux & UV (labbet)
   node_comment: Lolin32 (lux/UV sensor) (VLAN IoT)
   log_level: INFO
-  i2c_sda_pin: GPIO21
-  i2c_scl_pin: GPIO22
-  bh1750_update_interval: 30s
-  uv_update_interval: 30s
+  sensor_i2c_bus_id: sensor_bus
+  sensor_i2c_sda_pin: GPIO21
+  sensor_i2c_scl_pin: GPIO22
+  veml7700_update_interval: 30s
+  ltr390_update_interval: 30s
+  ltr390_gain: X3
+  ltr390_resolution: 18
+  ltr390_window_correction: 1.0
 
 # Include packages for this device specific type
 packages:
-  board: !include common/.board_esp32_lolin32_arduino.yaml
-  sensors: !include common/.device_lolin32_lux_uv.yaml
+  board: !include common/.board_esp32_lolin32.yaml
+  veml7700: !include common/.sensor_veml7700.yaml
+  ltr390: !include common/.sensor_ltr390.yaml
+
+i2c:
+  - id: ${sensor_i2c_bus_id}
+    sda: ${sensor_i2c_sda_pin}
+    scl: ${sensor_i2c_scl_pin}
+    frequency: 100kHz
+    scan: true
