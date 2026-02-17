@@ -1,0 +1,21 @@
+# Board package for ESP32-C6-Zero over Thread
+
+esphome:
+  name: ${node_name}
+  comment: ${node_comment}
+  friendly_name: ${node_friendly_name}
+
+esp32:
+  board: esp32-c6-devkitc-1
+  variant: esp32c6
+  framework:
+    type: esp-idf
+    version: recommended
+
+packages:
+  device_base: !include .base_thread.yaml
+
+switch:
+  - platform: restart
+    id: myRestartSwitch
+    internal: true

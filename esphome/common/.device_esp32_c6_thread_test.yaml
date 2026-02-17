@@ -1,0 +1,42 @@
+# Device package for ESP32-C6 Thread connectivity tests
+
+packages:
+  board: !include .board_esp32_c6_zero_thread.yaml
+
+debug:
+  update_interval: 30s
+
+sensor:
+  - platform: uptime
+    name: ${node_name} Uptime
+
+  - platform: debug
+    free:
+      name: ${node_name} Heap Free
+      unit_of_measurement: B
+      accuracy_decimals: 0
+    loop_time:
+      name: ${node_name} Loop Time
+      unit_of_measurement: ms
+      accuracy_decimals: 3
+    cpu_frequency:
+      name: ${node_name} CPU Frequency
+      unit_of_measurement: MHz
+      accuracy_decimals: 0
+
+text_sensor:
+  - platform: openthread_info
+    role:
+      name: ${node_name} Thread Role
+    rloc16:
+      name: ${node_name} Thread RLOC16
+    network_name:
+      name: ${node_name} Thread Network
+    pan_id:
+      name: ${node_name} Thread PAN ID
+    ip_address:
+      name: ${node_name} Thread IPv6
+
+button:
+  - platform: restart
+    name: ${node_name} Restart

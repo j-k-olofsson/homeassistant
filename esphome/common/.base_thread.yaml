@@ -1,0 +1,39 @@
+# Root file for Thread-capable devices, only to be included by board/device packages
+# Requires substitutions:
+#   - node_name
+#   - log_level
+
+network:
+  enable_ipv6: true
+
+openthread:
+  # Active dataset TLV exported from your HA Thread network
+  tlv: !secret THREAD_DATASET_TLV
+  force_dataset: true
+  # Use mDNS hostname instead of pinning a specific IPv6
+  use_address: ${node_name}.local
+
+mdns:
+  disabled: false
+
+logger:
+  level: ${log_level}
+
+web_server:
+  port: 80
+  include_internal: true
+  version: 2
+
+api:
+  encryption:
+    key: !secret ENCRYPTION_KEY
+
+ota:
+  - platform: esphome
+    password: !secret OTA_PWD
+
+text_sensor:
+  - platform: version
+    internal: true
+    name: ESPHome version
+    hide_timestamp: true

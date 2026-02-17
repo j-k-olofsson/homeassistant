@@ -1,0 +1,11 @@
+# Device specific substitutions
+substitutions:
+  node_id: "99"
+  node_name: esphome99
+  node_friendly_name: Thread Test (ESP32-C6-Zero)
+  node_comment: ESP32-C6-Zero (Thread test)
+  log_level: INFO
+
+# Include packages for this device specific type
+packages:
+  device: !include common/.device_esp32_c6_thread_test.yaml

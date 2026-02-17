@@ -1015,8 +1015,8 @@
       brightness: 1
     target:
       entity_id:
-      - light.bordslampor_kok_esphome55_light
       - light.kokslampor_kok_esphome56_light
+      - light.banklampor
     action: light.turn_on
   mode: queued
   max: 10
@@ -1244,7 +1244,7 @@
     target:
       device_id:
       - 78bd2e36f6fc6598dff6571b95783e4f
-      - aa81c2f4de66261c1b2f4d56dc43bbb7
+      entity_id: light.banklampor
     action: light.turn_on
   mode: queued
   max: 10
