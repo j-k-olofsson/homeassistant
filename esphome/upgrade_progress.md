@@ -66,3 +66,13 @@ Notes:
 - Standardized secrets to /config/esphome/secrets.yaml with /config/esphome/common/secrets.yaml as a symlink.
 - Archived legacy unused files to /config/esphome/archive/legacy_unused.
 - Normalized ownership/permissions under /config/esphome (dirs 755, files 644, secrets 600).
+- 2026-02-19: Locked esphome42 on stable neopixelbus path due to OTA rollback on esp32_rmt_led_strip with ESPHome 2026.2.0 (ESP32 lolin32 rev1.0).
+- Added regression test track files:
+  - /config/esphome/esphome42_rmt_test.yaml
+  - /config/esphome/common/.device_lolin32_ledstrip_indoors_rmt_test.yaml
+  - /config/esphome/common/.blueprint_ledstrip_indoors_lolin32_rmt_test.yaml
+  - /config/esphome/common/.base_ledstrip_lolin32_indoors_rmt_test.yaml
+- Revert plan when upstream fix is available:
+  1) Validate esphome42_rmt_test.yaml boots and stays on 2026.2+ without rollback.
+  2) Switch /config/esphome/common/.device_lolin32_ledstrip_indoors.yaml back to RMT test blueprint.
+  3) Keep neopixelbus files as fallback until at least one more ESPHome release has been stable.

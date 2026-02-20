@@ -214,18 +214,6 @@
         target:
           entity_id: input_select.light_scene
         action: input_select.select_option
-      - action: light.turn_on
-        data:
-          brightness_pct: 40
-          kelvin: 3000
-        target:
-          entity_id: light.grupp_bordslampor_dagtid_2
-      - action: light.turn_on
-        target:
-          entity_id: light.grupp_bordslampor_dagtid
-        data:
-          brightness_pct: 40
-          color_temp_kelvin: 3000
     - conditions:
       - condition: trigger
         id: daylight
@@ -282,11 +270,6 @@
         target:
           entity_id: input_select.light_scene
         action: input_select.select_option
-      - action: light.turn_off
-        metadata: {}
-        data: {}
-        target:
-          entity_id: light.grupp_bordslampor_dagtid_2
       - action: light.turn_on
         data:
           rgb_color:
@@ -295,15 +278,6 @@
           - 0
         target:
           entity_id: light.grupp_lampor_som_tands_vid_skymning
-      - action: light.turn_on
-        target:
-          entity_id: light.grupp_bordslampor_dagtid
-        data:
-          rgb_color:
-          - 255
-          - 0
-          - 0
-          brightness_pct: 20
       - condition: state
         entity_id: input_boolean.guest_mode
         state: 'off'
@@ -1013,11 +987,11 @@
   actions:
   - data:
       brightness: 1
+    action: light.turn_on
     target:
       entity_id:
-      - light.kokslampor_kok_esphome56_light
       - light.banklampor
-    action: light.turn_on
+      - light.taklampor_kok
   mode: queued
   max: 10
 - id: '1699271506552'
@@ -1242,9 +1216,9 @@
   - data:
       brightness: 75
     target:
-      device_id:
-      - 78bd2e36f6fc6598dff6571b95783e4f
-      entity_id: light.banklampor
+      entity_id:
+      - light.banklampor
+      - light.taklampor_kok
     action: light.turn_on
   mode: queued
   max: 10
@@ -2457,7 +2431,7 @@
               - light.bordslampa_hoger
             data:
               color_temp_kelvin: 3000
-              brightness_pct: 50
+              brightness_pct: 25
               transition: 1
         - conditions:
           - condition: state
@@ -2471,7 +2445,7 @@
               - light.bordslampa_hoger
             data:
               color_temp_kelvin: 3000
-              brightness_pct: 50
+              brightness_pct: 25
               transition: 1
         - conditions:
           - condition: state
@@ -2485,7 +2459,7 @@
               - light.bordslampa_hoger
             data:
               color_temp_kelvin: 3000
-              brightness_pct: 50
+              brightness_pct: 25
               transition: 1
     - conditions:
       - condition: template
@@ -2502,7 +2476,7 @@
           - variables:
               steps: 20
               start_brightness: 15
-              end_brightness: 50
+              end_brightness: 25
               start_rgb:
               - 255
               - 0
@@ -2539,7 +2513,7 @@
               - light.bordslampa_hoger
             data:
               color_temp_kelvin: 3000
-              brightness_pct: 50
+              brightness_pct: 25
               transition: 30
         - conditions:
           - condition: state
@@ -2570,7 +2544,7 @@
               - light.bordslampa_hoger
             data:
               color_temp_kelvin: 3000
-              brightness_pct: 50
+              brightness_pct: 25
               transition: 1
         - conditions:
           - condition: state
@@ -2584,7 +2558,7 @@
               - light.bordslampa_hoger
             data:
               color_temp_kelvin: 3000
-              brightness_pct: 50
+              brightness_pct: 25
               transition: 1
         - conditions:
           - condition: state
@@ -2598,7 +2572,7 @@
               - light.bordslampa_hoger
             data:
               color_temp_kelvin: 3000
-              brightness_pct: 50
+              brightness_pct: 25
               transition: 1
   mode: restart
 - id: '1769691569990'

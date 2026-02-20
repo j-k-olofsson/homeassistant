@@ -2,4 +2,4 @@
 
 packages:
   device_esp32_lolin32: !include .board_esp32_lolin32.yaml
-  ledstrip: !include .blueprint_ledstrip_indoors.yaml
+  ledstrip: !include .blueprint_ledstrip_indoors_lolin32.yaml

@@ -1,0 +1,4 @@
+# Test track: use this package only for regression retests of esp32_rmt_led_strip.
+packages:
+  device_esp32_lolin32: !include .board_esp32_lolin32.yaml
+  ledstrip: !include .blueprint_ledstrip_indoors_lolin32_rmt_test.yaml
