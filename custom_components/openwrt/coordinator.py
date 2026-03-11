@@ -24,6 +24,7 @@ class DeviceCoordinator:
         self._id = config["id"]
         self._apis = None
         self._wps = config.get("wps", False)
+        self._wireless_fallback_active = False
 
         self._coordinator = DataUpdateCoordinator(
             hass,
@@ -46,7 +47,7 @@ class DeviceCoordinator:
     async def discover_wireless(self) -> dict:
         result = dict(ap=[], mesh=[])
         if not self.is_api_supported("network.wireless"):
-            return result
+            return await self._discover_wireless_from_hostapd()
         wifi_devices = self._configured_devices("wifi_devices")
         try:
             response = await self._ubus.api_call('network.wireless', 'status', {})
@@ -66,8 +67,56 @@ class DeviceCoordinator:
                     if iface['config']['mode'] == 'mesh':
                         conf['mesh_id'] = iface['config']['mesh_id']
                         result['mesh'].append(conf)
+            if self._wireless_fallback_active:
+                _LOGGER.info(
+                    "Device [%s] recovered network.wireless status; disabling hostapd fallback",
+                    self._id,
+                )
+                self._wireless_fallback_active = False
+            return result
+        except ConnectionError as err:
+            # Newer OpenWrt builds can return numeric RPC code 2 for this method.
+            # Fall back to hostapd interface discovery to keep AP client metrics alive.
+            if "RPC error: 2" in str(err):
+                if not self._wireless_fallback_active:
+                    _LOGGER.warning(
+                        "Device [%s] network.wireless status unsupported (%s); "
+                        "falling back to hostapd interface discovery",
+                        self._id,
+                        err,
+                    )
+                    self._wireless_fallback_active = True
+                return await self._discover_wireless_from_hostapd()
+            raise
         except NameError as err:
             _LOGGER.warning(f"Device [{self._id}] doesn't support wireless: {err}")
+            return await self._discover_wireless_from_hostapd()
+
+    async def _discover_wireless_from_hostapd(self) -> dict:
+        """Best-effort fallback discovery when network.wireless status fails."""
+        result = dict(ap=[], mesh=[])
+        wifi_devices = self._configured_devices("wifi_devices")
+        if not self._apis:
+            self._apis = await self.load_ubus()
+        if not isinstance(self._apis, dict):
+            return result
+
+        hostapd_ifaces = []
+        for object_name in self._apis:
+            if not isinstance(object_name, str) or not object_name.startswith("hostapd."):
+                continue
+            ifname = object_name.split("hostapd.", 1)[1]
+            if not ifname:
+                continue
+            if len(wifi_devices) and ifname not in wifi_devices:
+                continue
+            hostapd_ifaces.append(ifname)
+
+        for ifname in sorted(set(hostapd_ifaces)):
+            result["ap"].append(dict(ifname=ifname, network="unknown"))
+
+        if not result["ap"]:
+            _LOGGER.warning("Device [%s] hostapd fallback found no AP interfaces", self._id)
         return result
 
     def find_mesh_peers(self, mesh_id: str):
@@ -157,7 +206,7 @@ class DeviceCoordinator:
                         dict()
                     )
                     result["wps"] = response.get("pbc_status") == "Active"
-                except ConnectionError:
+                except ConnectionError as err:
                     _LOGGER.warning(f"Interface [{interface_id}] doesn't support WPS: {err}")
 
             return result
@@ -339,7 +388,8 @@ class DeviceCoordinator:
                 raise ConfigEntryAuthFailed from err
             except Exception as err:
                 _LOGGER.exception(f"Device [{self._id}] async_update_data error: {err}")
-                raise UpdateFailed(f"OpenWrt communication error: {err}")
+                err_msg = str(err) or repr(err)
+                raise UpdateFailed(f"OpenWrt communication error: {err_msg}")
         return async_update_data
 
 def new_ubus_client(hass, config: dict) -> Ubus:

@@ -467,11 +467,13 @@
   description: Automatiskt aktivera värmaren för hönsens vatten när temperaturen sjunker
     under 1°C och stäng av den när temperaturen stiger över 2°C.
   triggers:
-  - entity_id: sensor.tem_hum_honshuset_temperature
+  - entity_id:
+    - sensor.honshuset_temp
     below: 1
     id: start_heater
     trigger: numeric_state
-  - entity_id: sensor.tem_hum_honshuset_temperature
+  - entity_id:
+    - sensor.honshuset_temp
     above: 2
     id: stop_heater
     trigger: numeric_state
@@ -518,7 +520,7 @@
       - condition: trigger
         id: open_cover
       - condition: numeric_state
-        entity_id: sensor.tem_hum_honshuset_temperature
+        entity_id: sensor.honshuset_temp
         above: 0
       sequence:
       - data: {}
@@ -580,6 +582,8 @@
     at: '22:00:00'
     id: 2200-alldays
   conditions: []
+  variables:
+    spotify_target_device_id: Dassens högtalare
   actions:
   - choose:
     - conditions:
@@ -608,7 +612,7 @@
             data:
               entity_id: media_player.spotifyplus_mammaochpapppa
               context_uri: spotify:playlist:1NL3k4V4XXj4mOOr2e6JGQ
-              device_id: 502e110e3653a9ec3bade927714d8bbc
+              device_id: '{{ spotify_target_device_id }}'
               shuffle: true
           - delay: 00:00:03
           - choose:
@@ -639,7 +643,7 @@
         data:
           entity_id: media_player.spotifyplus_mammaochpapppa
           context_uri: spotify:playlist:2fLpo9cVywf8wM52GesCKz?si=3YTiMKqfSMmiJYh5XXwYVw
-          device_id: 502e110e3653a9ec3bade927714d8bbc
+          device_id: '{{ spotify_target_device_id }}'
           shuffle: true
       - action: spotifyplus.player_set_repeat_mode
         data:
@@ -653,7 +657,7 @@
       - action: spotifyplus.player_media_pause
         data:
           entity_id: media_player.spotifyplus_mammaochpapppa
-          device_id: Dassens högtalare
+          device_id: '{{ spotify_target_device_id }}'
   mode: queued
   max: 10
 - id: '1674477126105'
@@ -843,11 +847,10 @@
         }}={{ v|round(3) }};{{ cat(v) }}\n{%- endif -%}\n{%- endfor -%}\n{%- endif
         -%}\n"
       channels:
-      - ha
       - tts
       - mobile
       - slack
-      tts_media_player: media_player.grupp_grannys_hogtalare
+      tts_media_player: media_player.kokets_skarm_2
       slack_channel: '#elpriser'
   mode: queued
   max: 10
@@ -991,7 +994,7 @@
     target:
       entity_id:
       - light.banklampor
-      - light.taklampor_kok
+      - light.taklampor_kokson
   mode: queued
   max: 10
 - id: '1699271506552'
@@ -1218,30 +1221,8 @@
     target:
       entity_id:
       - light.banklampor
-      - light.taklampor_kok
+      - light.taklampor_kokson
     action: light.turn_on
-  mode: queued
-  max: 10
-- id: '1706273215614'
-  alias: Ny starttid för billigaste elpriset
-  description: Automationen ställer in starten för billigaste elpriset varje dag.
-  triggers:
-  - at: '23:10:00'
-    trigger: time
-  conditions:
-  - condition: not
-    conditions:
-    - condition: state
-      entity_id: sensor.billigaste_elpriset
-      state: unknown
-  actions:
-  - metadata: {}
-    data:
-      time: '{{ as_timestamp(states(''sensor.billigaste_elpriset'')) | timestamp_custom(''%H:%M'')
-        }}'
-    target:
-      entity_id: input_datetime.starttid_for_billig_el
-    action: input_datetime.set_datetime
   mode: queued
   max: 10
 - id: '1707479332827'

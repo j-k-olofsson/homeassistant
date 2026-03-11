@@ -65,6 +65,35 @@
       "total_range": {
         "name": "Total range"
       },
+      "charging_status": {
+        "name": "Opladningsstatus",
+        "state": {
+          "charge_complete": "Opladning færdig",
+          "charging": "Oplader",
+          "none": "Ikke forbundet",
+          "plugged": "Tilsluttet"
+        },
+        "state_attributes": {
+          "remaining_minutes": {
+            "name": "Minutter til fuld"
+          },
+          "has_charging_schedule": {
+            "name": "Har opladningsplan"
+          },
+          "scheduled_charging_start": {
+            "name": "Planlagt start for opladning"
+          },
+          "scheduled_charging_end": {
+            "name": "Planlagt afslutning af opladning"
+          },
+          "scheduled_charging_duration": {
+            "name": "Varighed af planlagt opladning"
+          }
+        }
+      },
+      "remaining_charge_time": {
+        "name": "Resterende opladningstid"
+      },
       "current_day_statistics": {
         "name": "Statistik for denne dag"
       },
@@ -144,6 +173,19 @@
       },
       "taillights": {
         "name": "Baglygter"
+      }
+    },
+    "climate": {
+      "climate": {
+        "state_attributes": {
+          "preset_mode": {
+            "state": {
+              "front_defrost": "Forrude afisning",
+              "rear_defrost": "Bagrude afisning",
+              "both_defrost": "Begge afisning"
+            }
+          }
+        }
       }
     }
   }

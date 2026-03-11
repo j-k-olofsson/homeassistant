@@ -1,0 +1,441 @@
+input_datetime:
+  aqara_taklampor_senaste_knapp_tid:
+    name: Aqara taklampor senaste knapp tid
+    has_date: true
+    has_time: true
+  aqara_taklampor_senaste_kommando_tid:
+    name: Aqara taklampor senaste kommando tid
+    has_date: true
+    has_time: true
+  aqara_taklampor_senaste_flash_tid:
+    name: Aqara taklampor senaste flash tid
+    has_date: true
+    has_time: true
+  aqara_banklampor_senaste_knapp_tid:
+    name: Aqara banklampor senaste knapp tid
+    has_date: true
+    has_time: true
+  aqara_banklampor_senaste_kommando_tid:
+    name: Aqara banklampor senaste kommando tid
+    has_date: true
+    has_time: true
+  aqara_banklampor_senaste_flash_tid:
+    name: Aqara banklampor senaste flash tid
+    has_date: true
+    has_time: true
+
+input_text:
+  aqara_taklampor_senaste_kommando:
+    name: Aqara taklampor senaste kommando
+    max: 255
+  aqara_taklampor_senaste_orsak:
+    name: Aqara taklampor senaste orsak
+    max: 255
+  aqara_taklampor_senaste_handelserapport:
+    name: Aqara taklampor senaste händelserapport
+    max: 255
+  aqara_banklampor_senaste_kommando:
+    name: Aqara banklampor senaste kommando
+    max: 255
+  aqara_banklampor_senaste_orsak:
+    name: Aqara banklampor senaste orsak
+    max: 255
+  aqara_banklampor_senaste_handelserapport:
+    name: Aqara banklampor senaste händelserapport
+    max: 255
+
+counter:
+  aqara_taklampor_flash_count:
+    name: Aqara taklampor flash count
+    initial: 0
+    step: 1
+  aqara_banklampor_flash_count:
+    name: Aqara banklampor flash count
+    initial: 0
+    step: 1
+
+template:
+  - sensor:
+      - name: Aqara taklampor senaste analys
+        unique_id: aqara_taklampor_senaste_analys
+        state: "{{ states('input_text.aqara_taklampor_senaste_orsak') }}"
+        attributes:
+          senaste_flash: "{{ states('input_datetime.aqara_taklampor_senaste_flash_tid') }}"
+          flash_count: "{{ states('counter.aqara_taklampor_flash_count') }}"
+          senaste_kommando: "{{ states('input_text.aqara_taklampor_senaste_kommando') }}"
+          senaste_handelserapport: "{{ states('input_text.aqara_taklampor_senaste_handelserapport') }}"
+
+  - binary_sensor:
+      - name: Aqara taklampor flash senaste 24h
+        unique_id: aqara_taklampor_flash_senaste_24h
+        state: >-
+          {% if states('counter.aqara_taklampor_flash_count') | int(0) == 0 %}
+            false
+          {% else %}
+          {% set ts = states('input_datetime.aqara_taklampor_senaste_flash_tid') %}
+          {% if ts in ['unknown', 'unavailable', '', none] %}
+            false
+          {% else %}
+            {{ (as_timestamp(now()) - as_timestamp(ts)) < 86400 }}
+          {% endif %}
+          {% endif %}
+
+  - sensor:
+      - name: Aqara banklampor senaste analys
+        unique_id: aqara_banklampor_senaste_analys
+        state: "{{ states('input_text.aqara_banklampor_senaste_orsak') }}"
+        attributes:
+          senaste_flash: "{{ states('input_datetime.aqara_banklampor_senaste_flash_tid') }}"
+          flash_count: "{{ states('counter.aqara_banklampor_flash_count') }}"
+          senaste_kommando: "{{ states('input_text.aqara_banklampor_senaste_kommando') }}"
+          senaste_handelserapport: "{{ states('input_text.aqara_banklampor_senaste_handelserapport') }}"
+
+  - binary_sensor:
+      - name: Aqara banklampor flash senaste 24h
+        unique_id: aqara_banklampor_flash_senaste_24h
+        state: >-
+          {% if states('counter.aqara_banklampor_flash_count') | int(0) == 0 %}
+            false
+          {% else %}
+          {% set ts = states('input_datetime.aqara_banklampor_senaste_flash_tid') %}
+          {% if ts in ['unknown', 'unavailable', '', none] %}
+            false
+          {% else %}
+            {{ (as_timestamp(now()) - as_timestamp(ts)) < 86400 }}
+          {% endif %}
+          {% endif %}
+
+automation:
+  - id: aqara_taklampor_monitor_knapp_event
+    alias: Aqara taklampor monitor - knapp event
+    description: Registrerar senaste fysiska knapphändelse från Aqara H2 för taklampor.
+    triggers:
+      - trigger: state
+        entity_id:
+          - event.taklampor_kokson_knapp
+    actions:
+      - action: input_datetime.set_datetime
+        target:
+          entity_id: input_datetime.aqara_taklampor_senaste_knapp_tid
+        data:
+          datetime: "{{ now().strftime('%Y-%m-%d %H:%M:%S') }}"
+      - variables:
+          msg: >-
+            KNAPP {{ trigger.entity_id }} state={{ trigger.to_state.state if trigger.to_state else 'unknown' }}
+            ctx={{ trigger.to_state.context.id if trigger.to_state else 'none' }}
+      - action: input_text.set_value
+        target:
+          entity_id: input_text.aqara_taklampor_senaste_handelserapport
+        data:
+          value: "{{ msg[:255] }}"
+      - action: logbook.log
+        data:
+          name: Aqara taklampor monitor
+          message: "{{ msg }}"
+          entity_id: light.taklampor_kokson
+    mode: queued
+    max: 20
+
+  - id: aqara_taklampor_monitor_service_calls
+    alias: Aqara taklampor monitor - service calls
+    description: Loggar senaste service-kommando som riktar sig mot taklamporna.
+    triggers:
+      - trigger: event
+        event_type: call_service
+    conditions:
+      - condition: template
+        value_template: >-
+          {{ trigger.event.data.domain not in ['logbook', 'system_log', 'input_text', 'input_datetime'] }}
+      - condition: template
+        value_template: >-
+          {% set sd = trigger.event.data.service_data if trigger.event and trigger.event.data else {} %}
+          {% set eid = sd.entity_id if sd is mapping and 'entity_id' in sd else none %}
+          {% if eid is string %}
+            {{ eid in ['light.taklampor_kokson', 'light.grupp_taklampor_kok'] }}
+          {% elif eid is iterable and eid is not string %}
+            {{ 'light.taklampor_kokson' in eid or 'light.grupp_taklampor_kok' in eid }}
+          {% else %}
+            false
+          {% endif %}
+    actions:
+      - action: input_datetime.set_datetime
+        target:
+          entity_id: input_datetime.aqara_taklampor_senaste_kommando_tid
+        data:
+          datetime: "{{ now().strftime('%Y-%m-%d %H:%M:%S') }}"
+      - variables:
+          msg: >-
+            CMD {{ trigger.event.data.domain }}.{{ trigger.event.data.service }}
+            entity={{ trigger.event.data.service_data.entity_id }}
+            brightness={{ trigger.event.data.service_data.brightness if trigger.event.data.service_data is mapping and 'brightness' in trigger.event.data.service_data else 'na' }}
+            user_id={{ trigger.event.context.user_id if trigger.event and trigger.event.context else 'none' }}
+            ctx={{ trigger.event.context.id if trigger.event and trigger.event.context else 'none' }}
+      - action: input_text.set_value
+        target:
+          entity_id: input_text.aqara_taklampor_senaste_kommando
+        data:
+          value: "{{ msg[:255] }}"
+      - action: logbook.log
+        data:
+          name: Aqara taklampor monitor
+          message: "{{ msg }}"
+          entity_id: light.taklampor_kokson
+    mode: queued
+    max: 50
+
+  - id: aqara_taklampor_monitor_flash_detector
+    alias: Aqara taklampor monitor - flash detector
+    description: Detekterar misstänkt kort uppgång till hög ljusstyrka och klassificerar sannolik orsak.
+    triggers:
+      - trigger: state
+        entity_id:
+          - light.taklampor_kokson
+    conditions:
+      - condition: template
+        value_template: >-
+          {% if trigger.from_state is none or trigger.to_state is none %}
+            false
+          {% else %}
+            {% set from_on = trigger.from_state.state == 'on' %}
+            {% set to_on = trigger.to_state.state == 'on' %}
+            {% set bf = trigger.from_state.attributes.brightness | int(0) %}
+            {% set bt = trigger.to_state.attributes.brightness | int(0) %}
+            {{ from_on and to_on and bf > 0 and bt >= 230 and (bt - bf) >= 120 }}
+          {% endif %}
+    actions:
+      - variables:
+          bf: "{{ trigger.from_state.attributes.brightness | int(0) }}"
+          bt: "{{ trigger.to_state.attributes.brightness | int(0) }}"
+          cmd_ts: "{{ states('input_datetime.aqara_taklampor_senaste_kommando_tid') }}"
+          btn_ts: "{{ states('input_datetime.aqara_taklampor_senaste_knapp_tid') }}"
+          cmd_age: >-
+            {% if cmd_ts in ['unknown', 'unavailable', '', none] %}
+              999999
+            {% else %}
+              {{ (as_timestamp(now()) - as_timestamp(cmd_ts)) | int(999999) }}
+            {% endif %}
+          btn_age: >-
+            {% if btn_ts in ['unknown', 'unavailable', '', none] %}
+              999999
+            {% else %}
+              {{ (as_timestamp(now()) - as_timestamp(btn_ts)) | int(999999) }}
+            {% endif %}
+          cause: >-
+            {% if trigger.to_state.context.user_id is not none %}
+              Manuell styrning i app/UI
+            {% elif (cmd_age | int(999999)) <= 3 %}
+              Automations/skript/extern tjänst skickade ljuskommando
+            {% elif (btn_age | int(999999)) <= 3 %}
+              Fysisk knapphändelse från dimmern
+            {% elif trigger.to_state.context.parent_id is not none %}
+              Kedjad automation/skript-trigger (parent context finns)
+            {% else %}
+              Spontan rapport från enhet/driver/last (ingen nylig knapp eller tjänst)
+            {% endif %}
+          msg: >-
+            FLASH upptäckt på {{ trigger.entity_id }}: {{ bf }} -> {{ bt }}.
+            Orsak: {{ cause }}.
+            effekt={{ states('sensor.taklampor_kokson_effekt') }}W ström={{ states('sensor.taklampor_kokson_aktiv_strom') }}A.
+            cmd_age={{ cmd_age }}s btn_age={{ btn_age }}s.
+            ctx={{ trigger.to_state.context.id }} parent={{ trigger.to_state.context.parent_id if trigger.to_state.context.parent_id else 'none' }} user={{ trigger.to_state.context.user_id if trigger.to_state.context.user_id else 'none' }}
+      - action: counter.increment
+        target:
+          entity_id: counter.aqara_taklampor_flash_count
+      - action: input_datetime.set_datetime
+        target:
+          entity_id: input_datetime.aqara_taklampor_senaste_flash_tid
+        data:
+          datetime: "{{ now().strftime('%Y-%m-%d %H:%M:%S') }}"
+      - action: input_text.set_value
+        target:
+          entity_id: input_text.aqara_taklampor_senaste_orsak
+        data:
+          value: "{{ cause[:255] }}"
+      - action: input_text.set_value
+        target:
+          entity_id: input_text.aqara_taklampor_senaste_handelserapport
+        data:
+          value: "{{ msg[:255] }}"
+      - action: persistent_notification.create
+        data:
+          title: "Aqara taklampor: misstänkt flash"
+          message: "{{ msg }}"
+          notification_id: aqara_taklampor_flash_latest
+      - action: logbook.log
+        data:
+          name: Aqara taklampor monitor
+          message: "{{ msg }}"
+          entity_id: "{{ trigger.entity_id }}"
+      - action: system_log.write
+        data:
+          level: warning
+          message: "{{ msg }}"
+    mode: queued
+    max: 50
+
+  - id: aqara_banklampor_monitor_knapp_event
+    alias: Aqara banklampor monitor - knapp event
+    description: Registrerar senaste fysiska knapphändelse från Aqara H2 för banklampor.
+    triggers:
+      - trigger: state
+        entity_id:
+          - event.banklampor_knapp
+    actions:
+      - action: input_datetime.set_datetime
+        target:
+          entity_id: input_datetime.aqara_banklampor_senaste_knapp_tid
+        data:
+          datetime: "{{ now().strftime('%Y-%m-%d %H:%M:%S') }}"
+      - variables:
+          msg: >-
+            KNAPP {{ trigger.entity_id }} state={{ trigger.to_state.state if trigger.to_state else 'unknown' }}
+            ctx={{ trigger.to_state.context.id if trigger.to_state else 'none' }}
+      - action: input_text.set_value
+        target:
+          entity_id: input_text.aqara_banklampor_senaste_handelserapport
+        data:
+          value: "{{ msg[:255] }}"
+      - action: logbook.log
+        data:
+          name: Aqara banklampor monitor
+          message: "{{ msg }}"
+          entity_id: light.banklampor
+    mode: queued
+    max: 20
+
+  - id: aqara_banklampor_monitor_service_calls
+    alias: Aqara banklampor monitor - service calls
+    description: Loggar senaste service-kommando som riktar sig mot banklamporna.
+    triggers:
+      - trigger: event
+        event_type: call_service
+    conditions:
+      - condition: template
+        value_template: >-
+          {{ trigger.event.data.domain not in ['logbook', 'system_log', 'input_text', 'input_datetime'] }}
+      - condition: template
+        value_template: >-
+          {% set sd = trigger.event.data.service_data if trigger.event and trigger.event.data else {} %}
+          {% set eid = sd.entity_id if sd is mapping and 'entity_id' in sd else none %}
+          {% if eid is string %}
+            {{ eid in ['light.banklampor'] }}
+          {% elif eid is iterable and eid is not string %}
+            {{ 'light.banklampor' in eid }}
+          {% else %}
+            false
+          {% endif %}
+    actions:
+      - action: input_datetime.set_datetime
+        target:
+          entity_id: input_datetime.aqara_banklampor_senaste_kommando_tid
+        data:
+          datetime: "{{ now().strftime('%Y-%m-%d %H:%M:%S') }}"
+      - variables:
+          msg: >-
+            CMD {{ trigger.event.data.domain }}.{{ trigger.event.data.service }}
+            entity={{ trigger.event.data.service_data.entity_id }}
+            brightness={{ trigger.event.data.service_data.brightness if trigger.event.data.service_data is mapping and 'brightness' in trigger.event.data.service_data else 'na' }}
+            user_id={{ trigger.event.context.user_id if trigger.event and trigger.event.context else 'none' }}
+            ctx={{ trigger.event.context.id if trigger.event and trigger.event.context else 'none' }}
+      - action: input_text.set_value
+        target:
+          entity_id: input_text.aqara_banklampor_senaste_kommando
+        data:
+          value: "{{ msg[:255] }}"
+      - action: logbook.log
+        data:
+          name: Aqara banklampor monitor
+          message: "{{ msg }}"
+          entity_id: light.banklampor
+    mode: queued
+    max: 50
+
+  - id: aqara_banklampor_monitor_flash_detector
+    alias: Aqara banklampor monitor - flash detector
+    description: Detekterar misstänkt kort uppgång till hög ljusstyrka och klassificerar sannolik orsak.
+    triggers:
+      - trigger: state
+        entity_id:
+          - light.banklampor
+    conditions:
+      - condition: template
+        value_template: >-
+          {% if trigger.from_state is none or trigger.to_state is none %}
+            false
+          {% else %}
+            {% set from_on = trigger.from_state.state == 'on' %}
+            {% set to_on = trigger.to_state.state == 'on' %}
+            {% set bf = trigger.from_state.attributes.brightness | int(0) %}
+            {% set bt = trigger.to_state.attributes.brightness | int(0) %}
+            {{ from_on and to_on and bf > 0 and bt >= 230 and (bt - bf) >= 120 }}
+          {% endif %}
+    actions:
+      - variables:
+          bf: "{{ trigger.from_state.attributes.brightness | int(0) }}"
+          bt: "{{ trigger.to_state.attributes.brightness | int(0) }}"
+          cmd_ts: "{{ states('input_datetime.aqara_banklampor_senaste_kommando_tid') }}"
+          btn_ts: "{{ states('input_datetime.aqara_banklampor_senaste_knapp_tid') }}"
+          cmd_age: >-
+            {% if cmd_ts in ['unknown', 'unavailable', '', none] %}
+              999999
+            {% else %}
+              {{ (as_timestamp(now()) - as_timestamp(cmd_ts)) | int(999999) }}
+            {% endif %}
+          btn_age: >-
+            {% if btn_ts in ['unknown', 'unavailable', '', none] %}
+              999999
+            {% else %}
+              {{ (as_timestamp(now()) - as_timestamp(btn_ts)) | int(999999) }}
+            {% endif %}
+          cause: >-
+            {% if trigger.to_state.context.user_id is not none %}
+              Manuell styrning i app/UI
+            {% elif (cmd_age | int(999999)) <= 3 %}
+              Automations/skript/extern tjänst skickade ljuskommando
+            {% elif (btn_age | int(999999)) <= 3 %}
+              Fysisk knapphändelse från dimmern
+            {% elif trigger.to_state.context.parent_id is not none %}
+              Kedjad automation/skript-trigger (parent context finns)
+            {% else %}
+              Spontan rapport från enhet/driver/last (ingen nylig knapp eller tjänst)
+            {% endif %}
+          msg: >-
+            FLASH upptäckt på {{ trigger.entity_id }}: {{ bf }} -> {{ bt }}.
+            Orsak: {{ cause }}.
+            effekt={{ states('sensor.banklampor_effekt') }}W ström={{ states('sensor.banklampor_aktiv_strom') }}A.
+            cmd_age={{ cmd_age }}s btn_age={{ btn_age }}s.
+            ctx={{ trigger.to_state.context.id }} parent={{ trigger.to_state.context.parent_id if trigger.to_state.context.parent_id else 'none' }} user={{ trigger.to_state.context.user_id if trigger.to_state.context.user_id else 'none' }}
+      - action: counter.increment
+        target:
+          entity_id: counter.aqara_banklampor_flash_count
+      - action: input_datetime.set_datetime
+        target:
+          entity_id: input_datetime.aqara_banklampor_senaste_flash_tid
+        data:
+          datetime: "{{ now().strftime('%Y-%m-%d %H:%M:%S') }}"
+      - action: input_text.set_value
+        target:
+          entity_id: input_text.aqara_banklampor_senaste_orsak
+        data:
+          value: "{{ cause[:255] }}"
+      - action: input_text.set_value
+        target:
+          entity_id: input_text.aqara_banklampor_senaste_handelserapport
+        data:
+          value: "{{ msg[:255] }}"
+      - action: persistent_notification.create
+        data:
+          title: "Aqara banklampor: misstänkt flash"
+          message: "{{ msg }}"
+          notification_id: aqara_banklampor_flash_latest
+      - action: logbook.log
+        data:
+          name: Aqara banklampor monitor
+          message: "{{ msg }}"
+          entity_id: "{{ trigger.entity_id }}"
+      - action: system_log.write
+        data:
+          level: warning
+          message: "{{ msg }}"
+    mode: queued
+    max: 50

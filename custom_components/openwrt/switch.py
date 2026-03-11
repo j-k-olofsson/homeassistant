@@ -20,7 +20,7 @@ async def async_setup_entry(
     data = entry.as_dict()
     device = hass.data[DOMAIN]['devices'][entry.entry_id]
     device_id = data['data']['id']
-    for net_id, info in device.coordinator.data['wireless'].items():
+    for net_id, info in device.coordinator.data.get('wireless', {}).items():
         if "wps" in info:
             sensor = WirelessWpsSwitch(device, device_id, net_id)
             entities.append(sensor)
@@ -43,15 +43,19 @@ class WirelessWpsSwitch(OpenWrtEntity, SwitchEntity):
 
     @property
     def is_on(self):
-        return self.data["wireless"][self._interface_id]["wps"]
+        return self.data.get("wireless", {}).get(self._interface_id, {}).get("wps", False)
+
+    @property
+    def available(self):
+        return self._interface_id in self.data.get("wireless", {})
 
     async def async_turn_on(self, **kwargs):
         await self._device.set_wps(self._interface_id, True)
-        self.data["wireless"][self._interface_id]["wps"] = True
+        self.data.setdefault("wireless", {}).setdefault(self._interface_id, {})["wps"] = True
 
     async def async_turn_off(self, **kwargs):
         await self._device.set_wps(self._interface_id, False)
-        self.data["wireless"][self._interface_id]["wps"] = False
+        self.data.setdefault("wireless", {}).setdefault(self._interface_id, {})["wps"] = False
 
     @property
     def icon(self):

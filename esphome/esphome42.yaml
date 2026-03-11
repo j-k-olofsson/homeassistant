@@ -1,7 +1,7 @@
 # Device specific substitutions
-# LOCKED STABLE (2026-02-19):
+# LOCKED STABLE (2026-02-21):
 # Keep this node on the neopixelbus variant until esp32_rmt_led_strip
-# boots cleanly on ESPHome 2026.2+ for this hardware (ESP32 rev1.0 / lolin32).
+# boots cleanly on ESPHome for this hardware (ESP32 rev1.0 / lolin32).
 substitutions:
   node_id: "42"
   node_name: esphome42
@@ -16,5 +16,11 @@ substitutions:
 # Include packages for this device specific type
 packages:
   file: !include common/.device_lolin32_ledstrip_indoors.yaml
+
+# Lock framework version for this historically sensitive node.
+esp32:
+  framework:
+    type: arduino
+    version: 3.3.7
 
 safe_mode:

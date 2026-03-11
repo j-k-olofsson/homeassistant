@@ -851,11 +851,21 @@ class UbusClient:
         try:
             response = await self._request(payload, allow_reauth=True)
         except RuntimeError:
-            return {}
+            return await self._get_interface_band_map_from_iwinfo()
+
+        # Some OpenWrt variants return ubus result code 2 for this call.
+        result = response.get("result")
+        if (
+            isinstance(result, list)
+            and result
+            and isinstance(result[0], int)
+            and result[0] != 0
+        ):
+            return await self._get_interface_band_map_from_iwinfo()
 
         data = _extract_result_data(response)
         if not isinstance(data, dict):
-            return {}
+            return await self._get_interface_band_map_from_iwinfo()
 
         def band_tuple(raw_band: Any, freq: Any = None, channel: Any = None) -> tuple[str | None, str | None]:
             band_val = str(raw_band).strip().lower() if raw_band is not None else ""
@@ -903,6 +913,47 @@ class UbusClient:
                     iface_cfg.get("channel"),
                 )
                 band_map[str(ifname)] = iface_tuple if iface_tuple != (None, None) else radio_tuple
+
+        return band_map
+
+    async def _get_interface_band_map_from_iwinfo(
+        self,
+    ) -> dict[str, tuple[str | None, str | None]]:
+        """Fallback band mapping based on iwinfo per interface."""
+        interfaces = await self.list_hostapd_interfaces()
+        if not interfaces:
+            return {}
+
+        band_map: dict[str, tuple[str | None, str | None]] = {}
+        for ifname in interfaces:
+            payload = {
+                "method": "call",
+                "params": [
+                    self._ubus_session,
+                    "iwinfo",
+                    "info",
+                    {"device": ifname},
+                ],
+            }
+            try:
+                response = await self._request(payload, allow_reauth=True)
+            except RuntimeError:
+                continue
+
+            data = _extract_result_data(response)
+            if not isinstance(data, dict):
+                continue
+
+            band = _band_from_freq_channel(
+                _to_int(data.get("frequency")),
+                _to_int(data.get("channel")),
+            )
+            if band == "2.4 GHz":
+                band_map[ifname] = (band, "2G")
+            elif band == "5 GHz":
+                band_map[ifname] = (band, "5G")
+            elif band == "6 GHz":
+                band_map[ifname] = (band, "6G")
 
         return band_map
 

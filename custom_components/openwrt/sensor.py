@@ -26,25 +26,25 @@ async def async_setup_entry(
     device_id = data['data']['id']
 
     wireless = []
-    for net_id in device.coordinator.data['wireless']:
+    for net_id in device.coordinator.data.get('wireless', {}):
         sensor = WirelessClientsSensor(device, device_id, net_id)
         wireless.append(sensor)
         entities.append(sensor)
     if len(wireless) > 0:
         entities.append(WirelessTotalClientsSensor(
             device, device_id, wireless))
-    for net_id in device.coordinator.data['mesh']:
+    for net_id in device.coordinator.data.get('mesh', {}):
         entities.append(
             MeshSignalSensor(device, device_id, net_id)
         )
         entities.append(
             MeshPeersSensor(device, device_id, net_id)
         )
-    for net_id in device.coordinator.data["mwan3"]:
+    for net_id in device.coordinator.data.get("mwan3", {}):
         entities.append(
             Mwan3OnlineSensor(device, device_id, net_id)
         )
-    for net_id in device.coordinator.data["wan"]:
+    for net_id in device.coordinator.data.get("wan", {}):
         entities.append(
             WanRxTxSensor(device, device_id, net_id, "rx")
         )
@@ -80,7 +80,11 @@ class WirelessClientsSensor(OpenWrtSensor):
 
     @property
     def state(self):
-        return self.data['wireless'][self._interface_id]['clients']
+        return self.data.get('wireless', {}).get(self._interface_id, {}).get('clients', 0)
+
+    @property
+    def available(self):
+        return self._interface_id in self.data.get("wireless", {})
 
     @property
     def icon(self):
@@ -89,7 +93,7 @@ class WirelessClientsSensor(OpenWrtSensor):
     @property
     def extra_state_attributes(self):
         result = dict()
-        data = self.data['wireless'][self._interface_id]
+        data = self.data.get('wireless', {}).get(self._interface_id, {})
         for key, value in data.get("macs", {}).items():
             signal = value.get("signal", 0)
             result[key.upper()] = f"{signal} dBm"
@@ -116,8 +120,12 @@ class MeshSignalSensor(OpenWrtSensor):
 
     @property
     def state(self):
-        value = self.data['mesh'][self._interface_id]['signal']
+        value = self.data.get('mesh', {}).get(self._interface_id, {}).get('signal', -100)
         return f"{value} dBm"
+
+    @property
+    def available(self):
+        return self._interface_id in self.data.get("mesh", {})
 
     @property
     def device_class(self):
@@ -125,7 +133,7 @@ class MeshSignalSensor(OpenWrtSensor):
 
     @property
     def signal_strength(self):
-        value = self.data['mesh'][self._interface_id]['signal']
+        value = self.data.get('mesh', {}).get(self._interface_id, {}).get('signal', -100)
         levels = [-50, -60, -67, -70, -80]
         for idx, level in enumerate(levels):
             if value >= level:
@@ -159,8 +167,12 @@ class MeshPeersSensor(OpenWrtSensor):
 
     @property
     def state(self):
-        peers = self.data["mesh"][self._interface_id]["peers"]
+        peers = self.data.get("mesh", {}).get(self._interface_id, {}).get("peers", {})
         return len(list(filter(lambda x: x["active"], peers.values())))
+
+    @property
+    def available(self):
+        return self._interface_id in self.data.get("mesh", {})
 
     @property
     def icon(self):
@@ -169,7 +181,7 @@ class MeshPeersSensor(OpenWrtSensor):
     @property
     def extra_state_attributes(self):
         result = dict()
-        data = self.data["mesh"][self._interface_id]
+        data = self.data.get("mesh", {}).get(self._interface_id, {})
         for key, value in data.get("peers", {}).items():
             signal = value.get("signal", 0)
             result[key.upper()] = f"{signal} dBm"
@@ -217,7 +229,7 @@ class Mwan3OnlineSensor(OpenWrtSensor):
 
     @property
     def available(self):
-        return self._interface_id in self.data["mwan3"]
+        return self._interface_id in self.data.get("mwan3", {})
 
     @property
     def unique_id(self):
@@ -229,7 +241,7 @@ class Mwan3OnlineSensor(OpenWrtSensor):
 
     @property
     def native_value(self):
-        data = self.data["mwan3"].get(self._interface_id, {})
+        data = self.data.get("mwan3", {}).get(self._interface_id, {})
         value = data.get("online_sec") / data.get("uptime_sec") * \
             100 if data.get("uptime_sec") else 100
         return round(value, 1)
@@ -248,11 +260,11 @@ class WanRxTxSensor(OpenWrtSensor):
 
     @property 
     def _data(self):
-        return self.data["wan"].get(self._interface) 
+        return self.data.get("wan", {}).get(self._interface, {})
 
     @property
     def available(self):
-        return self._interface in self.data["wan"] and self._data.get("up")
+        return self._interface in self.data.get("wan", {}) and self._data.get("up")
 
     @property
     def unique_id(self):

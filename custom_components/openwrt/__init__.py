@@ -3,6 +3,7 @@ from .constants import DOMAIN, PLATFORMS
 
 from homeassistant.core import HomeAssistant, SupportsResponse
 from homeassistant.config_entries import ConfigEntry
+from homeassistant.exceptions import ConfigEntryAuthFailed, ConfigEntryNotReady
 from homeassistant.helpers import service
 from homeassistant.helpers.typing import ConfigType
 from homeassistant.helpers.update_coordinator import (
@@ -31,7 +32,19 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
     hass.data[DOMAIN]['devices'][entry.entry_id] = device # Backward compatibility
     entry.runtime_data = device # New style
 
-    await device.coordinator.async_config_entry_first_refresh()
+    # Start with a safe baseline so entities can be created even if first poll fails.
+    if device.coordinator.data is None:
+        device.coordinator.data = _default_data()
+    try:
+        await device.coordinator.async_config_entry_first_refresh()
+    except ConfigEntryAuthFailed:
+        raise
+    except ConfigEntryNotReady as err:
+        _LOGGER.warning(
+            "Device [%s] first refresh failed; starting in degraded mode: %s",
+            data.get("id", entry.entry_id),
+            err,
+        )
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
 
     return True
@@ -113,14 +126,15 @@ class OpenWrtEntity(CoordinatorEntity):
 
     @property
     def device_info(self):
+        info = self.data.get("info", {})
         return {
             "identifiers": {
                 ("id", self._device_id)
             },
             "name": f"OpenWrt [{self._device_id}]",
-            "model": self.data["info"]["model"],
-            "manufacturer": self.data["info"]["manufacturer"],
-            "sw_version": self.data["info"]["sw_version"],
+            "model": info.get("model", "Unavailable"),
+            "manufacturer": info.get("manufacturer", "OpenWrt"),
+            "sw_version": info.get("sw_version", "Unavailable"),
         }
 
     @property
@@ -133,4 +147,18 @@ class OpenWrtEntity(CoordinatorEntity):
 
     @property
     def data(self) -> dict:
-        return self.coordinator.data
+        return self.coordinator.data or _default_data()
+
+
+def _default_data() -> dict:
+    return {
+        "info": {
+            "model": "Unavailable",
+            "manufacturer": "OpenWrt",
+            "sw_version": "Unavailable",
+        },
+        "wireless": {},
+        "mesh": {},
+        "mwan3": {},
+        "wan": {},
+    }

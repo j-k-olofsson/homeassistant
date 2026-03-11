@@ -24,7 +24,7 @@ async def async_setup_entry(
     # This one will be always here
     entities.append(OpenWrtSensor(device, device_id))
 
-    for net_id in device.coordinator.data["mwan3"]:
+    for net_id in device.coordinator.data.get("mwan3", {}):
         entities.append(
             Mwan3OnlineBinarySensor(device, device_id, net_id)
         )
@@ -54,7 +54,7 @@ class Mwan3OnlineBinarySensor(OpenWrtEntity, BinarySensorEntity):
 
     @property
     def available(self):
-        return self._interface_id in self.data["mwan3"]
+        return self._interface_id in self.data.get("mwan3", {})
 
     @property
     def unique_id(self):
@@ -66,7 +66,7 @@ class Mwan3OnlineBinarySensor(OpenWrtEntity, BinarySensorEntity):
 
     @property
     def is_on(self):
-        data = self.data["mwan3"].get(self._interface_id, {})
+        data = self.data.get("mwan3", {}).get(self._interface_id, {})
         return data.get("online", False)
 
     @property
