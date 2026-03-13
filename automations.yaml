@@ -710,53 +710,52 @@
     trigger: state
   conditions: []
   actions:
-  - choose:
-    - conditions:
-      - condition: state
-        entity_id: binary_sensor.shelly_blu_door_window_2a6d_window
-        state: 'on'
-      sequence:
+  - variables:
+      _door_open: '{{ is_state(''binary_sensor.shelly_blu_door_window_2a6d_window'',
+        ''on'') }}'
+      _godnatt_task: "{% if _door_open %}\n  Balkongdörren är öppen. Varningston men
+        varm Granny-stil. Exakt en mening på svenska, 8-14 ord, inga siffror.\n{%
+        else %}\n  Säg godnatt och bekräfta tryggt läge med varm Granny-stil. Exakt
+        en mening på svenska, 8-14 ord, inga siffror.\n{% endif %}\n"
+      _godnatt_fallback: "{% if _door_open %}\n  Balkongdörren är öppen. Kolla den
+        innan ni somnar.\n{% else %}\n  Allt ser tryggt ut. Sov gott.\n{% endif %}\n"
+  - parallel:
+    - sequence:
+      - action: media_player.turn_on
+        continue_on_error: true
+        target:
+          entity_id: media_player.diegos_vackarklocka
+      - delay: 00:00:01
       - action: script.granny_broadcast
         data:
-          task: Meddela att balkongdörren är öppen trots att ni verkar redo för att
-            sova
-          severity: warn
-          humor_level: 2
+          task: '{{ _godnatt_task }}'
+          severity: '{{ ''warn'' if _door_open else ''info'' }}'
+          humor_level: '{{ 0 if _door_open else 1 }}'
           tts_media_player: media_player.diegos_vackarklocka
           channels:
           - tts
-      - stop: Balkongdörren är öppen
-    default:
-    - action: script.granny_broadcast
-      data:
-        task: Bekräfta att dörrarna är stängda och låsta så att vi nu kan sova en
-          gott. Max 20 ord.. Använd ett unikt meddelande varje dag och se till att
-          inte upprepa ett som du använt de senaste tio gångerna.
-        severity: info
-        humor_level: 1
-        tts_media_player: media_player.diegos_vackarklocka
-        channels:
-        - tts
-  - target:
-      entity_id: light.grupp_godnatt
-    action: light.turn_off
-    data: {}
-    enabled: true
-  - type: turn_off
-    device_id: 729cf1c0d534488f8fbbe60601af82af
-    entity_id: 50f5f890647aa525eea1ae293f9a82bc
-    domain: switch
-    enabled: true
-  - type: turn_off
-    device_id: 729cf1c0d534488f8fbbe60601af82af
-    entity_id: a70d7a6b06c541b3f592ded441c98a1a
-    domain: switch
-  - action: spotifyplus.player_media_pause
-    metadata: {}
-    data:
-      entity_id: media_player.spotifyplus_mammaochpapppa
-    enabled: true
-  mode: restart
+          fallback_message: '{{ _godnatt_fallback }}'
+    - sequence:
+      - target:
+          entity_id: light.grupp_godnatt
+        action: light.turn_off
+        data: {}
+        enabled: true
+      - type: turn_off
+        device_id: 729cf1c0d534488f8fbbe60601af82af
+        entity_id: 50f5f890647aa525eea1ae293f9a82bc
+        domain: switch
+        enabled: true
+      - type: turn_off
+        device_id: 729cf1c0d534488f8fbbe60601af82af
+        entity_id: a70d7a6b06c541b3f592ded441c98a1a
+        domain: switch
+      - action: spotifyplus.player_media_pause
+        metadata: {}
+        data:
+          entity_id: media_player.spotifyplus_mammaochpapppa
+        enabled: true
+  mode: single
 - id: '1678110729020'
   alias: Starta diskmaskinen vid lägsta elpris
   description: Automationen startar diskmaskinen när elpriset är som lägst, för att
@@ -1520,20 +1519,20 @@
   triggers:
   - trigger: state
     entity_id:
-    - sensor.wan_status_status
+    - binary_sensor.openwrt_router_wan_status
     from:
-    - down
-    to:
-    - up
+    - 'off'
     id: connected
+    to:
+    - 'on'
   - trigger: state
     entity_id:
-    - sensor.wan_status_status
+    - binary_sensor.openwrt_router_wan_status
     id: disconnected
     from:
-    - up
+    - 'on'
     to:
-    - down
+    - 'off'
   conditions: []
   actions:
   - choose:
@@ -2650,3 +2649,27 @@
             transition: 1
     default: []
   mode: restart
+- id: '1773242322642'
+  alias: 3D‑skrivaren - Färdig
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - sensor.prusaxl
+    from:
+    - printing
+    - finished
+  conditions: []
+  actions:
+  - action: script.granny_broadcast
+    metadata: {}
+    data:
+      severity: info
+      humor_level: 3
+      task: Informera om att 3D-skrivare är klar med sin utskrift
+      channels:
+      - tts
+      - tv
+      - mobile
+      tts_media_player: media_player.kokets_skarm
+  mode: single

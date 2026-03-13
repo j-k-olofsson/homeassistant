@@ -3,8 +3,6 @@ default_config:
 
 http:
   use_x_forwarded_for: true
-  ip_ban_enabled: true
-  login_attempts_threshold: 5
   trusted_proxies:
     - 172.19.0.0/16       # täcker Docker bridge (säkert och enkelt)
     - 192.168.10.200      # frigg hostens LAN-IP (valfritt, bra att ha)
@@ -36,7 +34,7 @@ logger:
 recorder:
   db_url: mysql://homeassistant:IceAgeRulesMDB@core-mariadb/homeassistant?charset=utf8mb4
   auto_purge: true
-  purge_keep_days: 10
+  purge_keep_days: 35
   commit_interval: 5
 
   exclude:
@@ -114,8 +112,6 @@ homeassistant:
   packages: !include_dir_named packages
   allowlist_external_dirs:
     - /config/file_notifications
-  auth_mfa_modules:
-    - type: totp
     
 # Text to speech
 tts:

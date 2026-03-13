@@ -1,0 +1,60 @@
+shell_command:
+  ha_db_optimize_tables: >-
+    bash -c "nohup python3 /config/shell_commands/optimize_mariadb.py >> /config/log/db_optimize.log 2>&1 &"
+
+command_line:
+  - sensor:
+      name: DB Optimize Last Log Line
+      unique_id: db_optimize_last_log_line
+      command: "tail -n 1 /config/log/db_optimize.log 2>/dev/null || echo idle"
+      scan_interval: 60
+
+automation:
+  - id: db_optimize_tables_weekly_night
+    alias: DB - Optimera MariaDB-tabeller natt
+    description: Kör OPTIMIZE TABLE veckovis på natten för stora recorder-tabeller.
+    triggers:
+      - trigger: time
+        at: "03:35:00"
+    conditions:
+      - condition: time
+        weekday:
+          - sun
+    actions:
+      - action: shell_command.ha_db_optimize_tables
+      - action: system_log.write
+        data:
+          level: info
+          message: "DB optimize startad via automation (veckovis nattkörning)."
+    mode: single
+
+  - id: db_optimize_tables_notify_result
+    alias: DB - Notifiera resultat av MariaDB-optimering
+    description: Skickar persistent_notification när DB-optimeringen är klar eller misslyckas.
+    triggers:
+      - trigger: state
+        entity_id: sensor.db_optimize_last_log_line
+    conditions:
+      - condition: template
+        value_template: >-
+          {% set s = trigger.to_state.state if trigger.to_state else '' %}
+          {{ 'Done: OPTIMIZE completed.' in s or 'ERROR: OPTIMIZE failed:' in s }}
+    actions:
+      - choose:
+          - conditions:
+              - condition: template
+                value_template: "{{ 'Done: OPTIMIZE completed.' in trigger.to_state.state }}"
+            sequence:
+              - action: persistent_notification.create
+                data:
+                  title: "DB-optimering klar"
+                  message: "{{ trigger.to_state.state }}"
+                  notification_id: db_optimize_tables_result
+        default:
+          - action: persistent_notification.create
+            data:
+              title: "DB-optimering misslyckades"
+              message: "{{ trigger.to_state.state }}"
+              notification_id: db_optimize_tables_result
+    mode: queued
+    max: 5
