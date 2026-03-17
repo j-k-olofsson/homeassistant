@@ -542,7 +542,11 @@ def _normalize_ap(ap: dict[str, Any]) -> APConfig:
         scheme=ap_clean.get(CONF_SCHEME) or DEFAULT_SCHEME,
         verify_ssl=ap_clean.get(CONF_VERIFY_SSL, DEFAULT_VERIFY_SSL),
         interfaces=ap_clean.get(CONF_INTERFACES) or [],
-        timeout=ap_clean.get(CONF_TIMEOUT) or DEFAULT_TIMEOUT,
+        timeout=(
+            DEFAULT_TIMEOUT
+            if ap_clean.get(CONF_TIMEOUT) in (None, "")
+            else int(ap_clean.get(CONF_TIMEOUT))
+        ),
     )
 
 

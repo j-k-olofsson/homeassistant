@@ -95,7 +95,8 @@ def _validate_ap_shape(
     name = str(normalized.get(CONF_AP_NAME) or "").strip()
     username = str(normalized.get(CONF_USERNAME) or "").strip()
     password = str(normalized.get(CONF_PASSWORD) or "")
-    timeout = int(normalized.get(CONF_TIMEOUT) or DEFAULT_TIMEOUT)
+    timeout_raw = normalized.get(CONF_TIMEOUT)
+    timeout = DEFAULT_TIMEOUT if timeout_raw in (None, "") else int(timeout_raw)
 
     if not host or not name or not username or not password:
         raise vol.Invalid("AP name, host, username, and password are required")
