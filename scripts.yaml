@@ -572,7 +572,6 @@ granny_car_charge_plan:
         plan_currency,\n    \"schedule\": plan_schedule_effective\n  } | tojson }}\n{%
         endif %}"
       calendar_entity: calendar.billaddning
-      calendar_config_entry_id: 01K9SK9EBYXG8KJ74JF2J13C00
   - action: system_log.write
     data:
       level: info
@@ -687,14 +686,9 @@ granny_car_charge_plan:
       window_start: '{{ now_iso }}'
       window_end: '{{ cleanup_end_iso }}'
       plan_json: '{{ plan_json }}'
-  - choose:
-    - conditions:
-      - condition: template
-        value_template: '{{ calendar_config_entry_id | length > 0 }}'
-      sequence:
-      - action: homeassistant.reload_config_entry
-        data:
-          entry_id: '{{ calendar_config_entry_id }}'
+  - action: homeassistant.reload_config_entry
+    target:
+      entity_id: '{{ calendar_entity }}'
   - action: homeassistant.update_entity
     target:
       entity_id: '{{ calendar_entity }}'

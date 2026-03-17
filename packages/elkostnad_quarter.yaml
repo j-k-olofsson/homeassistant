@@ -27,7 +27,7 @@ template:
 sql:
   - name: Kvartbaserad elkostnadsprognos
     unique_id: quarter_based_cost_forecast
-    db_url: mysql://homeassistant:IceAgeRulesMDB@core-mariadb/homeassistant?charset=utf8mb4
+    db_url: !secret mariadb_db_url
     unit_of_measurement: ":-"
     column: forecast
     query: >-

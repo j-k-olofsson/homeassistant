@@ -1,5 +1,9 @@
 # --- Hemligheter ---
 secrets.yaml
+.cloud/
+.codex/
+*.pem
+*.key
 
 # --- Databaser (lagras runtime av HA) ---
 *.db
@@ -11,12 +15,16 @@ home-assistant_v2.db-wal
 
 # --- HA runtime & cache ---
 .storage/
+.ha_run.lock
+.HA_VERSION
 deps/
 tts/
 media/
 www/.storage/
 .esphome/
 **/.esphome/
+.venv/
+.venv*/
 
 # --- Loggar ---
 home-assistant.log
@@ -51,3 +59,4 @@ __pycache__/
 # Lokala hemligheter för Granny-trigger
 tools/granny_plan.env
 zigbee.*
+.ps4-games*.json

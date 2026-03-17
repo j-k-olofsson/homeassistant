@@ -22,7 +22,7 @@ logger:
 
 # MaraiaDB specific configuration
 # recorder:
-#   db_url: mysql://homeassistant:IceAgeRulesMDB@core-mariadb/homeassistant?charset=utf8mb4
+#   db_url: !secret mariadb_db_url
 #   purge_keep_days: 14
 #   auto_purge: true
 #   commit_interval: 30
@@ -34,7 +34,7 @@ logger:
 #       - sensor.elmatare_elstolpen_current_phase_3
 
 recorder:
-  db_url: mysql://homeassistant:IceAgeRulesMDB@core-mariadb/homeassistant?charset=utf8mb4
+  db_url: !secret mariadb_db_url
   auto_purge: true
   purge_keep_days: 10
   commit_interval: 5
