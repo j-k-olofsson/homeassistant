@@ -1,6 +1,14 @@
 {
   "title": "OpenWrt Wi-Fi Clients",
   "config": {
+    "error": {
+      "cannot_connect": "Failed to connect to the OpenWrt AP.",
+      "invalid_ap": "Enter a valid AP configuration.",
+      "invalid_globals": "Client map must be a YAML dict and ignore MACs must be a YAML list."
+    },
+    "abort": {
+      "invalid_import": "Imported YAML configuration is invalid."
+    },
     "step": {
       "user": {
         "title": "Global Settings",
@@ -30,6 +38,11 @@
     }
   },
   "options": {
+    "error": {
+      "cannot_connect": "Failed to connect to the OpenWrt AP.",
+      "invalid_ap": "Enter a valid AP configuration.",
+      "invalid_globals": "Client map must be a YAML dict and ignore MACs must be a YAML list."
+    },
     "step": {
       "init": {
         "title": "Options",

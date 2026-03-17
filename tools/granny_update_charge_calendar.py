@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import urllib.parse
 import json
 import sys
 import uuid
@@ -33,6 +34,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--window-start", required=True, help="ISO datetime (inclusive)")
     parser.add_argument("--window-end", required=True, help="ISO datetime (exclusive)")
     parser.add_argument("--plan", required=True, help="JSON payload from AI task")
+    parser.add_argument(
+        "--plan-urlencoded",
+        help="URL-encoded JSON payload from AI task",
+    )
     return parser.parse_args()
 
 
@@ -145,21 +150,30 @@ def should_keep_event(
 
 
 def fold_line(text: str) -> List[str]:
-    """Fold a long ICS line to 75 characters with continuation."""
-    encoded = text.encode("utf-8")
-    max_len = 75
-    if len(encoded) <= max_len:
+    """Fold a long ICS line to 75 octets with UTF-8-safe continuation lines."""
+    max_octets = 75
+    if len(text.encode("utf-8")) <= max_octets:
         return [text]
 
     lines: List[str] = []
-    current = bytearray()
-    for byte in encoded:
-        current.append(byte)
-        if len(current) >= max_len:
-            lines.append(current.decode("utf-8"))
-            current = bytearray(b" ")
-    if len(current) > 0:
-        lines.append(current.decode("utf-8"))
+    current = ""
+    limit = max_octets
+
+    for char in text:
+        candidate = current + char
+        if len(candidate.encode("utf-8")) > limit:
+            if not current:
+                raise ValueError("Unable to fold ICS line safely")
+            lines.append(current)
+            current = f" {char}"
+            limit = max_octets - 1
+            if len(current.encode("utf-8")) > max_octets:
+                raise ValueError("ICS continuation line exceeds byte limit")
+            continue
+        current = candidate
+
+    if current:
+        lines.append(current)
     return lines
 
 
@@ -256,7 +270,10 @@ def main() -> int:
         window_end = window_end.astimezone(local_tz)
 
     try:
-        plan = json.loads(args.plan)
+        plan_raw = args.plan
+        if args.plan_urlencoded:
+            plan_raw = urllib.parse.unquote_plus(args.plan_urlencoded)
+        plan = json.loads(plan_raw)
     except json.JSONDecodeError as err:
         print(f"Invalid plan JSON: {err}", file=sys.stderr)
         return 2
@@ -305,7 +322,10 @@ def main() -> int:
                 continue
             current = merged[-1]
             delta = (slot["start_dt"] - current["end_dt"]).total_seconds()
-            if abs(delta) <= tolerance:  # directly adjacent
+            same_price = current.get("price_sek_kwh") == slot.get("price_sek_kwh")
+            same_source = current.get("source") == slot.get("source")
+            same_currency = current.get("currency") == slot.get("currency")
+            if abs(delta) <= tolerance and same_price and same_source and same_currency:
                 current["end_dt"] = slot["end_dt"]
                 current["energy_kwh"] += slot.get("energy_kwh", 0.0) or 0.0
                 current["cost_sek"] += slot.get("cost_sek", 0.0) or 0.0

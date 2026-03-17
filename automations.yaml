@@ -15,14 +15,14 @@
     data:
       severity: crit
       humor_level: 2
-      tts_media_player: media_player.grupp_grannys_hogtalare
+      tts_media_player: media_player.kokets_skarm
       task: Meddela att frysboxen i gamla verkstaden blivit för varm och att den behöver
         kontrolleras
       channels:
       - tts
-      - mobile
       - tv
       - ha
+      - mobile
   mode: queued
   max: 10
 - id: '1669463948653'
@@ -83,7 +83,6 @@
     data:
       severity: info
       humor_level: 0
-      tts_media_player: media_player.grupp_grannys_hogtalare
       task: 'Meddela att en eller flera av plantorna som beskrivs här behöver hjälp
         och vad det är för hjälp de behöver.
 
@@ -116,7 +115,6 @@
     data:
       severity: info
       humor_level: 2
-      tts_media_player: media_player.grupp_grannys_hogtalare
       task: Meddela att hönsens vatten börjar ta slut
       channels:
       - mobile
@@ -433,7 +431,6 @@
     data:
       severity: info
       humor_level: 2
-      tts_media_player: media_player.grupp_grannys_hogtalare
       task: Meddela att salttabletterna i vattenfiltret är på en låg nivå
       channels:
       - mobile
@@ -459,7 +456,7 @@
       channels:
       - tts
       - tv
-      - ha
+      tts_media_player: media_player.kokets_skarm
   mode: queued
   max: 10
 - id: '1673780941087'
@@ -869,9 +866,9 @@
       severity: info
       humor_level: 2
       channels:
-      - mobile
       - tts
       - tv
+      tts_media_player: media_player.kokets_skarm
   mode: queued
   max: 10
 - id: '1694445009947'
@@ -919,7 +916,6 @@
       - tts
       - mobile
       - tv
-      - ha
   mode: queued
   max: 10
 - id: '1694862579300'
@@ -942,7 +938,6 @@
       humor_level: 0
       channels:
       - mobile
-      - ha
       task: Meddela att balkongdörren är öppen nu när det verkar som att sista personen
         lämnar hemmet
   mode: queued
@@ -964,7 +959,7 @@
     data:
       severity: crit
       humor_level: 0
-      tts_media_player: media_player.grupp_grannys_hogtalare
+      tts_media_player: media_player.kokets_skarm
       task: Meddela att det verkar läcka vatten under torkskåpet och att det behöver
         kontrolleras
       channels:
@@ -1461,13 +1456,12 @@
     data:
       severity: info
       humor_level: 2
-      tts_media_player: media_player.grupp_grannys_hogtalare
+      tts_media_player: media_player.kokets_skarm
       task: Meddela att hönshusets lucka är öppen trots att klockan är efter 20:00
       channels:
       - tts
       - mobile
       - tv
-      - ha
   mode: queued
   max: 10
 - id: '1730208179783'
@@ -1500,11 +1494,13 @@
         data:
           severity: info
           humor_level: 2
-          tts_media_player: media_player.grupp_grannys_hogtalare
+          tts_media_player: media_player.kokets_skarm
           task: Meddela att luftfuktaren har slut på vatten
           channels:
           - mobile
           - ha
+          - tv
+          - tts
     - conditions:
       - condition: trigger
         id:
@@ -1546,7 +1542,7 @@
         data:
           severity: info
           humor_level: 2
-          tts_media_player: media_player.grupp_grannys_hogtalare
+          tts_media_player: media_player.kokets_skarm
           task: Meddela att kontakten med Internet verkar har gått ner
           channels:
           - tts
@@ -1563,7 +1559,7 @@
         data:
           severity: info
           humor_level: 2
-          tts_media_player: media_player.grupp_grannys_hogtalare
+          tts_media_player: media_player.kokets_skarm
           task: Kontakten med Internet är återställd
           channels:
           - tts
@@ -2658,6 +2654,8 @@
     - sensor.prusaxl
     from:
     - printing
+    id: done
+    to:
     - finished
   conditions: []
   actions:
@@ -2670,6 +2668,5 @@
       channels:
       - tts
       - tv
-      - mobile
       tts_media_player: media_player.kokets_skarm
   mode: single

@@ -60,4 +60,4 @@ input_number:
     initial: 3.6
 
 shell_command:
-  granny_update_charge_calendar: "python3 /config/tools/granny_update_charge_calendar.py --calendar {{ calendar_entity }} --window-start \"{{ window_start }}\" --window-end \"{{ window_end }}\" --plan '{{ plan_json }}'"
+  granny_update_charge_calendar: "python3 /config/tools/granny_update_charge_calendar.py --calendar {{ calendar_entity }} --window-start \"{{ window_start }}\" --window-end \"{{ window_end }}\" --plan \"{}\" --plan-urlencoded \"{{ plan_json | urlencode }}\""

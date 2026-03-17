@@ -1,6 +1,14 @@
 {
   "title": "OpenWrt Wi-Fi Clients",
   "config": {
+    "error": {
+      "cannot_connect": "Det gick inte att ansluta till OpenWrt-AP:n.",
+      "invalid_ap": "Ange en giltig AP-konfiguration.",
+      "invalid_globals": "Klientmappningen måste vara en YAML-dict och ignorerade MAC måste vara en YAML-lista."
+    },
+    "abort": {
+      "invalid_import": "Importerad YAML-konfiguration är ogiltig."
+    },
     "step": {
       "user": {
         "title": "Globala inställningar",
@@ -30,6 +38,11 @@
     }
   },
   "options": {
+    "error": {
+      "cannot_connect": "Det gick inte att ansluta till OpenWrt-AP:n.",
+      "invalid_ap": "Ange en giltig AP-konfiguration.",
+      "invalid_globals": "Klientmappningen måste vara en YAML-dict och ignorerade MAC måste vara en YAML-lista."
+    },
     "step": {
       "init": {
         "title": "Alternativ",

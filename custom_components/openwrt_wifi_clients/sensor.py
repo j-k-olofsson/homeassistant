@@ -39,7 +39,7 @@ async def async_setup_entry(
             continue
         entities.append(OpenWrtApSensor(coordinator, ap_name, ap_ip))
 
-    entities.append(OpenWrtAllClientsSensor(coordinator))
+    entities.append(OpenWrtAllClientsSensor(coordinator, entry))
     async_add_entities(entities)
 
 
@@ -90,9 +90,11 @@ class OpenWrtAllClientsSensor(
     _attr_has_entity_name = True
     _attr_entity_category = EntityCategory.DIAGNOSTIC
 
-    def __init__(self, coordinator: OpenWrtWifiDataCoordinator) -> None:
+    def __init__(
+        self, coordinator: OpenWrtWifiDataCoordinator, entry: ConfigEntry
+    ) -> None:
         super().__init__(coordinator)
-        self._attr_unique_id = f"{DOMAIN}_all_clients"
+        self._attr_unique_id = f"{DOMAIN}_{entry.entry_id}_all_clients"
         self._attr_name = "All Wi-Fi Clients"
 
     @property

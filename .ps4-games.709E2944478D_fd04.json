@@ -46,5 +46,11 @@
     "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/titlecontainer/se/en/999/CUSA41487_00/image",
     "media_content_type": "app",
     "locked": false
+  },
+  "CUSA00265": {
+    "media_title": "Minecraft",
+    "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/titlecontainer/se/en/999/CUSA00265_00/image",
+    "media_content_type": "game",
+    "locked": false
   }
 }
