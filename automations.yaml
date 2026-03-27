@@ -1311,21 +1311,6 @@
   - set_conversation_response: Alla ljudnivåer är nu återställda
   mode: queued
   max: 10
-- id: '1712747092926'
-  alias: Uppdatera Elkostnadsprognos
-  description: Uppdaterar elkostnadsprognosen varje kväll för att säkerställa att
-    du alltid har den senaste informationen.
-  triggers:
-  - at: '23:50:00'
-    trigger: time
-  conditions: []
-  actions:
-  - target:
-      entity_id: sensor.elkostnad_prognos
-    data: {}
-    action: homeassistant.update_entity
-  mode: queued
-  max: 10
 - id: '1714639575081'
   alias: Batteri Noterat
   description: Denna automation notifierar när ett batteri inte rapporteras, vilket
@@ -1430,8 +1415,8 @@
         - Online
       sequence:
       - data:
-          title: Varning!
           message: Elmätaren är tillbaka online
+          title: Info!
         action: notify.persistent_notification
   mode: queued
   max: 10

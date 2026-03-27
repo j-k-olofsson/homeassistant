@@ -272,23 +272,29 @@ class OpenWrtWifiClientsOptionsFlow(config_entries.OptionsFlow):
         self._options: dict[str, Any] = {}
         self._aps: list[dict[str, Any]] = []
         self._edit_index: int | None = None
+        self._initialized = False
 
     async def async_step_init(self, user_input: dict[str, Any] | None = None):
-        options = self._entry.options
-        data = self._entry.data
-        self._options = {
-            CONF_SCAN_INTERVAL: options.get(
-                CONF_SCAN_INTERVAL, data.get(CONF_SCAN_INTERVAL, DEFAULT_SCAN_INTERVAL)
-            ),
-            CONF_DHCP_HOST: options.get(CONF_DHCP_HOST, data.get(CONF_DHCP_HOST, "")),
-            CONF_CLIENT_NAME_MAP: options.get(
-                CONF_CLIENT_NAME_MAP, data.get(CONF_CLIENT_NAME_MAP, {})
-            ),
-            CONF_IGNORE_MACS: options.get(
-                CONF_IGNORE_MACS, data.get(CONF_IGNORE_MACS, [])
-            ),
-        }
-        self._aps = options.get(CONF_APS, data.get(CONF_APS, []))
+        if not self._initialized:
+            options = self._entry.options
+            data = self._entry.data
+            self._options = {
+                CONF_SCAN_INTERVAL: options.get(
+                    CONF_SCAN_INTERVAL,
+                    data.get(CONF_SCAN_INTERVAL, DEFAULT_SCAN_INTERVAL),
+                ),
+                CONF_DHCP_HOST: options.get(
+                    CONF_DHCP_HOST, data.get(CONF_DHCP_HOST, "")
+                ),
+                CONF_CLIENT_NAME_MAP: options.get(
+                    CONF_CLIENT_NAME_MAP, data.get(CONF_CLIENT_NAME_MAP, {})
+                ),
+                CONF_IGNORE_MACS: options.get(
+                    CONF_IGNORE_MACS, data.get(CONF_IGNORE_MACS, [])
+                ),
+            }
+            self._aps = list(options.get(CONF_APS, data.get(CONF_APS, [])))
+            self._initialized = True
 
         return self.async_show_menu(
             step_id="init",

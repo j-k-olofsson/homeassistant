@@ -13,7 +13,8 @@ http:
 logger:
   default: info
   logs:
-    custom_components.openwrt_wifi_clients: debug
+    homeassistant.config_entries: warning
+    custom_components.openwrt_wifi_clients: info
 
 # logger:
 #   default: info
@@ -74,6 +75,12 @@ recorder:
       - sensor.system_monitor_packets_*
       - sensor.processor_*
       - sensor.*_wi_fi_clients
+      - sensor.all_wi_fi_clients*
+      - sensor.*_uptime_30_days*
+      - sensor.*_uptime_365_days*
+      - sensor.*_response_time_o_1_day*
+      - sensor.*_response_time_o_30_days*
+      - sensor.*_response_time_o_365_days*
       - sensor.ha_states_rows_24h
 
       # Aqara-monitorering som tidigare gav mycket historik
