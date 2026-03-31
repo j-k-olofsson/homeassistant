@@ -1,6 +1,6 @@
 # persuader72's esphome custom components
 
-This repository contains a collection of my custom components.
+This directory contains locally hosted ESPHome external components used by this config set.
 
 ## 1. Installation
 
@@ -12,7 +12,23 @@ git clone https://github.com/persuader72/esphome-components custom_components
 
 Or copy a single selected component folder in your already exiting `custom_components` folder.
 
-## 2. Components
+## Active components
+
+### sonoff_ms01 component
+
+Local copy of the Sonoff MS01 soil moisture sensor external component for ESP32 devices using the ESP-IDF framework.
+
+Used by:
+
+- `/config/esphome/esphome10.yaml`
+
+Notes:
+
+- Requires `ESP32` with `ESP-IDF`
+- Works with `ESP32-C6`
+- Uses one `RMT RX` channel briefly for each reading
+
+### shelly_dallas component
 
 ### shelly_dallas component
 

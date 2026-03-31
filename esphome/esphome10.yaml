@@ -1,0 +1,16 @@
+# Device specific substitutions
+substitutions:
+  node_id: "10"
+  node_name: esphome10
+  node_friendly_name: Plant Sensor 7 Fredsskalla
+  node_comment: ESP32-C6-Zero + Sonoff MS01 over Thread
+  log_level: INFO
+  plant_name: Fredskalla
+  ms01_data_pin: GPIO14
+  soil_update_interval: 10min
+  soil_voltage_dry: "2.84"
+  soil_voltage_wet: "1.65"
+
+# Include packages for this device specific type
+packages:
+  device: !include common/.device_esp32_c6_thread_ms01.yaml

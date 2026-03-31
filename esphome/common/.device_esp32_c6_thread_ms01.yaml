@@ -1,0 +1,98 @@
+# Device package for ESP32-C6-Zero with Thread connectivity and Sonoff MS01
+# Required substitutions:
+#   node_name
+# Optional substitutions:
+#   ms01_data_pin
+#   soil_update_interval
+#   soil_voltage_dry
+#   soil_voltage_wet
+
+packages:
+  board: !include .board_esp32_c6_zero_thread.yaml
+
+external_components:
+  - source:
+      type: local
+      path: /config/esphome/external_components
+    components: [sonoff_ms01]
+
+debug:
+  update_interval: 30s
+
+sensor:
+  - platform: uptime
+    name: ${node_name} Uptime
+
+  - platform: debug
+    free:
+      name: ${node_name} Heap Free
+      unit_of_measurement: B
+      accuracy_decimals: 0
+    loop_time:
+      name: ${node_name} Loop Time
+      unit_of_measurement: ms
+      accuracy_decimals: 3
+    cpu_frequency:
+      name: ${node_name} CPU Frequency
+      unit_of_measurement: MHz
+      accuracy_decimals: 0
+
+  - platform: sonoff_ms01
+    pin: ${ms01_data_pin}
+    update_interval: ${soil_update_interval}
+    voltage:
+      id: soil_voltage
+      name: Soil Voltage
+      entity_category: diagnostic
+      on_value:
+        then:
+          - component.update: soil_moisture
+
+  - platform: template
+    id: soil_moisture
+    name: Jordfuktighet
+    unit_of_measurement: "%"
+    device_class: moisture
+    state_class: measurement
+    icon: mdi:water-percent
+    accuracy_decimals: 0
+    update_interval: never
+    lambda: |-
+      if (isnan(id(soil_voltage).state)) {
+        return {};
+      }
+
+      const float raw = id(soil_voltage).state * 10000.0f;
+      float moisture;
+      float x;
+
+      if (raw < 15037.0f) {
+        x = raw - 15200.0f;
+        moisture = -powf(0.0024f * x, 3.0f) - 0.0004f * x + 20.1f;
+      } else if (raw < 22300.0f) {
+        moisture = -0.00069f * raw + 30.6f;
+      } else {
+        x = raw - 22800.0f;
+        moisture = -powf(0.00046f * x, 3.0f) - 0.0004f * x + 15.0f;
+      }
+
+      if (moisture < 0.0f) return 0.0f;
+      if (moisture > 100.0f) return 100.0f;
+      return moisture;
+
+text_sensor:
+  - platform: openthread_info
+    role:
+      name: ${node_name} Thread Role
+    rloc16:
+      name: ${node_name} Thread RLOC16
+    network_name:
+      name: ${node_name} Thread Network
+    pan_id:
+      name: ${node_name} Thread PAN ID
+    ip_address:
+      name: ${node_name} Thread IPv6
+
+button:
+  - platform: restart
+    name: ${node_name} Restart
