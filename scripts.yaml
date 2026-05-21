@@ -231,10 +231,19 @@ granny_car_charge_plan:
   description: Planerar bilens laddning via en lokal prisoptimering och uppdaterar
     kalendern.
   mode: restart
+  fields:
+    notify_user:
+      name: Skicka statusnotis
+      description: Skicka informativa Granny-notiser när planen är klar.
+      selector:
+        boolean: {}
+      default: true
   sequence:
   - variables:
       log_prefix: '[Granny Laddning]'
       status_notification_id: granny_plan_status
+      notify_user_bool: '{{ (notify_user | default(true)) not in [false, False, ''false'',
+        ''False'', 0, ''0'', ''off'', ''no''] }}'
       slot_minutes: 15
       now_dt: '{{ now() }}'
       now_iso: '{{ now().isoformat() }}'
@@ -788,19 +797,16 @@ granny_car_charge_plan:
         %b %H:%M') if slot_start else 'okänd') ~ '–' ~ (as_local(as_datetime(slot_end)).strftime('%H:%M')
         if slot_end else 'okänd') ~ ' (≈' ~ (slot_energy | float(0) | round(2)) ~
         ' kWh)'] %}\n{% endfor %} {{ ns.parts | join('\\n') }}"
-  - action: script.granny_broadcast
-    data:
-      severity: info
-      humor_level: 2
-      channels:
-      - ha
-      task: '{{ granny_task }}'
-      fallback_message: '{{ broadcast_fallback }}'
-  - action: persistent_notification.create
-    data:
-      title: Granny-plan klar
-      message: '{{ status_notification_body }}'
-      notification_id: '{{ status_notification_id }}'
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ notify_user_bool in [True, "True", "true", 1, "1"] }}'
+      sequence:
+      - action: persistent_notification.create
+        data:
+          title: Granny-plan klar
+          message: '{{ status_notification_body }}'
+          notification_id: '{{ status_notification_id }}'
   - action: logbook.log
     data:
       name: '{{ log_prefix }}'

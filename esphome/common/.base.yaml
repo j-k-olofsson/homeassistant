@@ -40,3 +40,7 @@ text_sensor:
     internal: True
     name: ESPHome version
     hide_timestamp: True
+
+binary_sensor:
+  - platform: status
+    name: "Status"

@@ -1,0 +1,295 @@
+============================================================
+ESPHome Update Manager v1.7.0 - Update Log
+Timestamp: 2026-05-07 06:03:01
+============================================================
+
+Summary: 54 device(s) processed
+  ✅ Success:   2
+  ❌ Failed:    0
+  ⏭️  Skipped:   0
+  ⛔ Cancelled: 52
+
+------------------------------------------------------------
+Details:
+------------------------------------------------------------
+
+✅ Billaddare
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:00:06 +0200) → 2026.4.5
+   Started: 2026-05-07T05:55:50.430524
+   Finished: 2026-05-07T05:58:31.957822
+
+✅ Blomlampa (ateljén)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:02:12 +0200) → 2026.4.5
+   Started: 2026-05-07T05:58:32.968845
+   Finished: 2026-05-07T06:01:21.491566
+
+⛔ Blomlampa (kontoret)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:04:24 +0200)
+   Started: 2026-05-07T06:01:22.493882
+   Finished: 2026-05-07T06:03:01.412180
+   Error: Cancelled by user
+
+⛔ Blomlampa (Shelly Plus RGBW PM)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:06:37 +0200)
+
+⛔ Blomlampa 1 (Verandan)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:09:45 +0200)
+
+⛔ Blomlampa 2 (verandan)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:11:58 +0200)
+
+⛔ Blomlampor (bion)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:14:11 +0200)
+
+⛔ Elmätare (elstolpen)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:16:24 +0200)
+
+⛔ Esp32 kamera
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:18:31 +0200)
+
+⛔ Gasol (utomhus)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:21:45 +0200)
+
+⛔ Golvvärme (friggan)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:24:48 +0200)
+
+⛔ Golvvärme (sovrum och kontor)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:26:58 +0200)
+
+⛔ HA Voice PE 096460
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:29:30 +0200)
+
+⛔ Hemmabio El #1
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:37:55 +0200)
+
+⛔ Hemmabio El #2
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:41:22 +0200)
+
+⛔ Huvudströmbrytaren Prusa XL
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:44:46 +0200)
+
+⛔ IR gateway
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:48:11 +0200)
+
+⛔ Julbelysning (utomhus)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:50:22 +0200)
+
+⛔ Ledstrip (ateljé norra)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:52:35 +0200)
+
+⛔ Ledstrip (ateljé södra)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:55:44 +0200)
+
+⛔ Ledstrip (balkongdörrar)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:58:55 +0200)
+
+⛔ Ledstrip (entrén)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:01:47 +0200)
+
+⛔ Ledstrip (korridoren)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:04:58 +0200)
+
+⛔ Ledstrip (kök småfönster)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:07:42 +0200)
+
+⛔ Ledstrip (kök sydöstra)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:10:50 +0200)
+
+⛔ Ledstrip (kök södra)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:13:59 +0200)
+
+⛔ Ledstrip (kök östra)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:17:10 +0200)
+
+⛔ Ledstrip (sovrum norra)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:20:18 +0200)
+
+⛔ Ledstrip (sovrum östra)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:23:35 +0200)
+
+⛔ Ledstrip (verandan)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:26:54 +0200)
+
+⛔ Ledstrip (vitrinskåp)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:30:03 +0200)
+
+⛔ Ljussensor
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:33:34 +0200)
+
+⛔ Lucka (Hönshuset)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:37:00 +0200)
+
+⛔ Markis (utomhus)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:40:28 +0200)
+
+⛔ Plant Sensor 7 Fredskalla
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:43:12 +0200)
+
+⛔ Poolbelysning & temp
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:49:44 +0200)
+
+⛔ Poolpump (utomhus)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:52:27 +0200)
+
+⛔ Poolvärmepump (poolen)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:54:30 +0200)
+
+⛔ RF bridge
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:56:33 +0200)
+
+⛔ Salt (verkstan)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:59:14 +0200)
+
+⛔ Taklampor
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:01:51 +0200)
+
+⛔ Taklampor (duschen)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:04:05 +0200)
+
+⛔ Taklampor (kontoret)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:06:16 +0200)
+
+⛔ Taklampor (källaren)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:08:29 +0200)
+
+⛔ Taklampor (köket)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:10:41 +0200)
+
+⛔ Taklampor (sovrum)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:12:54 +0200)
+
+⛔ TempHyg (gamla verkstan)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:15:06 +0200)
+
+⛔ Termostat (friggan)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:17:42 +0200)
+
+⛔ Termostat (kontoret)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:19:51 +0200)
+
+⛔ Thread Test (ESP32-C6-Zero)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:24:55 +0200)
+
+⛔ Utomhusbelysning (friggan)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:31:56 +0200)
+
+⛔ Vattennivå (hönshuset)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:38:18 +0200)
+
+⛔ Vattenvärmare (hönshuset)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:34:07 +0200)
+
+⛔ Ventilfläkt (bion)
+   Status: cancelled
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:36:11 +0200)
+
+============================================================
+End of log
+============================================================

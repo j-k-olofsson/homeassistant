@@ -1,7 +1,7 @@
 "use strict";
 
 // VERSION info
-var VERSION = "1.3.0";
+var VERSION = "1.4.0";
 
 // typical [[1,2,3], [6,7,8]] to [[1, 6], [2, 7], [3, 8]] converter
 var transpose = m => m[0].map((x, i) => m.map(x => x[i]));
@@ -73,7 +73,47 @@ class CellFormatters {
         const minr = Math.floor(minutes);
         return (!isNaN(hours) && !isNaN(minr)) ? hours + " hours " + minr + " minutes" : null;
     }
-    duration(data) {
+    time_passed(data) {
+        const diffMs = Date.now() - Date.parse(data);
+        if (isNaN(diffMs)) return null;
+
+        // Convert to seconds.
+        let remaining = Math.floor(diffMs / 1000);
+
+        const weeks = Math.floor(remaining / 604800);
+        remaining -= weeks * 604800;
+
+        const days = Math.floor(remaining / 86400);
+        remaining -= days * 86400;
+
+        const hours = Math.floor(remaining / 3600);
+        remaining -= hours * 3600;
+
+        const minutes = Math.floor(remaining / 60);
+        remaining -= minutes * 60;
+
+        const seconds = remaining;
+
+        const units = [
+            { value: weeks, name: 'week' },
+            { value: days, name: 'day' },
+            { value: hours, name: 'hour' },
+            { value: minutes, name: 'minute' },
+            { value: seconds, name: 'second' }
+        ];
+
+        const parts = [];
+        for (const unit of units) {
+            if (unit.value > 0) {
+                const unitName = unit.value === 1 ? unit.name : unit.name + 's';
+                parts.push(unit.value + ' ' + unitName);
+                if (parts.length === 2) break;
+            }
+        }
+
+        return parts.length > 0 ? parts.join(' ') : '0 second';
+    }
+	duration(data) {
         let h = (data >= 3600) ? Math.floor(data / 3600).toString() + ':' : '';
         let m = (data >= 60) ? Math.floor((data % 3600) / 60).toString().padStart(2, 0) + ':' : '';
         let s = (data >= 0) ? Math.floor((data % 3600) % 60).toString() : '';
@@ -613,22 +653,10 @@ class DataRow {
 // Replace cell references with actual data.
 function getRefs(source, row_data, row_cells) {
     function _replace_col(match, p1) {
-        const idx = Number(p1);
-        if (!Array.isArray(row_data) || Number.isNaN(idx) || idx < 0 || idx >= row_data.length) {
-            return "";
-        }
-        const cell = row_data[idx];
-        if (cell === null || cell === undefined || cell.content === null || cell.content === undefined) {
-            return "";
-        }
-        return cell.content;
+        return row_data[p1].content;
     }
     function _replace_cell(match, p1) {
-        const idx = Number(p1);
-        if (!row_cells || Number.isNaN(idx) || idx < 0 || idx >= row_cells.length || !row_cells[idx]) {
-            return "";
-        }
-        return row_cells[idx].innerText == "\n" ? "" : row_cells[idx].innerText; // empty cell contains <br>
+        return row_cells[p1].innerText == "\n" ? "" : row_cells[p1].innerText; // empty cell contains <br>
     }
     function _replace_text(value) {
         const regex_col = /col\[(\d+)\]/gm;
@@ -639,31 +667,19 @@ function getRefs(source, row_data, row_cells) {
         return modify;
     }
 
-    function _deep_replace(value) {
-        if (value === null || value === undefined) {
-            return value;
-        }
-        if (typeof value === "string") {
-            return _replace_text(value);
-        }
-        if (Array.isArray(value)) {
-            return value.map((item) => _deep_replace(item));
-        }
-        if (typeof value === "object") {
-            const out = {};
-            Object.keys(value).forEach((key) => {
-                out[key] = _deep_replace(value[key]);
-            });
-            return out;
-        }
-        return value;
-    }
-
     // Search for col and cell references (e.g. "col[3]", "cell[2]") and replace with actual data values.
     if (source) {
-        return _deep_replace(source);
+        if (typeof source === "object") {
+            return JSON.parse(_replace_text(JSON.stringify(source)));
+        }
+        else {
+            // Process simple string.
+            return _replace_text(source);
+        }
     }
-    return "";
+    else {
+        return "";
+    }
 }
 
 // Used for feedback during mouse/touch hold
@@ -685,7 +701,6 @@ class FlexTableCard extends HTMLElement {
     // Used to detect changes requiring a table refresh.
     #old_last_updated = "";
     #old_rowcount = 0;
-    #old_signature = "";
     #last_config = null;
 
     _getRegEx(pats, invert=false) {
@@ -761,10 +776,10 @@ class FlexTableCard extends HTMLElement {
         var css_styles = {
             ".type-custom-flex-table-card":
                                         "overflow: auto;",
-            "table":                    `width: 100%; padding: 0; border-collapse: collapse; border-spacing: 0; ${cfg.selectable ? "user-select: text;" : ""} `,
+            "table":                    `width: 100%; padding: 16px; ${cfg.selectable ? "user-select: text;" : ""} `,
             "thead th":                 "height: 1em;",
-            "tr td":                    "padding-left: 0; padding-right: 0; margin: 0; border: 0; position: relative; overflow: hidden; ",
-            "th":                       "padding-left: 0; padding-right: 0; margin: 0; ",
+            "tr td":                    "padding-left: 0.5em; padding-right: 0.5em; position: relative; overflow: hidden; ",
+            "th":                       "padding-left: 0.5em; padding-right: 0.5em; ",
             "tr td.left":               "text-align: left; ",
             "th.left":                  "text-align: left; ",
             "tr td.center":             "text-align: center; ",
@@ -1420,26 +1435,6 @@ class FlexTableCard extends HTMLElement {
             return (Number.isNaN(parseFloat(value[0])) && value[0] !== '-') ? parseFloat(value.substring(1)) : parseFloat(value);
         }
     }
-
-    _entitySignature(entity) {
-        const attrs = entity && entity.attributes ? entity.attributes : {};
-        let clients_sig = "";
-        if (Array.isArray(attrs.clients)) {
-            clients_sig = attrs.clients
-                .map((c) => {
-                    if (!c || typeof c !== "object") return "";
-                    const mac = c.mac || "";
-                    const ifname = c.ifname || "";
-                    const rssi = (c.rssi === null || c.rssi === undefined) ? "" : c.rssi;
-                    const ip = c.ip || "";
-                    return `${mac}:${ifname}:${rssi}:${ip}`;
-                })
-                .sort()
-                .join("|");
-        }
-        return `${entity.entity_id || ""}|${entity.state || ""}|${entity.last_updated || ""}|${clients_sig}`;
-    }
-
     set hass(hass) {
         const config = this._config;
         const root = this.shadowRoot;
@@ -1461,15 +1456,13 @@ class FlexTableCard extends HTMLElement {
         // Check for changes requiring a table refresh.
         // Return if no changes detected.
         let rowcount = entities.length;
-        let last_updated_arr = entities.map(a => a.last_updated);
-        let max = last_updated_arr.sort().slice(-1)[0];
-        let signature = entities.map((e) => this._entitySignature(e)).join("||");
-        if (rowcount == this.#old_rowcount && max == this.#old_last_updated && signature == this.#old_signature) {
-            return;
+        if (rowcount == this.#old_rowcount) {
+            let last_updated_arr = entities.map(a => a.last_updated);
+            let max = last_updated_arr.sort().slice(-1)[0];
+            if (max == this.#old_last_updated) return;
+            this.#old_last_updated = max;
         }
         this.#old_rowcount = rowcount;
-        this.#old_last_updated = max;
-        this.#old_signature = signature;
 
         if (config.action || config.service) {
             // Use action to populate

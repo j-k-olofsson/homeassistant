@@ -1,0 +1,12 @@
+{
+    "domain": "esphome_update_manager",
+    "name": "ESPHome Update Manager",
+    "codeowners": ["@KriVaTri"],
+    "config_flow": true,
+    "dependencies": ["esphome", "http"],
+    "documentation": "https://github.com/KriVaTri/esphome-update-manager#readme",
+    "integration_type": "service",
+    "iot_class": "local_polling",
+    "issue_tracker": "https://github.com/KriVaTri/esphome-update-manager/issues",
+    "version": "1.10.0"
+}

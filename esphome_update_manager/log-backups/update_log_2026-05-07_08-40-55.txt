@@ -1,0 +1,382 @@
+============================================================
+ESPHome Update Manager v1.7.0 - Update Log
+Timestamp: 2026-05-07 08:40:55
+============================================================
+
+Summary: 52 device(s) processed
+  ✅ Success:   52
+  ❌ Failed:    0
+  ⏭️  Skipped:   0
+  ⛔ Cancelled: 0
+
+------------------------------------------------------------
+Details:
+------------------------------------------------------------
+
+✅ Blomlampa (kontoret)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:04:24 +0200) → 2026.4.5
+   Started: 2026-05-07T06:04:13.331886
+   Finished: 2026-05-07T06:05:01.573077
+
+✅ Blomlampa (Shelly Plus RGBW PM)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:06:37 +0200) → 2026.4.5
+   Started: 2026-05-07T06:05:02.576813
+   Finished: 2026-05-07T06:09:17.267017
+
+✅ Blomlampa 1 (Verandan)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:09:45 +0200) → 2026.4.5
+   Started: 2026-05-07T06:09:18.269105
+   Finished: 2026-05-07T06:11:31.414614
+
+✅ Blomlampa 2 (verandan)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:11:58 +0200) → 2026.4.5
+   Started: 2026-05-07T06:11:32.415655
+   Finished: 2026-05-07T06:13:43.388030
+
+✅ Blomlampor (bion)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:14:11 +0200) → 2026.4.5
+   Started: 2026-05-07T06:13:44.389763
+   Finished: 2026-05-07T06:15:55.576336
+
+✅ Elmätare (elstolpen)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:16:24 +0200) → 2026.4.5
+   Started: 2026-05-07T06:15:56.577044
+   Finished: 2026-05-07T06:18:03.869333
+
+✅ Esp32 kamera
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:18:31 +0200) → 2026.4.5
+   Started: 2026-05-07T06:18:04.870994
+   Finished: 2026-05-07T06:21:28.544517
+
+✅ Gasol (utomhus)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:21:45 +0200) → 2026.4.5
+   Started: 2026-05-07T06:21:29.545668
+   Finished: 2026-05-07T06:24:30.817556
+
+✅ Golvvärme (friggan)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:24:48 +0200) → 2026.4.5
+   Started: 2026-05-07T06:24:31.818934
+   Finished: 2026-05-07T06:26:40.687337
+
+✅ Golvvärme (sovrum och kontor)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:26:58 +0200) → 2026.4.5
+   Started: 2026-05-07T06:26:41.688478
+   Finished: 2026-05-07T06:28:50.796755
+
+✅ HA Voice PE 096460
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:29:30 +0200) → 2026.4.5
+   Started: 2026-05-07T06:28:51.797987
+   Finished: 2026-05-07T06:37:34.696358
+
+✅ Hemmabio El #1
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:37:55 +0200) → 2026.4.5
+   Started: 2026-05-07T06:37:35.698122
+   Finished: 2026-05-07T06:40:58.688339
+
+✅ Hemmabio El #2
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:41:22 +0200) → 2026.4.5
+   Started: 2026-05-07T06:40:59.689655
+   Finished: 2026-05-07T06:44:22.320879
+
+✅ Huvudströmbrytaren Prusa XL
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:44:46 +0200) → 2026.4.5
+   Started: 2026-05-07T06:44:23.322656
+   Finished: 2026-05-07T06:47:48.699384
+
+✅ IR gateway
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:48:11 +0200) → 2026.4.5
+   Started: 2026-05-07T06:47:49.701145
+   Finished: 2026-05-07T06:50:20.634618
+
+✅ Julbelysning (utomhus)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:50:22 +0200) → 2026.4.5
+   Started: 2026-05-07T06:50:21.637605
+   Finished: 2026-05-07T06:52:33.062061
+
+✅ Ledstrip (ateljé norra)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:52:35 +0200) → 2026.4.5
+   Started: 2026-05-07T06:52:34.063781
+   Finished: 2026-05-07T06:55:40.486042
+
+✅ Ledstrip (ateljé södra)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:55:44 +0200) → 2026.4.5
+   Started: 2026-05-07T06:55:41.487756
+   Finished: 2026-05-07T06:58:49.688986
+
+✅ Ledstrip (balkongdörrar)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 06:58:55 +0200) → 2026.4.5
+   Started: 2026-05-07T06:58:50.690831
+   Finished: 2026-05-07T07:01:38.888387
+
+✅ Ledstrip (entrén)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:01:47 +0200) → 2026.4.5
+   Started: 2026-05-07T07:01:39.889928
+   Finished: 2026-05-07T07:04:49.407038
+
+✅ Ledstrip (korridoren)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:04:58 +0200) → 2026.4.5
+   Started: 2026-05-07T07:04:50.410681
+   Finished: 2026-05-07T07:07:32.060770
+
+✅ Ledstrip (kök småfönster)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:07:42 +0200) → 2026.4.5
+   Started: 2026-05-07T07:07:33.061986
+   Finished: 2026-05-07T07:10:40.573287
+
+✅ Ledstrip (kök sydöstra)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:10:50 +0200) → 2026.4.5
+   Started: 2026-05-07T07:10:41.574883
+   Finished: 2026-05-07T07:13:49.412352
+
+✅ Ledstrip (kök södra)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:13:59 +0200) → 2026.4.5
+   Started: 2026-05-07T07:13:50.413559
+   Finished: 2026-05-07T07:16:59.409614
+
+✅ Ledstrip (kök östra)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:17:10 +0200) → 2026.4.5
+   Started: 2026-05-07T07:17:00.410537
+   Finished: 2026-05-07T07:20:08.597628
+
+✅ Ledstrip (sovrum norra)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:20:18 +0200) → 2026.4.5
+   Started: 2026-05-07T07:20:09.599753
+   Finished: 2026-05-07T07:23:26.463761
+
+✅ Ledstrip (sovrum östra)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:23:35 +0200) → 2026.4.5
+   Started: 2026-05-07T07:23:27.464617
+   Finished: 2026-05-07T07:26:43.455220
+
+✅ Ledstrip (verandan)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:26:54 +0200) → 2026.4.5
+   Started: 2026-05-07T07:26:44.457137
+   Finished: 2026-05-07T07:29:51.627578
+
+✅ Ledstrip (vitrinskåp)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:30:03 +0200) → 2026.4.5
+   Started: 2026-05-07T07:29:52.628727
+   Finished: 2026-05-07T07:33:20.403236
+
+✅ Ljussensor
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:33:34 +0200) → 2026.4.5
+   Started: 2026-05-07T07:33:21.405147
+   Finished: 2026-05-07T07:36:46.364190
+
+✅ Lucka (Hönshuset)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:37:00 +0200) → 2026.4.5
+   Started: 2026-05-07T07:36:47.365573
+   Finished: 2026-05-07T07:40:14.393393
+
+✅ Markis (utomhus)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:40:28 +0200) → 2026.4.5
+   Started: 2026-05-07T07:40:15.394901
+   Finished: 2026-05-07T07:42:58.053996
+
+✅ Plant Sensor 7 Fredskalla
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:43:12 +0200) → 2026.4.5
+   Started: 2026-05-07T07:42:59.056092
+   Finished: 2026-05-07T07:49:32.753737
+
+✅ Poolbelysning & temp
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:49:44 +0200) → 2026.4.5
+   Started: 2026-05-07T07:49:33.756656
+   Finished: 2026-05-07T07:53:06.990282
+
+✅ Poolpump (utomhus)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:52:27 +0200) → 2026.4.5
+   Started: 2026-05-07T07:53:07.991799
+   Finished: 2026-05-07T07:56:07.246654
+
+✅ Poolvärmepump (poolen)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:54:30 +0200) → 2026.4.5
+   Started: 2026-05-07T07:56:08.248001
+   Finished: 2026-05-07T07:58:10.547355
+
+✅ RF bridge
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:56:33 +0200) → 2026.4.5
+   Started: 2026-05-07T07:58:11.549361
+   Finished: 2026-05-07T08:00:51.080857
+
+✅ Salt (verkstan)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 07:59:14 +0200) → 2026.4.5
+   Started: 2026-05-07T08:00:52.083482
+   Finished: 2026-05-07T08:03:38.546055
+
+✅ Taklampor
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:01:51 +0200) → 2026.4.5
+   Started: 2026-05-07T08:03:39.547950
+   Finished: 2026-05-07T08:05:51.139212
+
+✅ Taklampor (duschen)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:04:05 +0200) → 2026.4.5
+   Started: 2026-05-07T08:05:52.141168
+   Finished: 2026-05-07T08:08:03.238919
+
+✅ Taklampor (kontoret)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:06:16 +0200) → 2026.4.5
+   Started: 2026-05-07T08:08:04.241686
+   Finished: 2026-05-07T08:10:15.260226
+
+✅ Taklampor (källaren)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:08:29 +0200) → 2026.4.5
+   Started: 2026-05-07T08:10:16.262952
+   Finished: 2026-05-07T08:12:27.600783
+
+✅ Taklampor (köket)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:10:41 +0200) → 2026.4.5
+   Started: 2026-05-07T08:12:28.602580
+   Finished: 2026-05-07T08:14:40.012627
+
+✅ Taklampor (sovrum)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:12:54 +0200) → 2026.4.5
+   Started: 2026-05-07T08:14:41.014131
+   Finished: 2026-05-07T08:16:52.320100
+
+✅ TempHyg (gamla verkstan)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:15:06 +0200) → 2026.4.5
+   Started: 2026-05-07T08:16:53.322530
+   Finished: 2026-05-07T08:19:26.760557
+
+✅ Termostat (friggan)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:17:42 +0200) → 2026.4.5
+   Started: 2026-05-07T08:19:27.762352
+   Finished: 2026-05-07T08:21:36.168935
+
+✅ Termostat (kontoret)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:19:51 +0200) → 2026.4.5
+   Started: 2026-05-07T08:21:37.170873
+   Finished: 2026-05-07T08:23:45.994237
+
+✅ Thread Test (ESP32-C6-Zero)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:24:55 +0200) → 2026.4.5
+   Started: 2026-05-07T08:23:46.996538
+   Finished: 2026-05-07T08:30:43.934077
+
+✅ Utomhusbelysning (friggan)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:31:56 +0200) → 2026.4.5
+   Started: 2026-05-07T08:30:44.935858
+   Finished: 2026-05-07T08:32:55.856162
+
+✅ Vattennivå (hönshuset)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:38:18 +0200) → 2026.4.5
+   Started: 2026-05-07T08:32:56.857852
+   Finished: 2026-05-07T08:36:47.116961
+
+✅ Vattenvärmare (hönshuset)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:34:07 +0200) → 2026.4.5
+   Started: 2026-05-07T08:36:48.119422
+   Finished: 2026-05-07T08:38:50.434829
+
+✅ Ventilfläkt (bion)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.4.4 (2026-05-05 08:36:11 +0200) → 2026.4.5
+   Started: 2026-05-07T08:38:51.436853
+   Finished: 2026-05-07T08:40:55.177371
+
+============================================================
+End of log
+============================================================

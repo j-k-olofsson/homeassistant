@@ -72,7 +72,6 @@ from .flow_helper.schema import (
     SCHEMA_UTILITY_METER_TOGGLE,
 )
 from .power_profile.factory import get_power_profile
-from .power_profile.library import ModelInfo
 from .power_profile.power_profile import SUPPORTED_DOMAINS, DeviceType, DiscoveryBy, PowerProfile
 from .strategy.factory import PowerCalculatorStrategyFactory
 
@@ -472,12 +471,11 @@ class PowercalcOptionsFlow(PowercalcCommonFlow, OptionsFlow):
             return None
 
         try:
-            model_info = ModelInfo(manufacturer, model)
             self.selected_profile = await get_power_profile(
                 self.hass,
-                {},
+                self.sensor_config,
                 self.source_entity,
-                model_info,
+                process_variables=False,
             )
             if self.selected_profile and not self.strategy:
                 self.strategy = self.selected_profile.calculation_strategy
@@ -509,7 +507,7 @@ class PowercalcOptionsFlow(PowercalcCommonFlow, OptionsFlow):
 
     def should_add_strategy_option_to_menu(self) -> bool:
         """Check whether the strategy option should be added to the menu."""
-        if not self.strategy or self.strategy == CalculationStrategy.LUT:
+        if not self.strategy or self.strategy not in STRATEGY_STEP_MAPPING:
             return False
 
         if self.selected_profile:

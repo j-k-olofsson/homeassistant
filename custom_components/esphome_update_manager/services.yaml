@@ -1,0 +1,42 @@
+start_updates:
+  name: Start Updates
+  description: Start updates for all ESPHome devices that have updates available.
+  fields:
+    entity_ids:
+      name: Entity IDs
+      description: Optional list of specific entity IDs to update. If not provided, all devices with available updates will be updated.
+      required: false
+      example: "['update.esp_test_firmware', 'update.esp_living_firmware']"
+      selector:
+        entity:
+          multiple: true
+          filter:
+            domain: update
+    stop_addon:
+      name: Stop VS Code Server
+      description: Whether to stop the VS Code Server add-on during updates. If not provided, uses the saved setting.
+      required: false
+      example: true
+      selector:
+        boolean:
+
+force_install:
+  name: ESPHome Yaml Force Install
+  description: Force compile and OTA install device(s) (even without pending update)
+  fields:
+    device_id:
+      name: Device(s)
+      description: The ESPHome device(s) to force install
+      required: true
+      selector:
+        device:
+          multiple: true
+          integration: esphome
+
+refresh_project_versions:
+  name: Refresh Project Versions
+  description: >-
+    Re-check the YAML configuration of all online devices for project version
+    bumps. If auto-update is enabled with scope "project" or "both", any detected
+    bumps will be queued for force install automatically. Equivalent to clicking
+    the refresh button in the panel.

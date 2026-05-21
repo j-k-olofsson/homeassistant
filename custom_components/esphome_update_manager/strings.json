@@ -1,0 +1,67 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "ESPHome Update Manager",
+        "description": "Configure your ESPHome Update Manager.",
+        "data": {
+          "dashboard_url": "External Dashboard URL",
+          "dashboard_username": "Username (optional)",
+          "dashboard_password": "Password (optional)",
+          "max_log_backups": "Maximum number of log backups to keep"
+        },
+        "data_description": {
+          "dashboard_url": "Example: {example_url}. Leave empty or http:// to use only local add-on.",
+          "dashboard_username": "Username for dashboard authentication",
+          "dashboard_password": "Password for dashboard authentication",
+          "max_log_backups": "Set to 0 to disable log backups"
+        }
+      }
+    },
+    "error": {
+      "connection_failed": "Connection failed - host unreachable or port incorrect",
+      "connection_error": "Connection error - check network and firewall",
+      "timeout": "Connection timed out - host unreachable or dashboard not running",
+      "http_error": "HTTP error - dashboard returned an error",
+      "not_found": "Not found (404) - check URL and port",
+      "auth_required": "Authentication required - provide username and password",
+      "auth_failed": "Authentication failed - check username and password",
+      "invalid_response": "Invalid response - not an ESPHome Dashboard",
+      "unknown_error": "Unexpected error - check URL and try again"
+    },
+    "abort": {
+      "already_configured": "Already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "ESPHome Update Manager Settings",
+        "description": "Configure your ESPHome Update Manager settings.",
+        "data": {
+          "dashboard_url": "External Dashboard URL",
+          "dashboard_username": "Username (optional)",
+          "dashboard_password": "Password (optional)",
+          "max_log_backups": "Maximum number of log backups to keep"
+        },
+        "data_description": {
+          "dashboard_url": "Example: {example_url}. Set to http:// to use only local add-on.",
+          "dashboard_username": "Username for dashboard authentication",
+          "dashboard_password": "Password for dashboard authentication. Leave empty to keep current password.",
+          "max_log_backups": "Set to 0 to disable log backups"
+        }
+      }
+    },
+    "error": {
+      "connection_failed": "Connection failed - host unreachable or port incorrect",
+      "connection_error": "Connection error - check network and firewall",
+      "timeout": "Connection timed out - host unreachable or dashboard not running",
+      "http_error": "HTTP error - dashboard returned an error",
+      "not_found": "Not found (404) - check URL and port",
+      "auth_required": "Authentication required - provide username and password",
+      "auth_failed": "Authentication failed - check username and password",
+      "invalid_response": "Invalid response - not an ESPHome Dashboard",
+      "unknown_error": "Unexpected error - check URL and try again"
+    }
+  }
+}

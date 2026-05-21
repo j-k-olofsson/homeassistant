@@ -322,15 +322,23 @@ def main() -> int:
                 continue
             current = merged[-1]
             delta = (slot["start_dt"] - current["end_dt"]).total_seconds()
-            same_price = current.get("price_sek_kwh") == slot.get("price_sek_kwh")
-            same_source = current.get("source") == slot.get("source")
             same_currency = current.get("currency") == slot.get("currency")
-            if abs(delta) <= tolerance and same_price and same_source and same_currency:
+            if abs(delta) <= tolerance and same_currency:
                 current["end_dt"] = slot["end_dt"]
                 current["energy_kwh"] += slot.get("energy_kwh", 0.0) or 0.0
                 current["cost_sek"] += slot.get("cost_sek", 0.0) or 0.0
-                if current.get("price_sek_kwh") is None and slot.get("price_sek_kwh") is not None:
+                if current["energy_kwh"] > 0 and current["cost_sek"] > 0:
+                    current["price_sek_kwh"] = current["cost_sek"] / current["energy_kwh"]
+                elif current.get("price_sek_kwh") is None and slot.get("price_sek_kwh") is not None:
                     current["price_sek_kwh"] = slot["price_sek_kwh"]
+                elif current.get("price_sek_kwh") != slot.get("price_sek_kwh"):
+                    current["price_sek_kwh"] = None
+                if slot.get("source") and slot.get("source") not in str(current.get("source", "")):
+                    current["source"] = (
+                        f"{current.get('source')}+{slot.get('source')}"
+                        if current.get("source")
+                        else slot.get("source")
+                    )
                 current["slot_count"] += slot.get("slot_count", 1)
                 continue
             merged.append(slot)
