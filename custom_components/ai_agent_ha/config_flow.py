@@ -15,7 +15,17 @@ from homeassistant.helpers.selector import (
     TextSelectorConfig,
 )
 
-from .const import CONF_LOCAL_MODEL, CONF_LOCAL_URL, DOMAIN
+from .agent import (
+    fetch_gemini_models,
+    fetch_openai_compatible_models,
+    fetch_openai_models,
+)
+from .const import (
+    CONF_LOCAL_OLLAMA_URL,
+    CONF_OPENAI_BASE_URL,
+    CONF_OPENAI_COMPATIBLE_URL,
+    DOMAIN,
+)
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -27,7 +37,8 @@ PROVIDERS = {
     "anthropic": "Anthropic (Claude)",
     "alter": "Alter",
     "zai": "z.ai",
-    "local": "Local Model",
+    "local_ollama": "Local Ollama",
+    "openai_compatible": "Local OpenAI-Compatible (e.g. LM Studio, vLLM)",
 }
 
 TOKEN_FIELD_NAMES = {
@@ -39,7 +50,8 @@ TOKEN_FIELD_NAMES = {
     "alter": "alter_token",
     "zai": "zai_token",
     "zai_endpoint": "zai_endpoint",
-    "local": CONF_LOCAL_URL,  # For local models, we use URL instead of token
+    "local_ollama": CONF_LOCAL_OLLAMA_URL,  # For local Ollama models, we use URL instead of token
+    "openai_compatible": CONF_OPENAI_COMPATIBLE_URL,  # For OpenAI-compatible endpoints
 }
 
 TOKEN_LABELS = {
@@ -51,7 +63,8 @@ TOKEN_LABELS = {
     "alter": "Alter API Key",
     "zai": "z.ai API Key",
     "zai_endpoint": "z.ai API Endpoint Type",
-    "local": "Local API URL (e.g., http://localhost:11434/api/generate)",
+    "local_ollama": "Local Ollama API URL (e.g., http://localhost:11434/api/generate)",
+    "openai_compatible": "OpenAI-Compatible URL (e.g., http://example.com/v1/ or http://localhost:8080/v1/). Must end with /v1/",
 }
 
 DEFAULT_MODELS = {
@@ -62,7 +75,8 @@ DEFAULT_MODELS = {
     "anthropic": "claude-sonnet-4-5-20250929",
     "alter": "",  # User enters custom model
     "zai": "glm-4.7",  # Z.ai's latest flagship model
-    "local": "llama3.2",  # Updated to use llama3.2 as default
+    "local_ollama": "llama3.2",  # Updated to use llama3.2 as default for local Ollama
+    "openai_compatible": "",  # User enters custom model for OpenAI-compatible endpoint
 }
 
 AVAILABLE_MODELS = {
@@ -107,6 +121,9 @@ AVAILABLE_MODELS = {
         "deepseek/deepseek-r1",
     ],
     "anthropic": [
+        "claude-opus-4-7",
+        "claude-sonnet-4-6",
+        "claude-haiku-4-5",
         "claude-sonnet-4-5-20250929",
         "claude-sonnet-4-20250514",
         "claude-3-5-sonnet-20241022",
@@ -137,14 +154,18 @@ AVAILABLE_MODELS = {
         "glm-4-32b-0414-128k",
         "Custom...",
     ],
-    # For local models, provide common Ollama models with llama3.2 as the default
-    "local": [
+    # For local Ollama models, provide common models with llama3.2 as the default
+    "local_ollama": [
         "llama3.2",
         "llama3",
         "llama3.1",
         "mistral",
         "mixtral",
         "deepseek-coder",
+        "Custom...",
+    ],
+    # For OpenAI-compatible endpoints, user should specify their model
+    "openai_compatible": [
         "Custom...",
     ],
 }
@@ -223,6 +244,28 @@ class AiAgentHaConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):  # type: ig
                     endpoint_type = user_input.get("zai_endpoint", "general")
                     self.config_data["zai_endpoint"] = endpoint_type
 
+                # For OpenAI, store Base URL (defaults to official endpoint if unchanged)
+                if provider == "openai":
+                    base_url = (user_input.get(CONF_OPENAI_BASE_URL) or "").strip()
+                    self.config_data[CONF_OPENAI_BASE_URL] = (
+                        base_url or "https://api.openai.com/v1"
+                    )
+                    # For OpenAI, move to next step to select model from dynamic list
+                    return await self.async_step_configure_openai_models()
+
+                # For OpenAI-Compatible, store Base URL + optional API key, then move on
+                if provider == "openai_compatible":
+                    base_url = (
+                        user_input.get(CONF_OPENAI_COMPATIBLE_URL) or ""
+                    ).strip()
+                    self.config_data[CONF_OPENAI_COMPATIBLE_URL] = base_url
+                    api_key = (
+                        user_input.get("openai_compatible_api_key") or ""
+                    ).strip()
+                    self.config_data["openai_compatible_api_key"] = api_key
+                    # Move to next step to select model from dynamic list
+                    return await self.async_step_configure_openai_compatible_models()
+
                 # Add model configuration if provided
                 selected_model = user_input.get("model")
                 custom_model = user_input.get("custom_model")
@@ -242,8 +285,13 @@ class AiAgentHaConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):  # type: ig
                     # Use selected model if it's not the "Custom..." option
                     self.config_data["models"][provider] = selected_model
                 else:
-                    # For local and alter providers, allow empty model name
-                    if provider in ("local", "alter", "zai"):
+                    # For local_ollama, openai_compatible, alter, and zai providers, allow empty model name
+                    if provider in (
+                        "local_ollama",
+                        "openai_compatible",
+                        "alter",
+                        "zai",
+                    ):
                         self.config_data["models"][provider] = ""
                     else:
                         # Fallback to default model for other providers
@@ -292,16 +340,16 @@ class AiAgentHaConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):  # type: ig
                 },
             )
 
-        if provider == "local":
-            # For local provider, we need both URL and optional model name
+        if provider == "local_ollama":
+            # For local_ollama provider, we need both URL and optional model name
             schema_dict = {
-                vol.Required(CONF_LOCAL_URL): TextSelector(
+                vol.Required(CONF_LOCAL_OLLAMA_URL): TextSelector(
                     TextSelectorConfig(type="text")
                 ),
             }
 
             # Add model selection
-            model_options = AVAILABLE_MODELS.get("local", ["Custom..."])
+            model_options = AVAILABLE_MODELS.get("local_ollama", ["Custom..."])
             schema_dict[vol.Optional("model", default="Custom...")] = SelectSelector(
                 SelectSelectorConfig(options=model_options)
             )
@@ -314,7 +362,53 @@ class AiAgentHaConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):  # type: ig
                 data_schema=vol.Schema(schema_dict),
                 errors=errors,
                 description_placeholders={
-                    "token_label": "Local API URL",  # nosec B105 - UI label string shown next to the URL field, not a credential
+                    "token_label": "Local Ollama API URL",  # nosec B105 - UI label string shown next to the URL field, not a credential
+                    "provider": PROVIDERS[provider],
+                },
+            )
+
+        if provider == "openai_compatible":
+            # For openai_compatible provider, we need base URL + optional API key.
+            # Many local endpoints (LM Studio, vLLM) need no key; gateways like
+            # Open WebUI or LiteLLM require one. Models are fetched in the next step.
+            schema_dict = {
+                vol.Required(CONF_OPENAI_COMPATIBLE_URL): TextSelector(
+                    TextSelectorConfig(type="text")
+                ),
+                vol.Optional("openai_compatible_api_key", default=""): TextSelector(
+                    TextSelectorConfig(type="password")
+                ),
+            }
+
+            return self.async_show_form(
+                step_id="configure",
+                data_schema=vol.Schema(schema_dict),
+                errors=errors,
+                description_placeholders={
+                    "token_label": "Local OpenAI-Compatible URL",  # nosec B105 - UI label for config form, not a credential
+                    "provider": PROVIDERS[provider],
+                },
+            )
+
+        if provider == "openai":
+            # For OpenAI provider, first step: API Key + Base URL
+            # Model selection happens in the next step after we fetch available models
+            schema_dict = {
+                vol.Required(token_field): TextSelector(
+                    TextSelectorConfig(type="password")
+                ),
+                vol.Optional(
+                    CONF_OPENAI_BASE_URL,
+                    default="https://api.openai.com/v1",
+                ): TextSelector(TextSelectorConfig(type="text")),
+            }
+
+            return self.async_show_form(
+                step_id="configure",
+                data_schema=vol.Schema(schema_dict),
+                errors=errors,
+                description_placeholders={
+                    "token_label": token_label,
                     "provider": PROVIDERS[provider],
                 },
             )
@@ -328,11 +422,20 @@ class AiAgentHaConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):  # type: ig
 
         # Add model selection if available
         if available_models:
-            # Add predefined models + custom option (avoid duplicating "Custom...")
-            if "Custom..." in available_models:
-                model_options = available_models
+            # For Gemini, fetch models dynamically
+            if provider == "gemini":
+                token_value = self.config_data.get("gemini_token")
+                model_list = await fetch_gemini_models(token_value)
+                if "Custom..." not in model_list:
+                    model_list.insert(0, "Custom...")
+                model_options = model_list
             else:
-                model_options = available_models + ["Custom..."]
+                # Add predefined models + custom option (avoid duplicating "Custom...")
+                if "Custom..." in available_models:
+                    model_options = available_models
+                else:
+                    model_options = available_models + ["Custom..."]
+
             schema_dict[vol.Optional("model", default=dropdown_default)] = (
                 SelectSelector(SelectSelectorConfig(options=model_options))
             )
@@ -346,6 +449,118 @@ class AiAgentHaConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):  # type: ig
             errors=errors,
             description_placeholders={
                 "token_label": token_label,
+                "provider": PROVIDERS[provider],
+            },
+        )
+
+    async def async_step_configure_openai_models(self, user_input=None):
+        """Handle the OpenAI model selection step with dynamic model list."""
+        errors = {}
+        provider = "openai"
+        token = self.config_data.get("openai_token")
+        base_url = self.config_data.get(
+            CONF_OPENAI_BASE_URL, "https://api.openai.com/v1"
+        )
+
+        # Fetch available models dynamically
+        model_list = await fetch_openai_models(base_url, token)
+
+        # Ensure "Custom..." is always available
+        if "Custom..." not in model_list:
+            model_list.insert(0, "Custom...")
+
+        if user_input is not None:
+            try:
+                selected_model = user_input.get("model")
+                custom_model = user_input.get("custom_model")
+
+                # Initialize models dict if it doesn't exist
+                if "models" not in self.config_data:
+                    self.config_data["models"] = {}
+
+                if custom_model and custom_model.strip():
+                    self.config_data["models"][provider] = custom_model.strip()
+                elif selected_model and selected_model != "Custom...":
+                    self.config_data["models"][provider] = selected_model
+                else:
+                    self.config_data["models"][provider] = ""
+
+                return self.async_create_entry(
+                    title=f"AI Agent HA ({PROVIDERS[provider]})",
+                    data=self.config_data,
+                )
+            except Exception:  # pylint: disable=broad-except
+                _LOGGER.exception("Unexpected exception in OpenAI model selection")
+                errors["base"] = "unknown"
+
+        schema_dict = {
+            vol.Optional("model", default="Custom..."): SelectSelector(
+                SelectSelectorConfig(options=model_list)
+            ),
+            vol.Optional("custom_model"): TextSelector(TextSelectorConfig(type="text")),
+        }
+
+        return self.async_show_form(
+            step_id="configure_openai_models",
+            data_schema=vol.Schema(schema_dict),
+            errors=errors,
+            description_placeholders={
+                "provider": PROVIDERS[provider],
+            },
+        )
+
+    async def async_step_configure_openai_compatible_models(self, user_input=None):
+        """Handle the OpenAI-Compatible model selection step with dynamic model list."""
+        errors = {}
+        provider = "openai_compatible"
+        base_url = self.config_data.get(CONF_OPENAI_COMPATIBLE_URL, "")
+        api_key = self.config_data.get("openai_compatible_api_key") or ""
+
+        # Fetch available models dynamically if the endpoint supports it
+        model_list = await fetch_openai_compatible_models(base_url, api_key or None)
+
+        # Ensure "Custom..." is always available
+        if "Custom..." not in model_list:
+            model_list.insert(0, "Custom...")
+
+        if user_input is not None:
+            try:
+                selected_model = user_input.get("model")
+                custom_model = user_input.get("custom_model")
+
+                # Initialize models dict if it doesn't exist
+                if "models" not in self.config_data:
+                    self.config_data["models"] = {}
+
+                if custom_model and custom_model.strip():
+                    self.config_data["models"][provider] = custom_model.strip()
+                elif selected_model and selected_model != "Custom...":
+                    self.config_data["models"][provider] = selected_model
+                else:
+                    self.config_data["models"][provider] = ""
+
+                return self.async_create_entry(
+                    title=f"AI Agent HA ({PROVIDERS[provider]})",
+                    data=self.config_data,
+                )
+            except Exception:  # pylint: disable=broad-except
+                _LOGGER.exception(
+                    "Unexpected exception in OpenAI-Compatible model selection"
+                )
+                errors["base"] = "unknown"
+
+        schema_dict = {
+            vol.Optional("model", default="Custom..."): SelectSelector(
+                SelectSelectorConfig(options=model_list)
+            ),
+            vol.Optional("custom_model"): TextSelector(TextSelectorConfig(type="text")),
+        }
+
+        return self.async_show_form(
+            step_id="configure_openai_compatible_models",
+            data_schema=vol.Schema(schema_dict),
+            errors=errors,
+            description_placeholders={
                 "provider": PROVIDERS[provider],
             },
         )
@@ -458,6 +673,19 @@ class AiAgentHaOptionsFlowHandler(config_entries.OptionsFlow):
                         endpoint_type = user_input.get("zai_endpoint", "general")
                         updated_data["zai_endpoint"] = endpoint_type
 
+                    # For OpenAI, update Base URL (default to official if blank)
+                    if provider == "openai":
+                        base_url = (user_input.get(CONF_OPENAI_BASE_URL) or "").strip()
+                        updated_data[CONF_OPENAI_BASE_URL] = (
+                            base_url or "https://api.openai.com/v1"
+                        )
+
+                    # For OpenAI-Compatible, update the optional API key
+                    if provider == "openai_compatible":
+                        updated_data["openai_compatible_api_key"] = (
+                            user_input.get("openai_compatible_api_key") or ""
+                        ).strip()
+
                     # Initialize models dict if it doesn't exist
                     if "models" not in updated_data:
                         updated_data["models"] = {}
@@ -469,8 +697,13 @@ class AiAgentHaOptionsFlowHandler(config_entries.OptionsFlow):
                         # Use selected model if it's not the "Custom..." option
                         updated_data["models"][provider] = selected_model
                     else:
-                        # For local, alter, and zai providers, allow empty model name
-                        if provider in ("local", "alter", "zai"):
+                        # For local_ollama, openai_compatible, alter, and zai providers, allow empty model name
+                        if provider in (
+                            "local_ollama",
+                            "openai_compatible",
+                            "alter",
+                            "zai",
+                        ):
                             updated_data["models"][provider] = ""
                         else:
                             # Ensure we keep the current model or use default for other providers
@@ -530,18 +763,18 @@ class AiAgentHaOptionsFlowHandler(config_entries.OptionsFlow):
                 },
             )
 
-        if provider == "local":
-            # For local provider, we need both URL and optional model name
-            current_url = self.config_entry.data.get(CONF_LOCAL_URL, "")
+        if provider == "local_ollama":
+            # For local_ollama provider, we need both URL and optional model name
+            current_url = self.config_entry.data.get(CONF_LOCAL_OLLAMA_URL, "")
 
             schema_dict = {
-                vol.Required(CONF_LOCAL_URL, default=current_url): TextSelector(
+                vol.Required(CONF_LOCAL_OLLAMA_URL, default=current_url): TextSelector(
                     TextSelectorConfig(type="text")
                 ),
             }
 
             # Add model selection
-            model_options = AVAILABLE_MODELS.get("local", ["Custom..."])
+            model_options = AVAILABLE_MODELS.get("local_ollama", ["Custom..."])
             # Ensure "Custom..." is in model options
             if "Custom..." not in model_options:
                 model_options = model_options + ["Custom..."]
@@ -557,7 +790,93 @@ class AiAgentHaOptionsFlowHandler(config_entries.OptionsFlow):
                 data_schema=vol.Schema(schema_dict),
                 errors=errors,
                 description_placeholders={
-                    "token_label": "Local API URL",  # nosec B105 - UI label string shown next to the URL field, not a credential
+                    "token_label": "Local Ollama API URL",  # nosec B105 - UI label string shown next to the URL field, not a credential
+                    "provider": PROVIDERS[provider],
+                },
+            )
+
+        if provider == "openai_compatible":
+            # For openai_compatible provider, we need URL + optional API key + model
+            current_url = self.config_entry.data.get(CONF_OPENAI_COMPATIBLE_URL, "")
+            current_api_key = (
+                self.config_entry.data.get("openai_compatible_api_key") or ""
+            )
+
+            # Fetch available models dynamically if the endpoint supports it
+            model_list = await fetch_openai_compatible_models(
+                current_url, current_api_key or None
+            )
+
+            # Ensure "Custom..." is always available
+            if "Custom..." not in model_list:
+                model_list.insert(0, "Custom...")
+
+            schema_dict = {
+                vol.Required(
+                    CONF_OPENAI_COMPATIBLE_URL, default=current_url
+                ): TextSelector(TextSelectorConfig(type="text")),
+                vol.Optional(
+                    "openai_compatible_api_key", default=current_api_key
+                ): TextSelector(TextSelectorConfig(type="password")),
+            }
+
+            # Add model selection with dynamic list
+            schema_dict[vol.Optional("model", default=model_default)] = SelectSelector(
+                SelectSelectorConfig(options=model_list)
+            )
+            schema_dict[vol.Optional("custom_model", default=custom_model_default)] = (
+                TextSelector(TextSelectorConfig(type="text"))
+            )
+
+            return self.async_show_form(
+                step_id="configure_options",
+                data_schema=vol.Schema(schema_dict),
+                errors=errors,
+                description_placeholders={
+                    "token_label": "Local OpenAI-Compatible URL",  # nosec B105 - UI label for config form, not a credential
+                    "provider": PROVIDERS[provider],
+                },
+            )
+
+        if provider == "openai":
+            # For OpenAI provider, we need token and optional Base URL
+            # Pre-fill with official endpoint if not set
+            current_base_url = (
+                self.config_entry.data.get(CONF_OPENAI_BASE_URL)
+                or "https://api.openai.com/v1"
+            )
+
+            # Fetch available models dynamically
+            current_token = self.config_entry.data.get("openai_token", "")
+            model_list = await fetch_openai_models(current_base_url, current_token)
+
+            # Ensure "Custom..." is always available
+            if "Custom..." not in model_list:
+                model_list.insert(0, "Custom...")
+
+            schema_dict = {
+                vol.Required(token_field, default=display_token): TextSelector(
+                    TextSelectorConfig(type="password")
+                ),
+                vol.Optional(
+                    CONF_OPENAI_BASE_URL, default=current_base_url
+                ): TextSelector(TextSelectorConfig(type="text")),
+            }
+
+            # Add model selection with dynamic list
+            schema_dict[vol.Optional("model", default=model_default)] = SelectSelector(
+                SelectSelectorConfig(options=model_list)
+            )
+            schema_dict[vol.Optional("custom_model", default=custom_model_default)] = (
+                TextSelector(TextSelectorConfig(type="text"))
+            )
+
+            return self.async_show_form(
+                step_id="configure_options",
+                data_schema=vol.Schema(schema_dict),
+                errors=errors,
+                description_placeholders={
+                    "token_label": token_label,
                     "provider": PROVIDERS[provider],
                 },
             )
@@ -571,7 +890,15 @@ class AiAgentHaOptionsFlowHandler(config_entries.OptionsFlow):
 
         # Add model selection if available
         if available_models:
-            # model_options already has "Custom..." added above
+            # For Gemini, fetch models dynamically
+            if provider == "gemini":
+                current_token = self.config_entry.data.get("gemini_token", "")
+                model_list = await fetch_gemini_models(current_token)
+                if "Custom..." not in model_list:
+                    model_list.insert(0, "Custom...")
+                model_options = model_list
+            # model_options already has "Custom..." added above for other providers
+
             schema_dict[vol.Optional("model", default=model_default)] = SelectSelector(
                 SelectSelectorConfig(options=model_options)
             )

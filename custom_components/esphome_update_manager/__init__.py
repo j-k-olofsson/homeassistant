@@ -358,6 +358,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         """Handle update finished event - write log and send notification if needed."""
         results = event.data.get("results", [])
         summary = event.data.get("summary", {})
+        operation = event.data.get("operation", "force_install")
 
         # Only process if there are actual results
         if not results:
@@ -408,11 +409,17 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
             if not did:
                 continue
             recent_updates[did] = datetime.now()
-            # Only pop pv_cache if device is actually online — if it's still
-            # rebooting offline, popping now hides the "→ new" version in the
-            # panel. The frontend's pv_cache self-validation will pop it
+            # Only pop pv_cache when the device was actually flashed
+            # (upload / force_install). compile and clean don't change
+            # what's installed, so the bump is still pending.
+            # And only pop if device is online — if it's still rebooting
+            # offline, popping now hides the "→ new" version in the panel.
+            # The frontend's pv_cache self-validation will pop it
             # automatically once the device returns with updated sw_version.
-            if _is_device_online(hass, ent_reg_for_cleanup, did) is True:
+            if (
+                operation in ("upload", "force_install")
+                and _is_device_online(hass, ent_reg_for_cleanup, did) is True
+            ):
                 if pv_cache.pop(did, None) is not None:
                     _LOGGER.debug("Cleared project version cache for %s after successful update", did)
             if pending_project.pop(did, None) is not None:
@@ -432,7 +439,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         if not has_attempted:
             return
         
-        await _write_update_log(hass, results)
+        await _write_update_log(hass, results, operation)
         await _backup_log(hass)
         
         # Check for failures
@@ -470,6 +477,45 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         _handle_force_install,
         schema=vol.Schema({
             vol.Required("device_id"): vol.All(cv.ensure_list, [cv.string]),
+        }),
+    )
+
+    # Clean build files service
+    async def _handle_clean_build_files(call: ServiceCall) -> None:
+        await _handle_device_operation(hass, call, "clean")
+
+    hass.services.async_register(
+        DOMAIN,
+        "clean_build_files",
+        _handle_clean_build_files,
+        schema=vol.Schema({
+            vol.Optional("device_id"): vol.All(cv.ensure_list, [cv.string]),
+        }),
+    )
+
+    # Compile only service
+    async def _handle_compile(call: ServiceCall) -> None:
+        await _handle_device_operation(hass, call, "compile")
+
+    hass.services.async_register(
+        DOMAIN,
+        "compile",
+        _handle_compile,
+        schema=vol.Schema({
+            vol.Optional("device_id"): vol.All(cv.ensure_list, [cv.string]),
+        }),
+    )
+
+    # OTA upload only service
+    async def _handle_upload(call: ServiceCall) -> None:
+        await _handle_device_operation(hass, call, "upload")
+
+    hass.services.async_register(
+        DOMAIN,
+        "upload",
+        _handle_upload,
+        schema=vol.Schema({
+            vol.Optional("device_id"): vol.All(cv.ensure_list, [cv.string]),
         }),
     )
 
@@ -578,9 +624,9 @@ async def _setup_always_on_status_listener(hass: HomeAssistant) -> None:
         if (
             entity.domain == "binary_sensor"
             and entity.platform == "esphome"
-            and entity.entity_id.endswith("_status")
             and entity.disabled_by is None
             and entity.device_id in esphome_device_ids
+            and (entity.device_class or entity.original_device_class) == "connectivity"
         )
     ]
 
@@ -885,7 +931,11 @@ def _read_manifest(manifest_path: Path) -> dict:
         return json.load(f)
 
 
-async def _write_update_log(hass: HomeAssistant, results: list[dict]) -> None:
+async def _write_update_log(
+    hass: HomeAssistant,
+    results: list[dict],
+    operation: str = "force_install",
+) -> None:
     """Write update results to log file."""
     log_path = _get_log_path(hass)
     
@@ -905,7 +955,14 @@ async def _write_update_log(hass: HomeAssistant, results: list[dict]) -> None:
         
         lines = []
         lines.append("=" * 60)
-        lines.append(f"ESPHome Update Manager v{version} - Update Log")
+        op_titles = {
+            "clean": "Clean Build Files Log",
+            "compile": "Compile Only Log",
+            "upload": "OTA Upload Only Log",
+            "force_install": "Force Install / Update Log",
+        }
+        op_title = op_titles.get(operation, "Update Log")
+        lines.append(f"ESPHome Update Manager v{version} - {op_title}")
         lines.append(f"Timestamp: {timestamp}")
         lines.append("=" * 60)
         lines.append("")
@@ -949,7 +1006,15 @@ async def _write_update_log(hass: HomeAssistant, results: list[dict]) -> None:
             lines.append(f"{status_icon} {entity_id}")
             lines.append(f"   Status: {status}")
             if r.get("is_force_install"):
-                lines.append(f"   Type: Force Install (compile + OTA)")
+                # Operation-aware label for clean/compile/upload services
+                type_labels = {
+                    "clean": "Clean Build Files",
+                    "compile": "Compile Only (no upload)",
+                    "upload": "OTA Upload Only (no compile)",
+                    "force_install": "Force Install (compile + OTA)",
+                }
+                type_label = type_labels.get(operation, "Force Install (compile + OTA)")
+                lines.append(f"   Type: {type_label}")
             else:
                 lines.append(f"   Type: Firmware Update (OTA)")
             if status == "success" and from_version and to_version:
@@ -1102,6 +1167,9 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     hass.services.async_remove(DOMAIN, "start_updates")
     hass.services.async_remove(DOMAIN, "force_install")
     hass.services.async_remove(DOMAIN, "refresh_project_versions")
+    hass.services.async_remove(DOMAIN, "clean_build_files")
+    hass.services.async_remove(DOMAIN, "compile")
+    hass.services.async_remove(DOMAIN, "upload")
     
     hass.data[DOMAIN].pop("queue", None)
     hass.data[DOMAIN].pop("store", None)
@@ -1271,9 +1339,9 @@ async def _setup_auto_update_listener(hass: HomeAssistant) -> None:
         if (
             entity.domain == "binary_sensor"
             and entity.platform == "esphome"
-            and entity.entity_id.endswith("_status")
             and entity.disabled_by is None
             and entity.device_id in esphome_device_ids
+            and (entity.device_class or entity.original_device_class) == "connectivity"
         )
     ]
 
@@ -1340,7 +1408,7 @@ async def _check_project_version_update_by_device(hass: HomeAssistant, device_id
     if _is_esphome_subdevice(hass, device):
         return
 
-    original_name = device.name
+    original_name = _get_esphome_node_name(hass, device)
     if not original_name:
         return
 
@@ -1816,6 +1884,80 @@ async def async_handle_start_updates(hass: HomeAssistant, call: ServiceCall) -> 
     except RuntimeError as err:
         _LOGGER.warning("Failed to start updates via service: %s", err)
 
+async def _handle_device_operation(
+    hass: HomeAssistant,
+    call: ServiceCall,
+    operation: str,
+) -> None:
+    """Shared handler for clean_build_files / compile / upload services.
+
+    If no device_id is provided, applies to all ESPHome devices.
+    """
+    device_ids = call.data.get("device_id")
+    dev_reg = dr.async_get(hass)
+
+    if not device_ids:
+        # No device_id → operate on ALL ESPHome devices
+        esphome_device_ids = _get_esphome_device_ids(hass)
+        device_ids = [
+            did for did in esphome_device_ids
+            if (d := dev_reg.async_get(did)) is not None
+            and not _is_esphome_subdevice(hass, d)
+        ]
+    elif isinstance(device_ids, str):
+        device_ids = [device_ids]
+
+    device_ids = list(dict.fromkeys(device_ids))
+
+    devices_list: list[dict] = []
+    for device_id in device_ids:
+        device = dev_reg.async_get(device_id)
+        if not device:
+            continue
+        if _is_esphome_subdevice(hass, device):
+            continue
+        name = device.name_by_user or device.name or device_id
+        devices_list.append({
+            "entity_id": f"{operation}:{_normalize_device_name(name)}",
+            "device_id": device_id,
+            "name": name,
+            "from_version": device.sw_version,
+            "to_version": None,
+        })
+
+    if not devices_list:
+        raise HomeAssistantError(f"No valid devices found for {operation}")
+
+    queue: UpdateQueue = hass.data[DOMAIN]["queue"]
+    if queue.is_running:
+        raise HomeAssistantError(
+            f"Cannot start {operation}: update queue is already running"
+        )
+
+    settings = hass.data[DOMAIN].get("settings", {})
+    stop_addon_slug = None
+    # Only stop the addon for compile/upload (clean is fast and doesn't need it)
+    if operation in ("compile", "upload") and settings.get("stop_addon_during_update", True):
+        addon_info = await async_get_addon_info(hass, VSCODE_ADDON_SLUG)
+        if addon_info and addon_info.get("state") == "started":
+            stop_addon_slug = VSCODE_ADDON_SLUG
+
+    try:
+        queue.start(
+            entity_ids=[d["entity_id"] for d in devices_list],
+            force_install_devices=devices_list,
+            stop_addon_slug=stop_addon_slug,
+            operation=operation,
+        )
+        _LOGGER.info(
+            "Started %s for %d device(s): %s",
+            operation,
+            len(devices_list),
+            [d["name"] for d in devices_list],
+        )
+    except RuntimeError as err:
+        raise HomeAssistantError(str(err)) from err
+
 async def async_handle_force_install(hass: HomeAssistant, call: ServiceCall) -> None:
     """Handle the force_install service call.
 
@@ -1846,12 +1988,13 @@ async def async_handle_force_install(hass: HomeAssistant, call: ServiceCall) -> 
             continue
 
         name = device.name_by_user or device.name or device_id
+        node_name = _get_esphome_node_name(hass, device) or name
         raw = device.sw_version
 
         # Split into online vs offline
         if _is_device_online(hass, ent_reg, device_id) is True:
             online_devices.append({
-                "entity_id": f"force:{_normalize_device_name(name)}",
+                "entity_id": f"force:{_normalize_device_name(node_name)}",
                 "device_id": device_id,
                 "name": name,
                 "from_version": raw,
@@ -2148,6 +2291,59 @@ def _get_mac_suffix(device: dr.DeviceEntry) -> str | None:
     return None
 
 
+def _get_device_ip(hass: HomeAssistant, device_id: str | None) -> str | None:
+    """Return the IP address HA knows for an ESPHome device, or None.
+
+    Reads the host from the device's ESPHome config entry. Only returns a
+    value when it is a literal IP address (not a .local hostname), since the
+    whole point is to bypass mDNS resolution.
+    """
+    if not device_id:
+        return None
+
+    dev_reg = dr.async_get(hass)
+    device = dev_reg.async_get(device_id)
+    if device is None:
+        return None
+
+    for entry in hass.config_entries.async_entries("esphome"):
+        if entry.entry_id not in device.config_entries:
+            continue
+        host = entry.data.get("host")
+        if not host:
+            return None
+        host = str(host).strip()
+        # Strip a trailing port if present (e.g. "192.168.1.50:6053")
+        candidate = host.rsplit(":", 1)[0] if host.count(":") == 1 and "." in host else host
+        try:
+            import ipaddress
+            ipaddress.ip_address(candidate)
+            return candidate
+        except ValueError:
+            # Not a literal IP (probably a hostname) → no benefit, skip
+            _LOGGER.debug(
+                "Device %s host '%s' is not a literal IP, cannot use IP-OTA",
+                device_id, host,
+            )
+            return None
+    return None
+
+
+def _resolve_ota_port(hass: HomeAssistant, device_id: str | None) -> str:
+    """Prefer the device IP HA already knows for OTA, falling back to mDNS.
+
+    Returns the literal IP when available (bypassing mDNS, which can fail for
+    devices with name_add_mac_suffix), otherwise the default "OTA".
+    """
+    ip = _get_device_ip(hass, device_id)
+    if ip:
+        _LOGGER.debug("Using IP %s for OTA upload (device %s)", ip, device_id)
+        return ip
+    _LOGGER.info("No IP known for device %s, falling back to mDNS-based OTA", device_id)
+    _LOGGER.debug("Using mDNS-based OTA for device %s", device_id)
+    return "OTA"
+
+
 def _build_to_version(sw_version_raw: str | None, new_esphome_version: str | None, new_project_version: str | None = None) -> str | None:
     """Build expected to_version string based on current sw_version format.
 
@@ -2250,13 +2446,13 @@ def _find_status_entity(
             entity.device_id == device_id
             and entity.domain == "binary_sensor"
             and entity.platform == "esphome"
-            and entity.entity_id.endswith("_status")
             and entity.disabled_by is None
+            and (entity.device_class or entity.original_device_class) == "connectivity"
         ):
             return entity.entity_id
     return None
 
-
+        
 def _is_device_online(
     hass: HomeAssistant,
     ent_reg: er.EntityRegistry,
@@ -2379,6 +2575,42 @@ async def _refresh_local_yaml_cache(
         hass.bus.async_fire("esphome_update_manager_devices_updated")
 
 
+def _get_esphome_node_name(hass: HomeAssistant, device: dr.DeviceEntry) -> str | None:
+    """Return the ESPHome node name (= YAML filename, = esphome.name in YAML).
+
+    HA's device.name is set to the ESPHome 'friendly_name' when one is
+    configured, which is NOT the YAML filename. The real node name lives
+    on the ESPHome config entry as entry.data["device_name"].
+
+    Fallback chain:
+    1. entry.data["device_name"] of the ESPHome config entry
+    2. runtime_data.device_info.name (set after the API connection is up)
+    3. device.name (last resort, only correct when no friendly_name is set)
+    """
+    if device is None:
+        return None
+
+    # 1) Config entry data — populated at integration setup, always available
+    for entry in hass.config_entries.async_entries("esphome"):
+        if entry.entry_id in device.config_entries:
+            node_name = entry.data.get("device_name")
+            if node_name:
+                return str(node_name)
+
+            # 2) Runtime data (available once the device API connected)
+            runtime_data = getattr(entry, "runtime_data", None)
+            if runtime_data is not None:
+                device_info = getattr(runtime_data, "device_info", None)
+                if device_info is not None:
+                    rt_name = getattr(device_info, "name", None)
+                    if rt_name:
+                        return str(rt_name)
+            break
+
+    # 3) Last resort — only correct when no friendly_name is configured
+    return device.name
+
+
 def _get_esphome_update_entities(hass: HomeAssistant) -> list[dict[str, Any]]:
     """Get all ESPHome update entities with their status."""
     ent_reg = er.async_get(hass)
@@ -2468,7 +2700,7 @@ def _get_esphome_update_entities(hass: HomeAssistant) -> list[dict[str, Any]]:
             if device_id:
                 dev = dev_reg.async_get(device_id)
                 if dev:
-                    original_name = dev.name
+                    original_name = _get_esphome_node_name(hass, dev)
                     mac_suffix = _get_mac_suffix(dev)
             
             external_device_info = _match_device_to_external_dashboard(
@@ -2621,7 +2853,19 @@ def _get_esphome_update_entities(hass: HomeAssistant) -> list[dict[str, Any]]:
                 state_latest = _parse_version(
                     state.attributes.get("latest_version")
                 )
-                latest = state_latest or builder_version
+                # The update entity's latest_version can lag behind a freshly
+                # bumped builder (HA's ESPHome integration doesn't push the
+                # new builder version to every update entity immediately).
+                # Pick whichever is highest — the builder is ground truth for
+                # what would actually be compiled.
+                if state_latest and builder_version:
+                    if _is_update_available(state_latest, builder_version):
+                        # builder is newer than what the entity reports
+                        latest = builder_version
+                    else:
+                        latest = state_latest
+                else:
+                    latest = state_latest or builder_version
 
             # Calculate update availability based on correct builder version
             actually_newer = _is_update_available(installed, latest)
@@ -2677,7 +2921,7 @@ def _get_esphome_update_entities(hass: HomeAssistant) -> list[dict[str, Any]]:
         processed_device_ids.add(device.id)
         
         name = device.name_by_user or device.name or "Unknown device"
-        original_name = device.name
+        original_name = _get_esphome_node_name(hass, device)
         normalized_name = _normalize_device_name(name)
         
         # Skip if already processed (by name)
@@ -3010,7 +3254,7 @@ def _has_ready_pending_devices(hass: HomeAssistant, pending: dict) -> bool:
             ext_dev = _match_device_to_external_dashboard(
                 hass,
                 device.name_by_user or device.name or "",
-                original_name=device.name,
+                original_name=_get_esphome_node_name(hass, device),
                 mac_suffix=mac_suffix,
             )
             if ext_dev and not external_available:
@@ -3061,15 +3305,16 @@ async def _execute_pending_force_installs(hass: HomeAssistant) -> None:
             ext_dev = _match_device_to_external_dashboard(
                 hass,
                 device.name_by_user or device.name or "",
-                original_name=device.name,
+                original_name=_get_esphome_node_name(hass, device),
                 mac_suffix=mac_suffix,
             )
             if ext_dev and not external_available:
                 continue
 
         name = device.name_by_user or device.name or device_id
+        node_name = _get_esphome_node_name(hass, device) or device.name or name
         ready_devices.append({
-            "entity_id": f"force:{_normalize_device_name(device.name or name)}",
+            "entity_id": f"force:{_normalize_device_name(node_name)}",
             "device_id": device_id,
             "name": name,
             "from_version": device.sw_version,
@@ -3162,7 +3407,7 @@ async def _get_yaml_project_version(hass: HomeAssistant, device: dict) -> str | 
         if (datetime.now() - ts).total_seconds() < 30:
             return val
 
-    original_name = device_entry.name
+    original_name = _get_esphome_node_name(hass, device_entry)
     local_coordinator = hass.data[DOMAIN].get("local_dashboard")
     external_coordinator = hass.data[DOMAIN].get("external_dashboard")
 
@@ -3289,6 +3534,7 @@ def ws_get_status(hass, connection, msg):
             "summary": queue.summary,
             "phase": queue.phase,
             "addon_name": queue.addon_name,
+            "operation": queue.operation,
         },
     )
 

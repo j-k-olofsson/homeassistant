@@ -1,13 +1,124 @@
 {
   "domain": "openwrt",
   "name": "OpenWrt",
-  "documentation": "https://github.com/kvj/hass_openwrt",
-  "issue_tracker": "https://github.com/kvj/hass_openwrt/issues",
-  "dependencies": [],
-  "codeowners": ["@kvj"],
-  "requirements": [],
-  "iot_class": "local_polling",
+  "codeowners": [
+    "@FaserF"
+  ],
   "config_flow": true,
-  "version": "0.2.1"
+  "dependencies": [
+    "network",
+    "ssdp"
+  ],
+  "dhcp": [
+    {
+      "hostname": "openwrt*"
+    },
+    {
+      "hostname": "lede*"
+    },
+    {
+      "hostname": "librecmc*"
+    },
+    {
+      "macaddress": "9C9D7E*"
+    },
+    {
+      "macaddress": "009EC8*"
+    },
+    {
+      "macaddress": "00C30A*"
+    },
+    {
+      "macaddress": "2072A9*"
+    },
+    {
+      "macaddress": "E44519*"
+    },
+    {
+      "macaddress": "1C2AB0*"
+    },
+    {
+      "macaddress": "1C8BEF*"
+    },
+    {
+      "macaddress": "3C2CA6*"
+    },
+    {
+      "macaddress": "68B8BB*"
+    },
+    {
+      "macaddress": "047A0B*"
+    },
+    {
+      "macaddress": "4C6371*"
+    },
+    {
+      "macaddress": "D4BC52*"
+    },
+    {
+      "macaddress": "E848B8*"
+    },
+    {
+      "macaddress": "000C43*"
+    },
+    {
+      "macaddress": "B0B98A*"
+    },
+    {
+      "macaddress": "D85D4C*"
+    },
+    {
+      "macaddress": "E45F01*"
+    },
+    {
+      "macaddress": "B827EB*"
+    },
+    {
+      "macaddress": "14CC20*"
+    },
+    {
+      "macaddress": "C9D3C3*"
+    },
+    {
+      "macaddress": "B04E26*"
+    },
+    {
+      "macaddress": "30055C*"
+    },
+    {
+      "macaddress": "04BF6D*"
+    }
+  ],
+  "documentation": "https://github.com/FaserF/ha-openwrt",
+  "integration_type": "hub",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/FaserF/ha-openwrt/issues",
+  "loggers": [
+    "openwrt"
+  ],
+  "requirements": [
+    "paramiko==5.0.0",
+    "segno==1.6.6"
+  ],
+  "ssdp": [
+    {
+      "st": "urn:schemas-upnp-org:device:InternetGatewayDevice:1"
+    },
+    {
+      "st": "urn:schemas-upnp-org:device:InternetGatewayDevice:2"
+    },
+    {
+      "st": "upnp:rootdevice"
+    },
+    {
+      "manufacturer": "OpenWrt*"
+    },
+    {
+      "manufacturer": "miniupnpd*"
+    },
+    {
+      "modelName": "OpenWrt*"
+    }
+  ],
+  "version": "2.3.1-dev0"
 }
-

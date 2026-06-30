@@ -846,7 +846,7 @@
       - tts
       - mobile
       - slack
-      tts_media_player: media_player.kokets_skarm_2
+      tts_media_player: media_player.grupp_grannys_hogtalare
       slack_channel: '#elpriser'
   mode: queued
   max: 10
@@ -1497,7 +1497,7 @@
   triggers:
   - trigger: state
     entity_id:
-    - binary_sensor.openwrt_router_wan_status
+    - binary_sensor.sovrummet_gw_home_arpa_wan_connected
     from:
     - 'off'
     id: connected
@@ -1505,7 +1505,7 @@
     - 'on'
   - trigger: state
     entity_id:
-    - binary_sensor.openwrt_router_wan_status
+    - binary_sensor.sovrummet_gw_home_arpa_wan_connected
     id: disconnected
     from:
     - 'on'
@@ -1977,8 +1977,7 @@
           entity_id: input_boolean.ha_ready
   mode: queued
   max: 10
-- &id001
-  id: esphome_install_updates_button
+- id: esphome_install_updates_button
   alias: Uppdatera ESPHome-enheter
   description: 'Uppdaterar alla ESPHome-firmware som har uppdatering tillgänglig,
     i upp till tre pass. Visar progress + ETA under körning. Ger alltid en slutrapport
@@ -2270,7 +2269,6 @@
     notif_id: esphome_update_progress
     ewma_alpha: 0.3
     bootstrap_guess_sec: 120
-- *id001
 - id: '1769682852305'
   alias: Hemmabio - bordslampor att/dag & bio av/på
   description: Styr bordslampor utifrån input_select.light_scene och släcker vid hemmabio.

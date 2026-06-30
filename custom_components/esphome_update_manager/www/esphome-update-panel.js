@@ -44,6 +44,7 @@ class ESPHomeUpdatePanel extends LitElement {
       _autoUpdateScope: { type: String },
       cardMode: { type: Boolean },
       cardConfig: { type: Object },
+      _operation: { type: String },
     };
   }
 
@@ -92,6 +93,7 @@ class ESPHomeUpdatePanel extends LitElement {
     this._autoUpdateScope = localStorage.getItem('esphome_auto_update_scope') || 'firmware';
     this.cardMode = false;
     this.cardConfig = {};
+    this._operation = "force_install";
   }
 
   connectedCallback() {
@@ -211,10 +213,13 @@ class ESPHomeUpdatePanel extends LitElement {
     }
   }
 
-    async _subscribeToDevicesUpdated() {
+  async _subscribeToDevicesUpdated() {
     try {
       this._devicesUpdatedSubscription = await this.hass.connection.subscribeMessage(
-        () => this._loadDevices(),
+        async () => {
+          await this._pollStatus();
+          await this._loadDevices();
+        },
         { type: "esphome_update_manager/subscribe_devices_updated" }
       );
     } catch (e) {
@@ -390,6 +395,19 @@ class ESPHomeUpdatePanel extends LitElement {
 
   _restoreUpdatingState() {
     if (!this.results || this.results.length === 0) return;
+
+    // Reconstruct the force-install intent flag after a reload/resume so the
+    // status bar shows the correct text. A run counts as a force install when
+    // every still-active (running/queued) item is a force install. Using the
+    // active items (not results.some) avoids a stale earlier regular-update
+    // result flipping the text incorrectly.
+    const active = this.results.filter(
+      (r) => r.status === "running" || r.status === "queued"
+    );
+    if (active.length > 0 && active.every((r) => r.is_force_install)) {
+      this._isForceInstallRun = true;
+    }
+
     this._updatingIds = new Map(this._updatingIds);
     
     const merged = this._mergedDevices();
@@ -568,6 +586,9 @@ class ESPHomeUpdatePanel extends LitElement {
         if (res.running && !this.running) {
           this.running = true;
           this.results = res.results || [];
+          this._phase = res.phase || "idle";
+          this._operation = res.operation || "force_install";
+          this._addonName = res.addon_name || null;
           this._restoreUpdatingState();
           this._startStatusPolling();
           this._loadDevices();
@@ -578,6 +599,9 @@ class ESPHomeUpdatePanel extends LitElement {
           this._clearAllUpdatingTimers();
           this._forceInstallingIds = new Map();
           this._cancelling = false;
+          this._phase = "idle";
+          this._operation = "force_install";
+          this._isForceInstallRun = false;
           this.selected.clear();
           await this._loadDevices();
           await this._loadAddonInfo();
@@ -593,6 +617,7 @@ class ESPHomeUpdatePanel extends LitElement {
       this.running = res.running;
       this.results = res.results || [];
       this._phase = res.phase || "idle";
+      this._operation = res.operation || "force_install";
       this._addonName = res.addon_name || null;
 
       if (this._updatingIds.size > 0) {
@@ -639,6 +664,7 @@ class ESPHomeUpdatePanel extends LitElement {
         this._clearAllUpdatingTimers();
         this._cancelling = false;
         this._phase = "idle";
+        this._operation = "force_install";
         this._addonName = null;
         this._isForceInstallRun = false;
         this.selected.clear();
@@ -723,6 +749,7 @@ class ESPHomeUpdatePanel extends LitElement {
       const timeoutId = setTimeout(() => this._expireUpdating(entityId), UPDATING_TIMEOUT_MS);
       this._updatingIds = new Map(this._updatingIds);
       this._updatingIds.set(entityId, { startedAt: Date.now(), timeoutId });
+      this._operation = "force_install";
       this.requestUpdate();
       await this.hass.callWS({
         type: "esphome_update_manager/start",
@@ -753,6 +780,10 @@ class ESPHomeUpdatePanel extends LitElement {
     }];
     this._forceInstallingIds = new Map(this._forceInstallingIds);
     this._forceInstallingIds.set(d.entity_id, { startedAt: null, timeoutId: null, isRunning: false });
+    // A project-bump install runs through the force-install flow, so mark intent
+    // before the await for correct status text and no flicker.
+    this._isForceInstallRun = true;
+    this._operation = "force_install";
     this.requestUpdate();
     try {
       await this.hass.callWS({
@@ -764,6 +795,8 @@ class ESPHomeUpdatePanel extends LitElement {
       this.running = true;
       this._startStatusPolling();
     } catch (e) {
+      // Roll back so a failed start doesn't leave the flag/bar stuck.
+      this._isForceInstallRun = false;
       this._forceInstallingIds.delete(d.entity_id);
       this._forceInstallingIds = new Map(this._forceInstallingIds);
       throw e;
@@ -794,6 +827,7 @@ class ESPHomeUpdatePanel extends LitElement {
       ids.forEach((id) => {
         this._updatingIds.set(id, { startedAt: null, timeoutId: null, isRunning: false });
       });
+      this._operation = "force_install";
       this.requestUpdate();
       await this.hass.callWS({
         type: "esphome_update_manager/start",
@@ -1014,6 +1048,11 @@ class ESPHomeUpdatePanel extends LitElement {
     });
     this.requestUpdate();
 
+    // Set the intent flag BEFORE the await so the status bar shows
+    // "Compiling and uploading yaml…" immediately, with no "Updating…" flicker
+    // during the WS round-trip / first status poll.
+    this._isForceInstallRun = true;
+    this._operation = "force_install";
     try {
       await this.hass.callWS({
         type: "esphome_update_manager/start",
@@ -1022,13 +1061,14 @@ class ESPHomeUpdatePanel extends LitElement {
         stop_addon_slug: this._getStopAddonSlug(),
       });
       this.running = true;
-      this._isForceInstallRun = true;
       this._forceInstallMode = false;
       this.selected.clear();
       this._startStatusPolling();
       this.requestUpdate();
     } catch (e) {
       console.error("Force install failed:", e);
+      // Roll back the intent flag so a failed start doesn't leave the bar stuck.
+      this._isForceInstallRun = false;
       this._localResults = [
         ...this._localResults,
         {
@@ -1062,14 +1102,26 @@ class ESPHomeUpdatePanel extends LitElement {
 
   _getStatusText() {
     if (this._cancelling) return "Cancelling…";
-    
-    const isForceInstall = this._isForceInstallRun || this.results.some(r => r.is_force_install);
-    
+
     switch (this._phase) {
       case "stopping_addon": return `Stopping ${this._addonName || "add-on"}…`;
       case "starting_addon": return `Starting ${this._addonName || "add-on"}…`;
+    }
+
+    // Operation-specific status text
+    switch (this._operation) {
+      case "clean":    return "Cleaning build files…";
+      case "compile":  return "Compiling firmware…";
+      case "upload":   return "Uploading firmware (OTA)…";
+      case "force_install":
       default:
-        return isForceInstall ? "Compiling and uploading yaml…" : "Updating…";
+        // operation is "force_install" server-side for BOTH real force installs
+        // and regular updates (the queue uses the force_install flow for both),
+        // so we can't distinguish on operation alone. Use the intent flag, which
+        // is set before the WS call in the force-install / project-bump flows and
+        // reconstructed on resume in _restoreUpdatingState(). Regular updates
+        // never set it, so they correctly show "Updating…".
+        return this._isForceInstallRun ? "Compiling and uploading yaml…" : "Updating…";
     }
   }
 
@@ -1085,7 +1137,14 @@ class ESPHomeUpdatePanel extends LitElement {
 
   _getDeviceButton(d) {
     const isForceInstalling = this._forceInstallingIds.has(d.entity_id);
-    if (isForceInstalling) return { label: "Installing…", cls: "btn-updating", disabled: true, action: null, spinner: true };
+    if (isForceInstalling) {
+      // Operation-specific button label when device is being processed
+      let label = "Installing…";
+      if (this._operation === "clean") label = "Cleaning…";
+      else if (this._operation === "compile") label = "Compiling…";
+      else if (this._operation === "upload") label = "Uploading…";
+      return { label, cls: "btn-updating", disabled: true, action: null, spinner: true };
+    }
     if (d.pending_force_install) return { label: "Pending", cls: "btn-offline", disabled: true, action: null, spinner: false };
     const isUpdating = this._isUpdatingPending(d.entity_id) || d.in_progress;
     if (isUpdating) return { label: "Updating…", cls: "btn-updating", disabled: true, action: null, spinner: true };
@@ -1430,10 +1489,13 @@ class ESPHomeUpdatePanel extends LitElement {
       }
       .version .arrow { color: #4caf50; font-weight: bold; }
       .checkbox-col { flex: 0 0 24px; display: flex; align-items: center; justify-content: center; }
-      .checkbox-col input[type="checkbox"] {
+      .checkbox-col input[type="checkbox"],
+      .btn-select-all input[type="checkbox"],
+      .addon-option input[type="checkbox"] {
         margin: 0;
         width: 14px;
         height: 14px;
+        accent-color: #1976d2;
       }
       .checkbox-col input:disabled { opacity: 0; }
       button {

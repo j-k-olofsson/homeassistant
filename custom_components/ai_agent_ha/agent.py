@@ -2,7 +2,7 @@
 
 Example config:
 ai_agent_ha:
-  ai_provider: openai  # or 'llama', 'gemini', 'openrouter', 'anthropic', 'alter', 'zai', 'local'
+  ai_provider: openai  # or 'llama', 'gemini', 'openrouter', 'anthropic', 'alter', 'zai', 'local_ollama', 'openai_compatible'
   llama_token: "..."
   openai_token: "..."
   gemini_token: "..."
@@ -11,7 +11,8 @@ ai_agent_ha:
   alter_token: "..."
   zai_token: "..."
   zai_endpoint: "general"  # or 'coding' for z.ai (3× usage, 1/7 cost)
-  local_url: "http://localhost:11434/api/generate"  # Required for local models
+  local_ollama_url: "http://localhost:11434/api/generate"  # Required for local_ollama provider
+  openai_compatible_url: "http://example.com/v1/" or "http://localhost/v1/"  # (Url must end with /v1/)
   # Model configuration (optional, defaults will be used if not specified)
   models:
     openai: "gpt-3.5-turbo"  # or "gpt-4", "gpt-4-turbo", etc.
@@ -21,12 +22,16 @@ ai_agent_ha:
     anthropic: "claude-sonnet-4-5-20250929"  # or "claude-sonnet-4-20250514", "claude-3-5-sonnet-20241022", "claude-3-opus-20240229", etc.
     alter: "your-model-name"  # model name for Alter API
     zai: "glm-4.7"  # model name for z.ai API (glm-4.7, glm-4.6, glm-4.5, etc.)
-    local: "llama3.2"  # model name for local API (optional if your API doesn't require it)
+    local_ollama: "llama3.2"  # model name for local_ollama provider (optional if your API doesn't require it)
+    openai_compatible: "model unique-id or your-model-name"  # model name for your OpenAI-compatible endpoint
 """
 
 import asyncio
 import json
 import logging
+import os
+import shutil
+import tempfile
 import time
 from datetime import datetime, timedelta
 from typing import Any, Dict, List, Optional, Union
@@ -38,7 +43,7 @@ from homeassistant.core import HomeAssistant
 from homeassistant.helpers.storage import Store
 from homeassistant.util import dt as dt_util
 
-from .const import CONF_WEATHER_ENTITY, DOMAIN
+from .const import CONF_OPENAI_BASE_URL, CONF_WEATHER_ENTITY, DOMAIN
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -108,26 +113,50 @@ def sanitize_for_logging(data: Any, mask: str = "***REDACTED***") -> Any:
 
 
 # === AI Client Abstractions ===
+class NonRetryableAIError(Exception):
+    """Provider error that cannot succeed on retry (e.g. deterministic HTTP 4xx).
+
+    Raised for client errors like "prompt is too long" where re-sending the
+    identical payload is guaranteed to fail again (see issue #80). Rate
+    limiting (429) and request timeouts (408) stay retryable.
+    """
+
+
+class RateLimitedAIError(Exception):
+    """Provider rate limit (HTTP 429) with an optional server-suggested wait.
+
+    Carries the provider's retry-after hint so the retry loop can wait long
+    enough for a per-minute token window to reset instead of burning all
+    retries in a few seconds (see issue #80).
+    """
+
+    def __init__(self, message: str, retry_after: Optional[float] = None):
+        super().__init__(message)
+        self.retry_after = retry_after
+
+
 class BaseAIClient:
     async def get_response(self, messages, **kwargs):
         raise NotImplementedError
 
 
-class LocalClient(BaseAIClient):
+class LocalOllamaClient(BaseAIClient):
+    """Client for Ollama-style local models using /api/generate style endpoints."""
+
     def __init__(self, url, model=""):
         self.url = url
         self.model = model
 
     async def get_response(self, messages, **kwargs):
         _LOGGER.debug(
-            "Making request to local API with model: '%s' at URL: %s",
+            "Making request to local Ollama API with model: '%s' at URL: %s",
             self.model or "[NO MODEL SPECIFIED]",
             self.url,
         )
 
         if not self.model:
             _LOGGER.warning(
-                "No model specified for local API request. Some APIs (like Ollama) require a model name."
+                "No model specified for local Ollama API request. Some APIs (like Ollama) require a model name."
             )
         headers = {"Content-Type": "application/json"}
 
@@ -148,7 +177,7 @@ class LocalClient(BaseAIClient):
         # Add final prompt prefix for the assistant's response
         prompt += "Assistant: "
 
-        # Build a generic payload that works with most local API servers
+        # Build a generic payload that works with most local Ollama-style API servers
         payload = {
             "prompt": prompt,
             "stream": False,  # Disable streaming to get a single complete response
@@ -160,12 +189,14 @@ class LocalClient(BaseAIClient):
             payload["model"] = self.model
 
         # Note: Payloads don't contain auth tokens (those are in headers), but may contain user prompts
-        _LOGGER.debug("Local API request payload: %s", json.dumps(payload, indent=2))
+        _LOGGER.debug(
+            "Local Ollama API request payload: %s", json.dumps(payload, indent=2)
+        )
 
         # Ollama-specific validation
         if "model" not in payload or not payload["model"]:
             _LOGGER.warning(
-                "Missing 'model' field in request to local API. This may cause issues with Ollama."
+                "Missing 'model' field in request to local Ollama API. This may cause issues with Ollama."
             )
         elif self.url and "ollama" in self.url.lower():
             _LOGGER.debug(
@@ -182,7 +213,9 @@ class LocalClient(BaseAIClient):
             ) as resp:
                 if resp.status != 200:
                     error_text = await resp.text()
-                    _LOGGER.error("Local API error %d: %s", resp.status, error_text)
+                    _LOGGER.error(
+                        "Local Ollama API error %d: %s", resp.status, error_text
+                    )
 
                     # Provide more specific error messages for common Ollama issues
                     if resp.status == 404:
@@ -192,24 +225,27 @@ class LocalClient(BaseAIClient):
                             )
                         else:
                             raise Exception(
-                                "Local API endpoint not found. Please check the URL and ensure Ollama is running."
+                                "Local Ollama API endpoint not found. Please check the URL and ensure Ollama is running."
                             )
                     elif resp.status == 400:
                         raise Exception(
-                            f"Bad request to local API. Error: {error_text}"
+                            f"Bad request to local Ollama API. Error: {error_text}"
                         )
                     else:
-                        raise Exception(f"Local API error {resp.status}: {error_text}")
+                        raise Exception(
+                            f"Local Ollama API error {resp.status}: {error_text}"
+                        )
 
                 try:
                     response_text = await resp.text()
                     _LOGGER.debug(
-                        "Local API response (first 200 chars): %s", response_text[:200]
+                        "Local Ollama API response (first 200 chars): %s",
+                        response_text[:200],
                     )
-                    _LOGGER.debug("Local API response status: %d", resp.status)
+                    _LOGGER.debug("Local Ollama API response status: %d", resp.status)
                     # Sanitize headers to avoid logging any auth tokens
                     _LOGGER.debug(
-                        "Local API response headers: %s",
+                        "Local Ollama API response headers: %s",
                         sanitize_for_logging(dict(resp.headers)),
                     )
 
@@ -278,7 +314,7 @@ class LocalClient(BaseAIClient):
                                         and "request_type" in parsed_json
                                     ):
                                         _LOGGER.debug(
-                                            "Local model provided valid JSON response"
+                                            "Local Ollama model provided valid JSON response"
                                         )
                                         return response_content
                                     else:
@@ -287,7 +323,7 @@ class LocalClient(BaseAIClient):
                                         )
                                 except json.JSONDecodeError:
                                     _LOGGER.debug(
-                                        "Invalid JSON from local model, treating as plain text"
+                                        "Invalid JSON from local Ollama model, treating as plain text"
                                     )
                                     pass
 
@@ -319,7 +355,7 @@ class LocalClient(BaseAIClient):
                                         and "request_type" in parsed_json
                                     ):
                                         _LOGGER.debug(
-                                            "Local model provided valid JSON response (OpenAI format)"
+                                            "Local Ollama model provided valid JSON response (OpenAI format)"
                                         )
                                         return content
                                     else:
@@ -328,7 +364,7 @@ class LocalClient(BaseAIClient):
                                         )
                                 except json.JSONDecodeError:
                                     _LOGGER.debug(
-                                        "Invalid JSON from local model, treating as plain text (OpenAI format)"
+                                        "Invalid JSON from local Ollama model, treating as plain text (OpenAI format)"
                                     )
                                     pass
 
@@ -351,7 +387,7 @@ class LocalClient(BaseAIClient):
                                         and "request_type" in parsed_json
                                     ):
                                         _LOGGER.debug(
-                                            "Local model provided valid JSON response (generic format)"
+                                            "Local Ollama model provided valid JSON response (generic format)"
                                         )
                                         return content
                                     else:
@@ -360,7 +396,7 @@ class LocalClient(BaseAIClient):
                                         )
                                 except json.JSONDecodeError:
                                     _LOGGER.debug(
-                                        "Invalid JSON from local model, treating as plain text (generic format)"
+                                        "Invalid JSON from local Ollama model, treating as plain text (generic format)"
                                     )
                                     pass
 
@@ -372,7 +408,7 @@ class LocalClient(BaseAIClient):
 
                         # Handle case where no standard fields are found
                         _LOGGER.warning(
-                            "No standard response fields found in local API response. Full response: %s",
+                            "No standard response fields found in local Ollama API response. Full response: %s",
                             data,
                         )
 
@@ -409,7 +445,7 @@ class LocalClient(BaseAIClient):
                         return json.dumps(
                             {
                                 "request_type": "final_response",
-                                "response": f"Received unexpected response format from local API: {str(data)}",
+                                "response": f"Received unexpected response format from local Ollama API: {str(data)}",
                             }
                         )
 
@@ -426,7 +462,7 @@ class LocalClient(BaseAIClient):
                                     and "request_type" in parsed_json
                                 ):
                                     _LOGGER.debug(
-                                        "Local model provided valid JSON response (direct)"
+                                        "Local Ollama model provided valid JSON response (direct)"
                                     )
                                     return response_text
                             except json.JSONDecodeError:
@@ -441,8 +477,122 @@ class LocalClient(BaseAIClient):
                         return json.dumps(wrapped_response)
 
                 except Exception as e:
-                    _LOGGER.error("Failed to parse local API response: %s", str(e))
-                    raise Exception(f"Failed to parse local API response: {str(e)}")
+                    _LOGGER.error(
+                        "Failed to parse local Ollama API response: %s", str(e)
+                    )
+                    raise Exception(
+                        f"Failed to parse local Ollama API response: {str(e)}"
+                    )
+
+
+class OpenaiCompatibleClient(BaseAIClient):
+    """Client for OpenAI-compatible endpoints (e.g., LM Studio, vLLM, etc.).
+
+    Expected URL format: http://example.com/v1/
+    This client sends chat completions requests to: {url}/chat/completions
+    No API key is required by default, but can be provided if needed.
+    """
+
+    def __init__(self, base_url, model="", api_key=None):
+        # Ensure base_url ends with /v1/ style segment
+        base_url = (base_url or "").strip().rstrip("/")
+        if not base_url:
+            raise Exception("openai_compatible_url is required and must not be empty")
+        self.base_url = base_url
+        # Derive chat completions endpoint
+        self.api_url = f"{self.base_url}/chat/completions"
+        self.model = model
+        self.api_key = api_key or ""  # Optional; many local endpoints don’t require it
+
+    async def get_response(self, messages, **kwargs):
+        _LOGGER.debug(
+            "Making request to OpenAI-compatible endpoint at %s with model: %s",
+            self.api_url,
+            self.model or "[NO MODEL SPECIFIED]",
+        )
+
+        if not self.model:
+            _LOGGER.warning(
+                "No model specified for OpenAI-compatible request. Some servers require a model name."
+            )
+
+        headers = {
+            "Content-Type": "application/json",
+        }
+
+        # Add Authorization header only if an API key is set
+        if self.api_key:
+            headers["Authorization"] = f"Bearer {self.api_key}"
+
+        payload = {
+            "model": self.model,
+            "messages": messages,
+            "temperature": 0.7,
+            "top_p": 0.9,
+            # max_tokens omitted - let server/model use its default capacity
+        }
+
+        _LOGGER.debug(
+            "OpenAI-compatible request payload: %s",
+            json.dumps(payload, indent=2),
+        )
+
+        async with aiohttp.ClientSession() as session:
+            async with session.post(
+                self.api_url,
+                headers=headers,
+                json=payload,
+                timeout=aiohttp.ClientTimeout(total=300),
+            ) as resp:
+                response_text = await resp.text()
+                _LOGGER.debug("OpenAI-compatible API response status: %d", resp.status)
+                _LOGGER.debug(
+                    "OpenAI-compatible API response (first 500 chars): %s",
+                    response_text[:500],
+                )
+
+                if resp.status != 200:
+                    _LOGGER.error(
+                        "OpenAI-compatible API error %d: %s",
+                        resp.status,
+                        response_text,
+                    )
+                    raise Exception(
+                        f"OpenAI-compatible API error {resp.status}: {response_text}"
+                    )
+
+                try:
+                    data = json.loads(response_text)
+                except json.JSONDecodeError as e:
+                    _LOGGER.error(
+                        "Failed to parse OpenAI-compatible response as JSON: %s", str(e)
+                    )
+                    raise Exception(
+                        f"Invalid JSON response from OpenAI-compatible API: {response_text[:200]}"
+                    )
+
+                # Extract text from OpenAI-compatible response
+                choices = data.get("choices", [])
+                if choices and "message" in choices[0]:
+                    content = choices[0]["message"].get("content", "")
+                    if not content:
+                        _LOGGER.warning(
+                            "OpenAI-compatible API returned empty content in message"
+                        )
+                        _LOGGER.debug(
+                            "Full OpenAI-compatible API response: %s",
+                            json.dumps(data, indent=2),
+                        )
+                    return content
+                else:
+                    _LOGGER.warning(
+                        "OpenAI-compatible API response missing expected structure"
+                    )
+                    _LOGGER.debug(
+                        "Full OpenAI-compatible API response: %s",
+                        json.dumps(data, indent=2),
+                    )
+                    return str(data)
 
 
 class LlamaClient(BaseAIClient):
@@ -485,11 +635,197 @@ class LlamaClient(BaseAIClient):
                 return content.get("text", str(data))
 
 
+async def fetch_openai_models(base_url, api_key, timeout=10):
+    """Fetch available OpenAI models dynamically.
+
+    Returns a list of model IDs suitable for chat (gpt-*, o*). On failure,
+    returns a small safe fallback list.
+    """
+    if not base_url:
+        base_url = "https://api.openai.com/v1"
+    url = f"{base_url.rstrip('/')}/models"
+
+    fallback_models = [
+        "gpt-4.1-mini",
+        "gpt-4o-mini",
+        "o4-mini",
+    ]
+
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(
+                url,
+                headers={"Authorization": f"Bearer {api_key}"},
+                timeout=aiohttp.ClientTimeout(total=timeout),
+            ) as resp:
+                if resp.status != 200:
+                    _LOGGER.warning(
+                        "Failed to fetch OpenAI models (status=%d), using fallback list",
+                        resp.status,
+                    )
+                    return fallback_models
+
+                data = await resp.json()
+                models = data.get("data", [])
+                if not isinstance(models, list):
+                    return fallback_models
+
+                # Filter likely chat-capable models
+                chat_models = []
+                for m in models:
+                    mid = m.get("id", "")
+                    if isinstance(mid, str) and (
+                        mid.startswith("gpt-") or mid.startswith("o")
+                    ):
+                        chat_models.append(mid)
+
+                if not chat_models:
+                    return fallback_models
+
+                chat_models.sort()
+                _LOGGER.debug("Fetched %d OpenAI chat models", len(chat_models))
+                return chat_models
+
+    except Exception as e:
+        _LOGGER.warning("Error fetching OpenAI models, using fallback list: %s", e)
+        return fallback_models
+
+
+async def fetch_gemini_models(api_key, timeout=10):
+    """Fetch available Gemini models dynamically.
+
+    Returns a list of model IDs suitable for chat. On failure,
+    returns a small safe fallback list.
+    """
+    if not api_key:
+        return [
+            "gemini-2.5-flash",
+            "gemini-2.5-pro",
+        ]
+
+    url = f"https://generativelanguage.googleapis.com/v1beta/models?key={api_key}"
+
+    fallback_models = [
+        "gemini-2.5-flash",
+        "gemini-2.5-pro",
+    ]
+
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(
+                url,
+                timeout=aiohttp.ClientTimeout(total=timeout),
+            ) as resp:
+                if resp.status != 200:
+                    _LOGGER.warning(
+                        "Failed to fetch Gemini models (status=%d), using fallback list",
+                        resp.status,
+                    )
+                    return fallback_models
+
+                data = await resp.json()
+                models = data.get("models", [])
+                if not isinstance(models, list):
+                    return fallback_models
+
+                # Filter likely chat-capable models
+                chat_models = []
+                for m in models:
+                    mid = m.get("name", "")
+                    if isinstance(mid, str) and "gemini" in mid.lower():
+                        # Extract model ID from name like "models/gemini-2.5-flash"
+                        model_id = mid.split("/")[-1] if "/" in mid else mid
+                        chat_models.append(model_id)
+
+                if not chat_models:
+                    return fallback_models
+
+                chat_models.sort()
+                _LOGGER.debug("Fetched %d Gemini models", len(chat_models))
+                return chat_models
+
+    except Exception as e:
+        _LOGGER.warning("Error fetching Gemini models, using fallback list: %s", e)
+        return fallback_models
+
+
+async def fetch_openai_compatible_models(base_url, api_key=None, timeout=10):
+    """Fetch available models from an OpenAI-compatible endpoint.
+
+    Many local/self-hosted endpoints (LM Studio, vLLM, etc.) support /v1/models.
+    If the endpoint does not support it, fall back to ["Custom..."] only.
+    """
+    if not base_url:
+        return ["Custom..."]
+
+    url = f"{base_url.rstrip('/')}/models"
+
+    try:
+        async with aiohttp.ClientSession() as session:
+            headers = {"Content-Type": "application/json"}
+            if api_key:
+                headers["Authorization"] = f"Bearer {api_key}"
+
+            async with session.get(
+                url,
+                headers=headers,
+                timeout=aiohttp.ClientTimeout(total=timeout),
+            ) as resp:
+                if resp.status not in (200, 201):
+                    _LOGGER.debug(
+                        "OpenAI-compatible endpoint did not support /v1/models (status=%d)",
+                        resp.status,
+                    )
+                    return ["Custom..."]
+
+                data = await resp.json()
+                models = data.get("data", [])
+                if not isinstance(models, list):
+                    return ["Custom..."]
+
+                # Collect all model IDs
+                model_ids = []
+                for m in models:
+                    mid = m.get("id", "")
+                    if isinstance(mid, str) and mid:
+                        model_ids.append(mid)
+
+                if not model_ids:
+                    return ["Custom..."]
+
+                model_ids.sort()
+                _LOGGER.debug(
+                    "Fetched %d models from OpenAI-compatible endpoint", len(model_ids)
+                )
+                return model_ids
+
+    except Exception as e:
+        _LOGGER.debug(
+            "Error fetching models from OpenAI-compatible endpoint, using Custom only: %s",
+            e,
+        )
+        return ["Custom..."]
+
+
 class OpenAIClient(BaseAIClient):
-    def __init__(self, token, model="gpt-3.5-turbo"):
+    def __init__(self, token, model="gpt-4.1-mini", base_url=None):
         self.token = token
         self.model = model
-        self.api_url = "https://api.openai.com/v1/chat/completions"
+        # Default endpoint is OpenAI's Responses API. If the user has pointed Base URL
+        # at a third-party "OpenAI-compatible" gateway (Open WebUI, LM Studio, vLLM,
+        # LiteLLM, ...), those servers only implement /chat/completions, so switch
+        # to Chat Completions when the base URL is not api.openai.com.
+        if base_url and base_url.strip():
+            base = base_url.strip().rstrip("/")
+            if "api.openai.com" in base:
+                self.api_url = f"{base}/responses"
+                self.use_chat_completions = False
+            else:
+                self.api_url = f"{base}/chat/completions"
+                self.use_chat_completions = True
+        else:
+            self.api_url = "https://api.openai.com/v1/responses"
+            self.use_chat_completions = False
 
     def _is_restricted_model(self):
         """Check if the model has restricted parameters (no temperature, top_p, etc.)."""
@@ -511,21 +847,33 @@ class OpenAIClient(BaseAIClient):
             "Content-Type": "application/json",
         }
 
-        # Check if model has restricted parameters
-        is_restricted = self._is_restricted_model()
-        _LOGGER.debug(
-            "Using model: %s (restricted parameters: %s)",
-            self.model,
-            is_restricted,
-        )
-
-        # Build payload with model-appropriate parameters
-        # Don't set max_tokens - let OpenAI use the model's maximum capacity
-        payload = {"model": self.model, "messages": messages}
-
-        # Only add temperature and top_p for models that support them
-        if not is_restricted:
-            payload.update({"temperature": 0.7, "top_p": 0.9})
+        if self.use_chat_completions:
+            # Chat Completions: forward messages as-is.
+            payload = {
+                "model": self.model,
+                "messages": messages,
+            }
+            if not self._is_restricted_model():
+                payload["temperature"] = 0.7
+                payload["top_p"] = 0.9
+        else:
+            # Responses API: flatten messages into a single input string.
+            parts = []
+            for msg in messages:
+                role = (msg.get("role") or "user").lower()
+                content = msg.get("content") or ""
+                if role == "system":
+                    parts.append(f"System: {content}")
+                elif role == "user":
+                    parts.append(f"User: {content}")
+                elif role == "assistant":
+                    parts.append(f"Assistant: {content}")
+                else:
+                    parts.append(f"{role.capitalize()}: {content}")
+            payload = {
+                "model": self.model,
+                "input": "\n\n".join(parts),
+            }
 
         _LOGGER.debug("OpenAI request payload: %s", json.dumps(payload, indent=2))
 
@@ -552,22 +900,57 @@ class OpenAIClient(BaseAIClient):
                         f"Invalid JSON response from OpenAI: {response_text[:200]}"
                     )
 
-                # Extract text from OpenAI response
-                choices = data.get("choices", [])
-                if choices and "message" in choices[0]:
-                    content = choices[0]["message"].get("content", "")
-                    if not content:
-                        _LOGGER.warning("OpenAI returned empty content in message")
-                        _LOGGER.debug(
-                            "Full OpenAI response: %s", json.dumps(data, indent=2)
-                        )
-                    return content
-                else:
+                if self.use_chat_completions:
+                    # Chat Completions response shape
+                    choices = data.get("choices", [])
+                    if choices and "message" in choices[0]:
+                        return choices[0]["message"].get("content", "") or ""
                     _LOGGER.warning("OpenAI response missing expected structure")
                     _LOGGER.debug(
                         "Full OpenAI response: %s", json.dumps(data, indent=2)
                     )
                     return str(data)
+
+                # Extract text from OpenAI Responses API.
+                # Primary field: output_text is an SDK-only convenience property
+                # and is normally absent from the raw HTTP body, so it is only a
+                # fast path when a gateway happens to include it as a string.
+                content = data.get("output_text")
+                if isinstance(content, str) and content:
+                    return content
+
+                # Fallback: the Responses API returns
+                #   output: [ { type: "message", content: [ { type: "output_text",
+                #               text: "..." }, ... ] }, ... ]
+                # plus, for reasoning models, leading items (e.g. type "reasoning")
+                # that carry no text. Concatenate every output_text block we find.
+                # NOTE: item["content"] is a LIST here, so it must never be
+                # returned directly (that caused issue #75: 'list' object has no
+                # attribute 'strip').
+                output = data.get("output")
+                if isinstance(output, list):
+                    text_parts = []
+                    for item in output:
+                        if not isinstance(item, dict):
+                            continue
+                        content_blocks = item.get("content")
+                        if isinstance(content_blocks, list):
+                            for block in content_blocks:
+                                if isinstance(block, dict) and isinstance(
+                                    block.get("text"), str
+                                ):
+                                    text_parts.append(block["text"])
+                        elif isinstance(content_blocks, str) and content_blocks:
+                            text_parts.append(content_blocks)
+                        elif isinstance(item.get("text"), str):
+                            text_parts.append(item["text"])
+                    if text_parts:
+                        return "".join(text_parts)
+
+                # Last resort: return full response as string
+                _LOGGER.warning("OpenAI response missing expected structure")
+                _LOGGER.debug("Full OpenAI response: %s", json.dumps(data, indent=2))
+                return str(data)
 
 
 class GeminiClient(BaseAIClient):
@@ -738,12 +1121,35 @@ class AnthropicClient(BaseAIClient):
                 self.api_url,
                 headers=headers,
                 json=payload,
-                timeout=aiohttp.ClientTimeout(total=30),
+                timeout=aiohttp.ClientTimeout(total=300),
             ) as resp:
                 if resp.status != 200:
                     error_text = await resp.text()
                     _LOGGER.error("Anthropic API error %d: %s", resp.status, error_text)
-                    raise Exception(f"Anthropic API error {resp.status}")
+                    # Surface the API's own error message (e.g. "prompt is too
+                    # long: N tokens > 200000 maximum") instead of a bare status
+                    # code so the user can see why the request failed (issue #80).
+                    try:
+                        detail = json.loads(error_text)["error"]["message"]
+                    except (ValueError, KeyError, TypeError):
+                        detail = error_text[:300]
+                    message = f"Anthropic API error {resp.status}: {detail}"
+                    if resp.status == 429:
+                        # Honor the server's retry-after hint so the retry
+                        # loop waits out per-minute token windows.
+                        retry_after = None
+                        try:
+                            header = resp.headers.get("retry-after")
+                            if header is not None:
+                                retry_after = float(header)
+                        except (TypeError, ValueError):
+                            retry_after = None
+                        raise RateLimitedAIError(message, retry_after=retry_after)
+                    if 400 <= resp.status < 500 and resp.status != 408:
+                        # Deterministic client error - retrying the identical
+                        # payload cannot succeed, so don't burn retries on it.
+                        raise NonRetryableAIError(message)
+                    raise Exception(message)
                 data = await resp.json()
                 # Extract text from Anthropic response
                 content_blocks = data.get("content", [])
@@ -1160,9 +1566,11 @@ class AiAgentHaAgent:
         _LOGGER.debug("Models config loaded: %s", models_config)
 
         # Set the appropriate system prompt based on provider
-        if provider == "local":
+        if provider in ("local_ollama", "openai_compatible"):
             self.system_prompt = self.SYSTEM_PROMPT_LOCAL
-            _LOGGER.debug("Using local-optimized system prompt")
+            _LOGGER.debug(
+                "Using local-optimized system prompt for provider: %s", provider
+            )
         else:
             self.system_prompt = self.SYSTEM_PROMPT
             _LOGGER.debug("Using standard system prompt")
@@ -1170,7 +1578,10 @@ class AiAgentHaAgent:
         # Initialize the appropriate AI client with model selection
         if provider == "openai":
             model = models_config.get("openai", "gpt-3.5-turbo")
-            self.ai_client = OpenAIClient(config.get("openai_token"), model)
+            base_url = config.get(CONF_OPENAI_BASE_URL) or ""
+            self.ai_client = OpenAIClient(
+                config.get("openai_token"), model, base_url or None
+            )
         elif provider == "gemini":
             model = models_config.get("gemini", "gemini-2.5-flash")
             self.ai_client = GeminiClient(config.get("gemini_token"), model)
@@ -1187,13 +1598,28 @@ class AiAgentHaAgent:
             model = models_config.get("zai", "glm-4.7")
             endpoint_type = config.get("zai_endpoint", "general")
             self.ai_client = ZaiClient(config.get("zai_token"), model, endpoint_type)
-        elif provider == "local":
-            model = models_config.get("local", "")
-            url = config.get("local_url")
+        elif provider == "local_ollama":
+            # Support both new local_ollama_url and legacy local_url
+            url = config.get("local_ollama_url") or config.get("local_url")
+            model = models_config.get("local_ollama") or models_config.get("local", "")
             if not url:
-                _LOGGER.error("Missing local_url for local provider")
-                raise Exception("Missing local_url configuration for local provider")
-            self.ai_client = LocalClient(url, model)
+                _LOGGER.error("Missing local_ollama_url for local_ollama provider")
+                raise Exception(
+                    "Missing local_ollama_url configuration for local_ollama provider"
+                )
+            self.ai_client = LocalOllamaClient(url, model)
+        elif provider == "openai_compatible":
+            url = config.get("openai_compatible_url")
+            model = models_config.get("openai_compatible", "")
+            api_key = config.get("openai_compatible_api_key", "") or ""
+            if not url:
+                _LOGGER.error(
+                    "Missing openai_compatible_url for openai_compatible provider"
+                )
+                raise Exception(
+                    "Missing openai_compatible_url configuration for openai_compatible provider"
+                )
+            self.ai_client = OpenaiCompatibleClient(url, model, api_key or None)
         else:  # default to llama if somehow specified
             model = models_config.get("llama", "Llama-4-Maverick-17B-128E-Instruct-FP8")
             self.ai_client = LlamaClient(config.get("llama_token"), model)
@@ -1220,16 +1646,20 @@ class AiAgentHaAgent:
             token = self.config.get("alter_token")
         elif provider == "zai":
             token = self.config.get("zai_token")
-        elif provider == "local":
-            token = self.config.get("local_url")
+        elif provider == "local_ollama":
+            # For local_ollama, the “token” is actually the URL; support legacy local_url
+            token = self.config.get("local_ollama_url") or self.config.get("local_url")
+        elif provider == "openai_compatible":
+            # For openai_compatible, validate the URL is present
+            token = self.config.get("openai_compatible_url")
         else:
             token = self.config.get("llama_token")
 
         if not token or not isinstance(token, str):
             return False
 
-        # For local provider, validate URL format
-        if provider == "local":
+        # For local_ollama and openai_compatible, validate URL format
+        if provider in ("local_ollama", "openai_compatible"):
             return bool(token.startswith(("http://", "https://")))
 
         # Add more specific validation based on your API key format
@@ -1261,6 +1691,83 @@ class AiAgentHaAgent:
         """Store data in cache with timestamp."""
         self._cache[key] = (time.time(), data)
 
+    # Maximum size (in characters) of a single data message added to the
+    # conversation. Large installs can return megabytes of entity data, which
+    # blows past the model's context window (~200k tokens for Claude) and makes
+    # every request fail with a deterministic 400 (issue #80). 50k chars is
+    # roughly 13k tokens, which also keeps requests within entry-tier
+    # per-minute token rate limits (e.g. Anthropic tier 1: 30k input
+    # tokens/min) even with a data message persisting in the history window.
+    MAX_DATA_MESSAGE_CHARS = 50_000
+
+    # Maximum combined size (in characters) of the message window sent to the
+    # provider per request. Several capped data messages can still stack past
+    # context and per-minute token budgets (issue #80); the most recent
+    # messages are kept. ~100k chars is roughly 25k tokens.
+    MAX_WINDOW_CHARS = 100_000
+
+    def _format_data_message(self, data: Any) -> str:
+        """Serialize fetched HA data for the conversation, capping its size.
+
+        If the payload is too large, list items are dropped from the end and a
+        truncation notice is included so the model knows to request more
+        specific data instead of the full dump.
+        """
+        message = json.dumps({"data": data}, default=str)
+        if len(message) <= self.MAX_DATA_MESSAGE_CHARS:
+            return message
+
+        note = (
+            "Data truncated to fit the model context window. "
+            "Request more specific data (e.g. a specific entity, domain or area) "
+            "to see the rest."
+        )
+        if isinstance(data, list) and data:
+            truncated = data
+            while len(message) > self.MAX_DATA_MESSAGE_CHARS and len(truncated) > 1:
+                # Scale down proportionally to the overshoot, then re-check
+                # (item sizes vary, so loop until it actually fits).
+                keep = max(
+                    1,
+                    len(truncated) * self.MAX_DATA_MESSAGE_CHARS // len(message),
+                )
+                truncated = truncated[:keep]
+                message = json.dumps(
+                    {
+                        "data": truncated,
+                        "truncated": True,
+                        "total_items": len(data),
+                        "items_shown": len(truncated),
+                        "note": note,
+                    },
+                    default=str,
+                )
+            if len(message) <= self.MAX_DATA_MESSAGE_CHARS:
+                _LOGGER.warning(
+                    "Data response truncated from %d to %d items to fit context window",
+                    len(data),
+                    len(truncated),
+                )
+                return message
+            # A single item alone exceeds the cap - fall through to the
+            # hard-truncated preview below so the cap always holds.
+
+        # Oversized non-list payloads (or a single oversized list item): keep
+        # a prefix of the serialized form as a preview.
+        _LOGGER.warning(
+            "Oversized data response hard-truncated from %d chars", len(message)
+        )
+        preview = message[: self.MAX_DATA_MESSAGE_CHARS]
+        result = json.dumps({"data_preview": preview, "truncated": True, "note": note})
+        # JSON-escaping the preview can push the result back over the cap;
+        # shrink until the final message actually fits.
+        while len(result) > self.MAX_DATA_MESSAGE_CHARS and preview:
+            preview = preview[: int(len(preview) * 0.9)]
+            result = json.dumps(
+                {"data_preview": preview, "truncated": True, "note": note}
+            )
+        return result
+
     def _sanitize_automation_config(self, config: Dict[str, Any]) -> Dict[str, Any]:
         """Sanitize automation configuration to prevent injection attacks."""
         sanitized: Dict[str, Any] = {}
@@ -1269,14 +1776,104 @@ class AiAgentHaAgent:
                 # Sanitize strings
                 sanitized[key] = str(value).strip()[:100]  # Limit length
             elif key in ["trigger", "condition", "action"]:
-                # Validate arrays
+                # Home Assistant accepts either a single mapping or a list for
+                # trigger/condition/action. Normalize a single mapping to a
+                # one-element list instead of silently dropping it (which would
+                # later raise KeyError and reject a perfectly valid automation).
                 if isinstance(value, list):
                     sanitized[key] = value
+                elif isinstance(value, dict):
+                    sanitized[key] = [value]
             elif key == "mode":
                 # Validate mode
                 if value in ["single", "restart", "queued", "parallel"]:
                     sanitized[key] = value
         return sanitized
+
+    @staticmethod
+    def _read_automations_file(path: str) -> List[Dict[str, Any]]:
+        """Read and parse automations.yaml into a list of automations.
+
+        Runs inside an executor thread. Raises FileNotFoundError when the file
+        does not exist (the caller treats that as "no automations yet").
+        """
+        with open(path, "r", encoding="utf-8") as handle:
+            data = yaml.safe_load(handle)
+
+        if data is None:
+            return []
+        if not isinstance(data, list):
+            # automations.yaml is always a top-level list. If it is anything
+            # else, refuse to touch it rather than risk clobbering content we
+            # don't understand.
+            raise ValueError("automations.yaml does not contain a list of automations")
+        return data
+
+    @staticmethod
+    def _write_automations_file(path: str, automations: List[Dict[str, Any]]) -> None:
+        """Safely persist automations to automations.yaml.
+
+        Runs inside an executor thread. Compared to a naive ``yaml.dump`` to an
+        open file handle, this:
+          * keeps accented/unicode text readable instead of mangling it into
+            ``\\uXXXX`` escapes (``allow_unicode=True``),
+          * preserves key order so automations stay diff-friendly
+            (``sort_keys=False``),
+          * never line-wraps long Jinja templates (``width``),
+          * validates that the serialized YAML round-trips back to the same
+            data before touching disk,
+          * backs up the previous file to ``<path>.bak`` so the user can roll
+            back,
+          * writes atomically (temp file + ``os.replace``) so a crash or a bad
+            write can never leave a half-written / corrupted file in place.
+        """
+        # Use safe_dump (the SafeDumper) so the writer mirrors the safe_load
+        # reader: only plain YAML types are ever emitted, never opaque
+        # ``!!python/object`` tags.
+        content = yaml.safe_dump(
+            automations,
+            default_flow_style=False,
+            allow_unicode=True,
+            sort_keys=False,
+            width=4096,
+        )
+
+        # Guard against ever writing YAML that does not decode back to the
+        # exact same data structure.
+        if yaml.safe_load(content) != automations:
+            raise ValueError(
+                "Refusing to write automations.yaml: serialized YAML did not "
+                "round-trip cleanly"
+            )
+
+        path_exists = os.path.exists(path)
+
+        # Back up the existing file before overwriting it.
+        if path_exists:
+            shutil.copy2(path, f"{path}.bak")
+
+        # Atomic write: write to a temp file in the same directory, fsync, then
+        # atomically replace the target.
+        directory = os.path.dirname(path) or "."
+        fd, tmp_path = tempfile.mkstemp(
+            prefix=".automations.", suffix=".yaml.tmp", dir=directory
+        )
+        try:
+            with os.fdopen(fd, "w", encoding="utf-8") as handle:
+                handle.write(content)
+                handle.flush()
+                os.fsync(handle.fileno())
+            # Preserve the original file's permission bits. mkstemp creates the
+            # temp file as 0600, so without this an atomic replace would strip
+            # any group/world bits the user or an external editor relied on.
+            if path_exists:
+                shutil.copymode(path, tmp_path)
+            os.replace(tmp_path, path)
+        except BaseException:
+            # Never leave a stray temp file behind on failure.
+            if os.path.exists(tmp_path):
+                os.remove(tmp_path)
+            raise
 
     async def get_entity_state(self, entity_id: str) -> Dict[str, Any]:
         """Get the state of a specific entity."""
@@ -1991,6 +2588,17 @@ class AiAgentHaAgent:
             # Sanitize configuration
             sanitized_config = self._sanitize_automation_config(automation_config)
 
+            # Make sure the core building blocks survived sanitization. A
+            # malformed trigger/action (e.g. not a list or mapping) is dropped
+            # by the sanitizer, so validate here and fail with a clear message
+            # instead of raising KeyError further down.
+            if not sanitized_config.get("alias"):
+                return {"error": "Automation must include a non-empty alias"}
+            if not sanitized_config.get("trigger"):
+                return {"error": "Automation must include at least one trigger"}
+            if not sanitized_config.get("action"):
+                return {"error": "Automation must include at least one action"}
+
             # Generate a unique ID for the automation
             automation_id = f"ai_agent_auto_{int(time.time() * 1000)}"
 
@@ -2009,7 +2617,7 @@ class AiAgentHaAgent:
             automations_path = self.hass.config.path("automations.yaml")
             try:
                 current_automations = await self.hass.async_add_executor_job(
-                    lambda: yaml.safe_load(open(automations_path, "r")) or []
+                    self._read_automations_file, automations_path
                 )
             except FileNotFoundError:
                 current_automations = []
@@ -2026,13 +2634,13 @@ class AiAgentHaAgent:
             # Append new automation
             current_automations.append(automation_entry)
 
-            # Write back to file using async executor
+            # Write back to file safely: backs up the previous file, validates
+            # the YAML round-trips, preserves unicode/key order, and replaces
+            # the file atomically so a bad write can never corrupt it.
             await self.hass.async_add_executor_job(
-                lambda: yaml.dump(
-                    current_automations,
-                    open(automations_path, "w"),
-                    default_flow_style=False,
-                )
+                self._write_automations_file,
+                automations_path,
+                current_automations,
             )
 
             # Reload automations
@@ -2637,10 +3245,15 @@ Then restart Home Assistant to see your new dashboard in the sidebar."""
                     "model": models_config.get("zai", ""),
                     "client_class": ZaiClient,
                 },
-                "local": {
-                    "token_key": "local_url",  # nosec B105 - dict-key field name, not a credential value (false positive)
-                    "model": models_config.get("local", ""),
-                    "client_class": LocalClient,
+                "local_ollama": {
+                    "token_key": "local_ollama_url",  # nosec B105 - dict-key field name, not a credential value (false positive)
+                    "model": models_config.get("local_ollama", ""),
+                    "client_class": LocalOllamaClient,
+                },
+                "openai_compatible": {
+                    "token_key": "openai_compatible_url",  # nosec B105 - dict-key field name, not a credential value (false positive)
+                    "model": models_config.get("openai_compatible", ""),
+                    "client_class": OpenaiCompatibleClient,
                 },
             }
 
@@ -2666,7 +3279,11 @@ Then restart Home Assistant to see your new dashboard in the sidebar."""
 
             # Validate token/URL
             if not token:
-                error_msg = f"No {'URL' if selected_provider == 'local' else 'token'} configured for provider {selected_provider}"
+                is_url_provider = selected_provider in (
+                    "local_ollama",
+                    "openai_compatible",
+                )
+                error_msg = f"No {'URL' if is_url_provider else 'token'} configured for provider {selected_provider}"
                 _LOGGER.error(error_msg)
                 return _with_debug({"success": False, "error": error_msg})
 
@@ -2683,10 +3300,15 @@ Then restart Home Assistant to see your new dashboard in the sidebar."""
                     _LOGGER.debug(
                         f"Initialized {selected_provider} client with model {provider_settings['model']}, endpoint_type {endpoint_type}"
                     )
-                elif selected_provider == "local":
-                    # LocalClient takes (url, model)
+                elif selected_provider in ("local_ollama", "openai_compatible"):
+                    # LocalOllamaClient and OpenaiCompatibleClient take (url, model)
+                    if selected_provider == "local_ollama":
+                        # Support legacy local_url
+                        url = token or config.get("local_url")
+                    else:
+                        url = token
                     self.ai_client = provider_settings["client_class"](
-                        url=token, model=provider_settings["model"]
+                        url, provider_settings["model"]
                     )
                     _LOGGER.debug(
                         f"Initialized {selected_provider} client with model {provider_settings['model']}"
@@ -2733,11 +3355,19 @@ Then restart Home Assistant to see your new dashboard in the sidebar."""
                 _LOGGER.debug("Adding system message to new conversation")
                 self.conversation_history.append(self.system_prompt)
 
+            # Remember where this query started so a failure can be rolled
+            # back instead of leaving dangling/oversized messages that poison
+            # every subsequent query (issue #80).
+            history_checkpoint = len(self.conversation_history)
+
             # Add user query to conversation
             self.conversation_history.append({"role": "user", "content": user_query})
             _LOGGER.debug("Added user query to conversation history")
 
-            max_iterations = 5  # Prevent infinite loops
+            # Prevent infinite loops while leaving room for multi-step
+            # discovery: with data responses capped (issue #80) the model may
+            # need several narrower data requests instead of one big dump.
+            max_iterations = 8
             iteration = 0
 
             while iteration < max_iterations:
@@ -3012,7 +3642,7 @@ Then restart Home Assistant to see your new dashboard in the sidebar."""
                             self.conversation_history.append(
                                 {
                                     "role": "user",
-                                    "content": json.dumps({"data": data}, default=str),
+                                    "content": self._format_data_message(data),
                                 }
                             )
                             continue
@@ -3131,7 +3761,7 @@ Then restart Home Assistant to see your new dashboard in the sidebar."""
                             self.conversation_history.append(
                                 {
                                     "role": "user",
-                                    "content": json.dumps({"data": data}, default=str),
+                                    "content": self._format_data_message(data),
                                 }
                             )
                             continue
@@ -3276,7 +3906,7 @@ Then restart Home Assistant to see your new dashboard in the sidebar."""
                             self.conversation_history.append(
                                 {
                                     "role": "user",
-                                    "content": json.dumps({"data": data}, default=str),
+                                    "content": self._format_data_message(data),
                                 }
                             )
                             # Go to next iteration to continue the loop
@@ -3297,7 +3927,7 @@ Then restart Home Assistant to see your new dashboard in the sidebar."""
                     except json.JSONDecodeError as e:
                         # Check if this is a local provider that might have already wrapped the response
                         provider = self.config.get("ai_provider", "unknown")
-                        if provider == "local":
+                        if provider in ("local_ollama", "openai_compatible"):
                             _LOGGER.debug(
                                 "Local provider returned non-JSON response (this is normal and handled): %s",
                                 response[:200],
@@ -3325,7 +3955,7 @@ Then restart Home Assistant to see your new dashboard in the sidebar."""
                             )
 
                         # Also log the response to a separate debug file for detailed analysis (non-local providers only)
-                        if provider != "local":
+                        if provider not in ("local_ollama", "openai_compatible"):
                             try:
                                 import os
 
@@ -3408,6 +4038,12 @@ Then restart Home Assistant to see your new dashboard in the sidebar."""
                                 "request_type": "final_response",
                                 "response": response_to_wrap,
                             }
+                            # Keep the conversation paired: record the assistant
+                            # reply so history doesn't end with a dangling user
+                            # message (issue #80).
+                            self.conversation_history.append(
+                                {"role": "assistant", "content": response_to_wrap}
+                            )
                             result = {
                                 "success": True,
                                 "answer": json.dumps(wrapped_response),
@@ -3428,6 +4064,9 @@ Then restart Home Assistant to see your new dashboard in the sidebar."""
 
                 except Exception as e:
                     _LOGGER.exception("Error processing AI response: %s", str(e))
+                    # Roll back this query's messages so the failure doesn't
+                    # poison subsequent queries (issue #80).
+                    del self.conversation_history[history_checkpoint:]
                     return _with_debug(
                         {
                             "success": False,
@@ -3437,6 +4076,9 @@ Then restart Home Assistant to see your new dashboard in the sidebar."""
 
             # If we've reached max iterations without a final response
             _LOGGER.warning("Reached maximum iterations without final response")
+            # Roll back this query's messages so the failure doesn't poison
+            # subsequent queries (issue #80).
+            del self.conversation_history[history_checkpoint:]
             result = {
                 "success": False,
                 "error": "Maximum iterations reached without final response",
@@ -3474,15 +4116,27 @@ Then restart Home Assistant to see your new dashboard in the sidebar."""
             raise Exception("Rate limit exceeded. Please try again later.")
         retry_count = 0
         last_error = None
-        # Limit conversation history to last 10 messages to prevent token overflow
-        recent_messages = (
-            self.conversation_history[-10:]
-            if len(self.conversation_history) > 10
-            else self.conversation_history
-        )
-        # Ensure system prompt is always the first message
-        if not recent_messages or recent_messages[0].get("role") != "system":
-            recent_messages = [self.system_prompt] + recent_messages
+        # Limit conversation history to the last 10 messages to prevent token
+        # overflow, and cap the window's total size as well: even
+        # individually-capped data messages can stack up past context and
+        # per-minute token budgets (issue #80). Most recent messages win.
+        candidates = [
+            m for m in self.conversation_history[-10:] if m.get("role") != "system"
+        ]
+        recent_messages: List[Dict[str, Any]] = []
+        total_chars = 0
+        for message in reversed(candidates):
+            size = len(str(message.get("content") or ""))
+            if recent_messages and total_chars + size > self.MAX_WINDOW_CHARS:
+                break
+            recent_messages.insert(0, message)
+            total_chars += size
+        # Dropping/slicing can cut mid-turn; ensure the window starts with a
+        # user turn (issue #80).
+        while recent_messages and recent_messages[0].get("role") == "assistant":
+            recent_messages.pop(0)
+        # System prompt is always the first message
+        recent_messages = [self.system_prompt] + recent_messages
 
         _LOGGER.debug("Sending %d messages to AI provider", len(recent_messages))
         _LOGGER.debug("AI provider: %s", self.config.get("ai_provider", "unknown"))
@@ -3495,6 +4149,21 @@ Then restart Home Assistant to see your new dashboard in the sidebar."""
                     self._max_retries,
                 )
                 response = await self.ai_client.get_response(recent_messages)
+                # Every client is expected to return a string. Guard against a
+                # client handing back a non-string (e.g. a raw list/dict from an
+                # unexpected provider response shape) so the downstream string
+                # operations below don't crash with an unhelpful AttributeError
+                # and burn all retries (see issue #75).
+                if response is not None and not isinstance(response, str):
+                    _LOGGER.warning(
+                        "AI client returned non-string response of type %s; coercing to str",
+                        type(response).__name__,
+                    )
+                    response = (
+                        json.dumps(response)
+                        if isinstance(response, (list, dict))
+                        else str(response)
+                    )
                 _LOGGER.debug(
                     "AI client returned response of length: %d", len(response or "")
                 )
@@ -3531,6 +4200,10 @@ Then restart Home Assistant to see your new dashboard in the sidebar."""
                         continue
 
                 return str(response)
+            except NonRetryableAIError:
+                # Deterministic client error (e.g. 400 "prompt is too long") -
+                # retrying the same payload cannot succeed (issue #80).
+                raise
             except Exception as e:
                 _LOGGER.error(
                     "AI client error on attempt %d: %s", retry_count + 1, str(e)
@@ -3538,7 +4211,13 @@ Then restart Home Assistant to see your new dashboard in the sidebar."""
                 last_error = e
                 retry_count += 1
                 if retry_count < self._max_retries:
-                    await asyncio.sleep(self._retry_delay * retry_count)
+                    delay: float = self._retry_delay * retry_count
+                    if isinstance(e, RateLimitedAIError) and e.retry_after:
+                        # Wait at least as long as the provider asked for
+                        # (capped at 60s) so per-minute token windows can
+                        # actually reset (issue #80).
+                        delay = max(delay, min(e.retry_after, 60))
+                    await asyncio.sleep(delay)
                 continue
         raise Exception(
             f"Failed after {retry_count} retries. Last error: {str(last_error)}"

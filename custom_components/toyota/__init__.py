@@ -8,7 +8,9 @@ import asyncio
 import asyncio.exceptions as asyncioexceptions
 import contextlib
 import logging
+import os
 from datetime import datetime, timedelta
+from pathlib import Path
 from typing import TYPE_CHECKING, TypedDict, TypeVar
 
 import httpcore
@@ -67,6 +69,18 @@ _LOGGER = logging.getLogger(__name__)
 # so 25s is enough for ~3 polls at 10s spacing without burning extra
 # requests against the gateway.
 STRATEGY_DEFAULT_WAKE_TIMEOUT_S = 25
+
+# Per-cycle wall-clock budgets that keep a single Toyota-side outage from
+# blocking config-entry setup. The /v1/trips summary endpoints are the slowest
+# + flakiest Toyota surface (each call retries 4x with 2/4/8s backoff inside
+# pytoyoda on a 5xx), so an unbounded summary fetch can stall first_refresh
+# ~45s+ - long enough to overrun HA's bootstrap setup budget, get the setup
+# cancelled mid platform-forward, and leave the platforms half-registered
+# ("... has already been setup"). Bounding both the status fetch and the
+# summary fetch makes first_refresh complete (or fail cleanly) in bounded time
+# so HA can do its own backoff retry instead of wedging the entry.
+STATUS_FETCH_BUDGET_S = 20
+SUMMARY_FETCH_BUDGET_S = 12
 
 
 def loguru_to_hass(message: str) -> None:
@@ -154,6 +168,11 @@ async def async_setup_entry(  # pylint: disable=too-many-statements # noqa: PLR0
     brand_code = brand_map.get(brand, "T")
 
     _LOGGER.info("Setting up %s integration (brand code: %s)", brand, brand_code)
+
+    (Path(hass.config.config_dir) / ".cache" / "hishel").mkdir(
+        parents=True, exist_ok=True
+    )
+    os.chdir(hass.config.config_dir)
 
     client = MyT(
         username=email,
@@ -571,7 +590,24 @@ async def async_setup_entry(  # pylint: disable=too-many-statements # noqa: PLR0
         # 429+APIGW-403 from a stale cache that we can avoid entirely by
         # POSTing first OR by serving from cache. Note: vehicle.update() also
         # populates _endpoint_data["telemetry"], which we read for odometer.
-        await _call_tagged("vehicle.update", vin, vehicle.update(skip=["status"]))
+        # Bounded so a slow/flaky non-status endpoint can't stall first_refresh
+        # past HA's setup budget. On timeout the TimeoutError propagates to the
+        # caller's per-vehicle handler, which serves cache or a stub - same
+        # degrade path as any other transient Toyota failure. A climate-settings
+        # (or other endpoint) HTTP 500 surfaces here as a ToyotaApiError/
+        # ToyotaInternalError - swallow it so a single bad endpoint doesn't fail
+        # the whole refresh; the rest of the snapshot still builds from cache.
+        try:
+            await asyncio.wait_for(
+                _call_tagged("vehicle.update", vin, vehicle.update(skip=["status"])),
+                STATUS_FETCH_BUDGET_S,
+            )
+        except (ToyotaApiError, ToyotaInternalError) as ex:
+            _LOGGER.warning(
+                "vehicle.update partial failure for vin=...%s (%s), continuing",
+                (vin or "")[-6:],
+                _error_code(ex),
+            )
 
         # Build snapshot for the strategy.
         current_odometer_km: float | None = None
@@ -647,20 +683,58 @@ async def async_setup_entry(  # pylint: disable=too-many-statements # noqa: PLR0
             # summary calls in an asyncio.gather within the same event-loop
             # tick reliably trips a 429 with {"description": "Unauthorized"}
             # response bodies. See pytoyoda/ha_toyota#282.
-            statistics = StatisticsData(
-                day=await _call_tagged(
-                    "day_summary", vin, vehicle.get_current_day_summary()
-                ),
-                week=await _call_tagged(
-                    "week_summary", vin, vehicle.get_current_week_summary()
-                ),
-                month=await _call_tagged(
-                    "month_summary", vin, vehicle.get_current_month_summary()
-                ),
-                year=await _call_tagged(
-                    "year_summary", vin, vehicle.get_current_year_summary()
-                ),
-            )
+            async def _fetch_summaries() -> StatisticsData:
+                return StatisticsData(
+                    day=await _call_tagged(
+                        "day_summary", vin, vehicle.get_current_day_summary()
+                    ),
+                    week=await _call_tagged(
+                        "week_summary", vin, vehicle.get_current_week_summary()
+                    ),
+                    month=await _call_tagged(
+                        "month_summary", vin, vehicle.get_current_month_summary()
+                    ),
+                    year=await _call_tagged(
+                        "year_summary", vin, vehicle.get_current_year_summary()
+                    ),
+                )
+
+            # Summaries are secondary telemetry: bound the whole block and
+            # degrade gracefully rather than letting a /v1/trips outage block
+            # setup or stub out the whole car. On timeout/API-error we hold the
+            # last-known statistics (or None) and still return this cycle's
+            # fresh status data. wait_for cancels the inner coro on timeout,
+            # which _call_tagged surfaces as a per-endpoint "cancelled" log.
+            try:
+                statistics = await asyncio.wait_for(
+                    _fetch_summaries(), SUMMARY_FETCH_BUDGET_S
+                )
+            except (
+                asyncioexceptions.TimeoutError,
+                ToyotaApiError,
+                ToyotaInternalError,
+                httpx.ConnectTimeout,
+                httpcore.ConnectTimeout,
+                httpx.ReadTimeout,
+                ValidationError,
+            ) as ex:
+                # Degrade on ANY transient summary failure (matches the family
+                # the per-vehicle handler treats as recoverable). NOT
+                # CancelledError: a real outer cancel must propagate, and
+                # wait_for already surfaces its own timeout as TimeoutError.
+                cached_stats = (
+                    last_good_per_vin[vin]["statistics"]
+                    if vin in last_good_per_vin
+                    else None
+                )
+                _LOGGER.warning(
+                    "Toyota summary fetch for vin=...%s degraded (%s); "
+                    "holding %s statistics",
+                    vin[-6:],
+                    _error_code(ex),
+                    "last-known" if cached_stats is not None else "no",
+                )
+                statistics = cached_stats
         now = dt_util.now()
         # NB: do NOT update last_fetch_time_per_vin here. We need commit
         # semantics matching coordinator.data: if a later vehicle in the loop
@@ -751,6 +825,7 @@ async def async_setup_entry(  # pylint: disable=too-many-statements # noqa: PLR0
                 asyncioexceptions.TimeoutError,
                 httpx.ReadTimeout,
                 ValidationError,
+                TypeError,
             ) as ex:
                 code = _error_code(ex)
                 last_error_per_vin[vin] = (dt_util.now(), code)

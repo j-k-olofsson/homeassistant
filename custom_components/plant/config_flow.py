@@ -23,6 +23,7 @@ from homeassistant.helpers.network import NoURLAvailableError, get_url
 from homeassistant.helpers.selector import selector
 
 from .const import (
+    ATTR_CARE,
     ATTR_ENTITY,
     ATTR_LIMITS,
     ATTR_OPTIONS,
@@ -333,6 +334,10 @@ class PlantConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 ATTR_SENSORS: {},
             }
         )
+        # Always overwrite (do not guard on truthiness): if the user switches to a
+        # species with no care via the "wrong plant" path, stale care from the
+        # previous species must be cleared, not left behind.
+        self.plant_info[ATTR_CARE] = plant_config[FLOW_PLANT_INFO].get(ATTR_CARE, {})
         extra_desc = ""
         if plant_config[FLOW_PLANT_INFO].get(OPB_DISPLAY_PID):
             # We got data from OPB.  Display a "wrong plant" switch
@@ -377,7 +382,7 @@ class PlantConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                         CONF_MAX_MOISTURE
                     ),
                 )
-            ] = int
+            ] = vol.Coerce(int)
             data_schema[
                 vol.Required(
                     CONF_MIN_MOISTURE,
@@ -385,7 +390,7 @@ class PlantConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                         CONF_MIN_MOISTURE
                     ),
                 )
-            ] = int
+            ] = vol.Coerce(int)
 
         if show_all or selected_sensors["illuminance"]:
             data_schema[
@@ -395,7 +400,7 @@ class PlantConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                         CONF_MAX_ILLUMINANCE
                     ),
                 )
-            ] = int
+            ] = vol.Coerce(int)
             data_schema[
                 vol.Required(
                     CONF_MIN_ILLUMINANCE,
@@ -403,7 +408,7 @@ class PlantConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                         CONF_MIN_ILLUMINANCE
                     ),
                 )
-            ] = int
+            ] = vol.Coerce(int)
             # Always show DLI together with illuminance
             data_schema[
                 vol.Required(
@@ -412,7 +417,7 @@ class PlantConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                         CONF_MAX_DLI
                     ),
                 )
-            ] = int
+            ] = vol.Coerce(float)
             data_schema[
                 vol.Required(
                     CONF_MIN_DLI,
@@ -420,7 +425,7 @@ class PlantConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                         CONF_MIN_DLI
                     ),
                 )
-            ] = int
+            ] = vol.Coerce(float)
 
         if show_all or selected_sensors["temperature"]:
             data_schema[
@@ -430,7 +435,7 @@ class PlantConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                         CONF_MAX_TEMPERATURE
                     ),
                 )
-            ] = int
+            ] = vol.Coerce(int)
             data_schema[
                 vol.Required(
                     CONF_MIN_TEMPERATURE,
@@ -438,7 +443,7 @@ class PlantConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                         CONF_MIN_TEMPERATURE
                     ),
                 )
-            ] = int
+            ] = vol.Coerce(int)
 
         if show_all or selected_sensors["conductivity"]:
             data_schema[
@@ -448,7 +453,7 @@ class PlantConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                         CONF_MAX_CONDUCTIVITY
                     ),
                 )
-            ] = int
+            ] = vol.Coerce(int)
             data_schema[
                 vol.Required(
                     CONF_MIN_CONDUCTIVITY,
@@ -456,7 +461,7 @@ class PlantConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                         CONF_MIN_CONDUCTIVITY
                     ),
                 )
-            ] = int
+            ] = vol.Coerce(int)
 
         if show_all or selected_sensors["humidity"]:
             data_schema[
@@ -466,7 +471,7 @@ class PlantConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                         CONF_MAX_HUMIDITY
                     ),
                 )
-            ] = int
+            ] = vol.Coerce(int)
             data_schema[
                 vol.Required(
                     CONF_MIN_HUMIDITY,
@@ -474,7 +479,7 @@ class PlantConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                         CONF_MIN_HUMIDITY
                     ),
                 )
-            ] = int
+            ] = vol.Coerce(int)
 
         # Show VPD thresholds when both temperature and humidity are selected
         if show_all or (
@@ -487,13 +492,13 @@ class PlantConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                     CONF_MAX_VPD,
                     default=max_vpd if max_vpd is not None else DEFAULT_MAX_VPD,
                 )
-            ] = float
+            ] = vol.Coerce(float)
             data_schema[
                 vol.Required(
                     CONF_MIN_VPD,
                     default=min_vpd if min_vpd is not None else DEFAULT_MIN_VPD,
                 )
-            ] = float
+            ] = vol.Coerce(float)
 
         data_schema[
             vol.Optional(
@@ -908,6 +913,7 @@ async def refresh_plant_from_openplantbook(
     plant.display_species = (
         opb_display_raw[0].upper() + opb_display_raw[1:] if opb_display_raw else ""
     )
+    plant.care = plant_config[FLOW_PLANT_INFO].get(ATTR_CARE, {})
 
     limits = plant_config[FLOW_PLANT_INFO][FLOW_PLANT_LIMITS]
     _LOGGER.debug("Updating %d threshold entities from OPB data", len(limits))
@@ -946,6 +952,7 @@ async def refresh_plant_from_openplantbook(
     data = dict(entry.data)
     plant_info = dict(data.get(FLOW_PLANT_INFO, {}))
     plant_info[FLOW_PLANT_LIMITS] = dict(limits)
+    plant_info[ATTR_CARE] = dict(plant.care)
     data[FLOW_PLANT_INFO] = plant_info
     options = dict(entry.options)
     options[OPB_DISPLAY_PID] = plant.display_species

@@ -1,8 +1,0 @@
-powercalc:
-  sensors:
-    - entity_id: sensor.alsavopro_poolvarmepump_compressor
-      name: Poolheater power
-      linear:
-        calibrate:
-          - 0 -> 0
-          - 12 -> 2670

@@ -87,6 +87,10 @@ class UpdateQueue:
         return self._addon_name
 
     @property
+    def operation(self) -> str:
+        return getattr(self, "_operation", "force_install")
+
+    @property
     def results(self) -> list[dict[str, Any]]:
         return [
             {
@@ -117,6 +121,7 @@ class UpdateQueue:
         stop_addon_slug: str | None = None,
         version_info: dict | None = None,
         force_install_devices: list[dict] | None = None,
+        operation: str = "force_install",
     ) -> None:
         """Start the update queue.
         
@@ -126,6 +131,8 @@ class UpdateQueue:
             version_info: Optional version info per entity_id.
             force_install_devices: If set, list of dicts with device info for force install.
                 Each dict: {"entity_id": str, "device_id": str, "name": str}
+            operation: One of "force_install" (default, compile+upload), "clean",
+                "compile" (only), or "upload" (only). Applies to force_install_devices only.
         """
         if self._running:
             raise RuntimeError("Update queue is already running")
@@ -136,7 +143,8 @@ class UpdateQueue:
         if force_install_devices is not None:
             # Force install mode - build queue from device list
             _LOGGER.debug(
-                "Starting force install queue with %d devices: %s",
+                "Starting %s queue with %d devices: %s",
+                operation,
                 len(force_install_devices),
                 [d["name"] for d in force_install_devices],
             )
@@ -174,6 +182,7 @@ class UpdateQueue:
         self._addon_was_running = False
         self._phase = PHASE_IDLE
         self._addon_name = None
+        self._operation = operation
         self._task = self.hass.async_create_task(self._run())
 
     def cancel(self) -> None:
@@ -269,17 +278,23 @@ class UpdateQueue:
                     recent = data.setdefault("recent_successful_updates", {})
                     recent[item.device_id] = datetime.now()
 
-                    # Only pop pv_cache if device is still online — if it has
-                    # rebooted offline, we want to keep showing the bump target
-                    # version in the panel until the device comes back with its
-                    # updated sw_version. _trigger_device_online_checks will
-                    # pop the cache once it confirms device_v >= yaml_v.
-                    from homeassistant.helpers import entity_registry as er
-                    from . import _is_device_online
-                    ent_reg = er.async_get(self.hass)
-                    if _is_device_online(self.hass, ent_reg, item.device_id) is True:
-                        pv_cache = data.get("project_version_cache", {})
-                        pv_cache.pop(item.device_id, None)
+                    # Only pop pv_cache when the device was actually flashed
+                    # (upload / force_install). compile and clean don't change
+                    # what's installed on the device, so the project bump is
+                    # still pending and the panel must keep showing it.
+                    #
+                    # And: only pop if device is still online — if it has
+                    # rebooted offline, keep the bump target visible until the
+                    # device comes back with updated sw_version.
+                    # _trigger_device_online_checks pops the cache once it
+                    # confirms device_v >= yaml_v.
+                    if self._operation in ("upload", "force_install"):
+                        from homeassistant.helpers import entity_registry as er
+                        from . import _is_device_online
+                        ent_reg = er.async_get(self.hass)
+                        if _is_device_online(self.hass, ent_reg, item.device_id) is True:
+                            pv_cache = data.get("project_version_cache", {})
+                            pv_cache.pop(item.device_id, None)
 
                     pending_project = data.get("pending_project_installs", {})
                     if pending_project:
@@ -296,7 +311,7 @@ class UpdateQueue:
 
                 self.hass.bus.async_fire(
                     "esphome_update_manager_progress",
-                    {"results": self.results, "summary": self.summary},
+                    {"results": self.results, "summary": self.summary, "operation": self.operation},
                 )
 
                 if i < len(self._queue) - 1 and not self._cancelled:
@@ -329,7 +344,7 @@ class UpdateQueue:
             _LOGGER.info("Update queue finished. Summary: %s", self.summary)
             self.hass.bus.async_fire(
                 "esphome_update_manager_finished",
-                {"results": self.results, "summary": self.summary},
+                {"results": self.results, "summary": self.summary, "operation": self.operation},
             )
 
             if not self._cancelled:
@@ -474,9 +489,10 @@ class UpdateQueue:
             item.finished_at = datetime.now()
             return
 
-        original_name = device.name
+        from . import _get_esphome_node_name
+        original_name = _get_esphome_node_name(self.hass, device)
         user_name = device.name_by_user
-        display_name = user_name or original_name or item.device_id
+        display_name = user_name or device.name or item.device_id
 
         if not original_name:
             item.status = STATUS_FAILED
@@ -493,7 +509,7 @@ class UpdateQueue:
             mac_suffix = _get_mac_suffix(device)
             external_device = _match_device_to_external_dashboard(
                 self.hass,
-                user_name or original_name,
+                user_name or device.name or original_name,
                 original_name=original_name,
                 mac_suffix=mac_suffix,
             )
@@ -518,6 +534,93 @@ class UpdateQueue:
         if not configuration.endswith(".yaml"):
             configuration = f"{configuration}.yaml"
 
+        # Handle partial operations (clean / compile-only / upload-only)
+        operation = getattr(self, "_operation", "force_install")
+
+        if operation in ("clean", "compile", "upload"):
+            if self._cancelled:
+                item.status = STATUS_CANCELLED
+                item.error = "Cancelled by user"
+                item.finished_at = datetime.now()
+                return
+
+            # Resolve from/to versions for the log (clean doesn't need to_version)
+            if operation in ("compile", "upload"):
+                from . import (
+                    _build_to_version,
+                    _get_local_esphome_builder_version,
+                    _get_external_dashboard_version,
+                )
+                if coordinator == external_coordinator:
+                    builder_version = (
+                        _get_external_dashboard_version(self.hass)
+                        or _get_local_esphome_builder_version(self.hass)
+                    )
+                else:
+                    builder_version = (
+                        _get_local_esphome_builder_version(self.hass)
+                        or _get_external_dashboard_version(self.hass)
+                    )
+
+                yaml_project_version = None
+                try:
+                    config = await coordinator.async_get_config(configuration)
+                    if config:
+                        yaml_project_version = (
+                            config.get("esphome", {})
+                            .get("project", {})
+                            .get("version")
+                        )
+                except Exception:
+                    pass
+
+                # from_version comes from device.sw_version (already in item.from_version)
+                item.to_version = _build_to_version(
+                    item.from_version, builder_version, yaml_project_version
+                )
+
+            _LOGGER.info(
+                "Running %s for %s (config: %s) via %s dashboard",
+                operation,
+                display_name,
+                configuration,
+                "external" if coordinator == external_coordinator else "local",
+            )
+
+            # Refresh pv_cache before compile so the panel reflects "→ new
+            # project" right as the operation starts (matches the full
+            # force-install flow). Only relevant for compile — clean
+            # doesn't change yaml-vs-device state, upload happens after
+            # an earlier compile already set the cache.
+            if operation == "compile" and item.device_id:
+                from . import _check_project_version_update_by_device
+                await _check_project_version_update_by_device(
+                    self.hass, item.device_id
+                )
+
+            if operation == "clean":
+                success = await coordinator.async_clean(configuration)
+                error_msg = "Clean failed — check ESPHome dashboard for details"
+            elif operation == "compile":
+                success = await coordinator.async_compile(configuration)
+                error_msg = "Compile failed — check ESPHome dashboard for details"
+            else:  # upload
+                from . import _resolve_ota_port
+                ota_port = _resolve_ota_port(self.hass, item.device_id)
+                success = await coordinator.async_upload(configuration, ota_port)
+                error_msg = "OTA upload failed — check ESPHome dashboard for details"
+
+            if not success:
+                item.status = STATUS_FAILED
+                item.error = error_msg
+            else:
+                item.status = STATUS_SUCCESS
+
+            item.finished_at = datetime.now()
+            _LOGGER.info("%s completed for %s: %s", operation, display_name, item.status)
+            return
+
+        # Default: full force install (compile + upload) — existing flow below
         from . import _build_to_version, _get_local_esphome_builder_version, _get_external_dashboard_version
         if coordinator == external_coordinator:
             builder_version = _get_external_dashboard_version(self.hass)
@@ -559,6 +662,17 @@ class UpdateQueue:
             item.finished_at = datetime.now()
             return
 
+        # Refresh pv_cache BEFORE compile so the panel reflects "→ new
+        # project" right as the install starts, matching the update-button
+        # flow (which pre-populates pv_cache via ws_start_updates →
+        # _get_yaml_project_version). yaml doesn't change during compile,
+        # so one fetch up front is enough.
+        if item.device_id:
+            from . import _check_project_version_update_by_device
+            await _check_project_version_update_by_device(
+                self.hass, item.device_id
+            )
+
         compile_success = await coordinator.async_compile(configuration)
         if not compile_success:
             item.status = STATUS_FAILED
@@ -573,7 +687,9 @@ class UpdateQueue:
             item.finished_at = datetime.now()
             return
 
-        upload_success = await coordinator.async_upload(configuration, "OTA")
+        from . import _resolve_ota_port
+        ota_port = _resolve_ota_port(self.hass, item.device_id)
+        upload_success = await coordinator.async_upload(configuration, ota_port)
         if not upload_success:
             item.status = STATUS_FAILED
             item.error = "OTA upload failed — check ESPHome dashboard for details"
@@ -612,11 +728,13 @@ class UpdateQueue:
             dev_reg = dr.async_get(self.hass)
             device = dev_reg.async_get(item.device_id)
             if device:
+                from . import _get_esphome_node_name
                 mac_suffix = _get_mac_suffix(device)
+                node_name = _get_esphome_node_name(self.hass, device)
                 external_device = _match_device_to_external_dashboard(
                     self.hass,
                     device.name_by_user or device.name,
-                    original_name=device.name,
+                    original_name=node_name,
                     mac_suffix=mac_suffix,
                 )
                 if external_device:
@@ -645,7 +763,9 @@ class UpdateQueue:
             item.finished_at = datetime.now()
             return
 
-        upload_success = await coordinator.async_upload(configuration, "OTA")
+        from . import _resolve_ota_port
+        ota_port = _resolve_ota_port(self.hass, item.device_id)
+        upload_success = await coordinator.async_upload(configuration, ota_port)
         if not upload_success:
             item.status = STATUS_FAILED
             item.error = "OTA upload failed on external dashboard"
@@ -754,3 +874,5 @@ class UpdateQueue:
         if saw_in_progress:
             return False, "Update timed out — device may still be updating"
         return False, "Update timed out — no progress detected"
+
+# EOF

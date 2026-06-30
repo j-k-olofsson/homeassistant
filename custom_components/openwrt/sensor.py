@@ -1,287 +1,2662 @@
+"""Sensor platform for OpenWrt integration.
+
+Provides comprehensive system, network, and wireless monitoring sensors.
+All entities are grouped under the router device.
+"""
+
 from __future__ import annotations
 
-from homeassistant.config_entries import ConfigEntry
-from homeassistant.components.sensor import SensorEntity
-from homeassistant.core import HomeAssistant
-from homeassistant.helpers.entity import EntityCategory
-from homeassistant.components.sensor import SensorDeviceClass
-
 import logging
+from collections.abc import Callable
+from dataclasses import dataclass
+from datetime import datetime, timedelta
+from typing import Any, cast
 
-from . import OpenWrtEntity
-from .constants import DOMAIN
+from homeassistant.components.sensor import (
+    SensorDeviceClass,
+    SensorEntity,
+    SensorEntityDescription,
+    SensorStateClass,
+)
+from homeassistant.config_entries import ConfigEntry
+from homeassistant.const import (
+    CONF_HOST,
+    PERCENTAGE,
+    EntityCategory,
+    UnitOfInformation,
+    UnitOfTemperature,
+)
+from homeassistant.core import HomeAssistant, callback
+from homeassistant.helpers import (
+    device_registry as dr,
+)
+from homeassistant.helpers import (
+    entity_registry as er,
+)
+from homeassistant.helpers.device_registry import DeviceInfo
+from homeassistant.helpers.entity_platform import AddEntitiesCallback
+from homeassistant.helpers.typing import UNDEFINED, StateType
+from homeassistant.helpers.update_coordinator import CoordinatorEntity
+from homeassistant.util import dt as dt_util
+
+from .api.base import OpenWrtData, StorageUsage
+from .const import (
+    CONF_ENABLE_LOAD,
+    CONF_ENABLE_NLBWMON_SENSORS,
+    CONF_ENABLE_SQM,
+    CONF_ENABLE_VPN,
+    CONF_MQTT_PRESENCE,
+    CONF_SKIP_RANDOM_MAC,
+    CONF_TRACK_DEVICES,
+    CONF_TRACK_WIRED,
+    DATA_COORDINATOR,
+    DEFAULT_SKIP_RANDOM_MAC,
+    DEFAULT_TRACK_DEVICES,
+    DEFAULT_TRACK_WIRED,
+    DOMAIN,
+)
+from .coordinator import OpenWrtDataCoordinator
+from .helpers import format_ap_device_id, format_ap_name, get_via_device, is_random_mac
 
 _LOGGER = logging.getLogger(__name__)
+
+
+def _format_bytes(num_bytes: int) -> str:
+    value = float(num_bytes)
+    for unit in ["B", "KB", "MB", "GB", "TB"]:
+        if value < 1024 or unit == "TB":
+            return f"{int(value)} {unit}" if unit == "B" else f"{value:.2f} {unit}"
+        value /= 1024
+    return f"{num_bytes} B"
+
+
+@dataclass(frozen=True, kw_only=True)
+class OpenWrtSensorDescription(SensorEntityDescription):
+    """OpenWrt sensor description."""
+
+    value_fn: Callable[[OpenWrtData], StateType | datetime]
+    attrs_fn: Callable[[OpenWrtData], dict[str, Any]] | None = None
+    available_fn: Callable[[OpenWrtData], bool] | None = None
+
+
+@dataclass(frozen=True, kw_only=True)
+class OpenWrtStorageSensorDescription(SensorEntityDescription):
+    """OpenWrt storage sensor description."""
+
+    value_fn: Callable[[StorageUsage], StateType | datetime]
+
+
+class OpenWrtSensorEntity(CoordinatorEntity[OpenWrtDataCoordinator], SensorEntity):
+    """Representation of an OpenWrt sensor."""
+
+    entity_description: OpenWrtSensorDescription
+    _attr_has_entity_name = True
+
+    def __init__(
+        self,
+        coordinator: OpenWrtDataCoordinator,
+        entry: ConfigEntry,
+        description: OpenWrtSensorDescription,
+    ) -> None:
+        """Initialize."""
+        super().__init__(coordinator)
+        self.entity_description = description
+        self._attr_unique_id = f"{entry.entry_id}_{description.key}"
+        self._attr_device_info = DeviceInfo(
+            identifiers={(DOMAIN, cast(str, entry.unique_id or entry.data[CONF_HOST]))},
+        )
+
+    @property
+    def native_value(self) -> StateType | datetime:
+        """Return value."""
+        if self.coordinator.data is None:
+            return None
+        return self.entity_description.value_fn(self.coordinator.data)
+
+    @property
+    def extra_state_attributes(self) -> dict[str, Any] | None:
+        """Return attributes."""
+        if self.coordinator.data is None or not self.entity_description.attrs_fn:
+            return None
+        return self.entity_description.attrs_fn(self.coordinator.data)
+
+    @property
+    def available(self) -> bool:
+        """Return availability."""
+        if not self.coordinator.last_update_success:
+            return False
+        if self.entity_description.available_fn and self.coordinator.data:
+            return self.entity_description.available_fn(self.coordinator.data)
+        return True
+
+
+class OpenWrtWifiSensorEntity(OpenWrtSensorEntity):
+    """Representation of an OpenWrt WiFi sensor."""
+
+    def __init__(
+        self,
+        coordinator: OpenWrtDataCoordinator,
+        entry: ConfigEntry,
+        description: OpenWrtSensorDescription,
+        iface_name: str,
+        ssid: str,
+        frequency: str = "",
+        section_id: str | None = None,
+    ) -> None:
+        """Initialize."""
+        super().__init__(coordinator, entry, description)
+
+        name_label = format_ap_name(ssid or iface_name, frequency)
+
+        # Ensure sensors are grouped under the correct AP device
+        stable_id = coordinator.interface_to_stable_id.get(iface_name, iface_name)
+
+        # If multiple virtual interfaces map to the same AP device (e.g. mesh nodes),
+        # append the interface name to disambiguate the sensor entities.
+        if (
+            sum(
+                1
+                for sid in coordinator.interface_to_stable_id.values()
+                if sid == stable_id
+            )
+            > 1
+        ):
+            name_label = f"{name_label} [{iface_name}]"
+            # We also need to update the description name so the entity name reflects this.
+            # Use getattr to avoid AttributeError on HA versions where _attr_name has no
+            # class-level default until it is explicitly set.
+            existing_name = getattr(self, "_attr_name", None)
+            if existing_name:
+                self._attr_name = f"{existing_name} [{iface_name}]"
+            elif description.name:
+                self._attr_name = f"{description.name} [{iface_name}]"
+
+        self._attr_device_info = DeviceInfo(
+            identifiers={
+                (DOMAIN, format_ap_device_id(coordinator.router_id, stable_id))
+            },
+            name=name_label,
+            manufacturer="OpenWrt",
+            model="Access Point",
+            via_device=(DOMAIN, coordinator.router_id),
+        )
+        self._attr_translation_placeholders = {"iface": iface_name}
+
+
+class OpenWrtStorageSensor(CoordinatorEntity[OpenWrtDataCoordinator], SensorEntity):
+    """Sensor for a specific storage mount point."""
+
+    entity_description: OpenWrtStorageSensorDescription
+    _attr_has_entity_name = True
+
+    def __init__(
+        self,
+        coordinator: OpenWrtDataCoordinator,
+        entry: ConfigEntry,
+        description: OpenWrtStorageSensorDescription,
+        mount_point: str,
+    ) -> None:
+        """Initialize."""
+        super().__init__(coordinator)
+        self.entity_description = description
+        self._mount_point = mount_point
+        self._attr_unique_id = f"{entry.entry_id}_{description.key}_{mount_point}"
+        self._attr_device_info = DeviceInfo(
+            identifiers={(DOMAIN, cast(str, entry.unique_id or entry.data[CONF_HOST]))},
+        )
+        self._attr_translation_placeholders = {"mount": mount_point}
+
+    @property
+    def native_value(self) -> StateType | datetime:
+        """Return value."""
+        if (
+            not self.coordinator.data
+            or not self.coordinator.data.system_resources.storage
+        ):
+            return None
+        for usage in self.coordinator.data.system_resources.storage:
+            if usage.mount_point == self._mount_point:
+                return self.entity_description.value_fn(usage)
+        return None
+
+
+class OpenWrtQModemSensorEntity(OpenWrtSensorEntity):
+    """Representation of an OpenWrt QModem sensor."""
+
+    entity_description: OpenWrtSensorDescription
+    _attr_has_entity_name = True
+
+    def __init__(
+        self,
+        coordinator: OpenWrtDataCoordinator,
+        entry: ConfigEntry,
+        description: OpenWrtSensorDescription,
+    ) -> None:
+        """Initialize."""
+        super().__init__(coordinator, entry, description)
+        self._attr_unique_id = f"{entry.entry_id}_{description.key}"
+
+        manufacturer = coordinator.data.qmodem_info.manufacturer or "Unknown"
+        revision = coordinator.data.qmodem_info.revision
+        model = f"QModem {revision}" if revision else "QModem Device"
+
+        self._attr_device_info = DeviceInfo(
+            identifiers={(DOMAIN, f"{entry.unique_id}_qmodem")},
+            name=f"QModem ({entry.unique_id})",
+            manufacturer=manufacturer,
+            model=model,
+            via_device=(
+                DOMAIN,
+                cast(str, entry.unique_id or entry.data[CONF_HOST]),
+            ),
+        )
+
+    @property
+    def native_value(self) -> StateType | datetime:
+        """Return value."""
+        if self.coordinator.data is None:
+            return None
+        return self.entity_description.value_fn(self.coordinator.data)
+
+    @property
+    def available(self) -> bool:
+        """Return availability."""
+        if not self.coordinator.last_update_success:
+            return False
+        return not (
+            self.coordinator.data and not self.coordinator.data.qmodem_info.enabled
+        )
+
+
+class OpenWrtDeviceSensor(CoordinatorEntity[OpenWrtDataCoordinator], SensorEntity):
+    """Representation of an OpenWrt per-device sensor (e.g. signal)."""
+
+    _attr_has_entity_name = True
+
+    def __init__(
+        self,
+        coordinator: OpenWrtDataCoordinator,
+        entry: ConfigEntry,
+        mac: str,
+        description: SensorEntityDescription,
+        value_fn: Callable[[OpenWrtData], StateType],
+        available_fn: Callable[[OpenWrtData], bool] | None = None,
+        device_name: str | None = None,
+    ) -> None:
+        """Initialize."""
+        super().__init__(coordinator)
+        self.entity_description = description
+        self._mac = mac.lower()
+        self._value_fn = value_fn
+        self._available_fn = available_fn
+        self._attr_unique_id = f"{entry.entry_id}_{self._mac}_{description.key}"
+        self._attr_name = (
+            cast(str, description.name) if description.name is not UNDEFINED else None
+        )
+        self._entry = entry
+        self._initial_name = device_name or mac
+
+        if is_random_mac(self._mac):
+            self._attr_entity_registry_enabled_default = False
+        elif hasattr(description, "entity_registry_enabled_default"):
+            self._attr_entity_registry_enabled_default = (
+                description.entity_registry_enabled_default
+            )
+
+    @property
+    def device_info(self) -> DeviceInfo:
+        """Return device info."""
+        return DeviceInfo(
+            identifiers={(DOMAIN, self._mac)},
+            connections={(dr.CONNECTION_NETWORK_MAC, self._mac)},
+            name=self._initial_name,
+            via_device=get_via_device(
+                self.coordinator.hass, self.coordinator, self._entry, self._mac
+            ),
+        )
+
+    @property
+    def native_value(self) -> StateType | datetime:
+        """Return value."""
+        if self.coordinator.data is None:
+            return None
+        return self._value_fn(self.coordinator.data)
+
+    @property
+    def available(self) -> bool:
+        """Return availability."""
+        if not self.coordinator.last_update_success:
+            return False
+        if self._available_fn and self.coordinator.data:
+            return self._available_fn(self.coordinator.data)
+        return True
+
+    @property
+    def extra_state_attributes(self) -> dict[str, Any]:
+        """Return attributes."""
+        if self.coordinator.data is None:
+            return {}
+
+        for device in self.coordinator.data.connected_devices:
+            if device.mac and device.mac.lower() == self._mac:
+                attrs: dict[str, Any] = {
+                    "mac": device.mac,
+                    "is_wireless": device.is_wireless,
+                }
+                if device.connection_type:
+                    attrs["connection_type"] = device.connection_type
+                if device.connection_info:
+                    attrs["connection_info"] = device.connection_info
+                if device.rx_bytes:
+                    attrs["rx_bytes"] = device.rx_bytes
+                if device.tx_bytes:
+                    attrs["tx_bytes"] = device.tx_bytes
+                if device.rx_rate:
+                    attrs["rx_rate"] = device.rx_rate
+                if device.tx_rate:
+                    attrs["tx_rate"] = device.tx_rate
+                if device.uptime:
+                    attrs["uptime"] = device.uptime
+                if device.interface:
+                    attrs["interface"] = device.interface
+                return attrs
+        return {}
+
+
+def _bytes_to_mb(value: int) -> float:
+    """Convert bytes to MB."""
+    return round(value / (1024 * 1024), 2)
+
+
+def _get_system_sensors() -> tuple[OpenWrtSensorDescription, ...]:
+    """Get system sensors."""
+    return (
+        OpenWrtSensorDescription(
+            key="cpu_usage",
+            name="CPU Usage",
+            translation_key="cpu_usage",
+            native_unit_of_measurement=PERCENTAGE,
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            suggested_display_precision=1,
+            value_fn=lambda data: data.system_resources.cpu_usage,
+        ),
+        OpenWrtSensorDescription(
+            key="public_ip",
+            name="Public IP",
+            translation_key="public_ip",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.external_ip,
+        ),
+        OpenWrtSensorDescription(
+            key="memory_usage",
+            name="Memory Usage",
+            translation_key="memory_usage",
+            native_unit_of_measurement=PERCENTAGE,
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            suggested_display_precision=1,
+            value_fn=lambda data: (
+                round(
+                    data.system_resources.memory_used
+                    / data.system_resources.memory_total
+                    * 100,
+                    1,
+                )
+                if data.system_resources.memory_total > 0
+                else 0
+            ),
+            attrs_fn=lambda data: {
+                "total_mb": _bytes_to_mb(data.system_resources.memory_total),
+                "used_mb": _bytes_to_mb(data.system_resources.memory_used),
+                "free_mb": _bytes_to_mb(data.system_resources.memory_free),
+                "buffered_mb": _bytes_to_mb(data.system_resources.memory_buffered),
+                "cached_mb": _bytes_to_mb(data.system_resources.memory_cached),
+            },
+        ),
+        OpenWrtSensorDescription(
+            key="memory_used",
+            name="Memory Used",
+            translation_key="memory_used",
+            native_unit_of_measurement=UnitOfInformation.MEGABYTES,
+            device_class=SensorDeviceClass.DATA_SIZE,
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            entity_registry_enabled_default=False,
+            value_fn=lambda data: _bytes_to_mb(data.system_resources.memory_used),
+        ),
+        OpenWrtSensorDescription(
+            key="swap_usage",
+            name="Swap Usage",
+            translation_key="swap_usage",
+            native_unit_of_measurement=PERCENTAGE,
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            entity_registry_enabled_default=False,
+            value_fn=lambda data: (
+                round(
+                    data.system_resources.swap_used
+                    / data.system_resources.swap_total
+                    * 100,
+                    1,
+                )
+                if data.system_resources.swap_total > 0
+                else 0
+            ),
+            available_fn=lambda data: data.system_resources.swap_total > 0,
+        ),
+        OpenWrtSensorDescription(
+            key="load_1min",
+            name="System Load (1m)",
+            translation_key="load_1min",
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            suggested_display_precision=2,
+            value_fn=lambda data: round(data.system_resources.load_1min, 2),
+        ),
+        OpenWrtSensorDescription(
+            key="load_5min",
+            name="System Load (5m)",
+            translation_key="load_5min",
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            entity_registry_enabled_default=False,
+            suggested_display_precision=2,
+            value_fn=lambda data: round(data.system_resources.load_5min, 2),
+        ),
+        OpenWrtSensorDescription(
+            key="load_15min",
+            name="System Load (15m)",
+            translation_key="load_15min",
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            entity_registry_enabled_default=False,
+            suggested_display_precision=2,
+            value_fn=lambda data: round(data.system_resources.load_15min, 2),
+        ),
+        OpenWrtSensorDescription(
+            key="uptime",
+            name="Uptime",
+            translation_key="uptime",
+            device_class=SensorDeviceClass.TIMESTAMP,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.boot_time,
+            attrs_fn=lambda data: {
+                "days": data.system_resources.uptime // 86400,
+                "hours": (data.system_resources.uptime % 86400) // 3600,
+                "minutes": (
+                    (data.system_resources.uptime % 3600) // 60
+                    if data.system_resources.uptime < 3600
+                    else None
+                ),
+            },
+        ),
+        OpenWrtSensorDescription(
+            key="temperature",
+            name="Temperature",
+            translation_key="temperature",
+            device_class=SensorDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            suggested_display_precision=1,
+            value_fn=lambda data: data.system_resources.temperature,
+            available_fn=lambda data: data.system_resources.temperature is not None,
+        ),
+        OpenWrtSensorDescription(
+            key="storage_usage",
+            name="Storage Usage",
+            translation_key="storage_usage",
+            native_unit_of_measurement=PERCENTAGE,
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            entity_registry_enabled_default=False,
+            value_fn=lambda data: (
+                round(
+                    data.system_resources.filesystem_used
+                    / data.system_resources.filesystem_total
+                    * 100,
+                    1,
+                )
+                if data.system_resources.filesystem_total > 0
+                else 0
+            ),
+            available_fn=lambda data: data.system_resources.filesystem_total > 0,
+            attrs_fn=lambda data: {
+                "total_mb": _bytes_to_mb(data.system_resources.filesystem_total),
+                "used_mb": _bytes_to_mb(data.system_resources.filesystem_used),
+                "free_mb": _bytes_to_mb(data.system_resources.filesystem_free),
+            },
+        ),
+        OpenWrtSensorDescription(
+            key="filesystem_free",
+            name="Filesystem Free",
+            translation_key="filesystem_free",
+            native_unit_of_measurement=UnitOfInformation.MEGABYTES,
+            device_class=SensorDeviceClass.DATA_SIZE,
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            entity_registry_enabled_default=False,
+            suggested_display_precision=1,
+            value_fn=lambda data: _bytes_to_mb(data.system_resources.filesystem_free),
+            available_fn=lambda data: data.system_resources.filesystem_total > 0,
+        ),
+        OpenWrtSensorDescription(
+            key="kernel_version",
+            name="Kernel Version",
+            translation_key="kernel_version",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            entity_registry_enabled_default=False,
+            value_fn=lambda data: data.device_info.kernel_version,
+        ),
+        OpenWrtSensorDescription(
+            key="architecture",
+            name="Architecture",
+            translation_key="architecture",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            entity_registry_enabled_default=False,
+            value_fn=lambda data: data.device_info.architecture,
+        ),
+        OpenWrtSensorDescription(
+            key="connected_clients",
+            name="Connected Clients",
+            translation_key="connected_clients",
+            state_class=SensorStateClass.MEASUREMENT,
+            value_fn=lambda data: sum(
+                1 for d in data.all_connected_devices if d.connected
+            ),
+            attrs_fn=lambda data: {
+                "wireless": sum(
+                    1
+                    for d in data.all_connected_devices
+                    if d.is_wireless and d.connected
+                ),
+                "wired": sum(
+                    1
+                    for d in data.all_connected_devices
+                    if not d.is_wireless and d.connected
+                ),
+            },
+        ),
+        OpenWrtSensorDescription(
+            key="wireless_clients",
+            name="Wireless Clients",
+            translation_key="wireless_clients",
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_registry_enabled_default=False,
+            value_fn=lambda data: sum(
+                1 for d in data.all_connected_devices if d.is_wireless and d.connected
+            ),
+        ),
+        OpenWrtSensorDescription(
+            key="neighbor_devices",
+            name="Neighbor Devices",
+            translation_key="neighbor_devices",
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_registry_enabled_default=False,
+            value_fn=lambda data: len(data.ip_neighbors),
+            attrs_fn=lambda data: {
+                "reachable": sum(
+                    1 for n in data.ip_neighbors if n.state.upper() == "REACHABLE"
+                ),
+                "stale": sum(
+                    1 for n in data.ip_neighbors if n.state.upper() == "STALE"
+                ),
+            },
+        ),
+        OpenWrtSensorDescription(
+            key="system_logs",
+            name="System Logs",
+            translation_key="system_logs",
+            icon="mdi:script-text",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            entity_registry_enabled_default=False,
+            value_fn=lambda data: (
+                "Error"
+                if any(
+                    e in line.lower()
+                    for e in ["err", "fail", "crit", "alert", "emerg"]
+                    for line in data.system_logs
+                )
+                else "OK"
+            ),
+            attrs_fn=lambda data: {
+                "logs": "\n".join(data.system_logs),
+                "log_count": len(data.system_logs),
+            },
+        ),
+        OpenWrtSensorDescription(
+            key="top_processes",
+            name="Top Processes",
+            translation_key="top_processes",
+            icon="mdi:cpu-64-bit",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            entity_registry_enabled_default=False,
+            value_fn=lambda data: len(data.system_resources.top_processes),
+            attrs_fn=lambda data: {
+                "processes": [
+                    {
+                        "pid": p.pid,
+                        "user": p.user,
+                        "cpu": f"{p.cpu_usage}%",
+                        "vsz": f"{p.vsz}k",
+                        "command": p.command,
+                    }
+                    for p in data.system_resources.top_processes
+                ]
+            },
+        ),
+        OpenWrtSensorDescription(
+            key="usb_devices",
+            name="USB Devices",
+            icon="mdi:usb",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            entity_registry_enabled_default=False,
+            value_fn=lambda data: (
+                len(data.system_resources.usb_devices) if data.system_resources else 0
+            ),
+            attrs_fn=lambda data: {
+                "devices": [
+                    {
+                        "id": dev.id,
+                        "vendor_id": dev.vendor_id,
+                        "product_id": dev.product_id,
+                        "manufacturer": dev.manufacturer,
+                        "product": dev.product,
+                        "speed": dev.speed,
+                    }
+                    for dev in (
+                        data.system_resources.usb_devices
+                        if data.system_resources
+                        else []
+                    )
+                ]
+            },
+        ),
+    )
+
+
+def _get_upnp_sensors() -> tuple[OpenWrtSensorDescription, ...]:
+    """Get UPnP sensors."""
+    return (
+        OpenWrtSensorDescription(
+            key="upnp_mappings",
+            name="UPnP Mappings",
+            translation_key="upnp_mappings",
+            icon="mdi:folder-network",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            entity_registry_enabled_default=False,
+            value_fn=lambda data: len(data.upnp_mappings),
+            attrs_fn=lambda data: {
+                "mappings": [
+                    {
+                        "protocol": m.protocol,
+                        "external_port": m.external_port,
+                        "internal_ip": m.internal_ip,
+                        "internal_port": m.internal_port,
+                        "description": m.description,
+                    }
+                    for m in data.upnp_mappings
+                ]
+            },
+        ),
+    )
+
+
+def _get_qmodem_sensors() -> tuple[OpenWrtSensorDescription, ...]:
+    """Get QModem sensors."""
+    return (
+        OpenWrtSensorDescription(
+            key="qmodem_manufacturer",
+            name="Modem Manufacturer",
+            translation_key="qmodem_manufacturer",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            entity_registry_enabled_default=False,
+            value_fn=lambda data: data.qmodem_info.manufacturer,
+        ),
+        OpenWrtSensorDescription(
+            key="qmodem_revision",
+            name="Modem Revision",
+            translation_key="qmodem_revision",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            entity_registry_enabled_default=False,
+            value_fn=lambda data: data.qmodem_info.revision,
+        ),
+        OpenWrtSensorDescription(
+            key="qmodem_temperature",
+            name="Modem Temperature",
+            translation_key="qmodem_temperature",
+            device_class=SensorDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.qmodem_info.temperature,
+        ),
+        OpenWrtSensorDescription(
+            key="qmodem_voltage",
+            name="Modem Voltage",
+            translation_key="qmodem_voltage",
+            device_class=SensorDeviceClass.VOLTAGE,
+            native_unit_of_measurement="mV",
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.qmodem_info.voltage,
+        ),
+        OpenWrtSensorDescription(
+            key="qmodem_connect_status",
+            name="Modem Connect Status",
+            translation_key="qmodem_connect_status",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.qmodem_info.connect_status,
+        ),
+        OpenWrtSensorDescription(
+            key="qmodem_sim_status",
+            name="SIM Status",
+            translation_key="qmodem_sim_status",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.qmodem_info.sim_status,
+        ),
+        OpenWrtSensorDescription(
+            key="qmodem_isp",
+            name="Internet Service Provider",
+            translation_key="qmodem_isp",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.qmodem_info.isp,
+        ),
+        OpenWrtSensorDescription(
+            key="qmodem_sim_slot",
+            name="SIM Slot",
+            translation_key="qmodem_sim_slot",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.qmodem_info.sim_slot,
+        ),
+        OpenWrtSensorDescription(
+            key="qmodem_lte_rsrp",
+            name="LTE RSRP",
+            translation_key="qmodem_lte_rsrp",
+            device_class=SensorDeviceClass.SIGNAL_STRENGTH,
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement="dBm",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.qmodem_info.lte_rsrp,
+        ),
+        OpenWrtSensorDescription(
+            key="qmodem_lte_rsrq",
+            name="LTE RSRQ",
+            translation_key="qmodem_lte_rsrq",
+            device_class=SensorDeviceClass.SIGNAL_STRENGTH,
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement="dB",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.qmodem_info.lte_rsrq,
+        ),
+        OpenWrtSensorDescription(
+            key="qmodem_lte_rssi",
+            name="LTE RSSI",
+            translation_key="qmodem_lte_rssi",
+            device_class=SensorDeviceClass.SIGNAL_STRENGTH,
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement="dBm",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.qmodem_info.lte_rssi,
+        ),
+        OpenWrtSensorDescription(
+            key="qmodem_lte_sinr",
+            name="LTE SINR",
+            translation_key="qmodem_lte_sinr",
+            device_class=SensorDeviceClass.SIGNAL_STRENGTH,
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement="dB",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.qmodem_info.lte_sinr,
+        ),
+        OpenWrtSensorDescription(
+            key="qmodem_nr5g_rsrp",
+            name="5G NR RSRP",
+            translation_key="qmodem_nr5g_rsrp",
+            device_class=SensorDeviceClass.SIGNAL_STRENGTH,
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement="dBm",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.qmodem_info.nr5g_rsrp,
+        ),
+        OpenWrtSensorDescription(
+            key="qmodem_nr5g_rsrq",
+            name="5G NR RSRQ",
+            translation_key="qmodem_nr5g_rsrq",
+            device_class=SensorDeviceClass.SIGNAL_STRENGTH,
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement="dB",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.qmodem_info.nr5g_rsrq,
+        ),
+        OpenWrtSensorDescription(
+            key="qmodem_nr5g_sinr",
+            name="5G NR SINR",
+            translation_key="qmodem_nr5g_sinr",
+            device_class=SensorDeviceClass.SIGNAL_STRENGTH,
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement="dB",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.qmodem_info.nr5g_sinr,
+        ),
+    )
+
+
+def _get_adblock_sensors() -> tuple[OpenWrtSensorDescription, ...]:
+    """Get adblock sensor descriptions."""
+    return (
+        OpenWrtSensorDescription(
+            key="adblock_status",
+            name="AdBlock Status",
+            translation_key="adblock_status",
+            icon="mdi:shield-check",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.adblock.status,
+        ),
+        OpenWrtSensorDescription(
+            key="adblock_blocked",
+            name="AdBlock Blocked Domains",
+            translation_key="adblock_blocked",
+            icon="mdi:shield-search",
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.adblock.blocked_domains,
+        ),
+    )
+
+
+def _get_simple_adblock_sensors() -> tuple[OpenWrtSensorDescription, ...]:
+    """Get simple-adblock sensor descriptions."""
+    return (
+        OpenWrtSensorDescription(
+            key="simple_adblock_blocked",
+            name="Simple AdBlock Blocked Domains",
+            translation_key="simple_adblock_blocked",
+            icon="mdi:shield-search",
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.simple_adblock.blocked_domains,
+        ),
+    )
+
+
+def _get_banip_sensors() -> tuple[OpenWrtSensorDescription, ...]:
+    """Get ban-ip sensor descriptions."""
+    return (
+        OpenWrtSensorDescription(
+            key="banip_banned",
+            name="Ban-IP Banned IPs",
+            translation_key="banip_banned",
+            icon="mdi:ip-network-outline",
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.ban_ip.banned_ips,
+        ),
+    )
+
+
+class OpenWrtNlbwmonTopHostsSensor(
+    CoordinatorEntity[OpenWrtDataCoordinator], SensorEntity
+):
+    """Sensor showing count and ranked list of top bandwidth hosts via nlbwmon."""
+
+    _attr_has_entity_name = True
+    _attr_icon = "mdi:network-outline"
+    _attr_name = "Top Bandwidth Hosts"
+
+    def __init__(
+        self,
+        coordinator: OpenWrtDataCoordinator,
+        entry: ConfigEntry,
+    ) -> None:
+        super().__init__(coordinator)
+        self._entry = entry
+        self._attr_unique_id = f"{entry.entry_id}_top_bandwidth_hosts"
+
+    @property
+    def device_info(self) -> DeviceInfo:
+        return DeviceInfo(
+            identifiers={(DOMAIN, self.coordinator.router_id)},
+        )
+
+    @property
+    def native_value(self) -> int | None:
+        if not self.coordinator.data:
+            return None
+        hosts = self.coordinator.data.nlbwmon_top_hosts
+        if not hosts:
+            return None
+        return hosts.get("host_count", 0)
+
+    @property
+    def extra_state_attributes(self) -> dict[str, Any]:
+        if not self.coordinator.data:
+            return {}
+        hosts = self.coordinator.data.nlbwmon_top_hosts
+        if not hosts:
+            return {}
+        return {
+            "host_count": hosts.get("host_count", 0),
+            "total_download": _format_bytes(hosts.get("total_rx_bytes", 0)),
+            "total_upload": _format_bytes(hosts.get("total_tx_bytes", 0)),
+            "top_hosts": hosts.get("top_hosts", []),
+        }
 
 
 async def async_setup_entry(
     hass: HomeAssistant,
     entry: ConfigEntry,
-    async_add_entities
+    async_add_entities: AddEntitiesCallback,
 ) -> None:
+    """Set up OpenWrt sensors from a config entry."""
+    coordinator: OpenWrtDataCoordinator = hass.data[DOMAIN][entry.entry_id][
+        DATA_COORDINATOR
+    ]
 
-    entities = []
-    data = entry.as_dict()
-    device = hass.data[DOMAIN]['devices'][entry.entry_id]
-    device_id = data['data']['id']
+    tracked_keys: set[str] = set()
 
-    wireless = []
-    for net_id in device.coordinator.data.get('wireless', {}):
-        sensor = WirelessClientsSensor(device, device_id, net_id)
-        wireless.append(sensor)
-        entities.append(sensor)
-    if len(wireless) > 0:
-        entities.append(WirelessTotalClientsSensor(
-            device, device_id, wireless))
-    for net_id in device.coordinator.data.get('mesh', {}):
-        entities.append(
-            MeshSignalSensor(device, device_id, net_id)
+    @callback
+    def _async_discover_entities() -> None:
+        """Discover and add all sensors (static and dynamic)."""
+        if not coordinator.data:
+            return
+
+        new_entities: list[SensorEntity] = []
+        perms = coordinator.data.permissions
+        pkgs = coordinator.data.packages
+
+        _LOGGER.debug(
+            "Discovering sensors for %s. Permissions: %s, Packages: %s",
+            entry.title,
+            perms,
+            pkgs,
         )
-        entities.append(
-            MeshPeersSensor(device, device_id, net_id)
+
+        # System & Storage Sensors
+        _async_setup_system_sensors(
+            coordinator,
+            entry,
+            new_entities,
+            pkgs,
+            tracked_keys,
+            entry.options.get(CONF_ENABLE_LOAD, True),
         )
-    for net_id in device.coordinator.data.get("mwan3", {}):
-        entities.append(
-            Mwan3OnlineSensor(device, device_id, net_id)
+        _async_setup_storage_sensors(coordinator, entry, new_entities, tracked_keys)
+
+        # VPN Sensors
+        if (
+            perms.read_vpn
+            and pkgs.wireguard is not False
+            and entry.options.get(CONF_ENABLE_VPN, True)
+        ):
+            _async_setup_wireguard_sensors(
+                coordinator, entry, new_entities, tracked_keys
+            )
+
+        # Wireless Sensors
+        if perms.read_wireless and pkgs.iwinfo is not False:
+            _async_setup_wireless_sensors(
+                coordinator, entry, new_entities, tracked_keys
+            )
+
+        # Network Sensors
+        _async_setup_network_sensors(coordinator, entry, new_entities, tracked_keys)
+
+        # Specialized Sensors
+        _async_setup_specialized_sensors(
+            coordinator, entry, new_entities, perms, pkgs, tracked_keys
         )
-    for net_id in device.coordinator.data.get("wan", {}):
-        entities.append(
-            WanRxTxSensor(device, device_id, net_id, "rx")
+
+        # Device-specific sensors (Dynamic)
+        track_devices = entry.options.get(
+            CONF_TRACK_DEVICES,
+            entry.data.get(CONF_TRACK_DEVICES, DEFAULT_TRACK_DEVICES),
         )
-        entities.append(
-            WanRxTxSensor(device, device_id, net_id, "tx")
+        if track_devices:
+            track_wired = entry.options.get(
+                CONF_TRACK_WIRED,
+                entry.data.get(CONF_TRACK_WIRED, DEFAULT_TRACK_WIRED),
+            )
+            skip_random = entry.options.get(
+                CONF_SKIP_RANDOM_MAC, DEFAULT_SKIP_RANDOM_MAC
+            )
+
+            for device in coordinator.data.connected_devices:
+                if not device.mac:
+                    continue
+                mac = device.mac.lower()
+                is_random = is_random_mac(mac)
+
+                if is_random and skip_random:
+                    continue
+                if not track_wired and not device.is_wireless and not is_random:
+                    continue
+
+                # Device diagnostic sensors (Signal, Rates, Noise)
+                key = f"device_{mac.replace(':', '_')}_sensors"
+                if key not in tracked_keys:
+                    tracked_keys.add(key)
+                    new_entities.extend(
+                        _create_device_sensors(coordinator, entry, device)
+                    )
+
+                # NLBWmon sensors
+                if pkgs.nlbwmon:
+                    key = f"nlbwmon_{mac.replace(':', '_')}"
+                    if key not in tracked_keys:
+                        tracked_keys.add(key)
+                        new_entities.extend(
+                            _create_nlbwmon_sensors(coordinator, entry, device)
+                        )
+
+        if new_entities:
+            async_add_entities(new_entities)
+
+    # Initial discovery and listener registration
+    _async_discover_entities()
+    entry.async_on_unload(coordinator.async_add_listener(_async_discover_entities))
+
+    @callback
+    def _async_cleanup_entities() -> None:
+        """Clean up orphaned or old-format entities."""
+        ent_reg = er.async_get(hass)
+        entries = er.async_entries_for_config_entry(ent_reg, entry.entry_id)
+
+        track_devices = entry.options.get(
+            CONF_TRACK_DEVICES,
+            entry.data.get(CONF_TRACK_DEVICES, DEFAULT_TRACK_DEVICES),
         )
-    async_add_entities(entities)
-    return True
+        track_wired = entry.options.get(
+            CONF_TRACK_WIRED,
+            entry.data.get(CONF_TRACK_WIRED, DEFAULT_TRACK_WIRED),
+        )
+
+        for ent in entries:
+            if ent.domain != "sensor":
+                continue
+
+            unique_id = ent.unique_id
+
+            # Cleanup by settings
+            if "_device_" in unique_id:
+                if not track_devices:
+                    ent_reg.async_remove(ent.entity_id)
+                    continue
+
+                # Identify MAC from unique_id
+                parts = unique_id.split("_")
+                if len(parts) >= 4:
+                    mac = parts[1]
+                    # Pattern check for old format
+                    if f"_device_{mac}_" in unique_id:
+                        ent_reg.async_remove(ent.entity_id)
+                        continue
+
+                    # Wired cleanup
+                    if not track_wired and mac in coordinator._device_history:
+                        if not coordinator._device_history[mac].get("is_wireless"):
+                            ent_reg.async_remove(ent.entity_id)
+                            continue
+
+            # Cleanup top bandwidth hosts sensor when option is disabled
+            if (
+                unique_id == f"{entry.entry_id}_top_bandwidth_hosts"
+                and not entry.options.get(
+                    CONF_ENABLE_NLBWMON_SENSORS,
+                    entry.data.get(CONF_ENABLE_NLBWMON_SENSORS, False),
+                )
+            ):
+                ent_reg.async_remove(ent.entity_id)
+                continue
+
+            # Cleanup Batman neighbors
+            if "batman_neighbor_" in unique_id:
+                current_keys = {
+                    f"batman_neighbor_{n.mac}"
+                    for n in coordinator.data.batman_neighbors
+                }
+                if unique_id not in current_keys:
+                    ent_reg.async_remove(ent.entity_id)
+                    tracked_keys.discard(unique_id)
+                    continue
+
+            # Cleanup orphaned wireless sensors (e.g. ghost radios)
+            if "_wifi_" in unique_id and coordinator.data:
+                found = False
+                for w in coordinator.data.wireless_interfaces:
+                    if f"_wifi_{w.name}_" in unique_id or (
+                        w.section and f"_wifi_{w.section}_" in unique_id
+                    ):
+                        found = True
+                        break
+                if not found:
+                    ent_reg.async_remove(ent.entity_id)
+                    continue
+
+    hass.add_job(_async_cleanup_entities)
+
+    if entry.options.get(
+        CONF_ENABLE_NLBWMON_SENSORS,
+        entry.data.get(CONF_ENABLE_NLBWMON_SENSORS, False),
+    ):
+        async_add_entities([OpenWrtNlbwmonTopHostsSensor(coordinator, entry)])
 
 
-class OpenWrtSensor(OpenWrtEntity, SensorEntity):
-    def __init__(self, coordinator, device: str):
-        super().__init__(coordinator, device)
-
-    @property
-    def state_class(self):
-        return 'measurement'
-
-
-class WirelessClientsSensor(OpenWrtSensor):
-
-    def __init__(self, device, device_id: str, interface: str):
-        super().__init__(device, device_id)
-        self._interface_id = interface
-
-    @property
-    def unique_id(self):
-        return "%s.%s.clients" % (super().unique_id, self._interface_id)
-
-    @property
-    def name(self):
-        return "%s Wireless [%s] clients" % (super().name, self._interface_id)
-
-    @property
-    def state(self):
-        return self.data.get('wireless', {}).get(self._interface_id, {}).get('clients', 0)
-
-    @property
-    def available(self):
-        return self._interface_id in self.data.get("wireless", {})
-
-    @property
-    def icon(self):
-        return 'mdi:wifi-off' if self.state == 0 else 'mdi:wifi'
-
-    @property
-    def extra_state_attributes(self):
-        result = dict()
-        data = self.data.get('wireless', {}).get(self._interface_id, {})
-        for key, value in data.get("macs", {}).items():
-            signal = value.get("signal", 0)
-            result[key.upper()] = f"{signal} dBm"
-        return result
-
-    @property
-    def entity_category(self):
-        return EntityCategory.DIAGNOSTIC
+def _create_nlbwmon_sensors(
+    coordinator: OpenWrtDataCoordinator,
+    entry: ConfigEntry,
+    device: Any,
+) -> list[SensorEntity]:
+    """Create nlbwmon sensors for a device."""
+    if not coordinator.data or not coordinator.data.packages.nlbwmon:
+        return []
+    return [
+        OpenWrtNlbwmonRxSensor(
+            coordinator,
+            entry,
+            device.mac.lower(),
+            device.hostname or device.mac,
+        ),
+        OpenWrtNlbwmonTxSensor(
+            coordinator,
+            entry,
+            device.mac.lower(),
+            device.hostname or device.mac,
+        ),
+    ]
 
 
-class MeshSignalSensor(OpenWrtSensor):
+class OpenWrtNlbwmonRxSensor(CoordinatorEntity[OpenWrtDataCoordinator], SensorEntity):
+    """Sensor for client download usage (Rx) from nlbwmon."""
 
-    def __init__(self, device, device_id: str, interface: str):
-        super().__init__(device, device_id)
-        self._interface_id = interface
+    _attr_has_entity_name = True
+    _attr_entity_registry_enabled_default = False
+    _attr_icon = "mdi:download"
+    _attr_entity_category = EntityCategory.DIAGNOSTIC
+    _attr_native_unit_of_measurement = UnitOfInformation.MEGABYTES
+    _attr_device_class = SensorDeviceClass.DATA_SIZE
+    _attr_state_class = SensorStateClass.TOTAL_INCREASING
 
-    @property
-    def unique_id(self):
-        return "%s.%s.mesh_signal" % (super().unique_id, self._interface_id)
-
-    @property
-    def name(self):
-        return f"{super().name} Mesh [{self._interface_id}] signal"
-
-    @property
-    def state(self):
-        value = self.data.get('mesh', {}).get(self._interface_id, {}).get('signal', -100)
-        return f"{value} dBm"
-
-    @property
-    def available(self):
-        return self._interface_id in self.data.get("mesh", {})
-
-    @property
-    def device_class(self):
-        return 'signal_strength'
-
-    @property
-    def signal_strength(self):
-        value = self.data.get('mesh', {}).get(self._interface_id, {}).get('signal', -100)
-        levels = [-50, -60, -67, -70, -80]
-        for idx, level in enumerate(levels):
-            if value >= level:
-                return idx
-        return len(levels)
-
-    @property
-    def icon(self):
-        icons = ['mdi:network-strength-4', 'mdi:network-strength-3', 'mdi:network-strength-2',
-                 'mdi:network-strength-1', 'mdi:network-strength-outline', 'mdi:network-strength-off-outline']
-        return icons[self.signal_strength]
-
-    @property
-    def entity_category(self):
-        return EntityCategory.DIAGNOSTIC
-
-
-class MeshPeersSensor(OpenWrtSensor):
-
-    def __init__(self, device, device_id: str, interface: str):
-        super().__init__(device, device_id)
-        self._interface_id = interface
-
-    @property
-    def unique_id(self):
-        return "%s.%s.mesh_peers" % (super().unique_id, self._interface_id)
-
-    @property
-    def name(self):
-        return f"{super().name} Mesh [{self._interface_id}] peers"
-
-    @property
-    def state(self):
-        peers = self.data.get("mesh", {}).get(self._interface_id, {}).get("peers", {})
-        return len(list(filter(lambda x: x["active"], peers.values())))
-
-    @property
-    def available(self):
-        return self._interface_id in self.data.get("mesh", {})
-
-    @property
-    def icon(self):
-        return 'mdi:server-network' if self.state > 0 else 'mdi:server-network-off'
-
-    @property
-    def extra_state_attributes(self):
-        result = dict()
-        data = self.data.get("mesh", {}).get(self._interface_id, {})
-        for key, value in data.get("peers", {}).items():
-            signal = value.get("signal", 0)
-            result[key.upper()] = f"{signal} dBm"
-        return result
+    def __init__(
+        self,
+        coordinator: OpenWrtDataCoordinator,
+        entry: ConfigEntry,
+        mac: str,
+        name: str,
+    ) -> None:
+        """Initialize the nlbwmon Rx sensor."""
+        super().__init__(coordinator)
+        self._mac = mac.upper()
+        self._entry = entry
+        self._initial_name = name
+        self._attr_name = "Traffic Rx"
+        self._attr_unique_id = f"{entry.entry_id}_nlbwmon_rx_{mac.replace(':', '_')}"
 
     @property
-    def entity_category(self):
-        return EntityCategory.DIAGNOSTIC
-
-
-class WirelessTotalClientsSensor(OpenWrtSensor):
-
-    def __init__(self, device, device_id: str, sensors):
-        super().__init__(device, device_id)
-        self._sensors = sensors
-
-    @property
-    def unique_id(self):
-        return "%s.total_clients" % (super().unique_id)
+    def device_info(self) -> DeviceInfo:
+        """Return device information."""
+        return DeviceInfo(
+            identifiers={(DOMAIN, self._mac.lower())},
+            connections={(dr.CONNECTION_NETWORK_MAC, self._mac.lower())},
+            name=self._initial_name,
+            via_device=get_via_device(
+                self.coordinator.hass, self.coordinator, self._entry, self._mac
+            ),
+        )
 
     @property
-    def name(self):
-        return "%s Wireless total clients" % (super().name)
+    def native_value(self) -> float | None:
+        """Return the Rx bandwidth usage in MB."""
+        if not self.coordinator.data:
+            return None
+        traffic = self.coordinator.data.nlbwmon_traffic.get(self._mac)
+        if not traffic:
+            return None
+        return round(traffic.rx_bytes / (1024 * 1024), 2)
+
+
+class OpenWrtNlbwmonTxSensor(CoordinatorEntity[OpenWrtDataCoordinator], SensorEntity):
+    """Sensor for client upload usage (Tx) from nlbwmon."""
+
+    _attr_has_entity_name = True
+    _attr_entity_registry_enabled_default = False
+    _attr_icon = "mdi:upload"
+    _attr_entity_category = EntityCategory.DIAGNOSTIC
+    _attr_native_unit_of_measurement = UnitOfInformation.MEGABYTES
+    _attr_device_class = SensorDeviceClass.DATA_SIZE
+    _attr_state_class = SensorStateClass.TOTAL_INCREASING
+
+    def __init__(
+        self,
+        coordinator: OpenWrtDataCoordinator,
+        entry: ConfigEntry,
+        mac: str,
+        name: str,
+    ) -> None:
+        """Initialize the nlbwmon Tx sensor."""
+        super().__init__(coordinator)
+        self._mac = mac.upper()
+        self._entry = entry
+        self._initial_name = name
+        self._attr_name = "Traffic Tx"
+        self._attr_unique_id = f"{entry.entry_id}_nlbwmon_tx_{mac.replace(':', '_')}"
 
     @property
-    def state(self):
-        total = 0
-        for item in self._sensors:
-            total += item.state
-        return total
+    def device_info(self) -> DeviceInfo:
+        """Return device information."""
+        return DeviceInfo(
+            identifiers={(DOMAIN, self._mac.lower())},
+            connections={(dr.CONNECTION_NETWORK_MAC, self._mac.lower())},
+            name=self._initial_name,
+            via_device=get_via_device(
+                self.coordinator.hass, self.coordinator, self._entry, self._mac
+            ),
+        )
 
     @property
-    def icon(self):
-        return 'mdi:wifi-off' if self.state == 0 else 'mdi:wifi'
+    def native_value(self) -> float | None:
+        """Return the Tx bandwidth usage in MB."""
+        if not self.coordinator.data:
+            return None
+        traffic = self.coordinator.data.nlbwmon_traffic.get(self._mac)
+        if not traffic:
+            return None
+        return round(traffic.tx_bytes / (1024 * 1024), 2)
 
 
-class Mwan3OnlineSensor(OpenWrtSensor):
+def _async_setup_wireguard_sensors(
+    coordinator: OpenWrtDataCoordinator,
+    entry: ConfigEntry,
+    entities: list[SensorEntity],
+    tracked_keys: set[str],
+) -> None:
+    """Set up WireGuard sensors."""
+    if not coordinator.data:
+        return
 
-    def __init__(self, device, device_id: str, interface: str):
-        super().__init__(device, device_id)
-        self._interface_id = interface
-        self._attr_native_unit_of_measurement = "%"
-        self._attr_icon = "mdi:router-network"
-        self._attr_entity_category = EntityCategory.DIAGNOSTIC
+    for wg in coordinator.data.wireguard_interfaces:
+        # Interface level: Peer count
+        key = f"wireguard_{wg.name}_peer_count"
+        if key not in tracked_keys:
+            tracked_keys.add(key)
+            entities.append(
+                OpenWrtSensorEntity(
+                    coordinator,
+                    entry,
+                    OpenWrtSensorDescription(
+                        key=key,
+                        name=f"WireGuard {wg.name} Peer Count",
+                        icon="mdi:account-group",
+                        entity_category=EntityCategory.DIAGNOSTIC,
+                        entity_registry_enabled_default=False,
+                        value_fn=lambda data, n=wg.name: next(
+                            (
+                                len(w.peers)
+                                for w in data.wireguard_interfaces
+                                if w.name == n
+                            ),
+                            0,
+                        ),
+                    ),
+                )
+            )
+
+        # Peer level: Data usage
+        for peer in wg.peers:
+            peer_key = f"wg_{wg.name}_{peer.public_key}"
+            if peer_key not in tracked_keys:
+                tracked_keys.add(peer_key)
+                entities.append(
+                    OpenWrtWireGuardPeerSensor(
+                        coordinator,
+                        entry,
+                        wg.name,
+                        peer.public_key,
+                    )
+                )
+
+
+class OpenWrtWireGuardPeerSensor(
+    CoordinatorEntity[OpenWrtDataCoordinator], SensorEntity
+):
+    """Sensor for a specific WireGuard peer."""
+
+    _attr_has_entity_name = True
+    _attr_entity_registry_enabled_default = False
+    _attr_icon = "mdi:vpn"
+    _attr_entity_category = EntityCategory.DIAGNOSTIC
+    _attr_native_unit_of_measurement = UnitOfInformation.MEGABYTES
+    _attr_device_class = SensorDeviceClass.DATA_SIZE
+    _attr_state_class = SensorStateClass.TOTAL_INCREASING
+
+    def __init__(
+        self,
+        coordinator: OpenWrtDataCoordinator,
+        entry: ConfigEntry,
+        iface_name: str,
+        public_key: str,
+    ) -> None:
+        """Initialize the WireGuard peer sensor."""
+        super().__init__(coordinator)
+        self._iface_name = iface_name
+        self._public_key = public_key
+        self._attr_unique_id = f"{entry.entry_id}_wg_{iface_name}_{public_key}"
+        self._attr_name = f"WireGuard {iface_name} Peer {public_key[:8]}"
+        self._attr_device_info = DeviceInfo(
+            identifiers={(DOMAIN, cast(str, entry.unique_id or entry.data[CONF_HOST]))},
+        )
 
     @property
-    def available(self):
-        return self._interface_id in self.data.get("mwan3", {})
+    def native_value(self) -> float | None:
+        """Return the total data transfer in MB."""
+        if not self.coordinator.data:
+            return None
+        for wg in self.coordinator.data.wireguard_interfaces:
+            if wg.name == self._iface_name:
+                for peer in wg.peers:
+                    if peer.public_key == self._public_key:
+                        return round(
+                            (peer.transfer_rx + peer.transfer_tx) / (1024 * 1024), 2
+                        )
+        return None
 
     @property
-    def unique_id(self):
-        return "%s.%s.mwan3_online_ratio" % (super().unique_id, self._interface_id)
+    def extra_state_attributes(self) -> dict[str, Any]:
+        """Return peer attributes."""
+        if not self.coordinator.data:
+            return {}
+        for wg in self.coordinator.data.wireguard_interfaces:
+            if wg.name == self._iface_name:
+                for peer in wg.peers:
+                    if peer.public_key == self._public_key:
+                        return {
+                            "public_key": peer.public_key,
+                            "endpoint": peer.endpoint,
+                            "allowed_ips": peer.allowed_ips,
+                            "latest_handshake": peer.latest_handshake,
+                            "rx_bytes": peer.transfer_rx,
+                            "tx_bytes": peer.transfer_tx,
+                            "persistent_keepalive": peer.persistent_keepalive,
+                        }
+        return {}
+
+
+def _async_setup_system_sensors(
+    coordinator: OpenWrtDataCoordinator,
+    entry: ConfigEntry,
+    entities: list[SensorEntity],
+    pkgs: Any,
+    tracked_keys: set[str],
+    enable_load: bool = True,
+) -> None:
+    """Set up system-wide sensors."""
+    for description in _get_system_sensors():
+        if not enable_load and "load_" in description.key:
+            continue
+        if description.key not in tracked_keys:
+            _LOGGER.debug("Adding system sensor: %s", description.key)
+            tracked_keys.add(description.key)
+            entities.append(OpenWrtSensorEntity(coordinator, entry, description))
+        else:
+            _LOGGER.debug("System sensor already tracked: %s", description.key)
+
+    if coordinator.data and coordinator.data.system_resources.temperatures:
+        for zone_name in coordinator.data.system_resources.temperatures:
+            if zone_name.lower() == "system":
+                continue
+            key = f"temperature_{zone_name}"
+            if key not in tracked_keys:
+                tracked_keys.add(key)
+                entities.append(OpenWrtTemperatureSensor(coordinator, entry, zone_name))
+
+    if pkgs.adblock:
+        for description in _get_adblock_sensors():
+            if description.key not in tracked_keys:
+                tracked_keys.add(description.key)
+                entities.append(OpenWrtSensorEntity(coordinator, entry, description))
+
+    if pkgs.simple_adblock:
+        for description in _get_simple_adblock_sensors():
+            if description.key not in tracked_keys:
+                tracked_keys.add(description.key)
+                entities.append(OpenWrtSensorEntity(coordinator, entry, description))
+
+    if pkgs.ban_ip:
+        for description in _get_banip_sensors():
+            if description.key not in tracked_keys:
+                tracked_keys.add(description.key)
+                entities.append(OpenWrtSensorEntity(coordinator, entry, description))
+
+    if pkgs.miniupnpd:
+        for description in _get_upnp_sensors():
+            if description.key not in tracked_keys:
+                tracked_keys.add(description.key)
+                entities.append(OpenWrtSensorEntity(coordinator, entry, description))
+
+
+def _async_setup_storage_sensors(
+    coordinator: OpenWrtDataCoordinator,
+    entry: ConfigEntry,
+    entities: list[SensorEntity],
+    tracked_keys: set[str],
+) -> None:
+    """Set up storage sensors for each mount point."""
+    if not coordinator.data or not coordinator.data.system_resources:
+        return
+    if not coordinator.data.system_resources.storage:
+        return
+
+    storage_descriptions = [
+        OpenWrtStorageSensorDescription(
+            key="storage_total",
+            translation_key="mount_storage_total",
+            native_unit_of_measurement=UnitOfInformation.MEGABYTES,
+            device_class=SensorDeviceClass.DATA_SIZE,
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            entity_registry_enabled_default=False,
+            suggested_display_precision=1,
+            value_fn=lambda usage: _bytes_to_mb(usage.total),
+        ),
+        OpenWrtStorageSensorDescription(
+            key="storage_used",
+            translation_key="mount_storage_used",
+            native_unit_of_measurement=UnitOfInformation.MEGABYTES,
+            device_class=SensorDeviceClass.DATA_SIZE,
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            entity_registry_enabled_default=False,
+            suggested_display_precision=1,
+            value_fn=lambda usage: _bytes_to_mb(usage.used),
+        ),
+        OpenWrtStorageSensorDescription(
+            key="storage_free",
+            translation_key="mount_storage_free",
+            native_unit_of_measurement=UnitOfInformation.MEGABYTES,
+            device_class=SensorDeviceClass.DATA_SIZE,
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            entity_registry_enabled_default=False,
+            suggested_display_precision=1,
+            value_fn=lambda usage: _bytes_to_mb(usage.free),
+        ),
+        OpenWrtStorageSensorDescription(
+            key="storage_usage",
+            translation_key="mount_storage_usage",
+            native_unit_of_measurement=PERCENTAGE,
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            entity_registry_enabled_default=False,
+            suggested_display_precision=1,
+            value_fn=lambda usage: usage.percent,
+        ),
+    ]
+
+    for usage in coordinator.data.system_resources.storage:
+        if usage.filesystem in ("devtmpfs", "proc", "sysfs", "debugfs", "pstore"):
+            continue
+        if usage.filesystem == "squashfs" and usage.mount_point == "/rom":
+            continue
+
+        for description in storage_descriptions:
+            key = f"storage_{usage.mount_point}_{description.key}"
+            if key not in tracked_keys:
+                tracked_keys.add(key)
+                entities.append(
+                    OpenWrtStorageSensor(
+                        coordinator, entry, description, usage.mount_point
+                    )
+                )
+
+
+def _async_setup_wireless_sensors(
+    coordinator: OpenWrtDataCoordinator,
+    entry: ConfigEntry,
+    entities: list[SensorEntity],
+    tracked_keys: set[str],
+) -> None:
+    """Set up interface-specific wireless sensors."""
+    if not coordinator.data:
+        return
+    for wifi in coordinator.data.wireless_interfaces:
+        if not wifi.name:
+            continue
+        # Use signal as a representative key for the group of sensors created by _create_wifi_sensors
+        key = f"wifi_{wifi.section or wifi.name}_signal"
+        if key not in tracked_keys:
+            tracked_keys.add(key)
+            entities.extend(
+                _create_wifi_sensors(
+                    coordinator,
+                    entry,
+                    wifi.name,
+                    wifi.ssid,
+                    wifi.mode,
+                    wifi.frequency,
+                    wifi.section,
+                    wifi.ifname,
+                )
+            )
+
+
+def _async_setup_network_sensors(
+    coordinator: OpenWrtDataCoordinator,
+    entry: ConfigEntry,
+    entities: list[SensorEntity],
+    tracked_keys: set[str],
+) -> None:
+    """Set up interface-specific network sensors."""
+    if not coordinator.data:
+        return
+
+    # MWAN3 Metrics
+    for mwan in coordinator.data.mwan_status:
+        for metric in ("latency", "packet_loss"):
+            key = f"mwan_{mwan.interface_name}_{metric}"
+            if key not in tracked_keys:
+                tracked_keys.add(key)
+                entities.append(
+                    OpenWrtMwanMetricSensor(
+                        coordinator, entry, mwan.interface_name, metric
+                    )
+                )
+
+    # DHCP Lease Count
+    key = "dhcp_lease_count"
+    if key not in tracked_keys:
+        tracked_keys.add(key)
+        entities.append(
+            OpenWrtSensorEntity(
+                coordinator,
+                entry,
+                OpenWrtSensorDescription(
+                    key=key,
+                    name="DHCP Leases",
+                    translation_key="dhcp_lease_count",
+                    state_class=SensorStateClass.MEASUREMENT,
+                    entity_category=EntityCategory.DIAGNOSTIC,
+                    entity_registry_enabled_default=False,
+                    value_fn=lambda data: len(data.dhcp_leases),
+                ),
+            )
+        )
+
+    # Create MQTT presence status sensor conditionally
+    key = "mqtt_presence_status"
+    if entry.options.get(CONF_MQTT_PRESENCE, False) and key not in tracked_keys:
+        tracked_keys.add(key)
+        entities.append(
+            OpenWrtSensorEntity(
+                coordinator,
+                entry,
+                OpenWrtSensorDescription(
+                    key=key,
+                    name="MQTT Presence Status",
+                    translation_key="mqtt_presence_status",
+                    value_fn=lambda data: data.mqtt_presence_status,
+                    attrs_fn=lambda data: (
+                        {"logs": data.mqtt_presence_logs}
+                        if data.mqtt_presence_logs
+                        else {}
+                    ),
+                    available_fn=lambda data: data.mqtt_presence_status is not None,
+                    entity_category=EntityCategory.DIAGNOSTIC,
+                    icon="mdi:home-search",
+                ),
+            )
+        )
+
+    # Add network interface sensors
+    for iface in coordinator.data.network_interfaces:
+        key = f"net_iface_{iface.name}"
+        if key not in tracked_keys:
+            tracked_keys.add(key)
+            entities.extend(_create_net_sensors(coordinator, entry, iface.name))
+
+
+def _async_setup_specialized_sensors(
+    coordinator: OpenWrtDataCoordinator,
+    entry: ConfigEntry,
+    entities: list[SensorEntity],
+    perms: Any,
+    pkgs: Any,
+    tracked_keys: set[str],
+) -> None:
+    """Set up sensors for specialized services (VPN, MWAN, SQM, etc.)."""
+    if not coordinator.data:
+        return
+
+    if perms.read_mwan and pkgs.mwan3 is not False:
+        for mwan in coordinator.data.mwan_status:
+            key = f"mwan_{mwan.interface_name}_main"
+            if key not in tracked_keys:
+                tracked_keys.add(key)
+                entities.extend(
+                    _create_mwan_sensors(coordinator, entry, mwan.interface_name)
+                )
+
+    if coordinator.data.qmodem_info.enabled:
+        # QModem sensors don't have a stable key pattern in this helper, but they are relatively static
+        key = "qmodem_info"
+        if key not in tracked_keys:
+            tracked_keys.add(key)
+            for description in _get_qmodem_sensors():
+                entities.append(
+                    OpenWrtQModemSensorEntity(coordinator, entry, description)
+                )
+
+    if (
+        perms.read_sqm
+        and pkgs.sqm_scripts is not False
+        and entry.options.get(CONF_ENABLE_SQM, True)
+    ):
+        for sqm in coordinator.data.sqm:
+            if sqm.section_id:
+                key = f"sqm_{sqm.section_id}"
+                if key not in tracked_keys:
+                    tracked_keys.add(key)
+                    entities.extend(
+                        _create_sqm_sensors(
+                            coordinator, entry, sqm.section_id, sqm.name
+                        )
+                    )
+
+    if perms.read_vpn:
+        for vpn in coordinator.data.vpn_interfaces:
+            if not vpn.name:
+                continue
+            if vpn.type == "wireguard" and pkgs.wireguard is False:
+                continue
+            if vpn.type == "openvpn" and pkgs.openvpn is False:
+                continue
+            key = f"vpn_{vpn.name}_traffic"
+            if key not in tracked_keys:
+                tracked_keys.add(key)
+                entities.extend(
+                    _create_vpn_sensors(coordinator, entry, vpn.name, vpn.type)
+                )
+
+    if coordinator.data.lldp_neighbors:
+        for neighbor in coordinator.data.lldp_neighbors:
+            if neighbor.local_interface:
+                key = f"lldp_{neighbor.local_interface}_{neighbor.neighbor_chassis}"
+                if key not in tracked_keys:
+                    tracked_keys.add(key)
+                    entities.extend(
+                        _create_lldp_sensors(
+                            coordinator, entry, neighbor.local_interface
+                        )
+                    )
+
+    # WAN Latency
+    key = "wan_latency"
+    if key not in tracked_keys:
+        tracked_keys.add(key)
+        entities.append(
+            OpenWrtSensorEntity(
+                coordinator,
+                entry,
+                OpenWrtSensorDescription(
+                    key=key,
+                    name="WAN Latency",
+                    translation_key="wan_latency",
+                    native_unit_of_measurement="ms",
+                    state_class=SensorStateClass.MEASUREMENT,
+                    suggested_display_precision=1,
+                    entity_registry_enabled_default=False,
+                    value_fn=lambda data: data.latency.latency_ms,
+                    available_fn=lambda data: data.latency.available,
+                    attrs_fn=lambda data: {
+                        "target": data.latency.target,
+                        "packet_loss": data.latency.packet_loss,
+                    },
+                ),
+            )
+        )
+
+    # Batman Mesh
+    if perms.read_batman and (pkgs.batman_adv or pkgs.batctl):
+        key = "batman_mesh_global"
+        if key not in tracked_keys:
+            tracked_keys.add(key)
+            entities.extend(_get_batman_global_sensors(coordinator, entry))
+
+        for mesh_neighbor in coordinator.data.batman_neighbors:
+            key = f"batman_neighbor_{mesh_neighbor.mac}"
+            if key not in tracked_keys:
+                tracked_keys.add(key)
+                entities.extend(
+                    _create_batman_neighbor_sensors(
+                        coordinator, entry, mesh_neighbor.mac
+                    )
+                )
+
+
+def _create_device_sensors(
+    coordinator: OpenWrtDataCoordinator,
+    entry: ConfigEntry,
+    device: Any,
+) -> list[OpenWrtDeviceSensor]:
+    """Create sensors for a specific connected device."""
+    dev_name = _get_device_display_name(coordinator, device)
+    mac = device.mac.lower()
+
+    descriptions = [
+        (
+            "signal",
+            "Signal Strength",
+            "device_signal",
+            "dBm",
+            lambda d, m=mac: next(
+                (x.signal for x in d.connected_devices if x.mac == m), None
+            ),
+            lambda d, m=mac: any(
+                x.mac == m and x.is_wireless for x in d.connected_devices
+            ),
+        ),
+        (
+            "rx_rate",
+            "RX Rate",
+            "device_rx_rate",
+            "Mbps",
+            lambda d, m=mac: next(
+                (round(x.rx_rate / 1000, 1) for x in d.connected_devices if x.mac == m),
+                None,
+            ),
+            lambda d, m=mac: any(
+                x.mac == m and x.is_wireless for x in d.connected_devices
+            ),
+        ),
+        (
+            "tx_rate",
+            "TX Rate",
+            "device_tx_rate",
+            "Mbps",
+            lambda d, m=mac: next(
+                (round(x.tx_rate / 1000, 1) for x in d.connected_devices if x.mac == m),
+                None,
+            ),
+            lambda d, m=mac: any(
+                x.mac == m and x.is_wireless for x in d.connected_devices
+            ),
+        ),
+        (
+            "noise",
+            "Noise Level",
+            "device_noise",
+            "dBm",
+            lambda d, m=mac: next(
+                (x.noise for x in d.connected_devices if x.mac == m), None
+            ),
+            lambda d, m=mac: any(
+                x.mac == m and x.is_wireless for x in d.connected_devices
+            ),
+        ),
+    ]
+
+    return [
+        OpenWrtDeviceSensor(
+            coordinator,
+            entry,
+            mac,
+            SensorEntityDescription(
+                key=f"device_{key}",
+                name=name,
+                translation_key=tkey,
+                native_unit_of_measurement=unit,
+                state_class=SensorStateClass.MEASUREMENT if unit else None,
+                entity_category=EntityCategory.DIAGNOSTIC,
+                entity_registry_enabled_default=False,
+            ),
+            v_fn,
+            a_fn,
+            dev_name,
+        )
+        for key, name, tkey, unit, v_fn, a_fn in descriptions
+    ]
+
+
+def _get_device_display_name(coordinator: OpenWrtDataCoordinator, device: Any) -> str:
+    """Determine the display name for a device."""
+    dev_name = device.mac
+    if device.hostname and device.hostname != "*":
+        router_hostname = ""
+        if coordinator.data and coordinator.data.device_info:
+            router_hostname = coordinator.data.device_info.hostname
+        if device.hostname != router_hostname:
+            dev_name = device.hostname
+    return dev_name
+
+
+def _create_wifi_sensors(
+    coordinator: OpenWrtDataCoordinator,
+    entry: ConfigEntry,
+    iface_name: str,
+    ssid: str,
+    mode: str,
+    frequency: str = "",
+    section_id: str | None = None,
+    ifname: str | None = None,
+) -> list[OpenWrtWifiSensorEntity]:
+    """Create sensors for a wireless interface."""
+    sensors: list[OpenWrtWifiSensorEntity] = []
+
+    # Base configuration sensors
+    _create_wifi_base_sensors(
+        coordinator, entry, iface_name, ssid, frequency, section_id, ifname, sensors
+    )
+
+    # Station-specific quality sensors (STA/Mesh/etc)
+    if mode.lower() not in ("ap", "master", "access point"):
+        _create_wifi_station_sensors(
+            coordinator, entry, iface_name, ssid, frequency, section_id, sensors
+        )
+
+    return sensors
+
+
+def _create_wifi_base_sensors(
+    coordinator: OpenWrtDataCoordinator,
+    entry: ConfigEntry,
+    iface_name: str,
+    ssid: str,
+    frequency: str,
+    section_id: str | None,
+    ifname: str | None,
+    sensors: list[OpenWrtWifiSensorEntity],
+) -> None:
+    """Create basic WiFi sensors (Clients, Channel, Power, etc.)."""
+    label = ssid or iface_name
+
+    # Clients
+    sensors.append(
+        OpenWrtWifiSensorEntity(
+            coordinator,
+            entry,
+            OpenWrtSensorDescription(
+                key=f"wifi_{section_id or iface_name}_clients",
+                translation_key="wifi_clients",
+                name=f"{label} Clients",
+                state_class=SensorStateClass.MEASUREMENT,
+                value_fn=lambda data, n=iface_name, s=section_id, i=ifname: sum(
+                    1
+                    for d in data.all_connected_devices
+                    if d.is_wireless
+                    and d.connected
+                    and (
+                        d.interface == n
+                        or (s and d.interface == s)
+                        or (i and d.interface == i)
+                    )
+                ),
+            ),
+            iface_name,
+            ssid,
+            frequency,
+        )
+    )
+
+    # Generic descriptions for simple interface lookups
+    desc_map = {
+        "channel": ("Channel", "wifi_channel", EntityCategory.DIAGNOSTIC, True),
+        "txpower": ("TX Power", "wifi_txpower", EntityCategory.DIAGNOSTIC, False),
+        "htmode": ("HT Mode", "wifi_htmode", EntityCategory.DIAGNOSTIC, False),
+        "hwmode": ("Hardware Mode", "wifi_hwmode", EntityCategory.DIAGNOSTIC, False),
+    }
+
+    for key, (name, tkey, cat, enabled) in desc_map.items():
+        sensors.append(
+            OpenWrtWifiSensorEntity(
+                coordinator,
+                entry,
+                OpenWrtSensorDescription(
+                    key=f"wifi_{section_id or iface_name}_{key}",
+                    translation_key=tkey,
+                    name=f"{label} {name}",
+                    native_unit_of_measurement="dBm" if key == "txpower" else None,
+                    entity_category=cat,
+                    entity_registry_enabled_default=enabled,
+                    value_fn=lambda data, n=iface_name, k=key: next(
+                        (
+                            getattr(w, k)
+                            for w in data.wireless_interfaces
+                            if w.name == n
+                        ),
+                        None,
+                    ),
+                ),
+                iface_name,
+                ssid,
+                frequency,
+                section_id,
+            )
+        )
+
+
+def _create_wifi_station_sensors(
+    coordinator: OpenWrtDataCoordinator,
+    entry: ConfigEntry,
+    iface_name: str,
+    ssid: str,
+    frequency: str,
+    section_id: str | None,
+    sensors: list[OpenWrtWifiSensorEntity],
+) -> None:
+    """Create quality sensors for WiFi station interfaces."""
+    label = ssid or iface_name
+
+    # Signal
+    sensors.append(
+        OpenWrtWifiSensorEntity(
+            coordinator,
+            entry,
+            OpenWrtSensorDescription(
+                key=f"wifi_{section_id or iface_name}_signal",
+                translation_key="wifi_signal",
+                name=f"{label} Signal",
+                native_unit_of_measurement="dBm",
+                device_class=SensorDeviceClass.SIGNAL_STRENGTH,
+                state_class=SensorStateClass.MEASUREMENT,
+                entity_category=EntityCategory.DIAGNOSTIC,
+                value_fn=lambda data, n=iface_name: next(
+                    (w.signal for w in data.wireless_interfaces if w.name == n),
+                    None,
+                ),
+                available_fn=lambda data, n=iface_name: any(
+                    w.name == n and w.signal != 0 for w in data.wireless_interfaces
+                ),
+                attrs_fn=lambda data, n=iface_name: next(
+                    (
+                        {
+                            "noise": w.noise,
+                            "encryption": w.encryption,
+                            "frequency": w.frequency,
+                        }
+                        for w in data.wireless_interfaces
+                        if w.name == n
+                    ),
+                    {},
+                ),
+            ),
+            iface_name,
+            ssid,
+            frequency,
+        )
+    )
+
+    # Simple station sensors
+    sta_map = {
+        "quality": (
+            "Signal Quality",
+            "wifi_quality",
+            PERCENTAGE,
+            SensorStateClass.MEASUREMENT,
+        ),
+        "bitrate": ("Bitrate", "wifi_bitrate", "Mbps", SensorStateClass.MEASUREMENT),
+        "noise": ("Noise Level", "wifi_noise", "dBm", SensorStateClass.MEASUREMENT),
+    }
+
+    for key, (name, tkey, unit, sclass) in sta_map.items():
+        sensors.append(
+            OpenWrtWifiSensorEntity(
+                coordinator,
+                entry,
+                OpenWrtSensorDescription(
+                    key=f"wifi_{section_id or iface_name}_{key}",
+                    translation_key=tkey,
+                    name=f"{label} {name}",
+                    native_unit_of_measurement=unit,
+                    device_class=(
+                        SensorDeviceClass.DATA_RATE
+                        if key == "bitrate"
+                        else (
+                            SensorDeviceClass.SIGNAL_STRENGTH
+                            if key == "noise"
+                            else None
+                        )
+                    ),
+                    state_class=sclass,
+                    entity_category=EntityCategory.DIAGNOSTIC,
+                    entity_registry_enabled_default=False,
+                    value_fn=lambda data, n=iface_name, k=key: next(
+                        (
+                            getattr(w, k)
+                            for w in data.wireless_interfaces
+                            if w.name == n
+                        ),
+                        None,
+                    ),
+                ),
+                iface_name,
+                ssid,
+                frequency,
+            )
+        )
+
+
+def _create_sqm_sensors(
+    coordinator: OpenWrtDataCoordinator,
+    entry: ConfigEntry,
+    section_id: str,
+    name: str,
+) -> list[OpenWrtSensorEntity]:
+    """Create diagnostic sensors for an SQM instance."""
+    sensors = []
+
+    # SQM Interface
+    sensors.append(
+        OpenWrtSensorEntity(
+            coordinator,
+            entry,
+            OpenWrtSensorDescription(
+                key=f"sqm_{section_id}_interface",
+                translation_key="sqm_interface",
+                name=f"SQM {name} Interface",
+                entity_category=EntityCategory.DIAGNOSTIC,
+                entity_registry_enabled_default=False,
+                value_fn=lambda data, sid=section_id: next(
+                    (s.interface for s in data.sqm if s.section_id == sid),
+                    None,
+                ),
+            ),
+        ),
+    )
+
+    # SQM Qdisc
+    sensors.append(
+        OpenWrtSensorEntity(
+            coordinator,
+            entry,
+            OpenWrtSensorDescription(
+                key=f"sqm_{section_id}_qdisc",
+                translation_key="sqm_qdisc",
+                name=f"SQM {name} Qdisc",
+                entity_category=EntityCategory.DIAGNOSTIC,
+                entity_registry_enabled_default=False,
+                value_fn=lambda data, sid=section_id: next(
+                    (s.qdisc for s in data.sqm if s.section_id == sid),
+                    None,
+                ),
+            ),
+        ),
+    )
+
+    # SQM Script
+    sensors.append(
+        OpenWrtSensorEntity(
+            coordinator,
+            entry,
+            OpenWrtSensorDescription(
+                key=f"sqm_{section_id}_script",
+                translation_key="sqm_script",
+                name=f"SQM {name} Script",
+                entity_category=EntityCategory.DIAGNOSTIC,
+                entity_registry_enabled_default=False,
+                value_fn=lambda data, sid=section_id: next(
+                    (s.script for s in data.sqm if s.section_id == sid),
+                    None,
+                ),
+            ),
+        ),
+    )
+
+    return sensors
+
+
+def _create_net_sensors(
+    coordinator: OpenWrtDataCoordinator,
+    entry: ConfigEntry,
+    iface_name: str,
+) -> list[OpenWrtSensorEntity]:
+    """Create sensors for a network interface."""
+    sensors: list[OpenWrtSensorEntity] = []
+
+    # Traffic sensors (RX/TX)
+    _create_net_traffic_sensors(coordinator, entry, iface_name, sensors)
+
+    # Address sensors (IPv4/IPv6)
+    _create_net_address_sensors(coordinator, entry, iface_name, sensors)
+
+    # Status sensors (Speed/Uptime)
+    _create_net_status_sensors(coordinator, entry, iface_name, sensors)
+
+    # Rate sensors (RX/TX rate)
+    _create_net_rate_sensors(coordinator, entry, iface_name, sensors)
+
+    return sensors
+
+
+def _create_net_traffic_sensors(
+    coordinator: OpenWrtDataCoordinator,
+    entry: ConfigEntry,
+    iface_name: str,
+    sensors: list[OpenWrtSensorEntity],
+) -> None:
+    """Create traffic-related sensors (RX/TX) for an interface."""
+    for direction in ("rx", "tx"):
+        sensors.append(
+            OpenWrtSensorEntity(
+                coordinator,
+                entry,
+                OpenWrtSensorDescription(
+                    key=f"net_{iface_name}_{direction}",
+                    name=f"{iface_name} {direction.upper()}",
+                    translation_key=f"net_{direction}",
+                    translation_placeholders={"interface": iface_name},
+                    native_unit_of_measurement=UnitOfInformation.MEGABYTES,
+                    device_class=SensorDeviceClass.DATA_SIZE,
+                    state_class=SensorStateClass.TOTAL_INCREASING,
+                    entity_category=EntityCategory.DIAGNOSTIC,
+                    entity_registry_enabled_default=False,
+                    value_fn=lambda data, n=iface_name, d=direction: next(
+                        (
+                            _bytes_to_mb(getattr(i, f"{d}_bytes"))
+                            for i in data.network_interfaces
+                            if i.name == n
+                        ),
+                        0,
+                    ),
+                    attrs_fn=lambda data, n=iface_name, d=direction: next(
+                        (
+                            {
+                                "errors": getattr(i, f"{d}_errors"),
+                                "dropped": getattr(i, f"{d}_dropped"),
+                                "packets": getattr(i, f"{d}_packets"),
+                                **(
+                                    {"multicast": i.multicast}
+                                    if d == "rx"
+                                    else {"collisions": i.collisions}
+                                ),
+                            }
+                            for i in data.network_interfaces
+                            if i.name == n
+                        ),
+                        {},
+                    ),
+                ),
+            )
+        )
+
+
+def _create_net_address_sensors(
+    coordinator: OpenWrtDataCoordinator,
+    entry: ConfigEntry,
+    iface_name: str,
+    sensors: list[OpenWrtSensorEntity],
+) -> None:
+    """Create address-related sensors (IPv4/IPv6) for an interface."""
+    # IPv4
+    sensors.append(
+        OpenWrtSensorEntity(
+            coordinator,
+            entry,
+            OpenWrtSensorDescription(
+                key=f"net_{iface_name}_ipv4",
+                name=f"{iface_name} IPv4 Address",
+                translation_key="net_ipv4",
+                translation_placeholders={"interface": iface_name},
+                entity_category=EntityCategory.DIAGNOSTIC,
+                value_fn=lambda data, n=iface_name: next(
+                    (i.ipv4_address for i in data.network_interfaces if i.name == n),
+                    None,
+                ),
+                attrs_fn=lambda data, n=iface_name: next(
+                    (
+                        {
+                            "dns_servers": (
+                                ", ".join(i.dns_servers) if i.dns_servers else "none"
+                            )
+                        }
+                        for i in data.network_interfaces
+                        if i.name == n
+                    ),
+                    {},
+                ),
+            ),
+        )
+    )
+    # IPv6
+    sensors.append(
+        OpenWrtSensorEntity(
+            coordinator,
+            entry,
+            OpenWrtSensorDescription(
+                key=f"net_{iface_name}_ipv6",
+                name=f"{iface_name} IPv6 Address",
+                translation_key="net_ipv6",
+                translation_placeholders={"interface": iface_name},
+                entity_category=EntityCategory.DIAGNOSTIC,
+                entity_registry_enabled_default=False,
+                value_fn=lambda data, n=iface_name: next(
+                    (i.ipv6_address for i in data.network_interfaces if i.name == n),
+                    None,
+                ),
+                available_fn=lambda data, n=iface_name: any(
+                    i.name == n and i.ipv6_address for i in data.network_interfaces
+                ),
+            ),
+        )
+    )
+
+
+def _create_net_status_sensors(
+    coordinator: OpenWrtDataCoordinator,
+    entry: ConfigEntry,
+    iface_name: str,
+    sensors: list[OpenWrtSensorEntity],
+) -> None:
+    """Create status-related sensors (Speed/Uptime) for an interface."""
+    # Speed
+    sensors.append(
+        OpenWrtSensorEntity(
+            coordinator,
+            entry,
+            OpenWrtSensorDescription(
+                key=f"net_{iface_name}_speed",
+                name=f"{iface_name} Link Speed",
+                translation_key="net_speed",
+                translation_placeholders={"interface": iface_name},
+                entity_category=EntityCategory.DIAGNOSTIC,
+                entity_registry_enabled_default=False,
+                value_fn=lambda data, n=iface_name: next(
+                    (i.speed for i in data.network_interfaces if i.name == n),
+                    None,
+                ),
+                attrs_fn=lambda data, n=iface_name: next(
+                    (
+                        {"duplex": i.duplex}
+                        for i in data.network_interfaces
+                        if i.name == n
+                    ),
+                    {},
+                ),
+                available_fn=lambda data, n=iface_name: any(
+                    i.name == n and i.speed for i in data.network_interfaces
+                ),
+            ),
+        )
+    )
+    # Uptime
+    sensors.append(
+        OpenWrtSensorEntity(
+            coordinator,
+            entry,
+            OpenWrtSensorDescription(
+                key=f"net_{iface_name}_uptime",
+                name=f"{iface_name} Uptime",
+                translation_key="net_uptime",
+                translation_placeholders={"interface": iface_name},
+                device_class=SensorDeviceClass.TIMESTAMP,
+                entity_category=EntityCategory.DIAGNOSTIC,
+                entity_registry_enabled_default=False,
+                value_fn=lambda data, n=iface_name: next(
+                    (
+                        (dt_util.utcnow() - timedelta(seconds=i.uptime)).replace(
+                            second=0, microsecond=0
+                        )
+                        for i in data.network_interfaces
+                        if i.name == n and i.uptime > 0
+                    ),
+                    None,
+                ),
+                available_fn=lambda data, n=iface_name: any(
+                    i.name == n for i in data.network_interfaces
+                ),
+            ),
+        )
+    )
+
+
+def _create_net_rate_sensors(
+    coordinator: OpenWrtDataCoordinator,
+    entry: ConfigEntry,
+    iface_name: str,
+    sensors: list[OpenWrtSensorEntity],
+) -> None:
+    """Create traffic rate sensors (RX/TX Mbps) for an interface."""
+    for direction in ("rx", "tx"):
+        sensors.append(
+            OpenWrtSensorEntity(
+                coordinator,
+                entry,
+                OpenWrtSensorDescription(
+                    key=f"net_{iface_name}_{direction}_rate",
+                    name=f"{iface_name} {direction.upper()} Rate",
+                    translation_key=f"net_{direction}_rate",
+                    translation_placeholders={"interface": iface_name},
+                    native_unit_of_measurement="Mbps",
+                    state_class=SensorStateClass.MEASUREMENT,
+                    entity_registry_enabled_default=False,
+                    value_fn=lambda data, n=iface_name, d=direction: next(
+                        (
+                            getattr(i, f"{d}_rate")
+                            for i in data.network_interfaces
+                            if i.name == n
+                        ),
+                        0.0,
+                    ),
+                ),
+            )
+        )
+
+
+def _create_vpn_sensors(
+    coordinator: OpenWrtDataCoordinator,
+    entry: ConfigEntry,
+    iface_name: str,
+    vpn_type: str,
+) -> list[OpenWrtSensorEntity]:
+    """Create sensors for a VPN interface."""
+    label = f"VPN {iface_name}"
+    sensors: list[OpenWrtSensorEntity] = []
+
+    sensors.append(
+        OpenWrtSensorEntity(
+            coordinator,
+            entry,
+            OpenWrtSensorDescription(
+                key=f"vpn_{iface_name}_rx",
+                name=f"{label} RX",
+                translation_key="vpn_rx",
+                translation_placeholders={"interface": iface_name},
+                native_unit_of_measurement=UnitOfInformation.MEGABYTES,
+                device_class=SensorDeviceClass.DATA_SIZE,
+                state_class=SensorStateClass.TOTAL_INCREASING,
+                entity_category=EntityCategory.DIAGNOSTIC,
+                entity_registry_enabled_default=False,
+                value_fn=lambda data, n=iface_name: next(
+                    (
+                        _bytes_to_mb(v.rx_bytes)
+                        for v in data.vpn_interfaces
+                        if v.name == n
+                    ),
+                    0,
+                ),
+            ),
+        ),
+    )
+
+    sensors.append(
+        OpenWrtSensorEntity(
+            coordinator,
+            entry,
+            OpenWrtSensorDescription(
+                key=f"vpn_{iface_name}_tx",
+                name=f"{label} TX",
+                translation_key="vpn_tx",
+                translation_placeholders={"interface": iface_name},
+                native_unit_of_measurement=UnitOfInformation.MEGABYTES,
+                device_class=SensorDeviceClass.DATA_SIZE,
+                state_class=SensorStateClass.TOTAL_INCREASING,
+                entity_category=EntityCategory.DIAGNOSTIC,
+                entity_registry_enabled_default=False,
+                value_fn=lambda data, n=iface_name: next(
+                    (
+                        _bytes_to_mb(v.tx_bytes)
+                        for v in data.vpn_interfaces
+                        if v.name == n
+                    ),
+                    0,
+                ),
+            ),
+        ),
+    )
+
+    if vpn_type == "wireguard":
+        sensors.append(
+            OpenWrtSensorEntity(
+                coordinator,
+                entry,
+                OpenWrtSensorDescription(
+                    key=f"vpn_{iface_name}_peers",
+                    name=f"{label} Peers",
+                    translation_key="vpn_peers",
+                    state_class=SensorStateClass.MEASUREMENT,
+                    entity_registry_enabled_default=False,
+                    value_fn=lambda data, n=iface_name: next(
+                        (v.peers for v in data.vpn_interfaces if v.name == n),
+                        0,
+                    ),
+                    attrs_fn=lambda data, n=iface_name: next(
+                        (
+                            {"latest_handshake": v.latest_handshake, "type": v.type}
+                            for v in data.vpn_interfaces
+                            if v.name == n
+                        ),
+                        {},
+                    ),
+                ),
+            ),
+        )
+
+    return sensors
+
+
+def _create_mwan_sensors(
+    coordinator: OpenWrtDataCoordinator,
+    entry: ConfigEntry,
+    iface_name: str,
+) -> list[OpenWrtSensorEntity]:
+    """Create sensors for an MWAN3 interface."""
+    return [
+        OpenWrtSensorEntity(
+            coordinator,
+            entry,
+            OpenWrtSensorDescription(
+                key=f"mwan_{iface_name}_ratio",
+                translation_key="mwan_ratio",
+                translation_placeholders={"interface": iface_name},
+                name=f"MWAN {iface_name} Online Ratio",
+                native_unit_of_measurement=PERCENTAGE,
+                state_class=SensorStateClass.MEASUREMENT,
+                value_fn=lambda data, n=iface_name: next(
+                    (
+                        m.online_ratio * 100
+                        for m in data.mwan_status
+                        if m.interface_name == n
+                    ),
+                    0,
+                ),
+            ),
+        ),
+    ]
+
+
+def _create_lldp_sensors(
+    coordinator: OpenWrtDataCoordinator,
+    entry: ConfigEntry,
+    local_interface: str,
+) -> list[OpenWrtSensorEntity]:
+    """Create sensors for an LLDP neighbor."""
+    return [
+        OpenWrtSensorEntity(
+            coordinator,
+            entry,
+            OpenWrtSensorDescription(
+                key=f"lldp_{local_interface}_neighbor",
+                name=f"LLDP Neighbor on {local_interface}",
+                translation_key="lldp_neighbor",
+                entity_category=EntityCategory.DIAGNOSTIC,
+                value_fn=lambda data, i=local_interface: next(
+                    (
+                        n.neighbor_name or n.neighbor_system_name or n.neighbor_chassis
+                        for n in data.lldp_neighbors
+                        if n.local_interface == i
+                    ),
+                    None,
+                ),
+                attrs_fn=lambda data, i=local_interface: next(
+                    (
+                        {
+                            "local_interface": n.local_interface,
+                            "neighbor_name": n.neighbor_name,
+                            "neighbor_port": n.neighbor_port,
+                            "neighbor_chassis": n.neighbor_chassis,
+                            "neighbor_description": n.neighbor_description,
+                            "neighbor_system_name": n.neighbor_system_name,
+                        }
+                        for n in data.lldp_neighbors
+                        if n.local_interface == i
+                    ),
+                    {},
+                ),
+            ),
+        ),
+    ]
+
+
+class OpenWrtTemperatureSensor(CoordinatorEntity[OpenWrtDataCoordinator], SensorEntity):
+    """Temperature sensor for extra thermal zones."""
+
+    _attr_has_entity_name = True
+    _attr_device_class = SensorDeviceClass.TEMPERATURE
+    _attr_native_unit_of_measurement = UnitOfTemperature.CELSIUS
+    _attr_state_class = SensorStateClass.MEASUREMENT
+    _attr_entity_category = EntityCategory.DIAGNOSTIC
+    _attr_entity_registry_enabled_default = False
+
+    def __init__(
+        self, coordinator: OpenWrtDataCoordinator, entry: ConfigEntry, zone_name: str
+    ) -> None:
+        super().__init__(coordinator)
+        self._zone_name = zone_name
+        self._attr_unique_id = (
+            f"{entry.entry_id}_temp_{zone_name.lower().replace(' ', '_')}"
+        )
+        self._attr_name = f"Temperature {zone_name}"
+        self._attr_device_info = DeviceInfo(
+            identifiers={(DOMAIN, entry.unique_id or entry.data[CONF_HOST])},
+        )
 
     @property
-    def name(self):
-        return f"{super().name} Mwan3 [{self._interface_id}] online ratio"
+    def native_value(self) -> float | None:
+        if not self.coordinator.data:
+            return None
+        return self.coordinator.data.system_resources.temperatures.get(self._zone_name)
+
+
+class OpenWrtMwanMetricSensor(CoordinatorEntity[OpenWrtDataCoordinator], SensorEntity):
+    """MWAN3 metric sensor (latency, packet loss)."""
+
+    _attr_has_entity_name = True
+    _attr_entity_category = EntityCategory.DIAGNOSTIC
+    _attr_entity_registry_enabled_default = False
+
+    def __init__(
+        self,
+        coordinator: OpenWrtDataCoordinator,
+        entry: ConfigEntry,
+        iface: str,
+        metric: str,
+    ) -> None:
+        super().__init__(coordinator)
+        self._iface = iface
+        self._metric = metric
+        self._attr_unique_id = f"{entry.entry_id}_mwan_{iface}_{metric}"
+        self._attr_name = f"MWAN {iface} {metric.replace('_', ' ').title()}"
+        if metric == "latency":
+            self._attr_native_unit_of_measurement = "ms"
+            self._attr_icon = "mdi:timer-outline"
+        else:
+            self._attr_native_unit_of_measurement = "%"
+            self._attr_icon = "mdi:packet-stack"
+
+        self._attr_device_info = DeviceInfo(
+            identifiers={(DOMAIN, entry.unique_id or entry.data[CONF_HOST])},
+        )
 
     @property
-    def native_value(self):
-        data = self.data.get("mwan3", {}).get(self._interface_id, {})
-        value = data.get("online_sec") / data.get("uptime_sec") * \
-            100 if data.get("uptime_sec") else 100
-        return round(value, 1)
+    def native_value(self) -> float | None:
+        if not self.coordinator.data:
+            return None
+        for m in self.coordinator.data.mwan_status:
+            if m.interface_name == self._iface:
+                return getattr(m, self._metric)
+        return None
 
 
-class WanRxTxSensor(OpenWrtSensor):
+def _get_batman_global_sensors(
+    coordinator: OpenWrtDataCoordinator, entry: ConfigEntry
+) -> list[OpenWrtSensorEntity]:
+    """Get Batman-adv global sensors."""
+    return [
+        OpenWrtSensorEntity(
+            coordinator,
+            entry,
+            OpenWrtSensorDescription(
+                key="batman_originators_count",
+                name="Batman Mesh Originators",
+                translation_key="batman_originators_count",
+                state_class=SensorStateClass.MEASUREMENT,
+                icon="mdi:transit-connection-variant",
+                entity_category=EntityCategory.DIAGNOSTIC,
+                value_fn=lambda data: len(data.batman_originators),
+            ),
+        ),
+        OpenWrtSensorEntity(
+            coordinator,
+            entry,
+            OpenWrtSensorDescription(
+                key="batman_neighbors_count",
+                name="Batman Mesh Neighbors",
+                translation_key="batman_neighbors_count",
+                state_class=SensorStateClass.MEASUREMENT,
+                icon="mdi:router-wireless",
+                entity_category=EntityCategory.DIAGNOSTIC,
+                value_fn=lambda data: len(data.batman_neighbors),
+            ),
+        ),
+        OpenWrtSensorEntity(
+            coordinator,
+            entry,
+            OpenWrtSensorDescription(
+                key="batman_gateways_count",
+                name="Batman Mesh Gateways",
+                translation_key="batman_gateways_count",
+                state_class=SensorStateClass.MEASUREMENT,
+                icon="mdi:gateway",
+                entity_category=EntityCategory.DIAGNOSTIC,
+                value_fn=lambda data: len(data.batman_gateways),
+            ),
+        ),
+    ]
 
-    def __init__(self, device, device_id: str, interface: str, code: str):
-        super().__init__(device, device_id)
-        self._interface = interface
-        self._code = code
-        self._attr_entity_category = EntityCategory.DIAGNOSTIC
-        self._attr_icon = "mdi:download-network" if code == "rx" else "mdi:upload-network"
-        self._attr_device_class = SensorDeviceClass.DATA_SIZE
-        self._attr_native_unit_of_measurement = "B"
 
-    @property 
-    def _data(self):
-        return self.data.get("wan", {}).get(self._interface, {})
+def _create_batman_neighbor_sensors(
+    coordinator: OpenWrtDataCoordinator,
+    entry: ConfigEntry,
+    mac: str,
+) -> list[OpenWrtDeviceSensor]:
+    """Create sensors for a specific Batman neighbor."""
+    sensors = []
 
-    @property
-    def available(self):
-        return self._interface in self.data.get("wan", {}) and self._data.get("up")
+    # TQ (Transmit Quality) to this neighbor (if it's also an originator)
+    def get_tq(data: OpenWrtData) -> int | None:
+        for orig in data.batman_originators:
+            if orig.mac == mac:
+                return orig.tq
+        return None
 
-    @property
-    def unique_id(self):
-        return "%s.%s.wan_%s_bytes" % (super().unique_id, self._interface, self._code)
+    def is_available(data: OpenWrtData) -> bool:
+        return any(orig.mac == mac for orig in data.batman_originators)
 
-    @property
-    def name(self):
-        return f"{super().name} Wan [{self._interface}] {self._code.capitalize()} bytes"
+    sensors.append(
+        OpenWrtDeviceSensor(
+            coordinator,
+            entry,
+            mac,
+            SensorEntityDescription(
+                key="batman_tq",
+                name="Mesh Link Quality (TQ)",
+                translation_key="batman_tq",
+                native_unit_of_measurement=PERCENTAGE,
+                state_class=SensorStateClass.MEASUREMENT,
+                icon="mdi:signal-variant",
+            ),
+            value_fn=get_tq,
+            available_fn=is_available,
+        )
+    )
 
-    @property
-    def native_value(self):
-        return self._data.get(f"{self._code}_bytes")
-
-    @property
-    def extra_state_attributes(self):
-        return dict(mac=self._data.get("mac"), speed=self._data.get("speed"))
-
-    @property
-    def state_class(self):
-        return "total_increasing"
+    return sensors
