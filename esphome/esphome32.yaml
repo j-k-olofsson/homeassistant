@@ -5,6 +5,7 @@ substitutions:
   node_friendly_name: Blomlampa (Shelly Plus RGBW PM)
   node_comment: Shelly Plus RGBW PM (VLAN IoT)
   log_level: INFO
+  active: "on"
   late_on: "false"
   growlight_light_id: growlight_rgbw
   sunrise_start_brightness: "1%"
