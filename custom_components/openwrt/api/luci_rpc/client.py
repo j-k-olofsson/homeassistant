@@ -257,6 +257,13 @@ class LuciRpcClient(
             return {"code": rc or 1, "stdout": "", "stderr": stdout}
         return {"code": rc, "stdout": stdout, "stderr": ""}
 
+    async def read_file(self, path: str) -> str | None:
+        """Read a file via LuCI RPC (cat through sys.exec)."""
+        import shlex
+
+        out = await self.execute_command(f"cat {shlex.quote(path)} 2>/dev/null")
+        return out if out else None
+
     async def user_exists(self, username: str) -> bool:
         """Check if a system user exists on the device."""
         # 1. Try via LuCI RPC (often more restricted than ubus, but let's try reading passwd)
@@ -568,7 +575,8 @@ class LuciRpcClient(
             "/etc/init.d/odhcpd "
             "/etc/init.d/lldpd "
             "/usr/sbin/batctl "
-            "/sys/module/batman_adv; do "
+            "/sys/module/batman_adv "
+            "/usr/bin/stty /bin/stty /usr/bin/timeout /bin/timeout /etc/init.d/snort; do "
             "if [ -e $f ]; then echo 1; else echo 0; fi; done"
         )
         out = await self._rpc_call("sys", "exec", [cmd])
@@ -620,6 +628,9 @@ class LuciRpcClient(
                 packages.batctl = detect_status(20)
             if packages.batman_adv is not True:
                 packages.batman_adv = detect_status(21)
+            packages.stty = detect_status(22) or detect_status(23)
+            packages.timeout = detect_status(24) or detect_status(25)
+            packages.snort = detect_status(26)
 
         # Step 3: Check UCI configs for remaining packages (very robust fallback)
         if packages.sqm_scripts is not True:

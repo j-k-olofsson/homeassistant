@@ -10,6 +10,7 @@
 #   - sunset_duration          : e.g. "3600s"
 #   - sunrise_red/green/blue/white : channel mix during sunrise
 #   - night_red_brightness     : e.g. "10%"
+#   - active                  : "on"/"off"
 #   - late_on                  : bool string ("true"/"false")
 
 esphome:
@@ -42,6 +43,8 @@ script:
       - if:
           condition:
             and:
+              - lambda: |-
+                  return std::string("${active}") == "on";
               - text_sensor.state:
                   id: myGrowlightScene
                   state: "ON"
@@ -51,9 +54,12 @@ script:
             - script.execute: growlight_sunrise
       - if:
           condition:
-            text_sensor.state:
-              id: myGrowlightScene
-              state: "LATE_ON"
+            and:
+              - lambda: |-
+                  return std::string("${active}") == "on";
+              - text_sensor.state:
+                  id: myGrowlightScene
+                  state: "LATE_ON"
           then:
             - script.execute: growlight_manual_on
       - if:

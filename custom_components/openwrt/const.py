@@ -37,6 +37,15 @@ CONF_TRUST_STALE_ARP: Final = "trust_stale_arp"
 CONF_TRUST_BRIDGE_FDB: Final = "trust_bridge_fdb"
 CONF_FORCE_WIRELESS_MACS: Final = "force_wireless_macs"
 CONF_REDEPLOY_USER: Final = "redeploy_user"
+CONF_REVERSE_DNS: Final = "reverse_dns"
+
+CONF_GPS_MODEM_ENABLED: Final = "gps_modem_enabled"
+CONF_GPS_MODEM_PORT: Final = "gps_modem_port"
+CONF_GPS_POLL_INTERVAL: Final = "gps_poll_interval"
+
+DEFAULT_GPS_MODEM_ENABLED: Final = False
+DEFAULT_GPS_MODEM_PORT: Final = "/dev/ttyUSB3"
+DEFAULT_GPS_POLL_INTERVAL: Final = 60
 
 CONF_ENABLE_FIREWALL: Final = "enable_firewall"
 CONF_ENABLE_SERVICES: Final = "enable_services"
@@ -45,6 +54,7 @@ CONF_ENABLE_LED: Final = "enable_led"
 CONF_ENABLE_SQM: Final = "enable_sqm"
 CONF_ENABLE_LOAD: Final = "enable_load"
 CONF_ENABLE_NLBWMON_SENSORS: Final = "enable_nlbwmon_sensors"
+CONF_ENABLE_SNORT_SENSORS: Final = "enable_snort_sensors"
 
 CONNECTION_TYPE_UBUS: Final = "ubus"
 CONNECTION_TYPE_LUCI_RPC: Final = "luci_rpc"
@@ -65,6 +75,7 @@ DEFAULT_VERIFY_SSL: Final = False
 DEFAULT_SKIP_RANDOM_MAC: Final = True
 DEFAULT_TRUST_STALE_ARP: Final = True
 DEFAULT_TRUST_BRIDGE_FDB: Final = True
+DEFAULT_REVERSE_DNS: Final = False
 
 DHCP_SOFTWARE_AUTO: Final = "auto"
 DHCP_SOFTWARE_DNSMASQ: Final = "dnsmasq"

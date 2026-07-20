@@ -96,6 +96,7 @@ class OpenWrtUpdateEntity(CoordinatorEntity[OpenWrtDataCoordinator], UpdateEntit
         self._attr_device_info = {
             "identifiers": {(DOMAIN, coordinator.router_id)},
         }
+        self._in_progress = False
 
     @property
     def supported_features(self) -> UpdateEntityFeature:
@@ -325,98 +326,108 @@ class OpenWrtUpdateEntity(CoordinatorEntity[OpenWrtDataCoordinator], UpdateEntit
         **kwargs: Any,
     ) -> None:
         """Install the latest firmware version."""
-        data = self.coordinator.data
-        if not data:
-            msg = "No data available to process firmware update."
-            raise HomeAssistantError(msg)
-
-        if not data.firmware_install_url and not data.asu_supported:
-            msg = "No firmware URL available for installation."
-            raise ValueError(msg)
-
-        # Check for auto-backup option
-        auto_backup = self.coordinator.config_entry.options.get(CONF_AUTO_BACKUP, True)
-        if auto_backup:
-            await self._async_perform_backup()
-
-        # Check for required ASU package if using LuCI/Ubus
-        if data.asu_supported and not data.firmware_install_url:
-            conn_type = self.coordinator.config_entry.data.get(CONF_CONNECTION_TYPE)
-            if (
-                conn_type in (CONNECTION_TYPE_LUCI_RPC, CONNECTION_TYPE_UBUS)
-                and not data.packages.asu
-            ):
-                msg = (
-                    "Attended Sysupgrade package (luci-app-attendedsysupgrade) "
-                    "is missing on the router. Cannot perform firmware upgrade."
-                )
-                raise HomeAssistantError(
-                    msg,
-                )
-
-        # ASU Update Flow
-        if data.asu_supported and data.asu_update_available:
-            _LOGGER.info(
-                "Initiating ASU custom firmware build for %s",
-                data.firmware_latest_version,
-            )
-            try:
-                from .const import CONF_ASU_URL
-                from .helpers.asu import AsuClient
-
-                asu_url = self.coordinator.config_entry.options.get(
-                    CONF_ASU_URL,
-                    "https://sysupgrade.openwrt.org",
-                )
-                asu_client = AsuClient(self.hass, asu_url)
-
-                request_hash = await asu_client.request_build(
-                    version=data.firmware_latest_version,
-                    target=data.device_info.target,
-                    board_name=data.device_info.board_name,
-                    packages=data.installed_packages,
-                    client_name=(
-                        f"Home Assistant OpenWrt Integration ({self.coordinator.name})"
-                    ),
-                )
-
-                _LOGGER.info(
-                    "ASU build requested (hash: %s). Waiting for image...",
-                    request_hash,
-                )
-                download_url = await asu_client.poll_build_status(request_hash)
-
-                _LOGGER.info(
-                    "ASU build complete. Flashing image from: %s",
-                    download_url,
-                )
-                # ASU builds always keep settings by default in OpenWrt logic,
-                # but we pass it anyway.
-                await self.coordinator.client.install_firmware(
-                    download_url,
-                    keep_settings=True,
-                )
-
-            except Exception as err:
-                _LOGGER.exception("ASU firmware update failed")
-                msg = f"ASU firmware update failed: {err}"
-                raise HomeAssistantError(msg) from err
-
+        if self._in_progress:
+            _LOGGER.warning("Firmware update is already in progress.")
             return
 
-        # Standard Update Flow
-        url = data.firmware_install_url
-        _LOGGER.info("Initiating standard firmware installation from: %s", url)
-        if not url:
-            msg = "No firmware URL available for installation."
-            raise ValueError(msg)
-
+        self._in_progress = True
         try:
-            # We assume keep_settings=True for official updates from HA
-            await self.coordinator.client.install_firmware(url, keep_settings=True)
-        except Exception as err:
-            msg = f"Failed to initiate firmware installation: {err}"
-            raise HomeAssistantError(msg) from err
+            data = self.coordinator.data
+            if not data:
+                msg = "No data available to process firmware update."
+                raise HomeAssistantError(msg)
+
+            if not data.firmware_install_url and not data.asu_supported:
+                msg = "No firmware URL available for installation."
+                raise ValueError(msg)
+
+            # Check for auto-backup option
+            auto_backup = self.coordinator.config_entry.options.get(
+                CONF_AUTO_BACKUP, True
+            )
+            if auto_backup:
+                await self._async_perform_backup()
+
+            # Check for required ASU package if using LuCI/Ubus
+            if data.asu_supported and not data.firmware_install_url:
+                conn_type = self.coordinator.config_entry.data.get(CONF_CONNECTION_TYPE)
+                if (
+                    conn_type in (CONNECTION_TYPE_LUCI_RPC, CONNECTION_TYPE_UBUS)
+                    and not data.packages.asu
+                ):
+                    msg = (
+                        "Attended Sysupgrade package (luci-app-attendedsysupgrade) "
+                        "is missing on the router. Cannot perform firmware upgrade."
+                    )
+                    raise HomeAssistantError(
+                        msg,
+                    )
+
+            # ASU Update Flow
+            if data.asu_supported and data.asu_update_available:
+                _LOGGER.info(
+                    "Initiating ASU custom firmware build for %s",
+                    data.firmware_latest_version,
+                )
+                try:
+                    from .const import CONF_ASU_URL
+                    from .helpers.asu import AsuClient
+
+                    asu_url = self.coordinator.config_entry.options.get(
+                        CONF_ASU_URL,
+                        "https://sysupgrade.openwrt.org",
+                    )
+                    asu_client = AsuClient(self.hass, asu_url)
+
+                    request_hash = await asu_client.request_build(
+                        version=data.firmware_latest_version,
+                        target=data.device_info.target,
+                        board_name=data.device_info.board_name,
+                        packages=data.installed_packages,
+                        client_name=(
+                            f"Home Assistant OpenWrt Integration ({self.coordinator.name})"
+                        ),
+                    )
+
+                    _LOGGER.info(
+                        "ASU build requested (hash: %s). Waiting for image...",
+                        request_hash,
+                    )
+                    download_url = await asu_client.poll_build_status(request_hash)
+
+                    _LOGGER.info(
+                        "ASU build complete. Flashing image from: %s",
+                        download_url,
+                    )
+                    # ASU builds always keep settings by default in OpenWrt logic,
+                    # but we pass it anyway.
+                    await self.coordinator.client.install_firmware(
+                        download_url,
+                        keep_settings=True,
+                    )
+
+                except Exception as err:
+                    _LOGGER.exception("ASU firmware update failed")
+                    msg = f"ASU firmware update failed: {err}"
+                    raise HomeAssistantError(msg) from err
+
+                return
+
+            # Standard Update Flow
+            url = data.firmware_install_url
+            _LOGGER.info("Initiating standard firmware installation from: %s", url)
+            if not url:
+                msg = "No firmware URL available for installation."
+                raise ValueError(msg)
+
+            try:
+                # We assume keep_settings=True for official updates from HA
+                await self.coordinator.client.install_firmware(url, keep_settings=True)
+            except Exception as err:
+                msg = f"Failed to initiate firmware installation: {err}"
+                raise HomeAssistantError(msg) from err
+        finally:
+            self._in_progress = False
 
     async def _async_perform_backup(self) -> None:
         """Perform a backup and download it to HA."""
@@ -425,8 +436,9 @@ class OpenWrtUpdateEntity(CoordinatorEntity[OpenWrtDataCoordinator], UpdateEntit
             # Create backup on router
             remote_path = await self.coordinator.client.create_backup()
             if not remote_path:
-                _LOGGER.error("Failed to create backup on router")
-                return
+                msg = "Failed to create backup on router"
+                _LOGGER.error(msg)
+                raise HomeAssistantError(msg)
 
             # Prepare local path
             from pathlib import Path
@@ -448,14 +460,16 @@ class OpenWrtUpdateEntity(CoordinatorEntity[OpenWrtDataCoordinator], UpdateEntit
                 # Cleanup remote file
                 await self.coordinator.client.execute_command(f"rm {remote_path}")
             else:
-                _LOGGER.error("Failed to download backup from router to %s", local_path)
+                msg = f"Failed to download backup from router to {local_path}"
+                _LOGGER.error(msg)
+                raise HomeAssistantError(msg)
 
-        except Exception:
+        except Exception as err:
             _LOGGER.exception("Automatic backup failed")
-            # We don't raise here to avoid blocking the update if backup fails,
-            # unless the user really wants it. But usually, an update is more important.
-            # However, safety first - maybe we should raise?
-            # User said "automatically trigger a backup", so let's log it.
+            if isinstance(err, HomeAssistantError):
+                raise
+            msg = f"Automatic backup failed: {err}"
+            raise HomeAssistantError(msg) from err
 
 
 class OpenWrtPackageUpdateEntity(

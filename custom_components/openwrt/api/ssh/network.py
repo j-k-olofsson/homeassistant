@@ -362,20 +362,28 @@ class SshNetworkMixin:
             iface_map: dict[str, WireGuardInterface] = {}
             for line in stdout.splitlines():
                 parts = line.split("\t")
-                if len(parts) == 4:
+                if len(parts) in (4, 5):
                     ifname = parts[0]
                     if ifname not in wg_ifaces:
                         continue
+                    if len(parts) == 4:
+                        public_key = parts[1]
+                        listen_port = int(parts[2]) if parts[2].isdigit() else 0
+                        fwmark = int(parts[3]) if parts[3].isdigit() else 0
+                    else:
+                        public_key = parts[2]
+                        listen_port = int(parts[3]) if parts[3].isdigit() else 0
+                        fwmark = int(parts[4]) if parts[4].isdigit() else 0
                     iface = WireGuardInterface(
                         name=ifname,
                         enabled=wg_ifaces[ifname],
-                        public_key=parts[1],
-                        listen_port=int(parts[2]) if parts[2].isdigit() else 0,
-                        fwmark=int(parts[3]) if parts[3].isdigit() else 0,
+                        public_key=public_key,
+                        listen_port=listen_port,
+                        fwmark=fwmark,
                     )
                     iface_map[ifname] = iface
                     interfaces.append(iface)
-                elif len(parts) >= 8:
+                elif len(parts) >= 9:
                     ifname = parts[0]
                     if ifname in iface_map:
                         peer = WireGuardPeer(

@@ -1,14 +1,11 @@
 """Provide info to system health."""
-import sys
+
 import logging
 
 from homeassistant.components import system_health
 from homeassistant.core import HomeAssistant, callback
 
-from .const import (
-    DOMAIN,
-    VERSION
-)
+from .const import DOMAIN, VERSION
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -18,31 +15,21 @@ def async_register(
     hass: HomeAssistant, register: system_health.SystemHealthRegistration
 ) -> None:
     """Register system health callbacks."""
-
-    try:
-        register.domain = DOMAIN
-        register.async_register_info(system_health_info, "/config/integrations")
-        _LOGGER.debug("System health registration succeeded")
-    except:
-        _LOGGER.error("System health registration failed")
+    register.async_register_info(system_health_info, "/config/integrations")
 
 
-async def system_health_info(hass):
+async def system_health_info(hass: HomeAssistant):
     """Get info for the info page."""
-    worker = hass.data[DOMAIN]
+    coordinators = hass.data.get(DOMAIN, {})
 
-    try:
-        statusObject = {
-            "Version": VERSION,
-            "Idle": worker.is_idle(),
-            "Instances": len(worker.postalcodes)
-        }
-        _LOGGER.debug("Information gather succeeded")
-        return statusObject
-    except:
-        _LOGGER.debug("Information gather Failed")
-        return {
-            "Version": VERSION,
-            "Idle": "(worker failed)",
-            "Instances": "(worker failed)"
-        }
+    return {
+        "Version": VERSION,
+        "Instances": len(coordinators),
+        "Last update success": (
+            all(
+                coordinator.last_update_success for coordinator in coordinators.values()
+            )
+            if coordinators
+            else False
+        ),
+    }

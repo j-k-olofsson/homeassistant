@@ -1,0 +1,49 @@
+name: ha
+services:
+  ha:
+    image: ${HA_IMAGE}
+    container_name: ha
+    restart: unless-stopped
+    networks: [default, edge]
+    environment:
+      - TZ=${TZ}
+    volumes:
+      - ${DATA_DIR}/config:/config
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "${HA_HTTP_PORT:-58123}:8123"
+    # valfri healthcheck (kommenterad om du vill aktivera senare)
+    # healthcheck:
+    #   test: ["CMD", "bash", "-lc", "curl -fsS http://127.0.0.1:8123 >/dev/null"]
+    #   interval: 20s
+    #   timeout: 5s
+    #   retries: 10
+
+  esphome:
+    image: ${ESPHOME_IMAGE}
+    container_name: esphome
+    restart: unless-stopped
+    healthcheck:
+      disable: true
+    networks: [default, edge]
+    environment:
+      - TZ=${TZ}
+    volumes:
+      - ${DATA_DIR}/esphome-builder:/config
+      - /etc/localtime:/etc/localtime:ro
+    command:
+      - dashboard
+      - --remote-build-only
+      - --remote-build-host
+      - 0.0.0.0
+      - --remote-build-port
+      - "6055"
+      - --allow-pairing-source
+      - 192.168.10.2
+      - /config
+    ports:
+      - "6055:6055"
+
+networks:
+  edge:
+    external: true

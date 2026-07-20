@@ -285,7 +285,7 @@ class UbusServicesMixin:
                     "/usr/share/luci/menu.d/luci-app-attendedsysupgrade.json "
                     "/etc/init.d/adblock "
                     "/etc/init.d/simple-adblock "
-                    "/etc/init.d/ban-ip "
+                    "/etc/init.d/banip "
                     "/etc/init.d/miniupnpd "
                     "/etc/init.d/nlbwmon "
                     "/etc/init.d/pbr "
@@ -293,7 +293,8 @@ class UbusServicesMixin:
                     "/etc/init.d/unbound "
                     "/usr/sbin/batctl "
                     "/sys/module/batman_adv "
-                    "/etc/config/sqm; do "
+                    "/etc/config/sqm "
+                    "/usr/bin/stty /bin/stty /usr/bin/timeout /bin/timeout; do "
                     "if [ -f $f ] || [ -x $f ]; then echo 1; else echo 0; fi; done"
                 )
                 result = await self._call(
@@ -343,6 +344,8 @@ class UbusServicesMixin:
                     packages.unbound = detect_status(17)
                 packages.batctl = detect_status(18)
                 packages.batman_adv = detect_status(19)
+                packages.stty = detect_status(21) or detect_status(22)
+                packages.timeout = detect_status(23) or detect_status(24)
 
             except Exception as err:
                 _LOGGER.debug("Package detection via RPC failed, falling back: %s", err)
@@ -423,7 +426,8 @@ class UbusServicesMixin:
             ("/usr/lib/lua/luci/controller/attendedsysupgrade.lua", "asu"),
             ("/etc/init.d/adblock", "adblock"),
             ("/etc/init.d/simple-adblock", "simple_adblock"),
-            ("/etc/init.d/ban-ip", "ban_ip"),
+            ("/etc/init.d/banip", "ban_ip"),
+            ("/etc/init.d/snort", "snort"),
         ]
         for path, attr in check_list:
             if getattr(packages, attr) is not True:
@@ -449,7 +453,8 @@ class UbusServicesMixin:
             "asu": "luci-app-attendedsysupgrade",
             "adblock": "adblock",
             "simple_adblock": "simple-adblock",
-            "ban_ip": "ban-ip",
+            "ban_ip": "banip",
+            "snort": "snort",
         }
         for attr, pkg_name in mapping.items():
             if getattr(packages, attr) is not True:

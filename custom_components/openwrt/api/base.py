@@ -68,7 +68,7 @@ echo "LOG: TRACE: Password set"
 
 ACL_FILE="/usr/share/rpcd/acl.d/homeassistant.json"
 mkdir -p "$(dirname "$ACL_FILE")"
-printf '{{\\n  "homeassistant": {{\\n    "description": "Home Assistant Integration",\\n    "read": {{\\n      "ubus": {{\\n        "system": ["info", "board", "logread", "upgrade"],\\n        "log": ["read"],\\n        "network": ["*"],\\n        "network.*": ["*"],\\n        "iwinfo": ["*"],\\n        "file": ["*"],\\n        "firewall": ["*"],\\n        "rc": ["*"],\\n        "service": ["*"],\\n        "system": ["*"],\\n        "uci": ["*"],\\n        "session": ["*"],\\n        "hostapd.*": ["*"],\\n        "luci": ["*"],\\n        "luci-rpc": ["*"],\\n        "attendedsysupgrade": ["*"]\\n      }},\\n      "uci": ["*"],\\n      "file": {{\\n        "/etc/config/*": ["read", "stat"],\\n        "/etc/passwd": ["read"],\\n        "/etc/group": ["read"],\\n        "/etc/shadow": ["read"],\\n        "/etc/shells": ["read"],\\n        "/usr/bin/iwinfo": ["read", "stat", "exec"],\\n        "/usr/bin/etherwake": ["read", "stat", "exec"],\\n        "/usr/bin/wg": ["read", "stat", "exec"],\\n        "/usr/sbin/openvpn": ["read", "stat", "exec"],\\n        "/usr/bin/id": ["read", "stat", "exec"],\\n        "/bin/sh": ["read", "stat", "exec"],\\n        "/bin/ash": ["read", "stat", "exec"],\\n        "/bin/ls": ["read", "stat", "exec"],\\n        "/sbin/apk": ["read", "stat", "exec"],\\n        "/bin/opkg": ["read", "stat", "exec"],\\n        "/sbin/logread": ["read", "stat"],\\n        "/etc/presence/*": ["read", "stat"],\\n        "/etc/init.d/presence_hostapd": ["read", "stat", "exec"],\\n        "/usr/sbin/batctl": ["read", "stat", "exec"],\\n        "/sys/module/batman_adv": ["read", "stat"],\\n        "/bin/cat": ["read", "stat", "exec"],\\n        "/bin/grep": ["read", "stat", "exec"],\\n        "/usr/bin/awk": ["read", "stat", "exec"],\\n        "/bin/df": ["read", "stat", "exec"],\\n        "/sbin/ip": ["read", "stat", "exec"],\\n        "/usr/sbin/ip": ["read", "stat", "exec"],\\n        "/bin/ubus": ["read", "stat", "exec"],\\n        "/bin/ping": ["read", "stat", "exec"],\\n        "/usr/bin/ping": ["read", "stat", "exec"],\\n        "/usr/bin/uptime": ["read", "stat", "exec"],\\n        "/usr/bin/killall": ["read", "stat", "exec"],\\n        "/bin/chmod": ["read", "stat", "exec"],\\n        "/bin/mkdir": ["read", "stat", "exec"],\\n        "/bin/rm": ["read", "stat", "exec"],\\n        "/proc/stat": ["read"],\\n        "/proc/meminfo": ["read"],\\n        "/proc/net/arp": ["read"],\\n        "/proc/net/dev": ["read"],\\n        "/tmp/dhcp.leases": ["read"],\\n        "/sys/class/thermal/*": ["read"]\\n      }}\\n    }},\\n    "write": {{\\n      "ubus": {{\\n        "system": ["reboot", "upgrade"],\\n        "network.interface": ["up", "down", "reconnect"],\\n        "network": ["*"],\\n        "firewall": ["*"],\\n        "rc": ["*"],\\n        "service": ["*"],\\n        "uci": ["*"],\\n        "file": ["exec"],\\n        "hostapd.*": ["*"]\\n      }},\\n      "uci": ["*"],\\n      "file": {{\\n        "/bin/sh": ["exec"],\\n        "/bin/ash": ["exec"],\\n        "/usr/bin/id": ["exec"],\\n        "/sbin/apk": ["exec"],\\n        "/bin/opkg": ["exec"],\\n        "/etc/presence/*": ["read", "stat", "write"],\\n        "/etc/init.d/presence_hostapd": ["read", "stat", "write", "exec"]\\n      }}\\n    }}\\n  }}\\n}}' > "$ACL_FILE"
+printf '{{\\n  "homeassistant": {{\\n    "description": "Home Assistant Integration",\\n    "read": {{\\n      "ubus": {{\\n        "system": ["info", "board", "logread", "upgrade"],\\n        "log": ["read"],\\n        "network": ["*"],\\n        "network.*": ["*"],\\n        "iwinfo": ["*"],\\n        "file": ["*"],\\n        "firewall": ["*"],\\n        "rc": ["*"],\\n        "service": ["*"],\\n        "system": ["*"],\\n        "uci": ["*"],\\n        "session": ["*"],\\n        "hostapd.*": ["*"],\\n        "luci": ["*"],\\n        "luci-rpc": ["*"],\\n        "attendedsysupgrade": ["*"]\\n      }},\\n      "uci": ["*"],\\n      "file": {{\\n        "/etc/config/*": ["read", "stat"],\\n        "/etc/passwd": ["read"],\\n        "/etc/group": ["read"],\\n        "/etc/shadow": ["read"],\\n        "/etc/shells": ["read"],\\n        "/usr/bin/iwinfo": ["read", "stat", "exec"],\\n        "/usr/bin/etherwake": ["read", "stat", "exec"],\\n        "/usr/bin/wg": ["read", "stat", "exec"],\\n        "/usr/sbin/openvpn": ["read", "stat", "exec"],\\n        "/usr/bin/id": ["read", "stat", "exec"],\\n        "/bin/sh": ["read", "stat", "exec"],\\n        "/bin/ash": ["read", "stat", "exec"],\\n        "/bin/ls": ["read", "stat", "exec"],\\n        "/sbin/apk": ["read", "stat", "exec"],\\n        "/bin/opkg": ["read", "stat", "exec"],\\n        "/sbin/logread": ["read", "stat"],\\n        "/etc/presence/*": ["read", "stat"],\\n        "/etc/init.d/presence_hostapd": ["read", "stat", "exec"],\\n        "/usr/sbin/batctl": ["read", "stat", "exec"],\\n        "/sys/module/batman_adv": ["read", "stat"],\\n        "/bin/cat": ["read", "stat", "exec"],\\n        "/bin/grep": ["read", "stat", "exec"],\\n        "/usr/bin/awk": ["read", "stat", "exec"],\\n        "/bin/df": ["read", "stat", "exec"],\\n        "/sbin/ip": ["read", "stat", "exec"],\\n        "/usr/sbin/ip": ["read", "stat", "exec"],\\n        "/bin/ubus": ["read", "stat", "exec"],\\n        "/bin/ping": ["read", "stat", "exec"],\\n        "/usr/bin/ping": ["read", "stat", "exec"],\\n        "/usr/bin/uptime": ["read", "stat", "exec"],\\n        "/usr/bin/killall": ["read", "stat", "exec"],\\n        "/bin/chmod": ["read", "stat", "exec"],\\n        "/bin/mkdir": ["read", "stat", "exec"],\\n        "/bin/rm": ["read", "stat", "exec"],\\n        "/proc/stat": ["read"],\\n        "/proc/meminfo": ["read"],\\n        "/proc/net/arp": ["read"],\\n        "/proc/net/dev": ["read"],\\n        "/etc/init.d/snort": ["read", "stat", "exec"],\\n        "/etc/init.d/banip": ["read", "stat", "exec"],\\n        "/proc/sys/net/netfilter/nf_conntrack_count": ["read"],\\n        "/proc/sys/net/netfilter/nf_conntrack_max": ["read"],\\n        "/usr/bin/tail": ["read", "stat", "exec"],\\n        "/usr/bin/wc": ["read", "stat", "exec"],\\n        "/tmp/dhcp.leases": ["read"],\\n        "/tmp/*": ["read", "stat"],\\n        "/sys/class/thermal/*": ["read"]\\n      }}\\n    }},\\n    "write": {{\\n      "ubus": {{\\n        "system": ["reboot", "upgrade"],\\n        "network.interface": ["up", "down", "reconnect"],\\n        "network": ["*"],\\n        "firewall": ["*"],\\n        "rc": ["*"],\\n        "service": ["*"],\\n        "uci": ["*"],\\n        "file": ["exec"],\\n        "hostapd.*": ["*"]\\n      }},\\n      "uci": ["*"],\\n      "file": {{\\n        "/bin/sh": ["exec"],\\n        "/bin/ash": ["exec"],\\n        "/usr/bin/id": ["exec"],\\n        "/sbin/apk": ["exec"],\\n        "/bin/opkg": ["exec"],\\n        "/tmp/*": ["read", "stat", "write"],\\n        "/etc/presence/*": ["read", "stat", "write"],\\n        "/etc/init.d/presence_hostapd": ["read", "stat", "write", "exec"]\\n      }}\\n    }}\\n  }}\\n}}' > "$ACL_FILE"
 chmod 644 "$ACL_FILE"
 echo "LOG: TRACE: ACL created"
 
@@ -315,6 +315,8 @@ class SystemResources:
     load_15min: float = 0.0
     uptime: int = 0
     processes: int = 0
+    conntrack_count: int = 0
+    conntrack_max: int = 0
     temperature: float | None = None
     temperatures: dict[str, float] = field(default_factory=dict)
     cpu_frequency: float | None = None
@@ -468,6 +470,12 @@ class QModemInfo:
     nr5g_rsrp: int | None = None
     nr5g_rsrq: int | None = None
     nr5g_sinr: int | None = None
+    gps_latitude: float | None = None
+    gps_longitude: float | None = None
+    gps_last_update: datetime | None = None
+    gps_last_update_attempted: datetime | None = None
+    gps_last_update_successful: datetime | None = None
+    gps_last_update_ok: bool | None = None
 
 
 @dataclass
@@ -508,6 +516,10 @@ class BanIpStatus:
     status: str = "disabled"
     version: str | None = None
     banned_ips: int = 0
+    blocked_packets: int = 0
+    blocked_inbound: int = 0
+    blocked_outbound: int = 0
+    block_stats: dict[str, int] = field(default_factory=dict)
 
 
 @dataclass
@@ -704,10 +716,13 @@ class OpenWrtPackages:
     unbound: bool | None = None
     batman_adv: bool | None = None
     batctl: bool | None = None
+    snort: bool | None = None
 
     dhcp: bool | None = None
     wireless: bool | None = None
     lldp: bool | None = None
+    stty: bool | None = None
+    timeout: bool | None = None
 
 
 @dataclass
@@ -766,6 +781,7 @@ class OpenWrtData:
     permissions: OpenWrtPermissions = field(default_factory=OpenWrtPermissions)
     mqtt_presence_status: str | None = None
     mqtt_presence_logs: list[str] | None = None
+    snort_status: dict[str, Any] = field(default_factory=dict)
     batman_mesh_active: bool = False
     batman_originators: list[BatmanOriginator] = field(default_factory=list)
     batman_neighbors: list[BatmanNeighbor] = field(default_factory=list)
@@ -828,11 +844,33 @@ class OpenWrtClient(abc.ABC):
         self._cached_medium_data: dict[str, Any] = {}
 
     def _get_assoc_rate(self, client: dict[str, Any], direction: str) -> int:
-        """Helper to safely extract wireless rate from assoclist data."""
+        """Helper to safely extract wireless rate from assoclist/hostapd data."""
+        # 1. Check "rate" dict (hostapd format: "rate": {"rx": 866700} in Kbps)
+        rate_obj = client.get("rate")
+        if isinstance(rate_obj, dict):
+            val = rate_obj.get(direction)
+            if isinstance(val, (int, float)):
+                return int(val)
+
+        # 2. Check "rx"/"tx" dict (iwinfo format: "rx": {"rate": 120100} in Kbps)
         val = client.get(direction)
         if isinstance(val, dict):
-            return val.get("rate", 0)
-        return client.get(f"{direction}_rate", 0)
+            rate_val = val.get("rate")
+            if isinstance(rate_val, (int, float)):
+                return int(rate_val)
+        elif isinstance(val, (int, float)):
+            return int(val)
+
+        # 3. Check "rx_rate"/"tx_rate" (hostapd legacy/other format: "rx_rate": 8660 or {"rate": 8660} in tenths of Mbps)
+        dir_rate = client.get(f"{direction}_rate")
+        if isinstance(dir_rate, dict):
+            rate_val = dir_rate.get("rate")
+            if isinstance(rate_val, (int, float)):
+                return int(rate_val * 100)
+        elif isinstance(dir_rate, (int, float)):
+            return int(dir_rate * 100)
+
+        return 0
 
     async def _get_logread_command(self, count: int) -> str:
         """Resolve the correct logread command (detecting -n vs -l)."""
@@ -1181,6 +1219,23 @@ class OpenWrtClient(abc.ABC):
         """Execute a binary via rpcd file.exec. Returns {} if unsupported by this client."""
         return {}
 
+    async def read_file(self, path: str) -> str | None:
+        """Read a file's contents. None if unsupported by this client or on error."""
+        return None
+
+    async def _fetch_conntrack(self, resources: SystemResources) -> None:
+        """Populate nf_conntrack count/max from /proc."""
+        for attr, path in (
+            ("conntrack_count", "/proc/sys/net/netfilter/nf_conntrack_count"),
+            ("conntrack_max", "/proc/sys/net/netfilter/nf_conntrack_max"),
+        ):
+            data = await self.read_file(path)
+            if not data:
+                continue
+            match = re.search(r"\d+", data)
+            if match:
+                setattr(resources, attr, int(match.group(0)))
+
     async def kick_device(self, mac_address: str, interface: str) -> bool:
         """Kick a wireless device from the network using hostapd."""
         cmd_ubus = f'ubus call hostapd.{interface} del_client \'{{"addr":"{mac_address}","reason":5,"deauth":true,"ban_time":60000}}\''
@@ -1518,9 +1573,9 @@ class OpenWrtClient(abc.ABC):
                             for vpn in vpn_interfaces:
                                 if vpn.name == current_iface:
                                     vpn.peers += 1
-                                    # parts[4] = latest-handshake
-                                    if len(parts) > 4 and parts[4].isdigit():
-                                        handshake = int(parts[4])
+                                    # parts[5] = latest-handshake
+                                    if len(parts) > 5 and parts[5].isdigit():
+                                        handshake = int(parts[5])
                                         vpn.latest_handshake = max(
                                             vpn.latest_handshake, handshake
                                         )
@@ -1601,12 +1656,69 @@ class OpenWrtClient(abc.ABC):
         return False
 
     async def get_banip_status(self) -> BanIpStatus:
-        """Get status of the ban-ip package."""
-        return BanIpStatus()
+        """Get banIP status and runtime block counters."""
+        status = BanIpStatus()
+
+        try:
+            res = await self.file_exec("/etc/init.d/banip", ["enabled"])
+            if isinstance(res, dict) and "code" in res:
+                status.enabled = res.get("code") == 0
+        except Exception as err:  # noqa: BLE001
+            _LOGGER.debug("banip enabled probe failed: %s", err)
+        status.status = "enabled" if status.enabled else "disabled"
+
+        # Element count + packet-block counters from banIP's JSON report.
+        try:
+            res = await self.file_exec("/etc/init.d/banip", ["report", "json"])
+            out = res.get("stdout", "") if isinstance(res, dict) else ""
+            if out:
+                payload = json.loads(out)
+                summary = (
+                    payload[0] if isinstance(payload, list) and payload else payload
+                )
+                if isinstance(summary, dict):
+
+                    def _n(key: str) -> int:
+                        try:
+                            return int(str(summary.get(key, "0")).strip() or "0")
+                        except (ValueError, TypeError):
+                            return 0
+
+                    status.banned_ips = _n("sum_cntelements")
+                    status.blocked_inbound = _n("sum_setinbound")
+                    status.blocked_outbound = _n("sum_setoutbound")
+                    status.block_stats = {
+                        "inbound": status.blocked_inbound,
+                        "outbound": status.blocked_outbound,
+                        "syn_flood": _n("sum_synflood"),
+                        "udp_flood": _n("sum_udpflood"),
+                        "icmp_flood": _n("sum_icmpflood"),
+                        "ct_invalid": _n("sum_ctinvalid"),
+                        "tcp_invalid": _n("sum_tcpinvalid"),
+                        "bcp38": _n("sum_bcp38"),
+                        "autoadd_block": _n("autoadd_block"),
+                    }
+                    status.blocked_packets = sum(
+                        v for k, v in status.block_stats.items() if k != "autoadd_block"
+                    )
+        except Exception as err:  # noqa: BLE001
+            _LOGGER.debug("banip report failed: %s", err)
+        return status
 
     async def set_banip_enabled(self, enabled: bool) -> bool:
-        """Enable/disable the ban-ip service."""
-        return False
+        """Enable/disable the banIP service (uci flag + init start/stop)."""
+        val = "1" if enabled else "0"
+        try:
+            await self.execute_command(
+                f"uci set banip.global.ban_enabled='{val}' && uci commit banip"
+            )
+            await self.execute_command(
+                f"/etc/init.d/banip {'start' if enabled else 'stop'}"
+            )
+            return True
+        except Exception as err:  # noqa: BLE001
+            _LOGGER.debug("banip enable/disable failed: %s", err)
+            return False
 
     async def get_latency(self, target: str = "8.8.8.8") -> LatencyResult | None:
         """Measure network latency via ping."""
@@ -1851,6 +1963,7 @@ class OpenWrtClient(abc.ABC):
         data.system_resources = get_val(
             core_results[0], data.system_resources, "system_resources"
         )
+        await self._fetch_conntrack(data.system_resources)
         data.network_interfaces = get_val(
             core_results[1], data.network_interfaces, "network_interfaces"
         )
@@ -1884,7 +1997,6 @@ class OpenWrtClient(abc.ABC):
                 "firewall_rules": self.get_firewall_rules(),
                 "access_control": self.get_access_control(),
                 "sqm": self.get_sqm_status(),
-                "wireguard": self.get_wireguard_interfaces(),
                 "packages": self.check_packages(),
                 "permissions": self.check_permissions(),
                 "reboot_required": self.is_reboot_required(),
@@ -1916,9 +2028,6 @@ class OpenWrtClient(abc.ABC):
                 slow_map["access_control"], data.access_control, "access control"
             )
             data.sqm = get_val(slow_map["sqm"], data.sqm, "SQM")
-            data.wireguard_interfaces = get_val(
-                slow_map["wireguard"], data.wireguard_interfaces, "wireguard"
-            )
             data.packages = get_val(slow_map["packages"], data.packages, "packages")
             data.permissions = get_val(
                 slow_map["permissions"], data.permissions, "permissions"
@@ -1948,7 +2057,6 @@ class OpenWrtClient(abc.ABC):
                     "firewall_rules",
                     "access_control",
                     "sqm",
-                    "wireguard_interfaces",
                     "packages",
                     "permissions",
                     "reboot_required",
@@ -1979,6 +2087,7 @@ class OpenWrtClient(abc.ABC):
                 "external_ip": self.get_external_ip(),
                 "gateway_mac": self.get_gateway_mac(),
                 "wifi_credentials": self.get_wifi_credentials(),
+                "wireguard": self.get_wireguard_interfaces(),
             }
 
             if data.packages.wireless is not False:
@@ -2011,6 +2120,9 @@ class OpenWrtClient(abc.ABC):
             data.qmodem_info = get_val(med_map.get("qmodem"), data.qmodem_info, "modem")
             data.vpn_interfaces = get_val(
                 med_map.get("vpn"), data.vpn_interfaces, "VPN"
+            )
+            data.wireguard_interfaces = get_val(
+                med_map.get("wireguard"), data.wireguard_interfaces, "wireguard"
             )
             data.latency = get_val(med_map.get("latency"), data.latency, "latency")
             data.external_ip = get_val(
@@ -2062,6 +2174,7 @@ class OpenWrtClient(abc.ABC):
                     "mwan_status",
                     "qmodem_info",
                     "vpn_interfaces",
+                    "wireguard_interfaces",
                     "latency",
                     "external_ip",
                     "wifi_credentials",

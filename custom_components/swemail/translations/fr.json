@@ -27,7 +27,8 @@
         "user": {
           "data": {
             "postnord": "Activer le contrôle chez Postnord",
-            "citymail": "Activer le contrôle chez Citymail"
+            "citymail": "Activer le contrôle chez Citymail",
+            "extra_sensors": "Créer des capteurs supplémentaires (prochaine date de livraison et ville)"
           },
           "title": "Livraison de la poste suédoise"
         }
@@ -54,6 +55,12 @@
             "14": "Dans 2 semaines"
           }
         }
+      }
+    },
+    "device_automation": {
+      "trigger_type": {
+        "delivery_today": "Le courrier est distribué aujourd'hui",
+        "delivery_tomorrow": "Le courrier est distribué demain"
       }
     }
   }

@@ -103,6 +103,7 @@
           "enable_sqm": "SQM QoS-Steuerung aktivieren",
           "enable_vpn": "VPN-Überwachung & Steuerung aktivieren",
           "enable_nlbwmon_sensors": "NLBWMon Top-Hosts-Sensor aktivieren",
+          "enable_snort_sensors": "Snort IDS-Sensor aktivieren",
           "acknowledge": "Ich habe diese Informationen geprüft und möchte fortfahren"
         }
       },
@@ -206,6 +207,7 @@
       "already_configured": "Dieser Router ist bereits konfiguriert.",
       "already_in_progress": "Ein Einrichtungs-Vorgang für diesen Router läuft bereits.",
       "reauth_successful": "Die erneute Authentifizierung war erfolgreich.",
+      "reconfigure_successful": "Die Neukonfiguration war erfolgreich.",
       "no_host": "Das entdeckte Gerät hat keine gültige Host-Adresse.",
       "not_openwrt": "Das entdeckte Gerät scheint kein OpenWrt-Router zu sein."
     }
@@ -230,7 +232,11 @@
           "redeploy_user": "Home Assistant Benutzer & ACLs neu übertragen",
           "trust_stale_arp": "ARP-Status 'STALE' als anwesend werten",
           "trust_bridge_fdb": "Bridge-FDB für Anwesenheit nutzen (Kabel)",
-          "force_wireless_macs": "Drahtlose MACs erzwingen (Eine pro Zeile)"
+          "force_wireless_macs": "Drahtlose MACs erzwingen (Eine pro Zeile)",
+          "gps_modem_enabled": "GPS-Modem-Tracking aktivieren",
+          "gps_modem_port": "GPS-Modem Serieller Port",
+          "gps_poll_interval": "GPS-Modem Abfrageintervall (Sekunden)",
+          "reverse_dns": "Hostnamen per Reverse-DNS auflösen"
         },
         "description": "Konfiguriere die Optionen der OpenWrt-Integration."
       },
@@ -267,6 +273,7 @@
           "enable_sqm": "SQM QoS-Steuerung aktivieren",
           "enable_vpn": "VPN-Überwachung & Steuerung aktivieren",
           "enable_nlbwmon_sensors": "NLBWMon Top-Hosts-Sensor aktivieren",
+          "enable_snort_sensors": "Snort IDS-Sensor aktivieren",
           "acknowledge": "Ich habe diese Informationen geprüft und möchte fortfahren"
         }
       },
@@ -407,6 +414,9 @@
       "load_1min": {
         "name": "Systemlast (1m)"
       },
+      "conntrack_count": {
+        "name": "Verbindungsverfolgung"
+      },
       "load_5min": {
         "name": "Systemlast (5m)"
       },
@@ -460,6 +470,9 @@
       },
       "banip_banned": {
         "name": "Ban-IP Gebannte IPs"
+      },
+      "banip_blocked": {
+        "name": "Ban-IP blockierte Pakete"
       },
       "connected_clients": {
         "name": "Verbundene Clients"
@@ -590,6 +603,24 @@
       "qmodem_nr5g_sinr": {
         "name": "5G NR SINR"
       },
+      "qmodem_gps_latitude": {
+        "name": "Modem GPS Breitengrad"
+      },
+      "qmodem_gps_longitude": {
+        "name": "Modem GPS Längengrad"
+      },
+      "qmodem_gps_last_update": {
+        "name": "Modem GPS Letzte Aktualisierung"
+      },
+      "qmodem_gps_last_update_attempted": {
+        "name": "Modem GPS Letzter Aktualisierungsversuch"
+      },
+      "qmodem_gps_last_update_successful": {
+        "name": "Modem GPS Letzte erfolgreiche Aktualisierung"
+      },
+      "qmodem_gps_last_update_ok": {
+        "name": "Modem GPS Aktualisierungsstatus"
+      },
       "dhcp_lease_count": {
         "name": "DHCP Leases"
       },
@@ -659,7 +690,8 @@
           "ban_ip": "Ban-IP",
           "batman_adv": "Batman-adv Mesh-Netzwerk",
           "batctl": "Batman-adv Steuerung (batctl)",
-          "nlbwmon": "Top-Bandbreiten-Hosts-Sensor"
+          "nlbwmon": "Top-Bandbreiten-Hosts-Sensor",
+          "snort": "Snort IDS-Sensor"
         }
       }
     },

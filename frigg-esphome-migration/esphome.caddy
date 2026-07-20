@@ -1,0 +1,15 @@
+esphome.home.arpa {
+  tls internal
+
+  @allowed {
+    remote_ip 127.0.0.1/32 ::1 192.168.10.0/24 172.16.0.0/12 10.0.0.0/8
+  }
+
+  handle @allowed {
+    respond "ESPHome runs as a headless remote build server on 192.168.10.200:6055" 200
+  }
+
+  handle {
+    respond "Access restricted to LAN" 403
+  }
+}

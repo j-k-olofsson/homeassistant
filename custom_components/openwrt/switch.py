@@ -601,6 +601,7 @@ class OpenWrtBanIpSwitch(CoordinatorEntity[OpenWrtDataCoordinator], SwitchEntity
     _attr_translation_key = "banip"
     _attr_entity_category = EntityCategory.CONFIG
     _attr_device_class = SwitchDeviceClass.SWITCH
+    _attr_entity_registry_enabled_default = False
 
     def __init__(
         self,
@@ -790,7 +791,9 @@ class OpenWrtWirelessSwitch(CoordinatorEntity[OpenWrtDataCoordinator], SwitchEnt
     async def async_turn_on(self, **kwargs: Any) -> None:
         """Enable the wireless interface."""
         try:
-            await self._client.set_wireless_enabled(self._iface_name, True)
+            await self._client.set_wireless_enabled(
+                self._section_id or self._iface_name, True
+            )
             # Optimistic update
             if self.coordinator.data:
                 for wifi in self.coordinator.data.wireless_interfaces:
@@ -807,7 +810,9 @@ class OpenWrtWirelessSwitch(CoordinatorEntity[OpenWrtDataCoordinator], SwitchEnt
     async def async_turn_off(self, **kwargs: Any) -> None:
         """Disable the wireless interface."""
         try:
-            await self._client.set_wireless_enabled(self._iface_name, False)
+            await self._client.set_wireless_enabled(
+                self._section_id or self._iface_name, False
+            )
             # Optimistic update
             if self.coordinator.data:
                 for wifi in self.coordinator.data.wireless_interfaces:

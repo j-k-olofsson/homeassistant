@@ -16,16 +16,20 @@ button:
       - if:
           condition:
             and:
+              - lambda: |-
+                  return std::string("${active}") == "on";
               - text_sensor.state:
                   id: myGrowlightPhase
-                  state: "ON"   
+                  state: "ON"
               - lambda: |-
-                      return !${late_on};
+                  return !${late_on};
           then:
             - light.turn_on: myLight
       - if:
           condition:
             and:
+              - lambda: |-
+                  return std::string("${active}") == "on";
               - text_sensor.state:
                   id: myGrowlightPhase
                   state: "LATE_ON"
@@ -35,6 +39,6 @@ button:
           condition:
             - text_sensor.state:
                 id: myGrowlightPhase
-                state: "OFF"   
+                state: "OFF"
           then:
             - light.turn_off: myLight

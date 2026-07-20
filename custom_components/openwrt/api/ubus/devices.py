@@ -502,6 +502,8 @@ class UbusDevicesMixin:
                             self._set_wireless_connection_type(dev, ifname)
                             dev.signal = client.get("signal", 0)
                             dev.noise = client.get("noise", 0)
+                            dev.rx_rate = self._get_assoc_rate(client, "rx")
+                            dev.tx_rate = self._get_assoc_rate(client, "tx")
                 except (
                     UbusTimeoutError,
                     UbusConnectionError,
@@ -649,12 +651,10 @@ class UbusDevicesMixin:
                 dev.rx_bytes = bytes_data.get("rx", 0)
                 dev.tx_bytes = bytes_data.get("tx", 0)
 
-            # Hostapd returns rate in 100kbps (tenths of Mbps).
-            # Convert to Kbps by multiplying by 100.
-            if "rx_rate" in client_data and not dev.rx_rate:
-                dev.rx_rate = client_data.get("rx_rate", 0) * 100
-            if "tx_rate" in client_data and not dev.tx_rate:
-                dev.tx_rate = client_data.get("tx_rate", 0) * 100
+            if not dev.rx_rate:
+                dev.rx_rate = self._get_assoc_rate(client_data, "rx")
+            if not dev.tx_rate:
+                dev.tx_rate = self._get_assoc_rate(client_data, "tx")
 
     def _set_wireless_connection_type(self, dev: ConnectedDevice, ifname: str) -> None:
         """Determine specific wireless band from interface name."""
@@ -723,6 +723,16 @@ class UbusDevicesMixin:
                         mac = neigh.get("lladdr")
                         ip = neigh.get("address")
                         if mac and ip:
+                            # Filter out IPv6 link-local addresses (fe80::/10)
+                            import ipaddress
+
+                            try:
+                                ip_obj = ipaddress.ip_address(ip)
+                                if ip_obj.version == 6 and ip_obj.is_link_local:
+                                    continue
+                            except ValueError:
+                                pass
+
                             neighbors.append(
                                 IpNeighbor(
                                     ip=ip,

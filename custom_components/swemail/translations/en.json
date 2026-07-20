@@ -27,7 +27,8 @@
         "user": {
           "data": {
             "postnord": "Enable Postnord check",
-            "citymail": "Enable Citymail check"
+            "citymail": "Enable Citymail check",
+            "extra_sensors": "Create extra sensors (next delivery date and city)"
           },
           "title": "Swedish Mail Delivery"
         }
@@ -54,6 +55,12 @@
             "14": "In two weeks"
           }
         }
+      }
+    },
+    "device_automation": {
+      "trigger_type": {
+        "delivery_today": "Mail is delivered today",
+        "delivery_tomorrow": "Mail is delivered tomorrow"
       }
     }
   }

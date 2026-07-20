@@ -67,6 +67,7 @@ class UbusClient(
         self._ubus_path = ubus_path
         self._session_id: str = "00000000000000000000000000000000"
         self._reauth_lock = asyncio.Lock()
+        self._last_connect_time: float = 0.0
 
         self._semaphore = asyncio.Semaphore(5)
 
@@ -131,11 +132,9 @@ class UbusClient(
                         reauth_needed = True
 
             if reauth_needed and not reauthenticated:
-                async with self._reauth_lock:
-                    if self._session_id == failed_session:
-                        _LOGGER.debug("Ubus session expired, re-authenticating...")
-                        self._session_id = "00000000000000000000000000000000"
-                        await self.connect()
+                if self._session_id == failed_session:
+                    _LOGGER.debug("Ubus session expired, re-authenticating...")
+                    await self.connect()
                 return await self._call(
                     ubus_object,
                     ubus_method,
@@ -279,11 +278,22 @@ class UbusClient(
 
     async def connect(self) -> bool:
         """Authenticate with ubus."""
-        try:
-            return await self._connect()
-        except Exception as err:
-            self._last_connect_error = err
-            raise
+        import time
+
+        async with self._reauth_lock:
+            if self._connected and (time.time() - self._last_connect_time < 5.0):
+                _LOGGER.debug(
+                    "Ubus already connected recently, skipping re-authentication"
+                )
+                return True
+            try:
+                res = await self._connect()
+                if res:
+                    self._last_connect_time = time.time()
+                return res
+            except Exception as err:
+                self._last_connect_error = err
+                raise
 
     async def _connect(self) -> bool:
         """Authenticate with ubus."""

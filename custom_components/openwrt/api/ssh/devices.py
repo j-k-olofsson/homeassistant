@@ -161,8 +161,34 @@ class SshDevicesMixin:
         try:
             # Use get_wireless_interfaces to find active interfaces
             wireless_ifaces = await self.get_wireless_interfaces()
-            for wifi_iface in wireless_ifaces:
-                iface_name = wifi_iface.name
+            ifaces = {w.name for w in wireless_ifaces if w.name}
+
+            # Supplement with hostapd.* objects
+            try:
+                hostapd_list = await self._exec("ubus list 'hostapd.*' 2>/dev/null")
+                if hostapd_list:
+                    for line in hostapd_list.splitlines():
+                        if "." in line:
+                            ifaces.add(line.split(".", 1)[1])
+            except Exception:
+                pass
+
+            # Fallback candidates if nothing found
+            if not ifaces:
+                ifaces.update(
+                    {
+                        "wlan0",
+                        "wlan1",
+                        "wlan0-1",
+                        "wlan1-1",
+                        "ra0",
+                        "ra1",
+                        "rax0",
+                        "rax1",
+                    }
+                )
+
+            for iface_name in ifaces:
                 # Use ubus call for JSON output over SSH
                 safe_arg = shlex.quote(json.dumps({"device": iface_name}))
                 assoc_str = await self._exec(
@@ -186,18 +212,12 @@ class SshDevicesMixin:
                         dev.rx_rate = self._get_assoc_rate(client, "rx")
                         dev.tx_rate = self._get_assoc_rate(client, "tx")
 
-                        # Set connection type based on interface frequency/name
-                        if "5g" in iface_name.lower() or (
-                            wifi_iface.frequency and "5" in wifi_iface.frequency
-                        ):
+                        # Set connection type based on interface name
+                        if "5g" in iface_name.lower():
                             dev.connection_type = "5GHz"
-                        elif "6g" in iface_name.lower() or (
-                            wifi_iface.frequency and "6" in wifi_iface.frequency
-                        ):
+                        elif "6g" in iface_name.lower():
                             dev.connection_type = "6GHz"
-                        elif "2g" in iface_name.lower() or (
-                            wifi_iface.frequency and "2" in wifi_iface.frequency
-                        ):
+                        elif "2g" in iface_name.lower():
                             dev.connection_type = "2.4GHz"
                         else:
                             dev.connection_type = "wireless"
@@ -276,12 +296,10 @@ class SshDevicesMixin:
                                     dev.rx_bytes = bytes_data.get("rx", 0)
                                     dev.tx_bytes = bytes_data.get("tx", 0)
 
-                                # Hostapd returns rate in 100kbps (tenths of Mbps).
-                                # Convert to Kbps by multiplying by 100.
-                                if "rx_rate" in info and not dev.rx_rate:
-                                    dev.rx_rate = info.get("rx_rate", 0) * 100
-                                if "tx_rate" in info and not dev.tx_rate:
-                                    dev.tx_rate = info.get("tx_rate", 0) * 100
+                                if not dev.rx_rate:
+                                    dev.rx_rate = self._get_assoc_rate(info, "rx")
+                                if not dev.tx_rate:
+                                    dev.tx_rate = self._get_assoc_rate(info, "tx")
                                 dev.connection_type = (
                                     "5GHz"
                                     if "5g" in iface_name.lower()

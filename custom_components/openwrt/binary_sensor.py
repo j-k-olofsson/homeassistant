@@ -255,7 +255,9 @@ def _async_setup_vpn_binary_sensors(
                         translation_placeholders={"interface": vpn.name},
                         device_class=BinarySensorDeviceClass.CONNECTIVITY,
                         entity_category=EntityCategory.DIAGNOSTIC,
-                        entity_registry_enabled_default=False,
+                        entity_registry_enabled_default=entry.options.get(
+                            CONF_ENABLE_VPN, True
+                        ),
                         is_on_fn=lambda data, n=vpn.name: any(
                             v.up for v in data.vpn_interfaces if v.name == n
                         ),
@@ -295,9 +297,11 @@ def _async_setup_wireguard_peer_binary_sensors(
                             },
                             device_class=BinarySensorDeviceClass.CONNECTIVITY,
                             entity_category=EntityCategory.DIAGNOSTIC,
-                            entity_registry_enabled_default=False,
+                            entity_registry_enabled_default=entry.options.get(
+                                CONF_ENABLE_VPN, True
+                            ),
                             is_on_fn=lambda data, i=wg.name, p=peer.public_key: any(
-                                (time.time() - peer_data.latest_handshake < 180)
+                                (time.time() - peer_data.latest_handshake < 600)
                                 for w in data.wireguard_interfaces
                                 if w.name == i
                                 for peer_data in w.peers

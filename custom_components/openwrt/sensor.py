@@ -43,6 +43,7 @@ from .api.base import OpenWrtData, StorageUsage
 from .const import (
     CONF_ENABLE_LOAD,
     CONF_ENABLE_NLBWMON_SENSORS,
+    CONF_ENABLE_SNORT_SENSORS,
     CONF_ENABLE_SQM,
     CONF_ENABLE_VPN,
     CONF_MQTT_PRESENCE,
@@ -242,7 +243,7 @@ class OpenWrtQModemSensorEntity(OpenWrtSensorEntity):
 
         self._attr_device_info = DeviceInfo(
             identifiers={(DOMAIN, f"{entry.unique_id}_qmodem")},
-            name=f"QModem ({entry.unique_id})",
+            name=f"QModem ({entry.title})",
             manufacturer=manufacturer,
             model=model,
             via_device=(
@@ -473,6 +474,31 @@ def _get_system_sensors() -> tuple[OpenWrtSensorDescription, ...]:
             entity_registry_enabled_default=False,
             suggested_display_precision=2,
             value_fn=lambda data: round(data.system_resources.load_15min, 2),
+        ),
+        OpenWrtSensorDescription(
+            key="conntrack_count",
+            name="Connection Tracking",
+            translation_key="conntrack_count",
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            entity_registry_enabled_default=False,
+            icon="mdi:table-network",
+            native_unit_of_measurement="connections",
+            value_fn=lambda data: data.system_resources.conntrack_count,
+            available_fn=lambda data: data.system_resources.conntrack_max > 0,
+            attrs_fn=lambda data: {
+                "max": data.system_resources.conntrack_max,
+                "usage_percent": (
+                    round(
+                        data.system_resources.conntrack_count
+                        / data.system_resources.conntrack_max
+                        * 100.0,
+                        1,
+                    )
+                    if data.system_resources.conntrack_max > 0
+                    else None
+                ),
+            },
         ),
         OpenWrtSensorDescription(
             key="uptime",
@@ -840,6 +866,55 @@ def _get_qmodem_sensors() -> tuple[OpenWrtSensorDescription, ...]:
             entity_category=EntityCategory.DIAGNOSTIC,
             value_fn=lambda data: data.qmodem_info.nr5g_sinr,
         ),
+        OpenWrtSensorDescription(
+            key="qmodem_gps_latitude",
+            name="Modem GPS Latitude",
+            translation_key="qmodem_gps_latitude",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.qmodem_info.gps_latitude,
+        ),
+        OpenWrtSensorDescription(
+            key="qmodem_gps_longitude",
+            name="Modem GPS Longitude",
+            translation_key="qmodem_gps_longitude",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.qmodem_info.gps_longitude,
+        ),
+        OpenWrtSensorDescription(
+            key="qmodem_gps_last_update",
+            name="Modem GPS Last Update",
+            translation_key="qmodem_gps_last_update",
+            device_class=SensorDeviceClass.TIMESTAMP,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.qmodem_info.gps_last_update,
+        ),
+        OpenWrtSensorDescription(
+            key="qmodem_gps_last_update_attempted",
+            name="Modem GPS Last Update Attempted",
+            translation_key="qmodem_gps_last_update_attempted",
+            device_class=SensorDeviceClass.TIMESTAMP,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.qmodem_info.gps_last_update_attempted,
+        ),
+        OpenWrtSensorDescription(
+            key="qmodem_gps_last_update_successful",
+            name="Modem GPS Last Update Successful",
+            translation_key="qmodem_gps_last_update_successful",
+            device_class=SensorDeviceClass.TIMESTAMP,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: data.qmodem_info.gps_last_update_successful,
+        ),
+        OpenWrtSensorDescription(
+            key="qmodem_gps_last_update_ok",
+            name="Modem GPS Last Update Status",
+            translation_key="qmodem_gps_last_update_ok",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            value_fn=lambda data: (
+                None
+                if data.qmodem_info.gps_last_update_ok is None
+                else ("OK" if data.qmodem_info.gps_last_update_ok else "Failed")
+            ),
+        ),
     )
 
 
@@ -891,7 +966,20 @@ def _get_banip_sensors() -> tuple[OpenWrtSensorDescription, ...]:
             icon="mdi:ip-network-outline",
             state_class=SensorStateClass.MEASUREMENT,
             entity_category=EntityCategory.DIAGNOSTIC,
+            entity_registry_enabled_default=False,
             value_fn=lambda data: data.ban_ip.banned_ips,
+        ),
+        OpenWrtSensorDescription(
+            key="banip_blocked",
+            name="Ban-IP Blocked Packets",
+            translation_key="banip_blocked",
+            icon="mdi:shield-remove-outline",
+            native_unit_of_measurement="packets",
+            state_class=SensorStateClass.TOTAL_INCREASING,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            entity_registry_enabled_default=False,
+            value_fn=lambda data: data.ban_ip.blocked_packets,
+            attrs_fn=lambda data: data.ban_ip.block_stats,
         ),
     )
 
@@ -942,6 +1030,72 @@ class OpenWrtNlbwmonTopHostsSensor(
             "total_upload": _format_bytes(hosts.get("total_tx_bytes", 0)),
             "top_hosts": hosts.get("top_hosts", []),
         }
+
+
+class OpenWrtSnortSensor(CoordinatorEntity[OpenWrtDataCoordinator], SensorEntity):
+    """Sensor showing the Snort IDS alert count, with the latest alert as attributes."""
+
+    _attr_has_entity_name = True
+    _attr_icon = "mdi:shield-bug"
+    _attr_name = "Snort Alerts"
+    _attr_entity_registry_enabled_default = False
+
+    def __init__(
+        self,
+        coordinator: OpenWrtDataCoordinator,
+        entry: ConfigEntry,
+    ) -> None:
+        super().__init__(coordinator)
+        self._entry = entry
+        self._attr_unique_id = f"{entry.entry_id}_snort_alerts"
+
+    @property
+    def device_info(self) -> DeviceInfo:
+        return DeviceInfo(
+            identifiers={(DOMAIN, self.coordinator.router_id)},
+        )
+
+    @property
+    def available(self) -> bool:
+        if not super().available or not self.coordinator.data:
+            return False
+        status = self.coordinator.data.snort_status
+        return bool(status and status.get("installed"))
+
+    @property
+    def native_value(self) -> int | None:
+        if not self.coordinator.data:
+            return None
+        status = self.coordinator.data.snort_status
+        if not status:
+            return None
+        return status.get("alert_count", 0)
+
+    @property
+    def extra_state_attributes(self) -> dict[str, Any]:
+        if not self.coordinator.data:
+            return {}
+        status = self.coordinator.data.snort_status
+        if not status:
+            return {}
+        attrs: dict[str, Any] = {
+            "running": status.get("running", False),
+            "recent_alerts": status.get("recent_alerts", []),
+        }
+        last = status.get("last_alert")
+        if isinstance(last, dict):
+            attrs.update(
+                {
+                    "last_alert_message": last.get("message"),
+                    "last_alert_time": last.get("timestamp"),
+                    "last_alert_proto": last.get("proto"),
+                    "last_alert_src": last.get("src"),
+                    "last_alert_dst": last.get("dst"),
+                    "last_alert_sid": last.get("sid"),
+                    "last_alert_action": last.get("action"),
+                }
+            )
+        return attrs
 
 
 async def async_setup_entry(
@@ -1110,6 +1264,14 @@ async def async_setup_entry(
                 ent_reg.async_remove(ent.entity_id)
                 continue
 
+            # Cleanup Snort alerts sensor when option is disabled
+            if unique_id == f"{entry.entry_id}_snort_alerts" and not entry.options.get(
+                CONF_ENABLE_SNORT_SENSORS,
+                entry.data.get(CONF_ENABLE_SNORT_SENSORS, False),
+            ):
+                ent_reg.async_remove(ent.entity_id)
+                continue
+
             # Cleanup Batman neighbors
             if "batman_neighbor_" in unique_id:
                 current_keys = {
@@ -1141,6 +1303,12 @@ async def async_setup_entry(
         entry.data.get(CONF_ENABLE_NLBWMON_SENSORS, False),
     ):
         async_add_entities([OpenWrtNlbwmonTopHostsSensor(coordinator, entry)])
+
+    if entry.options.get(
+        CONF_ENABLE_SNORT_SENSORS,
+        entry.data.get(CONF_ENABLE_SNORT_SENSORS, False),
+    ):
+        async_add_entities([OpenWrtSnortSensor(coordinator, entry)])
 
 
 def _create_nlbwmon_sensors(
@@ -1289,7 +1457,9 @@ def _async_setup_wireguard_sensors(
                         name=f"WireGuard {wg.name} Peer Count",
                         icon="mdi:account-group",
                         entity_category=EntityCategory.DIAGNOSTIC,
-                        entity_registry_enabled_default=False,
+                        entity_registry_enabled_default=entry.options.get(
+                            CONF_ENABLE_VPN, True
+                        ),
                         value_fn=lambda data, n=wg.name: next(
                             (
                                 len(w.peers)
@@ -1343,6 +1513,9 @@ class OpenWrtWireGuardPeerSensor(
         self._public_key = public_key
         self._attr_unique_id = f"{entry.entry_id}_wg_{iface_name}_{public_key}"
         self._attr_name = f"WireGuard {iface_name} Peer {public_key[:8]}"
+        self._attr_entity_registry_enabled_default = entry.options.get(
+            CONF_ENABLE_VPN, True
+        )
         self._attr_device_info = DeviceInfo(
             identifiers={(DOMAIN, cast(str, entry.unique_id or entry.data[CONF_HOST]))},
         )
@@ -1749,10 +1922,12 @@ def _create_device_sensors(
             "device_signal",
             "dBm",
             lambda d, m=mac: next(
-                (x.signal for x in d.connected_devices if x.mac == m), None
+                (x.signal for x in d.connected_devices if x.mac and x.mac.lower() == m),
+                None,
             ),
             lambda d, m=mac: any(
-                x.mac == m and x.is_wireless for x in d.connected_devices
+                x.mac and x.mac.lower() == m and x.is_wireless
+                for x in d.connected_devices
             ),
         ),
         (
@@ -1761,11 +1936,16 @@ def _create_device_sensors(
             "device_rx_rate",
             "Mbps",
             lambda d, m=mac: next(
-                (round(x.rx_rate / 1000, 1) for x in d.connected_devices if x.mac == m),
+                (
+                    round(x.rx_rate / 1000, 1)
+                    for x in d.connected_devices
+                    if x.mac and x.mac.lower() == m
+                ),
                 None,
             ),
             lambda d, m=mac: any(
-                x.mac == m and x.is_wireless for x in d.connected_devices
+                x.mac and x.mac.lower() == m and x.is_wireless
+                for x in d.connected_devices
             ),
         ),
         (
@@ -1774,11 +1954,16 @@ def _create_device_sensors(
             "device_tx_rate",
             "Mbps",
             lambda d, m=mac: next(
-                (round(x.tx_rate / 1000, 1) for x in d.connected_devices if x.mac == m),
+                (
+                    round(x.tx_rate / 1000, 1)
+                    for x in d.connected_devices
+                    if x.mac and x.mac.lower() == m
+                ),
                 None,
             ),
             lambda d, m=mac: any(
-                x.mac == m and x.is_wireless for x in d.connected_devices
+                x.mac and x.mac.lower() == m and x.is_wireless
+                for x in d.connected_devices
             ),
         ),
         (
@@ -1787,10 +1972,12 @@ def _create_device_sensors(
             "device_noise",
             "dBm",
             lambda d, m=mac: next(
-                (x.noise for x in d.connected_devices if x.mac == m), None
+                (x.noise for x in d.connected_devices if x.mac and x.mac.lower() == m),
+                None,
             ),
             lambda d, m=mac: any(
-                x.mac == m and x.is_wireless for x in d.connected_devices
+                x.mac and x.mac.lower() == m and x.is_wireless
+                for x in d.connected_devices
             ),
         ),
     ]
@@ -2364,7 +2551,9 @@ def _create_vpn_sensors(
                 device_class=SensorDeviceClass.DATA_SIZE,
                 state_class=SensorStateClass.TOTAL_INCREASING,
                 entity_category=EntityCategory.DIAGNOSTIC,
-                entity_registry_enabled_default=False,
+                entity_registry_enabled_default=entry.options.get(
+                    CONF_ENABLE_VPN, True
+                ),
                 value_fn=lambda data, n=iface_name: next(
                     (
                         _bytes_to_mb(v.rx_bytes)
@@ -2390,7 +2579,9 @@ def _create_vpn_sensors(
                 device_class=SensorDeviceClass.DATA_SIZE,
                 state_class=SensorStateClass.TOTAL_INCREASING,
                 entity_category=EntityCategory.DIAGNOSTIC,
-                entity_registry_enabled_default=False,
+                entity_registry_enabled_default=entry.options.get(
+                    CONF_ENABLE_VPN, True
+                ),
                 value_fn=lambda data, n=iface_name: next(
                     (
                         _bytes_to_mb(v.tx_bytes)
@@ -2413,7 +2604,9 @@ def _create_vpn_sensors(
                     name=f"{label} Peers",
                     translation_key="vpn_peers",
                     state_class=SensorStateClass.MEASUREMENT,
-                    entity_registry_enabled_default=False,
+                    entity_registry_enabled_default=entry.options.get(
+                        CONF_ENABLE_VPN, True
+                    ),
                     value_fn=lambda data, n=iface_name: next(
                         (v.peers for v in data.vpn_interfaces if v.name == n),
                         0,

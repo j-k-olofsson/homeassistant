@@ -75,9 +75,13 @@ from .const import (
     CONF_ENABLE_LOAD,
     CONF_ENABLE_NLBWMON_SENSORS,
     CONF_ENABLE_SERVICES,
+    CONF_ENABLE_SNORT_SENSORS,
     CONF_ENABLE_SQM,
     CONF_ENABLE_VPN,
     CONF_FORCE_WIRELESS_MACS,
+    CONF_GPS_MODEM_ENABLED,
+    CONF_GPS_MODEM_PORT,
+    CONF_GPS_POLL_INTERVAL,
     CONF_MANUAL_TRACKED_DEVICES,
     CONF_MQTT_BROKER,
     CONF_MQTT_PASSWORD,
@@ -86,6 +90,7 @@ from .const import (
     CONF_MQTT_USERNAME,
     CONF_REDEPLOY_MQTT,
     CONF_REDEPLOY_USER,
+    CONF_REVERSE_DNS,
     CONF_SKIP_RANDOM_MAC,
     CONF_SSH_KEY,
     CONF_TARGET_OVERRIDE,
@@ -104,9 +109,13 @@ from .const import (
     DATA_COORDINATOR,
     DEFAULT_BACKUP_RETENTION_DAYS,
     DEFAULT_CONSIDER_HOME,
+    DEFAULT_GPS_MODEM_ENABLED,
+    DEFAULT_GPS_MODEM_PORT,
+    DEFAULT_GPS_POLL_INTERVAL,
     DEFAULT_PORT_SSH,
     DEFAULT_PORT_UBUS,
     DEFAULT_PORT_UBUS_SSL,
+    DEFAULT_REVERSE_DNS,
     DEFAULT_SKIP_RANDOM_MAC,
     DEFAULT_TRACK_WIRED,
     DEFAULT_TRUST_BRIDGE_FDB,
@@ -276,7 +285,11 @@ def _generate_package_table(
         f"| **luci-app-attendedsysupgrade** | {to_icon(packages.asu)} | {get_missing(packages.asu, 'Firmware Upgrade (ASU)', 'asu')} |\n"
         f"| **kmod-batman-adv** | {to_icon(packages.batman_adv)} | {get_missing(packages.batman_adv, 'Batman-adv Mesh', 'batman_adv')} |\n"
         f"| **batctl** | {to_icon(packages.batctl)} | {get_missing(packages.batctl, 'Batman-adv Control (batctl)', 'batctl')} |\n"
-        f"| **nlbwmon** | {to_icon(packages.nlbwmon)} | {get_missing(packages.nlbwmon, 'Top Bandwidth Hosts Sensor', 'nlbwmon')} |"
+        f"| **nlbwmon** | {to_icon(packages.nlbwmon)} | {get_missing(packages.nlbwmon, 'Top Bandwidth Hosts Sensor', 'nlbwmon')} |\n"
+        f"| **coreutils-stty** | {to_icon(packages.stty)} | {get_missing(packages.stty, 'GPS Modem Tracking (stty)', 'stty')} |\n"
+        f"| **coreutils-timeout** | {to_icon(packages.timeout)} | {get_missing(packages.timeout, 'GPS Modem Tracking (timeout)', 'timeout')} |\n"
+        f"| **banip** | {to_icon(packages.ban_ip)} | {get_missing(packages.ban_ip, 'banIP Service Control & Sensors', 'ban_ip')} |\n"
+        f"| **snort** | {to_icon(packages.snort)} | {get_missing(packages.snort, 'Snort IDS Alerts Sensor', 'snort')} |"
     )
 
 
@@ -351,6 +364,15 @@ class OpenWrtConfigFlow(ConfigFlow, domain=DOMAIN):
     def async_get_options_flow(config_entry: ConfigEntry) -> OpenWrtOptionsFlow:
         """Get the options flow."""
         return OpenWrtOptionsFlow(config_entry)
+
+    async def async_step_reconfigure(
+        self, user_input: dict[str, Any] | None = None
+    ) -> ConfigFlowResult:
+        """Handle reconfiguration of the integration."""
+        entry = self._get_reconfigure_entry()
+        self._data = dict(entry.data)
+        self._data.update(entry.options)
+        return await self.async_step_manual_entry()
 
     async def async_step_user(
         self,
@@ -455,10 +477,15 @@ class OpenWrtConfigFlow(ConfigFlow, domain=DOMAIN):
             step_id="manual_entry",
             data_schema=vol.Schema(
                 {
-                    vol.Required(CONF_HOST, default="192.168.1.1"): str,
+                    vol.Required(
+                        CONF_HOST,
+                        default=self._data.get(CONF_HOST, "192.168.1.1"),
+                    ): str,
                     vol.Required(
                         CONF_CONNECTION_TYPE,
-                        default=CONNECTION_TYPE_LUCI_RPC,
+                        default=self._data.get(
+                            CONF_CONNECTION_TYPE, CONNECTION_TYPE_LUCI_RPC
+                        ),
                     ): vol.In(CONNECTION_TYPE_MAP),
                 },
             ),
@@ -886,22 +913,46 @@ class OpenWrtConfigFlow(ConfigFlow, domain=DOMAIN):
         is_ubus = connection_type == CONNECTION_TYPE_UBUS
 
         schema_dict: dict[Any, Any] = {
-            vol.Required(CONF_USERNAME, default=DEFAULT_USERNAME): str,
-            vol.Required(CONF_PASSWORD): str,
-            vol.Required(CONF_USE_SSL, default=DEFAULT_USE_SSL): bool,
-            vol.Optional(CONF_VERIFY_SSL, default=DEFAULT_VERIFY_SSL): bool,
-            vol.Optional(CONF_DHCP_SOFTWARE, default="auto"): selector.SelectSelector(
+            vol.Required(
+                CONF_USERNAME,
+                default=self._data.get(CONF_USERNAME, DEFAULT_USERNAME),
+            ): str,
+            vol.Required(
+                CONF_PASSWORD,
+                default=self._data.get(CONF_PASSWORD, ""),
+            ): str,
+            vol.Required(
+                CONF_USE_SSL,
+                default=self._data.get(CONF_USE_SSL, DEFAULT_USE_SSL),
+            ): bool,
+            vol.Optional(
+                CONF_VERIFY_SSL,
+                default=self._data.get(CONF_VERIFY_SSL, DEFAULT_VERIFY_SSL),
+            ): bool,
+            vol.Optional(
+                CONF_DHCP_SOFTWARE,
+                default=self._data.get(CONF_DHCP_SOFTWARE, "auto"),
+            ): selector.SelectSelector(
                 selector.SelectSelectorConfig(
                     options=["auto", "dnsmasq", "odhcpd", "none"],
                     translation_key="dhcp_software",
                     mode=selector.SelectSelectorMode.DROPDOWN,
                 ),
             ),
-            vol.Optional(CONF_PORT): int,
         }
 
+        if CONF_PORT in self._data:
+            schema_dict[vol.Optional(CONF_PORT, default=self._data[CONF_PORT])] = int
+        else:
+            schema_dict[vol.Optional(CONF_PORT)] = int
+
         if is_ubus:
-            schema_dict[vol.Optional(CONF_UBUS_PATH, default=DEFAULT_UBUS_PATH)] = str
+            schema_dict[
+                vol.Optional(
+                    CONF_UBUS_PATH,
+                    default=self._data.get(CONF_UBUS_PATH, DEFAULT_UBUS_PATH),
+                )
+            ] = str
 
         return vol.Schema(schema_dict)
 
@@ -943,13 +994,26 @@ class OpenWrtConfigFlow(ConfigFlow, domain=DOMAIN):
         """Return the schema for SSH step."""
         return vol.Schema(
             {
-                vol.Required(CONF_USERNAME, default=DEFAULT_USERNAME): str,
-                vol.Optional(CONF_PASSWORD): str,
-                vol.Optional(CONF_SSH_KEY): str,
-                vol.Optional(CONF_DHCP_SOFTWARE, default="auto"): vol.In(
-                    ["auto", "dnsmasq", "odhcpd", "none"],
-                ),
-                vol.Optional(CONF_PORT, default=DEFAULT_PORT_SSH): int,
+                vol.Required(
+                    CONF_USERNAME,
+                    default=self._data.get(CONF_USERNAME, DEFAULT_USERNAME),
+                ): str,
+                vol.Optional(
+                    CONF_PASSWORD,
+                    default=self._data.get(CONF_PASSWORD, ""),
+                ): str,
+                vol.Optional(
+                    CONF_SSH_KEY,
+                    default=self._data.get(CONF_SSH_KEY, ""),
+                ): str,
+                vol.Optional(
+                    CONF_DHCP_SOFTWARE,
+                    default=self._data.get(CONF_DHCP_SOFTWARE, "auto"),
+                ): vol.In(["auto", "dnsmasq", "odhcpd", "none"]),
+                vol.Optional(
+                    CONF_PORT,
+                    default=self._data.get(CONF_PORT, DEFAULT_PORT_SSH),
+                ): int,
             },
         )
 
@@ -1831,6 +1895,12 @@ class OpenWrtConfigFlow(ConfigFlow, domain=DOMAIN):
                 default=bool(self._packages.nlbwmon),
             )
         ] = bool
+        schema_dict[
+            vol.Optional(
+                CONF_ENABLE_SNORT_SENSORS,
+                default=bool(self._packages.snort),
+            )
+        ] = bool
 
         return self.async_show_form(
             step_id="packages",
@@ -2045,7 +2115,8 @@ class OpenWrtConfigFlow(ConfigFlow, domain=DOMAIN):
 
         # Set unique ID and abort if already configured
         await self.async_set_unique_id(unique_id)
-        self._abort_if_unique_id_configured()
+        if getattr(self, "context", {}).get("source") != "reconfigure":
+            self._abort_if_unique_id_configured()
 
     async def _create_entry(self) -> ConfigFlowResult:
         """Create the config entry."""
@@ -2088,6 +2159,15 @@ class OpenWrtConfigFlow(ConfigFlow, domain=DOMAIN):
             options[CONF_TARGET_OVERRIDE] = data.pop(CONF_TARGET_OVERRIDE)
 
         title = hostname if hostname else host
+
+        if getattr(self, "context", {}).get("source") == "reconfigure":
+            entry = self._get_reconfigure_entry()
+            self.hass.config_entries.async_update_entry(
+                entry, title=title, data=data, options=options
+            )
+            await self.hass.config_entries.async_reload(entry.entry_id)
+            return self.async_abort(reason="reconfigure_successful")
+
         return self.async_create_entry(title=title, data=data, options=options)
 
 
@@ -2216,6 +2296,26 @@ class OpenWrtOptionsFlow(OptionsFlow):
                         type=selector.TextSelectorType.TEXT,
                     )
                 ),
+                vol.Optional(
+                    CONF_GPS_MODEM_ENABLED,
+                    default=current.get(
+                        CONF_GPS_MODEM_ENABLED, DEFAULT_GPS_MODEM_ENABLED
+                    ),
+                ): bool,
+                vol.Optional(
+                    CONF_GPS_MODEM_PORT,
+                    default=current.get(CONF_GPS_MODEM_PORT, DEFAULT_GPS_MODEM_PORT),
+                ): str,
+                vol.Optional(
+                    CONF_GPS_POLL_INTERVAL,
+                    default=current.get(
+                        CONF_GPS_POLL_INTERVAL, DEFAULT_GPS_POLL_INTERVAL
+                    ),
+                ): vol.All(vol.Coerce(int), vol.Range(min=10, max=86400)),
+                vol.Optional(
+                    CONF_REVERSE_DNS,
+                    default=current.get(CONF_REVERSE_DNS, DEFAULT_REVERSE_DNS),
+                ): bool,
                 vol.Optional(
                     CONF_REDEPLOY_USER,
                     default=False,
@@ -2475,6 +2575,19 @@ class OpenWrtOptionsFlow(OptionsFlow):
                         self._config_entry.data.get(CONF_ENABLE_NLBWMON_SENSORS, False),
                     )
                     if self._packages.nlbwmon
+                    else False
+                ),
+            )
+        ] = bool
+        schema_dict[
+            vol.Optional(
+                CONF_ENABLE_SNORT_SENSORS,
+                default=(
+                    current.get(
+                        CONF_ENABLE_SNORT_SENSORS,
+                        self._config_entry.data.get(CONF_ENABLE_SNORT_SENSORS, False),
+                    )
+                    if self._packages.snort
                     else False
                 ),
             )

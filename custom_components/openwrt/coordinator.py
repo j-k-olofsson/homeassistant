@@ -57,11 +57,16 @@ from .const import (
     CONF_CUSTOM_FIRMWARE_REPO,
     CONF_DHCP_SOFTWARE,
     CONF_ENABLE_NLBWMON_SENSORS,
+    CONF_ENABLE_SNORT_SENSORS,
     CONF_FORCE_WIRELESS_MACS,
+    CONF_GPS_MODEM_ENABLED,
+    CONF_GPS_MODEM_PORT,
+    CONF_GPS_POLL_INTERVAL,
     CONF_MANUAL_TRACKED_DEVICES,
     CONF_MQTT_PRESENCE,
     CONF_PASSWORD,
     CONF_PORT,
+    CONF_REVERSE_DNS,
     CONF_SKIP_RANDOM_MAC,
     CONF_SSH_KEY,
     CONF_TARGET_OVERRIDE,
@@ -78,9 +83,12 @@ from .const import (
     CONNECTION_TYPE_SSH,
     CONNECTION_TYPE_UBUS,
     DEFAULT_CONSIDER_HOME,
+    DEFAULT_GPS_MODEM_PORT,
+    DEFAULT_GPS_POLL_INTERVAL,
     DEFAULT_PORT_SSH,
     DEFAULT_PORT_UBUS,
     DEFAULT_PORT_UBUS_SSL,
+    DEFAULT_REVERSE_DNS,
     DEFAULT_SKIP_RANDOM_MAC,
     DEFAULT_TRACK_DEVICES,
     DEFAULT_UBUS_PATH,
@@ -213,6 +221,7 @@ class OpenWrtDataCoordinator(DataUpdateCoordinator[OpenWrtData]):
         self.config_entry = config_entry
         self._firmware_checked = False
         self._last_firmware_check: float = -86400.0  # Force check on startup
+        self._last_gps_check: float = -86400.0  # Force check on startup
         self._last_update_time: float = 0.0
         self._device_history: dict[str, dict[str, Any]] = {}
         self._wireless_last_seen: dict[str, float] = {}
@@ -332,6 +341,7 @@ class OpenWrtDataCoordinator(DataUpdateCoordinator[OpenWrtData]):
         """Fetch data."""
         try:
             data = await self._async_fetch_all_data()
+            await self._async_resolve_reverse_dns(data)
             # Reset backoff on success
             if self._current_backoff_interval != self._configured_update_interval:
                 self._current_backoff_interval = self._configured_update_interval
@@ -448,6 +458,72 @@ class OpenWrtDataCoordinator(DataUpdateCoordinator[OpenWrtData]):
                 await self._async_fetch_nlbwmon_top_hosts_data(data)
             except Exception as err:
                 _LOGGER.debug("nlbwmon top hosts fetch failed: %s", err)
+
+        if self.config_entry.options.get(
+            CONF_ENABLE_SNORT_SENSORS,
+            self.config_entry.data.get(CONF_ENABLE_SNORT_SENSORS, False),
+        ):
+            try:
+                await self._async_fetch_snort_data(data)
+            except Exception as err:
+                _LOGGER.debug("snort data fetch failed: %s", err)
+        if self.config_entry.options.get(CONF_GPS_MODEM_ENABLED, False):
+            data.qmodem_info.enabled = True
+            gps_port = self.config_entry.options.get(
+                CONF_GPS_MODEM_PORT, DEFAULT_GPS_MODEM_PORT
+            )
+            gps_interval = self.config_entry.options.get(
+                CONF_GPS_POLL_INTERVAL, DEFAULT_GPS_POLL_INTERVAL
+            )
+            now_time = self.hass.loop.time()
+            if now_time - self._last_gps_check >= gps_interval:
+                self._last_gps_check = now_time
+                from .helpers.gps import async_update_gps_location
+
+                data.qmodem_info.gps_last_update_attempted = dt_util.now()
+
+                try:
+                    res = await async_update_gps_location(
+                        self.hass, self.client, gps_port
+                    )
+                    if res:
+                        lat, lon, last_update = res
+                        data.qmodem_info.gps_latitude = lat
+                        data.qmodem_info.gps_longitude = lon
+                        data.qmodem_info.gps_last_update = last_update
+                        data.qmodem_info.gps_last_update_successful = last_update
+                        data.qmodem_info.gps_last_update_ok = True
+                    else:
+                        data.qmodem_info.gps_last_update_ok = False
+                except Exception as gps_err:
+                    _LOGGER.debug("GPS location update failed: %s", gps_err)
+                    data.qmodem_info.gps_last_update_ok = False
+
+            # Preserve previous GPS data if we are not currently polling it
+            if self.data and self.data.qmodem_info:
+                if data.qmodem_info.gps_latitude is None:
+                    data.qmodem_info.gps_latitude = self.data.qmodem_info.gps_latitude
+                if data.qmodem_info.gps_longitude is None:
+                    data.qmodem_info.gps_longitude = self.data.qmodem_info.gps_longitude
+                if data.qmodem_info.gps_last_update is None:
+                    val = self.data.qmodem_info.gps_last_update
+                    if isinstance(val, str):
+                        val = dt_util.parse_datetime(val)
+                    data.qmodem_info.gps_last_update = val
+                if data.qmodem_info.gps_last_update_successful is None:
+                    val = self.data.qmodem_info.gps_last_update_successful
+                    if isinstance(val, str):
+                        val = dt_util.parse_datetime(val)
+                    data.qmodem_info.gps_last_update_successful = val
+                if data.qmodem_info.gps_last_update_attempted is None:
+                    val = self.data.qmodem_info.gps_last_update_attempted
+                    if isinstance(val, str):
+                        val = dt_util.parse_datetime(val)
+                    data.qmodem_info.gps_last_update_attempted = val
+                if data.qmodem_info.gps_last_update_ok is None:
+                    data.qmodem_info.gps_last_update_ok = (
+                        self.data.qmodem_info.gps_last_update_ok
+                    )
 
         return data
 
@@ -639,6 +715,102 @@ class OpenWrtDataCoordinator(DataUpdateCoordinator[OpenWrtData]):
             "total_tx_bytes": sum(h["tx_bytes"] for h in hosts),
         }
 
+    async def _async_fetch_snort_data(self, data: OpenWrtData) -> None:
+        """Fetch Snort IDS status and latest alert via rpcd file.exec.
+
+        Reads snort's alert_json log (/var/log/alert_json.txt) for the alert
+        count and most recent alert, plus the service running state. Note the
+        log lives on tmpfs, so the count resets on reboot (alerts since boot).
+        """
+        empty: dict[str, Any] = {
+            "installed": False,
+            "running": False,
+            "alert_count": 0,
+            "last_alert": None,
+            "recent_alerts": [],
+        }
+
+        # 1. Service state via a direct exec of the init script (no /bin/sh).
+        installed = False
+        running = False
+        try:
+            res = await self.client.file_exec("/etc/init.d/snort", ["running"])
+            if isinstance(res, dict) and "code" in res:
+                installed = True
+                running = res.get("code") == 0
+        except Exception as err:  # noqa: BLE001
+            _LOGGER.debug("snort: init 'running' probe failed: %s", err)
+
+        if not installed:
+            data.snort_status = empty
+            return
+
+        # tail/wc rather than file.read: rpcd file.read truncates past ~256KB,
+        # which would blind the sensor on a large IDS log.
+        log_path = "/var/log/alert_json.txt"
+        alerts: list[dict[str, Any]] = []
+        count = 0
+        try:
+            res = await self.client.file_exec("/usr/bin/wc", ["-l", log_path])
+            out = res.get("stdout", "") if isinstance(res, dict) else ""
+            m = re.search(r"\d+", out)
+            if m:
+                count = int(m.group(0))
+        except Exception as err:  # noqa: BLE001
+            _LOGGER.debug("snort: wc failed: %s", err)
+
+        if count:
+            try:
+                res = await self.client.file_exec(
+                    "/usr/bin/tail", ["-n", "20", log_path]
+                )
+                body = res.get("stdout", "") if isinstance(res, dict) else ""
+                for ln in body.splitlines():
+                    ln = ln.strip()
+                    if not ln:
+                        continue
+                    try:
+                        obj = json.loads(ln)
+                    except (json.JSONDecodeError, ValueError):
+                        continue
+                    if isinstance(obj, dict):
+                        alerts.append(obj)
+            except Exception as err:  # noqa: BLE001
+                _LOGGER.debug("snort: tail failed: %s", err)
+
+        def _clean(value: Any) -> str | None:
+            """Coerce to a single-line, length-capped string (attribute hygiene)."""
+            if value is None:
+                return None
+            return str(value).replace("\n", " ").replace("\r", " ").strip()[:256]
+
+        def _hostport(addr: Any, port: Any) -> str | None:
+            if not addr:
+                return None
+            addr = str(addr)
+            # Bracket IPv6 so "addr:port" stays unambiguous.
+            return f"[{addr}]:{port}" if ":" in addr else f"{addr}:{port}"
+
+        def _fmt_alert(a: dict[str, Any]) -> dict[str, Any]:
+            return {
+                "message": _clean(a.get("msg")),
+                "timestamp": _clean(a.get("timestamp")),
+                "proto": _clean(a.get("proto")),
+                "src": _hostport(a.get("src_addr"), a.get("src_port")),
+                "dst": _hostport(a.get("dst_addr"), a.get("dst_port")),
+                "sid": a.get("sid"),
+                "action": _clean(a.get("action")),
+            }
+
+        data.snort_status = {
+            "installed": True,
+            "running": running,
+            "alert_count": count,
+            "last_alert": _fmt_alert(alerts[-1]) if alerts else None,
+            # newest first for display
+            "recent_alerts": [_fmt_alert(a) for a in reversed(alerts)],
+        }
+
     def _async_check_stale_permissions(self, data: OpenWrtData) -> None:
         """Check for stale permissions."""
         username = self.config_entry.data.get(CONF_USERNAME, "homeassistant")
@@ -705,6 +877,52 @@ class OpenWrtDataCoordinator(DataUpdateCoordinator[OpenWrtData]):
             )
         else:
             async_delete_stale_permissions_repair(self.hass, self.config_entry)
+
+    async def _async_resolve_reverse_dns(self, data: OpenWrtData) -> None:
+        """Resolve reverse DNS for connected devices and DHCP leases if they have no hostname."""
+        if not self.config_entry.options.get(CONF_REVERSE_DNS, DEFAULT_REVERSE_DNS):
+            return
+
+        import socket
+
+        tasks = []
+
+        async def resolve_device(device) -> None:
+            try:
+                resolved = await self.hass.async_add_executor_job(
+                    socket.gethostbyaddr, device.ip
+                )
+                if resolved and resolved[0]:
+                    device.hostname = resolved[0]
+            except Exception as err:
+                _LOGGER.debug(
+                    "Reverse DNS failed for device %s (%s): %s",
+                    device.mac,
+                    device.ip,
+                    err,
+                )
+
+        async def resolve_lease(lease) -> None:
+            try:
+                resolved = await self.hass.async_add_executor_job(
+                    socket.gethostbyaddr, lease.ip
+                )
+                if resolved and resolved[0]:
+                    lease.hostname = resolved[0]
+            except Exception as err:
+                _LOGGER.debug(
+                    "Reverse DNS failed for lease %s (%s): %s", lease.mac, lease.ip, err
+                )
+
+        for device in data.connected_devices:
+            if device.ip and (not device.hostname or device.hostname == "*"):
+                tasks.append(resolve_device(device))
+        for lease in data.dhcp_leases:
+            if lease.ip and (not lease.hostname or lease.hostname == "*"):
+                tasks.append(resolve_lease(lease))
+
+        if tasks:
+            await asyncio.gather(*tasks, return_exceptions=True)
 
     async def _async_fetch_all_data(self) -> OpenWrtData:
         """Fetch all data with retry logic."""
@@ -1553,11 +1771,26 @@ class OpenWrtDataCoordinator(DataUpdateCoordinator[OpenWrtData]):
             for ident in dev.identifiers:
                 if ident[0] == DOMAIN:
                     ident_str = str(ident[1])
+                    norm_ident = ident_str.replace(":", "").lower()
+                    norm_router_id = self.router_id.replace(":", "").lower()
+                    norm_host = str(self.config_entry.data.get(CONF_HOST, "")).lower()
+                    norm_unique_id = (
+                        str(self.config_entry.unique_id or "").replace(":", "").lower()
+                    )
+
                     if (
                         ident_str == self.router_id
                         or ident_str == self.config_entry.data.get(CONF_HOST)
                         or ident_str == self.config_entry.unique_id
                         or ident_str.startswith(f"{self.router_id}_")
+                        or norm_ident == norm_router_id
+                        or (norm_host and norm_ident == norm_host)
+                        or (norm_unique_id and norm_ident == norm_unique_id)
+                        or norm_ident.startswith(f"{norm_router_id}_")
+                        or (
+                            norm_unique_id
+                            and norm_ident.startswith(f"{norm_unique_id}_")
+                        )
                     ):
                         is_ours = True
                     elif re.match(r"^([0-9a-f]{2}:){5}[0-9a-f]{2}$", ident_str):
@@ -1568,9 +1801,18 @@ class OpenWrtDataCoordinator(DataUpdateCoordinator[OpenWrtData]):
                 continue
 
             # If it's one of our currently active APs or the router itself, keep it
-            if is_ours and any(
-                ident in active_identifiers for ident in dev.identifiers
-            ):
+            is_active = False
+            if is_ours:
+                for ident in dev.identifiers:
+                    if ident[0] == DOMAIN:
+                        norm_id = str(ident[1]).replace(":", "").lower()
+                        if any(
+                            str(act[1]).replace(":", "").lower() == norm_id
+                            for act in active_identifiers
+                        ):
+                            is_active = True
+                            break
+            if is_active:
                 continue
 
             # Identify if this is an Access Point device (old or new style)
@@ -1674,7 +1916,19 @@ class OpenWrtDataCoordinator(DataUpdateCoordinator[OpenWrtData]):
         if not target:
             return
 
-        url = f"https://downloads.openwrt.org/snapshots/targets/{target}/profiles.json"
+        import re
+
+        current_version = data.device_info.release_version or ""
+        match = re.search(r"(\d+\.\d+)-SNAPSHOT", current_version, re.IGNORECASE)
+        if match:
+            branch = f"{match.group(1)}-SNAPSHOT"
+            base_url = (
+                f"https://downloads.openwrt.org/releases/{branch}/targets/{target}/"
+            )
+        else:
+            base_url = f"https://downloads.openwrt.org/snapshots/targets/{target}/"
+
+        url = f"{base_url}profiles.json"
 
         with contextlib.suppress(Exception):
             async with session.get(
@@ -1690,7 +1944,11 @@ class OpenWrtDataCoordinator(DataUpdateCoordinator[OpenWrtData]):
                 if not version_code:
                     return
 
-                latest_snapshot = f"SNAPSHOT ({version_code})"
+                if match:
+                    latest_snapshot = f"{branch} ({version_code})"
+                else:
+                    latest_snapshot = f"SNAPSHOT ({version_code})"
+
                 _LOGGER.info(
                     "Comparing snapshot versions: current=%s, latest=%s",
                     data.firmware_current_version,
@@ -1704,9 +1962,7 @@ class OpenWrtDataCoordinator(DataUpdateCoordinator[OpenWrtData]):
                     _LOGGER.info(
                         "Newer snapshot found for %s: %s", target, latest_snapshot
                     )
-                    data.firmware_release_url = (
-                        f"https://downloads.openwrt.org/snapshots/targets/{target}/"
-                    )
+                    data.firmware_release_url = base_url
                 else:
                     data.firmware_upgradable = False
                     _LOGGER.debug("Snapshot is up-to-date: %s", latest_snapshot)
@@ -1719,7 +1975,7 @@ class OpenWrtDataCoordinator(DataUpdateCoordinator[OpenWrtData]):
                 if board_profile:
                     for img in board_profile.get("images", []):
                         if "sysupgrade" in img.get("name", ""):
-                            data.firmware_install_url = f"https://downloads.openwrt.org/snapshots/targets/{target}/{img.get('name')}"
+                            data.firmware_install_url = f"{base_url}{img.get('name')}"
                             break
 
     async def _check_stable_release_update(
@@ -1749,16 +2005,68 @@ class OpenWrtDataCoordinator(DataUpdateCoordinator[OpenWrtData]):
                         data.device_info.release_version, latest_stable
                     ):
                         data.firmware_upgradable = True
-                        self._set_stable_release_urls(data, latest_stable)
+                        await self._async_set_stable_release_urls(
+                            data, latest_stable, session
+                        )
                     else:
                         data.firmware_upgradable = False
 
-    def _set_stable_release_urls(self, data: OpenWrtData, latest_stable: str) -> None:
+    async def _async_set_stable_release_urls(
+        self, data: OpenWrtData, latest_stable: str, session: aiohttp.ClientSession
+    ) -> None:
         """Determine release and install URLs for a stable release."""
         data.firmware_release_url = f"https://openwrt.org/releases/{latest_stable}"
         info = data.device_info
         target = self._get_target(info.target)
-        if target and info.board_name:
+        if not target or not info.board_name:
+            return
+
+        # Try to fetch profiles.json to get exact sysupgrade file name (extension, spelling)
+        url = f"https://downloads.openwrt.org/releases/{latest_stable}/targets/{target}/profiles.json"
+
+        with contextlib.suppress(Exception):
+            async with session.get(
+                url, timeout=aiohttp.ClientTimeout(total=10)
+            ) as resp:
+                if resp.status == 200:
+                    profile_data = await resp.json()
+                    profiles = profile_data.get("profiles", {})
+                    board_name = info.board_name or ""
+
+                    def normalize(name: str) -> str:
+                        return (
+                            name.lower()
+                            .replace("-", "")
+                            .replace("_", "")
+                            .replace(",", "")
+                        )
+
+                    norm_board = normalize(board_name)
+                    board_profile = None
+
+                    for k in [
+                        board_name,
+                        board_name.replace("-", "_").replace(",", "_"),
+                        board_name.replace("_", "-").replace(",", "-"),
+                    ]:
+                        if k in profiles:
+                            board_profile = profiles[k]
+                            break
+
+                    if not board_profile:
+                        for k, prof in profiles.items():
+                            if normalize(k) == norm_board:
+                                board_profile = prof
+                                break
+
+                    if board_profile:
+                        for img in board_profile.get("images", []):
+                            if "sysupgrade" in img.get("name", ""):
+                                data.firmware_install_url = f"https://downloads.openwrt.org/releases/{latest_stable}/targets/{target}/{img.get('name')}"
+                                break
+
+        if not data.firmware_install_url:
+            # Fallback to static URL construction
             board = info.board_name.replace("_", "-").replace(",", "-")
             dist = info.release_distribution or "openwrt"
             data.firmware_install_url = (

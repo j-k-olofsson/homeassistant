@@ -1,0 +1,431 @@
+============================================================
+ESPHome Update Manager v1.10.5 - Force Install / Update Log
+Timestamp: 2026-07-16 08:09:59
+============================================================
+
+Summary: 55 device(s) processed
+  ✅ Success:   27
+  ❌ Failed:    28
+  ⏭️  Skipped:   0
+  ⛔ Cancelled: 0
+
+------------------------------------------------------------
+Details:
+------------------------------------------------------------
+
+✅ 08:b6:1f:38:0b:64
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T06:50:22.482427
+   Finished: 2026-07-16T06:54:04.174251
+
+✅ 08:b6:1f:38:26:78
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T06:54:05.177015
+   Finished: 2026-07-16T06:56:20.105389
+
+✅ 24:6f:28:c1:b9:60
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T06:56:21.107172
+   Finished: 2026-07-16T06:58:58.400246
+
+✅ 2c:bc:bb:c1:87:2c
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T06:58:59.402134
+   Finished: 2026-07-16T07:01:35.124674
+
+✅ 40:22:d8:76:6f:70
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T07:01:36.126907
+   Finished: 2026-07-16T07:03:37.630432
+
+❌ Billaddare
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T07:03:38.656866
+   Finished: 2026-07-16T07:03:39.557039
+   Error: Compile failed — Error compiling esphome24.yaml. Try again in ESPHome dashboard for more information
+
+❌ Blomlampa (ateljén)
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T07:03:40.558689
+   Finished: 2026-07-16T07:03:41.471432
+   Error: Compile failed — Error compiling esphome09.yaml. Try again in ESPHome dashboard for more information
+
+❌ Blomlampa (kontoret)
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T07:03:42.472119
+   Finished: 2026-07-16T07:03:43.388592
+   Error: Compile failed — Error compiling esphome05.yaml. Try again in ESPHome dashboard for more information
+
+❌ Blomlampa 1 (Verandan)
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T07:03:44.389916
+   Finished: 2026-07-16T07:03:45.282805
+   Error: Compile failed — Error compiling esphome07.yaml. Try again in ESPHome dashboard for more information
+
+❌ Blomlampa 2 (verandan)
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T07:03:46.283965
+   Finished: 2026-07-16T07:03:47.147297
+   Error: Compile failed — Error compiling esphome03.yaml. Try again in ESPHome dashboard for more information
+
+❌ Blomlampor (bion)
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T07:03:48.148822
+   Finished: 2026-07-16T07:03:49.036327
+   Error: Compile failed — Error compiling esphome02.yaml. Try again in ESPHome dashboard for more information
+
+✅ c4:4f:33:7a:2e:79
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T07:03:50.039040
+   Finished: 2026-07-16T07:05:32.817798
+
+✅ c4:4f:33:7a:51:6d
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T07:05:33.821623
+   Finished: 2026-07-16T07:06:33.611194
+
+❌ Elmätare (elstolpen)
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T07:06:34.613383
+   Finished: 2026-07-16T07:06:35.632905
+   Error: Compile failed — Error compiling esphome95.yaml. Try again in ESPHome dashboard for more information
+
+✅ Esp32 kamera
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T07:06:36.634383
+   Finished: 2026-07-16T07:09:43.640426
+
+❌ Golvvärme (friggan)
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T07:09:44.642212
+   Finished: 2026-07-16T07:09:45.726806
+   Error: Compile failed — Error compiling esphome80.yaml. Try again in ESPHome dashboard for more information
+
+❌ Golvvärme (sovrum och kontor)
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T07:09:46.727924
+   Finished: 2026-07-16T07:09:47.806867
+   Error: Compile failed — Error compiling esphome81.yaml. Try again in ESPHome dashboard for more information
+
+✅ HA Voice PE 096460
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T07:09:48.807933
+   Finished: 2026-07-16T07:17:46.956245
+
+✅ Hemmabio El #1
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T07:17:47.959074
+   Finished: 2026-07-16T07:18:48.049178
+
+✅ Huvudströmbrytaren Prusa XL
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T07:18:49.051316
+   Finished: 2026-07-16T07:20:49.867073
+
+❌ IR gateway
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T07:20:50.869266
+   Finished: 2026-07-16T07:20:51.835680
+   Error: Compile failed — Error compiling esphome76.yaml. Try again in ESPHome dashboard for more information
+
+❌ Julbelysning (utomhus)
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T07:20:52.836710
+   Finished: 2026-07-16T07:20:53.768040
+   Error: Compile failed — Error compiling esphome23.yaml. Try again in ESPHome dashboard for more information
+
+✅ Ledstrip (ateljé södra)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T07:20:54.769058
+   Finished: 2026-07-16T07:21:55.605880
+
+✅ Ledstrip (balkongdörrar)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T07:21:56.608847
+   Finished: 2026-07-16T07:24:23.759660
+
+✅ Ledstrip (entrén)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T07:24:24.763675
+   Finished: 2026-07-16T07:26:13.547316
+
+✅ Ledstrip (korridoren)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T07:26:14.551259
+   Finished: 2026-07-16T07:27:54.197466
+
+✅ Ledstrip (kök småfönster)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T07:27:55.199851
+   Finished: 2026-07-16T07:28:54.095557
+
+✅ Ledstrip (kök sydöstra)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T07:28:55.098705
+   Finished: 2026-07-16T07:29:53.517160
+
+✅ Ledstrip (kök östra)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T07:29:54.520154
+   Finished: 2026-07-16T07:30:52.828239
+
+✅ Ledstrip (sovrum norra)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T07:30:53.831562
+   Finished: 2026-07-16T07:33:48.077242
+
+✅ Ledstrip (sovrum östra)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T07:33:49.080142
+   Finished: 2026-07-16T07:34:51.647620
+
+✅ Ledstrip (verandan)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T07:34:52.649765
+   Finished: 2026-07-16T07:35:51.078814
+
+❌ Ledstrip (vitrinskåp)
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T07:35:52.080971
+   Finished: 2026-07-16T07:50:02.588791
+   Error: Update timed out — no progress detected
+
+✅ Ljussensor
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T07:50:03.590306
+   Finished: 2026-07-16T07:52:35.999656
+
+✅ Lucka (Hönshuset)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T07:52:37.001530
+   Finished: 2026-07-16T07:54:16.328060
+
+✅ Markis (utomhus)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T07:54:17.330209
+   Finished: 2026-07-16T07:55:55.017359
+
+✅ Plant Sensor 7 Fredskalla
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T07:55:56.019795
+   Finished: 2026-07-16T08:01:30.657349
+
+❌ Poolbelysning & temp
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T08:01:31.660730
+   Finished: 2026-07-16T08:01:32.561108
+   Error: Compile failed — Error compiling esphome29.yaml. Try again in ESPHome dashboard for more information
+
+❌ Poolpump (utomhus)
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T08:01:33.562563
+   Finished: 2026-07-16T08:01:34.378940
+   Error: Compile failed — Error compiling esphome27.yaml. Try again in ESPHome dashboard for more information
+
+❌ Poolvärmepump (poolen)
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T08:01:35.380742
+   Finished: 2026-07-16T08:01:36.200563
+   Error: Compile failed — Error compiling esphome28.yaml. Try again in ESPHome dashboard for more information
+
+❌ RF bridge
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T08:01:37.201387
+   Finished: 2026-07-16T08:01:38.193953
+   Error: Compile failed — Error compiling esphome94.yaml. Try again in ESPHome dashboard for more information
+
+❌ Taklampor
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T08:01:39.194820
+   Finished: 2026-07-16T08:01:40.191447
+   Error: Compile failed — Error compiling esphome59.yaml. Try again in ESPHome dashboard for more information
+
+❌ Taklampor (duschen)
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T08:01:41.192420
+   Finished: 2026-07-16T08:01:42.192329
+   Error: Compile failed — Error compiling esphome63.yaml. Try again in ESPHome dashboard for more information
+
+❌ Taklampor (kontoret)
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T08:01:43.192853
+   Finished: 2026-07-16T08:01:44.175975
+   Error: Compile failed — Error compiling esphome61.yaml. Try again in ESPHome dashboard for more information
+
+❌ Taklampor (källaren)
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T08:01:45.178162
+   Finished: 2026-07-16T08:01:46.152771
+   Error: Compile failed — Error compiling esphome57.yaml. Try again in ESPHome dashboard for more information
+
+❌ Taklampor (köket)
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T08:01:47.153643
+   Finished: 2026-07-16T08:01:48.123491
+   Error: Compile failed — Error compiling esphome60.yaml. Try again in ESPHome dashboard for more information
+
+❌ Taklampor (sovrum)
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T08:01:49.124655
+   Finished: 2026-07-16T08:01:50.102751
+   Error: Compile failed — Error compiling esphome54.yaml. Try again in ESPHome dashboard for more information
+
+❌ Termostat (friggan)
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T08:01:51.104586
+   Finished: 2026-07-16T08:01:51.983743
+   Error: Compile failed — Error compiling esphome21.yaml. Try again in ESPHome dashboard for more information
+
+❌ Termostat (kontoret)
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T08:01:52.985136
+   Finished: 2026-07-16T08:01:53.860959
+   Error: Compile failed — Error compiling esphome20.yaml. Try again in ESPHome dashboard for more information
+
+❌ Termostat (toaletten)
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T08:01:54.862136
+   Finished: 2026-07-16T08:01:55.733347
+   Error: Compile failed — Error compiling esphome83.yaml. Try again in ESPHome dashboard for more information
+
+✅ Thread Test (ESP32-C6-Zero)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T08:01:56.734742
+   Finished: 2026-07-16T08:06:30.701185
+
+❌ Utomhusbelysning (friggan)
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T08:06:31.703936
+   Finished: 2026-07-16T08:06:32.600096
+   Error: Compile failed — Error compiling esphome26.yaml. Try again in ESPHome dashboard for more information
+
+✅ Vattennivå (hönshuset)
+   Status: success
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5 → 2026.7.0
+   Started: 2026-07-16T08:06:33.601032
+   Finished: 2026-07-16T08:09:55.493046
+
+❌ Vattenvärmare (hönshuset)
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T08:09:56.495463
+   Finished: 2026-07-16T08:09:57.343455
+   Error: Compile failed — Error compiling esphome25.yaml. Try again in ESPHome dashboard for more information
+
+❌ Ventilfläkt (bion)
+   Status: failed
+   Type: Firmware Update (OTA)
+   Version: 2026.6.5
+   Started: 2026-07-16T08:09:58.345300
+   Finished: 2026-07-16T08:09:59.192206
+   Error: Compile failed — Error compiling esphome08.yaml. Try again in ESPHome dashboard for more information
+
+============================================================
+End of log
+============================================================
