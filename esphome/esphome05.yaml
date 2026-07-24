@@ -6,7 +6,7 @@ substitutions:
   node_comment: Sonoff Basic (VLAN IoT)
   log_level: INFO
   active: "on"
-  late_on: "false"
+  late_on: "true"
 
 # Include packages for this device specific type
 packages:
