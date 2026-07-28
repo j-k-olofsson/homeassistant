@@ -47,7 +47,7 @@ async def async_setup_entry(
         # TX Power per wireless interface
         if perms.write_wireless:
             for wifi in coordinator.data.wireless_interfaces:
-                if wifi.name and wifi.txpower > 0:
+                if wifi.name and wifi.txpower >= 0:
                     key = f"txpower_{wifi.name}"
                     if key not in tracked_keys:
                         tracked_keys.add(key)

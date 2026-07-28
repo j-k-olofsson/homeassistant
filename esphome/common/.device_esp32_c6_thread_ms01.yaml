@@ -13,7 +13,7 @@ packages:
 external_components:
   - source:
       type: local
-      path: /config/esphome/external_components
+      path: external_components
     components: [sonoff_ms01]
 
 debug:

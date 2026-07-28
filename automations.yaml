@@ -765,7 +765,7 @@
   - choose:
     - conditions:
       - condition: state
-        entity_id: binary_sensor.bosch_smu88ts06s_68a40e0c1a5c_bsh_common_status_remotecontrolstartallowed
+        entity_id: binary_sensor.siemens_016050395510002818_bsh_common_status_remotecontrolstartallowed
         state: 'on'
       sequence:
       - metadata: {}
@@ -778,7 +778,7 @@
         action: todo.add_item
       - data:
           validate: false
-          device_id: 626db3476001e814560aa9dd7f751fae
+          device_id: 444edb1c05f7869597326dcc1621322a
           program_key: Dishcare.Dishwasher.Program.Eco50
         action: home_connect_alt.start_program
   mode: queued
@@ -854,7 +854,7 @@
   alias: Diskmaskinen - Färdig
   description: Notifierar när diskmaskinen är klar med att diska och torka disken.
   triggers:
-  - device_id: 626db3476001e814560aa9dd7f751fae
+  - device_id: 444edb1c05f7869597326dcc1621322a
     domain: home_connect_alt
     type: program_finished
     trigger: device
@@ -2628,4 +2628,46 @@
     data:
       entity_id:
       - sensor.openuv_aktuellt_uv_index
+  mode: single
+- id: '1785228807993'
+  alias: Poolpump on/off (Bilresa knappar(
+  description: ''
+  triggers:
+  - trigger: event.received
+    target:
+      entity_id: event.bilresa_dual_button_knapp_1
+    options:
+      event_type:
+      - multi_press_1
+    id: 'On'
+  - trigger: event.received
+    target:
+      entity_id: event.bilresa_dual_button_knapp_2
+    options:
+      event_type:
+      - multi_press_1
+    id: 'Off'
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - 'On'
+      sequence:
+      - action: switch.turn_on
+        metadata: {}
+        target:
+          device_id: 7513532280eefa77d57e78f477e10014
+        data: {}
+    - conditions:
+      - condition: trigger
+        id:
+        - 'Off'
+      sequence:
+      - action: switch.turn_off
+        metadata: {}
+        target:
+          device_id: 7513532280eefa77d57e78f477e10014
+        data: {}
   mode: single

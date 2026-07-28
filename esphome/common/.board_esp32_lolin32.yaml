@@ -11,6 +11,9 @@ esp32:
   framework:
     type: arduino
     version: recommended
+    advanced:
+      sram1_as_iram: true
+# [14:37:38.102][W][app:198]: Bootloader supports SRAM1 as IRAM (+40KB). Set sram1_as_iram: true under esp32 > framework > advanced
 
 packages:
   device_base: !include .base.yaml
@@ -27,3 +30,4 @@ switch:
 #     pin:
 #       number: GPIO5
 #       inverted: true
+

@@ -176,7 +176,7 @@ class LuciRpcClient(
             out = await self._rpc_call(
                 "sys", "exec", [f"/bin/sh -c '{escaped_cmd}' 2>&1"]
             )
-            if out and out.strip():
+            if out is not None:
                 return out
         except (
             LuciRpcTimeoutError,

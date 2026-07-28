@@ -4,6 +4,7 @@ from __future__ import annotations
 import asyncio
 import logging
 from typing import Any
+from urllib.parse import urlsplit
 
 import aiohttp
 
@@ -68,6 +69,9 @@ class UbusClient(
         self._session_id: str = "00000000000000000000000000000000"
         self._reauth_lock = asyncio.Lock()
         self._last_connect_time: float = 0.0
+        # Set once we've checked whether the endpoint forces an http->https
+        # redirect (e.g. uhttpd `redirect_https`); see _resolve_endpoint.
+        self._endpoint_resolved: bool = False
 
         self._semaphore = asyncio.Semaphore(5)
 
@@ -130,6 +134,14 @@ class UbusClient(
                         and data["result"][0] == 6  # Permission denied/Session expired
                     ):
                         reauth_needed = True
+                    elif (
+                        isinstance(data.get("error"), dict)
+                        and data["error"].get("code") == -32002
+                    ):
+                        # The ubus JSON-RPC gateway reports an invalid/expired session this way
+                        # on some rpcd/uhttpd-mod-ubus versions, instead of embedding code 6 in
+                        # a "result" array. Treat it the same as a session expiry.
+                        reauth_needed = True
 
             if reauth_needed and not reauthenticated:
                 if self._session_id == failed_session:
@@ -191,6 +203,19 @@ class UbusClient(
                 raise
             msg = f"Unexpected error communicating with {self.host}: {err}"
             raise UbusError(msg) from err
+
+        if isinstance(data.get("error"), dict):
+            err_obj = data["error"]
+            code = err_obj.get("code")
+            message = err_obj.get("message", "unknown error")
+            if code == -32002:
+                msg = (
+                    f"Access denied to ubus on {self.host} (session invalid even "
+                    "after re-authentication - check credentials/ACL)"
+                )
+                raise UbusPermissionError(msg)
+            msg = f"Ubus JSON-RPC error {code} from {self.host}: {message}"
+            raise UbusError(msg)
 
         if "result" not in data:
             msg = f"Unexpected response: {data}"
@@ -295,10 +320,61 @@ class UbusClient(
                 self._last_connect_error = err
                 raise
 
+    async def _resolve_endpoint(self) -> None:
+        """Upgrade to HTTPS if the ubus endpoint redirects there.
+
+        Some hardened OpenWrt setups force HTTPS on uhttpd (``redirect_https``),
+        often on a non-standard port, so a plain-http ubus call gets a 3xx to an
+        ``https://`` URL. Following that redirect would work, but only after the
+        JSON-RPC login (password included) has already crossed the wire in
+        cleartext. Instead we probe once with a credential-free GET and, if
+        redirected to https, switch scheme/port/path before authenticating.
+
+        Runs at most once per client and is a no-op on stock http-only OpenWrt
+        (no redirect) and on explicitly SSL-configured entries.
+        """
+        if self._endpoint_resolved or self.use_ssl or self.session is None:
+            self._endpoint_resolved = True
+            return
+        try:
+            async with self.session.get(
+                self._base_url,
+                allow_redirects=False,
+                ssl=False,
+                timeout=aiohttp.ClientTimeout(total=10),
+            ) as resp:
+                location = resp.headers.get("Location", "")
+                if resp.status in (301, 302, 307, 308) and location.startswith(
+                    "https://"
+                ):
+                    parsed = urlsplit(location)
+                    new_host = parsed.hostname
+                    # urlsplit strips brackets off IPv6 literals; restore them
+                    # so _base_url rebuilds a valid "https://[addr]:port/…".
+                    if new_host and ":" in new_host:
+                        new_host = f"[{new_host}]"
+                    self.host = new_host or self.host
+                    self.port = parsed.port or 443
+                    if parsed.path:
+                        self._ubus_path = parsed.path
+                    self.use_ssl = True
+                    _LOGGER.info(
+                        "ubus endpoint redirects to HTTPS; upgraded to %s "
+                        "(certificate verification stays disabled for the "
+                        "common self-signed case unless you enable it)",
+                        self._base_url,
+                    )
+        except Exception as err:  # noqa: BLE001
+            # Non-fatal: fall back to the configured scheme and let the login
+            # attempt surface any real connection error.
+            _LOGGER.debug("ubus endpoint redirect probe failed: %s", err)
+        self._endpoint_resolved = True
+
     async def _connect(self) -> bool:
         """Authenticate with ubus."""
         if self.session is None:
             raise UbusError("Session not initialized")
+        await self._resolve_endpoint()
         session = self.session
         payload = self._build_request(
             "call",
