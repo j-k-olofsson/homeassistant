@@ -18,9 +18,9 @@ packages:
   file: !include common/.device_lolin32_ledstrip_indoors.yaml
 
 # Lock framework version for this historically sensitive node.
-esp32:
-  framework:
-    type: arduino
-    version: 3.3.7
+# esp32:
+#   framework:
+#     type: arduino
+#     version: 3.3.7
 
 safe_mode:
