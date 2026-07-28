@@ -15,8 +15,8 @@ substitutions:
 
 # Include packages for this device specific type
 packages:
-  file: !include common/.device_lolin32_ledstrip_indoors.yaml
-
+#  file: !include common/.device_lolin32_ledstrip_indoors.yaml
+  file: !include common/.device_lolin32_ledstrip_indoors_rmt_test.yaml
 # Lock framework version for this historically sensitive node.
 # esp32:
 #   framework:
