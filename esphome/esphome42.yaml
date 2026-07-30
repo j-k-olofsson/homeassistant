@@ -1,26 +1,16 @@
 # Device specific substitutions
-# LOCKED STABLE (2026-02-21):
-# Keep this node on the neopixelbus variant until esp32_rmt_led_strip
-# boots cleanly on ESPHome for this hardware (ESP32 rev1.0 / lolin32).
 substitutions:
   node_id: "42"
   node_name: esphome42
   node_friendly_name: Ledstrip (vitrinskåp)
-  node_comment: Lolin32 (VLAN IoT)
+  node_comment: ESP32-C6-Zero over Thread
   log_level: INFO
   num_leds: "107"
-  gpio_pin: "GPIO13"
+  gpio_pin: "GPIO3"
   night_brightness: "20%"
   day_brightness: "40%"
 
-# Include packages for this device specific type
 packages:
-#  file: !include common/.device_lolin32_ledstrip_indoors.yaml
-  file: !include common/.device_lolin32_ledstrip_indoors_rmt_test.yaml
-# Lock framework version for this historically sensitive node.
-# esp32:
-#   framework:
-#     type: arduino
-#     version: 3.3.7
+  device: !include common/.device_esp32_c6_ledstrip_indoors.yaml
 
 safe_mode:
