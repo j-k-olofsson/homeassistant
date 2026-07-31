@@ -219,6 +219,7 @@ class OpenWrtDataCoordinator(DataUpdateCoordinator[OpenWrtData]):
         self.client.coordinator = self
         self.hass = hass
         self.config_entry = config_entry
+        self.in_reboot_installation = False
         self._firmware_checked = False
         self._last_firmware_check: float = -86400.0  # Force check on startup
         self._last_gps_check: float = -86400.0  # Force check on startup
@@ -342,6 +343,11 @@ class OpenWrtDataCoordinator(DataUpdateCoordinator[OpenWrtData]):
         try:
             data = await self._async_fetch_all_data()
             await self._async_resolve_reverse_dns(data)
+            if self.in_reboot_installation:
+                _LOGGER.info(
+                    "Device rebooted successfully after firmware update, connection restored."
+                )
+                self.in_reboot_installation = False
             # Reset backoff on success
             if self._current_backoff_interval != self._configured_update_interval:
                 self._current_backoff_interval = self._configured_update_interval
@@ -358,12 +364,19 @@ class OpenWrtDataCoordinator(DataUpdateCoordinator[OpenWrtData]):
                 self._current_backoff_interval * 2, 600
             )
             self.update_interval = timedelta(seconds=self._current_backoff_interval)
-            _LOGGER.warning(
-                "Update failed: %s. Backing off next poll to %s seconds",
-                err,
-                self._current_backoff_interval,
-            )
-            raise
+            if self.in_reboot_installation:
+                _LOGGER.info(
+                    "Device is rebooting due to firmware update (%s). Polling again in %s seconds.",
+                    err,
+                    self._current_backoff_interval,
+                )
+            else:
+                _LOGGER.warning(
+                    "Update failed: %s. Backing off next poll to %s seconds",
+                    err,
+                    self._current_backoff_interval,
+                )
+            raise UpdateFailed(f"Error fetching data: {err}") from err
 
         async_delete_connection_lost_repair(self.hass, self.config_entry)
 
@@ -2219,33 +2232,49 @@ class OpenWrtDataCoordinator(DataUpdateCoordinator[OpenWrtData]):
                 releases = await resp.json()
                 if not releases:
                     return
-                latest_release = releases[0]
 
             # 2. Try to identify current version by commit hash if unknown
             if router_hash:
-                await self._find_tag_by_hash(
-                    data, owner, repo, router_hash, headers, session
+                tag_name = await self._find_tag_by_hash(
+                    owner, repo, router_hash, headers, session
                 )
+                if tag_name:
+                    data.firmware_current_version = tag_name
 
-            # 3. Determine latest version and meta
-            latest_tag = latest_release.get("tag_name", "")
-            latest_version = self._get_latest_version_string(latest_release)
+            # 3. Find the latest release that contains a matching sysupgrade image for this router
+            matching_release = None
+            for release in releases:
+                if self._release_has_matching_asset(data, release):
+                    matching_release = release
+                    break
+
+            # Fallback to the first release if no specific asset match is found
+            target_release = matching_release or releases[0]
+
+            latest_tag = target_release.get("tag_name", "")
+            latest_version = self._get_latest_version_string(target_release)
 
             data.firmware_latest_version = latest_version
-            data.firmware_release_url = latest_release.get("html_url", "")
+            data.firmware_release_url = target_release.get("html_url", "")
 
             # 4. Check if upgradable
-            is_upgradable = self._version_is_newer(
-                data.firmware_current_version or "", latest_tag
-            )
-            if not is_upgradable and latest_version != latest_tag:
+            if (
+                data.firmware_current_version == latest_tag
+                or data.firmware_current_version == target_release.get("name")
+            ):
+                is_upgradable = False
+            else:
                 is_upgradable = self._version_is_newer(
-                    data.firmware_current_version or "", latest_version
+                    data.firmware_current_version or "", latest_tag
                 )
+                if not is_upgradable and latest_version != latest_tag:
+                    is_upgradable = self._version_is_newer(
+                        data.firmware_current_version or "", latest_version
+                    )
             data.firmware_upgradable = is_upgradable
 
-            # 5. Find sysupgrade image and checksum
-            await self._process_custom_release_assets(data, latest_release, session)
+            # 5. Find sysupgrade image and checksum from the target release
+            await self._process_custom_release_assets(data, target_release, session)
 
     def _get_router_hash(self, data: OpenWrtData) -> str:
         """Extract commit hash from revision string."""
@@ -2256,13 +2285,12 @@ class OpenWrtDataCoordinator(DataUpdateCoordinator[OpenWrtData]):
 
     async def _find_tag_by_hash(
         self,
-        data: OpenWrtData,
         owner: str,
         repo: str,
         router_hash: str,
         headers: dict,
         session: aiohttp.ClientSession,
-    ) -> None:
+    ) -> str | None:
         """Find a GitHub tag that matches the router's commit hash."""
         with contextlib.suppress(Exception):
             url = f"https://api.github.com/repos/{owner}/{repo}/tags"
@@ -2274,8 +2302,8 @@ class OpenWrtDataCoordinator(DataUpdateCoordinator[OpenWrtData]):
                     for tag in tags:
                         sha = tag.get("commit", {}).get("sha", "")
                         if sha.startswith(router_hash):
-                            data.firmware_current_version = tag.get("name")
-                            break
+                            return str(tag.get("name"))
+        return None
 
     def _get_latest_version_string(self, release: dict[str, Any]) -> str:
         """Format the latest version string from release info."""
@@ -2290,6 +2318,24 @@ class OpenWrtDataCoordinator(DataUpdateCoordinator[OpenWrtData]):
         if published:
             return f"{tag} ({published.split('T')[0]})"
         return tag
+
+    def _release_has_matching_asset(
+        self, data: OpenWrtData, release: dict[str, Any]
+    ) -> bool:
+        """Check if a release contains a sysupgrade asset matching the router."""
+        assets = release.get("assets", [])
+        pattern = self._build_sysupgrade_pattern(data)
+        board_name = data.device_info.board_name or ""
+        board = board_name.replace(",", "_").replace(" ", "_")
+
+        for asset in assets:
+            name = asset.get("name", "")
+            if pattern and re.match(pattern, name, re.IGNORECASE):
+                return True
+            if board and board in name and "sysupgrade" in name:
+                return True
+
+        return False
 
     async def _process_custom_release_assets(
         self, data: OpenWrtData, release: dict[str, Any], session: aiohttp.ClientSession
@@ -2353,18 +2399,36 @@ class OpenWrtDataCoordinator(DataUpdateCoordinator[OpenWrtData]):
 
     @staticmethod
     def _build_sysupgrade_pattern(data: OpenWrtData) -> str | None:
-        """Build regex pattern for sysupgrade matching."""
+        """Build regex pattern for sysupgrade matching.
+
+        OpenWrt firmware filenames use the format:
+          openwrt-{subtarget}-{arch}-{board}-sysupgrade.bin
+        but the router reports target as "{arch}/{subtarget}" (e.g.
+        "qualcommax/ipq807x"). The two parts can appear in either order in the
+        filename, so we use lookaheads to require both parts independently.
+        """
         info = data.device_info
         if not info.target or not info.board_name:
             return None
-        target = info.target.replace("/", "-")
+        # Split "arch/subtarget" into its two components so we can match them
+        # regardless of their order in the filename.
+        target_parts = info.target.split("/")
         board = info.board_name.replace(",", "_").replace(" ", "_")
-        return rf".*{re.escape(target)}.*{re.escape(board)}.*sysupgrade\.bin$"
+        # Build a lookahead for every target part + the board name
+        lookaheads = "".join(
+            rf"(?=.*{re.escape(part)})" for part in target_parts if part
+        )
+        lookaheads += rf"(?=.*{re.escape(board)})"
+        lookaheads += r"(?=.*sysupgrade\.bin)"
+        return rf"^{lookaheads}.*$"
 
     @staticmethod
     def _version_is_newer(current: str, latest: str) -> bool:
         """Compare firmware versions (e.g., '24.10.1' vs '25.12.0')."""
         import re
+
+        if current and latest and current == latest:
+            return False
 
         if "SNAPSHOT" in current.upper() or "SNAPSHOT" in latest.upper():
             # For snapshots, we always prefer revision comparison if possible
@@ -2389,6 +2453,22 @@ class OpenWrtDataCoordinator(DataUpdateCoordinator[OpenWrtData]):
             if rev_current >= 0 and rev_latest >= 0:
                 if rev_latest != rev_current:
                     return rev_latest > rev_current
+
+            # Check for embedded date strings (e.g. 2026-07-13-2054 or 2026-07-13) in latest/current
+            date_match_current = re.search(
+                r"(\d{4}[-._]\d{2}[-._]\d{2}(?:[-._]\d{4})?)", current
+            )
+            date_match_latest = re.search(
+                r"(\d{4}[-._]\d{2}[-._]\d{2}(?:[-._]\d{4})?)", latest
+            )
+            if date_match_latest and not date_match_current:
+                # Latest has a date tag (e.g. 2026-07-13) and current is generic SNAPSHOT -> latest is newer
+                return True
+            if date_match_current and date_match_latest:
+                c_str = date_match_current.group(1).replace(".", "-").replace("_", "-")
+                l_str = date_match_latest.group(1).replace(".", "-").replace("_", "-")
+                if c_str != l_str:
+                    return l_str > c_str
 
             # Fallback to string comparison if revisions aren't numeric/comparable
             # but strip "SNAPSHOT" and extra chars for a cleaner comparison

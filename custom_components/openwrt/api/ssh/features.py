@@ -1,6 +1,7 @@
 # mypy: disable-error-code="attr-defined"
 from __future__ import annotations
 
+import asyncio
 import logging
 import shlex
 from typing import Any
@@ -332,13 +333,24 @@ class SshFeaturesMixin:
             _LOGGER.exception("Failed to set access control via SSH: %s", err)
             return False
 
-    async def install_firmware(self, url: str, keep_settings: bool = True) -> None:
+    async def install_firmware(
+        self, url: str, keep_settings: bool = True, force: bool = False
+    ) -> None:
         """Install firmware from the given URL via SSH."""
         # Use sysupgrade for installation
         # Download to /tmp and then run sysupgrade
         keep = "" if keep_settings else "-n"
+        force_flag = "-F " if force else ""
         safe_url = shlex.quote(url)
-        cmd = f"wget -O /tmp/firmware.bin {safe_url} && sysupgrade {keep} /tmp/firmware.bin; rm -f /tmp/firmware.bin"
+        cmd = (
+            f"if command -v uclient-fetch >/dev/null 2>&1; then "
+            f"  uclient-fetch --no-check-certificate -O /tmp/firmware.bin {safe_url}; "
+            f"elif command -v curl >/dev/null 2>&1; then "
+            f"  curl -k -L -o /tmp/firmware.bin {safe_url}; "
+            f"else "
+            f"  wget --no-check-certificate -O /tmp/firmware.bin {safe_url}; "
+            f"fi && sysupgrade {force_flag}{keep} /tmp/firmware.bin; rm -f /tmp/firmware.bin"
+        )
         try:
             _LOGGER.info("Initiating firmware installation via SSH from: %s", url)
             # We expect this to eventually fail or disconnect as the router reboots
@@ -385,8 +397,8 @@ class SshFeaturesMixin:
                 b64_content = await self._exec(f"base64 {safe_path}")
                 import base64
 
-                with open(local_path, "wb") as f:
-                    f.write(base64.b64decode(b64_content))
+                data = base64.b64decode(b64_content)
+                await asyncio.to_thread(self._write_bytes, local_path, data)
                 return True
         except Exception as err:
             _LOGGER.exception("Failed to download file via SSH: %s", err)

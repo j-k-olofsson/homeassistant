@@ -1389,7 +1389,9 @@ class OpenWrtClient(abc.ABC):
         raise NotImplementedError
 
     @abc.abstractmethod
-    async def install_firmware(self, url: str, keep_settings: bool = True) -> None:
+    async def install_firmware(
+        self, url: str, keep_settings: bool = True, force: bool = False
+    ) -> None:
         """Install firmware from the given URL."""
         raise NotImplementedError
 
@@ -1779,6 +1781,12 @@ class OpenWrtClient(abc.ABC):
         except Exception as err:
             _LOGGER.exception("Backup creation failed: %s", err)
             raise
+
+    @staticmethod
+    def _write_bytes(local_path: str, data: bytes) -> None:
+        """Write bytes to a file synchronously in a thread."""
+        with open(local_path, "wb") as f:
+            f.write(data)
 
     @abc.abstractmethod
     async def download_file(self, remote_path: str, local_path: str) -> bool:

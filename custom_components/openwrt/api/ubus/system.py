@@ -725,10 +725,21 @@ class UbusSystemMixin:
             _LOGGER.debug("file.write/exec provisioning fallback failed: %s", err)
             return ""
 
-    async def install_firmware(self, url: str, keep_settings: bool = True) -> None:
+    async def install_firmware(
+        self, url: str, keep_settings: bool = True, force: bool = False
+    ) -> None:
         """Install firmware from the given URL via ubus."""
         keep = "" if keep_settings else "-n"
-        cmd = f"wget -O /tmp/firmware.bin '{url}' && sysupgrade {keep} /tmp/firmware.bin; rm -f /tmp/firmware.bin"
+        force_flag = "-F " if force else ""
+        cmd = (
+            f"if command -v uclient-fetch >/dev/null 2>&1; then "
+            f"  uclient-fetch --no-check-certificate -O /tmp/firmware.bin '{url}'; "
+            f"elif command -v curl >/dev/null 2>&1; then "
+            f"  curl -k -L -o /tmp/firmware.bin '{url}'; "
+            f"else "
+            f"  wget --no-check-certificate -O /tmp/firmware.bin '{url}'; "
+            f"fi && sysupgrade {force_flag}{keep} /tmp/firmware.bin; rm -f /tmp/firmware.bin"
+        )
         try:
             _LOGGER.info("Initiating firmware installation via ubus from: %s", url)
             await self.execute_command(cmd)
@@ -768,8 +779,8 @@ class UbusSystemMixin:
             # ubus file.read returns base64 encoded data (in "data" key)
             res = await self._call("file", "read", {"path": remote_path})
             if res and isinstance(res, dict) and "data" in res:
-                with open(local_path, "wb") as f:
-                    f.write(base64.b64decode(res["data"]))
+                data = base64.b64decode(res["data"])
+                await asyncio.to_thread(self._write_bytes, local_path, data)
                 return True
         except Exception as err:
             _LOGGER.exception("Failed to download file via ubus: %s", err)
