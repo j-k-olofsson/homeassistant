@@ -246,6 +246,11 @@ class LuciRpcNetworkMixin:
                     if q_val is not None and q_max:
                         wifi.quality = round((q_val / q_max) * 100, 1)
 
+                    if info.get("txpower") is not None:
+                        wifi.txpower = info["txpower"]
+                    if info.get("txpower_offset") is not None:
+                        wifi.txpower_offset = info["txpower_offset"]
+
                     # Association list for client count
                     assoc_str = await self.execute_command(
                         f'ubus call iwinfo assoclist \'{{"device":"{iface_name}"}}\' 2>/dev/null'
@@ -287,6 +292,9 @@ class LuciRpcNetworkMixin:
                             wifi.radio = wifi.radio or prev_wifi.radio
                             wifi.htmode = wifi.htmode or prev_wifi.htmode
                             wifi.txpower = wifi.txpower or prev_wifi.txpower
+                            wifi.txpower_offset = (
+                                wifi.txpower_offset or prev_wifi.txpower_offset
+                            )
                             wifi.mesh_id = wifi.mesh_id or prev_wifi.mesh_id
                             wifi.mesh_fwding = wifi.mesh_fwding or prev_wifi.mesh_fwding
                             wifi.ifname = wifi.ifname or prev_wifi.ifname
@@ -517,40 +525,76 @@ class LuciRpcNetworkMixin:
                     iface.dns_servers = iface_data.get("dns-server", [])
                     interfaces.append(iface)
 
-            if interfaces:
-                return interfaces
         except Exception:  # noqa: BLE001
             pass
 
-        # Fallback to UCI config if ubus dump fails
-        net_config = await self._rpc_call("uci", "get_all", ["network"])
-        if isinstance(net_config, dict):
-            for section, values in net_config.items():
-                if isinstance(values, dict) and values.get(".type") == "interface":
-                    iface = NetworkInterface(
-                        name=section,
-                        protocol=values.get("proto", ""),
-                        device=str(values.get("device", values.get("ifname", ""))),
-                    )
-                    # Try to get MAC if possible
-                    if iface.device:
-                        try:
-                            mac = await self.execute_command(
-                                f"cat /sys/class/net/{iface.device}/address 2>/dev/null",
+        # Fallback to UCI config if ubus dump produces no interfaces
+        if not interfaces:
+            try:
+                net_config = await self._rpc_call("uci", "get_all", ["network"])
+                if isinstance(net_config, dict):
+                    for section, values in net_config.items():
+                        if (
+                            isinstance(values, dict)
+                            and values.get(".type") == "interface"
+                        ):
+                            iface = NetworkInterface(
+                                name=section,
+                                protocol=values.get("proto", ""),
+                                device=str(
+                                    values.get("device", values.get("ifname", ""))
+                                ),
                             )
-                            if mac and ":" in mac:
-                                iface.mac_address = mac.strip().lower()
-                        except Exception:
-                            pass
-                    interfaces.append(iface)
+                            if iface.device:
+                                try:
+                                    mac = await self.execute_command(
+                                        f"cat /sys/class/net/{iface.device}/address 2>/dev/null",
+                                    )
+                                    if mac and ":" in mac:
+                                        iface.mac_address = mac.strip().lower()
+                                except Exception:
+                                    pass
+                            interfaces.append(iface)
+            except Exception:  # noqa: BLE001
+                pass
 
-        # 3. Add physical devices that are NOT logical interfaces (e.g. eth1, eth2)
+        # 3. Fetch device statistics and enrich interfaces (logical & physical)
         try:
             dev_status_str = await self.execute_command(
                 "ubus call network.device status 2>/dev/null"
             )
             if dev_status_str and dev_status_str.strip().startswith("{"):
                 device_stats = json.loads(dev_status_str)
+
+                # Enrich existing logical interfaces with statistics
+                for iface in interfaces:
+                    dev_name = iface.device
+                    if dev_name and dev_name in device_stats:
+                        dev_status = device_stats[dev_name]
+                        iface.is_link_up = dev_status.get("link", False)
+                        iface.link_speed = dev_status.get("speed", 0)
+                        iface.link_duplex = (
+                            "full" if dev_status.get("full_duplex") else "half"
+                        )
+
+                        stats = dev_status.get("statistics", {})
+                        iface.rx_bytes = stats.get("rx_bytes", 0)
+                        iface.tx_bytes = stats.get("tx_bytes", 0)
+                        iface.rx_packets = stats.get("rx_packets", 0)
+                        iface.tx_packets = stats.get("tx_packets", 0)
+                        iface.rx_errors = stats.get("rx_errors", 0)
+                        iface.tx_errors = stats.get("tx_errors", 0)
+                        iface.rx_dropped = stats.get("rx_dropped", 0)
+                        iface.tx_dropped = stats.get("tx_dropped", 0)
+                        iface.collisions = stats.get("collisions", 0)
+                        iface.mac_address = dev_status.get("macaddr", "")
+                        iface.speed = (
+                            str(iface.link_speed)
+                            if iface.link_speed
+                            else str(dev_status.get("speed", ""))
+                        )
+
+                # Add physical devices that are NOT logical interfaces (e.g. eth1, eth2)
                 seen_phys = {i.device for i in interfaces if i.device}
                 seen_phys.update({i.name for i in interfaces})
 
@@ -689,9 +733,13 @@ class LuciRpcNetworkMixin:
     async def trigger_wps_push(self, interface: str) -> bool:
         """Trigger WPS push button via LuCI RPC."""
         try:
-            # We use execute_command abstraction to call ubus
-            await self.execute_command(f"ubus call hostapd.{interface} wps_push")
-            return True
+            # Try wps_start first (standard OpenWrt hostapd method), fallback to wps_push
+            try:
+                await self.execute_command(f"ubus call hostapd.{interface} wps_start")
+                return True
+            except Exception:
+                await self.execute_command(f"ubus call hostapd.{interface} wps_push")
+                return True
         except Exception as err:
             _LOGGER.debug(
                 "Failed to trigger WPS push via luci_rpc for %s: %s", interface, err

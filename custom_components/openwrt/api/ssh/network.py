@@ -16,6 +16,7 @@ from ..base import (
     WireGuardInterface,
     WireGuardPeer,
     WirelessInterface,
+    WpsStatus,
 )
 from .exceptions import *
 
@@ -249,6 +250,11 @@ class SshNetworkMixin:
                     if q_val is not None and q_max:
                         wifi.quality = round((q_val / q_max) * 100, 1)
 
+                    if info.get("txpower") is not None:
+                        wifi.txpower = info["txpower"]
+                    if info.get("txpower_offset") is not None:
+                        wifi.txpower_offset = info["txpower_offset"]
+
                     # Association list for client count
                     assoc_str = await self._exec(
                         f"ubus call iwinfo assoclist {safe_arg} 2>/dev/null"
@@ -295,6 +301,7 @@ class SshNetworkMixin:
                             wifi.radio = prev_wifi.radio
                             wifi.htmode = prev_wifi.htmode
                             wifi.txpower = prev_wifi.txpower
+                            wifi.txpower_offset = prev_wifi.txpower_offset
                             wifi.mesh_id = prev_wifi.mesh_id
                             wifi.mesh_fwding = prev_wifi.mesh_fwding
                             wifi.ifname = prev_wifi.ifname
@@ -740,13 +747,58 @@ class SshNetworkMixin:
             _LOGGER.debug("Failed to get mwan3 status via ssh: %s", err)
             return []
 
+    async def get_wps_status(self) -> WpsStatus:
+        """Get WPS status via SSH."""
+        if self.packages.wireless is False:
+            return WpsStatus()
+        try:
+            # Check active PBC status on hostapd interfaces
+            out = await self._exec("ubus list 'hostapd.*' 2>/dev/null")
+            if out:
+                for line in out.strip().splitlines():
+                    obj = line.strip()
+                    if obj:
+                        status_out = await self._exec(
+                            f"ubus call {obj} wps_status 2>/dev/null"
+                        )
+                        if status_out and "Active" in status_out:
+                            return WpsStatus(enabled=True, status="Active")
+            return WpsStatus(enabled=False, status="Disabled")
+        except Exception as err:
+            _LOGGER.debug("Failed to get WPS status via ssh: %s", err)
+            return WpsStatus()
+
+    async def set_wps(self, enabled: bool) -> bool:
+        """Enable or disable WPS via SSH."""
+        method = "wps_start" if enabled else "wps_cancel"
+        try:
+            out = await self._exec("ubus list 'hostapd.*' 2>/dev/null")
+            if out:
+                success = False
+                for line in out.strip().splitlines():
+                    obj = line.strip()
+                    if obj:
+                        res = await self._exec(f"ubus call {obj} {method} 2>/dev/null")
+                        if res is not None:
+                            success = True
+                return success
+        except Exception as err:
+            _LOGGER.debug("Failed to set WPS via ssh: %s", err)
+        return False
+
     async def trigger_wps_push(self, interface: str) -> bool:
         """Trigger WPS push button via SSH."""
         try:
-            # hostapd_cli -i wlan0 wps_push
+            # Try ubus call first with wps_start, then hostapd_cli
             safe_iface = shlex.quote(interface)
-            await self.execute_command(f"hostapd_cli -i {safe_iface} wps_push")
-            return True
+            try:
+                await self.execute_command(
+                    f"ubus call hostapd.{safe_iface} wps_start 2>/dev/null || hostapd_cli -i {safe_iface} wps_push"
+                )
+                return True
+            except Exception:
+                await self.execute_command(f"hostapd_cli -i {safe_iface} wps_push")
+                return True
         except Exception as err:
             _LOGGER.debug(
                 "Failed to trigger WPS push via ssh for %s: %s", interface, err

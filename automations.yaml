@@ -481,18 +481,16 @@
       - condition: trigger
         id: start_heater
       sequence:
-      - type: turn_on
-        device_id: 1ee67733da4db42035644c9e5fa89074
-        entity_id: switch.vattenvarmare_honshuset_esphome25_relay_state
-        domain: switch
+      - action: switch.turn_on
+        target:
+          entity_id: switch.vattenvarmare_honshuset_esphome25_relay_state
     - conditions:
       - condition: trigger
         id: stop_heater
       sequence:
-      - type: turn_off
-        device_id: 1ee67733da4db42035644c9e5fa89074
-        entity_id: switch.vattenvarmare_honshuset_esphome25_relay_state
-        domain: switch
+      - action: switch.turn_off
+        target:
+          entity_id: switch.vattenvarmare_honshuset_esphome25_relay_state
   mode: queued
   max: 10
 - id: '1673781338782'
@@ -738,15 +736,11 @@
         action: light.turn_off
         data: {}
         enabled: true
-      - type: turn_off
-        device_id: 729cf1c0d534488f8fbbe60601af82af
-        entity_id: 50f5f890647aa525eea1ae293f9a82bc
-        domain: switch
-        enabled: true
-      - type: turn_off
-        device_id: 729cf1c0d534488f8fbbe60601af82af
-        entity_id: a70d7a6b06c541b3f592ded441c98a1a
-        domain: switch
+      - action: switch.turn_off
+        target:
+          entity_id:
+          - switch.shelly_pro_3_verkstaden_switch_1
+          - switch.shelly_pro_3_verkstaden_switch_2
       - action: spotifyplus.player_media_pause
         metadata: {}
         data:
@@ -1101,50 +1095,44 @@
           entity_id: media_player.playstation_4
           command: ps
         action: ps4.send_command
-      - device_id: 503fbae0fc47a65837b6e0966cfd696b
-        domain: button
-        entity_id: b7174089bed6ae52fba5dab87817494f
-        type: press
-      - type: turn_off
-        device_id: f6384d84be3c05b7a1f2f88a939e3238
-        entity_id: 8f2695d0115bb41a3ee1326795219c7f
-        domain: light
+      - action: button.press
+        target:
+          entity_id: button.esphome76_benq_on
+      - action: light.turn_off
+        target:
+          entity_id: light.blomlampa_shelly_plus_rgbw_pm_esphome32_growlight
       - delay:
           hours: 0
           minutes: 0
           seconds: 5
           milliseconds: 0
-      - device_id: 503fbae0fc47a65837b6e0966cfd696b
-        domain: button
-        entity_id: 3eae18d9790976f6ea31eafa58e84c26
-        type: press
+      - action: button.press
+        target:
+          entity_id: button.esphome76_benq_mute
     - conditions:
       - condition: trigger
         id:
         - bio_off
       sequence:
-      - device_id: f6384d84be3c05b7a1f2f88a939e3238
-        domain: button
-        entity_id: dac6a63307fc76c20bba76a1aba6c722
-        type: press
+      - action: button.press
+        target:
+          entity_id: button.blomlampa_shelly_plus_rgbw_pm_esphome32_apply_growlight_scene
       - action: button.press
         metadata: {}
         data: {}
         target:
           entity_id: button.esphome02_esphome02_apply_scene
-      - device_id: 503fbae0fc47a65837b6e0966cfd696b
-        domain: button
-        entity_id: 067869c482e9824ff5e57fb6ae888b07
-        type: press
+      - action: button.press
+        target:
+          entity_id: button.esphome76_benq_off
       - delay:
           hours: 0
           minutes: 0
           seconds: 0
           milliseconds: 200
-      - device_id: 503fbae0fc47a65837b6e0966cfd696b
-        domain: button
-        entity_id: 067869c482e9824ff5e57fb6ae888b07
-        type: press
+      - action: button.press
+        target:
+          entity_id: button.esphome76_benq_off
       - choose:
         - conditions:
           - condition: state
@@ -1262,14 +1250,13 @@
     target:
       entity_id:
       - media_player.kokets_skarm
-      - media_player.jbl_link_500_67aa69
+      - media_player.jbl_link_500_2
   - action: media_player.volume_set
     data:
       volume_level: 0.4
     target:
       entity_id:
       - media_player.diegos_vackarklocka
-      - media_player.mannis_vackarklocka
   - action: media_player.volume_set
     data:
       volume_level: 0.05
@@ -1280,8 +1267,7 @@
   - action: media_player.volume_set
     data:
       volume_level: 0.3
-    target:
-      entity_id: media_player.verkstadens_hogtalare
+    enabled: false
   - action: media_player.volume_set
     data:
       volume_level: 0.15
@@ -1427,11 +1413,9 @@
   - trigger: time
     at: '21:00:00'
   conditions:
-  - condition: device
-    device_id: 3d74a99687ecaf1f2dc34e7ec08f9852
-    domain: cover
-    entity_id: 62308c484dad120c22035d7c068bb0c4
-    type: is_open
+  - condition: state
+    entity_id: cover.honsluckan_esphome75_cover
+    state: open
   actions:
   - action: script.granny_broadcast
     metadata: {}
@@ -1712,12 +1696,10 @@
     id: stopped
     trigger: state
     from: playing
-  - type: turned_off
-    device_id: 38dd604f8f4c3049e081d3d69b121a38
-    entity_id: remote.sony_kd_55xh9005
-    domain: remote
+  - entity_id: remote.sony_kd_55xh9005
+    to: 'off'
     id: tv-off
-    trigger: device
+    trigger: state
   - entity_id:
     - media_player.nya_tvn
     to: 'off'
@@ -1736,11 +1718,9 @@
           minutes: 0
           seconds: 3
           milliseconds: 0
-      - condition: device
-        device_id: e3a7c058dab8d9a0b9ee10a298adf0d2
-        domain: media_player
-        entity_id: e1ec8287dda549c11ef7ae64f4647de2
-        type: is_playing
+      - condition: state
+        entity_id: media_player.nya_tvn
+        state: playing
       - data: {}
         target:
           entity_id: light.grupp_lampor_vid_tvn
@@ -1760,16 +1740,12 @@
           milliseconds: 0
       - condition: or
         conditions:
-        - condition: device
-          device_id: e3a7c058dab8d9a0b9ee10a298adf0d2
-          domain: media_player
-          entity_id: e1ec8287dda549c11ef7ae64f4647de2
-          type: is_paused
-        - condition: device
-          device_id: 38dd604f8f4c3049e081d3d69b121a38
-          domain: media_player
-          entity_id: 152c6e2fcef1c1f72fd17c4c1109ab15
-          type: is_off
+        - condition: state
+          entity_id: media_player.nya_tvn
+          state: paused
+        - condition: state
+          entity_id: media_player.sony_kd_55xh9005
+          state: 'off'
       - data: {}
         target:
           entity_id: light.grupp_lampor_vid_tvn
@@ -1783,18 +1759,12 @@
           minutes: 0
           seconds: 10
           milliseconds: 0
-      - device_id: 776f52c73a012c787b1956fd89125491
-        domain: button
-        entity_id: 7967ac6ba9e9ea947e3b8afb8e812709
-        type: press
-      - device_id: b9e7356f5adc899931e4737fc571c273
-        domain: button
-        entity_id: 5723b8a358bb8d606331b71603330914
-        type: press
-      - device_id: a18a14f4449708ee9639186c386887ce
-        domain: button
-        entity_id: e2b64021359c7349e8ebf2240dbbb0e5
-        type: press
+      - action: button.press
+        target:
+          entity_id:
+          - button.blomlampa_1_verandan_esphome07_apply_scene
+          - button.blomlampa_2_verandan_esphome03_apply_scene
+          - button.blomlampa_ateljen_esphome09_apply_scene
   mode: queued
   max: 10
 - id: '1751524387243'
@@ -2658,7 +2628,7 @@
       - action: switch.turn_on
         metadata: {}
         target:
-          device_id: 7513532280eefa77d57e78f477e10014
+          entity_id: switch.poolpump_utomhus_esphome27_relay_state
         data: {}
     - conditions:
       - condition: trigger
@@ -2668,6 +2638,37 @@
       - action: switch.turn_off
         metadata: {}
         target:
-          device_id: 7513532280eefa77d57e78f477e10014
+          entity_id: switch.poolpump_utomhus_esphome27_relay_state
         data: {}
+  mode: single
+- id: '1785778291181'
+  alias: Kräftor – temperaturstatus
+  description: Skickar frysens temperatur varje hel timme dagtid till och med kräftskivan.
+  triggers:
+  - trigger: time_pattern
+    minutes: '0'
+  conditions:
+  - condition: time
+    after: 07:59:00
+    before: '22:01:00'
+  - condition: template
+    value_template: '{{ now().date() <= as_datetime(''2026-08-08'').date() }}'
+  actions:
+  - action: notify.send_message
+    target:
+      entity_id: notify.home_assistant_kraftor_kraftovervakning
+    data:
+      title: KRÄFTOR STATUS
+      message: "Temperatur: {{ states('sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature')\n
+        \  | float(0) | round(1) }} °C\n\nTidpunkt: {{ now().strftime('%Y-%m-%d %H:%M:%S')
+        }}"
+  mode: single
+- id: '1787050345503'
+  alias: Thread - Automatisk nätverksdiagnostik
+  description: Uppdaterar Thread mesh-diagnostiken var 10:e minut
+  triggers:
+  - trigger: time_pattern
+    minutes: /10
+  actions:
+  - action: script.thread_uppdatera_natverksdiagnostik
   mode: single

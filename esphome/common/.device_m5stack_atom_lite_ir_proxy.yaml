@@ -1,0 +1,32 @@
+# Device type specific file for M5Stack ATOM Lite with IR Unit U002
+
+packages:
+  board: !include .board_m5stack_atom_lite.yaml
+
+# ATOM Lite Grove port: yellow/GPIO26, white/GPIO32.
+# U002 Grove signals: yellow/IR_TX, white/IR_RX.
+remote_transmitter:
+  id: ir_tx
+  pin: GPIO26
+  carrier_duty_percent: 50%
+  non_blocking: true
+
+remote_receiver:
+  id: ir_rx
+  pin:
+    number: GPIO32
+    inverted: true
+  dump: all
+
+# Separate entities are required for transmission and reception.
+infrared:
+  - platform: ir_rf_proxy
+    id: ir_proxy_tx
+    name: ${node_name} IR Transmitter
+    remote_transmitter_id: ir_tx
+
+  - platform: ir_rf_proxy
+    id: ir_proxy_rx
+    name: ${node_name} IR Receiver
+    receiver_frequency: 38kHz
+    remote_receiver_id: ir_rx

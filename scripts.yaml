@@ -24,7 +24,17 @@ rescan_wifi_on_esphome_nodes:
         | list | sort }}'
       sequence:
       - variables:
-          _esphome_node: "{% set dev = device_id(repeat.item) %}\n            {% set ns = namespace(node='') %}\n            {% if 'esphome' in repeat.item %}\n              {% set matches = repeat.item | regex_findall('esphome\\\\d{2}') %}\n              {% if matches %}\n                {% set ns.node = matches[0] %}\n              {% endif %}\n            {% endif %}\n            {% if dev and ns.node == '' %}\n              {% for ent in device_entities(dev) %}\n                {% set matches = ent | regex_findall('esphome\\\\d{2}') %}\n                {% if matches %}\n                  {% set ns.node = matches[0] %}\n                  {% break %}\n                {% endif %}\n              {% endfor %}\n            {% endif %}\n            {{ ns.node }}\n"
+          _esphome_node: "{% set dev = device_id(repeat.item) %}\n            {% set
+            ns = namespace(node='') %}\n            {% if 'esphome' in repeat.item
+            %}\n              {% set matches = repeat.item | regex_findall('esphome\\\\d{2}')
+            %}\n              {% if matches %}\n                {% set ns.node = matches[0]
+            %}\n              {% endif %}\n            {% endif %}\n            {%
+            if dev and ns.node == '' %}\n              {% for ent in device_entities(dev)
+            %}\n                {% set matches = ent | regex_findall('esphome\\\\d{2}')
+            %}\n                {% if matches %}\n                  {% set ns.node
+            = matches[0] %}\n                  {% break %}\n                {% endif
+            %}\n              {% endfor %}\n            {% endif %}\n            {{
+            ns.node }}\n"
       - if:
         - condition: template
           value_template: '{{ _esphome_node | length > 0 }}'
@@ -813,3 +823,24 @@ granny_car_charge_plan:
       message: 'Laddningsplan klar: {{ updated_event_count }} slotar, energi ≈ {{
         total_energy_kwh | float(0) | round(2) }} kWh, kostnad ≈ {{ total_cost_value
         | float(0) | round(2) }} {{ plan_currency }}.'
+thread_uppdatera_natverksdiagnostik:
+  alias: Thread - Uppdatera nätverksdiagnostik
+  mode: single
+  sequence:
+  - action: rest_command.thread_get_devices
+    response_variable: devices_response
+  - variables:
+      thread_routers: "{{ devices_response.content\n   | selectattr('role', 'eq',
+        'router')\n   | map(attribute='extAddress')\n   | list }}"
+  - repeat:
+      for_each: '{{ thread_routers }}'
+      sequence:
+      - action: rest_command.thread_get_diagnostics
+        data:
+          destination: '{{ repeat.item }}'
+      - delay:
+          seconds: 1
+  - delay:
+      seconds: 35
+  - action: rest_command.thread_get_diagnostics_result
+    response_variable: diagnostics_response

@@ -18,10 +18,26 @@ from ..base import (
     SqmStatus,
     WifiCredentials,
     WpsStatus,
+    classify_service,
 )
 from .exceptions import *
 
 _LOGGER = logging.getLogger(__name__)
+
+
+def _extract_json(stdout: str | None) -> dict[str, Any]:
+    """Parse the first JSON object embedded in command output."""
+    if not stdout:
+        return {}
+    start = stdout.find("{")
+    end = stdout.rfind("}")
+    if start == -1 or end == -1:
+        return {}
+    try:
+        data = json.loads(stdout[start : end + 1])
+    except json.JSONDecodeError:
+        return {}
+    return data if isinstance(data, dict) else {}
 
 
 class LuciRpcFeaturesMixin:
@@ -72,7 +88,7 @@ class LuciRpcFeaturesMixin:
             f"  curl -k -L -o /tmp/firmware.bin '{url}'; "
             f"else "
             f"  wget --no-check-certificate -O /tmp/firmware.bin '{url}'; "
-            f"fi && sysupgrade {force_flag}{keep} /tmp/firmware.bin; rm -f /tmp/firmware.bin"
+            f"fi && sysupgrade {force_flag}{keep} /tmp/firmware.bin"
         )
         try:
             _LOGGER.info("Initiating firmware installation via LuCI RPC from: %s", url)
@@ -286,6 +302,21 @@ class LuciRpcFeaturesMixin:
         except Exception as err:
             _LOGGER.debug("Failed to get WPS status via luci_rpc: %s", err)
             return WpsStatus()
+
+    async def set_wps(self, enabled: bool) -> bool:
+        """Enable or disable WPS via LuCI RPC."""
+        method = "wps_start" if enabled else "wps_cancel"
+        try:
+            cmd = (
+                f"for obj in $(ubus list 'hostapd.*' 2>/dev/null); do "
+                f'ubus call "$obj" {method} 2>/dev/null; '
+                f"done"
+            )
+            await self.execute_command(cmd)
+            return True
+        except Exception as err:
+            _LOGGER.debug("Failed to set WPS via luci_rpc: %s", err)
+            return False
 
     async def set_firewall_redirect_enabled(
         self,
@@ -649,56 +680,25 @@ class LuciRpcFeaturesMixin:
     async def get_services(self) -> list[ServiceInfo]:
         """Get list of system services via ubus rc list."""
         services: list[ServiceInfo] = []
-        # 'rc list' is more reliable as it shows both enabled and running state
-        stdout = await self.execute_command("ubus call rc list 2>/dev/null")
-        if stdout:
-            # Find the first { and last } to extract JSON
-            start = stdout.find("{")
-            end = stdout.rfind("}")
-            if start != -1 and end != -1:
-                try:
-                    data = json.loads(stdout[start : end + 1])
-                    for name, val in data.items():
-                        if isinstance(val, dict):
-                            services.append(
-                                ServiceInfo(
-                                    name=name,
-                                    enabled=val.get("enabled", False),
-                                    running=val.get("running", False)
-                                    or (
-                                        val.get("running") is False
-                                        and val.get("exit_code") == 0
-                                        and name
-                                        in ("adblock", "simple-adblock", "sysctl")
-                                    ),
-                                )
-                            )
-                except json.JSONDecodeError:
-                    pass
 
-        # Fallback to 'service list' if 'rc list' was empty
+        # 'service list' tells daemons (which own procd instances) apart from
+        # one-shot scripts, which procd always reports as not running.
+        service_map = _extract_json(
+            await self.execute_command("ubus call service list 2>/dev/null")
+        )
+
+        # 'rc list' is more reliable as it shows both enabled and running state
+        rc_map = _extract_json(
+            await self.execute_command("ubus call rc list 2>/dev/null")
+        )
+        for name, val in rc_map.items():
+            if isinstance(val, dict):
+                services.append(classify_service(name, val, service_map.get(name)))
+
+        # Fallback to 'service list' alone if 'rc list' was empty
         if not services:
-            stdout = await self.execute_command("ubus call service list 2>/dev/null")
-            if stdout:
-                start = stdout.find("{")
-                end = stdout.rfind("}")
-                if start != -1 and end != -1:
-                    try:
-                        data = json.loads(stdout[start : end + 1])
-                        for name, val in data.items():
-                            if isinstance(val, dict) and "instances" in val:
-                                running = any(
-                                    inst.get("running", False)
-                                    or (
-                                        inst.get("running") is False
-                                        and inst.get("exit_code") == 0
-                                        and name
-                                        in ("adblock", "simple-adblock", "sysctl")
-                                    )
-                                    for inst in val.get("instances", {}).values()
-                                )
-                                services.append(ServiceInfo(name=name, running=running))
-                    except json.JSONDecodeError:
-                        pass
+            for name, val in service_map.items():
+                if isinstance(val, dict) and "instances" in val:
+                    services.append(classify_service(name, {}, val))
 
         return services

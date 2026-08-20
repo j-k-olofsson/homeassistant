@@ -267,12 +267,41 @@ class UbusClient(
             _LOGGER.debug("Failed to list ubus objects: %s", err)
             return []
 
-        result = data.get("result")
-        if not result or not isinstance(result, list):
+        result = self._unwrap_list_result(data.get("result"))
+        if not result:
             return []
 
-        # On success, result is a list with one dict: [{"object1": {...}, "object2": {...}}]
-        return list(result[0].keys())
+        objects = list(result)
+        if objects != ["*"]:
+            return objects
+
+        core_objects = (
+            "system",
+            "network.interface",
+            "uci",
+            "file",
+            "session",
+            "network.device",
+            "network.wireless",
+            "luci",
+            "luci-rpc",
+            "service",
+            "hostapd.*",
+        )
+        found = []
+        for object_name in core_objects:
+            if await self._get_object_methods(object_name):
+                found.append(object_name)
+        return found
+
+    @staticmethod
+    def _unwrap_list_result(result: Any) -> dict[str, Any]:
+        """Return an object map from standard and proxy ubus list responses."""
+        if isinstance(result, list):
+            if result and isinstance(result[0], dict):
+                return result[0]
+            return {}
+        return result if isinstance(result, dict) else {}
 
     async def _get_object_methods(self, object_name: str) -> dict[str, Any]:
         """Get methods for a specific ubus object."""
@@ -294,9 +323,8 @@ class UbusClient(
             ) as response:
                 response.raise_for_status()
                 data = await response.json()
-                result = data.get("result")
-                if result and isinstance(result, list) and len(result) > 0:
-                    return result[0].get(object_name, {})
+                result = self._unwrap_list_result(data.get("result"))
+                return result.get(object_name, {})
         except Exception:
             pass
         return {}

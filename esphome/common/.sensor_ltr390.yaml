@@ -4,13 +4,21 @@ sensor:
   - platform: ltr390
     i2c_id: ${sensor_i2c_bus_id}
     update_interval: ${ltr390_update_interval}
-    gain: ${ltr390_gain}
-    resolution: ${ltr390_resolution}
+    gain:
+      ambient_light: ${ltr390_als_gain}
+      uv: ${ltr390_uv_gain}
+    resolution:
+      ambient_light: ${ltr390_als_resolution}
+      uv: ${ltr390_uv_resolution}
     window_correction_factor: ${ltr390_window_correction}
     uv_index:
       name: ${node_name} UV Index
       icon: mdi:weather-sunny-alert
       accuracy_decimals: 2
+    uv:
+      name: ${node_name} UV Counts
+      icon: mdi:counter
+      accuracy_decimals: 0
     ambient_light:
       name: ${node_name} UV Ambient
       device_class: illuminance

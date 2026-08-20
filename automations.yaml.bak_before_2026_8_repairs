@@ -1,0 +1,2695 @@
+- id: '1669463747067'
+  alias: PERSISTENT VARNING - Frysboxen
+  description: Meddela mobilen att frysboxen är för varm och att åtgärder kan behövas.
+  triggers:
+  - entity_id:
+    - sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature
+    trigger: state
+  conditions:
+  - condition: numeric_state
+    entity_id: sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature
+    above: -10
+  actions:
+  - action: script.granny_broadcast
+    metadata: {}
+    data:
+      severity: crit
+      humor_level: 2
+      tts_media_player: media_player.kokets_skarm
+      task: Meddela att frysboxen i gamla verkstaden blivit för varm och att den behöver
+        kontrolleras
+      channels:
+      - tts
+      - tv
+      - ha
+      - mobile
+  mode: queued
+  max: 10
+- id: '1669463948653'
+  alias: Kontrollera gasolnivå
+  description: Meddela mobilen att gasolen håller på att ta slut och logga arbetsuppgiften.
+  triggers:
+  - at: 06:00:00
+    trigger: time
+  conditions:
+  - condition: numeric_state
+    entity_id: sensor.gasol_utomhus_esphome73_lpg_level
+    below: 5
+  actions:
+  - action: script.granny_broadcast
+    metadata: {}
+    data:
+      severity: info
+      humor_level: 2
+      tts_media_player: media_player.grupp_grannys_hogtalare
+      task: Meddela att gasolen börjar ta slut och att det är dags att byta flaska
+      channels:
+      - mobile
+      - ha
+  mode: queued
+  max: 10
+- id: '1669464348939'
+  alias: Kontrollera växters välmående
+  description: Meddela mobilen om växterna har för lite vatten eller för mycket näring.
+  triggers:
+  - at: 06:00:00
+    trigger: time
+  conditions:
+  - condition: or
+    conditions:
+    - condition: state
+      state: problem
+      entity_id: plant.paraplyaralia
+    - condition: state
+      entity_id: plant.coffea_arabica
+      state: problem
+    - condition: state
+      state: problem
+      entity_id: plant.meyer_citron
+    - condition: state
+      state: problem
+      entity_id: plant.citron
+    - condition: state
+      state:
+      - problem
+      entity_id: plant.kaffir_lime
+    - condition: state
+      state:
+      - problem
+      entity_id: plant.monstera
+  actions:
+  - action: script.granny_broadcast
+    metadata: {}
+    data:
+      severity: info
+      humor_level: 0
+      task: 'Meddela att en eller flera av plantorna som beskrivs här behöver hjälp
+        och vad det är för hjälp de behöver.
+
+        {% for plant in states.plant if plant.state == ''problem'' %}   {{- plant.name
+        }}:    {%- if ''Low'' in plant.attributes.moisture_status %} Behöver vattnas.{%
+        endif %}   {%- if ''High'' in plant.attributes.moisture_status %} För mycket
+        vatten!{% endif %}   {%- if ''Low'' in plant.attributes.conductivity_status
+        %} Behöver näring.{% endif %}   {%- if ''High'' in plant.attributes.conductivity_status
+        %} För mycket näring!{% endif %}   {% if loop.last %}{{ "\n" }}{% endif %}
+        {% endfor %}'
+      channels:
+      - mobile
+      - ha
+  mode: queued
+  max: 10
+- id: '1669464498470'
+  alias: Kontrollera hönsvatten
+  description: Meddela mobilen när vattnet i Hönshuset är lågt. Det säkerställer att
+    hönsen alltid har tillgång till friskt vatten.
+  triggers:
+  - at: 06:00:00
+    trigger: time
+  conditions:
+  - condition: numeric_state
+    entity_id: sensor.vattenniva_honshuset_esphome74_water_level
+    below: 25
+  actions:
+  - action: script.granny_broadcast
+    metadata: {}
+    data:
+      severity: info
+      humor_level: 2
+      task: Meddela att hönsens vatten börjar ta slut
+      channels:
+      - mobile
+      - ha
+  mode: queued
+  max: 10
+- id: '1669464923530'
+  alias: Kontrollera låga batterinivåer
+  description: Meddelar mobilen när något batteri har för låg nivå (<15%) för att
+    säkerställa att alla sensorer fungerar som de ska. Automation körs dagligen kl.
+    02:00. Kontroll av batterinivåer görs för både vanlig och binär sensor.
+  triggers:
+  - at: 02:00:00
+    trigger: time
+  conditions:
+  - condition: template
+    value_template: '{{ sensors != '''' and (day | int == 0 or day | int == now().isoweekday())
+      }}'
+  actions:
+  - choose: []
+    default:
+    - action: script.granny_broadcast
+      metadata: {}
+      data:
+        severity: warn
+        humor_level: 2
+        tts_media_player: media_player.grupp_grannys_hogtalare
+        task: 'Låg batterinivå: {{ sensors }}'
+        channels:
+        - mobile
+        - ha
+  variables:
+    day: 0
+    threshold: 15
+    exclude:
+      entity_id: []
+    sensors: "{% set result = namespace(sensors=[]) %} {% for state in states.sensor
+      | selectattr('attributes.device_class', '==', 'battery') %}\n  {% if 0 <= state.state
+      | int(-1) < threshold | int and not state.entity_id in exclude.entity_id %}\n
+      \   {% set result.sensors = result.sensors + [state.name ~ ' (' ~ state.state
+      ~ ' %)'] %}\n  {% endif %}\n{% endfor %} {% for state in states.binary_sensor
+      | selectattr('attributes.device_class', '==', 'battery') | selectattr('state',
+      '==', 'on') %}\n  {% if not state.entity_id in exclude.entity_id %}\n    {%
+      set result.sensors = result.sensors + [state.name] %}\n  {% endif %}\n{% endfor
+      %} {{result.sensors|join(', ')}}"
+  mode: queued
+  max: 10
+- id: '1670227045254'
+  alias: SCEN - Dagsljus och Nattbelysning
+  description: Denna automation anpassar belysningen efter solens olika faser och
+    tidpunkter på dygnet. Den slår på lampor vid gryning och skymning, samt stänger
+    av dem när tid för nattljus har ankommit. Den styr också scener för olika belysningslägen
+    baserat på tid och ljusförhållanden.
+  triggers:
+  - at: input_datetime.lights_on
+    id: dawn_by_time
+    trigger: time
+  - entity_id:
+    - input_select.sun_phase
+    to: SUNPHASE_SUNRISE
+    id: dawn
+    trigger: state
+  - entity_id:
+    - input_select.sun_phase
+    to: SUNPHASE_DAYLIGHT
+    id: daylight
+    trigger: state
+  - entity_id:
+    - input_select.sun_phase
+    to: SUNPHASE_SUNSET
+    id: dusk
+    trigger: state
+  - entity_id:
+    - input_select.sun_phase
+    to: SUNPHASE_NIGHT
+    id: night
+    trigger: state
+  - at: input_datetime.lights_off
+    id: night_by_time
+    trigger: time
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: dawn_by_time
+      - condition: not
+        conditions:
+        - condition: state
+          entity_id: input_select.sun_phase
+          state: SUNPHASE_DAYLIGHT
+      sequence:
+      - data:
+          option: DAWN
+        target:
+          entity_id: input_select.light_scene
+        action: input_select.select_option
+    - conditions:
+      - condition: trigger
+        id: daylight
+      sequence:
+      - data:
+          option: DAY
+        target:
+          entity_id: input_select.light_scene
+        action: input_select.select_option
+      - action: light.turn_off
+        target:
+          entity_id:
+          - light.grupp_lampor_som_tands_vid_skymning
+        data: {}
+    - conditions:
+      - condition: trigger
+        id: dusk
+      - condition: not
+        conditions:
+        - condition: state
+          entity_id: input_select.light_scene
+          state: NIGHT
+      sequence:
+      - data:
+          option: DUSK
+        target:
+          entity_id: input_select.light_scene
+        action: input_select.select_option
+      - condition: state
+        entity_id: input_boolean.guest_mode
+        state: 'off'
+        enabled: false
+      - metadata: {}
+        data: {}
+        target:
+          entity_id: light.grupp_lampor_som_tands_vid_skymning
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: night_by_time
+      sequence:
+      - data:
+          option: DUSK
+        target:
+          entity_id: input_select.light_scene
+        action: input_select.select_option
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 5
+          milliseconds: 0
+      - data:
+          option: NIGHT
+        target:
+          entity_id: input_select.light_scene
+        action: input_select.select_option
+      - action: light.turn_on
+        data:
+          rgb_color:
+          - 255
+          - 0
+          - 0
+        target:
+          entity_id: light.grupp_lampor_som_tands_vid_skymning
+      - condition: state
+        entity_id: input_boolean.guest_mode
+        state: 'off'
+  mode: queued
+  max: 10
+- id: '1670242070937'
+  alias: Solens dygnsfaser
+  description: Denna automation uppdaterar solens faser (soluppgång, dagsljus, solnedgång,
+    natt) automatiskt baserat på solens elevatiion för att möjliggöra bättre ljusstyrning
+    i hemmet.
+  triggers:
+  - entity_id: sun.sun
+    above: -6
+    id: dawn
+    attribute: elevation
+    trigger: numeric_state
+  - entity_id: sun.sun
+    above: 0
+    id: day
+    attribute: elevation
+    trigger: numeric_state
+  - entity_id: sun.sun
+    below: 0
+    id: dusk
+    attribute: elevation
+    trigger: numeric_state
+  - entity_id: sun.sun
+    below: -6
+    id: night
+    attribute: elevation
+    trigger: numeric_state
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: dawn
+      sequence:
+      - data:
+          options: SUNPHASE_SUNRICE
+        target:
+          entity_id: input_select.sun_phase
+        action: input_select.set_options
+    - conditions:
+      - condition: trigger
+        id: day
+      sequence:
+      - data:
+          options: SUNPHASE_DAYLIGHT
+        target:
+          entity_id: input_select.sun_phase
+        action: input_select.set_options
+    - conditions:
+      - condition: trigger
+        id: dusk
+      sequence:
+      - data:
+          options: SUNPHASE_SUNSET
+        target:
+          entity_id: input_select.sun_phase
+        action: input_select.set_options
+    - conditions:
+      - condition: trigger
+        id: night
+      sequence:
+      - data:
+          options: SUNPHASE_NIGHT
+        target:
+          entity_id: input_select.sun_phase
+        action: input_select.set_options
+  mode: queued
+  max: 10
+- id: '1670242540792'
+  alias: SCEN - Växtlampor
+  description: Automatisera växtlampornas belysning genom att aktivera olika lägen
+    under dagen.
+  triggers:
+  - at: input_datetime.growlights_on
+    id: early_on
+    trigger: time
+  - at: input_datetime.growlights_late_on
+    id: late_on
+    trigger: time
+  - at: input_datetime.growlights_off
+    id: all_off
+    trigger: time
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: early_on
+      sequence:
+      - data:
+          option: 'ON'
+        target:
+          entity_id: input_select.growlight_scene
+        action: input_select.select_option
+      - action: light.turn_on
+        metadata: {}
+        data: {}
+        target:
+          entity_id:
+          - light.vaxtlampa_frosadd_koket_shpls
+    - conditions:
+      - condition: trigger
+        id: late_on
+      sequence:
+      - data:
+          option: LATE_ON
+        target:
+          entity_id: input_select.growlight_scene
+        action: input_select.select_option
+    - conditions:
+      - condition: trigger
+        id: all_off
+      sequence:
+      - data:
+          option: 'OFF'
+        target:
+          entity_id: input_select.growlight_scene
+        action: input_select.select_option
+      - action: light.turn_off
+        metadata: {}
+        data: {}
+        target:
+          entity_id:
+          - light.vaxtlampa_frosadd_koket_shpls
+  mode: queued
+  max: 10
+- id: '1673173615791'
+  alias: Kontrollera saltnivå
+  description: Meddela mobilen att saltet håller på att ta slut. Dags att fylla på
+    salt vid låga nivåer.
+  triggers:
+  - at: 06:00:00
+    trigger: time
+    weekday:
+    - sun
+    - sat
+    - fri
+    - thu
+    - wed
+    - tue
+    - mon
+  conditions:
+  - condition: numeric_state
+    entity_id: sensor.esphome90_esphome90_salt_level
+    below: 30
+  actions:
+  - action: script.granny_broadcast
+    metadata: {}
+    data:
+      severity: info
+      humor_level: 2
+      task: Meddela att salttabletterna i vattenfiltret är på en låg nivå
+      channels:
+      - mobile
+      - ha
+  mode: queued
+  max: 10
+- id: '1673428919960'
+  alias: Tvätt/tork - Färdig
+  description: När tvättmaskinen har avslutat sitt program, skickas en notification
+    och meddelande via högtalare för att påminna om att tömma tvätten.
+  triggers:
+  - device_id: f16f2d8a7234951574cdd787c8fcebef
+    domain: home_connect_alt
+    type: program_finished
+    trigger: device
+  conditions: []
+  actions:
+  - action: script.granny_broadcast
+    data:
+      task: Meddela att tvättmaskinen nu är färdig och kan nu tömmas
+      severity: info
+      humor_level: 2
+      channels:
+      - tts
+      - tv
+      tts_media_player: media_player.kokets_skarm
+  mode: queued
+  max: 10
+- id: '1673780941087'
+  alias: Värma hönsens vatten
+  description: Automatiskt aktivera värmaren för hönsens vatten när temperaturen sjunker
+    under 1°C och stäng av den när temperaturen stiger över 2°C.
+  triggers:
+  - entity_id:
+    - sensor.honshuset_temp
+    below: 1
+    id: start_heater
+    trigger: numeric_state
+  - entity_id:
+    - sensor.honshuset_temp
+    above: 2
+    id: stop_heater
+    trigger: numeric_state
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: start_heater
+      sequence:
+      - type: turn_on
+        device_id: 1ee67733da4db42035644c9e5fa89074
+        entity_id: switch.vattenvarmare_honshuset_esphome25_relay_state
+        domain: switch
+    - conditions:
+      - condition: trigger
+        id: stop_heater
+      sequence:
+      - type: turn_off
+        device_id: 1ee67733da4db42035644c9e5fa89074
+        entity_id: switch.vattenvarmare_honshuset_esphome25_relay_state
+        domain: switch
+  mode: queued
+  max: 10
+- id: '1673781338782'
+  alias: Automatisk hönslucka
+  description: Öppnar och stänger hönsluckan baserat på solens faser och tid.
+  triggers:
+  - id: open_cover
+    at: input_datetime.oppna_honsluckan
+    trigger: time
+  - entity_id:
+    - input_select.sun_phase
+    to: SUNPHASE_SUNSET
+    id: close_cover
+    trigger: state
+  - trigger: time
+    at: '20:55:00'
+    id: close-on-time
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: open_cover
+      - condition: numeric_state
+        entity_id: sensor.honshuset_temp
+        above: 0
+      sequence:
+      - data: {}
+        target:
+          entity_id: cover.honsluckan_esphome75_cover
+        action: cover.open_cover
+    - conditions:
+      - condition: trigger
+        id: close_cover
+      sequence:
+      - data: {}
+        target:
+          entity_id: cover.honsluckan_esphome75_cover
+        action: cover.close_cover
+    - conditions:
+      - condition: trigger
+        id:
+        - close-on-time
+      sequence:
+      - action: cover.close_cover
+        metadata: {}
+        data: {}
+        target:
+          entity_id: cover.honsluckan_esphome75_cover
+  mode: queued
+  max: 10
+- id: '1674139073169'
+  alias: Hissmusik
+  description: Spela hissmusik på morgonen eller när knappen trycks in. Automationen
+    startar en Spotify-spellista med godtycklig och blandad musik för en glad start
+    på dagen.
+  triggers:
+  - entity_id:
+    - input_button.spela_hissmusik
+    trigger: state
+    id: google-voice
+  - trigger: time
+    at: 05:30:00
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+    id: 0530-weekdays
+  - trigger: time
+    at: 07:00:00
+    weekday:
+    - sat
+    - sun
+    id: 0700-weekends
+  - trigger: time
+    at: 08:00:00
+    id: 0900-alldays
+  - trigger: time
+    at: '20:00:00'
+    id: 2000-alldays
+  - trigger: time
+    at: '22:00:00'
+    id: 2200-alldays
+  conditions: []
+  variables:
+    spotify_target_device_id: Dassens högtalare
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - 0530-weekdays
+        - 0700-weekends
+        - 2000-alldays
+      sequence:
+      - alias: Väck 502e110e3653a9ec3bade927714d8bbc
+        continue_on_error: true
+        action: media_player.play_media
+        target:
+          entity_id: media_player.spotifyplus_mammaochpapppa
+        data:
+          media:
+            media_content_id: https://actions.google.com/sounds/v1/alarms/beep_short.ogg
+            media_content_type: music
+            metadata: {}
+      - alias: Spela hissmusik (retry x3)
+        repeat:
+          count: 3
+          sequence:
+          - action: spotifyplus.player_media_play_context
+            continue_on_error: true
+            data:
+              entity_id: media_player.spotifyplus_mammaochpapppa
+              context_uri: spotify:playlist:1NL3k4V4XXj4mOOr2e6JGQ
+              device_id: '{{ spotify_target_device_id }}'
+              shuffle: true
+          - delay: 00:00:03
+          - choose:
+            - conditions:
+              - condition: state
+                entity_id: media_player.spotifyplus_mammaochpapppa
+                state: playing
+              sequence: []
+            default: []
+      - choose:
+        - conditions:
+          - condition: state
+            entity_id: media_player.spotifyplus_mammaochpapppa
+            state: playing
+          sequence:
+          - action: spotifyplus.player_set_repeat_mode
+            data:
+              entity_id: media_player.spotifyplus_mammaochpapppa
+              state: context
+        default: []
+    - conditions:
+      - condition: trigger
+        id:
+        - 0900-alldays
+        - google-voice
+      sequence:
+      - action: spotifyplus.player_media_play_context
+        data:
+          entity_id: media_player.spotifyplus_mammaochpapppa
+          context_uri: spotify:playlist:2fLpo9cVywf8wM52GesCKz?si=3YTiMKqfSMmiJYh5XXwYVw
+          device_id: '{{ spotify_target_device_id }}'
+          shuffle: true
+      - action: spotifyplus.player_set_repeat_mode
+        data:
+          entity_id: media_player.spotifyplus_mammaochpapppa
+          state: context
+    - conditions:
+      - condition: trigger
+        id:
+        - 2200-alldays
+      sequence:
+      - action: spotifyplus.player_media_pause
+        data:
+          entity_id: media_player.spotifyplus_mammaochpapppa
+          device_id: '{{ spotify_target_device_id }}'
+  mode: queued
+  max: 10
+- id: '1674477126105'
+  alias: SCEN - Morgonljus före väckarklockan
+  description: 'Denna automation tänder mjukt morgonljus 15 minuter före att väckarklockan
+    ringer för att hjälpa användaren att vakna mer naturligt.
+
+    '
+  triggers:
+  - id: diegosalarm
+    value_template: "{% set t = states('sensor.diegos_vackarklocka_alarms') | as_datetime(default=None)
+      %} {{ t is not none\n   and now() >= (t - timedelta(minutes=15))\n   and now()
+      <  (t - timedelta(minutes=14)) }}"
+    trigger: template
+  - id: mannisalarm
+    value_template: "{% set t = states('sensor.mannis_vackarklocka_alarms') | as_datetime(default=None)
+      %} {{ t is not none\n   and now() >= (t - timedelta(minutes=15))\n   and now()
+      <  (t - timedelta(minutes=14)) }}"
+    trigger: template
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: diegosalarm
+      sequence:
+      - target:
+          entity_id: light.ledstrip_sovrum_ostra_esphome40_light
+        data:
+          effect: morning
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: mannisalarm
+      sequence:
+      - target:
+          entity_id: light.ledstrip_sovrum_norra_esphome44_light
+        data:
+          effect: morning
+        action: light.turn_on
+  mode: queued
+  max: 3
+- id: '1676995549797'
+  alias: SCEN - Godnatt
+  description: Stänger av lampor och ger en godnatt-hälsning. Kontrollerar även om
+    balkongdörren är stängd.
+  triggers:
+  - entity_id:
+    - input_button.godnatt
+    trigger: state
+  conditions: []
+  actions:
+  - variables:
+      _door_open: '{{ is_state(''binary_sensor.shelly_blu_door_window_2a6d_window'',
+        ''on'') }}'
+      _godnatt_task: "{% if _door_open %}\n  Balkongdörren är öppen. Varningston men
+        varm Granny-stil. Exakt en mening på svenska, 8-14 ord, inga siffror.\n{%
+        else %}\n  Säg godnatt och bekräfta tryggt läge med varm Granny-stil. Exakt
+        en mening på svenska, 8-14 ord, inga siffror.\n{% endif %}\n"
+      _godnatt_fallback: "{% if _door_open %}\n  Balkongdörren är öppen. Kolla den
+        innan ni somnar.\n{% else %}\n  Allt ser tryggt ut. Sov gott.\n{% endif %}\n"
+  - parallel:
+    - sequence:
+      - action: media_player.turn_on
+        continue_on_error: true
+        target:
+          entity_id: media_player.diegos_vackarklocka
+      - delay: 00:00:01
+      - action: script.granny_broadcast
+        data:
+          task: '{{ _godnatt_task }}'
+          severity: '{{ ''warn'' if _door_open else ''info'' }}'
+          humor_level: '{{ 0 if _door_open else 1 }}'
+          tts_media_player: media_player.diegos_vackarklocka
+          channels:
+          - tts
+          fallback_message: '{{ _godnatt_fallback }}'
+    - sequence:
+      - target:
+          entity_id: light.grupp_godnatt
+        action: light.turn_off
+        data: {}
+        enabled: true
+      - type: turn_off
+        device_id: 729cf1c0d534488f8fbbe60601af82af
+        entity_id: 50f5f890647aa525eea1ae293f9a82bc
+        domain: switch
+        enabled: true
+      - type: turn_off
+        device_id: 729cf1c0d534488f8fbbe60601af82af
+        entity_id: a70d7a6b06c541b3f592ded441c98a1a
+        domain: switch
+      - action: spotifyplus.player_media_pause
+        metadata: {}
+        data:
+          entity_id: media_player.spotifyplus_mammaochpapppa
+        enabled: true
+  mode: single
+- id: '1678110729020'
+  alias: Starta diskmaskinen vid lägsta elpris
+  description: Automationen startar diskmaskinen när elpriset är som lägst, för att
+    spara kostnader. Om diskmaskinen är tillåten att starta, registreras det i loggen.
+  triggers:
+  - at: input_datetime.starttid_for_billig_el
+    trigger: time
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: binary_sensor.siemens_016050395510002818_bsh_common_status_remotecontrolstartallowed
+        state: 'on'
+      sequence:
+      - metadata: {}
+        data:
+          item: Startad vid nattens lägsta elpris
+          description: Diskmaskinen
+          due_datetime: '{{ now() }}'
+        target:
+          entity_id: todo.ha_loggade_arbetsuppgifter
+        action: todo.add_item
+      - data:
+          validate: false
+          device_id: 444edb1c05f7869597326dcc1621322a
+          program_key: Dishcare.Dishwasher.Program.Eco50
+        action: home_connect_alt.start_program
+  mode: queued
+  max: 10
+- id: '1680086760563'
+  alias: Nya elpriser har publicerats
+  description: Denna automation meddelar dig när elpriserna för nästa dygn blir tillgängliga.
+    Den skickar notifikationer via mobil och spelar upp ett meddelande genom högtalaren.
+  triggers:
+  - entity_id:
+    - sensor.nordpool
+    attribute: tomorrow_valid
+    to: 1
+    trigger: state
+  conditions: []
+  actions:
+  - action: script.granny_broadcast
+    metadata: {}
+    data:
+      severity: info
+      humor_level: 1
+      task: "SYSTEM Du är \"Granny\", en varm och vardaglig hushållsrådgivare som
+        pratar till familjen i hemmet. Du ska låta personlig, kortfattad och lättsam,
+        inte som en teknisk rapport. Svara på svenska med naturligt språk, utan siffror
+        eller tabeller.\n\n  USER Nedanstående data är elpris per timme för NÄSTA
+        DYGN i SE3. Varje rad är: YYYY-MM-DDTHH:00±ZZZZ=pris;kategori\n  Kategorier:\n
+        \   - green: < 1,65 SEK/kWh\n    - yellow: 1,66–3,00 SEK/kWh\n    - red: >
+        3,00 SEK/kWh\n\n  Uppgift:\n    1) Analysera prisnivåerna och avgör om morgondagen
+        ser billig, normal eller dyr ut som helhet.\n    2) Om det finns tydliga undantag
+        (t.ex. dyrare morgon eller kväll) nämn dem kort.\n    3) Skriv ett vänligt
+        och mänskligt meddelande som passar att läsas upp av Granny, t.ex.:\n       -
+        “Morgondagens elpriser ser fina ut, mest gröna nivåer hela dagen.”\n       -
+        “Det ser ut att bli dyrt imorgon, särskilt på morgonen och kvällen.”\n    4)
+        Undvik siffror och tekniska detaljer. Fokusera på hur hushållet kan tänka
+        kring sin vardag (tvätt, laddning, matlagning).\n    5) Max 25 ord, ingen
+        punktlista. Bara ett kort och naturligt stycke text.\n\n  DATA\n{# ===== PROD:
+        nästa dygn när tomorrow_valid: true ===== #}\n{%- set e = 'sensor.nordpool'
+        -%}\n{%- set currency = state_attr(e,'currency') or 'SEK' -%}\n{%- set unit
+        = currency ~ '/kWh' -%}\n{%- set area = state_attr(e,'region') or state_attr(e,'area')
+        or 'SE?' -%}\n{%- set nowts = now() -%}\n{%- set base_today = today_at() -%}\n{%-
+        set base_tomorrow = base_today + timedelta(days=1) -%}\n{%- set tm  = state_attr(e,'tomorrow')
+        \    | default([], true) -%}\n{%- set rtm = state_attr(e,'raw_tomorrow') |
+        default([], true) -%}\n\n{%- macro cat(v) -%}\n  {%- set x = (v|float) -%}\n
+        \ {%- if x > 3 -%}red{%- elif x >= 1.66 -%}yellow{%- else -%}green{%- endif
+        -%}\n{%- endmacro -%}\n\n# PRICES\ntz={{ now().tzinfo }}\narea={{ area }}\ncurrency={{
+        currency }}\nunit={{ unit }}\nvat={{ state_attr(e,'vat') if state_attr(e,'vat')
+        is not none else 'unknown' }}\nsource=nordpool\ngenerated={{ as_local(nowts).strftime('%Y-%m-%dT%H:%M%z')
+        }}\n\n# DATA (start_hour=value;cat)\n{%- if not state_attr(e,'tomorrow_valid')
+        -%}\nNO DATA: tomorrow_valid=false\n{%- elif tm|length == 24 -%}\n{%- for
+        i in range(0,24) -%}\n{{ as_local(base_tomorrow + timedelta(hours=i)).strftime('%Y-%m-%dT%H:00%z')
+        }}={{ (tm[i]|float)|round(3) }};{{ cat(tm[i]) }}\n{%- endfor -%}\n{%- elif
+        tm|length == 96 -%}\n{%- for i in range(0,24) -%}\n{%- set j = i*4 -%}\n{%-
+        set v = ((tm[j]|float)+(tm[j+1]|float)+(tm[j+2]|float)+(tm[j+3]|float))/4
+        -%}\n{{ as_local(base_tomorrow + timedelta(hours=i)).strftime('%Y-%m-%dT%H:00%z')
+        }}={{ v|round(3) }};{{ cat(v) }}\n{%- endfor -%}\n{%- elif rtm|length > 0
+        -%}\n{%- for i in range(0,24) -%}\n{%- set h_start = base_tomorrow + timedelta(hours=i)
+        -%}\n{%- set h_end   = h_start + timedelta(hours=1) -%}\n{%- set sumv = 0.0
+        -%}{%- set cnt = 0 -%}\n{%- for q in rtm -%}\n{%- set qs = as_datetime(q['start'])
+        -%}\n{%- if qs >= h_start and qs < h_end -%}\n{%- set sumv = sumv + (q['value']|float)
+        -%}\n{%- set cnt = cnt + 1 -%}\n{%- endif -%}\n{%- endfor -%}\n{%- if cnt
+        > 0 -%}\n{%- set v = (sumv / cnt) -%}\n{{ as_local(h_start).strftime('%Y-%m-%dT%H:00%z')
+        }}={{ v|round(3) }};{{ cat(v) }}\n{%- endif -%}\n{%- endfor -%}\n{%- endif
+        -%}\n"
+      channels:
+      - tts
+      - mobile
+      - slack
+      tts_media_player: media_player.grupp_grannys_hogtalare
+      slack_channel: '#elpriser'
+  mode: queued
+  max: 10
+- id: '1693323915636'
+  alias: Diskmaskinen - Färdig
+  description: Notifierar när diskmaskinen är klar med att diska och torka disken.
+  triggers:
+  - device_id: 444edb1c05f7869597326dcc1621322a
+    domain: home_connect_alt
+    type: program_finished
+    trigger: device
+  conditions: []
+  actions:
+  - action: script.granny_broadcast
+    data:
+      task: Meddela att diskmaskinen nu är färdig och klar för tömmning
+      severity: info
+      humor_level: 2
+      channels:
+      - tts
+      - tv
+      tts_media_player: media_player.kokets_skarm
+  mode: queued
+  max: 10
+- id: '1694445009947'
+  alias: PERSISTENT VARNING - Dörrklocka
+  description: Denna automation skickar en varning när någon ringer på dörrklockan,
+    så att du alltid är medveten om besökare vid din ytterdörr.
+  triggers:
+  - type: occupied
+    device_id: 54d2a489a356e75349f383bef1be62af
+    entity_id: 49ae6f1769b62cbf8fa20c9817068e79
+    domain: binary_sensor
+    trigger: device
+  conditions: []
+  actions:
+  - action: script.granny_broadcast
+    data:
+      severity: info
+      humor_level: 0
+      task: Meddela att det är någon som ringer på klockan vid ytterdörren
+      channels:
+      - tts
+      - tv
+  mode: queued
+  max: 10
+- id: '1694445280116'
+  alias: PERSISTENT VARNING - Ytterdörren krånglar
+  description: En varning utfärdas om ytterdörren är blockerad och inte kan låsas,
+    för att säkerställa säkerheten i hemmet.
+  triggers:
+  - device_id: 54d2a489a356e75349f383bef1be62af
+    domain: lock
+    entity_id: b7ed0e4927fdecbaf065eba4d45cb742
+    type: jammed
+    trigger: device
+  conditions: []
+  actions:
+  - action: script.granny_broadcast
+    metadata: {}
+    data:
+      severity: crit
+      humor_level: 0
+      tts_media_player: media_player.grupp_grannys_hogtalare
+      task: Meddela att ytterdörren krånglar och inte kan låsas automatiskt
+      channels:
+      - tts
+      - mobile
+      - tv
+  mode: queued
+  max: 10
+- id: '1694862579300'
+  alias: PERSISTENT VARNING - Balkongdörren
+  description: Denna automation skickar en varning när balkongdörren är öppen samtidigt
+    som ytterdörren är låst från utsidan.
+  triggers:
+  - entity_id: person.kenneth
+    zone: zone.home
+    event: leave
+    trigger: zone
+  conditions:
+  - condition: state
+    entity_id: binary_sensor.shelly_blu_door_window_2a6d_window
+    state: 'on'
+  actions:
+  - action: script.granny_broadcast
+    data:
+      severity: crit
+      humor_level: 0
+      channels:
+      - mobile
+      task: Meddela att balkongdörren är öppen nu när det verkar som att sista personen
+        lämnar hemmet
+  mode: queued
+  max: 10
+- id: '1695105133463'
+  alias: PERSISTENT VARNING - Vattenläcka under torkskåpet
+  description: Denna automation skickar ut en varning när en vattenläcka upptäcks
+    under torkskåpet. Den använder en vattensensor för att aktivera larmet och informera
+    om läget.
+  triggers:
+  - entity_id:
+    - binary_sensor.vattensensor_torkskap_flood
+    to: 'on'
+    trigger: state
+  conditions: []
+  actions:
+  - action: script.granny_broadcast
+    metadata: {}
+    data:
+      severity: crit
+      humor_level: 0
+      tts_media_player: media_player.kokets_skarm
+      task: Meddela att det verkar läcka vatten under torkskåpet och att det behöver
+        kontrolleras
+      channels:
+      - tts
+      - mobile
+      - tv
+      - ha
+  mode: queued
+  max: 10
+- id: '1697022749995'
+  alias: SCEN - Mysbelysning
+  description: Denna automatisering aktiverar mysbelysningen i köket när knappen trycks
+    eller via röstkommando. Den ställer in belysningen på en låg ljusstyrka för att
+    skapa en avslappnande atmosfär.
+  triggers:
+  - entity_id:
+    - input_button.mysbelysning
+    trigger: state
+  - trigger: conversation
+    command: Mysbelysning
+  conditions: []
+  actions:
+  - data:
+      brightness: 1
+    action: light.turn_on
+    target:
+      entity_id:
+      - light.banklampor
+      - light.taklampor_kokson
+  mode: queued
+  max: 10
+- id: '1699271506552'
+  alias: SCEN - Julbelysning
+  description: Aktiverar julbelysning när knappen trycks.
+  triggers:
+  - entity_id:
+    - input_button.julbelysning
+    trigger: state
+  conditions: []
+  actions:
+  - data:
+      option: XMAS
+    target:
+      entity_id: input_select.light_scene
+    action: input_select.select_option
+  mode: queued
+  max: 10
+- id: '1699271572052'
+  alias: SCEN - Festbelysning
+  description: Aktiverar festbelysning när knappen trycks.
+  triggers:
+  - entity_id:
+    - input_button.partybelysning
+    trigger: state
+  conditions: []
+  actions:
+  - data:
+      option: PARTY
+    target:
+      entity_id: input_select.light_scene
+    action: input_select.select_option
+  mode: queued
+  max: 10
+- id: '1699271612376'
+  alias: SCEN - Alarm
+  description: Aktiverar alarmscen när knappen trycks.
+  triggers:
+  - entity_id:
+    - input_button.alarm
+    trigger: state
+  conditions: []
+  actions:
+  - data:
+      option: ALARM
+    target:
+      entity_id: input_select.light_scene
+    action: input_select.select_option
+  mode: queued
+  max: 10
+- id: '1702214539999'
+  alias: Hemmabio
+  description: Styrning av hemmabiofunktioner för uppstart och avstängning. Automationen
+    slår på/av belysning och fläktar och skickar kommandon till din spelkonsol.
+  triggers:
+  - entity_id:
+    - switch.grupp_hemmabio
+    to: 'on'
+    id: bio_on
+    trigger: state
+  - entity_id:
+    - switch.grupp_hemmabio
+    to: 'off'
+    id: bio_off
+    trigger: state
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - bio_on
+      sequence:
+      - choose:
+        - conditions:
+          - condition: state
+            entity_id: humidifier.bions_hygrostat
+            state: 'on'
+          sequence:
+          - action: input_boolean.turn_on
+            metadata: {}
+            data: {}
+            target:
+              entity_id: input_boolean.hemmabio_restore_hygrostat
+        default:
+        - action: input_boolean.turn_off
+          metadata: {}
+          data: {}
+          target:
+            entity_id: input_boolean.hemmabio_restore_hygrostat
+      - action: light.turn_off
+        metadata: {}
+        data: {}
+        target:
+          entity_id: light.grupp_bordslampor_bion
+      - action: light.turn_off
+        metadata: {}
+        data: {}
+        target:
+          entity_id:
+          - light.blomlampor_bion
+          - light.vaxtlampa_frosadd_koket_shpls
+      - action: humidifier.turn_off
+        metadata: {}
+        data: {}
+        target:
+          entity_id: humidifier.bions_hygrostat
+      - metadata: {}
+        data:
+          entity_id: media_player.playstation_4
+          command: ps
+        action: ps4.send_command
+      - device_id: 503fbae0fc47a65837b6e0966cfd696b
+        domain: button
+        entity_id: b7174089bed6ae52fba5dab87817494f
+        type: press
+      - type: turn_off
+        device_id: f6384d84be3c05b7a1f2f88a939e3238
+        entity_id: 8f2695d0115bb41a3ee1326795219c7f
+        domain: light
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 5
+          milliseconds: 0
+      - device_id: 503fbae0fc47a65837b6e0966cfd696b
+        domain: button
+        entity_id: 3eae18d9790976f6ea31eafa58e84c26
+        type: press
+    - conditions:
+      - condition: trigger
+        id:
+        - bio_off
+      sequence:
+      - device_id: f6384d84be3c05b7a1f2f88a939e3238
+        domain: button
+        entity_id: dac6a63307fc76c20bba76a1aba6c722
+        type: press
+      - action: button.press
+        metadata: {}
+        data: {}
+        target:
+          entity_id: button.esphome02_esphome02_apply_scene
+      - device_id: 503fbae0fc47a65837b6e0966cfd696b
+        domain: button
+        entity_id: 067869c482e9824ff5e57fb6ae888b07
+        type: press
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 0
+          milliseconds: 200
+      - device_id: 503fbae0fc47a65837b6e0966cfd696b
+        domain: button
+        entity_id: 067869c482e9824ff5e57fb6ae888b07
+        type: press
+      - choose:
+        - conditions:
+          - condition: state
+            entity_id: input_select.growlight_scene
+            state: 'ON'
+          sequence:
+          - action: light.turn_on
+            metadata: {}
+            data: {}
+            target:
+              entity_id: light.vaxtlampa_frosadd_koket_shpls
+        - conditions:
+          - condition: state
+            entity_id: input_select.growlight_scene
+            state: LATE_ON
+          sequence:
+          - action: light.turn_on
+            metadata: {}
+            data: {}
+            target:
+              entity_id: light.vaxtlampa_frosadd_koket_shpls
+        default:
+        - action: light.turn_off
+          metadata: {}
+          data: {}
+          target:
+            entity_id: light.vaxtlampa_frosadd_koket_shpls
+      - action: light.turn_on
+        metadata: {}
+        data: {}
+        target:
+          entity_id: light.grupp_bordslampor_bion
+      - choose:
+        - conditions:
+          - condition: state
+            entity_id: input_boolean.hemmabio_restore_hygrostat
+            state: 'on'
+          sequence:
+          - action: humidifier.turn_on
+            metadata: {}
+            data: {}
+            target:
+              entity_id: humidifier.bions_hygrostat
+        default:
+        - action: humidifier.turn_off
+          metadata: {}
+          data: {}
+          target:
+            entity_id: humidifier.bions_hygrostat
+      - target:
+          entity_id:
+          - media_player.playstation_4
+        data: {}
+        action: media_player.turn_off
+  mode: queued
+  max: 10
+- id: '1702833952662'
+  alias: SCEN - Matbelysning
+  description: Slå på matbelysningen med 75% ljusstyrka när knappen aktiveras.
+  triggers:
+  - entity_id:
+    - input_button.matbelysning
+    trigger: state
+  conditions: []
+  actions:
+  - data:
+      brightness: 75
+    target:
+      entity_id:
+      - light.banklampor
+      - light.taklampor_kokson
+    action: light.turn_on
+  mode: queued
+  max: 10
+- id: '1707479332827'
+  alias: INTENT - Pooltemperatur
+  description: Automationen svarar på frågor om temperaturen i poolen.
+  triggers:
+  - command:
+    - Hur varmt är det i badet
+    - Hur varmt är det i poolen
+    - Hur varm är poolen
+    - Hur varmt är badet
+    - Poolens temperatur
+    - Badets temperatur
+    trigger: conversation
+  conditions: []
+  actions:
+  - set_conversation_response: Poolen är {{states("sensor.poolbelysning_temp_esphome29_temperature")}}°C
+  mode: queued
+  max: 10
+- id: '1708001190693'
+  alias: Återställ ljudvolymer
+  description: Återställd volyminställningar för olika högtalare vid bestämd tid,
+    med alternativ att styra via knapptryckning eller röstkommandon.
+  triggers:
+  - at: 03:00:00
+    trigger: time
+  - entity_id:
+    - input_button.aterstall_ljudvolymer
+    trigger: state
+  - trigger: conversation
+    command: Återställ ljudnivåer
+  conditions: []
+  actions:
+  - action: media_player.volume_set
+    data:
+      volume_level: 0.95
+    target:
+      entity_id:
+      - media_player.home_assistant_voice_096460_media_player
+  - action: media_player.volume_set
+    data:
+      volume_level: 0.5
+    target:
+      entity_id:
+      - media_player.kokets_skarm
+      - media_player.jbl_link_500_67aa69
+  - action: media_player.volume_set
+    data:
+      volume_level: 0.4
+    target:
+      entity_id:
+      - media_player.diegos_vackarklocka
+      - media_player.mannis_vackarklocka
+  - action: media_player.volume_set
+    data:
+      volume_level: 0.05
+    target:
+      entity_id:
+      - media_player.stereo_hoger
+      - media_player.chromecastaudio4733
+  - action: media_player.volume_set
+    data:
+      volume_level: 0.3
+    target:
+      entity_id: media_player.verkstadens_hogtalare
+  - action: media_player.volume_set
+    data:
+      volume_level: 0.15
+    target:
+      entity_id:
+      - media_player.toalettens_hogtalare
+      - media_player.duschen
+  mode: queued
+  max: 10
+- id: '1708002644944'
+  alias: INTENT - Återställ ljudnivåer
+  description: Denna automation återställer ljudnivåerna i ditt hem när du ger ett
+    kommandot om det. Perfekt för att snabbt återfå din ljudmiljö.
+  triggers:
+  - command:
+    - Återställ ljudnivåer
+    - Återställ ljudvolymer
+    trigger: conversation
+  conditions: []
+  actions:
+  - metadata: {}
+    data: {}
+    target:
+      entity_id: input_button.aterstall_ljudvolymer
+    action: input_button.press
+  - set_conversation_response: Alla ljudnivåer är nu återställda
+  mode: queued
+  max: 10
+- id: '1714639575081'
+  alias: Batteri Noterat
+  description: Denna automation notifierar när ett batteri inte rapporteras, vilket
+    kan indikera problem med enhetens anslutning eller funktion.
+  use_blueprint:
+    path: andrew-codechimp/battery_notes_battery_not_reported.yaml
+    input:
+      excluded_devices:
+      - null
+  mode: queued
+  max: 10
+- id: '1714639602643'
+  alias: Batteri Bytt
+  description: Automationen registrerar när ett batteri har bytts ut.
+  use_blueprint:
+    path: andrew-codechimp/battery_notes_battery_replaced.yaml
+  mode: queued
+  max: 10
+- id: '1714639620029'
+  alias: Batteri Tröskel
+  description: Denna automation övervakar batterinivåer och ger en varning när de
+    sjunker under en viss tröskel.
+  use_blueprint:
+    path: andrew-codechimp/battery_notes_battery_threshold.yaml
+    input:
+      excluded_devices:
+      - null
+  mode: queued
+  max: 10
+- id: '1714922581711'
+  alias: LED-plafonder i verkstaden
+  description: Denna automation tänder eller släcker LED-plafonderna i verkstaden
+    baserat på statusen för en specifik lampa.
+  triggers:
+  - entity_id:
+    - light.shellypro3_ec626089edbc_switch_0
+    from: 'off'
+    to: 'on'
+    id: 'on'
+    trigger: state
+  - entity_id:
+    - light.shellypro3_ec626089edbc_switch_0
+    from: 'on'
+    to: 'off'
+    id: 'off'
+    trigger: state
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - 'on'
+      sequence:
+      - metadata: {}
+        data: {}
+        target:
+          entity_id: light.shellyplug_s_083a8dc344dd
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id:
+        - 'off'
+      sequence:
+      - metadata: {}
+        data: {}
+        target:
+          entity_id: light.shellyplug_s_083a8dc344dd
+        action: light.turn_off
+  mode: queued
+  max: 10
+- id: '1718793021982'
+  alias: Elmätare Online Status
+  description: Denna automation övervakar elmätarens status och skickar varningar
+    när den går offline eller blir online igen.
+  triggers:
+  - entity_id:
+    - sensor.power_consumed
+    to: unavailable
+    id: Offline
+    trigger: state
+  - entity_id:
+    - sensor.power_consumed
+    from: unavailable
+    id: Online
+    trigger: state
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - Offline
+      sequence:
+      - data:
+          title: Varning!
+          message: Elmätaren är offline
+        action: notify.persistent_notification
+    - conditions:
+      - condition: trigger
+        id:
+        - Online
+      sequence:
+      - data:
+          message: Elmätaren är tillbaka online
+          title: Info!
+        action: notify.persistent_notification
+  mode: queued
+  max: 10
+- id: '1727787103629'
+  alias: Kontrollera hönsluckans stängning
+  description: Denna automation kontrollerar om hönsluckan är stängd och ger en varning
+    om den är öppen efter kl. 20:00.
+  triggers:
+  - trigger: time
+    at: '21:00:00'
+  conditions:
+  - condition: device
+    device_id: 3d74a99687ecaf1f2dc34e7ec08f9852
+    domain: cover
+    entity_id: 62308c484dad120c22035d7c068bb0c4
+    type: is_open
+  actions:
+  - action: script.granny_broadcast
+    metadata: {}
+    data:
+      severity: info
+      humor_level: 2
+      tts_media_player: media_player.kokets_skarm
+      task: Meddela att hönshusets lucka är öppen trots att klockan är efter 20:00
+      channels:
+      - tts
+      - mobile
+      - tv
+  mode: queued
+  max: 10
+- id: '1730208179783'
+  alias: Kontrollera luftfuktare
+  description: Övervaka och registrera vattennivåer i luftfuktaren. Om det är slut
+    på vatten, loggas en arbetsuppgift och tas bort när vattnet fylls på igen.
+  triggers:
+  - type: problem
+    device_id: cb4859e1895848029726ebf30c1551bc
+    entity_id: 3582b8daaabe503c3b9b814fee928f51
+    domain: binary_sensor
+    trigger: device
+    id: out-of-water-on
+  - type: no_problem
+    device_id: cb4859e1895848029726ebf30c1551bc
+    entity_id: 3582b8daaabe503c3b9b814fee928f51
+    domain: binary_sensor
+    trigger: device
+    id: out-off-water-off
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - out-of-water-on
+      sequence:
+      - action: script.granny_broadcast
+        metadata: {}
+        data:
+          severity: info
+          humor_level: 2
+          tts_media_player: media_player.kokets_skarm
+          task: Meddela att luftfuktaren har slut på vatten
+          channels:
+          - mobile
+          - ha
+          - tv
+          - tts
+    - conditions:
+      - condition: trigger
+        id:
+        - out-off-water-off
+      sequence: []
+  mode: queued
+  max: 10
+- id: '1733728812594'
+  alias: Internetstatus
+  description: Denna automation övervakar internetanslutningen och loggar status när
+    den tappar eller återfår kontakt.
+  triggers:
+  - trigger: state
+    entity_id:
+    - binary_sensor.sovrummet_openwrt_one_router_sovrum_wan_connected
+    from:
+    - 'off'
+    id: connected
+    to:
+    - 'on'
+  - trigger: state
+    entity_id:
+    - binary_sensor.sovrummet_openwrt_one_router_sovrum_wan_connected
+    id: disconnected
+    from:
+    - 'on'
+    to:
+    - 'off'
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - disconnected
+      sequence:
+      - action: script.granny_broadcast
+        metadata: {}
+        data:
+          severity: info
+          humor_level: 2
+          tts_media_player: media_player.kokets_skarm
+          task: Meddela att kontakten med Internet verkar har gått ner
+          channels:
+          - tts
+          - mobile
+          - tv
+          - ha
+    - conditions:
+      - condition: trigger
+        id:
+        - connected
+      sequence:
+      - action: script.granny_broadcast
+        metadata: {}
+        data:
+          severity: info
+          humor_level: 2
+          tts_media_player: media_player.kokets_skarm
+          task: Kontakten med Internet är återställd
+          channels:
+          - tts
+          - mobile
+          - tv
+          - ha
+  mode: queued
+  max: 10
+- id: '1735998434886'
+  alias: SCEN - Släck köket
+  description: Denna automation stänger av taklamporna i köket när kommandot "Släck
+    köket" ges.
+  triggers:
+  - trigger: conversation
+    command: Släck köket
+  conditions: []
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id:
+      - light.grupp_taklampor_kok
+  mode: queued
+  max: 10
+- id: '1743592851261'
+  alias: Värmeinställningar
+  description: Automatiska värmeinställningar baserade på hem-, komfort- eller bortaläge.
+    Styr golvvärme och termostater i hela huset för att optimera komfort och energiförbrukning.
+  triggers:
+  - trigger: state
+    entity_id:
+    - input_button.hemmavarme
+    id: HEMMA
+  - trigger: state
+    entity_id:
+    - input_button.komfortvarme
+    id: KOMFORT
+  - trigger: state
+    entity_id:
+    - input_button.bortavarme
+    id: BORTA
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - HEMMA
+      sequence:
+      - action: climate.set_preset_mode
+        metadata: {}
+        data:
+          preset_mode: home
+        target:
+          entity_id:
+          - climate.golvvarme_termostat_ateljen
+          - climate.termostat_kontoret_esphome20_thermostat
+          - climate.golvvarme_termostat_entren
+          - climate.golvvarme_termostat_koket
+          - climate.golvvarme_termostat_verandan
+    - conditions:
+      - condition: trigger
+        id:
+        - KOMFORT
+      sequence:
+      - action: climate.set_preset_mode
+        metadata: {}
+        data:
+          preset_mode: comfort
+        target:
+          entity_id:
+          - climate.golvvarme_termostat_ateljen
+          - climate.termostat_kontoret_esphome20_thermostat
+          - climate.golvvarme_termostat_entren
+          - climate.golvvarme_termostat_koket
+          - climate.golvvarme_termostat_verandan
+    - conditions:
+      - condition: trigger
+        id:
+        - BORTA
+      sequence:
+      - action: climate.set_preset_mode
+        metadata: {}
+        data:
+          preset_mode: away
+        target:
+          entity_id:
+          - climate.golvvarme_termostat_ateljen
+          - climate.termostat_kontoret_esphome20_thermostat
+          - climate.golvvarme_termostat_entren
+          - climate.golvvarme_termostat_koket
+          - climate.golvvarme_termostat_verandan
+  mode: queued
+  max: 10
+- id: '1743593630706'
+  alias: INTENT - Hemmavärme
+  description: Aktiverar hemmavärme genom att ställa in temperaturen på övervåningen
+    till 20 grader.
+  triggers:
+  - command:
+    - Hemmavärme
+    trigger: conversation
+  conditions: []
+  actions:
+  - metadata: {}
+    data: {}
+    action: input_button.press
+    target:
+      entity_id: input_button.hemmavarme
+  - set_conversation_response: All värme på övervåningen är nu inställd på 20 grader
+  mode: queued
+  max: 10
+- id: '1743593737050'
+  alias: INTENT - Justera Värme
+  description: Denna automation justerar värmen till önskad temperatur i hemmet när
+    kommando ges via samtal.
+  triggers:
+  - command:
+    - Komfortvärme
+    trigger: conversation
+  conditions: []
+  actions:
+  - metadata: {}
+    data: {}
+    action: input_button.press
+    target:
+      entity_id: input_button.komfortvarme
+  - set_conversation_response: All värme på övervåningen är nu inställd på 18 grader
+  mode: queued
+  max: 10
+- id: '1743593789387'
+  alias: INTENT - Bortavärme
+  description: Justera värmen på övervåningen till en behaglig temperatur.
+  triggers:
+  - command:
+    - Bortavärme
+    trigger: conversation
+  conditions: []
+  actions:
+  - metadata: {}
+    data: {}
+    action: input_button.press
+    target:
+      entity_id: input_button.bortavarme
+  - set_conversation_response: All värme på övervåningen är nu inställd på 16 grader
+  mode: queued
+  max: 10
+- id: '1747115239605'
+  alias: SCEN - TV och Belysning
+  description: Denna automation styr belysningen i rummet baserat på TV:ns status.
+    Om TV:n är igång släcker den belysningen, och om TV:n pausas eller stängs av tänds
+    belysningen igen. Automationen säkerställer en mysig atmosfär under TV-tittande.
+  triggers:
+  - entity_id:
+    - media_player.nya_tvn
+    id: playing
+    to: playing
+    trigger: state
+  - entity_id:
+    - media_player.nya_tvn
+    to: paused
+    id: paused
+    trigger: state
+  - entity_id:
+    - media_player.nya_tvn
+    to: 'off'
+    id: stopped
+    trigger: state
+    from: playing
+  - type: turned_off
+    device_id: 38dd604f8f4c3049e081d3d69b121a38
+    entity_id: remote.sony_kd_55xh9005
+    domain: remote
+    id: tv-off
+    trigger: device
+  - entity_id:
+    - media_player.nya_tvn
+    to: 'off'
+    id: stopped
+    trigger: state
+    from: paused
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: playing
+      sequence:
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 3
+          milliseconds: 0
+      - condition: device
+        device_id: e3a7c058dab8d9a0b9ee10a298adf0d2
+        domain: media_player
+        entity_id: e1ec8287dda549c11ef7ae64f4647de2
+        type: is_playing
+      - data: {}
+        target:
+          entity_id: light.grupp_lampor_vid_tvn
+        action: light.turn_off
+    - conditions:
+      - condition: or
+        conditions:
+        - condition: trigger
+          id: paused
+        - condition: trigger
+          id: stopped
+      sequence:
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 3
+          milliseconds: 0
+      - condition: or
+        conditions:
+        - condition: device
+          device_id: e3a7c058dab8d9a0b9ee10a298adf0d2
+          domain: media_player
+          entity_id: e1ec8287dda549c11ef7ae64f4647de2
+          type: is_paused
+        - condition: device
+          device_id: 38dd604f8f4c3049e081d3d69b121a38
+          domain: media_player
+          entity_id: 152c6e2fcef1c1f72fd17c4c1109ab15
+          type: is_off
+      - data: {}
+        target:
+          entity_id: light.grupp_lampor_vid_tvn
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: tv-off
+      sequence:
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 10
+          milliseconds: 0
+      - device_id: 776f52c73a012c787b1956fd89125491
+        domain: button
+        entity_id: 7967ac6ba9e9ea947e3b8afb8e812709
+        type: press
+      - device_id: b9e7356f5adc899931e4737fc571c273
+        domain: button
+        entity_id: 5723b8a358bb8d606331b71603330914
+        type: press
+      - device_id: a18a14f4449708ee9639186c386887ce
+        domain: button
+        entity_id: e2b64021359c7349e8ebf2240dbbb0e5
+        type: press
+  mode: queued
+  max: 10
+- id: '1751524387243'
+  alias: Starta Granny Bil-laddning
+  description: Startar AI-planeringen av bilens laddning och överlåter schemaläggningen
+    till skriptet granny_car_charge_plan.
+  triggers:
+  - trigger: homeassistant
+    event: start
+  - trigger: state
+    entity_id:
+    - sensor.nordpool
+    attribute: tomorrow_valid
+    to: 1
+  - trigger: state
+    entity_id:
+    - device_tracker.sef_42h_parking_location
+    to: home
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+  - trigger: template
+    value_template: "{{ states('sensor.sef_42h_battery_level') | float(999) <\n   states('input_number.car_target_soc')
+      | float(999) }}\n"
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+  - trigger: time_pattern
+    minutes: /30
+    id: periodic-replan
+  conditions:
+  - condition: template
+    value_template: '{% set loc = states(''device_tracker.sef_42h_parking_location'')
+      %} {{ loc in [''home'', ''Hemma''] }}
+
+      '
+  - condition: state
+    entity_id: input_boolean.car_ai_planning_enabled
+    state: 'on'
+  - condition: state
+    entity_id: input_boolean.car_man_override
+    state: 'off'
+  - condition: template
+    value_template: "{{ states('sensor.sef_42h_battery_level') | float(0) <\n   states('input_number.car_target_soc')
+      | float(100) }}\n"
+  - condition: state
+    entity_id: input_boolean.ha_ready
+    state: 'on'
+  actions:
+  - variables:
+      granny_notify_user: '{{ trigger.id | default('''') != ''periodic-replan'' }}'
+      granny_window_end_iso: '{% set window_start = now() %} {% set deadline = today_at(''05:30:00'')
+        %} {% set window_end = deadline if window_start < deadline else (deadline
+        + timedelta(days=1)) %} {{ window_end.isoformat() }}'
+      granny_tomorrow_valid: '{{ state_attr(''sensor.nordpool'', ''tomorrow_valid'')
+        in [True, 1, ''true''] }}'
+      granny_price_slots: "{% set sensor = 'sensor.nordpool' %} {% set raw_today =
+        state_attr(sensor, 'raw_today') or [] %} {% set raw_tomorrow = state_attr(sensor,
+        'raw_tomorrow') or [] %} {% set window_start = now() %} {% set deadline =
+        today_at('05:30:00') %} {% set window_end = deadline if window_start < deadline
+        else (deadline + timedelta(days=1)) %} {% set slots = namespace(count=0) %}
+        {% for item in raw_today + raw_tomorrow %}\n  {% if item is mapping %}\n    {%
+        set start = item.get('start') %}\n    {% set end = item.get('end') %}\n  {%
+        else %}\n    {% set start = item[0] %}\n    {% set end = item[1] %}\n  {%
+        endif %}\n  {% set start_dt = as_datetime(start) if start is not none else
+        none %}\n  {% set end_dt = as_datetime(end) if end is not none else none %}\n
+        \ {% if start_dt is none or end_dt is none %}\n    {% continue %}\n  {% endif
+        %}\n  {% if end_dt > window_start and start_dt < window_end %}\n    {% set
+        slots.count = slots.count + 1 %}\n  {% endif %}\n{% endfor %} {{ slots.count
+        }}"
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ not granny_tomorrow_valid }}'
+      sequence:
+      - action: logbook.log
+        data:
+          name: '[Granny AI-Laddning]'
+          message: 'Planeringen stoppad: tomorrow_valid är False. Trigger: {{ trigger.description
+            | default(trigger.id | default(trigger.platform | default("ok"))) }}.'
+      - stop: Väntar på morgondagens priser.
+    - conditions:
+      - condition: template
+        value_template: '{{ granny_price_slots | int(0) == 0 }}'
+      sequence:
+      - action: logbook.log
+        data:
+          name: '[Granny AI-Laddning]'
+          message: 'Planeringen stoppad: inga prisintervall överlappar fönstret. Trigger:
+            {{ trigger.description | default(trigger.id | default(trigger.platform
+            | default("ok"))) }}.'
+      - stop: Väntar på prisdata.
+  - action: script.granny_car_charge_plan
+    metadata: {}
+    data:
+      notify_user: '{{ granny_notify_user }}'
+  mode: restart
+- id: '1751907475273'
+  alias: Av/På Bil-laddning
+  description: Automationen startar och stänger av laddningen av bilens batteri baserat
+    på schemalagda tider i kalendern. Den skickar även notifieringar när laddningen
+    inleds och avslutas.
+  triggers:
+  - trigger: calendar
+    entity_id: calendar.billaddning
+    event: start
+    offset: 0:0:0
+    id: charging-starts
+  - trigger: calendar
+    entity_id: calendar.billaddning
+    event: end
+    offset: 0:0:0
+    id: charging-ends
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - charging-starts
+      sequence:
+      - action: switch.turn_on
+        metadata: {}
+        data: {}
+        target:
+          entity_id: switch.billaddare
+    - conditions:
+      - condition: trigger
+        id:
+        - charging-ends
+      sequence:
+      - action: switch.turn_off
+        metadata: {}
+        data: {}
+        target:
+          entity_id: switch.billaddare
+  mode: queued
+  max: 10
+- id: '1752130874333'
+  alias: HA Redo
+  description: Denna automation ställer in statusindikatorn för Home Assistant när
+    systemet startar och stänger av. En minut efter att Home Assistant har startat
+    sätts statusen till redo, och vid avstängning sätts statusen till inte redo.
+  triggers:
+  - trigger: homeassistant
+    event: start
+    id: boot
+  - trigger: homeassistant
+    event: shutdown
+    id: shutdown
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - boot
+      sequence:
+      - delay:
+          hours: 0
+          minutes: 1
+          seconds: 0
+          milliseconds: 0
+      - action: input_boolean.turn_on
+        metadata: {}
+        data: {}
+        target:
+          entity_id: input_boolean.ha_ready
+    - conditions:
+      - condition: trigger
+        id:
+        - shutdown
+      sequence:
+      - action: input_boolean.turn_off
+        metadata: {}
+        data: {}
+        target:
+          entity_id: input_boolean.ha_ready
+  mode: queued
+  max: 10
+- id: esphome_install_updates_button
+  alias: Uppdatera ESPHome-enheter
+  description: 'Uppdaterar alla ESPHome-firmware som har uppdatering tillgänglig,
+    i upp till tre pass. Visar progress + ETA under körning. Ger alltid en slutrapport
+    med: - Antal lyckade - Antal misslyckade (om några) - Total tid
+
+    '
+  triggers:
+  - entity_id: input_button.uppgradera_esphome_enheter
+    trigger: state
+  conditions: []
+  actions:
+  - variables:
+      esphome_entities_all: '{{ integration_entities(''esphome'') | list }}'
+      initial_updates: "{%- set out = namespace(items=[]) -%} {%- for s in states.update
+        -%}\n  {%- if s.entity_id in esphome_entities_all\n        and (s.attributes.device_class|default('')
+        in ['firmware',''])\n        and s.state == 'on' -%}\n    {%- set out.items
+        = out.items + [ s.entity_id ] -%}\n  {%- endif -%}\n{%- endfor -%} {{ out.items
+        }}\n"
+      initial_total: '{{ initial_updates | length }}'
+      start_ts: '{{ as_timestamp(now()) }}'
+      done_count: 0
+      ewma_avg: 0
+      perf_log: []
+  - action: persistent_notification.create
+    data:
+      title: ESPHome – uppdatering pågår
+      message: 'Startar ESPHome-uppdateringar (upp till {{ max_passes }} pass). Förhandskontroll:
+        totalt {{ initial_total }} enheter planerade att uppdateras.
+
+        '
+      notification_id: '{{ notif_id }}'
+  - action: logbook.log
+    data:
+      name: Updater
+      message: 'Startar ESPHome-uppdateringar. Förhandskontroll: {{ initial_total
+        }} enheter.'
+  - if:
+    - condition: template
+      value_template: '{{ initial_total | int == 0 }}'
+    then:
+    - variables:
+        total_elapsed_sec: '{{ (as_timestamp(now()) - start_ts) | int }}'
+        total_elapsed_str: '{{ (total_elapsed_sec // 3600) }}h {{ ((total_elapsed_sec
+          % 3600)//60) }}m {{ (total_elapsed_sec % 60) }}s'
+    - action: persistent_notification.create
+      data:
+        title: ESPHome – klart
+        message: 'Ingen enhet behövde uppdateras. Total tid: {{ total_elapsed_str
+          }}.
+
+          '
+        notification_id: '{{ notif_id }}'
+    - action: logbook.log
+      data:
+        name: Updater
+        message: Klar – inget att uppdatera.
+    - stop: Klar – inga uppdateringar.
+  - repeat:
+      count: '{{ max_passes }}'
+      sequence:
+      - variables:
+          pass_index: '{{ repeat.index }}'
+          pass_start_ts: '{{ as_timestamp(now()) }}'
+          esphome_entities: '{{ integration_entities(''esphome'') | list }}'
+          updates_this_pass: "{%- set ids = namespace(items=[]) -%} {%- for s in states.update
+            -%}\n  {%- if s.entity_id in esphome_entities\n        and (s.attributes.device_class|default('')
+            in ['firmware',''])\n        and s.state == 'on' -%}\n    {%- set ids.items
+            = ids.items + [ s.entity_id ] -%}\n  {%- endif -%}\n{%- endfor -%} {{
+            ids.items }}\n"
+          total_in_this_pass: '{{ updates_this_pass | length }}'
+      - choose:
+        - conditions:
+          - condition: template
+            value_template: '{{ total_in_this_pass | int == 0 }}'
+          sequence:
+          - variables:
+              remaining: "{%- set ids = namespace(items=[]) -%} {%- for s in states.update
+                -%}\n  {%- if s.entity_id in esphome_entities\n        and (s.attributes.device_class|default('')
+                in ['firmware',''])\n        and s.state == 'on' -%}\n    {%- set
+                ids.items = ids.items + [ s.entity_id ] -%}\n  {%- endif -%}\n{%-
+                endfor -%} {{ ids.items }}\n"
+              success_entities_final: "{%- set out = [] -%} {%- for e in initial_updates
+                -%}\n  {%- if e not in remaining -%}\n    {%- set _ = out.append(e)
+                -%}\n  {%- endif -%}\n{%- endfor -%} {{ out }}"
+              success_count: '{{ success_entities_final | length }}'
+              failure_entities_final: '{{ remaining }}'
+              failure_count: '{{ failure_entities_final | length }}'
+              total_elapsed_sec: '{{ (as_timestamp(now()) - start_ts) | int }}'
+              total_elapsed_str: '{{ (total_elapsed_sec // 3600) }}h {{ ((total_elapsed_sec
+                % 3600)//60) }}m {{ (total_elapsed_sec % 60) }}s'
+              avg_dur_sec: "{%- set ns = namespace(sum=0.0) -%} {%- for it in perf_log
+                -%}\n  {%- set ns.sum = ns.sum + (it.d | float(0)) -%}\n{%- endfor
+                -%} {%- set n = (perf_log | length) -%} {{ (ns.sum / (n if n>0 else
+                1)) }}"
+              avg_dur_i: '{{ (avg_dur_sec | int) }}'
+              avg_dur_str: '{{ (avg_dur_i // 3600) }}h {{ ((avg_dur_i % 3600)//60)
+                }}m {{ (avg_dur_i % 60) }}s'
+          - action: persistent_notification.create
+            data:
+              title: ESPHome – klart
+              message: 'Slutrapport efter pass {{ pass_index - 1 if pass_index>1 else
+                1 }}: {{ ''\n'' -}} Lyckade: {{ success_count }} · Misslyckade: {{
+                failure_count }} · Total tid: {{ total_elapsed_str }} {%- if failure_count
+                | int > 0 -%} {{ ''\n'' -}} Misslyckade enheter: {{ failure_entities_final
+                | join('', '') }} {%- endif -%} {%- if (perf_log | length) > 0 -%}
+                {{ ''\n'' -}} Medeltid per enhet (loggad): {{ avg_dur_str }} {%- endif
+                -%}
+
+                '
+              notification_id: '{{ notif_id }}'
+          - action: logbook.log
+            data:
+              name: Updater
+              message: 'Slutrapport – Lyckade: {{ success_count }}, Misslyckade: {{
+                failure_count }}, Total tid: {{ total_elapsed_str }}.
+
+                '
+          - stop: Klar – slutrapport skapad.
+        default:
+        - action: persistent_notification.create
+          data:
+            title: ESPHome – uppdatering (pass {{ pass_index }} / {{ max_passes }})
+            message: 'Pass {{ pass_index }} startar. Hittade {{ total_in_this_pass
+              }} ESPHome-uppdateringar i detta pass. (Förhandskontroll: {{ initial_total
+              }} totalt.) Automation kör igenom alla enheter en gång. Se Loggbok för
+              detaljer.
+
+              '
+            notification_id: '{{ notif_id }}'
+        - action: logbook.log
+          data:
+            name: Updater
+            message: 'Pass {{ pass_index }}: hittade {{ total_in_this_pass }} ESPHome-uppdateringar.'
+        - repeat:
+            for_each: '{{ updates_this_pass }}'
+            sequence:
+            - variables:
+                entity: '{{ repeat.item }}'
+                idx: '{{ repeat.index }}'
+                total: '{{ total_in_this_pass }}'
+                remaining_after: '{{ total_in_this_pass - repeat.index }}'
+                last_start_ts: '{{ as_timestamp(now()) }}'
+                elapsed_sec_pre: '{{ (as_timestamp(now()) - start_ts) | float(0) }}'
+                planned_total: '{{ initial_total | int if (initial_total | int) >
+                  0 else ((done_count | int) + (total_in_this_pass | int)) }}'
+                avg_for_eta_pre: "{% if (done_count | int) > 0 and (ewma_avg | float(0))
+                  > 0 %}\n  {{ ewma_avg }}\n{% elif (done_count | int) > 0 %}\n  {{
+                  (elapsed_sec_pre / (done_count | int)) }}\n{% else %}\n  {{ bootstrap_guess_sec
+                  }}\n{% endif %}"
+                est_total_sec_pre: '{{ (avg_for_eta_pre | float(0)) * (planned_total
+                  | int) }}'
+                remaining_raw_pre: '{{ (est_total_sec_pre - elapsed_sec_pre) | float(0)
+                  }}'
+                remaining_sec_pre: '{{ 0.0 if (remaining_raw_pre < 0) else remaining_raw_pre
+                  }}'
+                eta_ts_pre: '{{ (as_timestamp(now()) + (remaining_sec_pre | float(0)))
+                  | float(0) }}'
+                _elp_i_pre: '{{ elapsed_sec_pre | int }}'
+                _rem_i_pre: '{{ remaining_sec_pre | int }}'
+                _tot_i_pre: '{{ est_total_sec_pre | int }}'
+                elapsed_str_pre: '{{ (_elp_i_pre // 3600) }}h {{ ((_elp_i_pre % 3600)//60)
+                  }}m {{ (_elp_i_pre % 60) }}s'
+                remaining_str_pre: '{{ (_rem_i_pre // 3600) }}h {{ ((_rem_i_pre %
+                  3600)//60) }}m {{ (_rem_i_pre % 60) }}s'
+                est_total_str_pre: '{{ (_tot_i_pre // 3600) }}h {{ ((_tot_i_pre %
+                  3600)//60) }}m {{ (_tot_i_pre % 60) }}s'
+                eta_str_pre: '{{ eta_ts_pre | timestamp_custom(''%Y-%m-%d %H:%M:%S'',
+                  true, ''N/A'') }}'
+            - action: persistent_notification.create
+              data:
+                title: ESPHome – uppdatering (pass {{ pass_index }} / {{ max_passes
+                  }})
+                message: 'Installerar: {{ entity }} ({{ idx }}/{{ total }} i detta
+                  pass). Kvar efter denna: {{ remaining_after }} st. {{ ''\n'' -}}
+                  (Preliminärt) Tid hittills: {{ elapsed_str_pre }} · Prognos total:
+                  {{ est_total_str_pre }} {{ ''\n'' -}} (Preliminärt) Återstående:
+                  {{ remaining_str_pre }} · ETA: {{ eta_str_pre }}
+
+                  '
+                notification_id: '{{ notif_id }}'
+            - action: update.install
+              continue_on_error: true
+              target:
+                entity_id: '{{ entity }}'
+            - delay: 00:00:02
+            - variables:
+                last_dur: '{{ (as_timestamp(now()) - last_start_ts) | float(0) }}'
+                ewma_next: "{% if (done_count | int) == 0 %}\n  {{ last_dur }}\n{%
+                  else %}\n  {{ (ewma_avg | float(0)) * (1 - (ewma_alpha | float(0)))
+                  + (last_dur | float(0)) * (ewma_alpha | float(0)) }}\n{% endif %}"
+                ewma_avg: '{{ ewma_next }}'
+                done_count: '{{ (done_count | int) + 1 }}'
+                perf_log: '{{ (perf_log | default([])) + [ {''e'': entity, ''d'':
+                  last_dur } ] }}'
+                elapsed_sec: '{{ (as_timestamp(now()) - start_ts) | float(0) }}'
+                avg_for_eta_post: '{{ (ewma_avg | float(0)) if (ewma_avg | float(0))
+                  > 0 else (elapsed_sec / (done_count | int)) }}'
+                est_total_sec: '{{ (avg_for_eta_post | float(0)) * (initial_total
+                  | int(0)) }}'
+                remaining_raw: '{{ (est_total_sec - elapsed_sec) | float(0) }}'
+                remaining_sec: '{{ 0.0 if (remaining_raw < 0) else remaining_raw }}'
+                eta_ts: '{{ (as_timestamp(now()) + (remaining_sec | float(0))) | float(0)
+                  }}'
+                _elp_i: '{{ (elapsed_sec | int) }}'
+                _rem_i: '{{ (remaining_sec | int) }}'
+                _tot_i: '{{ (est_total_sec | int) }}'
+                elapsed_str: '{{ (_elp_i // 3600) }}h {{ ((_elp_i % 3600)//60) }}m
+                  {{ (_elp_i % 60) }}s'
+                remaining_str: '{{ (_rem_i // 3600) }}h {{ ((_rem_i % 3600)//60) }}m
+                  {{ (_rem_i % 60) }}s'
+                est_total_str: '{{ (_tot_i // 3600) }}h {{ ((_tot_i % 3600)//60) }}m
+                  {{ (_tot_i % 60) }}s'
+                eta_str: '{{ eta_ts | timestamp_custom(''%Y-%m-%d %H:%M:%S'', true,
+                  ''N/A'') }}'
+            - action: persistent_notification.create
+              data:
+                title: ESPHome – uppdatering (pass {{ pass_index }} / {{ max_passes
+                  }})
+                message: 'Installerad: {{ entity }} ({{ idx }}/{{ total }} i passet).
+                  {{ ''\n'' -}} Totalt planerat: {{ initial_total }} enheter. Klart
+                  hittills: {{ done_count }} / {{ initial_total }}. {{ ''\n'' -}}
+                  Tid hittills: {{ elapsed_str }} · Beräknad total tid: {{ est_total_str
+                  }} {{ ''\n'' -}} Beräknad återstående tid: {{ remaining_str }} ·
+                  ETA: {{ eta_str }}
+
+                  '
+                notification_id: '{{ notif_id }}'
+        - delay: '{{ settle_delay }}'
+        - variables:
+            pass_elapsed_i: '{{ (as_timestamp(now()) - pass_start_ts) | int }}'
+            pass_avg_i: '{{ (pass_elapsed_i // (total_in_this_pass if total_in_this_pass>0
+              else 1)) | int }}'
+            pass_avg_str: '{{ (pass_avg_i // 3600) }}h {{ ((pass_avg_i % 3600)//60)
+              }}m {{ (pass_avg_i % 60) }}s'
+        - action: persistent_notification.create
+          data:
+            title: ESPHome – pass {{ pass_index }} klart
+            message: 'Pass {{ pass_index }} klart. Enheter i passet: {{ total_in_this_pass
+              }}. Medeltid per enhet i passet: {{ pass_avg_str }}. {{ ''\n'' -}} {{
+              ''Fortsätter till nästa pass...'' if pass_index < max_passes else ''Summerar
+              resultat...'' }}
+
+              '
+            notification_id: '{{ notif_id }}'
+  - variables:
+      esphome_entities: '{{ integration_entities(''esphome'') | list }}'
+      remaining: "{%- set ids = namespace(items=[]) -%} {%- for s in states.update
+        -%}\n  {%- if s.entity_id in esphome_entities\n        and (s.attributes.device_class|default('')
+        in ['firmware',''])\n        and s.state == 'on' -%}\n    {%- set ids.items
+        = ids.items + [ s.entity_id ] -%}\n  {%- endif -%}\n{%- endfor -%} {{ ids.items
+        }}\n"
+      success_entities_final: "{%- set out = [] -%} {%- for e in initial_updates -%}\n
+        \ {%- if e not in remaining -%}\n    {%- set _ = out.append(e) -%}\n  {%-
+        endif -%}\n{%- endfor -%} {{ out }}"
+      success_count: '{{ success_entities_final | length }}'
+      failure_entities_final: '{{ remaining }}'
+      failure_count: '{{ failure_entities_final | length }}'
+      total_elapsed_sec: '{{ (as_timestamp(now()) - start_ts) | int }}'
+      total_elapsed_str: '{{ (total_elapsed_sec // 3600) }}h {{ ((total_elapsed_sec
+        % 3600)//60) }}m {{ (total_elapsed_sec % 60) }}s'
+      avg_dur_sec: "{%- set ns = namespace(sum=0.0) -%} {%- for it in perf_log -%}\n
+        \ {%- set ns.sum = ns.sum + (it.d | float(0)) -%}\n{%- endfor -%} {%- set
+        n = (perf_log | length) -%} {{ (ns.sum / (n if n>0 else 1)) }}"
+      avg_dur_i: '{{ (avg_dur_sec | int) }}'
+      avg_dur_str: '{{ (avg_dur_i // 3600) }}h {{ ((avg_dur_i % 3600)//60) }}m {{
+        (avg_dur_i % 60) }}s'
+  - action: persistent_notification.create
+    data:
+      title: ESPHome – klart
+      message: 'Slutrapport: {{ ''\n'' -}} Lyckade: {{ success_count }} · Misslyckade:
+        {{ failure_count }} · Total tid: {{ total_elapsed_str }} {%- if failure_count
+        | int > 0 -%} {{ ''\n'' -}} Misslyckade enheter: {{ failure_entities_final
+        | join('', '') }} {%- endif -%} {%- if (perf_log | length) > 0 -%} {{ ''\n''
+        -}} Medeltid per enhet (loggad): {{ avg_dur_str }} {%- endif -%}
+
+        '
+      notification_id: '{{ notif_id }}'
+  - action: logbook.log
+    data:
+      name: Updater
+      message: 'Slutrapport – Lyckade: {{ success_count }}, Misslyckade: {{ failure_count
+        }}, Total tid: {{ total_elapsed_str }}.
+
+        '
+  mode: single
+  variables:
+    max_passes: 3
+    settle_delay: 00:00:20
+    notif_id: esphome_update_progress
+    ewma_alpha: 0.3
+    bootstrap_guess_sec: 120
+- id: '1769682852305'
+  alias: Hemmabio - bordslampor att/dag & bio av/på
+  description: Styr bordslampor utifrån input_select.light_scene och släcker vid hemmabio.
+  triggers:
+  - entity_id: input_select.light_scene
+    to: DAY
+    id: scene_day
+    trigger: state
+  - entity_id: input_select.light_scene
+    to: DAWN
+    id: scene_dawn
+    trigger: state
+  - entity_id: input_select.light_scene
+    to: DUSK
+    id: scene_dusk
+    trigger: state
+  - entity_id: input_select.light_scene
+    to: NIGHT
+    id: scene_night
+    trigger: state
+  - entity_id: switch.grupp_hemmabio
+    to: 'on'
+    id: bio_on
+    trigger: state
+  - entity_id: switch.grupp_hemmabio
+    to: 'off'
+    id: bio_off
+    trigger: state
+  - event_type: test_bordslampor_bio_on
+    id: bio_on
+    trigger: event
+  - event_type: test_bordslampor_bio_off
+    id: bio_off
+    trigger: event
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ trigger.id == ''bio_on'' }}'
+      sequence:
+      - action: light.turn_off
+        target:
+          entity_id:
+          - light.bordslampa_vanster
+          - light.bordslampa_hoger
+    - conditions:
+      - condition: template
+        value_template: '{{ trigger.id == ''bio_off'' }}'
+      sequence:
+      - choose:
+        - conditions:
+          - condition: state
+            entity_id: input_select.light_scene
+            state: NIGHT
+          sequence:
+          - action: light.turn_on
+            target:
+              entity_id:
+              - light.bordslampa_vanster
+              - light.bordslampa_hoger
+            data:
+              rgb_color:
+              - 255
+              - 0
+              - 0
+              brightness_pct: 15
+              transition: 1
+        - conditions:
+          - condition: state
+            entity_id: input_select.light_scene
+            state: DAY
+          sequence:
+          - action: light.turn_on
+            target:
+              entity_id:
+              - light.bordslampa_vanster
+              - light.bordslampa_hoger
+            data:
+              color_temp_kelvin: 3000
+              brightness_pct: 25
+              transition: 1
+        - conditions:
+          - condition: state
+            entity_id: input_select.light_scene
+            state: DAWN
+          sequence:
+          - action: light.turn_on
+            target:
+              entity_id:
+              - light.bordslampa_vanster
+              - light.bordslampa_hoger
+            data:
+              color_temp_kelvin: 3000
+              brightness_pct: 25
+              transition: 1
+        - conditions:
+          - condition: state
+            entity_id: input_select.light_scene
+            state: DUSK
+          sequence:
+          - action: light.turn_on
+            target:
+              entity_id:
+              - light.bordslampa_vanster
+              - light.bordslampa_hoger
+            data:
+              color_temp_kelvin: 3000
+              brightness_pct: 25
+              transition: 1
+    - conditions:
+      - condition: template
+        value_template: '{{ trigger.id in [''scene_day'',''scene_dawn'',''scene_dusk'',''scene_night'']
+          and is_state(''switch.grupp_hemmabio'',''off'') }}'
+      sequence:
+      - choose:
+        - conditions:
+          - condition: template
+            value_template: '{{ trigger.to_state is not none and trigger.from_state
+              is not none and trigger.to_state.state == ''DAY'' and trigger.from_state.state
+              == ''NIGHT'' }}'
+          sequence:
+          - variables:
+              steps: 20
+              start_brightness: 15
+              end_brightness: 25
+              start_rgb:
+              - 255
+              - 0
+              - 0
+              end_rgb:
+              - 255
+              - 214
+              - 170
+          - repeat:
+              count: '{{ steps }}'
+              sequence:
+              - variables:
+                  i: '{{ repeat.index }}'
+                  t: '{{ (i - 1) / (steps - 1) }}'
+                  r: '{{ (start_rgb[0] + (end_rgb[0] - start_rgb[0]) * t) | int }}'
+                  g: '{{ (start_rgb[1] + (end_rgb[1] - start_rgb[1]) * t) | int }}'
+                  b: '{{ (start_rgb[2] + (end_rgb[2] - start_rgb[2]) * t) | int }}'
+                  bri: '{{ (start_brightness + (end_brightness - start_brightness)
+                    * t) | int }}'
+              - action: light.turn_on
+                target:
+                  entity_id:
+                  - light.bordslampa_vanster
+                  - light.bordslampa_hoger
+                data:
+                  rgb_color: '{{ [r, g, b] }}'
+                  brightness_pct: '{{ bri }}'
+                  transition: 30
+              - delay: 00:00:30
+          - action: light.turn_on
+            target:
+              entity_id:
+              - light.bordslampa_vanster
+              - light.bordslampa_hoger
+            data:
+              color_temp_kelvin: 3000
+              brightness_pct: 25
+              transition: 30
+        - conditions:
+          - condition: state
+            entity_id: input_select.light_scene
+            state: NIGHT
+          sequence:
+          - action: light.turn_on
+            target:
+              entity_id:
+              - light.bordslampa_vanster
+              - light.bordslampa_hoger
+            data:
+              rgb_color:
+              - 255
+              - 0
+              - 0
+              brightness_pct: 15
+              transition: 1
+        - conditions:
+          - condition: state
+            entity_id: input_select.light_scene
+            state: DAY
+          sequence:
+          - action: light.turn_on
+            target:
+              entity_id:
+              - light.bordslampa_vanster
+              - light.bordslampa_hoger
+            data:
+              color_temp_kelvin: 3000
+              brightness_pct: 25
+              transition: 1
+        - conditions:
+          - condition: state
+            entity_id: input_select.light_scene
+            state: DAWN
+          sequence:
+          - action: light.turn_on
+            target:
+              entity_id:
+              - light.bordslampa_vanster
+              - light.bordslampa_hoger
+            data:
+              color_temp_kelvin: 3000
+              brightness_pct: 25
+              transition: 1
+        - conditions:
+          - condition: state
+            entity_id: input_select.light_scene
+            state: DUSK
+          sequence:
+          - action: light.turn_on
+            target:
+              entity_id:
+              - light.bordslampa_vanster
+              - light.bordslampa_hoger
+            data:
+              color_temp_kelvin: 3000
+              brightness_pct: 25
+              transition: 1
+  mode: restart
+- id: '1769691569990'
+  alias: Ateljén – bordslampa kväll/natt (mjuk morgonfade)
+  description: Justerar bordslampans färg och ljusstyrka mellan kväll, natt och morgon
+    med en mjuk fade‑övergång.
+  triggers:
+  - trigger: state
+    entity_id: input_select.light_scene
+    to: DUSK
+    id: scene_dusk
+  - trigger: state
+    entity_id: input_select.light_scene
+    to: NIGHT
+    id: scene_night
+  - trigger: state
+    entity_id: input_select.light_scene
+    to: DAY
+    id: scene_day
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: scene_dusk
+      sequence:
+      - action: light.turn_on
+        target:
+          entity_id: light.bordslampa_ateljen
+        data:
+          color_temp_kelvin: '{{ state_attr(''light.bordslampa_ateljen'', ''min_color_temp_kelvin'')
+            or 2000 }}'
+          brightness_pct: 50
+          transition: 1
+    - conditions:
+      - condition: trigger
+        id: scene_night
+      sequence:
+      - action: light.turn_on
+        target:
+          entity_id: light.bordslampa_ateljen
+        data:
+          color_temp_kelvin: '{{ state_attr(''light.bordslampa_ateljen'', ''min_color_temp_kelvin'')
+            or 2000 }}'
+          brightness_pct: 5
+          transition: 1
+    - conditions:
+      - condition: trigger
+        id: scene_day
+      sequence:
+      - choose:
+        - conditions:
+          - condition: template
+            value_template: "{{ trigger.from_state is not none\n   and trigger.from_state.state
+              == 'NIGHT' }}\n"
+          sequence:
+          - variables:
+              steps: 20
+              start_brightness: 5
+              end_brightness: 50
+          - repeat:
+              count: '{{ steps }}'
+              sequence:
+              - variables:
+                  i: '{{ repeat.index }}'
+                  t: '{{ (i - 1) / (steps - 1) }}'
+                  bri: '{{ (start_brightness + (end_brightness - start_brightness)
+                    * t) | int }}'
+              - action: light.turn_on
+                target:
+                  entity_id: light.bordslampa_ateljen
+                data:
+                  color_temp_kelvin: '{{ state_attr(''light.bordslampa_ateljen'',
+                    ''min_color_temp_kelvin'') or 2000 }}'
+                  brightness_pct: '{{ bri }}'
+                  transition: 30
+              - delay: 00:00:30
+          - action: light.turn_on
+            target:
+              entity_id: light.bordslampa_ateljen
+            data:
+              color_temp_kelvin: '{{ state_attr(''light.bordslampa_ateljen'', ''min_color_temp_kelvin'')
+                or 2000 }}'
+              brightness_pct: 50
+              transition: 30
+        default:
+        - action: light.turn_on
+          target:
+            entity_id: light.bordslampa_ateljen
+          data:
+            color_temp_kelvin: '{{ state_attr(''light.bordslampa_ateljen'', ''min_color_temp_kelvin'')
+              or 2000 }}'
+            brightness_pct: 50
+            transition: 1
+    default: []
+  mode: restart
+- id: '1773242322642'
+  alias: 3D‑skrivaren - Färdig
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - sensor.prusaxl
+    from:
+    - printing
+    id: done
+    to:
+    - finished
+  conditions: []
+  actions:
+  - action: script.granny_broadcast
+    metadata: {}
+    data:
+      severity: info
+      humor_level: 3
+      task: Informera om att 3D-skrivare är klar med sin utskrift
+      channels:
+      - tts
+      - tv
+      tts_media_player: media_player.kokets_skarm
+  mode: single
+- id: '1776246491818'
+  alias: Uppdatera UV-index varje timme
+  description: ''
+  triggers:
+  - trigger: time_pattern
+    hours: '*'
+  conditions:
+  - condition: time
+    after: 06:00:00
+    before: '18:00:00'
+  actions:
+  - action: homeassistant.update_entity
+    metadata: {}
+    data:
+      entity_id:
+      - sensor.openuv_aktuellt_uv_index
+  mode: single
+- id: '1785228807993'
+  alias: Poolpump on/off (Bilresa knappar(
+  description: ''
+  triggers:
+  - trigger: event.received
+    target:
+      entity_id: event.bilresa_dual_button_knapp_1
+    options:
+      event_type:
+      - multi_press_1
+    id: 'On'
+  - trigger: event.received
+    target:
+      entity_id: event.bilresa_dual_button_knapp_2
+    options:
+      event_type:
+      - multi_press_1
+    id: 'Off'
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - 'On'
+      sequence:
+      - action: switch.turn_on
+        metadata: {}
+        target:
+          device_id: 7513532280eefa77d57e78f477e10014
+        data: {}
+    - conditions:
+      - condition: trigger
+        id:
+        - 'Off'
+      sequence:
+      - action: switch.turn_off
+        metadata: {}
+        target:
+          device_id: 7513532280eefa77d57e78f477e10014
+        data: {}
+  mode: single
+- id: '1785778291181'
+  alias: Kräftor – temperaturstatus
+  description: Skickar frysens temperatur varje hel timme dagtid till och med kräftskivan.
+  triggers:
+  - trigger: time_pattern
+    minutes: '0'
+  conditions:
+  - condition: time
+    after: 07:59:00
+    before: '22:01:00'
+  - condition: template
+    value_template: '{{ now().date() <= as_datetime(''2026-08-08'').date() }}'
+  actions:
+  - action: notify.send_message
+    target:
+      entity_id: notify.home_assistant_kraftor_kraftovervakning
+    data:
+      title: KRÄFTOR STATUS
+      message: "Temperatur: {{ states('sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature')\n
+        \  | float(0) | round(1) }} °C\n\nTidpunkt: {{ now().strftime('%Y-%m-%d %H:%M:%S')
+        }}"
+  mode: single

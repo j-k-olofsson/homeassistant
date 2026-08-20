@@ -37,3 +37,10 @@ text_sensor:
     internal: true
     name: ESPHome version
     hide_timestamp: true
+  - platform: openthread_info
+    ext_addr:
+      name: "Thread Extended Address"
+    rloc16:
+      name: "Thread RLOC16"
+    role:
+      name: "Thread Device Role"

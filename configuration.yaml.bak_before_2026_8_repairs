@@ -1,0 +1,129 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+http:
+  use_x_forwarded_for: true
+  ip_ban_enabled: true
+  login_attempts_threshold: 5
+  trusted_proxies:
+    - 172.19.0.0/16       # täcker Docker bridge (säkert och enkelt)
+    - 192.168.10.200      # frigg hostens LAN-IP (valfritt, bra att ha)
+
+# Define global log-level
+logger:
+  default: info
+  logs:
+    homeassistant.config_entries: warning
+    custom_components.openwrt_wifi_clients: info
+
+# logger:
+#   default: info
+#   logs:
+#     homeassistant.components.automation: debug
+
+# MaraiaDB specific configuration
+# recorder:
+#   db_url: !secret mariadb_db_url
+#   purge_keep_days: 14
+#   auto_purge: true
+#   commit_interval: 30
+#   exclude:
+#     entities:
+#       # Elmätare – fasström (behåll energi per timme/dag, rör ej!)
+#       - sensor.elmatare_elstolpen_current_phase_1
+#       - sensor.elmatare_elstolpen_current_phase_2
+#       - sensor.elmatare_elstolpen_current_phase_3
+
+recorder:
+  db_url: !secret mariadb_db_url
+  auto_purge: true
+  purge_keep_days: 10
+  commit_interval: 5
+
+  exclude:
+    # Ta bort hela domäner som oftast skräpar
+    domains:
+      - persistent_notification
+      - camera
+      - image_processing
+      - media_player
+      - weather
+      - updater
+
+    # Generiska mönster (globbar) – inga hårdkodade namn
+    entity_globs:
+      # Tickande klock-/datum-/uptime-sensorer
+      - sensor.time*
+      - sensor.date*
+      - sensor.uptime*
+
+      # OpenWRT (alla sensorer från integrationen)
+      - sensor.openwrt_*
+
+      # ESPHome-lampor – högfrekvent brus (behåll ev. *_energy)
+      - sensor.*_light_power
+      - sensor.*_light_voltage
+      - sensor.*_light_current
+
+      # Elmätare: exkludera effekt/spänning (behåll energy/kWh för Energi)
+      - sensor.elmatare_*_power*
+      - sensor.elmatare_*_voltage*
+      - sensor.elmatare_*_current_phase_*
+
+      # System-/CPU-last etc.
+      - sensor.system_monitor_load_*
+      - sensor.system_monitor_packets_*
+      - sensor.processor_*
+      - sensor.*_wi_fi_clients
+      - sensor.all_wi_fi_clients*
+      - sensor.*_uptime_30_days*
+      - sensor.*_uptime_365_days*
+      - sensor.*_response_time_o_1_day*
+      - sensor.*_response_time_o_30_days*
+      - sensor.*_response_time_o_365_days*
+      - sensor.ha_states_rows_24h
+
+      # Aqara-monitorering som tidigare gav mycket historik
+      - automation.aqara_taklampor_monitor_service_calls
+      - sensor.aqara_taklampor_senaste_analys
+      - input_text.aqara_taklampor_senaste_kommando
+
+    # Brusiga eventtyper som sällan behövs i recorder
+    event_types:
+      - call_service
+      - entity_registry_updated
+      - service_registered
+      - service_removed
+      - component_loaded
+      - logbook_entry
+      - automation_triggered
+      - automation_reloaded
+      - recorder_5min_statistics_generated
+      - recorder_hourly_statistics_generated
+      - device_registry_updated
+      - panels_updated
+      - core_config_updated
+      - lovelace_updated
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+  extra_module_url:
+    - /local/card-mod.js
+
+# Load automations, scripts and scenes from separate files (System - do not move or alter)
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+# Load extra configurationes as described in separate files in dir packages/
+homeassistant:
+  packages: !include_dir_named packages
+  allowlist_external_dirs:
+    - /config/file_notifications
+  auth_mfa_modules:
+    - type: totp
+    
+# Text to speech
+tts:
+  - platform: google_translate

@@ -235,7 +235,7 @@ automation:
           msg: >-
             FLASH upptäckt på {{ trigger.entity_id }}: {{ bf }} -> {{ bt }}.
             Orsak: {{ cause }}.
-            effekt={{ states('sensor.taklampor_kokson_effekt') }}W ström={{ states('sensor.taklampor_kokson_aktiv_strom') }}A.
+            ström={{ states('sensor.taklampor_kokson_aktiv_strom') }}A.
             cmd_age={{ cmd_age }}s btn_age={{ btn_age }}s.
             ctx={{ trigger.to_state.context.id }} parent={{ trigger.to_state.context.parent_id if trigger.to_state.context.parent_id else 'none' }} user={{ trigger.to_state.context.user_id if trigger.to_state.context.user_id else 'none' }}
       - action: counter.increment

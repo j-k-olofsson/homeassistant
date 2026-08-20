@@ -1,14 +1,6 @@
 # Loads default set of integrations. Do not remove.
 default_config:
 
-http:
-  use_x_forwarded_for: true
-  ip_ban_enabled: true
-  login_attempts_threshold: 5
-  trusted_proxies:
-    - 172.19.0.0/16       # täcker Docker bridge (säkert och enkelt)
-    - 192.168.10.200      # frigg hostens LAN-IP (valfritt, bra att ha)
-
 # Define global log-level
 logger:
   default: info
@@ -104,6 +96,8 @@ recorder:
       - panels_updated
       - core_config_updated
       - lovelace_updated
+    entities:
+      - sensor.thread_network_diagnostics
 
 # Load frontend themes from the themes folder
 frontend:
@@ -127,3 +121,242 @@ homeassistant:
 # Text to speech
 tts:
   - platform: google_translate
+
+rest_command:
+  thread_get_devices:
+    url: "http://192.168.10.2:8081/api/devices"
+    method: get
+    headers:
+      Accept: "application/json"
+    timeout: 10
+  thread_get_diagnostics:
+    url: "http://192.168.10.2:8081/api/actions"
+    method: post
+    headers:
+      Accept: "application/vnd.api+json"
+    content_type: "application/vnd.api+json"
+    payload: >-
+      {
+        "data": [{
+          "type": "getNetworkDiagnosticTask",
+          "attributes": {
+            "destination": "{{ destination }}",
+            "types": [
+              "extAddress",
+              "rloc16",
+              "eui",
+              "threadVersion",
+              "vendorName",
+              "vendorModel",
+              "vendorSwVersion",
+              "threadStackVersion",
+              "childTable",
+              "children",
+              "routerNeighbors",
+              "mleCounters"
+            ],
+            "timeout": 30
+          }
+        }]
+      }
+  thread_get_diagnostics_result:
+    url: "http://192.168.10.2:8081/api/diagnostics"
+    method: get
+    headers:
+      Accept: "application/json"
+    timeout: 10
+
+template:
+  - triggers:
+      - trigger: state
+        entity_id: script.thread_uppdatera_natverksdiagnostik
+        from: "on"
+        to: "off"
+
+    actions:
+      - action: rest_command.thread_get_diagnostics_result
+        response_variable: thread_diag
+
+    sensor:
+      - name: "Thread Network Diagnostics"
+        unique_id: thread_network_diagnostics
+        icon: mdi:access-point-network
+
+        state: >
+          {{ thread_diag.content | count }}
+
+        attributes:
+          updated: >
+            {{ now().isoformat() }}
+
+          diagnostics: >
+            {% set src = thread_diag.content or [] %}
+            {% set result = namespace(items=[], seen=[]) %}
+
+            {% for d in src %}
+
+              {% set addr =
+                   d.extAddress
+                   | default('')
+                   | lower %}
+
+              {% if addr != ''
+                    and addr not in result.seen %}
+
+                {% set matches =
+                     src
+                     | selectattr(
+                         'extAddress',
+                         'defined'
+                       )
+                     | selectattr(
+                         'extAddress',
+                         'equalto',
+                         d.extAddress
+                       )
+                     | list %}
+
+                {% set best =
+                     namespace(
+                       item=d,
+                       count=-1
+                     ) %}
+
+                {% set meta =
+                     namespace(
+                       stack='',
+                       vendor='',
+                       model=''
+                     ) %}
+
+                {% for c in matches %}
+
+                  {% set neighbors =
+                       c.routerNeighbors
+                       | default([], true) %}
+
+                  {% set cnt =
+                       neighbors
+                       | count %}
+
+                  {% if cnt > best.count %}
+                    {% set best.item = c %}
+                    {% set best.count = cnt %}
+                  {% endif %}
+
+                  {% if meta.stack == ''
+                        and
+                        (c.threadStackVersion
+                         | default('')
+                         | trim) != '' %}
+
+                    {% set meta.stack =
+                         c.threadStackVersion %}
+
+                  {% endif %}
+
+                  {% if meta.vendor == ''
+                        and
+                        (c.vendorName
+                         | default('')
+                         | trim) != '' %}
+
+                    {% set meta.vendor =
+                         c.vendorName %}
+
+                  {% endif %}
+
+                  {% if meta.model == ''
+                        and
+                        (c.vendorModel
+                         | default('')
+                         | trim) != '' %}
+
+                    {% set meta.model =
+                         c.vendorModel %}
+
+                  {% endif %}
+
+                {% endfor %}
+
+
+                {% set compact_neighbors =
+                     namespace(items=[]) %}
+
+                {% for n in
+                     best.item.routerNeighbors
+                     | default([], true) %}
+
+                  {% set compact_neighbors.items =
+                       compact_neighbors.items
+                       +
+                       [
+                         dict(
+                           averageRssi =
+                             n.averageRssi
+                             | default(none),
+                           lastRssi =
+                             n.lastRssi
+                             | default(none),
+                           linkMargin =
+                             n.linkMargin
+                             | default(none),
+                           messageErrorRate =
+                             n.messageErrorRate
+                             | default(0),
+                           frameErrorRate =
+                             n.frameErrorRate
+                             | default(0)
+                         )
+                       ] %}
+
+                {% endfor %}
+
+
+                {% set result.items =
+                     result.items
+                     +
+                     [
+                       dict(
+                         extAddress=addr,
+                         threadStackVersion=
+                           meta.stack,
+                         vendorName=
+                           meta.vendor,
+                         vendorModel=
+                           meta.model,
+                         routerNeighbors=
+                           compact_neighbors.items
+                       )
+                     ] %}
+
+                {% set result.seen =
+                     result.seen + [addr] %}
+
+              {% endif %}
+
+            {% endfor %}
+
+            {{ result.items }}
+          
+command_line:
+  - sensor:
+      name: Thread Matter Topology
+      unique_id: thread_matter_topology
+      command: 'python3 /config/thread_matter_topology.py'
+      command_timeout: 20
+      scan_interval: 600
+      value_template: "{{ value_json.count }}"
+      json_attributes:
+        - nodes
+        - collected_at
+        - child_links
+  - sensor:
+      name: Nest Hub Test 210
+      unique_id: nest_hub_test_210
+      command: >-
+        python3 -c "from pychromecast.dial import get_device_info;
+        d=get_device_info('192.168.10.213', timeout=8);
+        print('NONE' if d is None else str(d))"
+      command_timeout: 15
+      scan_interval: 3600

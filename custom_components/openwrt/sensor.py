@@ -39,7 +39,7 @@ from homeassistant.helpers.typing import UNDEFINED, StateType
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 from homeassistant.util import dt as dt_util
 
-from .api.base import OpenWrtData, StorageUsage
+from .api.base import NetworkInterface, OpenWrtData, StorageUsage
 from .const import (
     CONF_ENABLE_LOAD,
     CONF_ENABLE_NLBWMON_SENSORS,
@@ -57,7 +57,13 @@ from .const import (
     DOMAIN,
 )
 from .coordinator import OpenWrtDataCoordinator
-from .helpers import format_ap_device_id, format_ap_name, get_via_device, is_random_mac
+from .helpers import (
+    format_ap_device_id,
+    format_ap_name,
+    get_via_device,
+    is_random_mac,
+    resolve_client_name,
+)
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -106,6 +112,10 @@ class OpenWrtSensorEntity(CoordinatorEntity[OpenWrtDataCoordinator], SensorEntit
         self._attr_device_info = DeviceInfo(
             identifiers={(DOMAIN, cast(str, entry.unique_id or entry.data[CONF_HOST]))},
         )
+        if hasattr(description, "entity_registry_enabled_default"):
+            self._attr_entity_registry_enabled_default = (
+                description.entity_registry_enabled_default
+            )
 
     @property
     def native_value(self) -> StateType | datetime:
@@ -310,7 +320,9 @@ class OpenWrtDeviceSensor(CoordinatorEntity[OpenWrtDataCoordinator], SensorEntit
         return DeviceInfo(
             identifiers={(DOMAIN, self._mac)},
             connections={(dr.CONNECTION_NETWORK_MAC, self._mac)},
-            name=self._initial_name,
+            name=resolve_client_name(
+                self.coordinator.hass, self._mac, self._initial_name
+            ),
             via_device=get_via_device(
                 self.coordinator.hass, self.coordinator, self._entry, self._mac
             ),
@@ -1296,6 +1308,27 @@ async def async_setup_entry(
                     ent_reg.async_remove(ent.entity_id)
                     continue
 
+            # Cleanup orphaned network address sensors for physical devices or removed interfaces
+            if unique_id.startswith(f"{entry.entry_id}_net_") and coordinator.data:
+                if unique_id.endswith(("_ipv4", "_ipv6")):
+                    # Check if interface still exists and is a logical interface with an IP or protocol
+                    matched_iface = next(
+                        (
+                            i
+                            for i in coordinator.data.network_interfaces
+                            if f"_net_{i.name}_ipv4" in unique_id
+                            or f"_net_{i.name}_ipv6" in unique_id
+                        ),
+                        None,
+                    )
+                    if not matched_iface or not (
+                        matched_iface.ipv4_address
+                        or matched_iface.ipv6_address
+                        or matched_iface.protocol
+                    ):
+                        ent_reg.async_remove(ent.entity_id)
+                        continue
+
     hass.add_job(_async_cleanup_entities)
 
     if entry.options.get(
@@ -1367,7 +1400,9 @@ class OpenWrtNlbwmonRxSensor(CoordinatorEntity[OpenWrtDataCoordinator], SensorEn
         return DeviceInfo(
             identifiers={(DOMAIN, self._mac.lower())},
             connections={(dr.CONNECTION_NETWORK_MAC, self._mac.lower())},
-            name=self._initial_name,
+            name=resolve_client_name(
+                self.coordinator.hass, self._mac, self._initial_name
+            ),
             via_device=get_via_device(
                 self.coordinator.hass, self.coordinator, self._entry, self._mac
             ),
@@ -1416,7 +1451,9 @@ class OpenWrtNlbwmonTxSensor(CoordinatorEntity[OpenWrtDataCoordinator], SensorEn
         return DeviceInfo(
             identifiers={(DOMAIN, self._mac.lower())},
             connections={(dr.CONNECTION_NETWORK_MAC, self._mac.lower())},
-            name=self._initial_name,
+            name=resolve_client_name(
+                self.coordinator.hass, self._mac, self._initial_name
+            ),
             via_device=get_via_device(
                 self.coordinator.hass, self.coordinator, self._entry, self._mac
             ),
@@ -1785,7 +1822,7 @@ def _async_setup_network_sensors(
         key = f"net_iface_{iface.name}"
         if key not in tracked_keys:
             tracked_keys.add(key)
-            entities.extend(_create_net_sensors(coordinator, entry, iface.name))
+            entities.extend(_create_net_sensors(coordinator, entry, iface))
 
 
 def _async_setup_specialized_sensors(
@@ -2037,7 +2074,7 @@ def _create_wifi_sensors(
     # Station-specific quality sensors (STA/Mesh/etc)
     if mode.lower() not in ("ap", "master", "access point"):
         _create_wifi_station_sensors(
-            coordinator, entry, iface_name, ssid, frequency, section_id, sensors
+            coordinator, entry, iface_name, ssid, frequency, section_id, ifname, sensors
         )
 
     return sensors
@@ -2104,13 +2141,17 @@ def _create_wifi_base_sensors(
                     native_unit_of_measurement="dBm" if key == "txpower" else None,
                     entity_category=cat,
                     entity_registry_enabled_default=enabled,
-                    value_fn=lambda data, n=iface_name, k=key: next(
-                        (
-                            getattr(w, k)
-                            for w in data.wireless_interfaces
-                            if w.name == n
-                        ),
-                        None,
+                    value_fn=lambda data, n=iface_name, s=section_id, i=ifname, k=key: (
+                        next(
+                            (
+                                getattr(w, k)
+                                for w in data.wireless_interfaces
+                                if w.name == n
+                                or (s and w.section == s)
+                                or (i and w.ifname == i)
+                            ),
+                            None,
+                        )
                     ),
                 ),
                 iface_name,
@@ -2128,6 +2169,7 @@ def _create_wifi_station_sensors(
     ssid: str,
     frequency: str,
     section_id: str | None,
+    ifname: str | None,
     sensors: list[OpenWrtWifiSensorEntity],
 ) -> None:
     """Create quality sensors for WiFi station interfaces."""
@@ -2146,14 +2188,22 @@ def _create_wifi_station_sensors(
                 device_class=SensorDeviceClass.SIGNAL_STRENGTH,
                 state_class=SensorStateClass.MEASUREMENT,
                 entity_category=EntityCategory.DIAGNOSTIC,
-                value_fn=lambda data, n=iface_name: next(
-                    (w.signal for w in data.wireless_interfaces if w.name == n),
+                value_fn=lambda data, n=iface_name, s=section_id, i=ifname: next(
+                    (
+                        w.signal
+                        for w in data.wireless_interfaces
+                        if w.name == n
+                        or (s and w.section == s)
+                        or (i and w.ifname == i)
+                    ),
                     None,
                 ),
-                available_fn=lambda data, n=iface_name: any(
-                    w.name == n and w.signal != 0 for w in data.wireless_interfaces
+                available_fn=lambda data, n=iface_name, s=section_id, i=ifname: any(
+                    (w.name == n or (s and w.section == s) or (i and w.ifname == i))
+                    and w.signal != 0
+                    for w in data.wireless_interfaces
                 ),
-                attrs_fn=lambda data, n=iface_name: next(
+                attrs_fn=lambda data, n=iface_name, s=section_id, i=ifname: next(
                     (
                         {
                             "noise": w.noise,
@@ -2162,6 +2212,8 @@ def _create_wifi_station_sensors(
                         }
                         for w in data.wireless_interfaces
                         if w.name == n
+                        or (s and w.section == s)
+                        or (i and w.ifname == i)
                     ),
                     {},
                 ),
@@ -2169,6 +2221,7 @@ def _create_wifi_station_sensors(
             iface_name,
             ssid,
             frequency,
+            section_id,
         )
     )
 
@@ -2206,13 +2259,17 @@ def _create_wifi_station_sensors(
                     state_class=sclass,
                     entity_category=EntityCategory.DIAGNOSTIC,
                     entity_registry_enabled_default=False,
-                    value_fn=lambda data, n=iface_name, k=key: next(
-                        (
-                            getattr(w, k)
-                            for w in data.wireless_interfaces
-                            if w.name == n
-                        ),
-                        None,
+                    value_fn=lambda data, n=iface_name, s=section_id, i=ifname, k=key: (
+                        next(
+                            (
+                                getattr(w, k)
+                                for w in data.wireless_interfaces
+                                if w.name == n
+                                or (s and w.section == s)
+                                or (i and w.ifname == i)
+                            ),
+                            None,
+                        )
                     ),
                 ),
                 iface_name,
@@ -2294,16 +2351,18 @@ def _create_sqm_sensors(
 def _create_net_sensors(
     coordinator: OpenWrtDataCoordinator,
     entry: ConfigEntry,
-    iface_name: str,
+    iface: NetworkInterface,
 ) -> list[OpenWrtSensorEntity]:
     """Create sensors for a network interface."""
     sensors: list[OpenWrtSensorEntity] = []
+    iface_name = iface.name
 
     # Traffic sensors (RX/TX)
     _create_net_traffic_sensors(coordinator, entry, iface_name, sensors)
 
-    # Address sensors (IPv4/IPv6)
-    _create_net_address_sensors(coordinator, entry, iface_name, sensors)
+    # Address sensors (IPv4/IPv6) - only create if interface has IP or protocol
+    if iface.ipv4_address or iface.ipv6_address or iface.protocol:
+        _create_net_address_sensors(coordinator, entry, iface, sensors)
 
     # Status sensors (Speed/Uptime)
     _create_net_status_sensors(coordinator, entry, iface_name, sensors)
@@ -2369,10 +2428,14 @@ def _create_net_traffic_sensors(
 def _create_net_address_sensors(
     coordinator: OpenWrtDataCoordinator,
     entry: ConfigEntry,
-    iface_name: str,
+    iface: NetworkInterface,
     sensors: list[OpenWrtSensorEntity],
 ) -> None:
     """Create address-related sensors (IPv4/IPv6) for an interface."""
+    iface_name = iface.name
+    # Disable IPv4 sensor by default for bridge/physical device without an IP
+    ipv4_enabled_default = bool(iface.ipv4_address)
+
     # IPv4
     sensors.append(
         OpenWrtSensorEntity(
@@ -2384,9 +2447,13 @@ def _create_net_address_sensors(
                 translation_key="net_ipv4",
                 translation_placeholders={"interface": iface_name},
                 entity_category=EntityCategory.DIAGNOSTIC,
+                entity_registry_enabled_default=ipv4_enabled_default,
                 value_fn=lambda data, n=iface_name: next(
                     (i.ipv4_address for i in data.network_interfaces if i.name == n),
                     None,
+                ),
+                available_fn=lambda data, n=iface_name: any(
+                    i.name == n and i.ipv4_address for i in data.network_interfaces
                 ),
                 attrs_fn=lambda data, n=iface_name: next(
                     (

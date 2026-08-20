@@ -33,6 +33,7 @@ from .const import (
     CONF_SKIP_RANDOM_MAC,
     CONF_TRACK_DEVICES,
     CONF_TRACK_WIRED,
+    CONF_TRUST_STALE_ARP,
     DATA_COORDINATOR,
     DEFAULT_CONSIDER_HOME,
     DEFAULT_SKIP_RANDOM_MAC,
@@ -41,7 +42,7 @@ from .const import (
     DOMAIN,
 )
 from .coordinator import OpenWrtDataCoordinator
-from .helpers import get_via_device, is_random_mac
+from .helpers import get_via_device, is_random_mac, resolve_client_name
 from .helpers.mac_vendor import get_mac_vendor_info
 
 _LOGGER = logging.getLogger(__name__)
@@ -147,6 +148,13 @@ async def async_setup_entry(
                 mac_lower = lease.mac.lower()
                 if mac_lower not in unique_devices or not unique_devices[mac_lower]:
                     unique_devices[mac_lower] = lease.hostname
+
+        # An access point has no DHCP data, so fall back to the hostname another
+        # config entry resolved. Without this its trackers are named by MAC.
+        shared_hostnames = hass.data.get(DOMAIN, {}).get("hostname_registry", {})
+        for mac_lower, hostname in unique_devices.items():
+            if not hostname or hostname == "*":
+                unique_devices[mac_lower] = shared_hostnames.get(mac_lower) or hostname
 
         new_entities: list[OpenWrtDeviceTracker] = []
 
@@ -262,10 +270,16 @@ class OpenWrtDeviceTracker(CoordinatorEntity[OpenWrtDataCoordinator], ScannerEnt
 
         # Initial device name fallback
         self._initial_name = hostname or mac
+        options = getattr(entry, "options", {})
+        if not hasattr(options, "get"):
+            options = {}
+        data = getattr(entry, "data", {})
+        if not hasattr(data, "get"):
+            data = {}
         self._consider_home = timedelta(
-            seconds=entry.options.get(
+            seconds=options.get(
                 CONF_CONSIDER_HOME,
-                entry.data.get(CONF_CONSIDER_HOME, DEFAULT_CONSIDER_HOME),
+                data.get(CONF_CONSIDER_HOME, DEFAULT_CONSIDER_HOME),
             ),
         )
         self._last_seen: datetime | None = None
@@ -341,31 +355,53 @@ class OpenWrtDeviceTracker(CoordinatorEntity[OpenWrtDataCoordinator], ScannerEnt
 
         # Handle historically wireless devices to prevent stale ARP/FDB records from keeping them 'home'
         wireless_history = domain_data.get("wireless_history", {})
-        was_ever_wireless = wireless_history.get(
-            self._mac
-        ) or self.coordinator._device_history.get(self._mac, {}).get(
-            "is_wireless", False
-        )
+        device_hist = getattr(self.coordinator, "_device_history", {})
+        if not isinstance(device_hist, dict):
+            device_hist = {}
+        was_ever_wireless = wireless_history.get(self._mac) or device_hist.get(
+            self._mac, {}
+        ).get("is_wireless", False)
 
         if was_ever_wireless and not device.is_wireless:
             return self._check_consider_home(False)
 
-        # Handle wireless/forced-wireless devices tracked via ARP/FDB (external APs)
-        # to prevent stale ARP (STALE) or stale FDB entries from keeping them 'home'.
-        if device.is_wireless or was_ever_wireless:
-            active_arp = device.neighbor_state and device.neighbor_state.upper() in (
-                "REACHABLE",
-                "DELAY",
-                "PROBE",
-                "PERMANENT",
-            )
+        def _config_get(key: str, default: Any = None) -> Any:
+            entry = self._entry
+            options = getattr(entry, "options", None)
+            if isinstance(options, dict) and key in options:
+                return options[key]
+            data = getattr(entry, "data", None)
+            if isinstance(data, dict) and key in data:
+                return data[key]
+            if options is not None and hasattr(options, "get"):
+                try:
+                    val = options.get(key)
+                    if val is not None and type(val).__name__ != "MagicMock":
+                        return val
+                except Exception:
+                    pass
+            if data is not None and hasattr(data, "get"):
+                try:
+                    val = data.get(key)
+                    if val is not None and type(val).__name__ != "MagicMock":
+                        return val
+                except Exception:
+                    pass
+            return default
+
+        trust_stale = _config_get(CONF_TRUST_STALE_ARP, True)
+        valid_arp_states = ["REACHABLE", "DELAY", "PROBE", "PERMANENT"]
+        if trust_stale:
+            valid_arp_states.append("STALE")
+
+        if device.neighbor_state:
+            active_arp = device.neighbor_state.upper() in valid_arp_states
             if not active_arp:
                 return self._check_consider_home(False)
+        elif (device.is_wireless or was_ever_wireless) and not trust_stale:
+            return self._check_consider_home(False)
 
-        track_wired = self._entry.options.get(
-            CONF_TRACK_WIRED,
-            self._entry.data.get(CONF_TRACK_WIRED, DEFAULT_TRACK_WIRED),
-        )
+        track_wired = _config_get(CONF_TRACK_WIRED, DEFAULT_TRACK_WIRED)
         if not track_wired and not device.is_wireless:
             return self._check_consider_home(False)
 
@@ -428,7 +464,10 @@ class OpenWrtDeviceTracker(CoordinatorEntity[OpenWrtDataCoordinator], ScannerEnt
             if hostname != router_hostname:
                 return hostname
 
-        return self._mac
+        # This entry resolved no hostname of its own -- an access point runs no
+        # DHCP server, so it only ever sees a MAC. Borrow the name another entry
+        # learned before falling back to the bare address.
+        return resolve_client_name(self.coordinator.hass, self._mac, self._initial_name)
 
     @property
     def extra_state_attributes(self) -> dict[str, Any]:

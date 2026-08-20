@@ -40,12 +40,15 @@ class UbusNetworkMixin:
         """Get wireless interface information."""
         interfaces: list[WirelessInterface] = []
         iface_names: set[str] = set()
+        radio_names: set[str] = set()
+        skip_iwinfo_info = self._ubus_path.rstrip("/") == "/cgi-bin/luci/admin/ubus"
 
         # 1. Primary source: network.wireless status
         if self.packages.wireless is not False:
             try:
                 wireless_data = await self._call("network.wireless", "status")
                 if wireless_data and isinstance(wireless_data, dict):
+                    radio_names.update(wireless_data)
                     for radio_name, radio_data in wireless_data.items():
                         if not isinstance(radio_data, dict):
                             continue
@@ -160,7 +163,7 @@ class UbusNetworkMixin:
                 candidates = iw_devs["devices"]
 
             for name in candidates:
-                if name in iface_names:
+                if skip_iwinfo_info or name in iface_names or name in radio_names:
                     continue
 
                 # Check if any existing interface from UCI matches this physical device
@@ -200,7 +203,9 @@ class UbusNetworkMixin:
         # 3. Populate metrics for all discovered interfaces in parallel
         async def _fetch_metrics(wifi: WirelessInterface) -> None:
             try:
-                iwinfo = await self._call("iwinfo", "info", {"device": wifi.name})
+                iwinfo = {}
+                if not skip_iwinfo_info:
+                    iwinfo = await self._call("iwinfo", "info", {"device": wifi.name})
                 if iwinfo:
                     if not wifi.ssid:
                         wifi.ssid = iwinfo.get("ssid", "")
@@ -233,6 +238,11 @@ class UbusNetworkMixin:
                     q_max = iwinfo.get("quality_max", 100)
                     if q_val is not None and q_max:
                         wifi.quality = round((q_val / q_max) * 100, 1)
+
+                    if iwinfo.get("txpower") is not None:
+                        wifi.txpower = iwinfo["txpower"]
+                    if iwinfo.get("txpower_offset") is not None:
+                        wifi.txpower_offset = iwinfo["txpower_offset"]
 
                     if "hwmode" in iwinfo and not wifi.hwmode:
                         if isinstance(iwinfo["hwmode"], list):
@@ -289,6 +299,7 @@ class UbusNetworkMixin:
                             wifi.radio = prev_wifi.radio
                             wifi.htmode = prev_wifi.htmode
                             wifi.txpower = prev_wifi.txpower
+                            wifi.txpower_offset = prev_wifi.txpower_offset
                             wifi.mesh_id = prev_wifi.mesh_id
                             wifi.mesh_fwding = prev_wifi.mesh_fwding
                             wifi.ifname = prev_wifi.ifname
