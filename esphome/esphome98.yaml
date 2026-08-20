@@ -10,8 +10,12 @@ substitutions:
   sensor_i2c_scl_pin: GPIO6
   veml7700_update_interval: 30s
   ltr390_update_interval: 30s
-  ltr390_gain: X3
-  ltr390_resolution: 18
+  # Keep the ALS channel conservative outdoors, but use the LTR390
+  # datasheet reference settings for accurate, high-resolution UVI.
+  ltr390_als_gain: X3
+  ltr390_als_resolution: 18
+  ltr390_uv_gain: X18
+  ltr390_uv_resolution: 20
   ltr390_window_correction: 1.0
 
 # Include packages for this device specific type
