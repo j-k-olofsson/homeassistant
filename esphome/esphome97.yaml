@@ -1,0 +1,11 @@
+# Device specific substitutions
+substitutions:
+  node_id: "97"
+  node_name: esphome97
+  node_friendly_name: IR-proxy 2
+  node_comment: M5Stack ATOM Lite + IR Unit U002 (VLAN IoT)
+  log_level: INFO
+
+# Include packages for this device specific type
+packages:
+  file: !include common/.device_m5stack_atom_lite_ir_proxy.yaml
