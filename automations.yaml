@@ -314,38 +314,38 @@
       - condition: trigger
         id: dawn
       sequence:
-      - data:
-          options: SUNPHASE_SUNRICE
+      - action: input_select.select_option
         target:
           entity_id: input_select.sun_phase
-        action: input_select.set_options
+        data:
+          option: SUNPHASE_SUNRISE
     - conditions:
       - condition: trigger
         id: day
       sequence:
-      - data:
-          options: SUNPHASE_DAYLIGHT
+      - action: input_select.select_option
         target:
           entity_id: input_select.sun_phase
-        action: input_select.set_options
+        data:
+          option: SUNPHASE_DAYLIGHT
     - conditions:
       - condition: trigger
         id: dusk
       sequence:
-      - data:
-          options: SUNPHASE_SUNSET
+      - action: input_select.select_option
         target:
           entity_id: input_select.sun_phase
-        action: input_select.set_options
+        data:
+          option: SUNPHASE_SUNSET
     - conditions:
       - condition: trigger
         id: night
       sequence:
-      - data:
-          options: SUNPHASE_NIGHT
+      - action: input_select.select_option
         target:
           entity_id: input_select.sun_phase
-        action: input_select.set_options
+        data:
+          option: SUNPHASE_NIGHT
   mode: queued
   max: 10
 - id: '1670242540792'
