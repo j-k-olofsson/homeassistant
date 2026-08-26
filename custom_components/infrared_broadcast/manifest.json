@@ -1,0 +1,10 @@
+{
+  "domain": "infrared_broadcast",
+  "name": "Infrared Broadcast",
+  "codeowners": [],
+  "dependencies": ["infrared"],
+  "documentation": "https://www.home-assistant.io/integrations/infrared/",
+  "integration_type": "helper",
+  "iot_class": "local_push",
+  "version": "0.1.0"
+}

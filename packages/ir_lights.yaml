@@ -1,0 +1,193 @@
+# Central scheduling for all IR-controlled light profiles.
+# Add future IR light profile entities to the two scripts below; the schedule
+# and the list of physical IR proxies then remain unchanged.
+
+input_boolean:
+  ir_lights_automation:
+    name: IR-ljus – automatisk styrning
+    icon: mdi:remote
+
+input_datetime:
+  ir_lights_on:
+    name: TID – IR-ljus tänds
+    has_date: false
+    has_time: true
+
+  ir_lights_off:
+    name: TID – IR-ljus släcks
+    has_date: false
+    has_time: true
+
+input_number:
+  ir_lights_before_diego_alarm:
+    name: TID – IR-ljus före Diegos alarm
+    icon: mdi:alarm-minus
+    min: 0
+    max: 120
+    step: 5
+    unit_of_measurement: min
+    mode: box
+
+input_select:
+  ir_lights_morning_start:
+    name: IR-ljus – morgonstart
+    icon: mdi:weather-sunset-up
+    options:
+      - Fast tid
+      - Diegos alarm
+      - Tidigast av båda
+
+script:
+  ir_lights_on:
+    alias: IR-ljus – tänd alla
+    icon: mdi:candle
+    mode: restart
+    sequence:
+      - action: homeassistant.turn_on
+        target:
+          entity_id:
+            - light.varmeljus
+
+  ir_lights_off:
+    alias: IR-ljus – släck alla
+    icon: mdi:candle-off
+    mode: restart
+    sequence:
+      - action: homeassistant.turn_off
+        target:
+          entity_id:
+            - light.varmeljus
+
+  ir_lights_automatic_on:
+    alias: IR-ljus – automatisk tändning
+    icon: mdi:weather-sunset-up
+    mode: restart
+    sequence:
+      # Normalise every candle to maximum brightness and slow flicker whenever
+      # an automation turns the IR lights on. Repeat the complete sequence once
+      # after two seconds to survive a brief line-of-sight obstruction.
+      # Manual controls remain untouched.
+      - action: script.ir_lights_on
+      - delay:
+          milliseconds: 500
+      - action: button.press
+        target:
+          entity_id: button.varmeljus_lage_light
+      - delay:
+          milliseconds: 300
+      - action: button.press
+        target:
+          entity_id: button.varmeljus_lage_sl
+      - delay:
+          seconds: 2
+      - action: script.ir_lights_on
+      - delay:
+          milliseconds: 500
+      - action: button.press
+        target:
+          entity_id: button.varmeljus_lage_light
+      - delay:
+          milliseconds: 300
+      - action: button.press
+        target:
+          entity_id: button.varmeljus_lage_sl
+
+  ir_lights_automatic_off:
+    alias: IR-ljus – automatisk släckning
+    icon: mdi:weather-night
+    mode: restart
+    sequence:
+      # Repeat automatic OFF once after two seconds. The manual OFF script
+      # remains a single transmission.
+      - action: script.ir_lights_off
+      - delay:
+          seconds: 2
+      - action: script.ir_lights_off
+
+automation:
+  - id: ir_lights_schedule
+    alias: IR-ljus – solfas, tider och väckarklocka
+    description: >-
+      Styr samtliga IR-ljus från samma scenflöde som fönsterbelysningen,
+      men med egna tider och valbar morgonstart före Diegos alarm.
+    mode: queued
+    max: 10
+    triggers:
+      - trigger: state
+        entity_id: input_select.light_scene
+        to: DUSK
+        id: dusk
+
+      - trigger: state
+        entity_id: input_select.light_scene
+        to: DAY
+        id: daylight
+
+      - trigger: time
+        at: input_datetime.ir_lights_on
+        id: fixed_morning
+
+      - trigger: time
+        at: input_datetime.ir_lights_off
+        id: scheduled_off
+
+      - trigger: template
+        id: diego_alarm
+        value_template: >-
+          {% set alarm = states('sensor.diegos_vackarklocka_alarms')
+             | as_datetime(default=None) %}
+          {% set offset = states('input_number.ir_lights_before_diego_alarm')
+             | int(15) %}
+          {{ alarm is not none
+             and now() >= alarm - timedelta(minutes=offset)
+             and now() < alarm - timedelta(minutes=offset) + timedelta(minutes=1) }}
+
+    conditions:
+      - condition: state
+        entity_id: input_boolean.ir_lights_automation
+        state: "on"
+
+    actions:
+      - choose:
+          - conditions:
+              - condition: trigger
+                id: dusk
+              - condition: template
+                value_template: >-
+                  {{ now() < today_at(states('input_datetime.ir_lights_off')) }}
+            sequence:
+              - action: script.ir_lights_automatic_on
+
+          - conditions:
+              - condition: trigger
+                id: fixed_morning
+              - condition: template
+                value_template: >-
+                  {{ states('input_select.ir_lights_morning_start')
+                     in ['Fast tid', 'Tidigast av båda'] }}
+              - condition: template
+                value_template: >-
+                  {{ not is_state('input_select.sun_phase', 'SUNPHASE_DAYLIGHT') }}
+            sequence:
+              - action: script.ir_lights_automatic_on
+
+          - conditions:
+              - condition: trigger
+                id: diego_alarm
+              - condition: template
+                value_template: >-
+                  {{ states('input_select.ir_lights_morning_start')
+                     in ['Diegos alarm', 'Tidigast av båda'] }}
+              - condition: template
+                value_template: >-
+                  {{ not is_state('input_select.sun_phase', 'SUNPHASE_DAYLIGHT') }}
+            sequence:
+              - action: script.ir_lights_automatic_on
+
+          - conditions:
+              - condition: trigger
+                id:
+                  - scheduled_off
+                  - daylight
+            sequence:
+              - action: script.ir_lights_automatic_off

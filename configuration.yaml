@@ -117,6 +117,18 @@ homeassistant:
     - /config/file_notifications
   auth_mfa_modules:
     - type: totp
+
+# Generic Home Assistant infrared broadcast and IR-controlled light profiles.
+infrared_broadcast:
+  name: IR Broadcast
+
+ir_lights:
+  - name: Värmeljus
+    unique_id: ir_lights_tea_lights
+    profiles:
+      - tea_lights_93cb
+      - taper_candles_ff00
+    emitter: infrared.ir_broadcast
     
 # Text to speech
 tts:
