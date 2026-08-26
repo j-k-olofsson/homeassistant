@@ -60,6 +60,7 @@ from .coordinator import OpenWrtDataCoordinator
 from .helpers import (
     format_ap_device_id,
     format_ap_name,
+    format_radio_device_id,
     get_via_device,
     is_random_mac,
     resolve_client_name,
@@ -162,34 +163,28 @@ class OpenWrtWifiSensorEntity(OpenWrtSensorEntity):
         # Ensure sensors are grouped under the correct AP device
         stable_id = coordinator.interface_to_stable_id.get(iface_name, iface_name)
 
-        # If multiple virtual interfaces map to the same AP device (e.g. mesh nodes),
-        # append the interface name to disambiguate the sensor entities.
-        if (
-            sum(
-                1
-                for sid in coordinator.interface_to_stable_id.values()
-                if sid == stable_id
+        wifi = next(
+            (
+                item
+                for item in coordinator.data.wireless_interfaces
+                if item.name == iface_name
+            ),
+            None,
+        )
+        via_device = (DOMAIN, coordinator.router_id)
+        if wifi and wifi.radio:
+            via_device = (
+                DOMAIN,
+                format_radio_device_id(coordinator.router_id, wifi.radio),
             )
-            > 1
-        ):
-            name_label = f"{name_label} [{iface_name}]"
-            # We also need to update the description name so the entity name reflects this.
-            # Use getattr to avoid AttributeError on HA versions where _attr_name has no
-            # class-level default until it is explicitly set.
-            existing_name = getattr(self, "_attr_name", None)
-            if existing_name:
-                self._attr_name = f"{existing_name} [{iface_name}]"
-            elif description.name:
-                self._attr_name = f"{description.name} [{iface_name}]"
-
         self._attr_device_info = DeviceInfo(
             identifiers={
                 (DOMAIN, format_ap_device_id(coordinator.router_id, stable_id))
             },
             name=name_label,
             manufacturer="OpenWrt",
-            model="Access Point",
-            via_device=(DOMAIN, coordinator.router_id),
+            model="Wireless SSID",
+            via_device=via_device,
         )
         self._attr_translation_placeholders = {"iface": iface_name}
 
@@ -522,11 +517,7 @@ def _get_system_sensors() -> tuple[OpenWrtSensorDescription, ...]:
             attrs_fn=lambda data: {
                 "days": data.system_resources.uptime // 86400,
                 "hours": (data.system_resources.uptime % 86400) // 3600,
-                "minutes": (
-                    (data.system_resources.uptime % 3600) // 60
-                    if data.system_resources.uptime < 3600
-                    else None
-                ),
+                "minutes": (data.system_resources.uptime % 3600) // 60,
             },
         ),
         OpenWrtSensorDescription(
@@ -1308,24 +1299,30 @@ async def async_setup_entry(
                     ent_reg.async_remove(ent.entity_id)
                     continue
 
-            # Cleanup orphaned network address sensors for physical devices or removed interfaces
+            # Cleanup orphaned network address sensors for physical devices, removed interfaces, or interfaces without an IP
             if unique_id.startswith(f"{entry.entry_id}_net_") and coordinator.data:
-                if unique_id.endswith(("_ipv4", "_ipv6")):
-                    # Check if interface still exists and is a logical interface with an IP or protocol
+                if unique_id.endswith("_ipv4"):
                     matched_iface = next(
                         (
                             i
                             for i in coordinator.data.network_interfaces
                             if f"_net_{i.name}_ipv4" in unique_id
-                            or f"_net_{i.name}_ipv6" in unique_id
                         ),
                         None,
                     )
-                    if not matched_iface or not (
-                        matched_iface.ipv4_address
-                        or matched_iface.ipv6_address
-                        or matched_iface.protocol
-                    ):
+                    if not matched_iface or not matched_iface.ipv4_address:
+                        ent_reg.async_remove(ent.entity_id)
+                        continue
+                elif unique_id.endswith("_ipv6"):
+                    matched_iface = next(
+                        (
+                            i
+                            for i in coordinator.data.network_interfaces
+                            if f"_net_{i.name}_ipv6" in unique_id
+                        ),
+                        None,
+                    )
+                    if not matched_iface or not matched_iface.ipv6_address:
                         ent_reg.async_remove(ent.entity_id)
                         continue
 
@@ -2433,65 +2430,75 @@ def _create_net_address_sensors(
 ) -> None:
     """Create address-related sensors (IPv4/IPv6) for an interface."""
     iface_name = iface.name
-    # Disable IPv4 sensor by default for bridge/physical device without an IP
-    ipv4_enabled_default = bool(iface.ipv4_address)
 
     # IPv4
-    sensors.append(
-        OpenWrtSensorEntity(
-            coordinator,
-            entry,
-            OpenWrtSensorDescription(
-                key=f"net_{iface_name}_ipv4",
-                name=f"{iface_name} IPv4 Address",
-                translation_key="net_ipv4",
-                translation_placeholders={"interface": iface_name},
-                entity_category=EntityCategory.DIAGNOSTIC,
-                entity_registry_enabled_default=ipv4_enabled_default,
-                value_fn=lambda data, n=iface_name: next(
-                    (i.ipv4_address for i in data.network_interfaces if i.name == n),
-                    None,
-                ),
-                available_fn=lambda data, n=iface_name: any(
-                    i.name == n and i.ipv4_address for i in data.network_interfaces
-                ),
-                attrs_fn=lambda data, n=iface_name: next(
-                    (
-                        {
-                            "dns_servers": (
-                                ", ".join(i.dns_servers) if i.dns_servers else "none"
-                            )
-                        }
-                        for i in data.network_interfaces
-                        if i.name == n
+    if iface.ipv4_address:
+        sensors.append(
+            OpenWrtSensorEntity(
+                coordinator,
+                entry,
+                OpenWrtSensorDescription(
+                    key=f"net_{iface_name}_ipv4",
+                    name=f"{iface_name} IPv4 Address",
+                    translation_key="net_ipv4",
+                    translation_placeholders={"interface": iface_name},
+                    entity_category=EntityCategory.DIAGNOSTIC,
+                    entity_registry_enabled_default=True,
+                    value_fn=lambda data, n=iface_name: next(
+                        (
+                            i.ipv4_address
+                            for i in data.network_interfaces
+                            if i.name == n
+                        ),
+                        None,
                     ),
-                    {},
+                    available_fn=lambda data, n=iface_name: any(
+                        i.name == n and i.ipv4_address for i in data.network_interfaces
+                    ),
+                    attrs_fn=lambda data, n=iface_name: next(
+                        (
+                            {
+                                "dns_servers": (
+                                    ", ".join(i.dns_servers)
+                                    if i.dns_servers
+                                    else "none"
+                                )
+                            }
+                            for i in data.network_interfaces
+                            if i.name == n
+                        ),
+                        {},
+                    ),
                 ),
-            ),
+            )
         )
-    )
     # IPv6
-    sensors.append(
-        OpenWrtSensorEntity(
-            coordinator,
-            entry,
-            OpenWrtSensorDescription(
-                key=f"net_{iface_name}_ipv6",
-                name=f"{iface_name} IPv6 Address",
-                translation_key="net_ipv6",
-                translation_placeholders={"interface": iface_name},
-                entity_category=EntityCategory.DIAGNOSTIC,
-                entity_registry_enabled_default=False,
-                value_fn=lambda data, n=iface_name: next(
-                    (i.ipv6_address for i in data.network_interfaces if i.name == n),
-                    None,
+    if iface.ipv6_address:
+        sensors.append(
+            OpenWrtSensorEntity(
+                coordinator,
+                entry,
+                OpenWrtSensorDescription(
+                    key=f"net_{iface_name}_ipv6",
+                    name=f"{iface_name} IPv6 Address",
+                    translation_key="net_ipv6",
+                    translation_placeholders={"interface": iface_name},
+                    entity_category=EntityCategory.DIAGNOSTIC,
+                    entity_registry_enabled_default=False,
+                    value_fn=lambda data, n=iface_name: next(
+                        (
+                            i.ipv6_address
+                            for i in data.network_interfaces
+                            if i.name == n
+                        ),
+                        None,
+                    ),
+                    available_fn=lambda data, n=iface_name: any(
+                        i.name == n and i.ipv6_address for i in data.network_interfaces
+                    ),
                 ),
-                available_fn=lambda data, n=iface_name: any(
-                    i.name == n and i.ipv6_address for i in data.network_interfaces
-                ),
-            ),
+            )
         )
-    )
 
 
 def _create_net_status_sensors(
@@ -2710,6 +2717,7 @@ def _create_mwan_sensors(
                 name=f"MWAN {iface_name} Online Ratio",
                 native_unit_of_measurement=PERCENTAGE,
                 state_class=SensorStateClass.MEASUREMENT,
+                suggested_display_precision=2,
                 value_fn=lambda data, n=iface_name: next(
                     (
                         m.online_ratio * 100

@@ -334,13 +334,7 @@ try:
 
         output_nodes.append(item)
 
-    sleepy_ids = {
-        str(node.get("id"))
-        for node in topology.get("nodes", [])
-        if node.get("role") == "sleepy_end_device"
-    }
-
-    child_links = []
+    connections = []
 
     for link in topology.get("connections", []):
         if link.get("network") != "thread":
@@ -349,12 +343,9 @@ try:
         source = str(link.get("source"))
         target = str(link.get("target"))
 
-        if source not in sleepy_ids and target not in sleepy_ids:
-            continue
-
         radio = link.get("source_to_target") or {}
 
-        child_links.append({
+        connections.append({
             "source": source,
             "target": target,
             "strength": radio.get("strength") or link.get("strength"),
@@ -367,7 +358,16 @@ try:
         "count": len(output_nodes),
         "collected_at": topology.get("collected_at"),
         "nodes": output_nodes,
-        "child_links": child_links
+        "connections": connections,
+        # Kept for the existing Markdown card.
+        "child_links": [
+            link for link in connections
+            if any(
+                str(node.get("id")) in (link["source"], link["target"])
+                and node.get("role") == "sleepy_end_device"
+                for node in topology.get("nodes", [])
+            )
+        ]
     }
 
     print(json.dumps(

@@ -350,6 +350,7 @@ command_line:
       json_attributes:
         - nodes
         - collected_at
+        - connections
         - child_links
   - sensor:
       name: Nest Hub Test 210

@@ -14,12 +14,33 @@ from ..base import (
     WireGuardPeer,
     WirelessInterface,
 )
-from .exceptions import *
+from .exceptions import UbusError
 
 _LOGGER = logging.getLogger(__name__)
 UBUS_JSONRPC_VERSION = "2.0"
 UBUS_ID_AUTH = 1
 UBUS_ID_CALL = 2
+
+
+def _as_seconds(value: Any) -> float:
+    """Coerce a ubus duration field to float seconds.
+
+    Routers occasionally omit these fields or report them as null, in which
+    case float() would raise and abort the whole status response.
+    """
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def _valid_txpower(value: Any) -> int:
+    """Return a positive dBm value, or zero when OpenWrt has no reading."""
+    try:
+        power = int(float(value))
+    except (TypeError, ValueError):
+        return 0
+    return power if power > 0 else 0
 
 
 class UbusNetworkMixin:
@@ -71,21 +92,28 @@ class UbusNetworkMixin:
                                 continue
 
                             iface_config = iface.get("config", {})
+                            iface_disabled = WirelessInterface._uci_disabled(
+                                iface_config.get("disabled", False)
+                            )
                             wifi = WirelessInterface(
                                 name=iface_name,
                                 ssid=iface_config.get("ssid", ""),
                                 mode=iface_config.get("mode", ""),
                                 encryption=iface_config.get("encryption", ""),
                                 enabled=not radio_data.get("disabled", False),
+                                interface_enabled=not iface_disabled,
                                 up=not radio_data.get("disabled", False),
                                 radio=radio_name,
+                                radio_enabled=not radio_data.get("disabled", False),
                                 band=WirelessInterface._band_from_raw(
                                     radio_data.get("config", {}).get("band", "")
                                     or radio_data.get("config", {}).get("hwmode", "")
                                 ),
                                 htmode=radio_data.get("config", {}).get("htmode", ""),
                                 hwmode=radio_data.get("config", {}).get("hwmode", ""),
-                                txpower=radio_data.get("config", {}).get("txpower", 0),
+                                txpower=_valid_txpower(
+                                    radio_data.get("config", {}).get("txpower")
+                                ),
                                 mesh_id=iface_config.get("mesh_id", ""),
                                 mesh_fwding=iface_config.get("mesh_fwding", False),
                                 section=section,
@@ -133,13 +161,18 @@ class UbusNetworkMixin:
                             mode=sect_data.get("mode", ""),
                             encryption=sect_data.get("encryption", ""),
                             enabled=not (radio_disabled or iface_disabled),
+                            interface_enabled=not iface_disabled,
                             up=not (radio_disabled or iface_disabled),
                             radio=radio_name,
+                            radio_enabled=not radio_disabled,
                             band=WirelessInterface._band_from_raw(
                                 vals.get(radio_name, {}).get("band", "")
                                 or vals.get(radio_name, {}).get("hwmode", "")
                             ),
                             hwmode=vals.get(radio_name, {}).get("hwmode", ""),
+                            txpower=_valid_txpower(
+                                vals.get(radio_name, {}).get("txpower")
+                            ),
                             section=sect_name,
                             ifname=sect_data.get("ifname"),
                         )
@@ -211,6 +244,9 @@ class UbusNetworkMixin:
                         wifi.ssid = iwinfo.get("ssid", "")
                     wifi.mac_address = iwinfo.get("bssid", "").upper()
                     wifi.channel = iwinfo.get("channel", 0)
+                    reported_txpower = _valid_txpower(iwinfo.get("txpower"))
+                    if reported_txpower:
+                        wifi.txpower = reported_txpower
                     wifi.frequency = str(iwinfo.get("frequency", ""))
                     # Re-resolve band from frequency if not already set
                     if not wifi.band and wifi.frequency:
@@ -239,8 +275,6 @@ class UbusNetworkMixin:
                     if q_val is not None and q_max:
                         wifi.quality = round((q_val / q_max) * 100, 1)
 
-                    if iwinfo.get("txpower") is not None:
-                        wifi.txpower = iwinfo["txpower"]
                     if iwinfo.get("txpower_offset") is not None:
                         wifi.txpower_offset = iwinfo["txpower_offset"]
 
@@ -582,11 +616,21 @@ class UbusNetworkMixin:
             data = await self._call("mwan3", "status")
             interfaces = data.get("interfaces", {})
             for iface_name, iface_data in interfaces.items():
+                # mwan3 reports "online" and "uptime" as durations in
+                # seconds. online_ratio is expected to be the fraction of
+                # uptime spent online; passing the raw seconds through made
+                # the sensor display values in the millions of percent.
+                online_secs = _as_seconds(iface_data.get("online"))
+                uptime_secs = _as_seconds(iface_data.get("uptime"))
                 statuses.append(
                     MwanStatus(
                         interface_name=iface_name,
                         status=iface_data.get("status", "unknown"),
-                        online_ratio=float(iface_data.get("online", 0)),
+                        online_ratio=(
+                            min(online_secs / uptime_secs, 1.0)
+                            if uptime_secs > 0
+                            else 0.0
+                        ),
                         uptime=iface_data.get("uptime", 0),
                         enabled=iface_data.get("enabled", False),
                     ),
