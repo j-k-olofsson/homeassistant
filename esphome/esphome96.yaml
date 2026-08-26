@@ -9,3 +9,18 @@ substitutions:
 # Include packages for this device specific type
 packages:
   file: !include common/.device_m5stack_atom_lite_ir_proxy.yaml
+
+button:
+  - platform: template
+    name: "IR-proxy 1 Candle ON"
+    on_press:
+      - remote_transmitter.transmit_nec:
+          address: 0x93CB
+          command: 0xAF50
+
+  - platform: template
+    name: "IR-proxy 1 Candle OFF"
+    on_press:
+      - remote_transmitter.transmit_nec:
+          address: 0x93CB
+          command: 0xA05F
