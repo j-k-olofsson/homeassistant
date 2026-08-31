@@ -205,6 +205,14 @@ async def async_setup_entry(
                         ent_reg.async_remove(ent.entity_id)
                         continue
 
+                    # Kick buttons only make sense for clients currently
+                    # associated with this AP. Remove stale registry entries so
+                    # they are not restored without a backing entity at startup.
+                    key = unique_id.removeprefix(f"{entry.entry_id}_")
+                    if key not in tracked_keys:
+                        ent_reg.async_remove(ent.entity_id)
+                        continue
+
     hass.add_job(_async_cleanup_entities)
     _async_add_new_entities()
 
@@ -568,6 +576,21 @@ def _get_unique_devices(
             }
         elif not unique[mac_lower]["hostname"] or unique[mac_lower]["hostname"] == "*":
             unique[mac_lower]["hostname"] = lease.hostname
+
+    # Keep persistent controls such as Wake-on-LAN available for known offline
+    # wired clients. Wireless clients remain inactive and therefore do not get
+    # a kick button until they associate again.
+    for mac, history in coordinator._device_history.items():
+        unique.setdefault(
+            mac.lower(),
+            {
+                "mac": mac,
+                "hostname": history.get("hostname") or history.get("name") or mac,
+                "is_wireless": history.get("is_wireless", False),
+                "interface": history.get("interface"),
+                "active": False,
+            },
+        )
     return unique
 
 

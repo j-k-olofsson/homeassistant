@@ -149,6 +149,16 @@ async def async_setup_entry(
                 if mac_lower not in unique_devices or not unique_devices[mac_lower]:
                     unique_devices[mac_lower] = lease.hostname
 
+        # Registry entries survive restarts, so previously seen clients must be
+        # instantiated even when they happen to be offline during startup.
+        # Otherwise Home Assistant restores the old registry entry without a
+        # backing entity and repair integrations correctly report it as dead.
+        for mac, history in coordinator._device_history.items():
+            unique_devices.setdefault(
+                mac.lower(),
+                history.get("hostname") or history.get("name") or mac,
+            )
+
         # An access point has no DHCP data, so fall back to the hostname another
         # config entry resolved. Without this its trackers are named by MAC.
         shared_hostnames = hass.data.get(DOMAIN, {}).get("hostname_registry", {})

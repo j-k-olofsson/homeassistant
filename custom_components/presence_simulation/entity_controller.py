@@ -26,6 +26,7 @@ class EntityController:
         should_send_event: bool,
         event_fire_callback: Any,
         event_name: str,
+        event_metadata: Optional[dict] = None,
     ) -> Optional[dict]:
         """Switch the entity to the given state."""
         domain = entity_id.split(".")[0]
@@ -50,7 +51,8 @@ class EntityController:
             )
 
         if event_data is not None and should_send_event:
-            event_fire_callback(event_name, event_data)
+            event_payload = {**event_data, **(event_metadata or {})}
+            event_fire_callback(event_name, event_payload)
 
         return event_data
 

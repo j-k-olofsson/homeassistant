@@ -166,8 +166,14 @@ automation:
                   {{ states('input_select.ir_lights_morning_start')
                      in ['Fast tid', 'Tidigast av båda'] }}
               - condition: template
+                alias: Fönsterbelysningens dagsljusscen har inte börjat
                 value_template: >-
-                  {{ not is_state('input_select.sun_phase', 'SUNPHASE_DAYLIGHT') }}
+                  {{ not is_state('input_select.light_scene', 'DAY')
+                     and not is_state('input_select.sun_phase', 'SUNPHASE_DAYLIGHT') }}
+              - condition: template
+                alias: Den obligatoriska släcktiden har inte passerat
+                value_template: >-
+                  {{ now() < today_at(states('input_datetime.ir_lights_off')) }}
             sequence:
               - action: script.ir_lights_automatic_on
 
@@ -179,8 +185,14 @@ automation:
                   {{ states('input_select.ir_lights_morning_start')
                      in ['Diegos alarm', 'Tidigast av båda'] }}
               - condition: template
+                alias: Fönsterbelysningens dagsljusscen har inte börjat
                 value_template: >-
-                  {{ not is_state('input_select.sun_phase', 'SUNPHASE_DAYLIGHT') }}
+                  {{ not is_state('input_select.light_scene', 'DAY')
+                     and not is_state('input_select.sun_phase', 'SUNPHASE_DAYLIGHT') }}
+              - condition: template
+                alias: Den obligatoriska släcktiden har inte passerat
+                value_template: >-
+                  {{ now() < today_at(states('input_datetime.ir_lights_off')) }}
             sequence:
               - action: script.ir_lights_automatic_on
 

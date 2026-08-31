@@ -10,7 +10,16 @@ from typing import Any, Callable, Dict, List, Optional
 from homeassistant.core import HomeAssistant, Context
 from homeassistant.helpers import label_registry as lr, entity_registry as er
 
-from .const import DOMAIN, SWITCH_PLATFORM, RESTORE_SCENE, SCENE_PLATFORM, MY_EVENT, MIN_DELAY
+from .const import (
+    DOMAIN,
+    SWITCH_PLATFORM,
+    RESTORE_SCENE,
+    SCENE_PLATFORM,
+    MY_EVENT,
+    MIN_DELAY,
+    MIN_EVENT_SPACING,
+    MIN_STATE_DURATION,
+)
 from .history import HistoryManager
 from .entity_controller import EntityController
 
@@ -144,7 +153,7 @@ class PresenceSimulationServices:
                     _LOGGER.warning("Start datetime could not be set to HA timezone: %s", e)
                     await entity.set_start_datetime(datetime.now())
 
-            if entity.restore and not after_ha_restart:
+            if entity.restore and not entity.dry_run and not after_ha_restart:
                 service_data: Dict[str, Any] = {}
                 service_data["scene_id"] = self._get_scene_name(switch_id)
                 service_data["snapshot_entities"] = expanded_entities
@@ -173,6 +182,7 @@ class PresenceSimulationServices:
             expanded_entities,
             switch_id,
             call,
+            after_ha_restart,
         )
 
     def _fetch_and_handle_history(
@@ -182,12 +192,16 @@ class PresenceSimulationServices:
         expanded_entities: List[str],
         switch_id: str,
         call: Optional[Any],
+        after_ha_restart: bool,
     ) -> None:
         """Fetch history and dispatch to entity simulators."""
         history = HistoryManager.get_history(hass, minus_delta, expanded_entities)
         entity = self._get_switch_entity()[switch_id]
         filtered_history = HistoryManager.filter_out_undefined(
             history, not entity.unavailable_as_off
+        )
+        filtered_history = HistoryManager.filter_short_state_pulses(
+            filtered_history, MIN_STATE_DURATION
         )
         _LOGGER.debug("history after filtering: %s", filtered_history)
 
@@ -201,6 +215,7 @@ class PresenceSimulationServices:
                     filtered_history[entity_id],
                     entity.delta,
                     entity.random,
+                    after_ha_restart,
                 )
             )
 
@@ -214,6 +229,7 @@ class PresenceSimulationServices:
         hist: List[Any],
         delta: int,
         random_val: int,
+        after_ha_restart: bool,
     ) -> None:
         """Replay the historic of one entity."""
         _LOGGER.debug("Simulate one entity: %s", entity_id)
@@ -221,6 +237,10 @@ class PresenceSimulationServices:
         entity = self._get_switch_entity()[switch_id]
         is_running = self._is_running
         event_fire = self._hass.bus.fire
+        random_offset_seconds = (
+            random.uniform(-random_val, random_val) if random_val > 0 else 0
+        )
+        last_target_time: Optional[datetime] = None
 
         for idx, state in enumerate(hist):
             _LOGGER.debug("State %s", state.as_dict())
@@ -233,11 +253,9 @@ class PresenceSimulationServices:
             _LOGGER.debug("Switch of %s foreseen at %s", entity_id, target_time + timedelta(delta))
 
             if idx > 0:
-                _LOGGER.debug("Randomize the event within a range of +/- %s sec", random_val)
-                random_delta = random.uniform(-random_val, random_val)
-                _LOGGER.debug("Randomize the event of %s seconds", random_delta)
-                random_delta = random_delta / 60 / 60 / 24
-                target_time += timedelta(random_delta)
+                # Use one offset per entity so event order and on-time durations
+                # remain intact instead of randomizing each edge independently.
+                target_time += timedelta(seconds=random_offset_seconds)
                 initial_secs_left = (target_time - datetime.now(timezone.utc)).total_seconds()
 
                 if initial_secs_left < MIN_DELAY and random_val > 0:
@@ -251,6 +269,21 @@ class PresenceSimulationServices:
                     _LOGGER.debug(
                         "initial_secs_left %s, target_time %s", initial_secs_left, target_time
                     )
+
+                if (
+                    last_target_time is not None
+                    and target_time
+                    < last_target_time + timedelta(seconds=MIN_EVENT_SPACING)
+                ):
+                    target_time = last_target_time + timedelta(
+                        seconds=MIN_EVENT_SPACING
+                    )
+
+            if idx == 0 and after_ha_restart:
+                # The first history item represents the current baseline. Replaying
+                # it after a HA restart can unexpectedly switch several lights.
+                last_target_time = datetime.now(timezone.utc)
+                continue
 
             await entity.async_add_next_event(target_time, entity_id, state.state)
 
@@ -269,10 +302,20 @@ class PresenceSimulationServices:
                 entity.unavailable_as_off,
                 entity.brightness,
                 entity.dry_run,
-                idx > 0,
+                True,
                 event_fire,
                 MY_EVENT,
+                {
+                    "simulation_switch_id": switch_id,
+                    "source_datetime": last_updated.isoformat(),
+                    "scheduled_datetime": target_time.isoformat(),
+                    "random_offset_seconds": round(random_offset_seconds, 3),
+                    "event_index": idx,
+                    "initial_state": idx == 0,
+                    "resumed_after_restart": after_ha_restart,
+                },
             )
+            last_target_time = target_time
             await entity.async_remove_event(entity_id)
 
     async def stop_simulation(
@@ -317,7 +360,7 @@ class PresenceSimulationServices:
             scene = self._hass.states.get(
                 SCENE_PLATFORM + "." + self._get_scene_name(switch_id)
             )
-            if scene is not None and entity.restore:
+            if scene is not None and entity.restore and not entity.dry_run:
                 service_data: Dict[str, Any] = {}
                 service_data["entity_id"] = (
                     SCENE_PLATFORM + "." + self._get_scene_name(switch_id)
@@ -336,6 +379,7 @@ class PresenceSimulationServices:
                     )
 
             await entity.reset_restore_states()
+            await entity.reset_default_values_async()
 
     async def toggle_simulation(self, call: Any) -> None:
         """Toggle the presence simulation."""
@@ -357,7 +401,6 @@ class PresenceSimulationServices:
     async def _schedule_restart(self, call: Any, switch_id: str) -> None:
         """Make sure that once delta days is passed, relaunch the simulation."""
         entity = self._get_switch_entity()[switch_id]
-        await entity.reset_default_values_async()
         _LOGGER.debug("Presence simulation will be relaunched in %i days", entity.delta)
 
         start_plus_delta = datetime.now(timezone.utc) + timedelta(entity.delta)

@@ -32,6 +32,51 @@ class HistoryManager:
         return filtered
 
     @staticmethod
+    def filter_short_state_pulses(
+        history: Dict[str, List[Any]], minimum_duration: int
+    ) -> Dict[str, List[Any]]:
+        """Remove short A-B-A on/off pulses from replay history."""
+        filtered: Dict[str, List[Any]] = {}
+
+        for entity_id, states in history.items():
+            result: List[Any] = []
+            index = 0
+
+            while index < len(states):
+                current = states[index]
+
+                if result and index + 1 < len(states):
+                    previous = result[-1]
+                    following = states[index + 1]
+                    pulse_duration = (
+                        following.last_updated - current.last_updated
+                    ).total_seconds()
+
+                    if (
+                        previous.state in ("on", "off")
+                        and current.state in ("on", "off")
+                        and following.state in ("on", "off")
+                        and previous.state == following.state
+                        and current.state != previous.state
+                        and pulse_duration < minimum_duration
+                    ):
+                        _LOGGER.debug(
+                            "Filtered %s pulse for %s lasting %.1f seconds",
+                            current.state,
+                            entity_id,
+                            pulse_duration,
+                        )
+                        index += 2
+                        continue
+
+                result.append(current)
+                index += 1
+
+            filtered[entity_id] = result
+
+        return filtered
+
+    @staticmethod
     def get_history(
         hass: HomeAssistant,
         start_time: datetime,

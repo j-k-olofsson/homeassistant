@@ -51,15 +51,7 @@ light:
     unique_id: narvarosimulering_lampor_group
     entities:
       - light.grupp_taklampor_kok
-      - light.taklampor_sovrum_esphome54_light
-      - light.taklampa_kontoret
-      - light.taklampor_verandan
-      - light.taklampor_kokson
-      - light.shellypro3_ec626089edbc_switch_0
-      - light.esphome57_esphome57_light
-      - light.esphome59_esphome59_light
       - light.esphome60_esphome60_light
-      - light.esphome63_light
 
 script:
   narvarosimulering_start:
@@ -138,8 +130,37 @@ automation:
           message: >-
             Skulle ha kört {{ trigger.event.data.service }} på
             {{ trigger.event.data.entity_id }} med data
-            {{ trigger.event.data.service_data | tojson }}
+            {{ trigger.event.data.service_data | tojson }}.
+            Källtid: {{ trigger.event.data.source_datetime }};
+            schemalagd tid: {{ trigger.event.data.scheduled_datetime }};
+            slumpförskjutning: {{ trigger.event.data.random_offset_seconds }} s;
+            återupptagen efter omstart:
+            {{ trigger.event.data.resumed_after_restart }}.
           entity_id: input_boolean.narvarosimulering_testlage
+
+  - id: narvarosimulering_permanent_aktivitetslogg
+    alias: Narvarosimulering - permanent aktivitetslogg
+    mode: queued
+    max: 100
+    triggers:
+      - trigger: event
+        event_type: presence_simulation_change
+    actions:
+      - action: notify.send_message
+        continue_on_error: true
+        target:
+          entity_id: notify.file
+        data:
+          message: >-
+            Narvarosimulering {{ 'TEST' if trigger.event.data.dry_run | default(false) else 'SKARP' }}:
+            {{ trigger.event.data.service }}
+            {{ trigger.event.data.entity_id }};
+            data={{ trigger.event.data.service_data | tojson }};
+            source={{ trigger.event.data.source_datetime }};
+            scheduled={{ trigger.event.data.scheduled_datetime }};
+            random_offset={{ trigger.event.data.random_offset_seconds }}s;
+            initial={{ trigger.event.data.initial_state }};
+            resumed={{ trigger.event.data.resumed_after_restart }}
 
   - id: narvarosimulering_dry_run_sammanfattning
     alias: Narvarosimulering - dry run sammanfattning
@@ -159,4 +180,31 @@ automation:
           message: >-
             Testkörning avslutad.
             Antal simulerade åtgärder: {{ states('input_number.narvarosimulering_test_events') | int(0) }}.
-            Se Logbook för detaljer per händelse.
+            Detaljer finns i /config/file_notifications/scripts.log.
+
+  - id: narvarosimulering_test_24h_autostopp
+    alias: Narvarosimulering - stoppa 24-timmarstest
+    mode: restart
+    triggers:
+      - trigger: state
+        entity_id: input_boolean.narvarosimulering_aktiv
+        to: "on"
+    conditions:
+      - condition: state
+        entity_id: input_boolean.narvarosimulering_testlage
+        state: "on"
+    actions:
+      - delay: "24:00:00"
+      - condition: state
+        entity_id: input_boolean.narvarosimulering_aktiv
+        state: "on"
+      - condition: state
+        entity_id: input_boolean.narvarosimulering_testlage
+        state: "on"
+      - action: input_boolean.turn_off
+        target:
+          entity_id: input_boolean.narvarosimulering_aktiv
+      - delay: "00:00:05"
+      - action: input_boolean.turn_off
+        target:
+          entity_id: input_boolean.narvarosimulering_testlage

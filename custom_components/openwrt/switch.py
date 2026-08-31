@@ -418,30 +418,43 @@ def _add_access_control_switches(
     skip_random = entry.options.get(CONF_SKIP_RANDOM_MAC, DEFAULT_SKIP_RANDOM_MAC)
     from .helpers import is_random_mac
 
+    clients: dict[str, tuple[str | None, bool]] = {}
     for device in coordinator.data.connected_devices:
-        if not device.mac:
-            continue
+        if device.mac:
+            clients[device.mac.lower()] = (device.hostname, device.is_wireless)
 
-        mac = device.mac.lower()
+    # Access-control rules are useful while a client is offline as well. Using
+    # history also guarantees that existing registry entries get a backing
+    # entity after restart instead of becoming dead repairs.
+    for mac, history in coordinator._device_history.items():
+        clients.setdefault(
+            mac.lower(),
+            (
+                history.get("hostname") or history.get("name"),
+                history.get("is_wireless", False),
+            ),
+        )
+
+    for mac, (hostname, is_wireless) in clients.items():
         if skip_random and is_random_mac(mac):
             continue
 
-        if not track_wired and not device.is_wireless:
+        if not track_wired and not is_wireless:
             continue
 
         key = f"access_{mac.replace(':', '_')}"
         if key not in tracked_keys:
             tracked_keys.add(key)
             dev_name = (
-                device.hostname
-                if device.hostname and device.hostname not in ("*", router_hostname)
-                else device.mac
+                hostname
+                if hostname and hostname not in ("*", router_hostname)
+                else mac
             )
             ac_rule = next(
                 (
                     r
                     for r in coordinator.data.access_control
-                    if r.mac and r.mac.lower() == device.mac.lower()
+                    if r.mac and r.mac.lower() == mac
                 ),
                 None,
             )
@@ -450,7 +463,7 @@ def _add_access_control_switches(
                     coordinator,
                     entry,
                     client,
-                    device.mac.lower(),
+                    mac,
                     dev_name,
                     ac_rule.section_id if ac_rule else None,
                 ),

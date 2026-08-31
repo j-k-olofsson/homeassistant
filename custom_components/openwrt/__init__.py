@@ -192,6 +192,7 @@ async def _async_cleanup_disabled_features(
                 or "_wol" in ent_unique_id
                 or "_kick_" in ent_unique_id
                 or "_access_" in ent_unique_id
+                or ent_unique_id.endswith("_new_device_event")
             ):
                 should_remove = True
 
