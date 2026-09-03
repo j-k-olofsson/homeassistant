@@ -99,3 +99,18 @@ remote_receiver:
     number: GPIO5
     inverted: True
   dump: all
+
+# Expose the existing IR hardware as a Home Assistant IR proxy.
+# The transmitter and receiver above remain available to the existing buttons
+# and protocol dumper; the proxy only adds API-accessible IR entities.
+infrared:
+  - platform: ir_rf_proxy
+    id: ir_proxy_tx
+    name: ${node_name} IR Transmitter
+    remote_transmitter_id: ir_transmitter
+
+  - platform: ir_rf_proxy
+    id: ir_proxy_rx
+    name: ${node_name} IR Receiver
+    receiver_frequency: 38kHz
+    remote_receiver_id: ir_reciever
