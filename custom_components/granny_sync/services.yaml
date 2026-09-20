@@ -1,6 +1,6 @@
 speak:
   name: Synkroniserat Granny-meddelande
-  description: Kontrollerar synkgruppen och utesluter felande medlemmar för denna utsändning.
+  description: Ett gemensamt MA-grupputrop och återupptagning av tidigare spelande MA-köer.
   fields:
     entity_id:
       required: true
@@ -19,6 +19,6 @@ speak:
           multiline: true
     test_only:
       default: false
-      description: Testa enbart med tyst ljud i den synkroniserade gruppen.
+      description: Kontrollera mål och köer utan att spela ljud eller ändra spelarna.
       selector:
         boolean:

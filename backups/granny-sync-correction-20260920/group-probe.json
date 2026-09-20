@@ -1,0 +1,572 @@
+[
+  [
+    {
+      "player_id": "syncgroup_rk7qfzy6",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": null,
+      "synced_to": null,
+      "active_output_protocol": null,
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    },
+    {
+      "player_id": "upb2965530",
+      "state": "playing",
+      "elapsed_time": 1.053724,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": "up0ba23cfe",
+      "active_output_protocol": "spb_00f48d97d9b5",
+      "group_members": []
+    },
+    {
+      "player_id": "up0ba23cfe",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": null,
+      "active_output_protocol": "spb_80c5f267aa69",
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    }
+  ],
+  [
+    {
+      "player_id": "syncgroup_rk7qfzy6",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": null,
+      "synced_to": null,
+      "active_output_protocol": null,
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    },
+    {
+      "player_id": "upb2965530",
+      "state": "playing",
+      "elapsed_time": 1.053724,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": "up0ba23cfe",
+      "active_output_protocol": "spb_00f48d97d9b5",
+      "group_members": []
+    },
+    {
+      "player_id": "up0ba23cfe",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": null,
+      "active_output_protocol": "spb_80c5f267aa69",
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    }
+  ],
+  [
+    {
+      "player_id": "syncgroup_rk7qfzy6",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": null,
+      "synced_to": null,
+      "active_output_protocol": null,
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    },
+    {
+      "player_id": "upb2965530",
+      "state": "playing",
+      "elapsed_time": 1.053724,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": "up0ba23cfe",
+      "active_output_protocol": "spb_00f48d97d9b5",
+      "group_members": []
+    },
+    {
+      "player_id": "up0ba23cfe",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": null,
+      "active_output_protocol": "spb_80c5f267aa69",
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    }
+  ],
+  [
+    {
+      "player_id": "syncgroup_rk7qfzy6",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": null,
+      "synced_to": null,
+      "active_output_protocol": null,
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    },
+    {
+      "player_id": "upb2965530",
+      "state": "playing",
+      "elapsed_time": 1.053724,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": "up0ba23cfe",
+      "active_output_protocol": "spb_00f48d97d9b5",
+      "group_members": []
+    },
+    {
+      "player_id": "up0ba23cfe",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": null,
+      "active_output_protocol": "spb_80c5f267aa69",
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    }
+  ],
+  [
+    {
+      "player_id": "syncgroup_rk7qfzy6",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": null,
+      "synced_to": null,
+      "active_output_protocol": null,
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    },
+    {
+      "player_id": "upb2965530",
+      "state": "playing",
+      "elapsed_time": 1.053724,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": "up0ba23cfe",
+      "active_output_protocol": "spb_00f48d97d9b5",
+      "group_members": []
+    },
+    {
+      "player_id": "up0ba23cfe",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": null,
+      "active_output_protocol": "spb_80c5f267aa69",
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    }
+  ],
+  [
+    {
+      "player_id": "syncgroup_rk7qfzy6",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": null,
+      "synced_to": null,
+      "active_output_protocol": null,
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    },
+    {
+      "player_id": "upb2965530",
+      "state": "playing",
+      "elapsed_time": 1.053724,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": "up0ba23cfe",
+      "active_output_protocol": "spb_00f48d97d9b5",
+      "group_members": []
+    },
+    {
+      "player_id": "up0ba23cfe",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": null,
+      "active_output_protocol": "spb_80c5f267aa69",
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    }
+  ],
+  [
+    {
+      "player_id": "syncgroup_rk7qfzy6",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": null,
+      "synced_to": null,
+      "active_output_protocol": null,
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    },
+    {
+      "player_id": "upb2965530",
+      "state": "playing",
+      "elapsed_time": 1.053724,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": "up0ba23cfe",
+      "active_output_protocol": "spb_00f48d97d9b5",
+      "group_members": []
+    },
+    {
+      "player_id": "up0ba23cfe",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": null,
+      "active_output_protocol": "spb_80c5f267aa69",
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    }
+  ],
+  [
+    {
+      "player_id": "syncgroup_rk7qfzy6",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": null,
+      "synced_to": null,
+      "active_output_protocol": null,
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    },
+    {
+      "player_id": "upb2965530",
+      "state": "playing",
+      "elapsed_time": 1.053724,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": "up0ba23cfe",
+      "active_output_protocol": "spb_00f48d97d9b5",
+      "group_members": []
+    },
+    {
+      "player_id": "up0ba23cfe",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": null,
+      "active_output_protocol": "spb_80c5f267aa69",
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    }
+  ],
+  [
+    {
+      "player_id": "syncgroup_rk7qfzy6",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": null,
+      "synced_to": null,
+      "active_output_protocol": null,
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    },
+    {
+      "player_id": "upb2965530",
+      "state": "playing",
+      "elapsed_time": 1.053724,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": "up0ba23cfe",
+      "active_output_protocol": "spb_00f48d97d9b5",
+      "group_members": []
+    },
+    {
+      "player_id": "up0ba23cfe",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": null,
+      "active_output_protocol": "spb_80c5f267aa69",
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    }
+  ],
+  [
+    {
+      "player_id": "syncgroup_rk7qfzy6",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": null,
+      "synced_to": null,
+      "active_output_protocol": null,
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    },
+    {
+      "player_id": "upb2965530",
+      "state": "playing",
+      "elapsed_time": 1.053724,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": "up0ba23cfe",
+      "active_output_protocol": "spb_00f48d97d9b5",
+      "group_members": []
+    },
+    {
+      "player_id": "up0ba23cfe",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": null,
+      "active_output_protocol": "spb_80c5f267aa69",
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    }
+  ],
+  [
+    {
+      "player_id": "syncgroup_rk7qfzy6",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": null,
+      "synced_to": null,
+      "active_output_protocol": null,
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    },
+    {
+      "player_id": "upb2965530",
+      "state": "playing",
+      "elapsed_time": 1.053724,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": "up0ba23cfe",
+      "active_output_protocol": "spb_00f48d97d9b5",
+      "group_members": []
+    },
+    {
+      "player_id": "up0ba23cfe",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": null,
+      "active_output_protocol": "spb_80c5f267aa69",
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    }
+  ],
+  [
+    {
+      "player_id": "syncgroup_rk7qfzy6",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": null,
+      "synced_to": null,
+      "active_output_protocol": null,
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    },
+    {
+      "player_id": "upb2965530",
+      "state": "playing",
+      "elapsed_time": 1.053724,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": "up0ba23cfe",
+      "active_output_protocol": "spb_00f48d97d9b5",
+      "group_members": []
+    },
+    {
+      "player_id": "up0ba23cfe",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": null,
+      "active_output_protocol": "spb_80c5f267aa69",
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    }
+  ],
+  [
+    {
+      "player_id": "syncgroup_rk7qfzy6",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": null,
+      "synced_to": null,
+      "active_output_protocol": null,
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    },
+    {
+      "player_id": "upb2965530",
+      "state": "playing",
+      "elapsed_time": 1.053724,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": "up0ba23cfe",
+      "active_output_protocol": "spb_00f48d97d9b5",
+      "group_members": []
+    },
+    {
+      "player_id": "up0ba23cfe",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": null,
+      "active_output_protocol": "spb_80c5f267aa69",
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    }
+  ],
+  [
+    {
+      "player_id": "syncgroup_rk7qfzy6",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": null,
+      "synced_to": null,
+      "active_output_protocol": null,
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    },
+    {
+      "player_id": "upb2965530",
+      "state": "playing",
+      "elapsed_time": 1.053724,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": "up0ba23cfe",
+      "active_output_protocol": "spb_00f48d97d9b5",
+      "group_members": []
+    },
+    {
+      "player_id": "up0ba23cfe",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": null,
+      "active_output_protocol": "spb_80c5f267aa69",
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    }
+  ],
+  [
+    {
+      "player_id": "syncgroup_rk7qfzy6",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": null,
+      "synced_to": null,
+      "active_output_protocol": null,
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    },
+    {
+      "player_id": "upb2965530",
+      "state": "playing",
+      "elapsed_time": 1.053724,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": "up0ba23cfe",
+      "active_output_protocol": "spb_00f48d97d9b5",
+      "group_members": []
+    },
+    {
+      "player_id": "up0ba23cfe",
+      "state": "playing",
+      "elapsed_time": 2.081566,
+      "active_source": "syncgroup_rk7qfzy6",
+      "active_group": "syncgroup_rk7qfzy6",
+      "synced_to": null,
+      "active_output_protocol": "spb_80c5f267aa69",
+      "group_members": [
+        "up0ba23cfe",
+        "upb2965530"
+      ]
+    }
+  ]
+]

@@ -15,7 +15,7 @@
     data:
       severity: crit
       humor_level: 2
-      tts_media_player: media_player.kokets_skarm
+      tts_media_player: media_player.kokets_skarm_ma
       task: Meddela att frysboxen i gamla verkstaden blivit för varm och att den behöver
         kontrolleras
       channels:
@@ -457,7 +457,7 @@
       channels:
       - tts
       - tv
-      tts_media_player: media_player.kokets_skarm
+      tts_media_player: media_player.kokets_skarm_ma
   mode: queued
   max: 10
 - id: '1673780941087'
@@ -782,7 +782,7 @@
       channels:
       - tts
       - tv
-      tts_media_player: media_player.kokets_skarm
+      tts_media_player: media_player.kokets_skarm_ma
   mode: queued
   max: 10
 - id: '1694445009947'
@@ -873,7 +873,7 @@
     data:
       severity: crit
       humor_level: 0
-      tts_media_player: media_player.kokets_skarm
+      tts_media_player: media_player.kokets_skarm_ma
       task: Meddela att det verkar läcka vatten under torkskåpet och att det behöver
         kontrolleras
       channels:
@@ -1302,7 +1302,7 @@
     data:
       severity: info
       humor_level: 2
-      tts_media_player: media_player.kokets_skarm
+      tts_media_player: media_player.kokets_skarm_ma
       task: Meddela att hönshusets lucka är öppen trots att klockan är efter 20:00
       channels:
       - tts
@@ -1340,7 +1340,7 @@
         data:
           severity: info
           humor_level: 2
-          tts_media_player: media_player.kokets_skarm
+          tts_media_player: media_player.kokets_skarm_ma
           task: Meddela att luftfuktaren har slut på vatten
           channels:
           - mobile
@@ -1388,7 +1388,7 @@
         data:
           severity: info
           humor_level: 2
-          tts_media_player: media_player.kokets_skarm
+          tts_media_player: media_player.kokets_skarm_ma
           task: Meddela att kontakten med Internet verkar har gått ner
           channels:
           - tts
@@ -1405,7 +1405,7 @@
         data:
           severity: info
           humor_level: 2
-          tts_media_player: media_player.kokets_skarm
+          tts_media_player: media_player.kokets_skarm_ma
           task: Kontakten med Internet är återställd
           channels:
           - tts
@@ -2168,7 +2168,7 @@
       channels:
       - tts
       - tv
-      tts_media_player: media_player.kokets_skarm
+      tts_media_player: media_player.kokets_skarm_ma
   mode: single
 - id: '1776246491818'
   alias: Uppdatera UV-index varje timme

@@ -1,0 +1,662 @@
+{
+  "original": {
+    "time": 1789880587.9081209,
+    "state": "idle",
+    "media_content_id": null,
+    "media_position": null,
+    "media_title": null,
+    "volume_level": 0.5,
+    "active_queue": "upb2965530"
+  },
+  "samples": [
+    {
+      "time": 1789880588.738818,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 0,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880589.550545,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 0,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880590.3631985,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 0,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880591.177082,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 0,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880591.9887302,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 0,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880592.800764,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 0,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880593.6138303,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 0,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880594.4249377,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 0,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880595.2380295,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 0,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880596.049952,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 0,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880596.8614957,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 0,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880597.674126,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 0,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880598.486968,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 0,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880599.3007426,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 0,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880600.112309,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 0,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880600.9251769,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 0,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880601.738337,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 0,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880602.5515401,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 0,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880603.367145,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 0,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880604.2701619,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 0,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880605.0829332,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 0,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880605.8943932,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 0,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880606.7072835,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 0,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880607.513145,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 7,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.22,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880608.3191967,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 7,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.22,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880609.1364162,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 7,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.22,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880609.9482067,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 7,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.22,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880610.7632287,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 7,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.22,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880611.576325,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 7,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.22,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880612.382078,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 7,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.22,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880613.1953738,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 7,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.22,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880614.0087266,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 7,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.22,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880614.8202643,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 7,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.22,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880615.6328824,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 7,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.22,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880616.4474404,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 9,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880617.2583761,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 9,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880618.0647829,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 9,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880618.8734066,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 9,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880619.685545,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 9,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880620.49942,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 9,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880621.3115473,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 9,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880622.1240396,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 9,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880622.9356806,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 9,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880623.7464466,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 9,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880624.5616996,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 9,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880625.3747482,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 9,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880626.185825,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 9,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880626.9981892,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 9,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880627.8104136,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 9,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880628.6233878,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 9,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880629.4346964,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 9,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880630.2507856,
+      "state": "paused",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 13,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880631.0607598,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 13,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.22,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880631.8665752,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 13,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.22,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880632.6783726,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 13,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.22,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880633.4916573,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 13,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.22,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880634.3050926,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 13,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.22,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880635.1177325,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 13,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.22,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880635.9283576,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 13,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.22,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880636.741176,
+      "state": "playing",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 13,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.22,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880637.5530915,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 13,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.22,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880638.3660395,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 13,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.22,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880639.1805167,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 13,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880639.99369,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 13,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880640.8067763,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 13,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880641.620411,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 13,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    },
+    {
+      "time": 1789880642.4332054,
+      "state": "idle",
+      "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+      "media_position": 13,
+      "media_title": "granny_native_verification",
+      "volume_level": 0.12,
+      "active_queue": "upb2965530"
+    }
+  ],
+  "before_announcement": {
+    "time": 1789880606.7133977,
+    "state": "playing",
+    "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+    "media_position": 0,
+    "media_title": "granny_native_verification",
+    "volume_level": 0.12,
+    "active_queue": "upb2965530"
+  },
+  "after_announcement": {
+    "time": 1789880625.4605634,
+    "state": "playing",
+    "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+    "media_position": 9,
+    "media_title": "granny_native_verification",
+    "volume_level": 0.12,
+    "active_queue": "upb2965530"
+  },
+  "resumed_progress": {
+    "time": 1789880629.4717505,
+    "state": "playing",
+    "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+    "media_position": 9,
+    "media_title": "granny_native_verification",
+    "volume_level": 0.12,
+    "active_queue": "upb2965530"
+  },
+  "before_paused_announcement": {
+    "time": 1789880630.5504413,
+    "state": "paused",
+    "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+    "media_position": 13,
+    "media_title": "granny_native_verification",
+    "volume_level": 0.12,
+    "active_queue": "upb2965530"
+  },
+  "after_paused_announcement": {
+    "time": 1789880643.0811813,
+    "state": "idle",
+    "media_content_id": "builtin://sound_effect/http://homeassistant:80/local/granny_native_verification.wav",
+    "media_position": 13,
+    "media_title": "granny_native_verification",
+    "volume_level": 0.12,
+    "active_queue": "upb2965530"
+  },
+  "success": true
+}

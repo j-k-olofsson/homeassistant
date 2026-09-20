@@ -374,5 +374,5 @@ command_line:
       command_timeout: 15
       scan_interval: 3600
 
-# Synkroniserade Granny-utrop med dynamisk felhantering.
+# Ett synkroniserat MA-utrop, med återställning av separat spelande MA-köer.
 granny_sync:

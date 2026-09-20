@@ -155,12 +155,13 @@ granny_broadcast:
             value: slack
     tts_media_player:
       name: tts_media_player
-      description: 'Högtalare eller grupp för TTS (fallback = media_player.grupp_grannys_hogtalare)
+      description: 'Music Assistant-spelare för TTS (standard: Grannys synkroniserade högtalargrupp)
 
         '
       selector:
         entity:
           domain: media_player
+          integration: music_assistant
     prompt_override:
       name: Egen fullständig AI-prompt
       description: Ersätter hela Granny-prompten för detta anrop. Tomt använder standardprompten.
@@ -255,25 +256,12 @@ granny_broadcast:
              (not _tts_in_quiet_hours or
               (tts_ignore_quiet_hours | default(false) | bool(false))) }}
       sequence:
-      - if:
-        - condition: template
-          value_template: "{{ _tts_player == 'media_player.grannys_hogtalare' }}"
-        then:
-        - action: granny_sync.speak
-          continue_on_error: true
-          data:
-            entity_id: media_player.grannys_hogtalare
-            tts_entity_id: '{{ _tts_engine }}'
-            message: '{{ final_message }}'
-        else:
-        - action: tts.speak
-          continue_on_error: true
-          target:
-            entity_id: '{{ _tts_engine }}'
-          data:
-            media_player_entity_id: '{{ _tts_player }}'
-            message: '{{ final_message }}'
-            cache: false
+      - action: script.granny_announce
+        continue_on_error: true
+        data:
+          media_player: '{{ _tts_player }}'
+          tts_engine: '{{ _tts_engine }}'
+          message: '{{ final_message }}'
   - choose:
     - conditions:
       - condition: template
@@ -313,8 +301,11 @@ granny_broadcast:
           target: '{{ [_slack_channel] if _slack_channel|length > 0 else [] }}
 
             '
+  - variables:
+      broadcast_response:
+        final_message: '{{ final_message }}'
   - stop: '{{ final_message }}'
-    response_variable: final_message
+    response_variable: broadcast_response
 granny_car_charge_plan:
   alias: Granny Bil-laddningsplan
   description: Planerar bilens laddning via en lokal prisoptimering och uppdaterar
@@ -1057,3 +1048,51 @@ hissmusik_stoppa:
   - action: media_player.media_stop
     target:
       entity_id: media_player.dassens_hogtalare_ma
+
+# Multiroom speech is always one synchronized group stream.
+granny_announce:
+  alias: Granny – synkroniserat meddelande via Music Assistant
+  description: >-
+    Ett gemensamt utrop till Grannys synkgrupp. MA sköter synkronisering och
+    meddelandevolym; separat spelande MA-köer återupptas efteråt. Inget pling
+    eller separat tyst förberedelse. Inga individuella flerrumsutrop.
+  mode: queued
+  max: 50
+  fields:
+    media_player:
+      default: media_player.grannys_hogtalare
+      selector:
+        entity:
+          domain: media_player
+          integration: music_assistant
+    tts_engine:
+      default: tts.piper
+      selector:
+        entity:
+          domain: tts
+    message:
+      required: true
+      selector:
+        text:
+          multiline: true
+  sequence:
+  - variables:
+      requested: "{{ media_player | default('media_player.grannys_hogtalare', true) }}"
+      player: >-
+        {{ 'media_player.kokets_skarm_ma' if requested == 'media_player.kokets_skarm'
+           else requested }}
+  - if: "{{ player == 'media_player.grannys_hogtalare' }}"
+    then:
+    - action: granny_sync.speak
+      data:
+        entity_id: media_player.grannys_hogtalare
+        tts_entity_id: "{{ tts_engine | default('tts.piper', true) }}"
+        message: '{{ message }}'
+    else:
+    - action: tts.speak
+      target:
+        entity_id: "{{ tts_engine | default('tts.piper', true) }}"
+      data:
+        media_player_entity_id: '{{ player }}'
+        message: '{{ message }}'
+        cache: true
