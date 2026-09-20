@@ -1,0 +1,6 @@
+prepare:
+  name: Förbered kort Godnatt-hälsning
+  description: Skapar AI-text och tre ljudvarianter med två sekunders tyst inledning, utan uppspelning.
+speak:
+  name: Läs upp förberedd Godnatt-hälsning
+  description: Väljer ljud efter balkongdörrens aktuella läge och spelar enbart i Diegos väckarklocka.

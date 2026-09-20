@@ -98,8 +98,7 @@ async def _launch_simulation_after_restart(hass: HomeAssistant) -> None:
         entity = hass.data[DOMAIN][SWITCH_PLATFORM][switch_id]
         if entity.is_on:
             _LOGGER.debug("Relaunching simulation %s", switch_id)
-            entity.internal_turn_off()
-            await entity.turn_on_async(after_ha_restart=True)
+            await hass.data[DOMAIN]["services"].restart_after_ha_start(switch_id)
 
 
 async def async_remove_entry(hass: HomeAssistant, entry: ConfigEntry) -> None:

@@ -1,0 +1,124 @@
+[
+  {
+    "request": {
+      "type": "config/device_registry/update",
+      "device_id": "c4c4ac8c2c992049d0562fa71d36b1f3",
+      "disabled_by": null
+    }
+  },
+  {
+    "request": {
+      "type": "config/entity_registry/update",
+      "entity_id": "media_player.dassens_hogtalare_2",
+      "new_entity_id": "media_player.dassens_hogtalare_ma"
+    }
+  },
+  {
+    "request": {
+      "type": "config/entity_registry/update",
+      "entity_id": "media_player.diegos_vackarklocka_2",
+      "new_entity_id": "media_player.diegos_vackarklocka_ma"
+    }
+  },
+  {
+    "request": {
+      "type": "config/entity_registry/update",
+      "entity_id": "media_player.stereo_hoger_2",
+      "new_entity_id": "media_player.verandans_hogtalare_hoger_ma"
+    }
+  },
+  {
+    "request": {
+      "type": "config/entity_registry/update",
+      "entity_id": "media_player.stereo_vanster",
+      "new_entity_id": "media_player.verandans_hogtalare_vanster_ma"
+    }
+  },
+  {
+    "request": {
+      "type": "config/entity_registry/remove",
+      "entity_id": "button.ha_voice_pe_096460_media_player_favorite_current_song"
+    }
+  },
+  {
+    "request": {
+      "type": "config/entity_registry/remove",
+      "entity_id": "media_player.ha_voice_pe_096460_media_player"
+    }
+  },
+  {
+    "request": {
+      "type": "config/entity_registry/update",
+      "entity_id": "media_player.alla_hogtalare_4",
+      "new_entity_id": "media_player.alla_hogtalare_ma"
+    }
+  },
+  {
+    "request": {
+      "type": "config/entity_registry/remove",
+      "entity_id": "button.nesthubf174_favoritmarkera_nuvarande_lat_2"
+    }
+  },
+  {
+    "request": {
+      "type": "config/entity_registry/remove",
+      "entity_id": "media_player.nesthubf174_4"
+    }
+  },
+  {
+    "request": {
+      "type": "config/entity_registry/update",
+      "entity_id": "media_player.nesthubf174_6",
+      "new_entity_id": "media_player.mannis_vackarklocka_ma"
+    }
+  },
+  {
+    "request": {
+      "type": "config/entity_registry/update",
+      "entity_id": "media_player.verandans_hogtalare_2",
+      "new_entity_id": "media_player.verandans_hogtalare_ma"
+    }
+  },
+  {
+    "request": {
+      "type": "config/entity_registry/update",
+      "entity_id": "media_player.home_assistant_voice_096460",
+      "new_entity_id": "media_player.home_assistant_voice_096460_ma"
+    }
+  },
+  {
+    "request": {
+      "type": "config/entity_registry/update",
+      "entity_id": "media_player.tvs_soundbar",
+      "new_entity_id": "media_player.tvs_soundbar_ma"
+    }
+  },
+  {
+    "request": {
+      "type": "config/entity_registry/update",
+      "entity_id": "media_player.toalettens_hogtalare_2",
+      "new_entity_id": "media_player.toalettens_hogtalare_ma"
+    }
+  },
+  {
+    "request": {
+      "type": "config/entity_registry/update",
+      "entity_id": "media_player.kokets_skarm_2",
+      "new_entity_id": "media_player.kokets_skarm_ma"
+    }
+  },
+  {
+    "request": {
+      "type": "config/entity_registry/update",
+      "entity_id": "media_player.ateljens_hogtalare",
+      "new_entity_id": "media_player.ateljens_hogtalare_ma"
+    }
+  },
+  {
+    "request": {
+      "type": "config/entity_registry/update",
+      "entity_id": "media_player.nya_tvn_3",
+      "new_entity_id": "media_player.nya_tvn_ma"
+    }
+  }
+]

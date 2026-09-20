@@ -9,6 +9,7 @@ from typing import Any, Callable, Dict, List, Optional
 
 from homeassistant.core import HomeAssistant, Context
 from homeassistant.helpers import label_registry as lr, entity_registry as er
+from homeassistant.helpers.storage import Store
 
 from .const import (
     DOMAIN,
@@ -19,6 +20,8 @@ from .const import (
     MIN_DELAY,
     MIN_EVENT_SPACING,
     MIN_STATE_DURATION,
+    RUNTIME_STORAGE_KEY,
+    RUNTIME_STORAGE_VERSION,
 )
 from .history import HistoryManager
 from .entity_controller import EntityController
@@ -42,6 +45,49 @@ class PresenceSimulationServices:
         self._system_user = system_user
         self._entity_controller = EntityController(
             hass, system_user.id if system_user else None
+        )
+        self._runtime_store = Store(
+            hass, RUNTIME_STORAGE_VERSION, RUNTIME_STORAGE_KEY
+        )
+
+    async def _save_runtime_config(self, switch_id: str, entity: Any) -> None:
+        """Persist the effective configuration used by an active run."""
+        stored = await self._runtime_store.async_load() or {}
+        stored[switch_id] = {
+            "switch_id": switch_id,
+            "entity_id": list(entity.entities),
+            "labels": list(entity.labels),
+            "delta": entity.delta,
+            "restore_states": entity.restore,
+            "random": entity.random,
+            "unavailable_as_off": entity.unavailable_as_off,
+            "brightness": entity.brightness,
+            "dry_run": entity.dry_run,
+        }
+        await self._runtime_store.async_save(stored)
+
+    async def _clear_runtime_config(self, switch_id: str) -> None:
+        """Remove configuration for a completed run."""
+        stored = await self._runtime_store.async_load() or {}
+        if switch_id in stored:
+            del stored[switch_id]
+            await self._runtime_store.async_save(stored)
+
+    async def restart_after_ha_start(self, switch_id: str) -> None:
+        """Resume with the exact persisted configuration after an HA restart."""
+        stored = await self._runtime_store.async_load() or {}
+        config = stored.get(switch_id)
+        entity = self._get_switch_entity()[switch_id]
+        entity.internal_turn_off()
+        if not config:
+            _LOGGER.warning(
+                "Not resuming %s: no persisted runtime configuration", switch_id
+            )
+            return
+        config = dict(config)
+        config["after_ha_restart"] = True
+        await self._hass.services.async_call(
+            DOMAIN, "start", config, blocking=True
         )
 
     @staticmethod
@@ -137,7 +183,10 @@ class PresenceSimulationServices:
             _LOGGER.error("Error during identifying entities, no valid entities has been found")
             return
 
-        entity.internal_turn_on()
+        # Save before advertising the switch as on. A restart at any later
+        # point can then recover dry-run and all other effective settings.
+        await self._save_runtime_config(switch_id, entity)
+        run_generation = entity.begin_run()
         _LOGGER.debug("Presence simulation started")
 
         if not restart:
@@ -183,6 +232,7 @@ class PresenceSimulationServices:
             switch_id,
             call,
             after_ha_restart,
+            run_generation,
         )
 
     def _fetch_and_handle_history(
@@ -193,6 +243,7 @@ class PresenceSimulationServices:
         switch_id: str,
         call: Optional[Any],
         after_ha_restart: bool,
+        run_generation: int,
     ) -> None:
         """Fetch history and dispatch to entity simulators."""
         history = HistoryManager.get_history(hass, minus_delta, expanded_entities)
@@ -200,10 +251,17 @@ class PresenceSimulationServices:
         filtered_history = HistoryManager.filter_out_undefined(
             history, not entity.unavailable_as_off
         )
+        filtered_history = HistoryManager.deduplicate_consecutive_states(
+            filtered_history
+        )
         filtered_history = HistoryManager.filter_short_state_pulses(
             filtered_history, MIN_STATE_DURATION
         )
         _LOGGER.debug("history after filtering: %s", filtered_history)
+
+        if not entity.is_current_run(run_generation):
+            _LOGGER.debug("Discarding history for stale generation %s", run_generation)
+            return
 
         for entity_id in filtered_history:
             _LOGGER.debug("Entity %s", entity_id)
@@ -216,10 +274,13 @@ class PresenceSimulationServices:
                     entity.delta,
                     entity.random,
                     after_ha_restart,
+                    run_generation,
                 )
             )
 
-        hass.create_task(self._schedule_restart(call, switch_id=switch_id))
+        hass.create_task(
+            self._schedule_restart(call, switch_id, run_generation)
+        )
         _LOGGER.debug("All async tasks launched")
 
     async def _simulate_single_entity(
@@ -230,12 +291,12 @@ class PresenceSimulationServices:
         delta: int,
         random_val: int,
         after_ha_restart: bool,
+        run_generation: int,
     ) -> None:
         """Replay the historic of one entity."""
         _LOGGER.debug("Simulate one entity: %s", entity_id)
 
         entity = self._get_switch_entity()[switch_id]
-        is_running = self._is_running
         event_fire = self._hass.bus.fire
         random_offset_seconds = (
             random.uniform(-random_val, random_val) if random_val > 0 else 0
@@ -287,13 +348,13 @@ class PresenceSimulationServices:
 
             await entity.async_add_next_event(target_time, entity_id, state.state)
 
-            while is_running(switch_id):
+            while entity.is_current_run(run_generation):
                 secs_left = (target_time - datetime.now(timezone.utc)).total_seconds()
                 if secs_left <= 0:
                     break
                 await asyncio.sleep(min(secs_left, entity.interval))
 
-            if not is_running(switch_id):
+            if not entity.is_current_run(run_generation):
                 return
 
             await self._entity_controller.update_entity(
@@ -313,6 +374,7 @@ class PresenceSimulationServices:
                     "event_index": idx,
                     "initial_state": idx == 0,
                     "resumed_after_restart": after_ha_restart,
+                    "run_generation": run_generation,
                 },
             )
             last_target_time = target_time
@@ -380,6 +442,7 @@ class PresenceSimulationServices:
 
             await entity.reset_restore_states()
             await entity.reset_default_values_async()
+            await self._clear_runtime_config(switch_id)
 
     async def toggle_simulation(self, call: Any) -> None:
         """Toggle the presence simulation."""
@@ -398,20 +461,22 @@ class PresenceSimulationServices:
         else:
             await self.start_simulation(call, restart=False)
 
-    async def _schedule_restart(self, call: Any, switch_id: str) -> None:
+    async def _schedule_restart(
+        self, call: Any, switch_id: str, run_generation: int
+    ) -> None:
         """Make sure that once delta days is passed, relaunch the simulation."""
         entity = self._get_switch_entity()[switch_id]
         _LOGGER.debug("Presence simulation will be relaunched in %i days", entity.delta)
 
         start_plus_delta = datetime.now(timezone.utc) + timedelta(entity.delta)
 
-        while self._is_running(switch_id):
+        while entity.is_current_run(run_generation):
             secs_left = (start_plus_delta - datetime.now(timezone.utc)).total_seconds()
             if secs_left <= 0:
                 break
             await asyncio.sleep(min(secs_left, entity.interval))
 
-        if self._is_running(switch_id):
+        if entity.is_current_run(run_generation):
             _LOGGER.debug("%s has passed, presence simulation is relaunched", entity.delta)
             await self.stop_simulation(call, restart=True, switch_id=switch_id)
             await self.start_simulation(call, restart=True, switch_id=switch_id)

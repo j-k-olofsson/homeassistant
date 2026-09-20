@@ -1,0 +1,1794 @@
+[
+  {
+    "player_id": "up442a44cc",
+    "provider": "universal_player",
+    "type": "player",
+    "name": "home-assistant-voice-096460",
+    "available": true,
+    "device_info": {
+      "model": "home-assistant-voice-096460",
+      "manufacturer": "ESPHome",
+      "software_version": null,
+      "model_id": null,
+      "manufacturer_id": null,
+      "identifiers": {
+        "mac_address": "20:F8:3B:09:64:60"
+      },
+      "mac_address": "20:F8:3B:09:64:60",
+      "ip_address": null
+    },
+    "supported_features": [
+      "set_members",
+      "volume_mute",
+      "volume_set"
+    ],
+    "playback_state": "idle",
+    "elapsed_time": null,
+    "elapsed_time_last_updated": null,
+    "powered": true,
+    "volume_level": 60,
+    "volume_muted": false,
+    "group_members": [],
+    "static_group_members": [],
+    "can_group_with": [
+      "KrqR8y05ep19BY_Axln8FqX8z24JAW-mml6-Mc_BKEc",
+      "upb2965530",
+      "up8cef2f7b",
+      "upf3ea6c7e",
+      "up366fb600"
+    ],
+    "synced_to": null,
+    "active_sound_mode": null,
+    "sound_mode_list": [],
+    "options": [],
+    "active_source": "up442a44cc",
+    "source_list": [
+      {
+        "id": "up442a44cc",
+        "name": "Music Assistant Queue",
+        "passive": false,
+        "can_play_pause": false,
+        "can_seek": false,
+        "can_next_previous": false,
+        "can_shuffle": false,
+        "can_repeat": false,
+        "shuffle_enabled": null,
+        "repeat_mode": null,
+        "account_id": null
+      }
+    ],
+    "active_group": null,
+    "current_media": null,
+    "enabled": true,
+    "hide_in_ui": false,
+    "private": false,
+    "expose_to_ha": true,
+    "icon": "speaker",
+    "group_volume": 60,
+    "group_volume_muted": false,
+    "extra_attributes": {},
+    "power_control": "none",
+    "volume_control": "20:F8:3B:09:64:60",
+    "mute_control": "20:F8:3B:09:64:60",
+    "output_protocols": [
+      {
+        "output_protocol_id": "20:F8:3B:09:64:60",
+        "name": "Sendspin",
+        "protocol_domain": "sendspin",
+        "is_native": false,
+        "priority": 40,
+        "available": true,
+        "derived_from": null
+      }
+    ],
+    "active_output_protocol": null,
+    "needs_setup": false,
+    "setup_reason": null,
+    "has_setup_flow": false,
+    "sleep_timer_expires_at": null,
+    "active_source_audio": null,
+    "display_name": "home-assistant-voice-096460",
+    "state": "idle",
+    "group_childs": [],
+    "extra_data": {},
+    "hide_player_in_ui": [
+      "when_unavailable",
+      "when_synced",
+      "when_group_active"
+    ]
+  },
+  {
+    "player_id": "up2d920741",
+    "provider": "universal_player",
+    "type": "player",
+    "name": "TVs soundbar",
+    "available": true,
+    "device_info": {
+      "model": "JBL Bar 5.0",
+      "manufacturer": "HARMAN International Industries",
+      "software_version": null,
+      "model_id": null,
+      "manufacturer_id": null,
+      "identifiers": {
+        "ip_address": "192.168.10.203",
+        "mac_address": "2C:FD:B3:12:5C:49",
+        "uuid": "6988608d-cfe8-8e74-1860-7d9ea20383e6",
+        "cast_uuid": "6988608d-cfe8-8e74-1860-7d9ea20383e6"
+      },
+      "mac_address": "2C:FD:B3:12:5C:49",
+      "ip_address": "192.168.10.203"
+    },
+    "supported_features": [
+      "volume_mute",
+      "volume_set"
+    ],
+    "playback_state": "idle",
+    "elapsed_time": null,
+    "elapsed_time_last_updated": null,
+    "powered": true,
+    "volume_level": 44,
+    "volume_muted": true,
+    "group_members": [],
+    "static_group_members": [],
+    "can_group_with": [],
+    "synced_to": null,
+    "active_sound_mode": null,
+    "sound_mode_list": [],
+    "options": [],
+    "active_source": "up2d920741",
+    "source_list": [
+      {
+        "id": "up2d920741",
+        "name": "Music Assistant Queue",
+        "passive": false,
+        "can_play_pause": false,
+        "can_seek": false,
+        "can_next_previous": false,
+        "can_shuffle": false,
+        "can_repeat": false,
+        "shuffle_enabled": null,
+        "repeat_mode": null,
+        "account_id": null
+      }
+    ],
+    "active_group": null,
+    "current_media": null,
+    "enabled": true,
+    "hide_in_ui": false,
+    "private": false,
+    "expose_to_ha": true,
+    "icon": "speaker",
+    "group_volume": 44,
+    "group_volume_muted": true,
+    "extra_attributes": {},
+    "power_control": "none",
+    "volume_control": "6988608d-cfe8-8e74-1860-7d9ea20383e6",
+    "mute_control": "6988608d-cfe8-8e74-1860-7d9ea20383e6",
+    "output_protocols": [
+      {
+        "output_protocol_id": "6988608d-cfe8-8e74-1860-7d9ea20383e6",
+        "name": "Chromecast",
+        "protocol_domain": "chromecast",
+        "is_native": false,
+        "priority": 30,
+        "available": true,
+        "derived_from": null
+      },
+      {
+        "output_protocol_id": "spb_2cfdb3125c49",
+        "name": "Sendspin",
+        "protocol_domain": "sendspin",
+        "is_native": false,
+        "priority": 40,
+        "available": false,
+        "derived_from": "6988608d-cfe8-8e74-1860-7d9ea20383e6"
+      }
+    ],
+    "active_output_protocol": null,
+    "needs_setup": false,
+    "setup_reason": null,
+    "has_setup_flow": false,
+    "sleep_timer_expires_at": null,
+    "active_source_audio": null,
+    "display_name": "TVs soundbar",
+    "state": "idle",
+    "group_childs": [],
+    "extra_data": {},
+    "hide_player_in_ui": [
+      "when_unavailable",
+      "when_synced",
+      "when_group_active"
+    ]
+  },
+  {
+    "player_id": "up366fb600",
+    "provider": "universal_player",
+    "type": "player",
+    "name": "Toalettens högtalare",
+    "available": true,
+    "device_info": {
+      "model": "JBL Link Portable",
+      "manufacturer": "HARMAN International Industries",
+      "software_version": null,
+      "model_id": null,
+      "manufacturer_id": null,
+      "identifiers": {
+        "ip_address": "192.168.10.211",
+        "mac_address": "6C:47:60:1A:87:36",
+        "uuid": "fbd9e291-c29e-c880-ebb2-3293f56f4e6b",
+        "cast_uuid": "fbd9e291-c29e-c880-ebb2-3293f56f4e6b"
+      },
+      "mac_address": "6C:47:60:1A:87:36",
+      "ip_address": "192.168.10.211"
+    },
+    "supported_features": [
+      "set_members",
+      "volume_mute",
+      "volume_set"
+    ],
+    "playback_state": "idle",
+    "elapsed_time": null,
+    "elapsed_time_last_updated": null,
+    "powered": true,
+    "volume_level": 15,
+    "volume_muted": false,
+    "group_members": [],
+    "static_group_members": [],
+    "can_group_with": [
+      "KrqR8y05ep19BY_Axln8FqX8z24JAW-mml6-Mc_BKEc",
+      "up442a44cc",
+      "up8cef2f7b",
+      "upf3ea6c7e",
+      "upb2965530"
+    ],
+    "synced_to": null,
+    "active_sound_mode": null,
+    "sound_mode_list": [],
+    "options": [],
+    "active_source": "up366fb600",
+    "source_list": [
+      {
+        "id": "up366fb600",
+        "name": "Music Assistant Queue",
+        "passive": false,
+        "can_play_pause": false,
+        "can_seek": false,
+        "can_next_previous": false,
+        "can_shuffle": false,
+        "can_repeat": false,
+        "shuffle_enabled": null,
+        "repeat_mode": null,
+        "account_id": null
+      }
+    ],
+    "active_group": null,
+    "current_media": null,
+    "enabled": true,
+    "hide_in_ui": false,
+    "private": false,
+    "expose_to_ha": true,
+    "icon": "speaker",
+    "group_volume": 15,
+    "group_volume_muted": false,
+    "extra_attributes": {},
+    "power_control": "none",
+    "volume_control": "fbd9e291-c29e-c880-ebb2-3293f56f4e6b",
+    "mute_control": "fbd9e291-c29e-c880-ebb2-3293f56f4e6b",
+    "output_protocols": [
+      {
+        "output_protocol_id": "fbd9e291-c29e-c880-ebb2-3293f56f4e6b",
+        "name": "Chromecast",
+        "protocol_domain": "chromecast",
+        "is_native": false,
+        "priority": 30,
+        "available": true,
+        "derived_from": null
+      },
+      {
+        "output_protocol_id": "spb_6c47601a8736",
+        "name": "Sendspin",
+        "protocol_domain": "sendspin",
+        "is_native": false,
+        "priority": 40,
+        "available": true,
+        "derived_from": "fbd9e291-c29e-c880-ebb2-3293f56f4e6b"
+      }
+    ],
+    "active_output_protocol": null,
+    "needs_setup": false,
+    "setup_reason": null,
+    "has_setup_flow": false,
+    "sleep_timer_expires_at": null,
+    "active_source_audio": null,
+    "display_name": "Toalettens högtalare",
+    "state": "idle",
+    "group_childs": [],
+    "extra_data": {},
+    "hide_player_in_ui": [
+      "when_unavailable",
+      "when_synced",
+      "when_group_active"
+    ]
+  },
+  {
+    "player_id": "upb2965530",
+    "provider": "universal_player",
+    "type": "player",
+    "name": "Kökets skärm",
+    "available": true,
+    "device_info": {
+      "model": "JBL Link View",
+      "manufacturer": "Harman International Corp",
+      "software_version": null,
+      "model_id": null,
+      "manufacturer_id": null,
+      "identifiers": {
+        "ip_address": "192.168.10.209",
+        "uuid": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+        "cast_uuid": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+        "mac_address": "00:F4:8D:97:D9:B5"
+      },
+      "mac_address": "00:F4:8D:97:D9:B5",
+      "ip_address": "192.168.10.209"
+    },
+    "supported_features": [
+      "set_members",
+      "volume_mute",
+      "volume_set"
+    ],
+    "playback_state": "idle",
+    "elapsed_time": null,
+    "elapsed_time_last_updated": null,
+    "powered": true,
+    "volume_level": 50,
+    "volume_muted": false,
+    "group_members": [],
+    "static_group_members": [],
+    "can_group_with": [
+      "KrqR8y05ep19BY_Axln8FqX8z24JAW-mml6-Mc_BKEc",
+      "up442a44cc",
+      "up8cef2f7b",
+      "upf3ea6c7e",
+      "up366fb600"
+    ],
+    "synced_to": null,
+    "active_sound_mode": null,
+    "sound_mode_list": [],
+    "options": [],
+    "active_source": "upb2965530",
+    "source_list": [
+      {
+        "id": "upb2965530",
+        "name": "Music Assistant Queue",
+        "passive": false,
+        "can_play_pause": false,
+        "can_seek": false,
+        "can_next_previous": false,
+        "can_shuffle": false,
+        "can_repeat": false,
+        "shuffle_enabled": null,
+        "repeat_mode": null,
+        "account_id": null
+      }
+    ],
+    "active_group": null,
+    "current_media": null,
+    "enabled": true,
+    "hide_in_ui": false,
+    "private": false,
+    "expose_to_ha": true,
+    "icon": "speaker",
+    "group_volume": 50,
+    "group_volume_muted": false,
+    "extra_attributes": {},
+    "power_control": "none",
+    "volume_control": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+    "mute_control": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+    "output_protocols": [
+      {
+        "output_protocol_id": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+        "name": "Chromecast",
+        "protocol_domain": "chromecast",
+        "is_native": false,
+        "priority": 30,
+        "available": true,
+        "derived_from": null
+      },
+      {
+        "output_protocol_id": "spb_00f48d97d9b5",
+        "name": "Sendspin",
+        "protocol_domain": "sendspin",
+        "is_native": false,
+        "priority": 40,
+        "available": true,
+        "derived_from": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+      }
+    ],
+    "active_output_protocol": null,
+    "needs_setup": false,
+    "setup_reason": null,
+    "has_setup_flow": false,
+    "sleep_timer_expires_at": null,
+    "active_source_audio": null,
+    "display_name": "Kökets skärm",
+    "state": "idle",
+    "group_childs": [],
+    "extra_data": {},
+    "hide_player_in_ui": [
+      "when_unavailable",
+      "when_synced",
+      "when_group_active"
+    ]
+  },
+  {
+    "player_id": "up8cef2f7b",
+    "provider": "universal_player",
+    "type": "player",
+    "name": "Ateljéns högtalare",
+    "available": true,
+    "device_info": {
+      "model": "JBL Link 500",
+      "manufacturer": "JBL",
+      "software_version": null,
+      "model_id": null,
+      "manufacturer_id": null,
+      "identifiers": {
+        "ip_address": "192.168.10.205",
+        "uuid": "9842167e-772a-ad9d-6664-74077d0f77e6",
+        "cast_uuid": "9842167e-772a-ad9d-6664-74077d0f77e6",
+        "mac_address": "80:C5:F2:67:AA:69"
+      },
+      "mac_address": "80:C5:F2:67:AA:69",
+      "ip_address": "192.168.10.205"
+    },
+    "supported_features": [
+      "set_members",
+      "volume_mute",
+      "volume_set"
+    ],
+    "playback_state": "idle",
+    "elapsed_time": null,
+    "elapsed_time_last_updated": null,
+    "powered": true,
+    "volume_level": 50,
+    "volume_muted": false,
+    "group_members": [],
+    "static_group_members": [],
+    "can_group_with": [
+      "KrqR8y05ep19BY_Axln8FqX8z24JAW-mml6-Mc_BKEc",
+      "up442a44cc",
+      "upb2965530",
+      "upf3ea6c7e",
+      "up366fb600"
+    ],
+    "synced_to": null,
+    "active_sound_mode": null,
+    "sound_mode_list": [],
+    "options": [],
+    "active_source": "up8cef2f7b",
+    "source_list": [
+      {
+        "id": "up8cef2f7b",
+        "name": "Music Assistant Queue",
+        "passive": false,
+        "can_play_pause": false,
+        "can_seek": false,
+        "can_next_previous": false,
+        "can_shuffle": false,
+        "can_repeat": false,
+        "shuffle_enabled": null,
+        "repeat_mode": null,
+        "account_id": null
+      }
+    ],
+    "active_group": null,
+    "current_media": null,
+    "enabled": true,
+    "hide_in_ui": false,
+    "private": false,
+    "expose_to_ha": true,
+    "icon": "speaker",
+    "group_volume": 50,
+    "group_volume_muted": false,
+    "extra_attributes": {},
+    "power_control": "none",
+    "volume_control": "9842167e-772a-ad9d-6664-74077d0f77e6",
+    "mute_control": "9842167e-772a-ad9d-6664-74077d0f77e6",
+    "output_protocols": [
+      {
+        "output_protocol_id": "9842167e-772a-ad9d-6664-74077d0f77e6",
+        "name": "Chromecast",
+        "protocol_domain": "chromecast",
+        "is_native": false,
+        "priority": 30,
+        "available": true,
+        "derived_from": null
+      },
+      {
+        "output_protocol_id": "spb_80c5f267aa69",
+        "name": "Sendspin",
+        "protocol_domain": "sendspin",
+        "is_native": false,
+        "priority": 40,
+        "available": true,
+        "derived_from": "9842167e-772a-ad9d-6664-74077d0f77e6"
+      }
+    ],
+    "active_output_protocol": null,
+    "needs_setup": false,
+    "setup_reason": null,
+    "has_setup_flow": false,
+    "sleep_timer_expires_at": null,
+    "active_source_audio": null,
+    "display_name": "Ateljéns högtalare",
+    "state": "idle",
+    "group_childs": [],
+    "extra_data": {},
+    "hide_player_in_ui": [
+      "when_unavailable",
+      "when_synced",
+      "when_group_active"
+    ]
+  },
+  {
+    "player_id": "upc1652555",
+    "provider": "universal_player",
+    "type": "player",
+    "name": "Nya TVn",
+    "available": true,
+    "device_info": {
+      "model": "BRAVIA VH1",
+      "manufacturer": "Sony",
+      "software_version": null,
+      "model_id": null,
+      "manufacturer_id": null,
+      "identifiers": {
+        "ip_address": "192.168.10.19",
+        "uuid": "72134bdc-232c-a223-447a-f63000ce0ce7",
+        "cast_uuid": "72134bdc-232c-a223-447a-f63000ce0ce7",
+        "mac_address": "14:3F:A6:03:6B:40"
+      },
+      "mac_address": "14:3F:A6:03:6B:40",
+      "ip_address": "192.168.10.19"
+    },
+    "supported_features": [
+      "volume_mute",
+      "volume_set"
+    ],
+    "playback_state": "idle",
+    "elapsed_time": null,
+    "elapsed_time_last_updated": null,
+    "powered": true,
+    "volume_level": 0,
+    "volume_muted": false,
+    "group_members": [],
+    "static_group_members": [],
+    "can_group_with": [],
+    "synced_to": null,
+    "active_sound_mode": null,
+    "sound_mode_list": [],
+    "options": [],
+    "active_source": "upc1652555",
+    "source_list": [
+      {
+        "id": "upc1652555",
+        "name": "Music Assistant Queue",
+        "passive": false,
+        "can_play_pause": false,
+        "can_seek": false,
+        "can_next_previous": false,
+        "can_shuffle": false,
+        "can_repeat": false,
+        "shuffle_enabled": null,
+        "repeat_mode": null,
+        "account_id": null
+      }
+    ],
+    "active_group": null,
+    "current_media": null,
+    "enabled": true,
+    "hide_in_ui": false,
+    "private": false,
+    "expose_to_ha": true,
+    "icon": "speaker",
+    "group_volume": 0,
+    "group_volume_muted": false,
+    "extra_attributes": {},
+    "power_control": "none",
+    "volume_control": "72134bdc-232c-a223-447a-f63000ce0ce7",
+    "mute_control": "72134bdc-232c-a223-447a-f63000ce0ce7",
+    "output_protocols": [
+      {
+        "output_protocol_id": "72134bdc-232c-a223-447a-f63000ce0ce7",
+        "name": "Chromecast",
+        "protocol_domain": "chromecast",
+        "is_native": false,
+        "priority": 30,
+        "available": true,
+        "derived_from": null
+      },
+      {
+        "output_protocol_id": "spb_143fa6036b40",
+        "name": "Sendspin",
+        "protocol_domain": "sendspin",
+        "is_native": false,
+        "priority": 40,
+        "available": false,
+        "derived_from": "72134bdc-232c-a223-447a-f63000ce0ce7"
+      }
+    ],
+    "active_output_protocol": null,
+    "needs_setup": false,
+    "setup_reason": null,
+    "has_setup_flow": false,
+    "sleep_timer_expires_at": null,
+    "active_source_audio": null,
+    "display_name": "Nya TVn",
+    "state": "idle",
+    "group_childs": [],
+    "extra_data": {},
+    "hide_player_in_ui": [
+      "when_unavailable",
+      "when_synced",
+      "when_group_active"
+    ]
+  },
+  {
+    "player_id": "syncgroup_rk7qfzy6",
+    "provider": "sync_group",
+    "type": "group",
+    "name": "Grannys högtalare",
+    "available": true,
+    "device_info": {
+      "model": "Sync Group Player",
+      "manufacturer": "Music Assistant",
+      "software_version": null,
+      "model_id": null,
+      "manufacturer_id": null,
+      "identifiers": {},
+      "mac_address": null,
+      "ip_address": null
+    },
+    "supported_features": [
+      "play_media",
+      "set_members",
+      "volume_mute",
+      "volume_set"
+    ],
+    "playback_state": "idle",
+    "elapsed_time": null,
+    "elapsed_time_last_updated": null,
+    "powered": true,
+    "volume_level": null,
+    "volume_muted": null,
+    "group_members": [
+      "upb2965530",
+      "up8cef2f7b",
+      "upf3ea6c7e",
+      "up366fb600"
+    ],
+    "static_group_members": [],
+    "can_group_with": [
+      "KrqR8y05ep19BY_Axln8FqX8z24JAW-mml6-Mc_BKEc",
+      "up366fb600",
+      "up442a44cc",
+      "up8cef2f7b",
+      "upf3ea6c7e",
+      "upb2965530"
+    ],
+    "synced_to": null,
+    "active_sound_mode": null,
+    "sound_mode_list": [],
+    "options": [],
+    "active_source": "syncgroup_rk7qfzy6",
+    "source_list": [
+      {
+        "id": "syncgroup_rk7qfzy6",
+        "name": "Music Assistant Queue",
+        "passive": false,
+        "can_play_pause": false,
+        "can_seek": false,
+        "can_next_previous": false,
+        "can_shuffle": false,
+        "can_repeat": false,
+        "shuffle_enabled": null,
+        "repeat_mode": null,
+        "account_id": null
+      }
+    ],
+    "active_group": null,
+    "current_media": null,
+    "enabled": true,
+    "hide_in_ui": false,
+    "private": false,
+    "expose_to_ha": true,
+    "icon": "speakers",
+    "group_volume": 50,
+    "group_volume_muted": false,
+    "extra_attributes": {},
+    "power_control": "none",
+    "volume_control": "native",
+    "mute_control": "native",
+    "output_protocols": [
+      {
+        "output_protocol_id": "native",
+        "name": "Sync Group Player",
+        "protocol_domain": "sync_group",
+        "is_native": true,
+        "priority": 0,
+        "available": true,
+        "derived_from": null
+      }
+    ],
+    "active_output_protocol": null,
+    "needs_setup": false,
+    "setup_reason": null,
+    "has_setup_flow": false,
+    "sleep_timer_expires_at": null,
+    "active_source_audio": null,
+    "display_name": "Grannys högtalare",
+    "state": "idle",
+    "group_childs": [
+      "upb2965530",
+      "up8cef2f7b",
+      "upf3ea6c7e",
+      "up366fb600"
+    ],
+    "extra_data": {},
+    "hide_player_in_ui": [
+      "when_unavailable",
+      "when_synced",
+      "when_group_active"
+    ]
+  },
+  {
+    "player_id": "81cfbae8-4ee1-4c8c-84fc-4f1be6360cb2",
+    "provider": "chromecast",
+    "type": "group",
+    "name": "Alla högtalare",
+    "available": true,
+    "device_info": {
+      "model": "Google Cast Group",
+      "manufacturer": "Google Inc.",
+      "software_version": null,
+      "model_id": null,
+      "manufacturer_id": null,
+      "identifiers": {
+        "uuid": "81cfbae8-4ee1-4c8c-84fc-4f1be6360cb2",
+        "cast_uuid": "81cfbae8-4ee1-4c8c-84fc-4f1be6360cb2"
+      },
+      "mac_address": null,
+      "ip_address": null
+    },
+    "supported_features": [
+      "play_media",
+      "volume_set",
+      "power",
+      "pause",
+      "enqueue",
+      "volume_mute"
+    ],
+    "playback_state": "idle",
+    "elapsed_time": null,
+    "elapsed_time_last_updated": null,
+    "powered": false,
+    "volume_level": 66,
+    "volume_muted": false,
+    "group_members": [
+      "up74890f07"
+    ],
+    "static_group_members": [
+      "f145fffd-5ecf-8df1-a2b4-744765541f59"
+    ],
+    "can_group_with": [],
+    "synced_to": null,
+    "active_sound_mode": null,
+    "sound_mode_list": [],
+    "options": [],
+    "active_source": "81cfbae8-4ee1-4c8c-84fc-4f1be6360cb2",
+    "source_list": [
+      {
+        "id": "81cfbae8-4ee1-4c8c-84fc-4f1be6360cb2",
+        "name": "Music Assistant Queue",
+        "passive": false,
+        "can_play_pause": false,
+        "can_seek": false,
+        "can_next_previous": false,
+        "can_shuffle": false,
+        "can_repeat": false,
+        "shuffle_enabled": null,
+        "repeat_mode": null,
+        "account_id": null
+      }
+    ],
+    "active_group": null,
+    "current_media": null,
+    "enabled": true,
+    "hide_in_ui": false,
+    "private": false,
+    "expose_to_ha": true,
+    "icon": "speakers",
+    "group_volume": 15,
+    "group_volume_muted": false,
+    "extra_attributes": {},
+    "power_control": "native",
+    "volume_control": "native",
+    "mute_control": "native",
+    "output_protocols": [
+      {
+        "output_protocol_id": "native",
+        "name": "Chromecast",
+        "protocol_domain": "chromecast",
+        "is_native": true,
+        "priority": 0,
+        "available": true,
+        "derived_from": null
+      }
+    ],
+    "active_output_protocol": null,
+    "needs_setup": false,
+    "setup_reason": null,
+    "has_setup_flow": false,
+    "sleep_timer_expires_at": null,
+    "active_source_audio": null,
+    "display_name": "Alla högtalare",
+    "state": "idle",
+    "group_childs": [
+      "up74890f07"
+    ],
+    "extra_data": {},
+    "hide_player_in_ui": [
+      "when_unavailable",
+      "when_synced",
+      "when_group_active"
+    ]
+  },
+  {
+    "player_id": "aea84eaf-2bc6-4267-8f3d-2fbeec03a194",
+    "provider": "chromecast",
+    "type": "group",
+    "name": "Dassens högtalare",
+    "available": true,
+    "device_info": {
+      "model": "Google Cast Group",
+      "manufacturer": "Google Inc.",
+      "software_version": null,
+      "model_id": null,
+      "manufacturer_id": null,
+      "identifiers": {
+        "uuid": "aea84eaf-2bc6-4267-8f3d-2fbeec03a194",
+        "cast_uuid": "aea84eaf-2bc6-4267-8f3d-2fbeec03a194"
+      },
+      "mac_address": null,
+      "ip_address": null
+    },
+    "supported_features": [
+      "play_media",
+      "volume_set",
+      "power",
+      "pause",
+      "enqueue",
+      "volume_mute"
+    ],
+    "playback_state": "idle",
+    "elapsed_time": null,
+    "elapsed_time_last_updated": null,
+    "powered": false,
+    "volume_level": 15,
+    "volume_muted": false,
+    "group_members": [
+      "up74890f07"
+    ],
+    "static_group_members": [
+      "f145fffd-5ecf-8df1-a2b4-744765541f59"
+    ],
+    "can_group_with": [],
+    "synced_to": null,
+    "active_sound_mode": null,
+    "sound_mode_list": [],
+    "options": [],
+    "active_source": "aea84eaf-2bc6-4267-8f3d-2fbeec03a194",
+    "source_list": [
+      {
+        "id": "aea84eaf-2bc6-4267-8f3d-2fbeec03a194",
+        "name": "Music Assistant Queue",
+        "passive": false,
+        "can_play_pause": false,
+        "can_seek": false,
+        "can_next_previous": false,
+        "can_shuffle": false,
+        "can_repeat": false,
+        "shuffle_enabled": null,
+        "repeat_mode": null,
+        "account_id": null
+      }
+    ],
+    "active_group": null,
+    "current_media": null,
+    "enabled": true,
+    "hide_in_ui": false,
+    "private": false,
+    "expose_to_ha": true,
+    "icon": "speakers",
+    "group_volume": 15,
+    "group_volume_muted": false,
+    "extra_attributes": {},
+    "power_control": "native",
+    "volume_control": "native",
+    "mute_control": "native",
+    "output_protocols": [
+      {
+        "output_protocol_id": "native",
+        "name": "Chromecast",
+        "protocol_domain": "chromecast",
+        "is_native": true,
+        "priority": 0,
+        "available": true,
+        "derived_from": null
+      }
+    ],
+    "active_output_protocol": null,
+    "needs_setup": false,
+    "setup_reason": null,
+    "has_setup_flow": false,
+    "sleep_timer_expires_at": null,
+    "active_source_audio": null,
+    "display_name": "Dassens högtalare",
+    "state": "idle",
+    "group_childs": [
+      "up74890f07"
+    ],
+    "extra_data": {},
+    "hide_player_in_ui": [
+      "when_unavailable",
+      "when_synced",
+      "when_group_active"
+    ]
+  },
+  {
+    "player_id": "up74890f07",
+    "provider": "universal_player",
+    "type": "player",
+    "name": "Duschens högtalare",
+    "available": true,
+    "device_info": {
+      "model": "JBL Link Portable",
+      "manufacturer": "HARMAN International Industries",
+      "software_version": null,
+      "model_id": null,
+      "manufacturer_id": null,
+      "identifiers": {
+        "ip_address": "192.168.10.208",
+        "mac_address": "6C:47:60:0B:55:77",
+        "uuid": "f145fffd-5ecf-8df1-a2b4-744765541f59",
+        "cast_uuid": "f145fffd-5ecf-8df1-a2b4-744765541f59"
+      },
+      "mac_address": "6C:47:60:0B:55:77",
+      "ip_address": "192.168.10.208"
+    },
+    "supported_features": [
+      "volume_mute",
+      "volume_set"
+    ],
+    "playback_state": "idle",
+    "elapsed_time": null,
+    "elapsed_time_last_updated": null,
+    "powered": true,
+    "volume_level": 15,
+    "volume_muted": false,
+    "group_members": [],
+    "static_group_members": [],
+    "can_group_with": [],
+    "synced_to": null,
+    "active_sound_mode": null,
+    "sound_mode_list": [],
+    "options": [],
+    "active_source": "up74890f07",
+    "source_list": [
+      {
+        "id": "up74890f07",
+        "name": "Music Assistant Queue",
+        "passive": false,
+        "can_play_pause": false,
+        "can_seek": false,
+        "can_next_previous": false,
+        "can_shuffle": false,
+        "can_repeat": false,
+        "shuffle_enabled": null,
+        "repeat_mode": null,
+        "account_id": null
+      }
+    ],
+    "active_group": null,
+    "current_media": null,
+    "enabled": true,
+    "hide_in_ui": false,
+    "private": false,
+    "expose_to_ha": true,
+    "icon": "speaker",
+    "group_volume": 15,
+    "group_volume_muted": false,
+    "extra_attributes": {},
+    "power_control": "none",
+    "volume_control": "f145fffd-5ecf-8df1-a2b4-744765541f59",
+    "mute_control": "f145fffd-5ecf-8df1-a2b4-744765541f59",
+    "output_protocols": [
+      {
+        "output_protocol_id": "f145fffd-5ecf-8df1-a2b4-744765541f59",
+        "name": "Chromecast",
+        "protocol_domain": "chromecast",
+        "is_native": false,
+        "priority": 30,
+        "available": true,
+        "derived_from": null
+      },
+      {
+        "output_protocol_id": "spb_6c47600b5577",
+        "name": "Sendspin",
+        "protocol_domain": "sendspin",
+        "is_native": false,
+        "priority": 40,
+        "available": false,
+        "derived_from": "f145fffd-5ecf-8df1-a2b4-744765541f59"
+      }
+    ],
+    "active_output_protocol": null,
+    "needs_setup": false,
+    "setup_reason": null,
+    "has_setup_flow": false,
+    "sleep_timer_expires_at": null,
+    "active_source_audio": null,
+    "display_name": "Duschens högtalare",
+    "state": "idle",
+    "group_childs": [],
+    "extra_data": {},
+    "hide_player_in_ui": [
+      "when_unavailable",
+      "when_synced",
+      "when_group_active"
+    ]
+  },
+  {
+    "player_id": "741eea0d-05a3-445b-a807-71d6884f1a90",
+    "provider": "chromecast",
+    "type": "player",
+    "name": "Verandans högtalare vänster",
+    "available": true,
+    "device_info": {
+      "model": "Chromecast Audio",
+      "manufacturer": "Google Inc.",
+      "software_version": null,
+      "model_id": null,
+      "manufacturer_id": null,
+      "identifiers": {
+        "ip_address": "192.168.10.206",
+        "mac_address": "54:60:09:D6:4F:22",
+        "uuid": "741eea0d-05a3-445b-a807-71d6884f1a90",
+        "cast_uuid": "741eea0d-05a3-445b-a807-71d6884f1a90"
+      },
+      "mac_address": "54:60:09:D6:4F:22",
+      "ip_address": "192.168.10.206"
+    },
+    "supported_features": [
+      "volume_set",
+      "next_previous",
+      "play_media",
+      "pause",
+      "enqueue",
+      "volume_mute",
+      "seek"
+    ],
+    "playback_state": "idle",
+    "elapsed_time": null,
+    "elapsed_time_last_updated": null,
+    "powered": true,
+    "volume_level": 5,
+    "volume_muted": false,
+    "group_members": [],
+    "static_group_members": [],
+    "can_group_with": [],
+    "synced_to": null,
+    "active_sound_mode": null,
+    "sound_mode_list": [],
+    "options": [],
+    "active_source": "741eea0d-05a3-445b-a807-71d6884f1a90",
+    "source_list": [
+      {
+        "id": "741eea0d-05a3-445b-a807-71d6884f1a90",
+        "name": "Music Assistant Queue",
+        "passive": false,
+        "can_play_pause": false,
+        "can_seek": false,
+        "can_next_previous": false,
+        "can_shuffle": false,
+        "can_repeat": false,
+        "shuffle_enabled": null,
+        "repeat_mode": null,
+        "account_id": null
+      }
+    ],
+    "active_group": null,
+    "current_media": null,
+    "enabled": true,
+    "hide_in_ui": false,
+    "private": false,
+    "expose_to_ha": true,
+    "icon": "cast",
+    "group_volume": 5,
+    "group_volume_muted": false,
+    "extra_attributes": {},
+    "power_control": "none",
+    "volume_control": "native",
+    "mute_control": "native",
+    "output_protocols": [
+      {
+        "output_protocol_id": "native",
+        "name": "Chromecast",
+        "protocol_domain": "chromecast",
+        "is_native": true,
+        "priority": 0,
+        "available": true,
+        "derived_from": null
+      },
+      {
+        "output_protocol_id": "spb_546009d64f22",
+        "name": "Sendspin",
+        "protocol_domain": "sendspin",
+        "is_native": false,
+        "priority": 40,
+        "available": false,
+        "derived_from": "native"
+      }
+    ],
+    "active_output_protocol": null,
+    "needs_setup": false,
+    "setup_reason": null,
+    "has_setup_flow": false,
+    "sleep_timer_expires_at": null,
+    "active_source_audio": null,
+    "display_name": "Verandans högtalare vänster",
+    "state": "idle",
+    "group_childs": [],
+    "extra_data": {},
+    "hide_player_in_ui": [
+      "when_unavailable",
+      "when_synced",
+      "when_group_active"
+    ]
+  },
+  {
+    "player_id": "112179a2-361d-8781-2474-d01839f340eb",
+    "provider": "chromecast",
+    "type": "player",
+    "name": "Verandans högtalare höger",
+    "available": true,
+    "device_info": {
+      "model": "Chromecast Audio",
+      "manufacturer": "Google Inc.",
+      "software_version": null,
+      "model_id": null,
+      "manufacturer_id": null,
+      "identifiers": {
+        "ip_address": "192.168.10.207",
+        "mac_address": "54:60:09:E8:FC:56",
+        "uuid": "112179a2-361d-8781-2474-d01839f340eb",
+        "cast_uuid": "112179a2-361d-8781-2474-d01839f340eb"
+      },
+      "mac_address": "54:60:09:E8:FC:56",
+      "ip_address": "192.168.10.207"
+    },
+    "supported_features": [
+      "volume_set",
+      "next_previous",
+      "play_media",
+      "pause",
+      "enqueue",
+      "volume_mute",
+      "seek"
+    ],
+    "playback_state": "idle",
+    "elapsed_time": null,
+    "elapsed_time_last_updated": null,
+    "powered": true,
+    "volume_level": 5,
+    "volume_muted": false,
+    "group_members": [],
+    "static_group_members": [],
+    "can_group_with": [],
+    "synced_to": null,
+    "active_sound_mode": null,
+    "sound_mode_list": [],
+    "options": [],
+    "active_source": "112179a2-361d-8781-2474-d01839f340eb",
+    "source_list": [
+      {
+        "id": "112179a2-361d-8781-2474-d01839f340eb",
+        "name": "Music Assistant Queue",
+        "passive": false,
+        "can_play_pause": false,
+        "can_seek": false,
+        "can_next_previous": false,
+        "can_shuffle": false,
+        "can_repeat": false,
+        "shuffle_enabled": null,
+        "repeat_mode": null,
+        "account_id": null
+      }
+    ],
+    "active_group": null,
+    "current_media": null,
+    "enabled": true,
+    "hide_in_ui": false,
+    "private": false,
+    "expose_to_ha": true,
+    "icon": "cast",
+    "group_volume": 5,
+    "group_volume_muted": false,
+    "extra_attributes": {},
+    "power_control": "none",
+    "volume_control": "native",
+    "mute_control": "native",
+    "output_protocols": [
+      {
+        "output_protocol_id": "native",
+        "name": "Chromecast",
+        "protocol_domain": "chromecast",
+        "is_native": true,
+        "priority": 0,
+        "available": true,
+        "derived_from": null
+      },
+      {
+        "output_protocol_id": "spb_546009e8fc56",
+        "name": "Sendspin",
+        "protocol_domain": "sendspin",
+        "is_native": false,
+        "priority": 40,
+        "available": false,
+        "derived_from": "native"
+      }
+    ],
+    "active_output_protocol": null,
+    "needs_setup": false,
+    "setup_reason": null,
+    "has_setup_flow": false,
+    "sleep_timer_expires_at": null,
+    "active_source_audio": null,
+    "display_name": "Verandans högtalare höger",
+    "state": "idle",
+    "group_childs": [],
+    "extra_data": {},
+    "hide_player_in_ui": [
+      "when_unavailable",
+      "when_synced",
+      "when_group_active"
+    ]
+  },
+  {
+    "player_id": "919454fc-c108-40cd-8ac5-23808d3fa5a9",
+    "provider": "chromecast",
+    "type": "group",
+    "name": "Verandans högtalare",
+    "available": true,
+    "device_info": {
+      "model": "Google Cast Group",
+      "manufacturer": "Google Inc.",
+      "software_version": null,
+      "model_id": null,
+      "manufacturer_id": null,
+      "identifiers": {
+        "uuid": "919454fc-c108-40cd-8ac5-23808d3fa5a9",
+        "cast_uuid": "919454fc-c108-40cd-8ac5-23808d3fa5a9"
+      },
+      "mac_address": null,
+      "ip_address": null
+    },
+    "supported_features": [
+      "play_media",
+      "volume_set",
+      "power",
+      "pause",
+      "enqueue",
+      "volume_mute"
+    ],
+    "playback_state": "idle",
+    "elapsed_time": null,
+    "elapsed_time_last_updated": null,
+    "powered": false,
+    "volume_level": 5,
+    "volume_muted": false,
+    "group_members": [
+      "112179a2-361d-8781-2474-d01839f340eb",
+      "741eea0d-05a3-445b-a807-71d6884f1a90"
+    ],
+    "static_group_members": [
+      "112179a2-361d-8781-2474-d01839f340eb",
+      "741eea0d-05a3-445b-a807-71d6884f1a90"
+    ],
+    "can_group_with": [],
+    "synced_to": null,
+    "active_sound_mode": null,
+    "sound_mode_list": [],
+    "options": [],
+    "active_source": "919454fc-c108-40cd-8ac5-23808d3fa5a9",
+    "source_list": [
+      {
+        "id": "919454fc-c108-40cd-8ac5-23808d3fa5a9",
+        "name": "Music Assistant Queue",
+        "passive": false,
+        "can_play_pause": false,
+        "can_seek": false,
+        "can_next_previous": false,
+        "can_shuffle": false,
+        "can_repeat": false,
+        "shuffle_enabled": null,
+        "repeat_mode": null,
+        "account_id": null
+      }
+    ],
+    "active_group": null,
+    "current_media": null,
+    "enabled": true,
+    "hide_in_ui": false,
+    "private": false,
+    "expose_to_ha": true,
+    "icon": "speakers",
+    "group_volume": 5,
+    "group_volume_muted": false,
+    "extra_attributes": {},
+    "power_control": "native",
+    "volume_control": "native",
+    "mute_control": "native",
+    "output_protocols": [
+      {
+        "output_protocol_id": "native",
+        "name": "Chromecast",
+        "protocol_domain": "chromecast",
+        "is_native": true,
+        "priority": 0,
+        "available": true,
+        "derived_from": null
+      }
+    ],
+    "active_output_protocol": null,
+    "needs_setup": false,
+    "setup_reason": null,
+    "has_setup_flow": false,
+    "sleep_timer_expires_at": null,
+    "active_source_audio": null,
+    "display_name": "Verandans högtalare",
+    "state": "idle",
+    "group_childs": [
+      "112179a2-361d-8781-2474-d01839f340eb",
+      "741eea0d-05a3-445b-a807-71d6884f1a90"
+    ],
+    "extra_data": {},
+    "hide_player_in_ui": [
+      "when_unavailable",
+      "when_synced",
+      "when_group_active"
+    ]
+  },
+  {
+    "player_id": "721a89d6-fc3f-406d-050e-ea545ac83fc4",
+    "provider": "chromecast",
+    "type": "player",
+    "name": "Mannis väckarklocka",
+    "available": true,
+    "device_info": {
+      "model": "Google Nest Hub",
+      "manufacturer": "Google Inc.",
+      "software_version": null,
+      "model_id": null,
+      "manufacturer_id": null,
+      "identifiers": {
+        "ip_address": "192.168.10.213",
+        "mac_address": "D8:EB:46:96:63:E4",
+        "uuid": "721a89d6-fc3f-406d-050e-ea545ac83fc4",
+        "cast_uuid": "721a89d6-fc3f-406d-050e-ea545ac83fc4"
+      },
+      "mac_address": "D8:EB:46:96:63:E4",
+      "ip_address": "192.168.10.213"
+    },
+    "supported_features": [
+      "volume_set",
+      "next_previous",
+      "play_media",
+      "pause",
+      "enqueue",
+      "volume_mute",
+      "seek"
+    ],
+    "playback_state": "idle",
+    "elapsed_time": null,
+    "elapsed_time_last_updated": null,
+    "powered": true,
+    "volume_level": 36,
+    "volume_muted": false,
+    "group_members": [],
+    "static_group_members": [],
+    "can_group_with": [],
+    "synced_to": null,
+    "active_sound_mode": null,
+    "sound_mode_list": [],
+    "options": [],
+    "active_source": "721a89d6-fc3f-406d-050e-ea545ac83fc4",
+    "source_list": [
+      {
+        "id": "721a89d6-fc3f-406d-050e-ea545ac83fc4",
+        "name": "Music Assistant Queue",
+        "passive": false,
+        "can_play_pause": false,
+        "can_seek": false,
+        "can_next_previous": false,
+        "can_shuffle": false,
+        "can_repeat": false,
+        "shuffle_enabled": null,
+        "repeat_mode": null,
+        "account_id": null
+      }
+    ],
+    "active_group": null,
+    "current_media": null,
+    "enabled": true,
+    "hide_in_ui": false,
+    "private": false,
+    "expose_to_ha": true,
+    "icon": "google-nest",
+    "group_volume": 36,
+    "group_volume_muted": false,
+    "extra_attributes": {},
+    "power_control": "none",
+    "volume_control": "native",
+    "mute_control": "native",
+    "output_protocols": [
+      {
+        "output_protocol_id": "native",
+        "name": "Chromecast",
+        "protocol_domain": "chromecast",
+        "is_native": true,
+        "priority": 0,
+        "available": true,
+        "derived_from": null
+      },
+      {
+        "output_protocol_id": "spb_d8eb469663e4",
+        "name": "Sendspin",
+        "protocol_domain": "sendspin",
+        "is_native": false,
+        "priority": 40,
+        "available": false,
+        "derived_from": "native"
+      }
+    ],
+    "active_output_protocol": null,
+    "needs_setup": false,
+    "setup_reason": null,
+    "has_setup_flow": false,
+    "sleep_timer_expires_at": null,
+    "active_source_audio": null,
+    "display_name": "Mannis väckarklocka",
+    "state": "idle",
+    "group_childs": [],
+    "extra_data": {},
+    "hide_player_in_ui": [
+      "when_unavailable",
+      "when_synced",
+      "when_group_active"
+    ]
+  },
+  {
+    "player_id": "a56bb45d-aa7e-3a34-132d-5baa281f1f23",
+    "provider": "chromecast",
+    "type": "player",
+    "name": "Diegos väckarklocka",
+    "available": true,
+    "device_info": {
+      "model": "Google Nest Hub",
+      "manufacturer": "Google Inc.",
+      "software_version": null,
+      "model_id": null,
+      "manufacturer_id": null,
+      "identifiers": {
+        "ip_address": "192.168.10.210",
+        "mac_address": "D8:EB:46:81:A7:F3",
+        "uuid": "a56bb45d-aa7e-3a34-132d-5baa281f1f23",
+        "cast_uuid": "a56bb45d-aa7e-3a34-132d-5baa281f1f23"
+      },
+      "mac_address": "D8:EB:46:81:A7:F3",
+      "ip_address": "192.168.10.210"
+    },
+    "supported_features": [
+      "volume_set",
+      "next_previous",
+      "play_media",
+      "pause",
+      "enqueue",
+      "volume_mute",
+      "seek"
+    ],
+    "playback_state": "idle",
+    "elapsed_time": null,
+    "elapsed_time_last_updated": null,
+    "powered": true,
+    "volume_level": 40,
+    "volume_muted": false,
+    "group_members": [],
+    "static_group_members": [],
+    "can_group_with": [],
+    "synced_to": null,
+    "active_sound_mode": null,
+    "sound_mode_list": [],
+    "options": [],
+    "active_source": "a56bb45d-aa7e-3a34-132d-5baa281f1f23",
+    "source_list": [
+      {
+        "id": "a56bb45d-aa7e-3a34-132d-5baa281f1f23",
+        "name": "Music Assistant Queue",
+        "passive": false,
+        "can_play_pause": false,
+        "can_seek": false,
+        "can_next_previous": false,
+        "can_shuffle": false,
+        "can_repeat": false,
+        "shuffle_enabled": null,
+        "repeat_mode": null,
+        "account_id": null
+      }
+    ],
+    "active_group": null,
+    "current_media": null,
+    "enabled": true,
+    "hide_in_ui": false,
+    "private": false,
+    "expose_to_ha": true,
+    "icon": "google-nest",
+    "group_volume": 40,
+    "group_volume_muted": false,
+    "extra_attributes": {},
+    "power_control": "none",
+    "volume_control": "native",
+    "mute_control": "native",
+    "output_protocols": [
+      {
+        "output_protocol_id": "native",
+        "name": "Chromecast",
+        "protocol_domain": "chromecast",
+        "is_native": true,
+        "priority": 0,
+        "available": true,
+        "derived_from": null
+      },
+      {
+        "output_protocol_id": "spb_d8eb4681a7f3",
+        "name": "Sendspin",
+        "protocol_domain": "sendspin",
+        "is_native": false,
+        "priority": 40,
+        "available": false,
+        "derived_from": "native"
+      }
+    ],
+    "active_output_protocol": null,
+    "needs_setup": false,
+    "setup_reason": null,
+    "has_setup_flow": false,
+    "sleep_timer_expires_at": null,
+    "active_source_audio": null,
+    "display_name": "Diegos väckarklocka",
+    "state": "idle",
+    "group_childs": [],
+    "extra_data": {},
+    "hide_player_in_ui": [
+      "when_unavailable",
+      "when_synced",
+      "when_group_active"
+    ]
+  },
+  {
+    "player_id": "KrqR8y05ep19BY_Axln8FqX8z24JAW-mml6-Mc_BKEc",
+    "provider": "sendspin",
+    "type": "player",
+    "name": "PWA (Chrome on Windows)",
+    "available": true,
+    "device_info": {
+      "model": "Web Player",
+      "manufacturer": "Google Inc.",
+      "software_version": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "model_id": null,
+      "manufacturer_id": null,
+      "identifiers": {},
+      "mac_address": null,
+      "ip_address": null
+    },
+    "supported_features": [
+      "set_members",
+      "play_media",
+      "volume_set",
+      "multi_device_dsp",
+      "volume_mute"
+    ],
+    "playback_state": "idle",
+    "elapsed_time": null,
+    "elapsed_time_last_updated": null,
+    "powered": true,
+    "volume_level": 100,
+    "volume_muted": false,
+    "group_members": [],
+    "static_group_members": [],
+    "can_group_with": [
+      "up366fb600",
+      "up442a44cc",
+      "up8cef2f7b",
+      "upf3ea6c7e",
+      "upb2965530"
+    ],
+    "synced_to": null,
+    "active_sound_mode": null,
+    "sound_mode_list": [],
+    "options": [],
+    "active_source": "KrqR8y05ep19BY_Axln8FqX8z24JAW-mml6-Mc_BKEc",
+    "source_list": [
+      {
+        "id": "KrqR8y05ep19BY_Axln8FqX8z24JAW-mml6-Mc_BKEc",
+        "name": "Music Assistant Queue",
+        "passive": false,
+        "can_play_pause": false,
+        "can_seek": false,
+        "can_next_previous": false,
+        "can_shuffle": false,
+        "can_repeat": false,
+        "shuffle_enabled": null,
+        "repeat_mode": null,
+        "account_id": null
+      }
+    ],
+    "active_group": null,
+    "current_media": null,
+    "enabled": true,
+    "hide_in_ui": true,
+    "private": true,
+    "expose_to_ha": false,
+    "icon": "speaker",
+    "group_volume": 100,
+    "group_volume_muted": false,
+    "extra_attributes": {},
+    "power_control": "none",
+    "volume_control": "native",
+    "mute_control": "native",
+    "output_protocols": [
+      {
+        "output_protocol_id": "native",
+        "name": "Sendspin",
+        "protocol_domain": "sendspin",
+        "is_native": true,
+        "priority": 0,
+        "available": true,
+        "derived_from": null
+      }
+    ],
+    "active_output_protocol": null,
+    "needs_setup": false,
+    "setup_reason": null,
+    "has_setup_flow": false,
+    "sleep_timer_expires_at": null,
+    "active_source_audio": null,
+    "display_name": "PWA (Chrome on Windows)",
+    "state": "idle",
+    "group_childs": [],
+    "extra_data": {},
+    "hide_player_in_ui": [
+      "always"
+    ]
+  },
+  {
+    "player_id": "upf3ea6c7e",
+    "provider": "universal_player",
+    "type": "player",
+    "name": "Kontorets högtalare",
+    "available": true,
+    "device_info": {
+      "model": "JBL Link 20",
+      "manufacturer": "JBL",
+      "software_version": null,
+      "model_id": null,
+      "manufacturer_id": null,
+      "identifiers": {
+        "ip_address": "192.168.10.212",
+        "mac_address": "80:C5:F2:3E:08:43",
+        "uuid": "abc85c69-d2e2-af6d-921e-fc4a5eb1b8e2",
+        "cast_uuid": "abc85c69-d2e2-af6d-921e-fc4a5eb1b8e2"
+      },
+      "mac_address": "80:C5:F2:3E:08:43",
+      "ip_address": "192.168.10.212"
+    },
+    "supported_features": [
+      "set_members",
+      "volume_mute",
+      "volume_set"
+    ],
+    "playback_state": "idle",
+    "elapsed_time": null,
+    "elapsed_time_last_updated": null,
+    "powered": true,
+    "volume_level": 44,
+    "volume_muted": false,
+    "group_members": [],
+    "static_group_members": [],
+    "can_group_with": [
+      "KrqR8y05ep19BY_Axln8FqX8z24JAW-mml6-Mc_BKEc",
+      "up442a44cc",
+      "upb2965530",
+      "up8cef2f7b",
+      "up366fb600"
+    ],
+    "synced_to": null,
+    "active_sound_mode": null,
+    "sound_mode_list": [],
+    "options": [],
+    "active_source": "upf3ea6c7e",
+    "source_list": [
+      {
+        "id": "upf3ea6c7e",
+        "name": "Music Assistant Queue",
+        "passive": false,
+        "can_play_pause": false,
+        "can_seek": false,
+        "can_next_previous": false,
+        "can_shuffle": false,
+        "can_repeat": false,
+        "shuffle_enabled": null,
+        "repeat_mode": null,
+        "account_id": null
+      }
+    ],
+    "active_group": null,
+    "current_media": null,
+    "enabled": true,
+    "hide_in_ui": false,
+    "private": false,
+    "expose_to_ha": true,
+    "icon": "speaker",
+    "group_volume": 44,
+    "group_volume_muted": false,
+    "extra_attributes": {},
+    "power_control": "none",
+    "volume_control": "abc85c69-d2e2-af6d-921e-fc4a5eb1b8e2",
+    "mute_control": "abc85c69-d2e2-af6d-921e-fc4a5eb1b8e2",
+    "output_protocols": [
+      {
+        "output_protocol_id": "abc85c69-d2e2-af6d-921e-fc4a5eb1b8e2",
+        "name": "Chromecast",
+        "protocol_domain": "chromecast",
+        "is_native": false,
+        "priority": 30,
+        "available": true,
+        "derived_from": null
+      },
+      {
+        "output_protocol_id": "spb_80c5f23e0843",
+        "name": "Sendspin",
+        "protocol_domain": "sendspin",
+        "is_native": false,
+        "priority": 40,
+        "available": true,
+        "derived_from": "abc85c69-d2e2-af6d-921e-fc4a5eb1b8e2"
+      }
+    ],
+    "active_output_protocol": null,
+    "needs_setup": false,
+    "setup_reason": null,
+    "has_setup_flow": false,
+    "sleep_timer_expires_at": null,
+    "active_source_audio": null,
+    "display_name": "Kontorets högtalare",
+    "state": "idle",
+    "group_childs": [],
+    "extra_data": {},
+    "hide_player_in_ui": [
+      "when_unavailable",
+      "when_synced",
+      "when_group_active"
+    ]
+  }
+]

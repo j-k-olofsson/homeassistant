@@ -1,0 +1,362 @@
+[
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV2WFX49FPJBWGVVGYSQ1XH",
+    "config_subentry_id": null,
+    "created_at": 1783320434.332488,
+    "device_id": "7e3365ff7aa3b8275a662a8823f1b9b8",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.koket_openwrt_one_ap_koket_public_ip",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "cbde216d7e2d73d5a4b5be401c6d169c",
+    "labels": [],
+    "modified_at": 1786162040.305338,
+    "name": null,
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Public IP",
+    "platform": "openwrt",
+    "translation_key": "public_ip",
+    "unique_id": "01KWV2WFX49FPJBWGVVGYSQ1XH_public_ip"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV2SPH2EV1C7PC398AHYHMG",
+    "config_subentry_id": null,
+    "created_at": 1783320342.83187,
+    "device_id": "8a1e9043f71dc45229190247390e0d69",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.kontoret_openwrt_one_ap_kontoret_public_ip",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "ef01c687d10de3294dbb80c37d2bbe69",
+    "labels": [],
+    "modified_at": 1786162040.590132,
+    "name": null,
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Public IP",
+    "platform": "openwrt",
+    "translation_key": "public_ip",
+    "unique_id": "01KWV2SPH2EV1C7PC398AHYHMG_public_ip"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M0CQWZG3NKV22ZVEVFEN0KWF",
+    "config_subentry_id": null,
+    "created_at": 1787134123.810633,
+    "device_id": "d0feb355293a7b1561f1b965602b3016",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.friggan_asus_lyra_map_ac2200_ap_friggan_public_ip",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "0a547ce2d58abc02615631f5b5c0b5da",
+    "labels": [],
+    "modified_at": 1787134123.81197,
+    "name": null,
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Public IP",
+    "platform": "openwrt",
+    "translation_key": "public_ip",
+    "unique_id": "01M0CQWZG3NKV22ZVEVFEN0KWF_public_ip"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV37NP1NFRTCQ76KJ6B0PRE",
+    "config_subentry_id": null,
+    "created_at": 1783320807.512513,
+    "device_id": "9d41bc4604451d12213ca26190d146da",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_public_ip",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "53104d1d92284682dad492c4c903ea94",
+    "labels": [],
+    "modified_at": 1786162046.630561,
+    "name": null,
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Public IP",
+    "platform": "openwrt",
+    "translation_key": "public_ip",
+    "unique_id": "01KWV37NP1NFRTCQ76KJ6B0PRE_public_ip"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01K86C7FV03FZSW85Q2QGG0BH8",
+    "config_subentry_id": null,
+    "created_at": 1784540870.772192,
+    "device_id": "444edb1c05f7869597326dcc1621322a",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "select.siemens_016050395510002818_bsh_common_option_startinrelative",
+    "has_entity_name": false,
+    "hidden_by": null,
+    "icon": null,
+    "id": "8ba2a370c797f514eb211b08bc1862de",
+    "labels": [],
+    "modified_at": 1789238684.974095,
+    "name": null,
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Siemens Diskmaskin - Starttid",
+    "platform": "home_connect_alt",
+    "translation_key": null,
+    "unique_id": "siemens_016050395510002818_bsh_common_option_startinrelative"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01K86C7FV03FZSW85Q2QGG0BH8",
+    "config_subentry_id": null,
+    "created_at": 1784540870.804101,
+    "device_id": "444edb1c05f7869597326dcc1621322a",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "switch.siemens_016050395510002818_dishcare_dishwasher_option_hygieneplus",
+    "has_entity_name": false,
+    "hidden_by": null,
+    "icon": null,
+    "id": "c274a83adfb5f9f84d7e86c17781ade2",
+    "labels": [],
+    "modified_at": 1789469624.866423,
+    "name": null,
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Siemens Diskmaskin - Hygiene Plus",
+    "platform": "home_connect_alt",
+    "translation_key": null,
+    "unique_id": "siemens_016050395510002818_dishcare_dishwasher_option_hygieneplus"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01K86C7FV03FZSW85Q2QGG0BH8",
+    "config_subentry_id": null,
+    "created_at": 1784540870.807445,
+    "device_id": "444edb1c05f7869597326dcc1621322a",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "switch.siemens_016050395510002818_dishcare_dishwasher_option_halfload",
+    "has_entity_name": false,
+    "hidden_by": null,
+    "icon": null,
+    "id": "a10742bb9b397d20a2c03c3ef6df33d1",
+    "labels": [],
+    "modified_at": 1789469624.867955,
+    "name": null,
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Siemens Diskmaskin - Half Load",
+    "platform": "home_connect_alt",
+    "translation_key": null,
+    "unique_id": "siemens_016050395510002818_dishcare_dishwasher_option_halfload"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01K86C7FV03FZSW85Q2QGG0BH8",
+    "config_subentry_id": null,
+    "created_at": 1784540870.80921,
+    "device_id": "444edb1c05f7869597326dcc1621322a",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "switch.siemens_016050395510002818_dishcare_dishwasher_option_variospeedplus",
+    "has_entity_name": false,
+    "hidden_by": null,
+    "icon": null,
+    "id": "bab57e562f5fc07be2ecd8749ce0b32a",
+    "labels": [],
+    "modified_at": 1789469624.869706,
+    "name": null,
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Siemens Diskmaskin - Vario Speed Plus",
+    "platform": "home_connect_alt",
+    "translation_key": null,
+    "unique_id": "siemens_016050395510002818_dishcare_dishwasher_option_variospeedplus"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01K86C7FV03FZSW85Q2QGG0BH8",
+    "config_subentry_id": null,
+    "created_at": 1784540870.812385,
+    "device_id": "444edb1c05f7869597326dcc1621322a",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "switch.siemens_016050395510002818_dishcare_dishwasher_option_brilliancedry",
+    "has_entity_name": false,
+    "hidden_by": null,
+    "icon": null,
+    "id": "c132a35154bf761c3017dbd3fb64ab93",
+    "labels": [],
+    "modified_at": 1789469624.868599,
+    "name": null,
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Siemens Diskmaskin - Brilliance Dry",
+    "platform": "home_connect_alt",
+    "translation_key": null,
+    "unique_id": "siemens_016050395510002818_dishcare_dishwasher_option_brilliancedry"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": null,
+    "config_subentry_id": null,
+    "created_at": 1787053026.163158,
+    "device_id": null,
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.ha_python_cast_test",
+    "has_entity_name": false,
+    "hidden_by": null,
+    "icon": null,
+    "id": "3dda3a6bcd3b8d23c48bf52f20edfeda",
+    "labels": [],
+    "modified_at": 1787053026.406588,
+    "name": null,
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "HA Python Cast Test",
+    "platform": "command_line",
+    "translation_key": null,
+    "unique_id": "ha_python_cast_test"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": null,
+    "config_subentry_id": null,
+    "created_at": 1787053181.522301,
+    "device_id": null,
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.nest_hub_ip_test",
+    "has_entity_name": false,
+    "hidden_by": null,
+    "icon": null,
+    "id": "665271e6bdce54dfa1a26b28d0e1ed65",
+    "labels": [],
+    "modified_at": 1787053181.583105,
+    "name": null,
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Nest Hub IP Test",
+    "platform": "command_line",
+    "translation_key": null,
+    "unique_id": "nest_hub_ip_test"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": null,
+    "config_subentry_id": null,
+    "created_at": 1787736668.208285,
+    "device_id": null,
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "light.ir_ljus",
+    "has_entity_name": false,
+    "hidden_by": null,
+    "icon": null,
+    "id": "bfd6923d05d7ab5085eb5235071dce41",
+    "labels": [],
+    "modified_at": 1787736731.717853,
+    "name": null,
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "IR-ljus",
+    "platform": "group",
+    "translation_key": "light",
+    "unique_id": "ir_lights_all_profiles"
+  }
+]

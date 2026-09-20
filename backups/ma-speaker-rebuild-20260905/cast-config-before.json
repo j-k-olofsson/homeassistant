@@ -1,0 +1,109 @@
+{
+  "values": {
+    "log_level": {
+      "key": "log_level",
+      "type": "string",
+      "default_value": "GLOBAL",
+      "required": true,
+      "options": [
+        {
+          "value": "GLOBAL",
+          "title": "Global",
+          "disabled": false,
+          "disabled_reason": null,
+          "description": null
+        },
+        {
+          "value": "INFO",
+          "title": "Info",
+          "disabled": false,
+          "disabled_reason": null,
+          "description": null
+        },
+        {
+          "value": "WARNING",
+          "title": "Warning",
+          "disabled": false,
+          "disabled_reason": null,
+          "description": null
+        },
+        {
+          "value": "ERROR",
+          "title": "Error",
+          "disabled": false,
+          "disabled_reason": null,
+          "description": null
+        },
+        {
+          "value": "DEBUG",
+          "title": "Debug",
+          "disabled": false,
+          "disabled_reason": null,
+          "description": null
+        },
+        {
+          "value": "VERBOSE",
+          "title": "Verbose",
+          "disabled": false,
+          "disabled_reason": null,
+          "description": null
+        }
+      ],
+      "range": null,
+      "format": null,
+      "description": "Set the log verbosity for this provider.",
+      "help_link": null,
+      "multi_value": false,
+      "expanded_options": false,
+      "depends_on": null,
+      "depends_on_value": null,
+      "depends_on_value_not": null,
+      "hidden": false,
+      "read_only": false,
+      "category": "generic",
+      "action": null,
+      "action_label": null,
+      "immediate_apply": false,
+      "requires_reload": false,
+      "advanced": true,
+      "label": "Log level",
+      "category_label": "Generic",
+      "value": "GLOBAL"
+    },
+    "manual_discovery_ip_addresses": {
+      "key": "manual_discovery_ip_addresses",
+      "type": "string",
+      "default_value": [],
+      "required": false,
+      "options": [],
+      "range": null,
+      "format": null,
+      "description": "In normal circumstances, Music Assistant will automatically discover all players on the network. using multicast discovery on the (L2) local network, such as mDNS or UPNP.\n\nIn case of special network setups or when you run into issues where one or more players are not discovered, you can manually add the IP addresses of the players here. \n\nNote that this setting is not recommended for normal use and should only be used if you know what you are doing. Also, if players are not on the same subnet as the Music Assistant server, you may run into issues with streaming. In that case always ensure that the players can reach the server on the network and double check the base URL configuration of the Stream server in the settings.",
+      "help_link": null,
+      "multi_value": true,
+      "expanded_options": false,
+      "depends_on": null,
+      "depends_on_value": null,
+      "depends_on_value_not": null,
+      "hidden": false,
+      "read_only": false,
+      "category": "generic",
+      "action": null,
+      "action_label": null,
+      "immediate_apply": false,
+      "requires_reload": false,
+      "advanced": true,
+      "label": "Manual IP addresses for discovery",
+      "category_label": "Generic",
+      "value": []
+    }
+  },
+  "type": "player",
+  "domain": "chromecast",
+  "instance_id": "chromecast",
+  "enabled": true,
+  "name": null,
+  "default_name": "Chromecast",
+  "last_error": null,
+  "status": "loaded"
+}

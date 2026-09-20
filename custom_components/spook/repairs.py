@@ -39,7 +39,7 @@ from homeassistant.helpers.event import async_track_time_interval
 from homeassistant.util.async_ import create_eager_task
 
 from .const import DOMAIN, LOGGER
-from .dashboard_resources import redundant_item_ids
+from .dashboard_resources import is_yaml_managed, redundant_item_ids
 from .entity_filtering import async_filter_known_entity_ids, async_get_all_entity_ids
 from .entity_suggestions import async_describe_unknown_entities
 
@@ -104,9 +104,17 @@ class AbstractSpookRepairBase(ABC):
         issue_id: str,
         learn_more_url: str | None = None,
         severity: ir.IssueSeverity = ir.IssueSeverity.WARNING,
+        translation_key: str | None = None,
         translation_placeholders: dict[str, str] | None = None,
     ) -> None:
-        """Create an issue."""
+        """Create an issue.
+
+        `translation_key` defaults to the repair's own name, which is what
+        nearly every repair wants. Pass one when the same finding needs to be
+        worded differently depending on what the house looks like, so that the
+        alternative is a translated string of its own rather than a sentence
+        smuggled in through a placeholder.
+        """
         self.issue_ids.add(issue_id)
         ir.async_create_issue(
             self.hass,
@@ -119,7 +127,7 @@ class AbstractSpookRepairBase(ABC):
             issue_id=f"{self.repair}_{issue_id}",
             learn_more_url=learn_more_url,
             severity=severity,
-            translation_key=self.repair,
+            translation_key=translation_key or self.repair,
             translation_placeholders=translation_placeholders,
         )
 
@@ -147,13 +155,23 @@ class AbstractSpookRepairBase(ABC):
         """Trigger a repair check."""
         raise NotImplementedError
 
-    async def async_deactivate(self) -> None:
-        """Unregister the repair."""
-        if self.hass.is_stopping:
-            return
+    async def async_deactivate(self) -> None:  # noqa: B027
+        """Unregister the repair, and leave what it reported where it is.
 
-        for issue_id in self.issue_ids.copy():
-            self.async_delete_issue(issue_id)
+        Deliberately does nothing, and that is the point of it. Somebody
+        pressing "ignore" has that written on the issue itself, so deleting
+        the issue takes the mark with it and the next inspection puts the same
+        thing back as something nobody has ever seen. Home Assistant keeps an
+        issue over a restart for exactly that reason, as an empty record
+        holding only the mark, and reporting the same thing again finds it and
+        leaves it alone.
+
+        Which makes this a matter of not getting in the way. Every repair
+        already compares what it left in the registry against what it finds
+        when it next looks, and deletes what is no longer there, so the tidying
+        this used to do happens anyway and happens later, when there is
+        something to compare against. #1572.
+        """
 
 
 class AbstractSpookRepair(AbstractSpookRepairBase):
@@ -409,7 +427,19 @@ class AbstractSpookEntityComponentUnknownReferencesRepair(AbstractSpookRepair, A
 
         await self._async_setup_inspection()
 
-        for index, entity in enumerate(entity_component.entities):
+        # Taken as a snapshot, because this loop gives the event loop a turn
+        # every so often and an automation being added or removed during one of
+        # those turns changes the collection underneath it. Home Assistant says
+        # so itself: "callers that iterate over this asynchronously should make
+        # a copy". Without it the whole inspection dies on a `RuntimeError` and
+        # takes the round with it, since nothing above catches that. #1558.
+        #
+        # An entity that arrives while a round is running is missed until the
+        # next one, which is minutes away and no worse than arriving a moment
+        # after the round finished.
+        entities = list(entity_component.entities)
+
+        for index, entity in enumerate(entities):
             if index and index % INSPECTION_YIELD_INTERVAL == 0:
                 # Inspections are CPU-bound; periodically yield to the event
                 # loop so large installations do not stall it.
@@ -528,7 +558,28 @@ class SpookRepairManager:
         self._repairs.add(repair)
 
     async def async_on_unload(self) -> None:
-        """Tear down the Spook reapris."""
+        """Tear down the Spook repairs.
+
+        Nothing is removed from the issue registry on the way out, on purpose.
+
+        Somebody pressing "ignore" on a repair has that written down on the
+        issue itself, and deleting the issue throws it away with everything
+        else. Home Assistant is built for it to survive: an issue that is not
+        marked persistent is still kept over a restart as an empty record
+        holding only that, and creating the same issue again finds that record
+        and leaves the mark alone. Which means the way to keep an ignored
+        repair ignored is to not touch it.
+
+        Spook used to clear them all out here, so every reload, every
+        integration reload and every update through HACS quietly undid every
+        ignore anybody had ever pressed.
+
+        Leaving them behind costs nothing. Every repair already looks at what
+        it left in the registry when it next inspects, and deletes whatever it
+        does not find again, which covers the very things this was for: an
+        issue about something that was resolved or removed while Spook was not
+        running.
+        """
         LOGGER.debug("Tearing down Spook repairs")
         for repair in self._repairs:
             LOGGER.debug(
@@ -537,15 +588,6 @@ class SpookRepairManager:
                 repair.repair,
             )
             await repair.async_deactivate()
-
-            if self.hass.is_stopping:
-                continue
-
-            # Remove issues created by this Spook repair. Issue IDs are
-            # created as "<repair>_<issue_id>" (see async_create_issue).
-            for domain, issue_id in list(self.issue_registry.issues):
-                if domain == DOMAIN and issue_id.startswith(f"{repair.repair}_"):
-                    self.issue_registry.async_delete(domain, issue_id)
 
 
 class RestartRequiredFixFlow(RepairsFlow):
@@ -763,7 +805,7 @@ class DuplicateResourceFixFlow(_RemoveOrIgnoreFixFlow):
         lovelace = self.hass.data.get(lovelace_const.DOMAIN)
         resources = lovelace.resources if lovelace is not None else None
 
-        if resources is not None and not hasattr(resources, "async_delete_item"):
+        if resources is not None and is_yaml_managed(resources):
             return self.async_abort(
                 reason="yaml",
                 description_placeholders=self._menu_placeholders(),
@@ -914,6 +956,14 @@ class GroupUnknownMembersFixFlow(_RemoveOrIgnoreFixFlow):
                 self.hass.config_entries.async_update_entry(
                     entry, options={**entry.options, CONF_ENTITIES: remaining}
                 )
+                # Writing the options is not the end of it. Nothing in the
+                # group integration listens for its own entry changing, so
+                # the group that is running carries on with the list it was
+                # built from until something reloads it. Leave that out and
+                # the button reports success, the member is still in the
+                # group, and the repair goes on reporting it because it reads
+                # the group rather than the stored options.
+                await self.hass.config_entries.async_reload(entry.entry_id)
         return self.async_create_entry(data={})
 
 
@@ -963,6 +1013,11 @@ class MinMaxUnknownSourcesFixFlow(_RemoveOrIgnoreFixFlow):
                 self.hass.config_entries.async_update_entry(
                     entry, options={**entry.options, "entity_ids": remaining}
                 )
+                # Same as above, and here it is worse than a stale reference:
+                # the helper keeps listening to the source somebody just took
+                # out, so if that source comes back it drives the value again
+                # while the configuration says it is gone.
+                await self.hass.config_entries.async_reload(entry.entry_id)
         return self.async_create_entry(data={})
 
 

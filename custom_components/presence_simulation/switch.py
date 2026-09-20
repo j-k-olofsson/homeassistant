@@ -36,6 +36,10 @@ class PresenceSimulationSwitch(SwitchEntity,RestoreEntity):
         # to None by homeassistant/helpers/entity.py:ToggleEntity.
         # State will be initialized when restore_state() runs.
         self._next_events = []
+        # A monotonically increasing token permanently invalidates tasks from
+        # an earlier run, even if the switch is turned off and on again before
+        # those tasks wake up.
+        self._run_generation = 0
         self.id = SWITCH_PLATFORM+"."+re.sub("[^0-9a-zA-Z]", "_", config.data["switch"].lower())
         _LOGGER.debug("In init of switch - end")
 
@@ -76,8 +80,21 @@ class PresenceSimulationSwitch(SwitchEntity,RestoreEntity):
         self._attr_is_on = True
         self.async_write_ha_state()
 
+    def begin_run(self):
+        """Start a new generation and return its cancellation token."""
+        self._run_generation += 1
+        self.attr["run_generation"] = self._run_generation
+        self.internal_turn_on()
+        return self._run_generation
+
+    def is_current_run(self, generation):
+        """Return whether generation still owns the active simulation."""
+        return self.is_on and generation == self._run_generation
+
     def internal_turn_off(self, **kwargs):
         """Turn off the presence simulation flag. Does not launch the stop simulation service, this is for the calls from the services, to avoid a loop"""
+        self._run_generation += 1
+        self.attr["run_generation"] = self._run_generation
         self._attr_available = True
         self._attr_is_on = False
         self._next_events = []
@@ -206,6 +223,8 @@ class PresenceSimulationSwitch(SwitchEntity,RestoreEntity):
                     self._unavailable_as_off_overriden = state.attributes["unavailable_as_off"]
                 if "brightness" in state.attributes:
                     self._brightness_overriden = state.attributes["brightness"]
+                if "dry_run" in state.attributes:
+                    self._dry_run_overriden = state.attributes["dry_run"]
                 #just set internally to on, the simulation service will be called later once the HA Start event is fired
                 self.internal_turn_on()
             else:

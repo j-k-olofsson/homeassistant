@@ -1,0 +1,82 @@
+{
+  "values": {
+    "log_level": {
+      "key": "log_level",
+      "type": "string",
+      "default_value": "GLOBAL",
+      "required": true,
+      "options": [
+        {
+          "value": "GLOBAL",
+          "title": "Global",
+          "disabled": false,
+          "disabled_reason": null,
+          "description": null
+        },
+        {
+          "value": "INFO",
+          "title": "Info",
+          "disabled": false,
+          "disabled_reason": null,
+          "description": null
+        },
+        {
+          "value": "WARNING",
+          "title": "Warning",
+          "disabled": false,
+          "disabled_reason": null,
+          "description": null
+        },
+        {
+          "value": "ERROR",
+          "title": "Error",
+          "disabled": false,
+          "disabled_reason": null,
+          "description": null
+        },
+        {
+          "value": "DEBUG",
+          "title": "Debug",
+          "disabled": false,
+          "disabled_reason": null,
+          "description": null
+        },
+        {
+          "value": "VERBOSE",
+          "title": "Verbose",
+          "disabled": false,
+          "disabled_reason": null,
+          "description": null
+        }
+      ],
+      "range": null,
+      "format": null,
+      "description": "Set the log verbosity for this provider.",
+      "help_link": null,
+      "multi_value": false,
+      "expanded_options": false,
+      "depends_on": null,
+      "depends_on_value": null,
+      "depends_on_value_not": null,
+      "hidden": false,
+      "read_only": false,
+      "category": "generic",
+      "action": null,
+      "action_label": null,
+      "immediate_apply": false,
+      "requires_reload": false,
+      "advanced": true,
+      "label": "Log level",
+      "category_label": "Generic",
+      "value": "GLOBAL"
+    }
+  },
+  "type": "player",
+  "domain": "airplay",
+  "instance_id": "airplay",
+  "enabled": false,
+  "name": "AirPlay",
+  "default_name": "AirPlay",
+  "last_error": null,
+  "status": "disabled"
+}

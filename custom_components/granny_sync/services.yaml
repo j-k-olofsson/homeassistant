@@ -1,0 +1,24 @@
+speak:
+  name: Synkroniserat Granny-meddelande
+  description: Kontrollerar synkgruppen och utesluter felande medlemmar för denna utsändning.
+  fields:
+    entity_id:
+      required: true
+      selector:
+        entity:
+          integration: music_assistant
+          domain: media_player
+    tts_entity_id:
+      default: tts.piper
+      selector:
+        entity:
+          domain: tts
+    message:
+      selector:
+        text:
+          multiline: true
+    test_only:
+      default: false
+      description: Testa enbart med tyst ljud i den synkroniserade gruppen.
+      selector:
+        boolean:

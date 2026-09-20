@@ -15,3 +15,6 @@ MIN_DELAY = 1
 # far enough apart to avoid visible flicker.
 MIN_STATE_DURATION = 120
 MIN_EVENT_SPACING = 120
+
+RUNTIME_STORAGE_VERSION = 1
+RUNTIME_STORAGE_KEY = "presence_simulation.runtime"

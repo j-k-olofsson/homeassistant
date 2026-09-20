@@ -43,7 +43,20 @@ input_number:
     max: 5000
     step: 1
     mode: box
-    initial: 0
+  narvarosimulering_test_minuter:
+    name: Narvarosimulering testlangd
+    min: 1
+    max: 10080
+    step: 1
+    mode: box
+    unit_of_measurement: min
+    initial: 1440
+
+input_datetime:
+  narvarosimulering_test_sluttid:
+    name: Narvarosimulering test sluttid
+    has_date: true
+    has_time: true
 
 light:
   - platform: group
@@ -84,6 +97,7 @@ automation:
     triggers:
       - trigger: state
         entity_id: input_boolean.narvarosimulering_aktiv
+        from: "off"
         to: "on"
     actions:
       - if:
@@ -96,6 +110,13 @@ automation:
               entity_id: input_number.narvarosimulering_test_events
             data:
               value: 0
+          - action: input_datetime.set_datetime
+            target:
+              entity_id: input_datetime.narvarosimulering_test_sluttid
+            data:
+              timestamp: >-
+                {{ as_timestamp(now()) +
+                   states('input_number.narvarosimulering_test_minuter') | int(1440) * 60 }}
       - action: script.narvarosimulering_start
 
   - id: narvarosimulering_stop_nar_toggle_off
@@ -104,6 +125,7 @@ automation:
     triggers:
       - trigger: state
         entity_id: input_boolean.narvarosimulering_aktiv
+        from: "on"
         to: "off"
     actions:
       - action: script.narvarosimulering_stop
@@ -152,15 +174,14 @@ automation:
           entity_id: notify.file
         data:
           message: >-
-            Narvarosimulering {{ 'TEST' if trigger.event.data.dry_run | default(false) else 'SKARP' }}:
-            {{ trigger.event.data.service }}
-            {{ trigger.event.data.entity_id }};
-            data={{ trigger.event.data.service_data | tojson }};
-            source={{ trigger.event.data.source_datetime }};
-            scheduled={{ trigger.event.data.scheduled_datetime }};
-            random_offset={{ trigger.event.data.random_offset_seconds }}s;
-            initial={{ trigger.event.data.initial_state }};
-            resumed={{ trigger.event.data.resumed_after_restart }}
+            PS {{ 'T' if trigger.event.data.dry_run | default(false) else 'S' }}
+            g={{ trigger.event.data.run_generation | default('?') }}
+            {{ trigger.event.data.service }} {{ trigger.event.data.entity_id }}
+            src={{ trigger.event.data.source_datetime }}
+            at={{ trigger.event.data.scheduled_datetime }}
+            rnd={{ trigger.event.data.random_offset_seconds }}
+            i={{ trigger.event.data.initial_state | int }}
+            r={{ trigger.event.data.resumed_after_restart | int }}
 
   - id: narvarosimulering_dry_run_sammanfattning
     alias: Narvarosimulering - dry run sammanfattning
@@ -181,26 +202,46 @@ automation:
             Testkörning avslutad.
             Antal simulerade åtgärder: {{ states('input_number.narvarosimulering_test_events') | int(0) }}.
             Detaljer finns i /config/file_notifications/scripts.log.
+      - action: notify.send_message
+        continue_on_error: true
+        target:
+          entity_id: notify.file
+        data:
+          message: >-
+            Narvarosimulering TEST SLUT:
+            events={{ states('input_number.narvarosimulering_test_events') | int(0) }};
+            deadline={{ states('input_datetime.narvarosimulering_test_sluttid') }}
 
-  - id: narvarosimulering_test_24h_autostopp
-    alias: Narvarosimulering - stoppa 24-timmarstest
+  - id: narvarosimulering_test_deadline_autostopp
+    alias: Narvarosimulering - stoppa test vid beständig sluttid
     mode: restart
     triggers:
-      - trigger: state
-        entity_id: input_boolean.narvarosimulering_aktiv
-        to: "on"
+      - trigger: time
+        at: input_datetime.narvarosimulering_test_sluttid
+      - trigger: homeassistant
+        event: start
     conditions:
       - condition: state
         entity_id: input_boolean.narvarosimulering_testlage
         state: "on"
     actions:
-      - delay: "24:00:00"
+      - if:
+          - condition: template
+            value_template: "{{ trigger.platform == 'homeassistant' }}"
+        then:
+          - delay: "00:00:45"
       - condition: state
         entity_id: input_boolean.narvarosimulering_aktiv
         state: "on"
       - condition: state
         entity_id: input_boolean.narvarosimulering_testlage
         state: "on"
+      - condition: template
+        value_template: >-
+          {{ states('input_datetime.narvarosimulering_test_sluttid') not in
+             ['unknown', 'unavailable', ''] and
+             as_timestamp(now()) >=
+             as_timestamp(states('input_datetime.narvarosimulering_test_sluttid')) }}
       - action: input_boolean.turn_off
         target:
           entity_id: input_boolean.narvarosimulering_aktiv
@@ -208,3 +249,63 @@ automation:
       - action: input_boolean.turn_off
         target:
           entity_id: input_boolean.narvarosimulering_testlage
+
+  - id: narvarosimulering_startup_aterstallning
+    alias: Narvarosimulering - aterstall aktiv korning efter omstart
+    mode: single
+    triggers:
+      - trigger: homeassistant
+        event: start
+    actions:
+      - delay: "00:01:00"
+      - condition: state
+        entity_id: input_boolean.narvarosimulering_aktiv
+        state: "on"
+      - condition: state
+        entity_id: switch.presence_simulation_hemma
+        state: "off"
+      - action: script.narvarosimulering_start
+      - delay: "00:00:15"
+      - if:
+          - condition: state
+            entity_id: switch.presence_simulation_hemma
+            state: "off"
+        then:
+          - action: notify.send_message
+            continue_on_error: true
+            target:
+              entity_id: notify.file
+            data:
+              message: >-
+                Narvarosimulering FEL: kunde inte aterstalla aktiv korning efter omstart
+          - action: input_boolean.turn_off
+            target:
+              entity_id: input_boolean.narvarosimulering_aktiv
+
+  - id: narvarosimulering_synka_ovantat_stopp
+    alias: Narvarosimulering - synka helper efter ovantat stopp
+    mode: restart
+    triggers:
+      - trigger: state
+        entity_id: switch.presence_simulation_hemma
+        from: "on"
+        to: "off"
+    actions:
+      - delay: "00:00:30"
+      - condition: state
+        entity_id: input_boolean.narvarosimulering_aktiv
+        state: "on"
+      - condition: state
+        entity_id: switch.presence_simulation_hemma
+        state: "off"
+      - action: notify.send_message
+        continue_on_error: true
+        target:
+          entity_id: notify.file
+        data:
+          message: >-
+            Narvarosimulering VARNING: integrationsswitchen stannade ovantat;
+            aktiv-helpern stangs av
+      - action: input_boolean.turn_off
+        target:
+          entity_id: input_boolean.narvarosimulering_aktiv

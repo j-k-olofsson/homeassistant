@@ -1,0 +1,8 @@
+{
+  "domain": "granny_goodnight",
+  "name": "Granny snabb Godnatt",
+  "version": "1.0.0",
+  "dependencies": ["tts", "ai_task"],
+  "codeowners": [],
+  "iot_class": "local_push"
+}

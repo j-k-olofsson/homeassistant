@@ -1,0 +1,6 @@
+prepare:
+  name: Förbered Godnatt-hälsningen
+  description: Förbereder ljud för den fasta frasen Godnatt och sov sött!, utan uppspelning.
+speak:
+  name: Kontrollera och avsluta Godnatt
+  description: Kontrollerar verandans dörrar, hönsluckan och entrélåset och läser upp godnatt eller åtgärder i Diegos väckarklocka.

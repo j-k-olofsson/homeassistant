@@ -1,0 +1,6 @@
+prepare:
+  name: Förbered korta Godnatt-hälsningar
+  description: Fyller kön med fyra olika AI-hälsningar och dörrvarianter med tre sekunders tyst inledning, utan uppspelning.
+speak:
+  name: Läs upp nästa Godnatt-hälsning
+  description: Startar Cast-mottagaren och spelar nästa hälsning efter verandadörrens aktuella läge, enbart i Diegos väckarklocka.

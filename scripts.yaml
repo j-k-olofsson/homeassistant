@@ -1,3 +1,55 @@
+godnatt_slack_belysning:
+  alias: Godnatt – släck och kontrollera belysningen
+  description: >-
+    Släcker Godnatt-gruppens enskilda lampor och de två befintliga verkstadsbrytarna.
+    Gör högst tre försök och loggar enheter vars släckning inte kunde bekräftas.
+  mode: single
+  sequence:
+  - variables:
+      _targets: >-
+        {{ (expand('light.grupp_godnatt') | map(attribute='entity_id') | list
+            + ['switch.shelly_pro_3_verkstaden_switch_1',
+               'switch.shelly_pro_3_verkstaden_switch_2']) | unique | list }}
+      _pending: '{{ _targets }}'
+  - repeat:
+      sequence:
+      - repeat:
+          for_each: '{{ _pending }}'
+          sequence:
+          - action: homeassistant.turn_off
+            continue_on_error: true
+            target:
+              entity_id: '{{ repeat.item }}'
+      - delay: '00:00:03'
+      - variables:
+          _pending: >-
+            {% set remaining = namespace(entities=[]) %}
+            {% for entity_id in _targets %}
+              {% if not is_state(entity_id, 'off') %}
+                {% set remaining.entities = remaining.entities + [entity_id] %}
+              {% endif %}
+            {% endfor %}
+            {{ remaining.entities }}
+      until:
+      - condition: template
+        value_template: '{{ _pending | length == 0 or repeat.index >= 3 }}'
+  - if:
+    - condition: template
+      value_template: '{{ _pending | length > 0 }}'
+    then:
+    - action: system_log.write
+      data:
+        level: warning
+        logger: godnatt.belysning
+        message: >-
+          Godnatt kunde inte bekräfta släckning efter tre försök:
+          {{ _pending | join(', ') }}.
+  - variables:
+      _godnatt_result:
+        targets: '{{ _targets }}'
+        unconfirmed: '{{ _pending }}'
+  - stop: Släckning klar; se resultatet för eventuell kvarvarande belysning.
+    response_variable: _godnatt_result
 ange_starttid_for_bilvarmen:
   alias: Ange starttid för bilvärmen
   sequence:
@@ -109,6 +161,18 @@ granny_broadcast:
       selector:
         entity:
           domain: media_player
+    prompt_override:
+      name: Egen fullständig AI-prompt
+      description: Ersätter hela Granny-prompten för detta anrop. Tomt använder standardprompten.
+      selector:
+        text:
+          multiline: true
+    tts_ignore_quiet_hours:
+      name: Tillåt tal under tyst period
+      description: Används för uttryckligen begärda utrop, exempelvis Godnatt.
+      default: false
+      selector:
+        boolean: {}
     fallback_message:
       name: fallback_message
       description: 'Eget fallbackmeddelande om AI inte svarar. Lämna tomt för neutral
@@ -129,7 +193,7 @@ granny_broadcast:
   - variables:
       _ai_entity: ai_task.ollama_ai_task
       _severity: '{{ severity | default(''info'') }}'
-      _humor: '{{ humor_level | int(2) }}'
+      _humor: '{{ humor_level | default(2) | int(2) }}'
       _recipient: '{{ (recipient | default('''', true)) | trim }}'
       _tts_player: "{{ tts_media_player\n   if tts_media_player is defined and tts_media_player|length
         > 0\n   else 'media_player.grannys_hogtalare' }}\n"
@@ -169,7 +233,8 @@ granny_broadcast:
       - action: ai_task.generate_data
         data:
           entity_id: '{{ _ai_entity }}'
-          instructions: '{{ _prompt }}'
+          instructions: >-
+            {{ (prompt_override | default('', true) | trim) or _prompt }}
           task_name: granny_broadcast
         response_variable: ai_out
       - variables:
@@ -185,16 +250,30 @@ granny_broadcast:
   - choose:
     - conditions:
       - condition: template
-        value_template: '{{ ''tts'' in _channels and not _tts_in_quiet_hours }}'
+        value_template: >-
+          {{ 'tts' in _channels and
+             (not _tts_in_quiet_hours or
+              (tts_ignore_quiet_hours | default(false) | bool(false))) }}
       sequence:
-      - action: tts.speak
-        continue_on_error: true
-        target:
-          entity_id: '{{ _tts_engine }}'
-        data:
-          media_player_entity_id: '{{ _tts_player }}'
-          message: '{{ final_message }}'
-          cache: false
+      - if:
+        - condition: template
+          value_template: "{{ _tts_player == 'media_player.grannys_hogtalare' }}"
+        then:
+        - action: granny_sync.speak
+          continue_on_error: true
+          data:
+            entity_id: media_player.grannys_hogtalare
+            tts_entity_id: '{{ _tts_engine }}'
+            message: '{{ final_message }}'
+        else:
+        - action: tts.speak
+          continue_on_error: true
+          target:
+            entity_id: '{{ _tts_engine }}'
+          data:
+            media_player_entity_id: '{{ _tts_player }}'
+            message: '{{ final_message }}'
+            cache: false
   - choose:
     - conditions:
       - condition: template
@@ -844,3 +923,137 @@ thread_uppdatera_natverksdiagnostik:
       seconds: 35
   - action: rest_command.thread_get_diagnostics_result
     response_variable: diagnostics_response
+
+hissmusik_starta:
+  alias: Hissmusik - Starta lokal musik
+  description: >-
+    Spelar angiven lokal MA-spellista (standard Hissmusik) på
+    Dassens högtalare med 15 % volym, shuffle och repeat all. Högst tre
+    startförsök; avbryter direkt när gruppen spelar och meddelar vid fel.
+  mode: restart
+  fields:
+    spellista:
+      name: Spellista
+      description: Lokal MA-lista att spela. Hissmusik används om inget val anges.
+      default: hissmusik
+      selector:
+        select:
+          options:
+          - label: Hissmusik
+            value: hissmusik
+          - label: Motown & Soul (60s, 70s & 80s)
+            value: motown
+  trace:
+    stored_traces: 10
+  sequence:
+  - variables:
+      hissmusik_player: media_player.dassens_hogtalare_ma
+      # Verifierade lokala MA-listor, inte namnsökning bland streaminglistor.
+      hissmusik_playlists:
+        hissmusik:
+          name: Hissmusik
+          uri: library://playlist/58
+        motown:
+          name: Motown & Soul (60s, 70s & 80s)
+          uri: library://playlist/59
+  - variables:
+      hissmusik_playlist: "{{ hissmusik_playlists[spellista | default('hissmusik')] }}"
+  - repeat:
+      sequence:
+      - alias: Vänta på att MA-gruppen är tillgänglig
+        wait_template: "{{ states(hissmusik_player) not in ['unknown', 'unavailable'] }}"
+        timeout: '00:00:20'
+        continue_on_timeout: true
+      - if:
+        - condition: template
+          value_template: '{{ wait.completed }}'
+        then:
+        - alias: Stoppa föregående kö före ett nytt startförsök
+          action: media_player.media_stop
+          continue_on_error: true
+          target:
+            entity_id: '{{ hissmusik_player }}'
+        - wait_template: "{{ not is_state(hissmusik_player, 'playing') }}"
+          timeout: '00:00:10'
+          continue_on_timeout: true
+        - if:
+          - condition: template
+            value_template: '{{ wait.completed }}'
+          then:
+          - action: media_player.volume_set
+            continue_on_error: true
+            target:
+              entity_id: '{{ hissmusik_player }}'
+            data:
+              volume_level: 0.15
+          - action: media_player.volume_mute
+            continue_on_error: true
+            target:
+              entity_id: '{{ hissmusik_player }}'
+            data:
+              is_volume_muted: false
+          - action: media_player.shuffle_set
+            continue_on_error: true
+            target:
+              entity_id: '{{ hissmusik_player }}'
+            data:
+              shuffle: true
+          - action: media_player.repeat_set
+            continue_on_error: true
+            target:
+              entity_id: '{{ hissmusik_player }}'
+            data:
+              repeat: all
+          - alias: Starta den valda lokala spellistan på gruppen
+            action: music_assistant.play_media
+            continue_on_error: true
+            target:
+              entity_id: '{{ hissmusik_player }}'
+            data:
+              media_id: '{{ hissmusik_playlist.uri }}'
+              media_type: playlist
+              enqueue: replace
+              radio_mode: false
+          - wait_template: "{{ is_state(hissmusik_player, 'playing') }}"
+            timeout: '00:00:30'
+            continue_on_timeout: true
+          - if:
+            - condition: template
+              value_template: '{{ wait.completed }}'
+            then:
+            - action: persistent_notification.dismiss
+              data:
+                notification_id: hissmusik_startfel
+            - action: logbook.log
+              data:
+                name: Hissmusik
+                message: >-
+                  Spelar {{ hissmusik_playlist.name }} från lokala filer på
+                  Dassens högtalare (försök {{ repeat.index }}).
+                entity_id: '{{ hissmusik_player }}'
+            - stop: Dassens högtalare spelar den lokala spellistan.
+      until:
+      - condition: template
+        value_template: '{{ repeat.index >= 3 }}'
+  - action: persistent_notification.create
+    data:
+      notification_id: hissmusik_startfel
+      title: Hissmusik kunde inte starta
+      message: >-
+        Kunde inte starta {{ hissmusik_playlist.name }} på Dassens högtalare
+        efter tre försök. Gruppens status är {{ states(hissmusik_player) }}.
+        Kontrollera Music Assistant, högtalargruppen och de lokala musikfilerna.
+  - stop: Hissmusik kunde inte starta efter tre försök.
+    error: true
+
+hissmusik_stoppa:
+  alias: Hissmusik - Stoppa
+  description: Avbryter pågående startförsök och stoppar gruppen Dassens högtalare.
+  mode: restart
+  sequence:
+  - action: script.turn_off
+    target:
+      entity_id: script.hissmusik_starta
+  - action: media_player.media_stop
+    target:
+      entity_id: media_player.dassens_hogtalare_ma

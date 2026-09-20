@@ -105,6 +105,36 @@ script:
       - action: script.ir_lights_off
 
 automation:
+  - id: google_ir_lights_on
+    alias: Google – tänd IR-ljusen
+    description: Kör IR-ljusens tändskript när Google aktiverar hjälpbrytaren.
+    mode: single
+    triggers:
+      - trigger: state
+        entity_id: input_boolean.tand_ljusen
+        to: "on"
+    actions:
+      - action: script.ir_lights_on
+        continue_on_error: true
+      - action: input_boolean.turn_off
+        target:
+          entity_id: input_boolean.tand_ljusen
+
+  - id: google_ir_lights_off
+    alias: Google – släck IR-ljusen
+    description: Kör IR-ljusens släckskript när Google aktiverar hjälpbrytaren.
+    mode: single
+    triggers:
+      - trigger: state
+        entity_id: input_boolean.slack_ljusen
+        to: "on"
+    actions:
+      - action: script.ir_lights_off
+        continue_on_error: true
+      - action: input_boolean.turn_off
+        target:
+          entity_id: input_boolean.slack_ljusen
+
   - id: ir_lights_schedule
     alias: IR-ljus – solfas, tider och väckarklocka
     description: >-

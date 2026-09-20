@@ -1,0 +1,94 @@
+{
+  "player_id": "syncgroup_rk7qfzy6",
+  "provider": "sync_group",
+  "type": "group",
+  "name": "Grannys högtalare",
+  "available": true,
+  "device_info": {
+    "model": "Sync Group Player",
+    "manufacturer": "Music Assistant",
+    "software_version": null,
+    "model_id": null,
+    "manufacturer_id": null,
+    "identifiers": {},
+    "mac_address": null,
+    "ip_address": null
+  },
+  "supported_features": [
+    "play_media",
+    "set_members"
+  ],
+  "playback_state": "idle",
+  "elapsed_time": null,
+  "elapsed_time_last_updated": null,
+  "powered": true,
+  "volume_level": null,
+  "volume_muted": null,
+  "group_members": [],
+  "static_group_members": [],
+  "can_group_with": [
+    "up442a44cc",
+    "up366fb600",
+    "up8cef2f7b",
+    "upb2965530"
+  ],
+  "synced_to": null,
+  "active_sound_mode": null,
+  "sound_mode_list": [],
+  "options": [],
+  "active_source": "syncgroup_rk7qfzy6",
+  "source_list": [
+    {
+      "id": "syncgroup_rk7qfzy6",
+      "name": "Music Assistant Queue",
+      "passive": false,
+      "can_play_pause": false,
+      "can_seek": false,
+      "can_next_previous": false,
+      "can_shuffle": false,
+      "can_repeat": false,
+      "shuffle_enabled": null,
+      "repeat_mode": null,
+      "account_id": null
+    }
+  ],
+  "active_group": null,
+  "current_media": null,
+  "enabled": true,
+  "hide_in_ui": false,
+  "private": false,
+  "expose_to_ha": true,
+  "icon": "speakers",
+  "group_volume": 0,
+  "group_volume_muted": null,
+  "extra_attributes": {},
+  "power_control": "none",
+  "volume_control": "none",
+  "mute_control": "none",
+  "output_protocols": [
+    {
+      "output_protocol_id": "native",
+      "name": "Sync Group Player",
+      "protocol_domain": "sync_group",
+      "is_native": true,
+      "priority": 0,
+      "available": true,
+      "derived_from": null
+    }
+  ],
+  "active_output_protocol": null,
+  "needs_setup": false,
+  "setup_reason": null,
+  "has_setup_flow": false,
+  "sleep_timer_expires_at": null,
+  "active_source_audio": null,
+  "display_name": "Grannys högtalare",
+  "state": "idle",
+  "group_childs": [],
+  "extra_data": {},
+  "hide_player_in_ui": [
+    "when_unavailable",
+    "when_synced",
+    "when_group_active"
+  ]
+}

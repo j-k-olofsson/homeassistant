@@ -77,6 +77,29 @@ class HistoryManager:
         return filtered
 
     @staticmethod
+    def deduplicate_consecutive_states(
+        history: Dict[str, List[Any]],
+    ) -> Dict[str, List[Any]]:
+        """Remove repeated rows that do not represent a state transition."""
+        filtered: Dict[str, List[Any]] = {}
+
+        for entity_id, states in history.items():
+            result: List[Any] = []
+            for state in states:
+                if result and state.state == result[-1].state:
+                    continue
+                result.append(state)
+            if result:
+                filtered[entity_id] = result
+            _LOGGER.debug(
+                "Deduplicated states for %s: removed %d rows",
+                entity_id,
+                len(states) - len(result),
+            )
+
+        return filtered
+
+    @staticmethod
     def get_history(
         hass: HomeAssistant,
         start_time: datetime,

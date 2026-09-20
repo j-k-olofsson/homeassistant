@@ -373,3 +373,6 @@ command_line:
         print('NONE' if d is None else str(d))"
       command_timeout: 15
       scan_interval: 3600
+
+# Synkroniserade Granny-utrop med dynamisk felhantering.
+granny_sync:

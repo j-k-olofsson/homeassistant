@@ -11,7 +11,7 @@ if [[ -f "${ENV_FILE}" ]]; then
 fi
 
 ENTITY_ID="${1:-automation.sef_42h_plan_charging}"
-BASE_URL="${HA_BASE_URL:-http://eir.local:8123}"
+BASE_URL="${HA_BASE_URL:-http://eir.local}"
 TOKEN="${HA_TOKEN:-}"
 LOG_LINES="${HA_LOG_LINES:-150}"
 
@@ -21,7 +21,7 @@ Sätt miljövariabeln HA_TOKEN till din Long-Lived Access Token innan du kör sk
   export HA_TOKEN="din-token-här"
 
 Valfria variabler:
-  HA_BASE_URL   (standard http://eir.local:8123)
+  HA_BASE_URL   (standard http://eir.local)
   HA_LOG_LINES  (antal rader från ha core logs, standard 150)
 EOF
   exit 1
