@@ -7,8 +7,8 @@ substitutions:
   log_level: INFO
   num_leds: "107"
   gpio_pin: "GPIO3"
-  night_brightness: "20%"
-  day_brightness: "40%"
+  night_brightness: "40%"
+  day_brightness: "60%"
 
 packages:
   device: !include common/.device_esp32_c6_ledstrip_indoors.yaml
