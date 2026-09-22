@@ -1,0 +1,280 @@
+{
+  "path": [
+    "views",
+    0,
+    "sections",
+    1,
+    "cards",
+    0
+  ],
+  "original_card": {
+    "type": "custom:apexcharts-card",
+    "graph_span": "47h",
+    "span": {
+      "start": "day"
+    },
+    "now": {
+      "show": true,
+      "label": "Nu"
+    },
+    "yaxis": [
+      {
+        "id": "first",
+        "min": 0,
+        "decimals": 1,
+        "max": 6
+      }
+    ],
+    "apex_config": {
+      "responsive": [
+        {
+          "breakpoint": 500,
+          "options": {
+            "chart": {
+              "height": "100px"
+            }
+          }
+        },
+        {
+          "breakpoint": 1000,
+          "options": {
+            "chart": {
+              "height": "150px"
+            }
+          }
+        },
+        {
+          "breakpoint": 10000,
+          "options": {
+            "chart": {
+              "height": "200px"
+            }
+          }
+        }
+      ]
+    },
+    "experimental": {
+      "color_threshold": true
+    },
+    "series": [
+      {
+        "entity": "sensor.nordpool",
+        "type": "column",
+        "name": "Elpris nu",
+        "yaxis_id": "first",
+        "opacity": 1,
+        "show": {
+          "legend_value": false,
+          "in_header": "raw"
+        },
+        "data_generator": "return (entity.attributes.raw_today.map((start, index) => {\n  return [new Date(start[\"start\"]).getTime(), entity.attributes.raw_today[index][\"value\"]];\n})).concat(entity.attributes.raw_tomorrow.map((start, index) => {\n  return [new Date(start[\"start\"]).getTime(), entity.attributes.raw_tomorrow[index][\"value\"]];\n}));\n",
+        "float_precision": 2,
+        "color_threshold": [
+          {
+            "value": 0,
+            "color": "green"
+          },
+          {
+            "value": 2,
+            "color": "yellow"
+          },
+          {
+            "value": 3,
+            "color": "orange"
+          },
+          {
+            "value": 4,
+            "color": "red"
+          },
+          {
+            "value": 5,
+            "color": "darkred"
+          }
+        ],
+        "unit": "kr/kWh"
+      },
+      {
+        "entity": "sensor.template_nordpool_base_cost_current_hour",
+        "name": "Inköpspris",
+        "unit": "kr/kWh",
+        "float_precision": 2,
+        "yaxis_id": "first",
+        "show": {
+          "in_chart": false,
+          "in_header": "raw",
+          "legend_value": false
+        },
+        "data_generator": "return [];",
+        "header_actions": {
+          "tap_action": {
+            "action": "more-info"
+          }
+        }
+      },
+      {
+        "entity": "sensor.kvartbaserad_elkostnadsprognos",
+        "name": "Månadsprognos",
+        "unit": "kr",
+        "float_precision": 0,
+        "yaxis_id": "first",
+        "show": {
+          "in_chart": false,
+          "in_header": "raw",
+          "legend_value": false
+        },
+        "data_generator": "return [];",
+        "header_actions": {
+          "tap_action": {
+            "action": "more-info"
+          }
+        }
+      }
+    ],
+    "grid_options": {
+      "columns": "full"
+    },
+    "header": {
+      "show": true,
+      "show_states": true,
+      "colorize_states": false
+    },
+    "card_mod": {
+      "style": "#header { padding: 8px 12px 0 !important; }\n#header #header__states {\n  display: flex !important;\n  justify-content: center !important;\n  align-items: center !important;\n  flex-wrap: wrap !important;\n  gap: 4px 24px !important;\n  margin: 0 !important;\n}\n#header #header__states #states__state {\n  flex: 0 0 auto !important;\n  width: auto !important;\n  display: flex !important;\n  flex-direction: row-reverse !important;\n  align-items: baseline !important;\n  gap: 5px !important;\n  margin: 0 !important;\n}\n#header #state__value {\n  display: inline-flex !important;\n  align-items: baseline !important;\n  gap: 4px !important;\n}\n#header #state__value #state {\n  font-size: 13px !important;\n  font-weight: 500 !important;\n  line-height: 1.4 !important;\n}\n#header #state__value #uom, #header #state__name {\n  font-size: 12px !important;\n  font-weight: 400 !important;\n  line-height: 1.4 !important;\n}\n#header #state__name { color: var(--secondary-text-color); }\n#header #state__name::after { content: ':'; }\n\n{% set price = states('sensor.nordpool') %}\n{% set known = is_number(price) %}\n{% set p = price | float(0) %}\n{% set entries = state_attr('sensor.nordpool', 'raw_today') or [] %}\n{% set values = entries | map(attribute='value') | select('number') | list %}\n{% set lo = values | min if values else p %}\n{% set hi = values | max if values else p %}\n{% set ratio = ([0, ([1, ((p-lo)/(hi-lo))] | min)] | max) if known and hi > lo else 0 %}\n{% set rgb = '100, 181, 198' if p < 2 else '245, 207, 92' if p < 3 else '239, 156, 74' if p < 4 else '226, 96, 83' %}\nha-card {\n position: relative;\n isolation: isolate;\n overflow: hidden;\n background: linear-gradient(160deg, #285577 0%, #203e56 45%, #192f40 100%) !important;\n --primary-text-color: #eef4f8;\n --secondary-text-color: #c2ced7;\n}\nha-card::before {\n content: '';\n position: absolute;\n inset: 0;\n z-index: -1;\n pointer-events: none;\n border-radius: inherit;\n background-image: radial-gradient(ellipse at 35% 25%, rgba({{ rgb }}, {{ (0.12 + ratio * 0.16) | round(3) }}) 0%, transparent 65%);\n background-size: 160% 180%;\n background-position: 0% 30%;\n opacity: {{ 1 if known else 0 }};\n animation: {{ 'price-light-drift 20s ease-in-out infinite alternate' if known else 'none' }};\n}\n@keyframes price-light-drift {\n from { background-position: 0% 30%; }\n to { background-position: 100% 70%; }\n}\n@media (prefers-reduced-motion: reduce) {\n ha-card::before { animation: none; }\n}\n\n/* Only the existing current-time annotation is present on this chart. */\n.apexcharts-xaxis-annotations line {\n stroke: #a4e3ef !important;\n stroke-width: 2px !important;\n stroke-dasharray: 5 5 !important;\n animation: {{ 'price-now-travel 1.5s linear infinite' if is_number(states('sensor.nordpool')) else 'none' }};\n}\n@keyframes price-now-travel { from { stroke-dashoffset: 10; } to { stroke-dashoffset: 0; } }\n@media(prefers-reduced-motion:reduce) {\n .apexcharts-xaxis-annotations line { animation: none; }\n}\n\nha-card { background: linear-gradient(145deg,#263a49,#1b2937) !important; border:1px solid rgba(158,185,203,.20) !important; border-radius:12px !important; --primary-text-color:#eef4f8; --secondary-text-color:#bdcbd5; }"
+    }
+  },
+  "updated_card": {
+    "type": "custom:apexcharts-card",
+    "graph_span": "47h",
+    "span": {
+      "start": "day"
+    },
+    "now": {
+      "show": true,
+      "label": "Nu"
+    },
+    "yaxis": [
+      {
+        "id": "first",
+        "min": 0,
+        "decimals": 1,
+        "max": 6
+      }
+    ],
+    "apex_config": {
+      "responsive": [
+        {
+          "breakpoint": 500,
+          "options": {
+            "chart": {
+              "height": "100px"
+            }
+          }
+        },
+        {
+          "breakpoint": 1000,
+          "options": {
+            "chart": {
+              "height": "150px"
+            }
+          }
+        },
+        {
+          "breakpoint": 10000,
+          "options": {
+            "chart": {
+              "height": "200px"
+            }
+          }
+        }
+      ]
+    },
+    "experimental": {
+      "color_threshold": true
+    },
+    "series": [
+      {
+        "entity": "sensor.nordpool",
+        "type": "column",
+        "name": "Elpris nu",
+        "yaxis_id": "first",
+        "opacity": 1,
+        "show": {
+          "legend_value": false,
+          "in_header": "raw"
+        },
+        "data_generator": "return (entity.attributes.raw_today.map((start, index) => {\n  return [new Date(start[\"start\"]).getTime(), entity.attributes.raw_today[index][\"value\"]];\n})).concat(entity.attributes.raw_tomorrow.map((start, index) => {\n  return [new Date(start[\"start\"]).getTime(), entity.attributes.raw_tomorrow[index][\"value\"]];\n}));\n",
+        "float_precision": 2,
+        "color_threshold": [
+          {
+            "value": 0,
+            "color": "green"
+          },
+          {
+            "value": 2,
+            "color": "yellow"
+          },
+          {
+            "value": 3,
+            "color": "orange"
+          },
+          {
+            "value": 4,
+            "color": "red"
+          },
+          {
+            "value": 5,
+            "color": "darkred"
+          }
+        ],
+        "unit": "kr/kWh"
+      },
+      {
+        "entity": "sensor.template_nordpool_base_cost_current_hour",
+        "name": "Inköpspris",
+        "unit": "kr/kWh",
+        "float_precision": 2,
+        "yaxis_id": "first",
+        "show": {
+          "in_chart": false,
+          "in_header": "raw",
+          "legend_value": false
+        },
+        "data_generator": "return [];",
+        "header_actions": {
+          "tap_action": {
+            "action": "more-info"
+          }
+        }
+      },
+      {
+        "entity": "sensor.kvartbaserad_elkostnadsprognos",
+        "name": "Månadsprognos",
+        "unit": "kr",
+        "float_precision": 0,
+        "yaxis_id": "first",
+        "show": {
+          "in_chart": false,
+          "in_header": "raw",
+          "legend_value": false
+        },
+        "data_generator": "return [];",
+        "header_actions": {
+          "tap_action": {
+            "action": "more-info"
+          }
+        }
+      }
+    ],
+    "grid_options": {
+      "columns": "full"
+    },
+    "header": {
+      "show": true,
+      "show_states": true,
+      "colorize_states": false
+    },
+    "card_mod": {
+      "style": "#header { padding: 8px 12px 0 !important; }\n#header #header__states {\n  display: flex !important;\n  justify-content: center !important;\n  align-items: center !important;\n  flex-wrap: wrap !important;\n  gap: 4px 24px !important;\n  margin: 0 !important;\n}\n#header #header__states #states__state {\n  flex: 0 0 auto !important;\n  width: auto !important;\n  display: flex !important;\n  flex-direction: row-reverse !important;\n  align-items: baseline !important;\n  gap: 5px !important;\n  margin: 0 !important;\n}\n#header #state__value {\n  display: inline-flex !important;\n  align-items: baseline !important;\n  gap: 4px !important;\n}\n#header #state__value #state {\n  font-size: 13px !important;\n  font-weight: 500 !important;\n  line-height: 1.4 !important;\n}\n#header #state__value #uom, #header #state__name {\n  font-size: 12px !important;\n  font-weight: 400 !important;\n  line-height: 1.4 !important;\n}\n#header #state__name { color: var(--secondary-text-color); }\n#header #state__name::after { content: ':'; }\n\n/* Only the existing current-time annotation is present on this chart. */\n.apexcharts-xaxis-annotations line {\n stroke: #a4e3ef !important;\n stroke-width: 2px !important;\n stroke-dasharray: 5 5 !important;\n animation: {{ 'price-now-travel 1.5s linear infinite' if is_number(states('sensor.nordpool')) else 'none' }};\n}\n@keyframes price-now-travel { from { stroke-dashoffset: 10; } to { stroke-dashoffset: 0; } }\n@media(prefers-reduced-motion:reduce) {\n .apexcharts-xaxis-annotations line { animation: none; }\n}\n\nha-card { background: linear-gradient(145deg,#263a49,#1b2937) !important; border:1px solid rgba(158,185,203,.20) !important; border-radius:12px !important; --primary-text-color:#eef4f8; --secondary-text-color:#bdcbd5; }"
+    }
+  }
+}

@@ -9,6 +9,9 @@ PLATFORMS = [
     Platform.DEVICE_TRACKER,
     Platform.SENSOR,
     Platform.CLIMATE,
+    Platform.LOCK,
+    Platform.SELECT,
+    Platform.SWITCH,
 ]
 
 # CONFIG ENTRY SCHEMA
@@ -76,6 +79,11 @@ CONF_MAX_CACHE_AGE_MINUTES = "max_cache_age_minutes"
 DEFAULT_MAX_CACHE_AGE_MINUTES = 30
 CONF_POLLING_INTERVAL_MINUTES = "polling_interval_minutes"
 DEFAULT_POLLING_INTERVAL_MINUTES = 6
+# 0 disables automatic polling entirely (coordinator update_interval=None);
+# data still populates once on startup and via the manual refresh services/
+# buttons. 1440 (24h) is a generous ceiling for infrequently-driven vehicles.
+MIN_POLLING_INTERVAL_MINUTES = 0
+MAX_POLLING_INTERVAL_MINUTES = 1440
 # How many wake POSTs to fire when a stop event is detected. Cycle-count based
 # (one POST per cycle), independent of polling interval. 1 = single POST on
 # the just-stopped cycle. 2 (default) = an additional POST on the next cycle,
@@ -88,12 +96,16 @@ DEFAULT_POST_COUNT_PER_STOP = 2
 # Recent-trips sensor: rolling cache of the most recent N trips per vehicle,
 # fetched on-demand when the smart-strategy detects a stop event. Surfaces as
 # `sensor.<alias>_recent_trips` with attributes.trips[] in the
-# journey-viewer-card data contract shape. 0 (default) disables the feature
-# entirely (no extra API calls). 1-20 enables auto-fetch + caches that many
+# journey-viewer-card data contract shape. 0 disables the feature entirely
+# (no extra API calls). 1-20 enables auto-fetch + caches that many
 # most-recent trips per VIN. The service `toyota.refresh_recent_trips` works
-# regardless of this setting.
+# regardless of this setting. Default is 1 (not 0): the sensor is always
+# created (see sensor.py's ToyotaRecentTripsSensor), so leaving auto-fetch
+# off by default made it permanently read "0 trips" for anyone who never
+# discovered the option - confusing enough to look like a bug (ha_toyota,
+# reported by a user whose car does support trips just fine).
 CONF_MAX_RECENT_TRIPS = "max_recent_trips"
-DEFAULT_MAX_RECENT_TRIPS = 0
+DEFAULT_MAX_RECENT_TRIPS = 1
 MAX_RECENT_TRIPS_LIMIT = 20
 
 # DEFAULTS

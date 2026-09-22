@@ -116,6 +116,8 @@ from pytoyoda.exceptions import (  # noqa: E402
     ToyotaLoginError,
 )
 
+from .vehicle_list_cache import VehicleListStore  # noqa: E402
+
 if TYPE_CHECKING:
     from collections.abc import Awaitable
 
@@ -153,6 +155,22 @@ class VehicleData(TypedDict):
     # True when this poll's data is a cached fallback because the live fetch
     # failed. Used by downstream sensors as a diagnostic.
     is_cached: bool
+
+
+class _FleetFetchShortCircuit(Exception):  # noqa: N818
+    """Carries the final async_get_vehicle_data() result out of Step 1.
+
+    Step 1 (fetching the account-level vehicle list) has several recovery
+    paths that must return immediately without running Step 2 (per-vehicle
+    refresh): auth failure (None), serving cached fleet data, or serving a
+    persisted fleet snapshot verbatim. Raising this from the Step 1 helper
+    keeps that branching out of async_get_vehicle_data's own body.
+    """
+
+    def __init__(self, result: list[VehicleData] | None) -> None:
+        """Store the value async_get_vehicle_data should return."""
+        super().__init__()
+        self.result = result
 
 
 async def async_migrate_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
@@ -329,6 +347,8 @@ async def async_setup_entry(  # pylint: disable=too-many-statements # noqa: PLR0
     last_error_per_vin: dict[str, tuple[datetime, str]] = diag_bucket[
         "last_error_per_vin"
     ]
+    vehicle_list_store = VehicleListStore(hass, entry.entry_id)
+    await vehicle_list_store.load()
 
     exception_code_map: list[tuple[tuple[type[BaseException], ...], str]] = [
         ((httpx.ConnectTimeout, httpcore.ConnectTimeout), "connect timeout"),
@@ -368,6 +388,30 @@ async def async_setup_entry(  # pylint: disable=too-many-statements # noqa: PLR0
             last_error_code=err[1] if err else None,
             is_cached=True,
         )
+
+    def _rebuild_persisted_vehicles(code: str) -> list[Vehicle] | None:
+        """Rebuild a cold-start fallback fleet from the persisted GUID cache."""
+        if last_good_per_vin:
+            return None
+        if not vehicle_list_store.get():
+            return None
+        try:
+            vehicles = vehicle_list_store.rebuild_vehicles(
+                client._api,  # noqa: SLF001
+                metric=metric_values,
+            )
+        except TypeError, ValidationError:
+            _LOGGER.exception("Toyota persisted vehicle list validation error")
+            return None
+        _LOGGER.warning(
+            "Toyota get_vehicles failed on cold start (%s); using persisted "
+            "vehicle list from last successful run",
+            code,
+        )
+        # This account-level snapshot can lag add/remove events while `/guid`
+        # is flaky; the next successful live get_vehicles() call overwrites it
+        # and self-heals the cache.
+        return vehicles
 
     async def _call_tagged(
         endpoint_name: str, vin: str | None, coro: Awaitable[_T]
@@ -665,11 +709,14 @@ async def async_setup_entry(  # pylint: disable=too-many-statements # noqa: PLR0
         elif decision.action is RefreshAction.GET_ONLY:
             await _execute_get_only(vehicle, vin, state)
         elif decision.action is RefreshAction.HARD_DISABLED:
-            # Legacy path: include /status in the standard sweep.
-            with contextlib.suppress(ToyotaApiError, httpx.ReadTimeout):
-                await _call_tagged(
-                    "status_legacy", vin, vehicle.update(only=["status"])
-                )
+            # Legacy path: include /status in the standard sweep. Routed
+            # through _execute_get_only (not a bare vehicle.update()) so the
+            # diagnostic bookkeeping (last_status_fetch_at /
+            # last_status_occurrence_date) still advances here. Without this,
+            # status_last_reported_by_car never populates for the lifetime of
+            # a user- or auto-disabled entry, even though /status itself
+            # keeps refreshing fine every cycle.
+            await _execute_get_only(vehicle, vin, state)
         # SERVE_FROM_CACHE: no new fetch; the cached response gets re-injected
         # via _persist_status_for_cache() below.
 
@@ -812,9 +859,10 @@ async def async_setup_entry(  # pylint: disable=too-many-statements # noqa: PLR0
             _persist_status_for_cache(vehicle, vin)
 
         # Phase 2b: recent-trips manager.
-        # No-op when CONF_MAX_RECENT_TRIPS is 0 (default). Independent of
-        # the /status decision; uses the same trigger info so we fetch trips
-        # only on stop-event ticks (just_stopped + conditional followup).
+        # No-op when CONF_MAX_RECENT_TRIPS is 0 (auto-fetch disabled).
+        # Independent of the /status decision; uses the same trigger info so
+        # we fetch trips only on stop-event ticks (just_stopped + conditional
+        # followup).
         await trips_manager.async_maybe_refresh(vehicle, vin, decision)
 
         # Movement / sensor state.
@@ -913,23 +961,30 @@ async def async_setup_entry(  # pylint: disable=too-many-statements # noqa: PLR0
             is_cached=False,
         )
 
-    async def async_get_vehicle_data() -> list[VehicleData] | None:  # noqa: C901, PLR0912
-        """Fetch vehicle data from Toyota API, per-car error handling.
+    async def _fetch_vehicle_list() -> list[Vehicle]:
+        """Step 1: fetch the account-level vehicle list, with recovery.
 
-        Branch count is intentional: each except-arm maps to a distinct
-        recovery policy (retain-cache vs propagate UpdateFailed) for either
-        the fleet-level get_vehicles call or the per-vehicle refresh. Folding
-        them into a helper would obscure the recovery semantics.
+        On success returns the live (or persisted-fallback) vehicle list to
+        hand off to Step 2. On a recovery path that already has the final
+        answer (served cached/persisted fleet data as-is), raises
+        _FleetFetchShortCircuit so the caller returns immediately without
+        running Step 2. An auth failure raises ConfigEntryAuthFailed
+        directly (not _FleetFetchShortCircuit) so that a token/credential
+        failure discovered during a *periodic* refresh - not just initial
+        setup - triggers Home Assistant's reauth flow instead of silently
+        leaving every entity unavailable with no actionable prompt. See
+        https://github.com/pytoyoda/ha_toyota/issues/269.
         """
-        # Step 1: get the vehicle list. This is account-level; if it fails
-        # we have no per-vehicle recovery path, but we CAN serve stale
-        # fleet data if any exists.
         try:
             vehicles = await asyncio.wait_for(client.get_vehicles(), 15)
-        except ToyotaLoginError:
-            # Credentials invalid - not transient, surface as auth error.
+            vehicle_list_store.replace_from_vehicles(vehicles or [])
+            await vehicle_list_store.save()
+        except ToyotaLoginError as ex:
+            # Credentials/token invalid - not transient, surface as auth
+            # error so HA prompts the user to reauthenticate, whether this
+            # happens during initial setup or a later periodic refresh.
             _LOGGER.exception("Toyota login error")
-            return None
+            raise ConfigEntryAuthFailed(ex) from ex
         except (
             ToyotaApiError,
             httpx.ConnectTimeout,
@@ -938,83 +993,125 @@ async def async_setup_entry(  # pylint: disable=too-many-statements # noqa: PLR0
             asyncioexceptions.TimeoutError,
             httpx.ReadTimeout,
         ) as ex:
-            code = _error_code(ex)
-            now = dt_util.now()
-            for vin in last_good_per_vin:
-                last_error_per_vin[vin] = (now, code)
-            if retain_on_transient and last_good_per_vin:
-                _LOGGER.warning(
-                    "Toyota get_vehicles failed (%s); using cached fleet data", code
-                )
-                return [
-                    _build_vehicle_data_from_cache(vin) for vin in last_good_per_vin
-                ]
-            msg = f"Toyota get_vehicles failed: {ex}"
-            raise UpdateFailed(msg) from ex
+            vehicles = _recover_fleet_fetch_failure(code=_error_code(ex), ex=ex)
         except ValidationError:
             _LOGGER.exception("Toyota validation error on get_vehicles")
-            code = "validation error"
-            now = dt_util.now()
-            for vin in last_good_per_vin:
-                last_error_per_vin[vin] = (now, code)
-            if retain_on_transient and last_good_per_vin:
-                return [
-                    _build_vehicle_data_from_cache(vin) for vin in last_good_per_vin
-                ]
-            return None
+            vehicles = _recover_fleet_fetch_failure(code="validation error", ex=None)
+        return vehicles or []
 
-        # Step 2: fetch each vehicle's data independently, so a failure on
-        # one does not drop the others. Per-vehicle error recovery honors
-        # the retain-on-transient toggle.
-        vehicle_informations: list[VehicleData] = []
-        for vehicle in vehicles or []:
-            if not vehicle or vehicle.vin is None:
+    def _recover_fleet_fetch_failure(
+        *, code: str, ex: BaseException | None
+    ) -> list[Vehicle]:
+        """Choose a recovery path for a failed Step 1 get_vehicles() call.
+
+        Raises _FleetFetchShortCircuit when recovery already produced (or is)
+        the final result. Otherwise returns a persisted-fallback vehicle list
+        for Step 2 to refresh normally.
+        """
+        now = dt_util.now()
+        for vin in last_good_per_vin:
+            last_error_per_vin[vin] = (now, code)
+        if retain_on_transient and last_good_per_vin:
+            _LOGGER.warning(
+                "Toyota get_vehicles failed (%s); using cached fleet data", code
+            )
+            raise _FleetFetchShortCircuit(
+                [_build_vehicle_data_from_cache(vin) for vin in last_good_per_vin]
+            )
+        if persisted_vehicles := _rebuild_persisted_vehicles(code):
+            return persisted_vehicles
+        if ex is None:
+            raise _FleetFetchShortCircuit(None)
+        msg = f"Toyota get_vehicles failed: {ex}"
+        raise UpdateFailed(msg) from ex
+
+    async def _fetch_one_vehicle_data(vehicle: Vehicle) -> VehicleData:
+        """Step 2 per-vehicle: refresh one vehicle, isolating its failures.
+
+        A failure here becomes cached or stub VehicleData instead of
+        aborting the whole refresh, so one bad car doesn't take down its
+        siblings. Recovery honors the retain-on-transient toggle.
+        """
+        vin = vehicle.vin
+        try:
+            vehicle_data = await _refresh_one_vehicle(vehicle)
+            last_good_per_vin[vin] = vehicle_data
+        except ToyotaLoginError as ex:
+            # Token/credentials died mid-fleet-sweep (not just at the
+            # initial get_vehicles() call). Same as the Step 1 case: this is
+            # not transient, so surface it as an auth failure that triggers
+            # HA's reauth flow instead of leaving this (and every later)
+            # vehicle silently stuck unavailable. See
+            # https://github.com/pytoyoda/ha_toyota/issues/269.
+            _LOGGER.exception(
+                "Toyota login error for vin=...%s", vin[-6:] if vin else "?"
+            )
+            raise ConfigEntryAuthFailed(ex) from ex
+        except (
+            ToyotaApiError,
+            ToyotaInternalError,
+            httpx.ConnectTimeout,
+            httpcore.ConnectTimeout,
+            asyncioexceptions.CancelledError,
+            asyncioexceptions.TimeoutError,
+            httpx.ReadTimeout,
+            ValidationError,
+            TypeError,
+        ) as ex:
+            code = _error_code(ex)
+            last_error_per_vin[vin] = (dt_util.now(), code)
+            _LOGGER.warning("Toyota refresh failed for vin=...%s (%s)", vin[-6:], code)
+            if retain_on_transient and vin in last_good_per_vin:
+                # retain=ON + cache available: serve stale cached data.
+                return _build_vehicle_data_from_cache(vin)
+            # retain=OFF OR retain=ON with no cache yet: emit a stub
+            # VehicleData. The Vehicle object came from get_vehicles() so it
+            # has identity (vin, alias, device info) but no endpoint data
+            # because vehicle.update() failed. Data sensors read through a
+            # ToyotaBaseEntity.available override that checks
+            # last_successful_fetch, so stubs render as unavailable without
+            # raising UpdateFailed for the whole refresh. Siblings that
+            # succeeded this cycle keep their fresh data - per-vehicle fault
+            # isolation.
+            return VehicleData(
+                data=vehicle,
+                statistics=None,
+                metric_values=metric_values,
+                last_successful_fetch=None,
+                last_error_time=dt_util.now(),
+                last_error_code=code,
+                is_cached=False,
+            )
+        return vehicle_data
+
+    def _commit_fetch_timestamps(vehicle_informations: list[VehicleData]) -> None:
+        """Record per-VIN fetch timestamps once a refresh cycle has survived.
+
+        This is the only place last_fetch_time_per_vin is written, so it
+        stays consistent with coordinator.data: both are updated iff the
+        whole refresh succeeds. Cached entries (from the retain=ON path)
+        carry None last_successful_fetch and are skipped.
+        """
+        for vd in vehicle_informations:
+            if vd.get("is_cached"):
                 continue
-            vin = vehicle.vin
-            try:
-                vehicle_data = await _refresh_one_vehicle(vehicle)
-                last_good_per_vin[vin] = vehicle_data
-                vehicle_informations.append(vehicle_data)
-            except (
-                ToyotaApiError,
-                ToyotaInternalError,
-                httpx.ConnectTimeout,
-                httpcore.ConnectTimeout,
-                asyncioexceptions.CancelledError,
-                asyncioexceptions.TimeoutError,
-                httpx.ReadTimeout,
-                ValidationError,
-                TypeError,
-            ) as ex:
-                code = _error_code(ex)
-                last_error_per_vin[vin] = (dt_util.now(), code)
-                _LOGGER.warning(
-                    "Toyota refresh failed for vin=...%s (%s)", vin[-6:], code
-                )
-                if retain_on_transient and vin in last_good_per_vin:
-                    # retain=ON + cache available: serve stale cached data.
-                    vehicle_informations.append(_build_vehicle_data_from_cache(vin))
-                else:
-                    # retain=OFF OR retain=ON with no cache yet: emit a stub
-                    # VehicleData. The Vehicle object came from get_vehicles()
-                    # so it has identity (vin, alias, device info) but no
-                    # endpoint data because vehicle.update() failed. Data
-                    # sensors read through a ToyotaBaseEntity.available
-                    # override that checks last_successful_fetch, so stubs
-                    # render as unavailable without raising UpdateFailed for
-                    # the whole refresh. Siblings that succeeded this cycle
-                    # keep their fresh data - per-vehicle fault isolation.
-                    vehicle_informations.append(
-                        VehicleData(
-                            data=vehicle,
-                            statistics=None,
-                            metric_values=metric_values,
-                            last_successful_fetch=None,
-                            last_error_time=dt_util.now(),
-                            last_error_code=code,
-                            is_cached=False,
-                        )
-                    )
+            vin = vd["data"].vin if vd.get("data") else None
+            fetched = vd.get("last_successful_fetch")
+            if vin and fetched is not None:
+                last_fetch_time_per_vin[vin] = fetched
+
+    async def async_get_vehicle_data() -> list[VehicleData] | None:
+        """Fetch vehicle data from Toyota API, per-car error handling."""
+        try:
+            vehicles = await _fetch_vehicle_list()
+        except _FleetFetchShortCircuit as short_circuit:
+            return short_circuit.result
+
+        vehicle_informations = [
+            await _fetch_one_vehicle_data(vehicle)
+            for vehicle in vehicles
+            if vehicle and vehicle.vin is not None
+        ]
 
         # If nothing useful to serve (no fresh fetch anywhere, no cache either),
         # match upstream behaviour: raise UpdateFailed so the coordinator flips
@@ -1028,19 +1125,7 @@ async def async_setup_entry(  # pylint: disable=too-many-statements # noqa: PLR0
             msg = "Toyota refresh failed for all vehicles"
             raise UpdateFailed(msg)
 
-        # Commit per-VIN fetch timestamps now that the refresh has survived
-        # all exception paths. This is the only place last_fetch_time_per_vin
-        # is written to keep it consistent with coordinator.data: both are
-        # updated iff the whole refresh succeeds. Cached entries (from the
-        # retain=ON path) carry None last_successful_fetch and are skipped.
-        for vd in vehicle_informations:
-            if vd.get("is_cached"):
-                continue
-            vin = vd["data"].vin if vd.get("data") else None
-            fetched = vd.get("last_successful_fetch")
-            if vin and fetched is not None:
-                last_fetch_time_per_vin[vin] = fetched
-
+        _commit_fetch_timestamps(vehicle_informations)
         _LOGGER.debug(vehicle_informations)
         return vehicle_informations
 
@@ -1057,7 +1142,14 @@ async def async_setup_entry(  # pylint: disable=too-many-statements # noqa: PLR0
         _LOGGER,
         name=DOMAIN,
         update_method=async_get_vehicle_data,
-        update_interval=timedelta(minutes=polling_interval_minutes),
+        # 0 = automatic polling disabled: the coordinator still does its
+        # initial fetch on setup, but relies on the manual refresh
+        # services/buttons for subsequent updates.
+        update_interval=(
+            timedelta(minutes=polling_interval_minutes)
+            if polling_interval_minutes > 0
+            else None
+        ),
     )
 
     # Attach the per-VIN diagnostic dicts to the coordinator so sensors can read
@@ -1073,6 +1165,17 @@ async def async_setup_entry(  # pylint: disable=too-many-statements # noqa: PLR0
     ]
     coordinator._diag_status_refresh_state_per_vin = diag_bucket[  # noqa: SLF001
         "last_status_refresh_state_per_vin"
+    ]
+    # Bound to the same dict the refresh loop writes was_moving_last_cycle
+    # into (via _persist_vin_state), so binary_sensor.py's driving entity
+    # sees the freshest value without needing coordinator.data to change.
+    coordinator._diag_was_moving_last_cycle_per_vin = diag_bucket[  # noqa: SLF001
+        "was_moving_last_cycle_per_vin"
+    ]
+    # Used by the driving binary sensor to tell "never seen odometer data"
+    # (report unknown) apart from "odometer seen but unchanged" (report off).
+    coordinator._diag_last_odometer_km_per_vin = diag_bucket[  # noqa: SLF001
+        "last_odometer_km_per_vin"
     ]
 
     await coordinator.async_config_entry_first_refresh()
@@ -1101,6 +1204,7 @@ SERVICE_REFRESH_RECENT_TRIPS = "refresh_recent_trips"
 ATTR_LIMIT = "limit"
 SERVICE_GET_TRIP_ROUTE = "get_trip_route"
 ATTR_TRIP_ID = "trip_id"
+SERVICE_REFRESH_ELECTRIC_REALTIME_STATUS = "refresh_electric_realtime_status"
 
 
 def _resolve_devices_to_vins_per_entry(
@@ -1135,7 +1239,49 @@ def _resolve_devices_to_vins_per_entry(
     return per_entry_vins
 
 
-async def _async_register_services(hass: HomeAssistant) -> None:
+def _extract_device_ids(call: ServiceCall) -> list[str]:
+    """Normalize a service call's device_id field to a list.
+
+    device_id arrives either as a string (when called with
+    data={"device_id":...}) or a list (target.device normalization).
+    """
+    raw = call.data.get("device_id") or []
+    return [raw] if isinstance(raw, str) else list(raw)
+
+
+async def _wake_vehicle_electric_realtime_status(
+    vehicle_data: list[VehicleData], vin: str
+) -> None:
+    """Find the vehicle matching vin in vehicle_data and wake its EV status.
+
+    Missing vehicles and refresh failures are logged and swallowed so one
+    bad VIN doesn't abort the refresh for the rest of the targeted fleet.
+    """
+    vehicle = next(
+        (
+            vd["data"]
+            for vd in vehicle_data
+            if vd.get("data") is not None and vd["data"].vin == vin
+        ),
+        None,
+    )
+    if vehicle is None:
+        _LOGGER.warning(
+            "toyota.refresh_electric_realtime_status: VIN ...%s "
+            "not in coordinator data; skipping",
+            vin[-6:],
+        )
+        return
+    try:
+        await vehicle.refresh_electric_realtime_status()
+    except Exception:
+        _LOGGER.exception(
+            "toyota.refresh_electric_realtime_status failed for vin=...%s",
+            vin[-6:],
+        )
+
+
+async def _async_register_services(hass: HomeAssistant) -> None:  # noqa: C901
     """Register the toyota.refresh_vehicle_status service exactly once.
 
     Service handlers resolve their target devices to VINs via the device
@@ -1148,10 +1294,7 @@ async def _async_register_services(hass: HomeAssistant) -> None:
         return
 
     async def _handle_refresh_vehicle_status(call: ServiceCall) -> None:
-        # device_id arrives either as a string (when called with
-        # data={"device_id":...}) or a list (target.device normalization).
-        raw = call.data.get("device_id") or []
-        device_ids: list[str] = [raw] if isinstance(raw, str) else list(raw)
+        device_ids = _extract_device_ids(call)
         if not device_ids:
             _LOGGER.warning(
                 "toyota.refresh_vehicle_status called with no device target"
@@ -1186,6 +1329,41 @@ async def _async_register_services(hass: HomeAssistant) -> None:
         DOMAIN,
         SERVICE_REFRESH_VEHICLE_STATUS,
         _handle_refresh_vehicle_status,
+    )
+
+    async def _handle_refresh_electric_realtime_status(call: ServiceCall) -> None:
+        """Force a fresh electric/EV realtime status read for the targeted vehicles.
+
+        Calls pytoyoda's Vehicle.refresh_electric_realtime_status(), which
+        wakes the vehicle to report fresh battery level and charging state.
+        Use sparingly - each call uses cellular airtime and, per pytoyoda's
+        own docs, drains a small amount of 12V battery if used too often.
+        """
+        device_ids = _extract_device_ids(call)
+        if not device_ids:
+            _LOGGER.warning(
+                "toyota.refresh_electric_realtime_status called with no device target"
+            )
+            return
+        _LOGGER.info(
+            "toyota.refresh_electric_realtime_status invoked for devices=%s",
+            device_ids,
+        )
+        per_entry_vins = _resolve_devices_to_vins_per_entry(hass, device_ids)
+        for entry_id, vins in per_entry_vins.items():
+            coord = hass.data[DOMAIN].get(entry_id)
+            if coord is None or coord.data is None:
+                continue
+            for vin in vins:
+                await _wake_vehicle_electric_realtime_status(coord.data, vin)
+            # Schedule a refresh so the electric/battery sensors pick up the
+            # freshly-woken data on the next coordinator cycle.
+            hass.async_create_task(coord.async_request_refresh())
+
+    hass.services.async_register(
+        DOMAIN,
+        SERVICE_REFRESH_ELECTRIC_REALTIME_STATUS,
+        _handle_refresh_electric_realtime_status,
     )
 
     await _async_register_trips_services(hass)

@@ -1,0 +1,2493 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.lovelace",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "type": "sections",
+          "max_columns": 10,
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "custom:home-status-strip",
+                  "entities": [
+                    {
+                      "kind": "post",
+                      "entity": "sensor.template_postudelning"
+                    },
+                    {
+                      "kind": "waste",
+                      "entity": "sensor.soptomning"
+                    },
+                    {
+                      "kind": "lock",
+                      "entity": "lock.ytterdorren"
+                    },
+                    {
+                      "kind": "door",
+                      "entity": "sensor.verandadorrarna"
+                    },
+                    {
+                      "kind": "cover",
+                      "entity": "cover.honsluckan_esphome75_cover"
+                    }
+                  ],
+                  "grid_options": {
+                    "columns": "full",
+                    "rows": "auto"
+                  }
+                },
+                {
+                  "type": "custom:weather-forecast-card",
+                  "show_current": true,
+                  "show_forecast": true,
+                  "default_forecast": "daily",
+                  "tap_action": {
+                    "action": "more-info"
+                  },
+                  "entity": "weather.forecast_met_no_home",
+                  "show_condition_effects": true,
+                  "grid_options": {
+                    "columns": "full",
+                    "rows": "auto"
+                  },
+                  "name": "Blidö",
+                  "show_moon_phase": true,
+                  "forecast": {
+                    "mode": "chart",
+                    "show_sun_times": true,
+                    "use_color_thresholds": true,
+                    "scroll_to_selected": true,
+                    "hourly_group_size": 4,
+                    "default_chart_attribute": "temperature_and_precipitation",
+                    "extra_attribute": "wind_bearing",
+                    "show_attribute_selector": false,
+                    "temperature_precision": 1,
+                    "daily_slots": 14,
+                    "hourly_slots": 24
+                  },
+                  "forecast_action": {
+                    "tap_action": {
+                      "action": "toggle-forecast"
+                    },
+                    "hold_action": {
+                      "action": "select-forecast-attribute"
+                    },
+                    "double_tap_action": {
+                      "action": "more-info"
+                    }
+                  },
+                  "current": {
+                    "temperature_entity": "sensor.utomhus_temp",
+                    "show_attributes": [
+                      {
+                        "entity": "sensor.openuv_aktuell_uv_niva",
+                        "label": "UV moln"
+                      },
+                      {
+                        "entity": "sensor.esphome98_esphome98_uv_index",
+                        "label": "UV lokalt"
+                      },
+                      {
+                        "entity": "sensor.openuv_max_uv_index",
+                        "label": "UV max idag"
+                      }
+                    ],
+                    "temperature_precision": 1
+                  },
+                  "card_mod": {
+                    "style": "\nha-card {\n --card-padding: 8px 12px !important;\n --weather-forecast-card-current-conditions-icon-size: 40px !important;\n --weather-forecast-card-forecast-conditions-icon-size: 26px !important;\n}\n.wfc-container, .wfc-current-weather { gap: 4px !important; }\n.wfc-current-attributes {\n flex-direction: row !important;\n flex-wrap: wrap !important;\n justify-content: center !important;\n gap: 4px 24px !important;\n}\n.wfc-current-attribute { flex: 0 1 auto !important; gap: 5px !important; font-size: 12px !important; }\n.wfc-current-attribute-icon { padding-left: 0 !important; --mdc-icon-size: 16px !important; }\n.wfc-current-attribute-name { padding-left: 0 !important; flex: 0 1 auto !important; }\n.wfc-current-attribute-value { font-weight: 500 !important; }\n.wfc-forecast-chart { height: 96px !important; }\n\n.wfc-forecast-slot { gap: 2px !important; }\n",
+                    "prepend": true
+                  }
+                }
+              ],
+              "column_span": 5
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "custom:apexcharts-card",
+                  "graph_span": "47h",
+                  "span": {
+                    "start": "day"
+                  },
+                  "now": {
+                    "show": true,
+                    "label": "Nu"
+                  },
+                  "yaxis": [
+                    {
+                      "id": "first",
+                      "min": 0,
+                      "decimals": 1,
+                      "max": 6
+                    }
+                  ],
+                  "apex_config": {
+                    "responsive": [
+                      {
+                        "breakpoint": 500,
+                        "options": {
+                          "chart": {
+                            "height": "100px"
+                          }
+                        }
+                      },
+                      {
+                        "breakpoint": 1000,
+                        "options": {
+                          "chart": {
+                            "height": "150px"
+                          }
+                        }
+                      },
+                      {
+                        "breakpoint": 10000,
+                        "options": {
+                          "chart": {
+                            "height": "200px"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "experimental": {
+                    "color_threshold": true
+                  },
+                  "series": [
+                    {
+                      "entity": "sensor.nordpool",
+                      "type": "column",
+                      "name": "Elpris nu",
+                      "yaxis_id": "first",
+                      "opacity": 1,
+                      "show": {
+                        "legend_value": false,
+                        "in_header": "raw"
+                      },
+                      "data_generator": "return (entity.attributes.raw_today.map((start, index) => {\n  return [new Date(start[\"start\"]).getTime(), entity.attributes.raw_today[index][\"value\"]];\n})).concat(entity.attributes.raw_tomorrow.map((start, index) => {\n  return [new Date(start[\"start\"]).getTime(), entity.attributes.raw_tomorrow[index][\"value\"]];\n}));\n",
+                      "float_precision": 2,
+                      "color_threshold": [
+                        {
+                          "value": 0,
+                          "color": "green"
+                        },
+                        {
+                          "value": 2,
+                          "color": "yellow"
+                        },
+                        {
+                          "value": 3,
+                          "color": "orange"
+                        },
+                        {
+                          "value": 4,
+                          "color": "red"
+                        },
+                        {
+                          "value": 5,
+                          "color": "darkred"
+                        }
+                      ],
+                      "unit": "kr/kWh"
+                    },
+                    {
+                      "entity": "sensor.template_nordpool_base_cost_current_hour",
+                      "name": "Inköpspris",
+                      "unit": "kr/kWh",
+                      "float_precision": 2,
+                      "yaxis_id": "first",
+                      "show": {
+                        "in_chart": false,
+                        "in_header": "raw",
+                        "legend_value": false
+                      },
+                      "data_generator": "return [];",
+                      "header_actions": {
+                        "tap_action": {
+                          "action": "more-info"
+                        }
+                      }
+                    },
+                    {
+                      "entity": "sensor.kvartbaserad_elkostnadsprognos",
+                      "name": "Månadsprognos",
+                      "unit": "kr",
+                      "float_precision": 0,
+                      "yaxis_id": "first",
+                      "show": {
+                        "in_chart": false,
+                        "in_header": "raw",
+                        "legend_value": false
+                      },
+                      "data_generator": "return [];",
+                      "header_actions": {
+                        "tap_action": {
+                          "action": "more-info"
+                        }
+                      }
+                    }
+                  ],
+                  "grid_options": {
+                    "columns": "full"
+                  },
+                  "header": {
+                    "show": true,
+                    "show_states": true,
+                    "colorize_states": false
+                  },
+                  "card_mod": {
+                    "style": "#header { padding: 8px 12px 0 !important; }\n#header #header__states {\n  display: flex !important;\n  justify-content: center !important;\n  align-items: center !important;\n  flex-wrap: wrap !important;\n  gap: 4px 24px !important;\n  margin: 0 !important;\n}\n#header #header__states #states__state {\n  flex: 0 0 auto !important;\n  width: auto !important;\n  display: flex !important;\n  flex-direction: row-reverse !important;\n  align-items: baseline !important;\n  gap: 5px !important;\n  margin: 0 !important;\n}\n#header #state__value {\n  display: inline-flex !important;\n  align-items: baseline !important;\n  gap: 4px !important;\n}\n#header #state__value #state {\n  font-size: 13px !important;\n  font-weight: 500 !important;\n  line-height: 1.4 !important;\n}\n#header #state__value #uom, #header #state__name {\n  font-size: 12px !important;\n  font-weight: 400 !important;\n  line-height: 1.4 !important;\n}\n#header #state__name { color: var(--secondary-text-color); }\n#header #state__name::after { content: ':'; }\n\n/* Only the existing current-time annotation is present on this chart. */\n.apexcharts-xaxis-annotations line {\n stroke: #a4e3ef !important;\n stroke-width: 2px !important;\n stroke-dasharray: 5 5 !important;\n animation: {{ 'price-now-travel 1.5s linear infinite' if is_number(states('sensor.nordpool')) else 'none' }};\n}\n@keyframes price-now-travel { from { stroke-dashoffset: 10; } to { stroke-dashoffset: 0; } }\n@media(prefers-reduced-motion:reduce) {\n .apexcharts-xaxis-annotations line { animation: none; }\n}\n\nha-card { background: linear-gradient(145deg,#263a49,#1b2937) !important; border:1px solid rgba(158,185,203,.20) !important; border-radius:12px !important; --primary-text-color:#eef4f8; --secondary-text-color:#bdcbd5; }"
+                  }
+                }
+              ],
+              "column_span": 5
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "custom:house-flows-card",
+                  "power": "sensor.power_consumed",
+                  "download": "sensor.sovrummet_openwrt_one_router_sovrum_wan_rx_rate",
+                  "upload": "sensor.sovrummet_openwrt_one_router_sovrum_wan_tx_rate",
+                  "connection": "binary_sensor.sovrummet_openwrt_one_router_sovrum_wan_connected",
+                  "rate_factor": 1.048576,
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": "auto"
+                  }
+                },
+                {
+                  "type": "custom:compact-levels-card",
+                  "entities": [
+                    {
+                      "entity": "sensor.sef_42h_battery_level",
+                      "name": "Bilbatteri",
+                      "warning": 40,
+                      "good": 50
+                    },
+                    {
+                      "entity": "sensor.sef_42h_fuel_level",
+                      "name": "Bilbränsle",
+                      "warning": 10,
+                      "good": 20
+                    },
+                    {
+                      "entity": "sensor.gasol_utomhus_esphome73_lpg_level",
+                      "name": "Gasol",
+                      "warning": 10,
+                      "good": 20
+                    },
+                    {
+                      "entity": "sensor.esphome90_esphome90_salt_level",
+                      "name": "Salttabletter",
+                      "warning": 10,
+                      "good": 20
+                    },
+                    {
+                      "entity": "sensor.vattenniva_honshuset_esphome74_water_level",
+                      "name": "Hönsvatten",
+                      "warning": 10,
+                      "good": 20
+                    }
+                  ],
+                  "grid_options": {
+                    "rows": "auto",
+                    "columns": 12
+                  }
+                }
+              ],
+              "column_span": 2
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "show_name": true,
+                  "show_icon": true,
+                  "type": "button",
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "entity": "input_boolean.guest_mode",
+                  "name": "Gästläge",
+                  "grid_options": {
+                    "columns": 3,
+                    "rows": "auto"
+                  },
+                  "show_state": true,
+                  "hold_action": {
+                    "action": "toggle"
+                  },
+                  "icon_height": "32px",
+                  "card_mod": {
+                    "style": "\nha-card { background: linear-gradient(145deg,#263a49,#1b2937) !important; border:1px solid rgba(158,185,203,.20) !important; border-radius:12px !important; --primary-text-color:#eef4f8; --secondary-text-color:#bdcbd5; } :host { height:100%; } ha-card { height:100% !important; min-height:118px; box-sizing:border-box; } .name { font-size:12px !important; font-weight:500 !important; line-height:1.3 !important; } .state { font-size:11px !important; } \nha-card {font-size:12px !important;} ha-card > span:not(.state) {font-size:12px !important;font-weight:500 !important;line-height:1.3 !important;} ha-card > span.state {font-size:11px !important;}"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "grid_options": {
+                    "rows": "auto",
+                    "columns": 3
+                  },
+                  "entity": "input_boolean.narvarosimulering_aktiv",
+                  "name": "Närvarosim.",
+                  "icon": "mdi:home-lightbulb-outline",
+                  "show_entity_picture": false,
+                  "hide_state": false,
+                  "vertical": true,
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "icon_tap_action": {
+                    "action": "toggle"
+                  },
+                  "features_position": "bottom",
+                  "card_mod": {
+                    "style": {
+                      "ha-tile-icon$": "\n{% set active = is_state('input_boolean.narvarosimulering_aktiv', 'on') %}\n.container ::slotted([slot=\"icon\"]), .container ha-icon, .container ha-svg-icon { opacity: 0 !important; }\n.container.background::before { opacity: 0 !important; }\n.container::after {\n content: \"\"; position: absolute; inset: 0; pointer-events: none;\n background: center / 36px 36px no-repeat url('/local/dashboard-icons/presence-{{ 'on' if active else 'off' }}-v1.svg');\n}\n",
+                      ".": "\nha-card { background: linear-gradient(145deg,#263a49,#1b2937) !important; border:1px solid rgba(158,185,203,.20) !important; border-radius:12px !important; --primary-text-color:#eef4f8; --secondary-text-color:#bdcbd5; } :host { height:100%; } ha-card { height:100% !important; min-height:118px; box-sizing:border-box; } .name { font-size:12px !important; font-weight:500 !important; line-height:1.3 !important; } .state { font-size:11px !important; }  ha-tile-info { --ha-tile-info-primary-font-size:12px; --ha-tile-info-secondary-font-size:11px; }",
+                      "ha-tile-info$": " .primary {font-size:12px !important;font-weight:500 !important;} .secondary {font-size:11px !important;}"
+                    }
+                  }
+                },
+                {
+                  "show_name": true,
+                  "show_icon": true,
+                  "type": "button",
+                  "tap_action": {
+                    "action": "more-info"
+                  },
+                  "entity": "switch.poolpump_utomhus_esphome27_relay_state",
+                  "name": "Poolpump",
+                  "show_state": true,
+                  "hold_action": {
+                    "action": "more-info"
+                  },
+                  "grid_options": {
+                    "columns": 3,
+                    "rows": "auto"
+                  },
+                  "icon_height": "32px",
+                  "icon": "mdi:fan",
+                  "card_mod": {
+                    "style": "ha-state-icon {\n  transform-origin: center;\n}\nha-state-icon[data-state=\"on\"] {\n  animation: poolpump-rotation 4s linear infinite;\n}\n@keyframes poolpump-rotation {\n  from { transform: rotate(0deg); }\n  to { transform: rotate(360deg); }\n}\n@media (prefers-reduced-motion: reduce) {\n  ha-state-icon[data-state=\"on\"] { animation: none; }\n}\n\nha-card { background: linear-gradient(145deg,#263a49,#1b2937) !important; border:1px solid rgba(158,185,203,.20) !important; border-radius:12px !important; --primary-text-color:#eef4f8; --secondary-text-color:#bdcbd5; } :host { height:100%; } ha-card { height:100% !important; min-height:118px; box-sizing:border-box; } .name { font-size:12px !important; font-weight:500 !important; line-height:1.3 !important; } .state { font-size:11px !important; } \nha-card {font-size:12px !important;} ha-card > span:not(.state) {font-size:12px !important;font-weight:500 !important;line-height:1.3 !important;} ha-card > span.state {font-size:11px !important;}"
+                  }
+                },
+                {
+                  "show_name": true,
+                  "show_icon": true,
+                  "type": "button",
+                  "tap_action": {
+                    "action": "more-info"
+                  },
+                  "entity": "cover.esphome93_esphome93_markis",
+                  "name": "Markisen",
+                  "show_state": true,
+                  "hold_action": {
+                    "action": "more-info"
+                  },
+                  "grid_options": {
+                    "columns": 3,
+                    "rows": "auto"
+                  },
+                  "icon_height": "32px",
+                  "card_mod": {
+                    "style": "\nha-card { background: linear-gradient(145deg,#263a49,#1b2937) !important; border:1px solid rgba(158,185,203,.20) !important; border-radius:12px !important; --primary-text-color:#eef4f8; --secondary-text-color:#bdcbd5; } :host { height:100%; } ha-card { height:100% !important; min-height:118px; box-sizing:border-box; } .name { font-size:12px !important; font-weight:500 !important; line-height:1.3 !important; } .state { font-size:11px !important; } \nha-card {font-size:12px !important;} ha-card > span:not(.state) {font-size:12px !important;font-weight:500 !important;line-height:1.3 !important;} ha-card > span.state {font-size:11px !important;}"
+                  }
+                },
+                {
+                  "show_name": true,
+                  "show_icon": true,
+                  "type": "button",
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "entity": "light.esphome93_esphome93_led",
+                  "name": "Markis-LED",
+                  "show_state": true,
+                  "hold_action": {
+                    "action": "toggle"
+                  },
+                  "grid_options": {
+                    "columns": 3,
+                    "rows": "auto"
+                  },
+                  "icon": "mdi:led-strip-variant",
+                  "icon_height": "32px",
+                  "card_mod": {
+                    "style": "ha-state-icon {\n  transition: color 800ms ease-in-out,\n              filter 800ms ease-in-out,\n              transform 180ms ease-in-out;\n}\nha-card {\n  box-shadow: inset 0 0 0 1000px rgba(255, 193, 7, 0);\n  transition: box-shadow 800ms ease-in-out;\n}\nha-card:has(ha-state-icon[data-state=\"on\"]) {\n  box-shadow: inset 0 0 0 1000px rgba(255, 193, 7, 0.09);\n}\n@media (prefers-reduced-motion: reduce) {\n  ha-state-icon, ha-card { transition: none; }\n}\n\nha-card { background: linear-gradient(145deg,#263a49,#1b2937) !important; border:1px solid rgba(158,185,203,.20) !important; border-radius:12px !important; --primary-text-color:#eef4f8; --secondary-text-color:#bdcbd5; } :host { height:100%; } ha-card { height:100% !important; min-height:118px; box-sizing:border-box; } .name { font-size:12px !important; font-weight:500 !important; line-height:1.3 !important; } .state { font-size:11px !important; } \nha-card {font-size:12px !important;} ha-card > span:not(.state) {font-size:12px !important;font-weight:500 !important;line-height:1.3 !important;} ha-card > span.state {font-size:11px !important;}"
+                  }
+                },
+                {
+                  "show_name": true,
+                  "show_icon": true,
+                  "type": "button",
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "entity": "switch.billaddare",
+                  "name": "Billaddning",
+                  "show_state": true,
+                  "hold_action": {
+                    "action": "more-info"
+                  },
+                  "grid_options": {
+                    "columns": 3,
+                    "rows": "auto"
+                  },
+                  "icon_height": "32px",
+                  "icon": "mdi:battery-charging",
+                  "card_mod": {
+                    "style": "ha-state-icon {\n  animation: {{ 'charging-motion 1.4s ease-in-out infinite' if is_state('switch.billaddare', 'on') and is_state('sensor.sef_42h_charging_status', 'charging') else 'none' }};\n}\n@keyframes charging-motion { 0%,100% { transform:translateY(3px); } 50% { transform:translateY(-3px); } }\n@media (prefers-reduced-motion: reduce) {\n  ha-state-icon { animation: none; }\n}\n\nha-card { background: linear-gradient(145deg,#263a49,#1b2937) !important; border:1px solid rgba(158,185,203,.20) !important; border-radius:12px !important; --primary-text-color:#eef4f8; --secondary-text-color:#bdcbd5; } :host { height:100%; } ha-card { height:100% !important; min-height:118px; box-sizing:border-box; } .name { font-size:12px !important; font-weight:500 !important; line-height:1.3 !important; } .state { font-size:11px !important; } \nha-card {font-size:12px !important;} ha-card > span:not(.state) {font-size:12px !important;font-weight:500 !important;line-height:1.3 !important;} ha-card > span.state {font-size:11px !important;}"
+                  }
+                },
+                {
+                  "show_name": true,
+                  "show_icon": true,
+                  "type": "button",
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "show_state": true,
+                  "hold_action": {
+                    "action": "more-info"
+                  },
+                  "grid_options": {
+                    "columns": 3,
+                    "rows": "auto"
+                  },
+                  "icon_height": "32px",
+                  "icon": "mdi:fan",
+                  "entity": "climate.sef_42h_climate",
+                  "name": "Bilvärme",
+                  "card_mod": {
+                    "style": "ha-state-icon {\n  animation: {{ 'vehicle-spin 3s linear infinite' if is_state('climate.sef_42h_climate', 'heat_cool') else 'none' }};\n}\n@keyframes vehicle-spin { from { transform:rotate(0deg); } to { transform:rotate(360deg); } }\n@media (prefers-reduced-motion: reduce) {\n  ha-state-icon { animation: none; }\n}\n\nha-card { background: linear-gradient(145deg,#263a49,#1b2937) !important; border:1px solid rgba(158,185,203,.20) !important; border-radius:12px !important; --primary-text-color:#eef4f8; --secondary-text-color:#bdcbd5; } :host { height:100%; } ha-card { height:100% !important; min-height:118px; box-sizing:border-box; } .name { font-size:12px !important; font-weight:500 !important; line-height:1.3 !important; } .state { font-size:11px !important; } \nha-card {font-size:12px !important;} ha-card > span:not(.state) {font-size:12px !important;font-weight:500 !important;line-height:1.3 !important;} ha-card > span.state {font-size:11px !important;}"
+                  }
+                }
+              ],
+              "column_span": 2
+            },
+            {
+              "type": "grid",
+              "column_span": 2,
+              "cards": [
+                {
+                  "type": "custom:auto-entities",
+                  "card": {
+                    "type": "grid",
+                    "columns": 1,
+                    "square": false
+                  },
+                  "card_param": "cards",
+                  "filter": {
+                    "template": "{% set base = '{\"type\": \"custom:mini-media-player\", \"artwork\": \"default\", \"info\": \"short\", \"hide\": {\"power\": true, \"source\": true, \"group_button\": true, \"volume_level\": false, \"runtime\": false}, \"tap_action\": {\"action\": \"navigate\", \"navigation_path\": \"/d5369777_music_assistant\"}}' | from_json %}\n{% set css = \"ha-card { --mini-media-player-accent-color: #64b5c6; --ha-card-background: linear-gradient(145deg,#263a49,#1b2937); } .mmp__bg { background:linear-gradient(145deg,#263a49,#1b2937) !important; } ha-card { background: linear-gradient(145deg,#263a49,#1b2937) !important; border:1px solid rgba(158,185,203,.20) !important; border-radius:12px !important; --primary-text-color:#eef4f8; --secondary-text-color:#bdcbd5; }\\n.entity__info__name::before {\\n  content: '♫'; display: inline-block; margin-right: 7px;\\n  color: STATUS_COLOR; animation: PLAY_ANIMATION;\\n}\\n.entity__info__media, .entity__info__media * { animation: none !important; }\\n@keyframes music-note-motion { 0%,100% { transform:rotate(-15deg) translateY(1px); } 50% { transform:rotate(15deg) translateY(-2px); } }\\n@media (prefers-reduced-motion: reduce) { .entity__info__name::before { animation: none; } }\\n\" %}\n{% set candidates = states.media_player | selectattr('attributes.mass_player_type', 'defined') | selectattr('state', 'in', ['playing', 'paused']) | list %}\n{% if candidates | count == 0 %}\n{% set candidates = expand('media_player.dassens_hogtalare_ma') | list %}\n{% endif %}\n{% set groups = candidates | selectattr('attributes.mass_player_type', 'eq', 'group') | sort(attribute='entity_id') | list %}\n{% set players = candidates | rejectattr('attributes.mass_player_type', 'eq', 'group') | sort(attribute='entity_id') | list %}\n{% set ns = namespace(queues=[], cards=[]) %}\n{% for p in groups + players %}\n  {% set queue = p.attributes.get('active_queue') or p.entity_id %}\n  {% if queue not in ns.queues %}\n    {% set ns.queues = ns.queues + [queue] %}\n    {% set muted = p.attributes.get('is_volume_muted', false) %}\n    {% set label = 'Ljud av' if muted else 'Pausad' if p.state == 'paused' else 'Spelar' if p.state == 'playing' else 'Ej tillgänglig · Öppna MA' if p.state in ['unknown', 'unavailable'] else 'Välj musik' %}\n    {% set animation = 'music-note-motion 1.5s ease-in-out infinite' if p.state == 'playing' and not muted else 'none' %}\n    {% set color = '#FFC107' if muted or p.state == 'paused' else '#64b5c6' %}\n    {% set styling = css | replace('STATUS_COLOR', color) | replace('PLAY_ANIMATION', animation) %}\n    {% set card = dict(base, entity=p.entity_id, name=p.name ~ ' · ' ~ label, card_mod=dict(style=styling)) %}\n    {% set ns.cards = ns.cards + [card] %}\n  {% endif %}\n{% endfor %}\n{% if ns.cards | count == 0 %}\n{{ [dict(type='markdown', content='[♫ Välj musik i Music Assistant](/d5369777_music_assistant)')] }}\n{% else %}\n{{ ns.cards }}\n{% endif %}\n"
+                  },
+                  "show_empty": true,
+                  "grid_options": {
+                    "columns": "full",
+                    "rows": "auto"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "markdown",
+                  "content": "{% set printer = states('sensor.prusaxl') %}\n{% set progress = states('sensor.prusaxl_status') %}\n{% set finish = as_timestamp(states('sensor.prusaxl_utskriften_ar_fardig'), none) %}\n<ha-icon icon=\"mdi:printer-3d-nozzle\"></ha-icon> **Prusa XL · {{ {'printing': 'Skriver ut', 'paused': 'Pausad', 'attention': 'Åtgärd krävs', 'error': 'Fel – kontrollera skrivaren'}.get(printer, 'Inväntar status') }}**\n\n{% if is_number(progress) %}**{{ progress | float | round(0) | int }} %** klart{% else %}Förlopp saknas{% endif %} · {% if printer == 'paused' %}Återstående tid uppdateras när utskriften fortsätter{% elif printer in ['attention', 'error'] %}Kontrollera skrivaren{% elif finish is not none and finish > as_timestamp(now()) %}{% set minutes = ((finish - as_timestamp(now())) / 60) | round(0, 'ceil') | int %}Cirka {% if minutes >= 60 %}{{ minutes // 60 }} h {% endif %}{{ minutes % 60 }} min kvar{% else %}Inväntar ny sluttidsprognos{% endif %}\n",
+                  "entity_id": [
+                    "sensor.prusaxl",
+                    "sensor.prusaxl_status",
+                    "sensor.prusaxl_utskriften_ar_fardig"
+                  ],
+                  "visibility": [
+                    {
+                      "condition": "state",
+                      "entity": "sensor.prusaxl",
+                      "state": [
+                        "printing",
+                        "paused",
+                        "attention",
+                        "error"
+                      ]
+                    }
+                  ],
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  },
+                  "card_mod": {
+                    "style": {
+                      "ha-markdown$": "{% set indicator_state = states('sensor.prusaxl') %}\nha-icon {\n  color: {{ '#FFC107' if indicator_state == 'paused' else '#FF9800' if indicator_state in ['attention', 'error'] else '#FE6E31' }};\n  --mdc-icon-size: 24px;\n  display: inline-block;\n  margin-right: 6px;\n  vertical-align: middle;\n  animation: {{ 'printer-head-motion 1.6s ease-in-out infinite' if indicator_state == 'printing' else 'none' }};\n}\n@keyframes printer-head-motion { 0%,100% { transform:translateX(-5px); } 50% { transform:translateX(5px); } }\n@media (prefers-reduced-motion: reduce) {\n  ha-icon { animation: none; }\n}\n",
+                      ".": "\n{% set state = states('sensor.prusaxl') %}\n{% set value = states('sensor.prusaxl_status') %}\n{% set valid = is_number(value) and 0 <= value | float(0) <= 100 %}\n{% set progress = value | float(0) if valid else 0 %}\n{% set color = '#FFC107' if state == 'paused' else '#FF9800' if state in ['attention', 'error'] else '#FE6E31' %}\nha-card { position: relative; overflow: hidden; }\nha-card::before, ha-card::after {\n content: '';\n position: absolute;\n bottom: 0;\n left: 0;\n height: 4px;\n pointer-events: none;\n opacity: {{ 1 if valid else 0 }};\n}\nha-card::before { width: 100%; background: rgba(254,110,49,.15); }\nha-card::after {\n width: {{ progress }}%;\n background-color: {{ color }};\n background-image: linear-gradient(110deg, transparent 30%, rgba(255,255,255,.35) 50%, transparent 70%);\n background-size: 90px 100%;\n transition: width 1s ease, background-color .5s ease;\n animation: {{ 'prusa-progress-flow 3s linear infinite' if state == 'printing' and valid and progress < 100 else 'none' }};\n}\n@keyframes prusa-progress-flow { from { background-position: 0 0; } to { background-position: 90px 0; } }\n@media(prefers-reduced-motion:reduce) { ha-card::after { animation:none; transition:none; } }\n\nha-card { background: linear-gradient(145deg,#263a49,#1b2937) !important; border:1px solid rgba(158,185,203,.20) !important; border-radius:12px !important; --primary-text-color:#eef4f8; --secondary-text-color:#bdcbd5; }"
+                    }
+                  }
+                },
+                {
+                  "type": "markdown",
+                  "content": "{% set operation = states('sensor.siemens_tvatt_tork_driftsstatus').split('.')[-1] %}\n{% set progress = states('sensor.siemens_tvatt_tork_aktuell_programstatus') %}\n{% set finish = as_timestamp(states('sensor.siemens_tvatt_tork_aterstaende_programtid'), none) %}\n<ha-icon icon=\"mdi:washing-machine\"></ha-icon> **Tvätt/tork · {{ {'Run': 'Kör program', 'Pause': 'Pausad', 'ActionRequired': 'Åtgärd krävs'}.get(operation, 'Inväntar status') }}**\n\n{% if is_number(progress) %}**{{ progress | float | round(0) | int }} %** klart{% else %}Förlopp saknas{% endif %} · {% if operation == 'Pause' %}Tid uppdateras när programmet fortsätter{% elif operation == 'ActionRequired' %}Kontrollera maskinen{% elif finish is not none and finish > as_timestamp(now()) %}{% set minutes = ((finish - as_timestamp(now())) / 60) | round(0, 'ceil') | int %}Cirka {% if minutes >= 60 %}{{ minutes // 60 }} h {% endif %}{{ minutes % 60 }} min kvar{% else %}Inväntar tidsprognos{% endif %}\n",
+                  "entity_id": [
+                    "sensor.siemens_tvatt_tork_driftsstatus",
+                    "sensor.siemens_tvatt_tork_aktuell_programstatus",
+                    "sensor.siemens_tvatt_tork_aterstaende_programtid"
+                  ],
+                  "visibility": [
+                    {
+                      "condition": "state",
+                      "entity": "sensor.siemens_tvatt_tork_driftsstatus",
+                      "state": [
+                        "BSH.Common.EnumType.OperationState.Run",
+                        "BSH.Common.EnumType.OperationState.Pause",
+                        "BSH.Common.EnumType.OperationState.ActionRequired"
+                      ]
+                    }
+                  ],
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  },
+                  "card_mod": {
+                    "style": {
+                      "ha-markdown$": "{% set indicator_state = states('sensor.siemens_tvatt_tork_driftsstatus') %}\nha-icon {\n  color: {{ '#FFC107' if indicator_state == 'BSH.Common.EnumType.OperationState.Pause' else '#FF9800' if indicator_state in ['BSH.Common.EnumType.OperationState.ActionRequired'] else '#64b5c6' }};\n  --mdc-icon-size: 24px;\n  display: inline-block;\n  margin-right: 6px;\n  vertical-align: middle;\n  animation: {{ 'appliance-motion 1.6s ease-in-out infinite' if indicator_state == 'BSH.Common.EnumType.OperationState.Run' else 'none' }};\n}\n@keyframes appliance-motion { 0%,100% { transform:rotate(-12deg); } 50% { transform:rotate(12deg); } }\n@media (prefers-reduced-motion: reduce) {\n  ha-icon { animation: none; }\n}\n",
+                      ".": "{% set state = states('sensor.siemens_tvatt_tork_driftsstatus').split('.')[-1] %}\n{% set value = states('sensor.siemens_tvatt_tork_aktuell_programstatus') %}\n{% set valid = is_number(value) and 0 <= value | float(0) <= 100 %}\n{% set progress = value | float(0) if valid else 0 %}\n{% set color = '#FFC107' if state == 'Pause' else '#FF9800' if state in ['ActionRequired', 'Error'] else '#64b5c6' %}\nha-card { position: relative; overflow: hidden; }\nha-card::before, ha-card::after {\n content: '';\n position: absolute;\n bottom: 0;\n left: 0;\n height: 4px;\n pointer-events: none;\n opacity: {{ 1 if valid else 0 }};\n}\nha-card::before { width: 100%; background: rgba(100,181,198,.15); }\nha-card::after {\n width: {{ progress }}%;\n background-color: {{ color }};\n background-image: linear-gradient(110deg, transparent 30%, rgba(255,255,255,.35) 50%, transparent 70%);\n background-size: 90px 100%;\n transition: width 1s ease, background-color .5s ease;\n animation: {{ 'appliance-progress-flow 3s linear infinite' if state == 'Run' and valid and progress < 100 else 'none' }};\n}\n@keyframes appliance-progress-flow { from { background-position: 0 0; } to { background-position: 90px 0; } }\n@media(prefers-reduced-motion:reduce) { ha-card::after { animation:none; transition:none; } }\n\nha-card { background: linear-gradient(145deg,#263a49,#1b2937) !important; border:1px solid rgba(158,185,203,.20) !important; border-radius:12px !important; --primary-text-color:#eef4f8; --secondary-text-color:#bdcbd5; }"
+                    }
+                  }
+                },
+                {
+                  "type": "markdown",
+                  "content": "{% set machine_entities = device_entities(device_id('sensor.siemens_016050395510002818_bsh_common_status_operationstate')) %}\n{% set progress_entity = machine_entities | select('match', 'sensor\\..*_bsh_common_option_programprogress$') | first | default(none) %}\n{% set finish_entity = machine_entities | select('match', 'sensor\\..*_bsh_common_option_remainingprogramtime$') | first | default(none) %}\n{% if states('sensor.siemens_016050395510002818_bsh_common_status_operationstate') in ['unknown', 'unavailable'] %}\n<ha-icon icon=\"mdi:dishwasher-alert\"></ha-icon> **Diskmaskin · Kontakt saknas**\n\nProgramstatus och återstående tid kan inte hämtas.\n{% else %}\n{% set operation = states('sensor.siemens_016050395510002818_bsh_common_status_operationstate').split('.')[-1] %}\n{% set progress = (states(progress_entity) if progress_entity else 'unknown') %}\n{% set finish = as_timestamp((states(finish_entity) if finish_entity else 'unknown'), none) %}\n<ha-icon icon=\"mdi:dishwasher\"></ha-icon> **Diskmaskin · {{ {'Run': 'Kör program', 'Pause': 'Pausad', 'ActionRequired': 'Åtgärd krävs'}.get(operation, 'Inväntar status') }}**\n\n{% if is_number(progress) %}**{{ progress | float | round(0) | int }} %** klart{% else %}Förlopp saknas{% endif %} · {% if operation == 'Pause' %}Tid uppdateras när programmet fortsätter{% elif operation == 'ActionRequired' %}Kontrollera maskinen{% elif finish is not none and finish > as_timestamp(now()) %}{% set minutes = ((finish - as_timestamp(now())) / 60) | round(0, 'ceil') | int %}Cirka {% if minutes >= 60 %}{{ minutes // 60 }} h {% endif %}{{ minutes % 60 }} min kvar{% else %}Inväntar tidsprognos{% endif %}\n\n{% endif %}",
+                  "visibility": [
+                    {
+                      "condition": "state",
+                      "entity": "sensor.siemens_016050395510002818_bsh_common_status_operationstate",
+                      "state": [
+                        "BSH.Common.EnumType.OperationState.Run",
+                        "BSH.Common.EnumType.OperationState.Pause",
+                        "BSH.Common.EnumType.OperationState.ActionRequired",
+                        "unknown",
+                        "unavailable"
+                      ]
+                    }
+                  ],
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  },
+                  "card_mod": {
+                    "style": {
+                      "ha-markdown$": "{% set indicator_state = states('sensor.siemens_016050395510002818_bsh_common_status_operationstate') %}\nha-icon {\n  color: {{ '#FFC107' if indicator_state == 'BSH.Common.EnumType.OperationState.Pause' else '#FF9800' if indicator_state in ['BSH.Common.EnumType.OperationState.ActionRequired', 'unknown', 'unavailable'] else '#64b5c6' }};\n  --mdc-icon-size: 24px;\n  display: inline-block;\n  margin-right: 6px;\n  vertical-align: middle;\n  animation: {{ 'appliance-motion 1.6s ease-in-out infinite' if indicator_state == 'BSH.Common.EnumType.OperationState.Run' else 'none' }};\n}\n@keyframes appliance-motion { 0%,100% { transform:rotate(-12deg); } 50% { transform:rotate(12deg); } }\n@media (prefers-reduced-motion: reduce) {\n  ha-icon { animation: none; }\n}\n",
+                      ".": "{% set machine_entities = device_entities(device_id('sensor.siemens_016050395510002818_bsh_common_status_operationstate')) %}\n{% set progress_entity = machine_entities | select('match', 'sensor\\..*_bsh_common_option_programprogress$') | first | default(none) %}\n{% set finish_entity = machine_entities | select('match', 'sensor\\..*_bsh_common_option_remainingprogramtime$') | first | default(none) %}\n{% set state = states('sensor.siemens_016050395510002818_bsh_common_status_operationstate').split('.')[-1] %}\n{% set value = (states(progress_entity) if progress_entity else 'unknown') %}\n{% set valid = is_number(value) and 0 <= value | float(0) <= 100 %}\n{% set progress = value | float(0) if valid else 0 %}\n{% set color = '#FFC107' if state == 'Pause' else '#FF9800' if state in ['ActionRequired', 'Error'] else '#64b5c6' %}\nha-card { position: relative; overflow: hidden; }\nha-card::before, ha-card::after {\n content: '';\n position: absolute;\n bottom: 0;\n left: 0;\n height: 4px;\n pointer-events: none;\n opacity: {{ 1 if valid else 0 }};\n}\nha-card::before { width: 100%; background: rgba(100,181,198,.15); }\nha-card::after {\n width: {{ progress }}%;\n background-color: {{ color }};\n background-image: linear-gradient(110deg, transparent 30%, rgba(255,255,255,.35) 50%, transparent 70%);\n background-size: 90px 100%;\n transition: width 1s ease, background-color .5s ease;\n animation: {{ 'appliance-progress-flow 3s linear infinite' if state == 'Run' and valid and progress < 100 else 'none' }};\n}\n@keyframes appliance-progress-flow { from { background-position: 0 0; } to { background-position: 90px 0; } }\n@media(prefers-reduced-motion:reduce) { ha-card::after { animation:none; transition:none; } }\n\nha-card { background: linear-gradient(145deg,#263a49,#1b2937) !important; border:1px solid rgba(158,185,203,.20) !important; border-radius:12px !important; --primary-text-color:#eef4f8; --secondary-text-color:#bdcbd5; }"
+                    }
+                  },
+                  "tap_action": {
+                    "action": "more-info",
+                    "entity": "sensor.siemens_016050395510002818_bsh_common_status_operationstate"
+                  }
+                },
+                {
+                  "type": "markdown",
+                  "content": "{% set ids = [\"sensor.openwrt_backup_status\", \"sensor.fulla_status\", \"sensor.ping_status\", \"sensor.portainer_status\", \"sensor.open_webui_status\", \"sensor.wyoming_whisper_status\", \"sensor.openwrt_backup_senaste_korning_status\", \"sensor.uptime_via_caddy_status\", \"sensor.eir_status\", \"sensor.ping_status_2\", \"sensor.home_assistant_ui_status\", \"sensor.supervisor_health_status\", \"sensor.core_api_wake_up_status\", \"sensor.frigg_status\", \"sensor.ping_status_3\", \"sensor.ssh_status\", \"sensor.ssh_status_2\", \"sensor.caddy_reverse_proxy_status\", \"sensor.docker_api_status\", \"sensor.glances_ui_status\", \"sensor.ollama_api_status\", \"sensor.uptime_proxy_status\", \"sensor.ollama_container_status\", \"sensor.caddy_container_status\", \"sensor.ha_test_container_status\", \"sensor.esphome_test_container_status\", \"sensor.glances_container_status\", \"sensor.portainer_agent_container_status\", \"sensor.docker_socket_proxy_container_status\", \"sensor.glances_container_status_2\", \"sensor.open_webui_container_status\", \"sensor.openwrt_backup_container_status\", \"sensor.portainer_container_status\", \"sensor.uptime_kuma_container_status\", \"sensor.wyoming_whisper_container_status\", \"sensor.home_status\", \"sensor.gw_home_arpa_status\", \"sensor.ap_kontoret_home_arpa_status\", \"sensor.ap_koket_home_arpa_status\", \"sensor.ap_kallaren_home_arpa_status\", \"sensor.ap_verkstaden_home_arpa_status\", \"sensor.ap_friggan_home_arpa_status\", \"sensor.ap_honshuset_home_arpa_status\", \"sensor.ap_poolen_home_arpa_status\", \"sensor.gw_buck_status\", \"sensor.ap_buck_status\", \"sensor.buck_status\", \"sensor.ha_buck_status\", \"sensor.kiwi_status\", \"sensor.gw_kiwi_status\", \"sensor.ap_kiwi_status\", \"sensor.ha_kiwi_status\", \"sensor.sippan_status\", \"sensor.gw_sippan_status\", \"sensor.ha_sippan_status\", \"sensor.adguard_dns_status\", \"sensor.sw_vinden_status\", \"sensor.sw_kontoret_status\"] %}\n{% set ns = namespace(up=0, down=[], pending=[], maintenance=[], unknown=[]) %}\n{% for id in ids %}\n{% set s = states(id) %}\n{% set name = (state_attr(id, 'friendly_name') or id) | regex_replace(' Status$', '') %}\n{% if s == 'up' %}{% set ns.up = ns.up + 1 %}\n{% elif s == 'down' %}{% set ns.down = ns.down + [name] %}\n{% elif s == 'pending' %}{% set ns.pending = ns.pending + [name] %}\n{% elif s == 'maintenance' %}{% set ns.maintenance = ns.maintenance + [name] %}\n{% else %}{% set ns.unknown = ns.unknown + [name] %}{% endif %}\n{% endfor %}\n{% set color = '#e45b4f' if ns.down else '#e8b841' if ns.pending or ns.unknown else '#64b5c6' if ns.maintenance else '#66bb6a' %}\n<ha-icon icon=\"{{ 'mdi:server-off' if ns.down else 'mdi:server-security' }}\"></ha-icon> **Tjänster · {% if ns.down %}{{ ns.down | count }} nere{% elif ns.pending %}Kontroll pågår{% elif ns.unknown %}Status saknas{% elif ns.maintenance %}Underhåll{% else %}Allt uppe{% endif %}** · {{ ns.up }}/{{ ids | count }} uppe\n\n{% set names = ns.down + ns.pending + ns.unknown + ns.maintenance %}\n{% if names %}\n<details><summary>{{ names[:2] | join(' · ') | e }}{% if names | count > 2 %} · +{{ names | count - 2 }} till{% endif %}</summary>\n<ul>\n{% for label, group in [('Nere', ns.down), ('Väntar', ns.pending), ('Status saknas', ns.unknown), ('Underhåll', ns.maintenance)] %}\n{% for name in group %}<li><strong>{{ label }}</strong> · {{ name | e }}</li>{% endfor %}\n{% endfor %}\n</ul>\n<a href=\"/config/integrations/integration/uptime_kuma\">Öppna Uptime Kuma-integrationen</a>\n</details>\n{% else %}Alla övervakade kontroller svarar{% endif %}\n",
+                  "entity_id": [
+                    "sensor.openwrt_backup_status",
+                    "sensor.fulla_status",
+                    "sensor.ping_status",
+                    "sensor.portainer_status",
+                    "sensor.open_webui_status",
+                    "sensor.wyoming_whisper_status",
+                    "sensor.openwrt_backup_senaste_korning_status",
+                    "sensor.uptime_via_caddy_status",
+                    "sensor.eir_status",
+                    "sensor.ping_status_2",
+                    "sensor.home_assistant_ui_status",
+                    "sensor.supervisor_health_status",
+                    "sensor.core_api_wake_up_status",
+                    "sensor.frigg_status",
+                    "sensor.ping_status_3",
+                    "sensor.ssh_status",
+                    "sensor.ssh_status_2",
+                    "sensor.caddy_reverse_proxy_status",
+                    "sensor.docker_api_status",
+                    "sensor.glances_ui_status",
+                    "sensor.ollama_api_status",
+                    "sensor.uptime_proxy_status",
+                    "sensor.ollama_container_status",
+                    "sensor.caddy_container_status",
+                    "sensor.ha_test_container_status",
+                    "sensor.esphome_test_container_status",
+                    "sensor.glances_container_status",
+                    "sensor.portainer_agent_container_status",
+                    "sensor.docker_socket_proxy_container_status",
+                    "sensor.glances_container_status_2",
+                    "sensor.open_webui_container_status",
+                    "sensor.openwrt_backup_container_status",
+                    "sensor.portainer_container_status",
+                    "sensor.uptime_kuma_container_status",
+                    "sensor.wyoming_whisper_container_status",
+                    "sensor.home_status",
+                    "sensor.gw_home_arpa_status",
+                    "sensor.ap_kontoret_home_arpa_status",
+                    "sensor.ap_koket_home_arpa_status",
+                    "sensor.ap_kallaren_home_arpa_status",
+                    "sensor.ap_verkstaden_home_arpa_status",
+                    "sensor.ap_friggan_home_arpa_status",
+                    "sensor.ap_honshuset_home_arpa_status",
+                    "sensor.ap_poolen_home_arpa_status",
+                    "sensor.gw_buck_status",
+                    "sensor.ap_buck_status",
+                    "sensor.buck_status",
+                    "sensor.ha_buck_status",
+                    "sensor.kiwi_status",
+                    "sensor.gw_kiwi_status",
+                    "sensor.ap_kiwi_status",
+                    "sensor.ha_kiwi_status",
+                    "sensor.sippan_status",
+                    "sensor.gw_sippan_status",
+                    "sensor.ha_sippan_status",
+                    "sensor.adguard_dns_status",
+                    "sensor.sw_vinden_status",
+                    "sensor.sw_kontoret_status"
+                  ],
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  },
+                  "card_mod": {
+                    "style": {
+                      "ha-markdown$": "{% set ids = [\"sensor.openwrt_backup_status\", \"sensor.fulla_status\", \"sensor.ping_status\", \"sensor.portainer_status\", \"sensor.open_webui_status\", \"sensor.wyoming_whisper_status\", \"sensor.openwrt_backup_senaste_korning_status\", \"sensor.uptime_via_caddy_status\", \"sensor.eir_status\", \"sensor.ping_status_2\", \"sensor.home_assistant_ui_status\", \"sensor.supervisor_health_status\", \"sensor.core_api_wake_up_status\", \"sensor.frigg_status\", \"sensor.ping_status_3\", \"sensor.ssh_status\", \"sensor.ssh_status_2\", \"sensor.caddy_reverse_proxy_status\", \"sensor.docker_api_status\", \"sensor.glances_ui_status\", \"sensor.ollama_api_status\", \"sensor.uptime_proxy_status\", \"sensor.ollama_container_status\", \"sensor.caddy_container_status\", \"sensor.ha_test_container_status\", \"sensor.esphome_test_container_status\", \"sensor.glances_container_status\", \"sensor.portainer_agent_container_status\", \"sensor.docker_socket_proxy_container_status\", \"sensor.glances_container_status_2\", \"sensor.open_webui_container_status\", \"sensor.openwrt_backup_container_status\", \"sensor.portainer_container_status\", \"sensor.uptime_kuma_container_status\", \"sensor.wyoming_whisper_container_status\", \"sensor.home_status\", \"sensor.gw_home_arpa_status\", \"sensor.ap_kontoret_home_arpa_status\", \"sensor.ap_koket_home_arpa_status\", \"sensor.ap_kallaren_home_arpa_status\", \"sensor.ap_verkstaden_home_arpa_status\", \"sensor.ap_friggan_home_arpa_status\", \"sensor.ap_honshuset_home_arpa_status\", \"sensor.ap_poolen_home_arpa_status\", \"sensor.gw_buck_status\", \"sensor.ap_buck_status\", \"sensor.buck_status\", \"sensor.ha_buck_status\", \"sensor.kiwi_status\", \"sensor.gw_kiwi_status\", \"sensor.ap_kiwi_status\", \"sensor.ha_kiwi_status\", \"sensor.sippan_status\", \"sensor.gw_sippan_status\", \"sensor.ha_sippan_status\", \"sensor.adguard_dns_status\", \"sensor.sw_vinden_status\", \"sensor.sw_kontoret_status\"] %}\n{% set ns = namespace(up=0, down=[], pending=[], maintenance=[], unknown=[]) %}\n{% for id in ids %}\n{% set s = states(id) %}\n{% set name = (state_attr(id, 'friendly_name') or id) | regex_replace(' Status$', '') %}\n{% if s == 'up' %}{% set ns.up = ns.up + 1 %}\n{% elif s == 'down' %}{% set ns.down = ns.down + [name] %}\n{% elif s == 'pending' %}{% set ns.pending = ns.pending + [name] %}\n{% elif s == 'maintenance' %}{% set ns.maintenance = ns.maintenance + [name] %}\n{% else %}{% set ns.unknown = ns.unknown + [name] %}{% endif %}\n{% endfor %}\n{% set color = '#e45b4f' if ns.down else '#e8b841' if ns.pending or ns.unknown else '#64b5c6' if ns.maintenance else '#66bb6a' %}\n\nha-icon { display:inline-block; color: {{ color }}; --mdc-icon-size: 22px; margin-right: 5px; vertical-align: middle; animation: {{ 'kuma-alert 3s ease-in-out infinite' if ns.down else 'none' }}; }\np { margin: 0; font-size: 12px; line-height: 1.5; }\np + p { margin-top: 5px; color: var(--secondary-text-color); }\n@keyframes kuma-alert { 0%,30%,100% { transform:rotate(0deg); } 5%,15%,25% { transform:rotate(-14deg); } 10%,20% { transform:rotate(14deg); } }\n@media (prefers-reduced-motion: reduce) { ha-icon { animation: none; } }\n\ndetails { margin-top:5px; font-size:12px; line-height:1.5; }\nsummary { cursor:pointer; color:var(--secondary-text-color); }\nsummary:focus-visible { outline:2px solid var(--primary-color); }\nul { margin:8px 0; padding-left:18px; }\nli { margin:4px 0; overflow-wrap:anywhere; }\na { color:var(--primary-color); }\n",
+                      ".": "\nha-card { background: linear-gradient(145deg,#263a49,#1b2937) !important; border:1px solid rgba(158,185,203,.20) !important; border-radius:12px !important; --primary-text-color:#eef4f8; --secondary-text-color:#bdcbd5; }"
+                    }
+                  }
+                }
+              ],
+              "column_span": 2
+            },
+            {
+              "type": "grid",
+              "column_span": 2,
+              "cards": []
+            }
+          ],
+          "badges": [],
+          "icon": "mdi:home-outline",
+          "cards": [],
+          "visible": [
+            {
+              "user": "31929f46f3c34feabe9c0f73baefcd30"
+            },
+            {
+              "user": "1e38893527ee4e1b9e5081503f031176"
+            },
+            {
+              "user": "2f4267cc0cb04dc182ce9b6d85eab95c"
+            },
+            {
+              "user": "29b553be96084edfb7a9484fd8467ad6"
+            },
+            {
+              "user": "3f3dde1b0916421aaadc7b5a87964b4c"
+            },
+            {
+              "user": "7a2eb82593f34528bd69a04f5b005397"
+            },
+            {
+              "user": "bf1f2fb8d5154dadbd52b425fedda0b6"
+            }
+          ],
+          "dense_section_placement": true,
+          "subview": false,
+          "background": {
+            "opacity": 100,
+            "alignment": "center",
+            "size": "cover",
+            "repeat": "no-repeat",
+            "attachment": "fixed",
+            "image": {
+              "media_content_id": "media-source://image_upload/72b1a2b67e92e175decbeb379f10f4e0",
+              "media_content_type": "image/png",
+              "metadata": {
+                "title": "nordic-night-01a0c2db.png",
+                "thumbnail": "/api/image/serve/72b1a2b67e92e175decbeb379f10f4e0/256x256",
+                "media_class": "image",
+                "navigateIds": [
+                  {},
+                  {
+                    "media_content_type": "app",
+                    "media_content_id": "media-source://image_upload"
+                  }
+                ]
+              }
+            }
+          },
+          "header": {
+            "layout": "center",
+            "badges_position": "top",
+            "badges_wrap": "wrap"
+          }
+        },
+        {
+          "title": "Värme",
+          "path": "varme",
+          "type": "sections",
+          "max_columns": 3,
+          "dense_section_placement": true,
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "thermostat",
+                  "show_current_as_primary": false,
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 6
+                  },
+                  "features": [
+                    {
+                      "type": "climate-preset-modes",
+                      "style": "dropdown"
+                    },
+                    {
+                      "type": "climate-hvac-modes"
+                    }
+                  ],
+                  "entity": "climate.sef_42h_climate",
+                  "name": {
+                    "type": "entity"
+                  }
+                },
+                {
+                  "type": "thermostat",
+                  "name": "Köket",
+                  "show_current_as_primary": false,
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 6
+                  },
+                  "features": [
+                    {
+                      "type": "climate-preset-modes",
+                      "style": "dropdown"
+                    },
+                    {
+                      "type": "climate-hvac-modes"
+                    }
+                  ],
+                  "entity": "climate.golvvarme_termostat_koket"
+                },
+                {
+                  "type": "thermostat",
+                  "entity": "climate.golvvarme_termostat_verandan",
+                  "name": "Verandan",
+                  "show_current_as_primary": false,
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 6
+                  },
+                  "features": [
+                    {
+                      "type": "climate-preset-modes",
+                      "style": "dropdown"
+                    },
+                    {
+                      "type": "climate-hvac-modes"
+                    }
+                  ]
+                },
+                {
+                  "type": "thermostat",
+                  "entity": "climate.golvvarme_termostat_ateljen",
+                  "show_current_as_primary": false,
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 6
+                  },
+                  "features": [
+                    {
+                      "type": "climate-preset-modes",
+                      "style": "dropdown"
+                    },
+                    {
+                      "type": "climate-hvac-modes"
+                    }
+                  ],
+                  "name": "Ateljén"
+                },
+                {
+                  "type": "thermostat",
+                  "entity": "climate.termostat_kontoret_esphome20_thermostat",
+                  "name": "Kontoret",
+                  "features": [
+                    {
+                      "type": "climate-preset-modes",
+                      "style": "dropdown"
+                    },
+                    {
+                      "type": "climate-hvac-modes"
+                    }
+                  ],
+                  "show_current_as_primary": false,
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 6
+                  }
+                },
+                {
+                  "type": "thermostat",
+                  "entity": "climate.golvvarme_termostat_entren",
+                  "name": "Entrén",
+                  "show_current_as_primary": false,
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 6
+                  },
+                  "features": [
+                    {
+                      "type": "climate-preset-modes",
+                      "style": "dropdown"
+                    },
+                    {
+                      "type": "climate-hvac-modes"
+                    }
+                  ]
+                },
+                {
+                  "type": "thermostat",
+                  "show_current_as_primary": false,
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 6
+                  },
+                  "features": [
+                    {
+                      "type": "climate-preset-modes",
+                      "style": "dropdown"
+                    },
+                    {
+                      "type": "climate-hvac-modes"
+                    }
+                  ],
+                  "entity": "climate.golvvarme_termostat_duschen",
+                  "name": "Duschen"
+                },
+                {
+                  "type": "thermostat",
+                  "name": "Toaletten",
+                  "features": [
+                    {
+                      "type": "climate-preset-modes",
+                      "style": "dropdown"
+                    },
+                    {
+                      "type": "climate-hvac-modes"
+                    }
+                  ],
+                  "show_current_as_primary": false,
+                  "entity": "climate.termostat_toaletten_esphome83_thermostat",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 6
+                  }
+                },
+                {
+                  "type": "thermostat",
+                  "entity": "climate.golvvarme_termostat_bion",
+                  "show_current_as_primary": false,
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 6
+                  },
+                  "features": [
+                    {
+                      "type": "climate-preset-modes",
+                      "style": "dropdown"
+                    },
+                    {
+                      "type": "climate-hvac-modes"
+                    }
+                  ],
+                  "name": "Bion"
+                },
+                {
+                  "type": "thermostat",
+                  "name": "Friggan",
+                  "features": [
+                    {
+                      "type": "climate-preset-modes",
+                      "style": "dropdown"
+                    },
+                    {
+                      "type": "climate-hvac-modes"
+                    }
+                  ],
+                  "show_current_as_primary": false,
+                  "entity": "climate.termostat_friggan_esphome21_thermostat",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 6
+                  }
+                },
+                {
+                  "type": "humidifier",
+                  "entity": "humidifier.levoit_luftfukare_300s",
+                  "features": [
+                    {
+                      "type": "humidifier-toggle"
+                    }
+                  ],
+                  "name": "Luftfuktare",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 6
+                  }
+                },
+                {
+                  "type": "humidifier",
+                  "features": [
+                    {
+                      "type": "humidifier-toggle"
+                    },
+                    {
+                      "type": "humidifier-modes",
+                      "style": "dropdown"
+                    }
+                  ],
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 6
+                  },
+                  "entity": "humidifier.bions_hygrostat",
+                  "name": "Bions hygrostat",
+                  "show_current_as_primary": false
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.golvvarme_sovrum_kontor_esphome81_relay_state",
+                  "name": "Sovrum/Kontor"
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.golvvarme_friggan_esphome80_relay_state",
+                  "name": "Friggan"
+                }
+              ],
+              "column_span": 3
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Golvvärme",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.golvvarme_ateljen_switch_0_power",
+                  "name": "Ateljén"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.golvvarme_bion_switch_0_power",
+                  "name": "Bion"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.golvvarme_entren_switch_0_power",
+                  "name": "Entrén"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.golvvarme_koket_switch_0_power",
+                  "name": "Köket"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.golvvarme_verandan_switch_0_power",
+                  "name": "Verandan"
+                }
+              ],
+              "column_span": 3
+            }
+          ],
+          "cards": [],
+          "badges": [
+            {
+              "type": "entity",
+              "entity": "input_datetime.starta_bilvarmen"
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "input_boolean.automatisk_bilvarme",
+              "name": "Auto bilvärme",
+              "icon": "mdi:car-seat-heater",
+              "tap_action": {
+                "action": "toggle"
+              }
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": false,
+              "show_icon": false,
+              "tap_action": {
+                "action": "perform-action",
+                "perform_action": "input_button.press",
+                "target": {
+                  "entity_id": "input_button.hemmavarme"
+                }
+              },
+              "icon": "mdi:home",
+              "entity": "input_button.hemmavarme",
+              "name": "Hemma"
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": false,
+              "show_icon": false,
+              "tap_action": {
+                "action": "perform-action",
+                "perform_action": "input_button.press",
+                "target": {
+                  "entity_id": "input_button.komfortvarme"
+                },
+                "data": {}
+              },
+              "icon": "mdi:home",
+              "entity": "input_button.komfortvarme",
+              "name": "Komfort"
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": false,
+              "show_icon": false,
+              "tap_action": {
+                "action": "perform-action",
+                "perform_action": "input_button.press",
+                "target": {
+                  "entity_id": "input_button.bortavarme"
+                },
+                "data": {}
+              },
+              "icon": "mdi:home",
+              "entity": "input_button.bortavarme",
+              "name": "Borta"
+            }
+          ],
+          "icon": "mdi:heat-wave"
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "Pool",
+          "path": "pool",
+          "icon": "mdi:pool",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "thermostat",
+                  "show_current_as_primary": true,
+                  "features": [
+                    {
+                      "type": "climate-hvac-modes"
+                    },
+                    {
+                      "type": "climate-preset-modes",
+                      "style": "dropdown"
+                    }
+                  ],
+                  "entity": "climate.poolvarmepump"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Temperaturer",
+                  "heading_style": "title"
+                },
+                {
+                  "graph": "line",
+                  "type": "sensor",
+                  "entity": "sensor.poolvarmepump_water_in_temperature",
+                  "detail": 2,
+                  "name": {
+                    "type": "entity"
+                  },
+                  "limits": {
+                    "max": -4
+                  },
+                  "grid_options": {
+                    "rows": "auto",
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.poolvarmepump_water_out_temperature",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.poolvarmepump_ambient_temperature",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.poolvarmepump_cold_pipe_temperature",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.alsavopro_poolvarmepump_exhaust_temperature",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.poolvarmepump_heating_pipe_temperature",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.poolvarmepump_ipm_temperature",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "Fläkt & elförbrukning"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.poolvarmepump_compressor_current",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.alsavopro_poolvarmepump_compressor_running_frequency",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.alsavopro_poolvarmepump_fan_speed",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.poolvarmepump_exhaust_valve_opening",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Poolvärmepump",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "tile",
+                  "entity": "binary_sensor.poolvarmepump_connectivity",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.alsavopro_poolvarmepump_auto_mode_target",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.alsavopro_poolvarmepump_heating_mode_target",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.alsavopro_poolvarmepump_cooling_mode_target",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom"
+                }
+              ],
+              "column_span": 1
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Alarm & felkoder",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "tile",
+                  "entity": "binary_sensor.poolvarmepump_alarm",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.alsavopro_poolvarmepump_error_messages",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.poolvarmepump_device_status_code",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.alsavopro_poolvarmepump_alarm_code_1",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.alsavopro_poolvarmepump_alarm_code_2",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.alsavopro_poolvarmepump_alarm_code_3",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.alsavopro_poolvarmepump_alarm_code_4",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.alsavopro_poolvarmepump_system_running_code",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.alsavopro_poolvarmepump_system_status_code",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.alsavopro_poolvarmepump_frequency_limit_code",
+                  "name": {
+                    "type": "entity"
+                  },
+                  "vertical": false,
+                  "features_position": "bottom"
+                }
+              ]
+            }
+          ],
+          "badges": [
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "switch.poolpump_utomhus_esphome27_relay_state",
+              "name": "Pump"
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "switch.poolvarmepump_esphome28_relay_state",
+              "name": "Värme"
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "light.poolbelysning_temp_esphome29_light",
+              "name": "Lampa"
+            },
+            {
+              "type": "entity",
+              "entity": "sensor.poolbelysning_temp_esphome29_temperature"
+            }
+          ],
+          "visible": [
+            {
+              "user": "31929f46f3c34feabe9c0f73baefcd30"
+            },
+            {
+              "user": "1e38893527ee4e1b9e5081503f031176"
+            },
+            {
+              "user": "2f4267cc0cb04dc182ce9b6d85eab95c"
+            },
+            {
+              "user": "29b553be96084edfb7a9484fd8467ad6"
+            },
+            {
+              "user": "3f3dde1b0916421aaadc7b5a87964b4c"
+            }
+          ],
+          "cards": [],
+          "dense_section_placement": true
+        },
+        {
+          "title": "3D-printer",
+          "path": "3d-printer",
+          "icon": "mdi:printer-3d",
+          "type": "sections",
+          "background": {},
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "show_state": true,
+                  "show_name": true,
+                  "camera_view": "live",
+                  "fit_mode": "cover",
+                  "type": "picture-entity",
+                  "name": "Prusa Buddy Cam",
+                  "entity": "sensor.prusaxl",
+                  "camera_image": "camera.192_168_10_23",
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                }
+              ],
+              "visibility": [
+                {
+                  "condition": "state",
+                  "entity": "sensor.prusaxl",
+                  "state_not": "unavailable"
+                }
+              ],
+              "column_span": 2
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "custom:apexcharts-card",
+                  "graph_span": "3h",
+                  "yaxis": [
+                    {
+                      "show": true,
+                      "min": 0,
+                      "max": 250,
+                      "decimals": 0
+                    }
+                  ],
+                  "header": {
+                    "show": true,
+                    "title": "Temperaturer",
+                    "show_states": true,
+                    "colorize_states": true
+                  },
+                  "series": [
+                    {
+                      "entity": "sensor.prusaxl_munstycke_temperatur",
+                      "type": "line",
+                      "name": "Munstycke",
+                      "stroke_width": 2,
+                      "color": "orange"
+                    },
+                    {
+                      "entity": "sensor.prusaxl_munstycke_temperatur",
+                      "type": "line",
+                      "name": "Munstycke Mål",
+                      "stroke_width": 1,
+                      "color": "green"
+                    },
+                    {
+                      "entity": "sensor.prusaxl_varmebadd_temperatur",
+                      "type": "line",
+                      "name": "Värmebädd",
+                      "stroke_width": 2,
+                      "color": "red"
+                    },
+                    {
+                      "entity": "sensor.prusaxl_varmebadd_maltemperatur",
+                      "type": "line",
+                      "name": "Värmebädd Mål",
+                      "stroke_width": 1,
+                      "color": "blue"
+                    }
+                  ]
+                },
+                {
+                  "type": "heading",
+                  "heading": "Esphome84 - POWR316D",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.huvudstrombrytaren_prusa_xl_esphome84_voltage",
+                  "name": "Spänning",
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.huvudstrombrytaren_prusa_xl_esphome84_power",
+                  "name": "Effekt",
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.huvudstrombrytaren_prusa_xl_esphome84_current",
+                  "name": "Styrka",
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.huvudstrombrytaren_prusa_xl_esphome84_daily_energy",
+                  "name": "Daglig energi",
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.huvudstrombrytaren_prusa_xl_esphome84_energy",
+                  "name": "Total Energi",
+                  "vertical": false,
+                  "features_position": "bottom"
+                }
+              ],
+              "visibility": [
+                {
+                  "condition": "state",
+                  "entity": "sensor.prusaxl",
+                  "state_not": "unavailable"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "tile",
+                  "entity": "sensor.prusaxl_filnamn",
+                  "layout_options": {
+                    "grid_columns": 4,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.prusaxl_material",
+                  "layout_options": {
+                    "grid_columns": 4,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.prusaxl_utskrift_startas",
+                  "layout_options": {
+                    "grid_columns": 4,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.prusaxl_utskriften_ar_fardig",
+                  "layout_options": {
+                    "grid_columns": 4,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.prusaxl_z_hojd",
+                  "layout_options": {
+                    "grid_columns": 4,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.prusaxl_hotend_fan",
+                  "layout_options": {
+                    "grid_columns": 4,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.prusaxl_print_fan",
+                  "layout_options": {
+                    "grid_columns": 4,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.prusaxl_print_flow",
+                  "layout_options": {
+                    "grid_columns": 4,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.prusaxl_skriv_hastighet",
+                  "layout_options": {
+                    "grid_columns": 4,
+                    "grid_rows": 1
+                  }
+                }
+              ],
+              "visibility": [
+                {
+                  "condition": "state",
+                  "entity": "sensor.prusaxl",
+                  "state_not": "unavailable"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": []
+            }
+          ],
+          "cards": [],
+          "badges": [
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.prusaxl"
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "button.prusaxl_pausa_arbetet",
+              "name": "Pausa"
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "button.prusaxl_avbryt_arbetet",
+              "name": "Avbryt"
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "button.prusaxl_ateruppta_arbetet",
+              "name": "Återuppta"
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "switch.huvudstrombrytaren_prusa_xl_esphome84_relay_state",
+              "name": {
+                "type": "device"
+              }
+            }
+          ],
+          "max_columns": 4
+        },
+        {
+          "title": "Kameror",
+          "path": "kameror",
+          "icon": "mdi:webcam",
+          "type": "sections",
+          "max_columns": 2,
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "icon": "mdi:fridge",
+                  "heading": "Utomhus",
+                  "heading_style": "title",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.utomhus_temp"
+                    },
+                    {
+                      "type": "entity",
+                      "entity": "sensor.smhi_temp_inkl_vindfaktor"
+                    },
+                    {
+                      "type": "entity",
+                      "entity": "sensor.temp_hum_utomhus_humidity"
+                    }
+                  ]
+                },
+                {
+                  "camera_view": "live",
+                  "fit_mode": "cover",
+                  "type": "picture-glance",
+                  "entities": [],
+                  "camera_image": "camera.esphome89_esphome89_camera",
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "heading",
+                  "heading": "Hönshuset",
+                  "heading_style": "title",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.honshuset_temp"
+                    },
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.temp_hum_honshuset_humidity"
+                    },
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.vattenniva_honshuset_esphome74_water_level",
+                      "icon": "mdi:water-well-outline"
+                    }
+                  ]
+                },
+                {
+                  "features": [
+                    {
+                      "type": "cover-open-close"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "cover.honsluckan_esphome75_cover",
+                  "layout_options": {
+                    "grid_columns": 4,
+                    "grid_rows": 2
+                  },
+                  "icon": "mdi:garage",
+                  "vertical": false,
+                  "state_content": [
+                    "state",
+                    "current_position",
+                    "last_changed"
+                  ],
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "features_position": "bottom",
+                  "name": "Hönsluckan"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.vattenniva_honshuset_esphome74_water_level"
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.vattenvarmare_honshuset_esphome25_relay_state"
+                }
+              ]
+            }
+          ],
+          "cards": []
+        },
+        {
+          "title": "Växter",
+          "path": "vaxter2",
+          "icon": "mdi:flower-outline",
+          "type": "sections",
+          "max_columns": 2,
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "icon": "mdi:fridge",
+                  "heading": "Krukväxter med sensor",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "custom:flower-card",
+                  "entity": "plant.paraplyaralia",
+                  "show_bars": [
+                    "moisture",
+                    "conductivity",
+                    "temperature",
+                    "illuminance"
+                  ],
+                  "battery_sensor": "sensor.plantsensor_1_battery",
+                  "display_type": "full"
+                },
+                {
+                  "type": "custom:flower-card",
+                  "entity": "plant.coffea_arabica",
+                  "show_bars": [
+                    "moisture",
+                    "conductivity",
+                    "temperature",
+                    "illuminance"
+                  ],
+                  "battery_sensor": "sensor.plantsensor_2_battery",
+                  "display_type": "full"
+                },
+                {
+                  "type": "custom:flower-card",
+                  "entity": "plant.meyer_citron",
+                  "show_bars": [
+                    "moisture",
+                    "conductivity",
+                    "temperature",
+                    "illuminance"
+                  ],
+                  "battery_sensor": "sensor.plantsensor_3_battery",
+                  "display_type": "full"
+                },
+                {
+                  "type": "custom:flower-card",
+                  "entity": "plant.citron",
+                  "show_bars": [
+                    "moisture",
+                    "conductivity",
+                    "temperature",
+                    "illuminance"
+                  ],
+                  "battery_sensor": "sensor.plantsensor_4_battery",
+                  "display_type": "full"
+                },
+                {
+                  "type": "custom:flower-card",
+                  "entity": "plant.kaffir_lime",
+                  "show_bars": [
+                    "moisture",
+                    "conductivity",
+                    "temperature",
+                    "illuminance"
+                  ],
+                  "battery_sensor": "sensor.plantsensor_5_battery",
+                  "display_type": "full"
+                },
+                {
+                  "type": "custom:flower-card",
+                  "entity": "plant.monstera",
+                  "show_bars": [
+                    "moisture",
+                    "conductivity",
+                    "temperature",
+                    "illuminance"
+                  ],
+                  "battery_sensor": "sensor.plant_sensor_6_monstera_batteri",
+                  "display_type": "full"
+                }
+              ],
+              "column_span": 2
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "icon": "mdi:fridge",
+                  "heading_style": "subtitle"
+                },
+                {
+                  "integration": "pp",
+                  "city": "Stockholm",
+                  "allergens": [
+                    "Al",
+                    "Alm",
+                    "Malörtsambrosia",
+                    "Björk",
+                    "Ek",
+                    "Gråbo",
+                    "Gräs",
+                    "Hassel",
+                    "Sälg och viden"
+                  ],
+                  "minimal": false,
+                  "show_text_allergen": true,
+                  "show_value_text": true,
+                  "show_value_numeric": false,
+                  "show_value_numeric_in_circle": false,
+                  "show_empty_days": true,
+                  "debug": false,
+                  "days_to_show": 4,
+                  "days_relative": true,
+                  "days_abbreviated": false,
+                  "days_uppercase": false,
+                  "days_boldfaced": false,
+                  "pollen_threshold": 1,
+                  "sort": "value_descending",
+                  "allergens_abbreviated": false,
+                  "date_locale": "sv",
+                  "phrases": {
+                    "full": {},
+                    "short": {},
+                    "levels": [],
+                    "days": {},
+                    "no_information": ""
+                  },
+                  "type": "custom:pollenprognos-card",
+                  "show_text": true,
+                  "grid_options": {
+                    "columns": "full",
+                    "rows": 4
+                  }
+                }
+              ],
+              "column_span": 2
+            }
+          ],
+          "cards": [],
+          "badges": [
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "light.alla_blomlampor",
+              "tap_action": {
+                "action": "toggle"
+              }
+            }
+          ]
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "Bill",
+          "path": "bill",
+          "icon": "mdi:car",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "icon": "mdi:fridge",
+                  "heading": "Nivåer och beräknade körsträckor",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "custom:gauge-card-pro",
+                  "segments": [
+                    {
+                      "from": 0,
+                      "color": "red"
+                    },
+                    {
+                      "from": 25,
+                      "color": "#FFA500"
+                    },
+                    {
+                      "from": 50,
+                      "color": "rgb(255, 255, 0)"
+                    },
+                    {
+                      "from": 100,
+                      "color": "var(--green-color)"
+                    }
+                  ],
+                  "needle": true,
+                  "gradient": true,
+                  "titles": {
+                    "primary": "Batterinivå"
+                  },
+                  "min": 0,
+                  "max": 100,
+                  "value_texts": {
+                    "primary": "{{ states(entity) }}",
+                    "primary_color": "white",
+                    "primary_unit": "%"
+                  },
+                  "hide_background": false,
+                  "gradient_resolution": "medium",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 3
+                  },
+                  "entity": "sensor.sef_42h_battery_level"
+                },
+                {
+                  "type": "custom:gauge-card-pro",
+                  "segments": [
+                    {
+                      "from": 0,
+                      "color": "red"
+                    },
+                    {
+                      "from": 25,
+                      "color": "#FFA500"
+                    },
+                    {
+                      "from": 50,
+                      "color": "rgb(255, 255, 0)"
+                    },
+                    {
+                      "from": 100,
+                      "color": "var(--green-color)"
+                    }
+                  ],
+                  "needle": true,
+                  "gradient": true,
+                  "titles": {
+                    "primary": "Bränslenivå"
+                  },
+                  "min": 0,
+                  "max": 100,
+                  "value_texts": {
+                    "primary": "{{ states(entity) }}",
+                    "primary_color": "white",
+                    "primary_unit": "%"
+                  },
+                  "hide_background": false,
+                  "gradient_resolution": "medium",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 3
+                  },
+                  "entity": "sensor.sef_42h_fuel_level"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.sef_42h_battery_range_with_ac",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Sträcka (el + AC)"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.sef_42h_battery_range",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Körsträcka (el)"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.sef_42h_fuel_range",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Körsträcka (bränsle)"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.sef_42h_total_range",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Körsträcka (el+bränsle)"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Totalt körd sträcka per tidsenhet",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.sef_42h_current_year_statistics",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Km (år)"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.sef_42h_current_month_statistics",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Km (månad)"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.sef_42h_current_week_statistics",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Km (vecka)"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.sef_42h_current_day_statistics",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Km (dag)"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.sef_42h_odometer",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Odometer"
+                },
+                {
+                  "type": "heading",
+                  "heading": "Position och ID",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "tile",
+                  "entity": "device_tracker.sef_42h_parking_location"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.sef_42h_vehicle_identify_number"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Elladdning - parametrar",
+                  "heading_style": "title",
+                  "icon": "phu:charging-station"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_boolean.car_ai_planning_enabled"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.car_bat_capacity"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.car_target_soc"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.car_charger_capacity"
+                },
+                {
+                  "type": "tile",
+                  "entity": "script.granny_car_charge_plan"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.car_charger_efficiency"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_boolean.car_man_override"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Plan för batteriladdning",
+                  "heading_style": "title",
+                  "icon": "mdi:battery-charging-40"
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.billaddare",
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "initial_view": "listWeek",
+                  "type": "calendar",
+                  "entities": [
+                    "calendar.billaddning"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "Sensorer"
+                },
+                {
+                  "type": "tile",
+                  "entity": "binary_sensor.sef_42h_driverseat_door",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Vänster framdörr"
+                },
+                {
+                  "type": "tile",
+                  "entity": "binary_sensor.sef_42h_driverseat_lock",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Vänster framdörr",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 1
+                  },
+                  "hide_state": false,
+                  "color": "primary"
+                },
+                {
+                  "type": "tile",
+                  "entity": "binary_sensor.sef_42h_passengerseat_door",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Höger framdörr",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "binary_sensor.sef_42h_passengerseat_lock",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Höger framdörr"
+                },
+                {
+                  "type": "tile",
+                  "entity": "binary_sensor.sef_42h_leftrearseat_door",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Vänster bakdörr"
+                },
+                {
+                  "type": "tile",
+                  "entity": "binary_sensor.sef_42h_leftrearseat_lock",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Vänster bakdörr"
+                },
+                {
+                  "type": "tile",
+                  "entity": "binary_sensor.sef_42h_rightrearseat_door",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Höger bakdörr"
+                },
+                {
+                  "type": "tile",
+                  "entity": "binary_sensor.sef_42h_rightrearseat_lock",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Höger bakdörr"
+                },
+                {
+                  "type": "tile",
+                  "entity": "binary_sensor.sef_42h_driverseat_window",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Vänster framdörrs fönster"
+                },
+                {
+                  "type": "tile",
+                  "entity": "binary_sensor.sef_42h_passengerseat_window",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Höger framdörrs fönster"
+                },
+                {
+                  "type": "tile",
+                  "entity": "binary_sensor.sef_42h_leftrearseat_window",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Vänster bakdörrs fönster"
+                },
+                {
+                  "type": "tile",
+                  "entity": "binary_sensor.sef_42h_rightrearseat_window",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Höger bakdörrs fönster"
+                },
+                {
+                  "type": "tile",
+                  "entity": "binary_sensor.sef_42h_hood",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Motorhuv"
+                },
+                {
+                  "type": "tile",
+                  "entity": "binary_sensor.sef_42h_trunk",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Bakluckan"
+                },
+                {
+                  "type": "tile",
+                  "entity": "binary_sensor.sef_42h_trunk_lock",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Tanklock"
+                }
+              ],
+              "column_span": 4
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "path": "vader",
+          "title": "Väder",
+          "icon": "mdi:weather-partly-rainy",
+          "cards": [
+            {
+              "type": "custom:meteogram-card",
+              "title": "Väderprognos",
+              "latitude": 59.607587918958025,
+              "longitude": 18.88886690139771,
+              "show_cloud_cover": true,
+              "show_pressure": true,
+              "show_weather_icons": true,
+              "show_wind": true,
+              "show_rain": true,
+              "fill_container": true,
+              "dense_weather_icons": true,
+              "meteogram_hours": "54h"
+            }
+          ]
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "Verkstaden",
+          "path": "verkstaden",
+          "icon": "mdi:hammer-screwdriver",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "tile",
+                  "entity": "light.shellypro3_ec626089edbc_switch_0"
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.shelly_pro_3_verkstaden_switch_1"
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.shelly_pro_3_verkstaden_switch_2"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.verkstan_hum"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.verkstan_temp"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "Dammsugare",
+          "path": "dammsugare",
+          "icon": "mdi:robot-vacuum",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "tile",
+                  "grid_options": {
+                    "rows": "auto"
+                  },
+                  "entity": "vacuum.max",
+                  "vertical": false,
+                  "icon_tap_action": {
+                    "action": "more-info"
+                  },
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "select.max_vald_karta",
+                  "vertical": false,
+                  "features": [
+                    {
+                      "type": "select-options"
+                    }
+                  ],
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "rows": "auto"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.max_batteri",
+                  "features": [
+                    {
+                      "type": "bar-gauge"
+                    },
+                    {
+                      "type": "trend-graph"
+                    }
+                  ],
+                  "grid_options": {
+                    "rows": "auto"
+                  }
+                }
+              ],
+              "column_span": 4
+            }
+          ],
+          "cards": []
+        },
+        {
+          "type": "sections",
+          "max_columns": 1,
+          "title": "QR wifi",
+          "path": "qr-wifi",
+          "icon": "mdi:qrcode",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "Gäst WIFI"
+                },
+                {
+                  "type": "picture",
+                  "image": "/api/image/serve/a23aa1b41718c4f4a5055438eeaf9e2f/512x512"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

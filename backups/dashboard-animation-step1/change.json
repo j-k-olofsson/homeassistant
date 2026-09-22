@@ -1,0 +1,53 @@
+{
+  "path": [
+    "views",
+    0,
+    "sections",
+    2,
+    "cards",
+    4
+  ],
+  "original_card": {
+    "show_name": true,
+    "show_icon": true,
+    "type": "button",
+    "tap_action": {
+      "action": "more-info"
+    },
+    "entity": "switch.poolpump_utomhus_esphome27_relay_state",
+    "name": "Poolpump",
+    "show_state": true,
+    "hold_action": {
+      "action": "more-info"
+    },
+    "grid_options": {
+      "columns": 3,
+      "rows": "auto"
+    },
+    "icon_height": "32px"
+  },
+  "updated_card": {
+    "show_name": true,
+    "show_icon": true,
+    "type": "button",
+    "tap_action": {
+      "action": "more-info"
+    },
+    "entity": "switch.poolpump_utomhus_esphome27_relay_state",
+    "name": "Poolpump",
+    "show_state": true,
+    "hold_action": {
+      "action": "more-info"
+    },
+    "grid_options": {
+      "columns": 3,
+      "rows": "auto"
+    },
+    "icon_height": "32px",
+    "icon": "mdi:fan",
+    "card_mod": {
+      "style": "ha-state-icon {\n  transform-origin: center;\n}\nha-state-icon[data-state=\"on\"] {\n  animation: poolpump-rotation 4s linear infinite;\n}\n@keyframes poolpump-rotation {\n  from { transform: rotate(0deg); }\n  to { transform: rotate(360deg); }\n}\n@media (prefers-reduced-motion: reduce) {\n  ha-state-icon[data-state=\"on\"] { animation: none; }\n}\n"
+    }
+  },
+  "backup": "/config/backups/dashboard-animation-step1/original-20260921T073701Z.json"
+}

@@ -1,0 +1,109 @@
+{
+  "backup": "/config/backups/dashboard-animation-step3/original-20260921T075109Z.json",
+  "changes": [
+    {
+      "path": [
+        "views",
+        0,
+        "sections",
+        2,
+        "cards",
+        6
+      ],
+      "original_card": {
+        "show_name": true,
+        "show_icon": true,
+        "type": "button",
+        "tap_action": {
+          "action": "toggle"
+        },
+        "entity": "light.esphome93_esphome93_led",
+        "name": "Markis-LED",
+        "show_state": true,
+        "hold_action": {
+          "action": "toggle"
+        },
+        "grid_options": {
+          "columns": 3,
+          "rows": "auto"
+        },
+        "icon": "mdi:led-strip-variant",
+        "icon_height": "32px"
+      },
+      "updated_card": {
+        "show_name": true,
+        "show_icon": true,
+        "type": "button",
+        "tap_action": {
+          "action": "toggle"
+        },
+        "entity": "light.esphome93_esphome93_led",
+        "name": "Markis-LED",
+        "show_state": true,
+        "hold_action": {
+          "action": "toggle"
+        },
+        "grid_options": {
+          "columns": 3,
+          "rows": "auto"
+        },
+        "icon": "mdi:led-strip-variant",
+        "icon_height": "32px",
+        "card_mod": {
+          "style": "ha-state-icon {\n  transition: color 300ms ease-in-out,\n              filter 300ms ease-in-out,\n              transform 180ms ease-in-out;\n}\n@media (prefers-reduced-motion: reduce) {\n  ha-state-icon { transition: none; }\n}\n"
+        }
+      }
+    },
+    {
+      "path": [
+        "views",
+        0,
+        "sections",
+        2,
+        "cards",
+        7
+      ],
+      "original_card": {
+        "show_name": true,
+        "show_icon": true,
+        "type": "button",
+        "tap_action": {
+          "action": "toggle"
+        },
+        "entity": "light.grupp_lampor_vid_tvn",
+        "show_state": true,
+        "hold_action": {
+          "action": "toggle"
+        },
+        "grid_options": {
+          "columns": 3,
+          "rows": "auto"
+        },
+        "name": "Tv-lampor",
+        "icon_height": "32px"
+      },
+      "updated_card": {
+        "show_name": true,
+        "show_icon": true,
+        "type": "button",
+        "tap_action": {
+          "action": "toggle"
+        },
+        "entity": "light.grupp_lampor_vid_tvn",
+        "show_state": true,
+        "hold_action": {
+          "action": "toggle"
+        },
+        "grid_options": {
+          "columns": 3,
+          "rows": "auto"
+        },
+        "name": "Tv-lampor",
+        "icon_height": "32px",
+        "card_mod": {
+          "style": "ha-state-icon {\n  transition: color 300ms ease-in-out,\n              filter 300ms ease-in-out,\n              transform 180ms ease-in-out;\n}\n@media (prefers-reduced-motion: reduce) {\n  ha-state-icon { transition: none; }\n}\n"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,280 @@
+{
+  "backup": "/config/backups/dashboard-price-inline-header/original-20260921T090812Z.json",
+  "section_index": 1,
+  "original_section": {
+    "type": "grid",
+    "cards": [
+      {
+        "type": "heading",
+        "icon": "mdi:fridge",
+        "heading": "Elpris",
+        "heading_style": "subtitle",
+        "badges": [
+          {
+            "type": "entity",
+            "show_state": true,
+            "show_icon": true,
+            "entity": "sensor.nordpool",
+            "tap_action": {
+              "action": "more-info"
+            }
+          },
+          {
+            "type": "entity",
+            "show_state": true,
+            "show_icon": true,
+            "entity": "sensor.template_nordpool_base_cost_current_hour",
+            "tap_action": {
+              "action": "more-info"
+            }
+          },
+          {
+            "type": "entity",
+            "show_state": true,
+            "show_icon": true,
+            "entity": "sensor.kvartbaserad_elkostnadsprognos",
+            "icon": "mdi:bow-arrow",
+            "tap_action": {
+              "action": "more-info"
+            }
+          }
+        ],
+        "grid_options": {
+          "columns": "full",
+          "rows": "auto"
+        }
+      },
+      {
+        "type": "custom:apexcharts-card",
+        "graph_span": "47h",
+        "span": {
+          "start": "day"
+        },
+        "now": {
+          "show": true,
+          "label": "Now"
+        },
+        "yaxis": [
+          {
+            "id": "first",
+            "min": 0,
+            "decimals": 1,
+            "max": 6
+          }
+        ],
+        "apex_config": {
+          "responsive": [
+            {
+              "breakpoint": 500,
+              "options": {
+                "chart": {
+                  "height": "100px"
+                }
+              }
+            },
+            {
+              "breakpoint": 1000,
+              "options": {
+                "chart": {
+                  "height": "150px"
+                }
+              }
+            },
+            {
+              "breakpoint": 10000,
+              "options": {
+                "chart": {
+                  "height": "200px"
+                }
+              }
+            }
+          ]
+        },
+        "experimental": {
+          "color_threshold": true
+        },
+        "series": [
+          {
+            "entity": "sensor.nordpool",
+            "type": "column",
+            "name": "Elpris per timme",
+            "yaxis_id": "first",
+            "opacity": 1,
+            "show": {
+              "legend_value": false
+            },
+            "data_generator": "return (entity.attributes.raw_today.map((start, index) => {\n  return [new Date(start[\"start\"]).getTime(), entity.attributes.raw_today[index][\"value\"]];\n})).concat(entity.attributes.raw_tomorrow.map((start, index) => {\n  return [new Date(start[\"start\"]).getTime(), entity.attributes.raw_tomorrow[index][\"value\"]];\n}));\n",
+            "float_precision": 2,
+            "color_threshold": [
+              {
+                "value": 0,
+                "color": "green"
+              },
+              {
+                "value": 2,
+                "color": "yellow"
+              },
+              {
+                "value": 3,
+                "color": "orange"
+              },
+              {
+                "value": 4,
+                "color": "red"
+              },
+              {
+                "value": 5,
+                "color": "darkred"
+              }
+            ]
+          }
+        ],
+        "grid_options": {
+          "columns": "full"
+        }
+      }
+    ],
+    "column_span": 5
+  },
+  "updated_section": {
+    "type": "grid",
+    "cards": [
+      {
+        "type": "custom:apexcharts-card",
+        "graph_span": "47h",
+        "span": {
+          "start": "day"
+        },
+        "now": {
+          "show": true,
+          "label": "Now"
+        },
+        "yaxis": [
+          {
+            "id": "first",
+            "min": 0,
+            "decimals": 1,
+            "max": 6
+          }
+        ],
+        "apex_config": {
+          "responsive": [
+            {
+              "breakpoint": 500,
+              "options": {
+                "chart": {
+                  "height": "100px"
+                }
+              }
+            },
+            {
+              "breakpoint": 1000,
+              "options": {
+                "chart": {
+                  "height": "150px"
+                }
+              }
+            },
+            {
+              "breakpoint": 10000,
+              "options": {
+                "chart": {
+                  "height": "200px"
+                }
+              }
+            }
+          ]
+        },
+        "experimental": {
+          "color_threshold": true
+        },
+        "series": [
+          {
+            "entity": "sensor.nordpool",
+            "type": "column",
+            "name": "Elpris nu",
+            "yaxis_id": "first",
+            "opacity": 1,
+            "show": {
+              "legend_value": false,
+              "in_header": "raw"
+            },
+            "data_generator": "return (entity.attributes.raw_today.map((start, index) => {\n  return [new Date(start[\"start\"]).getTime(), entity.attributes.raw_today[index][\"value\"]];\n})).concat(entity.attributes.raw_tomorrow.map((start, index) => {\n  return [new Date(start[\"start\"]).getTime(), entity.attributes.raw_tomorrow[index][\"value\"]];\n}));\n",
+            "float_precision": 2,
+            "color_threshold": [
+              {
+                "value": 0,
+                "color": "green"
+              },
+              {
+                "value": 2,
+                "color": "yellow"
+              },
+              {
+                "value": 3,
+                "color": "orange"
+              },
+              {
+                "value": 4,
+                "color": "red"
+              },
+              {
+                "value": 5,
+                "color": "darkred"
+              }
+            ],
+            "unit": "kr/kWh"
+          },
+          {
+            "entity": "sensor.template_nordpool_base_cost_current_hour",
+            "name": "Inköpspris",
+            "unit": "kr/kWh",
+            "float_precision": 2,
+            "yaxis_id": "first",
+            "show": {
+              "in_chart": false,
+              "in_header": "raw",
+              "legend_value": false
+            },
+            "data_generator": "return [];",
+            "header_actions": {
+              "tap_action": {
+                "action": "more-info"
+              }
+            }
+          },
+          {
+            "entity": "sensor.kvartbaserad_elkostnadsprognos",
+            "name": "Månadsprognos",
+            "unit": "kr",
+            "float_precision": 0,
+            "yaxis_id": "first",
+            "show": {
+              "in_chart": false,
+              "in_header": "raw",
+              "legend_value": false
+            },
+            "data_generator": "return [];",
+            "header_actions": {
+              "tap_action": {
+                "action": "more-info"
+              }
+            }
+          }
+        ],
+        "grid_options": {
+          "columns": "full"
+        },
+        "header": {
+          "show": true,
+          "show_states": true,
+          "colorize_states": false
+        },
+        "card_mod": {
+          "style": "#header { padding: 10px 12px 0; }\n#header__states {\n  justify-content: center;\n  align-items: center;\n  gap: 6px 22px;\n  margin: 0;\n}\n#header__states > #states__state {\n  flex: 0 0 auto;\n  display: flex;\n  flex-direction: row-reverse;\n  align-items: baseline;\n  gap: 6px;\n  margin: 0;\n}\n#state__value { display: flex; align-items: baseline; gap: 4px; }\n#state__value > #state { font-size: 15px; font-weight: 600; }\n#state__value > #uom { font-size: 12px; }\n#state__name { font-size: 12px; font-weight: 400; color: var(--secondary-text-color); }\n#state__name::after { content: ':'; }\n"
+        }
+      }
+    ],
+    "column_span": 5
+  }
+}

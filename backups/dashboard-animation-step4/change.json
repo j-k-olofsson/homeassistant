@@ -1,0 +1,47 @@
+{
+  "backup": "/config/backups/dashboard-animation-step4/original-20260921T075431Z.json",
+  "path": [
+    "views",
+    0,
+    "sections",
+    3,
+    "cards",
+    8
+  ],
+  "added_card": {
+    "type": "custom:power-flow-card-plus",
+    "entities": {
+      "grid": {
+        "entity": "sensor.power_consumed",
+        "name": "Elnät",
+        "color": {
+          "consumption": "#64b5c6",
+          "production": "#64b5c6"
+        }
+      },
+      "home": {
+        "entity": "sensor.power_consumed",
+        "name": "Hem",
+        "color_icon": true
+      }
+    },
+    "min_flow_rate": 4,
+    "max_flow_rate": 8,
+    "use_new_flow_rate_model": true,
+    "min_expected_power": 0,
+    "max_expected_power": 16000,
+    "kilo_decimals": 1,
+    "kilo_threshold": 0,
+    "clickable_entities": true,
+    "grid_options": {
+      "columns": 12,
+      "rows": "auto"
+    }
+  },
+  "resource": {
+    "id": "ea7ac340274e4b1e84dbd728062de48a",
+    "url": "/local/power-flow-card-plus/power-flow-card-plus-v0.3.7.js",
+    "type": "module"
+  },
+  "url": "/local/power-flow-card-plus/power-flow-card-plus-v0.3.7.js"
+}

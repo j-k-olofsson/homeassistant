@@ -1,0 +1,34 @@
+{
+  "backup": "/config/backups/dashboard-animation-step5/original-20260921T080416Z.json",
+  "path": [
+    "views",
+    0,
+    "sections",
+    3,
+    "cards",
+    8
+  ],
+  "added_card": {
+    "type": "markdown",
+    "content": "{% set printer = states('sensor.prusaxl') %}\n{% set progress = states('sensor.prusaxl_status') %}\n{% set finish = as_timestamp(states('sensor.prusaxl_utskriften_ar_fardig'), none) %}\n**Prusa XL · {{ 'Pausad' if printer == 'paused' else 'Skriver ut' }}**\n\n{% if is_number(progress) %}**{{ progress | float | round(0) | int }} %** klart{% else %}Förlopp saknas{% endif %} · {% if printer == 'paused' %}Återstående tid uppdateras när utskriften fortsätter{% elif finish is not none and finish > as_timestamp(now()) %}{% set minutes = ((finish - as_timestamp(now())) / 60) | round(0, 'ceil') | int %}Cirka {% if minutes >= 60 %}{{ minutes // 60 }} h {% endif %}{{ minutes % 60 }} min kvar{% else %}Inväntar ny sluttidsprognos{% endif %}\n",
+    "entity_id": [
+      "sensor.prusaxl",
+      "sensor.prusaxl_status",
+      "sensor.prusaxl_utskriften_ar_fardig"
+    ],
+    "visibility": [
+      {
+        "condition": "state",
+        "entity": "sensor.prusaxl",
+        "state": [
+          "printing",
+          "paused"
+        ]
+      }
+    ],
+    "grid_options": {
+      "columns": 12,
+      "rows": "auto"
+    }
+  }
+}

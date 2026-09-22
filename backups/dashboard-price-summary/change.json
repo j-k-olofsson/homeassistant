@@ -1,0 +1,249 @@
+{
+  "backup": "/config/backups/dashboard-price-summary/original-20260921T085449Z.json",
+  "section_index": 1,
+  "original_section": {
+    "type": "grid",
+    "cards": [
+      {
+        "type": "heading",
+        "icon": "mdi:fridge",
+        "heading": "Elpris",
+        "heading_style": "subtitle",
+        "badges": [
+          {
+            "type": "entity",
+            "show_state": true,
+            "show_icon": true,
+            "entity": "sensor.nordpool",
+            "tap_action": {
+              "action": "more-info"
+            }
+          },
+          {
+            "type": "entity",
+            "show_state": true,
+            "show_icon": true,
+            "entity": "sensor.template_nordpool_base_cost_current_hour",
+            "tap_action": {
+              "action": "more-info"
+            }
+          },
+          {
+            "type": "entity",
+            "show_state": true,
+            "show_icon": true,
+            "entity": "sensor.kvartbaserad_elkostnadsprognos",
+            "icon": "mdi:bow-arrow",
+            "tap_action": {
+              "action": "more-info"
+            }
+          }
+        ],
+        "grid_options": {
+          "columns": "full",
+          "rows": "auto"
+        }
+      },
+      {
+        "type": "custom:apexcharts-card",
+        "graph_span": "47h",
+        "span": {
+          "start": "day"
+        },
+        "now": {
+          "show": true,
+          "label": "Now"
+        },
+        "yaxis": [
+          {
+            "id": "first",
+            "min": 0,
+            "decimals": 1,
+            "max": 6
+          }
+        ],
+        "apex_config": {
+          "responsive": [
+            {
+              "breakpoint": 500,
+              "options": {
+                "chart": {
+                  "height": "150px"
+                }
+              }
+            },
+            {
+              "breakpoint": 1000,
+              "options": {
+                "chart": {
+                  "height": "200px"
+                }
+              }
+            },
+            {
+              "breakpoint": 10000,
+              "options": {
+                "chart": {
+                  "height": "250px"
+                }
+              }
+            }
+          ]
+        },
+        "experimental": {
+          "color_threshold": true
+        },
+        "series": [
+          {
+            "entity": "sensor.nordpool",
+            "type": "column",
+            "name": "Elpris per timme",
+            "yaxis_id": "first",
+            "opacity": 1,
+            "show": {
+              "legend_value": false
+            },
+            "data_generator": "return (entity.attributes.raw_today.map((start, index) => {\n  return [new Date(start[\"start\"]).getTime(), entity.attributes.raw_today[index][\"value\"]];\n})).concat(entity.attributes.raw_tomorrow.map((start, index) => {\n  return [new Date(start[\"start\"]).getTime(), entity.attributes.raw_tomorrow[index][\"value\"]];\n}));\n",
+            "float_precision": 2,
+            "color_threshold": [
+              {
+                "value": 0,
+                "color": "green"
+              },
+              {
+                "value": 2,
+                "color": "yellow"
+              },
+              {
+                "value": 3,
+                "color": "orange"
+              },
+              {
+                "value": 4,
+                "color": "red"
+              },
+              {
+                "value": 5,
+                "color": "darkred"
+              }
+            ]
+          }
+        ],
+        "grid_options": {
+          "columns": "full"
+        }
+      }
+    ],
+    "column_span": 2
+  },
+  "updated_section": {
+    "type": "grid",
+    "cards": [
+      {
+        "type": "markdown",
+        "content": "{%- set today = state_attr('sensor.nordpool', 'raw_today') or [] -%}\n{%- set tomorrow = (state_attr('sensor.nordpool', 'raw_tomorrow') or []) if state_attr('sensor.nordpool', 'tomorrow_valid') else [] -%}\n{%- set now_ts = as_timestamp(now()) -%}\n{%- set ns = namespace(rows=[], current=none, upcoming=none, best=none, start=none, end=none) -%}\n{%- for r in today + tomorrow -%}\n  {%- set start = as_timestamp(r.start, none) -%}\n  {%- set end = as_timestamp(r.end, none) -%}\n  {%- if start is not none and end is not none and is_number(r.value) and end > start -%}\n    {%- set ns.rows = ns.rows + [dict(start=start, end=end, price=r.value | float)] -%}\n  {%- endif -%}\n{%- endfor -%}\n{%- set ns.rows = ns.rows | sort(attribute='start') -%}\n{%- for r in ns.rows -%}\n  {%- if r.start <= now_ts and now_ts < r.end -%}{%- set ns.current = r -%}{%- endif -%}\n  {%- if r.start > now_ts and ns.upcoming is none -%}{%- set ns.upcoming = r -%}{%- endif -%}\n{%- endfor -%}\n{%- for r in ns.rows if r.start >= now_ts -%}\n  {%- set win = namespace(cost=0, end=r.start, valid=true, duration=0) -%}\n  {%- for q in ns.rows if q.start >= r.start and q.start < r.start + 7200 -%}\n    {%- if q.start != win.end or q.end - q.start != 900 -%}{%- set win.valid = false -%}{%- endif -%}\n    {%- set win.cost = win.cost + q.price * (q.end-q.start) -%}\n    {%- set win.duration = win.duration + q.end-q.start -%}\n    {%- set win.end = q.end -%}\n  {%- endfor -%}\n  {%- if win.valid and win.duration == 7200 and (ns.best is none or win.cost/7200 < ns.best) -%}\n    {%- set ns.best = win.cost/7200 -%}{%- set ns.start = r.start -%}{%- set ns.end = win.end -%}\n  {%- endif -%}\n{%- endfor -%}\n**Elpris · Nu {% if ns.current is not none %}{{ ('%.2f' | format(ns.current.price)) | replace('.', ',') }}{% else %}—{% endif %} kr/kWh** · {% if ns.upcoming is not none %}Nästa {{ ns.upcoming.start | timestamp_custom('%H:%M') }}: **{{ ('%.2f' | format(ns.upcoming.price)) | replace('.', ',') }}** {% if ns.current is not none %}{{ '↑' if ns.upcoming.price > ns.current.price else '↓' if ns.upcoming.price < ns.current.price else '→' }}{% endif %} · om {{ ((ns.upcoming.start-now_ts)/60) | round(0, 'ceil') | int }} min{% else %}Nästa pris inväntas{% endif %}\n\nBilligaste kommande 2 h: {% if ns.best is not none %}**{{ ns.start | timestamp_custom('%H:%M') }}–{{ ns.end | timestamp_custom('%H:%M') }}{% if ns.start | timestamp_custom('%Y-%m-%d') != now().strftime('%Y-%m-%d') %} i morgon{% endif %}** · {{ ('%.2f' | format(ns.best)) | replace('.', ',') }} kr/kWh i snitt{% else %}underlag saknas{% endif %}\n\n{% if not state_attr('sensor.nordpool', 'tomorrow_valid') %}Morgondagens priser inväntas · {% endif %}Inköpspris {{ states('sensor.template_nordpool_base_cost_current_hour') | replace('.', ',') }} kr/kWh · Månadsprognos **{{ states('sensor.kvartbaserad_elkostnadsprognos') }} kr**\n",
+        "entity_id": [
+          "sensor.nordpool",
+          "sensor.template_nordpool_base_cost_current_hour",
+          "sensor.kvartbaserad_elkostnadsprognos"
+        ],
+        "grid_options": {
+          "columns": "full",
+          "rows": "auto"
+        },
+        "card_mod": {
+          "style": {
+            "ha-markdown$": "p { margin: 4px 0; font-size: 13px; line-height: 1.45; }",
+            ".": "ha-card { background: transparent; border: none; box-shadow: none; } ha-markdown { padding: 2px 8px; }"
+          }
+        }
+      },
+      {
+        "type": "custom:apexcharts-card",
+        "graph_span": "48h",
+        "span": {
+          "start": "day"
+        },
+        "now": {
+          "show": true,
+          "label": "Nu"
+        },
+        "yaxis": [
+          {
+            "id": "first",
+            "decimals": 1
+          }
+        ],
+        "apex_config": {
+          "responsive": [
+            {
+              "breakpoint": 600,
+              "options": {
+                "chart": {
+                  "height": 150
+                }
+              }
+            },
+            {
+              "breakpoint": 10000,
+              "options": {
+                "chart": {
+                  "height": 180
+                }
+              }
+            }
+          ],
+          "chart": {
+            "animations": {
+              "enabled": false
+            }
+          }
+        },
+        "experimental": {
+          "color_threshold": true
+        },
+        "series": [
+          {
+            "entity": "sensor.nordpool",
+            "type": "column",
+            "name": "Elpris per kvart",
+            "yaxis_id": "first",
+            "opacity": 1,
+            "show": {
+              "legend_value": false
+            },
+            "data_generator": "const a = entity.attributes; const rows = [...(a.raw_today || []), ...(a.tomorrow_valid ? (a.raw_tomorrow || []) : [])]; return rows.filter(r => r.value !== null && Number.isFinite(Number(r.value)) && Number.isFinite(Date.parse(r.start))).map(r => [Date.parse(r.start), Number(r.value)]).sort((a,b) => a[0]-b[0]);",
+            "float_precision": 2,
+            "color_threshold": [
+              {
+                "value": 0,
+                "color": "green"
+              },
+              {
+                "value": 2,
+                "color": "yellow"
+              },
+              {
+                "value": 3,
+                "color": "orange"
+              },
+              {
+                "value": 4,
+                "color": "red"
+              },
+              {
+                "value": 5,
+                "color": "darkred"
+              }
+            ]
+          }
+        ],
+        "grid_options": {
+          "columns": "full"
+        },
+        "update_interval": "1min"
+      }
+    ],
+    "column_span": 2
+  }
+}

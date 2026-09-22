@@ -1,0 +1,112 @@
+[
+  {
+    "url": "/hacsfiles/lovelace-auto-entities/auto-entities.js?hacstag=1677445841161",
+    "type": "module",
+    "id": "fbcb676986a4467c87d4711ae733b7fa"
+  },
+  {
+    "url": "/hacsfiles/battery-state-card/battery-state-card.js?hacstag=256292682420",
+    "type": "module",
+    "id": "ce0e5b6624874e18834e7d85e6c4681b"
+  },
+  {
+    "url": "/hacsfiles/lovelace-card-mod/card-mod.js?hacstag=190927524421",
+    "type": "module",
+    "id": "b483c486777344dbaac81d10765dc2de"
+  },
+  {
+    "url": "/hacsfiles/apexcharts-card/apexcharts-card.js?hacstag=331701152223",
+    "type": "module",
+    "id": "0fb2167e8ebf4a83a80dfde8704af8ca"
+  },
+  {
+    "url": "/hacsfiles/lovelace-flower-card/flower-card.js?hacstag=297423025202680",
+    "type": "module",
+    "id": "f6754fcff720493aaa66dc02948a4dda"
+  },
+  {
+    "id": "6846f9a8e5e44958825fafe9885319ae",
+    "url": "/webrtc/webrtc-camera.js?v=v3.6.0",
+    "type": "module"
+  },
+  {
+    "id": "cc3f96fefe634a94a1fee6ac7a2d411e",
+    "url": "/hacsfiles/pollenprognos-card/pollenprognos-card.js?hacstag=632590573430",
+    "type": "module"
+  },
+  {
+    "id": "bf42c34d259a4d71b4716c39ac6384a5",
+    "url": "/hacsfiles/custom-brand-icons/custom-brand-icons.js?hacstag=3668620312026090",
+    "type": "module"
+  },
+  {
+    "id": "5e54cb9b41f74a5e9161dab6a9cec53a",
+    "url": "/hacsfiles/kiosk-mode/kiosk-mode.js?hacstag=4973191281421",
+    "type": "module"
+  },
+  {
+    "id": "648c1c665db6491ea55e3fdf77f4daf4",
+    "url": "/browser_mod.js?automatically-added",
+    "type": "module"
+  },
+  {
+    "id": "8eb0fea361f34230bdfff6d785e5c5ae",
+    "url": "/hacsfiles/flex-table-card/flex-table-card.js?hacstag=15629205814",
+    "type": "module"
+  },
+  {
+    "id": "d6251001e5cd4755a0a6510267802844",
+    "url": "/hacsfiles/mini-graph-card/mini-graph-card-bundle.js?hacstag=1512800620130",
+    "type": "module"
+  },
+  {
+    "id": "2fd7f0ca2f394f17ae8f79833223d8b9",
+    "url": "/hacsfiles/config-template-card/config-template-card.js?hacstag=172177543136",
+    "type": "module"
+  },
+  {
+    "id": "895eae8024f340fb81142aad9f33f1e2",
+    "url": "/hacsfiles/gauge-card-pro/gauge-card-pro.js?hacstag=963750120250",
+    "type": "module"
+  },
+  {
+    "id": "103d1714d1b9474c8cb159d64bc1e11f",
+    "url": "/hacsfiles/lovelace-meteogram-card/meteogram-card.js?hacstag=1032497636202683",
+    "type": "module"
+  },
+  {
+    "id": "c8c5c805634f4fec825354b37edb53aa",
+    "url": "/hacsfiles/ha-weather-forecast-card/weather-forecast-card.js?hacstag=1110718167110",
+    "type": "module"
+  },
+  {
+    "id": "daea0b3b953745d99543bc4bbfdaa1b4",
+    "url": "/esphome_update_manager_static/esphome-update-panel.js?v=1.10.5",
+    "type": "module"
+  },
+  {
+    "id": "c62ac7f2f43f4801a554d93b8ef93b9a",
+    "url": "/local/openwrt-network-map/openwrt-network-map.js?v=1.1.0",
+    "type": "module"
+  },
+  {
+    "id": "threadnetworkmap20260824",
+    "url": "/local/thread-network-map/thread-network-map.js?v=1.1.0",
+    "type": "module"
+  },
+  {
+    "id": "ea7ac340274e4b1e84dbd728062de48a",
+    "url": "/local/power-flow-card-plus/power-flow-card-plus-v0.3.7.js",
+    "type": "module"
+  },
+  {
+    "id": "16d842b3c1f94790a986678295942e14",
+    "url": "/local/mini-media-player/mini-media-player-v1.16.12.js",
+    "type": "module"
+  },
+  {
+    "id": "d9614f9eea90439d8f1103ae21370f9d",
+    "url": "/local/compact-levels-card/compact-levels-card-v1.js",
+    "type": "module"
+  }
+]

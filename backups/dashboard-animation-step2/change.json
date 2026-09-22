@@ -1,0 +1,111 @@
+{
+  "backup": "/config/backups/dashboard-animation-step2/original-20260921T074741Z.json",
+  "changes": [
+    {
+      "path": [
+        "views",
+        0,
+        "sections",
+        2,
+        "cards",
+        2
+      ],
+      "original_card": {
+        "show_name": true,
+        "show_icon": true,
+        "type": "button",
+        "tap_action": {
+          "action": "toggle"
+        },
+        "entity": "switch.billaddare",
+        "name": "Billaddning",
+        "show_state": true,
+        "hold_action": {
+          "action": "more-info"
+        },
+        "grid_options": {
+          "columns": 3,
+          "rows": "auto"
+        },
+        "icon_height": "32px",
+        "icon": "mdi:battery-charging"
+      },
+      "updated_card": {
+        "show_name": true,
+        "show_icon": true,
+        "type": "button",
+        "tap_action": {
+          "action": "toggle"
+        },
+        "entity": "switch.billaddare",
+        "name": "Billaddning",
+        "show_state": true,
+        "hold_action": {
+          "action": "more-info"
+        },
+        "grid_options": {
+          "columns": 3,
+          "rows": "auto"
+        },
+        "icon_height": "32px",
+        "icon": "mdi:battery-charging",
+        "card_mod": {
+          "style": "ha-state-icon {\n  animation: {{ 'vehicle-soft-pulse 4s ease-in-out infinite' if is_state('switch.billaddare', 'on') and is_state('sensor.sef_42h_charging_status', 'charging') else 'none' }};\n}\n@keyframes vehicle-soft-pulse {\n  0%, 100% { opacity: 1; }\n  50% { opacity: 0.65; }\n}\n@media (prefers-reduced-motion: reduce) {\n  ha-state-icon { animation: none; }\n}\n"
+        }
+      }
+    },
+    {
+      "path": [
+        "views",
+        0,
+        "sections",
+        2,
+        "cards",
+        3
+      ],
+      "original_card": {
+        "show_name": true,
+        "show_icon": true,
+        "type": "button",
+        "tap_action": {
+          "action": "toggle"
+        },
+        "show_state": true,
+        "hold_action": {
+          "action": "more-info"
+        },
+        "grid_options": {
+          "columns": 3,
+          "rows": "auto"
+        },
+        "icon_height": "32px",
+        "icon": "mdi:car-seat-heater",
+        "entity": "climate.sef_42h_climate",
+        "name": "Bilvärme"
+      },
+      "updated_card": {
+        "show_name": true,
+        "show_icon": true,
+        "type": "button",
+        "tap_action": {
+          "action": "toggle"
+        },
+        "show_state": true,
+        "hold_action": {
+          "action": "more-info"
+        },
+        "grid_options": {
+          "columns": 3,
+          "rows": "auto"
+        },
+        "icon_height": "32px",
+        "icon": "mdi:car-seat-heater",
+        "entity": "climate.sef_42h_climate",
+        "name": "Bilvärme",
+        "card_mod": {
+          "style": "ha-state-icon {\n  animation: {{ 'vehicle-soft-pulse 4s ease-in-out infinite' if is_state('climate.sef_42h_climate', 'heat_cool') else 'none' }};\n}\n@keyframes vehicle-soft-pulse {\n  0%, 100% { opacity: 1; }\n  50% { opacity: 0.65; }\n}\n@media (prefers-reduced-motion: reduce) {\n  ha-state-icon { animation: none; }\n}\n"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "path": [
+    "views",
+    0,
+    "sections",
+    5,
+    "cards",
+    1
+  ],
+  "original_card": {
+    "type": "markdown",
+    "content": "{% set printer = states('sensor.prusaxl') %}\n{% set progress = states('sensor.prusaxl_status') %}\n{% set finish = as_timestamp(states('sensor.prusaxl_utskriften_ar_fardig'), none) %}\n<ha-icon icon=\"mdi:printer-3d-nozzle\"></ha-icon> **Prusa XL · {{ {'printing': 'Skriver ut', 'paused': 'Pausad', 'attention': 'Åtgärd krävs', 'error': 'Fel – kontrollera skrivaren'}.get(printer, 'Inväntar status') }}**\n\n{% if is_number(progress) %}**{{ progress | float | round(0) | int }} %** klart{% else %}Förlopp saknas{% endif %} · {% if printer == 'paused' %}Återstående tid uppdateras när utskriften fortsätter{% elif printer in ['attention', 'error'] %}Kontrollera skrivaren{% elif finish is not none and finish > as_timestamp(now()) %}{% set minutes = ((finish - as_timestamp(now())) / 60) | round(0, 'ceil') | int %}Cirka {% if minutes >= 60 %}{{ minutes // 60 }} h {% endif %}{{ minutes % 60 }} min kvar{% else %}Inväntar ny sluttidsprognos{% endif %}\n",
+    "entity_id": [
+      "sensor.prusaxl",
+      "sensor.prusaxl_status",
+      "sensor.prusaxl_utskriften_ar_fardig"
+    ],
+    "visibility": [
+      {
+        "condition": "state",
+        "entity": "sensor.prusaxl",
+        "state": [
+          "printing",
+          "paused",
+          "attention",
+          "error"
+        ]
+      }
+    ],
+    "grid_options": {
+      "columns": 6,
+      "rows": "auto"
+    },
+    "card_mod": {
+      "style": {
+        "ha-markdown$": "{% set indicator_state = states('sensor.prusaxl') %}\nha-icon {\n  color: {{ '#FFC107' if indicator_state == 'paused' else '#FF9800' if indicator_state in ['attention', 'error'] else '#FE6E31' }};\n  --mdc-icon-size: 24px;\n  display: inline-block;\n  margin-right: 6px;\n  vertical-align: middle;\n  animation: {{ 'printer-soft-pulse 3s ease-in-out infinite' if indicator_state == 'printing' else 'none' }};\n}\n@keyframes printer-soft-pulse {\n  0%, 100% { opacity: 1; filter: drop-shadow(0 0 3px rgba(254,110,49,0.45)); }\n  50% { opacity: 0.5; filter: drop-shadow(0 0 0px rgba(254,110,49,0)); }\n}\n@media (prefers-reduced-motion: reduce) {\n  ha-icon { animation: none; }\n}\n"
+      }
+    }
+  },
+  "updated_card": {
+    "type": "markdown",
+    "content": "{% set printer = states('sensor.prusaxl') %}\n{% set progress = states('sensor.prusaxl_status') %}\n{% set finish = as_timestamp(states('sensor.prusaxl_utskriften_ar_fardig'), none) %}\n<ha-icon icon=\"mdi:printer-3d-nozzle\"></ha-icon> **Prusa XL · {{ {'printing': 'Skriver ut', 'paused': 'Pausad', 'attention': 'Åtgärd krävs', 'error': 'Fel – kontrollera skrivaren'}.get(printer, 'Inväntar status') }}**\n\n{% if is_number(progress) %}**{{ progress | float | round(0) | int }} %** klart{% else %}Förlopp saknas{% endif %} · {% if printer == 'paused' %}Återstående tid uppdateras när utskriften fortsätter{% elif printer in ['attention', 'error'] %}Kontrollera skrivaren{% elif finish is not none and finish > as_timestamp(now()) %}{% set minutes = ((finish - as_timestamp(now())) / 60) | round(0, 'ceil') | int %}Cirka {% if minutes >= 60 %}{{ minutes // 60 }} h {% endif %}{{ minutes % 60 }} min kvar{% else %}Inväntar ny sluttidsprognos{% endif %}\n",
+    "entity_id": [
+      "sensor.prusaxl",
+      "sensor.prusaxl_status",
+      "sensor.prusaxl_utskriften_ar_fardig"
+    ],
+    "visibility": [
+      {
+        "condition": "state",
+        "entity": "sensor.prusaxl",
+        "state": [
+          "printing",
+          "paused",
+          "attention",
+          "error"
+        ]
+      }
+    ],
+    "grid_options": {
+      "columns": 6,
+      "rows": "auto"
+    },
+    "card_mod": {
+      "style": {
+        "ha-markdown$": "{% set indicator_state = states('sensor.prusaxl') %}\nha-icon {\n  color: {{ '#FFC107' if indicator_state == 'paused' else '#FF9800' if indicator_state in ['attention', 'error'] else '#FE6E31' }};\n  --mdc-icon-size: 24px;\n  display: inline-block;\n  margin-right: 6px;\n  vertical-align: middle;\n  animation: {{ 'printer-soft-pulse 3s ease-in-out infinite' if indicator_state == 'printing' else 'none' }};\n}\n@keyframes printer-soft-pulse {\n  0%, 100% { opacity: 1; filter: drop-shadow(0 0 3px rgba(254,110,49,0.45)); }\n  50% { opacity: 0.5; filter: drop-shadow(0 0 0px rgba(254,110,49,0)); }\n}\n@media (prefers-reduced-motion: reduce) {\n  ha-icon { animation: none; }\n}\n",
+        ".": "\n{% set state = states('sensor.prusaxl') %}\n{% set value = states('sensor.prusaxl_status') %}\n{% set valid = is_number(value) and 0 <= value | float(0) <= 100 %}\n{% set progress = value | float(0) if valid else 0 %}\n{% set color = '#FFC107' if state == 'paused' else '#FF9800' if state in ['attention', 'error'] else '#FE6E31' %}\nha-card { position: relative; overflow: hidden; }\nha-card::before, ha-card::after {\n content: '';\n position: absolute;\n bottom: 0;\n left: 0;\n height: 4px;\n pointer-events: none;\n opacity: {{ 1 if valid else 0 }};\n}\nha-card::before { width: 100%; background: rgba(254,110,49,.15); }\nha-card::after {\n width: {{ progress }}%;\n background-color: {{ color }};\n background-image: linear-gradient(110deg, transparent 30%, rgba(255,255,255,.35) 50%, transparent 70%);\n background-size: 90px 100%;\n transition: width 1s ease, background-color .5s ease;\n animation: {{ 'prusa-progress-flow 3s linear infinite' if state == 'printing' and valid and progress < 100 else 'none' }};\n}\n@keyframes prusa-progress-flow { from { background-position: 0 0; } to { background-position: 90px 0; } }\n@media(prefers-reduced-motion:reduce) { ha-card::after { animation:none; transition:none; } }\n"
+      }
+    }
+  }
+}

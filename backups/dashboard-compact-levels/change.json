@@ -1,0 +1,418 @@
+{
+  "section": 3,
+  "before": {
+    "type": "grid",
+    "cards": [
+      {
+        "show_name": true,
+        "show_icon": true,
+        "type": "button",
+        "tap_action": {
+          "action": "toggle"
+        },
+        "entity": "switch.billaddare",
+        "name": "Billaddning",
+        "show_state": true,
+        "hold_action": {
+          "action": "more-info"
+        },
+        "grid_options": {
+          "columns": 3,
+          "rows": "auto"
+        },
+        "icon_height": "32px",
+        "icon": "mdi:battery-charging",
+        "card_mod": {
+          "style": "ha-state-icon {\n  animation: {{ 'vehicle-soft-pulse 4s ease-in-out infinite' if is_state('switch.billaddare', 'on') and is_state('sensor.sef_42h_charging_status', 'charging') else 'none' }};\n}\n@keyframes vehicle-soft-pulse {\n  0%, 100% { opacity: 1; }\n  50% { opacity: 0.65; }\n}\n@media (prefers-reduced-motion: reduce) {\n  ha-state-icon { animation: none; }\n}\n"
+        }
+      },
+      {
+        "show_name": true,
+        "show_icon": true,
+        "type": "button",
+        "tap_action": {
+          "action": "toggle"
+        },
+        "show_state": true,
+        "hold_action": {
+          "action": "more-info"
+        },
+        "grid_options": {
+          "columns": 3,
+          "rows": "auto"
+        },
+        "icon_height": "32px",
+        "icon": "mdi:car-seat-heater",
+        "entity": "climate.sef_42h_climate",
+        "name": "Bilvärme",
+        "card_mod": {
+          "style": "ha-state-icon {\n  animation: {{ 'vehicle-soft-pulse 4s ease-in-out infinite' if is_state('climate.sef_42h_climate', 'heat_cool') else 'none' }};\n}\n@keyframes vehicle-soft-pulse {\n  0%, 100% { opacity: 1; }\n  50% { opacity: 0.65; }\n}\n@media (prefers-reduced-motion: reduce) {\n  ha-state-icon { animation: none; }\n}\n"
+        }
+      },
+      {
+        "type": "gauge",
+        "entity": "sensor.sef_42h_battery_level",
+        "max": 100,
+        "needle": true,
+        "severity": {
+          "green": 50,
+          "yellow": 40,
+          "red": 3
+        },
+        "grid_options": {
+          "columns": 3,
+          "rows": "auto"
+        },
+        "name": "Bilbatteri",
+        "min": 30
+      },
+      {
+        "type": "gauge",
+        "entity": "sensor.sef_42h_fuel_level",
+        "max": 100,
+        "needle": true,
+        "severity": {
+          "green": 20,
+          "yellow": 10,
+          "red": 0
+        },
+        "grid_options": {
+          "columns": 3,
+          "rows": "auto"
+        },
+        "min": 0,
+        "name": "Bilbränsle"
+      },
+      {
+        "type": "custom:gauge-card-pro",
+        "entity2": "sensor.openuv_aktuellt_uv_index",
+        "entity": "sensor.esphome98_esphome98_uv_index",
+        "min": 0,
+        "max": 7,
+        "needle": true,
+        "segments": [
+          {
+            "from": 0,
+            "color": "green"
+          },
+          {
+            "from": 2,
+            "color": "yellow"
+          },
+          {
+            "from": 5,
+            "color": "red"
+          }
+        ],
+        "inner": {
+          "mode": "on_main",
+          "needle_color": "#64b5c6",
+          "min": 0,
+          "max": 7,
+          "segments": [
+            {
+              "from": 0,
+              "color": "green"
+            },
+            {
+              "from": 2,
+              "color": "yellow"
+            },
+            {
+              "from": 5,
+              "color": "red"
+            }
+          ],
+          "gradient": true,
+          "gradient_resolution": "auto",
+          "round": "full"
+        },
+        "titles": {
+          "primary": {
+            "value": "UV",
+            "font_size": "12px"
+          },
+          "secondary": {
+            "value": "Max {{ ('%.1f' | format(states('sensor.openuv_max_uv_index') | float)) | replace('.', ',') if is_number(states('sensor.openuv_max_uv_index')) else '—' }}",
+            "font_size": "10px",
+            "color": "#64b5c6"
+          }
+        },
+        "value_texts": {
+          "primary": {
+            "unit_of_measurement": "Egen",
+            "value": "{{ ('%.1f' | format(states('sensor.esphome98_esphome98_uv_index') | float)) | replace('.', ',') if is_number(states('sensor.esphome98_esphome98_uv_index')) else '—' }}",
+            "unit_before_value": true,
+            "font_size_reduction": 5,
+            "color": "#ffffff"
+          },
+          "secondary": {
+            "unit_of_measurement": "Moln",
+            "color": "#64b5c6",
+            "value": "{{ ('%.1f' | format(states('sensor.openuv_aktuellt_uv_index') | float)) | replace('.', ',') if is_number(states('sensor.openuv_aktuellt_uv_index')) else '—' }}",
+            "unit_before_value": true
+          }
+        },
+        "grid_options": {
+          "rows": "auto",
+          "columns": 3
+        },
+        "gradient": true,
+        "gradient_resolution": "auto",
+        "round": "off",
+        "setpoint": {
+          "type": "entity",
+          "value": "sensor.openuv_max_uv_index",
+          "color": "#64b5c6",
+          "label": false
+        },
+        "animation_speed": "normal",
+        "needle_color": "#ffffff",
+        "entity_id": [
+          "sensor.esphome98_esphome98_uv_index",
+          "sensor.openuv_aktuellt_uv_index",
+          "sensor.openuv_max_uv_index"
+        ],
+        "hold_action": {
+          "action": "more-info",
+          "entity": "sensor.openuv_max_uv_index"
+        }
+      },
+      {
+        "type": "gauge",
+        "entity": "sensor.gasol_utomhus_esphome73_lpg_level",
+        "name": "Gasol",
+        "max": 100,
+        "needle": true,
+        "severity": {
+          "green": 20,
+          "yellow": 10,
+          "red": 0
+        },
+        "grid_options": {
+          "columns": 3,
+          "rows": "auto"
+        }
+      },
+      {
+        "type": "gauge",
+        "entity": "sensor.esphome90_esphome90_salt_level",
+        "max": 100,
+        "needle": true,
+        "severity": {
+          "green": 20,
+          "yellow": 10,
+          "red": 0
+        },
+        "grid_options": {
+          "columns": 3,
+          "rows": "auto"
+        },
+        "name": "Salttabletter"
+      },
+      {
+        "type": "gauge",
+        "entity": "sensor.vattenniva_honshuset_esphome74_water_level",
+        "max": 100,
+        "needle": true,
+        "severity": {
+          "green": 20,
+          "yellow": 10,
+          "red": 0
+        },
+        "grid_options": {
+          "columns": 3,
+          "rows": "auto"
+        },
+        "name": "Hönsvatten"
+      }
+    ],
+    "column_span": 2
+  },
+  "after": {
+    "type": "grid",
+    "cards": [
+      {
+        "show_name": true,
+        "show_icon": true,
+        "type": "button",
+        "tap_action": {
+          "action": "toggle"
+        },
+        "entity": "switch.billaddare",
+        "name": "Billaddning",
+        "show_state": true,
+        "hold_action": {
+          "action": "more-info"
+        },
+        "grid_options": {
+          "columns": 3,
+          "rows": "auto"
+        },
+        "icon_height": "32px",
+        "icon": "mdi:battery-charging",
+        "card_mod": {
+          "style": "ha-state-icon {\n  animation: {{ 'vehicle-soft-pulse 4s ease-in-out infinite' if is_state('switch.billaddare', 'on') and is_state('sensor.sef_42h_charging_status', 'charging') else 'none' }};\n}\n@keyframes vehicle-soft-pulse {\n  0%, 100% { opacity: 1; }\n  50% { opacity: 0.65; }\n}\n@media (prefers-reduced-motion: reduce) {\n  ha-state-icon { animation: none; }\n}\n"
+        }
+      },
+      {
+        "show_name": true,
+        "show_icon": true,
+        "type": "button",
+        "tap_action": {
+          "action": "toggle"
+        },
+        "show_state": true,
+        "hold_action": {
+          "action": "more-info"
+        },
+        "grid_options": {
+          "columns": 3,
+          "rows": "auto"
+        },
+        "icon_height": "32px",
+        "icon": "mdi:car-seat-heater",
+        "entity": "climate.sef_42h_climate",
+        "name": "Bilvärme",
+        "card_mod": {
+          "style": "ha-state-icon {\n  animation: {{ 'vehicle-soft-pulse 4s ease-in-out infinite' if is_state('climate.sef_42h_climate', 'heat_cool') else 'none' }};\n}\n@keyframes vehicle-soft-pulse {\n  0%, 100% { opacity: 1; }\n  50% { opacity: 0.65; }\n}\n@media (prefers-reduced-motion: reduce) {\n  ha-state-icon { animation: none; }\n}\n"
+        }
+      },
+      {
+        "type": "custom:gauge-card-pro",
+        "entity2": "sensor.openuv_aktuellt_uv_index",
+        "entity": "sensor.esphome98_esphome98_uv_index",
+        "min": 0,
+        "max": 7,
+        "needle": true,
+        "segments": [
+          {
+            "from": 0,
+            "color": "green"
+          },
+          {
+            "from": 2,
+            "color": "yellow"
+          },
+          {
+            "from": 5,
+            "color": "red"
+          }
+        ],
+        "inner": {
+          "mode": "on_main",
+          "needle_color": "#64b5c6",
+          "min": 0,
+          "max": 7,
+          "segments": [
+            {
+              "from": 0,
+              "color": "green"
+            },
+            {
+              "from": 2,
+              "color": "yellow"
+            },
+            {
+              "from": 5,
+              "color": "red"
+            }
+          ],
+          "gradient": true,
+          "gradient_resolution": "auto",
+          "round": "full"
+        },
+        "titles": {
+          "primary": {
+            "value": "UV",
+            "font_size": "12px"
+          },
+          "secondary": {
+            "value": "Max {{ ('%.1f' | format(states('sensor.openuv_max_uv_index') | float)) | replace('.', ',') if is_number(states('sensor.openuv_max_uv_index')) else '—' }}",
+            "font_size": "10px",
+            "color": "#64b5c6"
+          }
+        },
+        "value_texts": {
+          "primary": {
+            "unit_of_measurement": "Egen",
+            "value": "{{ ('%.1f' | format(states('sensor.esphome98_esphome98_uv_index') | float)) | replace('.', ',') if is_number(states('sensor.esphome98_esphome98_uv_index')) else '—' }}",
+            "unit_before_value": true,
+            "font_size_reduction": 5,
+            "color": "#ffffff"
+          },
+          "secondary": {
+            "unit_of_measurement": "Moln",
+            "color": "#64b5c6",
+            "value": "{{ ('%.1f' | format(states('sensor.openuv_aktuellt_uv_index') | float)) | replace('.', ',') if is_number(states('sensor.openuv_aktuellt_uv_index')) else '—' }}",
+            "unit_before_value": true
+          }
+        },
+        "grid_options": {
+          "rows": "auto",
+          "columns": 3
+        },
+        "gradient": true,
+        "gradient_resolution": "auto",
+        "round": "off",
+        "setpoint": {
+          "type": "entity",
+          "value": "sensor.openuv_max_uv_index",
+          "color": "#64b5c6",
+          "label": false
+        },
+        "animation_speed": "normal",
+        "needle_color": "#ffffff",
+        "entity_id": [
+          "sensor.esphome98_esphome98_uv_index",
+          "sensor.openuv_aktuellt_uv_index",
+          "sensor.openuv_max_uv_index"
+        ],
+        "hold_action": {
+          "action": "more-info",
+          "entity": "sensor.openuv_max_uv_index"
+        }
+      },
+      {
+        "type": "custom:compact-levels-card",
+        "entities": [
+          {
+            "entity": "sensor.sef_42h_battery_level",
+            "name": "Bilbatteri",
+            "warning": 40,
+            "good": 50
+          },
+          {
+            "entity": "sensor.sef_42h_fuel_level",
+            "name": "Bilbränsle",
+            "warning": 10,
+            "good": 20
+          },
+          {
+            "entity": "sensor.gasol_utomhus_esphome73_lpg_level",
+            "name": "Gasol",
+            "warning": 10,
+            "good": 20
+          },
+          {
+            "entity": "sensor.esphome90_esphome90_salt_level",
+            "name": "Salttabletter",
+            "warning": 10,
+            "good": 20
+          },
+          {
+            "entity": "sensor.vattenniva_honshuset_esphome74_water_level",
+            "name": "Hönsvatten",
+            "warning": 10,
+            "good": 20
+          }
+        ],
+        "grid_options": {
+          "columns": 12,
+          "rows": "auto"
+        }
+      }
+    ],
+    "column_span": 2
+  }
+}

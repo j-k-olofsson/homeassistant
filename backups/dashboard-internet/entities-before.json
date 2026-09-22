@@ -1,0 +1,86 @@
+[
+  {
+    "aliases": [],
+    "aliases_v2": [
+      null
+    ],
+    "area_id": null,
+    "categories": {},
+    "capabilities": {
+      "state_class": "measurement"
+    },
+    "config_entry_id": "01KX7X4BTDX2EMV78PB4N2BA56",
+    "config_subentry_id": null,
+    "created_at": "2026-07-11T06:16:47.566123+00:00",
+    "device_class": null,
+    "device_id": "9b92f72be8052dee025c353a0acb3f4f",
+    "disabled_by": "integration",
+    "entity_category": null,
+    "entity_id": "sensor.sovrummet_openwrt_one_router_sovrum_wan_rx_rate",
+    "hidden_by": null,
+    "icon": null,
+    "id": "5543eb7f8444953d3ea078a7b5a565cb",
+    "has_entity_name": true,
+    "labels": [],
+    "modified_at": "2026-07-11T06:16:47.566375+00:00",
+    "name": null,
+    "object_id_base": "wan RX Rate",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_device_class": null,
+    "original_icon": null,
+    "original_name": "wan RX Rate",
+    "platform": "openwrt",
+    "suggested_object_id": null,
+    "supported_features": 0,
+    "translation_key": "net_rx_rate",
+    "unique_id": "01KX7X4BTDX2EMV78PB4N2BA56_net_wan_rx_rate",
+    "previous_unique_id": null,
+    "unit_of_measurement": "Mbps"
+  },
+  {
+    "aliases": [],
+    "aliases_v2": [
+      null
+    ],
+    "area_id": null,
+    "categories": {},
+    "capabilities": {
+      "state_class": "measurement"
+    },
+    "config_entry_id": "01KX7X4BTDX2EMV78PB4N2BA56",
+    "config_subentry_id": null,
+    "created_at": "2026-07-11T06:16:47.567157+00:00",
+    "device_class": null,
+    "device_id": "9b92f72be8052dee025c353a0acb3f4f",
+    "disabled_by": "integration",
+    "entity_category": null,
+    "entity_id": "sensor.sovrummet_openwrt_one_router_sovrum_wan_tx_rate",
+    "hidden_by": null,
+    "icon": null,
+    "id": "7505f376c9298dc77f70da927fda3765",
+    "has_entity_name": true,
+    "labels": [],
+    "modified_at": "2026-07-11T06:16:47.567343+00:00",
+    "name": null,
+    "object_id_base": "wan TX Rate",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_device_class": null,
+    "original_icon": null,
+    "original_name": "wan TX Rate",
+    "platform": "openwrt",
+    "suggested_object_id": null,
+    "supported_features": 0,
+    "translation_key": "net_tx_rate",
+    "unique_id": "01KX7X4BTDX2EMV78PB4N2BA56_net_wan_tx_rate",
+    "previous_unique_id": null,
+    "unit_of_measurement": "Mbps"
+  }
+]

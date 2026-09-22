@@ -1,0 +1,74 @@
+{
+  "path": [
+    "views",
+    0,
+    "sections",
+    5,
+    "cards",
+    3
+  ],
+  "original_card": {
+    "type": "markdown",
+    "content": "{% set operation = states('sensor.siemens_016050395510002818_bsh_common_status_operationstate').split('.')[-1] %}\n{% set progress = states('sensor.siemens_016050395510002818_bsh_common_option_programprogress') %}\n{% set finish = as_timestamp(states('sensor.siemens_016050395510002818_bsh_common_option_remainingprogramtime'), none) %}\n<ha-icon icon=\"mdi:dishwasher\"></ha-icon> **Diskmaskin · {{ {'Run': 'Kör program', 'Pause': 'Pausad', 'ActionRequired': 'Åtgärd krävs'}.get(operation, 'Inväntar status') }}**\n\n{% if is_number(progress) %}**{{ progress | float | round(0) | int }} %** klart{% else %}Förlopp saknas{% endif %} · {% if operation == 'Pause' %}Tid uppdateras när programmet fortsätter{% elif operation == 'ActionRequired' %}Kontrollera maskinen{% elif finish is not none and finish > as_timestamp(now()) %}{% set minutes = ((finish - as_timestamp(now())) / 60) | round(0, 'ceil') | int %}Cirka {% if minutes >= 60 %}{{ minutes // 60 }} h {% endif %}{{ minutes % 60 }} min kvar{% else %}Inväntar tidsprognos{% endif %}\n",
+    "entity_id": [
+      "sensor.siemens_016050395510002818_bsh_common_status_operationstate",
+      "sensor.siemens_016050395510002818_bsh_common_option_programprogress",
+      "sensor.siemens_016050395510002818_bsh_common_option_remainingprogramtime"
+    ],
+    "visibility": [
+      {
+        "condition": "state",
+        "entity": "sensor.siemens_016050395510002818_bsh_common_status_operationstate",
+        "state": [
+          "BSH.Common.EnumType.OperationState.Run",
+          "BSH.Common.EnumType.OperationState.Pause",
+          "BSH.Common.EnumType.OperationState.ActionRequired"
+        ]
+      }
+    ],
+    "grid_options": {
+      "columns": 6,
+      "rows": "auto"
+    },
+    "card_mod": {
+      "style": {
+        "ha-markdown$": "{% set indicator_state = states('sensor.siemens_016050395510002818_bsh_common_status_operationstate') %}\nha-icon {\n  color: {{ '#FFC107' if indicator_state == 'BSH.Common.EnumType.OperationState.Pause' else '#FF9800' if indicator_state in ['BSH.Common.EnumType.OperationState.ActionRequired'] else '#64b5c6' }};\n  --mdc-icon-size: 24px;\n  display: inline-block;\n  margin-right: 6px;\n  vertical-align: middle;\n  animation: {{ 'printer-soft-pulse 3s ease-in-out infinite' if indicator_state == 'BSH.Common.EnumType.OperationState.Run' else 'none' }};\n}\n@keyframes printer-soft-pulse {\n  0%, 100% { opacity: 1; filter: drop-shadow(0 0 3px rgba(100,181,198,0.45)); }\n  50% { opacity: 0.5; filter: drop-shadow(0 0 0px rgba(100,181,198,0)); }\n}\n@media (prefers-reduced-motion: reduce) {\n  ha-icon { animation: none; }\n}\n"
+      }
+    }
+  },
+  "updated_card": {
+    "type": "markdown",
+    "content": "{% if states('sensor.siemens_016050395510002818_bsh_common_status_operationstate') in ['unknown', 'unavailable'] %}\n<ha-icon icon=\"mdi:dishwasher-alert\"></ha-icon> **Diskmaskin · Kontakt saknas**\n\nProgramstatus och återstående tid kan inte hämtas.\n{% else %}\n{% set operation = states('sensor.siemens_016050395510002818_bsh_common_status_operationstate').split('.')[-1] %}\n{% set progress = states('sensor.siemens_016050395510002818_bsh_common_option_programprogress') %}\n{% set finish = as_timestamp(states('sensor.siemens_016050395510002818_bsh_common_option_remainingprogramtime'), none) %}\n<ha-icon icon=\"mdi:dishwasher\"></ha-icon> **Diskmaskin · {{ {'Run': 'Kör program', 'Pause': 'Pausad', 'ActionRequired': 'Åtgärd krävs'}.get(operation, 'Inväntar status') }}**\n\n{% if is_number(progress) %}**{{ progress | float | round(0) | int }} %** klart{% else %}Förlopp saknas{% endif %} · {% if operation == 'Pause' %}Tid uppdateras när programmet fortsätter{% elif operation == 'ActionRequired' %}Kontrollera maskinen{% elif finish is not none and finish > as_timestamp(now()) %}{% set minutes = ((finish - as_timestamp(now())) / 60) | round(0, 'ceil') | int %}Cirka {% if minutes >= 60 %}{{ minutes // 60 }} h {% endif %}{{ minutes % 60 }} min kvar{% else %}Inväntar tidsprognos{% endif %}\n\n{% endif %}",
+    "entity_id": [
+      "sensor.siemens_016050395510002818_bsh_common_status_operationstate",
+      "sensor.siemens_016050395510002818_bsh_common_option_programprogress",
+      "sensor.siemens_016050395510002818_bsh_common_option_remainingprogramtime"
+    ],
+    "visibility": [
+      {
+        "condition": "state",
+        "entity": "sensor.siemens_016050395510002818_bsh_common_status_operationstate",
+        "state": [
+          "BSH.Common.EnumType.OperationState.Run",
+          "BSH.Common.EnumType.OperationState.Pause",
+          "BSH.Common.EnumType.OperationState.ActionRequired",
+          "unknown",
+          "unavailable"
+        ]
+      }
+    ],
+    "grid_options": {
+      "columns": 6,
+      "rows": "auto"
+    },
+    "card_mod": {
+      "style": {
+        "ha-markdown$": "{% set indicator_state = states('sensor.siemens_016050395510002818_bsh_common_status_operationstate') %}\nha-icon {\n  color: {{ '#FFC107' if indicator_state == 'BSH.Common.EnumType.OperationState.Pause' else '#FF9800' if indicator_state in ['BSH.Common.EnumType.OperationState.ActionRequired', 'unknown', 'unavailable'] else '#64b5c6' }};\n  --mdc-icon-size: 24px;\n  display: inline-block;\n  margin-right: 6px;\n  vertical-align: middle;\n  animation: {{ 'printer-soft-pulse 3s ease-in-out infinite' if indicator_state == 'BSH.Common.EnumType.OperationState.Run' else 'none' }};\n}\n@keyframes printer-soft-pulse {\n  0%, 100% { opacity: 1; filter: drop-shadow(0 0 3px rgba(100,181,198,0.45)); }\n  50% { opacity: 0.5; filter: drop-shadow(0 0 0px rgba(100,181,198,0)); }\n}\n@media (prefers-reduced-motion: reduce) {\n  ha-icon { animation: none; }\n}\n"
+      }
+    },
+    "tap_action": {
+      "action": "more-info",
+      "entity": "sensor.siemens_016050395510002818_bsh_common_status_operationstate"
+    }
+  }
+}

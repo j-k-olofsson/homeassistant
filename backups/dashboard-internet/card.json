@@ -1,0 +1,26 @@
+{
+  "type": "markdown",
+  "content": "{% set rx = states('sensor.sovrummet_openwrt_one_router_sovrum_wan_rx_rate') %}\n{% set tx = states('sensor.sovrummet_openwrt_one_router_sovrum_wan_tx_rate') %}\n{% set wan = states('binary_sensor.sovrummet_openwrt_one_router_sovrum_wan_connected') %}\n{% set down = rx | float(0) * 1.048576 %}\n{% set up = tx | float(0) * 1.048576 %}\n{% set dp = [100, [0, down / 5] | max] | min %}\n{% set upct = [100, [0, up / 5] | max] | min %}\n**Internet · 500/500** <small>· {{ 'WAN ansluten' if wan == 'on' else 'WAN frånkopplad' if wan == 'off' else 'Status saknas' }}</small>\n<table role=\"presentation\"><tr><td><ha-icon icon=\"mdi:download\"></ha-icon> Ned</td><td>{{ ('%.1f' | format(down)) | replace('.', ',') if is_number(rx) and wan == 'on' else '—' }} Mbit/s</td><td>{{ ('%.1f' | format(dp)) | replace('.', ',') if is_number(rx) and wan == 'on' else '—' }} %</td></tr><tr><td><ha-icon icon=\"mdi:upload\"></ha-icon> Upp</td><td>{{ ('%.1f' | format(up)) | replace('.', ',') if is_number(tx) and wan == 'on' else '—' }} Mbit/s</td><td>{{ ('%.1f' | format(upct)) | replace('.', ',') if is_number(tx) and wan == 'on' else '—' }} %</td></tr></table>\n",
+  "entity_id": [
+    "sensor.sovrummet_openwrt_one_router_sovrum_wan_rx_rate",
+    "sensor.sovrummet_openwrt_one_router_sovrum_wan_tx_rate",
+    "binary_sensor.sovrummet_openwrt_one_router_sovrum_wan_connected"
+  ],
+  "grid_options": {
+    "columns": 12,
+    "rows": "auto"
+  },
+  "tap_action": {
+    "action": "more-info",
+    "entity": "sensor.sovrummet_openwrt_one_router_sovrum_wan_rx_rate"
+  },
+  "hold_action": {
+    "action": "more-info",
+    "entity": "sensor.sovrummet_openwrt_one_router_sovrum_wan_tx_rate"
+  },
+  "card_mod": {
+    "style": {
+      "ha-markdown$": "{% set rx = states('sensor.sovrummet_openwrt_one_router_sovrum_wan_rx_rate') %}\n{% set tx = states('sensor.sovrummet_openwrt_one_router_sovrum_wan_tx_rate') %}\n{% set wan = states('binary_sensor.sovrummet_openwrt_one_router_sovrum_wan_connected') %}\n{% set down = rx | float(0) * 1.048576 %}\n{% set up = tx | float(0) * 1.048576 %}\n{% set dp = [100, [0, down / 5] | max] | min %}\n{% set upct = [100, [0, up / 5] | max] | min %}\n\np { margin: 0 0 5px; font-size: 12px; }\nsmall { color: var(--secondary-text-color); font-size: 10px; }\ntable { width:100%; font-size:12px; line-height:1.6; }\ntd { padding:0 !important; font-variant-numeric:tabular-nums; }\ntd:nth-child(2), td:nth-child(3) { text-align:right; }\ntd:nth-child(3) { color:var(--secondary-text-color); font-size:11px; }\nha-icon { --mdc-icon-size:18px; color:#64b5c6; margin-right:4px; }\ntr:nth-child(1) ha-icon { animation: {{ 'traffic-down ' ~ (6 - dp * 0.045) ~ 's ease-in-out infinite' if is_number(rx) and down > 0 and wan == 'on' else 'none' }}; }\ntr:nth-child(2) ha-icon { animation: {{ 'traffic-up ' ~ (6 - upct * 0.045) ~ 's ease-in-out infinite' if is_number(tx) and up > 0 and wan == 'on' else 'none' }}; }\n@keyframes traffic-down { 0%,100% { transform:translateY(-2px); opacity:.45; } 60% { transform:translateY(2px); opacity:1; } }\n@keyframes traffic-up { 0%,100% { transform:translateY(2px); opacity:.45; } 60% { transform:translateY(-2px); opacity:1; } }\n@media(prefers-reduced-motion:reduce) { ha-icon { animation:none !important; } }\n"
+    }
+  }
+}

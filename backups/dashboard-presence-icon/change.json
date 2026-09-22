@@ -1,0 +1,55 @@
+{
+  "path": [
+    "views",
+    0,
+    "sections",
+    3,
+    "cards",
+    1
+  ],
+  "original_card": {
+    "type": "tile",
+    "grid_options": {
+      "rows": "auto",
+      "columns": 3
+    },
+    "entity": "input_boolean.narvarosimulering_aktiv",
+    "name": "Närvarosim.",
+    "icon": "mdi:home-lightbulb-outline",
+    "show_entity_picture": false,
+    "hide_state": false,
+    "vertical": true,
+    "tap_action": {
+      "action": "toggle"
+    },
+    "icon_tap_action": {
+      "action": "toggle"
+    },
+    "features_position": "bottom"
+  },
+  "updated_card": {
+    "type": "tile",
+    "grid_options": {
+      "rows": "auto",
+      "columns": 3
+    },
+    "entity": "input_boolean.narvarosimulering_aktiv",
+    "name": "Närvarosim.",
+    "icon": "mdi:home-lightbulb-outline",
+    "show_entity_picture": false,
+    "hide_state": false,
+    "vertical": true,
+    "tap_action": {
+      "action": "toggle"
+    },
+    "icon_tap_action": {
+      "action": "toggle"
+    },
+    "features_position": "bottom",
+    "card_mod": {
+      "style": {
+        "ha-tile-icon$": "\n{% set active = is_state('input_boolean.narvarosimulering_aktiv', 'on') %}\n.container ::slotted([slot=\"icon\"]), .container ha-icon, .container ha-svg-icon { opacity: 0 !important; }\n.container.background::before { opacity: 0 !important; }\n.container::after {\n content: \"\"; position: absolute; inset: 0; pointer-events: none;\n background: center / 36px 36px no-repeat url('/local/dashboard-icons/presence-{{ 'on' if active else 'off' }}-v1.svg');\n}\n"
+      }
+    }
+  }
+}

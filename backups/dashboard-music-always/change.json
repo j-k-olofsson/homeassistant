@@ -1,0 +1,44 @@
+{
+  "path": [
+    "views",
+    0,
+    "sections",
+    4,
+    "cards",
+    0
+  ],
+  "original_card": {
+    "type": "custom:auto-entities",
+    "card": {
+      "type": "grid",
+      "columns": 1,
+      "square": false
+    },
+    "card_param": "cards",
+    "filter": {
+      "template": "{% set base = '{\"type\": \"custom:mini-media-player\", \"artwork\": \"default\", \"info\": \"short\", \"hide\": {\"power\": true, \"source\": true, \"group_button\": true, \"volume_level\": false, \"runtime\": false}, \"tap_action\": {\"action\": \"more-info\"}}' | from_json %}\n{% set css = \"ha-card { --mini-media-player-accent-color: #64b5c6; }\\n.entity__info__name::before {\\n  content: '♫'; display: inline-block; margin-right: 7px;\\n  color: STATUS_COLOR; animation: PLAY_ANIMATION;\\n}\\n.entity__info__media, .entity__info__media * { animation: none !important; }\\n@keyframes music-note-motion { 0%,100% { transform:rotate(-15deg) translateY(1px); } 50% { transform:rotate(15deg) translateY(-2px); } }\\n@media (prefers-reduced-motion: reduce) { .entity__info__name::before { animation: none; } }\\n\" %}\n{% set candidates = states.media_player | selectattr('attributes.mass_player_type', 'defined') | selectattr('state', 'in', ['playing', 'paused']) | list %}\n{% set groups = candidates | selectattr('attributes.mass_player_type', 'eq', 'group') | sort(attribute='entity_id') | list %}\n{% set players = candidates | rejectattr('attributes.mass_player_type', 'eq', 'group') | sort(attribute='entity_id') | list %}\n{% set ns = namespace(queues=[], cards=[]) %}\n{% for p in groups + players %}\n  {% set queue = p.attributes.get('active_queue') or p.entity_id %}\n  {% if queue not in ns.queues %}\n    {% set ns.queues = ns.queues + [queue] %}\n    {% set muted = p.attributes.get('is_volume_muted', false) %}\n    {% set label = 'Ljud av' if muted else 'Pausad' if p.state == 'paused' else 'Spelar' %}\n    {% set animation = 'music-note-motion 1.5s ease-in-out infinite' if p.state == 'playing' and not muted else 'none' %}\n    {% set color = '#FFC107' if muted or p.state == 'paused' else '#64b5c6' %}\n    {% set styling = css | replace('STATUS_COLOR', color) | replace('PLAY_ANIMATION', animation) %}\n    {% set card = dict(base, entity=p.entity_id, name=p.name ~ ' · ' ~ label, card_mod=dict(style=styling)) %}\n    {% set ns.cards = ns.cards + [card] %}\n  {% endif %}\n{% endfor %}\n{{ ns.cards }}\n"
+    },
+    "show_empty": false,
+    "grid_options": {
+      "columns": "full",
+      "rows": "auto"
+    }
+  },
+  "updated_card": {
+    "type": "custom:auto-entities",
+    "card": {
+      "type": "grid",
+      "columns": 1,
+      "square": false
+    },
+    "card_param": "cards",
+    "filter": {
+      "template": "{% set base = '{\"type\": \"custom:mini-media-player\", \"artwork\": \"default\", \"info\": \"short\", \"hide\": {\"power\": true, \"source\": true, \"group_button\": true, \"volume_level\": false, \"runtime\": false}, \"tap_action\": {\"action\": \"navigate\", \"navigation_path\": \"/d5369777_music_assistant\"}}' | from_json %}\n{% set css = \"ha-card { --mini-media-player-accent-color: #64b5c6; }\\n.entity__info__name::before {\\n  content: '♫'; display: inline-block; margin-right: 7px;\\n  color: STATUS_COLOR; animation: PLAY_ANIMATION;\\n}\\n.entity__info__media, .entity__info__media * { animation: none !important; }\\n@keyframes music-note-motion { 0%,100% { transform:rotate(-15deg) translateY(1px); } 50% { transform:rotate(15deg) translateY(-2px); } }\\n@media (prefers-reduced-motion: reduce) { .entity__info__name::before { animation: none; } }\\n\" %}\n{% set candidates = states.media_player | selectattr('attributes.mass_player_type', 'defined') | selectattr('state', 'in', ['playing', 'paused']) | list %}\n{% if candidates | count == 0 %}\n{% set candidates = expand('media_player.dassens_hogtalare_ma') | list %}\n{% endif %}\n{% set groups = candidates | selectattr('attributes.mass_player_type', 'eq', 'group') | sort(attribute='entity_id') | list %}\n{% set players = candidates | rejectattr('attributes.mass_player_type', 'eq', 'group') | sort(attribute='entity_id') | list %}\n{% set ns = namespace(queues=[], cards=[]) %}\n{% for p in groups + players %}\n  {% set queue = p.attributes.get('active_queue') or p.entity_id %}\n  {% if queue not in ns.queues %}\n    {% set ns.queues = ns.queues + [queue] %}\n    {% set muted = p.attributes.get('is_volume_muted', false) %}\n    {% set label = 'Ljud av' if muted else 'Pausad' if p.state == 'paused' else 'Spelar' if p.state == 'playing' else 'Ej tillgänglig · Öppna MA' if p.state in ['unknown', 'unavailable'] else 'Välj musik' %}\n    {% set animation = 'music-note-motion 1.5s ease-in-out infinite' if p.state == 'playing' and not muted else 'none' %}\n    {% set color = '#FFC107' if muted or p.state == 'paused' else '#64b5c6' %}\n    {% set styling = css | replace('STATUS_COLOR', color) | replace('PLAY_ANIMATION', animation) %}\n    {% set card = dict(base, entity=p.entity_id, name=p.name ~ ' · ' ~ label, card_mod=dict(style=styling)) %}\n    {% set ns.cards = ns.cards + [card] %}\n  {% endif %}\n{% endfor %}\n{% if ns.cards | count == 0 %}\n{{ [dict(type='markdown', content='[♫ Välj musik i Music Assistant](/d5369777_music_assistant)')] }}\n{% else %}\n{{ ns.cards }}\n{% endif %}\n"
+    },
+    "show_empty": true,
+    "grid_options": {
+      "columns": "full",
+      "rows": "auto"
+    }
+  }
+}

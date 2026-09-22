@@ -4,7 +4,6 @@ Adds per-vehicle sensors:
 - last_trip_score: overall driving score of the most recent cached trip
   (from the trips manager cache, same source as recent_trips).
 - cabin_temperature: climate status current temperature.
-- notifications: Toyota notification count + detail attributes.
 - warning_lights: dashboard warning lights count + detail.
 - last_service_detail: full service history detail (operations, notes,
   dealer, ro_number) with newest record's date as state.
@@ -30,10 +29,14 @@ from homeassistant.helpers.entity import EntityCategory
 
 from .const import DOMAIN
 from .entity import ToyotaBaseEntity
+from .utils import vehicle_has_climate_capability
 
 if TYPE_CHECKING:
+    from collections.abc import Callable
+
     from homeassistant.core import HomeAssistant
     from homeassistant.helpers.typing import StateType
+    from pytoyoda.models.vehicle import Vehicle
 
     from .trips_manager import RecentTripsManager
 
@@ -86,22 +89,32 @@ class ToyotaLastTripScoreSensor(ToyotaExtraSensorBase):
 
     @property
     def native_value(self) -> StateType:
-        """Return the driving score of the most recent trip."""
+        """Return the driving score of the most recent trip.
+
+        ``scores`` is a raw ``_ScoresModel.model_dump(by_alias=True)`` dict,
+        so the overall score is keyed ``"global"`` (the JSON alias for
+        pytoyoda's ``global_`` field), not ``"score"``.
+        """
         trip = self._last_trip()
         if not trip:
             return None
         scores = trip.get("scores") or {}
-        score = scores.get("score")
+        score = scores.get("global")
         return round(score, 1) if isinstance(score, (int, float)) else None
 
     @property
     def extra_state_attributes(self) -> dict[str, Any] | None:
-        """Return trip timing/distance and behaviour-score attributes."""
+        """Return trip timing/distance and driving-score attributes.
+
+        The per-category breakdown (acceleration/braking/advice/constant
+        speed) lives in the trip's ``scores`` dict (aliased ``constantSpeed``),
+        not in ``behaviours`` - ``behaviours`` is an unrelated list of
+        timestamped driving events.
+        """
         trip = self._last_trip()
         if not trip:
             return None
         scores = trip.get("scores") or {}
-        behaviours = trip.get("behaviours") or {}
         out: dict[str, Any] = {
             "start_ts": trip.get("start_ts"),
             "end_ts": trip.get("end_ts"),
@@ -110,14 +123,14 @@ class ToyotaLastTripScoreSensor(ToyotaExtraSensorBase):
         for src, name in (
             ("acceleration", "acceleration"),
             ("braking", "braking"),
-            ("constant_speed", "constant_speed"),
+            ("constantSpeed", "constant_speed"),
             ("advice", "advice"),
         ):
-            v = behaviours.get(src)
+            v = scores.get(src)
             if v is not None:
                 out[name] = v
-        if scores.get("score") is not None:
-            out["score"] = scores.get("score")
+        if scores.get("global") is not None:
+            out["score"] = scores.get("global")
         return out
 
 
@@ -128,36 +141,6 @@ class ToyotaCabinTemperatureSensor(ToyotaExtraSensorBase):
     def native_value(self) -> StateType:
         """Return the cabin (interior) temperature."""
         return _cabin_temperature(self.vehicle)
-
-
-class ToyotaNotificationsSensor(ToyotaExtraSensorBase):
-    """Toyota notifications count and detail."""
-
-    @property
-    def native_value(self) -> StateType:
-        """Return the total number of notifications."""
-        notes = getattr(self.vehicle, "notifications", None) or []
-        return len(notes)
-
-    @property
-    def extra_state_attributes(self) -> dict[str, Any] | None:
-        """Return the unread count and the most recent notification details."""
-        notes = getattr(self.vehicle, "notifications", None) or []
-        if not notes:
-            return None
-        return {
-            "unread": sum(1 for n in notes if not getattr(n, "read", True)),
-            "messages": [
-                {
-                    "date": str(getattr(n, "date", "")),
-                    "category": getattr(n, "category", None),
-                    "type": getattr(n, "type", None),
-                    "message": getattr(n, "message", None),
-                    "read": getattr(n, "read", None),
-                }
-                for n in notes[:20]
-            ],
-        }
 
 
 class ToyotaWarningLightsSensor(ToyotaExtraSensorBase):
@@ -205,7 +188,7 @@ class ToyotaServiceDetailSensor(ToyotaExtraSensorBase):
         hist = getattr(self.vehicle, "service_history", None) or []
         if not hist:
             return None
-        sd = getattr(hist[-1], "service_date", None)
+        sd = getattr(hist[0], "service_date", None)
         return str(sd) if sd else None
 
     @property
@@ -278,12 +261,6 @@ DESCRIPTIONS: dict[str, SensorEntityDescription] = {
         state_class=SensorStateClass.MEASUREMENT,
         native_unit_of_measurement=UnitOfTemperature.CELSIUS,
     ),
-    "notifications": SensorEntityDescription(
-        key="notifications",
-        translation_key="notifications",
-        icon="mdi:bell-outline",
-        entity_category=EntityCategory.DIAGNOSTIC,
-    ),
     "warning_lights": SensorEntityDescription(
         key="warning_lights",
         translation_key="warning_lights",
@@ -311,8 +288,20 @@ DESCRIPTIONS: dict[str, SensorEntityDescription] = {
 _CLASSES = {
     "last_trip_score": ToyotaLastTripScoreSensor,
     "cabin_temperature": ToyotaCabinTemperatureSensor,
-    "notifications": ToyotaNotificationsSensor,
     "warning_lights": ToyotaWarningLightsSensor,
     "last_service_detail": ToyotaServiceDetailSensor,
     "average_speed_week": ToyotaAverageSpeedWeekSensor,
+}
+
+# Per-key capability gate, checked before an extra sensor is created for a
+# vehicle. Keys absent here are always created (matches the pre-existing
+# behaviour for notifications/warning_lights/last_service_detail/
+# average_speed_week - none of them read from an endpoint pytoyoda gates on
+# a capability flag). cabin_temperature reads climate_status, which
+# pytoyoda only ever populates for climate-capable vehicles (see
+# vehicle_has_climate_capability) - without this gate the sensor is created
+# for every vehicle and reads permanently unknown on non-climate-capable
+# ones.
+CAPABILITY_CHECKS: dict[str, Callable[[Vehicle], bool]] = {
+    "cabin_temperature": vehicle_has_climate_capability,
 }

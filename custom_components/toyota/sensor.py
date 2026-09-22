@@ -20,11 +20,13 @@ from homeassistant.helpers.entity import EntityCategory
 from .const import DOMAIN
 from .entity import ToyotaBaseEntity
 from .sensor_extra import _CLASSES as _EXTRA_SENSOR_CLASSES
+from .sensor_extra import CAPABILITY_CHECKS as _EXTRA_SENSOR_CAPABILITY_CHECKS
 from .sensor_extra import DESCRIPTIONS as _EXTRA_SENSOR_DESCRIPTIONS
 from .utils import (
     charging_status_key,
     format_statistics_attributes,
     format_vin_sensor_attributes,
+    mask_string,
     round_number,
     td_to_hoursminutes,
 )
@@ -43,6 +45,11 @@ if TYPE_CHECKING:
     from . import StatisticsData, VehicleData
 
 _LOGGER = logging.getLogger(__name__)
+
+
+def _always_capable(vehicle: Vehicle) -> bool:  # noqa : ARG001
+    """Default capability check: no gate, always create the sensor."""
+    return True
 
 
 def get_vehicle_capability(
@@ -307,6 +314,81 @@ LAST_SERVICE_ENTITY_DESCRIPTION = ToyotaSensorEntityDescription(
     attributes_fn=_last_service_attributes,
 )
 
+# How many recent notifications to expose as sensor attributes.
+NOTIFICATION_ATTRIBUTE_LIMIT = 5
+
+
+def _vehicle_notifications(vehicle: Vehicle) -> list[Any] | None:
+    """The vehicle's notifications, or None when unavailable.
+
+    pytoyoda's ``notifications`` property iterates response payload pages the
+    endpoint model allows to be null (``payload`` and per-page
+    ``notifications``), which raises TypeError on zero-notification accounts —
+    treat that as not-reported.
+    """
+    try:
+        return vehicle.notifications
+    except TypeError:
+        return None
+
+
+def _notification_recency(notification: Any) -> float:  # noqa: ANN401
+    """Sort key for newest-first, safe for null and mixed-tz datetimes."""
+    stamp = notification.date
+    # Normally a datetime; guard the rare case where the wrapper yields a plain
+    # date or a string (neither has .timestamp()) so sorting can't raise.
+    return stamp.timestamp() if hasattr(stamp, "timestamp") else float("-inf")
+
+
+def _mask_vin_in_message(message: str | None, vin: str | None) -> str | None:
+    """Mask the vehicle's VIN inside a notification message, if present."""
+    if message and vin:
+        return message.replace(vin, mask_string(vin))
+    return message
+
+
+def _notification_attributes(vehicle: Vehicle) -> dict[str, Any] | None:
+    """The most recent notifications; None until the endpoint reports."""
+    notifications = _vehicle_notifications(vehicle)
+    if notifications is None:
+        return None
+    recent = sorted(notifications, key=_notification_recency, reverse=True)[
+        :NOTIFICATION_ATTRIBUTE_LIMIT
+    ]
+    return {
+        "latest": [
+            {
+                "date": n.date,
+                "category": n.category,
+                "type": n.type,
+                "message": _mask_vin_in_message(n.message, vehicle.vin),
+                # The wrapper only exposes the read *timestamp*; the API's
+                # separate isRead flag can be set without it. getattr guards a
+                # None/absent _data (e.g. a mock or a sparse payload).
+                "read": n.read is not None
+                or bool(getattr(getattr(n, "_data", None), "is_read", False)),
+            }
+            for n in recent
+        ],
+    }
+
+
+def _notification_count(vehicle: Vehicle) -> int | None:
+    """State for the notifications sensor: how many the API returns."""
+    notifications = _vehicle_notifications(vehicle)
+    return None if notifications is None else len(notifications)
+
+
+NOTIFICATIONS_ENTITY_DESCRIPTION = ToyotaSensorEntityDescription(
+    key="notifications",
+    translation_key="notifications",
+    icon="mdi:bell-outline",
+    entity_category=EntityCategory.DIAGNOSTIC,
+    state_class=SensorStateClass.MEASUREMENT,
+    value_fn=_notification_count,
+    attributes_fn=_notification_attributes,
+)
+
 STATISTICS_ENTITY_DESCRIPTIONS_DAILY = ToyotaStatisticsSensorEntityDescription(
     key="current_day_statistics",
     translation_key="current_day_statistics",
@@ -464,6 +546,14 @@ def create_sensor_configurations(metric_values: bool) -> list[dict[str, Any]]:  
             "suggested_unit": None,
         },
         {
+            "description": NOTIFICATIONS_ENTITY_DESCRIPTION,
+            # pytoyoda fetches notifications unconditionally (no capability
+            # flag); an unreported endpoint reads as unknown.
+            "capability_check": lambda v: True,  # noqa : ARG005
+            "native_unit": None,
+            "suggested_unit": None,
+        },
+        {
             "description": STATISTICS_ENTITY_DESCRIPTIONS_DAILY,
             "capability_check": lambda v: True,  # noqa : ARG005
             "native_unit": get_length_unit(metric_values),
@@ -529,18 +619,29 @@ LAST_SUCCESSFUL_FETCH_ENTITY_DESCRIPTION = SensorEntityDescription(
     device_class=SensorDeviceClass.TIMESTAMP,
     entity_category=EntityCategory.DIAGNOSTIC,
 )
-LAST_ERROR_TIME_ENTITY_DESCRIPTION = SensorEntityDescription(
-    key="last_error_time",
-    translation_key="last_error_time",
-    name="Last error",
+# Named "refresh error", not "vehicle error" or bare "error": this reports
+# HTTP/transport failures talking to Toyota's API (429s, timeouts, auth
+# errors, ...) from the integration's own refresh cycle. It says nothing
+# about the vehicle's own health/DTCs, which "last error" could easily be
+# misread as.
+LAST_REFRESH_ERROR_TIME_ENTITY_DESCRIPTION = SensorEntityDescription(
+    key="last_refresh_error_time",
+    translation_key="last_refresh_error_time",
+    name="Last refresh error",
     icon="mdi:clock-alert-outline",
     device_class=SensorDeviceClass.TIMESTAMP,
     entity_category=EntityCategory.DIAGNOSTIC,
 )
-LAST_ERROR_CODE_ENTITY_DESCRIPTION = SensorEntityDescription(
-    key="last_error_code",
-    translation_key="last_error_code",
-    name="Last error code",
+# State for last_refresh_error_code when no error has occurred yet.
+# last_refresh_error_time can't carry an equivalent - its
+# device_class=TIMESTAMP forces the frontend to render "Unknown" for any
+# non-timestamp value, so only this free-text sibling sensor can say "no
+# error" outright.
+NO_ERROR_CODE = "none"
+LAST_REFRESH_ERROR_CODE_ENTITY_DESCRIPTION = SensorEntityDescription(
+    key="last_refresh_error_code",
+    translation_key="last_refresh_error_code",
+    name="Last refresh error code",
     icon="mdi:alert-outline",
     entity_category=EntityCategory.DIAGNOSTIC,
 )
@@ -571,9 +672,10 @@ STATUS_REFRESH_STATE_ENTITY_DESCRIPTION = SensorEntityDescription(
 class ToyotaCoordinatorStateSensor(ToyotaBaseEntity, SensorEntity):
     """Sensor backed by per-VIN diagnostic dicts on the coordinator.
 
-    Used for observability sensors (last_successful_fetch, last_error_time,
-    last_error_code, status_last_reported, status_refresh_state) that
-    describe the fetch itself or the strategy's state, not the vehicle.
+    Used for observability sensors (last_successful_fetch,
+    last_refresh_error_time, last_refresh_error_code, status_last_reported,
+    status_refresh_state) that describe the fetch itself or the strategy's
+    state, not the vehicle.
 
     Two overrides are in play:
 
@@ -591,12 +693,18 @@ class ToyotaCoordinatorStateSensor(ToyotaBaseEntity, SensorEntity):
        last SUCCESSFUL refresh (where the error fields were None). Reading
        from the per-VIN dicts instead means error info appears as soon as
        it's known, regardless of retain toggle or UpdateFailed.
+
+    Note: last_refresh_error_code reads NO_ERROR_CODE ("none") instead of
+    None when no error has occurred yet, so the entity says something more
+    useful than "Unknown". last_refresh_error_time can't do the same - HA
+    always renders a None state as "Unknown" for a device_class=TIMESTAMP
+    sensor.
     """
 
     _DIAG_KEY_MAP: ClassVar[dict[str, tuple[str, int | None]]] = {
         "last_successful_fetch": ("_diag_last_fetch_per_vin", None),
-        "last_error_time": ("_diag_last_error_per_vin", 0),
-        "last_error_code": ("_diag_last_error_per_vin", 1),
+        "last_refresh_error_time": ("_diag_last_error_per_vin", 0),
+        "last_refresh_error_code": ("_diag_last_error_per_vin", 1),
         "status_last_reported": ("_diag_status_occurrence_per_vin", None),
         "status_refresh_state": ("_diag_status_refresh_state_per_vin", None),
     }
@@ -621,7 +729,7 @@ class ToyotaCoordinatorStateSensor(ToyotaBaseEntity, SensorEntity):
             return None
         value = per_vin.get(vin)
         if value is None:
-            return None
+            return NO_ERROR_CODE if key == "last_refresh_error_code" else None
         return value if tuple_idx is None else value[tuple_idx]
 
 
@@ -823,8 +931,8 @@ async def async_setup_entry(
             )
             for desc in (
                 LAST_SUCCESSFUL_FETCH_ENTITY_DESCRIPTION,
-                LAST_ERROR_TIME_ENTITY_DESCRIPTION,
-                LAST_ERROR_CODE_ENTITY_DESCRIPTION,
+                LAST_REFRESH_ERROR_TIME_ENTITY_DESCRIPTION,
+                LAST_REFRESH_ERROR_CODE_ENTITY_DESCRIPTION,
                 STATUS_LAST_REPORTED_ENTITY_DESCRIPTION,
                 STATUS_REFRESH_STATE_ENTITY_DESCRIPTION,
             )
@@ -851,6 +959,7 @@ async def async_setup_entry(
                 description=_EXTRA_SENSOR_DESCRIPTIONS[key],
             )
             for key in _EXTRA_SENSOR_CLASSES
+            if _EXTRA_SENSOR_CAPABILITY_CHECKS.get(key, _always_capable)(vehicle)
         )
 
     async_add_devices(sensors)

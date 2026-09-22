@@ -1,0 +1,135 @@
+{
+  "path": [
+    "views",
+    0,
+    "sections",
+    0,
+    "cards",
+    0
+  ],
+  "original_card": {
+    "type": "custom:weather-forecast-card",
+    "show_current": true,
+    "show_forecast": true,
+    "default_forecast": "daily",
+    "tap_action": {
+      "action": "more-info"
+    },
+    "entity": "weather.forecast_met_no_home",
+    "show_condition_effects": true,
+    "grid_options": {
+      "columns": "full",
+      "rows": "auto"
+    },
+    "name": "Blidö",
+    "show_moon_phase": true,
+    "forecast": {
+      "mode": "chart",
+      "show_sun_times": true,
+      "use_color_thresholds": true,
+      "scroll_to_selected": true,
+      "hourly_group_size": 4,
+      "default_chart_attribute": "temperature_and_precipitation",
+      "extra_attribute": "wind_bearing",
+      "show_attribute_selector": false,
+      "temperature_precision": 1,
+      "daily_slots": 14,
+      "hourly_slots": 24
+    },
+    "forecast_action": {
+      "tap_action": {
+        "action": "toggle-forecast"
+      },
+      "hold_action": {
+        "action": "select-forecast-attribute"
+      },
+      "double_tap_action": {
+        "action": "more-info"
+      }
+    },
+    "current": {
+      "temperature_entity": "sensor.utomhus_temp",
+      "show_attributes": [
+        {
+          "entity": "sensor.openuv_aktuell_uv_niva",
+          "label": "UV moln"
+        },
+        {
+          "entity": "sensor.esphome98_esphome98_uv_index",
+          "label": "UV lokalt"
+        },
+        {
+          "entity": "sensor.openuv_max_uv_index",
+          "label": "UV max idag"
+        }
+      ],
+      "temperature_precision": 1
+    },
+    "card_mod": {
+      "style": "\nha-card {\n --card-padding: 12px;\n --weather-forecast-card-current-conditions-icon-size: 48px;\n --weather-forecast-card-forecast-conditions-icon-size: 30px;\n}\n.wfc-container, .wfc-current-weather { gap: 8px; }\n.wfc-current-attributes {\n flex-direction: row;\n flex-wrap: wrap;\n justify-content: center;\n gap: 4px 24px;\n}\n.wfc-current-attribute { flex: 0 1 auto; gap: 5px; font-size: 12px; }\n.wfc-current-attribute-icon { padding-left: 0; --mdc-icon-size: 16px; }\n.wfc-current-attribute-name { padding-left: 0; flex: 0 1 auto; }\n.wfc-current-attribute-value { font-weight: 500; }\n.wfc-forecast-chart { height: 110px; }\n"
+    }
+  },
+  "updated_card": {
+    "type": "custom:weather-forecast-card",
+    "show_current": true,
+    "show_forecast": true,
+    "default_forecast": "daily",
+    "tap_action": {
+      "action": "more-info"
+    },
+    "entity": "weather.forecast_met_no_home",
+    "show_condition_effects": true,
+    "grid_options": {
+      "columns": "full",
+      "rows": "auto"
+    },
+    "name": "Blidö",
+    "show_moon_phase": true,
+    "forecast": {
+      "mode": "chart",
+      "show_sun_times": true,
+      "use_color_thresholds": true,
+      "scroll_to_selected": true,
+      "hourly_group_size": 4,
+      "default_chart_attribute": "temperature_and_precipitation",
+      "extra_attribute": "wind_bearing",
+      "show_attribute_selector": false,
+      "temperature_precision": 1,
+      "daily_slots": 14,
+      "hourly_slots": 24
+    },
+    "forecast_action": {
+      "tap_action": {
+        "action": "toggle-forecast"
+      },
+      "hold_action": {
+        "action": "select-forecast-attribute"
+      },
+      "double_tap_action": {
+        "action": "more-info"
+      }
+    },
+    "current": {
+      "temperature_entity": "sensor.utomhus_temp",
+      "show_attributes": [
+        {
+          "entity": "sensor.openuv_aktuell_uv_niva",
+          "label": "UV moln"
+        },
+        {
+          "entity": "sensor.esphome98_esphome98_uv_index",
+          "label": "UV lokalt"
+        },
+        {
+          "entity": "sensor.openuv_max_uv_index",
+          "label": "UV max idag"
+        }
+      ],
+      "temperature_precision": 1
+    },
+    "card_mod": {
+      "style": "\nha-card {\n --card-padding: 12px !important;\n --weather-forecast-card-current-conditions-icon-size: 48px !important;\n --weather-forecast-card-forecast-conditions-icon-size: 30px !important;\n}\n.wfc-container, .wfc-current-weather { gap: 8px !important; }\n.wfc-current-attributes {\n flex-direction: row !important;\n flex-wrap: wrap !important;\n justify-content: center !important;\n gap: 4px 24px !important;\n}\n.wfc-current-attribute { flex: 0 1 auto !important; gap: 5px !important; font-size: 12px !important; }\n.wfc-current-attribute-icon { padding-left: 0 !important; --mdc-icon-size: 16px !important; }\n.wfc-current-attribute-name { padding-left: 0 !important; flex: 0 1 auto !important; }\n.wfc-current-attribute-value { font-weight: 500 !important; }\n.wfc-forecast-chart { height: 110px !important; }\n",
+      "prepend": true
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{%- set today = state_attr('sensor.nordpool', 'raw_today') or [] -%}
+{%- set tomorrow = (state_attr('sensor.nordpool', 'raw_tomorrow') or []) if state_attr('sensor.nordpool', 'tomorrow_valid') else [] -%}
+{%- set now_ts = as_timestamp(now()) -%}
+{%- set ns = namespace(rows=[], current=none, upcoming=none, best=none, start=none, end=none) -%}
+{%- for r in today + tomorrow -%}
+  {%- set start = as_timestamp(r.start, none) -%}
+  {%- set end = as_timestamp(r.end, none) -%}
+  {%- if start is not none and end is not none and is_number(r.value) and end > start -%}
+    {%- set ns.rows = ns.rows + [dict(start=start, end=end, price=r.value | float)] -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- set ns.rows = ns.rows | sort(attribute='start') -%}
+{%- for r in ns.rows -%}
+  {%- if r.start <= now_ts and now_ts < r.end -%}{%- set ns.current = r -%}{%- endif -%}
+  {%- if r.start > now_ts and ns.upcoming is none -%}{%- set ns.upcoming = r -%}{%- endif -%}
+{%- endfor -%}
+{%- for r in ns.rows if r.start >= now_ts -%}
+  {%- set win = namespace(cost=0, end=r.start, valid=true, duration=0) -%}
+  {%- for q in ns.rows if q.start >= r.start and q.start < r.start + 7200 -%}
+    {%- if q.start != win.end or q.end - q.start != 900 -%}{%- set win.valid = false -%}{%- endif -%}
+    {%- set win.cost = win.cost + q.price * (q.end-q.start) -%}
+    {%- set win.duration = win.duration + q.end-q.start -%}
+    {%- set win.end = q.end -%}
+  {%- endfor -%}
+  {%- if win.valid and win.duration == 7200 and (ns.best is none or win.cost/7200 < ns.best) -%}
+    {%- set ns.best = win.cost/7200 -%}{%- set ns.start = r.start -%}{%- set ns.end = win.end -%}
+  {%- endif -%}
+{%- endfor -%}
+**Elpris · Nu {% if ns.current is not none %}{{ ('%.2f' | format(ns.current.price)) | replace('.', ',') }}{% else %}—{% endif %} kr/kWh** · {% if ns.upcoming is not none %}Nästa {{ ns.upcoming.start | timestamp_custom('%H:%M') }}: **{{ ('%.2f' | format(ns.upcoming.price)) | replace('.', ',') }}** {% if ns.current is not none %}{{ '↑' if ns.upcoming.price > ns.current.price else '↓' if ns.upcoming.price < ns.current.price else '→' }}{% endif %} · om {{ ((ns.upcoming.start-now_ts)/60) | round(0, 'ceil') | int }} min{% else %}Nästa pris inväntas{% endif %}
+
+Billigaste kommande 2 h: {% if ns.best is not none %}**{{ ns.start | timestamp_custom('%H:%M') }}–{{ ns.end | timestamp_custom('%H:%M') }}{% if ns.start | timestamp_custom('%Y-%m-%d') != now().strftime('%Y-%m-%d') %} i morgon{% endif %}** · {{ ('%.2f' | format(ns.best)) | replace('.', ',') }} kr/kWh i snitt{% else %}underlag saknas{% endif %}
+
+{% if not state_attr('sensor.nordpool', 'tomorrow_valid') %}Morgondagens priser inväntas · {% endif %}Inköpspris {{ states('sensor.template_nordpool_base_cost_current_hour') | replace('.', ',') }} kr/kWh · Månadsprognos **{{ states('sensor.kvartbaserad_elkostnadsprognos') }} kr**

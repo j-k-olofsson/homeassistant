@@ -1,0 +1,110 @@
+{
+  "sensor.gasol_utomhus_esphome73_lpg_level": {
+    "current": 68.532844543457,
+    "as_of": "2026-09-21T20:35:58.583846+02:00",
+    "refill_candidate": "2026-08-04",
+    "windows": [
+      {
+        "n_daily_points": 3,
+        "from": "2026-09-18",
+        "to": "2026-09-20",
+        "first": 71.34453756886872,
+        "last": 69.47163100118979,
+        "elapsed_days": 2,
+        "rate_pp_day": 0.9364532838394624,
+        "days_to_20": 51.826231357182216,
+        "days_to_zero": 73.18340992139197
+      },
+      {
+        "n_daily_points": 7,
+        "from": "2026-09-14",
+        "to": "2026-09-20",
+        "first": 72.91236432049683,
+        "last": 69.47163100118979,
+        "elapsed_days": 6,
+        "rate_pp_day": 0.5734555532178405,
+        "days_to_20": 84.63226883256054,
+        "days_to_zero": 119.50855503778372
+      },
+      {
+        "n_daily_points": 14,
+        "from": "2026-09-07",
+        "to": "2026-09-20",
+        "first": 76.02462158254443,
+        "last": 69.47163100118979,
+        "elapsed_days": 13,
+        "rate_pp_day": 0.5040761985657412,
+        "days_to_20": 96.28077001363792,
+        "days_to_zero": 135.95731109394765
+      }
+    ],
+    "backtest": {
+      "forecast_days": 3,
+      "training_daily_points": 7,
+      "count": 41,
+      "median_abs_error_pp": 0.900251246177703,
+      "max_abs_error_pp": 3.959418224142013
+    }
+  },
+  "sensor.vattenniva_honshuset_esphome74_water_level": {
+    "current": 76.8065643310547,
+    "as_of": "2026-09-21T20:35:58.590827+02:00",
+    "refill_candidate": "2026-09-16",
+    "windows": [
+      {
+        "n_daily_points": 3,
+        "from": "2026-09-18",
+        "to": "2026-09-20",
+        "first": 87.9246487639838,
+        "last": 78.44856532832978,
+        "elapsed_days": 2,
+        "rate_pp_day": 4.738041717827009,
+        "days_to_20": 11.989460564966846,
+        "days_to_zero": 16.21061377363309
+      }
+    ],
+    "backtest": {
+      "forecast_days": 3,
+      "training_daily_points": 7,
+      "count": 28,
+      "median_abs_error_pp": 3.006829034778933,
+      "max_abs_error_pp": 8.58847389400804
+    }
+  },
+  "sensor.esphome90_esphome90_salt_level": {
+    "current": 33.359375,
+    "as_of": "2026-09-21T20:35:58.597763+02:00",
+    "refill_candidate": "2026-09-10",
+    "windows": [
+      {
+        "n_daily_points": 3,
+        "from": "2026-09-18",
+        "to": "2026-09-20",
+        "first": 67.26319845433028,
+        "last": 48.592217070818776,
+        "elapsed_days": 2,
+        "rate_pp_day": 9.335490691755751,
+        "days_to_20": 1.431030830741203,
+        "days_to_zero": 3.5733927761783253
+      },
+      {
+        "n_daily_points": 7,
+        "from": "2026-09-14",
+        "to": "2026-09-20",
+        "first": 79.61364745829489,
+        "last": 48.592217070818776,
+        "elapsed_days": 6,
+        "rate_pp_day": 5.170238397912686,
+        "days_to_20": 2.583899227044039,
+        "days_to_zero": 6.452192806712308
+      }
+    ],
+    "backtest": {
+      "forecast_days": 3,
+      "training_daily_points": 7,
+      "count": 14,
+      "median_abs_error_pp": 3.1460650080011217,
+      "max_abs_error_pp": 9.95968118848932
+    }
+  }
+}

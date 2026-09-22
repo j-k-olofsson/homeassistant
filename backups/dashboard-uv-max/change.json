@@ -1,0 +1,171 @@
+{
+  "path": [
+    "views",
+    0,
+    "sections",
+    3,
+    "cards",
+    4
+  ],
+  "original_card": {
+    "type": "custom:gauge-card-pro",
+    "entity2": "sensor.openuv_aktuellt_uv_index",
+    "entity": "sensor.esphome98_esphome98_uv_index",
+    "min": 0,
+    "max": 7,
+    "needle": true,
+    "segments": [
+      {
+        "from": 0,
+        "color": "green"
+      },
+      {
+        "from": 2,
+        "color": "yellow"
+      },
+      {
+        "from": 5,
+        "color": "red"
+      }
+    ],
+    "inner": {
+      "mode": "on_main",
+      "needle_color": "white",
+      "min": 0,
+      "max": 7,
+      "segments": [
+        {
+          "from": 0,
+          "color": "green"
+        },
+        {
+          "from": 2,
+          "color": "yellow"
+        },
+        {
+          "from": 5,
+          "color": "red"
+        }
+      ],
+      "gradient": true,
+      "gradient_resolution": "auto",
+      "round": "full"
+    },
+    "titles": {
+      "primary": {
+        "value": "UV Index"
+      }
+    },
+    "value_texts": {
+      "primary": {
+        "unit_of_measurement": ""
+      },
+      "secondary": {
+        "unit_of_measurement": "",
+        "color": "white"
+      }
+    },
+    "grid_options": {
+      "rows": "auto",
+      "columns": 3
+    },
+    "gradient": true,
+    "gradient_resolution": "auto",
+    "round": "off"
+  },
+  "updated_card": {
+    "type": "custom:gauge-card-pro",
+    "entity2": "sensor.openuv_aktuellt_uv_index",
+    "entity": "sensor.esphome98_esphome98_uv_index",
+    "min": 0,
+    "max": 7,
+    "needle": true,
+    "segments": [
+      {
+        "from": 0,
+        "color": "green"
+      },
+      {
+        "from": 2,
+        "color": "yellow"
+      },
+      {
+        "from": 5,
+        "color": "red"
+      }
+    ],
+    "inner": {
+      "mode": "on_main",
+      "needle_color": "#64b5c6",
+      "min": 0,
+      "max": 7,
+      "segments": [
+        {
+          "from": 0,
+          "color": "green"
+        },
+        {
+          "from": 2,
+          "color": "yellow"
+        },
+        {
+          "from": 5,
+          "color": "red"
+        }
+      ],
+      "gradient": true,
+      "gradient_resolution": "auto",
+      "round": "full"
+    },
+    "titles": {
+      "primary": {
+        "value": "UV",
+        "font_size": "12px"
+      },
+      "secondary": {
+        "value": "Max {{ ('%.1f' | format(states('sensor.openuv_max_uv_index') | float)) | replace('.', ',') if is_number(states('sensor.openuv_max_uv_index')) else '—' }}",
+        "font_size": "10px",
+        "color": "#64b5c6"
+      }
+    },
+    "value_texts": {
+      "primary": {
+        "unit_of_measurement": "Egen",
+        "value": "{{ ('%.1f' | format(states('sensor.esphome98_esphome98_uv_index') | float)) | replace('.', ',') if is_number(states('sensor.esphome98_esphome98_uv_index')) else '—' }}",
+        "unit_before_value": true,
+        "font_size_reduction": 5,
+        "color": "#ffffff"
+      },
+      "secondary": {
+        "unit_of_measurement": "Moln",
+        "color": "#64b5c6",
+        "value": "{{ ('%.1f' | format(states('sensor.openuv_aktuellt_uv_index') | float)) | replace('.', ',') if is_number(states('sensor.openuv_aktuellt_uv_index')) else '—' }}",
+        "unit_before_value": true
+      }
+    },
+    "grid_options": {
+      "rows": "auto",
+      "columns": 3
+    },
+    "gradient": true,
+    "gradient_resolution": "auto",
+    "round": "off",
+    "setpoint": {
+      "type": "entity",
+      "value": "sensor.openuv_max_uv_index",
+      "color": "#64b5c6",
+      "label": false
+    },
+    "animation_speed": "normal",
+    "needle_color": "#ffffff",
+    "entity_id": [
+      "sensor.esphome98_esphome98_uv_index",
+      "sensor.openuv_aktuellt_uv_index",
+      "sensor.openuv_max_uv_index"
+    ],
+    "hold_action": {
+      "action": "more-info",
+      "entity": "sensor.openuv_max_uv_index"
+    }
+  }
+}

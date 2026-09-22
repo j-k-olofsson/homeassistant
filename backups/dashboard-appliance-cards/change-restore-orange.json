@@ -1,0 +1,121 @@
+{
+  "backup": "/config/backups/dashboard-appliance-cards/before-restore-orange-20260921T081357Z.json",
+  "section": 4,
+  "printer_index": 0,
+  "original_printer": {
+    "type": "markdown",
+    "content": "{% set printer = states('sensor.prusaxl') %}\n{% set progress = states('sensor.prusaxl_status') %}\n{% set finish = as_timestamp(states('sensor.prusaxl_utskriften_ar_fardig'), none) %}\n<ha-icon icon=\"mdi:printer-3d-nozzle\"></ha-icon> **Prusa XL · {{ 'Pausad' if printer == 'paused' else 'Skriver ut' }}**\n\n{% if is_number(progress) %}**{{ progress | float | round(0) | int }} %** klart{% else %}Förlopp saknas{% endif %} · {% if printer == 'paused' %}Återstående tid uppdateras när utskriften fortsätter{% elif finish is not none and finish > as_timestamp(now()) %}{% set minutes = ((finish - as_timestamp(now())) / 60) | round(0, 'ceil') | int %}Cirka {% if minutes >= 60 %}{{ minutes // 60 }} h {% endif %}{{ minutes % 60 }} min kvar{% else %}Inväntar ny sluttidsprognos{% endif %}\n",
+    "entity_id": [
+      "sensor.prusaxl",
+      "sensor.prusaxl_status",
+      "sensor.prusaxl_utskriften_ar_fardig"
+    ],
+    "visibility": [
+      {
+        "condition": "state",
+        "entity": "sensor.prusaxl",
+        "state": [
+          "printing",
+          "paused"
+        ]
+      }
+    ],
+    "grid_options": {
+      "columns": 6,
+      "rows": "auto"
+    },
+    "card_mod": {
+      "style": {
+        "ha-markdown$": "ha-icon {\n  color: #64b5c6;\n  --mdc-icon-size: 24px;\n  display: inline-block;\n  margin-right: 6px;\n  vertical-align: middle;\n  animation: {{ 'printer-soft-pulse 3s ease-in-out infinite' if is_state('sensor.prusaxl', 'printing') else 'none' }};\n}\n@keyframes printer-soft-pulse {\n  0%, 100% { opacity: 1; filter: drop-shadow(0 0 3px rgba(100,181,198,0.45)); }\n  50% { opacity: 0.5; filter: drop-shadow(0 0 0px rgba(100,181,198,0)); }\n}\n@media (prefers-reduced-motion: reduce) {\n  ha-icon { animation: none; }\n}\n"
+      }
+    }
+  },
+  "updated_printer": {
+    "type": "markdown",
+    "content": "{% set printer = states('sensor.prusaxl') %}\n{% set progress = states('sensor.prusaxl_status') %}\n{% set finish = as_timestamp(states('sensor.prusaxl_utskriften_ar_fardig'), none) %}\n<ha-icon icon=\"mdi:printer-3d-nozzle\"></ha-icon> **Prusa XL · {{ 'Pausad' if printer == 'paused' else 'Skriver ut' }}**\n\n{% if is_number(progress) %}**{{ progress | float | round(0) | int }} %** klart{% else %}Förlopp saknas{% endif %} · {% if printer == 'paused' %}Återstående tid uppdateras när utskriften fortsätter{% elif finish is not none and finish > as_timestamp(now()) %}{% set minutes = ((finish - as_timestamp(now())) / 60) | round(0, 'ceil') | int %}Cirka {% if minutes >= 60 %}{{ minutes // 60 }} h {% endif %}{{ minutes % 60 }} min kvar{% else %}Inväntar ny sluttidsprognos{% endif %}\n",
+    "entity_id": [
+      "sensor.prusaxl",
+      "sensor.prusaxl_status",
+      "sensor.prusaxl_utskriften_ar_fardig"
+    ],
+    "visibility": [
+      {
+        "condition": "state",
+        "entity": "sensor.prusaxl",
+        "state": [
+          "printing",
+          "paused"
+        ]
+      }
+    ],
+    "grid_options": {
+      "columns": 6,
+      "rows": "auto"
+    },
+    "card_mod": {
+      "style": {
+        "ha-markdown$": "ha-icon {\n  color: #FE6E31;\n  --mdc-icon-size: 24px;\n  display: inline-block;\n  margin-right: 6px;\n  vertical-align: middle;\n  animation: {{ 'printer-soft-pulse 3s ease-in-out infinite' if is_state('sensor.prusaxl', 'printing') else 'none' }};\n}\n@keyframes printer-soft-pulse {\n  0%, 100% { opacity: 1; filter: drop-shadow(0 0 3px rgba(254,110,49,0.45)); }\n  50% { opacity: 0.5; filter: drop-shadow(0 0 0px rgba(254,110,49,0)); }\n}\n@media (prefers-reduced-motion: reduce) {\n  ha-icon { animation: none; }\n}\n"
+      }
+    }
+  },
+  "added_cards": [
+    {
+      "type": "markdown",
+      "content": "{% set operation = states('sensor.siemens_tvatt_tork_driftsstatus').split('.')[-1] %}\n{% set progress = states('sensor.siemens_tvatt_tork_aktuell_programstatus') %}\n{% set finish = as_timestamp(states('sensor.siemens_tvatt_tork_aterstaende_programtid'), none) %}\n<ha-icon icon=\"mdi:washing-machine\"></ha-icon> **Tvätt/tork · {{ {'Run': 'Kör program', 'Pause': 'Pausad', 'ActionRequired': 'Åtgärd krävs'}.get(operation, 'Inväntar status') }}**\n\n{% if is_number(progress) %}**{{ progress | float | round(0) | int }} %** klart{% else %}Förlopp saknas{% endif %} · {% if operation == 'Pause' %}Tid uppdateras när programmet fortsätter{% elif operation == 'ActionRequired' %}Kontrollera maskinen{% elif finish is not none and finish > as_timestamp(now()) %}{% set minutes = ((finish - as_timestamp(now())) / 60) | round(0, 'ceil') | int %}Cirka {% if minutes >= 60 %}{{ minutes // 60 }} h {% endif %}{{ minutes % 60 }} min kvar{% else %}Inväntar tidsprognos{% endif %}\n",
+      "entity_id": [
+        "sensor.siemens_tvatt_tork_driftsstatus",
+        "sensor.siemens_tvatt_tork_aktuell_programstatus",
+        "sensor.siemens_tvatt_tork_aterstaende_programtid"
+      ],
+      "visibility": [
+        {
+          "condition": "state",
+          "entity": "sensor.siemens_tvatt_tork_driftsstatus",
+          "state": [
+            "BSH.Common.EnumType.OperationState.Run",
+            "BSH.Common.EnumType.OperationState.Pause",
+            "BSH.Common.EnumType.OperationState.ActionRequired"
+          ]
+        }
+      ],
+      "grid_options": {
+        "columns": 6,
+        "rows": "auto"
+      },
+      "card_mod": {
+        "style": {
+          "ha-markdown$": "ha-icon {\n  color: #64b5c6;\n  --mdc-icon-size: 24px;\n  display: inline-block;\n  margin-right: 6px;\n  vertical-align: middle;\n  animation: {{ 'printer-soft-pulse 3s ease-in-out infinite' if is_state('sensor.siemens_tvatt_tork_driftsstatus', 'BSH.Common.EnumType.OperationState.Run') else 'none' }};\n}\n@keyframes printer-soft-pulse {\n  0%, 100% { opacity: 1; filter: drop-shadow(0 0 3px rgba(100,181,198,0.45)); }\n  50% { opacity: 0.5; filter: drop-shadow(0 0 0px rgba(100,181,198,0)); }\n}\n@media (prefers-reduced-motion: reduce) {\n  ha-icon { animation: none; }\n}\n"
+        }
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "{% set operation = states('sensor.siemens_016050395510002818_bsh_common_status_operationstate').split('.')[-1] %}\n{% set progress = states('sensor.siemens_016050395510002818_bsh_common_option_programprogress') %}\n{% set finish = as_timestamp(states('sensor.siemens_016050395510002818_bsh_common_option_remainingprogramtime'), none) %}\n<ha-icon icon=\"mdi:dishwasher\"></ha-icon> **Diskmaskin · {{ {'Run': 'Kör program', 'Pause': 'Pausad', 'ActionRequired': 'Åtgärd krävs'}.get(operation, 'Inväntar status') }}**\n\n{% if is_number(progress) %}**{{ progress | float | round(0) | int }} %** klart{% else %}Förlopp saknas{% endif %} · {% if operation == 'Pause' %}Tid uppdateras när programmet fortsätter{% elif operation == 'ActionRequired' %}Kontrollera maskinen{% elif finish is not none and finish > as_timestamp(now()) %}{% set minutes = ((finish - as_timestamp(now())) / 60) | round(0, 'ceil') | int %}Cirka {% if minutes >= 60 %}{{ minutes // 60 }} h {% endif %}{{ minutes % 60 }} min kvar{% else %}Inväntar tidsprognos{% endif %}\n",
+      "entity_id": [
+        "sensor.siemens_016050395510002818_bsh_common_status_operationstate",
+        "sensor.siemens_016050395510002818_bsh_common_option_programprogress",
+        "sensor.siemens_016050395510002818_bsh_common_option_remainingprogramtime"
+      ],
+      "visibility": [
+        {
+          "condition": "state",
+          "entity": "sensor.siemens_016050395510002818_bsh_common_status_operationstate",
+          "state": [
+            "BSH.Common.EnumType.OperationState.Run",
+            "BSH.Common.EnumType.OperationState.Pause",
+            "BSH.Common.EnumType.OperationState.ActionRequired"
+          ]
+        }
+      ],
+      "grid_options": {
+        "columns": 6,
+        "rows": "auto"
+      },
+      "card_mod": {
+        "style": {
+          "ha-markdown$": "ha-icon {\n  color: #64b5c6;\n  --mdc-icon-size: 24px;\n  display: inline-block;\n  margin-right: 6px;\n  vertical-align: middle;\n  animation: {{ 'printer-soft-pulse 3s ease-in-out infinite' if is_state('sensor.siemens_016050395510002818_bsh_common_status_operationstate', 'BSH.Common.EnumType.OperationState.Run') else 'none' }};\n}\n@keyframes printer-soft-pulse {\n  0%, 100% { opacity: 1; filter: drop-shadow(0 0 3px rgba(100,181,198,0.45)); }\n  50% { opacity: 0.5; filter: drop-shadow(0 0 0px rgba(100,181,198,0)); }\n}\n@media (prefers-reduced-motion: reduce) {\n  ha-icon { animation: none; }\n}\n"
+        }
+      }
+    }
+  ]
+}
