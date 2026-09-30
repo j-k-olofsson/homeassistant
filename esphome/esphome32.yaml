@@ -15,10 +15,10 @@ substitutions:
   manual_transition: 8s
   manual_brightness: "100%"
   sunset_duration: 60s
-  night_red_brightness: "10%"
-  sunrise_red: "0%"
-  sunrise_green: "0%"
-  sunrise_blue: "0%"
+  night_red_brightness: "20%"
+  sunrise_red: "100%"
+  sunrise_green: "100%"
+  sunrise_blue: "100%"
   sunrise_white: "100%"
 
 # Include packages for this device type
