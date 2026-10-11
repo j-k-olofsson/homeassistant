@@ -5,7 +5,7 @@ substitutions:
   node_friendly_name: Termostat (toaletten)
   node_comment: Shelly 1 (VLAN IoT)
   log_level: INFO
-  home_target_temp: "25"
+  home_target_temp: "27"
   comfort_target_temp: "20"
   away_target_temp: "16"
   dallas_address: "0x340416A45770FF28"
