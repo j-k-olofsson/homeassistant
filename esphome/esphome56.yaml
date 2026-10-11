@@ -27,6 +27,14 @@ time:
   - platform: sntp
     id: coop_time
     timezone: Europe/Stockholm
+    # Lokal NTP-server i IoT-nätet; ingen internetåtkomst behövs.
+    servers:
+      - 192.168.30.1
+    on_time_sync:
+      then:
+        - lambda: |-
+            ESP_LOGI("coop_schedule", "Tid synkroniserad: %s",
+                     id(coop_time).now().strftime("%Y-%m-%d %H:%M:%S").c_str());
 
 sun:
   id: coop_sun
@@ -41,11 +49,31 @@ light:
     # Undvik att återställa gårdagens ljusstyrka före tidssynkronisering.
     restore_mode: ALWAYS_OFF
 
+text_sensor:
+  - platform: template
+    name: "${node_name} Lokal tid"
+    entity_category: diagnostic
+    update_interval: 10s
+    lambda: |-
+      const auto now = id(coop_time).now();
+      if (!now.is_valid()) return std::string("Väntar på tidssynkronisering");
+      return now.strftime("%Y-%m-%d %H:%M:%S");
+
 interval:
   - interval: 1s
     then:
       - lambda: |-
           const auto now = id(coop_time).now();
+          // Avvakta schemat tills tid finns; rör inte manuell belysning.
+          static bool waiting_logged = false;
+          if (!now.is_valid()) {
+            if (!waiting_logged) {
+              ESP_LOGW("coop_schedule", "Väntar på giltig tid; automatiken avvaktar");
+              waiting_logged = true;
+            }
+            return;
+          }
+          waiting_logged = false;
           float brightness = 0.0f;
           if (now.is_valid()) {
             // Beräkna dagens händelser från lokal midnatt, inte nästa
@@ -64,6 +92,13 @@ interval:
               sunrise = rise.has_value() ? rise->timestamp : 0;
               sunset = set.has_value() ? set->timestamp : 0;
               cached_date = date;
+              if (sunrise != 0 && sunset != 0) {
+                ESP_LOGI("coop_schedule", "Soluppgång %s, solnedgång %s",
+                         ESPTime::from_epoch_local(sunrise).strftime("%H:%M:%S").c_str(),
+                         ESPTime::from_epoch_local(sunset).strftime("%H:%M:%S").c_str());
+              } else {
+                ESP_LOGW("coop_schedule", "Solhändelser saknas för dagens datum");
+              }
             }
 
             auto earliest = now;
