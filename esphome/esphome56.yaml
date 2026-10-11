@@ -55,7 +55,7 @@ text_sensor:
     entity_category: diagnostic
     update_interval: 10s
     lambda: |-
-      const auto now = id(coop_time).now();
+      auto now = id(coop_time).now();
       if (!now.is_valid()) return std::string("Väntar på tidssynkronisering");
       return now.strftime("%Y-%m-%d %H:%M:%S");
 
@@ -63,7 +63,7 @@ interval:
   - interval: 1s
     then:
       - lambda: |-
-          const auto now = id(coop_time).now();
+          auto now = id(coop_time).now();
           // Avvakta schemat tills tid finns; rör inte manuell belysning.
           static bool waiting_logged = false;
           if (!now.is_valid()) {
