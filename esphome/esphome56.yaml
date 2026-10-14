@@ -16,7 +16,7 @@ packages:
 # Lokal dygnsstyrning för hönshusets inomhusbelysning.
 # Gryning/skymning = soluppgång/solnedgång vid -0.833 graders solhöjd.
 # Morgon: start max(soluppgång, 07:00), 1 -> 100 % under 30 minuter.
-# Kväll: 100 -> 1 % sista 30 minuterna, därefter av vid solnedgång.
+# Kväll: släck max(solnedgång, 18:00), dimma 100 -> 1 % sista 30 minuterna.
 # Tiderna följer Europe/Stockholm inklusive sommar-/vintertid.
 
 # Fortsätt schemat även när Home Assistant inte är anslutet.
@@ -106,14 +106,19 @@ interval:
             earliest.minute = earliest.second = 0;
             earliest.recalc_timestamp_local();
             const time_t start = std::max(sunrise, earliest.timestamp);
-            const time_t fade_start = sunset - 1800;
+            auto earliest_off = now;
+            earliest_off.hour = 18;
+            earliest_off.minute = earliest_off.second = 0;
+            earliest_off.recalc_timestamp_local();
+            const time_t off_time = std::max(sunset, earliest_off.timestamp);
+            const time_t fade_start = off_time - 1800;
             // Saknad solhändelse eller inget giltigt ljusfönster: släckt.
             if (sunrise != 0 && sunset != 0 &&
-                now.timestamp >= start && now.timestamp < sunset) {
+                now.timestamp >= start && now.timestamp < off_time) {
               if (now.timestamp >= fade_start) {
-                // Sista sekunden når exakt 1 %, sedan av vid solnedgång.
+                // Sista sekunden når exakt 1 %, sedan av tidigast 18:00.
                 brightness = 0.01f + 0.99f *
-                    static_cast<float>(sunset - now.timestamp - 1) / 1799.0f;
+                    static_cast<float>(off_time - now.timestamp - 1) / 1799.0f;
               } else if (now.timestamp < start + 1800) {
                 brightness = 0.01f + 0.99f *
                     static_cast<float>(now.timestamp - start) / 1800.0f;
