@@ -1,0 +1,8 @@
+{
+  "domain": "todo_order",
+  "name": "Automatic to-do ordering",
+  "version": "1.0.0",
+  "dependencies": ["todo"],
+  "iot_class": "local_push",
+  "codeowners": []
+}

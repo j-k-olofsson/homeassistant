@@ -1,0 +1,13 @@
+{
+  "status": "deferred_by_user_until_new_token",
+  "action": "notify.flocken",
+  "integration_state": "setup_retry",
+  "upstream_error": "token_revoked",
+  "config_data_unchanged_vs_original_backup": true,
+  "options_unchanged_vs_original_backup": true,
+  "service_name_unchanged": "flocken",
+  "root_cause": "Slack avvisar den återkallade token och HA registrerar därför inte tjänsten",
+  "repair_issue": "script_unknown_service_references_script.granny_skicka_meddelande_56b84d17",
+  "messages_sent_for_testing": false,
+  "user_decision": "Användaren skaffar ny token i efterhand"
+}

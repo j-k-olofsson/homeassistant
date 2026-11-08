@@ -1,0 +1,10 @@
+{
+  "slack_state": "setup_retry",
+  "notify_flocken_registered": false,
+  "granny_warning_remains": true,
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  }
+}

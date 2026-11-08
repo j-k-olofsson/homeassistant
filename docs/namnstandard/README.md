@@ -1,74 +1,68 @@
-# Enhetlig namnsättning – slutförd 8 november 2026
+# Namnstandardisering – aktuell slutrapport 8 november 2026
 
-Arbetet är slutfört med de två restpunkter som användaren uttryckligen har skjutit upp. Home Assistant är igång. Alla 10 150 registerentiteter och 1 070 enhetsposter har ingått i slutavstämningen. Därutöver finns 111 källstyrda tillståndsentiteter utan registerpost.
+Huvudmigrationen och de tre efterföljande restpunkterna är genomförda. Slider är borttagen efter användningskontroll. ESPHome09 heter **Blomlampa 3** och tillhör **Köket**, liksom dess fem länkade nätverksposter. Den oanvända WiFi-omskanningen är borttagen. Inga namnfrågor är uppskjutna.
 
-## Resultat
+Omstarterna visade separata driftproblem med autentisering och Cast-anslutningar. OpenAI är nu anslutet efter en separat nyckeländring. Slack avvisar sin oförändrade token med `token_revoked`, vilket hindrar `notify.flocken` från att registreras. [Aktuell rest-, drift- och underhållslista](RESTPUNKTER.md). Detta innebär att den aktuella driftkontrollen har dokumenterade avvikelser; namnarbetet rapporteras inte som en felfri kontroll av hela installationens drift.
 
-| Förändring sedan ursprunglig inventering 7 november | Unika poster |
+## Omfattning sedan ursprunglig inventering
+
+| Poster | Antal |
 |---|---:|
-| Ändrade entitets-ID:n, netto | 9 719 |
-| Ändrade egna entitetsnamn | 7 635 |
-| Ändrade aliaslistor | 8 221 |
-| Ändrade enhetsnamn | 288 |
-| Ändrade områdestilldelningar på enhetsposter | 103 |
+| Granskade registerentiteter nu | 10 156 |
+| Granskade enhetsposter nu | 1 071 |
+| Entitets-ID:n ändrade netto bland kvarvarande entiteter | 9 747 |
+| Ändrade egna entitetsnamn | 7 636 |
+| Ändrade aliaslistor | 8 220 |
+| Ändrade enhetsnamn | 293 |
+| Ändrade områdestilldelningar på enhetsposter | 106 |
+| Borttagna oanvända registerentiteter | 2 |
 
-Antalen jämför samma oföränderliga registeridentitet före och efter. Etappoperationer summeras inte: en post kan ha preciserats flera gånger. Under arbetet tillkom 21 entiteter och 4 enhetsposter; de ingår också i slutgranskningen. Flera enhetsposter kan representera samma hårdvara genom olika integrationer.
+Antalen jämför oföränderliga registeridentiteter, inte summan av etappoperationer. Det finns också 111 källstyrda tillståndsentiteter utan registerpost. Flera enhetsposter kan representera samma fysiska hårdvara genom olika integrationer.
 
-## Namnprincip för fortsatt användning
+## Gemensam namnprincip
 
-HA 2026.11 sätter samman namndelar efter sammanhanget. Området ligger i områdesregistret, enhetsnamnet beskriver saken och entitetsnamnet dess funktion. Därför undviks upprepade rums- och enhetsnamn i dessa fält. En enhet kan exempelvis heta Klimatsensor, tillhöra Sovrummet och ha funktionen Temperatur. Meningsfulla skillnader som östra/västra, mätpunkt och datakälla bevaras. Ett avstånd till en annan Bermuda-mätpunkt får även den mätpunktens område som precisering.
+Området beskriver rummet, enheten saken och entiteten funktionen. Exempel: område Köket, enhet Blomlampa 3 och funktion Beräknad energi. Rums- och enhetsnamn upprepas inte i varje namnfält. Huvudfunktioner använder enhetens namn. Meningsfulla skillnader som mätpunkt, väderstreck och datakälla behålls; inga okända placeringar eller ägare har hittats på.
 
-Huvudfunktioner använder enhetens namn. Svenska funktionsnamn används; produktnamn, protokoll, förkortningar och kända värdnamn behålls när de identifierar källan. Beräknad effekt/energi skiljs från uppmätta värden. Delade och virtuella resurser får sammanhang där det behövs; ingen okänd placering eller ägare har hittats på.
+Svenska funktionsnamn används. Produktnamn, protokoll och kända värdnamn behålls där de identifierar källan. ID-principen är `domän.område_enhet_funktion` med gemener och ASCII. Föräldraenhet eller källprecisering läggs till när det behövs. HA:s globala standard för nygenererade ID:n är kvar. Ett namnbyte ändrar inte automatiskt ett befintligt ID.
 
-För ID:n används `domän.område_enhet_funktion` med gemener och ASCII. Föräldraenhet och källprecisering tas med när det behövs för entydighet. HA:s globala standard för nya ID:n är kvar. Namnbyte ändrar inte automatiskt ett befintligt ID. Gamla namn bevaras som alternativa alias där lämpligt; ordningen för primärt alias är bevarad. `null` i aliasunderlaget betyder HA:s beräknade standardnamn.
+Tidigare namn finns kvar som alternativa alias där lämpligt. Primär aliasordning är bevarad. `null` i aliasunderlaget betyder HA:s beräknade standardnamn. [HA:s namn- och ID-dokumentation](https://www.home-assistant.io/docs/configuration/customizing-entities/) och [2026.11-lanseringen](https://www.home-assistant.io/blog/2026/11/04/release-202611/).
 
-Källor: [HA:s rekommendationer om namn och ID-format](https://www.home-assistant.io/docs/configuration/customizing-entities/) och [lanseringen av 2026.11](https://www.home-assistant.io/blog/2026/11/04/release-202611/).
+## Beroenden och verifiering
 
-## Beroenden och kontroller
+Automationer, skript, mallar, kontrollpaneler, hjälpare, energiinställningar, favoriter, personkopplingar och egna kort har följt med respektive ID-byte. Även dynamiska urval och recorder-globbar granskades. Hundra tidigare globmatchade recorder-undantag bevarades uttryckligen under nya ID:n. Huvudmigrationens sista etapp uppdaterade 978 ID:n, 30 källfiler och 19 lagrade konfigurationer; uppföljningen ändrade ytterligare 29 ID:n och tog bort två oanvända entiteter.
 
-Migrationen gjordes i små API-etapper och en samordnad slutetapp. Slutetappen uppdaterade 978 ID:n, 30 aktiva källfiler och 19 lagrade konfigurationer. Den sista textkontrollen rättade dessutom två ID-hänvisningar i felmeddelanden. Automationskällor, skript, mallar, hjälpare, energiinställningar, personkopplingar, favoriter och kontrollpaneler har följt med. Dynamiska urval, recorder-globbar, egna kort och integrationsspecifika referenser ingick. 166 integrationstitlar samordnades i slutetappen; den fysiska Shelly-tvåkanalsenhetens titel preciserades därefter. Hundra tidigare globmatchade recorder-undantag bevarades uttryckligen under de nya ID:na.
+ID:n ändrades via HA:s register-API. Lagrade integrationsreferenser och gamla ESPHome-cachedefinitioner skrevs endast medan HA-kärnan var verifierat stoppad. Avbrutna försök återställdes och räknas inte som genomförda ändringar. OpenWrts spårningsentiteter kan efter omstart associeras med en annan accesspunkts registerpost för samma klient. Sådana förflyttningar har bara godtagits när samma MAC och identifierare verifierats; alla sex poster för Blomlampa 3 har samordnade namn och område. Identifierar- och anslutningslistor jämförs som mängder.
 
-HA:s vanliga register-API användes för ID-byten. Lagrade konfigurationer som krävde en gemensam övergång skrevs endast medan HA-kärnan var verifierat stoppad; den startades därefter igen. Avbrutna försök återställdes och räknas inte som genomförda ändringar.
+HA:s aktuella konfigurationskontroll är giltig utan fel eller varningar. De ursprungliga på-/avlägena för 81 automationer är bevarade. Röstexponeringen är bevarad. Kvarvarande driftavvikelser finns i statusfilen och restlistan. Den slutliga referenskontrollen och den separata WiFi-/Slider-kontrollen ligger länkade nedan.
 
-Slutkontrollen visar:
+Historik och statistik jämfördes inom fasta perioder för ID-etapperna. Enbart huvudmigrationens sista etapp jämförde 213 681 historikposter och 6 339 statistikpunkter. Uppföljningens egna jämförelser finns i den privata verifieringsjournalen. Detta är inte en kontroll av varje historikrad sedan installationen skapades.
 
-- Giltig HA-konfiguration utan fel eller varningar.
-- Samma registeridentiteter, tekniska inställningar, enhetskopplingar, aktivering, döljning och etiketter i slutjämförelsen. Avsiktliga namn-/ID-/områdesändringar är dokumenterade.
-- Ursprungliga på-/avlägen för 81 automationer återställda.
-- Inga nytillkomna integrationsstartfel eller tillgänglighetsregressioner i slutjämförelsen.
-- Inga föråldrade migrerade ID-referenser i den avslutande kontrollen av inventerade aktiva källor och lagrade konfigurationer. [Kontrollresultat](slutlig-referenskontroll.json).
-- Historik och statistik jämförda i ID-etapperna. Enbart slutetappen jämförde 213 681 historikposter och 6 339 statistikpunkter; 307 statistikdefinitioner följde med. Jämförelserna avser avgränsade tidsperioder, inte installationens alla historikrader.
-- Egna OpenWrt-/Thread-korts namnlogik och adressering samt Plants sju registeruppslag har klarat regressionstester.
+Egna OpenWrt-/Thread-korts namnlogik och adressering samt Plants sju registeruppslag har klarat regressionstester. ESPHome09:s ändrade källa klarar ESPHomes konfigurationsvalidering. Ingen firmware har laddats upp och inga fysiska funktioner har aktiverats manuellt som test. Ingen visuell webbläsarprovning eller full provåterställning till en separat HA-instans har gjorts. **Ladda om öppna kontrollpaneler för att läsa in uppdaterade referenser och kort.**
 
-Detta är konfigurations-, referens- och tillståndskontroller. Ingen visuell webbläsarprovning eller manuell aktivering av lampor, lås, värme eller laddning har gjorts. Det ger inte en garanti för varje framtida automationsgren eller okänd extern konsument. **Ladda om redan öppna kontrollpaneler så att nya referenser och kortversioner läses in.**
+## Bevarade identiteter och underhåll
 
-## Avsiktligt bevarade identiteter
+83 kvarvarande register-ID:n har dokumenterade kompatibilitetsskäl. Det omfattar Google Assistant, sparad Alexa-exponering, ESPHome-importer, Music Assistant, Schedulers arbetsdagssensor och sophämtningskalendern. Blomlampa 3:s ljusentitet behåller därför `light.blomlampa_ateljen_esphome09_light`; visningsnamnet och området är uppdaterade. Alexa är globalt avstängt men dess sparade externa identiteter har behållits.
 
-113 register-ID:n har dokumenterade kompatibilitets- eller restpunktsskäl. [Fullständig lista](id-kompatibilitetsundantag.json). Visningsnamn kan vara enhetliga även när ett ID behöver vara stabilt.
+Tekniska `unique_id`, UUID, firmware-nodnamn, värdnamn, enumvärden, skriptens YAML-nycklar/tjänstenamn och kontrollpanelernas URL:er är stabila identiteter. Ett skripts tjänstenamn kan skilja sig från dess entitets-ID; tjänsteanrop och `target.entity_id` har behandlats var för sig. Historiska loggar, registertombstones, spår och säkerhetskopior har inte skrivits om.
 
-Google Assistant har 36 exponerade entiteter. Alexa är globalt avstängt men har 41 sparade exponeringar. Dessa externa identiteter har bevarats; sju äldre temperatur-ID:n återställdes med sina beroenden. ESPHome-importer, Music Assistant-spelaridentitet och Schedulers fasta arbetsdagsreferens behölls också. Sophämtningskalenderns ID behölls eftersom historik-API:ts jämförelse inte var identisk efter ett provbyte: en inledande gränsrad skiljde sig i text. Dess namn är Sophämtning NVAA.
+Plant har en [lokal rättning](plant-registeridentitet.patch) som låter befintliga registrerade ID:n styra härledda sensorkällor. Kontrollera den vid framtida integrationsuppdatering. Test: `python3 tools/test_ha_naming_plant.py`. Korttest: `node tools/test_ha_naming_cards.cjs`.
 
-Tekniska `unique_id`, UUID, protokolladresser, firmware-nodnamn, värdnamn, enumvärden, skriptens tjänstenamn/YAML-nycklar och kontrollpanelernas URL:er är stabila identiteter. Ett skripts tjänstenamn kan därför skilja sig från dess nya entitets-ID; tjänsteanrop och `target.entity_id` har hanterats var för sig. Även 108 äldre kända enheters tracker-källnycklar behölls; visningsnamn samordnades där exakt MAC-koppling fanns. Historiska loggtexter, spår och säkerhetskopior har inte skrivits om.
+För framtida namn-/referenskontroll finns `python3 tools/ha_naming_audit.py`. Det är ett läsande verktyg som rapporterar nya eller ändrade registerposter och föråldrade referenser. Granskningsmanifestet ska uppdateras först efter saklig granskning av nya ändringar.
 
-## Restpunkter och underhåll
-
-Endast Slider (`input_number.slider`) och Blomlampa (ateljén)/ESPHome09 med länkade poster är uppskjutna enligt användaren. [Restpunkter](RESTPUNKTER.md).
-
-Plant har en lokal rättning i sju konstruktorgrenar: befintligt registrerat ID används innan härledda sensorer fångar sin källa. Kontrollera rättningen vid en framtida uppdatering av Plant; integrationens uppdatering kan skriva över lokal kod. [Lokal Plant-rättning](plant-registeridentitet.patch). Test: `python3 tools/test_ha_naming_plant.py`. Korttest: `node tools/test_ha_naming_cards.cjs`.
-
-ESPHome-källornas firmware-nodnamn har bevarats och ingen firmware har laddats upp. WiFi-omskanningsskriptets namnmatchning och noduppslag är anpassade till nya ID:n. De nodspecifika scan_wifi-API-åtgärder som saknades redan före migrationen skapas inte av namnändringen; den befintliga funktionsbegränsningen kvarstår tills firmwarefrågan hanteras separat.
-
-För framtida kontroll finns `python3 tools/ha_naming_audit.py`. Det är ett läsande verktyg som söker föråldrade ID-referenser och visar nya eller ändrade registerposter jämfört med granskningsmanifestet. Det byter inga namn. Manifestet ska uppdateras först efter saklig granskning av kommande ändringar.
-
-## Inventering och återställning
+## Underlag och säkerhetskopior
 
 - [Alla registerentiteter före/efter](hela-entitetsinventeringen.csv)
 - [Alla enhetsposter före/efter](hela-enhetsinventeringen.csv)
-- [Källstyrda entiteter utan registerpost](entiteter-utan-registerpost.csv)
-- [Genomförd ID-karta CSV](genomford-id-karta.csv) / [JSON](id-karta.json)
-- [Maskinläsbar status](status.json)
-- [Säkerhetskopior och återställning](ATERSTALLNING.md)
+- [Borttagna oanvända entiteter](borttagna-entiteter.csv)
+- [Tillståndsentiteter utan registerpost](entiteter-utan-registerpost.csv)
+- [ID-karta CSV](genomford-id-karta.csv) / [JSON](id-karta.json)
+- [Kompatibilitetsundantag](id-kompatibilitetsundantag.json)
+- [Slutlig referenskontroll](slutlig-referenskontroll.json)
+- [Kontroll av borttagen funktion och hjälpare](restpunkter-referenskontroll.json)
+- [Analys av notify.flocken-varningen](NOTIFY-FLOCKEN.md)
+- [Aktuell status och verifiering](status.json)
+- [Återställningsanvisning och säkerhetskopior](ATERSTALLNING.md)
 
-Startkopian är **22f83cfa**. Den fullständiga kopian före slutetapperna är **d1a7d04b**. Dessa omfattar HA och MariaDB; centrala filer har provlästs ur arkiven. Den fullständiga slutkopian **8dc2d539** är skapad utan fel på Backup och extra lokalt; arkivet är provläst och det sparade namnregistret stämmer med slutgranskningen. Detaljer och SHA-256 finns i återställningsanvisningen och statusfilen. Ingen fullständig provåterställning till en körande separat HA-instans har gjorts.
+Startkopian är `22f83cfa`. Den arkivkontrollerade slutkopian före uppföljningen är `8dc2d539`. Ny fullständig kopia före restpunkternas åtgärder är `d381dcba`. Den fullständiga uppföljningskopian **`d8d4fa67`** är nu slutförd utan fel enligt Supervisor och finns på Backup. Innehållsmetadata bekräftar HA och MariaDB; denna kopia har inte arkivprovats eller provåterställts. HA och MariaDB ska återställas från samma kontrollpunkt.
 
-Etappplaner finns här i dokumentmappen. Privata före-/efterkopior, verifieringar och journaler finns under `/homeassistant/backups/namnstandard_20261107/` och `/homeassistant/backups/namnstandard_20261108/`. De kan innehålla känslig konfiguration och ska inte publiceras.
+Privata före-/efterkopior, avbrutna/återställda försök och verifieringsjournaler finns under `/homeassistant/backups/namnstandard_20261107/`, `/homeassistant/backups/namnstandard_20261108/` och `/homeassistant/backups/namnstandard_20261108_restpunkter/`. De kan innehålla känslig konfiguration och ska inte publiceras.

@@ -1,15 +1,10 @@
 {
-  "status": "Utreds senare enligt användarens besked",
-  "protected_entity_ids": [
-    "input_number.slider"
-  ],
-  "protected_device_ids": [
-    "0cc979ea34852945574729129825a6b2",
-    "227724855ae674b89183ee9f92632aa2",
-    "3f468b4d72344090ba3fc494f7562e9f",
-    "72464832ea5d50edac5e918c2018497a",
-    "7938b2ad630e3f5c590057a1fd59df79",
-    "7c98ea31c0db5d9db1de8cc6641c6606"
-  ],
-  "reason": "Syftet med Slider och placeringen för ESPHome09 är oklara. Ingen fortsatt namn-/ID-/områdesändring för dessa innan de har utretts."
+  "status": "Åtgärdade enligt användarens instruktion 2026-11-08",
+  "protected_entity_ids": [],
+  "protected_device_ids": [],
+  "resolved": [
+    "input_number.slider: verifierat oanvänd och borttagen",
+    "ESPHome09: Blomlampa 3 i Köket inklusive länkade poster",
+    "scan_wifi: oanvänt skript, källåtgärd, gamla exponeringsposter och två cachedefinitioner borttagna"
+  ]
 }

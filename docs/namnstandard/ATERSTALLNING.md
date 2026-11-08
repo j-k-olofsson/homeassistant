@@ -29,3 +29,12 @@ Supervisor avslutade jobbet till 100 % utan fel. Kopian finns på platsen Backup
 SHA-256: `3fecc51d62ef09d5d45b59142b2f5cae0474449fe3e652d8ba2ed9acba7bc104`.
 
 Konfiguration, skript, entitetsregister, integrationsregister och båda ändrade Plant-källfilerna har lästs ur det hämtade arkivet. De 10 150 registeridentiteterna och granskade namnfälten stämmer med slutgranskningen. Arkivet innehåller MariaDB. Detta är en arkiv-/innehållskontroll; ingen full provåterställning har gjorts. Slutrapportens efterföljande metadata om själva säkerhetskopian skrevs efter kopieringstillfället.
+
+## Uppföljning av restpunkterna 8 november 2026
+
+- **`d381dcba`**: fullständig kopia före borttagning av Slider/omskanning och flytten av ESPHome09:s namnsättning till Köket.
+- **`d8d4fa67`**: fullständig kopia efter verifierad uppföljning, inklusive HA, MariaDB och övriga inkluderade appar/mappar. Supervisor avslutade jobbet till 100 % utan fel. Storlek: 6765025280 byte. Finns på säkerhetskopieringsplatsen Backup.
+
+Dessa två kopior är verifierade genom Supervisors slutförda jobb och innehållsmetadata. De har inte hämtats som extra lokala arkiv eller provåterställts. Den tidigare extra lokala kopian `8dc2d539` finns kvar och är arkivkontrollerad. Återställ alltid HA och MariaDB från samma kontrollpunkt.
+
+Den avslutande uppföljningskopian innehåller den aktuella, fungerande OpenAI-konfigurationen efter separat nyckeländring. Slack-tokenen avvisas fortfarande av Slack med `token_revoked` vid denna kontrollpunkt; en lokal återställning återaktiverar inte en token som tjänsten har återkallat.

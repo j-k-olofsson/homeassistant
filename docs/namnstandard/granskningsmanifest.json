@@ -1,5 +1,5 @@
 {
-  "reviewed_at": "2026-11-08T09:39:38.001720+00:00",
+  "reviewed_at": "2026-11-08T11:45:09.321185+00:00",
   "service_ids": [
     "adaptive_lighting.apply",
     "adaptive_lighting.change_switch_settings",
@@ -328,7 +328,6 @@
     "nordpool.weekly",
     "nordpool.yearly",
     "notify.android_tv_fire_tv",
-    "notify.flocken",
     "notify.google_assistant_sdk",
     "notify.home_assistant_kraftor",
     "notify.mobile_app_galaxy_tab_2_hallen",
@@ -461,7 +460,6 @@
     "script.narvarosimulering_start",
     "script.narvarosimulering_stop",
     "script.reload",
-    "script.rescan_wifi_on_esphome_nodes",
     "script.thread_uppdatera_natverksdiagnostik",
     "script.toggle",
     "script.turn_off",
@@ -565,6 +563,8 @@
     ".storage/core.area_registry",
     ".storage/core.config_entries",
     ".storage/energy",
+    ".storage/esphome.093df378c502bf0cde52459691675cb0",
+    ".storage/esphome.5c1dfaab0957271f2094674fa9069abd",
     ".storage/frontend.system_data",
     ".storage/frontend.user_data_1e38893527ee4e1b9e5081503f031176",
     ".storage/frontend.user_data_29b553be96084edfb7a9484fd8467ad6",
@@ -623,6 +623,8 @@
     "custom_components/plant/trigger_impl.py",
     "custom_components/plant/triggers.yaml",
     "custom_templates/ha_namn.jinja",
+    "esphome/archive/trash/esphome15.yaml",
+    "esphome/esphome09.yaml",
     "go2rtc.yaml",
     "known_devices.yaml",
     "packages/aqara_taklampor_monitor.yaml",
@@ -873,13 +875,6 @@
       "device_id": "7acdb0b707a3474aaf4096052549d2ac",
       "area_id": null
     },
-    "8bc117a30b5cd45bafb94633a8096bdb": {
-      "entity_id": "update.blomlampa_ateljen_firmware",
-      "name": null,
-      "original_name": "Firmware",
-      "device_id": "0cc979ea34852945574729129825a6b2",
-      "area_id": null
-    },
     "0ca0a3e0a939977db0f18400e10400b3": {
       "entity_id": "light.blomlampa_ateljen_esphome09_light",
       "name": "",
@@ -1090,24 +1085,10 @@
       "device_id": null,
       "area_id": null
     },
-    "3a6ed34fa6c981a9c03bf73e72f1fbeb": {
-      "entity_id": "sensor.blomlampa_ateljen_energy_power",
-      "name": "Beräknad effekt",
-      "original_name": "Blomlampa (ateljén) - energy power",
-      "device_id": "0cc979ea34852945574729129825a6b2",
-      "area_id": null
-    },
     "70779ae7da42a6b9b31adf28a6ea792e": {
       "entity_id": "script.ange_starttid_for_bilvarmen",
       "name": null,
       "original_name": "Ange starttid för bilvärmen",
-      "device_id": null,
-      "area_id": null
-    },
-    "893e3959ab14c0f9b12affeb9fc6ffef": {
-      "entity_id": "input_number.slider",
-      "name": null,
-      "original_name": "Slider",
       "device_id": null,
       "area_id": null
     },
@@ -1368,20 +1349,6 @@
       "name": null,
       "original_name": null,
       "device_id": "1648d5dd8d727c41e215ac3b7d84551a",
-      "area_id": null
-    },
-    "a9181c238f6d0e56850440374c8d560c": {
-      "entity_id": "sensor.blomlampa_ateljen_energy_energy",
-      "name": "Beräknad energi",
-      "original_name": "Blomlampa (ateljén) - energy energy",
-      "device_id": "0cc979ea34852945574729129825a6b2",
-      "area_id": null
-    },
-    "e2b64021359c7349e8ebf2240dbbb0e5": {
-      "entity_id": "button.blomlampa_ateljen_esphome09_apply_scene",
-      "name": "Aktivera scen",
-      "original_name": "esphome09 Apply Scene",
-      "device_id": "0cc979ea34852945574729129825a6b2",
       "area_id": null
     },
     "410815f7353b92e95a9fb354fa50c6b9": {
@@ -1704,13 +1671,6 @@
       "name": null,
       "original_name": "Uppdatering",
       "device_id": "758fdad816f2c35b0fcea020b792e912",
-      "area_id": null
-    },
-    "6e9073ecd36876eafaabc179cceabd01": {
-      "entity_id": "binary_sensor.blomlampa_ateljen_status",
-      "name": "Anslutning",
-      "original_name": "Status",
-      "device_id": "0cc979ea34852945574729129825a6b2",
       "area_id": null
     },
     "8ea7cc41d5114b30fb135c7c34031a97": {
@@ -2105,60 +2065,11 @@
       "device_id": null,
       "area_id": null
     },
-    "8be5eace1100e3bac7bc0bc883aacee6": {
-      "entity_id": "device_tracker.8c_ce_4e_0c_ca_58_8c_ce_4e_0c_ca_58",
-      "name": null,
-      "original_name": "8c:ce:4e:0c:ca:58",
-      "device_id": "72464832ea5d50edac5e918c2018497a",
-      "area_id": null
-    },
-    "d702dd32d5ea8bb566e6bc3bc58eb2ae": {
-      "entity_id": "sensor.koket_8c_ce_4e_0c_ca_58_signal_strength",
-      "name": "Signalstyrka",
-      "original_name": "Signal Strength",
-      "device_id": "7c98ea31c0db5d9db1de8cc6641c6606",
-      "area_id": null
-    },
-    "d362dbe9e850a1ccca7274963f6f8037": {
-      "entity_id": "sensor.koket_8c_ce_4e_0c_ca_58_rx_rate",
-      "name": "Mottagningshastighet",
-      "original_name": "RX Rate",
-      "device_id": "7c98ea31c0db5d9db1de8cc6641c6606",
-      "area_id": null
-    },
-    "844e8c2e85336f577fbfae7733e60081": {
-      "entity_id": "sensor.koket_8c_ce_4e_0c_ca_58_tx_rate",
-      "name": "Sändningshastighet",
-      "original_name": "TX Rate",
-      "device_id": "7c98ea31c0db5d9db1de8cc6641c6606",
-      "area_id": null
-    },
-    "f3ab3c99c90b833f65f21666c5be669f": {
-      "entity_id": "sensor.koket_8c_ce_4e_0c_ca_58_noise_level",
-      "name": "Brusnivå",
-      "original_name": "Noise Level",
-      "device_id": "7c98ea31c0db5d9db1de8cc6641c6606",
-      "area_id": null
-    },
-    "712af67947fe914967bb8f3486fb5438": {
-      "entity_id": "switch.koket_8c_ce_4e_0c_ca_58_internet_access",
-      "name": "Internetåtkomst",
-      "original_name": "Internet Access",
-      "device_id": "7c98ea31c0db5d9db1de8cc6641c6606",
-      "area_id": null
-    },
     "70923c8769705c4fe963c25724e91013": {
       "entity_id": "device_tracker.utomhus_elmatare_elstolpen_48_55_19_f4_de_04",
       "name": null,
       "original_name": "48:55:19:f4:de:04",
       "device_id": "254b9bc249c0ffd559c889e63cb172e5",
-      "area_id": null
-    },
-    "78f580c730596a767edcb0c63a342cd2": {
-      "entity_id": "switch.koket_192_168_30_109_internet_access",
-      "name": "Internetåtkomst",
-      "original_name": "Internet Access",
-      "device_id": "72464832ea5d50edac5e918c2018497a",
       "area_id": null
     },
     "db86a416f2ac523ce2b9bf72c3b6ab82": {
@@ -2173,41 +2084,6 @@
       "name": "Närvarosimulering – återställ aktiv körning efter omstart",
       "original_name": "Närvarosimulering – återställ aktiv körning efter omstart",
       "device_id": null,
-      "area_id": null
-    },
-    "e82043eddbe7678e41ab74495676b287": {
-      "entity_id": "sensor.8c_ce_4e_0c_ca_58_signal_strength",
-      "name": "Signalstyrka",
-      "original_name": "Signal Strength",
-      "device_id": "3f468b4d72344090ba3fc494f7562e9f",
-      "area_id": null
-    },
-    "971ba01c0f2bf029b01858c69cd72725": {
-      "entity_id": "sensor.8c_ce_4e_0c_ca_58_rx_rate",
-      "name": "Mottagningshastighet",
-      "original_name": "RX Rate",
-      "device_id": "3f468b4d72344090ba3fc494f7562e9f",
-      "area_id": null
-    },
-    "8231209e3155d494f17b7df2474198ca": {
-      "entity_id": "sensor.8c_ce_4e_0c_ca_58_tx_rate",
-      "name": "Sändningshastighet",
-      "original_name": "TX Rate",
-      "device_id": "3f468b4d72344090ba3fc494f7562e9f",
-      "area_id": null
-    },
-    "d83cf0e238fc3ef9b9c547602d119386": {
-      "entity_id": "sensor.8c_ce_4e_0c_ca_58_noise_level",
-      "name": "Brusnivå",
-      "original_name": "Noise Level",
-      "device_id": "3f468b4d72344090ba3fc494f7562e9f",
-      "area_id": null
-    },
-    "6a58493dabf7661d03dce4847e5d69e5": {
-      "entity_id": "switch.8c_ce_4e_0c_ca_58_internet_access",
-      "name": "Internetåtkomst",
-      "original_name": "Internet Access",
-      "device_id": "3f468b4d72344090ba3fc494f7562e9f",
       "area_id": null
     },
     "4eebbd1f1a05c2daf679e84217106bc0": {
@@ -2271,41 +2147,6 @@
       "name": null,
       "original_name": "Favoritmarkera nuvarande låt",
       "device_id": "526d60fb16dbc60fe090acbfb5e70cd4",
-      "area_id": null
-    },
-    "f39d12b9b62e583f2a562bfe3a9c745d": {
-      "entity_id": "sensor.8c_ce_4e_0c_ca_58_signal_strength_2",
-      "name": "Signalstyrka",
-      "original_name": "Signal Strength",
-      "device_id": "227724855ae674b89183ee9f92632aa2",
-      "area_id": null
-    },
-    "777d421f8c731a0be0fd6c448da71da0": {
-      "entity_id": "sensor.8c_ce_4e_0c_ca_58_rx_rate_2",
-      "name": "Mottagningshastighet",
-      "original_name": "RX Rate",
-      "device_id": "227724855ae674b89183ee9f92632aa2",
-      "area_id": null
-    },
-    "a41edecb85a0ee75becd3042ffbbd7e2": {
-      "entity_id": "sensor.8c_ce_4e_0c_ca_58_tx_rate_2",
-      "name": "Sändningshastighet",
-      "original_name": "TX Rate",
-      "device_id": "227724855ae674b89183ee9f92632aa2",
-      "area_id": null
-    },
-    "c480edc24a89c1ec59aae8f037c8291e": {
-      "entity_id": "sensor.8c_ce_4e_0c_ca_58_noise_level_2",
-      "name": "Brusnivå",
-      "original_name": "Noise Level",
-      "device_id": "227724855ae674b89183ee9f92632aa2",
-      "area_id": null
-    },
-    "0ef93f1e3356d813fd74668917450646": {
-      "entity_id": "switch.8c_ce_4e_0c_ca_58_internet_access_2",
-      "name": "Internetåtkomst",
-      "original_name": "Internet Access",
-      "device_id": "227724855ae674b89183ee9f92632aa2",
       "area_id": null
     },
     "b59cfd2af69858c904dfc8078bbb18f5": {
@@ -2749,13 +2590,6 @@
       "device_id": "81d65dd9ae4facd4d260a6a567c129ba",
       "area_id": null
     },
-    "e441d67215c43acc4624fe4a14b15311": {
-      "entity_id": "button.koket_8c_ce_4e_0c_ca_58_disconnect_device",
-      "name": "Koppla från enhet",
-      "original_name": "Disconnect device",
-      "device_id": "7c98ea31c0db5d9db1de8cc6641c6606",
-      "area_id": null
-    },
     "8a0589a25df1e28c0ceb23e9a28cf010": {
       "entity_id": "button.granny_utrop_favoritmarkera_nuvarande_lat",
       "name": null,
@@ -2789,48 +2623,6 @@
       "name": null,
       "original_name": "Favoritmarkera nuvarande låt",
       "device_id": "8e9cae15d4f9a8d7ed91cc9d3c2a47c4",
-      "area_id": null
-    },
-    "085e57191147f9d1eb3d117f05c55468": {
-      "entity_id": "button.8c_ce_4e_0c_ca_58_disconnect_device",
-      "name": "Koppla från enhet",
-      "original_name": "Disconnect device",
-      "device_id": "7938b2ad630e3f5c590057a1fd59df79",
-      "area_id": null
-    },
-    "39b98944b4b3c7b5b83c6b2c092bc3f6": {
-      "entity_id": "sensor.8c_ce_4e_0c_ca_58_signal_strength_3",
-      "name": "Signalstyrka",
-      "original_name": "Signal Strength",
-      "device_id": "7938b2ad630e3f5c590057a1fd59df79",
-      "area_id": null
-    },
-    "e8d568a069b51e9eb61e7e68913d6170": {
-      "entity_id": "sensor.8c_ce_4e_0c_ca_58_rx_rate_3",
-      "name": "Mottagningshastighet",
-      "original_name": "RX Rate",
-      "device_id": "7938b2ad630e3f5c590057a1fd59df79",
-      "area_id": null
-    },
-    "f15e3ab1ab7c7058929247f7f17967df": {
-      "entity_id": "sensor.8c_ce_4e_0c_ca_58_tx_rate_3",
-      "name": "Sändningshastighet",
-      "original_name": "TX Rate",
-      "device_id": "7938b2ad630e3f5c590057a1fd59df79",
-      "area_id": null
-    },
-    "ce399d2ea00fe4c333790af4971bd7e4": {
-      "entity_id": "sensor.8c_ce_4e_0c_ca_58_noise_level_3",
-      "name": "Brusnivå",
-      "original_name": "Noise Level",
-      "device_id": "7938b2ad630e3f5c590057a1fd59df79",
-      "area_id": null
-    },
-    "e81628ce06300f1c1f3cba7c4e8d9be5": {
-      "entity_id": "switch.8c_ce_4e_0c_ca_58_internet_access_3",
-      "name": "Internetåtkomst",
-      "original_name": "Internet Access",
-      "device_id": "7938b2ad630e3f5c590057a1fd59df79",
       "area_id": null
     },
     "63d4506c69944d20c69158ae9dbc6c66": {
@@ -44619,28 +44411,28 @@
     "c274a83adfb5f9f84d7e86c17781ade2": {
       "entity_id": "switch.koket_diskmaskin_hygien_plus",
       "name": "Hygien Plus",
-      "original_name": "Siemens Diskmaskin - Hygiene Plus",
+      "original_name": "Siemens Diskmaskin - Hygien Plus",
       "device_id": "444edb1c05f7869597326dcc1621322a",
       "area_id": null
     },
     "a10742bb9b397d20a2c03c3ef6df33d1": {
       "entity_id": "switch.koket_diskmaskin_halvfull_maskin",
       "name": "Halvfull maskin",
-      "original_name": "Siemens Diskmaskin - Half Load",
+      "original_name": "Siemens Diskmaskin - Halvfull maskin",
       "device_id": "444edb1c05f7869597326dcc1621322a",
       "area_id": null
     },
     "bab57e562f5fc07be2ecd8749ce0b32a": {
       "entity_id": "switch.koket_diskmaskin_variospeedplus",
       "name": "VarioSpeedPlus",
-      "original_name": "Siemens Diskmaskin - Vario Speed Plus",
+      "original_name": "Siemens Diskmaskin - VarioSpeedPlus",
       "device_id": "444edb1c05f7869597326dcc1621322a",
       "area_id": null
     },
     "c132a35154bf761c3017dbd3fb64ab93": {
       "entity_id": "switch.koket_diskmaskin_glanstorkning",
       "name": "Glanstorkning",
-      "original_name": "Siemens Diskmaskin - Brilliance Dry",
+      "original_name": "Siemens Diskmaskin - Glanstorkning",
       "device_id": "444edb1c05f7869597326dcc1621322a",
       "area_id": null
     },
@@ -44801,7 +44593,7 @@
     "56b980612d3fe14f05acf995c09e7d3a": {
       "entity_id": "sensor.koket_diskmaskin_aterstaende_programtid",
       "name": "Återstående programtid",
-      "original_name": "Siemens Diskmaskin - Återstående programtid",
+      "original_name": "Siemens Diskmaskin - Remaining Program Time",
       "device_id": "444edb1c05f7869597326dcc1621322a",
       "area_id": null
     },
@@ -44815,7 +44607,7 @@
     "ff7997a535e8e02ca33694dbb7c56466": {
       "entity_id": "sensor.koket_diskmaskin_programforlopp",
       "name": "Programförlopp",
-      "original_name": "Siemens Diskmaskin - Aktuell programstatus",
+      "original_name": "Siemens Diskmaskin - Program Progress",
       "device_id": "444edb1c05f7869597326dcc1621322a",
       "area_id": null
     },
@@ -58308,13 +58100,6 @@
       "device_id": "f66541be41de7e575c08477f5859cc87",
       "area_id": null
     },
-    "6ce73c6d853cd50e6ea2028519c86fbf": {
-      "entity_id": "script.esphome_sok_efter_wi_fi_nat",
-      "name": "ESPHome – sök efter Wi-Fi-nät",
-      "original_name": "ESPHome – sök efter Wi-Fi-nät",
-      "device_id": null,
-      "area_id": null
-    },
     "1b56871fb6c9fe86658620a9de207df7": {
       "entity_id": "script.godnatt_forbered_nasta_halsning_efter_rutinen",
       "name": null,
@@ -71705,40 +71490,269 @@
       "original_name": null,
       "device_id": "5a31e8b505386008c9510cc9952d662d",
       "area_id": null
+    },
+    "f9a2a9840881253d88ad484c34b02c92": {
+      "entity_id": "switch.schedule_bilvarme_08_11_13_00",
+      "name": null,
+      "original_name": "Bilvärme 08/11 13:00",
+      "device_id": "68b68a42f51476563481c7d951b8ee25",
+      "area_id": null
+    },
+    "f9e6d316133e1762ad41111b042af05b": {
+      "entity_id": "switch.schedule_bilvarme_08_11_13_00_2",
+      "name": null,
+      "original_name": "Bilvärme 08/11 13:00",
+      "device_id": "68b68a42f51476563481c7d951b8ee25",
+      "area_id": null
+    },
+    "7b4189374840ca87bb43a2f6058510bd": {
+      "entity_id": "button.alicias_tab_a7_lite_disconnect_device",
+      "name": null,
+      "original_name": "Disconnect device",
+      "device_id": "d5af8519d9580736388baf08e2880e22",
+      "area_id": null
+    },
+    "1b6fad9da16beb0f6431d8add068d59a": {
+      "entity_id": "sensor.alicias_tab_a7_lite_signal_strength",
+      "name": null,
+      "original_name": "Signal Strength",
+      "device_id": "d5af8519d9580736388baf08e2880e22",
+      "area_id": null
+    },
+    "8079dd110dfa7df289749ec3a55c7a18": {
+      "entity_id": "sensor.alicias_tab_a7_lite_rx_rate",
+      "name": null,
+      "original_name": "RX Rate",
+      "device_id": "d5af8519d9580736388baf08e2880e22",
+      "area_id": null
+    },
+    "676fd34ac88404b407370d222ab4baa2": {
+      "entity_id": "sensor.alicias_tab_a7_lite_tx_rate",
+      "name": null,
+      "original_name": "TX Rate",
+      "device_id": "d5af8519d9580736388baf08e2880e22",
+      "area_id": null
+    },
+    "1f581a6fdf468914005fa8b0fd92075b": {
+      "entity_id": "sensor.alicias_tab_a7_lite_noise_level",
+      "name": null,
+      "original_name": "Noise Level",
+      "device_id": "d5af8519d9580736388baf08e2880e22",
+      "area_id": null
+    },
+    "6379090774d96c09304899859e88ee74": {
+      "entity_id": "switch.alicias_tab_a7_lite_internet_access",
+      "name": null,
+      "original_name": "Internet Access",
+      "device_id": "d5af8519d9580736388baf08e2880e22",
+      "area_id": null
+    },
+    "8bc117a30b5cd45bafb94633a8096bdb": {
+      "entity_id": "update.koket_blomlampa_3_firmware",
+      "name": "Firmware",
+      "original_name": "Firmware",
+      "device_id": "0cc979ea34852945574729129825a6b2",
+      "area_id": null
+    },
+    "3a6ed34fa6c981a9c03bf73e72f1fbeb": {
+      "entity_id": "sensor.koket_blomlampa_3_beraknad_effekt",
+      "name": "Beräknad effekt",
+      "original_name": "Blomlampa 3 – beräknad energi power",
+      "device_id": "0cc979ea34852945574729129825a6b2",
+      "area_id": null
+    },
+    "a9181c238f6d0e56850440374c8d560c": {
+      "entity_id": "sensor.koket_blomlampa_3_beraknad_energi",
+      "name": "Beräknad energi",
+      "original_name": "Blomlampa 3 – beräknad energi energy",
+      "device_id": "0cc979ea34852945574729129825a6b2",
+      "area_id": null
+    },
+    "e2b64021359c7349e8ebf2240dbbb0e5": {
+      "entity_id": "button.koket_blomlampa_3_aktivera_scen",
+      "name": "Aktivera scen",
+      "original_name": "esphome09 Apply Scene",
+      "device_id": "0cc979ea34852945574729129825a6b2",
+      "area_id": null
+    },
+    "6e9073ecd36876eafaabc179cceabd01": {
+      "entity_id": "binary_sensor.koket_blomlampa_3_anslutning",
+      "name": "Anslutning",
+      "original_name": "Status",
+      "device_id": "0cc979ea34852945574729129825a6b2",
+      "area_id": null
+    },
+    "8be5eace1100e3bac7bc0bc883aacee6": {
+      "entity_id": "device_tracker.koket_blomlampa_3_8c_ce_4e_0c_ca_58",
+      "name": "",
+      "original_name": "8c:ce:4e:0c:ca:58",
+      "device_id": "72464832ea5d50edac5e918c2018497a",
+      "area_id": null
+    },
+    "d702dd32d5ea8bb566e6bc3bc58eb2ae": {
+      "entity_id": "sensor.koket_blomlampa_3_signalstyrka_via_ap_koket",
+      "name": "Signalstyrka via ap_koket",
+      "original_name": "Signal Strength",
+      "device_id": "7c98ea31c0db5d9db1de8cc6641c6606",
+      "area_id": null
+    },
+    "d362dbe9e850a1ccca7274963f6f8037": {
+      "entity_id": "sensor.koket_blomlampa_3_mottagningshastighet_via_ap_koket",
+      "name": "Mottagningshastighet via ap_koket",
+      "original_name": "RX Rate",
+      "device_id": "7c98ea31c0db5d9db1de8cc6641c6606",
+      "area_id": null
+    },
+    "844e8c2e85336f577fbfae7733e60081": {
+      "entity_id": "sensor.koket_blomlampa_3_sandningshastighet_via_ap_koket",
+      "name": "Sändningshastighet via ap_koket",
+      "original_name": "TX Rate",
+      "device_id": "7c98ea31c0db5d9db1de8cc6641c6606",
+      "area_id": null
+    },
+    "f3ab3c99c90b833f65f21666c5be669f": {
+      "entity_id": "sensor.koket_blomlampa_3_brusniva_via_ap_koket",
+      "name": "Brusnivå via ap_koket",
+      "original_name": "Noise Level",
+      "device_id": "7c98ea31c0db5d9db1de8cc6641c6606",
+      "area_id": null
+    },
+    "712af67947fe914967bb8f3486fb5438": {
+      "entity_id": "switch.koket_blomlampa_3_internetatkomst_via_ap_koket",
+      "name": "Internetåtkomst via ap_koket",
+      "original_name": "Internet Access",
+      "device_id": "7c98ea31c0db5d9db1de8cc6641c6606",
+      "area_id": null
+    },
+    "78f580c730596a767edcb0c63a342cd2": {
+      "entity_id": "switch.koket_blomlampa_3_internetatkomst_via_gw",
+      "name": "Internetåtkomst via gw",
+      "original_name": "Internet Access",
+      "device_id": "72464832ea5d50edac5e918c2018497a",
+      "area_id": null
+    },
+    "e82043eddbe7678e41ab74495676b287": {
+      "entity_id": "sensor.koket_blomlampa_3_signalstyrka_via_ap_verkstaden",
+      "name": "Signalstyrka via ap_verkstaden",
+      "original_name": "Signal Strength",
+      "device_id": "3f468b4d72344090ba3fc494f7562e9f",
+      "area_id": null
+    },
+    "971ba01c0f2bf029b01858c69cd72725": {
+      "entity_id": "sensor.koket_blomlampa_3_mottagningshastighet_via_ap_verkstaden",
+      "name": "Mottagningshastighet via ap_verkstaden",
+      "original_name": "RX Rate",
+      "device_id": "3f468b4d72344090ba3fc494f7562e9f",
+      "area_id": null
+    },
+    "8231209e3155d494f17b7df2474198ca": {
+      "entity_id": "sensor.koket_blomlampa_3_sandningshastighet_via_ap_verkstaden",
+      "name": "Sändningshastighet via ap_verkstaden",
+      "original_name": "TX Rate",
+      "device_id": "3f468b4d72344090ba3fc494f7562e9f",
+      "area_id": null
+    },
+    "d83cf0e238fc3ef9b9c547602d119386": {
+      "entity_id": "sensor.koket_blomlampa_3_brusniva_via_ap_verkstaden",
+      "name": "Brusnivå via ap_verkstaden",
+      "original_name": "Noise Level",
+      "device_id": "3f468b4d72344090ba3fc494f7562e9f",
+      "area_id": null
+    },
+    "6a58493dabf7661d03dce4847e5d69e5": {
+      "entity_id": "switch.koket_blomlampa_3_internetatkomst_via_ap_verkstaden",
+      "name": "Internetåtkomst via ap_verkstaden",
+      "original_name": "Internet Access",
+      "device_id": "3f468b4d72344090ba3fc494f7562e9f",
+      "area_id": null
+    },
+    "f39d12b9b62e583f2a562bfe3a9c745d": {
+      "entity_id": "sensor.koket_blomlampa_3_signalstyrka_via_ap_kontoret",
+      "name": "Signalstyrka via ap_kontoret",
+      "original_name": "Signal Strength",
+      "device_id": "227724855ae674b89183ee9f92632aa2",
+      "area_id": null
+    },
+    "777d421f8c731a0be0fd6c448da71da0": {
+      "entity_id": "sensor.koket_blomlampa_3_mottagningshastighet_via_ap_kontoret",
+      "name": "Mottagningshastighet via ap_kontoret",
+      "original_name": "RX Rate",
+      "device_id": "227724855ae674b89183ee9f92632aa2",
+      "area_id": null
+    },
+    "a41edecb85a0ee75becd3042ffbbd7e2": {
+      "entity_id": "sensor.koket_blomlampa_3_sandningshastighet_via_ap_kontoret",
+      "name": "Sändningshastighet via ap_kontoret",
+      "original_name": "TX Rate",
+      "device_id": "227724855ae674b89183ee9f92632aa2",
+      "area_id": null
+    },
+    "c480edc24a89c1ec59aae8f037c8291e": {
+      "entity_id": "sensor.koket_blomlampa_3_brusniva_via_ap_kontoret",
+      "name": "Brusnivå via ap_kontoret",
+      "original_name": "Noise Level",
+      "device_id": "227724855ae674b89183ee9f92632aa2",
+      "area_id": null
+    },
+    "0ef93f1e3356d813fd74668917450646": {
+      "entity_id": "switch.koket_blomlampa_3_internetatkomst_via_ap_kontoret",
+      "name": "Internetåtkomst via ap_kontoret",
+      "original_name": "Internet Access",
+      "device_id": "227724855ae674b89183ee9f92632aa2",
+      "area_id": null
+    },
+    "e441d67215c43acc4624fe4a14b15311": {
+      "entity_id": "button.koket_blomlampa_3_koppla_fran_enhet_via_ap_koket",
+      "name": "Koppla från enhet via ap_koket",
+      "original_name": "Disconnect device",
+      "device_id": "7c98ea31c0db5d9db1de8cc6641c6606",
+      "area_id": null
+    },
+    "085e57191147f9d1eb3d117f05c55468": {
+      "entity_id": "button.koket_blomlampa_3_koppla_fran_enhet_via_ap_poolen",
+      "name": "Koppla från enhet via ap_poolen",
+      "original_name": "Disconnect device",
+      "device_id": "7938b2ad630e3f5c590057a1fd59df79",
+      "area_id": null
+    },
+    "39b98944b4b3c7b5b83c6b2c092bc3f6": {
+      "entity_id": "sensor.koket_blomlampa_3_signalstyrka_via_ap_poolen",
+      "name": "Signalstyrka via ap_poolen",
+      "original_name": "Signal Strength",
+      "device_id": "7938b2ad630e3f5c590057a1fd59df79",
+      "area_id": null
+    },
+    "e8d568a069b51e9eb61e7e68913d6170": {
+      "entity_id": "sensor.koket_blomlampa_3_mottagningshastighet_via_ap_poolen",
+      "name": "Mottagningshastighet via ap_poolen",
+      "original_name": "RX Rate",
+      "device_id": "7938b2ad630e3f5c590057a1fd59df79",
+      "area_id": null
+    },
+    "f15e3ab1ab7c7058929247f7f17967df": {
+      "entity_id": "sensor.koket_blomlampa_3_sandningshastighet_via_ap_poolen",
+      "name": "Sändningshastighet via ap_poolen",
+      "original_name": "TX Rate",
+      "device_id": "7938b2ad630e3f5c590057a1fd59df79",
+      "area_id": null
+    },
+    "ce399d2ea00fe4c333790af4971bd7e4": {
+      "entity_id": "sensor.koket_blomlampa_3_brusniva_via_ap_poolen",
+      "name": "Brusnivå via ap_poolen",
+      "original_name": "Noise Level",
+      "device_id": "7938b2ad630e3f5c590057a1fd59df79",
+      "area_id": null
+    },
+    "e81628ce06300f1c1f3cba7c4e8d9be5": {
+      "entity_id": "switch.koket_blomlampa_3_internetatkomst_via_ap_poolen",
+      "name": "Internetåtkomst via ap_poolen",
+      "original_name": "Internet Access",
+      "device_id": "7938b2ad630e3f5c590057a1fd59df79",
+      "area_id": null
     }
   },
   "compatibility_exceptions": {
-    "update.blomlampa_ateljen_firmware": "Utreds senare enligt användaren",
     "light.blomlampa_ateljen_esphome09_light": "Alexa: sparad exponering, stabil identitet bevaras även medan Alexa är avstängt",
-    "sensor.blomlampa_ateljen_energy_power": "Utreds senare enligt användaren",
-    "input_number.slider": "Utreds senare enligt användaren",
-    "sensor.blomlampa_ateljen_energy_energy": "Utreds senare enligt användaren",
-    "button.blomlampa_ateljen_esphome09_apply_scene": "Utreds senare enligt användaren",
-    "binary_sensor.blomlampa_ateljen_status": "Utreds senare enligt användaren",
-    "device_tracker.8c_ce_4e_0c_ca_58_8c_ce_4e_0c_ca_58": "Utreds senare enligt användaren",
-    "sensor.koket_8c_ce_4e_0c_ca_58_signal_strength": "Utreds senare enligt användaren",
-    "sensor.koket_8c_ce_4e_0c_ca_58_rx_rate": "Utreds senare enligt användaren",
-    "sensor.koket_8c_ce_4e_0c_ca_58_tx_rate": "Utreds senare enligt användaren",
-    "sensor.koket_8c_ce_4e_0c_ca_58_noise_level": "Utreds senare enligt användaren",
-    "switch.koket_8c_ce_4e_0c_ca_58_internet_access": "Utreds senare enligt användaren",
-    "switch.koket_192_168_30_109_internet_access": "Utreds senare enligt användaren",
-    "sensor.8c_ce_4e_0c_ca_58_signal_strength": "Utreds senare enligt användaren",
-    "sensor.8c_ce_4e_0c_ca_58_rx_rate": "Utreds senare enligt användaren",
-    "sensor.8c_ce_4e_0c_ca_58_tx_rate": "Utreds senare enligt användaren",
-    "sensor.8c_ce_4e_0c_ca_58_noise_level": "Utreds senare enligt användaren",
-    "switch.8c_ce_4e_0c_ca_58_internet_access": "Utreds senare enligt användaren",
-    "sensor.8c_ce_4e_0c_ca_58_signal_strength_2": "Utreds senare enligt användaren",
-    "sensor.8c_ce_4e_0c_ca_58_rx_rate_2": "Utreds senare enligt användaren",
-    "sensor.8c_ce_4e_0c_ca_58_tx_rate_2": "Utreds senare enligt användaren",
-    "sensor.8c_ce_4e_0c_ca_58_noise_level_2": "Utreds senare enligt användaren",
-    "switch.8c_ce_4e_0c_ca_58_internet_access_2": "Utreds senare enligt användaren",
-    "button.koket_8c_ce_4e_0c_ca_58_disconnect_device": "Utreds senare enligt användaren",
-    "button.8c_ce_4e_0c_ca_58_disconnect_device": "Utreds senare enligt användaren",
-    "sensor.8c_ce_4e_0c_ca_58_signal_strength_3": "Utreds senare enligt användaren",
-    "sensor.8c_ce_4e_0c_ca_58_rx_rate_3": "Utreds senare enligt användaren",
-    "sensor.8c_ce_4e_0c_ca_58_tx_rate_3": "Utreds senare enligt användaren",
-    "sensor.8c_ce_4e_0c_ca_58_noise_level_3": "Utreds senare enligt användaren",
-    "switch.8c_ce_4e_0c_ca_58_internet_access_3": "Utreds senare enligt användaren",
     "light.fonsterlampor_sovrum": "Alexa: sparad exponering, stabil identitet bevaras även medan Alexa är avstängt",
     "light.alla_blomlampor": "Alexa: sparad exponering, stabil identitet bevaras även medan Alexa är avstängt",
     "light.julbelysning_utomhus_esphome23_light": "Alexa: sparad exponering, stabil identitet bevaras även medan Alexa är avstängt",

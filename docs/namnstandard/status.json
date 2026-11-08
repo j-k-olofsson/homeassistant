@@ -1,18 +1,19 @@
 {
-  "status": "completed_with_user_deferred_items",
+  "status": "completed_with_separate_operational_issues",
   "completed_date": "2026-11-08",
   "counts": {
-    "registered_entities": 10150,
-    "registered_devices": 1070,
+    "registered_entities": 10156,
+    "registered_devices": 1071,
     "unregistered_state_entities": 111,
-    "net_entity_ids_changed_since_original": 9719,
-    "entity_display_name_overrides_changed": 7635,
-    "entity_alias_lists_changed": 8221,
-    "device_names_changed": 288,
-    "device_areas_changed": 103,
-    "entities_added_since_original": 21,
-    "devices_added_since_original": 4,
-    "documented_id_exceptions": 113
+    "net_entity_ids_changed_since_original": 9747,
+    "entity_display_name_overrides_changed": 7636,
+    "entity_alias_lists_changed": 8220,
+    "device_names_changed": 293,
+    "device_areas_changed": 106,
+    "entities_added_since_original": 29,
+    "devices_added_since_original": 5,
+    "documented_id_exceptions": 83,
+    "entities_removed_since_original": 2
   },
   "verification": {
     "registered_entities": 10150,
@@ -98,22 +99,23 @@
     "automation_states_restored": 81,
     "registry_identity_preserved": true
   },
-  "user_deferred_items": [
-    "input_number.slider",
-    "Blomlampa (ateljén) / ESPHome09"
-  ],
+  "user_deferred_items": [],
   "backup_before_original": "22f83cfa",
   "backup_before_completion": "d1a7d04b",
   "backup_after_completion": "8dc2d539",
   "reference_audit": {
     "read_only": true,
-    "registered_entities": 10150,
+    "registered_entities": 10156,
     "duplicate_entity_ids": 0,
     "obsolete_active_references": [],
+    "inactive_unregistered_exposure_exclusions": [
+      "input_number.slider",
+      "script.esphome_sok_efter_wi_fi_nat"
+    ],
     "new_entities_to_review": [],
     "changed_entities_to_review": [],
     "removed_since_review": 0,
-    "compatibility_exceptions": 113
+    "compatibility_exceptions": 83
   },
   "final_post_steps": {
     "physical_root_title": "verified",
@@ -142,5 +144,87 @@
       "Backup"
     ]
   },
-  "completed_at": "2026-11-08T09:47:49.557411+00:00"
+  "completed_at": "2026-11-08T09:47:49.557411+00:00",
+  "latest_followup_verification": {
+    "status": "naming_and_cleanup_verified_with_separate_operational_issues",
+    "registered_entities": 10156,
+    "registered_devices": 1071,
+    "renamed_entity_ids": 29,
+    "renamed_device_records": 6,
+    "removed_helpers": 2,
+    "automation_on_off_states_preserved": 81,
+    "startup_ready_flag_restored": false,
+    "helper_value_differences": [],
+    "observed_availability_differences_vs_before_task": [
+      "media_player.sovrummet_diegos_vackarklocka_cast",
+      "media_player.mannis_vackarklocka_cast",
+      "sensor.sovrummet_diegos_vackarklocka_beraknad_effekt",
+      "sensor.sovrummet_diegos_vackarklocka_beraknad_energi"
+    ],
+    "integration_failures_observed_after_restart": [
+      {
+        "entry_id": "01KC1W19A1VHXPTMNJ7QFS2XM6",
+        "domain": "slack",
+        "state": "setup_retry"
+      }
+    ],
+    "openai_options_unchanged": true,
+    "openai_credential_unchanged_since_task_start": false,
+    "openai_credential_changed_separately_during_work": true,
+    "openai_final_state": "loaded",
+    "voice_exposures_preserved": true,
+    "config_check": {
+      "result": "valid",
+      "errors": null,
+      "warnings": null
+    },
+    "firmware_uploaded": false,
+    "physical_actions_tested": false
+  },
+  "latest_followup_backup_before": "d381dcba",
+  "latest_followup_backup_after": "d8d4fa67",
+  "updated_at": "2026-11-08T11:51:47.976060+00:00",
+  "notify_flocken": {
+    "status": "deferred_by_user_until_new_token",
+    "action": "notify.flocken",
+    "integration_state": "setup_retry",
+    "upstream_error": "token_revoked",
+    "config_data_unchanged_vs_original_backup": true,
+    "options_unchanged_vs_original_backup": true,
+    "service_name_unchanged": "flocken",
+    "root_cause": "Slack avvisar den återkallade token och HA registrerar därför inte tjänsten",
+    "repair_issue": "script_unknown_service_references_script.granny_skicka_meddelande_56b84d17",
+    "messages_sent_for_testing": false,
+    "user_decision": "Användaren skaffar ny token i efterhand"
+  },
+  "followup_reference_audit": {
+    "status": "verified",
+    "active_sources_and_caches_checked": 349,
+    "active_references_remaining": [],
+    "historical_registry_tombstone_matches": 5,
+    "inactive_unregistered_exposure_exclusions": [
+      "input_number.slider",
+      "script.esphome_sok_efter_wi_fi_nat"
+    ],
+    "read_errors": [],
+    "custom_runtime_files_checked_before_removal": 2585,
+    "custom_runtime_callers_found": 0,
+    "additional_shared_jsonc_files_checked_as_text": 21,
+    "shared_jsonc_callers_found": 0
+  },
+  "latest_followup_backup_after_details": {
+    "status": "supervisor_completed_without_errors",
+    "slug": "d8d4fa67",
+    "type": "full",
+    "bytes": 6765025280,
+    "locations": [
+      "Backup"
+    ],
+    "includes_mariadb": true,
+    "archive_read_tested": false,
+    "full_restore_tested": false
+  },
+  "deferred_operational_items": [
+    "Slack / notify.flocken: ny giltig token införs av användaren i efterhand"
+  ]
 }

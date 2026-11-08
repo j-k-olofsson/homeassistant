@@ -1,0 +1,15 @@
+{
+  "status": "verified",
+  "active_sources_and_caches_checked": 349,
+  "active_references_remaining": [],
+  "historical_registry_tombstone_matches": 5,
+  "inactive_unregistered_exposure_exclusions": [
+    "input_number.slider",
+    "script.esphome_sok_efter_wi_fi_nat"
+  ],
+  "read_errors": [],
+  "custom_runtime_files_checked_before_removal": 2585,
+  "custom_runtime_callers_found": 0,
+  "additional_shared_jsonc_files_checked_as_text": 21,
+  "shared_jsonc_callers_found": 0
+}

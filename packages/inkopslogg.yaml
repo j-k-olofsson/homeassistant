@@ -1,0 +1,6 @@
+# Sortera själva listan så ordningen gäller även i HA:s inbyggda Att göra-vy.
+# Datum avser postens datumfält (HA:s förfallodatum), inte datum i fritext.
+# Odaterade poster visas först. Samma datum: senast skapade lokala post först.
+todo_order:
+  entity_ids:
+    - todo.inkopslogg
