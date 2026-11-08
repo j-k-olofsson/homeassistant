@@ -1,0 +1,16 @@
+{
+  "stage": "20-bermuda-matpunkter",
+  "status": "verified",
+  "operations": 44,
+  "devices": 0,
+  "entities": 44,
+  "entity_ids_unchanged": 10150,
+  "invariants_unchanged": true,
+  "missing_target_states": [],
+  "new_unavailable_targets": [],
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  }
+}

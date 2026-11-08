@@ -1,0 +1,10 @@
+{
+  "read_only": true,
+  "registered_entities": 10150,
+  "duplicate_entity_ids": 0,
+  "obsolete_active_references": [],
+  "new_entities_to_review": [],
+  "changed_entities_to_review": [],
+  "removed_since_review": 0,
+  "compatibility_exceptions": 113
+}

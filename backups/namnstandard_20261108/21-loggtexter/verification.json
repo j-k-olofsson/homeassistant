@@ -1,0 +1,10 @@
+{
+  "status": "verified",
+  "changes": 2,
+  "scope": "Endast två referenser i användarsynliga felmeddelanden",
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  }
+}

@@ -1,0 +1,152 @@
+--- a/custom_components/plant/sensor.py
++++ b/custom_components/plant/sensor.py
+@@ -262,15 +262,15 @@
+         # entity_id -> unsubscribe for the state listeners this sensor holds
+         self._tracker: dict[str, CALLBACK_TYPE] = {}
+         self._restored_value_active = False
+-        # Only force entity_id for existing entities (backwards compat).
++        # Resolve registered IDs before derived sensors capture their sources.
+         # New entities let has_entity_name derive the entity_id automatically.
+         ent_reg = er_async_get(hass)
+-        if ent_reg.async_get_entity_id(SENSOR_DOMAIN, DOMAIN, self._attr_unique_id):
+-            self.entity_id = async_generate_entity_id(
+-                f"{SENSOR_DOMAIN}.{{}}",
+-                f"{self._plant.name} {self._entity_id_key}",
+-                current_ids={},
+-            )
++        if (
++            registered_entity_id := ent_reg.async_get_entity_id(
++                SENSOR_DOMAIN, DOMAIN, self._attr_unique_id
++            )
++        ):
++            self.entity_id = registered_entity_id
+         # Default-disable entities with no external sensor configured.
+         # HA only applies entity_registry_enabled_default on first registration,
+         # so user-enabled entities survive config entry reloads.
+@@ -852,12 +852,12 @@
+ 
+         # Only force entity_id for existing entities (backwards compat)
+         ent_reg = er_async_get(hass)
+-        if ent_reg.async_get_entity_id(SENSOR_DOMAIN, DOMAIN, self._attr_unique_id):
+-            self.entity_id = async_generate_entity_id(
+-                f"{SENSOR_DOMAIN}.{{}}",
+-                f"{self._plant.name} {self._entity_id_key}",
+-                current_ids={},
+-            )
++        if (
++            registered_entity_id := ent_reg.async_get_entity_id(
++                SENSOR_DOMAIN, DOMAIN, self._attr_unique_id
++            )
++        ):
++            self.entity_id = registered_entity_id
+ 
+     @property
+     def device_info(self) -> DeviceInfo:
+@@ -1047,12 +1047,12 @@
+         super().__init__(hass, config, plantdevice)
+         self._follow_unit = False
+         ent_reg = er_async_get(hass)
+-        if ent_reg.async_get_entity_id(SENSOR_DOMAIN, DOMAIN, self._attr_unique_id):
+-            self.entity_id = async_generate_entity_id(
+-                f"{SENSOR_DOMAIN}.{{}}",
+-                f"{self._plant.name} {self._entity_id_key}",
+-                current_ids={},
+-            )
++        if (
++            registered_entity_id := ent_reg.async_get_entity_id(
++                SENSOR_DOMAIN, DOMAIN, self._attr_unique_id
++            )
++        ):
++            self.entity_id = registered_entity_id
+ 
+     def _is_ppfd_source(self) -> bool:
+         """Check if the external sensor provides PPFD directly (not lux).
+@@ -1287,14 +1287,12 @@
+             integration_kwargs["device_class"] = None
+         super().__init__(**integration_kwargs)
+         ent_reg = er_async_get(hass)
+-        if ent_reg.async_get_entity_id(
+-            SENSOR_DOMAIN, DOMAIN, f"{config.entry_id}-ppfd-integral"
++        if (
++            registered_entity_id := ent_reg.async_get_entity_id(
++                SENSOR_DOMAIN, DOMAIN, f'{config.entry_id}-ppfd-integral'
++            )
+         ):
+-            self.entity_id = async_generate_entity_id(
+-                f"{SENSOR_DOMAIN}.{{}}",
+-                f"{self._plant.name} Total {READING_PPFD} Integral",
+-                current_ids={},
+-            )
++            self.entity_id = registered_entity_id
+ 
+     @property
+     def device_info(self) -> DeviceInfo:
+@@ -1357,12 +1355,12 @@
+             utility_meter_kwargs["hass"] = hass
+         super().__init__(**utility_meter_kwargs)
+         ent_reg = er_async_get(hass)
+-        if ent_reg.async_get_entity_id(SENSOR_DOMAIN, DOMAIN, f"{config.entry_id}-dli"):
+-            self.entity_id = async_generate_entity_id(
+-                f"{SENSOR_DOMAIN}.{{}}",
+-                f"{self._plant.name} {READING_DLI}",
+-                current_ids={},
+-            )
++        if (
++            registered_entity_id := ent_reg.async_get_entity_id(
++                SENSOR_DOMAIN, DOMAIN, f'{config.entry_id}-dli'
++            )
++        ):
++            self.entity_id = registered_entity_id
+ 
+     @property
+     def native_unit_of_measurement(self) -> str:
+@@ -1426,14 +1424,12 @@
+             statistics_kwargs["hass"] = hass
+         super().__init__(**statistics_kwargs)
+         ent_reg = er_async_get(hass)
+-        if ent_reg.async_get_entity_id(
+-            SENSOR_DOMAIN, DOMAIN, f"{config.entry_id}-dli-24h"
++        if (
++            registered_entity_id := ent_reg.async_get_entity_id(
++                SENSOR_DOMAIN, DOMAIN, f'{config.entry_id}-dli-24h'
++            )
+         ):
+-            self.entity_id = async_generate_entity_id(
+-                f"{SENSOR_DOMAIN}.{{}}",
+-                f"{self._plant.name} {READING_DLI}_24h",
+-                current_ids={},
+-            )
++            self.entity_id = registered_entity_id
+ 
+     @property
+     def native_unit_of_measurement(self) -> str:
+--- a/custom_components/plant/number.py
++++ b/custom_components/plant/number.py
+@@ -335,7 +335,7 @@
+         self.hass = hass
+         self._plant = plantdevice
+         self._own_state_unsub: CALLBACK_TYPE | None = None
+-        # Only force entity_id for existing entities (backwards compat).
++        # Resolve registered IDs before derived sensors capture their sources.
+         # New entities let has_entity_name derive the entity_id automatically,
+         # which enables auto-rename when the device is renamed.
+         ent_reg = er_async_get(hass)
+@@ -348,12 +348,12 @@
+             ent_reg.async_get_entity_id(NUMBER_DOMAIN, DOMAIN, self._attr_unique_id)
+             is None
+         )
+-        if not self._is_new_entity:
+-            self.entity_id = async_generate_entity_id(
+-                f"{NUMBER_DOMAIN}.{{}}",
+-                f"{self._plant.name} {self._entity_id_key}",
+-                current_ids={},
+-            )
++        if (
++            registered_entity_id := ent_reg.async_get_entity_id(
++                NUMBER_DOMAIN, DOMAIN, self._attr_unique_id
++            )
++        ):
++            self.entity_id = registered_entity_id
+         # pylint: disable=no-member
+         if (
+             not hasattr(self, "_attr_native_value")

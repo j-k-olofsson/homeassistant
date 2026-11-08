@@ -1,0 +1,16 @@
+{
+  "registered_entities": 10150,
+  "registered_devices": 1070,
+  "registry_identity_and_settings_preserved": true,
+  "automations_restored": 81,
+  "new_integration_setup_failures": [],
+  "availability_regressions": [],
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  },
+  "source_files_match_verified_plan": true,
+  "google_exposed_entities": 36,
+  "alexa_saved_exposures": 41
+}

@@ -1,51 +1,31 @@
-# Återställning av namnfasen
+# Återställning efter namnstandardisering
 
-## Full återställningspunkt före ändringar
+Använd Home Assistants säkerhetskopierings-/återställningsfunktion i Inställningar → System → Säkerhetskopior, eller återställningsflödet vid onboarding om HA inte startar. Återställning skriver över nuvarande läge och ska endast göras när den behövs. Spara först en kopia av det dåvarande läget om möjligt.
 
-- Namn i HA: **Före enhetlig namnsättning 2026-11-07**.
-- Backup-ID: `22f83cfa`.
-- Start: 7 november 2026 kl. 18.13 svensk tid.
-- Typ: fullständig. HA 2026.11.0, samtliga 16 appar inklusive MariaDB, share, lokala appar, ssl och media.
-- Storlek: 6 219 632 640 byte, cirka 6,2 GB.
-- Ursprunglig lagringsplats: nätverksplatsen `Backup`.
-- Extra kopia finns i den lokala `/backup`-mappen; den aktuella sökvägen står i den privata manifestfilen nedan. Arkivkopian ligger utanför konfigurationen för att undvika att den packas in i kommande konfigurationskopior.
-- Krypterad: nej enligt Supervisor. Ingen separat dekrypteringsnyckel krävs för denna kopia. Arkivet innehåller hemligheter och ska hanteras som en fullständig systemkopia.
+## Kontrollpunkter
 
-Arkivet har hämtats, SHA-256-beräknats och öppnats. Centrala YAML-filer och registren har provlästs ur det inre HA-arkivet till en separat mapp. Huvudkonfiguration, automationer och skript matchade återställningskopiorna före ändring. Detta verifierar läsbarhet av dessa delar; det är inte ett fullständigt prov där en återställd HA-instans startats. MariaDB-appens arkiv finns med, men någon återläsning av databasen till en server har inte gjorts.
+| Kopia | Innehåll / läge |
+|---|---|
+| `22f83cfa` | Full kopia före namnändringar 7 november. HA, MariaDB och övriga inkluderade appar/data. |
+| `d59ec955` | Delkopia HA + MariaDB före etapp 14 den 7 november. |
+| `d1a7d04b` | Full kopia 8 november före slutetapperna. |
+| `8dc2d539` | Full kopia av det färdiga namnsystemet 8 november: HA + MariaDB + 15 övriga appar och inkluderade mappar. |
 
-Manifest och kontrollresultat finns under `/homeassistant/backups/namnstandard_20261107/full_backup_archive_manifest.json`.
+**Återställ HA-konfigurationen och MariaDB från samma kontrollpunkt.** ID-ändringar och recorderhistorik hör ihop. Att bara kopiera tillbaka en registerfil medan HA kör är inte en säker återställning. Vid full återställning används även apparnas/dataområdenas sparade läge. Följ HA:s aktuella återställningsdialog och se till att återställnings-/krypteringsnyckel finns om dialogen kräver den.
 
-Vid behov av exakt återgång används HA:s ordinarie återställning under **Inställningar → System → Säkerhetskopior**, med kopian ovan. En full återställning återför även andra data till tidpunkten före namnfasen. Läs [HA:s återställningsanvisningar](https://www.home-assistant.io/common-tasks/general/#restoring-a-backup) före genomförande. Ingen återställning har körts på den aktiva installationen.
+Startkopian och kopian före slutetapperna finns på säkerhetskopieringsplatsen Backup och som extra lokala arkiv:
 
-## Separata återställningskopior och journaler
+- `/backup/namnstandard_fore_20261107_22f83cfa.tar`
+- `/backup/namnstandard_fore_slutforande_20261108_d1a7d04b.tar`
 
-Privat arbetsmapp: `/homeassistant/backups/namnstandard_20261107/`.
+Centrala konfigurations-/registerfiler har provlästs. SHA- och arkivmanifest för kopian före slutförandet finns i den privata arbetsmappen. En full provåterställning till en separat körande instans har inte gjorts. Återställning av originalkopian tar bort alla efterföljande namnändringar; `d1a7d04b` återgår till läget före slutetapperna, inte till slutrapportens namn.
 
-- `baseline/`: YAML och `.storage` före ändring.
-- `live_baseline/`: körande register, tillstånd och panelkonfigurationer före ändring.
-- Varje namnetapp har `before/`, `after/`, `plan.json`, `journal.jsonl` och `verification.json`.
-- `05-kort-och-namnmallar/`: före/efter-kopior av ändrade YAML-filer och paneler samt malltester.
-- `checkpoint-after-names/`: slutkontroll efter namnfasen.
-- `migration_tooling/`: kopior av skripten som skapade planer och verifierade arbetet.
+De privata etappmapparna innehåller före-filer och ID-kartor för felsökning av en avgränsad etapp. Använd dem inte som instruktion att klistra in äldre `.storage`-filer i en körande installation. Arbetsverktygens interna återställning kräver rätt etapp, databasläge och stoppkontroll.
 
-Namnverktyget i `/homeassistant/tools/ha_naming_migration.py` kan återställa stödda namn- och aliasfält i en etapp med läget `rollback-names <etappnamn>`. Det vägrar om de berörda fälten ändrats sedan etappen, så senare överlappande ändringar måste hanteras först. Det ska bara köras vid avsedd återgång. Verktyget använder den befintliga Supervisor-token från miljön och skriver inte ut den.
+## Verifierad slutkopia `8dc2d539`
 
-API-återställningen återför namnfälten men kan inte återskapa HA:s interna `compat_name` exakt. För identiskt kompatibilitetsläge krävs den fullständiga återställningspunkten. `.storage` ska inte skrivas över medan HA kör.
+Supervisor avslutade jobbet till 100 % utan fel. Kopian finns på platsen Backup och dessutom som `/backup/namnstandard_slutford_20261108_8dc2d539.tar` (filrättighet 600). Storlek: 6716313600 byte.
 
-För käll- och paneländringarna i etapp 05 finns före/efter-filer. Dessa återställs som en sammanhängande ändring: mallkonsumenter och panelmallar måste återföras innan `ha_namn.jinja` tas bort. Därefter laddas de två berörda automationerna om separat. Filernas aktuella innehåll måste först jämföras så att senare ändringar inte skrivs över.
+SHA-256: `3fecc51d62ef09d5d45b59142b2f5cae0474449fe3e652d8ba2ed9acba7bc104`.
 
-Två avbrutna förkontroller finns kvar i arbetsmappen. Den första stoppade före någon namnändring när utökade registerfält saknades. Den andra återförde käll- och paneländringarna när en för strikt jämförelse räknade en mallvariabel som entitetsreferens. Båda korrigerades och motsvarande etapper kördes därefter med godkända slutkontroller.
-
-## Kontrollpunkt efter namnfasen och de första ID-bytena
-
-Backup-ID: `d59ec955`. Namn: **Kontrollpunkt namnsättning – svenska namn och 55 klimat-ID 2026-11-07**. Skapad 2026-11-07 18.55 svensk tid. Cirka 4.87 GB på nätverksplatsen Backup.
-
-Denna delkopia innehåller HA-konfiguration och MariaDB inklusive databasen, vid den verifierade kontrollpunkten med 55 migrerade klimat-ID:n. Övriga appar ändrades inte i namnfasen och ingår i den fullständiga startkopian. Supervisor har rapporterat färdig backup utan fel; en faktisk återläsning har inte provats.
-
-ID-etappernas mappar `08-id-pilot-toaletten` och `09-id-klimatsensorer` innehåller ID-kartor, berörda källfiler/paneler, historik-/statistikjämförelser och journaler. Vid återgång måste ID:n och deras beroenden återföras tillsammans. Verktyget för vanliga namnbyten ska inte användas som ensam återställning av ID-etapper. En säker full återgång till startläget finns i kopian `22f83cfa`; en återgång till den nya kontrollpunkten använder `d59ec955`.
-
-`13-natverkskort-kontext` innehåller före-/efterkopior av kartornas JavaScript och resursregistreringar. Återställ respektive skript och dess resursversion tillsammans, och ladda därefter om kontrollpanelen.
-
-## Etapp 14 efter kontrollpunkten
-
-35 firmware-entiteter fick enhetliga ID:n efter kontrollpunkten `d59ec955`. Ingen firmware installerades. `14-id-firmware/` innehåller ID-karta, före-/efterregister och verifierad historikjämförelse. De berörda ID:na hade inga identifierade aktiva konfigurationsreferenser att skriva om. Återgång ska ändå göras som en ID-migration genom registret så att historikens metadata följer med; en registerfil får inte ensam skrivas över medan HA kör.
+Konfiguration, skript, entitetsregister, integrationsregister och båda ändrade Plant-källfilerna har lästs ur det hämtade arkivet. De 10 150 registeridentiteterna och granskade namnfälten stämmer med slutgranskningen. Arkivet innehåller MariaDB. Detta är en arkiv-/innehållskontroll; ingen full provåterställning har gjorts. Slutrapportens efterföljande metadata om själva säkerhetskopian skrevs efter kopieringstillfället.

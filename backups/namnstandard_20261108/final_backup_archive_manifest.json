@@ -1,0 +1,21 @@
+{
+  "status": "verified",
+  "slug": "8dc2d539",
+  "path": "/backup/namnstandard_slutford_20261108_8dc2d539.tar",
+  "bytes": 6716313600,
+  "sha256": "3fecc51d62ef09d5d45b59142b2f5cae0474449fe3e652d8ba2ed9acba7bc104",
+  "archive_read_test": [
+    "data/.storage/core.config_entries",
+    "data/.storage/core.entity_registry",
+    "data/configuration.yaml",
+    "data/custom_components/plant/number.py",
+    "data/custom_components/plant/sensor.py",
+    "data/scripts.yaml"
+  ],
+  "final_registry_matches_review": true,
+  "homeassistant_and_mariadb_included": true,
+  "full_restore_tested": false,
+  "locations": [
+    "Backup"
+  ]
+}

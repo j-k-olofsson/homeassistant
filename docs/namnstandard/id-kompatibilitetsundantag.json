@@ -65,7 +65,6 @@
   "input_boolean.tand_ljusen": "Google Assistant: externt enhets-ID bevaras",
   "input_boolean.slack_ljusen": "Google Assistant: externt enhets-ID bevaras",
   "light.utomhuslampa": "Alexa: sparad exponering, stabil identitet bevaras även medan Alexa är avstängt",
-  "sensor.utomhus_klimatsensor_temperatur": "Google Assistant: externt enhets-ID bevaras",
   "light.shellyplug_s_083a8dc344dd": "ESPHome: befintlig firmware/källa använder detta stabila HA-ID",
   "light.shellypro3_ec626089edbc_switch_0": "ESPHome: befintlig firmware/källa använder detta stabila HA-ID",
   "switch.shelly_pro_3_verkstaden_switch_1": "ESPHome: befintlig firmware/källa använder detta stabila HA-ID",
@@ -111,6 +110,6 @@
   "sensor.sovrummet_temp": "Alexa: sparad exponering, stabil identitet bevaras även medan Alexa är avstängt",
   "sensor.honshuset_temp": "Alexa: sparad exponering, stabil identitet bevaras även medan Alexa är avstängt",
   "sensor.verandan_temp": "Alexa: sparad exponering, stabil identitet bevaras även medan Alexa är avstängt",
-  "sensor.utomhus_temp": "Alexa: sparad exponering, stabil identitet bevaras även medan Alexa är avstängt",
+  "sensor.utomhus_temp": "Google Assistant: externt enhets-ID bevaras; Alexa: sparad exponering, stabil identitet bevaras även medan Alexa är avstängt",
   "calendar.sophamtning": "Kalenderintegration: stabilt ID bevaras för oförändrad historikrepresentation och kalenderadress"
 }

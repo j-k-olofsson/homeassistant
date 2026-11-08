@@ -1,169 +1,146 @@
 {
-  "full_task_complete": false,
-  "registered_entities": 10129,
-  "registered_devices": 1066,
-  "state_entities_without_registry": 111,
-  "device_names_changed_unique": 261,
-  "entity_names_changed_unique": 7173,
-  "aliases_secured_unique": 7774,
-  "device_areas_changed_unique": 103,
-  "ids_changed": 90,
-  "history_records_verified": 1773,
-  "statistics_points_verified": 989,
-  "statistics_metadata_migrated": 43,
-  "name_stages_verified": [
-    "01-klimat-och-plantsensorer",
-    "02-esphome-visningsnamn",
-    "03-shelly-vitvaror-batterier",
-    "04-hjalpare-grupper-automationer",
-    "06-vaxt-och-energisensorer",
-    "07-bekraftade-rum",
-    "10-lankade-natverksenheter",
-    "11-mobile_app-namn-01",
-    "11-mobile_app-namn-02",
-    "11-mobile_app-namn-03",
-    "11-mobile_app-namn-04",
-    "11-mobile_app-namn-05",
-    "11-mobile_app-namn-06",
-    "11-openwrt-namn-01",
-    "11-openwrt-namn-02",
-    "11-openwrt-namn-03",
-    "11-openwrt-namn-04",
-    "11-openwrt-namn-05",
-    "11-openwrt-namn-06",
-    "11-openwrt-namn-07",
-    "11-openwrt-namn-08",
-    "11-openwrt-namn-09",
-    "11-openwrt-namn-10",
-    "11-openwrt-namn-11",
-    "11-openwrt-namn-12",
-    "11-openwrt-namn-13",
-    "11-openwrt-namn-14",
-    "11-openwrt-namn-15",
-    "11-openwrt-namn-16",
-    "11-openwrt-namn-17",
-    "11-openwrt-namn-18",
-    "11-openwrt-namn-19",
-    "11-openwrt-namn-20",
-    "12-natverk-och-ovriga-namn"
-  ],
-  "id_stages": [
-    {
-      "status": "verified",
-      "stage": "08-id-pilot-toaletten",
-      "renamed_entities": 5,
-      "same_unique_ids_and_settings": true,
-      "statistics_series_verified": 92,
-      "history_records_verified": 85,
-      "statistics_metadata_moved": 4,
-      "source_files_updated": [],
-      "dashboards_updated": [],
-      "frontend_favorites_updated": false,
-      "helper_config_entries_auto_updated": [],
-      "automation_consumers_reloaded": [],
-      "config_check": {
-        "result": "valid",
-        "errors": null,
-        "warnings": null
-      }
+  "status": "completed_with_user_deferred_items",
+  "completed_date": "2026-11-08",
+  "counts": {
+    "registered_entities": 10150,
+    "registered_devices": 1070,
+    "unregistered_state_entities": 111,
+    "net_entity_ids_changed_since_original": 9719,
+    "entity_display_name_overrides_changed": 7635,
+    "entity_alias_lists_changed": 8221,
+    "device_names_changed": 288,
+    "device_areas_changed": 103,
+    "entities_added_since_original": 21,
+    "devices_added_since_original": 4,
+    "documented_id_exceptions": 113
+  },
+  "verification": {
+    "registered_entities": 10150,
+    "registered_devices": 1070,
+    "registry_identity_and_settings_preserved": true,
+    "automations_restored": 81,
+    "new_integration_setup_failures": [],
+    "availability_regressions": [],
+    "config_check": {
+      "result": "valid",
+      "errors": null,
+      "warnings": null
     },
-    {
-      "status": "verified",
-      "stage": "09-id-klimatsensorer",
-      "renamed_entities": 50,
-      "same_unique_ids_and_settings": true,
-      "statistics_series_verified": 897,
-      "history_records_verified": 1654,
-      "statistics_metadata_moved": 39,
-      "source_files_updated": [
-        "automations.yaml"
-      ],
-      "dashboards_updated": [
-        "lovelace-friggan",
-        "lovelace"
-      ],
-      "frontend_favorites_updated": true,
-      "helper_config_entries_auto_updated": [
-        "01JCB5GMYV2TT2EYFXTN65B9Z5",
-        "01JH6FAN92A4F016KC6376MT5T",
-        "01JHJEPVEW4JG1G2NQG1RGH69D",
-        "01JHJER99149TSQTVQA3MCNQK8",
-        "01JHRFTY6RDGMP3XTAAYCEAR2X",
-        "01JQ8CT2TZBV3TC6KQPM1NVYZ8",
-        "01KAPN7N4RFX0HHVC6DCSKXGVN"
-      ],
-      "automation_consumers_reloaded": [
-        "automation.styrning_varmare_till_honsens_vatten",
-        "automation.styrning_honsluckan"
-      ],
-      "config_check": {
-        "result": "valid",
-        "errors": null,
-        "warnings": null
-      }
+    "source_files_match_verified_plan": true,
+    "google_exposed_entities": 36,
+    "alexa_saved_exposures": 41
+  },
+  "final_stage_verification": {
+    "status": "verified",
+    "renamed_entities": 978,
+    "source_files": [
+      "/homeassistant/scripts.yaml",
+      "/homeassistant/configuration.yaml",
+      "/homeassistant/known_devices.yaml",
+      "/homeassistant/automations.yaml",
+      "/homeassistant/recorder_excluded_entities.yaml",
+      "/homeassistant/tools/test_granny_goodnight_queue.py",
+      "/homeassistant/tools/trigger_granny_plan.sh",
+      "/homeassistant/tools/recorder_filter_audit.py",
+      "/homeassistant/tools/test_granny_announce.py",
+      "/homeassistant/packages/db_optimize.yaml",
+      "/homeassistant/packages/granny_goodnight.yaml",
+      "/homeassistant/packages/bio_adaptive_lighting.yaml",
+      "/homeassistant/packages/bilvarme_scheduler.yaml",
+      "/homeassistant/packages/feels_like.yaml",
+      "/homeassistant/packages/elkostnad_quarter.yaml",
+      "/homeassistant/packages/presence_simulation.yaml",
+      "/homeassistant/packages/granny.yaml",
+      "/homeassistant/packages/ir_lights.yaml",
+      "/homeassistant/packages/aqara_taklampor_monitor.yaml",
+      "/homeassistant/custom_components/plant/number.py",
+      "/homeassistant/custom_components/plant/sensor.py",
+      "/homeassistant/custom_components/granny_sync/__init__.py",
+      "/homeassistant/custom_components/granny_sync/services.yaml",
+      "/homeassistant/custom_components/granny_goodnight/__init__.py",
+      "/homeassistant/custom_components/granny_goodnight/text.py",
+      "/homeassistant/www/thread-network-map/thread-network-map.js",
+      "/homeassistant/www/feedback-control-card/feedback-control-card-v2.js",
+      "/homeassistant/www/feedback-control-card/feedback-control-card-v1.js",
+      "/homeassistant/www/feedback-control-card/feedback-control-card-v4.js",
+      "/homeassistant/www/feedback-control-card/feedback-control-card-v3.js"
+    ],
+    "cold_files": [
+      "/homeassistant/.storage/core.config_entries",
+      "/homeassistant/.storage/person",
+      "/homeassistant/.storage/ai_task",
+      "/homeassistant/.storage/assist_pipeline.pipelines",
+      "/homeassistant/.storage/powercalc_group",
+      "/homeassistant/.storage/energy",
+      "/homeassistant/.storage/input_boolean",
+      "/homeassistant/.storage/input_number",
+      "/homeassistant/.storage/input_datetime",
+      "/homeassistant/.storage/input_select",
+      "/homeassistant/.storage/timer",
+      "/homeassistant/.storage/homeassistant.exposed_entities",
+      "/homeassistant/.storage/lovelace.dashboard_hemmabio",
+      "/homeassistant/.storage/lovelace.kuma_status",
+      "/homeassistant/.storage/lovelace.dashboard_ai",
+      "/homeassistant/.storage/lovelace.lovelace",
+      "/homeassistant/.storage/lovelace_resources",
+      "/homeassistant/.storage/lovelace.dashboard_elpris",
+      "/homeassistant/.storage/lovelace.ha_admin"
+    ],
+    "config_check": {
+      "result": "valid",
+      "errors": null,
+      "warnings": null
     },
-    {
-      "status": "verified",
-      "stage": "14-id-firmware",
-      "renamed_entities": 35,
-      "same_unique_ids_and_settings": true,
-      "statistics_series_verified": 0,
-      "history_records_verified": 34,
-      "statistics_metadata_moved": 0,
-      "source_files_updated": [],
-      "dashboards_updated": [],
-      "frontend_favorites_updated": false,
-      "helper_config_entries_auto_updated": [],
-      "automation_consumers_reloaded": [],
-      "config_check": {
-        "result": "valid",
-        "errors": null,
-        "warnings": null
-      }
-    }
+    "history_records_verified": 213681,
+    "statistics_points_verified": 6339,
+    "statistics_metadata_migrated": 307,
+    "new_statistics_metadata_created": 0,
+    "automation_states_restored": 81,
+    "registry_identity_preserved": true
+  },
+  "user_deferred_items": [
+    "input_number.slider",
+    "Blomlampa (ateljén) / ESPHome09"
   ],
-  "config_check": {
-    "result": "valid",
-    "errors": null,
-    "warnings": null
+  "backup_before_original": "22f83cfa",
+  "backup_before_completion": "d1a7d04b",
+  "backup_after_completion": "8dc2d539",
+  "reference_audit": {
+    "read_only": true,
+    "registered_entities": 10150,
+    "duplicate_entity_ids": 0,
+    "obsolete_active_references": [],
+    "new_entities_to_review": [],
+    "changed_entities_to_review": [],
+    "removed_since_review": 0,
+    "compatibility_exceptions": 113
   },
-  "global_registry_invariants": "verified, with explicit approved device area changes and equivalent exposure false normalization",
-  "equivalent_explicit_google_exposure_false_additions": 152,
-  "old_migrated_ids_in_active_sources": 0,
-  "entity_id_settings": {
-    "entity_id_parts": null
+  "final_post_steps": {
+    "physical_root_title": "verified",
+    "bermuda_distance_names": 44,
+    "user_visible_log_id_references": 2
   },
-  "pending_information": [],
-  "deferred_items": {
-    "status": "Utreds senare enligt användarens besked",
-    "protected_entity_ids": [
-      "input_number.slider"
+  "backup_after_completion_status": "verified",
+  "backup_after_completion_details": {
+    "status": "verified",
+    "slug": "8dc2d539",
+    "path": "/backup/namnstandard_slutford_20261108_8dc2d539.tar",
+    "bytes": 6716313600,
+    "sha256": "3fecc51d62ef09d5d45b59142b2f5cae0474449fe3e652d8ba2ed9acba7bc104",
+    "archive_read_test": [
+      "data/.storage/core.config_entries",
+      "data/.storage/core.entity_registry",
+      "data/configuration.yaml",
+      "data/custom_components/plant/number.py",
+      "data/custom_components/plant/sensor.py",
+      "data/scripts.yaml"
     ],
-    "protected_device_ids": [
-      "0cc979ea34852945574729129825a6b2",
-      "227724855ae674b89183ee9f92632aa2",
-      "3f468b4d72344090ba3fc494f7562e9f",
-      "72464832ea5d50edac5e918c2018497a",
-      "7938b2ad630e3f5c590057a1fd59df79",
-      "7c98ea31c0db5d9db1de8cc6641c6606"
-    ],
-    "reason": "Syftet med Slider och placeringen för ESPHome09 är oklara. Ingen fortsatt namn-/ID-/områdesändring för dessa innan de har utretts."
+    "final_registry_matches_review": true,
+    "homeassistant_and_mariadb_included": true,
+    "full_restore_tested": false,
+    "locations": [
+      "Backup"
+    ]
   },
-  "user_confirmed_external_dependencies": "Inga externa beroenden vad användaren vet",
-  "user_confirmed_locations": {
-    "Blomlampa 2": "Köket",
-    "Taklampor tidigare i Entrén": "Köket",
-    "LED-lister": "Rummen i deras namn",
-    "Frösåddslampa": "Inte aktiv; driftstatus oförändrad"
-  },
-  "checkpoint_backup": {
-    "slug": "d59ec955",
-    "before_stage_14": true,
-    "type": "partial",
-    "restore_tested": false
-  },
-  "network_card_context_tests": "passed",
-  "visual_browser_test": false,
-  "manual_physical_actuation_tests": false,
-  "next_steps_authorized": true
+  "completed_at": "2026-11-08T09:47:49.557411+00:00"
 }

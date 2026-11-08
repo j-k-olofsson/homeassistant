@@ -1,0 +1,798 @@
+{
+  "stage": "20-bermuda-matpunkter",
+  "operations": [
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_avstand_till_shelly_pro_3_verkstaden",
+      "before": {
+        "name": "Avstånd till Shelly Pro 3",
+        "aliases": [
+          null,
+          "Distance to Shelly Pro 3"
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Shelly Pro 3 – Verkstaden",
+        "aliases": [
+          null,
+          "Distance to Shelly Pro 3"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_ofiltrerat_avstand_till_shelly_pro_3_verkstaden",
+      "before": {
+        "name": "Ofiltrerat avstånd till Shelly Pro 3",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Shelly Pro 3"
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Shelly Pro 3 – Verkstaden",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Shelly Pro 3"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_avstand_till_vattenniva_honshuset",
+      "before": {
+        "name": "Avstånd till Vattennivå",
+        "aliases": [
+          null,
+          "Distance to Vattennivå"
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Vattennivå – Hönshuset",
+        "aliases": [
+          null,
+          "Distance to Vattennivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_ofiltrerat_avstand_till_vattenniva_honshuset",
+      "before": {
+        "name": "Ofiltrerat avstånd till Vattennivå",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Vattennivå"
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Vattennivå – Hönshuset",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Vattennivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_avstand_till_led_stjarnor_utomhus",
+      "before": {
+        "name": "Avstånd till LED-stjärnor",
+        "aliases": [
+          null,
+          "Distance to LED-stjärnor"
+        ]
+      },
+      "after": {
+        "name": "Avstånd till LED-stjärnor – Utomhus",
+        "aliases": [
+          null,
+          "Distance to LED-stjärnor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_ofiltrerat_avstand_till_led_stjarnor_utomhus",
+      "before": {
+        "name": "Ofiltrerat avstånd till LED-stjärnor",
+        "aliases": [
+          null,
+          "Unfiltered Distance to LED-stjärnor"
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till LED-stjärnor – Utomhus",
+        "aliases": [
+          null,
+          "Unfiltered Distance to LED-stjärnor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_avstand_till_vaggkontakt_x2_verandan",
+      "before": {
+        "name": "Avstånd till Väggkontakt x2",
+        "aliases": [
+          null,
+          "Distance to Väggkontakt x2"
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Väggkontakt x2 – Verandan",
+        "aliases": [
+          null,
+          "Distance to Väggkontakt x2"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_ofiltrerat_avstand_till_vaggkontakt_x2_verandan",
+      "before": {
+        "name": "Ofiltrerat avstånd till Väggkontakt x2",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Väggkontakt x2"
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Väggkontakt x2 – Verandan",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Väggkontakt x2"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_avstand_till_hci0_54_e4_ed_a9_cd_05_heimdal_ha",
+      "before": {
+        "name": "Avstånd till hci0 (54:E4:ED:A9:CD:05)",
+        "aliases": [
+          null,
+          "Distance to hci0 (54:E4:ED:A9:CD:05)"
+        ]
+      },
+      "after": {
+        "name": "Avstånd till hci0 (54:E4:ED:A9:CD:05) – Heimdal (HA)",
+        "aliases": [
+          null,
+          "Distance to hci0 (54:E4:ED:A9:CD:05)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_ofiltrerat_avstand_till_hci0_54_e4_ed_a9_cd_05_heimdal_ha",
+      "before": {
+        "name": "Ofiltrerat avstånd till hci0 (54:E4:ED:A9:CD:05)",
+        "aliases": [
+          null,
+          "Unfiltered Distance to hci0 (54:E4:ED:A9:CD:05)"
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till hci0 (54:E4:ED:A9:CD:05) – Heimdal (HA)",
+        "aliases": [
+          null,
+          "Unfiltered Distance to hci0 (54:E4:ED:A9:CD:05)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_avstand_till_golvvarme_duschen",
+      "before": {
+        "name": "Avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Golvvärme – Duschen",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_ofiltrerat_avstand_till_golvvarme_duschen",
+      "before": {
+        "name": "Ofiltrerat avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Golvvärme – Duschen",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_avstand_till_golvvarme_verandan",
+      "before": {
+        "name": "Avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Golvvärme – Verandan",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_ofiltrerat_avstand_till_golvvarme_verandan",
+      "before": {
+        "name": "Ofiltrerat avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Golvvärme – Verandan",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_avstand_till_golvvarme_bion",
+      "before": {
+        "name": "Avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Golvvärme – Bion",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_ofiltrerat_avstand_till_golvvarme_bion",
+      "before": {
+        "name": "Ofiltrerat avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Golvvärme – Bion",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_avstand_till_golvvarme_koket",
+      "before": {
+        "name": "Avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Golvvärme – Köket",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_ofiltrerat_avstand_till_golvvarme_koket",
+      "before": {
+        "name": "Ofiltrerat avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Golvvärme – Köket",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_avstand_till_golvvarme_entren",
+      "before": {
+        "name": "Avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Golvvärme – Entrén",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_ofiltrerat_avstand_till_golvvarme_entren",
+      "before": {
+        "name": "Ofiltrerat avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Golvvärme – Entrén",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_avstand_till_golvvarme_ateljen",
+      "before": {
+        "name": "Avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Golvvärme – Ateljén",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_ofiltrerat_avstand_till_golvvarme_ateljen",
+      "before": {
+        "name": "Ofiltrerat avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Golvvärme – Ateljén",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_avstand_till_shelly_pro_3_verkstaden",
+      "before": {
+        "name": "Avstånd till Shelly Pro 3",
+        "aliases": [
+          null,
+          "Distance to Shelly Pro 3"
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Shelly Pro 3 – Verkstaden",
+        "aliases": [
+          null,
+          "Distance to Shelly Pro 3"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_ofiltrerat_avstand_till_shelly_pro_3_verkstaden",
+      "before": {
+        "name": "Ofiltrerat avstånd till Shelly Pro 3",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Shelly Pro 3"
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Shelly Pro 3 – Verkstaden",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Shelly Pro 3"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_avstand_till_vattenniva_honshuset",
+      "before": {
+        "name": "Avstånd till Vattennivå",
+        "aliases": [
+          null,
+          "Distance to Vattennivå"
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Vattennivå – Hönshuset",
+        "aliases": [
+          null,
+          "Distance to Vattennivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_ofiltrerat_avstand_till_vattenniva_honshuset",
+      "before": {
+        "name": "Ofiltrerat avstånd till Vattennivå",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Vattennivå"
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Vattennivå – Hönshuset",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Vattennivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_avstand_till_led_stjarnor_utomhus",
+      "before": {
+        "name": "Avstånd till LED-stjärnor",
+        "aliases": [
+          null,
+          "Distance to LED-stjärnor"
+        ]
+      },
+      "after": {
+        "name": "Avstånd till LED-stjärnor – Utomhus",
+        "aliases": [
+          null,
+          "Distance to LED-stjärnor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_ofiltrerat_avstand_till_led_stjarnor_utomhus",
+      "before": {
+        "name": "Ofiltrerat avstånd till LED-stjärnor",
+        "aliases": [
+          null,
+          "Unfiltered Distance to LED-stjärnor"
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till LED-stjärnor – Utomhus",
+        "aliases": [
+          null,
+          "Unfiltered Distance to LED-stjärnor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_avstand_till_vaggkontakt_x2_verandan",
+      "before": {
+        "name": "Avstånd till Väggkontakt x2",
+        "aliases": [
+          null,
+          "Distance to Väggkontakt x2"
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Väggkontakt x2 – Verandan",
+        "aliases": [
+          null,
+          "Distance to Väggkontakt x2"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_ofiltrerat_avstand_till_vaggkontakt_x2_verandan",
+      "before": {
+        "name": "Ofiltrerat avstånd till Väggkontakt x2",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Väggkontakt x2"
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Väggkontakt x2 – Verandan",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Väggkontakt x2"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_avstand_till_hci0_54_e4_ed_a9_cd_05_heimdal_ha",
+      "before": {
+        "name": "Avstånd till hci0 (54:E4:ED:A9:CD:05)",
+        "aliases": [
+          null,
+          "Distance to hci0 (54:E4:ED:A9:CD:05)"
+        ]
+      },
+      "after": {
+        "name": "Avstånd till hci0 (54:E4:ED:A9:CD:05) – Heimdal (HA)",
+        "aliases": [
+          null,
+          "Distance to hci0 (54:E4:ED:A9:CD:05)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_ofiltrerat_avstand_till_hci0_54_e4_ed_a9_cd_05_heimdal_ha",
+      "before": {
+        "name": "Ofiltrerat avstånd till hci0 (54:E4:ED:A9:CD:05)",
+        "aliases": [
+          null,
+          "Unfiltered Distance to hci0 (54:E4:ED:A9:CD:05)"
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till hci0 (54:E4:ED:A9:CD:05) – Heimdal (HA)",
+        "aliases": [
+          null,
+          "Unfiltered Distance to hci0 (54:E4:ED:A9:CD:05)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_avstand_till_golvvarme_duschen",
+      "before": {
+        "name": "Avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Golvvärme – Duschen",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_ofiltrerat_avstand_till_golvvarme_duschen",
+      "before": {
+        "name": "Ofiltrerat avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Golvvärme – Duschen",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_avstand_till_golvvarme_verandan",
+      "before": {
+        "name": "Avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Golvvärme – Verandan",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_ofiltrerat_avstand_till_golvvarme_verandan",
+      "before": {
+        "name": "Ofiltrerat avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Golvvärme – Verandan",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_avstand_till_golvvarme_bion",
+      "before": {
+        "name": "Avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Golvvärme – Bion",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_ofiltrerat_avstand_till_golvvarme_bion",
+      "before": {
+        "name": "Ofiltrerat avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Golvvärme – Bion",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_avstand_till_golvvarme_koket",
+      "before": {
+        "name": "Avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Golvvärme – Köket",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_ofiltrerat_avstand_till_golvvarme_koket",
+      "before": {
+        "name": "Ofiltrerat avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Golvvärme – Köket",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_avstand_till_golvvarme_entren",
+      "before": {
+        "name": "Avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Golvvärme – Entrén",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_ofiltrerat_avstand_till_golvvarme_entren",
+      "before": {
+        "name": "Ofiltrerat avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Golvvärme – Entrén",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_avstand_till_golvvarme_ateljen",
+      "before": {
+        "name": "Avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Golvvärme – Ateljén",
+        "aliases": [
+          null,
+          "Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_ofiltrerat_avstand_till_golvvarme_ateljen",
+      "before": {
+        "name": "Ofiltrerat avstånd till Golvvärme",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Golvvärme – Ateljén",
+        "aliases": [
+          null,
+          "Unfiltered Distance to Golvvärme"
+        ]
+      }
+    }
+  ],
+  "description": "Avståndsmätningar anger målskannerns faktiska område, så att sex golvvärmeproxyer får åtskilda visningsnamn."
+}

@@ -442,7 +442,7 @@ granny_car_charge_plan:
       - action: logbook.log
         data:
           name: '{{ log_prefix }}'
-          message: 'Planeringen stoppad: sätt ett värde på input_number.car_bat_capacity.'
+          message: 'Planeringen stoppad: sätt ett värde på input_number.utomhus_bilbatteriets_kapacitet.'
       - action: persistent_notification.create
         data:
           title: Laddningsplan saknar batterikapacitet
@@ -457,7 +457,7 @@ granny_car_charge_plan:
       - action: logbook.log
         data:
           name: '{{ log_prefix }}'
-          message: 'Planeringen stoppad: sätt ett värde på input_number.car_charger_capacity.'
+          message: 'Planeringen stoppad: sätt ett värde på input_number.utomhus_laddeffekt.'
       - action: persistent_notification.create
         data:
           title: Laddningsplan saknar laddareffekt
