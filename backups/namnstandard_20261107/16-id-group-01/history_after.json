@@ -1,0 +1,42 @@
+{
+  "binary_sensor.kritiska_entiteter_for_styrning_och_larm": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:11.571283+00:00",
+      "last_updated": "2026-11-07T07:45:11.571283+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T07:45:33.452017+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T07:45:47.536706+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:00.078631+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:25:20.852263+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T20:37:11.382016+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T20:37:20.275757+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:23.390894+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:42.556572+00:00"
+    }
+  ]
+}

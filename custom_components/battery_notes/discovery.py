@@ -37,12 +37,9 @@ _LOGGER = logging.getLogger(__name__)
 
 
 async def autodiscover_model(
-    device_entry: dr.DeviceEntry | None,
+    device_entry: dr.DeviceEntry,
 ) -> ModelInfo | None:
     """Try to auto discover manufacturer and model from the known device information."""
-    if not device_entry:
-        return None
-
     model_info = await get_model_information(device_entry)
     if not model_info:
         _LOGGER.debug(
@@ -94,7 +91,7 @@ class DiscoveryManager:
         self.ha_config = ha_config
         self.existing_devices: set[str] = set()
 
-    async def start_discovery(self) -> None:
+    async def start_discovery(self) -> None:  # noqa: PLR0912
         """Start the discovery procedure."""
         _LOGGER.debug("Start auto discovering devices")
         device_registry = dr.async_get(self.hass)
@@ -119,11 +116,7 @@ class DiscoveryManager:
                     continue
 
                 model_info = await autodiscover_model(device_entry)
-                if (
-                    not model_info
-                    or not model_info.manufacturer
-                    or not model_info.model
-                ):
+                if not model_info:
                     continue
 
                 device_battery_details = await library.get_device_battery_details(
@@ -133,10 +126,19 @@ class DiscoveryManager:
                 if not device_battery_details or device_battery_details.is_manual:
                     continue
 
-                # HACK: Change to device_entry.config_entry_id when HA 2026.8 is minimum
-                config_entry_id = next(iter(device_entry.config_entries))
-                config_entry = self.hass.config_entries.async_get_entry(config_entry_id)
+                # HACK: Change to device_entry.config_entry_id when HA 2026.9+ is minimum
+                if AwesomeVersion(__version__) >= AwesomeVersion("2026.8.9"):
+                    config_entry_id = device_entry.config_entry_id  # type: ignore[attr-defined]
+                else:
+                    # config_entries is a set, use the integration providing the device
+                    config_entry_id = device_entry.primary_config_entry
+                config_entry = (
+                    self.hass.config_entries.async_get_entry(config_entry_id)
+                    if config_entry_id
+                    else None
+                )
 
+                integration: Integration | None = None
                 if config_entry:
                     if library.is_domain_ignored(config_entry.domain):
                         continue
@@ -146,7 +148,7 @@ class DiscoveryManager:
                     )
 
                 self._init_entity_discovery(
-                    device_entry, device_battery_details, integration or None
+                    device_entry, device_battery_details, integration
                 )
         else:
             _LOGGER.error("Library not loaded")
@@ -231,11 +233,8 @@ class DiscoveryManager:
             CONF_DEVICE_ID: device_entry.id,
         }
 
-        if device_battery_details:
-            discovery_data[CONF_BATTERY_TYPE] = device_battery_details.battery_type
-            discovery_data[CONF_BATTERY_QUANTITY] = (
-                device_battery_details.battery_quantity
-            )
+        discovery_data[CONF_BATTERY_TYPE] = device_battery_details.battery_type
+        discovery_data[CONF_BATTERY_QUANTITY] = device_battery_details.battery_quantity
         discovery_data[CONF_MANUFACTURER] = device_battery_details.manufacturer
         discovery_data[CONF_MODEL] = device_battery_details.model
         discovery_data[CONF_MODEL_ID] = get_device_model_id(device_entry)
@@ -267,10 +266,7 @@ class DiscoveryManager:
 
 def get_wrapped_device_name(
     device_id: str,
-    device_entry: dr.DeviceEntry | None,
+    device_entry: dr.DeviceEntry,
 ) -> str:
     """Construct device name based on the wrapped device."""
-    if device_entry:
-        return device_entry.name_by_user or device_entry.name or device_id
-
-    return device_id
+    return device_entry.name_by_user or device_entry.name or device_id

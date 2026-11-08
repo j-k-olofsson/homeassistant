@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "minor_version": 3,
+  "key": "energy",
+  "data": {
+    "energy_sources": [
+      {
+        "type": "grid",
+        "cost_adjustment_day": 0.0,
+        "stat_energy_from": "sensor.elmatare_elstolpen_energy_consumed_luxembourg",
+        "stat_cost": null,
+        "entity_energy_price": "sensor.nordpool",
+        "number_energy_price": null,
+        "stat_energy_to": null,
+        "stat_compensation": null,
+        "entity_energy_price_export": null,
+        "number_energy_price_export": null
+      }
+    ],
+    "device_consumption": [
+      {
+        "stat_consumption": "sensor.poolpump_energy",
+        "name": "Poolpump"
+      },
+      {
+        "stat_consumption": "sensor.golvvarme_entren_switch_0_energy",
+        "name": "Golvvärme Entrén"
+      },
+      {
+        "stat_consumption": "sensor.golvvarme_ateljen_switch_0_energy",
+        "name": "Golvvärme Ateljén"
+      },
+      {
+        "stat_consumption": "sensor.shellyplus1pm_a0dd6c29b134_switch_0_energy",
+        "name": "Golvvärme Köket"
+      },
+      {
+        "stat_consumption": "sensor.golvvarme_verandan_switch_0_energy",
+        "name": "Golvvärme Verandan"
+      },
+      {
+        "stat_consumption": "sensor.golvvarme_sovrum_kontor_esphome81_energy",
+        "name": "Golvvärme Sovrum/Kontor"
+      },
+      {
+        "stat_consumption": "sensor.golvvarme_duschen_device_energy",
+        "name": "Golvvärme Duschen"
+      },
+      {
+        "stat_consumption": "sensor.golvvarme_bion_switch_0_energy",
+        "name": "Golvvärme Bion"
+      },
+      {
+        "stat_consumption": "sensor.golvvarme_friggan_esphome80_energy",
+        "name": "Golvvärme Friggan"
+      },
+      {
+        "stat_consumption": "sensor.esphome30_esphome30_total_daily_energy"
+      },
+      {
+        "stat_consumption": "sensor.esphome31_esphome31_total_daily_energy"
+      }
+    ],
+    "device_consumption_water": []
+  }
+}

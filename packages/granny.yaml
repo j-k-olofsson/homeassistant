@@ -2,16 +2,16 @@
 #   - sensor:
 #       - name: Granny CarCharger Data
 #         unique_id: granny_carcharger_data
-#         state: "{{ states('input_datetime.granny_charger_trigger') }}"
+#         state: "{{ states('input_datetime.laddplan_starttid') }}"
 #         attributes:
 #           granny_data: >
 #             {{
 #               {
-#                 "carBatteryLevel": states("sensor.sef_42h_battery_level"),
-#                 "carManualOverride": states("input_boolean.car_man_override"),
-#                 "carParkingLocation": states("device_tracker.sef_42h_parking_location"),
-#                 "carBatteryCapacity": states("input_number.car_bat_capacity"),
-#                 "carChargerCapacity": states("input_number.car_charger_capacity")
+#                 "carBatteryLevel": states("sensor.utomhus_sef_42h_batteriniva"),
+#                 "carManualOverride": states("input_boolean.manuell_laddstyrning"),
+#                 "carParkingLocation": states("device_tracker.utomhus_sef_42h_parkeringsplats"),
+#                 "carBatteryCapacity": states("input_number.utomhus_bilbatteriets_kapacitet"),
+#                 "carChargerCapacity": states("input_number.utomhus_laddeffekt")
 #               } | tojson
 #             }}
 
@@ -23,7 +23,7 @@ input_boolean:
 
 input_number:
   car_target_soc:
-    name: Bilens mål-SOC
+    name: "Målladdning"
     icon: mdi:flag-checkered
     min: 50
     max: 100
@@ -50,7 +50,7 @@ input_number:
     unit_of_measurement: "kWh"
     initial: 18
   car_charger_capacity:
-    name: Laddareffekt
+    name: "Laddeffekt"
     icon: mdi:ev-station
     min: 0.5
     max: 22

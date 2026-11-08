@@ -1,0 +1,16 @@
+{
+  "stage": "03-shelly-vitvaror-batterier",
+  "status": "verified",
+  "operations": 615,
+  "devices": 37,
+  "entities": 578,
+  "entity_ids_unchanged": 10129,
+  "invariants_unchanged": true,
+  "missing_target_states": [],
+  "new_unavailable_targets": [],
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  }
+}

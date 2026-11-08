@@ -1,0 +1,2 @@
+{"status": "rename_intent", "old": "sensor.elmatare_elstolpen_energy_consumed_luxembourg_cost", "new": "sensor.sensor_cost"}
+{"status": "renamed", "old": "sensor.elmatare_elstolpen_energy_consumed_luxembourg_cost", "new": "sensor.sensor_cost"}

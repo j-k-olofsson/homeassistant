@@ -1,0 +1,190 @@
+{
+  "path": "/backup/namnstandard_fore_20261107_22f83cfa.tar",
+  "bytes": 6219632640,
+  "members": [
+    "homeassistant.tar.gz",
+    "5c53de3b_esphome.tar.gz",
+    "a0d7b954_phpmyadmin.tar.gz",
+    "core_mariadb.tar.gz",
+    "a0d7b954_spotify.tar.gz",
+    "1f3d020e_hassos_ssh_configurator_addon.tar.gz",
+    "a0d7b954_ssh.tar.gz",
+    "1a32f091_sambanas.tar.gz",
+    "948e3081_tailscale.tar.gz",
+    "core_piper.tar.gz",
+    "a0d7b954_adguard.tar.gz",
+    "d5369777_music_assistant.tar.gz",
+    "core_matter_server.tar.gz",
+    "core_openthread_border_router.tar.gz",
+    "core_duckdns.tar.gz",
+    "core_configurator.tar.gz",
+    "9b396a0a_ai-config-agent.tar.gz",
+    "share.tar.gz",
+    "apps_local.tar.gz",
+    "ssl.tar.gz",
+    "media.tar.gz",
+    "supervisor.tar.gz",
+    "./backup.json"
+  ],
+  "metadata": {
+    "slug": "22f83cfa",
+    "version": 2,
+    "name": "Före enhetlig namnsättning 2026-11-07",
+    "date": "2026-11-07T17:13:27.601881+00:00",
+    "type": "full",
+    "supervisor_version": "2026.10.5",
+    "extra": {},
+    "protected": false,
+    "addons": [
+      {
+        "slug": "5c53de3b_esphome",
+        "name": "ESPHome Device Builder",
+        "version": "2026.10.2",
+        "size": 0.0
+      },
+      {
+        "slug": "a0d7b954_phpmyadmin",
+        "name": "phpMyAdmin",
+        "version": "0.14.1",
+        "size": 0.0
+      },
+      {
+        "slug": "core_mariadb",
+        "name": "MariaDB",
+        "version": "3.0.1",
+        "size": 0.0
+      },
+      {
+        "slug": "a0d7b954_spotify",
+        "name": "Spotify Connect",
+        "version": "0.19.0",
+        "size": 0.0
+      },
+      {
+        "slug": "1f3d020e_hassos_ssh_configurator_addon",
+        "name": "HassOS SSH port 22222 Configurator",
+        "version": "0.9.3",
+        "size": 0.0
+      },
+      {
+        "slug": "a0d7b954_ssh",
+        "name": "Advanced SSH & Web Terminal",
+        "version": "24.2.1",
+        "size": 0.0
+      },
+      {
+        "slug": "1a32f091_sambanas",
+        "name": "Samba NAS",
+        "version": "12.5.0-nas",
+        "size": 0.0
+      },
+      {
+        "slug": "948e3081_tailscale",
+        "name": "Tailscale",
+        "version": "1.104.5.0",
+        "size": 0.0
+      },
+      {
+        "slug": "core_piper",
+        "name": "Piper",
+        "version": "2.5.2",
+        "size": 0.0
+      },
+      {
+        "slug": "a0d7b954_adguard",
+        "name": "AdGuard Home",
+        "version": "6.3.2",
+        "size": 0.0
+      },
+      {
+        "slug": "d5369777_music_assistant",
+        "name": "Music Assistant",
+        "version": "2.10.9",
+        "size": 0.0
+      },
+      {
+        "slug": "core_matter_server",
+        "name": "Matter Server",
+        "version": "9.3.0",
+        "size": 0.0
+      },
+      {
+        "slug": "core_openthread_border_router",
+        "name": "OpenThread Border Router",
+        "version": "3.3.0",
+        "size": 0.0
+      },
+      {
+        "slug": "core_duckdns",
+        "name": "Duck DNS",
+        "version": "2.0.1",
+        "size": 0.0
+      },
+      {
+        "slug": "core_configurator",
+        "name": "File editor",
+        "version": "6.3.0",
+        "size": 0.0
+      },
+      {
+        "slug": "9b396a0a_ai-config-agent",
+        "name": "AI Configuration Agent",
+        "version": "0.2.0",
+        "size": 0.0
+      }
+    ],
+    "homeassistant": {
+      "version": "2026.11.0",
+      "exclude_database": false,
+      "size": 0.0
+    },
+    "folders": [
+      "share",
+      "apps/local",
+      "ssl",
+      "media"
+    ],
+    "repositories": [
+      "https://github.com/adamoutler/HassOSConfigurator",
+      "https://github.com/tsujamin/hass-addons",
+      "https://github.com/yinzara/ha-config-ai-agent",
+      "https://github.com/Rbillon59/hass-n8n",
+      "https://github.com/CoolKit-Technologies/ha-addon",
+      "https://github.com/dianlight/hassio-addons",
+      "https://github.com/hassio-addons/repository",
+      "https://github.com/music-assistant/home-assistant-addon",
+      "https://github.com/esphome/home-assistant-addon"
+    ],
+    "compressed": true
+  },
+  "restore_tested": false,
+  "sha256": "134670b8f0765c022c4c090802a7d3f4627ff5da74d7e3c31935529f43571e2d",
+  "restore_read_test": {
+    "scripts.yaml": {
+      "size": 61396,
+      "sha256": "818f33faad23aae33a4e5c419a9280d0e997f53c81670107164836ab0204a989"
+    },
+    "configuration.yaml": {
+      "size": 10856,
+      "sha256": "d904b2d905719456326863e53d0a506b5e3b341707092e450831228e6056fd25"
+    },
+    ".storage/core.config_entries": {
+      "size": 229868,
+      "sha256": "93dee468ea6239e1657bc4d9bb2277db9f8eeefa7689f60360a051ceb056d710"
+    },
+    ".storage/core.entity_registry": {
+      "size": 12378497,
+      "sha256": "8a6ce384427cd6469b8ddd8c0be304c7e9ad1aa06428054b0e588779325d92e0"
+    },
+    ".storage/core.device_registry": {
+      "size": 1002392,
+      "sha256": "5a7751e661d8e09fb3a006398d5946cba96584c41e5892b3894a9185e7d25996"
+    },
+    "automations.yaml": {
+      "size": 68616,
+      "sha256": "e14bd8e2beb644167b3ba0ad86a08b0a47ee8715eac682beb17cdbd36ec4826a"
+    }
+  },
+  "source_yaml_matches_baseline": true,
+  "reason_for_location": "Utanför HA-konfigurationen för att undvika att en säkerhetskopia packas in i kommande konfigurationskopior."
+}

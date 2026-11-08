@@ -22,13 +22,14 @@ logger:
 #   exclude:
 #     entities:
 #       # Elmätare – fasström (behåll energi per timme/dag, rör ej!)
-#       - sensor.elmatare_elstolpen_current_phase_1
-#       - sensor.elmatare_elstolpen_current_phase_2
-#       - sensor.elmatare_elstolpen_current_phase_3
+#       - sensor.utomhus_elmatare_elstolpen_strom_fas_1
+#       - sensor.utomhus_elmatare_elstolpen_strom_fas_2
+#       - sensor.utomhus_elmatare_elstolpen_strom_fas_3
 
 recorder:
   db_url: !secret mariadb_db_url
   auto_purge: true
+  auto_repack: true
   purge_keep_days: 10
   commit_interval: 5
 
@@ -49,7 +50,8 @@ recorder:
       - sensor.date*
       - sensor.uptime*
 
-      # OpenWRT (alla sensorer från integrationen)
+      # OpenWrt: registerbaserad lista i recorder_excluded_entities.yaml.
+      # Behåll även äldre prefix för historiska entitetsnamn.
       - sensor.openwrt_*
 
       # ESPHome-lampor – högfrekvent brus (behåll ev. *_energy)
@@ -67,16 +69,22 @@ recorder:
       - sensor.system_monitor_packets_*
       - sensor.processor_*
       - sensor.*_wi_fi_clients
-      - sensor.all_wi_fi_clients*
+      - sensor.wi_fi_klienter_alla_accesspunkter*
       - sensor.*_uptime_30_days*
       - sensor.*_uptime_365_days*
       - sensor.*_response_time_o_1_day*
       - sensor.*_response_time_o_30_days*
       - sensor.*_response_time_o_365_days*
+      # Uptime Kuma, svenska entitets-ID:n (Ø blir o vid slugifiering).
+      - sensor.*_upptid_30_dagar*
+      - sensor.*_upptid_365_dagar*
+      - sensor.*_svarstid_o_1_dag*
+      - sensor.*_svarstid_o_30_dagar*
+      - sensor.*_svarstid_o_365_dagar*
       - sensor.ha_states_rows_24h
 
       # Aqara-monitorering som tidigare gav mycket historik
-      - automation.aqara_taklampor_monitor_service_calls
+      - automation.aqara_taklampor_overvakning_atgardsanrop
       - sensor.aqara_taklampor_senaste_analys
       - input_text.aqara_taklampor_senaste_kommando
 
@@ -96,14 +104,11 @@ recorder:
       - panels_updated
       - core_config_updated
       - lovelace_updated
-    entities:
-      - sensor.thread_network_diagnostics
+    entities: !include recorder_excluded_entities.yaml
 
 # Load frontend themes from the themes folder
 frontend:
   themes: !include_dir_merge_named themes
-  extra_module_url:
-    - /local/card-mod.js
 
 # Load automations, scripts and scenes from separate files (System - do not move or alter)
 automation: !include automations.yaml
@@ -112,6 +117,9 @@ scene: !include scenes.yaml
 
 # Load extra configurationes as described in separate files in dir packages/
 homeassistant:
+  customize:
+    sun.sun:
+      friendly_name: Solen
   packages: !include_dir_named packages
   allowlist_external_dirs:
     - /config/file_notifications
@@ -120,7 +128,7 @@ homeassistant:
 
 # Generic Home Assistant infrared broadcast and IR-controlled light profiles.
 infrared_broadcast:
-  name: IR Broadcast
+  name: IR-sändning
 
 ir_lights:
   - name: Värmeljus
@@ -128,7 +136,7 @@ ir_lights:
     profiles:
       - tea_lights_93cb
       - taper_candles_ff00
-    emitter: infrared.ir_broadcast
+    emitter: infrared.ir_sandning
     
 # Text to speech
 tts:
@@ -190,7 +198,7 @@ template:
         response_variable: thread_diag
 
     sensor:
-      - name: "Thread Network Diagnostics"
+      - name: "Thread-nätverksdiagnostik"
         unique_id: thread_network_diagnostics
         icon: mdi:access-point-network
 
@@ -353,7 +361,7 @@ template:
           
 command_line:
   - sensor:
-      name: Thread Matter Topology
+      name: "Thread/Matter-topologi"
       unique_id: thread_matter_topology
       command: 'python3 /config/thread_matter_topology.py'
       command_timeout: 20
@@ -365,7 +373,7 @@ command_line:
         - connections
         - child_links
   - sensor:
-      name: Nest Hub Test 210
+      name: "Nest Hub – test 210"
       unique_id: nest_hub_test_210
       command: >-
         python3 -c "from pychromecast.dial import get_device_info;

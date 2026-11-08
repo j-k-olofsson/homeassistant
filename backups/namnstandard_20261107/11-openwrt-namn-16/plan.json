@@ -1,0 +1,4257 @@
+{
+  "stage": "11-openwrt-namn-16",
+  "description": "Svenska funktionsnamn enligt granskad ordlista. Inga ID:n, inställningar eller värden ändras.",
+  "operations": [
+    {
+      "kind": "entity",
+      "id": "sensor.koket_ap_olofsson_guest_2_4_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_ap_olofsson_guest_2_4_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_ap_olofsson_guest_2_4_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_iot_2_4_ghz_clients_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_iot_2_4_ghz_channel_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_iot_2_4_ghz_tx_power_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_iot_2_4_ghz_ht_mode_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_iot_2_4_ghz_hardware_mode_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_ap_olofsson_wifi_5_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_ap_olofsson_wifi_5_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_ap_olofsson_wifi_5_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_ap_olofsson_wifi_5_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_ap_olofsson_wifi_5_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_ap_olofsson_guest_5_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_ap_olofsson_guest_5_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_ap_olofsson_guest_5_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_ap_olofsson_guest_5_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_ap_olofsson_guest_5_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_ap_olofsson_iot_5_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_ap_olofsson_iot_5_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_ap_olofsson_iot_5_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_ap_olofsson_iot_5_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_ap_olofsson_iot_5_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.2_4_ghz_physical_radio",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Fysisk radio",
+        "aliases": [
+          null,
+          "2.4 GHz Physical radio"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.5_ghz_physical_radio",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Fysisk radio",
+        "aliases": [
+          null,
+          "5 GHz Physical radio"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_wifi_2_4_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_wifi_2_4_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_wifi_2_4_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_wifi_2_4_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_wifi_2_4_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_guest_2_4_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_guest_2_4_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_guest_2_4_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_guest_2_4_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_guest_2_4_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_iot_2_4_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_iot_2_4_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_iot_2_4_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_iot_2_4_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_iot_2_4_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_wifi_5_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_wifi_5_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_wifi_5_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_wifi_5_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_wifi_5_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_guest_5_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_guest_5_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_guest_5_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_guest_5_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_guest_5_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_iot_5_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_iot_5_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_iot_5_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_iot_5_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_olofsson_iot_5_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.e8_db_84_d3_1d_ce_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Termostat Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.e8_db_84_d3_1d_ce_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Termostat RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.e8_db_84_d3_1d_ce_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Termostat TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.e8_db_84_d3_1d_ce_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Termostat Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.2_4_ghz_physical_radio_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Fysisk radio",
+        "aliases": [
+          null,
+          "2.4 GHz Physical radio"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.5_ghz_physical_radio_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Fysisk radio",
+        "aliases": [
+          null,
+          "5 GHz Physical radio"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.e8_db_84_d3_1d_ce_internet_access",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "Termostat Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_wifi_2_4_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_wifi_2_4_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_wifi_2_4_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_wifi_2_4_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_wifi_2_4_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_guest_2_4_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_guest_2_4_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_guest_2_4_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_guest_2_4_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_guest_2_4_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_iot_2_4_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_iot_2_4_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_iot_2_4_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_iot_2_4_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_iot_2_4_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_wifi_5_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_wifi_5_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_wifi_5_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_wifi_5_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_wifi_5_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_guest_5_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_guest_5_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_guest_5_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_guest_5_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_guest_5_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_iot_5_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_iot_5_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_iot_5_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_iot_5_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ap_olofsson_iot_5_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.2_4_ghz_physical_radio_5",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Fysisk radio",
+        "aliases": [
+          null,
+          "2.4 GHz Physical radio"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.5_ghz_physical_radio_5",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Fysisk radio",
+        "aliases": [
+          null,
+          "5 GHz Physical radio"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_wifi_2_4_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_wifi_2_4_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_wifi_2_4_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_wifi_2_4_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_wifi_2_4_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_wifi_5_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_wifi_5_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_wifi_5_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_wifi_5_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_wifi_5_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_guest_5_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_guest_5_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_guest_5_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_guest_5_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_guest_5_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_iot_5_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_iot_5_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_iot_5_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_iot_5_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_iot_5_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_guest_2_4_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_guest_2_4_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_guest_2_4_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_guest_2_4_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_guest_2_4_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_iot_2_4_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_iot_2_4_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_iot_2_4_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_iot_2_4_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_ap_olofsson_iot_2_4_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.2_4_ghz_physical_radio_3",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Fysisk radio",
+        "aliases": [
+          null,
+          "2.4 GHz Physical radio"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.5_ghz_physical_radio_3",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Fysisk radio",
+        "aliases": [
+          null,
+          "5 GHz Physical radio"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_ap_repeat_iot_5_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID REPEAT_IOT (5 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_ap_repeat_iot_5_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID REPEAT_IOT (5 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_ap_repeat_iot_5_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID REPEAT_IOT (5 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_ap_repeat_iot_5_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID REPEAT_IOT (5 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_ap_repeat_iot_5_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID REPEAT_IOT (5 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_ap_olofsson_wifi_2_4_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_ap_olofsson_wifi_2_4_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_ap_olofsson_wifi_2_4_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_ap_olofsson_wifi_2_4_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_ap_olofsson_wifi_2_4_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_ap_olofsson_guest_2_4_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_ap_olofsson_guest_2_4_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_ap_olofsson_guest_2_4_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_ap_olofsson_guest_2_4_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_ap_olofsson_guest_2_4_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_ap_olofsson_iot_2_4_ghz_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_ap_olofsson_iot_2_4_ghz_channel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) Channel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_ap_olofsson_iot_2_4_ghz_tx_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_ap_olofsson_iot_2_4_ghz_ht_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_ap_olofsson_iot_2_4_ghz_hardware_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.5_ghz_physical_radio_6",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Fysisk radio",
+        "aliases": [
+          null,
+          "5 GHz Physical radio"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.2_4_ghz_physical_radio_6",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Fysisk radio",
+        "aliases": [
+          null,
+          "2.4 GHz Physical radio"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.6c_47_60_1a_87_36_signal_strength_3",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "chromecast-toans-speaker Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.6c_47_60_1a_87_36_rx_rate_3",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "chromecast-toans-speaker RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.6c_47_60_1a_87_36_tx_rate_3",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "chromecast-toans-speaker TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.6c_47_60_1a_87_36_noise_level_3",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "chromecast-toans-speaker Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_e0_4c_fc_8d_bc_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.99 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_e0_4c_fc_8d_bc_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.99 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_e0_4c_fc_8d_bc_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.99 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_e0_4c_fc_8d_bc_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.99 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.00_e0_4c_fc_8d_bc_internet_access",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.10.99 Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_99_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.99 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_99_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.99 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_99_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.99 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_99_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.99 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_99_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "192.168.10.99 Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_99_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "192.168.10.99 Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.192_168_10_99_internet_access",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.10.99 Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_99_signal_strength_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.99 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_99_rx_rate_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.99 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_99_tx_rate_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.99 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_99_noise_level_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.99 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.192_168_10_99_internet_access_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.10.99 Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_e0_4c_5a_e7_b3_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.60 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_e0_4c_5a_e7_b3_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.60 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_e0_4c_5a_e7_b3_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.60 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_e0_4c_5a_e7_b3_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.60 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.00_e0_4c_5a_e7_b3_internet_access",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.10.60 Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_60_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.60 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_60_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.60 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_60_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.60 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_60_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.60 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_60_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "192.168.10.60 Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_60_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "192.168.10.60 Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.192_168_10_60_internet_access",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.10.60 Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_60_signal_strength_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.60 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_60_rx_rate_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.60 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_60_tx_rate_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.60 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_60_noise_level_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.60 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.192_168_10_60_internet_access_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.10.60 Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.c8_2b_96_5c_72_08_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Blomlampor Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.c8_2b_96_5c_72_08_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Blomlampor RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.c8_2b_96_5c_72_08_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Blomlampor TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.c8_2b_96_5c_72_08_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Blomlampor Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.c8_2b_96_5c_72_08_internet_access",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "Blomlampor Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_e0_4c_50_00_fa_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.82 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_e0_4c_50_00_fa_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.82 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_e0_4c_50_00_fa_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.82 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_e0_4c_50_00_fa_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.82 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.00_e0_4c_50_00_fa_internet_access",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.10.82 Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_82_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.82 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_82_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.82 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_82_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.82 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_82_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.82 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_82_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "192.168.10.82 Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_82_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "192.168.10.82 Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.192_168_10_82_internet_access",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.10.82 Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_82_signal_strength_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.82 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_82_rx_rate_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.82 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_82_tx_rate_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.82 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_82_noise_level_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.82 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.192_168_10_82_internet_access_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.10.82 Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.28_39_26_d3_14_5f_signal_strength_3",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.55 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.28_39_26_d3_14_5f_rx_rate_3",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.55 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.28_39_26_d3_14_5f_tx_rate_3",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.55 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.28_39_26_d3_14_5f_noise_level_3",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.55 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.28_39_26_d3_14_5f_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "LenovoL340 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.28_39_26_d3_14_5f_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "LenovoL340 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.28_39_26_d3_14_5f_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "LenovoL340 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.28_39_26_d3_14_5f_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "LenovoL340 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_55_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "LenovoL340.home.arpa Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_55_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "LenovoL340.home.arpa RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_55_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "LenovoL340.home.arpa TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_55_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "LenovoL340.home.arpa Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.192_168_10_55_internet_access",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "LenovoL340.home.arpa Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.28_39_26_d3_14_5f_signal_strength_4",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.55 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.28_39_26_d3_14_5f_rx_rate_4",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.55 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.28_39_26_d3_14_5f_tx_rate_4",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.55 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.28_39_26_d3_14_5f_noise_level_4",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.55 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_2c_bc_bb_c1_87_2c_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "2c:bc:bb:c1:87:2c Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_2c_bc_bb_c1_87_2c_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "2c:bc:bb:c1:87:2c RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_2c_bc_bb_c1_87_2c_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "2c:bc:bb:c1:87:2c TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_2c_bc_bb_c1_87_2c_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "2c:bc:bb:c1:87:2c Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.e8_db_84_d3_1d_ce_signal_strength_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Termostat Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.e8_db_84_d3_1d_ce_rx_rate_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Termostat RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.e8_db_84_d3_1d_ce_tx_rate_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Termostat TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.e8_db_84_d3_1d_ce_noise_level_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Termostat Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.e8_db_84_d3_1d_ce_internet_access_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "Termostat Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_2c_bc_bb_c1_87_2c_signal_strength_3",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "2c:bc:bb:c1:87:2c Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_2c_bc_bb_c1_87_2c_rx_rate_3",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "2c:bc:bb:c1:87:2c RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_2c_bc_bb_c1_87_2c_tx_rate_3",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "2c:bc:bb:c1:87:2c TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_2c_bc_bb_c1_87_2c_noise_level_3",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "2c:bc:bb:c1:87:2c Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.80_c5_f2_3e_08_43_disconnect_device",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "chromecast-verkstadens-speaker Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.80_c5_f2_3e_08_43_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "chromecast-verkstadens-speaker Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.80_c5_f2_3e_08_43_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "chromecast-verkstadens-speaker RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.80_c5_f2_3e_08_43_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "chromecast-verkstadens-speaker TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.80_c5_f2_3e_08_43_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "chromecast-verkstadens-speaker Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.ec_62_60_89_ed_bc_disconnect_device_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null,
+          "shellypro-3-shop-central Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "shellypro-3-shop-central Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.q28756_disconnect_device_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Q28756 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.pixel_9_pro_xl_home_arpa_disconnect_device_4",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.pixel_9_pro_xl_home_arpa_disconnect_device",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.carolas_s25_disconnect_device",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Carolas-S25 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.carolas_s25_disconnect_device_3",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Carolas-S25 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.koket_b0_4a_39_24_a4_cb_disconnect_device_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "roborock-max Disconnect device"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+[
+  {
+    "time": 1793954964.0843008,
+    "values": {
+      "sensor.esphome30_esphome30_energy": "0.0",
+      "sensor.esphome31_esphome31_energy": "0.0",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_energy": "0.867501318454742",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_current": "0.629069566726685",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_power": "15.4149084091187"
+    }
+  },
+  {
+    "time": 1793954974.1446588,
+    "values": {
+      "sensor.esphome30_esphome30_energy": "0.0",
+      "sensor.esphome31_esphome31_energy": "0.0",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_energy": "0.867501318454742",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_current": "0.629069566726685",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_power": "15.4149084091187"
+    }
+  },
+  {
+    "time": 1793954984.2092502,
+    "values": {
+      "sensor.esphome30_esphome30_energy": "0.0",
+      "sensor.esphome31_esphome31_energy": "0.0",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_energy": "0.867501318454742",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_current": "0.629069566726685",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_power": "15.4149084091187"
+    }
+  },
+  {
+    "time": 1793954994.2727995,
+    "values": {
+      "sensor.esphome30_esphome30_energy": "0.0",
+      "sensor.esphome31_esphome31_energy": "0.0",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_energy": "0.867501318454742",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_current": "0.629069566726685",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_power": "15.4149084091187"
+    }
+  },
+  {
+    "time": 1793955004.3322828,
+    "values": {
+      "sensor.esphome30_esphome30_energy": "0.0",
+      "sensor.esphome31_esphome31_energy": "0.0",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_energy": "0.867501318454742",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_current": "0.629069566726685",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_power": "15.4149084091187"
+    }
+  },
+  {
+    "time": 1793955014.3887186,
+    "values": {
+      "sensor.esphome30_esphome30_energy": "0.0",
+      "sensor.esphome31_esphome31_energy": "0.0",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_energy": "1.12109136581421",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_current": "0.58067923784256",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_power": "15.0158910751343"
+    }
+  },
+  {
+    "time": 1793955024.4491193,
+    "values": {
+      "sensor.esphome30_esphome30_energy": "0.0",
+      "sensor.esphome31_esphome31_energy": "0.0",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_energy": "1.12109136581421",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_current": "0.58067923784256",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_power": "15.0158910751343"
+    }
+  },
+  {
+    "time": 1793955034.508105,
+    "values": {
+      "sensor.esphome30_esphome30_energy": "0.0",
+      "sensor.esphome31_esphome31_energy": "0.0",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_energy": "1.12109136581421",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_current": "0.58067923784256",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_power": "15.0158910751343"
+    }
+  },
+  {
+    "time": 1793955044.5689473,
+    "values": {
+      "sensor.esphome30_esphome30_energy": "0.0",
+      "sensor.esphome31_esphome31_energy": "0.0",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_energy": "1.12109136581421",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_current": "0.58067923784256",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_power": "15.0158910751343"
+    }
+  },
+  {
+    "time": 1793955054.627463,
+    "values": {
+      "sensor.esphome30_esphome30_energy": "0.0",
+      "sensor.esphome31_esphome31_energy": "0.0",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_energy": "1.12109136581421",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_current": "0.58067923784256",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_power": "15.0158910751343"
+    }
+  },
+  {
+    "time": 1793955064.6867092,
+    "values": {
+      "sensor.esphome30_esphome30_energy": "0.0",
+      "sensor.esphome31_esphome31_energy": "0.0",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_energy": "1.12109136581421",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_current": "0.58067923784256",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_power": "15.0158910751343"
+    }
+  },
+  {
+    "time": 1793955074.7432942,
+    "values": {
+      "sensor.esphome30_esphome30_energy": "0.0",
+      "sensor.esphome31_esphome31_energy": "0.0",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_energy": "1.36188805103302",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_current": "0.629069566726685",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_power": "13.8797159194946"
+    }
+  },
+  {
+    "time": 1793955084.797986,
+    "values": {
+      "sensor.esphome30_esphome30_energy": "0.0",
+      "sensor.esphome31_esphome31_energy": "0.0",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_energy": "1.36188805103302",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_current": "0.629069566726685",
+      "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_power": "13.8797159194946"
+    }
+  }
+]

@@ -1,0 +1,71 @@
+{
+  "title": "Hem",
+  "views": [
+    {
+      "theme": "Backend-selected",
+      "path": "default_view",
+      "title": "Home",
+      "icon": "mdi:home-outline",
+      "type": "custom:vertical-layout",
+      "badges": [],
+      "cards": [
+        {
+          "type": "horizontal-stack",
+          "cards": [
+            {
+              "type": "tile",
+              "entity": "sensor.termostat_friggan_esphome21_temperature",
+              "vertical": false,
+              "show_entity_picture": false,
+              "icon": "mdi:thermometer"
+            },
+            {
+              "type": "tile",
+              "entity": "sensor.utomhus_temp"
+            }
+          ]
+        },
+        {
+          "features": [
+            {
+              "type": "climate-hvac-modes",
+              "hvac_modes": [
+                "off",
+                "heat"
+              ]
+            },
+            {
+              "type": "target-temperature"
+            },
+            {
+              "type": "climate-preset-modes",
+              "style": "dropdown",
+              "preset_modes": [
+                "home",
+                "away"
+              ]
+            }
+          ],
+          "type": "tile",
+          "entity": "climate.termostat_friggan_esphome21_thermostat",
+          "name": "Termostat",
+          "state_content": [
+            "hvac_action",
+            "state",
+            "preset_mode"
+          ]
+        },
+        {
+          "type": "tile",
+          "entity": "switch.golvvarme_friggan_esphome80_relay_state",
+          "name": "Golvvärme"
+        },
+        {
+          "type": "tile",
+          "entity": "light.utomhuslampa",
+          "name": "Utomhusbelysning"
+        }
+      ]
+    }
+  ]
+}

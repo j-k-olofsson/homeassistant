@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "frontend_panels",
+  "data": {
+    "maintenance": {
+      "show_in_sidebar": true
+    },
+    "climate": {
+      "show_in_sidebar": true
+    },
+    "light": {
+      "show_in_sidebar": true
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "metadata": [
+    {
+      "statistic_id": "sensor.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_load_1m",
+      "display_unit_of_measurement": null,
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_cpu_usage",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_memory_usage",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_temperature",
+      "display_unit_of_measurement": "°C",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "°C",
+      "unit_class": "temperature"
+    }
+  ],
+  "series": {},
+  "start": "2026-11-07T07:00:00+00:00",
+  "end": "2026-11-08T06:00:00+00:00"
+}

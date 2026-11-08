@@ -1,0 +1,3169 @@
+{
+  "stage": "10-lankade-natverksenheter",
+  "description": "Samma namn och område för OpenWrt-poster som HA kopplar till samma fysiska enhet via gemensam anslutningsidentitet.",
+  "operations": [
+    {
+      "kind": "device",
+      "id": "5ccf726682f4645c184954fbd3ccf53e",
+      "before": {
+        "name_by_user": null,
+        "area_id": "friggan"
+      },
+      "after": {
+        "name_by_user": "Termostat",
+        "area_id": "friggan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "ed33c46075be9f0d4b01279949a5fbed",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Termostat",
+        "area_id": "friggan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "f2017908a1d13eb66eeb729164bd550a",
+      "before": {
+        "name_by_user": null,
+        "area_id": "friggan"
+      },
+      "after": {
+        "name_by_user": "Termostat",
+        "area_id": "friggan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "56d73e871264cec3a36afd3306996d98",
+      "before": {
+        "name_by_user": null,
+        "area_id": "honshuset"
+      },
+      "after": {
+        "name_by_user": "Vattenvärmare",
+        "area_id": "honshuset"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "3b39a982f76cf5c2916efe43018d480d",
+      "before": {
+        "name_by_user": null,
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list östra",
+        "area_id": "sovrummet"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "69707932608a9c3bf57ad780dd330bc0",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "LED-list östra",
+        "area_id": "sovrummet"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "a1a1ab61695d2fa0e9b7c1bb59c09b3b",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "LED-list östra",
+        "area_id": "sovrummet"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "5c12f892464e092251c4c5469f1c3c87",
+      "before": {
+        "name_by_user": null,
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list östra",
+        "area_id": "sovrummet"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "038d5f3a66f4cc8434b842de097f0070",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Blomlampa 2",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "4c3ff90ad1dc9ab15e6247f6472a84e9",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Blomlampa 2",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "2f8fc1557700187584df280c66034c24",
+      "before": {
+        "name_by_user": null,
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list norra",
+        "area_id": "sovrummet"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "7c340d67ffbdaebb2a09dfb7a0afe619",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "LED-list norra",
+        "area_id": "sovrummet"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "1dc8f14a226aa8e9cdd20869ec137863",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "LED-list norra",
+        "area_id": "sovrummet"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "b4066b07cd7434754d47daa8bb878d0b",
+      "before": {
+        "name_by_user": null,
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list norra",
+        "area_id": "sovrummet"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "0b19066afbc84f416b77517cbd425ccb",
+      "before": {
+        "name_by_user": null,
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list södra",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "c7dd4d4acbd2068b546001d5bab238f4",
+      "before": {
+        "name_by_user": null,
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list södra",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "1191aa806aa59345c2395a230e15432f",
+      "before": {
+        "name_by_user": null,
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list södra",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "6ee45b1222d6c4c7ad513c8d03f69f7d",
+      "before": {
+        "name_by_user": null,
+        "area_id": "utomhus"
+      },
+      "after": {
+        "name_by_user": "Gasol",
+        "area_id": "utomhus"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "d0764c866b6e89bde7e557009a21580d",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Gasol",
+        "area_id": "utomhus"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "7a17129969f318fe0c30f006beff7e40",
+      "before": {
+        "name_by_user": null,
+        "area_id": "utomhus"
+      },
+      "after": {
+        "name_by_user": "Gasol",
+        "area_id": "utomhus"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "8dd5292bbd3114fe1361fd46e4f2baf1",
+      "before": {
+        "name_by_user": null,
+        "area_id": "gamla_verkstan"
+      },
+      "after": {
+        "name_by_user": "Klimatsensor",
+        "area_id": "gamla_verkstan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "5a694c087021c22c2b6d98411d2f208c",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Klimatsensor",
+        "area_id": "gamla_verkstan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "8b8c87562b4abaf826c376d85cb6a099",
+      "before": {
+        "name_by_user": null,
+        "area_id": "gamla_verkstan"
+      },
+      "after": {
+        "name_by_user": "Klimatsensor",
+        "area_id": "gamla_verkstan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "dc1057019de4aa76e20b8725abda9851",
+      "before": {
+        "name_by_user": null,
+        "area_id": "toaletten"
+      },
+      "after": {
+        "name_by_user": "Termostat",
+        "area_id": "toaletten"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "93932bb2e41b6662b989dce906604122",
+      "before": {
+        "name_by_user": null,
+        "area_id": "toaletten"
+      },
+      "after": {
+        "name_by_user": "Termostat",
+        "area_id": "toaletten"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "e05a49e95da9c06595cc95cad95030e8",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Termostat",
+        "area_id": "toaletten"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "bbfc3305cea448b716db4b93e2422f2f",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Termostat",
+        "area_id": "toaletten"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "ef88eb9dd542d018ea0977cb4bff9ecf",
+      "before": {
+        "name_by_user": null,
+        "area_id": "friggan"
+      },
+      "after": {
+        "name_by_user": "Golvvärme",
+        "area_id": "friggan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "01cca45e17dae0e4c41629c6eede7177",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Golvvärme",
+        "area_id": "friggan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "f2b7e9295135561e44b8f743f84d5cfe",
+      "before": {
+        "name_by_user": null,
+        "area_id": "friggan"
+      },
+      "after": {
+        "name_by_user": "Golvvärme",
+        "area_id": "friggan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "93115a11cfad9ed0b7d2a951030b2e8c",
+      "before": {
+        "name_by_user": "Blomlampor (bion)",
+        "area_id": "hemmabion"
+      },
+      "after": {
+        "name_by_user": "Blomlampor",
+        "area_id": "hemmabion"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "821a5e8641ccbf676f1f06a89f3f9fcc",
+      "before": {
+        "name_by_user": "Blomlampor (bion)",
+        "area_id": "hemmabion"
+      },
+      "after": {
+        "name_by_user": "Blomlampor",
+        "area_id": "hemmabion"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "c95429ca710de252ac635fa5df99ff64",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Blomlampor",
+        "area_id": "hemmabion"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "48b941b8948bb46f61cd2879437040b1",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Blomlampor",
+        "area_id": "hemmabion"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "92d4c8a6813af15d7250b96417002d25",
+      "before": {
+        "name_by_user": null,
+        "area_id": "utomhus"
+      },
+      "after": {
+        "name_by_user": "Julbelysning",
+        "area_id": "utomhus"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "f61eead36abc9bba52c8f34f021709a1",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Julbelysning",
+        "area_id": "utomhus"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "8b54afebfda989dd2203010fb9736fd6",
+      "before": {
+        "name_by_user": null,
+        "area_id": "utomhus"
+      },
+      "after": {
+        "name_by_user": "Julbelysning",
+        "area_id": "utomhus"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "f81382f57ed714b188578bfb940756e8",
+      "before": {
+        "name_by_user": null,
+        "area_id": "kontoret"
+      },
+      "after": {
+        "name_by_user": "Termostat",
+        "area_id": "kontoret"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "f7b9dfb5867a3fda88ce6e5f7c480d12",
+      "before": {
+        "name_by_user": null,
+        "area_id": "kontoret"
+      },
+      "after": {
+        "name_by_user": "Termostat",
+        "area_id": "kontoret"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "caaa6c5980803e219616cfd2c44c93fa",
+      "before": {
+        "name_by_user": null,
+        "area_id": "kontoret"
+      },
+      "after": {
+        "name_by_user": "Termostat",
+        "area_id": "kontoret"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "ba4e3b93d8dc302363155d7483c52acc",
+      "before": {
+        "name_by_user": null,
+        "area_id": "sovrummet"
+      },
+      "after": {
+        "name_by_user": "Taklampor",
+        "area_id": "sovrummet"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "4e310c40372591fa80ae02e3e4b4e4a8",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Taklampor",
+        "area_id": "sovrummet"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "e4a844d4439bcf8f61d8dca153605e7d",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Taklampor",
+        "area_id": "sovrummet"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "ee544a832ce0d937e8e9b469f8e89c1f",
+      "before": {
+        "name_by_user": null,
+        "area_id": "sovrummet"
+      },
+      "after": {
+        "name_by_user": "Taklampor",
+        "area_id": "sovrummet"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "94e422cc74539d53042265c327d6ad61",
+      "before": {
+        "name_by_user": null,
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list sydöstra",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "8b12f635e2adaa779a3db0e5f641aa1d",
+      "before": {
+        "name_by_user": null,
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list sydöstra",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "fb357f4bfd36f57ee05df1c0f5ccd028",
+      "before": {
+        "name_by_user": null,
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list sydöstra",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "889114c7f25dfcb701ed80c7636e935d",
+      "before": {
+        "name_by_user": null,
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list",
+        "area_id": "verndan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "ed7412238af2bfda62602d802ab0ac2b",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "LED-list",
+        "area_id": "verndan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "80ff1b9d79b4e259048ceab11e301618",
+      "before": {
+        "name_by_user": null,
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list",
+        "area_id": "verndan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "a1fd37935a6546ad43c505fecee53e4f",
+      "before": {
+        "name_by_user": null,
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list östra",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "0d21d05941eb0c89d0f0cb466753785a",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "LED-list östra",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "15e0694a84565e784bc675254d1931cf",
+      "before": {
+        "name_by_user": null,
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list östra",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "8e97557399b0c3707e04c1bfc135659f",
+      "before": {
+        "name_by_user": null,
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list",
+        "area_id": "entren"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "05ae2627f4b455f3b51cfc1b50c287c2",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "LED-list",
+        "area_id": "entren"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "c544296765b210f396ec2298d154cd76",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "LED-list",
+        "area_id": "entren"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "65689fdeafed6337a71ea38677288977",
+      "before": {
+        "name_by_user": null,
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list",
+        "area_id": "entren"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "8a23e108be2c679648a9dcfd7b0ffed8",
+      "before": {
+        "name_by_user": null,
+        "area_id": "pool"
+      },
+      "after": {
+        "name_by_user": "Poolbelysning och temperatur",
+        "area_id": "pool"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "8dd48c0f9d36855faa01a7a89cdacfe8",
+      "before": {
+        "name_by_user": null,
+        "area_id": "pool"
+      },
+      "after": {
+        "name_by_user": "Poolbelysning och temperatur",
+        "area_id": "pool"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "3078be456859fccabe3ff5c5d2e7c17b",
+      "before": {
+        "name_by_user": null,
+        "area_id": "kontoret"
+      },
+      "after": {
+        "name_by_user": "RF-brygga",
+        "area_id": "kontoret"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "6fcd7c642e1873bbe69b38c1c1e0d772",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "RF-brygga",
+        "area_id": "kontoret"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "b9b90e4dea4d37340cd6c079109249d4",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "RF-brygga",
+        "area_id": "kontoret"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "9724a34cf55d2376bbc4561cae121b69",
+      "before": {
+        "name_by_user": null,
+        "area_id": "kontoret"
+      },
+      "after": {
+        "name_by_user": "RF-brygga",
+        "area_id": "kontoret"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "307a8a14cd4ec794f562e06c898841a6",
+      "before": {
+        "name_by_user": null,
+        "area_id": "honshuset"
+      },
+      "after": {
+        "name_by_user": "Vattennivå",
+        "area_id": "honshuset"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "c009f14ea5110f178ebbfb0188aaefec",
+      "before": {
+        "name_by_user": null,
+        "area_id": "honshuset"
+      },
+      "after": {
+        "name_by_user": "Vattennivå",
+        "area_id": "honshuset"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "89e955ab9ead97b83c21235a8cf42776",
+      "before": {
+        "name_by_user": "Vattensensor (torkskåp)",
+        "area_id": "ateljen"
+      },
+      "after": {
+        "name_by_user": "Vattensensor torkskåp",
+        "area_id": "ateljen"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "5ee897ff17093c0d83ea78216cb427bc",
+      "before": {
+        "name_by_user": "Vattensensor (torkskåp)",
+        "area_id": "ateljen"
+      },
+      "after": {
+        "name_by_user": "Vattensensor torkskåp",
+        "area_id": "ateljen"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "34b39f62a5b09c8a19cea4044a90a951",
+      "before": {
+        "name_by_user": "Vattensensor (torkskåp)",
+        "area_id": "ateljen"
+      },
+      "after": {
+        "name_by_user": "Vattensensor torkskåp",
+        "area_id": "ateljen"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "b574ce9c70dbfef8078dc807c916dfbc",
+      "before": {
+        "name_by_user": null,
+        "area_id": "hemmabion"
+      },
+      "after": {
+        "name_by_user": "IR-gateway",
+        "area_id": "hemmabion"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "ad0eb5049e5bd7a1dd432227c80c5c21",
+      "before": {
+        "name_by_user": null,
+        "area_id": "hemmabion"
+      },
+      "after": {
+        "name_by_user": "IR-gateway",
+        "area_id": "hemmabion"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "451c82bb3122d662dab862f231fe5d4e",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "IR-gateway",
+        "area_id": "hemmabion"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "a3cec764ea107664074a078c2a801997",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "IR-gateway",
+        "area_id": "hemmabion"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "a8c5d5ffb35af1bd27601825fcf75d76",
+      "before": {
+        "name_by_user": null,
+        "area_id": "utomhus"
+      },
+      "after": {
+        "name_by_user": "ESP32-kamera",
+        "area_id": "utomhus"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "d59021597d4ec3fa4f0e5f81050de3df",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "ESP32-kamera",
+        "area_id": "utomhus"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "012a3dbcc946329ab1054a7aae1e1036",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "ESP32-kamera",
+        "area_id": "utomhus"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "934c2386aa6d6de7c59ad1ddc2843d82",
+      "before": {
+        "name_by_user": null,
+        "area_id": "utomhus"
+      },
+      "after": {
+        "name_by_user": "ESP32-kamera",
+        "area_id": "utomhus"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "c3d296c6fe124342b568c0f1a646f6a2",
+      "before": {
+        "name_by_user": "Blomlampa 1 (Verandan)",
+        "area_id": "verndan"
+      },
+      "after": {
+        "name_by_user": "Blomlampa 1",
+        "area_id": "verndan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "f3bb1ac6b62bbb74113c58c11b297687",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Blomlampa 1",
+        "area_id": "verndan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "02d17b1c57500fa3a6461a770fe0a667",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Blomlampa 1",
+        "area_id": "verndan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "83b5fb3672cd5614741a3f02820229a2",
+      "before": {
+        "name_by_user": "Blomlampa 1 (Verandan)",
+        "area_id": "verndan"
+      },
+      "after": {
+        "name_by_user": "Blomlampa 1",
+        "area_id": "verndan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "1739eeb389835d312bbfb14475d81e65",
+      "before": {
+        "name_by_user": null,
+        "area_id": "verkstan"
+      },
+      "after": {
+        "name_by_user": "LED-plafonder",
+        "area_id": "verkstan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "00845577c9de6f8f16fdc24e2275f363",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "LED-plafonder",
+        "area_id": "verkstan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "c30a4cb4d3ede2ad808dd1a1d7616238",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "LED-plafonder",
+        "area_id": "verkstan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "b42931f4d10cd0d7ea3e14e2decc8a62",
+      "before": {
+        "name_by_user": null,
+        "area_id": "verkstan"
+      },
+      "after": {
+        "name_by_user": "LED-plafonder",
+        "area_id": "verkstan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "604a0c26206ba37afb1cb05b8ddb51e3",
+      "before": {
+        "name_by_user": null,
+        "area_id": "utomhus"
+      },
+      "after": {
+        "name_by_user": "Markis",
+        "area_id": "utomhus"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "f9cb7e351054f4fb0c0c5abd64606331",
+      "before": {
+        "name_by_user": null,
+        "area_id": "utomhus"
+      },
+      "after": {
+        "name_by_user": "Markis",
+        "area_id": "utomhus"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "945272d5693a70b3c51584e9cddeb738",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Markis",
+        "area_id": "utomhus"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "74b5529ed23b20a924942c918776a031",
+      "before": {
+        "name_by_user": null,
+        "area_id": "utomhus"
+      },
+      "after": {
+        "name_by_user": "Markis",
+        "area_id": "utomhus"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "d3d9e57098c5c3bd0e9e9c15597c2ecf",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Golvvärme",
+        "area_id": "hemmabion"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "0f608b9f77a13635f92b6b2949680396",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Golvvärme",
+        "area_id": "hemmabion"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "86a258f34d8b965791f2d420abbee6c1",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Golvvärme",
+        "area_id": "hemmabion"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "485d66614120bab8ca5956b51cd4b434",
+      "before": {
+        "name_by_user": "Ventilfläkt (bion)",
+        "area_id": "hemmabion"
+      },
+      "after": {
+        "name_by_user": "Ventilfläkt",
+        "area_id": "hemmabion"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "70e0f5a6fd2c82568a6f48210ef8da88",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Ventilfläkt",
+        "area_id": "hemmabion"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "d03a7cff0ce57c2044dd02002290b676",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Ventilfläkt",
+        "area_id": "hemmabion"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "835f0eb53e964c20301c5c528d3ed358",
+      "before": {
+        "name_by_user": "Ventilfläkt (bion)",
+        "area_id": "hemmabion"
+      },
+      "after": {
+        "name_by_user": "Ventilfläkt",
+        "area_id": "hemmabion"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "6b00e3547e2adbb55755bf6fe8be545c",
+      "before": {
+        "name_by_user": null,
+        "area_id": "hemmabion"
+      },
+      "after": {
+        "name_by_user": "Taklampor",
+        "area_id": "hemmabion"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "41f1d6c49daacacf375ac5a6d365baca",
+      "before": {
+        "name_by_user": null,
+        "area_id": "hemmabion"
+      },
+      "after": {
+        "name_by_user": "Taklampor",
+        "area_id": "hemmabion"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "abf3d01af8d7aeda8e2336836898560f",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Taklampor",
+        "area_id": "hemmabion"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "c5eb70dd8c934252039447c490be88da",
+      "before": {
+        "name_by_user": null,
+        "area_id": "hemmabion"
+      },
+      "after": {
+        "name_by_user": "Taklampor",
+        "area_id": "hemmabion"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "f9907305b94b0769630ddf9a2d14ac04",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Golvvärme",
+        "area_id": "verndan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "a65bcbf012e5dea6c6befd0eb7f2ff2a",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Golvvärme",
+        "area_id": "verndan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "35f1076f38fd486ac712f8ae017fe7d6",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Golvvärme",
+        "area_id": "verndan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "f3ba80e6c64abeb79624ebf64744ba27",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Golvvärme",
+        "area_id": "entren"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "ef12d1107be4ebab746874573cf87296",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Golvvärme",
+        "area_id": "entren"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "131c0d7f087e5dbc74cfb219e7958d36",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Golvvärme",
+        "area_id": "ateljen"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "e7d2dc93dd0cd8f69e461cd577317577",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Golvvärme",
+        "area_id": "ateljen"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "60ac31374b3d2f47cf1fc882ad0371b3",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Golvvärme",
+        "area_id": "ateljen"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "a551b0e58ab3a7c3d53d9a0201a7c14c",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Golvvärme",
+        "area_id": "ateljen"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "57526effb07b7464600deeede5ed7fac",
+      "before": {
+        "name_by_user": null,
+        "area_id": "entren"
+      },
+      "after": {
+        "name_by_user": "Taklampor ESPHome",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "486fa819a9ce457079cd4260c1970b23",
+      "before": {
+        "name_by_user": null,
+        "area_id": "entren"
+      },
+      "after": {
+        "name_by_user": "Taklampor ESPHome",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "133e4799c816f998010a700ae9a8df05",
+      "before": {
+        "name_by_user": null,
+        "area_id": "entren"
+      },
+      "after": {
+        "name_by_user": "Taklampor ESPHome",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "8e39cb75d39dd6a988ef3a9a5124de8d",
+      "before": {
+        "name_by_user": "Taklampor (kontoret)",
+        "area_id": "kontoret"
+      },
+      "after": {
+        "name_by_user": "Taklampor",
+        "area_id": "kontoret"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "da5bb78781668d7814271fe872d36429",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Taklampor",
+        "area_id": "kontoret"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "3ccbdcd0d1acc61328460175d8376c78",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Taklampor",
+        "area_id": "kontoret"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "26fc399a9899fb446dc9af75ba820a3d",
+      "before": {
+        "name_by_user": "Taklampor (kontoret)",
+        "area_id": "kontoret"
+      },
+      "after": {
+        "name_by_user": "Taklampor",
+        "area_id": "kontoret"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "33da8c755856fce15c805852262dd9ec",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Golvvärme",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "4d5b8fcd5210a08a1ca0fc4a0a690721",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Golvvärme",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "fb54db7f08567b6532302b4d8132b529",
+      "before": {
+        "name_by_user": null,
+        "area_id": "hemmabion"
+      },
+      "after": {
+        "name_by_user": "LED-list (balkongdörrar)",
+        "area_id": "verndan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "2241cafccd67256148bbab367ee55c44",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "LED-list (balkongdörrar)",
+        "area_id": "verndan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "9b853b74e49b33da90ccb5616debf30c",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "LED-list (balkongdörrar)",
+        "area_id": "verndan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "c0dc31ad7a03572df2da086b5e2a4809",
+      "before": {
+        "name_by_user": null,
+        "area_id": "hemmabion"
+      },
+      "after": {
+        "name_by_user": "LED-list (balkongdörrar)",
+        "area_id": "verndan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "8bc9b6ad7bf32081ff214581710b8a93",
+      "before": {
+        "name_by_user": null,
+        "area_id": "honshuset"
+      },
+      "after": {
+        "name_by_user": "Lucka",
+        "area_id": "honshuset"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "1d0e6afaa61887b35a155b9ddbb4060c",
+      "before": {
+        "name_by_user": "Växtlampa frösådd (bion) [SHPLS]",
+        "area_id": "kok"
+      },
+      "after": {
+        "name_by_user": "LED-stjärnor",
+        "area_id": "utomhus"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "5f9530504312c9bd37328294bd9ec31c",
+      "before": {
+        "name_by_user": "Växtlampa frösådd (bion) [SHPLS]",
+        "area_id": "kok"
+      },
+      "after": {
+        "name_by_user": "LED-stjärnor",
+        "area_id": "utomhus"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "b6ecb8a29e9b808c5657990a649a59d5",
+      "before": {
+        "name_by_user": "Växtlampa frösådd (bion) [SHPLS]",
+        "area_id": "kok"
+      },
+      "after": {
+        "name_by_user": "LED-stjärnor",
+        "area_id": "utomhus"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "88eac5338f5d2caafa1845e5fe970c00",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "LED-stjärnor",
+        "area_id": "utomhus"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "397ee9a5fadb5009740e7110532e4c1e",
+      "before": {
+        "name_by_user": null,
+        "area_id": "verkstan"
+      },
+      "after": {
+        "name_by_user": "Salt",
+        "area_id": "verkstan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "f50aa4177d55a2835ce6c0539ae0fc60",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Salt",
+        "area_id": "verkstan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "a5dc06ab0c28cc973c4e57682d4d24ca",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Salt",
+        "area_id": "verkstan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "cbc8829cc18604f6ffe29b25ffd8eb75",
+      "before": {
+        "name_by_user": null,
+        "area_id": "verkstan"
+      },
+      "after": {
+        "name_by_user": "Salt",
+        "area_id": "verkstan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "e03ce9189b88abe8f912563dee3343ac",
+      "before": {
+        "name_by_user": "Shelly Pro 3 - Verkstaden",
+        "area_id": "verkstan"
+      },
+      "after": {
+        "name_by_user": "Shelly Pro 3",
+        "area_id": "verkstan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "6c0b43166574454e63b8444585344c73",
+      "before": {
+        "name_by_user": "Shelly Pro 3 - Verkstaden",
+        "area_id": "verkstan"
+      },
+      "after": {
+        "name_by_user": "Shelly Pro 3",
+        "area_id": "verkstan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "367b93944c83eb73f449a805c00c35c1",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Shelly Pro 3",
+        "area_id": "verkstan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "1444d41eb2c7979b444d3d50fc64b55b",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Shelly Pro 3",
+        "area_id": "verkstan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "1bdc70d21dcc8437ee658f4f8b1efc89",
+      "before": {
+        "name_by_user": "Shelly Pro 3 - Verkstaden",
+        "area_id": "verkstan"
+      },
+      "after": {
+        "name_by_user": "Shelly Pro 3",
+        "area_id": "verkstan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "f5989d560d6e5f25963c6b28870e9c48",
+      "before": {
+        "name_by_user": null,
+        "area_id": "pool"
+      },
+      "after": {
+        "name_by_user": "Poolvärmepump",
+        "area_id": "pool"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "25dad0e161da819de3e5df52c98276dc",
+      "before": {
+        "name_by_user": null,
+        "area_id": "pool"
+      },
+      "after": {
+        "name_by_user": "Poolvärmepump",
+        "area_id": "pool"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "d00846d01d2081bf328a72c0f0a208c9",
+      "before": {
+        "name_by_user": null,
+        "area_id": "duschen"
+      },
+      "after": {
+        "name_by_user": "Taklampor",
+        "area_id": "duschen"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "156738c4fdc135bd05b0ee6b2bfdbe1c",
+      "before": {
+        "name_by_user": null,
+        "area_id": "duschen"
+      },
+      "after": {
+        "name_by_user": "Taklampor",
+        "area_id": "duschen"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "0d4b0744e4770ad2d5cb0c21c6ed905b",
+      "before": {
+        "name_by_user": null,
+        "area_id": "duschen"
+      },
+      "after": {
+        "name_by_user": "Taklampor",
+        "area_id": "duschen"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "0f2949ea12cacf69edf3d05d391756b3",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Golvvärme",
+        "area_id": "duschen"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "5c5bb33782f82c795021a2496170dd93",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Golvvärme",
+        "area_id": "duschen"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "93c2c1b9a67e7fe71ed62e56380357ac",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Golvvärme",
+        "area_id": "duschen"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "dd6f34a2e92e74d9457b95dc1a457ec0",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Väggkontakt x2",
+        "area_id": "verndan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "03c84816fa0ec5c5f284872684d852ae",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Väggkontakt x2",
+        "area_id": "verndan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "38f850a39c9a90ed663ad0ae3007a4e4",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Väggkontakt x2",
+        "area_id": "verndan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "2015427ab5a3971258931903a81dbfaf",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Väggkontakt x2",
+        "area_id": "verndan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "ad8fb2b615191013ff160833e718f6e7",
+      "before": {
+        "name_by_user": null,
+        "area_id": "kontoret"
+      },
+      "after": {
+        "name_by_user": "Blomlampa",
+        "area_id": "kontoret"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "09147886523170780169189ffb321f99",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Blomlampa",
+        "area_id": "kontoret"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "3a909c7e312d75cbaa84e9c22bdc3a9b",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Blomlampa",
+        "area_id": "kontoret"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "df6a4230c3d31643bcd09021fed15056",
+      "before": {
+        "name_by_user": null,
+        "area_id": "kontoret"
+      },
+      "after": {
+        "name_by_user": "Blomlampa",
+        "area_id": "kontoret"
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.c8_2b_96_5c_71_55_c8_2b_96_5c_71_55",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "c8:2b:96:5c:71:55 c8:2b:96:5c:71:55"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.c4_4f_33_7a_51_d5_c4_4f_33_7a_51_d5",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "c4:4f:33:7a:51:d5 c4:4f:33:7a:51:d5"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.c4_4f_33_7a_51_11_c4_4f_33_7a_51_11",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "c4:4f:33:7a:51:11 c4:4f:33:7a:51:11"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.taklampor_kontoret_c8_c9_a3_25_b7_f7",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "Taklampor (kontoret) c8:c9:a3:25:b7:f7"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.34_94_54_70_7c_a2_34_94_54_70_7c_a2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "34:94:54:70:7c:a2 34:94:54:70:7c:a2"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.a4_cf_12_d8_0a_dd_a4_cf_12_d8_0a_dd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "a4:cf:12:d8:0a:dd a4:cf:12:d8:0a:dd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.blomlampa_1_verandan_24_a1_60_1b_1f_92",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "Blomlampa 1 (Verandan) 24:a1:60:1b:1f:92"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.f0_08_d1_f2_b8_08_f0_08_d1_f2_b8_08",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "f0:08:d1:f2:b8:08 f0:08:d1:f2:b8:08"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.dc_06_75_9d_65_c0_dc_06_75_9d_65_c0",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "dc:06:75:9d:65:c0 dc:06:75:9d:65:c0"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.7c_9e_bd_06_e7_bc_7c_9e_bd_06_e7_bc",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "7c:9e:bd:06:e7:bc 7c:9e:bd:06:e7:bc"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.7c_9e_bd_47_e2_88_7c_9e_bd_47_e2_88",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "7c:9e:bd:47:e2:88 7c:9e:bd:47:e2:88"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.7c_9e_bd_46_f5_80_7c_9e_bd_46_f5_80",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "7c:9e:bd:46:f5:80 7c:9e:bd:46:f5:80"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.7c_9e_bd_06_c3_b4_7c_9e_bd_06_c3_b4",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "7c:9e:bd:06:c3:b4 7c:9e:bd:06:c3:b4"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.08_b6_1f_34_55_50_08_b6_1f_34_55_50",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "08:b6:1f:34:55:50 08:b6:1f:34:55:50"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.48_e7_29_67_de_7f_48_e7_29_67_de_7f",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "48:e7:29:67:de:7f 48:e7:29:67:de:7f"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.08_f9_e0_46_ed_b4_08_f9_e0_46_ed_b4",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "08:f9:e0:46:ed:b4 08:f9:e0:46:ed:b4"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.vaxtlampa_frosadd_bion_shpls_shellyplusplugs_08f9e0fd4304",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "Växtlampa frösådd (bion) [SHPLS] shellyplusplugs-08f9e0fd4304"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.blomlampor_bion_c8_2b_96_5c_72_08",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "Blomlampor (bion) c8:2b:96:5c:72:08"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.c4_4f_33_7a_2e_79_c4_4f_33_7a_2e_79",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "c4:4f:33:7a:2e:79 c4:4f:33:7a:2e:79"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.cc_50_e3_fe_16_ed_cc_50_e3_fe_16_ed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "cc:50:e3:fe:16:ed cc:50:e3:fe:16:ed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.24_62_ab_57_80_ad_24_62_ab_57_80_ad",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "24:62:ab:57:80:ad 24:62:ab:57:80:ad"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.c4_4f_33_7a_51_6d_c4_4f_33_7a_51_6d",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "c4:4f:33:7a:51:6d c4:4f:33:7a:51:6d"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.ventilflakt_bion_f4_cf_a2_15_d8_ac",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "Ventilfläkt (bion) f4:cf:a2:15:d8:ac"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.shellyplug_s_shop_roof_lamps_shellyplug_s_shop_roof_lamps",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "shellyplug-s-shop-roof-lamps shellyplug-s-shop-roof-lamps"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.shelly_pro_3_verkstaden_shellypro_3_shop_central",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "Shelly Pro 3 - Verkstaden shellypro-3-shop-central"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.08_b6_1f_38_0b_64_08_b6_1f_38_0b_64",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "08:b6:1f:38:0b:64 08:b6:1f:38:0b:64"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.80_64_6f_91_e9_d5_80_64_6f_91_e9_d5",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "80:64:6f:91:e9:d5 80:64:6f:91:e9:d5"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.94_b9_7e_16_d2_02_94_b9_7e_16_d2_02",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "94:b9:7e:16:d2:02 94:b9:7e:16:d2:02"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.08_b6_1f_38_26_78_08_b6_1f_38_26_78",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "192.168.30.171 192.168.30.171"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.e8_db_84_d3_1d_ce_e8_db_84_d3_1d_ce",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "192.168.30.183 192.168.30.183"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.24_a1_60_10_eb_a9_24_a1_60_10_eb_a9",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "24:a1:60:10:eb:a9 24:a1:60:10:eb:a9"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.c8_2b_96_07_35_26_c8_2b_96_07_35_26",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "192.168.30.129 192.168.30.129"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.c4_4f_33_72_73_e1_c4_4f_33_72_73_e1",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "c4:4f:33:72:73:e1 c4:4f:33:72:73:e1"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.vattensensor_torkskap_shellyflood_dryercabinet",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "Vattensensor (torkskåp) shellyflood-dryercabinet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.c8_2b_96_07_7d_6e_c8_2b_96_07_7d_6e",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "c8:2b:96:07:7d:6e c8:2b:96:07:7d:6e"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.98_f4_ab_e2_71_12_98_f4_ab_e2_71_12",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "98:f4:ab:e2:71:12 98:f4:ab:e2:71:12"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.honshuset_ac_67_b2_2c_18_8c_ac_67_b2_2c_18_8c",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "ac:67:b2:2c:18:8c ac:67:b2:2c:18:8c"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.honshuset_24_62_ab_58_40_b4_24_62_ab_58_40_b4",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null,
+          "24:62:ab:58:40:b4 24:62:ab:58:40:b4"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.ec_62_60_89_ed_bc_disconnect_device_2",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "shellypro-3-shop-central Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.honshuset_c4_4f_33_72_73_e1_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "c4:4f:33:72:73:e1 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.ateljen_vattensensor_torkskap_disconnect_device_2",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Vattensensor (torkskåp) Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.verandan_blomlampa_1_verandan_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Blomlampa 1 (Verandan) Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.utomhus_f0_08_d1_f2_b8_08_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "f0:08:d1:f2:b8:08 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.bion_dc_06_75_9d_65_c0_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "dc:06:75:9d:65:c0 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.ha_servern_7c_9e_bd_06_e7_bc_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "7c:9e:bd:06:e7:bc Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.ha_servern_7c_9e_bd_47_e2_88_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "7c:9e:bd:47:e2:88 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.ha_servern_7c_9e_bd_46_f5_80_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "7c:9e:bd:46:f5:80 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.ha_servern_7c_9e_bd_06_c3_b4_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "7c:9e:bd:06:c3:b4 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.duschen_48_e7_29_67_de_7f_disconnect_device_2",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "48:e7:29:67:de:7f Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.entren_08_f9_e0_46_ed_b4_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "08:f9:e0:46:ed:b4 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_c8_2b_96_5c_71_55_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "c8:2b:96:5c:71:55 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.ha_servern_c4_4f_33_7a_51_d5_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "c4:4f:33:7a:51:d5 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.ha_servern_c4_4f_33_7a_51_11_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "c4:4f:33:7a:51:11 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.utomhus_08_b6_1f_34_55_50_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "08:b6:1f:34:55:50 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_taklampor_kontoret_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Taklampor (kontoret) Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.sovrummet_34_94_54_70_7c_a2_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "34:94:54:70:7c:a2 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_a4_cf_12_d8_0a_dd_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "a4:cf:12:d8:0a:dd Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.friggan_c8_2b_96_07_7d_6e_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "c8:2b:96:07:7d:6e Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.friggan_98_f4_ab_e2_71_12_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "98:f4:ab:e2:71:12 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.verkstaden_08_3a_8d_c3_44_dd_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "shellyplug-s-shop-roof-lamps Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.verkstaden_08_b6_1f_38_0b_64_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "08:b6:1f:38:0b:64 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_80_64_6f_91_e9_d5_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "80:64:6f:91:e9:d5 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.bion_94_b9_7e_16_d2_02_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "94:b9:7e:16:d2:02 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.gamla_verkstaden_08_b6_1f_38_26_78_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "08:b6:1f:38:26:78 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.utomhus_c4_4f_33_7a_2e_79_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "c4:4f:33:7a:2e:79 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.utomhus_24_62_ab_57_80_ad_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "24:62:ab:57:80:ad Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.ha_servern_c4_4f_33_7a_51_6d_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "c4:4f:33:7a:51:6d Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.bion_ventilflakt_bion_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ventilfläkt (bion) Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_24_a1_60_10_eb_a9_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "24:a1:60:10:eb:a9 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_c8_2b_96_07_35_26_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "c8:2b:96:07:35:26 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.24_62_ab_57_80_ad_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "24:62:ab:57:80:ad Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.ha_servern_c4_4f_33_7a_51_6d_disconnect_device_2",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "c4:4f:33:7a:51:6d Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.verkstaden_shelly_pro_3_verkstaden_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Shelly Pro 3 - Verkstaden Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_a4_cf_12_d8_0a_dd_disconnect_device_2",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "a4:cf:12:d8:0a:dd Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.30_c9_22_86_74_68_disconnect_device_2",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "shellyplus2pm-porch-lamps-x2 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.duschen_48_e7_29_67_de_7f_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "48:e7:29:67:de:7f Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.entren_08_f9_e0_46_ed_b4_disconnect_device_2",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "08:f9:e0:46:ed:b4 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.ha_servern_7c_9e_bd_47_e2_88_disconnect_device_2",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "7c:9e:bd:47:e2:88 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.a0_dd_6c_29_b1_34_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "shelly-1pm-kitchen-floor-heating Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.a0_dd_6c_2b_31_4c_disconnect_device_2",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "shelly-1pm-studio-floor-heating Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.80_64_6f_e3_be_f0_disconnect_device_2",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "shelly-1pm-celler-floor-heating Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.utomhus_08_b6_1f_34_55_50_disconnect_device_2",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "08:b6:1f:34:55:50 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.bion_94_b9_7e_16_d2_02_disconnect_device_2",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "94:b9:7e:16:d2:02 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.toaletten_e8_db_84_d3_1d_ce_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "192.168.30.183 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.honshuset_24_62_ab_58_40_b4_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "24:62:ab:58:40:b4 Disconnect device"
+        ]
+      }
+    }
+  ]
+}

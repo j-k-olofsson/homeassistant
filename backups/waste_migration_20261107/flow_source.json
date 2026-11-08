@@ -1,0 +1,354 @@
+{
+  "type": "form",
+  "flow_id": "01M6TBEBBMYXXQJ7T9C9S7PB53",
+  "handler": "waste_collection_schedule",
+  "data_schema": [
+    {
+      "selector": {
+        "select": {
+          "options": [
+            {
+              "value": "",
+              "label": ""
+            },
+            {
+              "value": "affarsverken_se\tAffärsverken\taffarsverken_se",
+              "label": "Affärsverken (affarsverken_se)"
+            },
+            {
+              "value": "aen_minasidor_se\tAneby Miljö & Vatten\taen_minasidor_se",
+              "label": "Aneby Miljö & Vatten (aen_minasidor_se)"
+            },
+            {
+              "value": "skaraborg_se\tAvfall & Återvinning Skaraborg\tskaraborg_se",
+              "label": "Avfall & Återvinning Skaraborg (skaraborg_se)"
+            },
+            {
+              "value": "avfallsapp_se\tAvfallsapp.se - Multi Source\tavfallsapp_se",
+              "label": "Avfallsapp.se - Multi Source (avfallsapp_se)"
+            },
+            {
+              "value": "vattenmiljoresurs_se\tBerg\tvattenmiljoresurs_se",
+              "label": "Berg (vattenmiljoresurs_se)"
+            },
+            {
+              "value": "edpevent_se\tBoden\tedpevent_se",
+              "label": "Boden (edpevent_se)"
+            },
+            {
+              "value": "borlange_energi_se\tBorlänge Energi\tborlange_energi_se",
+              "label": "Borlänge Energi (borlange_energi_se)"
+            },
+            {
+              "value": "edpevent_se\tBorås Energi och Miljö\tedpevent_se",
+              "label": "Borås Energi och Miljö (edpevent_se)"
+            },
+            {
+              "value": "vattenmiljoresurs_se\tBräcke\tvattenmiljoresurs_se",
+              "label": "Bräcke (vattenmiljoresurs_se)"
+            },
+            {
+              "value": "edpevent_se\tDanderyds kommun\tedpevent_se",
+              "label": "Danderyds kommun (edpevent_se)"
+            },
+            {
+              "value": "edpevent_se\tEDPEvent - Multi Source\tedpevent_se",
+              "label": "EDPEvent - Multi Source (edpevent_se)"
+            },
+            {
+              "value": "roslagsvatten_se\tEkerö\troslagsvatten_se",
+              "label": "Ekerö (roslagsvatten_se)"
+            },
+            {
+              "value": "fev_se\tFalu Energi & Vatten (FEV)\tfev_se",
+              "label": "Falu Energi & Vatten (FEV) (fev_se)"
+            },
+            {
+              "value": "gastrikeatervinnare_se\tGästrike Återvinnare\tgastrikeatervinnare_se",
+              "label": "Gästrike Återvinnare (gastrikeatervinnare_se)"
+            },
+            {
+              "value": "hedemora_energi_se\tHedemora Energi\thedemora_energi_se",
+              "label": "Hedemora Energi (hedemora_energi_se)"
+            },
+            {
+              "value": "edpevent_se\tHerrljunga & Vårgårda kommun\tedpevent_se",
+              "label": "Herrljunga & Vårgårda kommun (edpevent_se)"
+            },
+            {
+              "value": "hudiksvall_se\tHudiksvall\thudiksvall_se",
+              "label": "Hudiksvall (hudiksvall_se)"
+            },
+            {
+              "value": "vattenmiljoresurs_se\tHärjedalen\tvattenmiljoresurs_se",
+              "label": "Härjedalen (vattenmiljoresurs_se)"
+            },
+            {
+              "value": "hassleholm_miljo_se\tHässleholm Miljö\thassleholm_miljo_se",
+              "label": "Hässleholm Miljö (hassleholm_miljo_se)"
+            },
+            {
+              "value": "juneavfall_se\tJönköping - June Avfall & Miljö\tjuneavfall_se",
+              "label": "Jönköping - June Avfall & Miljö (juneavfall_se)"
+            },
+            {
+              "value": "edpevent_se\tKiruna - Tekniska Verken\tedpevent_se",
+              "label": "Kiruna - Tekniska Verken (edpevent_se)"
+            },
+            {
+              "value": "edpevent_se\tKretslopp Sydost\tedpevent_se",
+              "label": "Kretslopp Sydost (edpevent_se)"
+            },
+            {
+              "value": "renhallningen_kristianstad_se\tKristianstad Renhållning\trenhallningen_kristianstad_se",
+              "label": "Kristianstad Renhållning (renhallningen_kristianstad_se)"
+            },
+            {
+              "value": "kungsbacka_se\tKungsbacka kommun\tkungsbacka_se",
+              "label": "Kungsbacka kommun (kungsbacka_se)"
+            },
+            {
+              "value": "kungalv_se\tKungälvs kommun Avfallshantering\tkungalv_se",
+              "label": "Kungälvs kommun Avfallshantering (kungalv_se)"
+            },
+            {
+              "value": "lsr_nu\tLandskrona - Svalövs Renhållning\tlsr_nu",
+              "label": "Landskrona - Svalövs Renhållning (lsr_nu)"
+            },
+            {
+              "value": "lerum_se\tLerum Vatten och Avlopp\tlerum_se",
+              "label": "Lerum Vatten och Avlopp (lerum_se)"
+            },
+            {
+              "value": "edpevent_se\tLidköpings kommun\tedpevent_se",
+              "label": "Lidköpings kommun (edpevent_se)"
+            },
+            {
+              "value": "edpevent_se\tLjungby kommun\tedpevent_se",
+              "label": "Ljungby kommun (edpevent_se)"
+            },
+            {
+              "value": "lumire_se\tLuleå\tlumire_se",
+              "label": "Luleå (lumire_se)"
+            },
+            {
+              "value": "lund_se\tLund Waste Collection\tlund_se",
+              "label": "Lund Waste Collection (lund_se)"
+            },
+            {
+              "value": "edpevent_se\tLycksele Kommun\tedpevent_se",
+              "label": "Lycksele Kommun (edpevent_se)"
+            },
+            {
+              "value": "edpevent_se\tMarks kommun\tedpevent_se",
+              "label": "Marks kommun (edpevent_se)"
+            },
+            {
+              "value": "msva_se\tMittsverige Vatten & Avfall\tmsva_se",
+              "label": "Mittsverige Vatten & Avfall (msva_se)"
+            },
+            {
+              "value": "avfallsapp_se\tMotala\tavfallsapp_se",
+              "label": "Motala (avfallsapp_se)"
+            },
+            {
+              "value": "molndal_se\tMölndal\tmolndal_se",
+              "label": "Mölndal (molndal_se)"
+            },
+            {
+              "value": "avfallsapp_se\tNodra (Norrköping)\tavfallsapp_se",
+              "label": "Nodra (Norrköping) (avfallsapp_se)"
+            },
+            {
+              "value": "nvaa_se\tNorrtalje Vatten & Avfall\tnvaa_se",
+              "label": "Norrtalje Vatten & Avfall (nvaa_se)"
+            },
+            {
+              "value": "rambo_se\tNorth / Middle Bohuslän - Rambo AB\trambo_se",
+              "label": "North / Middle Bohuslän - Rambo AB (rambo_se)"
+            },
+            {
+              "value": "nsr_se\tNSR - Nordvästra Skånes Renhållnings AB\tnsr_se",
+              "label": "NSR - Nordvästra Skånes Renhållnings AB (nsr_se)"
+            },
+            {
+              "value": "nsr_se\tNSR Tömningskalender\tnsr_se",
+              "label": "NSR Tömningskalender (nsr_se)"
+            },
+            {
+              "value": "edpevent_se\tNVOA - Nacka Vatten och Avfall\tedpevent_se",
+              "label": "NVOA - Nacka Vatten och Avfall (edpevent_se)"
+            },
+            {
+              "value": "narab_se\tNårab - Norra Åsbo Renhållnings AB\tnarab_se",
+              "label": "Nårab - Norra Åsbo Renhållnings AB (narab_se)"
+            },
+            {
+              "value": "edpevent_se\tOrust kommun\tedpevent_se",
+              "label": "Orust kommun (edpevent_se)"
+            },
+            {
+              "value": "partille_se\tPartille kommun\tpartille_se",
+              "label": "Partille kommun (partille_se)"
+            },
+            {
+              "value": "pireva_se\tPireva\tpireva_se",
+              "label": "Pireva (pireva_se)"
+            },
+            {
+              "value": "gotland_se\tRegion Gotland\tgotland_se",
+              "label": "Region Gotland (gotland_se)"
+            },
+            {
+              "value": "miljoteknik_se\tRonneby Miljöteknik\tmiljoteknik_se",
+              "label": "Ronneby Miljöteknik (miljoteknik_se)"
+            },
+            {
+              "value": "edpevent_se\tRoslagsvatten\tedpevent_se",
+              "label": "Roslagsvatten (edpevent_se)"
+            },
+            {
+              "value": "roslagsvatten_se\tRoslagsvatten\troslagsvatten_se",
+              "label": "Roslagsvatten (roslagsvatten_se)"
+            },
+            {
+              "value": "samiljo_se\tSamverkan Återvinning Miljö (SÅM)\tsamiljo_se",
+              "label": "Samverkan Återvinning Miljö (SÅM) (samiljo_se)"
+            },
+            {
+              "value": "avfallsapp_se\tSigtuna (Sivab)\tavfallsapp_se",
+              "label": "Sigtuna (Sivab) (avfallsapp_se)"
+            },
+            {
+              "value": "sjobo_se\tSjöbo kommun\tsjobo_se",
+              "label": "Sjöbo kommun (sjobo_se)"
+            },
+            {
+              "value": "edpevent_se\tSkellefteå\tedpevent_se",
+              "label": "Skellefteå (edpevent_se)"
+            },
+            {
+              "value": "srvatervinning_se\tSRV Återvinning\tsrvatervinning_se",
+              "label": "SRV Återvinning (srvatervinning_se)"
+            },
+            {
+              "value": "ssam_se\tSSAM (Deprecated)\tssam_se",
+              "label": "SSAM (Deprecated) (ssam_se)"
+            },
+            {
+              "value": "edpevent_se\tSSAM Södra Smalånds Avfall & Miljö\tedpevent_se",
+              "label": "SSAM Södra Smalånds Avfall & Miljö (edpevent_se)"
+            },
+            {
+              "value": "edpevent_se\tStenungsunds kommun\tedpevent_se",
+              "label": "Stenungsunds kommun (edpevent_se)"
+            },
+            {
+              "value": "sysav_se\tSysav Sophämntning\tsysav_se",
+              "label": "Sysav Sophämntning (sysav_se)"
+            },
+            {
+              "value": "avfallsapp_se\tSöderköping\tavfallsapp_se",
+              "label": "Söderköping (avfallsapp_se)"
+            },
+            {
+              "value": "avfallsapp_se\tTeknik i Väst (Arvika/Eda)\tavfallsapp_se",
+              "label": "Teknik i Väst (Arvika/Eda) (avfallsapp_se)"
+            },
+            {
+              "value": "telge_se\tTelge Återvinning\ttelge_se",
+              "label": "Telge Återvinning (telge_se)"
+            },
+            {
+              "value": "timra_se\tTimrå kommun\ttimra_se",
+              "label": "Timrå kommun (timra_se)"
+            },
+            {
+              "value": "uddevallaenergi_se\tUddevalla Energi\tuddevallaenergi_se",
+              "label": "Uddevalla Energi (uddevallaenergi_se)"
+            },
+            {
+              "value": "avfallsapp_se\tUpplands-Bro\tavfallsapp_se",
+              "label": "Upplands-Bro (avfallsapp_se)"
+            },
+            {
+              "value": "edpevent_se\tUppsala Vatten\tedpevent_se",
+              "label": "Uppsala Vatten (edpevent_se)"
+            },
+            {
+              "value": "uppsalavatten_se\tUppsala Vatten och Avfall AB (Deprecated)\tuppsalavatten_se",
+              "label": "Uppsala Vatten och Avfall AB (Deprecated) (uppsalavatten_se)"
+            },
+            {
+              "value": "vasyd_se\tVA Syd Sophämntning\tvasyd_se",
+              "label": "VA Syd Sophämntning (vasyd_se)"
+            },
+            {
+              "value": "edpevent_se\tVafab Miljö\tedpevent_se",
+              "label": "Vafab Miljö (edpevent_se)"
+            },
+            {
+              "value": "vattenmiljoresurs_se\tVatten och Miljöresurs\tvattenmiljoresurs_se",
+              "label": "Vatten och Miljöresurs (vattenmiljoresurs_se)"
+            },
+            {
+              "value": "roslagsvatten_se\tVaxholm\troslagsvatten_se",
+              "label": "Vaxholm (roslagsvatten_se)"
+            },
+            {
+              "value": "vivab_se\tVIVAB Sophämtning\tvivab_se",
+              "label": "VIVAB Sophämtning (vivab_se)"
+            },
+            {
+              "value": "vmab_se\tVMAB\tvmab_se",
+              "label": "VMAB (vmab_se)"
+            },
+            {
+              "value": "avfallsapp_se\tVänersborg\tavfallsapp_se",
+              "label": "Vänersborg (avfallsapp_se)"
+            },
+            {
+              "value": "varmdo_se\tVärmdö Sophämtning\tvarmdo_se",
+              "label": "Värmdö Sophämtning (varmdo_se)"
+            },
+            {
+              "value": "vmeab_se\tVästervik Miljö & Energi\tvmeab_se",
+              "label": "Västervik Miljö & Energi (vmeab_se)"
+            },
+            {
+              "value": "alvsbyns_energi_se\tÄlvsbyns Energi\talvsbyns_energi_se",
+              "label": "Älvsbyns Energi (alvsbyns_energi_se)"
+            },
+            {
+              "value": "okrab_se\tÖkrab Sophämntning\tokrab_se",
+              "label": "Ökrab Sophämntning (okrab_se)"
+            },
+            {
+              "value": "edpevent_se\tÖrebro kommun\tedpevent_se",
+              "label": "Örebro kommun (edpevent_se)"
+            },
+            {
+              "value": "ostersund_se\tÖstersunds kommun\tostersund_se",
+              "label": "Östersunds kommun (ostersund_se)"
+            },
+            {
+              "value": "roslagsvatten_se\tÖsteråker\troslagsvatten_se",
+              "label": "Österåker (roslagsvatten_se)"
+            }
+          ],
+          "mode": "dropdown",
+          "sort": true,
+          "multiple": false,
+          "custom_value": true
+        }
+      },
+      "name": "name",
+      "required": true
+    }
+  ],
+  "errors": {},
+  "description_placeholders": null,
+  "last_step": null,
+  "preview": null,
+  "step_id": "source"
+}

@@ -56,7 +56,7 @@ async def async_setup(hass, config):
         DOMAIN, 'speak', handle,
         schema=vol.Schema({
             vol.Required('entity_id'): cv.entity_id,
-            vol.Optional('tts_entity_id', default='tts.piper'): cv.entity_id,
+            vol.Optional('tts_entity_id', default='tts.heimdal_ha_piper'): cv.entity_id,
             vol.Optional('message', default=''): cv.string,
             vol.Optional('test_only', default=False): cv.boolean,
         }),

@@ -1,0 +1,16 @@
+{
+  "stage": "06-vaxt-och-energisensorer",
+  "status": "verified",
+  "operations": 243,
+  "devices": 0,
+  "entities": 243,
+  "entity_ids_unchanged": 10129,
+  "invariants_unchanged": true,
+  "missing_target_states": [],
+  "new_unavailable_targets": [],
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  }
+}

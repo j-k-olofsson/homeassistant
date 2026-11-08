@@ -1,0 +1,500 @@
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan3_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet lan3", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan3 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan3_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan4_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd lan4", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan4 RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan4_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan4_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd lan4", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan4 TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan4_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan4_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet lan4", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan4 Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan4_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan4_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid lan4", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan4 Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan4_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan4_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet lan4", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan4 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan4_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan4_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet lan4", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan4 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan4_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan5_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd lan5", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan5 RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan5_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan5_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd lan5", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan5 TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan5_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan5_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet lan5", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan5 Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan5_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan5_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid lan5", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan5 Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan5_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan5_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet lan5", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan5 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan5_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan5_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet lan5", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan5 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan5_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan6_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd lan6", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan6 RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan6_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan6_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd lan6", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan6 TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan6_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan6_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet lan6", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan6 Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan6_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan6_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid lan6", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan6 Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan6_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan6_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet lan6", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan6 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan6_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan6_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet lan6", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan6 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan6_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan7_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd lan7", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan7 RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan7_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan7_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd lan7", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan7 TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan7_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan7_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet lan7", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan7 Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan7_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan7_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid lan7", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan7 Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan7_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan7_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet lan7", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan7 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan7_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan7_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet lan7", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan7 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan7_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan8_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd lan8", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan8 RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan8_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan8_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd lan8", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan8 TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan8_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan8_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet lan8", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan8 Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan8_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan8_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid lan8", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan8 Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan8_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan8_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet lan8", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan8 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan8_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan8_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet lan8", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan8 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan8_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan9_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd lan9", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan9 RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan9_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan9_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd lan9", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan9 TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan9_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan9_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet lan9", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan9 Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan9_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan9_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid lan9", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan9 Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan9_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan9_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet lan9", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan9 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan9_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan9_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet lan9", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden lan9 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan9_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_switch_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd switch", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden switch RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_switch_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_switch_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd switch", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden switch TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_switch_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_switch_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet switch", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden switch Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_switch_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_switch_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid switch", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden switch Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_switch_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_switch_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet switch", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden switch RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_switch_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_switch_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet switch", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden switch TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_switch_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_wan_latency", "before": {"name": null, "aliases": [null]}, "after": {"name": "WAN-svarstid", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden WAN Latency"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_wan_latency"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.vinden_zyxel_gs1900_24e_a1_switch_vinden_firewall_rule_allow_dhcp_renew", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brandväggsregel Allow-DHCP-Renew", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden Firewall Rule: Allow-DHCP-Renew"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.vinden_zyxel_gs1900_24e_a1_switch_vinden_firewall_rule_allow_dhcp_renew"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.vinden_zyxel_gs1900_24e_a1_switch_vinden_firewall_rule_allow_ping", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brandväggsregel Allow-Ping", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden Firewall Rule: Allow-Ping"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.vinden_zyxel_gs1900_24e_a1_switch_vinden_firewall_rule_allow_ping"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.vinden_zyxel_gs1900_24e_a1_switch_vinden_firewall_rule_allow_igmp", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brandväggsregel Allow-IGMP", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden Firewall Rule: Allow-IGMP"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.vinden_zyxel_gs1900_24e_a1_switch_vinden_firewall_rule_allow_igmp"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.vinden_zyxel_gs1900_24e_a1_switch_vinden_firewall_rule_allow_dhcpv6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brandväggsregel Allow-DHCPv6", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden Firewall Rule: Allow-DHCPv6"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.vinden_zyxel_gs1900_24e_a1_switch_vinden_firewall_rule_allow_dhcpv6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.vinden_zyxel_gs1900_24e_a1_switch_vinden_firewall_rule_allow_mld", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brandväggsregel Allow-MLD", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden Firewall Rule: Allow-MLD"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.vinden_zyxel_gs1900_24e_a1_switch_vinden_firewall_rule_allow_mld"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.vinden_zyxel_gs1900_24e_a1_switch_vinden_firewall_rule_allow_icmpv6_input", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brandväggsregel Allow-ICMPv6-Input", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden Firewall Rule: Allow-ICMPv6-Input"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.vinden_zyxel_gs1900_24e_a1_switch_vinden_firewall_rule_allow_icmpv6_input"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.vinden_zyxel_gs1900_24e_a1_switch_vinden_firewall_rule_allow_icmpv6_forward", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brandväggsregel Allow-ICMPv6-Forward", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden Firewall Rule: Allow-ICMPv6-Forward"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.vinden_zyxel_gs1900_24e_a1_switch_vinden_firewall_rule_allow_icmpv6_forward"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.vinden_zyxel_gs1900_24e_a1_switch_vinden_firewall_rule_allow_ipsec_esp", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brandväggsregel Allow-IPSec-ESP", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden Firewall Rule: Allow-IPSec-ESP"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.vinden_zyxel_gs1900_24e_a1_switch_vinden_firewall_rule_allow_ipsec_esp"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.vinden_zyxel_gs1900_24e_a1_switch_vinden_firewall_rule_allow_isakmp", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brandväggsregel Allow-ISAKMP", "aliases": [null, "Zyxel GS1900-24E A1 - Switch Vinden Firewall Rule: Allow-ISAKMP"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.vinden_zyxel_gs1900_24e_a1_switch_vinden_firewall_rule_allow_isakmp"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_connected", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Connected"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_connected"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_reboot_required", "before": {"name": null, "aliases": [null]}, "after": {"name": "Omstart krävs", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Reboot Required"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_reboot_required"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_wps_active", "before": {"name": null, "aliases": [null]}, "after": {"name": "WPS aktivt", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren WPS Active"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_wps_active"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_boot", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst boot", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service boot"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_boot"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_bootcount", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst bootcount", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service bootcount"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_bootcount"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_cron", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst cron", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service cron"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_cron"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_dnsmasq", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst dnsmasq", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service dnsmasq"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_dnsmasq"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_done", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst done", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service done"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_done"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_dropbear", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst dropbear", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service dropbear"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_dropbear"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_firewall", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst firewall", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service firewall"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_firewall"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_gpio_switch", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst gpio_switch", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service gpio_switch"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_gpio_switch"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_led", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst led", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service led"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_led"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_log", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst log", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service log"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_log"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_modem_switch", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst modem_switch", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service modem_switch"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_modem_switch"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_network", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst network", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service network"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_network"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_odhcpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst odhcpd", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service odhcpd"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_odhcpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_packet_steering", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst packet_steering", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service packet_steering"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_packet_steering"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_rpcd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst rpcd", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service rpcd"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_rpcd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_sysctl", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst sysctl", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service sysctl"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_sysctl"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_sysfixtime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst sysfixtime", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service sysfixtime"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_sysfixtime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_sysntpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst sysntpd", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service sysntpd"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_sysntpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_system", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst system", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service system"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_system"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_ubihealthd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst ubihealthd", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service ubihealthd"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_ubihealthd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_ucitrack", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst ucitrack", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service ucitrack"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_ucitrack"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_uhttpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst uhttpd", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service uhttpd"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_uhttpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_umount", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst umount", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service umount"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_umount"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_urandom_seed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst urandom_seed", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service urandom_seed"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_urandom_seed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_urngd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst urngd", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service urngd"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_urngd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_wpad", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst wpad", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Service wpad"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_service_wpad"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_reboot_router", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om router", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Reboot Router"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_reboot_router"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_start_wps", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta WPS", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Start WPS"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_start_wps"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_cancel_wps", "before": {"name": null, "aliases": [null]}, "after": {"name": "Avbryt WPS", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Cancel WPS"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_cancel_wps"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_create_backup", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skapa säkerhetskopia", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Create Backup"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_create_backup"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_boot", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst boot", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart boot"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_boot"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_boot", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst boot", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop boot"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_boot"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_bootcount", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst bootcount", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart bootcount"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_bootcount"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_bootcount", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst bootcount", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop bootcount"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_bootcount"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_cron", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst cron", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart cron"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_cron"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_cron", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst cron", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop cron"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_cron"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_dnsmasq", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst dnsmasq", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart dnsmasq"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_dnsmasq"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_dnsmasq", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst dnsmasq", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop dnsmasq"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_dnsmasq"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_done", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst done", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart done"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_done"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_done", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst done", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop done"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_done"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_dropbear", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst dropbear", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart dropbear"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_dropbear"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_dropbear", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst dropbear", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop dropbear"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_dropbear"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_firewall", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst firewall", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart firewall"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_firewall"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_firewall", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst firewall", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop firewall"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_firewall"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_gpio_switch", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst gpio_switch", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart gpio_switch"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_gpio_switch"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_gpio_switch", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst gpio_switch", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop gpio_switch"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_gpio_switch"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_led", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst led", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart led"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_led"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_led", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst led", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop led"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_led"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_log", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst log", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart log"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_log"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_log", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst log", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop log"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_log"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_modem_switch", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst modem_switch", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart modem_switch"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_modem_switch"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_modem_switch", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst modem_switch", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop modem_switch"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_modem_switch"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_network", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst network", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart network"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_network"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_network", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst network", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop network"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_network"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_odhcpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst odhcpd", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart odhcpd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_odhcpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_odhcpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst odhcpd", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop odhcpd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_odhcpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_packet_steering", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst packet_steering", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart packet_steering"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_packet_steering"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_packet_steering", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst packet_steering", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop packet_steering"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_packet_steering"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_rpcd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst rpcd", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart rpcd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_rpcd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_rpcd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst rpcd", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop rpcd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_rpcd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_sysctl", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst sysctl", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart sysctl"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_sysctl"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_sysctl", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst sysctl", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop sysctl"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_sysctl"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_sysfixtime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst sysfixtime", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart sysfixtime"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_sysfixtime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_sysfixtime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst sysfixtime", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop sysfixtime"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_sysfixtime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_sysntpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst sysntpd", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart sysntpd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_sysntpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_sysntpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst sysntpd", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop sysntpd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_sysntpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_system", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst system", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart system"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_system"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_system", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst system", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop system"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_system"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_ubihealthd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst ubihealthd", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart ubihealthd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_ubihealthd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_ubihealthd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst ubihealthd", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop ubihealthd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_ubihealthd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_ucitrack", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst ucitrack", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart ucitrack"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_ucitrack"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_ucitrack", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst ucitrack", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop ucitrack"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_ucitrack"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_uhttpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst uhttpd", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart uhttpd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_uhttpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_uhttpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst uhttpd", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop uhttpd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_uhttpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_umount", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst umount", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart umount"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_umount"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_umount", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst umount", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop umount"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_umount"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_urandom_seed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst urandom_seed", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart urandom_seed"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_urandom_seed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_urandom_seed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst urandom_seed", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop urandom_seed"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_urandom_seed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_urngd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst urngd", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart urngd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_urngd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_urngd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst urngd", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop urngd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_urngd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_wpad", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst wpad", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Restart wpad"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_restart_wpad"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_wpad", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst wpad", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Stop wpad"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_stop_wpad"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_reconnect_wan", "before": {"name": null, "aliases": [null]}, "after": {"name": "Återanslut WAN", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Reconnect WAN"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_reconnect_wan"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_wps_push_phy1_ap1", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta WPS (phy1-ap1)", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren WPS Push (phy1-ap1)"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_wps_push_phy1_ap1"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_wps_push_phy2_ap2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta WPS (phy2-ap2)", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren WPS Push (phy2-ap2)"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_wps_push_phy2_ap2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_wps_push_phy2_ap0", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta WPS (phy2-ap0)", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren WPS Push (phy2-ap0)"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_wps_push_phy2_ap0"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_wps_push_phy2_ap1", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta WPS (phy2-ap1)", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren WPS Push (phy2-ap1)"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_wps_push_phy2_ap1"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_wps_push_phy1_ap0", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta WPS (phy1-ap0)", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren WPS Push (phy1-ap0)"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_wps_push_phy1_ap0"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_wps_push_phy1_ap2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta WPS (phy1-ap2)", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren WPS Push (phy1-ap2)"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_wps_push_phy1_ap2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_flush_dns_cache", "before": {"name": null, "aliases": [null]}, "after": {"name": "Töm DNS-cache", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Flush DNS Cache"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_asus_lyra_map_ac2200_ap_kallaren_flush_dns_cache"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_cpu_usage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Processoranvändning", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren CPU Usage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_cpu_usage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_public_ip", "before": {"name": null, "aliases": [null]}, "after": {"name": "Publik IP-adress", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Public IP"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_public_ip"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_memory_usage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Minnesanvändning", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Memory Usage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_memory_usage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_memory_used", "before": {"name": null, "aliases": [null]}, "after": {"name": "Använt minne", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Memory Used"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_memory_used"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_swap_usage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Växlingsminnesanvändning", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Swap Usage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_swap_usage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_load_1m", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belastning senaste minuten", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Load (1m)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_load_1m"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_load_5m", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belastning senaste 5 minuterna", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Load (5m)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_load_5m"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_load_15m", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belastning senaste 15 minuterna", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Load (15m)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_load_15m"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Temperatur", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_storage_usage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Diskanvändning", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Storage Usage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_storage_usage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_filesystem_free", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ledigt diskutrymme", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Filesystem Free"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_filesystem_free"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_kernel_version", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kärnversion", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Kernel Version"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_kernel_version"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_architecture", "before": {"name": null, "aliases": [null]}, "after": {"name": "Arkitektur", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Architecture"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_architecture"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_connected_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutna klienter", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Connected Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_connected_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_wireless_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Trådlösa klienter", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Wireless Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_wireless_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_neighbor_devices", "before": {"name": null, "aliases": [null]}, "after": {"name": "Grannenheter", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Neighbor Devices"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_neighbor_devices"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_system_logs", "before": {"name": null, "aliases": [null]}, "after": {"name": "Systemloggar", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren System Logs"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_system_logs"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_top_processes", "before": {"name": null, "aliases": [null]}, "after": {"name": "Processöversikt", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Top Processes"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_top_processes"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_usb_devices", "before": {"name": null, "aliases": [null]}, "after": {"name": "USB-enheter", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren USB Devices"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_usb_devices"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_temperature_hwmon_1", "before": {"name": null, "aliases": [null]}, "after": {"name": "Temperatur hwmon 1", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Temperature Hwmon 1"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_temperature_hwmon_1"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_temperature_hwmon_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Temperatur hwmon 2", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren Temperature Hwmon 2"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_temperature_hwmon_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_rom_total_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Totalt diskutrymme /rom", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren /rom Total Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_rom_total_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_rom_used_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Använt diskutrymme /rom", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren /rom Used Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_rom_used_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_rom_free_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ledigt diskutrymme /rom", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren /rom Free Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_rom_free_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_rom_storage_usage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Diskanvändning /rom", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren /rom Storage Usage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_rom_storage_usage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_tmp_total_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Totalt diskutrymme /tmp", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren /tmp Total Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_tmp_total_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_tmp_used_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Använt diskutrymme /tmp", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren /tmp Used Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_tmp_used_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_tmp_free_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ledigt diskutrymme /tmp", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren /tmp Free Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_tmp_free_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_tmp_storage_usage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Diskanvändning /tmp", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren /tmp Storage Usage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_tmp_storage_usage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_overlay_total_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Totalt diskutrymme /overlay", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren /overlay Total Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_overlay_total_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_overlay_used_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Använt diskutrymme /overlay", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren /overlay Used Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_overlay_used_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_overlay_free_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ledigt diskutrymme /overlay", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren /overlay Free Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_overlay_free_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_overlay_storage_usage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Diskanvändning /overlay", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren /overlay Storage Usage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_overlay_storage_usage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_total_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Totalt diskutrymme /", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren / Total Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_total_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_used_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Använt diskutrymme /", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren / Used Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_used_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_free_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ledigt diskutrymme /", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren / Free Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_free_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_storage_usage_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Diskanvändning /", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren / Storage Usage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_storage_usage_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_dev_total_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Totalt diskutrymme /dev", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren /dev Total Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_dev_total_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_dev_used_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Använt diskutrymme /dev", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren /dev Used Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_dev_used_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_dev_free_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ledigt diskutrymme /dev", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren /dev Free Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_dev_free_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_dev_storage_usage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Diskanvändning /dev", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren /dev Storage Usage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_dev_storage_usage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_dhcp_leases", "before": {"name": null, "aliases": [null]}, "after": {"name": "DHCP-tilldelningar", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren DHCP Leases"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_dhcp_leases"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_guest_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd guest", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren guest RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_guest_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_guest_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd guest", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren guest TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_guest_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_guest_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet guest", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren guest Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_guest_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_guest_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid guest", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren guest Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_guest_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_guest_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet guest", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren guest RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_guest_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_guest_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet guest", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren guest TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_guest_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_iot_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd iot", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren iot RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_iot_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_iot_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd iot", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren iot TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_iot_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_iot_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet iot", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren iot Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_iot_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_iot_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid iot", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren iot Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_iot_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_iot_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet iot", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren iot RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_iot_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_iot_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet iot", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren iot TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_iot_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_lan_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd lan", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren lan RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_lan_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_lan_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd lan", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren lan TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_lan_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_lan_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet lan", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren lan Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_lan_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_lan_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid lan", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren lan Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_lan_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_lan_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet lan", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren lan RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_lan_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_lan_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet lan", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren lan TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_lan_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_loopback_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd loopback", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren loopback RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_loopback_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_loopback_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd loopback", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren loopback TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_loopback_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_loopback_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet loopback", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren loopback Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_loopback_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_loopback_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid loopback", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren loopback Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_loopback_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_loopback_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet loopback", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren loopback RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_loopback_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_loopback_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet loopback", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren loopback TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_loopback_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_br_lan_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd br-lan", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren br-lan RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_br_lan_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_br_lan_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd br-lan", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren br-lan TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_br_lan_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_br_lan_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet br-lan", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren br-lan Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_br_lan_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_br_lan_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid br-lan", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren br-lan Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_br_lan_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_br_lan_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet br-lan", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren br-lan RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_br_lan_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_br_lan_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet br-lan", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren br-lan TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_br_lan_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_eth0_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd eth0", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren eth0 RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_eth0_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_eth0_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd eth0", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren eth0 TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_eth0_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_eth0_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet eth0", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren eth0 Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_eth0_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_eth0_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid eth0", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren eth0 Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_eth0_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_eth0_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet eth0", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren eth0 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_eth0_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_eth0_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet eth0", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren eth0 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_eth0_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap0_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd phy1-ap0", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy1-ap0 RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap0_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap0_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd phy1-ap0", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy1-ap0 TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap0_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap0_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet phy1-ap0", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy1-ap0 Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap0_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap0_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid phy1-ap0", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy1-ap0 Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap0_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap0_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet phy1-ap0", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy1-ap0 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap0_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap0_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet phy1-ap0", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy1-ap0 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap0_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap1_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd phy1-ap1", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy1-ap1 RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap1_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap1_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd phy1-ap1", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy1-ap1 TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap1_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap1_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet phy1-ap1", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy1-ap1 Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap1_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap1_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid phy1-ap1", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy1-ap1 Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap1_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap1_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet phy1-ap1", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy1-ap1 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap1_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap1_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet phy1-ap1", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy1-ap1 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap1_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap2_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd phy1-ap2", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy1-ap2 RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap2_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap2_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd phy1-ap2", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy1-ap2 TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap2_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap2_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet phy1-ap2", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy1-ap2 Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap2_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap2_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid phy1-ap2", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy1-ap2 Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap2_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap2_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet phy1-ap2", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy1-ap2 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap2_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap2_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet phy1-ap2", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy1-ap2 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy1_ap2_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy2_ap0_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd phy2-ap0", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy2-ap0 RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy2_ap0_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy2_ap0_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd phy2-ap0", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy2-ap0 TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy2_ap0_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy2_ap0_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet phy2-ap0", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy2-ap0 Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy2_ap0_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy2_ap0_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid phy2-ap0", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy2-ap0 Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy2_ap0_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy2_ap0_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet phy2-ap0", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy2-ap0 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy2_ap0_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy2_ap0_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet phy2-ap0", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy2-ap0 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy2_ap0_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy2_ap1_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd phy2-ap1", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Källaren phy2-ap1 RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_phy2_ap1_rx"}

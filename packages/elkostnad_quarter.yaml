@@ -7,17 +7,16 @@ template:
       - name: Elpris per kvart
         unique_id: quarter_energy_price
         unit_of_measurement: "SEK/kWh"
-        device_class: monetary
         state_class: measurement
         icon: mdi:cash-clock
         state: >-
-          {% set base = states('sensor.template_nordpool_base_cost_current_hour') | float(0) %}
-          {% set trade = states('input_number.nordpool_trade_fee') | float(0) %}
-          {% set spot_fee = states('input_number.nordpool_spot_fee') | float(0) %}
-          {% set certificate = states('input_number.nordpool_certificate_fee') | float(0) %}
-          {% set transfer = states('input_number.nordpool_energy_transfer_fee') | float(0) %}
-          {% set tax = states('input_number.nordpool_energy_tax') | float(0) %}
-          {% set vat = states('input_number.nordpool_vat') | float(25) %}
+          {% set base = states('sensor.heimdal_ha_nordpool_kwh_se3_sek_3_10_025_inkopspris') | float(0) %}
+          {% set trade = states('input_number.elpris_handelsavgift') | float(0) %}
+          {% set spot_fee = states('input_number.elpris_spotpaslag') | float(0) %}
+          {% set certificate = states('input_number.elpris_certifikatsavgift') | float(0) %}
+          {% set transfer = states('input_number.elpris_overforingsavgift') | float(0) %}
+          {% set tax = states('input_number.elpris_energiskatt') | float(0) %}
+          {% set vat = states('input_number.elpris_moms') | float(25) %}
           {% set subtotal = base + trade + spot_fee + certificate + transfer + tax %}
           {{ (subtotal * (1 + vat / 100)) | round(5) }}
         attributes:
@@ -44,7 +43,7 @@ sql:
         WHERE st.metadata_id = (
             SELECT id
             FROM statistics_meta
-            WHERE statistic_id = 'sensor.power_consumed'
+            WHERE statistic_id = 'sensor.utomhus_elmatare_elstolpen_forbrukad_effekt'
           )
           AND st.start_ts >= (SELECT month_start_ts FROM params)
         GROUP BY quarter_ts
@@ -76,7 +75,7 @@ sql:
       monthly_fee AS (
         SELECT CAST(state AS DECIMAL(10,2)) AS fee
         FROM states
-        WHERE metadata_id = (SELECT metadata_id FROM states_meta WHERE entity_id = 'input_number.nordpool_monthly_fee')
+        WHERE metadata_id = (SELECT metadata_id FROM states_meta WHERE entity_id = 'input_number.manadsavgifter_elhandel_nat')
         ORDER BY state_id DESC
         LIMIT 1
       )

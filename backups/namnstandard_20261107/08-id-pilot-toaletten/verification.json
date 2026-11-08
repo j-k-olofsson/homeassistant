@@ -1,0 +1,19 @@
+{
+  "status": "verified",
+  "stage": "08-id-pilot-toaletten",
+  "renamed_entities": 5,
+  "same_unique_ids_and_settings": true,
+  "statistics_series_verified": 92,
+  "history_records_verified": 85,
+  "statistics_metadata_moved": 4,
+  "source_files_updated": [],
+  "dashboards_updated": [],
+  "frontend_favorites_updated": false,
+  "helper_config_entries_auto_updated": [],
+  "automation_consumers_reloaded": [],
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  }
+}

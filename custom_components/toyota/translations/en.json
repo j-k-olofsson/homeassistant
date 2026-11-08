@@ -48,7 +48,8 @@
     "brand": {
       "options": {
         "toyota": "Toyota",
-        "lexus": "Lexus"
+        "lexus": "Lexus",
+        "subaru": "Subaru"
       }
     }
   },
@@ -76,6 +77,9 @@
       },
       "battery_level": {
         "name": "Battery level"
+      },
+      "phev_usable_battery_level": {
+        "name": "Usable battery level"
       },
       "battery_range_ac": {
         "name": "Battery range with AC"
@@ -179,6 +183,9 @@
       },
       "refresh_electric_realtime_status": {
         "name": "Refresh electric realtime status"
+      },
+      "sound_buzzer": {
+        "name": "Sound buzzer"
       }
     },
     "binary_sensor": {
@@ -290,6 +297,9 @@
     "switch": {
       "steering_heater": {
         "name": "Steering wheel heater"
+      },
+      "hazard_lights": {
+        "name": "Hazard lights"
       }
     }
   }

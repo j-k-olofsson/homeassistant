@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.dashboard_ai",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "title": "Home",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    "conversation.home_assistant",
+                    "conversation.ollama_conversation",
+                    "conversation.molnet_openai_conversation"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Modellportfölj",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "markdown",
+                  "content": "### 🧠 gpt-oss:20b  \n**Roll:** Tunga analyser & batch-bearbetning  \n**Miljö:** AI-server (Docker/Ollama), batchflöden, Prompt-lab  \n**✅ Styrkor:** Klarar större kontextfönster och mer komplex logik än 7–12B-klassen; lämpad för berättande väder/energiprognoser, analysrapporter och iterativ prompt-utvärdering  \n**⚠️ Svagheter:** Kräver mycket VRAM/CPU → inte optimal för snabb realtidsstyrning; svarstiden märkbart högre än 8–12B-modellerna  \n\n---  \n\n### 🏠 Llama3.1:8b  \n**Roll:** Huvudagent för röststyrning i Home Assistant  \n**Miljö:** Assist-pipeline  \n**✅ Styrkor:** Snabb, stabil, bra svenska; robust vardagsstyrning via HA:s intents  \n**⚠️ Svagheter:** Klarar inte alltid villkorlig logik; sämre om *”Föredra lokal”* är av  \n\n---  \n\n### 📊 Mistral-nemo:12b  \n**Roll:** AI Task-provider  \n**Miljö:** HA-automationer, n8n-flöden  \n**✅ Styrkor:** Bra på längre och strukturerad text, sammanfattningar, resonemang  \n**⚠️ Svagheter:** Långsammare → ej optimal som konversationsagent  \n\n---  \n\n### 💻 Qwen2.5-coder:7b  \n**Roll:** Kodningsstöd  \n**Miljö:** VS Code-integration, n8n, dev-miljö  \n**✅ Styrkor:** Stark på kodgenerering, refaktorering och felsökning  \n**⚠️ Svagheter:** Begränsad i fria dialoger; ej lämpad som agent i HA",
+                  "text_only": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

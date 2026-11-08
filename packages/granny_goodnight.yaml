@@ -13,7 +13,7 @@ automation:
       # Do not compete with the current greeting or startup. Prepare the next one.
       - delay: '00:01:00'
       - condition: template
-        value_template: "{{ state_attr('automation.godnatt', 'current') | int(0) == 0 }}"
+        value_template: "{{ state_attr('automation.belysning_godnatt', 'current') | int(0) == 0 }}"
       - action: granny_goodnight.prepare
 
 script:

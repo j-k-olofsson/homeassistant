@@ -1,0 +1,8 @@
+{
+  "sensor.ap_kontoret_wi_fi_clients": "sensor.wi_fi_klienter_ap_kontoret",
+  "sensor.ap_koket_wi_fi_clients": "sensor.wi_fi_klienter_ap_koket",
+  "sensor.ap_kallaren_wi_fi_clients": "sensor.wi_fi_klienter_ap_kallaren",
+  "sensor.ap_verkstaden_wi_fi_clients": "sensor.wi_fi_klienter_ap_verkstaden",
+  "sensor.ap_friggan_wi_fi_clients": "sensor.wi_fi_klienter_ap_friggan",
+  "sensor.ap_poolen_wi_fi_clients": "sensor.wi_fi_klienter_ap_poolen"
+}

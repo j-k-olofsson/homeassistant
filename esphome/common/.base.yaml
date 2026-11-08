@@ -30,10 +30,10 @@ api:
   encryption:
     key: !secret ENCRYPTION_KEY
 
-# Enable OTA
-ota:
-  - platform: esphome
-    password: !secret OTA_PWD
+# Shared API behavior and encrypted OTA
+packages:
+  api: !include .api.yaml
+  ota: !include .ota.yaml
 
 text_sensor:
   - platform: version

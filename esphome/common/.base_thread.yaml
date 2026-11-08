@@ -28,9 +28,9 @@ api:
   encryption:
     key: !secret ENCRYPTION_KEY
 
-ota:
-  - platform: esphome
-    password: !secret OTA_PWD
+packages:
+  api: !include .api.yaml
+  ota: !include .ota.yaml
 
 text_sensor:
   - platform: version

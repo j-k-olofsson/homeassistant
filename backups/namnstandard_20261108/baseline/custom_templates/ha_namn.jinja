@@ -1,0 +1,14 @@
+{%- macro namn(entity_id) -%}
+  {%- set a = area_name(entity_id) or '' -%}
+  {%- set d = device_name(entity_id) or '' -%}
+  {%- set n = entity_name(entity_id) or '' -%}
+  {%- set parts = namespace(values=[]) -%}
+  {%- if a and a | lower not in (d ~ ' ' ~ n) | lower -%}
+    {%- set parts.values = parts.values + [a] -%}
+  {%- endif -%}
+  {%- if d and d | lower not in n | lower -%}
+    {%- set parts.values = parts.values + [d] -%}
+  {%- endif -%}
+  {%- if n -%}{%- set parts.values = parts.values + [n] -%}{%- endif -%}
+  {{- parts.values | unique | join(' ') if parts.values else entity_id -}}
+{%- endmacro -%}

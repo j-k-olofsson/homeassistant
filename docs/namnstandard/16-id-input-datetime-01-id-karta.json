@@ -1,0 +1,4 @@
+{
+  "input_datetime.starta_bilvarmen": "input_datetime.heimdal_ha_starta_bilvarmen",
+  "input_datetime.granny_charger_done_trigger": "input_datetime.laddplan_sluttid"
+}

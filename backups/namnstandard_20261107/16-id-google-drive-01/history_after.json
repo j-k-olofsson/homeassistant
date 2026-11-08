@@ -1,0 +1,38 @@
+{
+  "sensor.j_k_olofsson_gmail_com_anvand_lagringsutrymme_i_drive": [
+    {
+      "state": "52.8120458954945",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:02.697303+00:00",
+      "last_updated": "2026-11-07T07:45:02.697303+00:00"
+    },
+    {
+      "state": "52.7895650584251",
+      "last_changed": "2026-11-07T10:58:39.765916+00:00"
+    },
+    {
+      "state": "53.5089108441025",
+      "last_changed": "2026-11-08T07:03:41.974794+00:00"
+    }
+  ],
+  "sensor.j_k_olofsson_gmail_com_anvand_lagringsutrymme_i_drive_papperskorgen": [
+    {
+      "state": "0.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:02.697303+00:00",
+      "last_updated": "2026-11-07T07:45:02.697303+00:00"
+    }
+  ],
+  "sensor.j_k_olofsson_gmail_com_total_storlek_pa_sakerhetskopior": [
+    {
+      "state": "14.16121344",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:02.697303+00:00",
+      "last_updated": "2026-11-07T07:45:02.697303+00:00"
+    },
+    {
+      "state": "14.9136384",
+      "last_changed": "2026-11-08T07:03:41.975219+00:00"
+    }
+  ]
+}

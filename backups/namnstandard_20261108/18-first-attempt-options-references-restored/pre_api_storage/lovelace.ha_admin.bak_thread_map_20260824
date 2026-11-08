@@ -1,0 +1,1351 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.ha_admin",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "title": "Admin",
+          "path": "admin",
+          "type": "sections",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Tider"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.lights_on",
+                  "name": "Lampor tänds",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.lights_off",
+                  "name": "Lampor släcks",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.growlights_on",
+                  "name": "Växtlampor tänds",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.growlights_late_on",
+                  "name": "Växtlampor senare tändning",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.growlights_off",
+                  "name": "Växtlampor släcks",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.oppna_honsluckan",
+                  "name": "Hönsluckan öppnas",
+                  "vertical": true
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Manuella tillstånd"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_boolean.pool_equipment",
+                  "name": "Poolprylar",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_boolean.winter_equipment",
+                  "name": "Vinterprylar",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_boolean.guest_mode",
+                  "vertical": true
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Automatiska tillstånd"
+                },
+                {
+                  "features": [
+                    {
+                      "type": "select-options"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "input_select.light_scene",
+                  "vertical": true,
+                  "hide_state": true,
+                  "name": "Lampornas scen",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 3
+                  }
+                },
+                {
+                  "features": [
+                    {
+                      "type": "select-options"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "input_select.sun_phase",
+                  "vertical": true,
+                  "hide_state": true,
+                  "name": "Solens dygnsfas",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 3
+                  }
+                },
+                {
+                  "features": [
+                    {
+                      "type": "select-options"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "input_select.growlight_scene",
+                  "vertical": true,
+                  "hide_state": true,
+                  "name": "Växtlampors scen",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 3
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Batterier"
+                },
+                {
+                  "type": "custom:auto-entities",
+                  "show_empty": false,
+                  "unique": true,
+                  "card": {
+                    "type": "custom:battery-state-card",
+                    "filter": null,
+                    "secondary_info": "{attributes.battery_type_and_quantity}",
+                    "round": 0,
+                    "bulk_rename": [
+                      {
+                        "from": "Battery+"
+                      }
+                    ],
+                    "sort": [
+                      "state"
+                    ]
+                  },
+                  "filter": {
+                    "include": [
+                      {
+                        "domain": "sensor",
+                        "entity_id": "*_battery_plus",
+                        "attributes": {
+                          "battery_type_and_quantity": "*"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Närvarosimulering",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_boolean.narvarosimulering_aktiv",
+                  "grid_options": {
+                    "rows": "auto",
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_boolean.narvarosimulering_testlage",
+                  "grid_options": {
+                    "rows": "auto",
+                    "columns": "full"
+                  }
+                }
+              ]
+            }
+          ],
+          "cards": [],
+          "max_columns": 4,
+          "icon": "mdi:state-machine"
+        },
+        {
+          "title": "Server",
+          "path": "system",
+          "type": "sections",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "icon": "mdi:home-percent-outline",
+                  "heading": "Belastning",
+                  "heading_style": "subtitle"
+                },
+                {
+                  "type": "gauge",
+                  "entity": "sensor.processor_use",
+                  "name": "CPU",
+                  "min": 0,
+                  "max": 100,
+                  "needle": true,
+                  "severity": {
+                    "green": 0,
+                    "yellow": 75,
+                    "red": 90
+                  },
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 3
+                  }
+                },
+                {
+                  "type": "gauge",
+                  "name": "Minne",
+                  "min": 0,
+                  "max": 100,
+                  "needle": true,
+                  "severity": {
+                    "green": 0,
+                    "yellow": 75,
+                    "red": 90
+                  },
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 3
+                  },
+                  "entity": "sensor.memory_use_percent"
+                },
+                {
+                  "type": "gauge",
+                  "name": "Disk",
+                  "min": 0,
+                  "max": 100,
+                  "needle": true,
+                  "severity": {
+                    "green": 0,
+                    "yellow": 75,
+                    "red": 90
+                  },
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 3
+                  },
+                  "entity": "sensor.system_monitor_disk_use_percent"
+                },
+                {
+                  "type": "gauge",
+                  "name": "Swap",
+                  "min": 0,
+                  "max": 100,
+                  "needle": true,
+                  "severity": {
+                    "green": 0,
+                    "yellow": 75,
+                    "red": 90
+                  },
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 3
+                  },
+                  "entity": "sensor.swap_use_percent"
+                },
+                {
+                  "type": "heading",
+                  "icon": "mdi:fridge",
+                  "heading": "Info",
+                  "heading_style": "subtitle"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.disk_free",
+                  "name": "Fri disk",
+                  "icon": "mdi:harddisk",
+                  "vertical": false
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.processor_temperature",
+                  "name": "CPU Temp"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.last_boot",
+                  "name": "OS reboot"
+                }
+              ],
+              "column_span": 4
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "HAGHS Pro v1.2 (Command Center)",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "gauge",
+                      "entity": "sensor.system_ha_global_health_score",
+                      "name": "HAGHS",
+                      "unit": " ",
+                      "needle": true,
+                      "severity": {
+                        "green": 90,
+                        "yellow": 75,
+                        "red": 0
+                      }
+                    },
+                    {
+                      "type": "markdown",
+                      "title": "Score Breakdown",
+                      "content": "{% set e = 'sensor.system_ha_global_health_score' %} {% set hw = state_attr(e, 'hardware_score') | int(0) %} {% set app = state_attr(e, 'application_score') | int(0) %} {% set score = states(e) | int(0) %}\nHardware **{{ hw }}**/100 | Application **{{ app }}**/100\nFormula: ({{ hw }} × 0.4) + ({{ app }} × 0.6) = {{ score }}\n"
+                    },
+                    {
+                      "type": "markdown",
+                      "title": "🛡️ Advisor",
+                      "content": "{% set e = 'sensor.system_ha_global_health_score' %} {% set rec = state_attr(e, 'recommendations') | default('', true) %}\n{% if states(e) in ['unavailable', 'unknown'] %}\n  ⚠️ Health Advisor sensor is offline.\n{% elif rec not in [none, 'unknown', 'unavailable'] and '✅' not in rec %}\n  {{ rec }}\n{% else %}\n  ✅ System healthy. No recommendations.\n{% endif %}\n"
+                    },
+                    {
+                      "type": "conditional",
+                      "conditions": [
+                        {
+                          "condition": "numeric_state",
+                          "entity": "sensor.system_ha_global_health_score",
+                          "attribute": "zombie_count",
+                          "above": -1
+                        }
+                      ],
+                      "card": {
+                        "type": "markdown",
+                        "title": "📦 Updates & Maintenance",
+                        "content": "{% set e = 'sensor.system_ha_global_health_score' %} {% set updates = state_attr(e, 'pending_updates') | default([], true) | list %} {% set db_mb = state_attr(e, 'db_size_mb') | float(0) %} {% set keep = state_attr(e, 'recorder_keep_days') %} {% set filter = state_attr(e, 'recorder_filter_active') | default(false, true) %} {% set psi = state_attr(e, 'psi_available') | default(false, true) %} {% set _upd = '/config/updates' %}\n{% if updates | length > 0 %}{{ updates | length }} update(s) pending:<br> {% for u in updates %}&nbsp;&nbsp; • {{ u }}<br>{% endfor %} [→ Open Updates](https://raw.githubusercontent.com/HA-Pulse/home-assistant-global-health-score/v2.3.0/{{ _upd }}) {% else %} ✅ All updates installed {% endif %}\n<hr>\nDatabase: {{ db_mb | round(1) }} MB {% if db_mb == 0.0 %}*(external DB detected)*{% endif %}\n\nRecorder: {% if keep not in [none, 'unknown'] %}purge active ({{ keep }} days){% else %}no purge configured — DB may grow indefinitely{% endif %}\n\n{{ 'Entity filter active' if filter else 'No entity filter' }}\n\n{% if keep in [none, 'unknown'] or not filter %} 💡 Tips to improve your score: {% if keep in [none, 'unknown'] %} &nbsp;&nbsp; • Set `purge_keep_days` in your recorder configuration (+5 pts){% endif %} {% if not filter %} &nbsp;&nbsp; • Configure an `include` / `exclude` entity filter for the recorder (+5 pts){% endif %} {% endif %}\n\n---\n**Metric source**: {% if psi %}🟢 PSI active (CPU + RAM + I/O + Disk) — hardware score uses 4 components{% else %}⚙️ Classic sensors (CPU + RAM + Disk) — hardware score uses 3 components{% endif %}\n"
+                      }
+                    },
+                    {
+                      "type": "markdown",
+                      "title": "🧟 Zombie Entities",
+                      "content": "{% set e = 'sensor.system_ha_global_health_score' %} {% set z_raw = state_attr(e, 'zombie_entities') | default([], true) %} {% set z_count = state_attr(e, 'zombie_count') | int(0) %}\n{% if z_count == 0 %}\n  ✅ No zombie entities detected.\n{% else %}\n  {% if z_raw is string %}\n    {% set z_list = z_raw.split(',') | map('trim') | list %}\n  {% else %}\n    {% set z_list = z_raw | list %}\n  {% endif %}\n  {% set ghosts = z_list | select('match', '^\\\\[unregistered\\\\]') | list %}\n  {% set tracked = z_list | reject('match', '^\\\\[unregistered\\\\]') | list %}\n  {% set grouped = expand(tracked) | groupby('domain') %}\n\n  {# Domain count: prefer the HAGHS v2.3+ attribute when present.\n     Fall back to extracting the distinct domains from z_list so the\n     card keeps working on older HAGHS versions that do not expose\n     zombie_count_per_domain. #}\n  {% set per_domain = state_attr(e, 'zombie_count_per_domain') %}\n  {% if per_domain %}\n    {% set domain_count = per_domain | length %}\n  {% else %}\n    {% set ns = namespace(seen=[]) %}\n    {% for entry in z_list %}\n      {% set dom = (entry | replace('[unregistered] ', '')).split('.')[0] %}\n      {% if dom not in ns.seen %}\n        {% set ns.seen = ns.seen + [dom] %}\n      {% endif %}\n    {% endfor %}\n    {% set domain_count = ns.seen | length %}\n  {% endif %}\n\n  {{ z_count }} zombie(s) across {{ domain_count }} domain(s)\n  {% if per_domain %} ({% for dom, cnt in per_domain.items() %}{{ dom }}: {{ cnt }}{% if not loop.last %}, {% endif %}{% endfor %}){% endif %}\n  {% if z_count > z_list | length %}*(showing first {{ z_list | length }} — {{ z_count - z_list | length }} more hidden)*{% endif %}\n\n  {% set _ent = '/config/entities' %}[→ Check Entities](https://raw.githubusercontent.com/HA-Pulse/home-assistant-global-health-score/v2.3.0/{{ _ent }})\n\n  {% for domain in grouped %}\n  <details>\n  <summary>{{ domain[0] | title }}: {{ domain[1] | count }}</summary>\n  {% for item in domain[1] %}\n  &nbsp;&nbsp; • {{ device_attr(item.entity_id, 'name') | default('unknown device', true) }} — {{ item.name }} (`{{ item.entity_id }}`): {{ item.state }}\n  {% endfor %}\n  </details>\n  {% endfor %}\n\n  {% if ghosts | length > 0 %}\n  <details>\n  <summary>⚠️ Unregistered: {{ ghosts | length }}</summary>\n  {% for entry in ghosts %}\n  &nbsp;&nbsp; • `{{ entry | replace('[unregistered] ', '') }}`\n  {% endfor %}\n  </details>\n  {% endif %}\n{% endif %}\n"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "max_columns": 4,
+          "dense_section_placement": true,
+          "cards": [],
+          "icon": "mdi:server-network"
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "Hälsokontroll",
+          "path": "health2",
+          "icon": "mdi:medical-bag",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "tile",
+                  "entity": "sensor.ha_db_size_mb",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.ha_states_rows_24h",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.ha_antal_enheter",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.ha_antal_otillgangliga_enheter",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.ha_antal_otillgangliga_kritiska_enheter",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                }
+              ],
+              "column_span": 1
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "history-graph",
+                  "entities": [
+                    {
+                      "entity": "sensor.ha_db_size_mb"
+                    },
+                    {
+                      "entity": "sensor.ha_states_rows_24h"
+                    }
+                  ],
+                  "hours_to_show": 168
+                }
+              ],
+              "column_span": 1
+            }
+          ]
+        },
+        {
+          "title": "Energipris",
+          "path": "energipris",
+          "icon": "mdi:transmission-tower",
+          "type": "sections",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Avgifter och skatter",
+                  "heading_style": "title",
+                  "icon": "mdi:cash-multiple"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.nordpool_certificate_fee",
+                  "name": "Certifikatsavgift",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  },
+                  "show_entity_picture": false,
+                  "vertical": false,
+                  "hide_state": false
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.nordpool_energy_tax",
+                  "name": "Energiskatt",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.nordpool_energy_transfer_fee",
+                  "name": "Transferavgift",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.nordpool_spot_fee",
+                  "name": "Spot påslag",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.nordpool_trade_fee",
+                  "name": "Handelsavgift",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.nordpool_vat",
+                  "name": "Moms",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.nordpool_monthly_fee"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Priser just nu",
+                  "heading_style": "title",
+                  "icon": "mdi:cash-multiple"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.nordpool",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.template_nordpool_base_cost_current_hour",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.template_nordpool_additional_costs_current_hour",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Progonos (inkl. fasta avgifter) - baserat på kvartar",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "tile",
+                  "layout_options": {
+                    "grid_columns": 4,
+                    "grid_rows": 1
+                  },
+                  "entity": "sensor.kvartbaserad_elkostnadsprognos",
+                  "vertical": true,
+                  "features_position": "bottom"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Ny sektion"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.elmatare_elstolpen_current_phase_1",
+                  "grid_options": {
+                    "rows": "auto",
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.elmatare_elstolpen_current_phase_2",
+                  "grid_options": {
+                    "rows": "auto",
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.elmatare_elstolpen_current_phase_3",
+                  "grid_options": {
+                    "rows": "auto",
+                    "columns": "full"
+                  }
+                }
+              ]
+            }
+          ],
+          "max_columns": 3,
+          "cards": []
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "WiFi",
+          "path": "wifi",
+          "header": {
+            "card": {
+              "type": "markdown",
+              "text_only": true,
+              "content": "### Accespunkter och Gateway - Totalt antal WIFI klienter: {{ states('sensor.all_wi_fi_clients') | int(0) }} st\n"
+            }
+          },
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "AP Kontoret (192.168.10.4)",
+                  "icon": "mdi:router-network-wireless",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.ap_kontoret_wi_fi_clients",
+                      "state_content": "state",
+                      "icon": "mdi:wifi",
+                      "color": "state"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:flex-table-card",
+                  "entities": [
+                    "sensor.ap_kontoret_wi_fi_clients"
+                  ],
+                  "sort_by": "rssi_raw",
+                  "sort_desc": false,
+                  "columns": [
+                    {
+                      "name": "Name",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; const badge=(x.band_short==='2G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#c9a227;color:#161616;font-size:7px;font-weight:700;vertical-align:middle;\">2G<\\/span>' : (x.band_short==='5G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#2f8f66;color:#eaf7ef;font-size:7px;font-weight:700;vertical-align:middle;\">5G<\\/span>' : (x.band_short==='6G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#4b63c6;color:#eef2ff;font-size:7px;font-weight:700;vertical-align:middle;\">6G<\\/span>' : ''; return `<span class=\"host-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 6px;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:${bg};\">${badge}${x.hostname || \"-\"}</span>`; })() : ''"
+                    },
+                    {
+                      "name": "IP",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"ip-cell\" title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 4px;margin:0;white-space:nowrap;text-align:right;background:${bg};\">${x.ip || '-'}</span>`; })() : ''"
+                    },
+                    {
+                      "name": "RSSI",
+                      "attr_as_list": "clients",
+                      "sort_unmodified": true,
+                      "modify": "(x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"rssi-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 1px;margin:0;text-align:right;white-space:nowrap;background:${bg};\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>`; })() : ''"
+                    },
+                    {
+                      "name": "",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ if (!x.mac) return ''; const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span style=\"position:relative;display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0;margin:0;background:${bg};\"><span title=\"Koppla från klient\" style=\"position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(180,52,52,.9);color:#fff;font-weight:700;font-size:8px;line-height:1;\">×</span></span><span style=\"display:block;width:0;height:0;overflow:hidden;font-size:0;line-height:0;\">${x.mac}</span>`; })() : ''",
+                      "tap_action": {
+                        "action": "perform-action",
+                        "perform_action": "openwrt_wifi_clients.disconnect_client",
+                        "data": {
+                          "client_mac": "col[5]",
+                          "reason": 5,
+                          "deauth": true,
+                          "ban_time": 30000
+                        },
+                        "confirmation": {
+                          "text": "Koppla från denna klient från AP?"
+                        }
+                      }
+                    },
+                    {
+                      "name": "rssi_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999",
+                      "hidden": true
+                    },
+                    {
+                      "name": "mac_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? x.mac : ''",
+                      "hidden": true
+                    }
+                  ],
+                  "css": {
+                    "table+": "width:100% !important; border-collapse:separate !important; border-spacing:0 1px !important; table-layout:fixed !important; margin:0 !important;",
+                    "th+": "text-align:left; font-size:13px; font-weight:600; padding:2px 6px 2px 6px !important;",
+                    "th:nth-child(1)+": "width:auto;",
+                    "th:nth-child(2)+": "width:90px !important; text-align:right; white-space:nowrap;",
+                    "th:nth-child(3)+": "width:10px !important; text-align:right; white-space:nowrap;",
+                    "th:nth-child(4)+": "width:10px !important; text-align:center; white-space:nowrap;",
+                    "tr+": "background:transparent;",
+                    "tbody tr:nth-child(odd)+": "background:transparent;",
+                    "tbody tr:nth-child(even)+": "background:transparent;",
+                    "tbody tr+": "height:19px !important;",
+                    "tbody tr td+": "padding:0 !important; margin:0 !important; height:18px !important; line-height:18px !important; vertical-align:middle !important; border:0 !important;",
+                    "td+": "padding:0 !important; margin:0 !important; font-size:13px; line-height:1; background:transparent !important; border:0 !important; white-space:nowrap;",
+                    "td:nth-child(1)+": "width:auto; max-width:0;",
+                    "td:nth-child(2)+": "width:90px !important; text-align:right;",
+                    "td:nth-child(3)+": "width:10px !important; text-align:right;",
+                    "td:nth-child(4)+": "width:10px !important; text-align:center; vertical-align:middle !important; padding:0 !important; line-height:18px !important;",
+                    ".host-cell": "display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;",
+                    ".ip-cell": "display:block; white-space:nowrap;",
+                    ".rssi-cell": "display:block; text-align:right; white-space:nowrap;"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "icon": "mdi:router-network-wireless",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.ap_koket_wi_fi_clients",
+                      "state_content": "state",
+                      "icon": "mdi:wifi"
+                    }
+                  ],
+                  "heading": "AP Köket (192.168.10.5)"
+                },
+                {
+                  "type": "custom:flex-table-card",
+                  "entities": [
+                    "sensor.ap_koket_wi_fi_clients"
+                  ],
+                  "sort_by": "rssi_raw",
+                  "sort_desc": false,
+                  "columns": [
+                    {
+                      "name": "Name",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; const badge=(x.band_short==='2G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#c9a227;color:#161616;font-size:7px;font-weight:700;vertical-align:middle;\">2G<\\/span>' : (x.band_short==='5G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#2f8f66;color:#eaf7ef;font-size:7px;font-weight:700;vertical-align:middle;\">5G<\\/span>' : (x.band_short==='6G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#4b63c6;color:#eef2ff;font-size:7px;font-weight:700;vertical-align:middle;\">6G<\\/span>' : ''; return `<span class=\"host-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 6px;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:${bg};\">${badge}${x.hostname || \"-\"}</span>`; })() : ''"
+                    },
+                    {
+                      "name": "IP",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"ip-cell\" title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 4px;margin:0;white-space:nowrap;text-align:right;background:${bg};\">${x.ip || '-'}</span>`; })() : ''"
+                    },
+                    {
+                      "name": "RSSI",
+                      "attr_as_list": "clients",
+                      "sort_unmodified": true,
+                      "modify": "(x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"rssi-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 1px;margin:0;text-align:right;white-space:nowrap;background:${bg};\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>`; })() : ''"
+                    },
+                    {
+                      "name": "",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ if (!x.mac) return ''; const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span style=\"position:relative;display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0;margin:0;background:${bg};\"><span title=\"Koppla från klient\" style=\"position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(180,52,52,.9);color:#fff;font-weight:700;font-size:8px;line-height:1;\">×</span></span><span style=\"display:block;width:0;height:0;overflow:hidden;font-size:0;line-height:0;\">${x.mac}</span>`; })() : ''",
+                      "tap_action": {
+                        "action": "perform-action",
+                        "perform_action": "openwrt_wifi_clients.disconnect_client",
+                        "data": {
+                          "client_mac": "col[5]",
+                          "reason": 5,
+                          "deauth": true,
+                          "ban_time": 30000
+                        },
+                        "confirmation": {
+                          "text": "Koppla från denna klient från AP?"
+                        }
+                      }
+                    },
+                    {
+                      "name": "rssi_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999",
+                      "hidden": true
+                    },
+                    {
+                      "name": "mac_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? x.mac : ''",
+                      "hidden": true
+                    }
+                  ],
+                  "css": {
+                    "table+": "width:100% !important; border-collapse:separate !important; border-spacing:0 1px !important; table-layout:fixed !important; margin:0 !important;",
+                    "th+": "text-align:left; font-size:13px; font-weight:600; padding:2px 6px 2px 6px !important;",
+                    "th:nth-child(1)+": "width:auto;",
+                    "th:nth-child(2)+": "width:90px !important; text-align:right; white-space:nowrap;",
+                    "th:nth-child(3)+": "width:10px !important; text-align:right; white-space:nowrap;",
+                    "th:nth-child(4)+": "width:10px !important; text-align:center; white-space:nowrap;",
+                    "tr+": "background:transparent;",
+                    "tbody tr:nth-child(odd)+": "background:transparent;",
+                    "tbody tr:nth-child(even)+": "background:transparent;",
+                    "tbody tr+": "height:19px !important;",
+                    "tbody tr td+": "padding:0 !important; margin:0 !important; height:18px !important; line-height:18px !important; vertical-align:middle !important; border:0 !important;",
+                    "td+": "padding:0 !important; margin:0 !important; font-size:13px; line-height:1; background:transparent !important; border:0 !important; white-space:nowrap;",
+                    "td:nth-child(1)+": "width:auto; max-width:0;",
+                    "td:nth-child(2)+": "width:90px !important; text-align:right;",
+                    "td:nth-child(3)+": "width:10px !important; text-align:right;",
+                    "td:nth-child(4)+": "width:10px !important; text-align:center; vertical-align:middle !important; padding:0 !important; line-height:18px !important;",
+                    ".host-cell": "display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;",
+                    ".ip-cell": "display:block; white-space:nowrap;",
+                    ".rssi-cell": "display:block; text-align:right; white-space:nowrap;"
+                  }
+                }
+              ],
+              "column_span": 1
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "AP Källaren (192.168.10.6)",
+                  "icon": "mdi:router-network-wireless",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.ap_kallaren_wi_fi_clients",
+                      "state_content": "state",
+                      "color": "state",
+                      "icon": "mdi:wifi"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:flex-table-card",
+                  "entities": [
+                    "sensor.ap_kallaren_wi_fi_clients"
+                  ],
+                  "sort_by": "rssi_raw",
+                  "sort_desc": false,
+                  "columns": [
+                    {
+                      "name": "Name",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; const badge=(x.band_short==='2G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#c9a227;color:#161616;font-size:7px;font-weight:700;vertical-align:middle;\">2G<\\/span>' : (x.band_short==='5G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#2f8f66;color:#eaf7ef;font-size:7px;font-weight:700;vertical-align:middle;\">5G<\\/span>' : (x.band_short==='6G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#4b63c6;color:#eef2ff;font-size:7px;font-weight:700;vertical-align:middle;\">6G<\\/span>' : ''; return `<span class=\"host-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 6px;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:${bg};\">${badge}${x.hostname || \"-\"}</span>`; })() : ''"
+                    },
+                    {
+                      "name": "IP",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"ip-cell\" title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 4px;margin:0;white-space:nowrap;text-align:right;background:${bg};\">${x.ip || '-'}</span>`; })() : ''"
+                    },
+                    {
+                      "name": "RSSI",
+                      "attr_as_list": "clients",
+                      "sort_unmodified": true,
+                      "modify": "(x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"rssi-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 1px;margin:0;text-align:right;white-space:nowrap;background:${bg};\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>`; })() : ''"
+                    },
+                    {
+                      "name": "",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ if (!x.mac) return ''; const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span style=\"position:relative;display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0;margin:0;background:${bg};\"><span title=\"Koppla från klient\" style=\"position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(180,52,52,.9);color:#fff;font-weight:700;font-size:8px;line-height:1;\">×</span></span><span style=\"display:block;width:0;height:0;overflow:hidden;font-size:0;line-height:0;\">${x.mac}</span>`; })() : ''",
+                      "tap_action": {
+                        "action": "perform-action",
+                        "perform_action": "openwrt_wifi_clients.disconnect_client",
+                        "data": {
+                          "client_mac": "col[5]",
+                          "reason": 5,
+                          "deauth": true,
+                          "ban_time": 30000
+                        },
+                        "confirmation": {
+                          "text": "Koppla från denna klient från AP?"
+                        }
+                      }
+                    },
+                    {
+                      "name": "rssi_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999",
+                      "hidden": true
+                    },
+                    {
+                      "name": "mac_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? x.mac : ''",
+                      "hidden": true
+                    }
+                  ],
+                  "css": {
+                    "table+": "width:100% !important; border-collapse:separate !important; border-spacing:0 1px !important; table-layout:fixed !important; margin:0 !important;",
+                    "th+": "text-align:left; font-size:13px; font-weight:600; padding:2px 6px 2px 6px !important;",
+                    "th:nth-child(1)+": "width:auto;",
+                    "th:nth-child(2)+": "width:90px !important; text-align:right; white-space:nowrap;",
+                    "th:nth-child(3)+": "width:10px !important; text-align:right; white-space:nowrap;",
+                    "th:nth-child(4)+": "width:10px !important; text-align:center; white-space:nowrap;",
+                    "tr+": "background:transparent;",
+                    "tbody tr:nth-child(odd)+": "background:transparent;",
+                    "tbody tr:nth-child(even)+": "background:transparent;",
+                    "tbody tr+": "height:19px !important;",
+                    "tbody tr td+": "padding:0 !important; margin:0 !important; height:18px !important; line-height:18px !important; vertical-align:middle !important; border:0 !important;",
+                    "td+": "padding:0 !important; margin:0 !important; font-size:13px; line-height:1; background:transparent !important; border:0 !important; white-space:nowrap;",
+                    "td:nth-child(1)+": "width:auto; max-width:0;",
+                    "td:nth-child(2)+": "width:90px !important; text-align:right;",
+                    "td:nth-child(3)+": "width:10px !important; text-align:right;",
+                    "td:nth-child(4)+": "width:10px !important; text-align:center; vertical-align:middle !important; padding:0 !important; line-height:18px !important;",
+                    ".host-cell": "display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;",
+                    ".ip-cell": "display:block; white-space:nowrap;",
+                    ".rssi-cell": "display:block; text-align:right; white-space:nowrap;"
+                  }
+                },
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "AP Friggan (192.168.10.8)",
+                  "icon": "mdi:router-network-wireless",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.ap_friggan_wi_fi_clients",
+                      "state_content": "state",
+                      "icon": "mdi:wifi",
+                      "color": "state"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:flex-table-card",
+                  "entities": [
+                    "sensor.ap_friggan_wi_fi_clients"
+                  ],
+                  "sort_by": "rssi_raw",
+                  "sort_desc": false,
+                  "columns": [
+                    {
+                      "name": "Name",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; const badge=(x.band_short==='2G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#c9a227;color:#161616;font-size:7px;font-weight:700;vertical-align:middle;\">2G<\\/span>' : (x.band_short==='5G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#2f8f66;color:#eaf7ef;font-size:7px;font-weight:700;vertical-align:middle;\">5G<\\/span>' : (x.band_short==='6G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#4b63c6;color:#eef2ff;font-size:7px;font-weight:700;vertical-align:middle;\">6G<\\/span>' : ''; return `<span class=\"host-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 6px;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:${bg};\">${badge}${x.hostname || \"-\"}</span>`; })() : ''"
+                    },
+                    {
+                      "name": "IP",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"ip-cell\" title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 4px;margin:0;white-space:nowrap;text-align:right;background:${bg};\">${x.ip || '-'}</span>`; })() : ''"
+                    },
+                    {
+                      "name": "RSSI",
+                      "attr_as_list": "clients",
+                      "sort_unmodified": true,
+                      "modify": "(x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"rssi-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 1px;margin:0;text-align:right;white-space:nowrap;background:${bg};\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>`; })() : ''"
+                    },
+                    {
+                      "name": "",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ if (!x.mac) return ''; const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span style=\"position:relative;display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0;margin:0;background:${bg};\"><span title=\"Koppla från klient\" style=\"position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(180,52,52,.9);color:#fff;font-weight:700;font-size:8px;line-height:1;\">×</span></span><span style=\"display:block;width:0;height:0;overflow:hidden;font-size:0;line-height:0;\">${x.mac}</span>`; })() : ''",
+                      "tap_action": {
+                        "action": "perform-action",
+                        "perform_action": "openwrt_wifi_clients.disconnect_client",
+                        "data": {
+                          "client_mac": "col[5]",
+                          "reason": 5,
+                          "deauth": true,
+                          "ban_time": 30000
+                        },
+                        "confirmation": {
+                          "text": "Koppla från denna klient från AP?"
+                        }
+                      }
+                    },
+                    {
+                      "name": "rssi_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999",
+                      "hidden": true
+                    },
+                    {
+                      "name": "mac_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? x.mac : ''",
+                      "hidden": true
+                    }
+                  ],
+                  "css": {
+                    "table+": "width:100% !important; border-collapse:separate !important; border-spacing:0 1px !important; table-layout:fixed !important; margin:0 !important;",
+                    "th+": "text-align:left; font-size:13px; font-weight:600; padding:2px 6px 2px 6px !important;",
+                    "th:nth-child(1)+": "width:auto;",
+                    "th:nth-child(2)+": "width:90px !important; text-align:right; white-space:nowrap;",
+                    "th:nth-child(3)+": "width:10px !important; text-align:right; white-space:nowrap;",
+                    "th:nth-child(4)+": "width:10px !important; text-align:center; white-space:nowrap;",
+                    "tr+": "background:transparent;",
+                    "tbody tr:nth-child(odd)+": "background:transparent;",
+                    "tbody tr:nth-child(even)+": "background:transparent;",
+                    "tbody tr+": "height:19px !important;",
+                    "tbody tr td+": "padding:0 !important; margin:0 !important; height:18px !important; line-height:18px !important; vertical-align:middle !important; border:0 !important;",
+                    "td+": "padding:0 !important; margin:0 !important; font-size:13px; line-height:1; background:transparent !important; border:0 !important; white-space:nowrap;",
+                    "td:nth-child(1)+": "width:auto; max-width:0;",
+                    "td:nth-child(2)+": "width:90px !important; text-align:right;",
+                    "td:nth-child(3)+": "width:10px !important; text-align:right;",
+                    "td:nth-child(4)+": "width:10px !important; text-align:center; vertical-align:middle !important; padding:0 !important; line-height:18px !important;",
+                    ".host-cell": "display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;",
+                    ".ip-cell": "display:block; white-space:nowrap;",
+                    ".rssi-cell": "display:block; text-align:right; white-space:nowrap;"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "AP Verkstaden (192.168.10.7)",
+                  "icon": "mdi:router-network-wireless",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.ap_verkstaden_wi_fi_clients",
+                      "state_content": "state",
+                      "icon": "mdi:wifi",
+                      "color": "state"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:flex-table-card",
+                  "entities": [
+                    "sensor.ap_verkstaden_wi_fi_clients"
+                  ],
+                  "sort_by": "rssi_raw",
+                  "sort_desc": false,
+                  "columns": [
+                    {
+                      "name": "Name",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; const badge=(x.band_short==='2G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#c9a227;color:#161616;font-size:7px;font-weight:700;vertical-align:middle;\">2G<\\/span>' : (x.band_short==='5G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#2f8f66;color:#eaf7ef;font-size:7px;font-weight:700;vertical-align:middle;\">5G<\\/span>' : (x.band_short==='6G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#4b63c6;color:#eef2ff;font-size:7px;font-weight:700;vertical-align:middle;\">6G<\\/span>' : ''; return `<span class=\"host-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 6px;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:${bg};\">${badge}${x.hostname || \"-\"}</span>`; })() : ''"
+                    },
+                    {
+                      "name": "IP",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"ip-cell\" title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 4px;margin:0;white-space:nowrap;text-align:right;background:${bg};\">${x.ip || '-'}</span>`; })() : ''"
+                    },
+                    {
+                      "name": "RSSI",
+                      "attr_as_list": "clients",
+                      "sort_unmodified": true,
+                      "modify": "(x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"rssi-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 1px;margin:0;text-align:right;white-space:nowrap;background:${bg};\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>`; })() : ''"
+                    },
+                    {
+                      "name": "",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ if (!x.mac) return ''; const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span style=\"position:relative;display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0;margin:0;background:${bg};\"><span title=\"Koppla från klient\" style=\"position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(180,52,52,.9);color:#fff;font-weight:700;font-size:8px;line-height:1;\">×</span></span><span style=\"display:block;width:0;height:0;overflow:hidden;font-size:0;line-height:0;\">${x.mac}</span>`; })() : ''",
+                      "tap_action": {
+                        "action": "perform-action",
+                        "perform_action": "openwrt_wifi_clients.disconnect_client",
+                        "data": {
+                          "client_mac": "col[5]",
+                          "reason": 5,
+                          "deauth": true,
+                          "ban_time": 30000
+                        },
+                        "confirmation": {
+                          "text": "Koppla från denna klient från AP?"
+                        }
+                      }
+                    },
+                    {
+                      "name": "rssi_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999",
+                      "hidden": true
+                    },
+                    {
+                      "name": "mac_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? x.mac : ''",
+                      "hidden": true
+                    }
+                  ],
+                  "css": {
+                    "table+": "width:100% !important; border-collapse:separate !important; border-spacing:0 1px !important; table-layout:fixed !important; margin:0 !important;",
+                    "th+": "text-align:left; font-size:13px; font-weight:600; padding:2px 6px 2px 6px !important;",
+                    "th:nth-child(1)+": "width:auto;",
+                    "th:nth-child(2)+": "width:90px !important; text-align:right; white-space:nowrap;",
+                    "th:nth-child(3)+": "width:10px !important; text-align:right; white-space:nowrap;",
+                    "th:nth-child(4)+": "width:10px !important; text-align:center; white-space:nowrap;",
+                    "tr+": "background:transparent;",
+                    "tbody tr:nth-child(odd)+": "background:transparent;",
+                    "tbody tr:nth-child(even)+": "background:transparent;",
+                    "tbody tr+": "height:19px !important;",
+                    "tbody tr td+": "padding:0 !important; margin:0 !important; height:18px !important; line-height:18px !important; vertical-align:middle !important; border:0 !important;",
+                    "td+": "padding:0 !important; margin:0 !important; font-size:13px; line-height:1; background:transparent !important; border:0 !important; white-space:nowrap;",
+                    "td:nth-child(1)+": "width:auto; max-width:0;",
+                    "td:nth-child(2)+": "width:90px !important; text-align:right;",
+                    "td:nth-child(3)+": "width:10px !important; text-align:right;",
+                    "td:nth-child(4)+": "width:10px !important; text-align:center; vertical-align:middle !important; padding:0 !important; line-height:18px !important;",
+                    ".host-cell": "display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;",
+                    ".ip-cell": "display:block; white-space:nowrap;",
+                    ".rssi-cell": "display:block; text-align:right; white-space:nowrap;"
+                  }
+                },
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "AP Poolen (192.168.10.10)",
+                  "icon": "mdi:router-network-wireless",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.ap_poolen_wi_fi_clients",
+                      "state_content": "state",
+                      "icon": "mdi:wifi",
+                      "color": "state"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:flex-table-card",
+                  "entities": [
+                    "sensor.ap_poolen_wi_fi_clients"
+                  ],
+                  "sort_by": "rssi_raw",
+                  "sort_desc": false,
+                  "columns": [
+                    {
+                      "name": "Name",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; const badge=(x.band_short==='2G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#c9a227;color:#161616;font-size:7px;font-weight:700;vertical-align:middle;\">2G<\\/span>' : (x.band_short==='5G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#2f8f66;color:#eaf7ef;font-size:7px;font-weight:700;vertical-align:middle;\">5G<\\/span>' : (x.band_short==='6G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#4b63c6;color:#eef2ff;font-size:7px;font-weight:700;vertical-align:middle;\">6G<\\/span>' : ''; return `<span class=\"host-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 6px;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:${bg};\">${badge}${x.hostname || \"-\"}</span>`; })() : ''"
+                    },
+                    {
+                      "name": "IP",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"ip-cell\" title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 4px;margin:0;white-space:nowrap;text-align:right;background:${bg};\">${x.ip || '-'}</span>`; })() : ''"
+                    },
+                    {
+                      "name": "RSSI",
+                      "attr_as_list": "clients",
+                      "sort_unmodified": true,
+                      "modify": "(x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"rssi-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 1px;margin:0;text-align:right;white-space:nowrap;background:${bg};\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>`; })() : ''"
+                    },
+                    {
+                      "name": "",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ if (!x.mac) return ''; const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span style=\"position:relative;display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0;margin:0;background:${bg};\"><span title=\"Koppla från klient\" style=\"position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(180,52,52,.9);color:#fff;font-weight:700;font-size:8px;line-height:1;\">×</span></span><span style=\"display:block;width:0;height:0;overflow:hidden;font-size:0;line-height:0;\">${x.mac}</span>`; })() : ''",
+                      "tap_action": {
+                        "action": "perform-action",
+                        "perform_action": "openwrt_wifi_clients.disconnect_client",
+                        "data": {
+                          "client_mac": "col[5]",
+                          "reason": 5,
+                          "deauth": true,
+                          "ban_time": 30000
+                        },
+                        "confirmation": {
+                          "text": "Koppla från denna klient från AP?"
+                        }
+                      }
+                    },
+                    {
+                      "name": "rssi_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999",
+                      "hidden": true
+                    },
+                    {
+                      "name": "mac_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? x.mac : ''",
+                      "hidden": true
+                    }
+                  ],
+                  "css": {
+                    "table+": "width:100% !important; border-collapse:separate !important; border-spacing:0 1px !important; table-layout:fixed !important; margin:0 !important;",
+                    "th+": "text-align:left; font-size:13px; font-weight:600; padding:2px 6px 2px 6px !important;",
+                    "th:nth-child(1)+": "width:auto;",
+                    "th:nth-child(2)+": "width:90px !important; text-align:right; white-space:nowrap;",
+                    "th:nth-child(3)+": "width:10px !important; text-align:right; white-space:nowrap;",
+                    "th:nth-child(4)+": "width:10px !important; text-align:center; white-space:nowrap;",
+                    "tr+": "background:transparent;",
+                    "tbody tr:nth-child(odd)+": "background:transparent;",
+                    "tbody tr:nth-child(even)+": "background:transparent;",
+                    "tbody tr+": "height:19px !important;",
+                    "tbody tr td+": "padding:0 !important; margin:0 !important; height:18px !important; line-height:18px !important; vertical-align:middle !important; border:0 !important;",
+                    "td+": "padding:0 !important; margin:0 !important; font-size:13px; line-height:1; background:transparent !important; border:0 !important; white-space:nowrap;",
+                    "td:nth-child(1)+": "width:auto; max-width:0;",
+                    "td:nth-child(2)+": "width:90px !important; text-align:right;",
+                    "td:nth-child(3)+": "width:10px !important; text-align:right;",
+                    "td:nth-child(4)+": "width:10px !important; text-align:center; vertical-align:middle !important; padding:0 !important; line-height:18px !important;",
+                    ".host-cell": "display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;",
+                    ".ip-cell": "display:block; white-space:nowrap;",
+                    ".rssi-cell": "display:block; text-align:right; white-space:nowrap;"
+                  }
+                }
+              ]
+            }
+          ],
+          "icon": "mdi:wifi",
+          "cards": [],
+          "show_icon_and_title": false,
+          "dense_section_placement": true
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "WiFi-karta",
+          "path": "wifi-karta",
+          "icon": "mdi:access-point-network",
+          "visible": true,
+          "subview": false,
+          "sections": [
+            {
+              "type": "grid",
+              "column_span": 4,
+              "cards": [
+                {
+                  "type": "custom:openwrt-network-map-card",
+                  "title": "Wi-Fi-topologi",
+                  "gateway_name": "GW",
+                  "weak_threshold": -67,
+                  "poor_threshold": -75,
+                  "show_labels": false,
+                  "ap_aliases": {
+                    "192.168.10.4": "Kontoret",
+                    "192.168.10.5": "Köket",
+                    "192.168.10.6": "Källaren",
+                    "192.168.10.7": "Verkstaden",
+                    "192.168.10.8": "Friggan",
+                    "192.168.10.10": "Poolen"
+                  },
+                  "grid_options": {
+                    "columns": "full",
+                    "rows": 10
+                  }
+                }
+              ]
+            }
+          ],
+          "cards": []
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "Thread",
+          "path": "thread",
+          "icon": "phu:thread-net",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "markdown",
+                  "content": "{% set diag = state_attr('sensor.thread_network_diagnostics', 'diagnostics') or [] %}\n  {% set topology = state_attr('sensor.thread_matter_topology', 'nodes') or [] %}\n\n  {# ------------------------------------------------------------\n     Samla HA-enheter från Matter-integrationen\n     ------------------------------------------------------------ #}\n  {% set md = namespace(devices=[]) %}\n\n  {% for entity in integration_entities('matter') %}\n    {% set dev = device_id(entity) %}\n\n    {% if dev and dev not in md.devices %}\n      {% set md.devices = md.devices + [dev] %}\n    {% endif %}\n  {% endfor %}\n\n\n  {# ------------------------------------------------------------\n     Hämta HA-namn från Matter node_id\n     ------------------------------------------------------------ #}\n  {% macro matter_name(node_id) -%}\n\n    {% set found = namespace(name='') %}\n\n    {% for dev in md.devices %}\n\n      {% for ident in device_attr(dev, 'identifiers') or [] %}\n\n        {% if ident[0] == 'matter'\n              and ident[1].startswith('deviceid_') %}\n\n          {% set parts = ident[1].split('-') %}\n\n          {% if parts | count >= 3 %}\n\n            {% set ha_node_id = parts[1] | int(0, 16) %}\n\n            {% if ha_node_id == node_id %}\n              {% set found.name = device_name(dev) %}\n            {% endif %}\n\n          {% endif %}\n\n        {% endif %}\n\n      {% endfor %}\n\n    {% endfor %}\n\n    {{ found.name }}\n\n  {%- endmacro %}\n\n\n  {# ------------------------------------------------------------\n     Hälsobedömning\n     ------------------------------------------------------------ #}\n  {% macro health(d) -%}\n\n    {% set neighbors = d.routerNeighbors | default([], true) %}\n    {% set q = namespace(good=0) %}\n\n    {% for n in neighbors %}\n\n      {% if (n.linkMargin | int(0)) >= 20 %}\n        {% set q.good = q.good + 1 %}\n      {% endif %}\n\n    {% endfor %}\n\n    {% set total = neighbors | count %}\n    {% set ratio = (q.good / total) if total > 0 else 0 %}\n\n    {% set errors =\n         neighbors\n         | map(attribute='messageErrorRate')\n         | list %}\n\n    {% set max_msg =\n         ((errors | max) * 100)\n         if errors | count > 0\n         else 100 %}\n\n    {% if total == 0\n          or q.good == 0\n          or max_msg >= 5 -%}\n\n      red\n\n    {%- elif q.good < 3\n          or ratio < 0.5\n          or max_msg >= 1 -%}\n\n      yellow\n\n    {%- else -%}\n\n      green\n\n    {%- endif %}\n\n  {%- endmacro %}\n\n\n  {# ------------------------------------------------------------\n     Rendera en Thread-nod\n     ------------------------------------------------------------ #}\n  {% macro render_node(d) -%}\n\n    {% set addr = d.extAddress | lower %}\n    {% set neighbors =\n         d.routerNeighbors\n         | default([], true) %}\n\n\n    {# ESPHome-matchning via Thread Extended Address #}\n    {% set esp =\n         states.sensor\n         | selectattr('state', 'eq', addr)\n         | list %}\n\n\n    {# Matter Server topology-matchning #}\n    {% set tn = namespace(node=none) %}\n\n    {% for t in topology %}\n\n      {% if (t.ext_address | default('') | lower) == addr %}\n        {% set tn.node = t %}\n      {% endif %}\n\n    {% endfor %}\n\n\n    {# ----------------------------------------------------------\n       Samla metadata från samtliga OTBR-diagnostikposter\n       ---------------------------------------------------------- #}\n    {% set meta = namespace(\n         stack='',\n         vendor='',\n         model=''\n       ) %}\n\n    {% for c in diag %}\n\n      {% if (c.extAddress | lower) == addr %}\n\n        {% if meta.stack == ''\n              and\n              (c.threadStackVersion\n               | default('')\n               | trim) != '' %}\n\n          {% set meta.stack = c.threadStackVersion %}\n\n        {% endif %}\n\n\n        {% if meta.vendor == ''\n              and\n              (c.vendorName\n               | default('')\n               | trim) != '' %}\n\n          {% set meta.vendor = c.vendorName %}\n\n        {% endif %}\n\n\n        {% if meta.model == ''\n              and\n              (c.vendorModel\n               | default('')\n               | trim) != '' %}\n\n          {% set meta.model = c.vendorModel %}\n\n        {% endif %}\n\n      {% endif %}\n\n    {% endfor %}\n\n\n    {# ----------------------------------------------------------\n       Namnprioritet\n\n       1. ESPHome / HA device name\n       2. Matter node -> HA device registry\n       3. Border Router friendly_name\n       4. Border Router vendor + model\n       5. OTBR vendor + model\n       6. Hexadress\n       ---------------------------------------------------------- #}\n\n    {% if esp | count > 0 %}\n\n      {% set s = esp[0] %}\n\n      {% set name =\n           device_attr(s.entity_id, 'name_by_user')\n           or\n           device_attr(s.entity_id, 'name')\n           or\n           s.name %}\n\n\n    {% elif tn.node is not none\n          and tn.node.kind == 'matter'\n          and tn.node.node_id is defined %}\n\n      {% set mn =\n           matter_name(tn.node.node_id)\n           | trim %}\n\n      {% set name =\n           mn\n           if mn != ''\n           else addr[:8] ~ '…' %}\n\n\n    {% elif tn.node is not none\n          and tn.node.kind == 'border_router'\n          and\n          (tn.node.friendly_name\n           | default('')\n           | trim) != '' %}\n\n      {% set name = tn.node.friendly_name %}\n\n\n    {% elif tn.node is not none\n          and tn.node.kind == 'border_router' %}\n\n      {% set name =\n           (\n             (tn.node.vendor_name | default(''))\n             ~ ' '\n             ~\n             (tn.node.model_name | default(''))\n           )\n           | trim %}\n\n\n    {% elif meta.vendor != '' %}\n\n      {% set name =\n           (meta.vendor ~ ' ' ~ meta.model)\n           | trim %}\n\n\n    {% else %}\n\n      {% set name = addr[:8] ~ '…' %}\n\n    {% endif %}\n\n\n    {# ----------------------------------------------------------\n       Nodtyp\n       ---------------------------------------------------------- #}\n    {% set stack_lower = meta.stack | lower %}\n\n    {% if 'esp32c6' in stack_lower %}\n\n      {% set type = 'ESP32-C6' %}\n\n    {% elif tn.node is not none\n          and tn.node.kind == 'matter' %}\n\n      {% set type = 'Matter' %}\n\n    {% elif tn.node is not none\n          and tn.node.kind == 'border_router' %}\n\n      {% set type = 'Border Router' %}\n\n    {% elif meta.vendor == 'Home Assistant' %}\n\n      {% set type = 'HA OTBR' %}\n\n    {% elif 'efr32' in stack_lower %}\n\n      {% set type = 'EFR32' %}\n\n    {% else %}\n\n      {% set type = 'Thread router' %}\n\n    {% endif %}\n\n\n    {# ----------------------------------------------------------\n       Antal användbara länkar\n       ---------------------------------------------------------- #}\n    {% set q = namespace(good=0) %}\n\n    {% for n in neighbors %}\n\n      {% if (n.linkMargin | int(0)) >= 20 %}\n        {% set q.good = q.good + 1 %}\n      {% endif %}\n\n    {% endfor %}\n\n\n    {# Statusikon #}\n    {% set h = health(d) | trim %}\n\n    {% if h == 'red' %}\n      {% set icon = '🔴' %}\n\n    {% elif h == 'yellow' %}\n      {% set icon = '🟡' %}\n\n    {% else %}\n      {% set icon = '🟢' %}\n    {% endif %}\n\n\n    {# ----------------------------------------------------------\n       Visning\n       ---------------------------------------------------------- #}\n    {% if neighbors | count > 0 %}\n\n      {% set rssis =\n           neighbors\n           | map(attribute='averageRssi')\n           | list %}\n\n      {% set margins =\n           neighbors\n           | map(attribute='linkMargin')\n           | list %}\n\n      {% set errors =\n           neighbors\n           | map(attribute='messageErrorRate')\n           | list %}\n\n      {% set best_rssi = rssis | max %}\n      {% set min_margin = margins | min %}\n\n      {% set max_error =\n           ((errors | max) * 100)\n           | round(1) %}\n\n  {{ icon }} **{{ name }}** · {{ type }}  \n  {{ q.good }}/{{ neighbors | count }} bra länkar · RSSI **{{ best_rssi }} dBm** · min margin **{{ min_margin }} dB** · msgfel **{{ max_error }} %**\n\n    {% else %}\n\n  🔴 **{{ name }}** · {{ type }}  \n  Ingen granninformation\n\n    {% endif %}\n\n  {%- endmacro %}\n\n\n  {# ------------------------------------------------------------\n     Sortering:\n     🔴 -> 🟡 -> 🟢\n\n     Samtidigt väljs den diagnostikpost för varje nod\n     som innehåller flest routerNeighbors.\n     ------------------------------------------------------------ #}\n\n  {% set ns = namespace(seen=[]) %}\n\n  {% for wanted in ['red', 'yellow', 'green'] %}\n\n    {% for d in diag %}\n\n      {% set candidates =\n           diag\n           | selectattr(\n               'extAddress',\n               'eq',\n               d.extAddress\n             )\n           | list %}\n\n      {% set best = namespace(count=-1) %}\n\n      {% for c in candidates %}\n\n        {% set cnt =\n             (c.routerNeighbors\n              | default([], true))\n             | count %}\n\n        {% if cnt > best.count %}\n          {% set best.count = cnt %}\n        {% endif %}\n\n      {% endfor %}\n\n\n      {% set current_count =\n           (d.routerNeighbors\n            | default([], true))\n           | count %}\n\n\n      {% if d.extAddress not in ns.seen\n            and\n            current_count == best.count\n            and\n            (health(d) | trim) == wanted %}\n\n        {% set ns.seen =\n             ns.seen + [d.extAddress] %}\n\n        {{ render_node(d) }}\n\n      {% endif %}\n\n    {% endfor %}\n\n  {% endfor %}\n\n    {# ------------------------------------------------------------\n     Sleepy End Devices\n     ------------------------------------------------------------ #}\n\n  {% set child_links =\n       state_attr(\n         'sensor.thread_matter_topology',\n         'child_links'\n       ) or [] %}\n\n  {% for t in topology %}\n\n    {% if (t.role | default('')) == 'sleepy_end_device' %}\n\n      {# HA-namn på den sovande Matter-enheten #}\n      {% set mn =\n           (matter_name(t.node_id) | trim)\n           if t.node_id is defined\n           else '' %}\n\n      {% set name =\n           mn\n           if mn != ''\n           else\n           (t.ext_address | default('okänd'))[:8] ~ '…' %}\n\n\n      {# Hitta länken för denna sleepy node #}\n      {% set ln = namespace(link=none) %}\n\n      {% for l in child_links %}\n\n        {% if (l.source | string) == (t.id | string)\n              or\n              (l.target | string) == (t.id | string) %}\n\n          {% set ln.link = l %}\n\n        {% endif %}\n\n      {% endfor %}\n\n\n      {# Identifiera andra änden = föräldraroutern #}\n      {% set parent = namespace(\n           id='',\n           node=none,\n           name=''\n         ) %}\n\n      {% if ln.link is not none %}\n\n        {% if (ln.link.source | string) == (t.id | string) %}\n          {% set parent.id = ln.link.target %}\n        {% else %}\n          {% set parent.id = ln.link.source %}\n        {% endif %}\n\n\n        {# Hitta motsvarande topology node #}\n        {% for p in topology %}\n\n          {% if (p.id | string) == (parent.id | string) %}\n            {% set parent.node = p %}\n          {% endif %}\n\n        {% endfor %}\n\n\n        {% if parent.node is not none %}\n\n          {% set paddr =\n               parent.node.ext_address\n               | default('')\n               | lower %}\n\n\n          {# ESPHome-namn har högst prioritet #}\n          {% set esp =\n               states.sensor\n               | selectattr('state', 'eq', paddr)\n               | list %}\n\n          {% if esp | count > 0 %}\n\n            {% set s = esp[0] %}\n\n            {% set parent.name =\n                 device_attr(s.entity_id, 'name_by_user')\n                 or\n                 device_attr(s.entity_id, 'name')\n                 or\n                 s.name %}\n\n\n          {# Matter-router #}\n          {% elif parent.node.kind == 'matter'\n                and parent.node.node_id is defined %}\n\n            {% set pm =\n                 matter_name(parent.node.node_id)\n                 | trim %}\n\n            {% set parent.name =\n                 pm\n                 if pm != ''\n                 else paddr[:8] ~ '…' %}\n\n\n          {# Border Router #}\n          {% elif parent.node.kind == 'border_router'\n                and\n                (parent.node.friendly_name\n                 | default('')\n                 | trim) != '' %}\n\n            {% set parent.name =\n                 parent.node.friendly_name %}\n\n\n          {% elif parent.node.kind == 'border_router' %}\n\n            {% set parent.name =\n                 (\n                   (parent.node.vendor_name | default(''))\n                   ~ ' '\n                   ~\n                   (parent.node.model_name | default(''))\n                 )\n                 | trim %}\n\n\n          {% else %}\n\n            {% set parent.name =\n                 paddr[:8] ~ '…' %}\n\n          {% endif %}\n\n        {% endif %}\n\n      {% endif %}\n\n\n      {# --------------------------------------------------------\n         Status och presentation\n         -------------------------------------------------------- #}\n\n      {% if not (t.available | default(false)) %}\n\n  🔴 **{{ name }}** · Matter · Sleepy End Device  \n  Ej tillgänglig\n\n      {% elif ln.link is none %}\n\n  🟡 **{{ name }}** · Matter · Sleepy End Device  \n  Tillgänglig · ingen aktuell föräldralänk\n\n      {% else %}\n\n        {% set lqi =\n             ln.link.lqi\n             | default(0, true)\n             | int %}\n\n        {% set rssi =\n             ln.link.rssi\n             | default(none) %}\n\n\n        {% if lqi >= 3 %}\n          {% set icon = '🟢' %}\n        {% elif lqi == 2 %}\n          {% set icon = '🟡' %}\n        {% else %}\n          {% set icon = '🔴' %}\n        {% endif %}\n\n  {{ icon }} **{{ name }}** · Matter · Sleepy End Device  \n  Förälder: **{{ parent.name }}** · RSSI **{{ rssi }} dBm** · LQI **{{ lqi }}**\n\n      {% endif %}\n\n    {% endif %}\n\n  {% endfor %}\n  ---\n  Senast uppdaterad: {{\n    as_timestamp(\n      state_attr(\n        'sensor.thread_network_diagnostics',\n        'updated'\n      )\n    )\n    | timestamp_custom(\n        '%Y-%m-%d %H:%M:%S'\n      )\n  }}",
+                  "title": "Thread mesh network",
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                }
+              ],
+              "column_span": 4
+            }
+          ],
+          "cards": [],
+          "badges": [
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.thread_matter_topology",
+              "state_content": "state",
+              "name": "Antal Thread enheter"
+            }
+          ]
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "Utomhusljus",
+          "path": "utomhusljus",
+          "icon": "mdi:sun-wireless-outline",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Ljussensor"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.esphome98_illuminance"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.esphome98_infrared"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.esphome98_esphome98_uv_ambient"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.esphome98_esphome98_uv_index"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.utomhus_ljussensor_esphome98_uv_counts",
+                  "name": "UV klick",
+                  "vertical": false,
+                  "features_position": "bottom"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

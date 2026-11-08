@@ -1,0 +1,290 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "openwrt_01KWV249279DQ09GEWR4AEZWC2_history",
+  "data": {
+    "devices": {
+      "b0:4a:39:24:a4:cb": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "30:c9:22:86:74:68": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "68:a4:0e:0c:1a:5c": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "cc:ba:bd:a5:eb:18": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "28:39:26:d3:14:5f": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "54:60:09:d6:4f:22": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "2c:fd:b3:12:5c:49": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "08:3a:8d:c1:7e:b4": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "00:e0:4c:8e:59:b7": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "14:3f:a6:03:6b:40": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "80:c5:f2:3e:08:43": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "88:12:ac:7f:8c:0d": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "00:2b:67:01:db:4e": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "d8:eb:46:96:63:e4": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "00:8c:fa:b1:9a:e3": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "d8:eb:46:81:a7:f3": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "c4:d8:d5:54:f8:a4": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "c4:d8:d5:54:cc:80": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "50:03:cf:84:6f:51": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "a0:dd:6c:29:b1:34": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "ac:16:2d:04:99:b2": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "08:f9:e0:fd:43:04": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "4c:75:25:06:bc:9c": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "20:f8:3b:09:64:60": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "6c:47:60:0b:55:77": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "6c:47:60:1a:87:36": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "08:3a:8d:c3:44:dd": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "1c:69:20:5b:b6:00": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "80:c5:f2:67:aa:69": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "78:9c:85:2a:70:af": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "a0:dd:6c:2b:31:4c": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "e4:65:b8:f1:c1:b8": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "ec:62:60:89:ed:bc": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "80:64:6f:e3:be:f0": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "8c:f5:a3:7f:d3:b4": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "08:3a:8d:c1:7e:39": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "00:11:f8:1e:af:0f": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "00:f4:8d:97:d9:b5": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "54:60:09:e8:fc:56": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "68:f7:28:79:0e:04": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "cc:ba:bd:a5:eb:19": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "2c:fd:a1:13:65:c9": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "94:27:70:89:d1:ad": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "2c:fd:a1:12:27:f9": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "e8:ff:1e:db:ea:f8": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "b8:ec:a3:13:ae:e2": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "00:00:5e:00:01:6f": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "98:0d:67:01:eb:9b": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "14:5d:34:95:70:d1": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "20:05:b7:00:78:f0": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "2c:fd:a1:12:4e:19": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "0c:b8:15:22:91:d4": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "4c:cf:7c:3f:10:25": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "14:36:0e:f8:a9:e5": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "60:cf:84:cd:9c:e2": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      },
+      "20:05:b6:ff:ea:40": {
+        "initially_seen": 1783319647,
+        "last_seen": 1783323113,
+        "is_wireless": false
+      }
+    },
+    "last_version": "25.12.5"
+  }
+}

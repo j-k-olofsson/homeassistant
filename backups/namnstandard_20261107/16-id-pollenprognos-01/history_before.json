@@ -1,0 +1,122 @@
+{
+  "sensor.pollen_stockholm_hassel": [
+    {
+      "state": "n/a",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:09.131326+00:00",
+      "last_updated": "2026-11-07T07:55:09.131326+00:00"
+    }
+  ],
+  "sensor.pollen_stockholm_al": [
+    {
+      "state": "n/a",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:09.131326+00:00",
+      "last_updated": "2026-11-07T07:55:09.131326+00:00"
+    }
+  ],
+  "sensor.pollen_stockholm_tall": [
+    {
+      "state": "n/a",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:09.131326+00:00",
+      "last_updated": "2026-11-07T07:55:09.131326+00:00"
+    }
+  ],
+  "sensor.pollen_stockholm_salg_och_viden": [
+    {
+      "state": "n/a",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:09.131326+00:00",
+      "last_updated": "2026-11-07T07:55:09.131326+00:00"
+    }
+  ],
+  "sensor.pollen_stockholm_alm": [
+    {
+      "state": "n/a",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:09.131326+00:00",
+      "last_updated": "2026-11-07T07:55:09.131326+00:00"
+    }
+  ],
+  "sensor.pollen_stockholm_bjork": [
+    {
+      "state": "n/a",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:09.131326+00:00",
+      "last_updated": "2026-11-07T07:55:09.131326+00:00"
+    }
+  ],
+  "sensor.pollen_stockholm_bok": [
+    {
+      "state": "n/a",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:09.131326+00:00",
+      "last_updated": "2026-11-07T07:55:09.131326+00:00"
+    }
+  ],
+  "sensor.pollen_stockholm_ek": [
+    {
+      "state": "n/a",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:09.131326+00:00",
+      "last_updated": "2026-11-07T07:55:09.131326+00:00"
+    }
+  ],
+  "sensor.pollen_stockholm_gran": [
+    {
+      "state": "n/a",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:09.131326+00:00",
+      "last_updated": "2026-11-07T07:55:09.131326+00:00"
+    }
+  ],
+  "sensor.pollen_stockholm_gras": [
+    {
+      "state": "n/a",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:09.131326+00:00",
+      "last_updated": "2026-11-07T07:55:09.131326+00:00"
+    }
+  ],
+  "sensor.pollen_stockholm_grabo": [
+    {
+      "state": "n/a",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:09.131326+00:00",
+      "last_updated": "2026-11-07T07:55:09.131326+00:00"
+    }
+  ],
+  "sensor.pollen_stockholm_malortsambrosia": [
+    {
+      "state": "n/a",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:09.131326+00:00",
+      "last_updated": "2026-11-07T07:55:09.131326+00:00"
+    }
+  ],
+  "sensor.pollen_stockholm_alternaria": [
+    {
+      "state": "n/a",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:09.131326+00:00",
+      "last_updated": "2026-11-07T07:55:09.131326+00:00"
+    }
+  ],
+  "sensor.pollen_stockholm_cladosporium": [
+    {
+      "state": "n/a",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:09.131326+00:00",
+      "last_updated": "2026-11-07T07:55:09.131326+00:00"
+    }
+  ],
+  "sensor.pollen_stockholm_epicoccum": [
+    {
+      "state": "n/a",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:09.131326+00:00",
+      "last_updated": "2026-11-07T07:55:09.131326+00:00"
+    }
+  ]
+}

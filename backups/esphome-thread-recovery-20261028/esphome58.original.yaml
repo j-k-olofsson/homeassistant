@@ -1,0 +1,22 @@
+# Device specific substitutions
+substitutions:
+  node_id: "58"
+  node_name: esphome58
+  node_friendly_name: Ledstrip (korridoren)
+  node_comment: ESP32-C6-Zero over Thread
+  log_level: INFO
+  num_leds: "46"
+  gpio_pin: "GPIO3"
+  night_brightness: "20%"
+  day_brightness: "40%"
+
+# Include packages for this device specific type
+packages:
+  device: !include common/.device_esp32_c6_ledstrip_indoors.yaml
+
+safe_mode:
+
+switch:
+  - platform: safe_mode
+    name: "${node_name} switch Restart (Safe Mode)"
+    internal: True

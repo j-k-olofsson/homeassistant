@@ -1,0 +1,140 @@
+# Substitutions
+substitutions:
+  node_id: "56"
+  node_name: esphome56
+  node_friendly_name: Hönsbelysning
+  node_comment: Shelly Dimmer 2 (VLAN IoT)
+  log_level: INFO
+  stm_fw_update: "true"
+  node_min_brightness: "0"
+  node_preset_tripple_tap: "1%"
+  transition_period: 1s
+
+packages:
+  file: !include common/.device_shelly_dimmer_2.yaml
+
+# Lokal dygnsstyrning för hönshusets inomhusbelysning.
+# Gryning/skymning = soluppgång/solnedgång vid -0.833 graders solhöjd.
+# Morgon: start max(soluppgång, 07:00), 1 -> 100 % under 30 minuter.
+# Kväll: 100 -> 1 % sista 30 minuterna, därefter av vid solnedgång.
+# Tiderna följer Europe/Stockholm inklusive sommar-/vintertid.
+
+# Fortsätt schemat även när Home Assistant inte är anslutet.
+api:
+  reboot_timeout: 0s
+
+time:
+  - platform: sntp
+    id: coop_time
+    timezone: Europe/Stockholm
+    # Lokal NTP-server i IoT-nätet; ingen internetåtkomst behövs.
+    servers:
+      - 192.168.30.1
+    on_time_sync:
+      then:
+        - lambda: |-
+            ESP_LOGI("coop_schedule", "Tid synkroniserad: %s",
+                     id(coop_time).now().strftime("%Y-%m-%d %H:%M:%S").c_str());
+
+sun:
+  id: coop_sun
+  # Samma plats som Home Assistants hemposition.
+  latitude: 59.607587918958025
+  longitude: 18.88886690139771
+
+light:
+  - id: !extend myLight
+    # Paketets gamma=0 ger ingen användbar dimningskurva.
+    gamma_correct: 1.0
+    # Undvik att återställa gårdagens ljusstyrka före tidssynkronisering.
+    restore_mode: ALWAYS_OFF
+
+text_sensor:
+  - platform: template
+    name: "${node_name} Lokal tid"
+    entity_category: diagnostic
+    update_interval: 10s
+    lambda: |-
+      auto now = id(coop_time).now();
+      if (!now.is_valid()) return std::string("Väntar på tidssynkronisering");
+      return now.strftime("%Y-%m-%d %H:%M:%S");
+
+interval:
+  - interval: 1s
+    then:
+      - lambda: |-
+          auto now = id(coop_time).now();
+          // Avvakta schemat tills tid finns; rör inte manuell belysning.
+          static bool waiting_logged = false;
+          if (!now.is_valid()) {
+            if (!waiting_logged) {
+              ESP_LOGW("coop_schedule", "Väntar på giltig tid; automatiken avvaktar");
+              waiting_logged = true;
+            }
+            return;
+          }
+          waiting_logged = false;
+          float brightness = 0.0f;
+          if (now.is_valid()) {
+            // Beräkna dagens händelser från lokal midnatt, inte nästa
+            // soluppgång/solnedgång räknat från nu. Cacha per lokalt datum.
+            static int cached_date = 0;
+            static time_t sunrise = 0;
+            static time_t sunset = 0;
+            const int date = now.year * 10000 + now.month * 100 + now.day_of_month;
+            if (date != cached_date) {
+              auto midnight = now;
+              midnight.hour = midnight.minute = midnight.second = 0;
+              midnight.recalc_timestamp_local();
+              const auto from = ESPTime::from_epoch_utc(midnight.timestamp);
+              const auto rise = id(coop_sun).sunrise(from, -0.833);
+              const auto set = id(coop_sun).sunset(from, -0.833);
+              sunrise = rise.has_value() ? rise->timestamp : 0;
+              sunset = set.has_value() ? set->timestamp : 0;
+              cached_date = date;
+              if (sunrise != 0 && sunset != 0) {
+                ESP_LOGI("coop_schedule", "Soluppgång %s, solnedgång %s",
+                         ESPTime::from_epoch_local(sunrise).strftime("%H:%M:%S").c_str(),
+                         ESPTime::from_epoch_local(sunset).strftime("%H:%M:%S").c_str());
+              } else {
+                ESP_LOGW("coop_schedule", "Solhändelser saknas för dagens datum");
+              }
+            }
+
+            auto earliest = now;
+            earliest.hour = 7;
+            earliest.minute = earliest.second = 0;
+            earliest.recalc_timestamp_local();
+            const time_t start = std::max(sunrise, earliest.timestamp);
+            const time_t fade_start = sunset - 1800;
+            // Saknad solhändelse eller inget giltigt ljusfönster: släckt.
+            if (sunrise != 0 && sunset != 0 &&
+                now.timestamp >= start && now.timestamp < sunset) {
+              if (now.timestamp >= fade_start) {
+                // Sista sekunden når exakt 1 %, sedan av vid solnedgång.
+                brightness = 0.01f + 0.99f *
+                    static_cast<float>(sunset - now.timestamp - 1) / 1799.0f;
+              } else if (now.timestamp < start + 1800) {
+                brightness = 0.01f + 0.99f *
+                    static_cast<float>(now.timestamp - start) / 1800.0f;
+              } else {
+                brightness = 1.0f;
+              }
+            }
+          }
+
+          // Beräkna aktuell nivå även efter omstart eller klockjustering.
+          // Undvik upprepade kommandon när nivån redan är rätt.
+          if (brightness <= 0.0f) {
+            if (id(myLight).remote_values.is_on()) {
+              auto call = id(myLight).turn_off();
+              call.set_transition_length(0);
+              call.perform();
+            }
+          } else if (!id(myLight).remote_values.is_on() ||
+                     fabsf(id(myLight).remote_values.get_brightness() - brightness) > 0.0001f) {
+            auto call = id(myLight).turn_on();
+            call.set_brightness(brightness);
+            call.set_transition_length(0);
+            call.perform();
+          }

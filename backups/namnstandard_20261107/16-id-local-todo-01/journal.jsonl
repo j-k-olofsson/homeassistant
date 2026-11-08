@@ -1,0 +1,6 @@
+{"status": "rename_intent", "old": "todo.3d_utskrifter", "new": "todo.heimdal_ha_3d_utskrifter"}
+{"status": "renamed", "old": "todo.3d_utskrifter", "new": "todo.heimdal_ha_3d_utskrifter"}
+{"status": "rename_intent", "old": "todo.digeos_backlog", "new": "todo.diegos_uppgifter"}
+{"status": "renamed", "old": "todo.digeos_backlog", "new": "todo.diegos_uppgifter"}
+{"status": "rename_intent", "old": "todo.ai_server", "new": "todo.it_hemma"}
+{"status": "renamed", "old": "todo.ai_server", "new": "todo.it_hemma"}

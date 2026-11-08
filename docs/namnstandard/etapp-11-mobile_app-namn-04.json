@@ -1,0 +1,4256 @@
+{
+  "stage": "11-mobile_app-namn-04",
+  "description": "Svenska funktionsnamn enligt granskad ordlista. Inga ID:n, inställningar eller värden ändras.",
+  "operations": [
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_light_sensor_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Belysningsstyrka",
+        "aliases": [
+          null,
+          "SM-G986B Light sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_high_accuracy_mode_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Platsläge med hög precision",
+        "aliases": [
+          null,
+          "SM-G986B High accuracy mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_high_accuracy_update_interval_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Uppdateringsintervall för hög precision",
+        "aliases": [
+          null,
+          "SM-G986B High accuracy update interval"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_mobile_data_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mobildata",
+        "aliases": [
+          null,
+          "SM-G986B Mobile data"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_mobile_data_roaming_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Dataroaming",
+        "aliases": [
+          null,
+          "SM-G986B Mobile data roaming"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_wi_fi_connection_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-anslutning",
+        "aliases": [
+          null,
+          "SM-G986B Wi-Fi connection"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_wi_fi_ip_address_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi IP-adress",
+        "aliases": [
+          null,
+          "SM-G986B Wi-Fi IP address"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_wi_fi_link_speed_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-länkhastighet",
+        "aliases": [
+          null,
+          "SM-G986B Wi-Fi link speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_wi_fi_state_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-status",
+        "aliases": [
+          null,
+          "SM-G986B Wi-Fi state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_wi_fi_frequency_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-frekvens",
+        "aliases": [
+          null,
+          "SM-G986B Wi-Fi frequency"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_wi_fi_signal_strength_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-signalstyrka",
+        "aliases": [
+          null,
+          "SM-G986B Wi-Fi signal strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_public_ip_address_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Publik IP-adress",
+        "aliases": [
+          null,
+          "SM-G986B Public IP address"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_hotspot_state_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Internetdelningsstatus",
+        "aliases": [
+          null,
+          "SM-G986B Hotspot state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_network_type_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Nätverkstyp",
+        "aliases": [
+          null,
+          "SM-G986B Network type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_ipv6_addresses_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "IPv6-adresser",
+        "aliases": [
+          null,
+          "SM-G986B IPv6 addresses"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_nfc_state_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "NFC-status",
+        "aliases": [
+          null,
+          "SM-G986B NFC state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_next_alarm_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Nästa alarm",
+        "aliases": [
+          null,
+          "SM-G986B Next alarm"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_last_notification_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senaste avisering",
+        "aliases": [
+          null,
+          "SM-G986B Last notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_last_removed_notification_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senast borttagna avisering",
+        "aliases": [
+          null,
+          "SM-G986B Last removed notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_active_notification_count_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Antal aktiva aviseringar",
+        "aliases": [
+          null,
+          "SM-G986B Active notification count"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_media_session_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mediasession",
+        "aliases": [
+          null,
+          "SM-G986B Media session"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_phone_state_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Telefonstatus",
+        "aliases": [
+          null,
+          "SM-G986B Phone state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_signal_strength_sim_1_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka SIM 1",
+        "aliases": [
+          null,
+          "SM-G986B Signal strength (SIM 1)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_signal_strength_sim_2_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka SIM 2",
+        "aliases": [
+          null,
+          "SM-G986B Signal strength (SIM 2)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_data_network_type_sim_1_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Datanätverkstyp SIM 1",
+        "aliases": [
+          null,
+          "SM-G986B Data network type (SIM 1)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_data_network_type_sim_2_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Datanätverkstyp SIM 2",
+        "aliases": [
+          null,
+          "SM-G986B Data network type (SIM 2)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_interactive_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmen interaktiv",
+        "aliases": [
+          null,
+          "SM-G986B Interactive"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_doze_mode_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Viloläge",
+        "aliases": [
+          null,
+          "SM-G986B Doze mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_power_save_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Energisparläge",
+        "aliases": [
+          null,
+          "SM-G986B Power save"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_pressure_sensor_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Lufttryck",
+        "aliases": [
+          null,
+          "SM-G986B Pressure sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_proximity_sensor_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Närhetssensor",
+        "aliases": [
+          null,
+          "SM-G986B Proximity sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_steps_sensor_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Steg",
+        "aliases": [
+          null,
+          "SM-G986B Steps sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_internal_storage_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Intern lagring",
+        "aliases": [
+          null,
+          "SM-G986B Internal storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_external_storage_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Extern lagring",
+        "aliases": [
+          null,
+          "SM-G986B External storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_current_time_zone_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Aktuell tidszon",
+        "aliases": [
+          null,
+          "SM-G986B Current time zone"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_total_rx_gb_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt mottagna data",
+        "aliases": [
+          null,
+          "SM-G986B Total Rx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_total_tx_gb_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt skickade data",
+        "aliases": [
+          null,
+          "SM-G986B Total Tx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_detected_activity",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Identifierad aktivitet",
+        "aliases": [
+          null,
+          "SM-S936B Detected activity"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_sleep_confidence",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Säkerhet i sömndetektering",
+        "aliases": [
+          null,
+          "SM-S936B Sleep confidence"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_sleep_segment",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sömnperiod",
+        "aliases": [
+          null,
+          "SM-S936B Sleep segment"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_os_version",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Operativsystemsversion",
+        "aliases": [
+          null,
+          "SM-S936B OS version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_security_patch",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Säkerhetsuppdatering",
+        "aliases": [
+          null,
+          "SM-S936B Security patch"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_current_version",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appversion",
+        "aliases": [
+          null,
+          "SM-S936B Current version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_app_rx_gb",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens mottagna data",
+        "aliases": [
+          null,
+          "SM-S936B App Rx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_app_tx_gb",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens skickade data",
+        "aliases": [
+          null,
+          "SM-S936B App Tx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_app_memory",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens minnesanvändning",
+        "aliases": [
+          null,
+          "SM-S936B App memory"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_s936b_app_inactive",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appen inaktiv",
+        "aliases": [
+          null,
+          "SM-S936B App inactive"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_app_standby_bucket",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens energisparklass",
+        "aliases": [
+          null,
+          "SM-S936B App standby bucket"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_app_importance",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens prioritet",
+        "aliases": [
+          null,
+          "SM-S936B App importance"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_ringer_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ringsignalläge",
+        "aliases": [
+          null,
+          "SM-S936B Ringer mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_audio_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ljudläge",
+        "aliases": [
+          null,
+          "SM-S936B Audio mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_s936b_headphones",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hörlurar",
+        "aliases": [
+          null,
+          "SM-S936B Headphones"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_s936b_mic_muted",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mikrofon avstängd",
+        "aliases": [
+          null,
+          "SM-S936B Mic muted"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_s936b_speakerphone",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Högtalartelefon",
+        "aliases": [
+          null,
+          "SM-S936B Speakerphone"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_s936b_music_active",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Musik aktiv",
+        "aliases": [
+          null,
+          "SM-S936B Music active"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_volume_level_alarm",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Alarmvolym",
+        "aliases": [
+          null,
+          "SM-S936B Volume level alarm"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_volume_level_call",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Samtalsvolym",
+        "aliases": [
+          null,
+          "SM-S936B Volume level call"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_volume_level_music",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Musikvolym",
+        "aliases": [
+          null,
+          "SM-S936B Volume level music"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_volume_level_ringer",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ringsignalvolym",
+        "aliases": [
+          null,
+          "SM-S936B Volume level ringer"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_volume_level_notification",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Aviseringsvolym",
+        "aliases": [
+          null,
+          "SM-S936B Volume level notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_volume_level_system",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Systemvolym",
+        "aliases": [
+          null,
+          "SM-S936B Volume level system"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_volume_level_dtmf",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Knappvalsvolym",
+        "aliases": [
+          null,
+          "SM-S936B Volume level DTMF"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_volume_level_accessibility",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tillgänglighetsvolym",
+        "aliases": [
+          null,
+          "SM-S936B Volume level accessibility"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_battery_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "SM-S936B Battery level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_battery_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batteristatus",
+        "aliases": [
+          null,
+          "SM-S936B Battery state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_s936b_is_charging",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Laddar",
+        "aliases": [
+          null,
+          "SM-S936B Is charging"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_charger_type",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Laddartyp",
+        "aliases": [
+          null,
+          "SM-S936B Charger type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_battery_health",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterihälsa",
+        "aliases": [
+          null,
+          "SM-S936B Battery health"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_battery_temperature",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batteritemperatur",
+        "aliases": [
+          null,
+          "SM-S936B Battery temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_battery_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterieffekt",
+        "aliases": [
+          null,
+          "SM-S936B Battery power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_remaining_charge_time",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Återstående laddningstid",
+        "aliases": [
+          null,
+          "SM-S936B Remaining charge time"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_bluetooth_connection",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bluetooth-anslutning",
+        "aliases": [
+          null,
+          "SM-S936B Bluetooth connection"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_s936b_bluetooth_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bluetooth-status",
+        "aliases": [
+          null,
+          "SM-S936B Bluetooth state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_ble_transmitter",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "BLE-sändare",
+        "aliases": [
+          null,
+          "SM-S936B BLE transmitter"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_beacon_monitor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Övervakning av Bluetooth-sändare",
+        "aliases": [
+          null,
+          "SM-S936B Beacon monitor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_car_battery",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens batterinivå",
+        "aliases": [
+          null,
+          "SM-S936B Car battery"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_car_name",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens namn",
+        "aliases": [
+          null,
+          "SM-S936B Car name"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_car_charging_status",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens laddningsstatus",
+        "aliases": [
+          null,
+          "SM-S936B Car charging status"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_car_ev_connector_type",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens laddkontakt",
+        "aliases": [
+          null,
+          "SM-S936B Car EV connector type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_car_fuel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens bränslenivå",
+        "aliases": [
+          null,
+          "SM-S936B Car fuel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_car_fuel_type",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens bränsletyp",
+        "aliases": [
+          null,
+          "SM-S936B Car fuel type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_car_odometer",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens vägmätare",
+        "aliases": [
+          null,
+          "SM-S936B Car odometer"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_car_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens hastighet",
+        "aliases": [
+          null,
+          "SM-S936B Car speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_car_range_remaining",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens återstående räckvidd",
+        "aliases": [
+          null,
+          "SM-S936B Car range remaining"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_screen_brightness",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmljusstyrka",
+        "aliases": [
+          null,
+          "SM-S936B Screen brightness"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_screen_off_timeout",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tid till skärmavstängning",
+        "aliases": [
+          null,
+          "SM-S936B Screen off timeout"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_screen_orientation",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmriktning",
+        "aliases": [
+          null,
+          "SM-S936B Screen orientation"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_screen_rotation",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmrotation",
+        "aliases": [
+          null,
+          "SM-S936B Screen rotation"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_do_not_disturb_sensor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stör ej-läge",
+        "aliases": [
+          null,
+          "SM-S936B Do Not Disturb sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_accent_color",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Accentfärg",
+        "aliases": [
+          null,
+          "SM-S936B Accent color"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_s936b_work_profile",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Arbetsprofil",
+        "aliases": [
+          null,
+          "SM-S936B Work profile"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_geocoded_location",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Platsadress",
+        "aliases": [
+          null,
+          "SM-S936B Geocoded location"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_active_calories_burned",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Aktiv energiförbrukning",
+        "aliases": [
+          null,
+          "SM-S936B Active calories burned"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_daily_distance",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Dagens sträcka",
+        "aliases": [
+          null,
+          "SM-S936B Daily distance"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_daily_elevation_gained",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Dagens stigning",
+        "aliases": [
+          null,
+          "SM-S936B Daily elevation gained"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_daily_floors",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Dagens våningar",
+        "aliases": [
+          null,
+          "SM-S936B Daily floors"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_daily_steps",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Dagens steg",
+        "aliases": [
+          null,
+          "SM-S936B Daily steps"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_total_calories_burned",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Total energiförbrukning",
+        "aliases": [
+          null,
+          "SM-S936B Total calories burned"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_s936b_device_locked",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Enheten låst",
+        "aliases": [
+          null,
+          "SM-S936B Device locked"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_s936b_device_secure",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Enheten skyddad",
+        "aliases": [
+          null,
+          "SM-S936B Device secure"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_s936b_keyguard_locked",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmlåset låst",
+        "aliases": [
+          null,
+          "SM-S936B Keyguard locked"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_s936b_keyguard_secure",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmlåset skyddat",
+        "aliases": [
+          null,
+          "SM-S936B Keyguard secure"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_last_used_app",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senast använda app",
+        "aliases": [
+          null,
+          "SM-S936B Last used app"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_last_reboot",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senaste omstart",
+        "aliases": [
+          null,
+          "SM-S936B Last reboot"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_last_update_trigger",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senaste uppdateringsorsak",
+        "aliases": [
+          null,
+          "SM-S936B Last update trigger"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_light_sensor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Belysningsstyrka",
+        "aliases": [
+          null,
+          "SM-S936B Light sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_s936b_high_accuracy_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Platsläge med hög precision",
+        "aliases": [
+          null,
+          "SM-S936B High accuracy mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_high_accuracy_update_interval",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Uppdateringsintervall för hög precision",
+        "aliases": [
+          null,
+          "SM-S936B High accuracy update interval"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_s936b_mobile_data",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mobildata",
+        "aliases": [
+          null,
+          "SM-S936B Mobile data"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_s936b_mobile_data_roaming",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Dataroaming",
+        "aliases": [
+          null,
+          "SM-S936B Mobile data roaming"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_wi_fi_connection",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-anslutning",
+        "aliases": [
+          null,
+          "SM-S936B Wi-Fi connection"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_wi_fi_ip_address",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi IP-adress",
+        "aliases": [
+          null,
+          "SM-S936B Wi-Fi IP address"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_wi_fi_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-länkhastighet",
+        "aliases": [
+          null,
+          "SM-S936B Wi-Fi link speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_s936b_wi_fi_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-status",
+        "aliases": [
+          null,
+          "SM-S936B Wi-Fi state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_wi_fi_frequency",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-frekvens",
+        "aliases": [
+          null,
+          "SM-S936B Wi-Fi frequency"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_wi_fi_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-signalstyrka",
+        "aliases": [
+          null,
+          "SM-S936B Wi-Fi signal strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_public_ip_address",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Publik IP-adress",
+        "aliases": [
+          null,
+          "SM-S936B Public IP address"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_s936b_hotspot_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Internetdelningsstatus",
+        "aliases": [
+          null,
+          "SM-S936B Hotspot state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_network_type",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Nätverkstyp",
+        "aliases": [
+          null,
+          "SM-S936B Network type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_ipv6_addresses",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "IPv6-adresser",
+        "aliases": [
+          null,
+          "SM-S936B IPv6 addresses"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_s936b_nfc_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "NFC-status",
+        "aliases": [
+          null,
+          "SM-S936B NFC state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_next_alarm",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Nästa alarm",
+        "aliases": [
+          null,
+          "SM-S936B Next alarm"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_last_notification",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senaste avisering",
+        "aliases": [
+          null,
+          "SM-S936B Last notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_last_removed_notification",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senast borttagna avisering",
+        "aliases": [
+          null,
+          "SM-S936B Last removed notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_active_notification_count",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Antal aktiva aviseringar",
+        "aliases": [
+          null,
+          "SM-S936B Active notification count"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_media_session",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mediasession",
+        "aliases": [
+          null,
+          "SM-S936B Media session"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_phone_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Telefonstatus",
+        "aliases": [
+          null,
+          "SM-S936B Phone state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_signal_strength_sim_1",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka SIM 1",
+        "aliases": [
+          null,
+          "SM-S936B Signal strength (SIM 1)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_signal_strength_sim_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka SIM 2",
+        "aliases": [
+          null,
+          "SM-S936B Signal strength (SIM 2)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_data_network_type_sim_1",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Datanätverkstyp SIM 1",
+        "aliases": [
+          null,
+          "SM-S936B Data network type (SIM 1)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_data_network_type_sim_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Datanätverkstyp SIM 2",
+        "aliases": [
+          null,
+          "SM-S936B Data network type (SIM 2)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_s936b_interactive",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmen interaktiv",
+        "aliases": [
+          null,
+          "SM-S936B Interactive"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_s936b_doze_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Viloläge",
+        "aliases": [
+          null,
+          "SM-S936B Doze mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_s936b_power_save",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Energisparläge",
+        "aliases": [
+          null,
+          "SM-S936B Power save"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_pressure_sensor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Lufttryck",
+        "aliases": [
+          null,
+          "SM-S936B Pressure sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_proximity_sensor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Närhetssensor",
+        "aliases": [
+          null,
+          "SM-S936B Proximity sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_steps_sensor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Steg",
+        "aliases": [
+          null,
+          "SM-S936B Steps sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_internal_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Intern lagring",
+        "aliases": [
+          null,
+          "SM-S936B Internal storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_external_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Extern lagring",
+        "aliases": [
+          null,
+          "SM-S936B External storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_current_time_zone",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Aktuell tidszon",
+        "aliases": [
+          null,
+          "SM-S936B Current time zone"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_mobile_rx_gb",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagna mobildata",
+        "aliases": [
+          null,
+          "SM-S936B Mobile Rx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_mobile_tx_gb",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickade mobildata",
+        "aliases": [
+          null,
+          "SM-S936B Mobile Tx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_total_rx_gb",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt mottagna data",
+        "aliases": [
+          null,
+          "SM-S936B Total Rx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_total_tx_gb",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt skickade data",
+        "aliases": [
+          null,
+          "SM-S936B Total Tx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_battery_cycle_count",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Antal battericykler",
+        "aliases": [
+          null,
+          "SM-S936B Battery cycle count"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_blood_glucose",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Blodsocker",
+        "aliases": [
+          null,
+          "SM-S936B Blood glucose"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_body_fat",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kroppsfett",
+        "aliases": [
+          null,
+          "SM-S936B Body fat"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_diastolic_blood_pressure",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diastoliskt blodtryck",
+        "aliases": [
+          null,
+          "SM-S936B Diastolic blood pressure"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_heart_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Puls",
+        "aliases": [
+          null,
+          "SM-S936B Heart rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_heart_rate_variability",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Pulsvariation",
+        "aliases": [
+          null,
+          "SM-S936B Heart rate variability"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_oxygen_saturation",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Syremättnad",
+        "aliases": [
+          null,
+          "SM-S936B Oxygen saturation"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_respiratory_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Andningsfrekvens",
+        "aliases": [
+          null,
+          "SM-S936B Respiratory rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_resting_heart_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Vilopuls",
+        "aliases": [
+          null,
+          "SM-S936B Resting heart rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_sleep_duration",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sömnlängd",
+        "aliases": [
+          null,
+          "SM-S936B Sleep duration"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_systolic_blood_pressure",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Systoliskt blodtryck",
+        "aliases": [
+          null,
+          "SM-S936B Systolic blood pressure"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_weight",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Vikt",
+        "aliases": [
+          null,
+          "SM-S936B Weight"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_basal_body_temperature",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Basal kroppstemperatur",
+        "aliases": [
+          null,
+          "SM-S936B Basal body temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_basal_metabolic_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Basal ämnesomsättning",
+        "aliases": [
+          null,
+          "SM-S936B Basal metabolic rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_body_temperature",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kroppstemperatur",
+        "aliases": [
+          null,
+          "SM-S936B Body temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_body_water_mass",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kroppsvattenmassa",
+        "aliases": [
+          null,
+          "SM-S936B Body water mass"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_bone_mass",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Benmassa",
+        "aliases": [
+          null,
+          "SM-S936B Bone mass"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_height",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Längd",
+        "aliases": [
+          null,
+          "SM-S936B Height"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_daily_hydration",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Dagens vätskeintag",
+        "aliases": [
+          null,
+          "SM-S936B Daily hydration"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_s936b_lean_body_mass",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Fettfri kroppsmassa",
+        "aliases": [
+          null,
+          "SM-S936B Lean body mass"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_detected_activity",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Identifierad aktivitet",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Detected activity"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_sleep_confidence",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Säkerhet i sömndetektering",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Sleep confidence"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_sleep_segment",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sömnperiod",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Sleep segment"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_os_version",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Operativsystemsversion",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL OS version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_security_patch",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Säkerhetsuppdatering",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Security patch"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_current_version",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appversion",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Current version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_app_rx_gb",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens mottagna data",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL App Rx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_app_tx_gb",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens skickade data",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL App Tx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_app_memory",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens minnesanvändning",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL App memory"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.ha_servern_pixel_9_pro_xl_app_inactive",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appen inaktiv",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL App inactive"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_app_standby_bucket",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens energisparklass",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL App standby bucket"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_app_importance",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens prioritet",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL App importance"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_ringer_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ringsignalläge",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Ringer mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_audio_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ljudläge",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Audio mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.ha_servern_pixel_9_pro_xl_headphones",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hörlurar",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Headphones"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.ha_servern_pixel_9_pro_xl_mic_muted",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mikrofon avstängd",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Mic muted"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.ha_servern_pixel_9_pro_xl_speakerphone",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Högtalartelefon",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Speakerphone"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.ha_servern_pixel_9_pro_xl_music_active",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Musik aktiv",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Music active"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_volume_level_alarm",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Alarmvolym",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Volume level alarm"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_volume_level_call",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Samtalsvolym",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Volume level call"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_volume_level_music",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Musikvolym",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Volume level music"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_volume_level_ringer",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ringsignalvolym",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Volume level ringer"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_volume_level_notification",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Aviseringsvolym",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Volume level notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_volume_level_system",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Systemvolym",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Volume level system"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_volume_level_dtmf",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Knappvalsvolym",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Volume level DTMF"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_volume_level_accessibility",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tillgänglighetsvolym",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Volume level accessibility"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_battery_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Battery level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_battery_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batteristatus",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Battery state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.ha_servern_pixel_9_pro_xl_is_charging",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Laddar",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Is charging"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_charger_type",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Laddartyp",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Charger type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_battery_health",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterihälsa",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Battery health"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_battery_temperature",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batteritemperatur",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Battery temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_battery_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterieffekt",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Battery power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_remaining_charge_time",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Återstående laddningstid",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Remaining charge time"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_battery_cycle_count",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Antal battericykler",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Battery cycle count"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_bluetooth_connection",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bluetooth-anslutning",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Bluetooth connection"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.ha_servern_pixel_9_pro_xl_bluetooth_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bluetooth-status",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Bluetooth state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_ble_transmitter",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "BLE-sändare",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL BLE transmitter"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_beacon_monitor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Övervakning av Bluetooth-sändare",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Beacon monitor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_car_battery",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens batterinivå",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Car battery"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_car_name",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens namn",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Car name"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_car_charging_status",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens laddningsstatus",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Car charging status"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_car_ev_connector_type",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens laddkontakt",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Car EV connector type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_car_fuel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens bränslenivå",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Car fuel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_car_fuel_type",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens bränsletyp",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Car fuel type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_car_odometer",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens vägmätare",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Car odometer"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_car_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens hastighet",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Car speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_car_range_remaining",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens återstående räckvidd",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Car range remaining"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_screen_brightness",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmljusstyrka",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Screen brightness"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_screen_off_timeout",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tid till skärmavstängning",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Screen off timeout"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_screen_orientation",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmriktning",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Screen orientation"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_screen_rotation",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmrotation",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Screen rotation"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_do_not_disturb_sensor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stör ej-läge",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Do Not Disturb sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_accent_color",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Accentfärg",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Accent color"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.ha_servern_pixel_9_pro_xl_work_profile",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Arbetsprofil",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Work profile"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_geocoded_location",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Platsadress",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Geocoded location"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_active_calories_burned",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Aktiv energiförbrukning",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Active calories burned"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_basal_body_temperature",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Basal kroppstemperatur",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Basal body temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_basal_metabolic_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Basal ämnesomsättning",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Basal metabolic rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_blood_glucose",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Blodsocker",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Blood glucose"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_body_fat",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kroppsfett",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Body fat"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_body_temperature",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kroppstemperatur",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Body temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_body_water_mass",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kroppsvattenmassa",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Body water mass"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_bone_mass",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Benmassa",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Bone mass"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_diastolic_blood_pressure",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diastoliskt blodtryck",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Diastolic blood pressure"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_daily_distance",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Dagens sträcka",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Daily distance"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_daily_elevation_gained",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Dagens stigning",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Daily elevation gained"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_daily_floors",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Dagens våningar",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Daily floors"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_heart_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Puls",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Heart rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_heart_rate_variability",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Pulsvariation",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Heart rate variability"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_height",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Längd",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Height"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_daily_hydration",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Dagens vätskeintag",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Daily hydration"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_lean_body_mass",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Fettfri kroppsmassa",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Lean body mass"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_oxygen_saturation",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Syremättnad",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Oxygen saturation"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_respiratory_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Andningsfrekvens",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Respiratory rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_resting_heart_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Vilopuls",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Resting heart rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_sleep_duration",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sömnlängd",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Sleep duration"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_daily_steps",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Dagens steg",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Daily steps"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_systolic_blood_pressure",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Systoliskt blodtryck",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Systolic blood pressure"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_total_calories_burned",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Total energiförbrukning",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Total calories burned"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_weight",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Vikt",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Weight"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.ha_servern_pixel_9_pro_xl_device_locked",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Enheten låst",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Device locked"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.ha_servern_pixel_9_pro_xl_device_secure",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Enheten skyddad",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Device secure"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.ha_servern_pixel_9_pro_xl_keyguard_locked",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmlåset låst",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Keyguard locked"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.ha_servern_pixel_9_pro_xl_keyguard_secure",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmlåset skyddat",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Keyguard secure"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_pixel_9_pro_xl_last_used_app",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senast använda app",
+        "aliases": [
+          null,
+          "Pixel 9 Pro XL Last used app"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "binary_sensor.ytterdorren_dorrklockan_ringer": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T08:00:58.804339+00:00",
+      "last_updated": "2026-11-07T08:00:58.804339+00:00"
+    }
+  ],
+  "button.ytterdorren_vack": [
+    {
+      "state": "2025-01-06T12:45:24.223539+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T08:00:58.804339+00:00",
+      "last_updated": "2026-11-07T08:00:58.804339+00:00"
+    }
+  ],
+  "sensor.ytterdorren_batteri": [
+    {
+      "state": "56",
+      "attributes": {},
+      "last_changed": "2026-11-07T08:00:58.804339+00:00",
+      "last_updated": "2026-11-07T08:00:58.804339+00:00"
+    },
+    {
+      "state": "55",
+      "last_changed": "2026-11-07T13:25:17.729147+00:00"
+    },
+    {
+      "state": "56",
+      "last_changed": "2026-11-08T07:03:41.550271+00:00"
+    }
+  ],
+  "binary_sensor.ytterdorren_dorr": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T08:00:58.804339+00:00",
+      "last_updated": "2026-11-07T08:00:58.804339+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T09:28:48.442521+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T09:30:59.810817+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T10:39:29.612084+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T10:41:09.096887+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T10:56:21.421535+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T11:02:17.128772+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T11:08:35.821617+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T11:10:10.363970+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T11:37:30.828098+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T11:39:50.535538+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T11:58:45.950531+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T12:00:19.750261+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T12:29:55.209860+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T12:31:31.064108+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T16:39:21.561184+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T16:41:35.722678+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T20:29:47.537822+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T20:32:03.116498+00:00"
+    }
+  ],
+  "sensor.ytterdorren_operator": [
+    {
+      "state": "Auto Lock",
+      "attributes": {},
+      "last_changed": "2026-11-07T08:00:58.804339+00:00",
+      "last_updated": "2026-11-07T08:00:58.804339+00:00"
+    },
+    {
+      "state": "Manual Lock",
+      "last_changed": "2026-11-07T09:28:18.374918+00:00"
+    },
+    {
+      "state": "Manual Unlock",
+      "last_changed": "2026-11-07T09:31:04.747648+00:00"
+    },
+    {
+      "state": "Auto Lock",
+      "last_changed": "2026-11-07T09:33:17.579872+00:00"
+    },
+    {
+      "state": "Manual Unlock",
+      "last_changed": "2026-11-07T09:33:17.580268+00:00"
+    },
+    {
+      "state": "Auto Lock",
+      "last_changed": "2026-11-07T09:35:09.847929+00:00"
+    },
+    {
+      "state": "Manual Unlock",
+      "last_changed": "2026-11-07T10:39:34.060995+00:00"
+    },
+    {
+      "state": "Auto Lock",
+      "last_changed": "2026-11-07T10:43:05.259392+00:00"
+    },
+    {
+      "state": "Manual Unlock",
+      "last_changed": "2026-11-07T10:56:25.762265+00:00"
+    },
+    {
+      "state": "Auto Lock",
+      "last_changed": "2026-11-07T11:04:11.863500+00:00"
+    },
+    {
+      "state": "Magnus Olofsson",
+      "last_changed": "2026-11-07T11:08:40.278538+00:00"
+    },
+    {
+      "state": "Auto Lock",
+      "last_changed": "2026-11-07T11:12:05.506925+00:00"
+    },
+    {
+      "state": "Love André",
+      "last_changed": "2026-11-07T11:37:35.153996+00:00"
+    },
+    {
+      "state": "Auto Lock",
+      "last_changed": "2026-11-07T11:41:48.702164+00:00"
+    },
+    {
+      "state": "Kenneth Olofsson",
+      "last_changed": "2026-11-07T11:44:00.303035+00:00"
+    },
+    {
+      "state": "Auto Lock",
+      "last_changed": "2026-11-07T11:45:50.304738+00:00"
+    },
+    {
+      "state": "Manual Unlock",
+      "last_changed": "2026-11-07T11:58:50.403511+00:00"
+    },
+    {
+      "state": "Auto Lock",
+      "last_changed": "2026-11-07T12:02:17.762892+00:00"
+    },
+    {
+      "state": "Kenneth Olofsson",
+      "last_changed": "2026-11-07T12:29:59.726105+00:00"
+    },
+    {
+      "state": "Auto Lock",
+      "last_changed": "2026-11-07T12:33:23.656255+00:00"
+    },
+    {
+      "state": "Manual Unlock",
+      "last_changed": "2026-11-07T16:39:26.088739+00:00"
+    },
+    {
+      "state": "Auto Lock",
+      "last_changed": "2026-11-07T16:43:29.804922+00:00"
+    },
+    {
+      "state": "Manual Unlock",
+      "last_changed": "2026-11-07T20:29:52.027803+00:00"
+    },
+    {
+      "state": "Auto Lock",
+      "last_changed": "2026-11-07T20:35:21.719642+00:00"
+    },
+    {
+      "state": "Manual Lock",
+      "last_changed": "2026-11-07T20:35:21.719986+00:00"
+    }
+  ],
+  "event.ytterdorren_dorrklocka": [
+    {
+      "state": "2026-08-08T14:58:18.553+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T08:00:58.804339+00:00",
+      "last_updated": "2026-11-07T08:00:58.804339+00:00"
+    }
+  ]
+}

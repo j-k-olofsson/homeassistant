@@ -1,0 +1,274 @@
+{
+  "update.termostat_friggan_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.vattenvarmare_honshuset_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.ledstrip_sovrum_ostra_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.ledstrip_atelje_norra_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.ledstrip_sovrum_norra_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.ledstrip_atelje_sodra_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.ledstrip_kok_sodra_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.termostat_toaletten_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.golvvarme_friggan_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.julbelysning_utomhus_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.termostat_kontoret_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.taklampor_sovrum_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.ledstrip_kok_sydostra_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.ledstrip_verandan_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.ledstrip_kok_smafonster_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.ledstrip_kok_ostra_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.ledstrip_entren_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.poolbelysning_temp_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.temp_hyg_gamla_verkstan_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.ir_gateway_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.esp32_kamera_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.taklampor_kallaren_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.ventilflakt_bion_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.taklampor_ateljen_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.taklampor_koket_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.lucka_honshuset_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.taklampa_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.blomlampa_1_verandan_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.blomlampa_2_verandan_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.blomlampor_bion_firmware": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.lux_uv_labbet_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.taklampor_duschen_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.blomlampa_kontoret_firmware": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ],
+  "update.huvudstrombrytaren_prusa_xl_firmware_2": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-06T18:33:50.980572+00:00",
+      "last_updated": "2026-11-06T18:33:50.980572+00:00"
+    }
+  ]
+}

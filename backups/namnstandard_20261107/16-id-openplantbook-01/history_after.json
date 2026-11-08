@@ -1,0 +1,26 @@
+{
+  "binary_sensor.openplantbook_uppladdningsproblem": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-08T07:03:37.989997+00:00",
+      "last_updated": "2026-11-08T07:03:37.989997+00:00"
+    }
+  ],
+  "sensor.openplantbook_uppladdningsstatus": [
+    {
+      "state": "disabled",
+      "attributes": {},
+      "last_changed": "2026-11-08T07:03:37.990937+00:00",
+      "last_updated": "2026-11-08T07:03:37.990937+00:00"
+    }
+  ],
+  "sensor.openplantbook_senaste_uppladdning": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-08T07:03:37.991566+00:00",
+      "last_updated": "2026-11-08T07:03:37.991566+00:00"
+    }
+  ]
+}

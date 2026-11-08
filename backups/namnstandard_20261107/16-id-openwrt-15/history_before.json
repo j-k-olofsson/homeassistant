@@ -1,0 +1,58 @@
+{
+  "device_tracker.34_e6_ad_56_bd_cd_34_e6_ad_56_bd_cd": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:14.287517+00:00",
+      "last_updated": "2026-11-07T07:43:14.287517+00:00"
+    }
+  ],
+  "switch.verkstaden_ap_olofsson_wifi_2_4_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:14.287517+00:00",
+      "last_updated": "2026-11-07T07:43:14.287517+00:00"
+    }
+  ],
+  "switch.verkstaden_ap_olofsson_guest_2_4_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:14.287517+00:00",
+      "last_updated": "2026-11-07T07:43:14.287517+00:00"
+    }
+  ],
+  "switch.verkstaden_ap_olofsson_iot_2_4_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:14.287517+00:00",
+      "last_updated": "2026-11-07T07:43:14.287517+00:00"
+    }
+  ],
+  "switch.verkstaden_ap_olofsson_wifi_5_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:14.287517+00:00",
+      "last_updated": "2026-11-07T07:43:14.287517+00:00"
+    }
+  ],
+  "switch.verkstaden_ap_olofsson_guest_5_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:14.287517+00:00",
+      "last_updated": "2026-11-07T07:43:14.287517+00:00"
+    }
+  ],
+  "switch.verkstaden_ap_olofsson_iot_5_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:14.287517+00:00",
+      "last_updated": "2026-11-07T07:43:14.287517+00:00"
+    }
+  ]
+}

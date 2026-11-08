@@ -1,0 +1,220 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "openwrt_01KWEQVWSCYV1Q1ENNG0YG8MTS_history",
+  "data": {
+    "devices": {
+      "d8:eb:46:81:a7:f3": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "94:27:70:89:d1:ad": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "d8:eb:46:96:63:e4": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "b0:4a:39:24:a4:cb": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "54:60:09:d6:4f:22": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "54:60:09:e8:fc:56": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "c4:d8:d5:54:cc:80": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "c4:d8:d5:54:f8:a4": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "8c:ce:4e:0c:ca:58": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "24:a1:60:1b:1f:92": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "f4:cf:a2:15:d0:e3": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "f0:08:d1:f2:b8:08": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "c4:4f:33:72:7c:01": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "dc:06:75:9d:65:c0": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "7c:9e:bd:06:e7:bc": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "7c:9e:bd:06:e4:88": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "7c:9e:bd:47:e2:88": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "c4:4f:33:7a:51:6d": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "7c:9e:bd:46:f5:80": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "7c:9e:bd:06:c3:b4": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "7c:9e:bd:06:5d:e8": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "c8:c9:a3:25:a9:24": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "2c:fd:b3:12:5c:49": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "00:f4:8d:97:d9:b5": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "e8:ff:1e:db:ea:f8": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": false
+      },
+      "20:05:b6:01:99:b1": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": false
+      },
+      "ac:16:2d:04:99:b2": {
+        "initially_seen": 1782906227,
+        "last_seen": 1782928914,
+        "is_wireless": false
+      },
+      "80:c5:f2:67:aa:69": {
+        "initially_seen": 1782907703,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "6c:47:60:1a:87:36": {
+        "initially_seen": 1782907703,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "24:6f:28:c1:b9:60": {
+        "initially_seen": 1782907703,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "30:c9:22:86:74:68": {
+        "initially_seen": 1782907703,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "e4:65:b8:f1:c1:b8": {
+        "initially_seen": 1782907703,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "94:b9:7e:16:d2:02": {
+        "initially_seen": 1782907703,
+        "last_seen": 1782908382,
+        "is_wireless": true
+      },
+      "48:e7:29:67:de:7f": {
+        "initially_seen": 1782907703,
+        "last_seen": 1782908382,
+        "is_wireless": true
+      },
+      "08:f9:e0:46:ed:b4": {
+        "initially_seen": 1782907703,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "e8:db:84:d3:1d:ce": {
+        "initially_seen": 1782907703,
+        "last_seen": 1782908692,
+        "is_wireless": true
+      },
+      "e0:98:06:d5:c4:ca": {
+        "initially_seen": 1782907703,
+        "last_seen": 1782908382,
+        "is_wireless": true
+      },
+      "6c:47:60:0b:55:77": {
+        "initially_seen": 1782907766,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "1c:69:20:5b:b6:00": {
+        "initially_seen": 1782925950,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "00:e0:4c:8e:59:b7": {
+        "initially_seen": 1782925950,
+        "last_seen": 1782928914,
+        "is_wireless": true
+      },
+      "c4:4f:33:7a:51:d5": {
+        "initially_seen": 1782925950,
+        "last_seen": 1782926321,
+        "is_wireless": true
+      },
+      "c8:2b:96:5c:71:55": {
+        "initially_seen": 1782925950,
+        "last_seen": 1782926630,
+        "is_wireless": true
+      }
+    },
+    "last_version": "25.12.5"
+  }
+}

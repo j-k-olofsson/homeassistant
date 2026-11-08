@@ -1,0 +1,15 @@
+{
+  "entity_id": "switch.huvudstrombrytaren_prusa_xl_esphome84_relay_state",
+  "state": "on",
+  "attributes": {
+    "friendly_name": "Huvudstr\u00f6mbrytaren Prusa XL esphome84 Relay State"
+  },
+  "last_changed": "2026-11-06T10:06:52.905441+00:00",
+  "last_reported": "2026-11-06T10:06:52.905441+00:00",
+  "last_updated": "2026-11-06T10:06:52.905441+00:00",
+  "context": {
+    "id": "01M6R56MF9X723P6X3JE8XKWNZ",
+    "parent_id": null,
+    "user_id": null
+  }
+}

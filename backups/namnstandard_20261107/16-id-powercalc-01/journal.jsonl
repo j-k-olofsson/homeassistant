@@ -1,0 +1,8 @@
+{"status": "rename_intent", "old": "sensor.all_standby_energy", "new": "sensor.beraknad_standbyenergi_totalt"}
+{"status": "renamed", "old": "sensor.all_standby_energy", "new": "sensor.beraknad_standbyenergi_totalt"}
+{"status": "rename_intent", "old": "sensor.poolpump_energy_daily", "new": "sensor.poolen_poolpump_utomhus_beraknad_energi_idag"}
+{"status": "renamed", "old": "sensor.poolpump_energy_daily", "new": "sensor.poolen_poolpump_utomhus_beraknad_energi_idag"}
+{"status": "rename_intent", "old": "sensor.poolpump_energy_weekly", "new": "sensor.poolen_poolpump_utomhus_beraknad_energi_denna_vecka"}
+{"status": "renamed", "old": "sensor.poolpump_energy_weekly", "new": "sensor.poolen_poolpump_utomhus_beraknad_energi_denna_vecka"}
+{"status": "rename_intent", "old": "sensor.poolpump_energy_monthly", "new": "sensor.poolen_poolpump_utomhus_beraknad_energi_denna_manad"}
+{"status": "renamed", "old": "sensor.poolpump_energy_monthly", "new": "sensor.poolen_poolpump_utomhus_beraknad_energi_denna_manad"}

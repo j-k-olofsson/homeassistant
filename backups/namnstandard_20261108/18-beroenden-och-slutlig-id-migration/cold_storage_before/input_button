@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "input_button",
+  "data": {
+    "items": [
+      {
+        "id": "google_assistant_starta_hissmusik",
+        "name": "Spela hissmusik",
+        "icon": "mdi:robot"
+      },
+      {
+        "id": "godnatt",
+        "name": "Godnatt",
+        "icon": "mdi:bed"
+      },
+      {
+        "id": "mysbelysning",
+        "name": "Mysbelysning",
+        "icon": "mdi:ceiling-light-multiple-outline"
+      },
+      {
+        "id": "partybelysning",
+        "name": "Partybelysning",
+        "icon": "mdi:lightbulb-group-outline"
+      },
+      {
+        "id": "julbelysning",
+        "name": "Julbelysning",
+        "icon": "mdi:string-lights"
+      },
+      {
+        "id": "alarm",
+        "name": "Alarm",
+        "icon": "mdi:alarm-light-outline"
+      },
+      {
+        "id": "matbelysning",
+        "name": "Matbelysning",
+        "icon": "mdi:ceiling-light-multiple-outline"
+      },
+      {
+        "id": "aterstall_ljudvolymer",
+        "name": "Återställ ljudvolymer",
+        "icon": "mdi:home-sound-out"
+      },
+      {
+        "id": "hemmavarme",
+        "name": "Hemmavärme",
+        "icon": "mdi:heating-coil"
+      },
+      {
+        "id": "bortavarme",
+        "name": "Bortavärme",
+        "icon": "mdi:heating-coil"
+      },
+      {
+        "id": "komfortvarme",
+        "name": "Komfortvärme",
+        "icon": "mdi:heating-coil"
+      }
+    ]
+  }
+}

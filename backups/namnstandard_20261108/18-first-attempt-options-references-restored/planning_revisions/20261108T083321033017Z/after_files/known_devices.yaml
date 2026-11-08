@@ -1,0 +1,648 @@
+shelly_1pm_kitchen_floor_heating_local:
+  name: Köket Golvvärme
+  mac: A0:DD:6C:29:B1:34
+  icon: null
+  picture: null
+  track: true
+henhouse_cam_local:
+  name: henhouse-cam.local
+  mac: E0:B9:4D:20:C9:86
+  icon: null
+  picture: null
+  track: true
+chromecast_verkstadens_speaker_local:
+  name: chromecast-verkstadens-speaker
+  mac: 80:C5:F2:3E:08:43
+  icon: null
+  picture: null
+  track: true
+hp_printer_local:
+  name: hp-printer.local
+  mac: 84:2A:FD:F9:97:90
+  icon: null
+  picture: null
+  track: true
+chromecast_mannis_screen_local:
+  name: chromecast-mannis-screen
+  mac: D8:EB:46:96:63:E4
+  icon: null
+  picture: null
+  track: true
+chromecast_diegos_screen_local:
+  name: chromecast-diegos-screen
+  mac: D8:EB:46:81:A7:F3
+  icon: null
+  picture: null
+  track: true
+chromecast_duschens_speaker_local:
+  name: chromecast-duschens-speaker
+  mac: 6C:47:60:0B:55:77
+  icon: null
+  picture: null
+  track: true
+chromecast_stereo_right_speaker_local:
+  name: chromecast-stereo-right-speaker
+  mac: 54:60:09:E8:FC:56
+  icon: null
+  picture: null
+  track: true
+chromecast_gamla_tv_local:
+  name: chromecast-gamla-tv
+  mac: F4:F5:D8:9D:B9:62
+  icon: null
+  picture: null
+  track: true
+78_32_1b_6c_58_9d:
+  name: 78_32_1b_6c_58_9d
+  mac: 78:32:1B:6C:58:9D
+  icon: null
+  picture: null
+  track: true
+68_f7_28_79_0e_04:
+  name: 68_f7_28_79_0e_04
+  mac: 68:F7:28:79:0E:04
+  icon: null
+  picture: null
+  track: true
+smarthomecontrolpanel_local:
+  name: Bion SmartHomeControlPanel
+  mac: 88:12:AC:7F:8C:0D
+  icon: null
+  picture: null
+  track: true
+bosch_diskmaskin_local:
+  name: bosch-diskmaskin.local
+  mac: 68:A4:0E:0C:1A:5C
+  icon: null
+  picture: null
+  track: true
+levoit_humidifier_verandan_local:
+  name: levoit-humidifier-verandan
+  mac: 1C:69:20:5B:B6:00
+  icon: null
+  picture: null
+  track: true
+playstation4_local:
+  name: Bion PS4
+  mac: 70:9E:29:44:47:8D
+  icon: null
+  picture: null
+  track: true
+chromecast_toans_speaker_local:
+  name: chromecast-toans-speaker
+  mac: 6C:47:60:1A:87:36
+  icon: null
+  picture: null
+  track: true
+00_00_5e_00_01_6f:
+  name: 80-68-110-1.customers.ownit.se
+  mac: 00:00:5E:00:01:6F
+  icon: null
+  picture: null
+  track: true
+chromecast_kokets_screen_local:
+  name: chromecast-kokets-screen
+  mac: 00:F4:8D:97:D9:B5
+  icon: null
+  picture: null
+  track: true
+chromecast_stereo_left_speaker_local:
+  name: chromecast-stereo-left-speaker
+  mac: 54:60:09:D6:4F:22
+  icon: null
+  picture: null
+  track: true
+chromecast_vaxtskapets_speaker_local:
+  name: chromecast-vaxtskapets-speaker
+  mac: 80:C5:F2:67:AA:69
+  icon: null
+  picture: null
+  track: true
+gw_august_connect_local:
+  name: Entrén gw-august-connect
+  mac: 78:9C:85:2A:70:AF
+  icon: null
+  picture: null
+  track: true
+chromecast_tv_soundbar_local:
+  name: chromecast-tv-soundbar
+  mac: 2C:FD:B3:12:5C:49
+  icon: null
+  picture: null
+  track: true
+roborock_max_local:
+  name: Köket roborock-max
+  mac: B0:4A:39:24:A4:CB
+  icon: null
+  picture: null
+  track: true
+samsung_tvattmaskin_local:
+  name: samsung-tvattmaskin.local
+  mac: 40:CA:63:2A:67:33
+  icon: null
+  picture: null
+  track: true
+2c_c3_e6_0d_c6_20:
+  name: 2c_c3_e6_0d_c6_20
+  mac: 2C:C3:E6:0D:C6:20
+  icon: null
+  picture: null
+  track: true
+hp_pavilion_local:
+  name: Kontoret hp-pavilion
+  mac: 00:8C:FA:B1:9A:E3
+  icon: null
+  picture: null
+  track: true
+sony_tv_local:
+  name: Verandan Sony KD-55XH9005
+  mac: 14:3F:A6:03:6B:40
+  icon: null
+  picture: null
+  track: true
+chromecast_kontorets_speaker_local:
+  name: chromecast-kontorets-speaker.local
+  mac: 30:58:90:17:03:E4
+  icon: null
+  picture: null
+  track: true
+0a_80_2d_cd_7a_31:
+  name: Galaxy-S9
+  mac: 0A:80:2D:CD:7A:31
+  icon: null
+  picture: null
+  track: true
+3c_e9_0e_d8_1a_b8:
+  name: 3c_e9_0e_d8_1a_b8
+  mac: 3C:E9:0E:D8:1A:B8
+  icon: null
+  picture: null
+  track: true
+2e_de_49_d0_d5_dc:
+  name: 2e_de_49_d0_d5_dc
+  mac: 2E:DE:49:D0:D5:DC
+  icon: null
+  picture: null
+  track: true
+4e_ab_6d_a3_ce_1d:
+  name: 4e_ab_6d_a3_ce_1d
+  mac: 4E:AB:6D:A3:CE:1D
+  icon: null
+  picture: null
+  track: true
+ea_ad_e0_29_56_64:
+  name: ea_ad_e0_29_56_64
+  mac: EA:AD:E0:29:56:64
+  icon: null
+  picture: null
+  track: true
+36_b7_9b_2b_3d_90:
+  name: 36_b7_9b_2b_3d_90
+  mac: 36:B7:9B:2B:3D:90
+  icon: null
+  picture: null
+  track: true
+shelly_1pm_celler_floor_heating_local:
+  name: Bion Golvvärme
+  mac: 80:64:6F:E3:BE:F0
+  icon: null
+  picture: null
+  track: true
+shelly_1pm_porch_floor_heating:
+  name: Verandan Golvvärme
+  mac: C4:D8:D5:54:CC:80
+  icon: null
+  picture: null
+  track: true
+42_8a_07_f6_64_43:
+  name: 42_8a_07_f6_64_43
+  mac: 42:8A:07:F6:64:43
+  icon: null
+  picture: null
+  track: true
+shellypro_3_shop_central_local:
+  name: shellypro-3-shop-central.local
+  mac: FC:E8:C0:DB:40:20
+  icon: null
+  picture: null
+  track: true
+shellyplug_s_diego_bed_lamp_local:
+  name: Sovrummet Sänglampor Diego
+  mac: 08:3A:8D:C1:7E:B4
+  icon: null
+  picture: null
+  track: true
+shelly_1pm_entry_floor_heating:
+  name: Entrén Golvvärme
+  mac: C4:D8:D5:54:F8:A4
+  icon: null
+  picture: null
+  track: true
+shellyplug_s_manni_bed_lamp_local:
+  name: Sovrummet Sänglampor Manni
+  mac: 08:3A:8D:C1:7E:39
+  icon: null
+  picture: null
+  track: true
+shellyplug_s_shop_roof_lamps_local:
+  name: Verkstaden LED-plafonder
+  mac: 08:3A:8D:C3:44:DD
+  icon: null
+  picture: null
+  track: true
+e8_6b_ea_0f_84_30:
+  name: e8_6b_ea_0f_84_30
+  mac: E8:6B:EA:0F:84:30
+  icon: null
+  picture: null
+  track: true
+shelly_1pm_studio_floor_heating:
+  name: Ateljén Golvvärme
+  mac: A0:DD:6C:2B:31:4C
+  icon: null
+  picture: null
+  track: true
+shellyflood_dryercabinet_local:
+  name: Ateljén Vattensensor torkskåp
+  mac: 4C:75:25:06:BC:9C
+  icon: null
+  picture: null
+  track: true
+20_f8_3b_09_64_60:
+  name: Kontoret HA Voice PE 096460
+  mac: 20:F8:3B:09:64:60
+  icon: null
+  picture: null
+  track: true
+72_0e_b3_71_8f_ef:
+  name: Pixel-9-Pro-XL
+  mac: 72:0E:B3:71:8F:EF
+  icon: null
+  picture: null
+  track: true
+56_5c_fc_d5_d8_cc:
+  name: 56_5c_fc_d5_d8_cc
+  mac: 56:5C:FC:D5:D8:CC
+  icon: null
+  picture: null
+  track: true
+00_e0_4c_6d_67_7c:
+  name: 00_e0_4c_6d_67_7c
+  mac: 00:E0:4C:6D:67:7C
+  icon: null
+  picture: null
+  track: true
+ee_82_08_e5_fe_b2:
+  name: ee_82_08_e5_fe_b2
+  mac: EE:82:08:E5:FE:B2
+  icon: null
+  picture: null
+  track: true
+ac_16_2d_04_99_b2:
+  name: fulla
+  mac: AC:16:2D:04:99:B2
+  icon: null
+  picture: null
+  track: true
+da_86_d9_a7_6f_8e:
+  name: da_86_d9_a7_6f_8e
+  mac: DA:86:D9:A7:6F:8E
+  icon: null
+  picture: null
+  track: true
+gs1900_24e_local:
+  name: Vinden Nätverksswitch
+  mac: 98:0D:67:01:EB:9B
+  icon: null
+  picture: null
+  track: true
+1e_7e_df_81_36_be:
+  name: DiegoTab
+  mac: 1E:7E:DF:81:36:BE
+  icon: null
+  picture: null
+  track: true
+prusa_esp32cam_160_local:
+  name: prusa-esp32cam-160.local
+  mac: E4:65:B8:4B:93:DC
+  icon: null
+  picture: null
+  track: true
+prusa_xl_local:
+  name: prusa-xl.home.arpa
+  mac: 10:9C:70:27:D7:1A
+  icon: null
+  picture: null
+  track: true
+28_39_26_d3_14_5f:
+  name: LenovoL340.home.arpa
+  mac: 28:39:26:D3:14:5F
+  icon: null
+  picture: null
+  track: true
+00_68_eb_e4_b9_01:
+  name: 00_68_eb_e4_b9_01
+  mac: 00:68:EB:E4:B9:01
+  icon: null
+  picture: null
+  track: true
+bosch_torktumlare_local:
+  name: bosch-torktumlare.local
+  mac: 68:A4:0E:3A:22:DF
+  icon: null
+  picture: null
+  track: true
+f0_fe_6b_c1_a0_06:
+  name: HF-LPT220
+  mac: F0:FE:6B:C1:A0:06
+  icon: null
+  picture: null
+  track: true
+3c_01_ef_1c_e8_f0:
+  name: 3c_01_ef_1c_e8_f0
+  mac: 3C:01:EF:1C:E8:F0
+  icon: null
+  picture: null
+  track: true
+60_f2_62_30_7a_32:
+  name: DESKTOP-VF5T4DK
+  mac: 60:F2:62:30:7A:32
+  icon: null
+  picture: null
+  track: true
+f4_cf_a2_15_d0_e3:
+  name: Köket Blomlampa 2
+  mac: F4:CF:A2:15:D0:E3
+  icon: null
+  picture: null
+  track: true
+7c_87_ce_b5_08_fd:
+  name: 7c_87_ce_b5_08_fd
+  mac: 7C:87:CE:B5:08:FD
+  icon: null
+  picture: null
+  track: true
+00_e0_4c_81_41_80:
+  name: 00_e0_4c_81_41_80
+  mac: 00:E0:4C:81:41:80
+  icon: null
+  picture: null
+  track: true
+c2_7c_bd_25_de_50:
+  name: c2_7c_bd_25_de_50
+  mac: C2:7C:BD:25:DE:50
+  icon: null
+  picture: null
+  track: true
+9a_35_a8_25_94_da:
+  name: 9a_35_a8_25_94_da
+  mac: 9A:35:A8:25:94:DA
+  icon: null
+  picture: null
+  track: true
+48_55_19_f4_de_04:
+  name: Utomhus Elmätare (elstolpen)
+  mac: 48:55:19:F4:DE:04
+  icon: null
+  picture: null
+  track: true
+4c_1d_96_14_64_f0:
+  name: 4c_1d_96_14_64_f0
+  mac: 4C:1D:96:14:64:F0
+  icon: null
+  picture: null
+  track: true
+aa_e2_53_6c_c4_01:
+  name: aa_e2_53_6c_c4_01
+  mac: AA:E2:53:6C:C4:01
+  icon: null
+  picture: null
+  track: true
+fa_87_2c_85_c7_73:
+  name: fa_87_2c_85_c7_73
+  mac: FA:87:2C:85:C7:73
+  icon: null
+  picture: null
+  track: true
+ee_17_6d_dc_e9_1c:
+  name: ee_17_6d_dc_e9_1c
+  mac: EE:17:6D:DC:E9:1C
+  icon: null
+  picture: null
+  track: true
+06_a7_e5_de_94_d6:
+  name: 06_a7_e5_de_94_d6
+  mac: 06:A7:E5:DE:94:D6
+  icon: null
+  picture: null
+  track: true
+00_e0_4c_9c_79_8f:
+  name: 00_e0_4c_9c_79_8f
+  mac: 00:E0:4C:9C:79:8F
+  icon: null
+  picture: null
+  track: true
+16_a5_a4_79_3f_b5:
+  name: 16_a5_a4_79_3f_b5
+  mac: 16:A5:A4:79:3F:B5
+  icon: null
+  picture: null
+  track: true
+d6_15_0d_6c_82_fd:
+  name: d6_15_0d_6c_82_fd
+  mac: D6:15:0D:6C:82:FD
+  icon: null
+  picture: null
+  track: true
+fe_10_d9_e8_e2_f7:
+  name: fe_10_d9_e8_e2_f7
+  mac: FE:10:D9:E8:E2:F7
+  icon: null
+  picture: null
+  track: true
+2e_5e_1d_c0_75_e6:
+  name: 2e_5e_1d_c0_75_e6
+  mac: 2E:5E:1D:C0:75:E6
+  icon: null
+  picture: null
+  track: true
+f6_4f_f1_5e_01_5f:
+  name: f6_4f_f1_5e_01_5f
+  mac: F6:4F:F1:5E:01:5F
+  icon: null
+  picture: null
+  track: true
+da_90_ef_78_91_04:
+  name: da_90_ef_78_91_04
+  mac: DA:90:EF:78:91:04
+  icon: null
+  picture: null
+  track: true
+ca_c3_81_00_7b_16:
+  name: ca_c3_81_00_7b_16
+  mac: CA:C3:81:00:7B:16
+  icon: null
+  picture: null
+  track: true
+08_b6_1f_38_2a_20:
+  name: 08_b6_1f_38_2a_20
+  mac: 08:B6:1F:38:2A:20
+  icon: null
+  picture: null
+  track: true
+48_e7_29_8b_7f_d0:
+  name: 48_e7_29_8b_7f_d0
+  mac: 48:E7:29:8B:7F:D0
+  icon: null
+  picture: null
+  track: true
+76_6f_be_6b_1b_b9:
+  name: 76_6f_be_6b_1b_b9
+  mac: 76:6F:BE:6B:1B:B9
+  icon: null
+  picture: null
+  track: true
+f0_08_d1_f2_b8_08:
+  name: Utomhus ESP32-kamera
+  mac: F0:08:D1:F2:B8:08
+  icon: null
+  picture: null
+  track: true
+0c_b8_15_22_91_d4:
+  name: prusa-xl
+  mac: 0C:B8:15:22:91:D4
+  icon: null
+  picture: null
+  track: true
+08_b6_1f_34_55_50:
+  name: Utomhus Markis
+  mac: 08:B6:1F:34:55:50
+  icon: null
+  picture: null
+  track: true
+c8_c9_a3_25_b7_f7:
+  name: Kontoret Taklampor
+  mac: C8:C9:A3:25:B7:F7
+  icon: null
+  picture: null
+  track: true
+24_a1_60_10_5f_96:
+  name: Poolen Poolpump (utomhus)
+  mac: 24:A1:60:10:5F:96
+  icon: null
+  picture: null
+  track: true
+c8_2b_96_07_35_26:
+  name: Poolen Poolbelysning och temperatur
+  mac: C8:2B:96:07:35:26
+  icon: null
+  picture: null
+  track: true
+46_20_5f_9b_3b_ec:
+  name: 46_20_5f_9b_3b_ec
+  mac: 46:20:5F:9B:3B:EC
+  icon: null
+  picture: null
+  track: true
+2e_76_1d_1e_ed_ac:
+  name: 2e_76_1d_1e_ed_ac
+  mac: 2E:76:1D:1E:ED:AC
+  icon: null
+  picture: null
+  track: true
+fe_f8_f9_2f_5d_1d:
+  name: fe_f8_f9_2f_5d_1d
+  mac: FE:F8:F9:2F:5D:1D
+  icon: null
+  picture: null
+  track: true
+26_2c_dd_1a_86_8c:
+  name: 26_2c_dd_1a_86_8c
+  mac: 26:2C:DD:1A:86:8C
+  icon: null
+  picture: null
+  track: true
+c4_4f_33_72_7c_01:
+  name: c4_4f_33_72_7c_01
+  mac: C4:4F:33:72:7C:01
+  icon: null
+  picture: null
+  track: true
+00_2b_67_01_db_4e:
+  name: 00_2b_67_01_db_4e
+  mac: 00:2B:67:01:DB:4E
+  icon: null
+  picture: null
+  track: true
+00_e0_4c_41_17_30:
+  name: 00_e0_4c_41_17_30
+  mac: 00:E0:4C:41:17:30
+  icon: null
+  picture: null
+  track: true
+dc_06_75_9d_65_c0:
+  name: Verandan LED-list (balkongdörrar)
+  mac: DC:06:75:9D:65:C0
+  icon: null
+  picture: null
+  track: true
+c4_4f_33_72_73_e1:
+  name: Hönshuset Vattennivå
+  mac: C4:4F:33:72:73:E1
+  icon: null
+  picture: null
+  track: true
+c4_4f_33_7a_2e_79:
+  name: Utomhus Gasol
+  mac: C4:4F:33:7A:2E:79
+  icon: null
+  picture: null
+  track: true
+8a_f9_23_f4_9b_d5:
+  name: 8a_f9_23_f4_9b_d5
+  mac: 8A:F9:23:F4:9B:D5
+  icon: null
+  picture: null
+  track: true
+00_e0_4c_3c_60_7c:
+  name: 00_e0_4c_3c_60_7c
+  mac: 00:E0:4C:3C:60:7C
+  icon: null
+  picture: null
+  track: true
+7c_9e_bd_ee_d0_98:
+  name: 7c_9e_bd_ee_d0_98
+  mac: 7C:9E:BD:EE:D0:98
+  icon: null
+  picture: null
+  track: true
+00_e0_4c_72_90_6b:
+  name: 00_e0_4c_72_90_6b
+  mac: 00:E0:4C:72:90:6B
+  icon: null
+  picture: null
+  track: true
+08_b6_1f_38_2c_4c:
+  name: 08_b6_1f_38_2c_4c
+  mac: 08:B6:1F:38:2C:4C
+  icon: null
+  picture: null
+  track: true
+48_e7_29_8b_8b_10:
+  name: 48_e7_29_8b_8b_10
+  mac: 48:E7:29:8B:8B:10
+  icon: null
+  picture: null
+  track: true
+c4_4f_33_7a_34_a5:
+  name: c4_4f_33_7a_34_a5
+  mac: C4:4F:33:7A:34:A5
+  icon: null
+  picture: null
+  track: true
+c4_4f_33_7a_51_11:
+  name: Sovrummet LED-list östra
+  mac: C4:4F:33:7A:51:11
+  icon: null
+  picture: null
+  track: true

@@ -1,0 +1,170 @@
+# Device type specific file for Sonoff POWR316D (Prusa XL main switch)
+
+packages:
+  device_base: !include .base.yaml
+
+esphome:
+  name: ${node_name}
+  comment: ${node_comment}
+  friendly_name: ${node_friendly_name}
+
+esp32:
+  board: nodemcu-32s
+  framework:
+    type: arduino
+    version: recommended
+
+preferences:
+  flash_write_interval: 1s
+
+uart:
+  rx_pin: GPIO16
+  baud_rate: 4800
+  parity: EVEN
+
+logger:
+  level: ${log_level}
+  baud_rate: 0
+
+time:
+  - platform: homeassistant
+    id: homeassistant_time
+
+sensor:
+  - platform: cse7766
+    current:
+      name: ${node_name} Current
+      id: a_sensor
+      filters:
+        - throttle_average: 30s
+    voltage:
+      name: ${node_name} Voltage
+      id: v_sensor
+      filters:
+        - throttle_average: 30s
+    power:
+      name: ${node_name} Power
+      id: w_sensor
+      filters:
+        - throttle_average: 15s
+    energy:
+      name: ${node_name} Energy
+      id: wh_sensor
+      filters:
+        - throttle_average: 60s
+    apparent_power:
+      name: ${node_name} Apparent Power
+      id: ap_sensor
+      filters:
+        - throttle_average: 30s
+    reactive_power:
+      name: ${node_name} Reactive Power
+      id: rp_sensor
+      filters:
+        - throttle_average: 30s
+    power_factor:
+      name: ${node_name} Power Factor
+      id: pf_sensor
+      filters:
+        - throttle_average: 30s
+  - platform: total_daily_energy
+    name: ${node_name} Daily Energy
+    power_id: w_sensor
+    unit_of_measurement: "kWh"
+    state_class: total_increasing
+    device_class: energy
+    accuracy_decimals: 3
+    filters:
+      - multiply: 0.001
+  - platform: template
+    name: ${node_name} Power Factor Template
+    device_class: power_factor
+    lambda: |-
+      if (id(v_sensor).state == 0 || id(a_sensor).state == 0) {
+        return 0;
+      }
+      return id(w_sensor).state / id(v_sensor).state / id(a_sensor).state;
+  - platform: template
+    name: ${node_name} ESP32 Temperature
+    id: myEsp32InternalTemp
+    unit_of_measurement: "°C"
+    device_class: temperature
+    state_class: measurement
+    lambda: return temperatureRead();
+    update_interval: 60s
+  - platform: homeassistant
+    id: myExternalTemp
+    entity_id: sensor.termostat_kontoret_esphome20_temperature
+
+binary_sensor:
+  - platform: gpio
+    id: device_button
+    internal: true
+    pin:
+      number: GPIO0
+      inverted: true
+    filters:
+      - delayed_off: 10ms
+    on_multi_click:
+      - timing:
+          - ON for at least 3s
+        then:
+          - switch.toggle: myRelay
+      - timing:
+          - ON for at most 750ms
+        then:
+          - lambda: |-
+              id(page).publish_state(!id(page).state);
+  - platform: template
+    id: page
+    trigger_on_initial_state: true
+    internal: true
+
+display:
+  platform: tm1621
+  id: tm1621_display
+  cs_pin: GPIO25
+  data_pin: GPIO14
+  read_pin: GPIO26
+  write_pin: GPIO27
+  lambda: |-
+    const bool show_voltage_current = id(page).state;
+    if (show_voltage_current) {
+      it.display_voltage(true);
+      it.display_kwh(false);
+      it.printf(0, "%.1f", id(v_sensor).state);
+      it.printf(1, "%.2f", id(a_sensor).state);
+    } else {
+      it.display_voltage(false);
+      it.display_kwh(true);
+      it.printf(0, "%.1f", id(wh_sensor).state);
+      it.printf(1, "%.1f", id(w_sensor).state);
+    }
+
+switch:
+  - platform: gpio
+    name: ${node_name} Relay State
+    id: myRelay
+    pin: GPIO13
+    restore_mode: RESTORE_DEFAULT_ON
+    on_turn_on:
+      - light.turn_on: myRelayStatusLED
+    on_turn_off:
+      - light.turn_off: myRelayStatusLED
+  - platform: restart
+    id: myRestartSwitch
+    internal: true
+
+light:
+  - platform: status_led
+    id: myRelayStatusLED
+    internal: true
+    pin:
+      number: GPIO18
+      inverted: true
+  - platform: status_led
+    id: myWiFiStatusLED
+    internal: true
+    pin:
+      number: GPIO05
+      inverted: true

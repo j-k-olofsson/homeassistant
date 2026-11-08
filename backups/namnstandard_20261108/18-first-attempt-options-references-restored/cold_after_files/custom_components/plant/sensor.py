@@ -1,0 +1,1622 @@
+"""Meter entities for the plant integration"""
+
+from __future__ import annotations
+
+import inspect
+import logging
+import math
+import random
+from datetime import datetime, timedelta
+
+from homeassistant.components.integration.const import METHOD_TRAPEZOIDAL
+from homeassistant.components.integration.sensor import IntegrationSensor
+from homeassistant.components.sensor import (
+    DOMAIN as SENSOR_DOMAIN,
+    RestoreSensor,
+    SensorDeviceClass,
+    SensorEntity,
+    SensorStateClass,
+)
+from homeassistant.components.statistics.sensor import StatisticsSensor
+from homeassistant.components.utility_meter.const import DAILY
+from homeassistant.components.utility_meter.sensor import UtilityMeterSensor
+from homeassistant.config_entries import ConfigEntry
+from homeassistant.const import (
+    ATTR_ICON,
+    ATTR_NAME,
+    ATTR_UNIT_OF_MEASUREMENT,
+    LIGHT_LUX,
+    PERCENTAGE,
+    STATE_UNAVAILABLE,
+    STATE_UNKNOWN,
+    UnitOfConductivity,
+    UnitOfTemperature,
+    UnitOfTime,
+)
+
+try:
+    # HA 2026.7+ deprecated CONCENTRATION_PARTS_PER_MILLION in favour of the
+    # UnitOfRatio enumerator (removed in HA Core 2027.8). Fall back to the old
+    # constant on HA < 2026.7, where UnitOfRatio does not exist yet.
+    from homeassistant.const import UnitOfRatio
+
+    _UNIT_PPM: str = UnitOfRatio.PARTS_PER_MILLION
+except ImportError:  # HA < 2026.7
+    from homeassistant.const import CONCENTRATION_PARTS_PER_MILLION as _UNIT_PPM
+
+from homeassistant.core import CALLBACK_TYPE, Event, HomeAssistant, State, callback
+from homeassistant.helpers.device_registry import DeviceInfo
+from homeassistant.helpers.dispatcher import async_dispatcher_connect
+from homeassistant.helpers.entity import (
+    Entity,
+    EntityCategory,
+    async_generate_entity_id,
+)
+from homeassistant.helpers.entity_platform import AddEntitiesCallback
+from homeassistant.helpers.entity_registry import (
+    EVENT_ENTITY_REGISTRY_UPDATED,
+    EventEntityRegistryUpdatedData,
+    async_get as er_async_get,
+)
+from homeassistant.helpers.event import (
+    async_call_later,
+    async_track_state_change_event,
+)
+from homeassistant.util.unit_conversion import TemperatureConverter
+
+from . import SETUP_DUMMY_SENSORS
+from .const import (
+    ATTR_CONDUCTIVITY,
+    ATTR_DLI,
+    ATTR_MOISTURE,
+    ATTR_PLANT,
+    ATTR_SENSORS,
+    ATTR_VPD,
+    DATA_UPDATED,
+    DEFAULT_LUX_TO_PPFD,
+    DOMAIN,
+    FLOW_PLANT_INFO,
+    FLOW_SENSOR_CO2,
+    FLOW_SENSOR_CONDUCTIVITY,
+    FLOW_SENSOR_HUMIDITY,
+    FLOW_SENSOR_ILLUMINANCE,
+    FLOW_SENSOR_MOISTURE,
+    FLOW_SENSOR_SOIL_TEMPERATURE,
+    FLOW_SENSOR_TEMPERATURE,
+    ICON_CO2,
+    ICON_CONDUCTIVITY,
+    ICON_DLI,
+    ICON_HUMIDITY,
+    ICON_ILLUMINANCE,
+    ICON_MOISTURE,
+    ICON_PPFD,
+    ICON_SOIL_TEMPERATURE,
+    ICON_TEMPERATURE,
+    ICON_VPD,
+    READING_CO2,
+    READING_CONDUCTIVITY,
+    READING_DLI,
+    READING_HUMIDITY,
+    READING_ILLUMINANCE,
+    READING_MOISTURE,
+    READING_PPFD,
+    READING_SOIL_TEMPERATURE,
+    READING_TEMPERATURE,
+    READING_VPD,
+    RESTORE_GRACE_PERIOD,
+    TRANSLATION_KEY_CO2,
+    TRANSLATION_KEY_CONDUCTIVITY,
+    TRANSLATION_KEY_DLI,
+    TRANSLATION_KEY_DLI_24H,
+    TRANSLATION_KEY_HUMIDITY,
+    TRANSLATION_KEY_ILLUMINANCE,
+    TRANSLATION_KEY_MOISTURE,
+    TRANSLATION_KEY_PPFD,
+    TRANSLATION_KEY_SOIL_TEMPERATURE,
+    TRANSLATION_KEY_TEMPERATURE,
+    TRANSLATION_KEY_TOTAL_LIGHT_INTEGRAL,
+    TRANSLATION_KEY_VPD,
+    UNIT_DLI,
+    UNIT_PPFD,
+    UNIT_TOTAL_LIGHT_INTEGRAL,
+    UNIT_VPD,
+)
+
+_LOGGER = logging.getLogger(__name__)
+
+
+def _init_accepts_hass(cls: type) -> bool:
+    """Return True if ``cls.__init__`` still accepts a ``hass`` argument.
+
+    HA 2026.8 (core PRs #177596 / #177597 / #177603 - "Do not set a device on
+    YAML integration / statistics / utility_meter entities") dropped the leading
+    ``hass`` argument from ``IntegrationSensor`` / ``StatisticsSensor`` /
+    ``UtilityMeterSensor.__init__`` and added an optional ``device``. We pass
+    ``hass`` only on HA < 2026.8; on newer cores the plant subclasses still
+    supply their own device through the ``device_info`` property, so the new
+    ``device`` argument is not needed.
+    """
+    return "hass" in inspect.signature(cls.__init__).parameters
+
+
+_INTEGRATION_SENSOR_ACCEPTS_HASS = _init_accepts_hass(IntegrationSensor)
+_UTILITY_METER_SENSOR_ACCEPTS_HASS = _init_accepts_hass(UtilityMeterSensor)
+_STATISTICS_SENSOR_ACCEPTS_HASS = _init_accepts_hass(StatisticsSensor)
+# HA 2026.11 made ``device_class`` a required keyword of IntegrationSensor.
+# None keeps the device class derived from the source sensor, as before.
+_INTEGRATION_SENSOR_TAKES_DEVICE_CLASS = (
+    "device_class" in inspect.signature(IntegrationSensor.__init__).parameters
+)
+
+
+async def async_setup_entry(
+    hass: HomeAssistant, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
+) -> bool:
+    """Set up Plant Sensors from a config entry."""
+    _LOGGER.debug(entry.data)
+    plant = hass.data[DOMAIN][entry.entry_id][ATTR_PLANT]
+
+    if SETUP_DUMMY_SENSORS:
+        sensor_entities = [
+            PlantDummyMoisture(hass, entry, plant),
+            PlantDummyTemperature(hass, entry, plant),
+            PlantDummyIlluminance(hass, entry, plant),
+            PlantDummyConductivity(hass, entry, plant),
+            PlantDummyHumidity(hass, entry, plant),
+        ]
+        async_add_entities(sensor_entities)
+
+    pcurb = PlantCurrentIlluminance(hass, entry, plant)
+    pcurc = PlantCurrentConductivity(hass, entry, plant)
+    pcurm = PlantCurrentMoisture(hass, entry, plant)
+    pcurt = PlantCurrentTemperature(hass, entry, plant)
+    pcurh = PlantCurrentHumidity(hass, entry, plant)
+    pcurco2 = PlantCurrentCo2(hass, entry, plant)
+    pcurst = PlantCurrentSoilTemperature(hass, entry, plant)
+    plant_sensors = [
+        pcurb,
+        pcurc,
+        pcurm,
+        pcurt,
+        pcurh,
+        pcurco2,
+        pcurst,
+    ]
+    async_add_entities(plant_sensors)
+    hass.data[DOMAIN][entry.entry_id][ATTR_SENSORS] = plant_sensors
+    plant.add_sensors(
+        temperature=pcurt,
+        moisture=pcurm,
+        conductivity=pcurc,
+        illuminance=pcurb,
+        humidity=pcurh,
+        co2=pcurco2,
+        soil_temperature=pcurst,
+    )
+
+    # Create and add the integral-entities
+    # Must be run after the sensors are added to the plant
+    # Default-disable illuminance-derived entities when no illuminance sensor configured
+    has_illuminance = (
+        entry.data.get(FLOW_PLANT_INFO, {}).get(FLOW_SENSOR_ILLUMINANCE) is not None
+    )
+
+    pcurppfd = PlantCurrentPpfd(hass, entry, plant)
+    pcurppfd._attr_entity_registry_enabled_default = has_illuminance
+    async_add_entities([pcurppfd])
+
+    pintegral = PlantTotalLightIntegral(hass, entry, pcurppfd, plant)
+    pintegral._attr_entity_registry_enabled_default = has_illuminance
+    async_add_entities([pintegral], update_before_add=True)
+
+    plant.add_calculations(pcurppfd, pintegral)
+
+    pdli = PlantDailyLightIntegral(hass, entry, pintegral, plant)
+    pdli._attr_entity_registry_enabled_default = has_illuminance
+    async_add_entities(new_entities=[pdli], update_before_add=True)
+
+    # Create rolling 24-hour DLI sensor (alternative to midnight-reset DLI)
+    pdli_24h = PlantDailyLightIntegral24h(hass, entry, pintegral, plant)
+    pdli_24h._attr_entity_registry_enabled_default = has_illuminance
+    async_add_entities(new_entities=[pdli_24h], update_before_add=True)
+
+    plant.add_dli(dli=pdli, dli_24h=pdli_24h)
+
+    # Create VPD sensor (computed from temperature + humidity)
+    has_temp_and_humidity = (
+        entry.data.get(FLOW_PLANT_INFO, {}).get(FLOW_SENSOR_TEMPERATURE) is not None
+        and entry.data.get(FLOW_PLANT_INFO, {}).get(FLOW_SENSOR_HUMIDITY) is not None
+    )
+    pvpd = PlantCurrentVpd(hass, entry, plant)
+    pvpd._attr_entity_registry_enabled_default = has_temp_and_humidity
+    async_add_entities([pvpd])
+    plant.add_vpd(vpd=pvpd)
+
+    return True
+
+
+async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
+    """Unload a config entry."""
+    return True
+
+
+class PlantCurrentStatus(RestoreSensor):
+    """Parent class for the meter classes below"""
+
+    _attr_has_entity_name = True
+    _attr_state_class = SensorStateClass.MEASUREMENT
+    # Subclasses should override this with their FLOW_SENSOR_* constant
+    _config_key: str | None = None
+
+    # Subclasses should override this with their READING_* constant for entity_id generation
+    _entity_id_key: str | None = None
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the Plant component."""
+        self.hass = hass
+        self._config = config
+        self._default_state = None
+        self._plant = plantdevice
+        # entity_id -> unsubscribe for the state listeners this sensor holds
+        self._tracker: dict[str, CALLBACK_TYPE] = {}
+        self._restored_value_active = False
+        # Resolve registered IDs before derived sensors capture their sources.
+        # New entities let has_entity_name derive the entity_id automatically.
+        ent_reg = er_async_get(hass)
+        if (
+            registered_entity_id := ent_reg.async_get_entity_id(
+                SENSOR_DOMAIN, DOMAIN, self._attr_unique_id
+            )
+        ):
+            self.entity_id = registered_entity_id
+        # Default-disable entities with no external sensor configured.
+        # HA only applies entity_registry_enabled_default on first registration,
+        # so user-enabled entities survive config entry reloads.
+        self._attr_entity_registry_enabled_default = self._external_sensor is not None
+
+        if (
+            self._attr_native_value is None
+            or self._attr_native_value == STATE_UNKNOWN
+            or self._attr_native_value == STATE_UNAVAILABLE
+        ):
+            _LOGGER.debug(
+                "Unknown native value for %s, setting to default: %s",
+                self.entity_id,
+                self._default_state,
+            )
+            self._attr_native_value = self._default_state
+
+    @property
+    def device_info(self) -> DeviceInfo:
+        """Device info for devices"""
+        return DeviceInfo(
+            identifiers={(DOMAIN, self._plant.unique_id)},
+            name=self._plant.name,
+        )
+
+    @property
+    def extra_state_attributes(self) -> dict:
+        if self._external_sensor:
+            return {
+                "external_sensor": self.external_sensor,
+            }
+        return {}
+
+    @property
+    def external_sensor(self) -> str:
+        """The external sensor we are tracking"""
+        return self._external_sensor
+
+    def replace_external_sensor(self, new_sensor: str | None) -> None:
+        """Modify the external sensor and persist to config entry."""
+        _LOGGER.info("Setting %s external sensor to %s", self.entity_id, new_sensor)
+        old_sensor = getattr(self, "_external_sensor", None)
+        # pylint: disable=attribute-defined-outside-init
+        self._external_sensor = new_sensor
+        if old_sensor not in (new_sensor, self.entity_id):
+            self.async_untrack_entity(old_sensor)
+
+        if new_sensor is None:
+            self._attr_native_value = self._default_state
+            self._restored_value_active = False
+
+        # Disabled entities have self.hass = None; use the plant's hass reference
+        # for operations that need it (config updates, registry changes)
+        hass = self.hass or (self._plant.hass if self._plant else None)
+
+        # Only track state changes if the entity is enabled (has its own hass ref).
+        # Disabled entities will set up tracking when enabled via async_added_to_hass.
+        if self.hass is not None:
+            self.async_track_entity(self.entity_id)
+            self.async_track_entity(self.external_sensor)
+
+        # Persist the change to config entry if we have a config key
+        if self._config_key:
+            self._update_config_entry(new_sensor, hass)
+
+        # Only write state if the entity is enabled (disabled entities have no state)
+        if self.hass is not None and self.hass.states.get(self.entity_id) is not None:
+            self.async_write_ha_state()
+
+        if (
+            self._plant
+            and getattr(self._plant, "plant_complete", False)
+            and hass is not None
+            and not hass.is_stopping
+        ):
+            self._plant.update_entity_disabled_state(self)
+
+    def _update_config_entry(
+        self, new_sensor: str | None, hass: HomeAssistant | None = None
+    ) -> None:
+        """Update the config entry with the new sensor value."""
+        if not self._config_key:
+            return
+
+        hass = hass or self.hass
+        if hass is None:
+            _LOGGER.warning(
+                "Cannot update config entry for %s: no hass reference", self.entity_id
+            )
+            return
+
+        # Skip update if value hasn't changed (avoids spurious config entry
+        # modifications during state restoration that can trigger reloads)
+        current_plant_info = self._config.data.get(FLOW_PLANT_INFO, {})
+        if current_plant_info.get(self._config_key) == new_sensor:
+            return
+
+        # Get current data and update the sensor assignment
+        new_data = dict(self._config.data)
+        new_plant_info = dict(new_data.get(FLOW_PLANT_INFO, {}))
+        new_plant_info[self._config_key] = new_sensor
+        new_data[FLOW_PLANT_INFO] = new_plant_info
+
+        hass.config_entries.async_update_entry(self._config, data=new_data)
+        _LOGGER.debug(
+            "Updated config entry %s with %s=%s",
+            self._config.entry_id,
+            self._config_key,
+            new_sensor,
+        )
+
+    def async_track_entity(self, entity_id: str | None) -> None:
+        """Track state_changed of certain entities"""
+        if entity_id and entity_id not in self._tracker:
+            self._tracker[entity_id] = async_track_state_change_event(
+                self.hass,
+                [entity_id],
+                self._state_changed_event,
+            )
+
+    def async_untrack_entity(self, entity_id: str | None) -> None:
+        """Stop tracking an entity."""
+        if (unsub := self._tracker.pop(entity_id, None)) is not None:
+            unsub()
+
+    @callback
+    def _async_untrack_all(self) -> None:
+        for unsub in self._tracker.values():
+            unsub()
+        self._tracker.clear()
+
+    async def async_added_to_hass(self) -> None:
+        """Handle entity which will be added."""
+        await super().async_added_to_hass()
+        self.async_on_remove(self._async_untrack_all)
+        state = await self.async_get_last_state()
+
+        if state:
+            # Restore the last known state on startup until the external sensor
+            # provides a fresh value. Without this, entities remain unknown after
+            # Home Assistant restart until the source sensor updates again.
+            if state.state not in (STATE_UNKNOWN, STATE_UNAVAILABLE):
+                try:
+                    self._attr_native_value = float(state.state)
+                except (ValueError, TypeError):
+                    _LOGGER.debug(
+                        "Ignoring non-numeric restored value for %s: %s",
+                        self.entity_id,
+                        state.state,
+                    )
+                else:
+                    self._restored_value_active = True
+
+            if ATTR_UNIT_OF_MEASUREMENT in state.attributes:
+                self._attr_native_unit_of_measurement = state.attributes[
+                    ATTR_UNIT_OF_MEASUREMENT
+                ]
+
+            if "external_sensor" in state.attributes:
+                _LOGGER.debug(
+                    "Restoring %s external sensor from state: %s",
+                    self.entity_id,
+                    state.attributes["external_sensor"],
+                )
+                self.replace_external_sensor(state.attributes["external_sensor"])
+            else:
+                _LOGGER.debug(
+                    "No external_sensor in restored state for %s",
+                    self.entity_id,
+                )
+        else:
+            _LOGGER.debug("No restore data for %s", self.entity_id)
+        _LOGGER.debug(
+            "Sensor %s setup complete: external_sensor=%s, enabled=%s",
+            self.entity_id,
+            self.external_sensor,
+            self.enabled,
+        )
+        self.async_track_entity(self.entity_id)
+        if self.external_sensor:
+            self.async_track_entity(self.external_sensor)
+            await self.async_update()
+            self.async_write_ha_state()
+
+        self.async_on_remove(
+            async_dispatcher_connect(
+                self.hass, DATA_UPDATED, self._schedule_immediate_update
+            )
+        )
+
+        # Listen for entity registry updates to handle entity_id changes and deletions
+        @callback
+        def _handle_entity_registry_update(
+            event: Event[EventEntityRegistryUpdatedData],
+        ) -> None:
+            """Handle entity registry updates."""
+            action = event.data["action"]
+            if action == "update":
+                # Check if this is our external sensor being renamed
+                if "old_entity_id" not in event.data:
+                    return
+                old_entity_id = event.data["old_entity_id"]
+                new_entity_id = event.data["entity_id"]
+                if self._external_sensor and old_entity_id == self._external_sensor:
+                    _LOGGER.debug(
+                        "External sensor renamed from %s to %s, updating tracking",
+                        old_entity_id,
+                        new_entity_id,
+                    )
+                    self.replace_external_sensor(new_entity_id)
+            elif action == "remove":
+                # Check if our external sensor was deleted
+                entity_id = event.data["entity_id"]
+                if self._external_sensor and entity_id == self._external_sensor:
+                    _LOGGER.info(
+                        "External sensor %s was deleted, clearing reference",
+                        entity_id,
+                    )
+                    self.replace_external_sensor(None)
+
+        self.async_on_remove(
+            self.hass.bus.async_listen(
+                EVENT_ENTITY_REGISTRY_UPDATED,
+                _handle_entity_registry_update,
+            )
+        )
+
+        # Bound the startup restore window: if the source never delivers a live
+        # value, end the window after the grace period so a stale restored value
+        # is not held indefinitely.
+        if self._restored_value_active:
+            self.async_on_remove(
+                async_call_later(
+                    self.hass, RESTORE_GRACE_PERIOD, self._end_restore_window
+                )
+            )
+
+    @callback
+    def async_entity_id_changed(self, old_entity_id: str) -> None:
+        """Take entity_id changes in place (HA 2026.11+).
+
+        A rename of a plant entity reloads the plant, which resubscribes
+        everything under the new entity_id (see async_setup_entry); the own
+        listener moves right away, so a late removal of the old id's state is
+        not taken for a source change.
+        """
+        self.async_untrack_entity(old_entity_id)
+        self.async_track_entity(self.entity_id)
+        if (parent := getattr(super(), "async_entity_id_changed", None)) is not None:
+            parent(old_entity_id)
+
+    @callback
+    def _end_restore_window(self, _now: datetime | None = None) -> None:
+        """End the startup restore window once the grace period elapses."""
+        if not self._restored_value_active:
+            return
+        _LOGGER.debug(
+            "Restore grace period elapsed for %s; resuming live behavior",
+            self.entity_id,
+        )
+        self._restored_value_active = False
+        self.async_schedule_update_ha_state(True)
+
+    async def async_update(self) -> None:
+        """Update state and unit from the external sensor when available."""
+        if not self.external_sensor:
+            _LOGGER.debug(
+                "External sensor not set for %s, setting to default: %s",
+                self.entity_id,
+                self._default_state,
+            )
+            self._attr_native_value = self._default_state
+            self._restored_value_active = False
+            return
+
+        external_state = self.hass.states.get(self.external_sensor)
+
+        if external_state is not None and external_state.state not in (
+            STATE_UNKNOWN,
+            STATE_UNAVAILABLE,
+        ):
+            try:
+                self._attr_native_value = float(external_state.state)
+            except (ValueError, TypeError):
+                _LOGGER.debug(
+                    "External sensor for %s has non-numeric value: %s = %s",
+                    self.entity_id,
+                    self.external_sensor,
+                    external_state.state,
+                )
+                self._attr_native_value = self._default_state
+                self._restored_value_active = False
+                return
+
+            self._restored_value_active = False
+
+            if ATTR_UNIT_OF_MEASUREMENT in external_state.attributes:
+                self._attr_native_unit_of_measurement = external_state.attributes[
+                    ATTR_UNIT_OF_MEASUREMENT
+                ]
+            return
+
+        if self._restored_value_active:
+            _LOGGER.debug(
+                "External sensor for %s is not available yet; keeping restored value",
+                self.entity_id,
+            )
+            return
+
+        _LOGGER.debug(
+            "External sensor for %s is unavailable, clearing state: %s",
+            self.entity_id,
+            self.external_sensor,
+        )
+        self._attr_native_value = self._default_state
+
+    @callback
+    def _schedule_immediate_update(self) -> None:
+        """Schedule an immediate state update."""
+        if not self.enabled:
+            return
+        self.async_schedule_update_ha_state(True)
+
+    @callback
+    def _state_changed_event(self, event: Event) -> None:
+        """Handle sensor state change event."""
+        self.state_changed(event.data.get("entity_id"), event.data.get("new_state"))
+
+    @callback
+    def state_changed(self, entity_id: str | None, new_state: State | None) -> None:
+        """Handle state changes from GUI and service calls."""
+        if not self.hass.states.get(self.entity_id):
+            return
+
+        if entity_id == self.entity_id:
+            current_attrs = self.hass.states.get(self.entity_id).attributes
+            if current_attrs.get("external_sensor") != self.external_sensor:
+                self.replace_external_sensor(current_attrs.get("external_sensor"))
+
+            if (
+                new_state is not None
+                and ATTR_ICON in new_state.attributes
+                and self.icon != new_state.attributes[ATTR_ICON]
+            ):
+                self._attr_icon = new_state.attributes[ATTR_ICON]
+                self.async_write_ha_state()
+            return
+
+        if not self.external_sensor:
+            self._attr_native_value = self._default_state
+            self._restored_value_active = False
+            self.async_write_ha_state()
+            return
+
+        if new_state is None:
+            if entity_id == self.external_sensor:
+                self._attr_native_value = self._default_state
+                self._restored_value_active = False
+                self.async_write_ha_state()
+            return
+
+        if new_state.state not in (STATE_UNKNOWN, STATE_UNAVAILABLE):
+            try:
+                self._attr_native_value = float(new_state.state)
+            except (ValueError, TypeError):
+                _LOGGER.debug(
+                    "Clearing %s due to non-numeric value from external sensor %s: %s",
+                    self.entity_id,
+                    self.external_sensor,
+                    new_state.state,
+                )
+                self._attr_native_value = self._default_state
+                self._restored_value_active = False
+                self.async_write_ha_state()
+                return
+            self._restored_value_active = False
+
+            if ATTR_UNIT_OF_MEASUREMENT in new_state.attributes:
+                self._attr_native_unit_of_measurement = new_state.attributes[
+                    ATTR_UNIT_OF_MEASUREMENT
+                ]
+
+            self.async_write_ha_state()
+            return
+
+        if self._restored_value_active:
+            _LOGGER.debug(
+                "External sensor %s unavailable for %s during startup restore "
+                "window; keeping restored value",
+                self.external_sensor,
+                self.entity_id,
+            )
+            return
+
+        _LOGGER.debug(
+            "External sensor %s unavailable for %s; clearing state",
+            self.external_sensor,
+            self.entity_id,
+        )
+        self._attr_native_value = self._default_state
+        self.async_write_ha_state()
+
+
+class PlantCurrentIlluminance(PlantCurrentStatus):
+    """Entity class for the current illuminance meter"""
+
+    _attr_device_class = SensorDeviceClass.ILLUMINANCE
+    _attr_icon = ICON_ILLUMINANCE
+    _attr_native_unit_of_measurement = LIGHT_LUX
+    _attr_suggested_display_precision = 1
+    _attr_translation_key = TRANSLATION_KEY_ILLUMINANCE
+    _config_key = FLOW_SENSOR_ILLUMINANCE
+    _entity_id_key = READING_ILLUMINANCE
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the sensor"""
+        self._attr_unique_id = f"{config.entry_id}-current-illuminance"
+        self._external_sensor = config.data[FLOW_PLANT_INFO].get(
+            FLOW_SENSOR_ILLUMINANCE
+        )
+        super().__init__(hass, config, plantdevice)
+
+
+class PlantCurrentConductivity(PlantCurrentStatus):
+    """Entity class for the current conductivity meter"""
+
+    # No official device class for conductivity - use custom string for UI
+    _attr_device_class = ATTR_CONDUCTIVITY
+    _attr_icon = ICON_CONDUCTIVITY
+    _attr_native_unit_of_measurement = UnitOfConductivity.MICROSIEMENS_PER_CM
+    _attr_suggested_display_precision = 1
+    _attr_translation_key = TRANSLATION_KEY_CONDUCTIVITY
+    _config_key = FLOW_SENSOR_CONDUCTIVITY
+    _entity_id_key = READING_CONDUCTIVITY
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the sensor"""
+        self._attr_unique_id = f"{config.entry_id}-current-conductivity"
+        self._external_sensor = config.data[FLOW_PLANT_INFO].get(
+            FLOW_SENSOR_CONDUCTIVITY
+        )
+        super().__init__(hass, config, plantdevice)
+
+
+class PlantCurrentMoisture(PlantCurrentStatus):
+    """Entity class for the current moisture meter"""
+
+    # No official device class for moisture - use custom string for UI
+    _attr_device_class = ATTR_MOISTURE
+    _attr_icon = ICON_MOISTURE
+    _attr_native_unit_of_measurement = PERCENTAGE
+    _attr_suggested_display_precision = 1
+    _attr_translation_key = TRANSLATION_KEY_MOISTURE
+    _config_key = FLOW_SENSOR_MOISTURE
+    _entity_id_key = READING_MOISTURE
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the sensor"""
+        self._attr_unique_id = f"{config.entry_id}-current-moisture"
+        self._external_sensor = config.data[FLOW_PLANT_INFO].get(FLOW_SENSOR_MOISTURE)
+        super().__init__(hass, config, plantdevice)
+
+
+class PlantCurrentTemperature(PlantCurrentStatus):
+    """Entity class for the current temperature meter"""
+
+    _attr_device_class = SensorDeviceClass.TEMPERATURE
+    _attr_icon = ICON_TEMPERATURE
+    _attr_native_unit_of_measurement = UnitOfTemperature.CELSIUS
+    _attr_suggested_display_precision = 1
+    _attr_translation_key = TRANSLATION_KEY_TEMPERATURE
+    _config_key = FLOW_SENSOR_TEMPERATURE
+    _entity_id_key = READING_TEMPERATURE
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the sensor"""
+        self._attr_unique_id = f"{config.entry_id}-current-temperature"
+        self._external_sensor = config.data[FLOW_PLANT_INFO].get(
+            FLOW_SENSOR_TEMPERATURE
+        )
+        super().__init__(hass, config, plantdevice)
+
+
+class PlantCurrentHumidity(PlantCurrentStatus):
+    """Entity class for the current humidity meter"""
+
+    _attr_device_class = SensorDeviceClass.HUMIDITY
+    _attr_icon = ICON_HUMIDITY
+    _attr_native_unit_of_measurement = PERCENTAGE
+    _attr_suggested_display_precision = 1
+    _attr_translation_key = TRANSLATION_KEY_HUMIDITY
+    _config_key = FLOW_SENSOR_HUMIDITY
+    _entity_id_key = READING_HUMIDITY
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the sensor"""
+        self._attr_unique_id = f"{config.entry_id}-current-humidity"
+        self._external_sensor = config.data[FLOW_PLANT_INFO].get(FLOW_SENSOR_HUMIDITY)
+        super().__init__(hass, config, plantdevice)
+
+
+class PlantCurrentCo2(PlantCurrentStatus):
+    """Entity class for the current CO2 meter"""
+
+    _attr_device_class = SensorDeviceClass.CO2
+    _attr_icon = ICON_CO2
+    _attr_native_unit_of_measurement = _UNIT_PPM
+    _attr_suggested_display_precision = 0
+    _attr_translation_key = TRANSLATION_KEY_CO2
+    _config_key = FLOW_SENSOR_CO2
+    _entity_id_key = READING_CO2
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the sensor"""
+        self._attr_unique_id = f"{config.entry_id}-current-co2"
+        self._external_sensor = config.data[FLOW_PLANT_INFO].get(FLOW_SENSOR_CO2)
+        super().__init__(hass, config, plantdevice)
+
+
+class PlantCurrentSoilTemperature(PlantCurrentStatus):
+    """Entity class for the current soil temperature meter"""
+
+    _attr_device_class = SensorDeviceClass.TEMPERATURE
+    _attr_icon = ICON_SOIL_TEMPERATURE
+    _attr_native_unit_of_measurement = UnitOfTemperature.CELSIUS
+    _attr_suggested_display_precision = 1
+    _attr_translation_key = TRANSLATION_KEY_SOIL_TEMPERATURE
+    _config_key = FLOW_SENSOR_SOIL_TEMPERATURE
+    _entity_id_key = READING_SOIL_TEMPERATURE
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the sensor"""
+        self._attr_unique_id = f"{config.entry_id}-current-soil-temperature"
+        self._external_sensor = config.data[FLOW_PLANT_INFO].get(
+            FLOW_SENSOR_SOIL_TEMPERATURE
+        )
+        super().__init__(hass, config, plantdevice)
+
+
+class PlantCurrentVpd(RestoreSensor):
+    """Entity reporting current VPD (Vapour Pressure Deficit) calculated from temperature and humidity.
+
+    VPD = SVP * (1 - RH/100), where SVP is the saturation vapor pressure
+    calculated using the Tetens formula: SVP = 0.6108 * exp((17.27 * T) / (T + 237.3))
+    """
+
+    _attr_has_entity_name = True
+    _attr_state_class = SensorStateClass.MEASUREMENT
+    _attr_device_class = ATTR_VPD
+    _attr_icon = ICON_VPD
+    _attr_native_unit_of_measurement = UNIT_VPD
+    _attr_suggested_display_precision = 2
+    _attr_translation_key = TRANSLATION_KEY_VPD
+    _entity_id_key = READING_VPD
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the sensor"""
+        self._attr_unique_id = f"{config.entry_id}-current-vpd"
+        self._plant = plantdevice
+        self.hass = hass
+        self._config = config
+        self._restored_value_active = False
+
+        # Only force entity_id for existing entities (backwards compat)
+        ent_reg = er_async_get(hass)
+        if (
+            registered_entity_id := ent_reg.async_get_entity_id(
+                SENSOR_DOMAIN, DOMAIN, self._attr_unique_id
+            )
+        ):
+            self.entity_id = registered_entity_id
+
+    @property
+    def device_info(self) -> DeviceInfo:
+        """Device info for devices"""
+        return DeviceInfo(
+            identifiers={(DOMAIN, self._plant.unique_id)},
+            name=self._plant.name,
+        )
+
+    @staticmethod
+    def calculate_vpd(temperature_c: float, humidity: float) -> float:
+        """Calculate VPD in kPa from temperature (Celsius) and relative humidity (%).
+
+        Uses the Tetens formula for saturation vapor pressure.
+        """
+        svp = 0.6108 * math.exp((17.27 * temperature_c) / (temperature_c + 237.3))
+        return svp * (1 - humidity / 100.0)
+
+    def _get_temperature_celsius(self) -> float | None:
+        """Read the plant's temperature sensor and return the value in Celsius.
+
+        The mirror entity inherits its unit of measurement from the source
+        sensor (and from HA's system unit), so the published state may be
+        in °C, °F, or K. Convert to °C before returning. Unknown or
+        missing units fall through unconverted (treated as already °C).
+        """
+        if self._plant.sensor_temperature is None:
+            return None
+        state_obj = self.hass.states.get(self._plant.sensor_temperature.entity_id)
+        if state_obj is None or state_obj.state in (STATE_UNAVAILABLE, STATE_UNKNOWN):
+            return None
+        try:
+            temp = float(state_obj.state)
+        except (ValueError, TypeError):
+            return None
+        unit = state_obj.attributes.get(ATTR_UNIT_OF_MEASUREMENT)
+        if (
+            unit in TemperatureConverter.VALID_UNITS
+            and unit != UnitOfTemperature.CELSIUS
+        ):
+            temp = TemperatureConverter.convert(temp, unit, UnitOfTemperature.CELSIUS)
+        return temp
+
+    def _get_humidity(self) -> float | None:
+        """Get the current humidity from the plant's humidity sensor."""
+        if self._plant.sensor_humidity is None:
+            return None
+        state = getattr(
+            self.hass.states.get(self._plant.sensor_humidity.entity_id),
+            "state",
+            None,
+        )
+        if state is None or state in (STATE_UNAVAILABLE, STATE_UNKNOWN):
+            return None
+        try:
+            return float(state)
+        except (ValueError, TypeError):
+            return None
+
+    def _update_vpd(self) -> None:
+        """Recalculate VPD from current temperature and humidity."""
+        temp_c = self._get_temperature_celsius()
+        humidity = self._get_humidity()
+        if temp_c is not None and humidity is not None:
+            self._attr_native_value = round(self.calculate_vpd(temp_c, humidity), 2)
+            self._restored_value_active = False
+            return
+
+        if self._restored_value_active:
+            _LOGGER.debug(
+                "VPD source values unavailable for %s during startup restore "
+                "window; keeping restored value",
+                self.entity_id,
+            )
+            return
+
+        _LOGGER.debug(
+            "VPD source values unavailable for %s; clearing state",
+            self.entity_id,
+        )
+        self._attr_native_value = None
+
+    async def async_added_to_hass(self) -> None:
+        """Restore state and subscribe to temperature and humidity changes."""
+        await super().async_added_to_hass()
+
+        if (state := await self.async_get_last_state()) and state.state not in (
+            STATE_UNKNOWN,
+            STATE_UNAVAILABLE,
+        ):
+            try:
+                self._attr_native_value = float(state.state)
+            except (ValueError, TypeError):
+                _LOGGER.debug(
+                    "Ignoring non-numeric restored value for %s: %s",
+                    self.entity_id,
+                    state.state,
+                )
+            else:
+                self._restored_value_active = True
+
+        # Track temperature sensor state changes
+        if self._plant.sensor_temperature is not None:
+            self.async_on_remove(
+                async_track_state_change_event(
+                    self.hass,
+                    [self._plant.sensor_temperature.entity_id],
+                    self._state_changed_event,
+                )
+            )
+
+        # Track humidity sensor state changes
+        if self._plant.sensor_humidity is not None:
+            self.async_on_remove(
+                async_track_state_change_event(
+                    self.hass,
+                    [self._plant.sensor_humidity.entity_id],
+                    self._state_changed_event,
+                )
+            )
+
+        # Calculate initial value
+        self._update_vpd()
+
+        # Bound the startup restore window (see PlantCurrentStatus).
+        if self._restored_value_active:
+            self.async_on_remove(
+                async_call_later(
+                    self.hass, RESTORE_GRACE_PERIOD, self._end_restore_window
+                )
+            )
+
+    @callback
+    def async_entity_id_changed(self, old_entity_id: str) -> None:
+        """Take entity_id changes in place (HA 2026.11+).
+
+        A rename of a plant entity reloads the plant, which resubscribes
+        everything under the new entity_id (see async_setup_entry).
+        """
+        if (parent := getattr(super(), "async_entity_id_changed", None)) is not None:
+            parent(old_entity_id)
+
+    @callback
+    def _end_restore_window(self, _now: datetime | None = None) -> None:
+        """End the startup restore window once the grace period elapses."""
+        if not self._restored_value_active:
+            return
+        _LOGGER.debug(
+            "Restore grace period elapsed for %s; resuming live behavior",
+            self.entity_id,
+        )
+        self._restored_value_active = False
+        self._update_vpd()
+        self.async_write_ha_state()
+
+    @callback
+    def _state_changed_event(self, event: Event) -> None:
+        """Handle state changes from temperature or humidity sensors."""
+        self._update_vpd()
+        self.async_write_ha_state()
+
+    async def async_update(self) -> None:
+        """Update VPD value."""
+        self._update_vpd()
+
+
+class PlantCurrentPpfd(PlantCurrentStatus):
+    """Entity reporting current PPFD calculated from LX or passed through from PPFD source."""
+
+    _attr_device_class = None
+    _attr_entity_category = EntityCategory.DIAGNOSTIC
+    _attr_entity_registry_visible_default = False
+    _attr_icon = ICON_PPFD
+    _attr_native_unit_of_measurement = UNIT_PPFD
+    _attr_translation_key = TRANSLATION_KEY_PPFD
+    _entity_id_key = READING_PPFD
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the sensor"""
+        self._attr_unique_id = f"{config.entry_id}-current-ppfd"
+        self._attr_unit_of_measurement = UNIT_PPFD
+        self._plant = plantdevice
+        self._external_sensor = self._plant.sensor_illuminance.entity_id
+        self._source_is_ppfd = False  # Track if source already provides PPFD
+        super().__init__(hass, config, plantdevice)
+        self._follow_unit = False
+        ent_reg = er_async_get(hass)
+        if (
+            registered_entity_id := ent_reg.async_get_entity_id(
+                SENSOR_DOMAIN, DOMAIN, self._attr_unique_id
+            )
+        ):
+            self.entity_id = registered_entity_id
+
+    def _is_ppfd_source(self) -> bool:
+        """Check if the external sensor provides PPFD directly (not lux).
+
+        FYTA sensors and similar devices report light in PPFD (µmol/s⋅m²)
+        instead of lux. When the source already provides PPFD, we should
+        pass through the value unchanged instead of converting from lux.
+        """
+        if not self.external_sensor:
+            return False
+        external_state = self.hass.states.get(self.external_sensor)
+        if not external_state:
+            return False
+        unit = external_state.attributes.get(ATTR_UNIT_OF_MEASUREMENT, "")
+        if not unit:
+            return False
+        # Check if unit contains 'mol' (covers µmol/s⋅m², mol/s⋅m², etc.)
+        return "mol" in unit.lower()
+
+    def ppfd(self, value: float | int | str | None) -> float | None:
+        """
+        Returns PPFD value - either passed through or converted from lux.
+
+        See https://community.home-assistant.io/t/light-accumulation-for-xiaomi-flower-sensor/111180/3
+        https://www.apogeeinstruments.com/conversion-ppfd-to-lux/
+        μmol/m²/s
+
+        The conversion factor is configurable per plant to account for different
+        light sources (sunlight ~0.0185, LED grow lights ~0.014-0.020, HPS ~0.013).
+        """
+        if value is None or value in (STATE_UNAVAILABLE, STATE_UNKNOWN):
+            return None
+
+        try:
+            numeric_value = float(value)
+        except (ValueError, TypeError):
+            _LOGGER.debug(
+                "PPFD source %s has non-numeric value: %s",
+                self.external_sensor,
+                value,
+            )
+            return None
+
+        # Check if source already provides PPFD
+        if self._source_is_ppfd:
+            # Pass through unchanged - source already provides PPFD
+            return numeric_value
+
+        # Convert from lux to PPFD (existing logic)
+        # Use plant's configurable conversion factor, fallback to default
+        lux_to_ppfd = DEFAULT_LUX_TO_PPFD
+        if (
+            self._plant.lux_to_ppfd is not None
+            and self._plant.lux_to_ppfd.native_value is not None
+        ):
+            try:
+                lux_to_ppfd = float(self._plant.lux_to_ppfd.native_value)
+            except (ValueError, TypeError):
+                _LOGGER.debug(
+                    "Lux-to-PPFD factor has non-numeric value: %s, using default %s",
+                    self._plant.lux_to_ppfd.native_value,
+                    DEFAULT_LUX_TO_PPFD,
+                )
+        return numeric_value * lux_to_ppfd / 1000000
+
+    async def async_update(self) -> None:
+        """Run on every update to allow for changes from the GUI and service call"""
+        if self.external_sensor != self._plant.sensor_illuminance.entity_id:
+            self.replace_external_sensor(self._plant.sensor_illuminance.entity_id)
+
+        self._source_is_ppfd = self._is_ppfd_source()
+
+        if not self.external_sensor:
+            _LOGGER.debug(
+                "PPFD source removed for %s, clearing state",
+                self.entity_id,
+            )
+            self._attr_native_value = None
+            self._restored_value_active = False
+            return
+
+        external_sensor = self.hass.states.get(self.external_sensor)
+
+        if external_sensor is not None and external_sensor.state not in (
+            STATE_UNKNOWN,
+            STATE_UNAVAILABLE,
+        ):
+            value = self.ppfd(external_sensor.state)
+            if value is not None:
+                self._attr_native_value = value
+                self._restored_value_active = False
+                return
+
+            _LOGGER.debug(
+                "PPFD source has invalid value for %s; clearing state",
+                self.entity_id,
+            )
+            self._attr_native_value = None
+            self._restored_value_active = False
+            self.async_write_ha_state()
+            return
+
+        if self._restored_value_active:
+            _LOGGER.debug(
+                "PPFD source %s unavailable for %s during startup restore "
+                "window; keeping restored value",
+                self.external_sensor,
+                self.entity_id,
+            )
+            return
+
+        _LOGGER.debug(
+            "PPFD source unavailable for %s; clearing state",
+            self.entity_id,
+        )
+        self._attr_native_value = None
+        self._restored_value_active = False
+
+    @callback
+    def state_changed(self, entity_id: str | None, new_state: State | None) -> None:
+        """Handle state changes from GUI and service calls."""
+        if not self.hass.states.get(self.entity_id):
+            return
+
+        # Ignore our own state writes; only react to source-sensor changes
+        # (mirrors PlantCurrentStatus). Without this, the entity's own
+        # "unavailable" write during startup would clear the restored value.
+        if entity_id == self.entity_id:
+            return
+
+        if self._external_sensor != self._plant.sensor_illuminance.entity_id:
+            self.replace_external_sensor(self._plant.sensor_illuminance.entity_id)
+
+        self._source_is_ppfd = self._is_ppfd_source()
+
+        if new_state is None or new_state.state in (STATE_UNKNOWN, STATE_UNAVAILABLE):
+            if self._restored_value_active and new_state is not None:
+                _LOGGER.debug(
+                    "PPFD source %s unavailable for %s during startup restore "
+                    "window; keeping restored value",
+                    self.external_sensor,
+                    self.entity_id,
+                )
+                return
+            _LOGGER.debug(
+                "PPFD source unavailable for %s; clearing state",
+                self.entity_id,
+            )
+            self._attr_native_value = None
+            self._restored_value_active = False
+            self.async_write_ha_state()
+            return
+
+        if not self.external_sensor:
+            _LOGGER.debug(
+                "PPFD source removed for %s, clearing state",
+                self.entity_id,
+            )
+            self._attr_native_value = None
+            self._restored_value_active = False
+            self.async_write_ha_state()
+            return
+
+        external_sensor = self.hass.states.get(self.external_sensor)
+
+        if external_sensor is not None and external_sensor.state not in (
+            STATE_UNKNOWN,
+            STATE_UNAVAILABLE,
+        ):
+            value = self.ppfd(new_state.state)
+            if value is not None:
+                self._attr_native_value = value
+                self._restored_value_active = False
+                self.async_write_ha_state()
+                return
+
+            _LOGGER.debug(
+                "PPFD source has invalid value for %s; clearing state",
+                self.entity_id,
+            )
+            self._attr_native_value = None
+            self._restored_value_active = False
+            self.async_write_ha_state()
+            return
+        _LOGGER.debug(
+            "PPFD source unavailable for %s; clearing state",
+            self.entity_id,
+        )
+        self._attr_native_value = None
+        self._restored_value_active = False
+        self.async_write_ha_state()
+
+
+class PlantTotalLightIntegral(IntegrationSensor):
+    """Entity class to calculate PPFD from LX"""
+
+    _attr_has_entity_name = True
+    _attr_entity_category = EntityCategory.DIAGNOSTIC
+    _attr_entity_registry_visible_default = False
+    _attr_icon = ICON_DLI
+    _attr_translation_key = TRANSLATION_KEY_TOTAL_LIGHT_INTEGRAL
+
+    def __init__(
+        self,
+        hass: HomeAssistant,
+        config: ConfigEntry,
+        illuminance_ppfd_sensor: Entity,
+        plantdevice: Entity,
+    ) -> None:
+        """Initialize the sensor"""
+        self._plant = plantdevice
+        # Store the source sensor's unique_id for tracking entity_id changes
+        self._source_unique_id = illuminance_ppfd_sensor.unique_id
+        self._state_change_unsub = None
+        self._state_report_unsub = None
+        integration_kwargs = {
+            "integration_method": METHOD_TRAPEZOIDAL,
+            "name": f"Total {READING_PPFD} Integral",
+            # The DLI meter reads this sensor's rounded state, so the rounding
+            # step is its resolution floor -- at 2 digits a dim plant loses a
+            # whole 0.01 mol/m² off its daily total.
+            "round_digits": 4,
+            "source_entity": illuminance_ppfd_sensor.entity_id,
+            "unique_id": f"{config.entry_id}-ppfd-integral",
+            "unit_prefix": None,
+            "unit_time": UnitOfTime.SECONDS,
+            "max_sub_interval": None,
+        }
+        if _INTEGRATION_SENSOR_ACCEPTS_HASS:
+            integration_kwargs["hass"] = hass
+        if _INTEGRATION_SENSOR_TAKES_DEVICE_CLASS:
+            integration_kwargs["device_class"] = None
+        super().__init__(**integration_kwargs)
+        ent_reg = er_async_get(hass)
+        if (
+            registered_entity_id := ent_reg.async_get_entity_id(
+                SENSOR_DOMAIN, DOMAIN, f'{config.entry_id}-ppfd-integral'
+            )
+        ):
+            self.entity_id = registered_entity_id
+
+    @property
+    def device_info(self) -> DeviceInfo:
+        """Device info for devices"""
+        return DeviceInfo(
+            identifiers={(DOMAIN, self._plant.unique_id)},
+            name=self._plant.name,
+        )
+
+    def _calculate_unit(self, source_unit: str) -> str:
+        """Override unit calculation to return the correct integrated unit.
+
+        The parent IntegrationSensor tries to derive the unit by appending
+        the time unit to the source unit (e.g., "mol/s⋅m²" + "s" = "mol/s⋅m²s").
+        We override this to return mol/m² (the seconds cancel out when
+        integrating mol/s⋅m² over time).
+        """
+        return UNIT_TOTAL_LIGHT_INTEGRAL
+
+
+class PlantDailyLightIntegral(UtilityMeterSensor):
+    """Entity class to calculate Daily Light Integral from PPFD"""
+
+    _attr_has_entity_name = True
+    # Custom device class for DLI (no official HA device class)
+    _attr_device_class = ATTR_DLI
+    _attr_icon = ICON_DLI
+    _attr_suggested_display_precision = 2
+    _attr_translation_key = TRANSLATION_KEY_DLI
+
+    def __init__(
+        self,
+        hass: HomeAssistant,
+        config: ConfigEntry,
+        illuminance_integration_sensor: Entity,
+        plantdevice: Entity,
+    ) -> None:
+        """Initialize the sensor"""
+        self._plant = plantdevice
+        # Store the source sensor's unique_id for tracking entity_id changes
+        self._source_unique_id = illuminance_integration_sensor.unique_id
+
+        utility_meter_kwargs = {
+            "cron_pattern": None,
+            "delta_values": None,
+            "meter_offset": timedelta(seconds=0),
+            "meter_type": DAILY,
+            "name": READING_DLI,
+            "net_consumption": None,
+            "parent_meter": config.entry_id,
+            "source_entity": illuminance_integration_sensor.entity_id,
+            "tariff_entity": None,
+            "tariff": None,
+            "unique_id": f"{config.entry_id}-dli",
+            "sensor_always_available": True,
+            "suggested_entity_id": None,
+            "periodically_resetting": True,
+        }
+        if _UTILITY_METER_SENSOR_ACCEPTS_HASS:
+            utility_meter_kwargs["hass"] = hass
+        super().__init__(**utility_meter_kwargs)
+        ent_reg = er_async_get(hass)
+        if (
+            registered_entity_id := ent_reg.async_get_entity_id(
+                SENSOR_DOMAIN, DOMAIN, f'{config.entry_id}-dli'
+            )
+        ):
+            self.entity_id = registered_entity_id
+
+    @property
+    def native_unit_of_measurement(self) -> str:
+        """Return the unit of measurement.
+
+        Override the parent class which copies the unit from the source sensor.
+        The UtilityMeterSensor sets _attr_native_unit_of_measurement from the
+        source sensor on every state change, so we must override the property
+        to always return the correct DLI unit.
+        """
+        return UNIT_DLI
+
+    @property
+    def device_info(self) -> DeviceInfo:
+        """Device info for devices"""
+        return DeviceInfo(
+            identifiers={(DOMAIN, self._plant.unique_id)},
+            name=self._plant.name,
+        )
+
+
+class PlantDailyLightIntegral24h(StatisticsSensor):
+    """Entity class to calculate rolling 24-hour Daily Light Integral.
+
+    Unlike PlantDailyLightIntegral which resets at midnight, this sensor
+    provides a rolling 24-hour window showing the total light accumulated
+    in the last 24 hours from any point in time.
+    """
+
+    _attr_has_entity_name = True
+    _attr_entity_category = EntityCategory.DIAGNOSTIC
+    _attr_entity_registry_visible_default = False
+    _attr_device_class = ATTR_DLI
+    _attr_icon = ICON_DLI
+    _attr_suggested_display_precision = 2
+    _attr_translation_key = TRANSLATION_KEY_DLI_24H
+
+    def __init__(
+        self,
+        hass: HomeAssistant,
+        config: ConfigEntry,
+        illuminance_integration_sensor: Entity,
+        plantdevice: Entity,
+    ) -> None:
+        """Initialize the sensor."""
+        self._plant = plantdevice
+        self._source_unique_id = illuminance_integration_sensor.unique_id
+
+        statistics_kwargs = {
+            "source_entity_id": illuminance_integration_sensor.entity_id,
+            "name": f"{READING_DLI} 24h",
+            "unique_id": f"{config.entry_id}-dli-24h",
+            "state_characteristic": "change",
+            "samples_max_buffer_size": None,  # Unlimited, driven by max_age
+            "samples_max_age": timedelta(hours=24),
+            "samples_keep_last": True,
+            "precision": 2,
+            "percentile": 50,  # Not used for "change" characteristic
+        }
+        if _STATISTICS_SENSOR_ACCEPTS_HASS:
+            statistics_kwargs["hass"] = hass
+        super().__init__(**statistics_kwargs)
+        ent_reg = er_async_get(hass)
+        if (
+            registered_entity_id := ent_reg.async_get_entity_id(
+                SENSOR_DOMAIN, DOMAIN, f'{config.entry_id}-dli-24h'
+            )
+        ):
+            self.entity_id = registered_entity_id
+
+    @property
+    def native_unit_of_measurement(self) -> str:
+        """Return the unit of measurement.
+
+        Override to return DLI unit instead of the source sensor's unit.
+        """
+        return UNIT_DLI
+
+    @property
+    def device_info(self) -> DeviceInfo:
+        """Device info for devices."""
+        return DeviceInfo(
+            identifiers={(DOMAIN, self._plant.unique_id)},
+            name=self._plant.name,
+        )
+
+    async def async_will_remove_from_hass(self) -> None:
+        """Cancel the scheduled purge/update timer on removal.
+
+        HA's StatisticsSensor schedules its purge/update timer via
+        async_track_point_in_utc_time but, unlike its state listeners, never
+        registers it with async_on_remove. Once a sample has been ingested the
+        timer outlives the entity and is flagged as a lingering timer. Cancel
+        it explicitly here.
+
+        ``_async_cancel_update_listener`` is a private StatisticsSensor API, so
+        guard the call: a future HA rename must not break entity unload/reload.
+        If it ever goes missing the lingering-timer regression would resurface
+        and be caught by the test suite in CI rather than at a user's teardown.
+        """
+        await super().async_will_remove_from_hass()
+        cancel_update_listener = getattr(self, "_async_cancel_update_listener", None)
+        if cancel_update_listener is not None:
+            cancel_update_listener()
+
+    @callback
+    def async_entity_id_changed(self, old_entity_id: str) -> None:
+        """Take entity_id changes in place (HA 2026.11+).
+
+        A rename of a plant entity reloads the plant, which resubscribes
+        everything under the new entity_id (see async_setup_entry).
+        """
+        if (parent := getattr(super(), "async_entity_id_changed", None)) is not None:
+            parent(old_entity_id)
+
+
+class PlantDummyStatus(SensorEntity):
+    """Simple dummy sensors. Parent class"""
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the dummy sensor."""
+        self._config = config
+        self._default_state = STATE_UNKNOWN
+        self.entity_id = async_generate_entity_id(
+            f"{SENSOR_DOMAIN}.{{}}", self.name, current_ids={}
+        )
+        self._plant = plantdevice
+
+        if self._attr_native_value is None or self._attr_native_value == STATE_UNKNOWN:
+            self._attr_native_value = self._default_state
+
+
+class PlantDummyIlluminance(PlantDummyStatus):
+    """Dummy sensor"""
+
+    _attr_device_class = SensorDeviceClass.ILLUMINANCE
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Init the dummy sensor"""
+        self._attr_name = (
+            f"Dummy {config.data[FLOW_PLANT_INFO][ATTR_NAME]} {READING_ILLUMINANCE}"
+        )
+        self._attr_unique_id = f"{config.entry_id}-dummy-illuminance"
+        self._attr_icon = ICON_ILLUMINANCE
+        self._attr_native_unit_of_measurement = LIGHT_LUX
+        self._attr_native_value = random.randint(20, 50) * 1000
+
+        super().__init__(hass, config, plantdevice)
+
+    async def async_update(self) -> None:
+        """Give out a dummy value"""
+        if datetime.now().hour < 5:
+            self._attr_native_value = random.randint(1, 10) * 100
+        elif datetime.now().hour < 15:
+            self._attr_native_value = random.randint(20, 50) * 1000
+        else:
+            self._attr_native_value = random.randint(1, 10) * 100
+
+
+class PlantDummyConductivity(PlantDummyStatus):
+    """Dummy sensor"""
+
+    _attr_device_class = ATTR_CONDUCTIVITY
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Init the dummy sensor"""
+        self._attr_name = (
+            f"Dummy {config.data[FLOW_PLANT_INFO][ATTR_NAME]} {READING_CONDUCTIVITY}"
+        )
+        self._attr_unique_id = f"{config.entry_id}-dummy-conductivity"
+        self._attr_icon = ICON_CONDUCTIVITY
+        self._attr_native_unit_of_measurement = UnitOfConductivity.MICROSIEMENS_PER_CM
+        self._attr_native_value = random.randint(40, 200) * 10
+
+        super().__init__(hass, config, plantdevice)
+
+    async def async_update(self) -> None:
+        """Give out a dummy value"""
+        self._attr_native_value = random.randint(40, 200) * 10
+
+
+class PlantDummyMoisture(PlantDummyStatus):
+    """Dummy sensor"""
+
+    _attr_device_class = ATTR_MOISTURE
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Init the dummy sensor"""
+        self._attr_name = (
+            f"Dummy {config.data[FLOW_PLANT_INFO][ATTR_NAME]} {READING_MOISTURE}"
+        )
+        self._attr_unique_id = f"{config.entry_id}-dummy-moisture"
+        self._attr_icon = ICON_MOISTURE
+        self._attr_native_unit_of_measurement = PERCENTAGE
+        self._attr_native_value = random.randint(10, 70)
+
+        super().__init__(hass, config, plantdevice)
+
+    async def async_update(self) -> None:
+        """Give out a dummy value"""
+        self._attr_native_value = random.randint(10, 70)
+
+
+class PlantDummyTemperature(PlantDummyStatus):
+    """Dummy sensor"""
+
+    _attr_device_class = SensorDeviceClass.TEMPERATURE
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Init the dummy sensor"""
+
+        self._attr_name = (
+            f"Dummy {config.data[FLOW_PLANT_INFO][ATTR_NAME]} {READING_TEMPERATURE}"
+        )
+        self._attr_unique_id = f"{config.entry_id}-dummy-temperature"
+        self._attr_icon = ICON_TEMPERATURE
+        self._attr_native_unit_of_measurement = UnitOfTemperature.CELSIUS
+        self._attr_native_value = random.randint(15, 20)
+
+        super().__init__(hass, config, plantdevice)
+
+    async def async_update(self) -> None:
+        """Give out a dummy value"""
+        self._attr_native_value = random.randint(15, 20)
+
+
+class PlantDummyHumidity(PlantDummyStatus):
+    """Dummy sensor"""
+
+    _attr_device_class = SensorDeviceClass.HUMIDITY
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Init the dummy sensor"""
+        self._attr_name = (
+            f"Dummy {config.data[FLOW_PLANT_INFO][ATTR_NAME]} {READING_HUMIDITY}"
+        )
+        self._attr_unique_id = f"{config.entry_id}-dummy-humidity"
+        self._attr_icon = ICON_HUMIDITY
+        self._attr_native_unit_of_measurement = PERCENTAGE
+        super().__init__(hass, config, plantdevice)
+        self._attr_native_value = random.randint(25, 90)
+
+    async def async_update(self) -> None:
+        """Give out a dummy value"""
+        test = random.randint(0, 100)
+        if test > 50:
+            self._attr_native_value = random.randint(25, 90)

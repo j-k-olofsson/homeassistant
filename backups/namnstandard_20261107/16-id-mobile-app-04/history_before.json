@@ -1,0 +1,510 @@
+{
+  "sensor.sm_g986b_battery_state_2": [
+    {
+      "state": "discharging",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:56.856960+00:00",
+      "last_updated": "2026-11-07T07:51:56.856960+00:00"
+    }
+  ],
+  "sensor.sm_g986b_charger_type_2": [
+    {
+      "state": "none",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:56.856960+00:00",
+      "last_updated": "2026-11-07T07:51:56.856960+00:00"
+    }
+  ],
+  "sensor.sm_s936b_battery_level": [
+    {
+      "state": "95",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:56.856960+00:00",
+      "last_updated": "2026-11-07T07:51:56.856960+00:00"
+    }
+  ],
+  "sensor.sm_s936b_battery_state": [
+    {
+      "state": "discharging",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:56.856960+00:00",
+      "last_updated": "2026-11-07T07:51:56.856960+00:00"
+    }
+  ],
+  "sensor.sm_s936b_charger_type": [
+    {
+      "state": "none",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:56.856960+00:00",
+      "last_updated": "2026-11-07T07:51:56.856960+00:00"
+    }
+  ],
+  "notify.sm_g930f": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:56.856960+00:00",
+      "last_updated": "2026-11-07T07:51:56.856960+00:00"
+    }
+  ],
+  "notify.galaxy_tab_2_hallen": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:56.856960+00:00",
+      "last_updated": "2026-11-07T07:51:56.856960+00:00"
+    }
+  ],
+  "notify.sm_t835": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:56.856960+00:00",
+      "last_updated": "2026-11-07T07:51:56.856960+00:00"
+    }
+  ],
+  "notify.nspanelpro": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:56.856960+00:00",
+      "last_updated": "2026-11-07T07:51:56.856960+00:00"
+    }
+  ],
+  "notify.sm_g965f": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:56.856960+00:00",
+      "last_updated": "2026-11-07T07:51:56.856960+00:00"
+    }
+  ],
+  "notify.mt_1011qr": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:56.856960+00:00",
+      "last_updated": "2026-11-07T07:51:56.856960+00:00"
+    }
+  ],
+  "notify.sm_t835_2": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:56.856960+00:00",
+      "last_updated": "2026-11-07T07:51:56.856960+00:00"
+    }
+  ],
+  "notify.sm_g986b": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:56.856960+00:00",
+      "last_updated": "2026-11-07T07:51:56.856960+00:00"
+    }
+  ],
+  "notify.pixel_9_pro_xl": [
+    {
+      "state": "2026-11-07T05:00:06.762016+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:56.856960+00:00",
+      "last_updated": "2026-11-07T07:51:56.856960+00:00"
+    },
+    {
+      "state": "2026-11-07T12:16:25.649195+00:00",
+      "last_changed": "2026-11-07T12:16:25.649307+00:00"
+    },
+    {
+      "state": "2026-11-08T01:00:07.864447+00:00",
+      "last_changed": "2026-11-08T01:00:07.864485+00:00"
+    },
+    {
+      "state": "2026-11-08T05:00:04.011842+00:00",
+      "last_changed": "2026-11-08T05:00:04.011945+00:00"
+    }
+  ],
+  "binary_sensor.ha_servern_pixel_9_pro_xl_android_auto": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:56.856960+00:00",
+      "last_updated": "2026-11-07T07:51:56.856960+00:00"
+    }
+  ],
+  "sensor.ha_servern_pixel_9_pro_xl_os_version": [
+    {
+      "state": "17",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:56.856960+00:00",
+      "last_updated": "2026-11-07T07:51:56.856960+00:00"
+    }
+  ],
+  "sensor.ha_servern_pixel_9_pro_xl_security_patch": [
+    {
+      "state": "2026-10-05",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:56.856960+00:00",
+      "last_updated": "2026-11-07T07:51:56.856960+00:00"
+    }
+  ],
+  "sensor.ha_servern_pixel_9_pro_xl_current_version": [
+    {
+      "state": "2026.10.1-full",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:56.856960+00:00",
+      "last_updated": "2026-11-07T07:51:56.856960+00:00"
+    }
+  ],
+  "binary_sensor.ha_servern_pixel_9_pro_xl_app_inactive": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:56.856960+00:00",
+      "last_updated": "2026-11-07T07:51:56.856960+00:00"
+    }
+  ],
+  "sensor.ha_servern_pixel_9_pro_xl_battery_level": [
+    {
+      "state": "63",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:56.856960+00:00",
+      "last_updated": "2026-11-07T07:51:56.856960+00:00"
+    },
+    {
+      "state": "61",
+      "last_changed": "2026-11-07T07:54:00.289550+00:00"
+    },
+    {
+      "state": "58",
+      "last_changed": "2026-11-07T08:26:57.909511+00:00"
+    },
+    {
+      "state": "57",
+      "last_changed": "2026-11-07T08:48:01.246015+00:00"
+    },
+    {
+      "state": "55",
+      "last_changed": "2026-11-07T09:03:30.160292+00:00"
+    },
+    {
+      "state": "54",
+      "last_changed": "2026-11-07T09:19:04.083964+00:00"
+    },
+    {
+      "state": "52",
+      "last_changed": "2026-11-07T09:34:59.582421+00:00"
+    },
+    {
+      "state": "57",
+      "last_changed": "2026-11-07T10:09:18.404144+00:00"
+    },
+    {
+      "state": "65",
+      "last_changed": "2026-11-07T10:24:58.828049+00:00"
+    },
+    {
+      "state": "67",
+      "last_changed": "2026-11-07T10:41:43.088446+00:00"
+    },
+    {
+      "state": "69",
+      "last_changed": "2026-11-07T10:58:10.734389+00:00"
+    },
+    {
+      "state": "77",
+      "last_changed": "2026-11-07T11:13:36.270077+00:00"
+    },
+    {
+      "state": "84",
+      "last_changed": "2026-11-07T11:28:56.778540+00:00"
+    },
+    {
+      "state": "91",
+      "last_changed": "2026-11-07T11:44:32.368424+00:00"
+    },
+    {
+      "state": "93",
+      "last_changed": "2026-11-07T11:59:11.795157+00:00"
+    },
+    {
+      "state": "90",
+      "last_changed": "2026-11-07T12:19:38.477844+00:00"
+    },
+    {
+      "state": "88",
+      "last_changed": "2026-11-07T12:29:35.358448+00:00"
+    },
+    {
+      "state": "87",
+      "last_changed": "2026-11-07T12:44:00.705451+00:00"
+    },
+    {
+      "state": "86",
+      "last_changed": "2026-11-07T13:01:06.067000+00:00"
+    },
+    {
+      "state": "85",
+      "last_changed": "2026-11-07T13:40:28.939463+00:00"
+    },
+    {
+      "state": "84",
+      "last_changed": "2026-11-07T13:58:10.561080+00:00"
+    },
+    {
+      "state": "81",
+      "last_changed": "2026-11-07T14:20:31.876825+00:00"
+    },
+    {
+      "state": "79",
+      "last_changed": "2026-11-07T15:05:39.296605+00:00"
+    },
+    {
+      "state": "78",
+      "last_changed": "2026-11-07T15:24:20.962770+00:00"
+    },
+    {
+      "state": "77",
+      "last_changed": "2026-11-07T16:00:19.233833+00:00"
+    },
+    {
+      "state": "75",
+      "last_changed": "2026-11-07T16:32:25.370419+00:00"
+    },
+    {
+      "state": "74",
+      "last_changed": "2026-11-07T17:02:45.726708+00:00"
+    },
+    {
+      "state": "73",
+      "last_changed": "2026-11-07T17:18:46.900117+00:00"
+    },
+    {
+      "state": "72",
+      "last_changed": "2026-11-07T17:45:14.491383+00:00"
+    },
+    {
+      "state": "71",
+      "last_changed": "2026-11-07T18:16:59.701869+00:00"
+    },
+    {
+      "state": "69",
+      "last_changed": "2026-11-07T18:32:20.999679+00:00"
+    },
+    {
+      "state": "68",
+      "last_changed": "2026-11-07T18:49:22.823963+00:00"
+    },
+    {
+      "state": "66",
+      "last_changed": "2026-11-07T19:36:47.475697+00:00"
+    },
+    {
+      "state": "64",
+      "last_changed": "2026-11-07T20:13:41.678018+00:00"
+    },
+    {
+      "state": "66",
+      "last_changed": "2026-11-07T20:37:14.640318+00:00"
+    },
+    {
+      "state": "65",
+      "last_changed": "2026-11-07T20:44:56.600618+00:00"
+    },
+    {
+      "state": "62",
+      "last_changed": "2026-11-07T20:58:32.074658+00:00"
+    },
+    {
+      "state": "60",
+      "last_changed": "2026-11-07T21:16:38.815730+00:00"
+    },
+    {
+      "state": "55",
+      "last_changed": "2026-11-07T21:31:59.250540+00:00"
+    },
+    {
+      "state": "51",
+      "last_changed": "2026-11-07T21:47:44.246845+00:00"
+    },
+    {
+      "state": "50",
+      "last_changed": "2026-11-07T22:43:26.482374+00:00"
+    },
+    {
+      "state": "49",
+      "last_changed": "2026-11-07T23:13:22.959018+00:00"
+    },
+    {
+      "state": "48",
+      "last_changed": "2026-11-07T23:49:10.057157+00:00"
+    },
+    {
+      "state": "47",
+      "last_changed": "2026-11-08T00:16:10.458932+00:00"
+    },
+    {
+      "state": "46",
+      "last_changed": "2026-11-08T00:44:22.740650+00:00"
+    },
+    {
+      "state": "45",
+      "last_changed": "2026-11-08T01:01:30.101140+00:00"
+    },
+    {
+      "state": "44",
+      "last_changed": "2026-11-08T01:33:40.298215+00:00"
+    },
+    {
+      "state": "43",
+      "last_changed": "2026-11-08T02:06:43.235028+00:00"
+    },
+    {
+      "state": "42",
+      "last_changed": "2026-11-08T02:43:17.395742+00:00"
+    },
+    {
+      "state": "41",
+      "last_changed": "2026-11-08T03:11:40.004797+00:00"
+    },
+    {
+      "state": "40",
+      "last_changed": "2026-11-08T03:57:22.984052+00:00"
+    },
+    {
+      "state": "39",
+      "last_changed": "2026-11-08T04:22:42.364542+00:00"
+    },
+    {
+      "state": "38",
+      "last_changed": "2026-11-08T04:45:38.892672+00:00"
+    },
+    {
+      "state": "37",
+      "last_changed": "2026-11-08T05:17:31.709089+00:00"
+    },
+    {
+      "state": "39",
+      "last_changed": "2026-11-08T05:21:58.541052+00:00"
+    },
+    {
+      "state": "45",
+      "last_changed": "2026-11-08T05:37:52.315405+00:00"
+    },
+    {
+      "state": "51",
+      "last_changed": "2026-11-08T05:54:02.486773+00:00"
+    },
+    {
+      "state": "57",
+      "last_changed": "2026-11-08T06:09:30.155759+00:00"
+    },
+    {
+      "state": "63",
+      "last_changed": "2026-11-08T06:25:18.913194+00:00"
+    },
+    {
+      "state": "69",
+      "last_changed": "2026-11-08T06:39:34.276258+00:00"
+    },
+    {
+      "state": "70",
+      "last_changed": "2026-11-08T06:42:03.388469+00:00"
+    },
+    {
+      "state": "75",
+      "last_changed": "2026-11-08T06:57:58.635673+00:00"
+    },
+    {
+      "state": "81",
+      "last_changed": "2026-11-08T07:13:57.346578+00:00"
+    },
+    {
+      "state": "88",
+      "last_changed": "2026-11-08T07:31:15.853783+00:00"
+    },
+    {
+      "state": "92",
+      "last_changed": "2026-11-08T07:46:36.349497+00:00"
+    }
+  ],
+  "sensor.ha_servern_pixel_9_pro_xl_battery_state": [
+    {
+      "state": "discharging",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:56.856960+00:00",
+      "last_updated": "2026-11-07T07:51:56.856960+00:00"
+    },
+    {
+      "state": "charging",
+      "last_changed": "2026-11-07T10:09:18.407524+00:00"
+    },
+    {
+      "state": "discharging",
+      "last_changed": "2026-11-07T10:41:43.089452+00:00"
+    },
+    {
+      "state": "charging",
+      "last_changed": "2026-11-07T10:58:10.737736+00:00"
+    },
+    {
+      "state": "discharging",
+      "last_changed": "2026-11-07T11:59:11.797981+00:00"
+    },
+    {
+      "state": "charging",
+      "last_changed": "2026-11-07T20:29:52.759882+00:00"
+    },
+    {
+      "state": "discharging",
+      "last_changed": "2026-11-07T20:37:14.642549+00:00"
+    },
+    {
+      "state": "charging",
+      "last_changed": "2026-11-08T05:17:54.760341+00:00"
+    }
+  ],
+  "sensor.ha_servern_pixel_9_pro_xl_charger_type": [
+    {
+      "state": "none",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:56.856960+00:00",
+      "last_updated": "2026-11-07T07:51:56.856960+00:00"
+    },
+    {
+      "state": "ac",
+      "last_changed": "2026-11-07T10:09:18.407645+00:00"
+    },
+    {
+      "state": "none",
+      "last_changed": "2026-11-07T10:41:43.089565+00:00"
+    },
+    {
+      "state": "ac",
+      "last_changed": "2026-11-07T10:58:10.738087+00:00"
+    },
+    {
+      "state": "none",
+      "last_changed": "2026-11-07T11:59:11.798282+00:00"
+    },
+    {
+      "state": "ac",
+      "last_changed": "2026-11-07T20:29:52.760357+00:00"
+    },
+    {
+      "state": "none",
+      "last_changed": "2026-11-07T20:37:14.642870+00:00"
+    },
+    {
+      "state": "ac",
+      "last_changed": "2026-11-08T05:17:54.762054+00:00"
+    }
+  ],
+  "sensor.ha_servern_pixel_9_pro_xl_battery_health": [
+    {
+      "state": "good",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:56.856960+00:00",
+      "last_updated": "2026-11-07T07:51:56.856960+00:00"
+    }
+  ]
+}

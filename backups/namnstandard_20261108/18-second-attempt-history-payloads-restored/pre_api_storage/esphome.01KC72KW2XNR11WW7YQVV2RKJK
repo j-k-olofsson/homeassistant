@@ -1,0 +1,237 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.01KC72KW2XNR11WW7YQVV2RKJK",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "esphome32",
+      "friendly_name": "Blomlampa (Shelly Plus RGBW PM)",
+      "mac_address": "2C:BC:BB:C1:87:2C",
+      "compilation_time": "2026-11-06 09:44:01 +0100",
+      "model": "esp32dev",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2026.10.2",
+      "project_name": "",
+      "project_version": "",
+      "webserver_port": 80,
+      "legacy_voice_assistant_version": 0,
+      "voice_assistant_feature_flags": 0,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0,
+      "zwave_proxy_feature_flags": 0,
+      "zwave_home_id": 0,
+      "suggested_area": "",
+      "bluetooth_mac_address": "",
+      "api_encryption_supported": true,
+      "api_encryption_provisionable": false,
+      "api_outgoing_connection_supported": true,
+      "devices": [],
+      "areas": [],
+      "area": {
+        "area_id": 0,
+        "name": ""
+      },
+      "serial_proxies": []
+    },
+    "services": [],
+    "api_version": {
+      "major": 1,
+      "minor": 19
+    },
+    "device_capabilities": {
+      "bluetooth_proxy": {
+        "feature_flags": 0,
+        "mac_address": ""
+      },
+      "voice_assistant": {
+        "feature_flags": 0
+      },
+      "zwave_proxy": {
+        "feature_flags": 0,
+        "home_id": 0
+      },
+      "serial_proxies": [],
+      "wizard": {
+        "configured": false
+      },
+      "sendspin": {
+        "feature_flags": 0,
+        "client_id": ""
+      },
+      "store_yaml": {
+        "supported": false
+      }
+    },
+    "sensor": [
+      {
+        "object_id": "esphome32_temperature",
+        "key": 860116734,
+        "name": "esphome32 Temperature",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "temperature",
+        "unit_of_measurement": "°C",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome32_voltage",
+        "key": 3711237298,
+        "name": "esphome32 Voltage",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "voltage",
+        "unit_of_measurement": "V",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome32_current",
+        "key": 72196167,
+        "name": "esphome32 Current",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "current",
+        "unit_of_measurement": "A",
+        "accuracy_decimals": 2,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome32_power",
+        "key": 382560195,
+        "name": "esphome32 Power",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "power",
+        "unit_of_measurement": "W",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome32_energy",
+        "key": 383997532,
+        "name": "esphome32 Energy",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "energy",
+        "unit_of_measurement": "Wh",
+        "accuracy_decimals": 2,
+        "force_update": false,
+        "state_class": 2,
+        "legacy_last_reset_type": 0
+      }
+    ],
+    "text_sensor": [],
+    "update": [],
+    "light": [
+      {
+        "object_id": "esphome32_growlight",
+        "key": 1260396807,
+        "name": "esphome32 Growlight",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "supported_color_modes": [
+          39
+        ],
+        "min_mireds": 0.0,
+        "max_mireds": 0.0,
+        "effects": [],
+        "legacy_supports_brightness": false,
+        "legacy_supports_rgb": false,
+        "legacy_supports_white_value": false,
+        "legacy_supports_color_temperature": false
+      }
+    ],
+    "button": [
+      {
+        "object_id": "esphome32_apply_growlight_scene",
+        "key": 301830071,
+        "name": "esphome32 Apply Growlight Scene",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 1,
+        "device_id": 0,
+        "device_class": ""
+      }
+    ],
+    "binary_sensor": [
+      {
+        "object_id": "status",
+        "key": 939730931,
+        "name": "Status",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_id": 0,
+        "device_class": "connectivity",
+        "is_status_binary_sensor": true
+      },
+      {
+        "object_id": "esphome32_input_1",
+        "key": 903960432,
+        "name": "esphome32 Input 1",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "",
+        "is_status_binary_sensor": false
+      },
+      {
+        "object_id": "esphome32_input_2",
+        "key": 903960435,
+        "name": "esphome32 Input 2",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "",
+        "is_status_binary_sensor": false
+      },
+      {
+        "object_id": "esphome32_input_3",
+        "key": 903960434,
+        "name": "esphome32 Input 3",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "",
+        "is_status_binary_sensor": false
+      },
+      {
+        "object_id": "esphome32_input_4",
+        "key": 903960437,
+        "name": "esphome32 Input 4",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "",
+        "is_status_binary_sensor": false
+      }
+    ]
+  }
+}

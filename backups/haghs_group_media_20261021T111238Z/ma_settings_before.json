@@ -1,0 +1,1695 @@
+{
+  "server_id": "2e331b122f344e3f98949836514925a9",
+  "providers": {
+    "lrclib": {
+      "values": {},
+      "type": "metadata",
+      "domain": "lrclib",
+      "instance_id": "lrclib",
+      "enabled": true,
+      "name": "LRCLIB",
+      "last_error": null,
+      "default_name": "LRCLIB"
+    },
+    "fanarttv": {
+      "values": {},
+      "type": "metadata",
+      "domain": "fanarttv",
+      "instance_id": "fanarttv",
+      "enabled": true,
+      "name": "fanart.tv",
+      "last_error": null,
+      "default_name": "fanart.tv"
+    },
+    "builtin_player": {
+      "values": {},
+      "type": "player",
+      "domain": "builtin_player",
+      "instance_id": "builtin_player",
+      "enabled": true,
+      "name": "Music Assistant",
+      "last_error": null
+    },
+    "theaudiodb": {
+      "values": {},
+      "type": "metadata",
+      "domain": "theaudiodb",
+      "instance_id": "theaudiodb",
+      "enabled": true,
+      "name": "The Audio DB",
+      "last_error": null,
+      "default_name": "The Audio DB"
+    },
+    "builtin": {
+      "values": {
+        "random_tracks": false
+      },
+      "type": "music",
+      "domain": "builtin",
+      "instance_id": "builtin",
+      "enabled": true,
+      "name": "Music Assistant",
+      "default_name": "Music Assistant",
+      "last_error": null
+    },
+    "musicbrainz": {
+      "values": {},
+      "type": "metadata",
+      "domain": "musicbrainz",
+      "instance_id": "musicbrainz",
+      "enabled": true,
+      "name": "MusicBrainz",
+      "last_error": null,
+      "default_name": "MusicBrainz"
+    },
+    "spotify--FMAF5tEG": {
+      "values": {
+        "library_sync_album_tracks": true
+      },
+      "type": "music",
+      "domain": "spotify",
+      "instance_id": "spotify--FMAF5tEG",
+      "enabled": true,
+      "name": null,
+      "default_name": "Spotify",
+      "last_error": null,
+      "setup_data": {
+        "refresh_token_global": "_encrypted_gAAAAABq2IcxtVcL5SZcUNnx_idLYvsJcr1G8SLMa5hJwrjdsVMOVrul-CUF5buk2tIzIuuA8wwEHQ84Y5bKP6tl4-bXf3j8QuU6QehuuOpaHf8QHhLukM1-fwVRceELpyXhVmlMHrPkq-r5sLH9u0Erh83G38ZbeXNBVwGOIqL9_OoiC6R2PxLPuCaL0s60UyJPpglEn-bXxJz6HozxIUcZsU7YVnPsiKykIXTlmhpYDSitjv9Z4vjqwLR6bdppyBRbX69ILJuO",
+        "account_id": "_encrypted_gAAAAABqmnMuY0EFRChGlKMya9NywxLMTyv2dWutB8XWz7wPnab5WlrWrok3d_vd8DEjHcgtovfvmUjGnzUqe_VgWfXvOQ5gHQ==",
+        "librespot_credentials": "_encrypted_gAAAAABqmnMuc5h2JoNt-AsiHdGAGjZ3Yk2UuXvU4wukESdJ05aqCUaaO4IYIj4Ly5aCElcFXaclYTBEbkSkOBXnGjkx552ApPklnrTZUBstVazCnH2rSJyNXyD4OhX0CPRk0zb3rZq5lf0o-7_JVfdT7aJGFuPsdi53qw89hp7NLxcX04QYcwQJzWUeHiPx7wj8qzxGpKRw6YUHXBffFV6Gye8KywzryJN6HByWkrNkVFgqdpNE_eqB_IXrbHn7cSobTMNhIJcLoGrl9txpFaodzCvGmTvXy6-BxnP3ZCUkchxiDj60F7DfWX097C61g4KFob4cry9prJzQXf7VR-NqUOZSsV19HXWBknc5BNEZyPq8OO8z8X2UDHXT3sexLYTmgFltcN3CO5i1VGbVSCLLClZI7Qmyse3FCxxKPTSkaM0hBCld55EKpRdKFmanK6hxNLOz6OEhuNspuA4MB2GF1PxQ7K1gBDCURbPwCEb0sJPT8uoI2XrSn0AmGMn7pxTMmLIcpGl_",
+        "soloist_api_key": null,
+        "soloist_download_consent": false,
+        "soloist_session_dir": null,
+        "playback_backend": "_encrypted_gAAAAABqmnMumwn2OFxv17Ndkwf2Cfd89nEzWwUQM0IzXAiP3jWwuJhGjfxRqsrk3YNFgq431P3OfIAQUwEAA-X_KPNr2NLSJg==",
+        "client_id": null,
+        "refresh_token_dev": null
+      }
+    },
+    "chromecast": {
+      "values": {
+        "manual_discovery_ip_addresses": [
+          "192.168.10.208"
+        ]
+      },
+      "type": "player",
+      "domain": "chromecast",
+      "instance_id": "chromecast",
+      "enabled": true,
+      "name": null,
+      "default_name": "Chromecast",
+      "last_error": null,
+      "setup_data": {}
+    },
+    "hass": {
+      "values": {},
+      "type": "plugin",
+      "domain": "hass",
+      "instance_id": "hass",
+      "enabled": true,
+      "name": null,
+      "last_error": null,
+      "default_name": "Home Assistant"
+    },
+    "radiobrowser": {
+      "values": {},
+      "type": "music",
+      "domain": "radiobrowser",
+      "instance_id": "radiobrowser",
+      "enabled": true,
+      "name": null,
+      "last_error": null,
+      "default_name": "RadioBrowser"
+    },
+    "hass_players": {
+      "values": {
+        "players": [
+          "media_player.home_assistant_voice_096460_media_player"
+        ]
+      },
+      "type": "player",
+      "domain": "hass_players",
+      "instance_id": "hass_players",
+      "enabled": true,
+      "name": null,
+      "default_name": "Home Assistant MediaPlayers",
+      "last_error": null,
+      "setup_data": {}
+    },
+    "sendspin": {
+      "values": {},
+      "type": "player",
+      "domain": "sendspin",
+      "instance_id": "sendspin",
+      "enabled": true,
+      "name": "Sendspin",
+      "last_error": null,
+      "default_name": "Sendspin"
+    },
+    "sync_group": {
+      "values": {},
+      "type": "player",
+      "domain": "sync_group",
+      "instance_id": "sync_group",
+      "enabled": true,
+      "name": "Sync Group Player",
+      "default_name": "Sync Group Player",
+      "last_error": null,
+      "setup_data": {}
+    },
+    "universal_player": {
+      "values": {},
+      "type": "player",
+      "domain": "universal_player",
+      "instance_id": "universal_player",
+      "enabled": true,
+      "name": "Universal Player",
+      "default_name": "Universal Player",
+      "last_error": null
+    },
+    "airplay": {
+      "values": {
+        "password_markers_reviewed": true,
+        "compat_pins_reviewed": true
+      },
+      "type": "player",
+      "domain": "airplay",
+      "instance_id": "airplay",
+      "enabled": false,
+      "name": "AirPlay",
+      "default_name": "AirPlay",
+      "last_error": null,
+      "setup_data": {}
+    },
+    "party": {
+      "values": {},
+      "type": "plugin",
+      "domain": "party",
+      "instance_id": "party",
+      "enabled": true,
+      "name": "Party",
+      "default_name": "Party",
+      "last_error": null
+    },
+    "dlna": {
+      "values": {},
+      "type": "player",
+      "domain": "dlna",
+      "instance_id": "dlna",
+      "enabled": true,
+      "name": "DLNA",
+      "default_name": "DLNA",
+      "last_error": null,
+      "setup_data": {}
+    },
+    "coverartarchive": {
+      "values": {},
+      "type": "metadata",
+      "domain": "coverartarchive",
+      "instance_id": "coverartarchive",
+      "enabled": true,
+      "name": "Cover Art Archive",
+      "default_name": "Cover Art Archive",
+      "last_error": null
+    },
+    "itunes_artwork": {
+      "values": {},
+      "type": "metadata",
+      "domain": "itunes_artwork",
+      "instance_id": "itunes_artwork",
+      "enabled": true,
+      "name": "iTunes Artwork",
+      "default_name": "iTunes Artwork",
+      "last_error": null
+    },
+    "wikipedia": {
+      "values": {},
+      "type": "metadata",
+      "domain": "wikipedia",
+      "instance_id": "wikipedia",
+      "enabled": true,
+      "name": "Wikipedia",
+      "default_name": "Wikipedia",
+      "last_error": null
+    },
+    "loudness_analysis": {
+      "values": {},
+      "type": "audio_analysis",
+      "domain": "loudness_analysis",
+      "instance_id": "loudness_analysis",
+      "enabled": true,
+      "name": "Loudness Analysis",
+      "default_name": "Loudness Analysis",
+      "last_error": null
+    },
+    "lastfm_recommendations": {
+      "values": {},
+      "type": "metadata",
+      "domain": "lastfm_recommendations",
+      "instance_id": "lastfm_recommendations",
+      "enabled": true,
+      "name": "Last.fm",
+      "default_name": "Last.fm",
+      "last_error": null
+    },
+    "smart_fades": {
+      "values": {},
+      "type": "audio_analysis",
+      "domain": "smart_fades",
+      "instance_id": "smart_fades",
+      "enabled": true,
+      "name": "Smart Fades",
+      "default_name": "Smart Fades",
+      "last_error": null
+    },
+    "recommendations": {
+      "values": {},
+      "type": "plugin",
+      "domain": "recommendations",
+      "instance_id": "recommendations",
+      "enabled": true,
+      "name": "Library Recommendations",
+      "default_name": "Library Recommendations",
+      "last_error": null,
+      "setup_data": {}
+    },
+    "sendspin_source": {
+      "values": {},
+      "type": "plugin",
+      "domain": "sendspin_source",
+      "instance_id": "sendspin_source",
+      "enabled": true,
+      "name": "Sendspin Source",
+      "default_name": "Sendspin Source",
+      "last_error": null,
+      "setup_data": {}
+    },
+    "radio_playlist": {
+      "values": {},
+      "type": "plugin",
+      "domain": "radio_playlist",
+      "instance_id": "radio_playlist",
+      "enabled": true,
+      "name": "Endless Mix Playlists",
+      "default_name": "Endless Mix Playlists",
+      "last_error": null,
+      "setup_data": {}
+    },
+    "playlist_metadata": {
+      "values": {},
+      "type": "metadata",
+      "domain": "playlist_metadata",
+      "instance_id": "playlist_metadata",
+      "enabled": true,
+      "name": "Playlist Metadata",
+      "default_name": "Playlist Metadata",
+      "last_error": null,
+      "setup_data": {}
+    },
+    "ambient_sounds": {
+      "values": {},
+      "type": "music",
+      "domain": "ambient_sounds",
+      "instance_id": "ambient_sounds",
+      "enabled": true,
+      "name": "Ambient Sounds",
+      "default_name": "Ambient Sounds",
+      "last_error": null,
+      "setup_data": {}
+    },
+    "filesystem_local--d4bbESrb": {
+      "values": {},
+      "type": "music",
+      "domain": "filesystem_local",
+      "instance_id": "filesystem_local--d4bbESrb",
+      "enabled": true,
+      "name": null,
+      "default_name": "Filesystem (local disk)",
+      "last_error": null,
+      "setup_data": {
+        "content_type": "_encrypted_gAAAAABqnn8IVv3ywlZdm4F8-IBD9Rqcqj_EQavqD_qCY3tZj4ZzLdSuXsoAJbDwASZTKCcrlsrnYsQY-U41TsMle6P8I9zXOg==",
+        "path": "_encrypted_gAAAAABqnn8IqPzDpLQK-_EYR25zVL7VwxHjOuNGyFq2ZydC7vkn3c1wmQBINwIbEWnzar7JyNiB_oHi8KmUi9jlQVAPUJ5L_Q=="
+      }
+    }
+  },
+  "core": {
+    "metadata": {
+      "values": {
+        "language": "sv_SE"
+      },
+      "domain": "metadata",
+      "last_error": null
+    },
+    "discovery": {
+      "domain": "discovery",
+      "values": {}
+    },
+    "tasks": {
+      "scheduled_task_states": {
+        "fix_group_member_configs": {
+          "status": "success",
+          "last_run": "2026-10-19T04:00:00.002234+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-19T04:00:00.002795+00:00",
+          "updated_at": "2026-10-19T04:00:00.002894+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "weekly",
+            "enabled": true,
+            "days_of_week": [
+              0
+            ],
+            "hour": 4,
+            "minute": 0
+          },
+          "schedule_enabled": true
+        },
+        "cache_database_cleanup": {
+          "status": "success",
+          "last_run": "2026-10-21T03:00:00.002059+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-21T03:00:00.088780+00:00",
+          "updated_at": "2026-10-21T03:00:00.088798+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "daily",
+            "enabled": true,
+            "every": 1,
+            "hour": 3,
+            "minute": 0
+          },
+          "schedule_enabled": true
+        },
+        "music_database_cleanup": {
+          "status": "success",
+          "last_run": "2026-10-21T11:12:51.036923+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-21T11:12:51.074623+00:00",
+          "updated_at": "2026-10-21T11:12:51.074647+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "daily",
+            "enabled": true,
+            "every": 1,
+            "hour": 4,
+            "minute": 0
+          },
+          "schedule_enabled": true
+        },
+        "music_provider_mapping_correction": {
+          "status": "success",
+          "last_run": "2026-10-07T03:00:00.002776+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-07T03:00:00.003626+00:00",
+          "updated_at": "2026-10-18T14:08:17.222578+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "daily",
+            "enabled": true,
+            "every": 30,
+            "hour": 3,
+            "minute": 0
+          },
+          "schedule_enabled": true
+        },
+        "genre_mapping_scan": {
+          "status": "success",
+          "last_run": "2026-10-21T11:12:51.037514+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-21T11:12:51.096338+00:00",
+          "updated_at": "2026-10-21T11:12:51.096359+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "daily",
+            "enabled": true,
+            "every": 1,
+            "hour": 3,
+            "minute": 0
+          },
+          "schedule_enabled": true
+        },
+        "metadata_missing_artist_artwork_scan": {
+          "status": "partial_success",
+          "last_run": "2026-04-11T03:00:00.068749+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-04-11T03:03:58.678735+00:00",
+          "updated_at": "2026-04-11T03:03:58.678795+00:00",
+          "last_error": null,
+          "failure_count": 5,
+          "failure_messages": [
+            "Bengt Skogholt: Retries exhausted, failed after 5 attempts",
+            "Claes Af Geijerstam: Retries exhausted, failed after 5 attempts",
+            "Tomas Bolme: 525, message='<none>', url='https://musicbrainz-mirror.music-assistant.io/ws/2/url?resource=https://open.spotify.com/artist/7HjbJ8V87zrxkSzL1KieQk&inc=artist-rels&fmt=json'",
+            "Frank Serafine: 504, message='Gateway Timeout', url='https://musicbrainz-mirror.music-assistant.io/ws/2/url?resource=https://open.spotify.com/artist/78lkyogHcvnXGBeZqYLQGk&inc=artist-rels&fmt=json'",
+            "Getrud Stenung: 504, message='Gateway Timeout', url='https://musicbrainz-mirror.music-assistant.io/ws/2/url?resource=https://open.spotify.com/artist/6hJqsksPk1UfjIP44rPokn&inc=artist-rels&fmt=json'"
+          ],
+          "schedule": {
+            "type": "daily",
+            "enabled": true,
+            "every": 1,
+            "hour": 3,
+            "minute": 0
+          },
+          "schedule_enabled": true
+        },
+        "music_sync_builtin_track": {
+          "status": "success",
+          "last_run": "2026-10-21T11:12:50.882606+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-21T11:12:50.888231+00:00",
+          "updated_at": "2026-10-21T11:12:50.888257+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "hourly",
+            "enabled": true,
+            "every": 3
+          },
+          "schedule_enabled": true
+        },
+        "music_sync_builtin_playlist": {
+          "status": "success",
+          "last_run": "2026-10-21T11:12:51.016811+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-21T11:12:51.034386+00:00",
+          "updated_at": "2026-10-21T11:12:51.034405+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "hourly",
+            "enabled": true,
+            "every": 3
+          },
+          "schedule_enabled": true
+        },
+        "music_sync_builtin_radio": {
+          "status": "success",
+          "last_run": "2026-10-21T11:12:51.017699+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-21T11:12:51.036256+00:00",
+          "updated_at": "2026-10-21T11:12:51.036274+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "hourly",
+            "enabled": true,
+            "every": 3
+          },
+          "schedule_enabled": true
+        },
+        "music_sync_spotify--FMAF5tEG_artist": {
+          "status": "success",
+          "last_run": "2026-10-21T09:34:41.766249+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-21T09:34:42.113536+00:00",
+          "updated_at": "2026-10-21T09:34:42.113550+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "hourly",
+            "enabled": true,
+            "every": 12
+          },
+          "schedule_enabled": true
+        },
+        "music_sync_spotify--FMAF5tEG_album": {
+          "status": "success",
+          "last_run": "2026-10-21T09:34:41.770845+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-21T09:34:44.108055+00:00",
+          "updated_at": "2026-10-21T09:34:44.108067+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "hourly",
+            "enabled": true,
+            "every": 12
+          },
+          "schedule_enabled": true
+        },
+        "music_sync_spotify--FMAF5tEG_track": {
+          "status": "success",
+          "last_run": "2026-10-21T09:34:55.086327+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-21T09:34:55.477862+00:00",
+          "updated_at": "2026-10-21T09:34:55.477875+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "hourly",
+            "enabled": true,
+            "every": 12
+          },
+          "schedule_enabled": true
+        },
+        "music_sync_spotify--FMAF5tEG_playlist": {
+          "status": "success",
+          "last_run": "2026-10-21T09:34:55.327007+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-21T09:34:59.444880+00:00",
+          "updated_at": "2026-10-21T09:34:59.444892+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "hourly",
+            "enabled": true,
+            "every": 12
+          },
+          "schedule_enabled": true
+        },
+        "music_sync_spotify--FMAF5tEG_audiobook": {
+          "status": "success",
+          "last_run": "2026-10-21T09:35:23.298959+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-21T09:35:23.421663+00:00",
+          "updated_at": "2026-10-21T09:35:23.421690+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "hourly",
+            "enabled": true,
+            "every": 12
+          },
+          "schedule_enabled": true
+        },
+        "music_sync_spotify--FMAF5tEG_podcast": {
+          "status": "success",
+          "last_run": "2026-10-21T09:35:27.752086+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-21T09:35:28.014519+00:00",
+          "updated_at": "2026-10-21T09:35:28.014550+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "hourly",
+            "enabled": true,
+            "every": 12
+          },
+          "schedule_enabled": true
+        },
+        "audio_analysis_background_scan": {
+          "status": "success",
+          "last_run": "2026-10-20T22:00:00.001226+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-20T22:00:00.006375+00:00",
+          "updated_at": "2026-10-20T22:00:00.006419+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "daily",
+            "enabled": true,
+            "every": 1,
+            "hour": 22,
+            "minute": 0
+          },
+          "schedule_enabled": true
+        },
+        "metadata_missing_artist_metadata_scan_v2": {
+          "status": "success",
+          "last_run": "2026-10-20T19:56:00.005886+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-20T19:56:00.013065+00:00",
+          "updated_at": "2026-10-20T19:56:00.013083+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "daily",
+            "enabled": true,
+            "every": 1,
+            "hour": 19,
+            "minute": 56
+          },
+          "schedule_enabled": true
+        },
+        "metadata_playlist_metadata_scan_v2": {
+          "status": "success",
+          "last_run": "2026-10-20T19:56:00.013253+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-20T19:56:00.015032+00:00",
+          "updated_at": "2026-10-20T19:56:00.015065+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "daily",
+            "enabled": true,
+            "every": 1,
+            "hour": 19,
+            "minute": 56
+          },
+          "schedule_enabled": true
+        },
+        "metadata_thumb_cache_cleanup_v2": {
+          "status": "success",
+          "last_run": "2026-10-20T19:56:00.001269+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-20T19:56:00.162949+00:00",
+          "updated_at": "2026-10-20T19:56:00.162966+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "daily",
+            "enabled": true,
+            "every": 1,
+            "hour": 19,
+            "minute": 56
+          },
+          "schedule_enabled": true
+        },
+        "lastfm_recommendations_refresh_lastfm_recommendations": {
+          "status": "success",
+          "last_run": "2026-10-21T10:26:08.970479+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-21T10:26:08.972708+00:00",
+          "updated_at": "2026-10-21T10:26:08.972764+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "hourly",
+            "enabled": true,
+            "every": 6
+          },
+          "schedule_enabled": true
+        },
+        "music_track_reconciliation": {
+          "status": "success",
+          "last_run": "2026-10-21T10:51:13.034743+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-21T10:51:13.035316+00:00",
+          "updated_at": "2026-10-21T10:51:13.035357+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "hourly",
+            "enabled": true,
+            "every": 1
+          },
+          "schedule_enabled": true
+        },
+        "metadata_album_reconciliation_v1": {
+          "status": "success",
+          "last_run": "2026-10-21T10:51:13.035999+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-21T10:51:13.040240+00:00",
+          "updated_at": "2026-10-21T10:51:13.040266+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "hourly",
+            "enabled": true,
+            "every": 1
+          },
+          "schedule_enabled": true
+        },
+        "playlist_metadata_cleanup": {
+          "status": "success",
+          "last_run": "2026-10-21T10:34:17.120148+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-21T10:34:17.157732+00:00",
+          "updated_at": "2026-10-21T10:34:17.157754+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "hourly",
+            "enabled": true,
+            "every": 2
+          },
+          "schedule_enabled": true
+        },
+        "music_sync_filesystem_local--d4bbESrb_artist": {
+          "status": "success",
+          "last_run": "2026-10-21T09:16:57.781878+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-21T09:16:57.782399+00:00",
+          "updated_at": "2026-10-21T09:16:57.782435+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "hourly",
+            "enabled": true,
+            "every": 12
+          },
+          "schedule_enabled": true
+        },
+        "music_sync_filesystem_local--d4bbESrb_album": {
+          "status": "success",
+          "last_run": "2026-10-21T09:16:57.832204+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-21T09:16:57.832345+00:00",
+          "updated_at": "2026-10-21T09:16:57.832356+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "hourly",
+            "enabled": true,
+            "every": 12
+          },
+          "schedule_enabled": true
+        },
+        "music_sync_filesystem_local--d4bbESrb_track": {
+          "status": "success",
+          "last_run": "2026-10-21T09:16:57.863793+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-21T09:16:57.868471+00:00",
+          "updated_at": "2026-10-21T09:16:57.868486+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "hourly",
+            "enabled": true,
+            "every": 12
+          },
+          "schedule_enabled": true
+        },
+        "music_sync_filesystem_local--d4bbESrb_playlist": {
+          "status": "success",
+          "last_run": "2026-10-21T09:16:57.919645+00:00",
+          "last_run_user_id": null,
+          "finished_at": "2026-10-21T09:16:57.923264+00:00",
+          "updated_at": "2026-10-21T09:16:57.923278+00:00",
+          "last_error": null,
+          "failure_count": 0,
+          "failure_messages": [],
+          "report": null,
+          "schedule": {
+            "type": "hourly",
+            "enabled": true,
+            "every": 12
+          },
+          "schedule_enabled": true
+        }
+      },
+      "domain": "tasks"
+    },
+    "streams": {
+      "values": {
+        "volume_normalization_target": -19
+      }
+    },
+    "music": {
+      "values": {
+        "track_reconciliation_cursor": [],
+        "track_reconciliation_rescan_due": true,
+        "deleted_providers": []
+      },
+      "domain": "music",
+      "last_error": null
+    }
+  },
+  "players": {
+    "20:F8:3B:09:64:60": {
+      "values": {
+        "cached_arp_mac": "20:F8:3B:09:64:60",
+        "reported_mac": null,
+        "protocol_parent_id": "media_player.home_assistant_voice_096460_media_player"
+      },
+      "provider": "sendspin",
+      "player_id": "20:F8:3B:09:64:60",
+      "enabled": true,
+      "name": null,
+      "available": false,
+      "default_name": "HA Voice PE 096460",
+      "player_type": "protocol"
+    },
+    "KrqR8y05ep19BY_Axln8FqX8z24JAW-mml6-Mc_BKEc": {
+      "values": {},
+      "provider": "sendspin",
+      "player_id": "KrqR8y05ep19BY_Axln8FqX8z24JAW-mml6-Mc_BKEc",
+      "enabled": true,
+      "name": null,
+      "default_name": "PWA (Chrome on Windows)",
+      "player_type": "player",
+      "setup_data": {}
+    },
+    "6988608d-cfe8-8e74-1860-7d9ea20383e6": {
+      "values": {
+        "cached_arp_mac": "2C:FD:B3:12:5C:49",
+        "reported_mac": null,
+        "sendspin_opt_out_pending": null,
+        "protocol_parent_id": "up2d920741"
+      },
+      "provider": "chromecast",
+      "player_id": "6988608d-cfe8-8e74-1860-7d9ea20383e6",
+      "enabled": true,
+      "name": null,
+      "default_name": "TVs soundbar",
+      "player_type": "protocol",
+      "setup_data": {}
+    },
+    "spb_2cfdb3125c49": {
+      "values": {
+        "cached_arp_mac": "2C:FD:B3:12:5C:49",
+        "reported_mac": null,
+        "underlying_player_id": "6988608d-cfe8-8e74-1860-7d9ea20383e6",
+        "protocol_parent_id": "up2d920741",
+        "protocol_experimental_note": "sendspin_cast_experimental"
+      },
+      "provider": "sendspin",
+      "player_id": "spb_2cfdb3125c49",
+      "enabled": false,
+      "name": null,
+      "default_name": "TVs soundbar (Cast)",
+      "player_type": "protocol",
+      "setup_data": {}
+    },
+    "fbd9e291-c29e-c880-ebb2-3293f56f4e6b": {
+      "values": {
+        "cached_arp_mac": "6C:47:60:1A:87:36",
+        "reported_mac": null,
+        "sendspin_opt_out_pending": null,
+        "protocol_parent_id": "up366fb600"
+      },
+      "provider": "chromecast",
+      "player_id": "fbd9e291-c29e-c880-ebb2-3293f56f4e6b",
+      "enabled": true,
+      "name": null,
+      "default_name": "Toalettens högtalare",
+      "player_type": "protocol",
+      "setup_data": {}
+    },
+    "spb_6c47601a8736": {
+      "values": {
+        "cached_arp_mac": "6C:47:60:1A:87:36",
+        "reported_mac": null,
+        "underlying_player_id": "fbd9e291-c29e-c880-ebb2-3293f56f4e6b",
+        "protocol_parent_id": "up366fb600",
+        "protocol_experimental_note": "sendspin_cast_experimental"
+      },
+      "provider": "sendspin",
+      "player_id": "spb_6c47601a8736",
+      "enabled": true,
+      "name": null,
+      "default_name": "Toalettens högtalare (Cast)",
+      "player_type": "protocol",
+      "setup_data": {}
+    },
+    "0416fda2-3f4b-f8d8-8a46-572bce5e58bc": {
+      "values": {
+        "cached_arp_mac": "00:F4:8D:97:D9:B5",
+        "sendspin_opt_out_pending": null,
+        "protocol_parent_id": "upb2965530"
+      },
+      "provider": "chromecast",
+      "player_id": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+      "enabled": true,
+      "name": null,
+      "default_name": "Kökets skärm",
+      "player_type": "protocol",
+      "setup_data": {}
+    },
+    "spb_00f48d97d9b5": {
+      "values": {
+        "cached_arp_mac": "00:F4:8D:97:D9:B5",
+        "reported_mac": null,
+        "underlying_player_id": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+        "protocol_parent_id": "upb2965530",
+        "protocol_experimental_note": "sendspin_cast_experimental"
+      },
+      "provider": "sendspin",
+      "player_id": "spb_00f48d97d9b5",
+      "enabled": true,
+      "name": null,
+      "default_name": "Kökets skärm (Cast)",
+      "player_type": "protocol",
+      "setup_data": {}
+    },
+    "aea84eaf-2bc6-4267-8f3d-2fbeec03a194": {
+      "values": {},
+      "provider": "chromecast",
+      "player_id": "aea84eaf-2bc6-4267-8f3d-2fbeec03a194",
+      "enabled": true,
+      "name": null,
+      "default_name": "Dassens högtalare",
+      "player_type": "group",
+      "setup_data": {}
+    },
+    "up2d920741": {
+      "values": {
+        "linked_protocol_ids": [
+          "6988608d-cfe8-8e74-1860-7d9ea20383e6",
+          "spb_2cfdb3125c49"
+        ],
+        "created_at": 1788615043577357744,
+        "device_identifiers": {
+          "ip_address": "192.168.10.203",
+          "mac_address": "2C:FD:B3:12:5C:49",
+          "uuid": "6988608d-cfe8-8e74-1860-7d9ea20383e6",
+          "cast_uuid": "6988608d-cfe8-8e74-1860-7d9ea20383e6"
+        },
+        "device_info": {
+          "model": "JBL Bar 5.0",
+          "manufacturer": "HARMAN International Industries"
+        },
+        "cached_arp_mac": "2C:FD:B3:12:5C:49",
+        "reported_mac": null
+      },
+      "provider": "universal_player",
+      "player_id": "up2d920741",
+      "enabled": true,
+      "name": null,
+      "default_name": "TVs soundbar",
+      "player_type": "player",
+      "setup_data": {}
+    },
+    "up366fb600": {
+      "values": {
+        "linked_protocol_ids": [
+          "fbd9e291-c29e-c880-ebb2-3293f56f4e6b",
+          "spb_6c47601a8736"
+        ],
+        "created_at": 1788615043802420476,
+        "device_identifiers": {
+          "ip_address": "192.168.10.211",
+          "mac_address": "6C:47:60:1A:87:36",
+          "uuid": "fbd9e291-c29e-c880-ebb2-3293f56f4e6b",
+          "cast_uuid": "fbd9e291-c29e-c880-ebb2-3293f56f4e6b"
+        },
+        "device_info": {
+          "model": "JBL Link Portable",
+          "manufacturer": "HARMAN International Industries"
+        },
+        "cached_arp_mac": "6C:47:60:1A:87:36",
+        "reported_mac": null
+      },
+      "provider": "universal_player",
+      "player_id": "up366fb600",
+      "enabled": true,
+      "name": null,
+      "default_name": "Toalettens högtalare",
+      "player_type": "player",
+      "setup_data": {}
+    },
+    "upb2965530": {
+      "values": {
+        "tts_pre_announce": false,
+        "announce_volume_strategy": "absolute",
+        "announce_volume": 40,
+        "announce_volume_min": 25,
+        "announce_volume_max": 65,
+        "preferred_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+        "linked_protocol_ids": [
+          "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+          "spb_00f48d97d9b5"
+        ],
+        "created_at": 1788615044671197585,
+        "device_identifiers": {
+          "ip_address": "192.168.10.209",
+          "uuid": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+          "cast_uuid": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+          "mac_address": "00:F4:8D:97:D9:B5"
+        },
+        "device_info": {
+          "model": "JBL Link View",
+          "manufacturer": "Harman International Corp"
+        },
+        "cached_arp_mac": "00:F4:8D:97:D9:B5",
+        "reported_mac": null
+      },
+      "provider": "universal_player",
+      "player_id": "upb2965530",
+      "enabled": true,
+      "name": null,
+      "default_name": "Kökets skärm",
+      "player_type": "player",
+      "setup_data": {}
+    },
+    "9842167e-772a-ad9d-6664-74077d0f77e6": {
+      "values": {
+        "cached_arp_mac": "80:C5:F2:67:AA:69",
+        "sendspin_opt_out_pending": null,
+        "protocol_parent_id": "up0ba23cfe",
+        "reported_mac": null
+      },
+      "provider": "chromecast",
+      "player_id": "9842167e-772a-ad9d-6664-74077d0f77e6",
+      "enabled": true,
+      "name": null,
+      "default_name": "Ateljéns högtalare",
+      "player_type": "protocol",
+      "setup_data": {}
+    },
+    "spb_80c5f267aa69": {
+      "values": {
+        "cached_arp_mac": "80:C5:F2:67:AA:69",
+        "reported_mac": null,
+        "underlying_player_id": "bb9d9db8-1113-1ba6-19b4-362bd919b660",
+        "protocol_parent_id": "up1a2803a2",
+        "protocol_experimental_note": "sendspin_cast_experimental",
+        "sendspin_static_delay": 330,
+        "linked_protocol_ids": []
+      },
+      "provider": "sendspin",
+      "player_id": "spb_80c5f267aa69",
+      "enabled": true,
+      "name": null,
+      "default_name": "Ateljéns högtalare (Cast)",
+      "player_type": "protocol",
+      "setup_data": {}
+    },
+    "741eea0d-05a3-445b-a807-71d6884f1a90": {
+      "values": {
+        "cached_arp_mac": "54:60:09:D6:4F:22",
+        "reported_mac": null,
+        "sendspin_opt_out_pending": null,
+        "linked_protocol_ids": [
+          "spb_546009d64f22"
+        ]
+      },
+      "provider": "chromecast",
+      "player_id": "741eea0d-05a3-445b-a807-71d6884f1a90",
+      "enabled": true,
+      "name": null,
+      "default_name": "Verandans högtalare vänster",
+      "player_type": "player",
+      "setup_data": {}
+    },
+    "spb_546009d64f22": {
+      "values": {
+        "cached_arp_mac": "54:60:09:D6:4F:22",
+        "reported_mac": null,
+        "underlying_player_id": "741eea0d-05a3-445b-a807-71d6884f1a90",
+        "protocol_parent_id": "741eea0d-05a3-445b-a807-71d6884f1a90",
+        "protocol_experimental_note": "sendspin_cast_experimental"
+      },
+      "provider": "sendspin",
+      "player_id": "spb_546009d64f22",
+      "enabled": false,
+      "name": null,
+      "default_name": "Verandans högtalare vänster (Cast)",
+      "player_type": "protocol",
+      "setup_data": {}
+    },
+    "112179a2-361d-8781-2474-d01839f340eb": {
+      "values": {
+        "cached_arp_mac": "54:60:09:E8:FC:56",
+        "reported_mac": null,
+        "sendspin_opt_out_pending": null,
+        "linked_protocol_ids": [
+          "spb_546009e8fc56"
+        ]
+      },
+      "provider": "chromecast",
+      "player_id": "112179a2-361d-8781-2474-d01839f340eb",
+      "enabled": true,
+      "name": null,
+      "default_name": "Verandans högtalare höger",
+      "player_type": "player",
+      "setup_data": {}
+    },
+    "spb_546009e8fc56": {
+      "values": {
+        "cached_arp_mac": "54:60:09:E8:FC:56",
+        "reported_mac": null,
+        "underlying_player_id": "112179a2-361d-8781-2474-d01839f340eb",
+        "protocol_parent_id": "112179a2-361d-8781-2474-d01839f340eb",
+        "protocol_experimental_note": "sendspin_cast_experimental"
+      },
+      "provider": "sendspin",
+      "player_id": "spb_546009e8fc56",
+      "enabled": false,
+      "name": null,
+      "default_name": "Verandans högtalare höger (Cast)",
+      "player_type": "protocol",
+      "setup_data": {}
+    },
+    "72134bdc-232c-a223-447a-f63000ce0ce7": {
+      "values": {
+        "cached_arp_mac": "14:3F:A6:03:6B:40",
+        "sendspin_opt_out_pending": null,
+        "protocol_parent_id": "upc1652555"
+      },
+      "provider": "chromecast",
+      "player_id": "72134bdc-232c-a223-447a-f63000ce0ce7",
+      "enabled": true,
+      "name": null,
+      "default_name": "Nya TVn",
+      "player_type": "protocol",
+      "setup_data": {}
+    },
+    "spb_143fa6036b40": {
+      "values": {
+        "cached_arp_mac": "14:3F:A6:03:6B:40",
+        "reported_mac": null,
+        "underlying_player_id": "72134bdc-232c-a223-447a-f63000ce0ce7",
+        "protocol_parent_id": "upc1652555",
+        "protocol_experimental_note": "sendspin_cast_experimental"
+      },
+      "provider": "sendspin",
+      "player_id": "spb_143fa6036b40",
+      "enabled": false,
+      "name": null,
+      "default_name": "Nya TVn (Cast)",
+      "player_type": "protocol",
+      "setup_data": {}
+    },
+    "81cfbae8-4ee1-4c8c-84fc-4f1be6360cb2": {
+      "values": {},
+      "provider": "chromecast",
+      "player_id": "81cfbae8-4ee1-4c8c-84fc-4f1be6360cb2",
+      "enabled": true,
+      "name": null,
+      "default_name": "Alla högtalare",
+      "player_type": "group",
+      "setup_data": {}
+    },
+    "919454fc-c108-40cd-8ac5-23808d3fa5a9": {
+      "values": {},
+      "provider": "chromecast",
+      "player_id": "919454fc-c108-40cd-8ac5-23808d3fa5a9",
+      "enabled": true,
+      "name": null,
+      "default_name": "Verandans högtalare",
+      "player_type": "group",
+      "setup_data": {}
+    },
+    "721a89d6-fc3f-406d-050e-ea545ac83fc4": {
+      "values": {
+        "cached_arp_mac": "D8:EB:46:96:63:E4",
+        "reported_mac": null,
+        "sendspin_opt_out_pending": null,
+        "linked_protocol_ids": [
+          "spb_d8eb469663e4"
+        ]
+      },
+      "provider": "chromecast",
+      "player_id": "721a89d6-fc3f-406d-050e-ea545ac83fc4",
+      "enabled": false,
+      "name": null,
+      "default_name": "Mannis väckarklocka",
+      "player_type": "player",
+      "setup_data": {}
+    },
+    "spb_d8eb469663e4": {
+      "values": {
+        "cached_arp_mac": "D8:EB:46:96:63:E4",
+        "reported_mac": null,
+        "underlying_player_id": "721a89d6-fc3f-406d-050e-ea545ac83fc4",
+        "protocol_parent_id": "721a89d6-fc3f-406d-050e-ea545ac83fc4",
+        "protocol_experimental_note": "sendspin_cast_experimental"
+      },
+      "provider": "sendspin",
+      "player_id": "spb_d8eb469663e4",
+      "enabled": false,
+      "name": null,
+      "default_name": "Mannis väckarklocka (Cast)",
+      "player_type": "protocol",
+      "setup_data": {}
+    },
+    "a56bb45d-aa7e-3a34-132d-5baa281f1f23": {
+      "values": {
+        "cached_arp_mac": "D8:EB:46:81:A7:F3",
+        "reported_mac": null,
+        "sendspin_opt_out_pending": null,
+        "linked_protocol_ids": [
+          "spb_d8eb4681a7f3"
+        ]
+      },
+      "provider": "chromecast",
+      "player_id": "a56bb45d-aa7e-3a34-132d-5baa281f1f23",
+      "enabled": true,
+      "name": null,
+      "default_name": "Diegos väckarklocka",
+      "player_type": "player",
+      "setup_data": {}
+    },
+    "spb_d8eb4681a7f3": {
+      "values": {
+        "cached_arp_mac": "D8:EB:46:81:A7:F3",
+        "reported_mac": null,
+        "underlying_player_id": "a56bb45d-aa7e-3a34-132d-5baa281f1f23",
+        "protocol_parent_id": "a56bb45d-aa7e-3a34-132d-5baa281f1f23",
+        "protocol_experimental_note": "sendspin_cast_experimental"
+      },
+      "provider": "sendspin",
+      "player_id": "spb_d8eb4681a7f3",
+      "enabled": false,
+      "name": null,
+      "default_name": "Diegos väckarklocka (Cast)",
+      "player_type": "protocol",
+      "setup_data": {}
+    },
+    "upc1652555": {
+      "values": {
+        "linked_protocol_ids": [
+          "72134bdc-232c-a223-447a-f63000ce0ce7",
+          "spb_143fa6036b40",
+          "uuid:23456789-1234-1010-8000-143FA6036B40"
+        ],
+        "created_at": 1788615083853253243,
+        "device_identifiers": {
+          "ip_address": "192.168.10.19",
+          "uuid": "23456789-1234-1010-8000-143FA6036B40",
+          "cast_uuid": "72134bdc-232c-a223-447a-f63000ce0ce7",
+          "mac_address": "14:3F:A6:03:6B:40"
+        },
+        "device_info": {
+          "model": "BRAVIA VH1",
+          "manufacturer": "Sony"
+        },
+        "cached_arp_mac": "14:3F:A6:03:6B:40",
+        "reported_mac": null
+      },
+      "provider": "universal_player",
+      "player_id": "upc1652555",
+      "enabled": true,
+      "name": null,
+      "default_name": "Nya TVn",
+      "player_type": "player",
+      "setup_data": {}
+    },
+    "syncgroup_rk7qfzy6": {
+      "values": {
+        "tts_pre_announce": false,
+        "power_control": "fake",
+        "group_members": [
+          "up1a2803a2",
+          "upb2965530",
+          "upf3ea6c7e"
+        ],
+        "allowed_members": [
+          "up0ba23cfe",
+          "upb2965530",
+          "upf3ea6c7e"
+        ],
+        "icon": "speakers"
+      },
+      "provider": "sync_group",
+      "player_id": "syncgroup_rk7qfzy6",
+      "enabled": true,
+      "name": null,
+      "default_name": "Grannys högtalare",
+      "player_type": "group",
+      "setup_data": {}
+    },
+    "f145fffd-5ecf-8df1-a2b4-744765541f59": {
+      "values": {
+        "cached_arp_mac": "6C:47:60:0B:55:77",
+        "reported_mac": null,
+        "sendspin_opt_out_pending": null,
+        "protocol_parent_id": "up74890f07"
+      },
+      "provider": "chromecast",
+      "player_id": "f145fffd-5ecf-8df1-a2b4-744765541f59",
+      "enabled": true,
+      "name": null,
+      "default_name": "Duschens högtalare",
+      "player_type": "protocol",
+      "setup_data": {}
+    },
+    "spb_6c47600b5577": {
+      "values": {
+        "cached_arp_mac": "6C:47:60:0B:55:77",
+        "reported_mac": null,
+        "underlying_player_id": "f145fffd-5ecf-8df1-a2b4-744765541f59",
+        "protocol_parent_id": "up74890f07",
+        "protocol_experimental_note": "sendspin_cast_experimental"
+      },
+      "provider": "sendspin",
+      "player_id": "spb_6c47600b5577",
+      "enabled": false,
+      "name": null,
+      "default_name": "Duschens högtalare (Cast)",
+      "player_type": "protocol",
+      "setup_data": {}
+    },
+    "up74890f07": {
+      "values": {
+        "linked_protocol_ids": [
+          "f145fffd-5ecf-8df1-a2b4-744765541f59",
+          "spb_6c47600b5577"
+        ],
+        "created_at": 1788615287699455190,
+        "device_identifiers": {
+          "ip_address": "192.168.10.208",
+          "mac_address": "6C:47:60:0B:55:77",
+          "uuid": "f145fffd-5ecf-8df1-a2b4-744765541f59",
+          "cast_uuid": "f145fffd-5ecf-8df1-a2b4-744765541f59"
+        },
+        "device_info": {
+          "model": "JBL Link Portable",
+          "manufacturer": "HARMAN International Industries"
+        },
+        "cached_arp_mac": "6C:47:60:0B:55:77",
+        "reported_mac": null
+      },
+      "provider": "universal_player",
+      "player_id": "up74890f07",
+      "enabled": true,
+      "name": null,
+      "default_name": "Duschens högtalare",
+      "player_type": "player",
+      "setup_data": {}
+    },
+    "abc85c69-d2e2-af6d-921e-fc4a5eb1b8e2": {
+      "values": {
+        "cached_arp_mac": "80:C5:F2:3E:08:43",
+        "reported_mac": null,
+        "sendspin_opt_out_pending": null,
+        "protocol_parent_id": "upf3ea6c7e"
+      },
+      "provider": "chromecast",
+      "player_id": "abc85c69-d2e2-af6d-921e-fc4a5eb1b8e2",
+      "enabled": true,
+      "name": null,
+      "default_name": "Kontorets högtalare",
+      "player_type": "protocol",
+      "setup_data": {}
+    },
+    "spb_80c5f23e0843": {
+      "values": {
+        "cached_arp_mac": "80:C5:F2:3E:08:43",
+        "reported_mac": null,
+        "underlying_player_id": "abc85c69-d2e2-af6d-921e-fc4a5eb1b8e2",
+        "protocol_parent_id": "upf3ea6c7e",
+        "protocol_experimental_note": "sendspin_cast_experimental"
+      },
+      "provider": "sendspin",
+      "player_id": "spb_80c5f23e0843",
+      "enabled": true,
+      "name": null,
+      "default_name": "Kontorets högtalare (Cast)",
+      "player_type": "protocol",
+      "setup_data": {}
+    },
+    "upf3ea6c7e": {
+      "values": {
+        "tts_pre_announce": false,
+        "announce_volume_strategy": "absolute",
+        "announce_volume": 40,
+        "announce_volume_min": 25,
+        "announce_volume_max": 65,
+        "preferred_output_protocol": "abc85c69-d2e2-af6d-921e-fc4a5eb1b8e2",
+        "linked_protocol_ids": [
+          "abc85c69-d2e2-af6d-921e-fc4a5eb1b8e2",
+          "spb_80c5f23e0843"
+        ],
+        "created_at": 1788618835305235886,
+        "device_identifiers": {
+          "ip_address": "192.168.10.212",
+          "mac_address": "80:C5:F2:3E:08:43",
+          "uuid": "abc85c69-d2e2-af6d-921e-fc4a5eb1b8e2",
+          "cast_uuid": "abc85c69-d2e2-af6d-921e-fc4a5eb1b8e2"
+        },
+        "device_info": {
+          "model": "JBL Link 20",
+          "manufacturer": "JBL"
+        },
+        "cached_arp_mac": "80:C5:F2:3E:08:43",
+        "reported_mac": null
+      },
+      "provider": "universal_player",
+      "player_id": "upf3ea6c7e",
+      "enabled": true,
+      "name": null,
+      "default_name": "Kontorets högtalare",
+      "player_type": "player",
+      "setup_data": {}
+    },
+    "media_player.home_assistant_voice_096460_media_player": {
+      "values": {
+        "cached_arp_mac": "20:F8:3B:09:64:60",
+        "reported_mac": null,
+        "linked_protocol_ids": [
+          "20:F8:3B:09:64:60"
+        ]
+      },
+      "provider": "hass_players",
+      "player_id": "media_player.home_assistant_voice_096460_media_player",
+      "enabled": true,
+      "name": null,
+      "default_name": "HA Voice PE 096460 Media Player",
+      "player_type": "player",
+      "setup_data": {}
+    },
+    "T4o--0lkp_ZgN_C4cIAqy0NqFjkysqiTQV5UnK4HpAI": {
+      "values": {},
+      "provider": "sendspin",
+      "player_id": "T4o--0lkp_ZgN_C4cIAqy0NqFjkysqiTQV5UnK4HpAI",
+      "enabled": true,
+      "name": null,
+      "default_name": "PWA (Chrome on Windows)",
+      "player_type": "player",
+      "setup_data": {}
+    },
+    "uuid:23456789-1234-1010-8000-143FA6036B40": {
+      "values": {
+        "cached_arp_mac": "14:3F:A6:03:6B:40",
+        "protocol_parent_id": "upc1652555"
+      },
+      "provider": "dlna",
+      "player_id": "uuid:23456789-1234-1010-8000-143FA6036B40",
+      "enabled": true,
+      "name": null,
+      "default_name": "Nya TVn",
+      "player_type": "protocol",
+      "setup_data": {}
+    },
+    "OkJ8h5TYVWf1obPWssiXGTtIHiCerC3GsSHgAf_RHn8": {
+      "values": {},
+      "provider": "sendspin",
+      "player_id": "OkJ8h5TYVWf1obPWssiXGTtIHiCerC3GsSHgAf_RHn8",
+      "enabled": true,
+      "name": null,
+      "default_name": "PWA (Chrome on Samsung SM-T835)",
+      "player_type": "player",
+      "setup_data": {}
+    },
+    "up0ba23cfe": {
+      "values": {
+        "tts_pre_announce": false,
+        "announce_volume_strategy": "absolute",
+        "announce_volume": 40,
+        "announce_volume_min": 25,
+        "announce_volume_max": 65,
+        "preferred_output_protocol": "spb_80c5f267aa69",
+        "linked_protocol_ids": [
+          "9842167e-772a-ad9d-6664-74077d0f77e6"
+        ],
+        "created_at": 1789811552194567286,
+        "device_identifiers": {
+          "ip_address": "192.168.10.205",
+          "uuid": "9842167e-772a-ad9d-6664-74077d0f77e6",
+          "cast_uuid": "9842167e-772a-ad9d-6664-74077d0f77e6",
+          "mac_address": "80:C5:F2:67:AA:69"
+        },
+        "device_info": {
+          "model": "JBL Link 500",
+          "manufacturer": "JBL"
+        },
+        "cached_arp_mac": "80:C5:F2:67:AA:69",
+        "reported_mac": null
+      },
+      "provider": "universal_player",
+      "player_id": "up0ba23cfe",
+      "enabled": true,
+      "name": null,
+      "default_name": "Ateljéns högtalare",
+      "player_type": "player",
+      "setup_data": {}
+    },
+    "R2izBcTiqXXdQsUmmcR4q_u_FwrXqBrLqtucyAht-2k": {
+      "values": {},
+      "provider": "sendspin",
+      "player_id": "R2izBcTiqXXdQsUmmcR4q_u_FwrXqBrLqtucyAht-2k",
+      "enabled": true,
+      "name": null,
+      "default_name": "PWA (Chrome on Samsung SM-T835)",
+      "player_type": "player",
+      "setup_data": {}
+    },
+    "RCL25pRE5NJ4P7rKUrzoKhR67PXVijZGPIt7pzQiOAA": {
+      "values": {},
+      "provider": "sendspin",
+      "player_id": "RCL25pRE5NJ4P7rKUrzoKhR67PXVijZGPIt7pzQiOAA",
+      "enabled": true,
+      "name": null,
+      "default_name": "PWA (Chrome on Windows)",
+      "player_type": "player",
+      "setup_data": {}
+    },
+    "bb9d9db8-1113-1ba6-19b4-362bd919b660": {
+      "values": {
+        "cached_arp_mac": "80:C5:F2:67:AA:69",
+        "reported_mac": null,
+        "protocol_parent_id": "up1a2803a2"
+      },
+      "provider": "chromecast",
+      "player_id": "bb9d9db8-1113-1ba6-19b4-362bd919b660",
+      "enabled": true,
+      "name": null,
+      "default_name": "Ateljéns högtalare",
+      "player_type": "protocol",
+      "setup_data": {}
+    },
+    "up1a2803a2": {
+      "values": {
+        "tts_pre_announce": false,
+        "announce_volume_strategy": "absolute",
+        "announce_volume": 40,
+        "announce_volume_min": 25,
+        "announce_volume_max": 65,
+        "preferred_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660",
+        "linked_protocol_ids": [
+          "bb9d9db8-1113-1ba6-19b4-362bd919b660",
+          "spb_80c5f267aa69"
+        ],
+        "created_at": 1789816089051245773,
+        "device_identifiers": {
+          "ip_address": "192.168.10.205",
+          "mac_address": "80:C5:F2:67:AA:69",
+          "uuid": "bb9d9db8-1113-1ba6-19b4-362bd919b660",
+          "cast_uuid": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        "device_info": {
+          "model": "JBL Link 500",
+          "manufacturer": "JBL"
+        },
+        "cached_arp_mac": "80:C5:F2:67:AA:69",
+        "reported_mac": null
+      },
+      "provider": "universal_player",
+      "player_id": "up1a2803a2",
+      "enabled": true,
+      "name": null,
+      "default_name": "Ateljéns högtalare",
+      "player_type": "player",
+      "setup_data": {}
+    },
+    "Nwd4WmAhZxmNjPPCw52t96-FQ9FIft27eIjTO62QZAA": {
+      "values": {},
+      "provider": "sendspin",
+      "player_id": "Nwd4WmAhZxmNjPPCw52t96-FQ9FIft27eIjTO62QZAA",
+      "enabled": true,
+      "name": null,
+      "default_name": "Web (Chrome on Google Pixel 9 Pro XL)",
+      "player_type": "player",
+      "setup_data": {}
+    },
+    "56862e31-51ae-420f-a85e-02ce6410ded3": {
+      "values": {
+        "tts_pre_announce": false
+      },
+      "provider": "chromecast",
+      "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+      "enabled": true,
+      "name": null,
+      "default_name": "Granny utrop",
+      "player_type": "group",
+      "setup_data": {}
+    },
+    "9ab1f3cc-03a8-a631-5d55-b79d71184229": {
+      "values": {
+        "cached_arp_mac": "F4:F5:D8:9D:B9:62",
+        "reported_mac": null,
+        "sendspin_opt_out_pending": null,
+        "linked_protocol_ids": [
+          "spb_f4f5d89db962"
+        ]
+      },
+      "provider": "chromecast",
+      "player_id": "9ab1f3cc-03a8-a631-5d55-b79d71184229",
+      "enabled": true,
+      "name": null,
+      "default_name": "Gamla TVn",
+      "player_type": "player",
+      "setup_data": {}
+    },
+    "spb_f4f5d89db962": {
+      "values": {
+        "cached_arp_mac": "F4:F5:D8:9D:B9:62",
+        "reported_mac": null,
+        "underlying_player_id": "9ab1f3cc-03a8-a631-5d55-b79d71184229",
+        "protocol_parent_id": "9ab1f3cc-03a8-a631-5d55-b79d71184229",
+        "protocol_experimental_note": "sendspin_cast_experimental"
+      },
+      "provider": "sendspin",
+      "player_id": "spb_f4f5d89db962",
+      "enabled": false,
+      "name": null,
+      "default_name": "Gamla TVn (Cast)",
+      "player_type": "protocol",
+      "setup_data": {}
+    },
+    "29e402d4-8515-167d-6ff1-e210ea52e762": {
+      "values": {
+        "cached_arp_mac": "F4:F5:D8:9D:B9:62",
+        "reported_mac": null
+      },
+      "provider": "chromecast",
+      "player_id": "29e402d4-8515-167d-6ff1-e210ea52e762",
+      "enabled": true,
+      "name": null,
+      "default_name": "Huset",
+      "player_type": "player",
+      "setup_data": {}
+    }
+  },
+  "onboard_done": true,
+  "default_providers_setup": [
+    "airplay",
+    "dlna",
+    "smart_fades",
+    "lastfm_recommendations",
+    "ambient_sounds",
+    "chromecast",
+    "playlist_metadata",
+    "party"
+  ],
+  "encryption_key": "kXh2bLFHabxVhMq4mhvy-rBukoLlofY717ZLf0wfL3g=",
+  "encryption_key_migrated": true,
+  "nfs_subfolder_migrated": true,
+  "retired_local_audio_cleaned": true
+}

@@ -1,0 +1,8 @@
+{
+  "status": "verified",
+  "resources_updated": 2,
+  "javascript_syntax": "passed",
+  "name_context_tests": "passed",
+  "served_scripts_verified": true,
+  "visual_browser_test": false
+}

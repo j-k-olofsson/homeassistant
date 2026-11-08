@@ -1,0 +1,6 @@
+{"status": "rename_intent", "old": "light.asus_tuf_gaming_b650_e_wifi", "new": "light.tor_ai_asus_tuf_gaming_b650_e_wifi"}
+{"status": "renamed", "old": "light.asus_tuf_gaming_b650_e_wifi", "new": "light.tor_ai_asus_tuf_gaming_b650_e_wifi"}
+{"status": "rename_intent", "old": "light.amd_wraith_prism", "new": "light.tor_ai_amd_wraith_prism"}
+{"status": "renamed", "old": "light.amd_wraith_prism", "new": "light.tor_ai_amd_wraith_prism"}
+{"status": "rename_intent", "old": "select.frigg_profil", "new": "select.tor_ai_tor_profil"}
+{"status": "renamed", "old": "select.frigg_profil", "new": "select.tor_ai_tor_profil"}

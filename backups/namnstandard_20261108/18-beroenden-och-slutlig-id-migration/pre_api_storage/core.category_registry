@@ -1,0 +1,174 @@
+{
+  "version": 1,
+  "minor_version": 2,
+  "key": "core.category_registry",
+  "data": {
+    "categories": {
+      "automation": [
+        {
+          "category_id": "01HTM4RZ12XCBAQJ7K8FPFV7PE",
+          "created_at": "1970-01-01T00:00:00+00:00",
+          "icon": "mdi:camera-control",
+          "modified_at": "1970-01-01T00:00:00+00:00",
+          "name": "Styrning"
+        },
+        {
+          "category_id": "01HTM4V3RBHXFDBFR2BQGSTHS5",
+          "created_at": "1970-01-01T00:00:00+00:00",
+          "icon": "phu:scene-concentrate",
+          "modified_at": "1970-01-01T00:00:00+00:00",
+          "name": "Scen"
+        },
+        {
+          "category_id": "01HTM4W0CTGHHY79AE5BTSTRA3",
+          "created_at": "1970-01-01T00:00:00+00:00",
+          "icon": "mdi:bookmark-check-outline",
+          "modified_at": "1970-01-01T00:00:00+00:00",
+          "name": "Kontroll"
+        },
+        {
+          "category_id": "01HTM4YSG13KQ00WBQSRMA8Q1D",
+          "created_at": "1970-01-01T00:00:00+00:00",
+          "icon": "mdi:state-machine",
+          "modified_at": "1970-01-01T00:00:00+00:00",
+          "name": "Tillstånd"
+        },
+        {
+          "category_id": "01HTM52TPKRSB46VSX55KFBMHC",
+          "created_at": "1970-01-01T00:00:00+00:00",
+          "icon": "mdi:assistant",
+          "modified_at": "1970-01-01T00:00:00+00:00",
+          "name": "Assistent"
+        },
+        {
+          "category_id": "01HTM53G6BJSMFFWKDJ6CQNKD2",
+          "created_at": "1970-01-01T00:00:00+00:00",
+          "icon": "mdi:alert",
+          "modified_at": "1970-01-01T00:00:00+00:00",
+          "name": "Varning"
+        },
+        {
+          "category_id": "01HV48FTAZVSZ2P4GA2HNTSTFR",
+          "created_at": "1970-01-01T00:00:00+00:00",
+          "icon": "mdi:fridge-outline",
+          "modified_at": "1970-01-01T00:00:00+00:00",
+          "name": "Vitvaror"
+        },
+        {
+          "category_id": "01HV48NF8A1CCA0NS971VH2D9M",
+          "created_at": "1970-01-01T00:00:00+00:00",
+          "icon": "mdi:home-lightning-bolt-outline",
+          "modified_at": "1970-01-01T00:00:00+00:00",
+          "name": "El"
+        },
+        {
+          "category_id": "01HV48Q7PV464XKTYEZ0J5KXE1",
+          "created_at": "1970-01-01T00:00:00+00:00",
+          "icon": "mdi:pool",
+          "modified_at": "1970-01-01T00:00:00+00:00",
+          "name": "Pool"
+        },
+        {
+          "category_id": "01HV48S6XKV73D82NAGB6YSKY9",
+          "created_at": "1970-01-01T00:00:00+00:00",
+          "icon": "mdi:lamp-outline",
+          "modified_at": "1970-01-01T00:00:00+00:00",
+          "name": "Lampor"
+        },
+        {
+          "category_id": "01HV48TXFZMRBC0X2EKPSXHGMW",
+          "created_at": "1970-01-01T00:00:00+00:00",
+          "icon": "phu:chicken",
+          "modified_at": "1970-01-01T00:00:00+00:00",
+          "name": "Hönshus"
+        },
+        {
+          "category_id": "01HV48W7S2AJAW13EANW04HXNS",
+          "created_at": "1970-01-01T00:00:00+00:00",
+          "icon": "mdi:printer-3d",
+          "modified_at": "1970-01-01T00:00:00+00:00",
+          "name": "3D skrivare"
+        },
+        {
+          "category_id": "01HV48YH3KK2YS4B44V2G7QACZ",
+          "created_at": "1970-01-01T00:00:00+00:00",
+          "icon": "mdi:car",
+          "modified_at": "1970-01-01T00:00:00+00:00",
+          "name": "Bil"
+        },
+        {
+          "category_id": "01HV4905TFPQF3JG9309TKXDT6",
+          "created_at": "1970-01-01T00:00:00+00:00",
+          "icon": "mdi:multimedia",
+          "modified_at": "1970-01-01T00:00:00+00:00",
+          "name": "Multimedia"
+        },
+        {
+          "category_id": "01HV49414M36X8PY220AT3AXCC",
+          "created_at": "1970-01-01T00:00:00+00:00",
+          "icon": "mdi:weather-sunny",
+          "modified_at": "1970-01-01T00:00:00+00:00",
+          "name": "Sol"
+        },
+        {
+          "category_id": "01HV496S5K3FZFEB5ZTYH8PQ1H",
+          "created_at": "1970-01-01T00:00:00+00:00",
+          "icon": "mdi:oil-level",
+          "modified_at": "1970-01-01T00:00:00+00:00",
+          "name": "Nivåkontroller"
+        },
+        {
+          "category_id": "01HV498R07SYEBSMMRC9FQWG35",
+          "created_at": "1970-01-01T00:00:00+00:00",
+          "icon": "mdi:door-sliding-lock",
+          "modified_at": "1970-01-01T00:00:00+00:00",
+          "name": "Dörr & fönster"
+        },
+        {
+          "category_id": "01HV499KGQ8C96S465YQT5J7YV",
+          "created_at": "1970-01-01T00:00:00+00:00",
+          "icon": "mdi:web",
+          "modified_at": "1970-01-01T00:00:00+00:00",
+          "name": "Internet"
+        },
+        {
+          "category_id": "01HV49AASKMKW4W9W296CT4CPM",
+          "created_at": "1970-01-01T00:00:00+00:00",
+          "icon": "mdi:devices",
+          "modified_at": "1970-01-01T00:00:00+00:00",
+          "name": "Enheter"
+        },
+        {
+          "category_id": "01HVZM0QF7W9Q7EM8KCGNS6GYJ",
+          "created_at": "1970-01-01T00:00:00+00:00",
+          "icon": null,
+          "modified_at": "1970-01-01T00:00:00+00:00",
+          "name": "Batteri"
+        },
+        {
+          "category_id": "01JA5AECCN4ASF2GAWPA0F8M6C",
+          "created_at": "2024-10-14T10:51:06.005280+00:00",
+          "icon": "mdi:heat-wave",
+          "modified_at": "2024-10-14T10:51:06.005287+00:00",
+          "name": "Värme"
+        },
+        {
+          "category_id": "01JM4C02R12CMDF55SF1K08N3W",
+          "created_at": "2025-02-15T08:35:58.337134+00:00",
+          "icon": "mdi:router-network-wireless",
+          "modified_at": "2025-02-15T08:35:58.337143+00:00",
+          "name": "OpenWRT"
+        }
+      ],
+      "helpers": [
+        {
+          "category_id": "01JZJDRYHW8Z2AJNGZXV72VS87",
+          "created_at": "2025-07-07T12:29:03.932316+00:00",
+          "icon": null,
+          "modified_at": "2025-07-07T12:29:03.932328+00:00",
+          "name": "Bil"
+        }
+      ]
+    }
+  }
+}

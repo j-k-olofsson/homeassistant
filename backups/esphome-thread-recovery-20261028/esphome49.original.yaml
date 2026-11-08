@@ -1,0 +1,14 @@
+# Device specific substitutions
+substitutions:
+  node_id: "49"
+  node_name: esphome49
+  node_friendly_name: Ledstrip (kök småfönster)
+  node_comment: ESP32-C6-Zero over Thread
+  log_level: INFO
+  num_leds: "98"
+  gpio_pin: "GPIO3"
+  night_brightness: "40%"
+
+# Include packages for this device specific type
+packages:
+  device: !include common/.device_esp32_c6_thread_ledstrip_window.yaml

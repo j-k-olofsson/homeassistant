@@ -1,0 +1,50 @@
+{
+  "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:41:43.979705+00:00",
+      "last_updated": "2026-11-07T07:41:43.979705+00:00"
+    }
+  ],
+  "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_reboot_required": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:41:43.979705+00:00",
+      "last_updated": "2026-11-07T07:41:43.979705+00:00"
+    }
+  ],
+  "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_reboot_router": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:41:43.979705+00:00",
+      "last_updated": "2026-11-07T07:41:43.979705+00:00"
+    }
+  ],
+  "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_start_wps": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:41:43.979705+00:00",
+      "last_updated": "2026-11-07T07:41:43.979705+00:00"
+    }
+  ],
+  "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_cancel_wps": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:41:43.979705+00:00",
+      "last_updated": "2026-11-07T07:41:43.979705+00:00"
+    }
+  ],
+  "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_create_backup": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:41:43.979705+00:00",
+      "last_updated": "2026-11-07T07:41:43.979705+00:00"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "entity_id": "switch.esphome31_esphome31_relay_state",
+  "state": "off",
+  "attributes": {
+    "friendly_name": "Hemmabio El #2"
+  },
+  "last_changed": "2026-11-05T07:27:05.294737+00:00",
+  "last_reported": "2026-11-05T07:27:05.294737+00:00",
+  "last_updated": "2026-11-05T07:27:05.294737+00:00",
+  "context": {
+    "id": "01M6N9NAJEPHMAKCA05TNNKVX2",
+    "parent_id": null,
+    "user_id": null
+  }
+}

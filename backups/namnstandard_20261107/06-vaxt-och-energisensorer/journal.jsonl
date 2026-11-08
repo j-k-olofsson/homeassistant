@@ -1,0 +1,486 @@
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.blomlampa_ateljen_energy_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad effekt", "aliases": [null, "Blomlampa (ateljén) Energy power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.blomlampa_ateljen_energy_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.blomlampa_vaxtskapet_energy_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad effekt", "aliases": [null, "Blomlampa 2 (verandan) Blomlampa (växtskåpet) - energy power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.blomlampa_vaxtskapet_energy_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.blomlampa_trappan_energy_power", "before": {"name": null, "aliases": [null, "Blomlampor (bion) Blomlampa (trappan) - energy power"]}, "after": {"name": "Beräknad effekt", "aliases": [null, "Blomlampor (bion) Blomlampa (trappan) - energy power", "Blomlampor Blomlampa (trappan) - energy power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.blomlampa_trappan_energy_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.diegoes_vackarklocka_energy_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad effekt", "aliases": [null, "Diegos väckarklocka Diegoes väckarklocka - energy power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.diegoes_vackarklocka_energy_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.blomlampa_trappan_energy", "before": {"name": null, "aliases": [null, "Blomlampor (bion) Blomlampa (trappan) - energy energy"]}, "after": {"name": "Beräknad energi", "aliases": [null, "Blomlampor (bion) Blomlampa (trappan) - energy energy", "Blomlampor Blomlampa (trappan) - energy energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.blomlampa_trappan_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.diegoes_vackarklocka_energy", "before": {"name": "Energy", "aliases": [null]}, "after": {"name": "Beräknad energi", "aliases": [null, "Diegos väckarklocka Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.diegoes_vackarklocka_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.all_standby_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad standbyeffekt totalt", "aliases": [null, "All standby power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.all_standby_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.all_standby_energy", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad standbyenergi totalt", "aliases": [null, "All standby energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.all_standby_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sanglampor_manni_device_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad effekt brytare", "aliases": [null, "Sänglampor Manni Device Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sanglampor_manni_device_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sanglampor_manni_device_energy", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad energi brytare", "aliases": [null, "Sänglampor Manni Device Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sanglampor_manni_device_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sanglampor_diego_device_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad effekt brytare", "aliases": [null, "Sänglampor Diego Device Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sanglampor_diego_device_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sanglampor_diego_device_energy", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad energi brytare", "aliases": [null, "Sänglampor Diego Device Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sanglampor_diego_device_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bordslampa_kallaren_device_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bordslampa (källaren) – beräknad effekt", "aliases": [null, "Bordslampa (källaren) Device Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bordslampa_kallaren_device_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bordslampa_kallaren_device_energy", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bordslampa (källaren) – beräknad energi", "aliases": [null, "Bordslampa (källaren) Device Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bordslampa_kallaren_device_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.led_plafonder_device_power", "before": {"name": null, "aliases": [null, "shellyplug-s-083A8DC344DD LED-plafonder Device Power"]}, "after": {"name": "Beräknad effekt brytare", "aliases": [null, "shellyplug-s-083A8DC344DD LED-plafonder Device Power", "LED-plafonder LED-plafonder Device Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.led_plafonder_device_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.led_plafonder_device_energy", "before": {"name": null, "aliases": [null, "shellyplug-s-083A8DC344DD LED-plafonder Device Energy"]}, "after": {"name": "Beräknad energi brytare", "aliases": [null, "shellyplug-s-083A8DC344DD LED-plafonder Device Energy", "LED-plafonder LED-plafonder Device Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.led_plafonder_device_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolpump_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad effekt", "aliases": [null, "Poolpump (utomhus) Poolpump power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolpump_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolpump_energy", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad energi", "aliases": [null, "Poolpump (utomhus) Poolpump energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolpump_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolpump_energy_daily", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad energi idag", "aliases": [null, "Poolpump (utomhus) Poolpump energy daily"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolpump_energy_daily"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolpump_energy_weekly", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad energi denna vecka", "aliases": [null, "Poolpump (utomhus) Poolpump energy weekly"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolpump_energy_weekly"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolpump_energy_monthly", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad energi denna månad", "aliases": [null, "Poolpump (utomhus) Poolpump energy monthly"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolpump_energy_monthly"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.max_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad effekt", "aliases": [null, "Max S6 MaxV Max power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.max_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.max_energy", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad energi", "aliases": [null, "Max S6 MaxV Max energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.max_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.led_plafonder_device_power_2", "before": {"name": null, "aliases": [null, "shellyplug-s-083A8DC344DD LED-plafonder Device Power"]}, "after": {"name": "Beräknad effekt belysning", "aliases": [null, "shellyplug-s-083A8DC344DD LED-plafonder Device Power", "LED-plafonder LED-plafonder Device Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.led_plafonder_device_power_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.led_plafonder_device_energy_2", "before": {"name": null, "aliases": [null, "shellyplug-s-083A8DC344DD LED-plafonder Device Energy"]}, "after": {"name": "Beräknad energi belysning", "aliases": [null, "shellyplug-s-083A8DC344DD LED-plafonder Device Energy", "LED-plafonder LED-plafonder Device Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.led_plafonder_device_energy_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sanglampor_diego_device_power_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad effekt belysning", "aliases": [null, "Sänglampor Diego Device Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sanglampor_diego_device_power_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sanglampor_diego_device_energy_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad energi belysning", "aliases": [null, "Sänglampor Diego Device Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sanglampor_diego_device_energy_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sanglampor_manni_device_power_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad effekt belysning", "aliases": [null, "Sänglampor Manni Device Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sanglampor_manni_device_power_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sanglampor_manni_device_energy_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad energi belysning", "aliases": [null, "Sänglampor Manni Device Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sanglampor_manni_device_energy_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bordslampa_koket_device_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bordslampa (köket) – beräknad effekt", "aliases": [null, "Bordslampa (köket) Device Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bordslampa_koket_device_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bordslampa_koket_device_energy", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bordslampa (köket) – beräknad energi", "aliases": [null, "Bordslampa (köket) Device Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bordslampa_koket_device_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.meyer_citron_max_soil_moisture", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta jordfuktighet", "aliases": [null, "Meyer Citron Max soil moisture"]}}}
+{"status": "applied", "kind": "entity", "id": "number.meyer_citron_max_soil_moisture"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.meyer_citron_min_soil_moisture", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta jordfuktighet", "aliases": [null, "Meyer Citron Min soil moisture"]}}}
+{"status": "applied", "kind": "entity", "id": "number.meyer_citron_min_soil_moisture"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.meyer_citron_max_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta temperatur", "aliases": [null, "Meyer Citron Max temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.meyer_citron_max_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.meyer_citron_min_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta temperatur", "aliases": [null, "Meyer Citron Min temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.meyer_citron_min_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.meyer_citron_max_illuminance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta belysningsstyrka", "aliases": [null, "Meyer Citron Max illuminance"]}}}
+{"status": "applied", "kind": "entity", "id": "number.meyer_citron_max_illuminance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.meyer_citron_min_illuminance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta belysningsstyrka", "aliases": [null, "Meyer Citron Min illuminance"]}}}
+{"status": "applied", "kind": "entity", "id": "number.meyer_citron_min_illuminance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.meyer_citron_max_conductivity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta ledningsförmåga", "aliases": [null, "Meyer Citron Max conductivity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.meyer_citron_max_conductivity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.meyer_citron_min_conductivity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta ledningsförmåga", "aliases": [null, "Meyer Citron Min conductivity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.meyer_citron_min_conductivity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.meyer_citron_max_air_humidity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta luftfuktighet", "aliases": [null, "Meyer Citron Max air humidity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.meyer_citron_max_air_humidity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.meyer_citron_min_air_humidity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta luftfuktighet", "aliases": [null, "Meyer Citron Min air humidity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.meyer_citron_min_air_humidity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.meyer_citron_max_dli", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta daglig ljusmängd", "aliases": [null, "Meyer Citron Max DLI"]}}}
+{"status": "applied", "kind": "entity", "id": "number.meyer_citron_max_dli"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.meyer_citron_min_dli", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta daglig ljusmängd", "aliases": [null, "Meyer Citron Min DLI"]}}}
+{"status": "applied", "kind": "entity", "id": "number.meyer_citron_min_dli"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.meyer_citron_illuminance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysningsstyrka", "aliases": [null, "Meyer Citron Illuminance"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.meyer_citron_illuminance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.meyer_citron_conductivity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ledningsförmåga", "aliases": [null, "Meyer Citron Conductivity"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.meyer_citron_conductivity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.meyer_citron_soil_moisture", "before": {"name": null, "aliases": [null]}, "after": {"name": "Jordfuktighet", "aliases": [null, "Meyer Citron Soil moisture"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.meyer_citron_soil_moisture"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.meyer_citron_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Temperatur", "aliases": [null, "Meyer Citron Temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.meyer_citron_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.meyer_citron_air_humidity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Luftfuktighet", "aliases": [null, "Meyer Citron Air humidity"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.meyer_citron_air_humidity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.meyer_citron_total_ppfd_mol_integral", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ackumulerad ljusmängd", "aliases": [null, "Meyer Citron Total ppfd (mol) Integral"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.meyer_citron_total_ppfd_mol_integral"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.meyer_citron_dli", "before": {"name": null, "aliases": [null]}, "after": {"name": "Daglig ljusmängd", "aliases": [null, "Meyer Citron dli"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.meyer_citron_dli"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.paraplyaralia_max_soil_moisture", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta jordfuktighet", "aliases": [null, "Paraplyaralia Max soil moisture"]}}}
+{"status": "applied", "kind": "entity", "id": "number.paraplyaralia_max_soil_moisture"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.paraplyaralia_min_soil_moisture", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta jordfuktighet", "aliases": [null, "Paraplyaralia Min soil moisture"]}}}
+{"status": "applied", "kind": "entity", "id": "number.paraplyaralia_min_soil_moisture"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.paraplyaralia_max_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta temperatur", "aliases": [null, "Paraplyaralia Max temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.paraplyaralia_max_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.paraplyaralia_min_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta temperatur", "aliases": [null, "Paraplyaralia Min temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.paraplyaralia_min_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.paraplyaralia_max_illuminance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta belysningsstyrka", "aliases": [null, "Paraplyaralia Max illuminance"]}}}
+{"status": "applied", "kind": "entity", "id": "number.paraplyaralia_max_illuminance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.paraplyaralia_min_illuminance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta belysningsstyrka", "aliases": [null, "Paraplyaralia Min illuminance"]}}}
+{"status": "applied", "kind": "entity", "id": "number.paraplyaralia_min_illuminance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.paraplyaralia_max_conductivity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta ledningsförmåga", "aliases": [null, "Paraplyaralia Max conductivity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.paraplyaralia_max_conductivity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.paraplyaralia_min_conductivity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta ledningsförmåga", "aliases": [null, "Paraplyaralia Min conductivity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.paraplyaralia_min_conductivity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.paraplyaralia_max_air_humidity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta luftfuktighet", "aliases": [null, "Paraplyaralia Max air humidity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.paraplyaralia_max_air_humidity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.paraplyaralia_min_air_humidity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta luftfuktighet", "aliases": [null, "Paraplyaralia Min air humidity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.paraplyaralia_min_air_humidity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.paraplyaralia_max_dli", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta daglig ljusmängd", "aliases": [null, "Paraplyaralia Max DLI"]}}}
+{"status": "applied", "kind": "entity", "id": "number.paraplyaralia_max_dli"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.paraplyaralia_min_dli", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta daglig ljusmängd", "aliases": [null, "Paraplyaralia Min DLI"]}}}
+{"status": "applied", "kind": "entity", "id": "number.paraplyaralia_min_dli"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.paraplyaralia_illuminance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysningsstyrka", "aliases": [null, "Paraplyaralia Illuminance"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.paraplyaralia_illuminance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.paraplyaralia_conductivity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ledningsförmåga", "aliases": [null, "Paraplyaralia Conductivity"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.paraplyaralia_conductivity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.paraplyaralia_soil_moisture", "before": {"name": null, "aliases": [null]}, "after": {"name": "Jordfuktighet", "aliases": [null, "Paraplyaralia Soil moisture"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.paraplyaralia_soil_moisture"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.paraplyaralia_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Temperatur", "aliases": [null, "Paraplyaralia Temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.paraplyaralia_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.paraplyaralia_air_humidity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Luftfuktighet", "aliases": [null, "Paraplyaralia Air humidity"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.paraplyaralia_air_humidity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.paraplyaralia_total_ppfd_mol_integral", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ackumulerad ljusmängd", "aliases": [null, "Paraplyaralia Total ppfd (mol) Integral"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.paraplyaralia_total_ppfd_mol_integral"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.paraplyaralia_dli", "before": {"name": null, "aliases": [null]}, "after": {"name": "Daglig ljusmängd", "aliases": [null, "Paraplyaralia dli"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.paraplyaralia_dli"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.citron_max_soil_moisture", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta jordfuktighet", "aliases": [null, "Fredskalla Max soil moisture"]}}}
+{"status": "applied", "kind": "entity", "id": "number.citron_max_soil_moisture"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.citron_min_soil_moisture", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta jordfuktighet", "aliases": [null, "Fredskalla Min soil moisture"]}}}
+{"status": "applied", "kind": "entity", "id": "number.citron_min_soil_moisture"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.citron_max_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta temperatur", "aliases": [null, "Fredskalla Max temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.citron_max_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.citron_min_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta temperatur", "aliases": [null, "Fredskalla Min temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.citron_min_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.citron_max_illuminance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta belysningsstyrka", "aliases": [null, "Fredskalla Max illuminance"]}}}
+{"status": "applied", "kind": "entity", "id": "number.citron_max_illuminance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.citron_min_illuminance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta belysningsstyrka", "aliases": [null, "Fredskalla Min illuminance"]}}}
+{"status": "applied", "kind": "entity", "id": "number.citron_min_illuminance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.citron_max_conductivity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta ledningsförmåga", "aliases": [null, "Fredskalla Max conductivity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.citron_max_conductivity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.citron_min_conductivity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta ledningsförmåga", "aliases": [null, "Fredskalla Min conductivity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.citron_min_conductivity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.citron_max_air_humidity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta luftfuktighet", "aliases": [null, "Fredskalla Max air humidity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.citron_max_air_humidity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.citron_min_air_humidity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta luftfuktighet", "aliases": [null, "Fredskalla Min air humidity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.citron_min_air_humidity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.citron_max_dli", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta daglig ljusmängd", "aliases": [null, "Fredskalla Max DLI"]}}}
+{"status": "applied", "kind": "entity", "id": "number.citron_max_dli"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.citron_min_dli", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta daglig ljusmängd", "aliases": [null, "Fredskalla Min DLI"]}}}
+{"status": "applied", "kind": "entity", "id": "number.citron_min_dli"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.citron_illuminance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysningsstyrka", "aliases": [null, "Fredskalla Illuminance"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.citron_illuminance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.citron_conductivity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ledningsförmåga", "aliases": [null, "Fredskalla Conductivity"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.citron_conductivity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.citron_soil_moisture", "before": {"name": null, "aliases": [null]}, "after": {"name": "Jordfuktighet", "aliases": [null, "Fredskalla Soil moisture"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.citron_soil_moisture"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.citron_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Temperatur", "aliases": [null, "Fredskalla Temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.citron_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.citron_air_humidity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Luftfuktighet", "aliases": [null, "Fredskalla Air humidity"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.citron_air_humidity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.citron_total_ppfd_mol_integral", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ackumulerad ljusmängd", "aliases": [null, "Fredskalla Total ppfd (mol) Integral"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.citron_total_ppfd_mol_integral"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.citron_dli", "before": {"name": null, "aliases": [null]}, "after": {"name": "Daglig ljusmängd", "aliases": [null, "Fredskalla dli"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.citron_dli"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplug_s_d81ab8_device_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "shellyplug-s-D81AB8 – beräknad effekt", "aliases": [null, "shellyplug-s-D81AB8 Device Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplug_s_d81ab8_device_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplug_s_d81ab8_device_energy", "before": {"name": null, "aliases": [null]}, "after": {"name": "shellyplug-s-D81AB8 – beräknad energi", "aliases": [null, "shellyplug-s-D81AB8 Device Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplug_s_d81ab8_device_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.kaffir_lime_max_soil_moisture", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta jordfuktighet", "aliases": [null, "Fredskallor (Trappan) Max soil moisture"]}}}
+{"status": "applied", "kind": "entity", "id": "number.kaffir_lime_max_soil_moisture"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.kaffir_lime_min_soil_moisture", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta jordfuktighet", "aliases": [null, "Fredskallor (Trappan) Min soil moisture"]}}}
+{"status": "applied", "kind": "entity", "id": "number.kaffir_lime_min_soil_moisture"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.kaffir_lime_max_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta temperatur", "aliases": [null, "Fredskallor (Trappan) Max temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.kaffir_lime_max_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.kaffir_lime_min_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta temperatur", "aliases": [null, "Fredskallor (Trappan) Min temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.kaffir_lime_min_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.kaffir_lime_max_illuminance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta belysningsstyrka", "aliases": [null, "Fredskallor (Trappan) Max illuminance"]}}}
+{"status": "applied", "kind": "entity", "id": "number.kaffir_lime_max_illuminance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.kaffir_lime_min_illuminance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta belysningsstyrka", "aliases": [null, "Fredskallor (Trappan) Min illuminance"]}}}
+{"status": "applied", "kind": "entity", "id": "number.kaffir_lime_min_illuminance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.kaffir_lime_max_conductivity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta ledningsförmåga", "aliases": [null, "Fredskallor (Trappan) Max conductivity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.kaffir_lime_max_conductivity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.kaffir_lime_min_conductivity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta ledningsförmåga", "aliases": [null, "Fredskallor (Trappan) Min conductivity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.kaffir_lime_min_conductivity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.kaffir_lime_max_air_humidity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta luftfuktighet", "aliases": [null, "Fredskallor (Trappan) Max air humidity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.kaffir_lime_max_air_humidity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.kaffir_lime_min_air_humidity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta luftfuktighet", "aliases": [null, "Fredskallor (Trappan) Min air humidity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.kaffir_lime_min_air_humidity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.kaffir_lime_max_dli", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta daglig ljusmängd", "aliases": [null, "Fredskallor (Trappan) Max DLI"]}}}
+{"status": "applied", "kind": "entity", "id": "number.kaffir_lime_max_dli"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.kaffir_lime_min_dli", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta daglig ljusmängd", "aliases": [null, "Fredskallor (Trappan) Min DLI"]}}}
+{"status": "applied", "kind": "entity", "id": "number.kaffir_lime_min_dli"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kaffir_lime_illuminance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysningsstyrka", "aliases": [null, "Fredskallor (Trappan) Illuminance"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kaffir_lime_illuminance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kaffir_lime_conductivity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ledningsförmåga", "aliases": [null, "Fredskallor (Trappan) Conductivity"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kaffir_lime_conductivity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kaffir_lime_soil_moisture", "before": {"name": null, "aliases": [null]}, "after": {"name": "Jordfuktighet", "aliases": [null, "Fredskallor (Trappan) Soil moisture"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kaffir_lime_soil_moisture"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kaffir_lime_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Temperatur", "aliases": [null, "Fredskallor (Trappan) Temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kaffir_lime_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kaffir_lime_air_humidity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Luftfuktighet", "aliases": [null, "Fredskallor (Trappan) Air humidity"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kaffir_lime_air_humidity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kaffir_lime_total_ppfd_mol_integral", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ackumulerad ljusmängd", "aliases": [null, "Fredskallor (Trappan) Total ppfd (mol) Integral"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kaffir_lime_total_ppfd_mol_integral"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kaffir_lime_dli", "before": {"name": null, "aliases": [null]}, "after": {"name": "Daglig ljusmängd", "aliases": [null, "Fredskallor (Trappan) dli"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kaffir_lime_dli"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplusplugs_08f9e0fd4304_switch_0_device_power", "before": {"name": null, "aliases": [null, "Led-stjärnor (utomhus) [SHPLS] shellyplusplugs-08f9e0fd4304 Switch 0 Device Power"]}, "after": {"name": "Beräknad effekt", "aliases": [null, "Led-stjärnor (utomhus) [SHPLS] shellyplusplugs-08f9e0fd4304 Switch 0 Device Power", "LED-stjärnor shellyplusplugs-08f9e0fd4304 Switch 0 Device Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplusplugs_08f9e0fd4304_switch_0_device_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplusplugs_08f9e0fd4304_switch_0_device_energy", "before": {"name": null, "aliases": [null, "Led-stjärnor (utomhus) [SHPLS] shellyplusplugs-08f9e0fd4304 Switch 0 Device Energy"]}, "after": {"name": "Beräknad energi", "aliases": [null, "Led-stjärnor (utomhus) [SHPLS] shellyplusplugs-08f9e0fd4304 Switch 0 Device Energy", "LED-stjärnor shellyplusplugs-08f9e0fd4304 Switch 0 Device Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplusplugs_08f9e0fd4304_switch_0_device_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.golvvarme_ateljen_rela_device_power", "before": {"name": "Relä Device Power", "aliases": [null, "Golvvärme (ateljén) Relä Device Power"]}, "after": {"name": "Beräknad effekt", "aliases": [null, "Golvvärme (ateljén) Relä Device Power", "Golvvärme Relä Device Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.golvvarme_ateljen_rela_device_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.golvvarme_ateljen_rela_device_energy", "before": {"name": "Relä Device Energy", "aliases": [null, "Golvvärme (ateljén) Relä Device Energy"]}, "after": {"name": "Beräknad energi", "aliases": [null, "Golvvärme (ateljén) Relä Device Energy", "Golvvärme Relä Device Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.golvvarme_ateljen_rela_device_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.golvvarme_bion_rela_device_power", "before": {"name": "Relä Device Power", "aliases": [null, "Golvvärme (bion) Relä Device Power"]}, "after": {"name": "Beräknad effekt", "aliases": [null, "Golvvärme (bion) Relä Device Power", "Golvvärme Relä Device Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.golvvarme_bion_rela_device_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.golvvarme_bion_rela_device_energy", "before": {"name": "Relä Device Energy", "aliases": [null, "Golvvärme (bion) Relä Device Energy"]}, "after": {"name": "Beräknad energi", "aliases": [null, "Golvvärme (bion) Relä Device Energy", "Golvvärme Relä Device Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.golvvarme_bion_rela_device_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.golvvarme_verandan_rela_device_power", "before": {"name": "Relä Device Power", "aliases": [null, "Golvvärme (verandan ) Relä Device Power"]}, "after": {"name": "Beräknad effekt", "aliases": [null, "Golvvärme (verandan ) Relä Device Power", "Golvvärme Relä Device Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.golvvarme_verandan_rela_device_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.golvvarme_verandan_rela_device_energy", "before": {"name": "Relä Device Energy", "aliases": [null, "Golvvärme (verandan ) Relä Device Energy"]}, "after": {"name": "Beräknad energi", "aliases": [null, "Golvvärme (verandan ) Relä Device Energy", "Golvvärme Relä Device Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.golvvarme_verandan_rela_device_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.golvvarme_entren_rela_device_power", "before": {"name": "Relä Device Power", "aliases": [null, "Golvvärme (entrén) Relä Device Power"]}, "after": {"name": "Beräknad effekt", "aliases": [null, "Golvvärme (entrén) Relä Device Power", "Golvvärme Relä Device Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.golvvarme_entren_rela_device_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.golvvarme_entren_rela_device_energy", "before": {"name": "Relä Device Energy", "aliases": [null, "Golvvärme (entrén) Relä Device Energy"]}, "after": {"name": "Beräknad energi", "aliases": [null, "Golvvärme (entrén) Relä Device Energy", "Golvvärme Relä Device Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.golvvarme_entren_rela_device_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.golvvarme_koket_rela_device_power", "before": {"name": "Relä Device Power", "aliases": [null, "Golvvärme (köket) Relä Device Power"]}, "after": {"name": "Beräknad effekt", "aliases": [null, "Golvvärme (köket) Relä Device Power", "Golvvärme Relä Device Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.golvvarme_koket_rela_device_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.golvvarme_koket_rela_device_energy", "before": {"name": "Relä Device Energy", "aliases": [null, "Golvvärme (köket) Relä Device Energy"]}, "after": {"name": "Beräknad energi", "aliases": [null, "Golvvärme (köket) Relä Device Energy", "Golvvärme Relä Device Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.golvvarme_koket_rela_device_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.coffea_arabica_max_soil_moisture", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta jordfuktighet", "aliases": [null, "Doftpelargon Max soil moisture"]}}}
+{"status": "applied", "kind": "entity", "id": "number.coffea_arabica_max_soil_moisture"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.coffea_arabica_min_soil_moisture", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta jordfuktighet", "aliases": [null, "Doftpelargon Min soil moisture"]}}}
+{"status": "applied", "kind": "entity", "id": "number.coffea_arabica_min_soil_moisture"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.coffea_arabica_max_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta temperatur", "aliases": [null, "Doftpelargon Max temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.coffea_arabica_max_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.coffea_arabica_min_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta temperatur", "aliases": [null, "Doftpelargon Min temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.coffea_arabica_min_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.coffea_arabica_max_illuminance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta belysningsstyrka", "aliases": [null, "Doftpelargon Max illuminance"]}}}
+{"status": "applied", "kind": "entity", "id": "number.coffea_arabica_max_illuminance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.coffea_arabica_min_illuminance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta belysningsstyrka", "aliases": [null, "Doftpelargon Min illuminance"]}}}
+{"status": "applied", "kind": "entity", "id": "number.coffea_arabica_min_illuminance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.coffea_arabica_max_conductivity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta ledningsförmåga", "aliases": [null, "Doftpelargon Max conductivity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.coffea_arabica_max_conductivity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.coffea_arabica_min_conductivity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta ledningsförmåga", "aliases": [null, "Doftpelargon Min conductivity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.coffea_arabica_min_conductivity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.coffea_arabica_max_air_humidity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta luftfuktighet", "aliases": [null, "Doftpelargon Max air humidity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.coffea_arabica_max_air_humidity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.coffea_arabica_min_air_humidity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta luftfuktighet", "aliases": [null, "Doftpelargon Min air humidity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.coffea_arabica_min_air_humidity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.coffea_arabica_max_dli", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta daglig ljusmängd", "aliases": [null, "Doftpelargon Max DLI"]}}}
+{"status": "applied", "kind": "entity", "id": "number.coffea_arabica_max_dli"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.coffea_arabica_min_dli", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta daglig ljusmängd", "aliases": [null, "Doftpelargon Min DLI"]}}}
+{"status": "applied", "kind": "entity", "id": "number.coffea_arabica_min_dli"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.coffea_arabica_illuminance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysningsstyrka", "aliases": [null, "Doftpelargon Illuminance"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.coffea_arabica_illuminance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.coffea_arabica_conductivity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ledningsförmåga", "aliases": [null, "Doftpelargon Conductivity"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.coffea_arabica_conductivity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.coffea_arabica_soil_moisture", "before": {"name": null, "aliases": [null]}, "after": {"name": "Jordfuktighet", "aliases": [null, "Doftpelargon Soil moisture"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.coffea_arabica_soil_moisture"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.coffea_arabica_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Temperatur", "aliases": [null, "Doftpelargon Temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.coffea_arabica_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.coffea_arabica_air_humidity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Luftfuktighet", "aliases": [null, "Doftpelargon Air humidity"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.coffea_arabica_air_humidity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.coffea_arabica_total_ppfd_mol_integral", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ackumulerad ljusmängd", "aliases": [null, "Doftpelargon Total ppfd (mol) Integral"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.coffea_arabica_total_ppfd_mol_integral"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.coffea_arabica_dli", "before": {"name": null, "aliases": [null]}, "after": {"name": "Daglig ljusmängd", "aliases": [null, "Doftpelargon dli"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.coffea_arabica_dli"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.blomlampa_vaxtskapet_energy_energy", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad energi", "aliases": [null, "Blomlampa 2 (verandan) Blomlampa (växtskåpet) - energy energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.blomlampa_vaxtskapet_energy_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.blomlampa_ateljen_energy_energy", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad energi", "aliases": [null, "Blomlampa (ateljén) Energy energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.blomlampa_ateljen_energy_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.golvvarme_duschen_device_power", "before": {"name": "Device Power", "aliases": [null, "Golvvärme (duschen) Device Power"]}, "after": {"name": "Beräknad effekt", "aliases": [null, "Golvvärme (duschen) Device Power", "Golvvärme Device Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.golvvarme_duschen_device_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.golvvarme_duschen_device_energy", "before": {"name": "Device Energy", "aliases": [null, "Golvvärme (duschen) Device Energy"]}, "after": {"name": "Beräknad energi", "aliases": [null, "Golvvärme (duschen) Device Energy", "Golvvärme Device Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.golvvarme_duschen_device_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.plus2pm_porch_switch_0_device_power", "before": {"name": null, "aliases": [null, "Taklampor (verandan) Plus2PM-porch Switch 0 Device Power"]}, "after": {"name": "Beräknad effekt", "aliases": [null, "Taklampor (verandan) Plus2PM-porch Switch 0 Device Power", "Taklampor Plus2PM-porch Switch 0 Device Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.plus2pm_porch_switch_0_device_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.plus2pm_porch_switch_0_device_energy", "before": {"name": null, "aliases": [null, "Taklampor (verandan) Plus2PM-porch Switch 0 Device Energy"]}, "after": {"name": "Beräknad energi", "aliases": [null, "Taklampor (verandan) Plus2PM-porch Switch 0 Device Energy", "Taklampor Plus2PM-porch Switch 0 Device Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.plus2pm_porch_switch_0_device_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.plus2pm_porch_switch_1_device_power", "before": {"name": null, "aliases": [null, "Julstjärnor (verandan) Plus2PM-porch Switch 1 Device Power"]}, "after": {"name": "Beräknad effekt", "aliases": [null, "Julstjärnor (verandan) Plus2PM-porch Switch 1 Device Power", "Julstjärnor Plus2PM-porch Switch 1 Device Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.plus2pm_porch_switch_1_device_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.plus2pm_porch_switch_1_device_energy", "before": {"name": null, "aliases": [null, "Julstjärnor (verandan) Plus2PM-porch Switch 1 Device Energy"]}, "after": {"name": "Beräknad energi", "aliases": [null, "Julstjärnor (verandan) Plus2PM-porch Switch 1 Device Energy", "Julstjärnor Plus2PM-porch Switch 1 Device Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.plus2pm_porch_switch_1_device_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.monstera_max_soil_moisture", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta jordfuktighet", "aliases": [null, "Monstera Max soil moisture"]}}}
+{"status": "applied", "kind": "entity", "id": "number.monstera_max_soil_moisture"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.monstera_min_soil_moisture", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta jordfuktighet", "aliases": [null, "Monstera Min soil moisture"]}}}
+{"status": "applied", "kind": "entity", "id": "number.monstera_min_soil_moisture"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.monstera_max_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta temperatur", "aliases": [null, "Monstera Max temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.monstera_max_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.monstera_min_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta temperatur", "aliases": [null, "Monstera Min temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.monstera_min_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.monstera_max_illuminance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta belysningsstyrka", "aliases": [null, "Monstera Max illuminance"]}}}
+{"status": "applied", "kind": "entity", "id": "number.monstera_max_illuminance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.monstera_min_illuminance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta belysningsstyrka", "aliases": [null, "Monstera Min illuminance"]}}}
+{"status": "applied", "kind": "entity", "id": "number.monstera_min_illuminance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.monstera_max_conductivity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta ledningsförmåga", "aliases": [null, "Monstera Max conductivity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.monstera_max_conductivity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.monstera_min_conductivity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta ledningsförmåga", "aliases": [null, "Monstera Min conductivity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.monstera_min_conductivity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.monstera_max_air_humidity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta luftfuktighet", "aliases": [null, "Monstera Max air humidity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.monstera_max_air_humidity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.monstera_min_air_humidity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta luftfuktighet", "aliases": [null, "Monstera Min air humidity"]}}}
+{"status": "applied", "kind": "entity", "id": "number.monstera_min_air_humidity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.monstera_max_dli", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta daglig ljusmängd", "aliases": [null, "Monstera Max DLI"]}}}
+{"status": "applied", "kind": "entity", "id": "number.monstera_max_dli"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.monstera_min_dli", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta daglig ljusmängd", "aliases": [null, "Monstera Min DLI"]}}}
+{"status": "applied", "kind": "entity", "id": "number.monstera_min_dli"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.monstera_illuminance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysningsstyrka", "aliases": [null, "Monstera Illuminance"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.monstera_illuminance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.monstera_conductivity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ledningsförmåga", "aliases": [null, "Monstera Conductivity"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.monstera_conductivity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.monstera_soil_moisture", "before": {"name": null, "aliases": [null]}, "after": {"name": "Jordfuktighet", "aliases": [null, "Monstera Soil moisture"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.monstera_soil_moisture"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.monstera_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Temperatur", "aliases": [null, "Monstera Temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.monstera_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.monstera_air_humidity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Luftfuktighet", "aliases": [null, "Monstera Air humidity"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.monstera_air_humidity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.monstera_total_ppfd_mol_integral", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ackumulerad ljusmängd", "aliases": [null, "Monstera Total ppfd (mol) Integral"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.monstera_total_ppfd_mol_integral"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.monstera_dli", "before": {"name": null, "aliases": [null]}, "after": {"name": "Daglig ljusmängd", "aliases": [null, "Monstera dli"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.monstera_dli"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.max_co2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta koldioxid", "aliases": [null, "Meyer Citron Max CO2"]}}}
+{"status": "applied", "kind": "entity", "id": "number.max_co2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.min_co2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta koldioxid", "aliases": [null, "Meyer Citron Min CO2"]}}}
+{"status": "applied", "kind": "entity", "id": "number.min_co2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.max_soil_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta jordtemperatur", "aliases": [null, "Meyer Citron Max soil temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.max_soil_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.min_soil_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta jordtemperatur", "aliases": [null, "Meyer Citron Min soil temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.min_soil_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.lux_to_ppfd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Omräkningsfaktor lux till PPFD", "aliases": [null, "Meyer Citron Lux to PPFD factor"]}}}
+{"status": "applied", "kind": "entity", "id": "number.lux_to_ppfd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.co2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koldioxid", "aliases": [null, "Meyer Citron CO2"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.co2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.soil_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Jordtemperatur", "aliases": [null, "Meyer Citron Soil temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.soil_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.dli_24h", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ljusmängd senaste dygnet", "aliases": [null, "Meyer Citron dli 24h"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.dli_24h"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.max_co2_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta koldioxid", "aliases": [null, "Paraplyaralia Max CO2"]}}}
+{"status": "applied", "kind": "entity", "id": "number.max_co2_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.min_co2_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta koldioxid", "aliases": [null, "Paraplyaralia Min CO2"]}}}
+{"status": "applied", "kind": "entity", "id": "number.min_co2_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.max_soil_temperature_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta jordtemperatur", "aliases": [null, "Paraplyaralia Max soil temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.max_soil_temperature_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.min_soil_temperature_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta jordtemperatur", "aliases": [null, "Paraplyaralia Min soil temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.min_soil_temperature_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.lux_to_ppfd_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Omräkningsfaktor lux till PPFD", "aliases": [null, "Paraplyaralia Lux to PPFD factor"]}}}
+{"status": "applied", "kind": "entity", "id": "number.lux_to_ppfd_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.co2_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koldioxid", "aliases": [null, "Paraplyaralia CO2"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.co2_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.soil_temperature_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Jordtemperatur", "aliases": [null, "Paraplyaralia Soil temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.soil_temperature_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.dli_24h_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ljusmängd senaste dygnet", "aliases": [null, "Paraplyaralia dli 24h"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.dli_24h_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.max_co2_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta koldioxid", "aliases": [null, "Fredskalla Max CO2"]}}}
+{"status": "applied", "kind": "entity", "id": "number.max_co2_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.min_co2_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta koldioxid", "aliases": [null, "Fredskalla Min CO2"]}}}
+{"status": "applied", "kind": "entity", "id": "number.min_co2_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.max_soil_temperature_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta jordtemperatur", "aliases": [null, "Fredskalla Max soil temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.max_soil_temperature_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.min_soil_temperature_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta jordtemperatur", "aliases": [null, "Fredskalla Min soil temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.min_soil_temperature_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.lux_to_ppfd_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Omräkningsfaktor lux till PPFD", "aliases": [null, "Fredskalla Lux to PPFD factor"]}}}
+{"status": "applied", "kind": "entity", "id": "number.lux_to_ppfd_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.co2_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koldioxid", "aliases": [null, "Fredskalla CO2"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.co2_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.soil_temperature_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Jordtemperatur", "aliases": [null, "Fredskalla Soil temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.soil_temperature_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.dli_24h_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ljusmängd senaste dygnet", "aliases": [null, "Fredskalla dli 24h"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.dli_24h_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.max_co2_5", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta koldioxid", "aliases": [null, "Doftpelargon Max CO2"]}}}
+{"status": "applied", "kind": "entity", "id": "number.max_co2_5"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.min_co2_5", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta koldioxid", "aliases": [null, "Doftpelargon Min CO2"]}}}
+{"status": "applied", "kind": "entity", "id": "number.min_co2_5"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.max_soil_temperature_5", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta jordtemperatur", "aliases": [null, "Doftpelargon Max soil temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.max_soil_temperature_5"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.min_soil_temperature_5", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta jordtemperatur", "aliases": [null, "Doftpelargon Min soil temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.min_soil_temperature_5"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.lux_to_ppfd_5", "before": {"name": null, "aliases": [null]}, "after": {"name": "Omräkningsfaktor lux till PPFD", "aliases": [null, "Doftpelargon Lux to PPFD factor"]}}}
+{"status": "applied", "kind": "entity", "id": "number.lux_to_ppfd_5"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.co2_5", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koldioxid", "aliases": [null, "Doftpelargon CO2"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.co2_5"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.soil_temperature_5", "before": {"name": null, "aliases": [null]}, "after": {"name": "Jordtemperatur", "aliases": [null, "Doftpelargon Soil temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.soil_temperature_5"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.dli_24h_5", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ljusmängd senaste dygnet", "aliases": [null, "Doftpelargon dli 24h"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.dli_24h_5"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.max_co2_6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta koldioxid", "aliases": [null, "Monstera Max CO2"]}}}
+{"status": "applied", "kind": "entity", "id": "number.max_co2_6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.min_co2_6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta koldioxid", "aliases": [null, "Monstera Min CO2"]}}}
+{"status": "applied", "kind": "entity", "id": "number.min_co2_6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.max_soil_temperature_6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta jordtemperatur", "aliases": [null, "Monstera Max soil temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.max_soil_temperature_6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.min_soil_temperature_6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta jordtemperatur", "aliases": [null, "Monstera Min soil temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.min_soil_temperature_6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.lux_to_ppfd_6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Omräkningsfaktor lux till PPFD", "aliases": [null, "Monstera Lux to PPFD factor"]}}}
+{"status": "applied", "kind": "entity", "id": "number.lux_to_ppfd_6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.co2_6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koldioxid", "aliases": [null, "Monstera CO2"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.co2_6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.soil_temperature_6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Jordtemperatur", "aliases": [null, "Monstera Soil temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.soil_temperature_6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.dli_24h_6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ljusmängd senaste dygnet", "aliases": [null, "Monstera dli 24h"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.dli_24h_6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bordslampa_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad effekt", "aliases": [null, "Bordslampa ateljen Bordslampa power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bordslampa_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bordslampa_energy", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad energi", "aliases": [null, "Bordslampa ateljen Bordslampa energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bordslampa_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bordslampa_hemmabion_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bordslampa (hemmabion) – beräknad effekt", "aliases": [null, "Bordslampa (hemmabion) power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bordslampa_hemmabion_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bordslampa_hemmabion_energy", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bordslampa (hemmabion) – beräknad energi", "aliases": [null, "Bordslampa (hemmabion) energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bordslampa_hemmabion_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ikea_of_sweden_tradfri_bulb_e14_cws_globe_806lm_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad effekt", "aliases": [null, "Bordslampa höger IKEA of Sweden TRADFRI bulb E14 CWS globe 806lm power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ikea_of_sweden_tradfri_bulb_e14_cws_globe_806lm_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ikea_of_sweden_tradfri_bulb_e14_cws_globe_806lm_energy", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad energi", "aliases": [null, "Bordslampa höger IKEA of Sweden TRADFRI bulb E14 CWS globe 806lm energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ikea_of_sweden_tradfri_bulb_e14_cws_globe_806lm_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.meyer_citron_max_vpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta ångtrycksunderskott", "aliases": [null, "Meyer Citron Max VPD"]}}}
+{"status": "applied", "kind": "entity", "id": "number.meyer_citron_max_vpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.meyer_citron_min_vpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta ångtrycksunderskott", "aliases": [null, "Meyer Citron Min VPD"]}}}
+{"status": "applied", "kind": "entity", "id": "number.meyer_citron_min_vpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.meyer_citron_vapour_pressure_deficit", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ångtrycksunderskott", "aliases": [null, "Meyer Citron Vapour pressure deficit"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.meyer_citron_vapour_pressure_deficit"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.paraplyaralia_max_vpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta ångtrycksunderskott", "aliases": [null, "Paraplyaralia Max VPD"]}}}
+{"status": "applied", "kind": "entity", "id": "number.paraplyaralia_max_vpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.paraplyaralia_min_vpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta ångtrycksunderskott", "aliases": [null, "Paraplyaralia Min VPD"]}}}
+{"status": "applied", "kind": "entity", "id": "number.paraplyaralia_min_vpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.paraplyaralia_vapour_pressure_deficit", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ångtrycksunderskott", "aliases": [null, "Paraplyaralia Vapour pressure deficit"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.paraplyaralia_vapour_pressure_deficit"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.citron_max_vpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta ångtrycksunderskott", "aliases": [null, "Fredskalla Max VPD"]}}}
+{"status": "applied", "kind": "entity", "id": "number.citron_max_vpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.citron_min_vpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta ångtrycksunderskott", "aliases": [null, "Fredskalla Min VPD"]}}}
+{"status": "applied", "kind": "entity", "id": "number.citron_min_vpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.citron_vapour_pressure_deficit", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ångtrycksunderskott", "aliases": [null, "Fredskalla Vapour pressure deficit"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.citron_vapour_pressure_deficit"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.coffea_arabica_max_vpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta ångtrycksunderskott", "aliases": [null, "Doftpelargon Max VPD"]}}}
+{"status": "applied", "kind": "entity", "id": "number.coffea_arabica_max_vpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.coffea_arabica_min_vpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta ångtrycksunderskott", "aliases": [null, "Doftpelargon Min VPD"]}}}
+{"status": "applied", "kind": "entity", "id": "number.coffea_arabica_min_vpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.coffea_arabica_vapour_pressure_deficit", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ångtrycksunderskott", "aliases": [null, "Doftpelargon Vapour pressure deficit"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.coffea_arabica_vapour_pressure_deficit"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.monstera_max_vpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta ångtrycksunderskott", "aliases": [null, "Monstera Max VPD"]}}}
+{"status": "applied", "kind": "entity", "id": "number.monstera_max_vpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.monstera_min_vpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta ångtrycksunderskott", "aliases": [null, "Monstera Min VPD"]}}}
+{"status": "applied", "kind": "entity", "id": "number.monstera_min_vpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.monstera_vapour_pressure_deficit", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ångtrycksunderskott", "aliases": [null, "Monstera Vapour pressure deficit"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.monstera_vapour_pressure_deficit"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.plus2pm_porch_device_power", "before": {"name": null, "aliases": [null, "Väggkontakt x2 (verandan) Plus2PM-porch Device Power"]}, "after": {"name": "Beräknad effekt", "aliases": [null, "Väggkontakt x2 (verandan) Plus2PM-porch Device Power", "Väggkontakt x2 Plus2PM-porch Device Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.plus2pm_porch_device_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.plus2pm_porch_device_energy", "before": {"name": null, "aliases": [null, "Väggkontakt x2 (verandan) Plus2PM-porch Device Energy"]}, "after": {"name": "Beräknad energi", "aliases": [null, "Väggkontakt x2 (verandan) Plus2PM-porch Device Energy", "Väggkontakt x2 Plus2PM-porch Device Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.plus2pm_porch_device_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bordslampa_vanster_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad effekt", "aliases": [null, "Bordslampa vänster Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bordslampa_vanster_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bordslampa_vanster_energy", "before": {"name": null, "aliases": [null]}, "after": {"name": "Beräknad energi", "aliases": [null, "Bordslampa vänster Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bordslampa_vanster_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kaffir_lime_co2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koldioxid", "aliases": [null, "Fredskallor (Trappan) CO2"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kaffir_lime_co2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kaffir_lime_dli_24h", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ljusmängd senaste dygnet", "aliases": [null, "Fredskallor (Trappan) dli 24h"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kaffir_lime_dli_24h"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.kaffir_lime_lux_to_ppfd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Omräkningsfaktor lux till PPFD", "aliases": [null, "Fredskallor (Trappan) Lux to PPFD factor"]}}}
+{"status": "applied", "kind": "entity", "id": "number.kaffir_lime_lux_to_ppfd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.kaffir_lime_max_co2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta koldioxid", "aliases": [null, "Fredskallor (Trappan) Max CO2"]}}}
+{"status": "applied", "kind": "entity", "id": "number.kaffir_lime_max_co2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.kaffir_lime_max_soil_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta jordtemperatur", "aliases": [null, "Fredskallor (Trappan) Max soil temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.kaffir_lime_max_soil_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.kaffir_lime_max_vpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högsta ångtrycksunderskott", "aliases": [null, "Fredskallor (Trappan) Max VPD"]}}}
+{"status": "applied", "kind": "entity", "id": "number.kaffir_lime_max_vpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.kaffir_lime_min_co2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta koldioxid", "aliases": [null, "Fredskallor (Trappan) Min CO2"]}}}
+{"status": "applied", "kind": "entity", "id": "number.kaffir_lime_min_co2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.kaffir_lime_min_soil_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta jordtemperatur", "aliases": [null, "Fredskallor (Trappan) Min soil temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "number.kaffir_lime_min_soil_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.kaffir_lime_min_vpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lägsta ångtrycksunderskott", "aliases": [null, "Fredskallor (Trappan) Min VPD"]}}}
+{"status": "applied", "kind": "entity", "id": "number.kaffir_lime_min_vpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kaffir_lime_soil_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Jordtemperatur", "aliases": [null, "Fredskallor (Trappan) Soil temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kaffir_lime_soil_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kaffir_lime_vpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ångtrycksunderskott", "aliases": [null, "Fredskallor (Trappan) Vapour pressure deficit"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kaffir_lime_vpd"}

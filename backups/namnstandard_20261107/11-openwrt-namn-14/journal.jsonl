@@ -1,0 +1,500 @@
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.f0_08_d1_f2_b8_08_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "ESP32-kamera RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.f0_08_d1_f2_b8_08_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.f0_08_d1_f2_b8_08_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "ESP32-kamera TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.f0_08_d1_f2_b8_08_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.f0_08_d1_f2_b8_08_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "ESP32-kamera Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.f0_08_d1_f2_b8_08_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.7c_9e_bd_06_c3_b4_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "LED-list Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.7c_9e_bd_06_c3_b4_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.192_168_30_196_internet_access_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "192.168.30.196 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.192_168_30_196_internet_access_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.dc_06_75_9d_65_c0_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "LED-list (balkongdörrar) Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.dc_06_75_9d_65_c0_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.f0_08_d1_f2_b8_08_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "ESP32-kamera Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.f0_08_d1_f2_b8_08_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.entren_78_9c_85_2a_70_af_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "gw-august-connect Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.entren_78_9c_85_2a_70_af_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.entren_78_9c_85_2a_70_af_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "gw-august-connect RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.entren_78_9c_85_2a_70_af_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.entren_78_9c_85_2a_70_af_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "gw-august-connect TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.entren_78_9c_85_2a_70_af_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.entren_78_9c_85_2a_70_af_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "gw-august-connect Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.entren_78_9c_85_2a_70_af_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.7c_9e_bd_06_e7_bc_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "LED-list Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.7c_9e_bd_06_e7_bc_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.7c_9e_bd_06_e7_bc_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "LED-list RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.7c_9e_bd_06_e7_bc_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.7c_9e_bd_06_e7_bc_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "LED-list TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.7c_9e_bd_06_e7_bc_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.7c_9e_bd_06_e7_bc_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "LED-list Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.7c_9e_bd_06_e7_bc_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_30_197_signal_strength_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "192.168.30.197 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_30_197_signal_strength_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_30_197_rx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "192.168.30.197 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_30_197_rx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_30_197_tx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "192.168.30.197 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_30_197_tx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_30_197_noise_level_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "192.168.30.197 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_30_197_noise_level_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.entren_08_f9_e0_46_ed_b4_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Taklampor ESPHome Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.entren_08_f9_e0_46_ed_b4_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.entren_08_f9_e0_46_ed_b4_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Taklampor ESPHome RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.entren_08_f9_e0_46_ed_b4_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.entren_08_f9_e0_46_ed_b4_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Taklampor ESPHome TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.entren_08_f9_e0_46_ed_b4_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.entren_08_f9_e0_46_ed_b4_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Taklampor ESPHome Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.entren_08_f9_e0_46_ed_b4_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.duschen_48_e7_29_67_de_7f_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Taklampor Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.duschen_48_e7_29_67_de_7f_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.duschen_48_e7_29_67_de_7f_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Taklampor RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.duschen_48_e7_29_67_de_7f_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.duschen_48_e7_29_67_de_7f_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Taklampor TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.duschen_48_e7_29_67_de_7f_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.duschen_48_e7_29_67_de_7f_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Taklampor Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.duschen_48_e7_29_67_de_7f_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.8c_ce_4e_0c_ca_58_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "8c:ce:4e:0c:ca:58 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.8c_ce_4e_0c_ca_58_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.8c_ce_4e_0c_ca_58_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "8c:ce:4e:0c:ca:58 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.8c_ce_4e_0c_ca_58_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.8c_ce_4e_0c_ca_58_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "8c:ce:4e:0c:ca:58 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.8c_ce_4e_0c_ca_58_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.8c_ce_4e_0c_ca_58_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "8c:ce:4e:0c:ca:58 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.8c_ce_4e_0c_ca_58_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.7c_9e_bd_06_e7_bc_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "LED-list Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.7c_9e_bd_06_e7_bc_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.192_168_30_197_internet_access_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "192.168.30.197 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.192_168_30_197_internet_access_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.8c_ce_4e_0c_ca_58_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "8c:ce:4e:0c:ca:58 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.8c_ce_4e_0c_ca_58_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.diegotab_signal_strength_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "DiegoTab Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.diegotab_signal_strength_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.diegotab_rx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "DiegoTab RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.diegotab_rx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.diegotab_tx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "DiegoTab TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.diegotab_tx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.diegotab_noise_level_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "DiegoTab Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.diegotab_noise_level_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_b0_4a_39_24_a4_cb_signal_strength_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "roborock-max Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_b0_4a_39_24_a4_cb_signal_strength_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_b0_4a_39_24_a4_cb_rx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "roborock-max RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_b0_4a_39_24_a4_cb_rx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_b0_4a_39_24_a4_cb_tx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "roborock-max TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_b0_4a_39_24_a4_cb_tx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_b0_4a_39_24_a4_cb_noise_level_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "roborock-max Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_b0_4a_39_24_a4_cb_noise_level_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.00_f4_8d_97_d9_b5_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "chromecast-kokets-screen Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.00_f4_8d_97_d9_b5_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.00_f4_8d_97_d9_b5_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "chromecast-kokets-screen RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.00_f4_8d_97_d9_b5_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.00_f4_8d_97_d9_b5_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "chromecast-kokets-screen TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.00_f4_8d_97_d9_b5_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.00_f4_8d_97_d9_b5_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "chromecast-kokets-screen Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.00_f4_8d_97_d9_b5_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.siemens_dishwasher_016050395510002818_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "siemens-dishwasher-016050395510002818 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.siemens_dishwasher_016050395510002818_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.siemens_dishwasher_016050395510002818_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "siemens-dishwasher-016050395510002818 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.siemens_dishwasher_016050395510002818_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.siemens_dishwasher_016050395510002818_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "siemens-dishwasher-016050395510002818 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.siemens_dishwasher_016050395510002818_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.siemens_dishwasher_016050395510002818_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "siemens-dishwasher-016050395510002818 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.siemens_dishwasher_016050395510002818_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_7c_9e_bd_47_e2_88_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "LED-list sydöstra Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_7c_9e_bd_47_e2_88_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_7c_9e_bd_47_e2_88_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "LED-list sydöstra RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_7c_9e_bd_47_e2_88_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_7c_9e_bd_47_e2_88_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "LED-list sydöstra TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_7c_9e_bd_47_e2_88_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_7c_9e_bd_47_e2_88_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "LED-list sydöstra Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_7c_9e_bd_47_e2_88_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.7c_9e_bd_46_f5_80_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "LED-list östra Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.7c_9e_bd_46_f5_80_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.7c_9e_bd_46_f5_80_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "LED-list östra RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.7c_9e_bd_46_f5_80_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.7c_9e_bd_46_f5_80_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "LED-list östra TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.7c_9e_bd_46_f5_80_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.7c_9e_bd_46_f5_80_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "LED-list östra Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.7c_9e_bd_46_f5_80_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.f4_cf_a2_15_d0_e3_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Blomlampa 2 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.f4_cf_a2_15_d0_e3_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.f4_cf_a2_15_d0_e3_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Blomlampa 2 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.f4_cf_a2_15_d0_e3_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.f4_cf_a2_15_d0_e3_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Blomlampa 2 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.f4_cf_a2_15_d0_e3_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.f4_cf_a2_15_d0_e3_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Blomlampa 2 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.f4_cf_a2_15_d0_e3_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.siemens_dishwasher_016050395510002818_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "siemens-dishwasher-016050395510002818 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.siemens_dishwasher_016050395510002818_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.7c_9e_bd_46_f5_80_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "LED-list östra Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.7c_9e_bd_46_f5_80_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.f4_cf_a2_15_d0_e3_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Blomlampa 2 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.f4_cf_a2_15_d0_e3_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_stereo_right_speaker_signal_strength_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "chromecast-stereo-right-speaker Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_stereo_right_speaker_signal_strength_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_stereo_right_speaker_rx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "chromecast-stereo-right-speaker RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_stereo_right_speaker_rx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_stereo_right_speaker_tx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "chromecast-stereo-right-speaker TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_stereo_right_speaker_tx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_stereo_right_speaker_noise_level_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "chromecast-stereo-right-speaker Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_stereo_right_speaker_noise_level_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.chromecast_stereo_right_speaker_internet_access_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "chromecast-stereo-right-speaker Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.chromecast_stereo_right_speaker_internet_access_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.entren_78_9c_85_2a_70_af_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "gw-august-connect Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.entren_78_9c_85_2a_70_af_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.entren_78_9c_85_2a_70_af_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "gw-august-connect RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.entren_78_9c_85_2a_70_af_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.entren_78_9c_85_2a_70_af_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "gw-august-connect TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.entren_78_9c_85_2a_70_af_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.entren_78_9c_85_2a_70_af_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "gw-august-connect Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.entren_78_9c_85_2a_70_af_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_c5_f2_67_aa_69_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "chromecast-vaxtskapets-speaker Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_c5_f2_67_aa_69_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_c5_f2_67_aa_69_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "chromecast-vaxtskapets-speaker RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_c5_f2_67_aa_69_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_c5_f2_67_aa_69_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "chromecast-vaxtskapets-speaker TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_c5_f2_67_aa_69_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_c5_f2_67_aa_69_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "chromecast-vaxtskapets-speaker Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_c5_f2_67_aa_69_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_c5_f2_3e_08_43_signal_strength_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "chromecast-verkstadens-speaker Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_c5_f2_3e_08_43_signal_strength_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_c5_f2_3e_08_43_rx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "chromecast-verkstadens-speaker RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_c5_f2_3e_08_43_rx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_c5_f2_3e_08_43_tx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "chromecast-verkstadens-speaker TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_c5_f2_3e_08_43_tx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_c5_f2_3e_08_43_noise_level_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "chromecast-verkstadens-speaker Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_c5_f2_3e_08_43_noise_level_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_verkstadens_speaker_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "chromecast-verkstadens-speaker Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_verkstadens_speaker_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_verkstadens_speaker_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "chromecast-verkstadens-speaker RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_verkstadens_speaker_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_verkstadens_speaker_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "chromecast-verkstadens-speaker TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_verkstadens_speaker_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_verkstadens_speaker_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "chromecast-verkstadens-speaker Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_verkstadens_speaker_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_verkstadens_speaker_traffic_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "chromecast-verkstadens-speaker Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_verkstadens_speaker_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_verkstadens_speaker_traffic_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd", "aliases": [null, "chromecast-verkstadens-speaker Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_verkstadens_speaker_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.canon_g3070_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "canon-g3070 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.canon_g3070_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.canon_g3070_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "canon-g3070 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.canon_g3070_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.canon_g3070_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "canon-g3070 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.canon_g3070_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.canon_g3070_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "canon-g3070 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.canon_g3070_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_diegos_screen_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "chromecast-diegos-screen Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_diegos_screen_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_diegos_screen_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "chromecast-diegos-screen RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_diegos_screen_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_diegos_screen_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "chromecast-diegos-screen TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_diegos_screen_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_diegos_screen_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "chromecast-diegos-screen Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_diegos_screen_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_46_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "192.168.10.46 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_46_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_46_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "192.168.10.46 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_46_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_46_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "192.168.10.46 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_46_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_46_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "192.168.10.46 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_46_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c4_4f_33_7a_51_d5_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "LED-list norra Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c4_4f_33_7a_51_d5_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c4_4f_33_7a_51_d5_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "LED-list norra RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c4_4f_33_7a_51_d5_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c4_4f_33_7a_51_d5_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "LED-list norra TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c4_4f_33_7a_51_d5_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c4_4f_33_7a_51_d5_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "LED-list norra Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c4_4f_33_7a_51_d5_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.34_94_54_70_7c_a2_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Taklampor Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.34_94_54_70_7c_a2_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.34_94_54_70_7c_a2_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Taklampor RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.34_94_54_70_7c_a2_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.34_94_54_70_7c_a2_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Taklampor TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.34_94_54_70_7c_a2_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.34_94_54_70_7c_a2_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Taklampor Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.34_94_54_70_7c_a2_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c8_c9_a3_25_b7_f7_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Taklampor Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c8_c9_a3_25_b7_f7_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c8_c9_a3_25_b7_f7_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Taklampor RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c8_c9_a3_25_b7_f7_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c8_c9_a3_25_b7_f7_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Taklampor TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c8_c9_a3_25_b7_f7_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c8_c9_a3_25_b7_f7_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Taklampor Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c8_c9_a3_25_b7_f7_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c8_2b_96_5c_71_55_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Blomlampa Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c8_2b_96_5c_71_55_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c8_2b_96_5c_71_55_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Blomlampa RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c8_2b_96_5c_71_55_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c8_2b_96_5c_71_55_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Blomlampa TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c8_2b_96_5c_71_55_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c8_2b_96_5c_71_55_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Blomlampa Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c8_2b_96_5c_71_55_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplug_s_manni_bed_lamp_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "shellyplug-s-manni-bed-lamp Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplug_s_manni_bed_lamp_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplug_s_manni_bed_lamp_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "shellyplug-s-manni-bed-lamp RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplug_s_manni_bed_lamp_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplug_s_manni_bed_lamp_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "shellyplug-s-manni-bed-lamp TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplug_s_manni_bed_lamp_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplug_s_manni_bed_lamp_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "shellyplug-s-manni-bed-lamp Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplug_s_manni_bed_lamp_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.canon_g3070_internet_access_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "canon-g3070 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.canon_g3070_internet_access_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.chromecast_diegos_screen_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "chromecast-diegos-screen Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.chromecast_diegos_screen_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.192_168_10_46_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "192.168.10.46 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.192_168_10_46_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.c4_4f_33_7a_51_d5_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "LED-list norra Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.c4_4f_33_7a_51_d5_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.34_94_54_70_7c_a2_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Taklampor Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.34_94_54_70_7c_a2_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.c8_c9_a3_25_b7_f7_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Taklampor Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.c8_c9_a3_25_b7_f7_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.c8_2b_96_5c_71_55_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Blomlampa Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.c8_2b_96_5c_71_55_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.shellyplug_s_manni_bed_lamp_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "shellyplug-s-manni-bed-lamp Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.shellyplug_s_manni_bed_lamp_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.levoit_humidifier_verandan_signal_strength_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "levoit-humidifier-verandan Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.levoit_humidifier_verandan_signal_strength_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.levoit_humidifier_verandan_rx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "levoit-humidifier-verandan RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.levoit_humidifier_verandan_rx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.levoit_humidifier_verandan_tx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "levoit-humidifier-verandan TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.levoit_humidifier_verandan_tx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.levoit_humidifier_verandan_noise_level_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "levoit-humidifier-verandan Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.levoit_humidifier_verandan_noise_level_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c4_4f_33_7a_51_11_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "LED-list östra Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c4_4f_33_7a_51_11_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c4_4f_33_7a_51_11_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "LED-list östra RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c4_4f_33_7a_51_11_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c4_4f_33_7a_51_11_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "LED-list östra TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c4_4f_33_7a_51_11_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c4_4f_33_7a_51_11_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "LED-list östra Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c4_4f_33_7a_51_11_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.levoit_humidifier_verandan_internet_access_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "levoit-humidifier-verandan Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.levoit_humidifier_verandan_internet_access_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.c4_4f_33_7a_51_11_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "LED-list östra Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.c4_4f_33_7a_51_11_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.home_assistant_voice_096460_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "home-assistant-voice-096460 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.home_assistant_voice_096460_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.home_assistant_voice_096460_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "home-assistant-voice-096460 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.home_assistant_voice_096460_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.home_assistant_voice_096460_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "home-assistant-voice-096460 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.home_assistant_voice_096460_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.home_assistant_voice_096460_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "home-assistant-voice-096460 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.home_assistant_voice_096460_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.dc_06_75_9d_82_74_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "dc:06:75:9d:82:74 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.dc_06_75_9d_82_74_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.dc_06_75_9d_82_74_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "dc:06:75:9d:82:74 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.dc_06_75_9d_82_74_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.dc_06_75_9d_82_74_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "dc:06:75:9d:82:74 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.dc_06_75_9d_82_74_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.dc_06_75_9d_82_74_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "dc:06:75:9d:82:74 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.dc_06_75_9d_82_74_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.a4_cf_12_d8_77_59_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "a4:cf:12:d8:77:59 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.a4_cf_12_d8_77_59_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.a4_cf_12_d8_77_59_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "a4:cf:12:d8:77:59 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.a4_cf_12_d8_77_59_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.a4_cf_12_d8_77_59_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "a4:cf:12:d8:77:59 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.a4_cf_12_d8_77_59_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.a4_cf_12_d8_77_59_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "a4:cf:12:d8:77:59 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.a4_cf_12_d8_77_59_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.home_assistant_voice_096460_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "home-assistant-voice-096460 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.home_assistant_voice_096460_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.dc_06_75_9d_82_74_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "dc:06:75:9d:82:74 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.dc_06_75_9d_82_74_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.a4_cf_12_d8_77_59_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "a4:cf:12:d8:77:59 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.a4_cf_12_d8_77_59_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.40_22_d8_61_53_f8_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "40:22:d8:61:53:f8 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.40_22_d8_61_53_f8_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.40_22_d8_61_53_f8_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "40:22:d8:61:53:f8 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.40_22_d8_61_53_f8_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.40_22_d8_61_53_f8_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "40:22:d8:61:53:f8 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.40_22_d8_61_53_f8_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.40_22_d8_61_53_f8_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "40:22:d8:61:53:f8 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.40_22_d8_61_53_f8_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.40_22_d8_61_53_f8_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "40:22:d8:61:53:f8 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.40_22_d8_61_53_f8_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_46_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "192.168.10.46 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_46_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_46_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "192.168.10.46 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_46_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_46_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "192.168.10.46 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_46_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_46_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "192.168.10.46 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_46_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.192_168_10_46_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "192.168.10.46 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.192_168_10_46_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c8_2b_96_5c_71_55_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Blomlampa Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c8_2b_96_5c_71_55_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c8_2b_96_5c_71_55_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Blomlampa RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c8_2b_96_5c_71_55_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c8_2b_96_5c_71_55_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Blomlampa TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c8_2b_96_5c_71_55_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c8_2b_96_5c_71_55_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Blomlampa Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c8_2b_96_5c_71_55_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.c8_2b_96_5c_71_55_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Blomlampa Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.c8_2b_96_5c_71_55_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.a4_cf_12_d8_77_59_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "a4:cf:12:d8:77:59 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.a4_cf_12_d8_77_59_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.a4_cf_12_d8_77_59_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "a4:cf:12:d8:77:59 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.a4_cf_12_d8_77_59_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.a4_cf_12_d8_77_59_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "a4:cf:12:d8:77:59 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.a4_cf_12_d8_77_59_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.a4_cf_12_d8_77_59_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "a4:cf:12:d8:77:59 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.a4_cf_12_d8_77_59_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplug_s_diego_bed_lamp_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "shellyplug-s-diego-bed-lamp Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplug_s_diego_bed_lamp_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplug_s_diego_bed_lamp_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "shellyplug-s-diego-bed-lamp RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplug_s_diego_bed_lamp_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplug_s_diego_bed_lamp_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "shellyplug-s-diego-bed-lamp TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplug_s_diego_bed_lamp_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplug_s_diego_bed_lamp_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "shellyplug-s-diego-bed-lamp Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplug_s_diego_bed_lamp_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.a4_cf_12_d8_77_59_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "a4:cf:12:d8:77:59 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.a4_cf_12_d8_77_59_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.shellyplug_s_diego_bed_lamp_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "shellyplug-s-diego-bed-lamp Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.shellyplug_s_diego_bed_lamp_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kontoret_openwrt_one_ap_kontoret_temperature_hwmon_0", "before": {"name": null, "aliases": [null]}, "after": {"name": "Temperatur hwmon 0", "aliases": [null, "OpenWrt One - AP Kontoret Temperature Hwmon 0"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kontoret_openwrt_one_ap_kontoret_temperature_hwmon_0"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kontoret_openwrt_one_ap_kontoret_temperature_hwmon_1", "before": {"name": null, "aliases": [null]}, "after": {"name": "Temperatur hwmon 1", "aliases": [null, "OpenWrt One - AP Kontoret Temperature Hwmon 1"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kontoret_openwrt_one_ap_kontoret_temperature_hwmon_1"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kontoret_openwrt_one_ap_kontoret_temperature_hwmon_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Temperatur hwmon 2", "aliases": [null, "OpenWrt One - AP Kontoret Temperature Hwmon 2"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kontoret_openwrt_one_ap_kontoret_temperature_hwmon_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_46_signal_strength_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "192.168.10.46 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_46_signal_strength_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_46_rx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "192.168.10.46 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_46_rx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_46_tx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "192.168.10.46 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_46_tx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_46_noise_level_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "192.168.10.46 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_46_noise_level_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.192_168_10_46_internet_access_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "192.168.10.46 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.192_168_10_46_internet_access_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_sanglampor_diego_signal_strength_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Sänglampor Diego Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_sanglampor_diego_signal_strength_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_sanglampor_diego_rx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Sänglampor Diego RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_sanglampor_diego_rx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_sanglampor_diego_tx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Sänglampor Diego TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_sanglampor_diego_tx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_sanglampor_diego_noise_level_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Sänglampor Diego Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_sanglampor_diego_noise_level_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplug_s_diego_bed_lamp_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "shellyplug-s-diego-bed-lamp Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplug_s_diego_bed_lamp_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplug_s_diego_bed_lamp_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "shellyplug-s-diego-bed-lamp RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplug_s_diego_bed_lamp_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplug_s_diego_bed_lamp_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "shellyplug-s-diego-bed-lamp TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplug_s_diego_bed_lamp_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplug_s_diego_bed_lamp_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "shellyplug-s-diego-bed-lamp Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplug_s_diego_bed_lamp_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c4_4f_33_7a_51_11_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "LED-list östra Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c4_4f_33_7a_51_11_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c4_4f_33_7a_51_11_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "LED-list östra RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c4_4f_33_7a_51_11_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c4_4f_33_7a_51_11_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "LED-list östra TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c4_4f_33_7a_51_11_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c4_4f_33_7a_51_11_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "LED-list östra Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c4_4f_33_7a_51_11_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.c4_4f_33_7a_51_11_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "LED-list östra Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.c4_4f_33_7a_51_11_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c8_c9_a3_25_b7_f7_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Taklampor Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c8_c9_a3_25_b7_f7_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c8_c9_a3_25_b7_f7_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Taklampor RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c8_c9_a3_25_b7_f7_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c8_c9_a3_25_b7_f7_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Taklampor TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c8_c9_a3_25_b7_f7_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c8_c9_a3_25_b7_f7_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Taklampor Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c8_c9_a3_25_b7_f7_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.c8_c9_a3_25_b7_f7_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Taklampor Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.c8_c9_a3_25_b7_f7_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.dc_06_75_9d_82_74_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "dc:06:75:9d:82:74 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.dc_06_75_9d_82_74_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.dc_06_75_9d_82_74_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "dc:06:75:9d:82:74 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.dc_06_75_9d_82_74_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.dc_06_75_9d_82_74_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "dc:06:75:9d:82:74 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.dc_06_75_9d_82_74_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.dc_06_75_9d_82_74_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "dc:06:75:9d:82:74 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.dc_06_75_9d_82_74_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.dc_06_75_9d_82_74_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "dc:06:75:9d:82:74 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.dc_06_75_9d_82_74_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplug_s_manni_bed_lamp_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "shellyplug-s-manni-bed-lamp Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplug_s_manni_bed_lamp_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplug_s_manni_bed_lamp_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "shellyplug-s-manni-bed-lamp RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplug_s_manni_bed_lamp_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplug_s_manni_bed_lamp_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "shellyplug-s-manni-bed-lamp TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplug_s_manni_bed_lamp_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplug_s_manni_bed_lamp_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "shellyplug-s-manni-bed-lamp Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplug_s_manni_bed_lamp_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.shellyplug_s_manni_bed_lamp_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "shellyplug-s-manni-bed-lamp Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.shellyplug_s_manni_bed_lamp_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_stereo_right_speaker_signal_strength_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "chromecast-stereo-right-speaker Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_stereo_right_speaker_signal_strength_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_stereo_right_speaker_rx_rate_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "chromecast-stereo-right-speaker RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_stereo_right_speaker_rx_rate_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_stereo_right_speaker_tx_rate_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "chromecast-stereo-right-speaker TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_stereo_right_speaker_tx_rate_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_stereo_right_speaker_noise_level_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "chromecast-stereo-right-speaker Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_stereo_right_speaker_noise_level_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.chromecast_stereo_right_speaker_internet_access_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "chromecast-stereo-right-speaker Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.chromecast_stereo_right_speaker_internet_access_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_r875f_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "SM-R875F Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_r875f_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_r875f_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "SM-R875F RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_r875f_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_r875f_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "SM-R875F TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_r875f_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_r875f_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "SM-R875F Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_r875f_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.sm_r875f_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "SM-R875F Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.sm_r875f_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.dc_06_75_9d_65_c0_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "LED-list (balkongdörrar) Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.dc_06_75_9d_65_c0_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.dc_06_75_9d_65_c0_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "LED-list (balkongdörrar) RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.dc_06_75_9d_65_c0_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.dc_06_75_9d_65_c0_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "LED-list (balkongdörrar) TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.dc_06_75_9d_65_c0_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.dc_06_75_9d_65_c0_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "LED-list (balkongdörrar) Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.dc_06_75_9d_65_c0_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplus2pm_porch_lamps_x2_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Väggkontakt x2 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplus2pm_porch_lamps_x2_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplus2pm_porch_lamps_x2_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Väggkontakt x2 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplus2pm_porch_lamps_x2_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplus2pm_porch_lamps_x2_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Väggkontakt x2 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplus2pm_porch_lamps_x2_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplus2pm_porch_lamps_x2_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Väggkontakt x2 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplus2pm_porch_lamps_x2_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_kokets_screen_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "chromecast-kokets-screen Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_kokets_screen_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_kokets_screen_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "chromecast-kokets-screen RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_kokets_screen_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_kokets_screen_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "chromecast-kokets-screen TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_kokets_screen_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_kokets_screen_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "chromecast-kokets-screen Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_kokets_screen_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.dc_06_75_9d_65_c0_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "LED-list (balkongdörrar) Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.dc_06_75_9d_65_c0_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.shellyplus2pm_porch_lamps_x2_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Väggkontakt x2 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.shellyplus2pm_porch_lamps_x2_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.chromecast_kokets_screen_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "chromecast-kokets-screen Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.chromecast_kokets_screen_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_tv_soundbar_signal_strength_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "chromecast-tv-soundbar Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_tv_soundbar_signal_strength_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_tv_soundbar_rx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "chromecast-tv-soundbar RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_tv_soundbar_rx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_tv_soundbar_tx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "chromecast-tv-soundbar TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_tv_soundbar_tx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_tv_soundbar_noise_level_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "chromecast-tv-soundbar Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_tv_soundbar_noise_level_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s9_signal_strength_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Galaxy-S9 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s9_signal_strength_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s9_rx_rate_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Galaxy-S9 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s9_rx_rate_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s9_tx_rate_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Galaxy-S9 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s9_tx_rate_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s9_noise_level_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Galaxy-S9 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s9_noise_level_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.chromecast_tv_soundbar_internet_access_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "chromecast-tv-soundbar Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.chromecast_tv_soundbar_internet_access_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.galaxy_s9_internet_access_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Galaxy-S9 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.galaxy_s9_internet_access_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.30_c9_22_86_74_68_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Väggkontakt x2 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.30_c9_22_86_74_68_signal_strength_2"}

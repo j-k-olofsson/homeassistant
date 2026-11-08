@@ -1,0 +1,873 @@
+{
+  "version": 1,
+  "minor_version": 3,
+  "key": "repairs.issue_registry",
+  "data": {
+    "issues": [
+      {
+        "config_entry_id": null,
+        "created": "2023-05-04T03:57:50.968947+00:00",
+        "dismissed_version": "2023.5.0",
+        "domain": "workday",
+        "is_persistent": false,
+        "issue_id": "deprecated_yaml"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2023-06-08T03:38:04.610026+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "8a85f76786864c7b930fdf5a80967f35"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2024-01-04T05:55:50.198568+00:00",
+        "dismissed_version": "2024.1.0",
+        "domain": "homeassistant",
+        "is_persistent": false,
+        "issue_id": "deprecated_yaml_systemmonitor"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2024-03-22T07:55:26.947556+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "98079b82938644bcb83ce66f2b1be677"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2024-03-22T07:55:26.948512+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "62e8d196576b45a5badd020f6f199d18"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2024-06-12T10:36:33.534463+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "674502b1d01e4902949b1e4e4b070959"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2024-06-12T10:36:33.534917+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "7d38013176664bbe951adc954e990d06"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2024-08-14T09:44:13.167425+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "f4b9706c34be4d569863a3a91c89eaf0"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2024-08-14T09:44:13.168042+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "ac5a2574253a4ad8a13cb2378dd68dd3"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2024-09-05T09:02:50.619984+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "610c52699a2c49e5a0627f58e061bea4"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2024-09-05T09:02:50.620332+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "169e865b2a554df7946007a925c39406"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2024-11-07T07:18:11.493351+00:00",
+        "dismissed_version": null,
+        "domain": "homeassistant",
+        "is_persistent": false,
+        "issue_id": "integration_not_found.nordpool"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2024-12-03T10:36:39.057650+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "52b09122ecc84dfbb49e85a3fb6917af"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2024-12-03T10:36:39.058282+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "a4bd42448db546758abea9a1d2a6b516"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2024-12-04T09:52:55.643161+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "a6fe1d8944d04cdc97a1b2df0996f597"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2024-12-04T09:52:55.643906+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "64c9130b5fd345c3968bb6cb053d786b"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2024-12-20T08:22:33.521103+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "012225932af64f809048c5de469f1949"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2024-12-20T08:22:33.521449+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "99e35914e55a431ab03f970d6c8fe71c"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2024-12-23T09:41:19.435453+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "363775a93b1340c594970c264c4595e1"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2024-12-23T09:41:19.435868+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "46c2b97ffcbc466b95093906f352e227"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-04-03T04:21:40.711541+00:00",
+        "dismissed_version": "2025.5.1",
+        "domain": "smartthings",
+        "is_persistent": false,
+        "issue_id": "deprecated_switch_appliance_switch.tvattmaskin"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-05-23T14:33:45.692349+00:00",
+        "dismissed_version": "2025.5.2",
+        "domain": "homeassistant",
+        "is_persistent": false,
+        "issue_id": "platform_integration_no_support_sensor_file"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-09-07T12:02:22.185486+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "48470b8db6a84d238fb61bf10bdf1a2a"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-09-07T12:02:22.188183+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "60bb0e0e5aa6458badb085cbcee8ea5c"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-10-10T08:10:10.827285+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "2d6bb7e355d847c4b98e3069c6692e30"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-10-10T08:10:10.832310+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "16a36c0ea8334f92a2cc3ffe6165bda2"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-10-17T08:56:15.199816+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "5b065ed294c647818a240e6c62e3ddac"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-10-17T08:56:15.202238+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "b81381c725cb41c08dedf52b74510432"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-10-19T14:39:08.204773+00:00",
+        "dismissed_version": "2025.10.3",
+        "domain": "homeassistant",
+        "is_persistent": false,
+        "issue_id": "platform_integration_no_support_binary_sensor_ping"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-11-05T08:38:32.158958+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "c593463517f9429aa4845fb39d85a631"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-11-05T08:38:32.161421+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "ffecb18f171c4d808629563f78da80f9"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-11-05T11:40:33.950834+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "2d88f6229d694f798a3dc3a3816e3300"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-11-05T11:40:33.953451+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "6d3a883842004421bc50172b9aa3d77c"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-11-05T12:10:47.414610+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "965bea9fd7d24c2c8fb82114ee826ba5"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-11-13T09:52:34.022541+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "dff81a9506f84d10a5edea2cba4c4321"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-11-13T09:52:34.025673+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "e91fb898a0794120821c6873d4b888a0"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-11-13T09:52:34.026736+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "94e45bf038cb4f4e82039962cd68a96b"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-11-18T17:25:52.226560+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "a3a2b674f9bb45e99abc0b524bc1778e"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-11-18T17:25:52.229604+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "b42fc4d2101c4800b51f874242902a82"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-11-18T17:25:52.230444+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "417a4314501b4caa9d4e078839a5c39e"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-11-21T14:53:12.096152+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "5b38385fba1a4424a9cca4187432c51f"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-11-21T14:53:12.098260+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "8615b5dfdf2b496d9aade9af295ade4a"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-11-21T14:53:12.099075+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "e718ceace6df4266aa520611d23afc76"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2025-12-11T13:39:23.960198+00:00",
+        "dismissed_version": "2025.12.2",
+        "domain": "sql",
+        "is_persistent": false,
+        "issue_id": "sensor_platform_yaml_not_supported"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-01-13T06:00:37.267790+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "2eb109e0c5db466abf229c99908515fe"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-01-13T06:00:37.270094+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "1c5468b1d7c14de0b2c1d77e7425e7f5"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-01-13T06:00:37.270867+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "3af627aeef2546079459b474db3e98fa"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-02-04T12:59:53.051202+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "378d5311dd894983b249e5e03d089d8a"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-02-04T12:59:53.054024+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "6350bc29017a43dfa0f4bfd7021bd265"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-02-04T12:59:53.055224+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "320300ab67eb459a95174cb190c343e6"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-02-09T00:25:48.045468+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "4011df3b6230486d819c94b217b0c1b3"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-02-09T00:25:48.046394+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "8746fea3286c44b5a0d8496fc81230f0"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-02-09T00:25:48.049174+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "2f862f5a1f584970847c5155fbb12283"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-02-20T11:39:29.700737+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "f5afec32182f49f49a4889a8beb8fc16"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-02-20T11:39:29.704813+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "caa22314b42c49929cca6cdba8ddfe9e"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-02-20T11:39:29.706276+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "48f0f20bb59d4159b4b7457e53a0e19c"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-02-23T10:16:31.909372+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "ce2753548ebb4b2f95f0a3f3c113256c"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-02-23T10:16:31.912504+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "29d2c8a74afb4931aeac18c568c05ac9"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-02-23T10:16:31.913709+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "34137dc5d0b54b91a98e8bf15068320b"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-08-18T11:58:42.460915+00:00",
+        "dismissed_version": "2026.8.2",
+        "domain": "template",
+        "is_persistent": false,
+        "issue_id": "-0x5e66f9bcbab99fda"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-08-31T15:28:11.556742+00:00",
+        "dismissed_version": "2026.8.3",
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "dead_entities_01K86C7FV03FZSW85Q2QGG0BH8"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-09-18T18:15:41.050238+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "98e69d03fda54b3a9166927438f2d9a4"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-09-18T18:15:41.050586+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "704c05bd573e45dd90564639c85236b5"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-09-18T18:16:39.608803+00:00",
+        "dismissed_version": null,
+        "domain": "homeassistant",
+        "is_persistent": false,
+        "issue_id": "config_entry_reauth_vesync_01JYEGT3Y7R47EN7J2QTTX8DRR"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-09-18T18:16:40.933850+00:00",
+        "dismissed_version": null,
+        "domain": "cloud",
+        "is_persistent": false,
+        "issue_id": "connection_error_2027-08-24 00:00:00+00:00"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-09-19T07:55:38.357386+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "f912da7a59614acda6c96c838b2b98ad"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-09-19T07:55:38.360951+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "099d95f7b0544cc881d05336f75036f5"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-09-19T09:09:46.514839+00:00",
+        "dismissed_version": null,
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "d8c435d60a544c68aa929fc503fb1191"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-09-19T09:32:47.291257+00:00",
+        "dismissed_version": "2026.9.2",
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "5c964ecd084d423e8de36c3551b65341"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-05T13:47:48.581083+00:00",
+        "dismissed_version": null,
+        "domain": "nfandroidtv",
+        "is_persistent": false,
+        "issue_id": "deprecated_notify_action_android_tv_fire_tv"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:11.147468+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "lovelace_unknown_entity_references_dashboard-elpris_d3cdf430"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:11.769374+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "template_unknown_entity_references_a4507c8760347eef04ad9fb915b7f68d_b5a91450"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:11.770210+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "person_unknown_device_trackers_person.kenneth_892037c3"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:11.775446+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "group_unknown_members_binary_sensor.kritiska_entiteter_for_styrning_och_larm_acda009e"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:11.800695+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "group_unknown_members_light.grupp_sanglampor_594e29c9"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:11.910654+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "group_unknown_members_switch.grupp_hemmabio_c0e4bf6a"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:12.004454+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "template_unknown_entity_references_sensor.elpris_per_kvart_9a50b98b"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:13.826988+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "script_unknown_entity_references_script.bilvarme_starta_en_gang_c5ba4726"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:13.828319+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "script_unknown_entity_references_script.granny_planera_billaddning_9acb49b3"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:14.792531+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "unknown_engines_01k47r34sraw7qdxdtsw1rbv1e_6ad617ff"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:14.960127+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "lovelace_unknown_entity_references_dashboard-ai_96f67470"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:15.000108+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "lovelace_unknown_entity_references_dashboard-hemmabio_2e3f0709"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:15.112659+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "group_unknown_members_light.alla_blomlampor_645ff153"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:15.114217+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "group_unknown_members_light.grupp_lampor_vid_tvn_89a894e9"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:15.214194+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "template_unknown_entity_references_sensor.aqara_taklampor_senaste_analys_5f0688ae"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:15.277912+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "template_unknown_entity_references_sensor.aqara_banklampor_senaste_analys_137845a9"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:15.500550+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "template_unknown_entity_references_binary_sensor.aqara_taklampor_blinkningar_senaste_dygnet_5f0688ae"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:15.502048+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "template_unknown_entity_references_binary_sensor.aqara_banklampor_blinkningar_senaste_dygnet_137845a9"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:16.632697+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "energy_unknown_references_energy_unknown_references_547cf952"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:17.040130+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "script_unknown_entity_references_script.narvarosimulering_starta_4f014f0c"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:17.040584+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "script_unknown_entity_references_script.narvarosimulering_stoppa_deb93063"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:18.307109+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "group_unknown_members_media_player.grannys_hogtalare_group_c18c2dfe"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:18.326807+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "group_unknown_members_light.bion_bordslampor_ea685702"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:18.565784+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "template_unknown_entity_references_e16c32f3a0912e39d6b6b3a38098d21e_d3d61283"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:20.324966+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "script_unknown_entity_references_script.hissmusik_stoppa_f044029e"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:20.325515+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "script_unknown_entity_references_script.ir_lights_on_815442fe"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:20.325790+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "script_unknown_entity_references_script.ir_lights_off_815442fe"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:20.326066+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "script_unknown_entity_references_script.granny_skicka_meddelande_382a7869"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:20.326640+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "script_unknown_entity_references_script.ir_ljus_automatisk_tandning_b2ba3db5"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:20.326912+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "script_unknown_entity_references_script.granny_synkroniserat_tal_via_vanlig_chromecast_90431d9d"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:20.327181+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "script_unknown_entity_references_script.granny_tal_till_ett_chromecast_mal_8c913a07"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:20.327432+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "script_unknown_entity_references_script.bilvarme_laddning_och_uppvarmning_c5ba4726"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:20.327694+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "script_unknown_entity_references_script.bio_synkronisera_adaptivt_ljus_13a6efb4"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:21.444391+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "lovelace_unknown_entity_references_ha-admin_f71132f0"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:21.475756+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "group_unknown_members_light.skymningsbelysning_d98c7d43"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:26.236755+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "lovelace_unknown_entity_references_lovelace_ad885866"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:26.237585+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "lovelace_unknown_entity_references_kuma-status_b5532bbc"
+      },
+      {
+        "config_entry_id": null,
+        "created": "2026-11-08T08:58:29.813630+00:00",
+        "dismissed_version": null,
+        "domain": "spook",
+        "is_persistent": false,
+        "issue_id": "script_unknown_entity_references_script.esphome_sok_efter_wi_fi_nat_e8f7e1e5"
+      }
+    ]
+  }
+}

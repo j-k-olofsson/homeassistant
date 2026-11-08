@@ -1,0 +1,154 @@
+{
+  "switch.koket_accesspunkt_wps": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:20.683389+00:00",
+      "last_updated": "2026-11-07T07:42:20.683389+00:00"
+    }
+  ],
+  "update.koket_accesspunkt": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:20.683389+00:00",
+      "last_updated": "2026-11-07T07:42:20.683389+00:00"
+    }
+  ],
+  "image.koket_accesspunkt_wi_fi_qr_kod_olofsson_wifi_via_ap_koket": [
+    {
+      "state": "2026-11-07T04:58:36.115540+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:20.683389+00:00",
+      "last_updated": "2026-11-07T07:42:20.683389+00:00"
+    },
+    {
+      "state": "2026-11-07T13:25:15.134637+00:00",
+      "last_changed": "2026-11-07T13:25:15.134900+00:00"
+    },
+    {
+      "state": "2026-11-08T07:03:38.409713+00:00",
+      "last_changed": "2026-11-08T07:03:38.409940+00:00"
+    }
+  ],
+  "image.koket_accesspunkt_wi_fi_qr_kod_olofsson_guest_via_ap_koket": [
+    {
+      "state": "2026-11-07T04:58:36.115571+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:20.683389+00:00",
+      "last_updated": "2026-11-07T07:42:20.683389+00:00"
+    },
+    {
+      "state": "2026-11-07T13:25:15.134684+00:00",
+      "last_changed": "2026-11-07T13:25:15.135112+00:00"
+    },
+    {
+      "state": "2026-11-08T07:03:38.409739+00:00",
+      "last_changed": "2026-11-08T07:03:38.410122+00:00"
+    }
+  ],
+  "image.koket_accesspunkt_wi_fi_qr_kod_olofsson_iot_via_ap_koket": [
+    {
+      "state": "2026-11-07T04:58:36.115592+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:20.683389+00:00",
+      "last_updated": "2026-11-07T07:42:20.683389+00:00"
+    },
+    {
+      "state": "2026-11-07T13:25:15.134705+00:00",
+      "last_changed": "2026-11-07T13:25:15.135293+00:00"
+    },
+    {
+      "state": "2026-11-08T07:03:38.409763+00:00",
+      "last_changed": "2026-11-08T07:03:38.410281+00:00"
+    }
+  ],
+  "binary_sensor.kontoret_accesspunkt_anslutning": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:20.683389+00:00",
+      "last_updated": "2026-11-07T07:42:20.683389+00:00"
+    }
+  ],
+  "binary_sensor.kontoret_accesspunkt_omstart_kravs": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:20.683389+00:00",
+      "last_updated": "2026-11-07T07:42:20.683389+00:00"
+    }
+  ],
+  "button.kontoret_accesspunkt_starta_om_router": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:20.683389+00:00",
+      "last_updated": "2026-11-07T07:42:20.683389+00:00"
+    }
+  ],
+  "button.kontoret_accesspunkt_starta_wps": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:20.683389+00:00",
+      "last_updated": "2026-11-07T07:42:20.683389+00:00"
+    }
+  ],
+  "button.kontoret_accesspunkt_avbryt_wps": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:20.683389+00:00",
+      "last_updated": "2026-11-07T07:42:20.683389+00:00"
+    }
+  ],
+  "button.kontoret_accesspunkt_skapa_sakerhetskopia": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:20.683389+00:00",
+      "last_updated": "2026-11-07T07:42:20.683389+00:00"
+    }
+  ],
+  "light.kontoret_accesspunkt_led_amber_lan": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:20.683389+00:00",
+      "last_updated": "2026-11-07T07:42:20.683389+00:00"
+    }
+  ],
+  "light.kontoret_accesspunkt_led_green_lan": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:20.683389+00:00",
+      "last_updated": "2026-11-07T07:42:20.683389+00:00"
+    }
+  ],
+  "light.kontoret_accesspunkt_led_green_status": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:20.683389+00:00",
+      "last_updated": "2026-11-07T07:42:20.683389+00:00"
+    }
+  ],
+  "light.kontoret_accesspunkt_led_mdio_bus_0f_amber_wan": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:20.683389+00:00",
+      "last_updated": "2026-11-07T07:42:20.683389+00:00"
+    }
+  ],
+  "light.kontoret_accesspunkt_led_mdio_bus_0f_green_wan": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:20.683389+00:00",
+      "last_updated": "2026-11-07T07:42:20.683389+00:00"
+    }
+  ]
+}

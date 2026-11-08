@@ -1,0 +1,10 @@
+{
+  "sensor.heimdal_ha_moon_fas": [
+    {
+      "state": "waning_crescent",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:52:14.609396+00:00",
+      "last_updated": "2026-11-07T07:52:14.609396+00:00"
+    }
+  ]
+}

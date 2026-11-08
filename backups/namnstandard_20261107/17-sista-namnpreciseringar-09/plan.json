@@ -1,0 +1,4461 @@
+{
+  "stage": "17-sista-namnpreciseringar-09",
+  "operations": [
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_iot_5_ghz_sandareffekt_via_ap_kallaren",
+      "before": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) TX Power"
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt via ap_kallaren",
+        "aliases": [
+          "SSID OLOFSSON_IOT (5 GHz) TX Power",
+          "Sändareffekt"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_iot_5_ghz_ht_lage_via_ap_kallaren",
+      "before": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) HT Mode"
+        ]
+      },
+      "after": {
+        "name": "HT-läge via ap_kallaren",
+        "aliases": [
+          "HT-läge",
+          "SSID OLOFSSON_IOT (5 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_iot_5_ghz_hardvarulage_via_ap_kallaren",
+      "before": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) Hardware Mode"
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge via ap_kallaren",
+        "aliases": [
+          "Hårdvaruläge",
+          "SSID OLOFSSON_IOT (5 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.2_4_ghz_fysisk_radio_via_ap_kallaren",
+      "before": {
+        "name": "Fysisk radio",
+        "aliases": [
+          null,
+          "2.4 GHz Physical radio"
+        ]
+      },
+      "after": {
+        "name": "Fysisk radio via ap_kallaren",
+        "aliases": [
+          "2.4 GHz Fysisk radio",
+          "2.4 GHz Physical radio"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.5_ghz_fysisk_radio_via_ap_kallaren",
+      "before": {
+        "name": "Fysisk radio",
+        "aliases": [
+          null,
+          "5 GHz Physical radio"
+        ]
+      },
+      "after": {
+        "name": "Fysisk radio via ap_kallaren",
+        "aliases": [
+          "5 GHz Fysisk radio",
+          "5 GHz Physical radio"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.ssid_olofsson_wifi_2_4_ghz_ssid_olofsson_wifi_via_ap_kallaren",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "SSID OLOFSSON_WIFI via ap_kallaren",
+        "aliases": [
+          "SSID OLOFSSON_WIFI (2.4 GHz) SSID OLOFSSON_WIFI"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.ssid_olofsson_guest_2_4_ghz_ssid_olofsson_guest_via_ap_kallaren",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "SSID OLOFSSON_GUEST via ap_kallaren",
+        "aliases": [
+          "SSID OLOFSSON_GUEST (2.4 GHz) SSID OLOFSSON_GUEST"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.ssid_olofsson_iot_2_4_ghz_ssid_olofsson_iot_via_ap_kallaren",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "SSID OLOFSSON_IOT via ap_kallaren",
+        "aliases": [
+          "SSID OLOFSSON_IOT (2.4 GHz) SSID OLOFSSON_IOT"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.ssid_olofsson_wifi_5_ghz_ssid_olofsson_wifi_via_ap_kallaren",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "SSID OLOFSSON_WIFI via ap_kallaren",
+        "aliases": [
+          "SSID OLOFSSON_WIFI (5 GHz) SSID OLOFSSON_WIFI"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.ssid_olofsson_guest_5_ghz_ssid_olofsson_guest_via_ap_kallaren",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "SSID OLOFSSON_GUEST via ap_kallaren",
+        "aliases": [
+          "SSID OLOFSSON_GUEST (5 GHz) SSID OLOFSSON_GUEST"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.ssid_olofsson_iot_5_ghz_ssid_olofsson_iot_via_ap_kallaren",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "SSID OLOFSSON_IOT via ap_kallaren",
+        "aliases": [
+          "SSID OLOFSSON_IOT (5 GHz) SSID OLOFSSON_IOT"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_wifi_2_4_ghz_klienter_via_ap_friggan",
+      "before": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) Clients"
+        ]
+      },
+      "after": {
+        "name": "Klienter via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_WIFI (2.4 GHz) Clients",
+          "SSID OLOFSSON_WIFI (2.4 GHz) Klienter"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_wifi_2_4_ghz_kanal_via_ap_friggan",
+      "before": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) Channel"
+        ]
+      },
+      "after": {
+        "name": "Kanal via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_WIFI (2.4 GHz) Channel",
+          "SSID OLOFSSON_WIFI (2.4 GHz) Kanal"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_wifi_2_4_ghz_sandareffekt_via_ap_friggan",
+      "before": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) TX Power"
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_WIFI (2.4 GHz) Sändareffekt",
+          "SSID OLOFSSON_WIFI (2.4 GHz) TX Power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_wifi_2_4_ghz_ht_lage_via_ap_friggan",
+      "before": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) HT Mode"
+        ]
+      },
+      "after": {
+        "name": "HT-läge via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_WIFI (2.4 GHz) HT Mode",
+          "SSID OLOFSSON_WIFI (2.4 GHz) HT-läge"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_wifi_2_4_ghz_hardvarulage_via_ap_friggan",
+      "before": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) Hardware Mode"
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_WIFI (2.4 GHz) Hardware Mode",
+          "SSID OLOFSSON_WIFI (2.4 GHz) Hårdvaruläge"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_wifi_5_ghz_klienter_via_ap_friggan",
+      "before": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) Clients"
+        ]
+      },
+      "after": {
+        "name": "Klienter via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_WIFI (5 GHz) Clients",
+          "SSID OLOFSSON_WIFI (5 GHz) Klienter"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_wifi_5_ghz_kanal_via_ap_friggan",
+      "before": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) Channel"
+        ]
+      },
+      "after": {
+        "name": "Kanal via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_WIFI (5 GHz) Channel",
+          "SSID OLOFSSON_WIFI (5 GHz) Kanal"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_wifi_5_ghz_sandareffekt_via_ap_friggan",
+      "before": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) TX Power"
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_WIFI (5 GHz) TX Power",
+          "Sändareffekt"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_wifi_5_ghz_ht_lage_via_ap_friggan",
+      "before": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) HT Mode"
+        ]
+      },
+      "after": {
+        "name": "HT-läge via ap_friggan",
+        "aliases": [
+          "HT-läge",
+          "SSID OLOFSSON_WIFI (5 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_wifi_5_ghz_hardvarulage_via_ap_friggan",
+      "before": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (5 GHz) Hardware Mode"
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge via ap_friggan",
+        "aliases": [
+          "Hårdvaruläge",
+          "SSID OLOFSSON_WIFI (5 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_guest_5_ghz_klienter_via_ap_friggan",
+      "before": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) Clients"
+        ]
+      },
+      "after": {
+        "name": "Klienter via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_GUEST (5 GHz) Clients",
+          "SSID OLOFSSON_GUEST (5 GHz) Klienter"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_guest_5_ghz_kanal_via_ap_friggan",
+      "before": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) Channel"
+        ]
+      },
+      "after": {
+        "name": "Kanal via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_GUEST (5 GHz) Channel",
+          "SSID OLOFSSON_GUEST (5 GHz) Kanal"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_guest_5_ghz_sandareffekt_via_ap_friggan",
+      "before": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) TX Power"
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_GUEST (5 GHz) TX Power",
+          "Sändareffekt"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_guest_5_ghz_ht_lage_via_ap_friggan",
+      "before": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) HT Mode"
+        ]
+      },
+      "after": {
+        "name": "HT-läge via ap_friggan",
+        "aliases": [
+          "HT-läge",
+          "SSID OLOFSSON_GUEST (5 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_guest_5_ghz_hardvarulage_via_ap_friggan",
+      "before": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (5 GHz) Hardware Mode"
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge via ap_friggan",
+        "aliases": [
+          "Hårdvaruläge",
+          "SSID OLOFSSON_GUEST (5 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_iot_5_ghz_klienter_via_ap_friggan",
+      "before": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) Clients"
+        ]
+      },
+      "after": {
+        "name": "Klienter via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_IOT (5 GHz) Clients",
+          "SSID OLOFSSON_IOT (5 GHz) Klienter"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_iot_5_ghz_kanal_via_ap_friggan",
+      "before": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) Channel"
+        ]
+      },
+      "after": {
+        "name": "Kanal via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_IOT (5 GHz) Channel",
+          "SSID OLOFSSON_IOT (5 GHz) Kanal"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_iot_5_ghz_sandareffekt_via_ap_friggan",
+      "before": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) TX Power"
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_IOT (5 GHz) TX Power",
+          "Sändareffekt"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_iot_5_ghz_ht_lage_via_ap_friggan",
+      "before": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) HT Mode"
+        ]
+      },
+      "after": {
+        "name": "HT-läge via ap_friggan",
+        "aliases": [
+          "HT-läge",
+          "SSID OLOFSSON_IOT (5 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_iot_5_ghz_hardvarulage_via_ap_friggan",
+      "before": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (5 GHz) Hardware Mode"
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge via ap_friggan",
+        "aliases": [
+          "Hårdvaruläge",
+          "SSID OLOFSSON_IOT (5 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_guest_2_4_ghz_klienter_via_ap_friggan",
+      "before": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) Clients"
+        ]
+      },
+      "after": {
+        "name": "Klienter via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_GUEST (2.4 GHz) Clients",
+          "SSID OLOFSSON_GUEST (2.4 GHz) Klienter"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_guest_2_4_ghz_kanal_via_ap_friggan",
+      "before": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) Channel"
+        ]
+      },
+      "after": {
+        "name": "Kanal via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_GUEST (2.4 GHz) Channel",
+          "SSID OLOFSSON_GUEST (2.4 GHz) Kanal"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_guest_2_4_ghz_sandareffekt_via_ap_friggan",
+      "before": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) TX Power"
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_GUEST (2.4 GHz) TX Power",
+          "Sändareffekt"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_guest_2_4_ghz_ht_lage_via_ap_friggan",
+      "before": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) HT Mode"
+        ]
+      },
+      "after": {
+        "name": "HT-läge via ap_friggan",
+        "aliases": [
+          "HT-läge",
+          "SSID OLOFSSON_GUEST (2.4 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_guest_2_4_ghz_hardvarulage_via_ap_friggan",
+      "before": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) Hardware Mode"
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge via ap_friggan",
+        "aliases": [
+          "Hårdvaruläge",
+          "SSID OLOFSSON_GUEST (2.4 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_iot_2_4_ghz_klienter_via_ap_friggan",
+      "before": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) Clients"
+        ]
+      },
+      "after": {
+        "name": "Klienter via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_IOT (2.4 GHz) Clients",
+          "SSID OLOFSSON_IOT (2.4 GHz) Klienter"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_iot_2_4_ghz_kanal_via_ap_friggan",
+      "before": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) Channel"
+        ]
+      },
+      "after": {
+        "name": "Kanal via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_IOT (2.4 GHz) Channel",
+          "SSID OLOFSSON_IOT (2.4 GHz) Kanal"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_iot_2_4_ghz_sandareffekt_via_ap_friggan",
+      "before": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) TX Power"
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_IOT (2.4 GHz) TX Power",
+          "Sändareffekt"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_iot_2_4_ghz_ht_lage_via_ap_friggan",
+      "before": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) HT Mode"
+        ]
+      },
+      "after": {
+        "name": "HT-läge via ap_friggan",
+        "aliases": [
+          "HT-läge",
+          "SSID OLOFSSON_IOT (2.4 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_iot_2_4_ghz_hardvarulage_via_ap_friggan",
+      "before": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) Hardware Mode"
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge via ap_friggan",
+        "aliases": [
+          "Hårdvaruläge",
+          "SSID OLOFSSON_IOT (2.4 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.2_4_ghz_fysisk_radio_via_ap_friggan",
+      "before": {
+        "name": "Fysisk radio",
+        "aliases": [
+          null,
+          "2.4 GHz Physical radio"
+        ]
+      },
+      "after": {
+        "name": "Fysisk radio via ap_friggan",
+        "aliases": [
+          "2.4 GHz Fysisk radio",
+          "2.4 GHz Physical radio"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.5_ghz_fysisk_radio_via_ap_friggan",
+      "before": {
+        "name": "Fysisk radio",
+        "aliases": [
+          null,
+          "5 GHz Physical radio"
+        ]
+      },
+      "after": {
+        "name": "Fysisk radio via ap_friggan",
+        "aliases": [
+          "5 GHz Fysisk radio",
+          "5 GHz Physical radio"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.ssid_olofsson_wifi_2_4_ghz_ssid_olofsson_wifi_via_ap_friggan",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "SSID OLOFSSON_WIFI via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_WIFI (2.4 GHz) SSID OLOFSSON_WIFI"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.ssid_olofsson_wifi_5_ghz_ssid_olofsson_wifi_via_ap_friggan",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "SSID OLOFSSON_WIFI via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_WIFI (5 GHz) SSID OLOFSSON_WIFI"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.ssid_olofsson_guest_5_ghz_ssid_olofsson_guest_via_ap_friggan",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "SSID OLOFSSON_GUEST via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_GUEST (5 GHz) SSID OLOFSSON_GUEST"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.ssid_olofsson_iot_5_ghz_ssid_olofsson_iot_via_ap_friggan",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "SSID OLOFSSON_IOT via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_IOT (5 GHz) SSID OLOFSSON_IOT"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.ssid_olofsson_guest_2_4_ghz_ssid_olofsson_guest_via_ap_friggan",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "SSID OLOFSSON_GUEST via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_GUEST (2.4 GHz) SSID OLOFSSON_GUEST"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.ssid_olofsson_iot_2_4_ghz_ssid_olofsson_iot_via_ap_friggan",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "SSID OLOFSSON_IOT via ap_friggan",
+        "aliases": [
+          "SSID OLOFSSON_IOT (2.4 GHz) SSID OLOFSSON_IOT"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_repeat_iot_5_ghz_klienter_via_ap_poolen",
+      "before": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID REPEAT_IOT (5 GHz) Clients"
+        ]
+      },
+      "after": {
+        "name": "Klienter via ap_poolen",
+        "aliases": [
+          "SSID REPEAT_IOT (5 GHz) Clients",
+          "SSID REPEAT_IOT (5 GHz) Klienter"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_repeat_iot_5_ghz_kanal_via_ap_poolen",
+      "before": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID REPEAT_IOT (5 GHz) Channel"
+        ]
+      },
+      "after": {
+        "name": "Kanal via ap_poolen",
+        "aliases": [
+          "SSID REPEAT_IOT (5 GHz) Channel",
+          "SSID REPEAT_IOT (5 GHz) Kanal"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_repeat_iot_5_ghz_sandareffekt_via_ap_poolen",
+      "before": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID REPEAT_IOT (5 GHz) TX Power"
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt via ap_poolen",
+        "aliases": [
+          "SSID REPEAT_IOT (5 GHz) TX Power",
+          "Sändareffekt"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_repeat_iot_5_ghz_ht_lage_via_ap_poolen",
+      "before": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID REPEAT_IOT (5 GHz) HT Mode"
+        ]
+      },
+      "after": {
+        "name": "HT-läge via ap_poolen",
+        "aliases": [
+          "HT-läge",
+          "SSID REPEAT_IOT (5 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_repeat_iot_5_ghz_hardvarulage_via_ap_poolen",
+      "before": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID REPEAT_IOT (5 GHz) Hardware Mode"
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge via ap_poolen",
+        "aliases": [
+          "Hårdvaruläge",
+          "SSID REPEAT_IOT (5 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_wifi_2_4_ghz_klienter_via_ap_poolen",
+      "before": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) Clients"
+        ]
+      },
+      "after": {
+        "name": "Klienter via ap_poolen",
+        "aliases": [
+          "SSID OLOFSSON_WIFI (2.4 GHz) Clients",
+          "SSID OLOFSSON_WIFI (2.4 GHz) Klienter"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_wifi_2_4_ghz_kanal_via_ap_poolen",
+      "before": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) Channel"
+        ]
+      },
+      "after": {
+        "name": "Kanal via ap_poolen",
+        "aliases": [
+          "SSID OLOFSSON_WIFI (2.4 GHz) Channel",
+          "SSID OLOFSSON_WIFI (2.4 GHz) Kanal"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_wifi_2_4_ghz_sandareffekt_via_ap_poolen",
+      "before": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) TX Power"
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt via ap_poolen",
+        "aliases": [
+          "SSID OLOFSSON_WIFI (2.4 GHz) TX Power",
+          "Sändareffekt"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_wifi_2_4_ghz_ht_lage_via_ap_poolen",
+      "before": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) HT Mode"
+        ]
+      },
+      "after": {
+        "name": "HT-läge via ap_poolen",
+        "aliases": [
+          "HT-läge",
+          "SSID OLOFSSON_WIFI (2.4 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_wifi_2_4_ghz_hardvarulage_via_ap_poolen",
+      "before": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_WIFI (2.4 GHz) Hardware Mode"
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge via ap_poolen",
+        "aliases": [
+          "Hårdvaruläge",
+          "SSID OLOFSSON_WIFI (2.4 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_guest_2_4_ghz_klienter_via_ap_poolen",
+      "before": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) Clients"
+        ]
+      },
+      "after": {
+        "name": "Klienter via ap_poolen",
+        "aliases": [
+          "SSID OLOFSSON_GUEST (2.4 GHz) Clients",
+          "SSID OLOFSSON_GUEST (2.4 GHz) Klienter"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_guest_2_4_ghz_kanal_via_ap_poolen",
+      "before": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) Channel"
+        ]
+      },
+      "after": {
+        "name": "Kanal via ap_poolen",
+        "aliases": [
+          "SSID OLOFSSON_GUEST (2.4 GHz) Channel",
+          "SSID OLOFSSON_GUEST (2.4 GHz) Kanal"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_guest_2_4_ghz_sandareffekt_via_ap_poolen",
+      "before": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) TX Power"
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt via ap_poolen",
+        "aliases": [
+          "SSID OLOFSSON_GUEST (2.4 GHz) TX Power",
+          "Sändareffekt"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_guest_2_4_ghz_ht_lage_via_ap_poolen",
+      "before": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) HT Mode"
+        ]
+      },
+      "after": {
+        "name": "HT-läge via ap_poolen",
+        "aliases": [
+          "HT-läge",
+          "SSID OLOFSSON_GUEST (2.4 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_guest_2_4_ghz_hardvarulage_via_ap_poolen",
+      "before": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_GUEST (2.4 GHz) Hardware Mode"
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge via ap_poolen",
+        "aliases": [
+          "Hårdvaruläge",
+          "SSID OLOFSSON_GUEST (2.4 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_iot_2_4_ghz_klienter_via_ap_poolen",
+      "before": {
+        "name": "Klienter",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) Clients"
+        ]
+      },
+      "after": {
+        "name": "Klienter via ap_poolen",
+        "aliases": [
+          "SSID OLOFSSON_IOT (2.4 GHz) Clients",
+          "SSID OLOFSSON_IOT (2.4 GHz) Klienter"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_iot_2_4_ghz_kanal_via_ap_poolen",
+      "before": {
+        "name": "Kanal",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) Channel"
+        ]
+      },
+      "after": {
+        "name": "Kanal via ap_poolen",
+        "aliases": [
+          "SSID OLOFSSON_IOT (2.4 GHz) Channel",
+          "SSID OLOFSSON_IOT (2.4 GHz) Kanal"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_iot_2_4_ghz_sandareffekt_via_ap_poolen",
+      "before": {
+        "name": "Sändareffekt",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) TX Power"
+        ]
+      },
+      "after": {
+        "name": "Sändareffekt via ap_poolen",
+        "aliases": [
+          "SSID OLOFSSON_IOT (2.4 GHz) TX Power",
+          "Sändareffekt"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_iot_2_4_ghz_ht_lage_via_ap_poolen",
+      "before": {
+        "name": "HT-läge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) HT Mode"
+        ]
+      },
+      "after": {
+        "name": "HT-läge via ap_poolen",
+        "aliases": [
+          "HT-läge",
+          "SSID OLOFSSON_IOT (2.4 GHz) HT Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssid_olofsson_iot_2_4_ghz_hardvarulage_via_ap_poolen",
+      "before": {
+        "name": "Hårdvaruläge",
+        "aliases": [
+          null,
+          "SSID OLOFSSON_IOT (2.4 GHz) Hardware Mode"
+        ]
+      },
+      "after": {
+        "name": "Hårdvaruläge via ap_poolen",
+        "aliases": [
+          "Hårdvaruläge",
+          "SSID OLOFSSON_IOT (2.4 GHz) Hardware Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.5_ghz_fysisk_radio_via_ap_poolen",
+      "before": {
+        "name": "Fysisk radio",
+        "aliases": [
+          null,
+          "5 GHz Physical radio"
+        ]
+      },
+      "after": {
+        "name": "Fysisk radio via ap_poolen",
+        "aliases": [
+          "5 GHz Fysisk radio",
+          "5 GHz Physical radio"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.2_4_ghz_fysisk_radio_via_ap_poolen",
+      "before": {
+        "name": "Fysisk radio",
+        "aliases": [
+          null,
+          "2.4 GHz Physical radio"
+        ]
+      },
+      "after": {
+        "name": "Fysisk radio via ap_poolen",
+        "aliases": [
+          "2.4 GHz Fysisk radio",
+          "2.4 GHz Physical radio"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.ssid_repeat_iot_5_ghz_ssid_repeat_iot_via_ap_poolen",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "SSID REPEAT_IOT via ap_poolen",
+        "aliases": [
+          "SSID REPEAT_IOT (5 GHz) SSID REPEAT_IOT"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.ssid_olofsson_wifi_2_4_ghz_ssid_olofsson_wifi_via_ap_poolen",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "SSID OLOFSSON_WIFI via ap_poolen",
+        "aliases": [
+          "SSID OLOFSSON_WIFI (2.4 GHz) SSID OLOFSSON_WIFI"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.ssid_olofsson_guest_2_4_ghz_ssid_olofsson_guest_via_ap_poolen",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "SSID OLOFSSON_GUEST via ap_poolen",
+        "aliases": [
+          "SSID OLOFSSON_GUEST (2.4 GHz) SSID OLOFSSON_GUEST"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.ssid_olofsson_iot_2_4_ghz_ssid_olofsson_iot_via_ap_poolen",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "SSID OLOFSSON_IOT via ap_poolen",
+        "aliases": [
+          "SSID OLOFSSON_IOT (2.4 GHz) SSID OLOFSSON_IOT"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "media_player.jbl_link_500_67aa69",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Google Cast",
+        "aliases": [
+          "Ateljéns högtalare"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "media_player.ateljens_hogtalare_music_assistant",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Music Assistant",
+        "aliases": [
+          "Ateljéns högtalare"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_svarstid_monitor_10",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Svarstid – monitor 10",
+        "aliases": [
+          "Ping Svarstid"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_svarstid_monitor_15",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Svarstid – monitor 15",
+        "aliases": [
+          "Ping Svarstid"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ping_status_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Status – monitor 10",
+        "aliases": [
+          "Ping Status"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ping_status_3",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Status – monitor 15",
+        "aliases": [
+          "Ping Status"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_monitortyp_monitor_10",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Monitortyp – monitor 10",
+        "aliases": [
+          "Ping Monitortyp"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_monitortyp_monitor_15",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Monitortyp – monitor 15",
+        "aliases": [
+          "Ping Monitortyp"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_overvakat_vardnamn_monitor_10",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Övervakat värdnamn – monitor 10",
+        "aliases": [
+          "Ping Övervakat värdnamn"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_overvakat_vardnamn_monitor_15",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Övervakat värdnamn – monitor 15",
+        "aliases": [
+          "Ping Övervakat värdnamn"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_upptid_1_dag_monitor_10",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid (1 dag) – monitor 10",
+        "aliases": [
+          "Ping Upptid (1 dag)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_upptid_1_dag_monitor_15",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid (1 dag) – monitor 15",
+        "aliases": [
+          "Ping Upptid (1 dag)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_upptid_30_dagar_monitor_10",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid (30 dagar) – monitor 10",
+        "aliases": [
+          "Ping Upptid (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_upptid_30_dagar_monitor_15",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid (30 dagar) – monitor 15",
+        "aliases": [
+          "Ping Upptid (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_upptid_365_dagar_monitor_10",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid (365 dagar) – monitor 10",
+        "aliases": [
+          "Ping Upptid (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_upptid_365_dagar_monitor_15",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid (365 dagar) – monitor 15",
+        "aliases": [
+          "Ping Upptid (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_genomsnittlig_svarstid_1_dag_monitor_10",
+      "before": {
+        "name": "Genomsnittlig svarstid (1 dag)",
+        "aliases": [
+          "Ping Svarstid Ø (1 dag)"
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (1 dag) – monitor 10",
+        "aliases": [
+          "Ping Genomsnittlig svarstid (1 dag)",
+          "Ping Svarstid Ø (1 dag)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_genomsnittlig_svarstid_1_dag_monitor_15",
+      "before": {
+        "name": "Genomsnittlig svarstid (1 dag)",
+        "aliases": [
+          "Ping Svarstid Ø (1 dag)"
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (1 dag) – monitor 15",
+        "aliases": [
+          "Ping Genomsnittlig svarstid (1 dag)",
+          "Ping Svarstid Ø (1 dag)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_genomsnittlig_svarstid_30_dagar_monitor_10",
+      "before": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Ping Svarstid Ø (30 dagar)"
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar) – monitor 10",
+        "aliases": [
+          "Ping Genomsnittlig svarstid (30 dagar)",
+          "Ping Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_genomsnittlig_svarstid_30_dagar_monitor_15",
+      "before": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Ping Svarstid Ø (30 dagar)"
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar) – monitor 15",
+        "aliases": [
+          "Ping Genomsnittlig svarstid (30 dagar)",
+          "Ping Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_genomsnittlig_svarstid_365_dagar_monitor_10",
+      "before": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Ping Svarstid Ø (365 dagar)"
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar) – monitor 10",
+        "aliases": [
+          "Ping Genomsnittlig svarstid (365 dagar)",
+          "Ping Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_genomsnittlig_svarstid_365_dagar_monitor_15",
+      "before": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Ping Svarstid Ø (365 dagar)"
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar) – monitor 15",
+        "aliases": [
+          "Ping Genomsnittlig svarstid (365 dagar)",
+          "Ping Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_taggar_monitor_10",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Taggar – monitor 10",
+        "aliases": [
+          "Taggar"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_taggar_monitor_15",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Taggar – monitor 15",
+        "aliases": [
+          "Taggar"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_toans_speaker_signalstyrka_via_ap_kontoret",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "chromecast-toans-speaker Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_kontoret",
+        "aliases": [
+          "Signalstyrka",
+          "chromecast-toans-speaker Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_toans_speaker_mottagningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "chromecast-toans-speaker RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_kontoret",
+        "aliases": [
+          "Mottagningshastighet",
+          "chromecast-toans-speaker RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_toans_speaker_sandningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "chromecast-toans-speaker TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_kontoret",
+        "aliases": [
+          "Sändningshastighet",
+          "chromecast-toans-speaker TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_toans_speaker_brusniva_via_ap_kontoret",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "chromecast-toans-speaker Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_kontoret",
+        "aliases": [
+          "Brusnivå",
+          "chromecast-toans-speaker Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_99_signalstyrka_via_ap_kontoret",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.99 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_kontoret",
+        "aliases": [
+          "192.168.10.99 Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_99_mottagningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.99 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_kontoret",
+        "aliases": [
+          "192.168.10.99 RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_99_sandningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.99 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_kontoret",
+        "aliases": [
+          "192.168.10.99 TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_99_brusniva_via_ap_kontoret",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.99 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_kontoret",
+        "aliases": [
+          "192.168.10.99 Noise Level",
+          "Brusnivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.192_168_10_99_internetatkomst_via_ap_kontoret",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.10.99 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_kontoret",
+        "aliases": [
+          "192.168.10.99 Internet Access",
+          "Internetåtkomst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_99_signalstyrka_via_gw",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.99 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via gw",
+        "aliases": [
+          "192.168.10.99 Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_99_mottagningshastighet_via_gw",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.99 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via gw",
+        "aliases": [
+          "192.168.10.99 RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_99_sandningshastighet_via_gw",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.99 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via gw",
+        "aliases": [
+          "192.168.10.99 TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_99_brusniva_via_gw",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.99 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via gw",
+        "aliases": [
+          "192.168.10.99 Noise Level",
+          "Brusnivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.192_168_10_99_internetatkomst_via_gw",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.10.99 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via gw",
+        "aliases": [
+          "192.168.10.99 Internet Access",
+          "Internetåtkomst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_99_signalstyrka_via_ap_koket",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.99 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_koket",
+        "aliases": [
+          "192.168.10.99 Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_99_mottagningshastighet_via_ap_koket",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.99 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_koket",
+        "aliases": [
+          "192.168.10.99 RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_99_sandningshastighet_via_ap_koket",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.99 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_koket",
+        "aliases": [
+          "192.168.10.99 TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_99_brusniva_via_ap_koket",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.99 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_koket",
+        "aliases": [
+          "192.168.10.99 Noise Level",
+          "Brusnivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.192_168_10_99_internetatkomst_via_ap_koket",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.10.99 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_koket",
+        "aliases": [
+          "192.168.10.99 Internet Access",
+          "Internetåtkomst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_60_signalstyrka_via_ap_koket",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.60 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_koket",
+        "aliases": [
+          "192.168.10.60 Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_60_mottagningshastighet_via_ap_koket",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.60 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_koket",
+        "aliases": [
+          "192.168.10.60 RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_60_sandningshastighet_via_ap_koket",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.60 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_koket",
+        "aliases": [
+          "192.168.10.60 TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_60_brusniva_via_ap_koket",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.60 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_koket",
+        "aliases": [
+          "192.168.10.60 Noise Level",
+          "Brusnivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.192_168_10_60_internetatkomst_via_ap_koket",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.10.60 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_koket",
+        "aliases": [
+          "192.168.10.60 Internet Access",
+          "Internetåtkomst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_60_signalstyrka_via_gw",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.60 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via gw",
+        "aliases": [
+          "192.168.10.60 Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_60_mottagningshastighet_via_gw",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.60 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via gw",
+        "aliases": [
+          "192.168.10.60 RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_60_sandningshastighet_via_gw",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.60 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via gw",
+        "aliases": [
+          "192.168.10.60 TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_60_brusniva_via_gw",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.60 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via gw",
+        "aliases": [
+          "192.168.10.60 Noise Level",
+          "Brusnivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.192_168_10_60_internetatkomst_via_gw",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.10.60 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via gw",
+        "aliases": [
+          "192.168.10.60 Internet Access",
+          "Internetåtkomst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_60_signalstyrka_via_ap_kontoret",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.60 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_kontoret",
+        "aliases": [
+          "192.168.10.60 Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_60_mottagningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.60 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_kontoret",
+        "aliases": [
+          "192.168.10.60 RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_60_sandningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.60 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_kontoret",
+        "aliases": [
+          "192.168.10.60 TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_60_brusniva_via_ap_kontoret",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.60 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_kontoret",
+        "aliases": [
+          "192.168.10.60 Noise Level",
+          "Brusnivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.192_168_10_60_internetatkomst_via_ap_kontoret",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.10.60 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_kontoret",
+        "aliases": [
+          "192.168.10.60 Internet Access",
+          "Internetåtkomst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_blomlampor_signalstyrka_via_ap_kontoret",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Blomlampor Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_kontoret",
+        "aliases": [
+          "Blomlampor Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_blomlampor_mottagningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Blomlampor RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_kontoret",
+        "aliases": [
+          "Blomlampor RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_blomlampor_sandningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Blomlampor TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_kontoret",
+        "aliases": [
+          "Blomlampor TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_blomlampor_brusniva_via_ap_kontoret",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Blomlampor Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_kontoret",
+        "aliases": [
+          "Blomlampor Noise Level",
+          "Brusnivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.bion_blomlampor_internetatkomst_via_ap_kontoret",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "Blomlampor Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_kontoret",
+        "aliases": [
+          "Blomlampor Internet Access",
+          "Internetåtkomst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_82_signalstyrka_via_ap_koket",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.82 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_koket",
+        "aliases": [
+          "192.168.10.82 Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_82_mottagningshastighet_via_ap_koket",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.82 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_koket",
+        "aliases": [
+          "192.168.10.82 RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_82_sandningshastighet_via_ap_koket",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.82 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_koket",
+        "aliases": [
+          "192.168.10.82 TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_82_brusniva_via_ap_koket",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.82 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_koket",
+        "aliases": [
+          "192.168.10.82 Noise Level",
+          "Brusnivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.192_168_10_82_internetatkomst_via_ap_koket",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.10.82 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_koket",
+        "aliases": [
+          "192.168.10.82 Internet Access",
+          "Internetåtkomst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_82_signalstyrka_via_gw",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.82 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via gw",
+        "aliases": [
+          "192.168.10.82 Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_82_mottagningshastighet_via_gw",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.82 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via gw",
+        "aliases": [
+          "192.168.10.82 RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_82_sandningshastighet_via_gw",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.82 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via gw",
+        "aliases": [
+          "192.168.10.82 TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_82_brusniva_via_gw",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.82 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via gw",
+        "aliases": [
+          "192.168.10.82 Noise Level",
+          "Brusnivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.192_168_10_82_internetatkomst_via_gw",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.10.82 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via gw",
+        "aliases": [
+          "192.168.10.82 Internet Access",
+          "Internetåtkomst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_82_signalstyrka_via_ap_kontoret",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.82 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_kontoret",
+        "aliases": [
+          "192.168.10.82 Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_82_mottagningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.82 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_kontoret",
+        "aliases": [
+          "192.168.10.82 RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_82_sandningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.82 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_kontoret",
+        "aliases": [
+          "192.168.10.82 TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_82_brusniva_via_ap_kontoret",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.82 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_kontoret",
+        "aliases": [
+          "192.168.10.82 Noise Level",
+          "Brusnivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.192_168_10_82_internetatkomst_via_ap_kontoret",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.10.82 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_kontoret",
+        "aliases": [
+          "192.168.10.82 Internet Access",
+          "Internetåtkomst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_55_signalstyrka_via_ap_kallaren",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.55 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_kallaren",
+        "aliases": [
+          "192.168.10.55 Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_55_mottagningshastighet_via_ap_kallaren",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.55 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_kallaren",
+        "aliases": [
+          "192.168.10.55 RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_55_sandningshastighet_via_ap_kallaren",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.55 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_kallaren",
+        "aliases": [
+          "192.168.10.55 TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_55_brusniva_via_ap_kallaren",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.55 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_kallaren",
+        "aliases": [
+          "192.168.10.55 Noise Level",
+          "Brusnivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.lenovol340_signalstyrka_via_ap_kontoret",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "LenovoL340 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_kontoret",
+        "aliases": [
+          "LenovoL340 Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.lenovol340_mottagningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "LenovoL340 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_kontoret",
+        "aliases": [
+          "LenovoL340 RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.lenovol340_sandningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "LenovoL340 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_kontoret",
+        "aliases": [
+          "LenovoL340 TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.lenovol340_brusniva_via_ap_kontoret",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "LenovoL340 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_kontoret",
+        "aliases": [
+          "Brusnivå",
+          "LenovoL340 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.lenovol340_home_arpa_signalstyrka_via_ap_verkstaden",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "LenovoL340.home.arpa Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_verkstaden",
+        "aliases": [
+          "LenovoL340.home.arpa Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.lenovol340_home_arpa_mottagningshastighet_via_ap_verkstaden",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "LenovoL340.home.arpa RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_verkstaden",
+        "aliases": [
+          "LenovoL340.home.arpa RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.lenovol340_home_arpa_sandningshastighet_via_ap_verkstaden",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "LenovoL340.home.arpa TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_verkstaden",
+        "aliases": [
+          "LenovoL340.home.arpa TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.lenovol340_home_arpa_brusniva_via_ap_verkstaden",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "LenovoL340.home.arpa Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_verkstaden",
+        "aliases": [
+          "Brusnivå",
+          "LenovoL340.home.arpa Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.lenovol340_home_arpa_internetatkomst_via_ap_verkstaden",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "LenovoL340.home.arpa Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_verkstaden",
+        "aliases": [
+          "Internetåtkomst",
+          "LenovoL340.home.arpa Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_55_signalstyrka_via_ap_koket",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.55 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_koket",
+        "aliases": [
+          "192.168.10.55 Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_55_mottagningshastighet_via_ap_koket",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.55 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_koket",
+        "aliases": [
+          "192.168.10.55 RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_55_sandningshastighet_via_ap_koket",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.55 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_koket",
+        "aliases": [
+          "192.168.10.55 TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_55_brusniva_via_ap_koket",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.55 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_koket",
+        "aliases": [
+          "192.168.10.55 Noise Level",
+          "Brusnivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_2c_bc_bb_c1_87_2c_signalstyrka_via_ap_verkstaden",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "2c:bc:bb:c1:87:2c Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_verkstaden",
+        "aliases": [
+          "2c:bc:bb:c1:87:2c Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_2c_bc_bb_c1_87_2c_mottagningshastighet_via_ap_verkstaden",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "2c:bc:bb:c1:87:2c RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_verkstaden",
+        "aliases": [
+          "2c:bc:bb:c1:87:2c RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_2c_bc_bb_c1_87_2c_sandningshastighet_via_ap_verkstaden",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "2c:bc:bb:c1:87:2c TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_verkstaden",
+        "aliases": [
+          "2c:bc:bb:c1:87:2c TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_2c_bc_bb_c1_87_2c_brusniva_via_ap_verkstaden",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "2c:bc:bb:c1:87:2c Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_verkstaden",
+        "aliases": [
+          "2c:bc:bb:c1:87:2c Noise Level",
+          "Brusnivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.toaletten_termostat_signalstyrka_via_ap_koket",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Termostat Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_koket",
+        "aliases": [
+          "Signalstyrka",
+          "Termostat Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.toaletten_termostat_mottagningshastighet_via_ap_koket",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Termostat RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_koket",
+        "aliases": [
+          "Mottagningshastighet",
+          "Termostat RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.toaletten_termostat_sandningshastighet_via_ap_koket",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Termostat TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_koket",
+        "aliases": [
+          "Sändningshastighet",
+          "Termostat TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.toaletten_termostat_brusniva_via_ap_koket",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Termostat Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_koket",
+        "aliases": [
+          "Brusnivå",
+          "Termostat Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.toaletten_termostat_internetatkomst_via_ap_koket",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "Termostat Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_koket",
+        "aliases": [
+          "Internetåtkomst",
+          "Termostat Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_2c_bc_bb_c1_87_2c_signalstyrka_via_ap_koket",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "2c:bc:bb:c1:87:2c Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_koket",
+        "aliases": [
+          "2c:bc:bb:c1:87:2c Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_2c_bc_bb_c1_87_2c_mottagningshastighet_via_ap_koket",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "2c:bc:bb:c1:87:2c RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_koket",
+        "aliases": [
+          "2c:bc:bb:c1:87:2c RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_2c_bc_bb_c1_87_2c_sandningshastighet_via_ap_koket",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "2c:bc:bb:c1:87:2c TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_koket",
+        "aliases": [
+          "2c:bc:bb:c1:87:2c TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_2c_bc_bb_c1_87_2c_brusniva_via_ap_koket",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "2c:bc:bb:c1:87:2c Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_koket",
+        "aliases": [
+          "2c:bc:bb:c1:87:2c Noise Level",
+          "Brusnivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.chromecast_verkstadens_speaker_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "chromecast-verkstadens-speaker Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "chromecast-verkstadens-speaker Disconnect device",
+          "chromecast-verkstadens-speaker Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_verkstadens_speaker_signalstyrka_via_ap_koket",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "chromecast-verkstadens-speaker Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_koket",
+        "aliases": [
+          "Signalstyrka",
+          "chromecast-verkstadens-speaker Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_verkstadens_speaker_mottagningshastighet_via_ap_koket",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "chromecast-verkstadens-speaker RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_koket",
+        "aliases": [
+          "Mottagningshastighet",
+          "chromecast-verkstadens-speaker RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_verkstadens_speaker_sandningshastighet_via_ap_koket",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "chromecast-verkstadens-speaker TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_koket",
+        "aliases": [
+          "Sändningshastighet",
+          "chromecast-verkstadens-speaker TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_verkstadens_speaker_brusniva_via_ap_koket",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "chromecast-verkstadens-speaker Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_koket",
+        "aliases": [
+          "Brusnivå",
+          "chromecast-verkstadens-speaker Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.verkstaden_shelly_pro_3_koppla_fran_enhet_via_ap_kallaren",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "shellypro-3-shop-central Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kallaren",
+        "aliases": [
+          "Shelly Pro 3 Koppla från enhet",
+          "shellypro-3-shop-central Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.q28756_koppla_fran_enhet_via_ap_kontoret_mac_0fa802_phy1_ap1",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Q28756 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret – MAC 0fa802 phy1_ap1",
+        "aliases": [
+          "Koppla från enhet",
+          "Q28756 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.pixel_9_pro_xl_koppla_fran_enhet_via_ap_kontoret_mac_718fef_phy1_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret – MAC 718fef phy1_ap0",
+        "aliases": [
+          "Koppla från enhet",
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.pixel_9_pro_xl_koppla_fran_enhet_via_ap_koket_mac_718fef_phy0_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket – MAC 718fef phy0_ap0",
+        "aliases": [
+          "Pixel-9-Pro-XL Disconnect device",
+          "Pixel-9-Pro-XL Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.carolas_s25_koppla_fran_enhet_via_ap_kontoret_mac_3077c1_phy1_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Carolas-S25 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret – MAC 3077c1 phy1_ap0",
+        "aliases": [
+          "Carolas-S25 Disconnect device",
+          "Carolas-S25 Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.carolas_s25_koppla_fran_enhet_via_ap_koket_mac_3077c1_phy0_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Carolas-S25 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket – MAC 3077c1 phy0_ap0",
+        "aliases": [
+          "Carolas-S25 Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.koket_roborock_max_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "roborock-max Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "roborock-max Disconnect device",
+          "roborock-max Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.roborock_max_koppla_fran_enhet_via_ap_verkstaden",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "roborock-max Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_verkstaden",
+        "aliases": [
+          "Koppla från enhet",
+          "roborock-max Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.carolas_s25_koppla_fran_enhet_via_ap_kallaren_mac_3077c1_phy2_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Carolas-S25 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kallaren – MAC 3077c1 phy2_ap0",
+        "aliases": [
+          "Carolas-S25 Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.pixel_9_pro_xl_koppla_fran_enhet_via_ap_kontoret_mac_718fef_phy0_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret – MAC 718fef phy0_ap0",
+        "aliases": [
+          "Koppla från enhet",
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.carolas_s25_koppla_fran_enhet_via_ap_kontoret_mac_3077c1_phy0_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Carolas-S25 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret – MAC 3077c1 phy0_ap0",
+        "aliases": [
+          "Carolas-S25 Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.entren_gw_august_connect_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "gw-august-connect Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "gw-august-connect Disconnect device",
+          "gw-august-connect Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.honshuset_vattenniva_koppla_fran_enhet_via_ap_poolen",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "c4:4f:33:72:73:e1 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_poolen",
+        "aliases": [
+          "Vattennivå Koppla från enhet",
+          "c4:4f:33:72:73:e1 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.galaxy_a36_5g_koppla_fran_enhet_via_ap_koket_mac_8ac630_phy0_ap1",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Galaxy-A36-5G Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket – MAC 8ac630 phy0_ap1",
+        "aliases": [
+          "Galaxy-A36-5G Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.galaxy_a36_5g_koppla_fran_enhet_via_ap_kontoret_mac_8ac630_phy1_ap1",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Galaxy-A36-5G Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret – MAC 8ac630 phy1_ap1",
+        "aliases": [
+          "Galaxy-A36-5G Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.ateljen_vattensensor_torkskap_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Vattensensor (torkskåp) Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "Vattensensor (torkskåp) Disconnect device",
+          "Vattensensor torkskåp Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.192_168_10_53_koppla_fran_enhet_via_ap_kallaren",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "192.168.10.53 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kallaren",
+        "aliases": [
+          "192.168.10.53 Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.chromecast_vaxtskapets_speaker_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "chromecast-vaxtskapets-speaker Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "chromecast-vaxtskapets-speaker Disconnect device",
+          "chromecast-vaxtskapets-speaker Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.chromecast_stereo_left_speaker_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "chromecast-stereo-left-speaker Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "chromecast-stereo-left-speaker Disconnect device",
+          "chromecast-stereo-left-speaker Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.koket_2c_bc_bb_c1_87_2c_koppla_fran_enhet_via_ap_poolen",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "2c:bc:bb:c1:87:2c Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_poolen",
+        "aliases": [
+          "2c:bc:bb:c1:87:2c Disconnect device",
+          "2c:bc:bb:c1:87:2c Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.chromecast_toans_speaker_koppla_fran_enhet_via_ap_verkstaden",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "chromecast-toans-speaker Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_verkstaden",
+        "aliases": [
+          "chromecast-toans-speaker Disconnect device",
+          "chromecast-toans-speaker Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.broadlink_remote_ea_14_9d_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "BroadLink-Remote-ea-14-9d Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "BroadLink-Remote-ea-14-9d Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.siemens_dishwasher_016050395510002818_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "siemens-dishwasher-016050395510002818 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "siemens-dishwasher-016050395510002818 Disconnect device",
+          "siemens-dishwasher-016050395510002818 Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.chromecast_duschens_speaker_koppla_fran_enhet_via_ap_koket_mac_0b5577_phy0_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "chromecast-duschens-speaker Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket – MAC 0b5577 phy0_ap0",
+        "aliases": [
+          "chromecast-duschens-speaker Disconnect device",
+          "chromecast-duschens-speaker Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.home_assistant_voice_096460_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "home-assistant-voice-096460 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "home-assistant-voice-096460 Disconnect device",
+          "home-assistant-voice-096460 Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.chromecast_kokets_screen_koppla_fran_enhet_via_ap_koket_mac_97d9b5_phy0_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "chromecast-kokets-screen Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket – MAC 97d9b5 phy0_ap0",
+        "aliases": [
+          "chromecast-kokets-screen Disconnect device",
+          "chromecast-kokets-screen Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.koket_roborock_max_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "roborock-max Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "roborock-max Disconnect device",
+          "roborock-max Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.chromecast_stereo_right_speaker_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "chromecast-stereo-right-speaker Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "chromecast-stereo-right-speaker Disconnect device",
+          "chromecast-stereo-right-speaker Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.galaxy_s9_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Galaxy-S9 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "Galaxy-S9 Disconnect device",
+          "Galaxy-S9 Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.verandan_vaggkontakt_x2_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Väggkontakt x2 (verandan) Disconnect device",
+          "Väggkontakt x2 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "Väggkontakt x2 (verandan) Disconnect device",
+          "Väggkontakt x2 Disconnect device",
+          "Väggkontakt x2 Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.verandan_golvvarme_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Golvvärme (verandan ) Disconnect device",
+          "Golvvärme Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "Golvvärme (verandan ) Disconnect device",
+          "Golvvärme Disconnect device",
+          "Golvvärme Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.entren_golvvarme_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Golvvärme (entrén) Disconnect device",
+          "Golvvärme Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "Golvvärme (entrén) Disconnect device",
+          "Golvvärme Disconnect device",
+          "Golvvärme Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.ateljen_golvvarme_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Golvvärme (ateljén) Disconnect device",
+          "Golvvärme Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "Golvvärme (ateljén) Disconnect device",
+          "Golvvärme Disconnect device",
+          "Golvvärme Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.koket_golvvarme_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Golvvärme (köket) Disconnect device",
+          "Golvvärme Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "Golvvärme (köket) Disconnect device",
+          "Golvvärme Disconnect device",
+          "Golvvärme Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.duschen_golvvarme_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Golvvärme (duschen) Disconnect device",
+          "Golvvärme Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "Golvvärme (duschen) Disconnect device",
+          "Golvvärme Disconnect device",
+          "Golvvärme Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.verandan_blomlampa_1_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Blomlampa 1 (Verandan) Disconnect device",
+          "Blomlampa 1 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "Blomlampa 1 (Verandan) Disconnect device",
+          "Blomlampa 1 Disconnect device",
+          "Blomlampa 1 Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.koket_blomlampa_2_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Blomlampa 2 (verandan) Disconnect device",
+          "Blomlampa 2 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "Blomlampa 2 (verandan) Disconnect device",
+          "Blomlampa 2 Disconnect device",
+          "Blomlampa 2 Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.utomhus_esp32_kamera_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "f0:08:d1:f2:b8:08 Disconnect device",
+          "ESP32-kamera Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "ESP32-kamera Disconnect device",
+          "ESP32-kamera Koppla från enhet",
+          "f0:08:d1:f2:b8:08 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.192_168_30_196_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "192.168.30.196 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "192.168.30.196 Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.verandan_led_list_balkongdorrar_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "dc:06:75:9d:65:c0 Disconnect device",
+          "LED-list (balkongdörrar) Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "LED-list (balkongdörrar) Disconnect device",
+          "LED-list (balkongdörrar) Koppla från enhet",
+          "dc:06:75:9d:65:c0 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.entren_led_list_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "7c:9e:bd:06:e7:bc Disconnect device",
+          "LED-list Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "7c:9e:bd:06:e7:bc Disconnect device",
+          "LED-list Disconnect device",
+          "LED-list Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.koket_led_list_sydostra_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "7c:9e:bd:47:e2:88 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "7c:9e:bd:47:e2:88 Disconnect device",
+          "LED-list sydöstra Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.koket_led_list_ostra_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "7c:9e:bd:46:f5:80 Disconnect device",
+          "LED-list östra Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "7c:9e:bd:46:f5:80 Disconnect device",
+          "LED-list östra Disconnect device",
+          "LED-list östra Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.verandan_led_list_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "7c:9e:bd:06:c3:b4 Disconnect device",
+          "LED-list Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "7c:9e:bd:06:c3:b4 Disconnect device",
+          "LED-list Disconnect device",
+          "LED-list Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.duschen_taklampor_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "48:e7:29:67:de:7f Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "48:e7:29:67:de:7f Disconnect device",
+          "Taklampor Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.koket_taklampor_esphome_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "08:f9:e0:46:ed:b4 Disconnect device",
+          "Taklampor ESPHome Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "08:f9:e0:46:ed:b4 Disconnect device",
+          "Taklampor ESPHome Disconnect device",
+          "Taklampor ESPHome Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.toaletten_termostat_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Termostat Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "Koppla från enhet",
+          "Termostat Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.chromecast_tv_soundbar_koppla_fran_enhet_via_ap_koket_mac_125c49_phy1_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "chromecast-tv-soundbar Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket – MAC 125c49 phy1_ap0",
+        "aliases": [
+          "chromecast-tv-soundbar Disconnect device",
+          "chromecast-tv-soundbar Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.diegotab_koppla_fran_enhet_via_ap_koket_mac_8136be_phy1_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "DiegoTab Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket – MAC 8136be phy1_ap0",
+        "aliases": [
+          "DiegoTab Disconnect device",
+          "DiegoTab Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.carolas_s25_koppla_fran_enhet_via_ap_koket_mac_3077c1_phy1_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Carolas-S25 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket – MAC 3077c1 phy1_ap0",
+        "aliases": [
+          "Carolas-S25 Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.pixel_9_pro_xl_koppla_fran_enhet_via_ap_koket_mac_718fef_phy1_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket – MAC 718fef phy1_ap0",
+        "aliases": [
+          "Koppla från enhet",
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.galaxy_a36_5g_koppla_fran_enhet_via_ap_koket_mac_8ac630_phy1_ap1",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Galaxy-A36-5G Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket – MAC 8ac630 phy1_ap1",
+        "aliases": [
+          "Galaxy-A36-5G Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.siemens_washerdryer_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "siemens-washerdryer Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "siemens-washerdryer Disconnect device",
+          "siemens-washerdryer Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.192_168_10_82_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "192.168.10.82 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "192.168.10.82 Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.chromecast_diegos_screen_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "chromecast-diegos-screen Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "chromecast-diegos-screen Disconnect device",
+          "chromecast-diegos-screen Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.sm_r875f_koppla_fran_enhet_via_ap_kontoret_mac_3b7f1d_phy0_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "SM-R875F Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret – MAC 3b7f1d phy0_ap0",
+        "aliases": [
+          "Koppla från enhet",
+          "SM-R875F Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.chromecast_mannis_screen_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "chromecast-mannis-screen Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "chromecast-mannis-screen Disconnect device",
+          "chromecast-mannis-screen Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.sovrummet_sanglampor_manni_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Sänglampor Manni Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "Sänglampor Manni Disconnect device",
+          "Sänglampor Manni Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.sovrummet_sanglampor_diego_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Sänglampor Diego Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "Sänglampor Diego Disconnect device",
+          "Sänglampor Diego Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_blomlampa_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "c8:2b:96:5c:71:55 Disconnect device",
+          "Blomlampa Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "Blomlampa Disconnect device",
+          "Blomlampa Koppla från enhet",
+          "c8:2b:96:5c:71:55 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.bion_blomlampor_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Blomlampor Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "Blomlampor Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.sovrummet_a4_cf_12_d8_77_59_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "a4:cf:12:d8:77:59 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "a4:cf:12:d8:77:59 Disconnect device",
+          "a4:cf:12:d8:77:59 Koppla från enhet"
+        ]
+      }
+    }
+  ]
+}

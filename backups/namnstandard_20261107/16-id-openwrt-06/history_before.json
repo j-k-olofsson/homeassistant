@@ -1,0 +1,246 @@
+{
+  "switch.sovrummet_openwrt_one_router_sovrum_wps": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:14.637926+00:00",
+      "last_updated": "2026-11-07T07:42:14.637926+00:00"
+    }
+  ],
+  "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_block_ipv6_ra_from_google_nest_1": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:14.637926+00:00",
+      "last_updated": "2026-11-07T07:42:14.637926+00:00"
+    }
+  ],
+  "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_block_ipv6_ra_from_google_nest_2": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:14.637926+00:00",
+      "last_updated": "2026-11-07T07:42:14.637926+00:00"
+    }
+  ],
+  "update.sovrummet_openwrt_one_router_sovrum": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:14.637926+00:00",
+      "last_updated": "2026-11-07T07:42:14.637926+00:00"
+    }
+  ],
+  "binary_sensor.koket_openwrt_one_ap_koket_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:14.637926+00:00",
+      "last_updated": "2026-11-07T07:42:14.637926+00:00"
+    }
+  ],
+  "binary_sensor.koket_openwrt_one_ap_koket_reboot_required": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:14.637926+00:00",
+      "last_updated": "2026-11-07T07:42:14.637926+00:00"
+    }
+  ],
+  "button.koket_openwrt_one_ap_koket_reboot_router": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:14.637926+00:00",
+      "last_updated": "2026-11-07T07:42:14.637926+00:00"
+    }
+  ],
+  "button.koket_openwrt_one_ap_koket_start_wps": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:14.637926+00:00",
+      "last_updated": "2026-11-07T07:42:14.637926+00:00"
+    }
+  ],
+  "button.koket_openwrt_one_ap_koket_cancel_wps": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:14.637926+00:00",
+      "last_updated": "2026-11-07T07:42:14.637926+00:00"
+    }
+  ],
+  "button.koket_openwrt_one_ap_koket_create_backup": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:14.637926+00:00",
+      "last_updated": "2026-11-07T07:42:14.637926+00:00"
+    }
+  ],
+  "light.koket_openwrt_one_ap_koket_led_amber_lan": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:14.637926+00:00",
+      "last_updated": "2026-11-07T07:42:14.637926+00:00"
+    }
+  ],
+  "light.koket_openwrt_one_ap_koket_led_green_lan": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:14.637926+00:00",
+      "last_updated": "2026-11-07T07:42:14.637926+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T09:05:31.652188+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T09:20:57.696455+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T10:07:15.654252+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T10:38:07.673682+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T11:39:51.662335+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T11:55:17.682551+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T12:10:43.664230+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T12:26:09.660311+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T12:57:01.670790+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:12:27.724335+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T13:56:06.986385+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T14:26:59.004127+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T17:01:19.995974+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T17:16:45.993482+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T17:32:12.011545+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T17:47:38.039390+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T18:33:55.999512+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T18:49:21.985654+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T19:51:05.994707+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T20:06:32.000594+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T20:52:49.942240+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T21:39:07.913121+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T21:54:33.952824+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T22:09:59.952240+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-08T00:13:27.943881+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T00:28:53.955427+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-08T02:16:56.969052+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T02:32:22.964190+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-08T03:18:40.947073+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T03:34:06.923401+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-08T04:35:51.007698+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T04:51:16.945685+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-08T06:54:44.987664+00:00"
+    }
+  ],
+  "light.koket_openwrt_one_ap_koket_led_mdio_bus_0f_amber_wan": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:14.637926+00:00",
+      "last_updated": "2026-11-07T07:42:14.637926+00:00"
+    }
+  ],
+  "light.koket_openwrt_one_ap_koket_led_mdio_bus_0f_green_wan": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:14.637926+00:00",
+      "last_updated": "2026-11-07T07:42:14.637926+00:00"
+    }
+  ]
+}

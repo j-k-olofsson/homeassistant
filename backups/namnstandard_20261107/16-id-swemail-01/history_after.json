@@ -1,0 +1,34 @@
+{
+  "binary_sensor.utomhus_postnord_76017_postutdelning_idag": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:56:15.519421+00:00",
+      "last_updated": "2026-11-07T07:56:15.519421+00:00"
+    }
+  ],
+  "binary_sensor.utomhus_postnord_76017_postutdelning_imorgon": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:56:15.519421+00:00",
+      "last_updated": "2026-11-07T07:56:15.519421+00:00"
+    }
+  ],
+  "binary_sensor.utomhus_postnord_76017_postnord_utdelning_idag": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:56:15.519421+00:00",
+      "last_updated": "2026-11-07T07:56:15.519421+00:00"
+    }
+  ],
+  "calendar.utomhus_postnord_76017_postutdelningskalender": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:56:15.519421+00:00",
+      "last_updated": "2026-11-07T07:56:15.519421+00:00"
+    }
+  ]
+}

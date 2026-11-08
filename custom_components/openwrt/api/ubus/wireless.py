@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import logging
+import re
 
 from ..base import (
     WifiCredentials,
@@ -105,29 +106,162 @@ class UbusWirelessMixin:
 
         return False
 
+    async def _resolve_wireless_section(
+        self,
+        interface: str,
+        radio: str = "",
+        ssid: str = "",
+    ) -> str:
+        """Resolve an interface name (e.g. wifinet0, wlan0) to a valid UCI section."""
+        try:
+            uci_data = await self._call("uci", "get", {"config": "wireless"})
+            if (
+                not uci_data
+                or not isinstance(uci_data, dict)
+                or "values" not in uci_data
+            ):
+                return interface
+
+            vals = uci_data["values"]
+            # 1. Exact match with section key
+            if interface in vals:
+                return interface
+
+            wifi_ifaces = [
+                (sect_name, sect_data)
+                for sect_name, sect_data in vals.items()
+                if isinstance(sect_data, dict)
+                and sect_data.get(".type") == "wifi-iface"
+            ]
+
+            # 2. Map kernel ifname / interface back to UCI section via network.wireless status
+            try:
+                wireless_status = await self._call("network.wireless", "status")
+                if isinstance(wireless_status, dict):
+                    for r_name, radio_data in wireless_status.items():
+                        if not isinstance(radio_data, dict):
+                            continue
+                        if radio and r_name != radio:
+                            continue
+                        for iface in radio_data.get("interfaces", []):
+                            iface_ifname = iface.get("ifname") or iface.get(
+                                "device", ""
+                            )
+                            iface_section = iface.get("section", "")
+                            if (
+                                iface_ifname == interface
+                                and iface_section
+                                and iface_section in vals
+                            ):
+                                return iface_section
+                            if (
+                                ssid
+                                and iface.get("config", {}).get("ssid") == ssid
+                                and iface_section
+                                and iface_section in vals
+                            ):
+                                return iface_section
+            except Exception as err:  # noqa: BLE001
+                _LOGGER.debug(
+                    "Failed network.wireless status lookup for %s: %s", interface, err
+                )
+
+            # 3. Check if interface is wifinetN or @wifi-iface[N]
+            match_net = re.match(r"^wifinet(\d+)$", interface, re.IGNORECASE)
+            match_anon = re.match(r"^@?wifi-iface\[(\d+)\]$", interface, re.IGNORECASE)
+            idx = None
+            if match_net:
+                idx = int(match_net.group(1))
+            elif match_anon:
+                idx = int(match_anon.group(1))
+
+            if idx is not None:
+                # First check radio-scoped ifaces if radio is specified
+                if radio:
+                    radio_ifaces = [
+                        (s_name, s_data)
+                        for s_name, s_data in wifi_ifaces
+                        if s_data.get("device") == radio
+                    ]
+                    if 0 <= idx < len(radio_ifaces):
+                        return radio_ifaces[idx][0]
+                if 0 <= idx < len(wifi_ifaces):
+                    return wifi_ifaces[idx][0]
+
+            # 4. Match by ifname or section field or .name
+            for sect_name, sect_data in wifi_ifaces:
+                if (
+                    sect_data.get("ifname") == interface
+                    or sect_data.get("section") == interface
+                    or sect_data.get(".name") == interface
+                ):
+                    return sect_name
+
+            # 5. Match by SSID if provided
+            if ssid:
+                for sect_name, sect_data in wifi_ifaces:
+                    if sect_data.get("ssid") == ssid and (
+                        not radio or sect_data.get("device") == radio
+                    ):
+                        return sect_name
+
+            # 6. If radio provided, match wifi-iface for this radio if only one exists
+            if radio:
+                radio_ifaces = [
+                    (s_name, s_data)
+                    for s_name, s_data in wifi_ifaces
+                    if s_data.get("device") == radio
+                ]
+                if len(radio_ifaces) == 1:
+                    return radio_ifaces[0][0]
+
+        except Exception as err:
+            _LOGGER.debug(
+                "Failed to resolve wireless UCI section for %s: %s", interface, err
+            )
+
+        return interface
+
     async def set_wireless_enabled(self, interface: str, enabled: bool) -> bool:
         """Enable or disable a wireless radio via UCI."""
         committed = False
         try:
+            target_section = await self._resolve_wireless_section(interface)
             action = "0" if enabled else "1"  # disabled=0 means enabled
             await self._call(
                 "uci",
                 "set",
                 {
                     "config": "wireless",
-                    "section": interface,
+                    "section": target_section,
                     "values": {"disabled": action},
                 },
             )
             await self._call("uci", "commit", {"config": "wireless"})
             committed = True
-            await self._call("network.wireless", "notify")
-            self._last_full_poll = 0
+            await self._reload_wireless()
+            self._invalidate_slow_poll()
             return True
         except UbusError:
             if not committed:
                 await self._revert_wireless_changes()
             return False
+
+    async def _reload_wireless(self) -> None:
+        """Best-effort wireless service reload after committing UCI."""
+        # 1. Prefer wifi reload via execute_command if available
+        if hasattr(self, "execute_command"):
+            try:
+                await self.execute_command("wifi reload")
+                return
+            except Exception as err:
+                _LOGGER.debug("wifi reload command failed: %s", err)
+
+        # 2. Try ubus network.wireless notify (best-effort)
+        try:
+            await self._call("network.wireless", "notify")
+        except UbusError as err:
+            _LOGGER.debug("network.wireless notify failed (non-fatal): %s", err)
 
     async def _revert_wireless_changes(self) -> None:
         """Best-effort discard of an incomplete wireless UCI transaction."""
@@ -143,10 +277,14 @@ class UbusWirelessMixin:
         enabled: bool,
         *,
         disable_radio: bool,
+        ssid: str = "",
     ) -> bool:
         """Set an SSID and its radio in one UCI transaction."""
         committed = False
         try:
+            target_section = await self._resolve_wireless_section(
+                interface, radio, ssid=ssid
+            )
             if enabled:
                 await self._call(
                     "uci",
@@ -162,7 +300,7 @@ class UbusWirelessMixin:
                 "set",
                 {
                     "config": "wireless",
-                    "section": interface,
+                    "section": target_section,
                     "values": {"disabled": "0" if enabled else "1"},
                 },
             )
@@ -178,8 +316,8 @@ class UbusWirelessMixin:
                 )
             await self._call("uci", "commit", {"config": "wireless"})
             committed = True
-            await self._call("network.wireless", "notify")
-            self._last_full_poll = 0
+            await self._reload_wireless()
+            self._invalidate_slow_poll()
             return True
         except UbusError:
             if not committed:

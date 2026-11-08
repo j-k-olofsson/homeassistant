@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.lovelace_friggan",
+  "data": {
+    "config": {
+      "title": "Hem",
+      "views": [
+        {
+          "path": "default_view",
+          "title": "Home",
+          "icon": "mdi:home-outline",
+          "type": "masonry",
+          "badges": [],
+          "cards": [
+            {
+              "type": "horizontal-stack",
+              "cards": [
+                {
+                  "type": "tile",
+                  "entity": "sensor.friggan_termostat_temperatur",
+                  "vertical": false,
+                  "show_entity_picture": false,
+                  "icon": "mdi:thermometer"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.utomhus_klimatsensor_temperatur"
+                }
+              ]
+            },
+            {
+              "features": [
+                {
+                  "type": "climate-hvac-modes",
+                  "hvac_modes": [
+                    "off",
+                    "heat"
+                  ]
+                },
+                {
+                  "type": "target-temperature"
+                },
+                {
+                  "type": "climate-preset-modes",
+                  "style": "dropdown",
+                  "preset_modes": [
+                    "home",
+                    "away"
+                  ]
+                }
+              ],
+              "type": "tile",
+              "entity": "climate.friggan_termostat",
+              "name": "Termostat",
+              "state_content": [
+                "hvac_action",
+                "state",
+                "preset_mode"
+              ]
+            },
+            {
+              "type": "tile",
+              "entity": "switch.friggan_golvvarme",
+              "name": "Golvvärme"
+            },
+            {
+              "type": "tile",
+              "entity": "light.utomhuslampa",
+              "name": "Utomhusbelysning"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

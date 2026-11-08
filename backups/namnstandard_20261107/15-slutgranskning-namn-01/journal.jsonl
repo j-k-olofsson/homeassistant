@@ -1,0 +1,360 @@
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.remote_ui", "before": {"name": null, "aliases": [null]}, "after": {"name": "Fjärråtkomst", "aliases": ["Remote UI"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.remote_ui"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_boolean.default_dashboard", "before": {"name": null, "aliases": [null]}, "after": {"name": "Standardkontrollpanel", "aliases": ["Default Dashboard"]}}}
+{"status": "applied", "kind": "entity", "id": "input_boolean.default_dashboard"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_select.default_dashboard", "before": {"name": null, "aliases": [null]}, "after": {"name": "Standardkontrollpanel", "aliases": ["Default Dashboard"]}}}
+{"status": "applied", "kind": "entity", "id": "input_select.default_dashboard"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_boolean.default_dashboard_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Standardkontrollpanel 2", "aliases": ["Default Dashboard"]}}}
+{"status": "applied", "kind": "entity", "id": "input_boolean.default_dashboard_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_select.default_dashboard_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Standardkontrollpanel 2", "aliases": ["Default Dashboard"]}}}
+{"status": "applied", "kind": "entity", "id": "input_select.default_dashboard_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_select.default_dashboard_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Standardkontrollpanel 3", "aliases": ["Default Dashboard"]}}}
+{"status": "applied", "kind": "entity", "id": "input_select.default_dashboard_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_select.default_dashboard_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Standardkontrollpanel 4", "aliases": ["Default Dashboard"]}}}
+{"status": "applied", "kind": "entity", "id": "input_select.default_dashboard_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_select.default_dashboard_5", "before": {"name": null, "aliases": [null]}, "after": {"name": "Standardkontrollpanel 5", "aliases": ["Default Dashboard"]}}}
+{"status": "applied", "kind": "entity", "id": "input_select.default_dashboard_5"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ytterdorren_batteri", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterinivå", "aliases": ["Ytterdörren Batteri"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ytterdorren_batteri"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_boolean.default_dashboard_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Standardkontrollpanel 3", "aliases": ["Default Dashboard"]}}}
+{"status": "applied", "kind": "entity", "id": "input_boolean.default_dashboard_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_select.default_dashboard_6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Standardkontrollpanel 6", "aliases": ["Default Dashboard"]}}}
+{"status": "applied", "kind": "entity", "id": "input_select.default_dashboard_6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.onedrive_drive_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lagringsstatus", "aliases": ["OneDrive Drive status"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.onedrive_drive_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.home_assistant_voice_096460_led_ring", "before": {"name": null, "aliases": [null]}, "after": {"name": "LED-ring", "aliases": ["HA Voice PE 096460 LED Ring"]}}}
+{"status": "applied", "kind": "entity", "id": "light.home_assistant_voice_096460_led_ring"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.garmin_device_battery_is_charging", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batteriet laddas", "aliases": ["Garmin Device Battery is Charging"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.garmin_device_battery_is_charging"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.garmin_device_steps_today", "before": {"name": null, "aliases": [null]}, "after": {"name": "Steg idag", "aliases": ["Garmin Device Steps today"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.garmin_device_steps_today"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.garmin_device_floors_climbed_today", "before": {"name": null, "aliases": [null]}, "after": {"name": "Våningar uppför idag", "aliases": ["Garmin Device Floors climbed today"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.garmin_device_floors_climbed_today"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.garmin_device_floors_descended_today", "before": {"name": null, "aliases": [null]}, "after": {"name": "Våningar nedför idag", "aliases": ["Garmin Device Floors descended today"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.garmin_device_floors_descended_today"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.garmin_device_respiration_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Andningsfrekvens", "aliases": ["Respiration rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.garmin_device_respiration_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.garmin_device_activity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aktivitet", "aliases": ["Garmin Device Activity"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.garmin_device_activity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.garmin_device_sub_activity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Delaktivitet", "aliases": ["Garmin Device Sub-activity"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.garmin_device_sub_activity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "media_player.nya_tvn_television", "before": {"name": null, "aliases": [null]}, "after": {"name": "TV", "aliases": ["Television"]}}}
+{"status": "applied", "kind": "entity", "id": "media_player.nya_tvn_television"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.nya_tvn_identify", "before": {"name": null, "aliases": [null]}, "after": {"name": "Identifiera", "aliases": ["Identify"]}}}
+{"status": "applied", "kind": "entity", "id": "button.nya_tvn_identify"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.nya_tvn_mute", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ljud av", "aliases": ["Mute"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.nya_tvn_mute"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_boolean.default_dashboard_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Standardkontrollpanel 4", "aliases": ["Default Dashboard"]}}}
+{"status": "applied", "kind": "entity", "id": "input_boolean.default_dashboard_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_select.default_dashboard_7", "before": {"name": null, "aliases": [null]}, "after": {"name": "Standardkontrollpanel 7", "aliases": ["Default Dashboard"]}}}
+{"status": "applied", "kind": "entity", "id": "input_select.default_dashboard_7"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_number.car_charger_capacity_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Laddeffekt", "aliases": ["Laddareffekt"]}}}
+{"status": "applied", "kind": "entity", "id": "input_number.car_charger_capacity_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.bil_laddning_trigger", "before": {"name": null, "aliases": [null]}, "after": {"name": "Billaddning – automatisk styrning", "aliases": ["Av/På Bil-laddning"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.bil_laddning_trigger"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.golvvarme_entren_aioshelly_ble_integration", "before": {"name": null, "aliases": [null, "Golvvärme (entrén) aioshelly_ble_integration"]}, "after": {"name": "Bluetooth-integration", "aliases": ["Golvvärme (entrén) aioshelly_ble_integration", "aioshelly_ble_integration"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.golvvarme_entren_aioshelly_ble_integration"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.golvvarme_bion_aioshelly_ble_integration", "before": {"name": null, "aliases": [null, "Golvvärme (bion) aioshelly_ble_integration"]}, "after": {"name": "Bluetooth-integration", "aliases": ["Golvvärme (bion) aioshelly_ble_integration", "aioshelly_ble_integration"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.golvvarme_bion_aioshelly_ble_integration"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.golvvarme_verandan_aioshelly_ble_integration", "before": {"name": null, "aliases": [null, "Golvvärme (verandan ) aioshelly_ble_integration"]}, "after": {"name": "Bluetooth-integration", "aliases": ["Golvvärme (verandan ) aioshelly_ble_integration", "aioshelly_ble_integration"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.golvvarme_verandan_aioshelly_ble_integration"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.golvvarme_ateljen_aioshelly_ble_integration", "before": {"name": null, "aliases": [null, "Golvvärme (ateljén) aioshelly_ble_integration"]}, "after": {"name": "Bluetooth-integration", "aliases": ["Golvvärme (ateljén) aioshelly_ble_integration", "aioshelly_ble_integration"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.golvvarme_ateljen_aioshelly_ble_integration"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.golvvarme_koket_aioshelly_ble_integration", "before": {"name": null, "aliases": [null, "Golvvärme (köket) aioshelly_ble_integration"]}, "after": {"name": "Bluetooth-integration", "aliases": ["Golvvärme (köket) aioshelly_ble_integration", "aioshelly_ble_integration"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.golvvarme_koket_aioshelly_ble_integration"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.golvvarme_duschen_aioshelly_ble_integration", "before": {"name": null, "aliases": [null, "Golvvärme (duschen) aioshelly_ble_integration"]}, "after": {"name": "Bluetooth-integration", "aliases": ["Golvvärme (duschen) aioshelly_ble_integration", "aioshelly_ble_integration"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.golvvarme_duschen_aioshelly_ble_integration"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.shelly_pro_3_verkstaden_aioshelly_ble_integration", "before": {"name": null, "aliases": [null, "Shelly Pro 3 - Verkstaden aioshelly_ble_integration"]}, "after": {"name": "Bluetooth-integration", "aliases": ["Shelly Pro 3 - Verkstaden aioshelly_ble_integration", "aioshelly_ble_integration"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.shelly_pro_3_verkstaden_aioshelly_ble_integration"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.vaggkontakt_x2_verandan_aioshelly_ble_integration", "before": {"name": null, "aliases": [null, "Väggkontakt x2 (verandan) aioshelly_ble_integration"]}, "after": {"name": "Bluetooth-integration", "aliases": ["Väggkontakt x2 (verandan) aioshelly_ble_integration", "aioshelly_ble_integration"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.vaggkontakt_x2_verandan_aioshelly_ble_integration"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.system_monitor_batteri", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterinivå", "aliases": ["Batteri"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.system_monitor_batteri"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.max_batteri", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterinivå", "aliases": ["Max S6 MaxV Batteri"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.max_batteri"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.canon_g3070_series_black_pgbk", "before": {"name": null, "aliases": [null]}, "after": {"name": "Pigmentsvart (PGBK)", "aliases": ["Canon G3070 series Black(PGBK)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.canon_g3070_series_black_pgbk"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.canon_g3070_series_yellow", "before": {"name": null, "aliases": [null]}, "after": {"name": "Gul", "aliases": ["Canon G3070 series Yellow"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.canon_g3070_series_yellow"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_kontoret_wi_fi_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-klienter – ap_kontoret", "aliases": ["ap_kontoret Wi-Fi Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_kontoret_wi_fi_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_koket_wi_fi_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-klienter – ap_koket", "aliases": ["ap_koket Wi-Fi Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_koket_wi_fi_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_kallaren_wi_fi_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-klienter – ap_kallaren", "aliases": ["ap_kallaren Wi-Fi Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_kallaren_wi_fi_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_verkstaden_wi_fi_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-klienter – ap_verkstaden", "aliases": ["ap_verkstaden Wi-Fi Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_verkstaden_wi_fi_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_friggan_wi_fi_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-klienter – ap_friggan", "aliases": ["ap_friggan Wi-Fi Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_friggan_wi_fi_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_poolen_wi_fi_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-klienter – ap_poolen", "aliases": ["ap_poolen Wi-Fi Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_poolen_wi_fi_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.banklampor_pa_niva", "before": {"name": null, "aliases": [null]}, "after": {"name": "Nivå vid påslagning", "aliases": ["Bänklampor På nivå"]}}}
+{"status": "applied", "kind": "entity", "id": "number.banklampor_pa_niva"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.banklampor_pa_av_overgangstid", "before": {"name": null, "aliases": [null]}, "after": {"name": "Övergångstid på/av", "aliases": ["Bänklampor På/av övergångstid"]}}}
+{"status": "applied", "kind": "entity", "id": "number.banklampor_pa_av_overgangstid"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.bordslampa_ateljen_pa_niva", "before": {"name": null, "aliases": [null]}, "after": {"name": "Nivå vid påslagning", "aliases": ["Bordslampa ateljen På nivå"]}}}
+{"status": "applied", "kind": "entity", "id": "number.bordslampa_ateljen_pa_niva"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.bordslampa_ateljen_pa_av_overgangstid", "before": {"name": null, "aliases": [null]}, "after": {"name": "Övergångstid på/av", "aliases": ["Bordslampa ateljen På/av övergångstid"]}}}
+{"status": "applied", "kind": "entity", "id": "number.bordslampa_ateljen_pa_av_overgangstid"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.bordslampa_hoger_av_overgangstid", "before": {"name": null, "aliases": [null]}, "after": {"name": "Övergångstid vid avslagning", "aliases": ["Bordslampa höger Av övergångstid"]}}}
+{"status": "applied", "kind": "entity", "id": "number.bordslampa_hoger_av_overgangstid"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.bordslampa_hoger_pa_niva", "before": {"name": null, "aliases": [null]}, "after": {"name": "Nivå vid påslagning", "aliases": ["Bordslampa höger På nivå"]}}}
+{"status": "applied", "kind": "entity", "id": "number.bordslampa_hoger_pa_niva"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.bordslampa_hoger_pa_overgangstid", "before": {"name": null, "aliases": [null]}, "after": {"name": "Övergångstid vid påslagning", "aliases": ["Bordslampa höger På övergångstid"]}}}
+{"status": "applied", "kind": "entity", "id": "number.bordslampa_hoger_pa_overgangstid"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.bordslampa_hoger_pa_av_overgangstid", "before": {"name": null, "aliases": [null]}, "after": {"name": "Övergångstid på/av", "aliases": ["Bordslampa höger På/av övergångstid"]}}}
+{"status": "applied", "kind": "entity", "id": "number.bordslampa_hoger_pa_av_overgangstid"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.db_optimize_last_log_line", "before": {"name": null, "aliases": [null]}, "after": {"name": "Databasoptimering – senaste loggrad", "aliases": ["DB Optimize Last Log Line"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.db_optimize_last_log_line"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.banklampor_power_on_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Nivå vid uppstart", "aliases": ["Bänklampor Power on-nivå"]}}}
+{"status": "applied", "kind": "entity", "id": "number.banklampor_power_on_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.bordslampa_ateljen_power_on_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Nivå vid uppstart", "aliases": ["Bordslampa ateljen Power on-nivå"]}}}
+{"status": "applied", "kind": "entity", "id": "number.bordslampa_ateljen_power_on_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.bordslampa_hoger_power_on_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Nivå vid uppstart", "aliases": ["Bordslampa höger Power on-nivå"]}}}
+{"status": "applied", "kind": "entity", "id": "number.bordslampa_hoger_power_on_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.presence_simulation_hemma", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närvarosimulering hemma", "aliases": ["presence_simulation_hemma"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.presence_simulation_hemma"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.poolvarmepump_connectivity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": ["Connectivity"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.poolvarmepump_connectivity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.poolvarmepump_frost_protection", "before": {"name": null, "aliases": [null]}, "after": {"name": "Frostskydd", "aliases": ["Frost protection"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.poolvarmepump_frost_protection"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolvarmepump_water_in_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ingående vattentemperatur", "aliases": ["Water in temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolvarmepump_water_in_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolvarmepump_water_out_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Utgående vattentemperatur", "aliases": ["Water out temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolvarmepump_water_out_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolvarmepump_ambient_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Omgivningstemperatur", "aliases": ["Ambient temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolvarmepump_ambient_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolvarmepump_cold_pipe_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Temperatur kallt rör", "aliases": ["Cold pipe temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolvarmepump_cold_pipe_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolvarmepump_heating_pipe_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Temperatur varmt rör", "aliases": ["Heating pipe temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolvarmepump_heating_pipe_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolvarmepump_ipm_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "IPM-temperatur", "aliases": ["IPM temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolvarmepump_ipm_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.alsavopro_poolvarmepump_exhaust_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Utloppstemperatur", "aliases": ["Exhaust temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.alsavopro_poolvarmepump_exhaust_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolvarmepump_exhaust_valve_opening", "before": {"name": null, "aliases": [null]}, "after": {"name": "Utloppsventilens öppning", "aliases": ["Exhaust valve opening"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolvarmepump_exhaust_valve_opening"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.alsavopro_poolvarmepump_fan_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Fläkthastighet", "aliases": ["Fan speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.alsavopro_poolvarmepump_fan_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolvarmepump_compressor_current", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kompressorström", "aliases": ["Compressor current"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolvarmepump_compressor_current"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.alsavopro_poolvarmepump_compressor_running_frequency", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kompressorfrekvens", "aliases": ["Compressor running frequency"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.alsavopro_poolvarmepump_compressor_running_frequency"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.alsavopro_poolvarmepump_heating_mode_target", "before": {"name": null, "aliases": [null]}, "after": {"name": "Börvärde värme", "aliases": ["Heating mode target"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.alsavopro_poolvarmepump_heating_mode_target"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.alsavopro_poolvarmepump_cooling_mode_target", "before": {"name": null, "aliases": [null]}, "after": {"name": "Börvärde kyla", "aliases": ["Cooling mode target"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.alsavopro_poolvarmepump_cooling_mode_target"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.alsavopro_poolvarmepump_auto_mode_target", "before": {"name": null, "aliases": [null]}, "after": {"name": "Börvärde automatiskt läge", "aliases": ["Auto mode target"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.alsavopro_poolvarmepump_auto_mode_target"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.alsavopro_poolvarmepump_power_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effektläge", "aliases": ["Power mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.alsavopro_poolvarmepump_power_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.alsavopro_poolvarmepump_frequency_limit_code", "before": {"name": null, "aliases": [null]}, "after": {"name": "Frekvensbegränsningskod", "aliases": ["Frequency limit code"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.alsavopro_poolvarmepump_frequency_limit_code"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.alsavopro_poolvarmepump_alarm_code_1", "before": {"name": null, "aliases": [null]}, "after": {"name": "Larmkod 1", "aliases": ["Alarm code 1"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.alsavopro_poolvarmepump_alarm_code_1"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.alsavopro_poolvarmepump_alarm_code_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Larmkod 2", "aliases": ["Alarm code 2"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.alsavopro_poolvarmepump_alarm_code_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.alsavopro_poolvarmepump_alarm_code_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Larmkod 3", "aliases": ["Alarm code 3"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.alsavopro_poolvarmepump_alarm_code_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.alsavopro_poolvarmepump_alarm_code_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Larmkod 4", "aliases": ["Alarm code 4"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.alsavopro_poolvarmepump_alarm_code_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.alsavopro_poolvarmepump_system_status_code", "before": {"name": null, "aliases": [null]}, "after": {"name": "Systemstatuskod", "aliases": ["System status code"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.alsavopro_poolvarmepump_system_status_code"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.alsavopro_poolvarmepump_system_running_code", "before": {"name": null, "aliases": [null]}, "after": {"name": "Systemdriftkod", "aliases": ["System running code"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.alsavopro_poolvarmepump_system_running_code"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolvarmepump_device_status_code", "before": {"name": null, "aliases": [null]}, "after": {"name": "Enhetsstatuskod", "aliases": ["Device status code"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolvarmepump_device_status_code"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.alsavopro_poolvarmepump_device_type", "before": {"name": null, "aliases": [null]}, "after": {"name": "Enhetstyp", "aliases": ["Device type"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.alsavopro_poolvarmepump_device_type"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.alsavopro_poolvarmepump_main_board_hw_revision", "before": {"name": null, "aliases": [null]}, "after": {"name": "Moderkortets hårdvaruversion", "aliases": ["Main board HW revision"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.alsavopro_poolvarmepump_main_board_hw_revision"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.alsavopro_poolvarmepump_main_board_sw_revision", "before": {"name": null, "aliases": [null]}, "after": {"name": "Moderkortets programvaruversion", "aliases": ["Main board SW revision"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.alsavopro_poolvarmepump_main_board_sw_revision"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.alsavopro_poolvarmepump_manual_hw_code", "before": {"name": null, "aliases": [null]}, "after": {"name": "Manuell hårdvarukod", "aliases": ["Manual HW code"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.alsavopro_poolvarmepump_manual_hw_code"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.alsavopro_poolvarmepump_manual_sw_code", "before": {"name": null, "aliases": [null]}, "after": {"name": "Manuell programvarukod", "aliases": ["Manual SW code"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.alsavopro_poolvarmepump_manual_sw_code"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.alsavopro_poolvarmepump_error_messages", "before": {"name": null, "aliases": [null]}, "after": {"name": "Felmeddelanden", "aliases": ["Error messages"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.alsavopro_poolvarmepump_error_messages"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.poolvarmepump_water_temperature_calibration", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kalibrering av vattentemperatur", "aliases": ["Water temperature calibration"]}}}
+{"status": "applied", "kind": "entity", "id": "number.poolvarmepump_water_temperature_calibration"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.all_wi_fi_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-klienter – alla accesspunkter", "aliases": ["All Wi-Fi Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.all_wi_fi_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_banklampor_thread_routing_roll", "before": {"name": null, "aliases": [null]}, "after": {"name": "Thread-routingroll", "aliases": ["Bänklampor Thread-routing roll"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_banklampor_thread_routing_roll"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ateljen_bordslampa_ateljen_thread_routing_roll", "before": {"name": null, "aliases": [null]}, "after": {"name": "Thread-routingroll", "aliases": ["Thread-routing roll"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ateljen_bordslampa_ateljen_thread_routing_roll"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_bordslampa_hoger_thread_routing_roll", "before": {"name": null, "aliases": [null]}, "after": {"name": "Thread-routingroll", "aliases": ["Thread-routing roll"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_bordslampa_hoger_thread_routing_roll"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.utomhus_postnord_76017_mail_delivery_today_76017", "before": {"name": null, "aliases": [null]}, "after": {"name": "Postutdelning idag", "aliases": ["PostNord 76017 Mail Delivery Today 76017"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.utomhus_postnord_76017_mail_delivery_today_76017"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.utomhus_postnord_76017_mail_delivery_tomorrow_76017", "before": {"name": null, "aliases": [null]}, "after": {"name": "Postutdelning imorgon", "aliases": ["PostNord 76017 Mail Delivery Tomorrow 76017"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.utomhus_postnord_76017_mail_delivery_tomorrow_76017"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.utomhus_postnord_76017_postnord_delivery_today_76017", "before": {"name": null, "aliases": [null]}, "after": {"name": "PostNord-utdelning idag", "aliases": ["PostNord 76017 Postnord Delivery Today 76017"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.utomhus_postnord_76017_postnord_delivery_today_76017"}
+{"status": "intent", "operation": {"kind": "entity", "id": "calendar.utomhus_postnord_76017_mail_delivery_calendar_76017", "before": {"name": null, "aliases": [null]}, "after": {"name": "Postutdelningskalender", "aliases": ["PostNord 76017 Mail Delivery Calendar 76017"]}}}
+{"status": "applied", "kind": "entity", "id": "calendar.utomhus_postnord_76017_mail_delivery_calendar_76017"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.postnord_delivery_76017", "before": {"name": null, "aliases": [null]}, "after": {"name": "PostNord-utdelning", "aliases": ["PostNord 76017 Postnord Delivery 76017"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.postnord_delivery_76017"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bilresa_dual_button_batteri", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterinivå", "aliases": ["BILRESA dual button Batteri"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bilresa_dual_button_batteri"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bilresa_dual_button_thread_routing_roll", "before": {"name": null, "aliases": [null]}, "after": {"name": "Thread-routingroll", "aliases": ["Thread-routing roll"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bilresa_dual_button_thread_routing_roll"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_taklampor_kokson_thread_routing_roll", "before": {"name": null, "aliases": [null]}, "after": {"name": "Thread-routingroll", "aliases": ["Thread-routing roll"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_taklampor_kokson_thread_routing_roll"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.taklampor_kokson_pa_niva", "before": {"name": null, "aliases": [null]}, "after": {"name": "Nivå vid påslagning", "aliases": ["Taklampor På nivå"]}}}
+{"status": "applied", "kind": "entity", "id": "number.taklampor_kokson_pa_niva"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.taklampor_kokson_power_on_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Nivå vid uppstart", "aliases": ["Taklampor Power on-nivå"]}}}
+{"status": "applied", "kind": "entity", "id": "number.taklampor_kokson_power_on_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.taklampor_kokson_pa_av_overgangstid", "before": {"name": null, "aliases": [null]}, "after": {"name": "Övergångstid på/av", "aliases": ["Taklampor På/av övergångstid"]}}}
+{"status": "applied", "kind": "entity", "id": "number.taklampor_kokson_pa_av_overgangstid"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.thread_matter_topology", "before": {"name": null, "aliases": [null]}, "after": {"name": "Thread/Matter-topologi", "aliases": ["Thread Matter Topology"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.thread_matter_topology"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nest_hub_test_210", "before": {"name": null, "aliases": [null]}, "after": {"name": "Nest Hub – test 210", "aliases": ["Nest Hub Test 210"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nest_hub_test_210"}
+{"status": "intent", "operation": {"kind": "entity", "id": "infrared.ir_broadcast", "before": {"name": null, "aliases": [null]}, "after": {"name": "IR-sändning", "aliases": ["IR Broadcast"]}}}
+{"status": "applied", "kind": "entity", "id": "infrared.ir_broadcast"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.varmeljus_ljusstyrka_minska", "before": {"name": null, "aliases": [null]}, "after": {"name": "Värmeljus – Minska ljusstyrka", "aliases": ["Värmeljus Ljusstyrka minska"]}}}
+{"status": "applied", "kind": "entity", "id": "button.varmeljus_ljusstyrka_minska"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.varmeljus_ljusstyrka_oka", "before": {"name": null, "aliases": [null]}, "after": {"name": "Värmeljus – Öka ljusstyrka", "aliases": ["Värmeljus Ljusstyrka öka"]}}}
+{"status": "applied", "kind": "entity", "id": "button.varmeljus_ljusstyrka_oka"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.varmeljus_lage_sl", "before": {"name": null, "aliases": [null]}, "after": {"name": "Värmeljus – Läge SL", "aliases": ["Värmeljus Läge SL"]}}}
+{"status": "applied", "kind": "entity", "id": "button.varmeljus_lage_sl"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.varmeljus_lage_fl", "before": {"name": null, "aliases": [null]}, "after": {"name": "Värmeljus – Läge FL", "aliases": ["Värmeljus Läge FL"]}}}
+{"status": "applied", "kind": "entity", "id": "button.varmeljus_lage_fl"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.varmeljus_lage_bf", "before": {"name": null, "aliases": [null]}, "after": {"name": "Värmeljus – Läge BF", "aliases": ["Värmeljus Läge BF"]}}}
+{"status": "applied", "kind": "entity", "id": "button.varmeljus_lage_bf"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.varmeljus_lage_light", "before": {"name": null, "aliases": [null]}, "after": {"name": "Värmeljus – Läge Light", "aliases": ["Värmeljus Läge Light"]}}}
+{"status": "applied", "kind": "entity", "id": "button.varmeljus_lage_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.varmeljus_timer_2h", "before": {"name": null, "aliases": [null]}, "after": {"name": "Värmeljus – Timer 2 timmar", "aliases": ["Värmeljus Timer 2H"]}}}
+{"status": "applied", "kind": "entity", "id": "button.varmeljus_timer_2h"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.varmeljus_timer_4h", "before": {"name": null, "aliases": [null]}, "after": {"name": "Värmeljus – Timer 4 timmar", "aliases": ["Värmeljus Timer 4H"]}}}
+{"status": "applied", "kind": "entity", "id": "button.varmeljus_timer_4h"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.varmeljus_timer_6h", "before": {"name": null, "aliases": [null]}, "after": {"name": "Värmeljus – Timer 6 timmar", "aliases": ["Värmeljus Timer 6H"]}}}
+{"status": "applied", "kind": "entity", "id": "button.varmeljus_timer_6h"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.varmeljus_timer_8h", "before": {"name": null, "aliases": [null]}, "after": {"name": "Värmeljus – Timer 8 timmar", "aliases": ["Värmeljus Timer 8H"]}}}
+{"status": "applied", "kind": "entity", "id": "button.varmeljus_timer_8h"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.blueprints_battery_notes_battery_not_reported", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterier – utebliven rapport", "aliases": ["Battery Notes - Battery Not Reported"]}}}
+{"status": "applied", "kind": "entity", "id": "update.blueprints_battery_notes_battery_not_reported"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.blueprints_battery_notes_battery_replaced", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterier – batteribyte", "aliases": ["Battery Notes - Battery Replaced"]}}}
+{"status": "applied", "kind": "entity", "id": "update.blueprints_battery_notes_battery_replaced"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.blueprints_battery_notes_battery_threshold", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterier – varningsgräns", "aliases": ["Battery Notes - Battery Threshold"]}}}
+{"status": "applied", "kind": "entity", "id": "update.blueprints_battery_notes_battery_threshold"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.portainer_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Portainer Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.portainer_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.open_webui_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Open WebUI Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.open_webui_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.wyoming_whisper_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Wyoming Whisper Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.wyoming_whisper_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.uptime_via_caddy_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Uptime Kuma – direkt Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.uptime_via_caddy_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.eir_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Heimdal Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.eir_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ping_svarstid_o_1_dag_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Ping Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ping_svarstid_o_1_dag_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.home_assistant_ui_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Home Assistant UI Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.home_assistant_ui_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.supervisor_health_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Supervisor Health Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.supervisor_health_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.core_api_wake_up_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Core API Wake-up Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.core_api_wake_up_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.frigg_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Tor Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.frigg_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ping_svarstid_o_1_dag_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Ping Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ping_svarstid_o_1_dag_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ssh_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["SSH Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ssh_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.caddy_reverse_proxy_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Caddy Reverse Proxy Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.caddy_reverse_proxy_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.docker_api_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Docker API Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.docker_api_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.glances_ui_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Glances UI Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.glances_ui_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ollama_api_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Ollama API Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ollama_api_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.uptime_proxy_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Uptime proxy Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.uptime_proxy_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ollama_container_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Ollama Container Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ollama_container_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.caddy_container_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Caddy Container Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.caddy_container_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_test_container_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["HA (Test) Container Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_test_container_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome_test_container_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["ESPHome (Test) Container Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome_test_container_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.glances_container_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Glances Container Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.glances_container_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.portainer_agent_container_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Portainer Agent Container Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.portainer_agent_container_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.docker_socket_proxy_container_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Docker Socket Proxy Container Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.docker_socket_proxy_container_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.open_webui_container_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Open webUI Container Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.open_webui_container_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.openwrt_backup_container_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["OpenWRT Backup Container Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.openwrt_backup_container_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.portainer_container_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Portainer Container Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.portainer_container_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.uptime_kuma_container_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Uptime-kuma Container Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.uptime_kuma_container_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.home_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Home Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.home_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.gw_home_arpa_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["gw.home.arpa Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.gw_home_arpa_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_kontoret_home_arpa_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["ap_kontoret.home.arpa Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_kontoret_home_arpa_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_koket_home_arpa_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["ap_koket.home.arpa Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_koket_home_arpa_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_kallaren_home_arpa_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["ap_kallaren.home.arpa Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_kallaren_home_arpa_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_verkstaden_home_arpa_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["ap_verkstaden.home.arpa Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_verkstaden_home_arpa_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_friggan_home_arpa_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["ap_friggan.home.arpa Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_friggan_home_arpa_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_honshuset_home_arpa_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["ap_honshuset.home.arpa Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_honshuset_home_arpa_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_poolen_home_arpa_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["ap_poolen.home.arpa Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_poolen_home_arpa_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.gw_buck_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["gw_buck Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.gw_buck_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_buck_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["ap_buck Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_buck_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.buck_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Buck Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.buck_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_buck_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["ha_buck Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_buck_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kiwi_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Kiwi Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kiwi_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.gw_kiwi_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["gw_kiwi Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.gw_kiwi_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_kiwi_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["ap_kiwi Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_kiwi_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_kiwi_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["ha_kiwi Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_kiwi_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sippan_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["Sippan Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sippan_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.gw_sippan_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["gw_sippan Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.gw_sippan_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_sippan_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["ha_sippan Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_sippan_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.adguard_dns_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["AdGuard DNS Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.adguard_dns_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sw_vinden_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["sw_vinden Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sw_vinden_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sw_kontoret_svarstid_o_1_dag", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (1 dag)", "aliases": ["sw_kontoret Svarstid Ø (1 dag)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sw_kontoret_svarstid_o_1_dag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.portainer_svarstid_o_30_dagar", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (30 dagar)", "aliases": ["Portainer Svarstid Ø (30 dagar)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.portainer_svarstid_o_30_dagar"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.open_webui_svarstid_o_30_dagar", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (30 dagar)", "aliases": ["Open WebUI Svarstid Ø (30 dagar)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.open_webui_svarstid_o_30_dagar"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.wyoming_whisper_svarstid_o_30_dagar", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (30 dagar)", "aliases": ["Wyoming Whisper Svarstid Ø (30 dagar)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.wyoming_whisper_svarstid_o_30_dagar"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.uptime_via_caddy_svarstid_o_30_dagar", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (30 dagar)", "aliases": ["Uptime Kuma – direkt Svarstid Ø (30 dagar)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.uptime_via_caddy_svarstid_o_30_dagar"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.eir_svarstid_o_30_dagar", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (30 dagar)", "aliases": ["Heimdal Svarstid Ø (30 dagar)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.eir_svarstid_o_30_dagar"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ping_svarstid_o_30_dagar_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (30 dagar)", "aliases": ["Ping Svarstid Ø (30 dagar)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ping_svarstid_o_30_dagar_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.home_assistant_ui_svarstid_o_30_dagar", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (30 dagar)", "aliases": ["Home Assistant UI Svarstid Ø (30 dagar)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.home_assistant_ui_svarstid_o_30_dagar"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.supervisor_health_svarstid_o_30_dagar", "before": {"name": null, "aliases": [null]}, "after": {"name": "Genomsnittlig svarstid (30 dagar)", "aliases": ["Supervisor Health Svarstid Ø (30 dagar)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.supervisor_health_svarstid_o_30_dagar"}

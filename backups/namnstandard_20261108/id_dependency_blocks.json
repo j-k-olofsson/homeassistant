@@ -1,0 +1,2631 @@
+{
+  "input_datetime.granny_charger_trigger": [
+    "/homeassistant/packages/granny.yaml",
+    "/homeassistant/scripts.yaml"
+  ],
+  "input_number.car_bat_capacity": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/packages/granny.yaml",
+    "/homeassistant/scripts.yaml"
+  ],
+  "input_number.car_charger_capacity": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/packages/granny.yaml",
+    "/homeassistant/scripts.yaml"
+  ],
+  "input_number.car_charger_efficiency": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/scripts.yaml"
+  ],
+  "input_number.car_target_soc": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml",
+    "/homeassistant/scripts.yaml"
+  ],
+  "light.grupp_godnatt": [
+    "/homeassistant/scripts.yaml"
+  ],
+  "media_player.dassens_hogtalare_ma": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/scripts.yaml"
+  ],
+  "media_player.granny_utrop": [
+    "/homeassistant/scripts.yaml"
+  ],
+  "media_player.grannys_hogtalare": [
+    "/homeassistant/automations.yaml",
+    "/homeassistant/scripts.yaml"
+  ],
+  "media_player.grupp_grannys_hogtalare": [
+    "/homeassistant/scripts.yaml"
+  ],
+  "media_player.kokets_skarm": [
+    ".storage/core.config_entries",
+    "/homeassistant/automations.yaml",
+    "/homeassistant/esphome/archive/esphome98.yaml",
+    "/homeassistant/scripts.yaml"
+  ],
+  "media_player.kokets_skarm_ma": [
+    "/homeassistant/automations.yaml",
+    "/homeassistant/scripts.yaml"
+  ],
+  "script.granny_announce": [
+    "/homeassistant/scripts.yaml"
+  ],
+  "script.granny_announce_player": [
+    "/homeassistant/scripts.yaml",
+    "/homeassistant/tools/test_granny_announce.py"
+  ],
+  "script.granny_speak_attempt": [
+    "/homeassistant/scripts.yaml",
+    "/homeassistant/tools/test_granny_announce.py"
+  ],
+  "script.hissmusik_starta": [
+    "/homeassistant/automations.yaml",
+    "/homeassistant/scripts.yaml"
+  ],
+  "sensor.nordpool": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW",
+    ".storage/energy",
+    ".storage/lovelace.dashboard_elpris",
+    ".storage/lovelace.ha_admin",
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml",
+    "/homeassistant/esphome/archive/esphome98.yaml",
+    "/homeassistant/scripts.yaml",
+    "/share/Shared/diego/.config/Code/User/History/-64c3fff6/UowC.yaml",
+    "/share/Shared/diego/.config/Code/User/workspaceStorage/2fa0b63dba24f71cd663ca6997de30c7/chatEditingSessions/8dc1d67d-f629-4645-9ca5-d2e08d7274a5/state.json",
+    "/share/Shared/diego/.config/Code/User/workspaceStorage/2fa0b63dba24f71cd663ca6997de30c7/chatSessions/8dc1d67d-f629-4645-9ca5-d2e08d7274a5.json"
+  ],
+  "sensor.sef_42h_battery_level": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml",
+    "/homeassistant/packages/granny.yaml",
+    "/homeassistant/scripts.yaml"
+  ],
+  "tts.piper": [
+    ".storage/assist_pipeline.pipelines",
+    "/homeassistant/custom_components/granny_goodnight/__init__.py",
+    "/homeassistant/custom_components/granny_sync/__init__.py",
+    "/homeassistant/custom_components/granny_sync/services.yaml",
+    "/homeassistant/scripts.yaml"
+  ],
+  "automation.aqara_taklampor_monitor_service_calls": [
+    "/homeassistant/configuration.yaml"
+  ],
+  "infrared.ir_broadcast": [
+    "/homeassistant/configuration.yaml",
+    "/homeassistant/custom_components/infrared_broadcast/const.py"
+  ],
+  "sensor.all_wi_fi_clients": [
+    "/homeassistant/configuration.yaml"
+  ],
+  "sensor.elmatare_elstolpen_current_phase_1": [
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/configuration.yaml",
+    "ESPHome node service lookup"
+  ],
+  "sensor.elmatare_elstolpen_current_phase_2": [
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/configuration.yaml",
+    "ESPHome node service lookup"
+  ],
+  "sensor.elmatare_elstolpen_current_phase_3": [
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/configuration.yaml",
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.shelly_blu_door_window_2a6d_window": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW",
+    "/homeassistant/automations.yaml",
+    "/homeassistant/custom_components/granny_goodnight/text.py",
+    "/homeassistant/tools/test_granny_goodnight_queue.py"
+  ],
+  "binary_sensor.siemens_016050395510002818_bsh_common_status_remotecontrolstartallowed": [
+    "/homeassistant/automations.yaml"
+  ],
+  "binary_sensor.sovrummet_openwrt_one_router_sovrum_wan_connected": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml"
+  ],
+  "binary_sensor.vattensensor_torkskap_flood": [
+    ".storage/core.config_entries",
+    "/homeassistant/automations.yaml"
+  ],
+  "button.blomlampa_1_verandan_esphome07_apply_scene": [
+    "/homeassistant/automations.yaml",
+    "ESPHome node service lookup"
+  ],
+  "button.blomlampa_2_verandan_esphome03_apply_scene": [
+    "/homeassistant/automations.yaml",
+    "ESPHome node service lookup"
+  ],
+  "button.blomlampa_shelly_plus_rgbw_pm_esphome32_apply_growlight_scene": [
+    "/homeassistant/automations.yaml",
+    "ESPHome node service lookup"
+  ],
+  "button.esphome02_esphome02_apply_scene": [
+    "/homeassistant/automations.yaml",
+    "ESPHome node service lookup"
+  ],
+  "button.esphome76_benq_mute": [
+    "/homeassistant/automations.yaml",
+    "ESPHome node service lookup"
+  ],
+  "button.esphome76_benq_off": [
+    "/homeassistant/automations.yaml",
+    "ESPHome node service lookup"
+  ],
+  "button.esphome76_benq_on": [
+    "/homeassistant/automations.yaml",
+    "ESPHome node service lookup"
+  ],
+  "climate.golvvarme_termostat_ateljen": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml"
+  ],
+  "climate.golvvarme_termostat_entren": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml"
+  ],
+  "climate.golvvarme_termostat_koket": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml"
+  ],
+  "climate.golvvarme_termostat_verandan": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml"
+  ],
+  "climate.termostat_kontoret_esphome20_thermostat": [
+    ".storage/cloud",
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml",
+    "ESPHome node service lookup"
+  ],
+  "cover.honsluckan_esphome75_cover": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml",
+    "/homeassistant/custom_components/granny_goodnight/text.py",
+    "/homeassistant/tools/test_granny_goodnight_queue.py",
+    "ESPHome node service lookup"
+  ],
+  "device_tracker.sef_42h_parking_location": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml",
+    "/homeassistant/packages/granny.yaml"
+  ],
+  "event.bilresa_dual_button_knapp_1": [
+    "/homeassistant/automations.yaml"
+  ],
+  "event.bilresa_dual_button_knapp_2": [
+    "/homeassistant/automations.yaml"
+  ],
+  "humidifier.bions_hygrostat": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml"
+  ],
+  "input_boolean.car_ai_planning_enabled": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml"
+  ],
+  "input_boolean.car_man_override": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml",
+    "/homeassistant/packages/granny.yaml"
+  ],
+  "input_boolean.ha_ready": [
+    "/homeassistant/automations.yaml"
+  ],
+  "input_boolean.hemmabio_restore_hygrostat": [
+    "/homeassistant/automations.yaml"
+  ],
+  "input_button.bortavarme": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml"
+  ],
+  "input_button.hemmavarme": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml"
+  ],
+  "input_button.komfortvarme": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml"
+  ],
+  "input_datetime.growlights_late_on": [
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/automations.yaml"
+  ],
+  "input_datetime.growlights_off": [
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/automations.yaml"
+  ],
+  "input_datetime.growlights_on": [
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/automations.yaml"
+  ],
+  "input_datetime.lights_off": [
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/automations.yaml"
+  ],
+  "input_datetime.lights_on": [
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/automations.yaml"
+  ],
+  "input_datetime.oppna_honsluckan": [
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/automations.yaml"
+  ],
+  "input_select.sun_phase": [
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/automations.yaml",
+    "/homeassistant/packages/ir_lights.yaml"
+  ],
+  "light.blomlampa_shelly_plus_rgbw_pm_esphome32_growlight": [
+    ".storage/core.config_entries",
+    "/homeassistant/automations.yaml",
+    "ESPHome node service lookup"
+  ],
+  "light.bordslampa_ateljen": [
+    ".storage/core.config_entries",
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/automations.yaml"
+  ],
+  "light.bordslampa_hoger": [
+    ".storage/core.config_entries",
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/automations.yaml",
+    "/homeassistant/packages/bio_adaptive_lighting.yaml"
+  ],
+  "light.bordslampa_vanster": [
+    ".storage/core.config_entries",
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/automations.yaml",
+    "/homeassistant/packages/bio_adaptive_lighting.yaml"
+  ],
+  "light.grupp_bordslampor_bion": [
+    ".storage/lovelace.dashboard_hemmabio",
+    "/homeassistant/automations.yaml"
+  ],
+  "light.grupp_lampor_som_tands_vid_skymning": [
+    "/homeassistant/automations.yaml"
+  ],
+  "light.ledstrip_sovrum_ostra_esphome40_light": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW",
+    "/homeassistant/automations.yaml",
+    "ESPHome node service lookup"
+  ],
+  "media_player.chromecastaudio4733": [
+    "/homeassistant/automations.yaml"
+  ],
+  "media_player.diegos_vackarklocka": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW",
+    "/homeassistant/automations.yaml"
+  ],
+  "media_player.duschen": [
+    "/homeassistant/automations.yaml"
+  ],
+  "media_player.home_assistant_voice_096460_media_player": [
+    ".storage/core.device_registry",
+    "/homeassistant/automations.yaml",
+    "ESPHome node service lookup"
+  ],
+  "media_player.jbl_link_500_67aa69": [
+    ".storage/core.config_entries",
+    "/homeassistant/automations.yaml"
+  ],
+  "media_player.nya_tvn": [
+    "/homeassistant/automations.yaml"
+  ],
+  "media_player.playstation_4": [
+    "/homeassistant/automations.yaml"
+  ],
+  "media_player.sony_kd_55xh9005": [
+    "/homeassistant/automations.yaml"
+  ],
+  "media_player.stereo_hoger": [
+    "/homeassistant/automations.yaml"
+  ],
+  "media_player.toalettens_hogtalare": [
+    "/homeassistant/automations.yaml"
+  ],
+  "media_player.verandans_hogtalare_ma": [
+    "/homeassistant/automations.yaml"
+  ],
+  "plant.citron": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml"
+  ],
+  "plant.coffea_arabica": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml"
+  ],
+  "plant.koket_fredskallor_trappan_fredskalla": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml"
+  ],
+  "plant.meyer_citron": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml"
+  ],
+  "plant.monstera": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml"
+  ],
+  "plant.paraplyaralia": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml"
+  ],
+  "remote.sony_kd_55xh9005": [
+    "/homeassistant/automations.yaml"
+  ],
+  "script.bio_adaptivt_ljus_synkronisera": [
+    "/homeassistant/automations.yaml",
+    "/homeassistant/packages/bio_adaptive_lighting.yaml"
+  ],
+  "script.godnatt_slack_belysning": [
+    "/homeassistant/automations.yaml"
+  ],
+  "script.granny_broadcast": [
+    "/homeassistant/automations.yaml"
+  ],
+  "script.granny_car_charge_plan": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml"
+  ],
+  "script.ir_lights_automatic_off": [
+    "/homeassistant/automations.yaml",
+    "/homeassistant/packages/ir_lights.yaml"
+  ],
+  "sensor.diegos_vackarklocka_alarms": [
+    "/homeassistant/automations.yaml",
+    "/homeassistant/packages/ir_lights.yaml"
+  ],
+  "sensor.esphome90_esphome90_salt_level": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml",
+    "ESPHome node service lookup"
+  ],
+  "sensor.gasol_utomhus_esphome73_lpg_level": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml",
+    "ESPHome node service lookup"
+  ],
+  "sensor.openuv_aktuellt_uv_index": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml"
+  ],
+  "sensor.power_consumed": [
+    ".storage/lovelace.dashboard_elpris",
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml",
+    "/homeassistant/packages/elkostnad_quarter.yaml",
+    "ESPHome node service lookup"
+  ],
+  "sensor.prusaxl": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml",
+    "/homeassistant/esphome/archive/trash/esphome33.yaml"
+  ],
+  "sensor.siemens_016050395510002818_bsh_common_status_operationstate": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml"
+  ],
+  "sensor.siemens_tvatt_tork_driftsstatus": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml"
+  ],
+  "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature": [
+    "/homeassistant/automations.yaml",
+    "ESPHome node service lookup"
+  ],
+  "sensor.vattenniva_honshuset_esphome74_water_level": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml",
+    "ESPHome node service lookup"
+  ],
+  "switch.vattenvarmare_honshuset_esphome25_relay_state": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml",
+    "ESPHome node service lookup"
+  ],
+  "timer.dashboard_disk_klar": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml"
+  ],
+  "timer.dashboard_prusa_klar": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml"
+  ],
+  "timer.dashboard_tvatt_klar": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/automations.yaml"
+  ],
+  "sensor.db_optimize_last_log_line": [
+    "/homeassistant/packages/db_optimize.yaml"
+  ],
+  "automation.godnatt": [
+    "/homeassistant/packages/granny_goodnight.yaml"
+  ],
+  "switch.adaptive_lighting_bio_adapt_brightness": [
+    "/homeassistant/packages/bio_adaptive_lighting.yaml"
+  ],
+  "switch.adaptive_lighting_bio_adapt_color": [
+    "/homeassistant/packages/bio_adaptive_lighting.yaml"
+  ],
+  "switch.adaptive_lighting_bio_sleep_mode": [
+    "/homeassistant/packages/bio_adaptive_lighting.yaml"
+  ],
+  "climate.sef_42h_climate": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/packages/bilvarme_scheduler.yaml"
+  ],
+  "script.bilvarme_med_laddning": [
+    "/homeassistant/packages/bilvarme_scheduler.yaml"
+  ],
+  "weather.forecast_met_no_home": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/packages/feels_like.yaml"
+  ],
+  "input_number.nordpool_certificate_fee": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW",
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/packages/elkostnad_quarter.yaml"
+  ],
+  "input_number.nordpool_energy_tax": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW",
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/packages/elkostnad_quarter.yaml"
+  ],
+  "input_number.nordpool_energy_transfer_fee": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW",
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/packages/elkostnad_quarter.yaml"
+  ],
+  "input_number.nordpool_monthly_fee": [
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/packages/elkostnad_quarter.yaml"
+  ],
+  "input_number.nordpool_spot_fee": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW",
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/packages/elkostnad_quarter.yaml"
+  ],
+  "input_number.nordpool_trade_fee": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW",
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/packages/elkostnad_quarter.yaml"
+  ],
+  "input_number.nordpool_vat": [
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/packages/elkostnad_quarter.yaml"
+  ],
+  "sensor.template_nordpool_base_cost_current_hour": [
+    ".storage/lovelace.ha_admin",
+    ".storage/lovelace.lovelace",
+    "/homeassistant/packages/elkostnad_quarter.yaml"
+  ],
+  "input_datetime.narvarosimulering_test_sluttid": [
+    "/homeassistant/packages/presence_simulation.yaml"
+  ],
+  "input_number.narvarosimulering_brightness_procent": [
+    "/homeassistant/packages/presence_simulation.yaml"
+  ],
+  "input_number.narvarosimulering_delta_dagar": [
+    "/homeassistant/packages/presence_simulation.yaml"
+  ],
+  "input_number.narvarosimulering_random_sekunder": [
+    "/homeassistant/packages/presence_simulation.yaml"
+  ],
+  "input_number.narvarosimulering_test_events": [
+    "/homeassistant/packages/presence_simulation.yaml"
+  ],
+  "input_number.narvarosimulering_test_minuter": [
+    "/homeassistant/packages/presence_simulation.yaml"
+  ],
+  "input_text.narvarosimulering_switch_entity": [
+    "/homeassistant/packages/presence_simulation.yaml"
+  ],
+  "light.narvarosimulering_lampor": [
+    "/homeassistant/packages/presence_simulation.yaml"
+  ],
+  "script.narvarosimulering_start": [
+    "/homeassistant/packages/presence_simulation.yaml"
+  ],
+  "script.narvarosimulering_stop": [
+    "/homeassistant/packages/presence_simulation.yaml"
+  ],
+  "switch.presence_simulation_hemma": [
+    "/homeassistant/packages/presence_simulation.yaml"
+  ],
+  "button.varmeljus_ljusstyrka_minska": [
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/packages/ir_lights.yaml"
+  ],
+  "input_boolean.ir_lights_automation": [
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/packages/ir_lights.yaml"
+  ],
+  "input_datetime.ir_lights_off": [
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/packages/ir_lights.yaml"
+  ],
+  "input_datetime.ir_lights_on": [
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/packages/ir_lights.yaml"
+  ],
+  "input_number.ir_lights_before_diego_alarm": [
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/packages/ir_lights.yaml"
+  ],
+  "input_select.ir_lights_morning_start": [
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/packages/ir_lights.yaml"
+  ],
+  "light.varmeljus": [
+    "/homeassistant/packages/ir_lights.yaml"
+  ],
+  "script.ir_lights_automatic_on": [
+    "/homeassistant/packages/ir_lights.yaml"
+  ],
+  "counter.aqara_banklampor_flash_count": [
+    "/homeassistant/packages/aqara_taklampor_monitor.yaml"
+  ],
+  "counter.aqara_taklampor_flash_count": [
+    "/homeassistant/packages/aqara_taklampor_monitor.yaml"
+  ],
+  "event.banklampor_knapp": [
+    "/homeassistant/packages/aqara_taklampor_monitor.yaml"
+  ],
+  "event.taklampor_kokson_knapp": [
+    "/homeassistant/packages/aqara_taklampor_monitor.yaml"
+  ],
+  "input_datetime.aqara_banklampor_senaste_flash_tid": [
+    "/homeassistant/packages/aqara_taklampor_monitor.yaml"
+  ],
+  "input_datetime.aqara_banklampor_senaste_knapp_tid": [
+    "/homeassistant/packages/aqara_taklampor_monitor.yaml"
+  ],
+  "input_datetime.aqara_banklampor_senaste_kommando_tid": [
+    "/homeassistant/packages/aqara_taklampor_monitor.yaml"
+  ],
+  "input_datetime.aqara_taklampor_senaste_flash_tid": [
+    "/homeassistant/packages/aqara_taklampor_monitor.yaml"
+  ],
+  "input_datetime.aqara_taklampor_senaste_knapp_tid": [
+    "/homeassistant/packages/aqara_taklampor_monitor.yaml"
+  ],
+  "input_datetime.aqara_taklampor_senaste_kommando_tid": [
+    "/homeassistant/packages/aqara_taklampor_monitor.yaml"
+  ],
+  "sensor.banklampor_aktiv_strom": [
+    "/homeassistant/packages/aqara_taklampor_monitor.yaml"
+  ],
+  "sensor.banklampor_effekt": [
+    "/homeassistant/packages/aqara_taklampor_monitor.yaml"
+  ],
+  "sensor.taklampor_kokson_aktiv_strom": [
+    "/homeassistant/packages/aqara_taklampor_monitor.yaml"
+  ],
+  "sensor.thread_matter_topology": [
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/www/thread-network-map/thread-network-map.js"
+  ],
+  "binary_sensor.max_stadar": [
+    "/homeassistant/www/feedback-control-card/feedback-control-card-v1.js",
+    "/homeassistant/www/feedback-control-card/feedback-control-card-v2.js",
+    "/homeassistant/www/feedback-control-card/feedback-control-card-v3.js",
+    "/homeassistant/www/feedback-control-card/feedback-control-card-v4.js"
+  ],
+  "sensor.max_status": [
+    "/homeassistant/www/feedback-control-card/feedback-control-card-v1.js",
+    "/homeassistant/www/feedback-control-card/feedback-control-card-v2.js",
+    "/homeassistant/www/feedback-control-card/feedback-control-card-v3.js",
+    "/homeassistant/www/feedback-control-card/feedback-control-card-v4.js"
+  ],
+  "sensor.sef_42h_charging_status": [
+    "/homeassistant/www/feedback-control-card/feedback-control-card-v1.js",
+    "/homeassistant/www/feedback-control-card/feedback-control-card-v2.js",
+    "/homeassistant/www/feedback-control-card/feedback-control-card-v3.js",
+    "/homeassistant/www/feedback-control-card/feedback-control-card-v4.js"
+  ],
+  "vacuum.max": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW",
+    ".storage/lovelace.lovelace",
+    "/homeassistant/www/feedback-control-card/feedback-control-card-v1.js",
+    "/homeassistant/www/feedback-control-card/feedback-control-card-v2.js",
+    "/homeassistant/www/feedback-control-card/feedback-control-card-v3.js",
+    "/homeassistant/www/feedback-control-card/feedback-control-card-v4.js"
+  ],
+  "binary_sensor.workday_sensor": [
+    "/homeassistant/custom_components/scheduler/const.py"
+  ],
+  "media_player.diegos_vackarklocka_ma": [
+    "/homeassistant/custom_components/granny_goodnight/__init__.py"
+  ],
+  "lock.ytterdorren": [
+    ".storage/lovelace.lovelace",
+    "/homeassistant/custom_components/granny_goodnight/text.py",
+    "/homeassistant/tools/test_granny_goodnight_queue.py"
+  ],
+  "button.ignore_all_issues": [
+    "/homeassistant/custom_components/spook/ectoplasms/repairs/button.py"
+  ],
+  "button.unignore_all_issues": [
+    "/homeassistant/custom_components/spook/ectoplasms/repairs/button.py"
+  ],
+  "event.repair": [
+    "/homeassistant/custom_components/spook/ectoplasms/repairs/event.py"
+  ],
+  "sensor.active_issues": [
+    "/homeassistant/custom_components/spook/ectoplasms/repairs/sensor.py"
+  ],
+  "sensor.ignored_issues": [
+    "/homeassistant/custom_components/spook/ectoplasms/repairs/sensor.py"
+  ],
+  "sensor.issues": [
+    "/homeassistant/custom_components/spook/ectoplasms/repairs/sensor.py"
+  ],
+  "button.homeassistant_reload": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/button.py"
+  ],
+  "button.homeassistant_restart": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/button.py"
+  ],
+  "sensor.air_quality": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.alarm_control_panels": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.areas": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.automations": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.binary_sensors": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.buttons": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.calendars": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.cameras": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.climate": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.counters": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.covers": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.custom_integrations": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.dates": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.datetimes": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.device_trackers": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.devices": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.entities": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.fans": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.groups": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.humidifiers": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.images": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.input_booleans": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.input_buttons": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.input_datetimes": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.input_numbers": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.input_selects": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.input_texts": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.integrations": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.lights": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.locks": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.media_players": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.numbers": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.persistent_notifications": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.persons": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.remotes": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.scenes": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.scripts": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.selects": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.sensors": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.sirens": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.stt": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.suns": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.switches": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.texts": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.timers": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.times": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.todos": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.tts": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.update": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.vacuums": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.water_heaters": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.weather": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "sensor.zones": [
+    "/homeassistant/custom_components/spook/ectoplasms/homeassistant/sensor.py"
+  ],
+  "switch.cloud_alexa": [
+    "/homeassistant/custom_components/spook/ectoplasms/cloud/switch.py"
+  ],
+  "switch.cloud_alexa_report_state": [
+    "/homeassistant/custom_components/spook/ectoplasms/cloud/switch.py"
+  ],
+  "switch.cloud_google": [
+    "/homeassistant/custom_components/spook/ectoplasms/cloud/switch.py"
+  ],
+  "switch.cloud_google_report_state": [
+    "/homeassistant/custom_components/spook/ectoplasms/cloud/switch.py"
+  ],
+  "switch.cloud_remote": [
+    "/homeassistant/custom_components/spook/ectoplasms/cloud/switch.py"
+  ],
+  "sensor.all_standby_power": [
+    "/homeassistant/custom_components/powercalc/sensors/group/standby.py"
+  ],
+  "sensor.system_ha_global_health_score": [
+    ".storage/lovelace.ha_admin",
+    "/homeassistant/tools/ha_admin_server_layout_20261026.py",
+    "/homeassistant/tools/haghs_cleanup_20261026.py"
+  ],
+  "sensor.tor_mimer_verifierad_backup_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace",
+    "/homeassistant/tools/haghs_cleanup_20261026.py"
+  ],
+  "automation.sef_42h_plan_charging": [
+    "/homeassistant/tools/trigger_granny_plan.sh"
+  ],
+  "sensor.thread_network_diagnostics": [
+    "/homeassistant/tools/recorder_filter_audit.py"
+  ],
+  "ai_task.openai_ai_task": [
+    ".storage/ai_task"
+  ],
+  "fan.ventilflakt_hemmabion_esphome08_fan": [
+    ".storage/core.config_entries",
+    "ESPHome node service lookup"
+  ],
+  "light.blomlampa_1_verandan_esphome07_light": [
+    ".storage/core.config_entries",
+    "ESPHome node service lookup"
+  ],
+  "light.blomlampa_2_verandan_esphome03_light": [
+    ".storage/core.config_entries",
+    "ESPHome node service lookup"
+  ],
+  "light.blomlampor_bion": [
+    ".storage/core.config_entries",
+    "ESPHome node service lookup"
+  ],
+  "light.esphome05_light": [
+    ".storage/core.config_entries",
+    "ESPHome node service lookup"
+  ],
+  "light.julstjarnor_verandan": [
+    ".storage/core.config_entries"
+  ],
+  "light.ledstrip_sovrum_norra_esphome44_light": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW",
+    "ESPHome node service lookup"
+  ],
+  "light.shellyplug_s_083a8dc17e39": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "light.shellyplug_s_083a8dc17eb4": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "light.taklampor_verandan": [
+    ".storage/core.config_entries"
+  ],
+  "light.utomhus_led_stjarnor_utomhus_shpls": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.blomlampa_trappan_energy": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW",
+    ".storage/powercalc_group"
+  ],
+  "sensor.blomlampa_trappan_energy_power": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW",
+    ".storage/powercalc_group"
+  ],
+  "sensor.blomlampa_vaxtskapet_energy_energy": [
+    ".storage/core.config_entries",
+    ".storage/powercalc_group"
+  ],
+  "sensor.blomlampa_vaxtskapet_energy_power": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW",
+    ".storage/powercalc_group"
+  ],
+  "sensor.bordslampa_energy": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.bordslampa_hemmabion_energy": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.bordslampa_hemmabion_power": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.bordslampa_kallaren_device_energy": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "sensor.bordslampa_kallaren_device_power": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "sensor.bordslampa_koket_device_energy": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.bordslampa_koket_device_power": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.bordslampa_power": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.bordslampa_vanster_energy": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.bordslampa_vanster_power": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.diegoes_vackarklocka_energy": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "sensor.diegoes_vackarklocka_energy_power": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "sensor.elmatare_elstolpen_energy_consumed_luxembourg": [
+    ".storage/core.config_entries",
+    ".storage/energy",
+    "ESPHome node service lookup"
+  ],
+  "sensor.golvvarme_ateljen_rela_device_energy": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.golvvarme_ateljen_rela_device_power": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.golvvarme_bion_rela_device_energy": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.golvvarme_bion_rela_device_power": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.golvvarme_duschen_device_energy": [
+    ".storage/core.config_entries",
+    ".storage/energy"
+  ],
+  "sensor.golvvarme_duschen_device_power": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.golvvarme_entren_rela_device_energy": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.golvvarme_entren_rela_device_power": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.golvvarme_koket_rela_device_energy": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.golvvarme_koket_rela_device_power": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.golvvarme_verandan_rela_device_energy": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.golvvarme_verandan_rela_device_power": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.ikea_of_sweden_tradfri_bulb_e14_cws_globe_806lm_energy": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.ikea_of_sweden_tradfri_bulb_e14_cws_globe_806lm_power": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.led_plafonder_device_energy": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "sensor.led_plafonder_device_energy_2": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.led_plafonder_device_power": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "sensor.led_plafonder_device_power_2": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.max_energy": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "sensor.max_power": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "sensor.memory_use_percent": [
+    ".storage/core.config_entries",
+    ".storage/lovelace.ha_admin"
+  ],
+  "sensor.plant_sensor_6_monstera_belysningsstyrka": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.plant_sensor_6_monstera_fukt": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.plant_sensor_6_monstera_temperatur": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.plantsensor_1_conductivity": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "sensor.plantsensor_1_illuminance": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "sensor.plantsensor_1_moisture": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "sensor.plantsensor_1_temperature": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "sensor.plantsensor_2_conductivity": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "sensor.plantsensor_2_illuminance": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "sensor.plantsensor_2_moisture": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "sensor.plantsensor_2_temperature": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "sensor.plantsensor_3_conductivity": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.plantsensor_3_illuminance": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.plantsensor_3_moisture": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.plantsensor_3_temperature": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.plantsensor_4_conductivity": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.plantsensor_4_illuminance": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.plantsensor_4_moisture": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.plantsensor_4_temperature": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.plantsensor_5_conductivity": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.plantsensor_5_illuminance": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.plantsensor_5_moisture": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.plantsensor_5_temperature": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.plantsensor_6_ledningsformaga": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.plus2pm_porch_device_energy": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.plus2pm_porch_device_power": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.plus2pm_porch_switch_0_device_energy": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.plus2pm_porch_switch_0_device_power": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.plus2pm_porch_switch_1_device_energy": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.plus2pm_porch_switch_1_device_power": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.poolpump_energy": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW",
+    ".storage/energy"
+  ],
+  "sensor.poolpump_power": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "sensor.postnord_delivery_76017": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "sensor.processor_use": [
+    ".storage/core.config_entries",
+    ".storage/lovelace.ha_admin"
+  ],
+  "sensor.sanglampor_diego_device_energy": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "sensor.sanglampor_diego_device_energy_2": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.sanglampor_diego_device_power": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "sensor.sanglampor_diego_device_power_2": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.sanglampor_manni_device_energy": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "sensor.sanglampor_manni_device_energy_2": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.sanglampor_manni_device_power": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "sensor.sanglampor_manni_device_power_2": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.shellyplug_s_d81ab8_device_energy": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.shellyplug_s_d81ab8_device_power": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.shellyplusplugs_08f9e0fd4304_switch_0_device_energy": [
+    ".storage/core.config_entries"
+  ],
+  "sensor.shellyplusplugs_08f9e0fd4304_switch_0_device_power": [
+    ".storage/core.config_entries"
+  ],
+  "switch.esphome30_esphome30_relay_state": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW",
+    "ESPHome node service lookup"
+  ],
+  "switch.esphome31_esphome31_relay_state": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW",
+    "ESPHome node service lookup"
+  ],
+  "switch.golvvarme_ateljen_relay": [
+    ".storage/core.config_entries"
+  ],
+  "switch.golvvarme_bion_relay": [
+    ".storage/core.config_entries"
+  ],
+  "switch.golvvarme_entren_relay": [
+    ".storage/core.config_entries"
+  ],
+  "switch.golvvarme_koket_relay": [
+    ".storage/core.config_entries"
+  ],
+  "switch.golvvarme_verandan_relay": [
+    ".storage/core.config_entries"
+  ],
+  "switch.julstjarnor_verandan": [
+    ".storage/core.config_entries"
+  ],
+  "switch.sanglampor_diego": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "switch.sanglampor_manni": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "switch.shelly_pro_3_verkstaden_switch_0_hidden": [
+    ".storage/core.config_entries"
+  ],
+  "switch.shellyplug_s_083a8dc344dd": [
+    ".storage/core.config_entries",
+    ".storage/core.config_entries.NEW"
+  ],
+  "switch.shellyplus1pm_e465b8f1c1b8": [
+    ".storage/core.config_entries"
+  ],
+  "switch.taklampor_verandan": [
+    ".storage/core.config_entries"
+  ],
+  "switch.utomhus_led_stjarnor_utomhus_shpls": [
+    ".storage/core.config_entries"
+  ],
+  "button.esphome76_lexicon_volume_down": [
+    ".storage/lovelace.dashboard_hemmabio",
+    "ESPHome node service lookup"
+  ],
+  "button.esphome76_lexicon_volume_up": [
+    ".storage/lovelace.dashboard_hemmabio",
+    "ESPHome node service lookup"
+  ],
+  "device_tracker.garmin_device": [
+    ".storage/person"
+  ],
+  "device_tracker.pixel_9_pro_xl_2": [
+    ".storage/person"
+  ],
+  "device_tracker.sm_g986b": [
+    ".storage/person"
+  ],
+  "sensor.adguard_dns_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.ap_buck_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.ap_friggan_home_arpa_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.ap_honshuset_home_arpa_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.ap_kallaren_home_arpa_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.ap_kiwi_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.ap_koket_home_arpa_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.ap_kontoret_home_arpa_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.ap_poolen_home_arpa_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.ap_verkstaden_home_arpa_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.buck_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.caddy_container_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.caddy_reverse_proxy_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.core_api_wake_up_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.docker_api_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.docker_socket_proxy_container_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.eir_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.esphome_test_container_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.frigg_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.glances_container_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.glances_ui_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.gw_buck_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.gw_home_arpa_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.gw_kiwi_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.gw_sippan_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.ha_buck_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.ha_kiwi_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.ha_sippan_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.ha_test_container_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.home_assistant_ui_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.home_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.kiwi_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.mimer_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.ollama_api_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.ollama_container_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.open_webui_container_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.open_webui_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.openwrt_backup_container_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.ping_status_2": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.ping_status_3": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.portainer_agent_container_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.portainer_container_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.portainer_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.sippan_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.ssh_borg_atkomst_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.ssh_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.supervisor_health_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.sw_kontoret_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.sw_vinden_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.uptime_kuma_container_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.uptime_proxy_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.uptime_via_caddy_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.wyoming_whisper_status": [
+    ".storage/lovelace.kuma_status",
+    ".storage/lovelace.lovelace"
+  ],
+  "conversation.openai_conversation": [
+    ".storage/lovelace.dashboard_ai"
+  ],
+  "binary_sensor.poolvarmepump_alarm": [
+    ".storage/lovelace.lovelace"
+  ],
+  "binary_sensor.poolvarmepump_connectivity": [
+    ".storage/lovelace.lovelace"
+  ],
+  "binary_sensor.sef_42h_driverseat_door": [
+    ".storage/lovelace.lovelace"
+  ],
+  "binary_sensor.sef_42h_driverseat_lock": [
+    ".storage/lovelace.lovelace"
+  ],
+  "binary_sensor.sef_42h_driverseat_window": [
+    ".storage/lovelace.lovelace"
+  ],
+  "binary_sensor.sef_42h_hood": [
+    ".storage/lovelace.lovelace"
+  ],
+  "binary_sensor.sef_42h_leftrearseat_door": [
+    ".storage/lovelace.lovelace"
+  ],
+  "binary_sensor.sef_42h_leftrearseat_lock": [
+    ".storage/lovelace.lovelace"
+  ],
+  "binary_sensor.sef_42h_leftrearseat_window": [
+    ".storage/lovelace.lovelace"
+  ],
+  "binary_sensor.sef_42h_passengerseat_door": [
+    ".storage/lovelace.lovelace"
+  ],
+  "binary_sensor.sef_42h_passengerseat_lock": [
+    ".storage/lovelace.lovelace"
+  ],
+  "binary_sensor.sef_42h_passengerseat_window": [
+    ".storage/lovelace.lovelace"
+  ],
+  "binary_sensor.sef_42h_rightrearseat_door": [
+    ".storage/lovelace.lovelace"
+  ],
+  "binary_sensor.sef_42h_rightrearseat_lock": [
+    ".storage/lovelace.lovelace"
+  ],
+  "binary_sensor.sef_42h_rightrearseat_window": [
+    ".storage/lovelace.lovelace"
+  ],
+  "binary_sensor.sef_42h_trunk": [
+    ".storage/lovelace.lovelace"
+  ],
+  "binary_sensor.sef_42h_trunk_lock": [
+    ".storage/lovelace.lovelace"
+  ],
+  "button.prusaxl_ateruppta_arbetet": [
+    ".storage/lovelace.lovelace"
+  ],
+  "button.prusaxl_avbryt_arbetet": [
+    ".storage/lovelace.lovelace"
+  ],
+  "button.prusaxl_pausa_arbetet": [
+    ".storage/lovelace.lovelace"
+  ],
+  "camera.192_168_10_23": [
+    ".storage/lovelace.lovelace"
+  ],
+  "camera.esphome89_esphome89_camera": [
+    ".storage/lovelace.lovelace",
+    "ESPHome node service lookup"
+  ],
+  "camera.honshuset_tapo_c200c_mainstream": [
+    ".storage/lovelace.lovelace"
+  ],
+  "climate.golvvarme_termostat_bion": [
+    ".storage/lovelace.lovelace"
+  ],
+  "climate.golvvarme_termostat_duschen": [
+    ".storage/lovelace.lovelace"
+  ],
+  "climate.poolvarmepump": [
+    ".storage/lovelace.lovelace"
+  ],
+  "climate.termostat_friggan_esphome21_thermostat": [
+    ".storage/lovelace.lovelace",
+    ".storage/lovelace.lovelace_friggan",
+    "ESPHome node service lookup"
+  ],
+  "climate.termostat_toaletten_esphome83_thermostat": [
+    ".storage/lovelace.lovelace",
+    "ESPHome node service lookup"
+  ],
+  "humidifier.levoit_luftfukare_300s": [
+    ".storage/lovelace.lovelace"
+  ],
+  "light.poolbelysning_temp_esphome29_light": [
+    ".storage/lovelace.lovelace",
+    "ESPHome node service lookup"
+  ],
+  "select.max_vald_karta": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.alsavopro_poolvarmepump_alarm_code_1": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.alsavopro_poolvarmepump_alarm_code_2": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.alsavopro_poolvarmepump_alarm_code_3": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.alsavopro_poolvarmepump_alarm_code_4": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.alsavopro_poolvarmepump_auto_mode_target": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.alsavopro_poolvarmepump_compressor_running_frequency": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.alsavopro_poolvarmepump_cooling_mode_target": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.alsavopro_poolvarmepump_error_messages": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.alsavopro_poolvarmepump_exhaust_temperature": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.alsavopro_poolvarmepump_fan_speed": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.alsavopro_poolvarmepump_frequency_limit_code": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.alsavopro_poolvarmepump_heating_mode_target": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.alsavopro_poolvarmepump_system_running_code": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.alsavopro_poolvarmepump_system_status_code": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.esphome98_esphome98_uv_index": [
+    ".storage/lovelace.ha_admin",
+    ".storage/lovelace.lovelace",
+    "ESPHome node service lookup"
+  ],
+  "sensor.golvvarme_ateljen_switch_0_power": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.golvvarme_bion_switch_0_power": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.golvvarme_entren_switch_0_power": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.golvvarme_koket_switch_0_power": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.golvvarme_verandan_switch_0_power": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.huvudstrombrytaren_prusa_xl_esphome84_current": [
+    ".storage/lovelace.lovelace",
+    "ESPHome node service lookup"
+  ],
+  "sensor.huvudstrombrytaren_prusa_xl_esphome84_daily_energy": [
+    ".storage/lovelace.lovelace",
+    "ESPHome node service lookup"
+  ],
+  "sensor.huvudstrombrytaren_prusa_xl_esphome84_energy": [
+    ".storage/lovelace.lovelace",
+    "ESPHome node service lookup"
+  ],
+  "sensor.huvudstrombrytaren_prusa_xl_esphome84_power": [
+    ".storage/lovelace.lovelace",
+    "ESPHome node service lookup"
+  ],
+  "sensor.huvudstrombrytaren_prusa_xl_esphome84_voltage": [
+    ".storage/lovelace.lovelace",
+    "ESPHome node service lookup"
+  ],
+  "sensor.max_batteri": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.openuv_max_uv_index": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.plant_sensor_6_monstera_batteri": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.plantsensor_1_battery": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.plantsensor_2_battery": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.plantsensor_3_battery": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.plantsensor_4_battery": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.plantsensor_5_battery": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.poolvarmepump_ambient_temperature": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.poolvarmepump_cold_pipe_temperature": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.poolvarmepump_compressor_current": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.poolvarmepump_device_status_code": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.poolvarmepump_exhaust_valve_opening": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.poolvarmepump_heating_pipe_temperature": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.poolvarmepump_ipm_temperature": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.poolvarmepump_water_in_temperature": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.poolvarmepump_water_out_temperature": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.prusaxl_filnamn": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.prusaxl_hotend_fan": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.prusaxl_material": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.prusaxl_munstycke_temperatur": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.prusaxl_print_fan": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.prusaxl_print_flow": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.prusaxl_skriv_hastighet": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.prusaxl_status": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.prusaxl_utskrift_startas": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.prusaxl_utskriften_ar_fardig": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.prusaxl_varmebadd_maltemperatur": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.prusaxl_varmebadd_temperatur": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.prusaxl_z_hojd": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.sef_42h_battery_range": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.sef_42h_battery_range_with_ac": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.sef_42h_current_day_statistics": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.sef_42h_current_month_statistics": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.sef_42h_current_week_statistics": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.sef_42h_current_year_statistics": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.sef_42h_fuel_level": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.sef_42h_fuel_range": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.sef_42h_odometer": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.sef_42h_total_range": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.sef_42h_vehicle_identify_number": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.siemens_tvatt_tork_aktuell_programstatus": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.siemens_tvatt_tork_aterstaende_programtid": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.smhi_temp_inkl_vindfaktor": [
+    ".storage/lovelace.lovelace",
+    "legacy_true_exposure"
+  ],
+  "sensor.soptomning": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.sovrummet_openwrt_one_router_sovrum_wan_rx_rate": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.sovrummet_openwrt_one_router_sovrum_wan_tx_rate": [
+    ".storage/lovelace.lovelace"
+  ],
+  "sensor.template_postudelning": [
+    ".storage/lovelace.lovelace"
+  ],
+  "switch.golvvarme_friggan_esphome80_relay_state": [
+    ".storage/lovelace.lovelace",
+    ".storage/lovelace.lovelace_friggan",
+    "ESPHome node service lookup"
+  ],
+  "switch.golvvarme_sovrum_kontor_esphome81_relay_state": [
+    ".storage/lovelace.lovelace",
+    "ESPHome node service lookup"
+  ],
+  "switch.huvudstrombrytaren_prusa_xl_esphome84_relay_state": [
+    ".storage/lovelace.lovelace",
+    "ESPHome node service lookup"
+  ],
+  "switch.poolvarmepump_esphome28_relay_state": [
+    ".storage/lovelace.lovelace",
+    "ESPHome node service lookup"
+  ],
+  "calendar.sophamtning": [
+    ".storage/core.config_entries.NEW"
+  ],
+  "media_player.mannis_vackarklocka": [
+    ".storage/core.config_entries.NEW"
+  ],
+  "sensor.energiforbrukning_per_timme": [
+    ".storage/lovelace.dashboard_elpris"
+  ],
+  "sensor.esphome30_esphome30_total_daily_energy": [
+    ".storage/energy",
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome31_esphome31_total_daily_energy": [
+    ".storage/energy",
+    "ESPHome node service lookup"
+  ],
+  "sensor.golvvarme_ateljen_switch_0_energy": [
+    ".storage/energy"
+  ],
+  "sensor.golvvarme_bion_switch_0_energy": [
+    ".storage/energy"
+  ],
+  "sensor.golvvarme_entren_switch_0_energy": [
+    ".storage/energy"
+  ],
+  "sensor.golvvarme_friggan_esphome80_energy": [
+    ".storage/energy",
+    "ESPHome node service lookup"
+  ],
+  "sensor.golvvarme_sovrum_kontor_esphome81_energy": [
+    ".storage/energy",
+    "ESPHome node service lookup"
+  ],
+  "sensor.golvvarme_verandan_switch_0_energy": [
+    ".storage/energy"
+  ],
+  "sensor.shellyplus1pm_a0dd6c29b134_switch_0_energy": [
+    ".storage/energy"
+  ],
+  "sensor.termostat_friggan_esphome21_temperature": [
+    ".storage/lovelace.lovelace_friggan",
+    "ESPHome node service lookup"
+  ],
+  "button.varmeljus_ljusstyrka_oka": [
+    ".storage/lovelace.ha_admin"
+  ],
+  "button.varmeljus_timer_2h": [
+    ".storage/lovelace.ha_admin"
+  ],
+  "button.varmeljus_timer_4h": [
+    ".storage/lovelace.ha_admin"
+  ],
+  "button.varmeljus_timer_6h": [
+    ".storage/lovelace.ha_admin"
+  ],
+  "button.varmeljus_timer_8h": [
+    ".storage/lovelace.ha_admin"
+  ],
+  "input_boolean.pool_equipment": [
+    ".storage/lovelace.ha_admin"
+  ],
+  "sensor.atc_b999ba_area": [
+    ".storage/lovelace.ha_admin"
+  ],
+  "sensor.atc_b999ba_distance": [
+    ".storage/lovelace.ha_admin"
+  ],
+  "sensor.atc_bfe81b_area": [
+    ".storage/lovelace.ha_admin"
+  ],
+  "sensor.atc_bfe81b_distance": [
+    ".storage/lovelace.ha_admin"
+  ],
+  "sensor.bermuda_global_active_proxy_count": [
+    ".storage/lovelace.ha_admin"
+  ],
+  "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_connected_clients": [
+    ".storage/lovelace.ha_admin"
+  ],
+  "sensor.disk_free": [
+    ".storage/lovelace.ha_admin"
+  ],
+  "sensor.esphome98_esphome98_uv_ambient": [
+    ".storage/lovelace.ha_admin",
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome98_illuminance": [
+    ".storage/lovelace.ha_admin",
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome98_infrared": [
+    ".storage/lovelace.ha_admin",
+    "ESPHome node service lookup"
+  ],
+  "sensor.friggan_asus_lyra_map_ac2200_ap_friggan_connected_clients": [
+    ".storage/lovelace.ha_admin"
+  ],
+  "sensor.koket_openwrt_one_ap_koket_connected_clients": [
+    ".storage/lovelace.ha_admin"
+  ],
+  "sensor.kontoret_openwrt_one_ap_kontoret_connected_clients": [
+    ".storage/lovelace.ha_admin"
+  ],
+  "sensor.last_boot": [
+    ".storage/lovelace.ha_admin"
+  ],
+  "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_connected_clients": [
+    ".storage/lovelace.ha_admin"
+  ],
+  "sensor.processor_temperature": [
+    ".storage/lovelace.ha_admin"
+  ],
+  "sensor.swap_use_percent": [
+    ".storage/lovelace.ha_admin"
+  ],
+  "sensor.system_monitor_disk_use_percent": [
+    ".storage/lovelace.ha_admin"
+  ],
+  "sensor.template_nordpool_additional_costs_current_hour": [
+    ".storage/lovelace.ha_admin"
+  ],
+  "sensor.utomhus_ljussensor_esphome98_uv_counts": [
+    ".storage/lovelace.ha_admin",
+    "ESPHome node service lookup"
+  ],
+  "sensor.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_connected_clients": [
+    ".storage/lovelace.ha_admin"
+  ],
+  "switch.termostat_friggan_esphome21_relay_state": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.termostat_friggan_esphome21_humidity": [
+    "ESPHome node service lookup"
+  ],
+  "light.ledstrip_atelje_norra_esphome46_light": [
+    "ESPHome node service lookup"
+  ],
+  "light.ledstrip_atelje_sodra_esphome47_light": [
+    "ESPHome node service lookup"
+  ],
+  "light.ledstrip_kok_sodra_esphome50_light": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.termostat_toaletten_esphome83_temperature": [
+    "ESPHome node service lookup"
+  ],
+  "update.golvvarme_sovrum_kontor_firmware": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.golvvarme_sovrum_kontor_esphome81_voltage": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.golvvarme_sovrum_kontor_esphome81_current": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.golvvarme_sovrum_kontor_esphome81_power": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.golvvarme_friggan_esphome80_voltage": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.golvvarme_friggan_esphome80_current": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.golvvarme_friggan_esphome80_power": [
+    "ESPHome node service lookup"
+  ],
+  "switch.termostat_kontoret_esphome20_relay_state": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.termostat_kontoret_esphome20_humidity": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.taklampor_sovrum_esphome54_light_power": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.taklampor_sovrum_esphome54_light_voltage": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.taklampor_sovrum_esphome54_light_current": [
+    "ESPHome node service lookup"
+  ],
+  "update.poolpup_utomhus_firmware": [
+    "ESPHome node service lookup"
+  ],
+  "light.ledstrip_kok_sydostra_esphome51_light": [
+    "ESPHome node service lookup"
+  ],
+  "light.ledstrip_verandan_esphome48_light": [
+    "ESPHome node service lookup"
+  ],
+  "light.ledstrip_kok_smafonster_esphome49_light": [
+    "ESPHome node service lookup"
+  ],
+  "light.ledstrip_kok_ostra_esphome52_light": [
+    "ESPHome node service lookup"
+  ],
+  "light.ledstrip_entren_esphome41_light": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.temp_hyg_gamla_verkstan_esphome71_room_temperature": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.temp_hyg_gamla_verkstan_esphome71_room_humidity": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.temp_hyg_gamla_verkstan_esphome71_box_humidity": [
+    "ESPHome node service lookup"
+  ],
+  "update.rf_bridge_firmware": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.rf_bridge_rfremoter1c1": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.rf_bridge_rfremoter1c2": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.rf_bridge_rfremoter2c1": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.rf_bridge_rfremoter2c2": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.rf_bridge_rfremoter3c1": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.rf_bridge_rfremoter3c2": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.rf_bridge_rfremoter4c1": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.rf_bridge_rfremoter4c2": [
+    "ESPHome node service lookup"
+  ],
+  "light.lampa_i_redet_esphome01_light": [
+    "ESPHome node service lookup"
+  ],
+  "update.vattenniva_honshuset_firmware": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome80_esphome80_daily_energy": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome81_esphome81_daily_energy": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome30_esphome30_power_factor": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome30_esphome30_voltage": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome30_esphome30_current": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome30_esphome30_power": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome30_esphome30_energy": [
+    "ESPHome node service lookup"
+  ],
+  "update.hemmabio_el_2_firmware": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome31_esphome31_power_factor": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome31_esphome31_voltage": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome31_esphome31_current": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome31_esphome31_power": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome31_esphome31_energy": [
+    "ESPHome node service lookup"
+  ],
+  "button.esphome76_lexicon_dvd1": [
+    "ESPHome node service lookup"
+  ],
+  "button.esphome76_lexicon_dvd2": [
+    "ESPHome node service lookup"
+  ],
+  "button.esphome76_lexicon_playstation": [
+    "ESPHome node service lookup"
+  ],
+  "update.hemmabio_el_1_firmware": [
+    "ESPHome node service lookup"
+  ],
+  "update.bilvarmare_utomhus_firmware": [
+    "ESPHome node service lookup"
+  ],
+  "update.markis_utomhus_firmware": [
+    "ESPHome node service lookup"
+  ],
+  "update.gasol_utomhus_firmware": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome30_esphome30_apparent_power": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome30_esphome30_reactive_power": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome31_esphome31_apparent_power": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome31_esphome31_reactive_power": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome80_esphome80_apparent_power": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome80_esphome80_reactive_power": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome80_esphome80_power_factor": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome81_esphome81_apparent_power": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome81_esphome81_reactive_power": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome81_esphome81_power_factor": [
+    "ESPHome node service lookup"
+  ],
+  "update.elmatare_elstolpen_firmware": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.elmatare_elstolpen_dsmr_identification": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.elmatare_elstolpen_electricity_failures": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.elmatare_elstolpen_esphome_version": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.elmatare_elstolpen_long_electricity_failures": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.elmatare_elstolpen_power_consumed_phase_1": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.elmatare_elstolpen_power_consumed_phase_2": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.elmatare_elstolpen_power_consumed_phase_3": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.elmatare_elstolpen_slimmelezer_uptime": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.elmatare_elstolpen_voltage_phase_1": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.elmatare_elstolpen_voltage_phase_2": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.elmatare_elstolpen_voltage_phase_3": [
+    "ESPHome node service lookup"
+  ],
+  "update.ledstrip_toalett_firmware": [
+    "ESPHome node service lookup"
+  ],
+  "light.esphome45_esphome45_light": [
+    "ESPHome node service lookup"
+  ],
+  "update.julgranen_firmware": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome01_wifi_rssi": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome01_wifi_bssid": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome53_wifi_rssi": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome53_wifi_bssid": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome57_esphome57_light_power": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome57_esphome57_light_voltage": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome57_esphome57_light_current": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome59_esphome59_light_power": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome59_esphome59_light_voltage": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome59_esphome59_light_current": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome60_esphome60_light_power": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome60_esphome60_light_voltage": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome60_esphome60_light_current": [
+    "ESPHome node service lookup"
+  ],
+  "update.ledstrip_balkongdorrar_firmware": [
+    "ESPHome node service lookup"
+  ],
+  "select.home_assistant_voice_096460_assistent": [
+    "ESPHome node service lookup"
+  ],
+  "select.home_assistant_voice_096460_slutdetektering_av_rostkommando": [
+    "ESPHome node service lookup"
+  ],
+  "select.home_assistant_voice_096460_vackord": [
+    "ESPHome node service lookup"
+  ],
+  "light.home_assistant_voice_096460_led_ring": [
+    "ESPHome node service lookup"
+  ],
+  "switch.home_assistant_voice_096460_mute": [
+    "ESPHome node service lookup"
+  ],
+  "switch.home_assistant_voice_096460_wake_sound": [
+    "ESPHome node service lookup"
+  ],
+  "button.home_assistant_voice_096460_restart": [
+    "ESPHome node service lookup"
+  ],
+  "event.home_assistant_voice_096460_button_press": [
+    "ESPHome node service lookup"
+  ],
+  "assist_satellite.home_assistant_voice_096460_assist_satellit": [
+    "ESPHome node service lookup"
+  ],
+  "light.esphome43_light": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.esphome94_rfwallswitch1": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.esphome94_rfwallswitch2": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.esphome94_rfwallswitch3": [
+    "ESPHome node service lookup"
+  ],
+  "update.poolvarmepump_poolen_firmware": [
+    "ESPHome node service lookup"
+  ],
+  "select.home_assistant_voice_096460_wake_word_sensitivity": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome30_esphome30_power_factor_template": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome31_esphome31_power_factor_template": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.taklampa_esphome61_light_current": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.taklampa_esphome61_light_power": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.taklampa_esphome61_light_voltage": [
+    "ESPHome node service lookup"
+  ],
+  "select.home_assistant_voice_096460_assistent_2": [
+    "ESPHome node service lookup"
+  ],
+  "select.home_assistant_voice_096460_wake_word_2": [
+    "ESPHome node service lookup"
+  ],
+  "update.home_assistant_voice_096460_firmware": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome63_esphome63_light_power": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome63_esphome63_light_voltage": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.esphome63_esphome63_light_current": [
+    "ESPHome node service lookup"
+  ],
+  "button.esphome05_esphome05_apply_scene": [
+    "ESPHome node service lookup"
+  ],
+  "update.blomlampa_shelly_plus_rgbw_pm_firmware": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_input_1": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_input_2": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_input_3": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_input_4": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_temperature": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_voltage": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_current": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_power": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_energy": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.huvudstrombrytaren_prusa_xl_esphome84_power_factor_template": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.huvudstrombrytaren_prusa_xl_esphome84_esp32_temperature": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.huvudstrombrytaren_prusa_xl_esphome84_apparent_power": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.huvudstrombrytaren_prusa_xl_esphome84_reactive_power": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.huvudstrombrytaren_prusa_xl_esphome84_power_factor": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.billaddare_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.blomlampa_kontoret_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.blomlampa_1_verandan_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.blomlampa_2_verandan_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.blomlampor_bion_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.elmatare_elstolpen_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.esp32_kamera_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.gasol_utomhus_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.golvvarme_friggan_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.golvvarme_sovrum_och_kontor_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.hemmabio_el_1_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.hemmabio_el_2_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.ir_gateway_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.julbelysning_utomhus_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.ledstrip_balkongdorrar_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.ledstrip_entren_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.ledstrip_kok_sydostra_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.ledstrip_kok_sodra_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.ledstrip_kok_ostra_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.ledstrip_sovrum_norra_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.ledstrip_sovrum_ostra_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.ledstrip_verandan_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.lucka_honshuset_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.markis_utomhus_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.poolbelysning_temp_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.poolpump_utomhus_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.poolvarmepump_poolen_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.rf_bridge_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.taklampor_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.taklampor_kontoret_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.taklampor_kallaren_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.taklampor_koket_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.taklampor_sovrum_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.temphyg_gamla_verkstan_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.termostat_friggan_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.termostat_kontoret_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.termostat_toaletten_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.vattenniva_honshuset_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.vattenvarmare_honshuset_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.ventilflakt_bion_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.blomlampa_shelly_plus_rgbw_pm_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.huvudstrombrytaren_prusa_xl_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.ljussensor_status": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.taklampor_duschen_status": [
+    "ESPHome node service lookup"
+  ],
+  "switch.kontoret_ha_voice_pe_096460_disable_physical_controls": [
+    "ESPHome node service lookup"
+  ],
+  "update.ledstrip_vitrinskap_firmware": [
+    "ESPHome node service lookup"
+  ],
+  "light.ledstrip_vitrinskap_esphome42_led_strip_107_st": [
+    "ESPHome node service lookup"
+  ],
+  "update.salt_verkstan_firmware": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.salt_verkstan_status": [
+    "ESPHome node service lookup"
+  ],
+  "update.thread_test_esp32_c6_zero_firmware": [
+    "ESPHome node service lookup"
+  ],
+  "light.kontoret_ledstrip_korridoren_esphome58_led_strip_46_st": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.ha_servern_ledstrip_atelje_norra_thread_device_role": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.ha_servern_ledstrip_atelje_norra_thread_rloc16": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.ha_servern_ledstrip_atelje_norra_thread_extended_address": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.koket_ledstrip_vitrinskap_thread_device_role": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.koket_ledstrip_vitrinskap_thread_rloc16": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.koket_ledstrip_vitrinskap_thread_extended_address": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.ha_servern_ledstrip_atelje_sodra_thread_device_role": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.ha_servern_ledstrip_atelje_sodra_thread_rloc16": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.ha_servern_ledstrip_atelje_sodra_thread_extended_address": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.kontoret_ledstrip_korridoren_thread_device_role": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.kontoret_ledstrip_korridoren_thread_rloc16": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.kontoret_ledstrip_korridoren_thread_extended_address": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.ha_servern_ledstrip_toalett_thread_device_role": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.ha_servern_ledstrip_toalett_thread_rloc16": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.ha_servern_ledstrip_toalett_thread_extended_address": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.ha_servern_ledstrip_kok_smafonster_thread_device_role": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.ha_servern_ledstrip_kok_smafonster_thread_rloc16": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.ha_servern_ledstrip_kok_smafonster_thread_extended_address": [
+    "ESPHome node service lookup"
+  ],
+  "infrared.ir_proxy_1_esphome96_ir_transmitter": [
+    "ESPHome node service lookup"
+  ],
+  "infrared.ir_proxy_1_esphome96_ir_receiver": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.ir_proxy_1_status": [
+    "ESPHome node service lookup"
+  ],
+  "infrared.ir_proxy_2_esphome97_ir_transmitter": [
+    "ESPHome node service lookup"
+  ],
+  "infrared.ir_proxy_2_esphome97_ir_receiver": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.ir_proxy_2_status": [
+    "ESPHome node service lookup"
+  ],
+  "infrared.bion_ir_gateway_esphome76_ir_transmitter": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.friggan_utomhuslampa_status": [
+    "ESPHome node service lookup"
+  ],
+  "light.honsbelysning_esphome56_light": [
+    "ESPHome node service lookup"
+  ],
+  "binary_sensor.honsbelysning_status": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.honsbelysning_esphome56_light_power": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.honsbelysning_esphome56_light_voltage": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.honsbelysning_esphome56_light_current": [
+    "ESPHome node service lookup"
+  ],
+  "sensor.honsbelysning_esphome56_lokal_tid": [
+    "ESPHome node service lookup"
+  ]
+}

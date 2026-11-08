@@ -1,0 +1,1 @@
+sensor.sovrummet_temp=Sovrummet Klimatsensor Temperatur\nsensor.temp_hum_sovrum_humidity=Sovrummet Klimatsensor Luftfuktighet\nsensor.sanglampor_diego_power=Sovrummet Sänglampor Diego Effekt\nplant.citron=Verandan Fredskalla\nsensor.vattensensor_torkskap_temperature=Ateljén Vattensensor torkskåp Temperatur\nsensor.does_not_exist=sensor.does_not_exist\n

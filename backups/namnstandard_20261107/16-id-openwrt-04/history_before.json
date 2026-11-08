@@ -1,0 +1,114 @@
+{
+  "switch.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_wps": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:02.252480+00:00",
+      "last_updated": "2026-11-07T07:42:02.252480+00:00"
+    }
+  ],
+  "update.verkstaden_asus_lyra_map_ac2200_ap_verkstaden": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:02.252480+00:00",
+      "last_updated": "2026-11-07T07:42:02.252480+00:00"
+    }
+  ],
+  "image.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_wi_fi_qr_code_olofsson_wifi": [
+    {
+      "state": "2026-11-07T04:58:37.952022+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:02.252480+00:00",
+      "last_updated": "2026-11-07T07:42:02.252480+00:00"
+    },
+    {
+      "state": "2026-11-07T13:25:17.518316+00:00",
+      "last_changed": "2026-11-07T13:25:17.518551+00:00"
+    },
+    {
+      "state": "2026-11-08T07:03:39.050772+00:00",
+      "last_changed": "2026-11-08T07:03:39.050995+00:00"
+    }
+  ],
+  "image.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_wi_fi_qr_code_olofsson_guest": [
+    {
+      "state": "2026-11-07T04:58:37.952045+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:02.252480+00:00",
+      "last_updated": "2026-11-07T07:42:02.252480+00:00"
+    },
+    {
+      "state": "2026-11-07T13:25:17.518339+00:00",
+      "last_changed": "2026-11-07T13:25:17.518750+00:00"
+    },
+    {
+      "state": "2026-11-08T07:03:39.050798+00:00",
+      "last_changed": "2026-11-08T07:03:39.051164+00:00"
+    }
+  ],
+  "image.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_wi_fi_qr_code_olofsson_iot": [
+    {
+      "state": "2026-11-07T04:58:37.952068+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:02.252480+00:00",
+      "last_updated": "2026-11-07T07:42:02.252480+00:00"
+    },
+    {
+      "state": "2026-11-07T13:25:17.518358+00:00",
+      "last_changed": "2026-11-07T13:25:17.518928+00:00"
+    },
+    {
+      "state": "2026-11-08T07:03:39.050816+00:00",
+      "last_changed": "2026-11-08T07:03:39.051314+00:00"
+    }
+  ],
+  "binary_sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:02.252480+00:00",
+      "last_updated": "2026-11-07T07:42:02.252480+00:00"
+    }
+  ],
+  "binary_sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_reboot_required": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:02.252480+00:00",
+      "last_updated": "2026-11-07T07:42:02.252480+00:00"
+    }
+  ],
+  "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_reboot_router": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:02.252480+00:00",
+      "last_updated": "2026-11-07T07:42:02.252480+00:00"
+    }
+  ],
+  "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_start_wps": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:02.252480+00:00",
+      "last_updated": "2026-11-07T07:42:02.252480+00:00"
+    }
+  ],
+  "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_cancel_wps": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:02.252480+00:00",
+      "last_updated": "2026-11-07T07:42:02.252480+00:00"
+    }
+  ],
+  "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_create_backup": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:02.252480+00:00",
+      "last_updated": "2026-11-07T07:42:02.252480+00:00"
+    }
+  ]
+}

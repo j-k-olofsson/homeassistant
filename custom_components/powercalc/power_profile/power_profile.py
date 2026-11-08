@@ -2,24 +2,23 @@ from collections import defaultdict
 from collections.abc import Mapping
 from copy import deepcopy
 from dataclasses import dataclass
+from decimal import Decimal, InvalidOperation
 from enum import StrEnum
 import logging
 import os
-from typing import Any, cast
+from typing import TYPE_CHECKING, Any, TypedDict, cast
 
-from homeassistant.components.binary_sensor import DOMAIN as BINARY_SENSOR_DOMAIN
-from homeassistant.components.camera import DOMAIN as CAMERA_DOMAIN
-from homeassistant.components.climate import DOMAIN as CLIMATE_DOMAIN
+from homeassistant.components.camera.const import DOMAIN as CAMERA_DOMAIN
+from homeassistant.components.climate.const import DOMAIN as CLIMATE_DOMAIN
 from homeassistant.components.cover import DOMAIN as COVER_DOMAIN
-from homeassistant.components.fan import DOMAIN as FAN_DOMAIN
-from homeassistant.components.humidifier import DOMAIN as HUMIDIFIER_DOMAIN
-from homeassistant.components.lawn_mower import DOMAIN as LAWN_MOWER_DOMAIN
-from homeassistant.components.light import DOMAIN as LIGHT_DOMAIN
-from homeassistant.components.media_player import DOMAIN as MEDIA_PLAYER_DOMAIN
+from homeassistant.components.humidifier.const import DOMAIN as HUMIDIFIER_DOMAIN
+from homeassistant.components.lawn_mower.const import DOMAIN as LAWN_MOWER_DOMAIN
+from homeassistant.components.light.const import DOMAIN as LIGHT_DOMAIN
+from homeassistant.components.media_player.const import DOMAIN as MEDIA_PLAYER_DOMAIN
 from homeassistant.components.sensor import DOMAIN as SENSOR_DOMAIN
-from homeassistant.components.switch import DOMAIN as SWITCH_DOMAIN
-from homeassistant.components.vacuum import DOMAIN as VACUUM_DOMAIN
-from homeassistant.components.water_heater import DOMAIN as WATER_HEATER_DOMAIN
+from homeassistant.components.switch.const import DOMAIN as SWITCH_DOMAIN
+from homeassistant.components.vacuum.const import DOMAIN as VACUUM_DOMAIN
+from homeassistant.components.water_heater.const import DOMAIN as WATER_HEATER_DOMAIN
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers import translation
 from homeassistant.helpers.entity_registry import RegistryEntry
@@ -32,6 +31,7 @@ from custom_components.powercalc.const import (
     CONF_ENERGY_SENSOR_NAMING,
     CONF_MAX_POWER,
     CONF_MIN_POWER,
+    CONF_MULTIPLY_FACTOR,
     CONF_POWER,
     CONF_POWER_SENSOR_NAMING,
     DEFAULT_SELF_USAGE_ENERGY_NAME_PATTERN,
@@ -42,9 +42,18 @@ from custom_components.powercalc.const import (
 )
 from custom_components.powercalc.errors import (
     ModelNotSupportedError,
+    StrategyConfigurationError,
     UnsupportedStrategyError,
 )
 from custom_components.powercalc.power_profile.sub_profile_selector import SubProfileSelectConfig
+
+# Older supported HA releases define these domains in the component modules.
+if TYPE_CHECKING:
+    from homeassistant.components.binary_sensor.const import DOMAIN as BINARY_SENSOR_DOMAIN
+    from homeassistant.components.fan.const import DOMAIN as FAN_DOMAIN
+else:
+    from homeassistant.components.binary_sensor import DOMAIN as BINARY_SENSOR_DOMAIN
+    from homeassistant.components.fan import DOMAIN as FAN_DOMAIN
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -80,6 +89,12 @@ class DiscoveryBy(StrEnum):
     MANUAL = "manual"
 
 
+class EntityAutoSelectConfig(TypedDict, total=False):
+    integration: str
+    translation_key: str
+    unique_id_pattern: str
+
+
 @dataclass(frozen=True)
 class CustomField:
     key: str
@@ -87,6 +102,13 @@ class CustomField:
     selector: dict[str, Any]
     description: str | None = None
     default: Any = None
+    auto_select: EntityAutoSelectConfig | None = None
+    translation_key: str | None = None
+
+    @property
+    def form_key(self) -> str:
+        """Name used by Home Assistant to look up the field's label and description."""
+        return self.translation_key or self.key
 
 
 DEVICE_TYPE_DOMAIN: dict[DeviceType, str | set[str]] = {
@@ -211,6 +233,21 @@ class PowerProfile:
         if standby_power_on is None and self.only_self_usage:
             return self.standby_power
         return standby_power_on or 0
+
+    @property
+    def multiply_factor(self) -> Decimal | None:
+        """Get the default multiplier after profile variables have been substituted."""
+        value = self._json_data.get(CONF_MULTIPLY_FACTOR)
+        if value is None:
+            return None
+        message = f"Invalid multiply_factor {value!r} for {self.manufacturer}/{self.model}: expected a finite number"
+        try:
+            factor = Decimal(str(value))
+        except InvalidOperation as err:
+            raise StrategyConfigurationError(message) from err
+        if not factor.is_finite():
+            raise StrategyConfigurationError(message)
+        return factor
 
     @property
     def calculation_strategy(self) -> CalculationStrategy:

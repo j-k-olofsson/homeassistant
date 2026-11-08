@@ -1,0 +1,2 @@
+{"status": "rename_intent", "old": "binary_sensor.kritiska_entiteter_styrning_larm", "new": "binary_sensor.kritiska_entiteter_for_styrning_och_larm"}
+{"status": "renamed", "old": "binary_sensor.kritiska_entiteter_styrning_larm", "new": "binary_sensor.kritiska_entiteter_for_styrning_och_larm"}

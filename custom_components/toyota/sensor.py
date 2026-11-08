@@ -78,6 +78,12 @@ def get_vehicle_capability(
         return default
 
 
+# Plug-in hybrids report the same electric_status data (battery level/range,
+# charging status) as full EVs whenever econnect_vehicle_status_capable is
+# missing/false, so they need the same fallback (see ha_toyota#434).
+ELECTRIC_STATUS_VEHICLE_TYPES = frozenset({"electric", "plug_in_hybrid"})
+
+
 class ToyotaSensorEntityDescription(SensorEntityDescription, frozen_or_thawed=True):
     """Describes a Toyota sensor entity."""
 
@@ -181,6 +187,23 @@ BATTERY_RANGE_AC_ENTITY_DESCRIPTION = ToyotaSensorEntityDescription(
         None
         if vehicle.dashboard is None
         else round_number(vehicle.dashboard.battery_range_with_ac)
+    ),
+    suggested_display_precision=0,
+    attributes_fn=lambda vehicle: None,  # noqa : ARG005
+)
+PHEV_USABLE_BATTERY_LEVEL_ENTITY_DESCRIPTION = ToyotaSensorEntityDescription(
+    key="phev_usable_battery_level",
+    translation_key="phev_usable_battery_level",
+    icon="mdi:car-electric",
+    device_class=SensorDeviceClass.BATTERY,
+    state_class=SensorStateClass.MEASUREMENT,
+    # Only reported via electric_status (not dashboard.battery_level, which
+    # for PHEVs reflects the higher, non-usable-for-EV-driving level) - see
+    # ha_toyota#437.
+    value_fn=lambda vehicle: (
+        None
+        if vehicle.electric_status is None
+        else round_number(vehicle.electric_status.phev_usable_battery_level)
     ),
     suggested_display_precision=0,
     attributes_fn=lambda vehicle: None,  # noqa : ARG005
@@ -462,18 +485,28 @@ def create_sensor_configurations(metric_values: bool) -> list[dict[str, Any]]:  
         },
         {
             "description": FUEL_LEVEL_ENTITY_DESCRIPTION,
+            # Toyota's registry has been observed reporting
+            # fuel_level_available=False for brand-new model-year vehicles
+            # (see ha_toyota#322 - RAV4 2026) even though the vehicle
+            # obviously has a fuel tank and the MyToyota app shows the
+            # value correctly. Mirrors the electric/climate capability
+            # widening pattern (ha_toyota#300, ha_toyota#302): any
+            # definitively non-electric vehicle type is a strong enough
+            # signal on its own, the flag no longer needs to gate it.
             "capability_check": lambda v: (
                 get_vehicle_capability(v, "fuel_level_available")
-                and v.type != "electric"
+                or v.type != "electric"
             ),
             "native_unit": PERCENTAGE,
             "suggested_unit": None,
         },
         {
             "description": FUEL_RANGE_ENTITY_DESCRIPTION,
+            # See FUEL_LEVEL_ENTITY_DESCRIPTION above - fuel_range_available
+            # has the same false-negative-on-new-vehicles failure mode.
             "capability_check": lambda v: (
                 get_vehicle_capability(v, "fuel_range_available")
-                and v.type != "electric"
+                or v.type != "electric"
             ),
             "native_unit": get_length_unit(metric_values),
             "suggested_unit": get_length_unit(metric_values),
@@ -482,7 +515,7 @@ def create_sensor_configurations(metric_values: bool) -> list[dict[str, Any]]:  
             "description": BATTERY_LEVEL_ENTITY_DESCRIPTION,
             "capability_check": lambda v: (
                 get_vehicle_capability(v, "econnect_vehicle_status_capable")
-                or v.type == "electric"
+                or v.type in ELECTRIC_STATUS_VEHICLE_TYPES
             ),
             "native_unit": PERCENTAGE,
             "suggested_unit": None,
@@ -491,7 +524,7 @@ def create_sensor_configurations(metric_values: bool) -> list[dict[str, Any]]:  
             "description": BATTERY_RANGE_ENTITY_DESCRIPTION,
             "capability_check": lambda v: (
                 get_vehicle_capability(v, "econnect_vehicle_status_capable")
-                or v.type == "electric"
+                or v.type in ELECTRIC_STATUS_VEHICLE_TYPES
             ),
             "native_unit": get_length_unit(metric_values),
             "suggested_unit": get_length_unit(metric_values),
@@ -500,10 +533,19 @@ def create_sensor_configurations(metric_values: bool) -> list[dict[str, Any]]:  
             "description": BATTERY_RANGE_AC_ENTITY_DESCRIPTION,
             "capability_check": lambda v: (
                 get_vehicle_capability(v, "econnect_vehicle_status_capable")
-                or v.type == "electric"
+                or v.type in ELECTRIC_STATUS_VEHICLE_TYPES
             ),
             "native_unit": get_length_unit(metric_values),
             "suggested_unit": get_length_unit(metric_values),
+        },
+        {
+            "description": PHEV_USABLE_BATTERY_LEVEL_ENTITY_DESCRIPTION,
+            # Only PHEVs report a distinct usable-for-EV-driving battery
+            # level; full EVs' battery_level already reflects the whole
+            # usable pack, so this sensor would be redundant for them.
+            "capability_check": lambda v: v.type == "plug_in_hybrid",
+            "native_unit": PERCENTAGE,
+            "suggested_unit": None,
         },
         {
             "description": TOTAL_RANGE_ENTITY_DESCRIPTION,
@@ -519,7 +561,7 @@ def create_sensor_configurations(metric_values: bool) -> list[dict[str, Any]]:  
             "description": CHARGING_STATUS_ENTITY_DESCRIPTION,
             "capability_check": lambda v: (
                 get_vehicle_capability(v, "econnect_vehicle_status_capable")
-                or v.type == "electric"
+                or v.type in ELECTRIC_STATUS_VEHICLE_TYPES
             ),
             "native_unit": None,
             "suggested_unit": None,
@@ -528,7 +570,7 @@ def create_sensor_configurations(metric_values: bool) -> list[dict[str, Any]]:  
             "description": REMAINING_CHARGE_TIME_ENTITY_DESCRIPTION,
             "capability_check": lambda v: (
                 get_vehicle_capability(v, "econnect_vehicle_status_capable")
-                or v.type == "electric"
+                or v.type in ELECTRIC_STATUS_VEHICLE_TYPES
             ),
             "native_unit": "min",
             "suggested_unit": "min",

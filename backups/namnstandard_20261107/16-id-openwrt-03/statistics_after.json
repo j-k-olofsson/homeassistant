@@ -1,0 +1,49 @@
+{
+  "metadata": [
+    {
+      "statistic_id": "sensor.verkstaden_accesspunkt_processoranvandning",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.verkstaden_accesspunkt_minnesanvandning",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.verkstaden_accesspunkt_belastning_senaste_minuten",
+      "display_unit_of_measurement": null,
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.verkstaden_accesspunkt_temperatur",
+      "display_unit_of_measurement": "°C",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "°C",
+      "unit_class": "temperature"
+    }
+  ],
+  "series": {}
+}

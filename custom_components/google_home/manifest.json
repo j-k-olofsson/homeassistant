@@ -6,6 +6,10 @@
     "http",
     "zeroconf"
   ],
+  "categories": [
+    "ai_voice.voice_assistants",
+    "media_entertainment.speakers_audio"
+  ],
   "codeowners": [
     "@leikoilja",
     "@DurgNomis-drol",
@@ -14,13 +18,18 @@
   ],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "https://github.com/leikoilja/ha-google-home",
+  "documentation": "https://ha-google-home.pages.dev/",
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/leikoilja/ha-google-home/issues",
-  "requirements": [
-    "glocaltokens==0.7.6"
+  "loggers": [
+    "glocaltokens"
   ],
-  "version": "1.13.3",
+  "requirements": [
+    "bluetooth-data-tools>=1.29.24",
+    "glocaltokens==2.0.0"
+  ],
+  "single_config_entry": true,
+  "version": "1.17.0",
   "zeroconf": [
     "_googlecast._tcp.local."
   ]

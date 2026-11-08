@@ -1,0 +1,248 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.01KCP2M8N8K0ATTJWDBFAS7KNM",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "esphome84",
+      "friendly_name": "Huvudströmbrytaren Prusa XL",
+      "mac_address": "40:22:D8:61:53:F8",
+      "compilation_time": "2026-11-06 09:45:02 +0100",
+      "model": "nodemcu-32s",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2026.10.2",
+      "project_name": "",
+      "project_version": "",
+      "webserver_port": 80,
+      "legacy_voice_assistant_version": 0,
+      "voice_assistant_feature_flags": 0,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0,
+      "zwave_proxy_feature_flags": 0,
+      "zwave_home_id": 0,
+      "suggested_area": "",
+      "bluetooth_mac_address": "",
+      "api_encryption_supported": true,
+      "api_encryption_provisionable": false,
+      "api_outgoing_connection_supported": true,
+      "devices": [],
+      "areas": [],
+      "area": {
+        "area_id": 0,
+        "name": ""
+      },
+      "serial_proxies": []
+    },
+    "services": [],
+    "api_version": {
+      "major": 1,
+      "minor": 19
+    },
+    "device_capabilities": {
+      "bluetooth_proxy": {
+        "feature_flags": 0,
+        "mac_address": ""
+      },
+      "voice_assistant": {
+        "feature_flags": 0
+      },
+      "zwave_proxy": {
+        "feature_flags": 0,
+        "home_id": 0
+      },
+      "serial_proxies": [],
+      "wizard": {
+        "configured": false
+      },
+      "sendspin": {
+        "feature_flags": 0,
+        "client_id": ""
+      },
+      "store_yaml": {
+        "supported": false
+      }
+    },
+    "sensor": [
+      {
+        "object_id": "esphome84_voltage",
+        "key": 2298870173,
+        "name": "esphome84 Voltage",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "voltage",
+        "unit_of_measurement": "V",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome84_current",
+        "key": 3817309880,
+        "name": "esphome84 Current",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "current",
+        "unit_of_measurement": "A",
+        "accuracy_decimals": 2,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome84_power",
+        "key": 2178790104,
+        "name": "esphome84 Power",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "power",
+        "unit_of_measurement": "W",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome84_energy",
+        "key": 4090822801,
+        "name": "esphome84 Energy",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "energy",
+        "unit_of_measurement": "Wh",
+        "accuracy_decimals": 3,
+        "force_update": false,
+        "state_class": 2,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome84_apparent_power",
+        "key": 1523313268,
+        "name": "esphome84 Apparent Power",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "apparent_power",
+        "unit_of_measurement": "VA",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome84_reactive_power",
+        "key": 3205571378,
+        "name": "esphome84 Reactive Power",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "reactive_power",
+        "unit_of_measurement": "var",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome84_power_factor",
+        "key": 2429422226,
+        "name": "esphome84 Power Factor",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "power_factor",
+        "unit_of_measurement": "",
+        "accuracy_decimals": 2,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome84_daily_energy",
+        "key": 2188742707,
+        "name": "esphome84 Daily Energy",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "energy",
+        "unit_of_measurement": "kWh",
+        "accuracy_decimals": 3,
+        "force_update": false,
+        "state_class": 2,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome84_power_factor_template",
+        "key": 303132931,
+        "name": "esphome84 Power Factor Template",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "power_factor",
+        "unit_of_measurement": "",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 0,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome84_esp32_temperature",
+        "key": 660384135,
+        "name": "esphome84 ESP32 Temperature",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "temperature",
+        "unit_of_measurement": "°C",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      }
+    ],
+    "text_sensor": [],
+    "switch": [
+      {
+        "object_id": "esphome84_relay_state",
+        "key": 4076761270,
+        "name": "esphome84 Relay State",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "assumed_state": false,
+        "device_class": ""
+      }
+    ],
+    "binary_sensor": [
+      {
+        "object_id": "status",
+        "key": 939730931,
+        "name": "Status",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_id": 0,
+        "device_class": "connectivity",
+        "is_status_binary_sensor": true
+      }
+    ],
+    "update": []
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "portainer-agent": {
+    "file": ".env",
+    "key": "PORTAINER_AGENT_IMAGE",
+    "before": "portainer/agent:2.45.2",
+    "after": "portainer/agent:2.45.3"
+  },
+  "caddy-ui": {
+    "file": "docker-compose.yml",
+    "before": "perteus/caddy-ui:3.1.0",
+    "after": "perteus/caddy-ui:3.3.1"
+  }
+}

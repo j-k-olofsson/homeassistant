@@ -1,0 +1,36 @@
+{
+  "status": "verified",
+  "stage": "16-id-smhi-01",
+  "renamed_entities": 18,
+  "same_unique_ids_and_settings": true,
+  "statistics_series_verified": 0,
+  "history_records_verified": 3,
+  "statistics_metadata_moved": 0,
+  "source_files_updated": [],
+  "dashboards_updated": [],
+  "frontend_favorites_updated": false,
+  "helper_config_entries_auto_updated": [],
+  "automation_consumers_reloaded": [],
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  },
+  "legacy_false_cleanup_pending": true,
+  "equivalent_explicit_google_false_additions": [
+    "sensor.heimdal_ha_home_total_molntackning",
+    "sensor.heimdal_ha_home_lite_moln",
+    "sensor.heimdal_ha_home_halvklart",
+    "sensor.heimdal_ha_home_mycket_moln",
+    "sensor.heimdal_ha_home_fwi_index",
+    "sensor.heimdal_ha_home_brandriskprognos_fwi",
+    "sensor.heimdal_ha_home_initialt_spridningsindex_isi",
+    "sensor.heimdal_ha_home_build_up_index_bui",
+    "sensor.heimdal_ha_home_fine_fuel_moisture_code_ffmc",
+    "sensor.heimdal_ha_home_duff_moisture_code_dmc",
+    "sensor.heimdal_ha_home_drought_code_dc",
+    "sensor.heimdal_ha_home_storst_risk_for_grasbrand",
+    "sensor.heimdal_ha_home_potentiell_spridningshastighet",
+    "sensor.heimdal_ha_home_bransleuttorkning"
+  ]
+}

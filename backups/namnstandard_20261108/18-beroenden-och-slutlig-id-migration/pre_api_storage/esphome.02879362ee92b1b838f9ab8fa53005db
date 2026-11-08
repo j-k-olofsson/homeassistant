@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.02879362ee92b1b838f9ab8fa53005db",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "esphome76",
+      "friendly_name": "IR gateway",
+      "mac_address": "CC:50:E3:FE:16:ED",
+      "compilation_time": "2026-11-04 06:45:37 +0100",
+      "model": "esp01_1m",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2026.10.2",
+      "project_name": "",
+      "project_version": "",
+      "webserver_port": 80,
+      "legacy_voice_assistant_version": 0,
+      "voice_assistant_feature_flags": 0,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0,
+      "zwave_proxy_feature_flags": 0,
+      "zwave_home_id": 0,
+      "suggested_area": "",
+      "bluetooth_mac_address": "",
+      "api_encryption_supported": true,
+      "api_encryption_provisionable": false,
+      "api_outgoing_connection_supported": true,
+      "devices": [],
+      "areas": [],
+      "area": {
+        "area_id": 0,
+        "name": ""
+      },
+      "serial_proxies": []
+    },
+    "services": [],
+    "api_version": {
+      "major": 1,
+      "minor": 19
+    },
+    "device_capabilities": {
+      "bluetooth_proxy": {
+        "feature_flags": 0,
+        "mac_address": ""
+      },
+      "voice_assistant": {
+        "feature_flags": 0
+      },
+      "zwave_proxy": {
+        "feature_flags": 0,
+        "home_id": 0
+      },
+      "serial_proxies": [],
+      "wizard": {
+        "configured": false
+      },
+      "sendspin": {
+        "feature_flags": 0,
+        "client_id": ""
+      },
+      "store_yaml": {
+        "supported": false
+      }
+    },
+    "button": [
+      {
+        "object_id": "lexicon_-_volume_up",
+        "key": 222491468,
+        "name": "Lexicon - Volume UP",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": ""
+      },
+      {
+        "object_id": "lexicon_-_volume_down",
+        "key": 1427920011,
+        "name": "Lexicon - Volume DOWN",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": ""
+      },
+      {
+        "object_id": "lexicon_-_dvd1",
+        "key": 1650926633,
+        "name": "Lexicon - DVD1",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": ""
+      },
+      {
+        "object_id": "lexicon_-_dvd2",
+        "key": 1650926634,
+        "name": "Lexicon - DVD2",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": ""
+      },
+      {
+        "object_id": "lexicon_-_playstation",
+        "key": 4209082096,
+        "name": "Lexicon - Playstation",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": ""
+      },
+      {
+        "object_id": "benq_on",
+        "key": 1111992743,
+        "name": "Benq ON",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": ""
+      },
+      {
+        "object_id": "benq_off",
+        "key": 97525275,
+        "name": "Benq OFF",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": ""
+      },
+      {
+        "object_id": "benq_mute",
+        "key": 1217458759,
+        "name": "Benq Mute",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": ""
+      }
+    ],
+    "infrared": [
+      {
+        "object_id": "esphome76_ir_transmitter",
+        "key": 643419949,
+        "name": "esphome76 IR Transmitter",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "capabilities": 1,
+        "receiver_frequency": 0
+      }
+    ],
+    "binary_sensor": [
+      {
+        "object_id": "status",
+        "key": 939730931,
+        "name": "Status",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_id": 0,
+        "device_class": "connectivity",
+        "is_status_binary_sensor": true
+      }
+    ],
+    "update": []
+  }
+}

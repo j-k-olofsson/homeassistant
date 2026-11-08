@@ -1,0 +1,4256 @@
+{
+  "stage": "11-mobile_app-namn-02",
+  "description": "Svenska funktionsnamn enligt granskad ordlista. Inga ID:n, inställningar eller värden ändras.",
+  "operations": [
+    {
+      "kind": "entity",
+      "id": "binary_sensor.nspanelpro_headphones",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hörlurar",
+        "aliases": [
+          null,
+          "nspanelpro Headphones"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.nspanelpro_mic_muted",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mikrofon avstängd",
+        "aliases": [
+          null,
+          "nspanelpro Mic muted"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.nspanelpro_speakerphone",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Högtalartelefon",
+        "aliases": [
+          null,
+          "nspanelpro Speakerphone"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.nspanelpro_music_active",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Musik aktiv",
+        "aliases": [
+          null,
+          "nspanelpro Music active"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_volume_level_alarm",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Alarmvolym",
+        "aliases": [
+          null,
+          "nspanelpro Volume level alarm"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_volume_level_call",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Samtalsvolym",
+        "aliases": [
+          null,
+          "nspanelpro Volume level call"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_volume_level_music",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Musikvolym",
+        "aliases": [
+          null,
+          "nspanelpro Volume level music"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_volume_level_ringer",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ringsignalvolym",
+        "aliases": [
+          null,
+          "nspanelpro Volume level ringer"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_volume_level_notification",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Aviseringsvolym",
+        "aliases": [
+          null,
+          "nspanelpro Volume level notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_volume_level_system",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Systemvolym",
+        "aliases": [
+          null,
+          "nspanelpro Volume level system"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_volume_level_dtmf",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Knappvalsvolym",
+        "aliases": [
+          null,
+          "nspanelpro Volume level DTMF"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_volume_level_accessibility",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tillgänglighetsvolym",
+        "aliases": [
+          null,
+          "nspanelpro Volume level accessibility"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_battery_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "nspanelpro Battery level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_battery_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batteristatus",
+        "aliases": [
+          null,
+          "nspanelpro Battery state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.nspanelpro_is_charging",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Laddar",
+        "aliases": [
+          null,
+          "nspanelpro Is charging"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_charger_type",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Laddartyp",
+        "aliases": [
+          null,
+          "nspanelpro Charger type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_battery_health",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterihälsa",
+        "aliases": [
+          null,
+          "nspanelpro Battery health"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_battery_temperature",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batteritemperatur",
+        "aliases": [
+          null,
+          "nspanelpro Battery temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_battery_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterieffekt",
+        "aliases": [
+          null,
+          "nspanelpro Battery power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_bluetooth_connection",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bluetooth-anslutning",
+        "aliases": [
+          null,
+          "nspanelpro Bluetooth connection"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.nspanelpro_bluetooth_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bluetooth-status",
+        "aliases": [
+          null,
+          "nspanelpro Bluetooth state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_ble_transmitter",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "BLE-sändare",
+        "aliases": [
+          null,
+          "nspanelpro BLE transmitter"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_beacon_monitor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Övervakning av Bluetooth-sändare",
+        "aliases": [
+          null,
+          "nspanelpro Beacon monitor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_screen_brightness",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmljusstyrka",
+        "aliases": [
+          null,
+          "nspanelpro Screen brightness"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_screen_off_timeout",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tid till skärmavstängning",
+        "aliases": [
+          null,
+          "nspanelpro Screen off timeout"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_do_not_disturb_sensor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stör ej-läge",
+        "aliases": [
+          null,
+          "nspanelpro Do Not Disturb sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.nspanelpro_work_profile",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Arbetsprofil",
+        "aliases": [
+          null,
+          "nspanelpro Work profile"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.nspanelpro_device_locked",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Enheten låst",
+        "aliases": [
+          null,
+          "nspanelpro Device locked"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.nspanelpro_device_secure",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Enheten skyddad",
+        "aliases": [
+          null,
+          "nspanelpro Device secure"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.nspanelpro_keyguard_locked",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmlåset låst",
+        "aliases": [
+          null,
+          "nspanelpro Keyguard locked"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.nspanelpro_keyguard_secure",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmlåset skyddat",
+        "aliases": [
+          null,
+          "nspanelpro Keyguard secure"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_last_used_app",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senast använda app",
+        "aliases": [
+          null,
+          "nspanelpro Last used app"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_last_reboot",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senaste omstart",
+        "aliases": [
+          null,
+          "nspanelpro Last reboot"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_last_update_trigger",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senaste uppdateringsorsak",
+        "aliases": [
+          null,
+          "nspanelpro Last update trigger"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_light_sensor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Belysningsstyrka",
+        "aliases": [
+          null,
+          "nspanelpro Light sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_wifi_connection",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-anslutning",
+        "aliases": [
+          null,
+          "nspanelpro WiFi connection"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_wifi_bssid",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi BSSID",
+        "aliases": [
+          null,
+          "nspanelpro WiFi BSSID"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_wifi_ip_address",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi IP-adress",
+        "aliases": [
+          null,
+          "nspanelpro WiFi IP address"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_wifi_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-länkhastighet",
+        "aliases": [
+          null,
+          "nspanelpro WiFi link speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.nspanelpro_wifi_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-status",
+        "aliases": [
+          null,
+          "nspanelpro WiFi state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_wifi_frequency",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-frekvens",
+        "aliases": [
+          null,
+          "nspanelpro WiFi frequency"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_wifi_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-signalstyrka",
+        "aliases": [
+          null,
+          "nspanelpro WiFi signal strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_public_ip_address",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Publik IP-adress",
+        "aliases": [
+          null,
+          "nspanelpro Public IP address"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.nspanelpro_hotspot_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Internetdelningsstatus",
+        "aliases": [
+          null,
+          "nspanelpro Hotspot state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_network_type",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Nätverkstyp",
+        "aliases": [
+          null,
+          "nspanelpro Network type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_next_alarm",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Nästa alarm",
+        "aliases": [
+          null,
+          "nspanelpro Next alarm"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_last_notification",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senaste avisering",
+        "aliases": [
+          null,
+          "nspanelpro Last notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_last_removed_notification",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senast borttagna avisering",
+        "aliases": [
+          null,
+          "nspanelpro Last removed notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_active_notification_count",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Antal aktiva aviseringar",
+        "aliases": [
+          null,
+          "nspanelpro Active notification count"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_media_session",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mediasession",
+        "aliases": [
+          null,
+          "nspanelpro Media session"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.nspanelpro_interactive",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmen interaktiv",
+        "aliases": [
+          null,
+          "nspanelpro Interactive"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.nspanelpro_doze_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Viloläge",
+        "aliases": [
+          null,
+          "nspanelpro Doze mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.nspanelpro_power_save",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Energisparläge",
+        "aliases": [
+          null,
+          "nspanelpro Power save"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_proximity_sensor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Närhetssensor",
+        "aliases": [
+          null,
+          "nspanelpro Proximity sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_internal_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Intern lagring",
+        "aliases": [
+          null,
+          "nspanelpro Internal storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_external_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Extern lagring",
+        "aliases": [
+          null,
+          "nspanelpro External storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_current_time_zone",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Aktuell tidszon",
+        "aliases": [
+          null,
+          "nspanelpro Current time zone"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_total_rx_gb",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt mottagna data",
+        "aliases": [
+          null,
+          "nspanelpro Total Rx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nspanelpro_total_tx_gb",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt skickade data",
+        "aliases": [
+          null,
+          "nspanelpro Total Tx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_ipv6_addresses",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "IPv6-adresser",
+        "aliases": [
+          null,
+          "SM-T835 IPv6 addresses"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_remaining_charge_time",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Återstående laddningstid",
+        "aliases": [
+          null,
+          "SM-T835 Remaining charge time"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_detected_activity",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Identifierad aktivitet",
+        "aliases": [
+          null,
+          "SM-G965F Detected activity"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_sleep_confidence",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Säkerhet i sömndetektering",
+        "aliases": [
+          null,
+          "SM-G965F Sleep confidence"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_sleep_segment",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sömnperiod",
+        "aliases": [
+          null,
+          "SM-G965F Sleep segment"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_os_version",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Operativsystemsversion",
+        "aliases": [
+          null,
+          "SM-G965F OS version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_security_patch",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Säkerhetsuppdatering",
+        "aliases": [
+          null,
+          "SM-G965F Security patch"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_current_version",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appversion",
+        "aliases": [
+          null,
+          "SM-G965F Current version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_app_rx_gb",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens mottagna data",
+        "aliases": [
+          null,
+          "SM-G965F App Rx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_app_tx_gb",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens skickade data",
+        "aliases": [
+          null,
+          "SM-G965F App Tx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_app_memory",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens minnesanvändning",
+        "aliases": [
+          null,
+          "SM-G965F App memory"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g965f_app_inactive",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appen inaktiv",
+        "aliases": [
+          null,
+          "SM-G965F App inactive"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_app_standby_bucket",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens energisparklass",
+        "aliases": [
+          null,
+          "SM-G965F App standby bucket"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_app_importance",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens prioritet",
+        "aliases": [
+          null,
+          "SM-G965F App importance"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_ringer_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ringsignalläge",
+        "aliases": [
+          null,
+          "SM-G965F Ringer mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_audio_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ljudläge",
+        "aliases": [
+          null,
+          "SM-G965F Audio mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g965f_headphones",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hörlurar",
+        "aliases": [
+          null,
+          "SM-G965F Headphones"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g965f_mic_muted",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mikrofon avstängd",
+        "aliases": [
+          null,
+          "SM-G965F Mic muted"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g965f_speakerphone",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Högtalartelefon",
+        "aliases": [
+          null,
+          "SM-G965F Speakerphone"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g965f_music_active",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Musik aktiv",
+        "aliases": [
+          null,
+          "SM-G965F Music active"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_volume_level_alarm",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Alarmvolym",
+        "aliases": [
+          null,
+          "SM-G965F Volume level alarm"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_volume_level_call",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Samtalsvolym",
+        "aliases": [
+          null,
+          "SM-G965F Volume level call"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_volume_level_music",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Musikvolym",
+        "aliases": [
+          null,
+          "SM-G965F Volume level music"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_volume_level_ringer",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ringsignalvolym",
+        "aliases": [
+          null,
+          "SM-G965F Volume level ringer"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_volume_level_notification",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Aviseringsvolym",
+        "aliases": [
+          null,
+          "SM-G965F Volume level notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_volume_level_system",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Systemvolym",
+        "aliases": [
+          null,
+          "SM-G965F Volume level system"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_volume_level_dtmf",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Knappvalsvolym",
+        "aliases": [
+          null,
+          "SM-G965F Volume level DTMF"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_volume_level_accessibility",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tillgänglighetsvolym",
+        "aliases": [
+          null,
+          "SM-G965F Volume level accessibility"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_battery_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "SM-G965F Battery level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_battery_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batteristatus",
+        "aliases": [
+          null,
+          "SM-G965F Battery state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g965f_is_charging",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Laddar",
+        "aliases": [
+          null,
+          "SM-G965F Is charging"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_charger_type",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Laddartyp",
+        "aliases": [
+          null,
+          "SM-G965F Charger type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_battery_health",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterihälsa",
+        "aliases": [
+          null,
+          "SM-G965F Battery health"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_battery_temperature",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batteritemperatur",
+        "aliases": [
+          null,
+          "SM-G965F Battery temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_battery_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterieffekt",
+        "aliases": [
+          null,
+          "SM-G965F Battery power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_remaining_charge_time",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Återstående laddningstid",
+        "aliases": [
+          null,
+          "SM-G965F Remaining charge time"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_bluetooth_connection",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bluetooth-anslutning",
+        "aliases": [
+          null,
+          "SM-G965F Bluetooth connection"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g965f_bluetooth_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bluetooth-status",
+        "aliases": [
+          null,
+          "SM-G965F Bluetooth state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_ble_transmitter",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "BLE-sändare",
+        "aliases": [
+          null,
+          "SM-G965F BLE transmitter"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_beacon_monitor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Övervakning av Bluetooth-sändare",
+        "aliases": [
+          null,
+          "SM-G965F Beacon monitor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_car_battery",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens batterinivå",
+        "aliases": [
+          null,
+          "SM-G965F Car battery"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_car_name",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens namn",
+        "aliases": [
+          null,
+          "SM-G965F Car name"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_car_charging_status",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens laddningsstatus",
+        "aliases": [
+          null,
+          "SM-G965F Car charging status"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_car_ev_connector_type",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens laddkontakt",
+        "aliases": [
+          null,
+          "SM-G965F Car EV connector type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_car_fuel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens bränslenivå",
+        "aliases": [
+          null,
+          "SM-G965F Car fuel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_car_fuel_type",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens bränsletyp",
+        "aliases": [
+          null,
+          "SM-G965F Car fuel type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_car_odometer",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens vägmätare",
+        "aliases": [
+          null,
+          "SM-G965F Car odometer"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_screen_brightness",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmljusstyrka",
+        "aliases": [
+          null,
+          "SM-G965F Screen brightness"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_screen_off_timeout",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tid till skärmavstängning",
+        "aliases": [
+          null,
+          "SM-G965F Screen off timeout"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_do_not_disturb_sensor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stör ej-läge",
+        "aliases": [
+          null,
+          "SM-G965F Do Not Disturb sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g965f_work_profile",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Arbetsprofil",
+        "aliases": [
+          null,
+          "SM-G965F Work profile"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_geocoded_location",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Platsadress",
+        "aliases": [
+          null,
+          "SM-G965F Geocoded location"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g965f_device_locked",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Enheten låst",
+        "aliases": [
+          null,
+          "SM-G965F Device locked"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g965f_device_secure",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Enheten skyddad",
+        "aliases": [
+          null,
+          "SM-G965F Device secure"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g965f_keyguard_locked",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmlåset låst",
+        "aliases": [
+          null,
+          "SM-G965F Keyguard locked"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g965f_keyguard_secure",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmlåset skyddat",
+        "aliases": [
+          null,
+          "SM-G965F Keyguard secure"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_last_used_app",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senast använda app",
+        "aliases": [
+          null,
+          "SM-G965F Last used app"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_last_reboot",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senaste omstart",
+        "aliases": [
+          null,
+          "SM-G965F Last reboot"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_last_update_trigger",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senaste uppdateringsorsak",
+        "aliases": [
+          null,
+          "SM-G965F Last update trigger"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_light_sensor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Belysningsstyrka",
+        "aliases": [
+          null,
+          "SM-G965F Light sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g965f_high_accuracy_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Platsläge med hög precision",
+        "aliases": [
+          null,
+          "SM-G965F High accuracy mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_high_accuracy_update_interval",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Uppdateringsintervall för hög precision",
+        "aliases": [
+          null,
+          "SM-G965F High accuracy update interval"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g965f_mobile_data",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mobildata",
+        "aliases": [
+          null,
+          "SM-G965F Mobile data"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g965f_mobile_data_roaming",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Dataroaming",
+        "aliases": [
+          null,
+          "SM-G965F Mobile data roaming"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_wifi_connection",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-anslutning",
+        "aliases": [
+          null,
+          "SM-G965F Wi-Fi connection"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_wifi_ip_address",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi IP-adress",
+        "aliases": [
+          null,
+          "SM-G965F Wi-Fi IP address"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_wifi_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-länkhastighet",
+        "aliases": [
+          null,
+          "SM-G965F Wi-Fi link speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g965f_wifi_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-status",
+        "aliases": [
+          null,
+          "SM-G965F Wi-Fi state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_wifi_frequency",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-frekvens",
+        "aliases": [
+          null,
+          "SM-G965F Wi-Fi frequency"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_wifi_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-signalstyrka",
+        "aliases": [
+          null,
+          "SM-G965F Wi-Fi signal strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_public_ip_address",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Publik IP-adress",
+        "aliases": [
+          null,
+          "SM-G965F Public IP address"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g965f_hotspot_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Internetdelningsstatus",
+        "aliases": [
+          null,
+          "SM-G965F Hotspot state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_network_type",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Nätverkstyp",
+        "aliases": [
+          null,
+          "SM-G965F Network type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_ipv6_addresses",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "IPv6-adresser",
+        "aliases": [
+          null,
+          "SM-G965F IPv6 addresses"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g965f_nfc_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "NFC-status",
+        "aliases": [
+          null,
+          "SM-G965F NFC state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_next_alarm",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Nästa alarm",
+        "aliases": [
+          null,
+          "SM-G965F Next alarm"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_last_notification",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senaste avisering",
+        "aliases": [
+          null,
+          "SM-G965F Last notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_last_removed_notification",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senast borttagna avisering",
+        "aliases": [
+          null,
+          "SM-G965F Last removed notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_active_notification_count",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Antal aktiva aviseringar",
+        "aliases": [
+          null,
+          "SM-G965F Active notification count"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_media_session",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mediasession",
+        "aliases": [
+          null,
+          "SM-G965F Media session"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_phone_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Telefonstatus",
+        "aliases": [
+          null,
+          "SM-G965F Phone state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g965f_interactive",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmen interaktiv",
+        "aliases": [
+          null,
+          "SM-G965F Interactive"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g965f_doze_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Viloläge",
+        "aliases": [
+          null,
+          "SM-G965F Doze mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g965f_power_save",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Energisparläge",
+        "aliases": [
+          null,
+          "SM-G965F Power save"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_pressure_sensor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Lufttryck",
+        "aliases": [
+          null,
+          "SM-G965F Pressure sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_proximity_sensor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Närhetssensor",
+        "aliases": [
+          null,
+          "SM-G965F Proximity sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_steps_sensor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Steg",
+        "aliases": [
+          null,
+          "SM-G965F Steps sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_internal_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Intern lagring",
+        "aliases": [
+          null,
+          "SM-G965F Internal storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_external_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Extern lagring",
+        "aliases": [
+          null,
+          "SM-G965F External storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_current_time_zone",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Aktuell tidszon",
+        "aliases": [
+          null,
+          "SM-G965F Current time zone"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_total_rx_gb",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt mottagna data",
+        "aliases": [
+          null,
+          "SM-G965F Total Rx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_total_tx_gb",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt skickade data",
+        "aliases": [
+          null,
+          "SM-G965F Total Tx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_screen_orientation",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmriktning",
+        "aliases": [
+          null,
+          "SM-T835 Screen orientation"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_screen_rotation",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmrotation",
+        "aliases": [
+          null,
+          "SM-T835 Screen rotation"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_screen_orientation",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmriktning",
+        "aliases": [
+          null,
+          "SM-G965F Screen orientation"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_screen_rotation",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmrotation",
+        "aliases": [
+          null,
+          "SM-G965F Screen rotation"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_car_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens hastighet",
+        "aliases": [
+          null,
+          "SM-T835 Car speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_car_range_remaining",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens återstående räckvidd",
+        "aliases": [
+          null,
+          "SM-T835 Car range remaining"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_car_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens hastighet",
+        "aliases": [
+          null,
+          "SM-G965F Car speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g965f_car_range_remaining",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens återstående räckvidd",
+        "aliases": [
+          null,
+          "SM-G965F Car range remaining"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_ringer_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ringsignalläge",
+        "aliases": [
+          null,
+          "MT-1011QR Ringer mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_app_standby_bucket",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens energisparklass",
+        "aliases": [
+          null,
+          "MT-1011QR App standby bucket"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_audio_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ljudläge",
+        "aliases": [
+          null,
+          "MT-1011QR Audio mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_app_importance",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens prioritet",
+        "aliases": [
+          null,
+          "MT-1011QR App importance"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.mt_1011qr_headphones",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hörlurar",
+        "aliases": [
+          null,
+          "MT-1011QR Headphones"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.mt_1011qr_mic_muted",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mikrofon avstängd",
+        "aliases": [
+          null,
+          "MT-1011QR Mic muted"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.mt_1011qr_speakerphone",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Högtalartelefon",
+        "aliases": [
+          null,
+          "MT-1011QR Speakerphone"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.mt_1011qr_music_active",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Musik aktiv",
+        "aliases": [
+          null,
+          "MT-1011QR Music active"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_volume_level_alarm",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Alarmvolym",
+        "aliases": [
+          null,
+          "MT-1011QR Volume level alarm"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_volume_level_call",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Samtalsvolym",
+        "aliases": [
+          null,
+          "MT-1011QR Volume level call"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_volume_level_music",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Musikvolym",
+        "aliases": [
+          null,
+          "MT-1011QR Volume level music"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_volume_level_ringer",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ringsignalvolym",
+        "aliases": [
+          null,
+          "MT-1011QR Volume level ringer"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_volume_level_notification",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Aviseringsvolym",
+        "aliases": [
+          null,
+          "MT-1011QR Volume level notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_volume_level_system",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Systemvolym",
+        "aliases": [
+          null,
+          "MT-1011QR Volume level system"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_volume_level_dtmf",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Knappvalsvolym",
+        "aliases": [
+          null,
+          "MT-1011QR Volume level DTMF"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_volume_level_accessibility",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tillgänglighetsvolym",
+        "aliases": [
+          null,
+          "MT-1011QR Volume level accessibility"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_battery_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "MT-1011QR Battery level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_battery_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batteristatus",
+        "aliases": [
+          null,
+          "MT-1011QR Battery state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.mt_1011qr_is_charging",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Laddar",
+        "aliases": [
+          null,
+          "MT-1011QR Is charging"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_charger_type",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Laddartyp",
+        "aliases": [
+          null,
+          "MT-1011QR Charger type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_battery_health",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterihälsa",
+        "aliases": [
+          null,
+          "MT-1011QR Battery health"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_battery_temperature",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batteritemperatur",
+        "aliases": [
+          null,
+          "MT-1011QR Battery temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_battery_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterieffekt",
+        "aliases": [
+          null,
+          "MT-1011QR Battery power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_remaining_charge_time",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Återstående laddningstid",
+        "aliases": [
+          null,
+          "MT-1011QR Remaining charge time"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_bluetooth_connection",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bluetooth-anslutning",
+        "aliases": [
+          null,
+          "MT-1011QR Bluetooth connection"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.mt_1011qr_bluetooth_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bluetooth-status",
+        "aliases": [
+          null,
+          "MT-1011QR Bluetooth state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_ble_transmitter",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "BLE-sändare",
+        "aliases": [
+          null,
+          "MT-1011QR BLE transmitter"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_beacon_monitor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Övervakning av Bluetooth-sändare",
+        "aliases": [
+          null,
+          "MT-1011QR Beacon monitor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_car_battery",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens batterinivå",
+        "aliases": [
+          null,
+          "MT-1011QR Car battery"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_car_name",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens namn",
+        "aliases": [
+          null,
+          "MT-1011QR Car name"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_car_charging_status",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens laddningsstatus",
+        "aliases": [
+          null,
+          "MT-1011QR Car charging status"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_car_ev_connector_type",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens laddkontakt",
+        "aliases": [
+          null,
+          "MT-1011QR Car EV connector type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_car_fuel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens bränslenivå",
+        "aliases": [
+          null,
+          "MT-1011QR Car fuel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_car_fuel_type",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens bränsletyp",
+        "aliases": [
+          null,
+          "MT-1011QR Car fuel type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_car_odometer",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens vägmätare",
+        "aliases": [
+          null,
+          "MT-1011QR Car odometer"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_car_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens hastighet",
+        "aliases": [
+          null,
+          "MT-1011QR Car speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_car_range_remaining",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens återstående räckvidd",
+        "aliases": [
+          null,
+          "MT-1011QR Car range remaining"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_screen_brightness",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmljusstyrka",
+        "aliases": [
+          null,
+          "MT-1011QR Screen brightness"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_screen_off_timeout",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tid till skärmavstängning",
+        "aliases": [
+          null,
+          "MT-1011QR Screen off timeout"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_screen_orientation",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmriktning",
+        "aliases": [
+          null,
+          "MT-1011QR Screen orientation"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_screen_rotation",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmrotation",
+        "aliases": [
+          null,
+          "MT-1011QR Screen rotation"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_do_not_disturb_sensor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stör ej-läge",
+        "aliases": [
+          null,
+          "MT-1011QR Do Not Disturb sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.mt_1011qr_work_profile",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Arbetsprofil",
+        "aliases": [
+          null,
+          "MT-1011QR Work profile"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_geocoded_location",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Platsadress",
+        "aliases": [
+          null,
+          "MT-1011QR Geocoded location"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.mt_1011qr_device_locked",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Enheten låst",
+        "aliases": [
+          null,
+          "MT-1011QR Device locked"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.mt_1011qr_device_secure",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Enheten skyddad",
+        "aliases": [
+          null,
+          "MT-1011QR Device secure"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.mt_1011qr_keyguard_locked",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmlåset låst",
+        "aliases": [
+          null,
+          "MT-1011QR Keyguard locked"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.mt_1011qr_keyguard_secure",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmlåset skyddat",
+        "aliases": [
+          null,
+          "MT-1011QR Keyguard secure"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_last_used_app",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senast använda app",
+        "aliases": [
+          null,
+          "MT-1011QR Last used app"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_last_reboot",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senaste omstart",
+        "aliases": [
+          null,
+          "MT-1011QR Last reboot"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_last_update_trigger",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senaste uppdateringsorsak",
+        "aliases": [
+          null,
+          "MT-1011QR Last update trigger"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.mt_1011qr_high_accuracy_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Platsläge med hög precision",
+        "aliases": [
+          null,
+          "MT-1011QR High accuracy mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_high_accuracy_update_interval",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Uppdateringsintervall för hög precision",
+        "aliases": [
+          null,
+          "MT-1011QR High accuracy update interval"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_wi_fi_connection",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-anslutning",
+        "aliases": [
+          null,
+          "MT-1011QR Wi-Fi connection"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_wi_fi_ip_address",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi IP-adress",
+        "aliases": [
+          null,
+          "MT-1011QR Wi-Fi IP address"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_wi_fi_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-länkhastighet",
+        "aliases": [
+          null,
+          "MT-1011QR Wi-Fi link speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.mt_1011qr_wi_fi_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-status",
+        "aliases": [
+          null,
+          "MT-1011QR Wi-Fi state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_wi_fi_frequency",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-frekvens",
+        "aliases": [
+          null,
+          "MT-1011QR Wi-Fi frequency"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_wi_fi_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-signalstyrka",
+        "aliases": [
+          null,
+          "MT-1011QR Wi-Fi signal strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_public_ip_address",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Publik IP-adress",
+        "aliases": [
+          null,
+          "MT-1011QR Public IP address"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.mt_1011qr_hotspot_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Internetdelningsstatus",
+        "aliases": [
+          null,
+          "MT-1011QR Hotspot state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_network_type",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Nätverkstyp",
+        "aliases": [
+          null,
+          "MT-1011QR Network type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_ipv6_addresses",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "IPv6-adresser",
+        "aliases": [
+          null,
+          "MT-1011QR IPv6 addresses"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_next_alarm",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Nästa alarm",
+        "aliases": [
+          null,
+          "MT-1011QR Next alarm"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_last_notification",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senaste avisering",
+        "aliases": [
+          null,
+          "MT-1011QR Last notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_last_removed_notification",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senast borttagna avisering",
+        "aliases": [
+          null,
+          "MT-1011QR Last removed notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_active_notification_count",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Antal aktiva aviseringar",
+        "aliases": [
+          null,
+          "MT-1011QR Active notification count"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_media_session",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mediasession",
+        "aliases": [
+          null,
+          "MT-1011QR Media session"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.mt_1011qr_interactive",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmen interaktiv",
+        "aliases": [
+          null,
+          "MT-1011QR Interactive"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.mt_1011qr_doze_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Viloläge",
+        "aliases": [
+          null,
+          "MT-1011QR Doze mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.mt_1011qr_power_save",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Energisparläge",
+        "aliases": [
+          null,
+          "MT-1011QR Power save"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_internal_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Intern lagring",
+        "aliases": [
+          null,
+          "MT-1011QR Internal storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_external_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Extern lagring",
+        "aliases": [
+          null,
+          "MT-1011QR External storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_current_time_zone",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Aktuell tidszon",
+        "aliases": [
+          null,
+          "MT-1011QR Current time zone"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_total_rx_gb",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt mottagna data",
+        "aliases": [
+          null,
+          "MT-1011QR Total Rx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_total_tx_gb",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt skickade data",
+        "aliases": [
+          null,
+          "MT-1011QR Total Tx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_detected_activity",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Identifierad aktivitet",
+        "aliases": [
+          null,
+          "MT-1011QR Detected activity"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_sleep_confidence",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Säkerhet i sömndetektering",
+        "aliases": [
+          null,
+          "MT-1011QR Sleep confidence"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_sleep_segment",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sömnperiod",
+        "aliases": [
+          null,
+          "MT-1011QR Sleep segment"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_os_version",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Operativsystemsversion",
+        "aliases": [
+          null,
+          "MT-1011QR OS version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_security_patch",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Säkerhetsuppdatering",
+        "aliases": [
+          null,
+          "MT-1011QR Security patch"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_current_version",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appversion",
+        "aliases": [
+          null,
+          "MT-1011QR Current version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_app_rx_gb",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens mottagna data",
+        "aliases": [
+          null,
+          "MT-1011QR App Rx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_app_tx_gb",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens skickade data",
+        "aliases": [
+          null,
+          "MT-1011QR App Tx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mt_1011qr_app_memory",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens minnesanvändning",
+        "aliases": [
+          null,
+          "MT-1011QR App memory"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.mt_1011qr_app_inactive",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appen inaktiv",
+        "aliases": [
+          null,
+          "MT-1011QR App inactive"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_detected_activity_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Identifierad aktivitet",
+        "aliases": [
+          null,
+          "SM-T835 Detected activity"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_sleep_confidence_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Säkerhet i sömndetektering",
+        "aliases": [
+          null,
+          "SM-T835 Sleep confidence"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_sleep_segment_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sömnperiod",
+        "aliases": [
+          null,
+          "SM-T835 Sleep segment"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_os_version_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Operativsystemsversion",
+        "aliases": [
+          null,
+          "SM-T835 OS version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_security_patch_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Säkerhetsuppdatering",
+        "aliases": [
+          null,
+          "SM-T835 Security patch"
+        ]
+      }
+    }
+  ]
+}

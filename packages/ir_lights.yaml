@@ -9,19 +9,19 @@ input_boolean:
 
 input_datetime:
   ir_lights_on:
-    name: TID – IR-ljus tänds
+    name: "IR-ljus tänds"
     has_date: false
     has_time: true
 
   ir_lights_off:
-    name: TID – IR-ljus släcks
+    name: "IR-ljus släcks"
     has_date: false
     has_time: true
 
 input_number:
   ir_lights_before_diego_alarm:
-    name: TID – IR-ljus före Diegos alarm
-    icon: mdi:alarm-minus
+    name: "IR-ljus före Diegos alarm"
+    icon: mdi:alarm
     min: 0
     max: 120
     step: 5
@@ -46,26 +46,28 @@ script:
       - action: homeassistant.turn_on
         target:
           entity_id:
-            - light.varmeljus
+            - light.koket_varmeljus
 
   ir_lights_off:
     alias: IR-ljus – släck alla
-    icon: mdi:candle-off
+    icon: mdi:power-off
     mode: restart
     sequence:
       - action: homeassistant.turn_off
         target:
           entity_id:
-            - light.varmeljus
+            - light.koket_varmeljus
 
   ir_lights_automatic_on:
     alias: IR-ljus – automatisk tändning
     icon: mdi:weather-sunset-up
     mode: restart
     sequence:
-      # Normalise every candle to maximum brightness and slow flicker whenever
+      # Normalise every candle to minimum brightness and slow flicker whenever
       # an automation turns the IR lights on. Repeat the complete sequence once
       # after two seconds to survive a brief line-of-sight obstruction.
+      # Dim after selecting modes, which can reset brightness. Ten DOWN commands
+      # drive both light families to their lowest level regardless of prior state.
       # Manual controls remain untouched.
       - action: script.ir_lights_on
       - delay:
@@ -78,6 +80,14 @@ script:
       - action: button.press
         target:
           entity_id: button.varmeljus_lage_sl
+      - repeat:
+          count: 10
+          sequence:
+            - action: button.press
+              target:
+                entity_id: button.varmeljus_minska_ljusstyrka
+            - delay:
+                milliseconds: 300
       - delay:
           seconds: 2
       - action: script.ir_lights_on
@@ -91,6 +101,14 @@ script:
       - action: button.press
         target:
           entity_id: button.varmeljus_lage_sl
+      - repeat:
+          count: 10
+          sequence:
+            - action: button.press
+              target:
+                entity_id: button.varmeljus_minska_ljusstyrka
+            - delay:
+                milliseconds: 300
 
   ir_lights_automatic_off:
     alias: IR-ljus – automatisk släckning
@@ -154,19 +172,19 @@ automation:
         id: daylight
 
       - trigger: time
-        at: input_datetime.ir_lights_on
+        at: input_datetime.ir_ljus_tands
         id: fixed_morning
 
       - trigger: time
-        at: input_datetime.ir_lights_off
+        at: input_datetime.ir_ljus_slacks
         id: scheduled_off
 
       - trigger: template
         id: diego_alarm
         value_template: >-
-          {% set alarm = states('sensor.diegos_vackarklocka_alarms')
+          {% set alarm = states('sensor.sovrummet_diegos_vackarklocka_alarm')
              | as_datetime(default=None) %}
-          {% set offset = states('input_number.ir_lights_before_diego_alarm')
+          {% set offset = states('input_number.ir_ljus_fore_diegos_alarm')
              | int(15) %}
           {{ alarm is not none
              and now() >= alarm - timedelta(minutes=offset)
@@ -174,7 +192,7 @@ automation:
 
     conditions:
       - condition: state
-        entity_id: input_boolean.ir_lights_automation
+        entity_id: input_boolean.ir_ljus_automatisk_styrning
         state: "on"
 
     actions:
@@ -184,7 +202,7 @@ automation:
                 id: dusk
               - condition: template
                 value_template: >-
-                  {{ now() < today_at(states('input_datetime.ir_lights_off')) }}
+                  {{ now() < today_at(states('input_datetime.ir_ljus_slacks')) }}
             sequence:
               - action: script.ir_lights_automatic_on
 
@@ -193,17 +211,17 @@ automation:
                 id: fixed_morning
               - condition: template
                 value_template: >-
-                  {{ states('input_select.ir_lights_morning_start')
+                  {{ states('input_select.ir_ljus_morgonstart')
                      in ['Fast tid', 'Tidigast av båda'] }}
               - condition: template
                 alias: Fönsterbelysningens dagsljusscen har inte börjat
                 value_template: >-
                   {{ not is_state('input_select.light_scene', 'DAY')
-                     and not is_state('input_select.sun_phase', 'SUNPHASE_DAYLIGHT') }}
+                     and not is_state('input_select.heimdal_ha_solens_dygnsfas', 'SUNPHASE_DAYLIGHT') }}
               - condition: template
                 alias: Den obligatoriska släcktiden har inte passerat
                 value_template: >-
-                  {{ now() < today_at(states('input_datetime.ir_lights_off')) }}
+                  {{ now() < today_at(states('input_datetime.ir_ljus_slacks')) }}
             sequence:
               - action: script.ir_lights_automatic_on
 
@@ -212,17 +230,17 @@ automation:
                 id: diego_alarm
               - condition: template
                 value_template: >-
-                  {{ states('input_select.ir_lights_morning_start')
+                  {{ states('input_select.ir_ljus_morgonstart')
                      in ['Diegos alarm', 'Tidigast av båda'] }}
               - condition: template
                 alias: Fönsterbelysningens dagsljusscen har inte börjat
                 value_template: >-
                   {{ not is_state('input_select.light_scene', 'DAY')
-                     and not is_state('input_select.sun_phase', 'SUNPHASE_DAYLIGHT') }}
+                     and not is_state('input_select.heimdal_ha_solens_dygnsfas', 'SUNPHASE_DAYLIGHT') }}
               - condition: template
                 alias: Den obligatoriska släcktiden har inte passerat
                 value_template: >-
-                  {{ now() < today_at(states('input_datetime.ir_lights_off')) }}
+                  {{ now() < today_at(states('input_datetime.ir_ljus_slacks')) }}
             sequence:
               - action: script.ir_lights_automatic_on
 

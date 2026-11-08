@@ -1,0 +1,58 @@
+{
+  "device_tracker.192_168_10_53": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:14.287517+00:00",
+      "last_updated": "2026-11-07T07:43:14.287517+00:00"
+    }
+  ],
+  "switch.ssid_olofsson_wifi_2_4_ghz_ssid_olofsson_wifi_via_ap_verkstaden": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:14.287517+00:00",
+      "last_updated": "2026-11-07T07:43:14.287517+00:00"
+    }
+  ],
+  "switch.ssid_olofsson_guest_2_4_ghz_ssid_olofsson_guest_via_ap_verkstaden": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:14.287517+00:00",
+      "last_updated": "2026-11-07T07:43:14.287517+00:00"
+    }
+  ],
+  "switch.ssid_olofsson_iot_2_4_ghz_ssid_olofsson_iot_via_ap_verkstaden": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:14.287517+00:00",
+      "last_updated": "2026-11-07T07:43:14.287517+00:00"
+    }
+  ],
+  "switch.ssid_olofsson_wifi_5_ghz_ssid_olofsson_wifi_via_ap_verkstaden": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:14.287517+00:00",
+      "last_updated": "2026-11-07T07:43:14.287517+00:00"
+    }
+  ],
+  "switch.ssid_olofsson_guest_5_ghz_ssid_olofsson_guest_via_ap_verkstaden": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:14.287517+00:00",
+      "last_updated": "2026-11-07T07:43:14.287517+00:00"
+    }
+  ],
+  "switch.ssid_olofsson_iot_5_ghz_ssid_olofsson_iot_via_ap_verkstaden": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:14.287517+00:00",
+      "last_updated": "2026-11-07T07:43:14.287517+00:00"
+    }
+  ]
+}

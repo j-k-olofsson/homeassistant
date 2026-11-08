@@ -1,0 +1,67 @@
+{
+  "removed": [
+    "media_player.pwa_chrome_on_samsung_sm_t835",
+    "sensor.6733e369c5ba97b5d5633e88d4a71b8db760f05943cb6d19d41fce5eeb813487_volymdrivrutin_2",
+    "sensor.ef4abfd89188cf4c457ab1d11945269ec83484ac5766f0d59171fc4e647ace49_volymdrivrutin_2"
+  ],
+  "changed": [
+    "sensor.diskhalsa_och_lagring_svarstid",
+    "sensor.diskhalsa_och_lagring_svarstid_o_1_dag",
+    "sensor.diskhalsa_och_lagring_svarstid_o_30_dagar",
+    "sensor.diskhalsa_och_lagring_svarstid_o_365_dagar",
+    "sensor.diskhalsa_och_lagring_upptid_1_dag",
+    "sensor.diskhalsa_och_lagring_upptid_30_dagar",
+    "sensor.diskhalsa_och_lagring_upptid_365_dagar",
+    "sensor.google_home_ateljens_hogtalare_ateljens_hogtalare_alarms_2",
+    "sensor.google_home_ateljens_hogtalare_ateljens_hogtalare_timers_2",
+    "sensor.tor_mimer_verifierad_backup_svarstid",
+    "sensor.tor_mimer_verifierad_backup_svarstid_o_1_dag",
+    "sensor.tor_mimer_verifierad_backup_svarstid_o_30_dagar",
+    "sensor.tor_mimer_verifierad_backup_svarstid_o_365_dagar",
+    "sensor.tor_mimer_verifierad_backup_upptid_1_dag",
+    "sensor.tor_mimer_verifierad_backup_upptid_30_dagar",
+    "sensor.tor_mimer_verifierad_backup_upptid_365_dagar"
+  ],
+  "health": {
+    "entity_id": "sensor.system_ha_global_health_score",
+    "state": "100",
+    "attributes": {
+      "hardware_score": 100,
+      "application_score": 100,
+      "zombie_count": 0,
+      "zombie_entities": [],
+      "zombie_count_per_domain": {},
+      "db_size_mb": 4607.2,
+      "psi_available": true,
+      "recorder_keep_days": 10,
+      "recorder_filter_active": true,
+      "pending_updates": [],
+      "recommendations": "✅ System optimized",
+      "rec_cpu_load": false,
+      "rec_ram_pressure": false,
+      "rec_io_pressure": false,
+      "rec_disk_low": false,
+      "rec_db_over_limit": false,
+      "rec_power_unstable": false,
+      "rec_backup_stale": false,
+      "rec_updates_pending": false,
+      "rec_zombie": false,
+      "rec_core_lag": false,
+      "unit_of_measurement": "%",
+      "icon": "mdi:shield-check",
+      "friendly_name": "System: HA - Global Health Score"
+    },
+    "last_changed": "2026-10-26T08:21:55.968356+00:00",
+    "last_reported": "2026-10-26T08:21:55.969415+00:00",
+    "last_updated": "2026-10-26T08:21:55.968356+00:00",
+    "context": {
+      "id": "01M5VMTJ40ZN7FBYPKCDS5841M",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  "monitor_status": {
+    "sensor.tor_mimer_verifierad_backup_status": "up",
+    "sensor.diskhalsa_och_lagring_status": "up"
+  }
+}

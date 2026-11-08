@@ -1,0 +1,30 @@
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.heimdal_ha_sun_nasta_gryning", "before": {"aliases": [null]}, "after": {"aliases": ["Sun Nästa gryning"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.heimdal_ha_sun_nasta_gryning"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.heimdal_ha_sun_nasta_skymning", "before": {"aliases": [null]}, "after": {"aliases": ["Sun Nästa skymning"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.heimdal_ha_sun_nasta_skymning"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.heimdal_ha_sun_nasta_midnatt", "before": {"aliases": [null]}, "after": {"aliases": ["Sun Nästa midnatt"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.heimdal_ha_sun_nasta_midnatt"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.heimdal_ha_sun_nasta_middag", "before": {"aliases": [null]}, "after": {"aliases": ["Sun Nästa middag"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.heimdal_ha_sun_nasta_middag"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.heimdal_ha_sun_nasta_soluppgang", "before": {"aliases": [null]}, "after": {"aliases": ["Sun Nästa soluppgång"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.heimdal_ha_sun_nasta_soluppgang"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.heimdal_ha_sun_nasta_solnedgang", "before": {"aliases": [null]}, "after": {"aliases": ["Sun Nästa solnedgång"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.heimdal_ha_sun_nasta_solnedgang"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.heimdal_ha_sun_solhojd", "before": {"aliases": [null]}, "after": {"aliases": ["Sun Solhöjd"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.heimdal_ha_sun_solhojd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.heimdal_ha_sun_solens_azimut", "before": {"aliases": [null]}, "after": {"aliases": ["Sun Solens azimut"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.heimdal_ha_sun_solens_azimut"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.heimdal_ha_sun_stigande_sol", "before": {"aliases": [null]}, "after": {"aliases": ["Sun Stigande sol"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.heimdal_ha_sun_stigande_sol"}
+{"status": "intent", "operation": {"kind": "entity", "id": "weather.heimdal_ha_home", "before": {"aliases": [null]}, "after": {"aliases": ["Home"]}}}
+{"status": "applied", "kind": "entity", "id": "weather.heimdal_ha_home"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.heimdal_ha_home_sannolikhet_for_aska", "before": {"aliases": [null]}, "after": {"aliases": ["Home Sannolikhet för åska"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.heimdal_ha_home_sannolikhet_for_aska"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.heimdal_ha_home_nederbordskategori", "before": {"aliases": [null]}, "after": {"aliases": ["Home Nederbördskategori"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.heimdal_ha_home_nederbordskategori"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.heimdal_ha_home_fryst_nederbord", "before": {"aliases": [null]}, "after": {"aliases": ["Home Fryst nederbörd"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.heimdal_ha_home_fryst_nederbord"}
+{"status": "intent", "operation": {"kind": "device", "id": "b0e6115878c4df246dc5d874c9accdf2", "before": {"name_by_user": null}, "after": {"name_by_user": "Solen"}}}
+{"status": "applied", "kind": "device", "id": "b0e6115878c4df246dc5d874c9accdf2"}
+{"status": "intent", "operation": {"kind": "device", "id": "0fd2bbfa263eea2631ef47e85ad4bd4d", "before": {"name_by_user": null}, "after": {"name_by_user": "Väderprognos SMHI"}}}
+{"status": "applied", "kind": "device", "id": "0fd2bbfa263eea2631ef47e85ad4bd4d"}

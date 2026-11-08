@@ -1,5 +1,6 @@
 packages:
   base: github://esphome/home-assistant-voice-pe/home-assistant-voice.yaml
+  api: !include ../common/.api.yaml
 
 micro_wake_word:
   models:

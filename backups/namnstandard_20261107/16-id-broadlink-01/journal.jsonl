@@ -1,0 +1,4 @@
+{"status": "rename_intent", "old": "infrared.broadlink_rm4_mini_ir_sandare", "new": "infrared.koket_ir_fjarrkontroll_ir_sandare"}
+{"status": "renamed", "old": "infrared.broadlink_rm4_mini_ir_sandare", "new": "infrared.koket_ir_fjarrkontroll_ir_sandare"}
+{"status": "rename_intent", "old": "remote.broadlink_rm4_mini", "new": "remote.koket_ir_fjarrkontroll"}
+{"status": "renamed", "old": "remote.broadlink_rm4_mini", "new": "remote.koket_ir_fjarrkontroll"}

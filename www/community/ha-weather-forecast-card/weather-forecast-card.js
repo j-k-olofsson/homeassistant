@@ -64,12 +64,12 @@ let t,e;function i(t,e,i,r){Object.defineProperty(t,e,{get:i,set:r,enumerable:!0
       justify-content: space-between;
       cursor: pointer;
       font-family: var(
-        --mdc-typography-subtitle1-font-family,
+        --ha-font-family-body,
         Roboto,
         sans-serif
       );
-      font-size: var(--mdc-typography-subtitle1-font-size, 1rem);
-      font-weight: var(--mdc-typography-subtitle1-font-weight, 400);
+      font-size: var(--ha-font-size-m, 1rem);
+      font-weight: var(--ha-font-weight-normal, 400);
       color: var(--primary-text-color);
       transition: background-color 0.1s;
       white-space: nowrap;

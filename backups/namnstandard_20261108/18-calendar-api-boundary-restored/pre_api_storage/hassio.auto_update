@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "minor_version": 3,
+  "key": "hassio.auto_update",
+  "data": {
+    "first_seen": {
+      "2026.11.0": "2026-11-05T07:14:45.449338+00:00"
+    },
+    "skipped": [],
+    "withdrawn": [],
+    "window_offset": 0.9464004172637296,
+    "attempted_window": null
+  }
+}

@@ -1,0 +1,3486 @@
+{
+  "button.verandan_balkongdorr_batteri_bytt": [
+    {
+      "state": "2026-06-28T09:07:12.858152+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.verandan_balkongdorr_batterityp": [
+    {
+      "state": "CR2032",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.verandan_balkongdorr_senaste_batteribyte": [
+    {
+      "state": "2026-10-06T15:03:13+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.verandan_balkongdorr_batteriinformation": [
+    {
+      "state": "81.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "82.0",
+      "last_changed": "2026-11-07T10:00:26.706780+00:00"
+    },
+    {
+      "state": "81.0",
+      "last_changed": "2026-11-07T10:30:26.717840+00:00"
+    },
+    {
+      "state": "80.0",
+      "last_changed": "2026-11-07T11:00:26.469958+00:00"
+    },
+    {
+      "state": "79.0",
+      "last_changed": "2026-11-07T13:00:26.123789+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.660859+00:00"
+    },
+    {
+      "state": "79.0",
+      "last_changed": "2026-11-07T13:25:17.602841+00:00"
+    },
+    {
+      "state": "80.0",
+      "last_changed": "2026-11-07T13:30:26.059202+00:00"
+    },
+    {
+      "state": "79.0",
+      "last_changed": "2026-11-07T15:00:25.618018+00:00"
+    },
+    {
+      "state": "80.0",
+      "last_changed": "2026-11-07T16:00:25.338862+00:00"
+    },
+    {
+      "state": "79.0",
+      "last_changed": "2026-11-07T16:30:25.320880+00:00"
+    },
+    {
+      "state": "80.0",
+      "last_changed": "2026-11-07T17:00:25.142454+00:00"
+    },
+    {
+      "state": "81.0",
+      "last_changed": "2026-11-07T20:30:24.401186+00:00"
+    },
+    {
+      "state": "80.0",
+      "last_changed": "2026-11-07T21:00:24.386732+00:00"
+    },
+    {
+      "state": "82.0",
+      "last_changed": "2026-11-07T22:00:24.051938+00:00"
+    },
+    {
+      "state": "80.0",
+      "last_changed": "2026-11-07T22:30:24.040604+00:00"
+    },
+    {
+      "state": "81.0",
+      "last_changed": "2026-11-07T23:00:23.882963+00:00"
+    },
+    {
+      "state": "82.0",
+      "last_changed": "2026-11-08T00:00:23.691339+00:00"
+    },
+    {
+      "state": "81.0",
+      "last_changed": "2026-11-08T00:30:23.617850+00:00"
+    },
+    {
+      "state": "80.0",
+      "last_changed": "2026-11-08T01:00:23.525398+00:00"
+    },
+    {
+      "state": "82.0",
+      "last_changed": "2026-11-08T01:30:23.426626+00:00"
+    },
+    {
+      "state": "81.0",
+      "last_changed": "2026-11-08T02:30:23.184167+00:00"
+    },
+    {
+      "state": "82.0",
+      "last_changed": "2026-11-08T03:00:23.004827+00:00"
+    },
+    {
+      "state": "83.0",
+      "last_changed": "2026-11-08T05:30:22.581407+00:00"
+    },
+    {
+      "state": "82.0",
+      "last_changed": "2026-11-08T06:00:22.309694+00:00"
+    },
+    {
+      "state": "81.0",
+      "last_changed": "2026-11-08T06:30:22.346835+00:00"
+    },
+    {
+      "state": "83.0",
+      "last_changed": "2026-11-08T07:00:22.341498+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.588577+00:00"
+    },
+    {
+      "state": "83.0",
+      "last_changed": "2026-11-08T07:03:40.894261+00:00"
+    },
+    {
+      "state": "80.0",
+      "last_changed": "2026-11-08T07:30:22.056496+00:00"
+    }
+  ],
+  "binary_sensor.verandan_balkongdorr_lag_batteriniva": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.642686+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:25:17.602179+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.560091+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:40.893611+00:00"
+    }
+  ],
+  "button.honshuset_klimatsensor_batteri_bytt": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.honshuset_klimatsensor_batterityp": [
+    {
+      "state": "CR2032",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.honshuset_klimatsensor_senaste_batteribyte": [
+    {
+      "state": "2025-12-09T07:23:10+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.honshuset_klimatsensor_batteriinformation": [
+    {
+      "state": "52.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "53.0",
+      "last_changed": "2026-11-07T08:18:25.139910+00:00"
+    },
+    {
+      "state": "54.0",
+      "last_changed": "2026-11-07T09:03:41.770050+00:00"
+    },
+    {
+      "state": "55.0",
+      "last_changed": "2026-11-07T10:04:06.086641+00:00"
+    },
+    {
+      "state": "54.0",
+      "last_changed": "2026-11-07T10:11:39.108869+00:00"
+    },
+    {
+      "state": "55.0",
+      "last_changed": "2026-11-07T10:26:46.638986+00:00"
+    },
+    {
+      "state": "54.0",
+      "last_changed": "2026-11-07T10:34:19.927870+00:00"
+    },
+    {
+      "state": "55.0",
+      "last_changed": "2026-11-07T10:49:24.138989+00:00"
+    },
+    {
+      "state": "54.0",
+      "last_changed": "2026-11-07T10:56:57.064380+00:00"
+    },
+    {
+      "state": "55.0",
+      "last_changed": "2026-11-07T11:04:30.114037+00:00"
+    },
+    {
+      "state": "54.0",
+      "last_changed": "2026-11-07T11:12:03.049074+00:00"
+    },
+    {
+      "state": "55.0",
+      "last_changed": "2026-11-07T11:27:09.299425+00:00"
+    },
+    {
+      "state": "54.0",
+      "last_changed": "2026-11-07T12:42:40.164613+00:00"
+    },
+    {
+      "state": "55.0",
+      "last_changed": "2026-11-07T12:57:47.841968+00:00"
+    },
+    {
+      "state": "54.0",
+      "last_changed": "2026-11-07T13:12:52.156521+00:00"
+    },
+    {
+      "state": "55.0",
+      "last_changed": "2026-11-07T13:20:25.183107+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.667779+00:00"
+    },
+    {
+      "state": "55.0",
+      "last_changed": "2026-11-07T13:25:17.629486+00:00"
+    },
+    {
+      "state": "54.0",
+      "last_changed": "2026-11-07T13:43:06.318503+00:00"
+    },
+    {
+      "state": "55.0",
+      "last_changed": "2026-11-07T13:50:37.492201+00:00"
+    },
+    {
+      "state": "54.0",
+      "last_changed": "2026-11-07T14:28:23.136618+00:00"
+    },
+    {
+      "state": "53.0",
+      "last_changed": "2026-11-07T15:59:01.119546+00:00"
+    },
+    {
+      "state": "54.0",
+      "last_changed": "2026-11-07T16:14:05.298869+00:00"
+    },
+    {
+      "state": "53.0",
+      "last_changed": "2026-11-07T16:29:11.596849+00:00"
+    },
+    {
+      "state": "54.0",
+      "last_changed": "2026-11-07T16:44:17.612596+00:00"
+    },
+    {
+      "state": "53.0",
+      "last_changed": "2026-11-07T16:51:50.460053+00:00"
+    },
+    {
+      "state": "52.0",
+      "last_changed": "2026-11-07T21:16:08.689801+00:00"
+    },
+    {
+      "state": "53.0",
+      "last_changed": "2026-11-07T21:23:39.875636+00:00"
+    },
+    {
+      "state": "52.0",
+      "last_changed": "2026-11-07T21:31:13.130243+00:00"
+    },
+    {
+      "state": "53.0",
+      "last_changed": "2026-11-07T21:38:46.143299+00:00"
+    },
+    {
+      "state": "52.0",
+      "last_changed": "2026-11-07T21:53:52.208723+00:00"
+    },
+    {
+      "state": "53.0",
+      "last_changed": "2026-11-07T22:16:31.566134+00:00"
+    },
+    {
+      "state": "52.0",
+      "last_changed": "2026-11-07T22:31:39.662153+00:00"
+    },
+    {
+      "state": "53.0",
+      "last_changed": "2026-11-08T00:17:20.486593+00:00"
+    },
+    {
+      "state": "52.0",
+      "last_changed": "2026-11-08T00:32:26.675232+00:00"
+    },
+    {
+      "state": "53.0",
+      "last_changed": "2026-11-08T00:39:59.499754+00:00"
+    },
+    {
+      "state": "52.0",
+      "last_changed": "2026-11-08T00:47:32.591994+00:00"
+    },
+    {
+      "state": "53.0",
+      "last_changed": "2026-11-08T01:17:44.386885+00:00"
+    },
+    {
+      "state": "52.0",
+      "last_changed": "2026-11-08T01:25:17.410722+00:00"
+    },
+    {
+      "state": "53.0",
+      "last_changed": "2026-11-08T02:40:47.569237+00:00"
+    },
+    {
+      "state": "52.0",
+      "last_changed": "2026-11-08T02:55:55.159316+00:00"
+    },
+    {
+      "state": "53.0",
+      "last_changed": "2026-11-08T03:10:59.368270+00:00"
+    },
+    {
+      "state": "52.0",
+      "last_changed": "2026-11-08T03:18:32.403748+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.590744+00:00"
+    },
+    {
+      "state": "52.0",
+      "last_changed": "2026-11-08T07:03:40.946837+00:00"
+    },
+    {
+      "state": "53.0",
+      "last_changed": "2026-11-08T07:35:13.739105+00:00"
+    }
+  ],
+  "binary_sensor.honshuset_klimatsensor_lag_batteriniva": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.643403+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:25:17.628851+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.566374+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:40.945767+00:00"
+    }
+  ],
+  "button.ateljen_klimatsensor_batteri_bytt": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.ateljen_klimatsensor_batterityp": [
+    {
+      "state": "CR2032",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.ateljen_klimatsensor_senaste_batteribyte": [
+    {
+      "state": "2026-08-20T14:24:01+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.ateljen_klimatsensor_batteriinformation": [
+    {
+      "state": "74.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-07T11:43:22.210583+00:00"
+    },
+    {
+      "state": "74.0",
+      "last_changed": "2026-11-07T11:50:51.915226+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-07T11:58:14.189440+00:00"
+    },
+    {
+      "state": "74.0",
+      "last_changed": "2026-11-07T12:13:42.000828+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-07T12:21:02.338306+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.669659+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-07T13:25:17.620825+00:00"
+    },
+    {
+      "state": "74.0",
+      "last_changed": "2026-11-07T18:46:45.978074+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-07T18:54:13.516660+00:00"
+    },
+    {
+      "state": "74.0",
+      "last_changed": "2026-11-07T19:24:05.931981+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-07T19:32:00.185564+00:00"
+    },
+    {
+      "state": "74.0",
+      "last_changed": "2026-11-07T19:39:12.581936+00:00"
+    },
+    {
+      "state": "73.0",
+      "last_changed": "2026-11-07T21:24:58.916475+00:00"
+    },
+    {
+      "state": "74.0",
+      "last_changed": "2026-11-07T21:32:36.097960+00:00"
+    },
+    {
+      "state": "73.0",
+      "last_changed": "2026-11-07T21:40:15.235657+00:00"
+    },
+    {
+      "state": "74.0",
+      "last_changed": "2026-11-07T21:47:42.763978+00:00"
+    },
+    {
+      "state": "73.0",
+      "last_changed": "2026-11-07T21:55:29.310467+00:00"
+    },
+    {
+      "state": "72.0",
+      "last_changed": "2026-11-08T00:18:55.339797+00:00"
+    },
+    {
+      "state": "73.0",
+      "last_changed": "2026-11-08T00:26:19.282725+00:00"
+    },
+    {
+      "state": "72.0",
+      "last_changed": "2026-11-08T00:41:35.217640+00:00"
+    },
+    {
+      "state": "73.0",
+      "last_changed": "2026-11-08T00:48:58.837575+00:00"
+    },
+    {
+      "state": "72.0",
+      "last_changed": "2026-11-08T00:56:32.143453+00:00"
+    },
+    {
+      "state": "71.0",
+      "last_changed": "2026-11-08T03:20:09.495512+00:00"
+    },
+    {
+      "state": "72.0",
+      "last_changed": "2026-11-08T03:27:38.989044+00:00"
+    },
+    {
+      "state": "71.0",
+      "last_changed": "2026-11-08T03:42:49.495432+00:00"
+    },
+    {
+      "state": "72.0",
+      "last_changed": "2026-11-08T06:06:21.528336+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.592689+00:00"
+    },
+    {
+      "state": "72.0",
+      "last_changed": "2026-11-08T07:03:40.938340+00:00"
+    }
+  ],
+  "binary_sensor.ateljen_klimatsensor_lag_batteriniva": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.644122+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:25:17.620160+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.566919+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:40.937766+00:00"
+    }
+  ],
+  "button.sovrummet_klimatsensor_batteri_bytt": [
+    {
+      "state": "2026-09-07T14:42:45.536117+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.sovrummet_klimatsensor_batterityp": [
+    {
+      "state": "CR2032",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.sovrummet_klimatsensor_senaste_batteribyte": [
+    {
+      "state": "2026-09-07T14:42:45+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.sovrummet_klimatsensor_batteriinformation": [
+    {
+      "state": "87.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.672483+00:00"
+    },
+    {
+      "state": "87.0",
+      "last_changed": "2026-11-07T13:25:17.608185+00:00"
+    },
+    {
+      "state": "86.0",
+      "last_changed": "2026-11-08T00:41:25.029668+00:00"
+    },
+    {
+      "state": "87.0",
+      "last_changed": "2026-11-08T00:49:06.300782+00:00"
+    },
+    {
+      "state": "86.0",
+      "last_changed": "2026-11-08T01:04:05.960527+00:00"
+    },
+    {
+      "state": "87.0",
+      "last_changed": "2026-11-08T01:11:41.539049+00:00"
+    },
+    {
+      "state": "86.0",
+      "last_changed": "2026-11-08T01:34:22.271341+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.596266+00:00"
+    },
+    {
+      "state": "86.0",
+      "last_changed": "2026-11-08T07:03:40.923483+00:00"
+    }
+  ],
+  "binary_sensor.sovrummet_klimatsensor_lag_batteriniva": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.644821+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:25:17.607540+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.567809+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:40.922882+00:00"
+    }
+  ],
+  "button.utomhus_klimatsensor_batteri_bytt": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.utomhus_klimatsensor_batterityp": [
+    {
+      "state": "CR2032",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.utomhus_klimatsensor_senaste_batteribyte": [
+    {
+      "state": "2025-11-22T09:15:38+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.utomhus_klimatsensor_batteriinformation": [
+    {
+      "state": "53.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "54.0",
+      "last_changed": "2026-11-07T08:25:52.652795+00:00"
+    },
+    {
+      "state": "55.0",
+      "last_changed": "2026-11-07T09:57:59.923807+00:00"
+    },
+    {
+      "state": "56.0",
+      "last_changed": "2026-11-07T11:30:09.317564+00:00"
+    },
+    {
+      "state": "55.0",
+      "last_changed": "2026-11-07T11:45:28.694330+00:00"
+    },
+    {
+      "state": "56.0",
+      "last_changed": "2026-11-07T12:16:19.316019+00:00"
+    },
+    {
+      "state": "55.0",
+      "last_changed": "2026-11-07T12:31:32.518686+00:00"
+    },
+    {
+      "state": "56.0",
+      "last_changed": "2026-11-07T12:46:53.623186+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.673520+00:00"
+    },
+    {
+      "state": "56.0",
+      "last_changed": "2026-11-07T13:25:17.625967+00:00"
+    },
+    {
+      "state": "55.0",
+      "last_changed": "2026-11-07T13:32:59.268589+00:00"
+    },
+    {
+      "state": "54.0",
+      "last_changed": "2026-11-07T15:35:48.516367+00:00"
+    },
+    {
+      "state": "53.0",
+      "last_changed": "2026-11-07T21:13:33.815817+00:00"
+    },
+    {
+      "state": "54.0",
+      "last_changed": "2026-11-07T21:59:39.772695+00:00"
+    },
+    {
+      "state": "53.0",
+      "last_changed": "2026-11-07T22:14:59.146757+00:00"
+    },
+    {
+      "state": "52.0",
+      "last_changed": "2026-11-08T05:55:45.181767+00:00"
+    },
+    {
+      "state": "53.0",
+      "last_changed": "2026-11-08T06:26:21.547962+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:36.002268+00:00"
+    },
+    {
+      "state": "53.0",
+      "last_changed": "2026-11-08T07:03:40.943569+00:00"
+    }
+  ],
+  "binary_sensor.utomhus_klimatsensor_lag_batteriniva": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.645102+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:25:17.625181+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.569172+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:40.942359+00:00"
+    }
+  ],
+  "button.verandan_klimatsensor_batteri_bytt": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.verandan_klimatsensor_batterityp": [
+    {
+      "state": "CR2032",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.verandan_klimatsensor_senaste_batteribyte": [
+    {
+      "state": "2026-08-03T04:57:34+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.verandan_klimatsensor_batteriinformation": [
+    {
+      "state": "76.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-07T09:25:07.787845+00:00"
+    },
+    {
+      "state": "76.0",
+      "last_changed": "2026-11-07T09:32:33.418769+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-07T12:18:48.856266+00:00"
+    },
+    {
+      "state": "76.0",
+      "last_changed": "2026-11-07T12:49:00.395491+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-07T12:56:43.144497+00:00"
+    },
+    {
+      "state": "76.0",
+      "last_changed": "2026-11-07T13:04:18.389945+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.674527+00:00"
+    },
+    {
+      "state": "76.0",
+      "last_changed": "2026-11-07T13:25:17.589703+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-07T15:42:48.860076+00:00"
+    },
+    {
+      "state": "76.0",
+      "last_changed": "2026-11-07T15:50:26.009405+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-07T15:58:01.489342+00:00"
+    },
+    {
+      "state": "76.0",
+      "last_changed": "2026-11-07T16:05:29.083102+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-07T16:13:04.368389+00:00"
+    },
+    {
+      "state": "76.0",
+      "last_changed": "2026-11-07T16:20:41.301549+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-07T16:35:40.283736+00:00"
+    },
+    {
+      "state": "76.0",
+      "last_changed": "2026-11-07T17:28:53.567560+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-07T17:51:26.385078+00:00"
+    },
+    {
+      "state": "76.0",
+      "last_changed": "2026-11-07T18:13:55.420618+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-07T18:21:37.800916+00:00"
+    },
+    {
+      "state": "76.0",
+      "last_changed": "2026-11-07T18:29:01.768797+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-07T18:36:38.712632+00:00"
+    },
+    {
+      "state": "76.0",
+      "last_changed": "2026-11-07T18:44:08.163415+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-07T18:51:51.132569+00:00"
+    },
+    {
+      "state": "76.0",
+      "last_changed": "2026-11-07T18:59:18.942774+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-07T21:53:06.030631+00:00"
+    },
+    {
+      "state": "76.0",
+      "last_changed": "2026-11-07T22:00:39.280200+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-07T22:23:27.191746+00:00"
+    },
+    {
+      "state": "76.0",
+      "last_changed": "2026-11-07T22:30:49.219441+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-07T22:53:29.746488+00:00"
+    },
+    {
+      "state": "74.0",
+      "last_changed": "2026-11-07T23:54:06.533433+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-08T00:01:42.036245+00:00"
+    },
+    {
+      "state": "74.0",
+      "last_changed": "2026-11-08T00:16:46.756896+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-08T01:02:00.774455+00:00"
+    },
+    {
+      "state": "74.0",
+      "last_changed": "2026-11-08T01:09:30.477583+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-08T01:47:19.098092+00:00"
+    },
+    {
+      "state": "74.0",
+      "last_changed": "2026-11-08T01:54:52.423076+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-08T02:10:09.683661+00:00"
+    },
+    {
+      "state": "74.0",
+      "last_changed": "2026-11-08T02:17:30.524428+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-08T02:32:37.457410+00:00"
+    },
+    {
+      "state": "74.0",
+      "last_changed": "2026-11-08T02:40:10.780955+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-08T02:47:51.819764+00:00"
+    },
+    {
+      "state": "74.0",
+      "last_changed": "2026-11-08T03:03:00.402281+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-08T03:10:24.335245+00:00"
+    },
+    {
+      "state": "74.0",
+      "last_changed": "2026-11-08T03:18:07.057472+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-08T03:33:10.159431+00:00"
+    },
+    {
+      "state": "74.0",
+      "last_changed": "2026-11-08T03:40:43.474044+00:00"
+    },
+    {
+      "state": "73.0",
+      "last_changed": "2026-11-08T04:33:32.512304+00:00"
+    },
+    {
+      "state": "74.0",
+      "last_changed": "2026-11-08T04:56:12.497889+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-08T05:03:45.835251+00:00"
+    },
+    {
+      "state": "76.0",
+      "last_changed": "2026-11-08T05:41:34.667274+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-08T05:49:04.192000+00:00"
+    },
+    {
+      "state": "76.0",
+      "last_changed": "2026-11-08T06:04:13.001862+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:36.003634+00:00"
+    },
+    {
+      "state": "76.0",
+      "last_changed": "2026-11-08T07:03:40.915078+00:00"
+    }
+  ],
+  "binary_sensor.verandan_klimatsensor_lag_batteriniva": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.645425+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:25:17.589094+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.569448+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:40.914371+00:00"
+    }
+  ],
+  "button.verkstaden_klimatsensor_batteri_bytt": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.verkstaden_klimatsensor_batterityp": [
+    {
+      "state": "CR2032",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.verkstaden_klimatsensor_senaste_batteribyte": [
+    {
+      "state": "2026-02-20T07:39:35+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.verkstaden_klimatsensor_batteriinformation": [
+    {
+      "state": "71.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "72.0",
+      "last_changed": "2026-11-07T09:05:22.584307+00:00"
+    },
+    {
+      "state": "73.0",
+      "last_changed": "2026-11-07T11:08:14.211855+00:00"
+    },
+    {
+      "state": "72.0",
+      "last_changed": "2026-11-07T11:38:59.986092+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.675506+00:00"
+    },
+    {
+      "state": "72.0",
+      "last_changed": "2026-11-07T13:25:17.616047+00:00"
+    },
+    {
+      "state": "71.0",
+      "last_changed": "2026-11-07T13:41:54.932417+00:00"
+    },
+    {
+      "state": "72.0",
+      "last_changed": "2026-11-07T13:57:09.505299+00:00"
+    },
+    {
+      "state": "71.0",
+      "last_changed": "2026-11-07T14:12:36.866554+00:00"
+    },
+    {
+      "state": "70.0",
+      "last_changed": "2026-11-07T19:50:31.616801+00:00"
+    },
+    {
+      "state": "71.0",
+      "last_changed": "2026-11-07T20:06:03.045688+00:00"
+    },
+    {
+      "state": "70.0",
+      "last_changed": "2026-11-07T20:52:07.036320+00:00"
+    },
+    {
+      "state": "71.0",
+      "last_changed": "2026-11-07T21:07:23.558371+00:00"
+    },
+    {
+      "state": "70.0",
+      "last_changed": "2026-11-07T21:22:54.497344+00:00"
+    },
+    {
+      "state": "71.0",
+      "last_changed": "2026-11-07T21:38:12.701081+00:00"
+    },
+    {
+      "state": "70.0",
+      "last_changed": "2026-11-07T23:10:23.563456+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:36.004776+00:00"
+    },
+    {
+      "state": "70.0",
+      "last_changed": "2026-11-08T07:03:40.932158+00:00"
+    }
+  ],
+  "binary_sensor.verkstaden_klimatsensor_lag_batteriniva": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.645705+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:25:17.615491+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.569710+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:40.931638+00:00"
+    }
+  ],
+  "button.entren_ytterdorren_batteri_bytt": [
+    {
+      "state": "2026-04-13T14:09:10.033100+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.entren_ytterdorren_batterityp": [
+    {
+      "state": "AA",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.entren_ytterdorren_senaste_batteribyte": [
+    {
+      "state": "2026-04-13T14:09:10+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.entren_ytterdorren_batteriinformation": [
+    {
+      "state": "56.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.678250+00:00"
+    },
+    {
+      "state": "55.0",
+      "last_changed": "2026-11-07T13:25:17.730353+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:36.006444+00:00"
+    },
+    {
+      "state": "56.0",
+      "last_changed": "2026-11-08T07:03:41.551028+00:00"
+    }
+  ],
+  "binary_sensor.entren_ytterdorren_lag_batteriniva": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.646723+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:25:17.729314+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.570312+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:41.550382+00:00"
+    }
+  ],
+  "button.ateljen_vattensensor_torkskap_batteri_bytt_batteripost_6053a7c9": [
+    {
+      "state": "2025-01-17T03:56:57.893904+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.ateljen_vattensensor_torkskap_batterityp_batteripost_6053a7c9": [
+    {
+      "state": "CR123A",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.ateljen_vattensensor_torkskap_senaste_batteribyte_batteripost_6053a7c9": [
+    {
+      "state": "2025-01-17T03:56:57+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "button.koket_klimatsensor_batteri_bytt": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.koket_klimatsensor_batterityp": [
+    {
+      "state": "CR2032",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.koket_klimatsensor_senaste_batteribyte": [
+    {
+      "state": "2026-02-10T11:02:48+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.koket_klimatsensor_batteriinformation": [
+    {
+      "state": "68.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "69.0",
+      "last_changed": "2026-11-07T11:49:26.572131+00:00"
+    },
+    {
+      "state": "68.0",
+      "last_changed": "2026-11-07T12:27:31.375046+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.680708+00:00"
+    },
+    {
+      "state": "68.0",
+      "last_changed": "2026-11-07T13:25:17.633645+00:00"
+    },
+    {
+      "state": "67.0",
+      "last_changed": "2026-11-07T14:35:44.608152+00:00"
+    },
+    {
+      "state": "68.0",
+      "last_changed": "2026-11-07T14:43:08.351507+00:00"
+    },
+    {
+      "state": "67.0",
+      "last_changed": "2026-11-07T14:58:14.738529+00:00"
+    },
+    {
+      "state": "68.0",
+      "last_changed": "2026-11-07T15:13:30.543623+00:00"
+    },
+    {
+      "state": "67.0",
+      "last_changed": "2026-11-07T15:20:59.906379+00:00"
+    },
+    {
+      "state": "68.0",
+      "last_changed": "2026-11-07T15:58:39.931964+00:00"
+    },
+    {
+      "state": "67.0",
+      "last_changed": "2026-11-07T16:06:12.569135+00:00"
+    },
+    {
+      "state": "66.0",
+      "last_changed": "2026-11-07T19:45:21.766254+00:00"
+    },
+    {
+      "state": "67.0",
+      "last_changed": "2026-11-07T19:52:52.935689+00:00"
+    },
+    {
+      "state": "66.0",
+      "last_changed": "2026-11-07T20:00:31.778608+00:00"
+    },
+    {
+      "state": "65.0",
+      "last_changed": "2026-11-07T22:16:13.921659+00:00"
+    },
+    {
+      "state": "66.0",
+      "last_changed": "2026-11-07T22:54:37.161307+00:00"
+    },
+    {
+      "state": "65.0",
+      "last_changed": "2026-11-07T23:09:07.489683+00:00"
+    },
+    {
+      "state": "66.0",
+      "last_changed": "2026-11-07T23:24:21.093323+00:00"
+    },
+    {
+      "state": "65.0",
+      "last_changed": "2026-11-07T23:39:21.772379+00:00"
+    },
+    {
+      "state": "66.0",
+      "last_changed": "2026-11-07T23:47:10.008529+00:00"
+    },
+    {
+      "state": "65.0",
+      "last_changed": "2026-11-07T23:54:39.249001+00:00"
+    },
+    {
+      "state": "66.0",
+      "last_changed": "2026-11-08T00:17:12.505310+00:00"
+    },
+    {
+      "state": "65.0",
+      "last_changed": "2026-11-08T00:24:45.610587+00:00"
+    },
+    {
+      "state": "66.0",
+      "last_changed": "2026-11-08T00:32:09.304578+00:00"
+    },
+    {
+      "state": "65.0",
+      "last_changed": "2026-11-08T00:39:45.967170+00:00"
+    },
+    {
+      "state": "64.0",
+      "last_changed": "2026-11-08T03:40:57.914772+00:00"
+    },
+    {
+      "state": "63.0",
+      "last_changed": "2026-11-08T04:03:51.848941+00:00"
+    },
+    {
+      "state": "64.0",
+      "last_changed": "2026-11-08T04:34:15.087200+00:00"
+    },
+    {
+      "state": "63.0",
+      "last_changed": "2026-11-08T04:56:33.414199+00:00"
+    },
+    {
+      "state": "64.0",
+      "last_changed": "2026-11-08T05:11:39.134774+00:00"
+    },
+    {
+      "state": "65.0",
+      "last_changed": "2026-11-08T05:34:22.056295+00:00"
+    },
+    {
+      "state": "66.0",
+      "last_changed": "2026-11-08T05:56:57.502628+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:36.008540+00:00"
+    },
+    {
+      "state": "66.0",
+      "last_changed": "2026-11-08T07:03:40.950850+00:00"
+    },
+    {
+      "state": "65.0",
+      "last_changed": "2026-11-08T07:04:57.213005+00:00"
+    }
+  ],
+  "binary_sensor.koket_klimatsensor_lag_batteriniva": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.647469+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:25:17.633136+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.570755+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:40.950311+00:00"
+    }
+  ],
+  "button.heimdal_ha_pixel_9_pro_xl_batteri_bytt": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.heimdal_ha_pixel_9_pro_xl_batterityp": [
+    {
+      "state": "Rechargeable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.heimdal_ha_pixel_9_pro_xl_senaste_batteribyte": [
+    {
+      "state": "2026-11-02T23:03:24+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "binary_sensor.heimdal_ha_pixel_9_pro_xl_lag_batteriniva": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.571024+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:36.098225+00:00"
+    }
+  ],
+  "button.entren_klimatsensor_batteri_bytt": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.entren_klimatsensor_batterityp": [
+    {
+      "state": "CR2032",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.entren_klimatsensor_senaste_batteribyte": [
+    {
+      "state": "2026-05-19T05:42:02+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.entren_klimatsensor_batteriinformation": [
+    {
+      "state": "78.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-07T08:24:42.253083+00:00"
+    },
+    {
+      "state": "78.0",
+      "last_changed": "2026-11-07T08:39:46.767133+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-07T08:47:27.780694+00:00"
+    },
+    {
+      "state": "78.0",
+      "last_changed": "2026-11-07T08:55:01.154228+00:00"
+    },
+    {
+      "state": "79.0",
+      "last_changed": "2026-11-07T09:40:17.518159+00:00"
+    },
+    {
+      "state": "80.0",
+      "last_changed": "2026-11-07T10:10:27.253773+00:00"
+    },
+    {
+      "state": "79.0",
+      "last_changed": "2026-11-07T10:18:08.531257+00:00"
+    },
+    {
+      "state": "80.0",
+      "last_changed": "2026-11-07T10:25:41.868517+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.683346+00:00"
+    },
+    {
+      "state": "80.0",
+      "last_changed": "2026-11-07T13:25:17.637176+00:00"
+    },
+    {
+      "state": "81.0",
+      "last_changed": "2026-11-07T15:50:31.685903+00:00"
+    },
+    {
+      "state": "80.0",
+      "last_changed": "2026-11-07T15:58:05.282227+00:00"
+    },
+    {
+      "state": "81.0",
+      "last_changed": "2026-11-07T16:05:46.325494+00:00"
+    },
+    {
+      "state": "80.0",
+      "last_changed": "2026-11-07T16:13:15.797240+00:00"
+    },
+    {
+      "state": "81.0",
+      "last_changed": "2026-11-07T17:59:08.049648+00:00"
+    },
+    {
+      "state": "80.0",
+      "last_changed": "2026-11-07T18:06:39.702117+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:36.011934+00:00"
+    },
+    {
+      "state": "80.0",
+      "last_changed": "2026-11-08T07:03:40.955334+00:00"
+    }
+  ],
+  "binary_sensor.entren_klimatsensor_lag_batteriniva": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.648221+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:25:17.636530+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.571436+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:40.954793+00:00"
+    }
+  ],
+  "button.verandan_plantsensor_3_batteri_bytt": [
+    {
+      "state": "2026-03-28T05:21:56.692140+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.verandan_plantsensor_3_batterityp": [
+    {
+      "state": "CR2032",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.verandan_plantsensor_3_senaste_batteribyte": [
+    {
+      "state": "2026-09-06T12:52:58+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.verandan_plantsensor_3_batteriinformation": [
+    {
+      "state": "30.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.685004+00:00"
+    },
+    {
+      "state": "30.0",
+      "last_changed": "2026-11-07T13:25:17.662127+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:36.014363+00:00"
+    },
+    {
+      "state": "30.0",
+      "last_changed": "2026-11-08T07:03:40.963933+00:00"
+    }
+  ],
+  "binary_sensor.verandan_plantsensor_3_lag_batteriniva": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.648724+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:25:17.661394+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.571942+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:40.963362+00:00"
+    }
+  ],
+  "button.verandan_plantsensor_4_batteri_bytt": [
+    {
+      "state": "2026-02-28T08:40:51.490493+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.verandan_plantsensor_4_batterityp": [
+    {
+      "state": "CR2032",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.verandan_plantsensor_4_senaste_batteribyte": [
+    {
+      "state": "2026-09-06T12:52:55+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.verandan_plantsensor_4_batteriinformation": [
+    {
+      "state": "18.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.685822+00:00"
+    },
+    {
+      "state": "18.0",
+      "last_changed": "2026-11-07T13:25:17.664959+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:36.015265+00:00"
+    },
+    {
+      "state": "18.0",
+      "last_changed": "2026-11-08T07:03:40.967392+00:00"
+    }
+  ],
+  "binary_sensor.verandan_plantsensor_4_lag_batteriniva": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.648976+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:25:17.664476+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.572187+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:40.966819+00:00"
+    }
+  ],
+  "sensor.duschen_klimatsensor_senaste_batteribyte": [
+    {
+      "state": "2025-01-30T19:33:53+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "binary_sensor.duschen_klimatsensor_lag_batteriniva": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.648480+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:25:17.654474+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.571703+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:40.958436+00:00"
+    }
+  ],
+  "button.duschen_klimatsensor_batteri_bytt": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.duschen_klimatsensor_batterityp": [
+    {
+      "state": "CR2032",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.duschen_klimatsensor_batteriinformation": [
+    {
+      "state": "82.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.684189+00:00"
+    },
+    {
+      "state": "82.0",
+      "last_changed": "2026-11-07T13:25:17.655393+00:00"
+    },
+    {
+      "state": "78.0",
+      "last_changed": "2026-11-07T18:27:24.284701+00:00"
+    },
+    {
+      "state": "79.0",
+      "last_changed": "2026-11-07T18:42:27.094683+00:00"
+    },
+    {
+      "state": "78.0",
+      "last_changed": "2026-11-07T18:50:04.032305+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-07T19:05:08.756782+00:00"
+    },
+    {
+      "state": "79.0",
+      "last_changed": "2026-11-07T19:12:39.949261+00:00"
+    },
+    {
+      "state": "78.0",
+      "last_changed": "2026-11-08T01:26:39.586211+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-08T01:56:45.181572+00:00"
+    },
+    {
+      "state": "78.0",
+      "last_changed": "2026-11-08T02:04:25.010275+00:00"
+    },
+    {
+      "state": "79.0",
+      "last_changed": "2026-11-08T02:11:51.807687+00:00"
+    },
+    {
+      "state": "78.0",
+      "last_changed": "2026-11-08T02:34:31.594431+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-08T02:49:38.230637+00:00"
+    },
+    {
+      "state": "78.0",
+      "last_changed": "2026-11-08T02:57:19.058319+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-08T03:04:52.153870+00:00"
+    },
+    {
+      "state": "78.0",
+      "last_changed": "2026-11-08T03:19:56.655049+00:00"
+    },
+    {
+      "state": "79.0",
+      "last_changed": "2026-11-08T03:27:29.938942+00:00"
+    },
+    {
+      "state": "78.0",
+      "last_changed": "2026-11-08T04:43:03.238942+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-08T05:05:57.908585+00:00"
+    },
+    {
+      "state": "78.0",
+      "last_changed": "2026-11-08T05:28:18.693357+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-08T05:35:55.946878+00:00"
+    },
+    {
+      "state": "78.0",
+      "last_changed": "2026-11-08T05:43:23.388899+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-08T05:51:02.487563+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-08T06:06:27.923654+00:00"
+    },
+    {
+      "state": "76.0",
+      "last_changed": "2026-11-08T06:13:40.554116+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-08T06:21:13.673197+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:36.013103+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-08T07:03:40.959357+00:00"
+    }
+  ],
+  "button.verandan_plantsensor_2_batteri_bytt": [
+    {
+      "state": "2026-10-02T05:42:31.702214+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.verandan_plantsensor_2_batterityp": [
+    {
+      "state": "CR2032",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.verandan_plantsensor_2_senaste_batteribyte": [
+    {
+      "state": "2026-10-02T05:44:54+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.verandan_plantsensor_2_batteriinformation": [
+    {
+      "state": "42.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.686635+00:00"
+    },
+    {
+      "state": "42.0",
+      "last_changed": "2026-11-07T13:25:17.672421+00:00"
+    },
+    {
+      "state": "46.0",
+      "last_changed": "2026-11-07T13:25:30.492542+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:36.016313+00:00"
+    },
+    {
+      "state": "46.0",
+      "last_changed": "2026-11-08T07:03:40.975502+00:00"
+    },
+    {
+      "state": "41.0",
+      "last_changed": "2026-11-08T07:03:54.494173+00:00"
+    }
+  ],
+  "binary_sensor.verandan_plantsensor_2_lag_batteriniva": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.649226+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:25:17.671940+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.572426+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:40.974916+00:00"
+    }
+  ],
+  "button.koket_plantsensor_1_batteri_bytt": [
+    {
+      "state": "2026-10-02T05:44:10.547944+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.koket_plantsensor_1_batterityp": [
+    {
+      "state": "CR2032",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.koket_plantsensor_1_senaste_batteribyte": [
+    {
+      "state": "2026-10-02T05:44:58+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.koket_plantsensor_1_batteriinformation": [
+    {
+      "state": "90.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.687495+00:00"
+    },
+    {
+      "state": "90.0",
+      "last_changed": "2026-11-07T13:25:17.669577+00:00"
+    },
+    {
+      "state": "95.0",
+      "last_changed": "2026-11-07T13:25:44.180001+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:36.017219+00:00"
+    },
+    {
+      "state": "95.0",
+      "last_changed": "2026-11-08T07:03:40.971650+00:00"
+    },
+    {
+      "state": "90.0",
+      "last_changed": "2026-11-08T07:04:02.493853+00:00"
+    }
+  ],
+  "binary_sensor.koket_plantsensor_1_lag_batteriniva": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.649465+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:25:17.669052+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.572661+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:40.971178+00:00"
+    }
+  ],
+  "button.koket_plantsensor_5_batteri_bytt": [
+    {
+      "state": "2026-04-18T05:27:16.530961+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.koket_plantsensor_5_batterityp": [
+    {
+      "state": "CR2032",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.koket_plantsensor_5_senaste_batteribyte": [
+    {
+      "state": "2026-04-18T05:27:16+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.koket_plantsensor_5_batteriinformation": [
+    {
+      "state": "27.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.688597+00:00"
+    },
+    {
+      "state": "27.0",
+      "last_changed": "2026-11-07T13:25:17.676270+00:00"
+    },
+    {
+      "state": "32.0",
+      "last_changed": "2026-11-07T13:25:46.512747+00:00"
+    },
+    {
+      "state": "31.0",
+      "last_changed": "2026-11-07T13:26:36.508565+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:36.018044+00:00"
+    },
+    {
+      "state": "31.0",
+      "last_changed": "2026-11-08T07:03:40.979230+00:00"
+    },
+    {
+      "state": "27.0",
+      "last_changed": "2026-11-08T07:03:52.491655+00:00"
+    }
+  ],
+  "binary_sensor.koket_plantsensor_5_lag_batteriniva": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.649709+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:25:17.675769+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.572893+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:40.978648+00:00"
+    }
+  ],
+  "button.toaletten_klimatsensor_batteri_bytt": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.toaletten_klimatsensor_batterityp": [
+    {
+      "state": "CR2032",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.toaletten_klimatsensor_senaste_batteribyte": [
+    {
+      "state": "2026-08-28T14:54:33+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.toaletten_klimatsensor_batteriinformation": [
+    {
+      "state": "86.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.689586+00:00"
+    },
+    {
+      "state": "86.0",
+      "last_changed": "2026-11-07T13:25:17.680970+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:36.019157+00:00"
+    },
+    {
+      "state": "86.0",
+      "last_changed": "2026-11-08T07:03:40.982830+00:00"
+    },
+    {
+      "state": "85.0",
+      "last_changed": "2026-11-08T07:19:58.778032+00:00"
+    },
+    {
+      "state": "86.0",
+      "last_changed": "2026-11-08T07:27:30.275748+00:00"
+    }
+  ],
+  "binary_sensor.toaletten_klimatsensor_lag_batteriniva": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.649949+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:25:17.680434+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.573139+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:40.982362+00:00"
+    }
+  ],
+  "sensor.heimdal_ha_pixel_9_pro_xl_batteriinformation": [
+    {
+      "state": "63.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "61.0",
+      "last_changed": "2026-11-07T07:54:00.291005+00:00"
+    },
+    {
+      "state": "58.0",
+      "last_changed": "2026-11-07T08:26:57.910768+00:00"
+    },
+    {
+      "state": "57.0",
+      "last_changed": "2026-11-07T08:48:01.247368+00:00"
+    },
+    {
+      "state": "55.0",
+      "last_changed": "2026-11-07T09:03:30.161429+00:00"
+    },
+    {
+      "state": "54.0",
+      "last_changed": "2026-11-07T09:19:04.084315+00:00"
+    },
+    {
+      "state": "52.0",
+      "last_changed": "2026-11-07T09:34:59.583250+00:00"
+    },
+    {
+      "state": "57.0",
+      "last_changed": "2026-11-07T10:09:18.405485+00:00"
+    },
+    {
+      "state": "65.0",
+      "last_changed": "2026-11-07T10:24:58.829442+00:00"
+    },
+    {
+      "state": "67.0",
+      "last_changed": "2026-11-07T10:41:43.088824+00:00"
+    },
+    {
+      "state": "69.0",
+      "last_changed": "2026-11-07T10:58:10.735737+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-07T11:13:36.271471+00:00"
+    },
+    {
+      "state": "84.0",
+      "last_changed": "2026-11-07T11:28:56.779971+00:00"
+    },
+    {
+      "state": "91.0",
+      "last_changed": "2026-11-07T11:44:32.370047+00:00"
+    },
+    {
+      "state": "93.0",
+      "last_changed": "2026-11-07T11:59:11.796342+00:00"
+    },
+    {
+      "state": "90.0",
+      "last_changed": "2026-11-07T12:19:38.478758+00:00"
+    },
+    {
+      "state": "88.0",
+      "last_changed": "2026-11-07T12:29:35.359758+00:00"
+    },
+    {
+      "state": "87.0",
+      "last_changed": "2026-11-07T12:44:00.706558+00:00"
+    },
+    {
+      "state": "86.0",
+      "last_changed": "2026-11-07T13:01:06.068293+00:00"
+    },
+    {
+      "state": "85.0",
+      "last_changed": "2026-11-07T13:40:28.940988+00:00"
+    },
+    {
+      "state": "84.0",
+      "last_changed": "2026-11-07T13:58:10.561469+00:00"
+    },
+    {
+      "state": "81.0",
+      "last_changed": "2026-11-07T14:20:31.877228+00:00"
+    },
+    {
+      "state": "79.0",
+      "last_changed": "2026-11-07T15:05:39.298009+00:00"
+    },
+    {
+      "state": "78.0",
+      "last_changed": "2026-11-07T15:24:20.963889+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-07T16:00:19.235051+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-07T16:32:25.371360+00:00"
+    },
+    {
+      "state": "74.0",
+      "last_changed": "2026-11-07T17:02:45.727905+00:00"
+    },
+    {
+      "state": "73.0",
+      "last_changed": "2026-11-07T17:18:46.901486+00:00"
+    },
+    {
+      "state": "72.0",
+      "last_changed": "2026-11-07T17:45:14.492668+00:00"
+    },
+    {
+      "state": "71.0",
+      "last_changed": "2026-11-07T18:16:59.702931+00:00"
+    },
+    {
+      "state": "69.0",
+      "last_changed": "2026-11-07T18:32:21.001240+00:00"
+    },
+    {
+      "state": "68.0",
+      "last_changed": "2026-11-07T18:49:22.824958+00:00"
+    },
+    {
+      "state": "66.0",
+      "last_changed": "2026-11-07T19:36:47.476963+00:00"
+    },
+    {
+      "state": "64.0",
+      "last_changed": "2026-11-07T20:13:41.678912+00:00"
+    },
+    {
+      "state": "66.0",
+      "last_changed": "2026-11-07T20:37:14.641151+00:00"
+    },
+    {
+      "state": "65.0",
+      "last_changed": "2026-11-07T20:44:56.601912+00:00"
+    },
+    {
+      "state": "62.0",
+      "last_changed": "2026-11-07T20:58:32.075165+00:00"
+    },
+    {
+      "state": "60.0",
+      "last_changed": "2026-11-07T21:16:38.816848+00:00"
+    },
+    {
+      "state": "55.0",
+      "last_changed": "2026-11-07T21:31:59.251896+00:00"
+    },
+    {
+      "state": "51.0",
+      "last_changed": "2026-11-07T21:47:44.248208+00:00"
+    },
+    {
+      "state": "50.0",
+      "last_changed": "2026-11-07T22:43:26.483732+00:00"
+    },
+    {
+      "state": "49.0",
+      "last_changed": "2026-11-07T23:13:22.960263+00:00"
+    },
+    {
+      "state": "48.0",
+      "last_changed": "2026-11-07T23:49:10.057536+00:00"
+    },
+    {
+      "state": "47.0",
+      "last_changed": "2026-11-08T00:16:10.460483+00:00"
+    },
+    {
+      "state": "46.0",
+      "last_changed": "2026-11-08T00:44:22.741777+00:00"
+    },
+    {
+      "state": "45.0",
+      "last_changed": "2026-11-08T01:01:30.101501+00:00"
+    },
+    {
+      "state": "44.0",
+      "last_changed": "2026-11-08T01:33:40.299295+00:00"
+    },
+    {
+      "state": "43.0",
+      "last_changed": "2026-11-08T02:06:43.235804+00:00"
+    },
+    {
+      "state": "42.0",
+      "last_changed": "2026-11-08T02:43:17.396755+00:00"
+    },
+    {
+      "state": "41.0",
+      "last_changed": "2026-11-08T03:11:40.005963+00:00"
+    },
+    {
+      "state": "40.0",
+      "last_changed": "2026-11-08T03:57:22.985489+00:00"
+    },
+    {
+      "state": "39.0",
+      "last_changed": "2026-11-08T04:22:42.364914+00:00"
+    },
+    {
+      "state": "38.0",
+      "last_changed": "2026-11-08T04:45:38.893042+00:00"
+    },
+    {
+      "state": "37.0",
+      "last_changed": "2026-11-08T05:17:31.710203+00:00"
+    },
+    {
+      "state": "39.0",
+      "last_changed": "2026-11-08T05:21:58.541437+00:00"
+    },
+    {
+      "state": "45.0",
+      "last_changed": "2026-11-08T05:37:52.316535+00:00"
+    },
+    {
+      "state": "51.0",
+      "last_changed": "2026-11-08T05:54:02.488051+00:00"
+    },
+    {
+      "state": "57.0",
+      "last_changed": "2026-11-08T06:09:30.157084+00:00"
+    },
+    {
+      "state": "63.0",
+      "last_changed": "2026-11-08T06:25:18.914593+00:00"
+    },
+    {
+      "state": "69.0",
+      "last_changed": "2026-11-08T06:39:34.277601+00:00"
+    },
+    {
+      "state": "70.0",
+      "last_changed": "2026-11-08T06:42:03.388846+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-08T06:57:58.637213+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:36.009476+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-08T07:03:36.098851+00:00"
+    },
+    {
+      "state": "81.0",
+      "last_changed": "2026-11-08T07:13:57.347795+00:00"
+    },
+    {
+      "state": "88.0",
+      "last_changed": "2026-11-08T07:31:15.855020+00:00"
+    }
+  ],
+  "button.sm_s936b_batteri_bytt": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.sm_s936b_batterityp": [
+    {
+      "state": "Rechargeable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.sm_s936b_senaste_batteribyte": [
+    {
+      "state": "2026-06-13T05:14:38+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.sm_s936b_batteriinformation": [
+    {
+      "state": "95.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:36.020035+00:00"
+    },
+    {
+      "state": "95.0",
+      "last_changed": "2026-11-08T07:03:36.094709+00:00"
+    }
+  ],
+  "binary_sensor.sm_s936b_lag_batteriniva": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.573371+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:36.094040+00:00"
+    }
+  ],
+  "binary_sensor.kontoret_plantsensor_6_lag_batteriniva": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.650814+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:25:17.683724+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.573606+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:40.986463+00:00"
+    }
+  ],
+  "button.kontoret_plantsensor_6_batteri_bytt": [
+    {
+      "state": "2026-10-20T13:54:50.619960+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.kontoret_plantsensor_6_batterityp": [
+    {
+      "state": "CR2032",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.kontoret_plantsensor_6_senaste_batteribyte": [
+    {
+      "state": "2026-10-21T05:34:43+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.kontoret_plantsensor_6_batteriinformation": [
+    {
+      "state": "54.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.691859+00:00"
+    },
+    {
+      "state": "54.0",
+      "last_changed": "2026-11-07T13:25:17.684304+00:00"
+    },
+    {
+      "state": "63.0",
+      "last_changed": "2026-11-07T13:25:54.548560+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:36.020867+00:00"
+    },
+    {
+      "state": "63.0",
+      "last_changed": "2026-11-08T07:03:40.986939+00:00"
+    },
+    {
+      "state": "54.0",
+      "last_changed": "2026-11-08T07:04:02.359330+00:00"
+    }
+  ],
+  "binary_sensor.koket_max_s6_maxv_lag_batteriniva_batteripost_89682651": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.573832+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:36.545940+00:00"
+    }
+  ],
+  "button.koket_max_s6_maxv_batteri_bytt_batteripost_89682651": [
+    {
+      "state": "2026-06-28T09:03:08.336387+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.koket_max_s6_maxv_batterityp_batteripost_89682651": [
+    {
+      "state": "Rechargeable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.koket_max_s6_maxv_senaste_batteribyte_batteripost_89682651": [
+    {
+      "state": "2026-06-28T09:03:08+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.koket_max_s6_maxv_batteriinformation_batteripost_89682651": [
+    {
+      "state": "100.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "99.0",
+      "last_changed": "2026-11-07T08:14:03.686786+00:00"
+    },
+    {
+      "state": "98.0",
+      "last_changed": "2026-11-07T08:15:14.542780+00:00"
+    },
+    {
+      "state": "97.0",
+      "last_changed": "2026-11-07T08:16:25.233550+00:00"
+    },
+    {
+      "state": "96.0",
+      "last_changed": "2026-11-07T08:17:34.719286+00:00"
+    },
+    {
+      "state": "95.0",
+      "last_changed": "2026-11-07T08:18:44.559174+00:00"
+    },
+    {
+      "state": "94.0",
+      "last_changed": "2026-11-07T08:19:55.608795+00:00"
+    },
+    {
+      "state": "93.0",
+      "last_changed": "2026-11-07T08:21:05.057512+00:00"
+    },
+    {
+      "state": "92.0",
+      "last_changed": "2026-11-07T08:22:12.707928+00:00"
+    },
+    {
+      "state": "91.0",
+      "last_changed": "2026-11-07T08:23:12.568313+00:00"
+    },
+    {
+      "state": "90.0",
+      "last_changed": "2026-11-07T08:24:09.151413+00:00"
+    },
+    {
+      "state": "89.0",
+      "last_changed": "2026-11-07T08:25:10.551740+00:00"
+    },
+    {
+      "state": "88.0",
+      "last_changed": "2026-11-07T08:26:10.956693+00:00"
+    },
+    {
+      "state": "87.0",
+      "last_changed": "2026-11-07T08:27:07.802828+00:00"
+    },
+    {
+      "state": "86.0",
+      "last_changed": "2026-11-07T08:28:05.271140+00:00"
+    },
+    {
+      "state": "85.0",
+      "last_changed": "2026-11-07T08:29:07.489300+00:00"
+    },
+    {
+      "state": "84.0",
+      "last_changed": "2026-11-07T08:30:12.935559+00:00"
+    },
+    {
+      "state": "83.0",
+      "last_changed": "2026-11-07T08:31:20.978821+00:00"
+    },
+    {
+      "state": "82.0",
+      "last_changed": "2026-11-07T08:32:23.958269+00:00"
+    },
+    {
+      "state": "81.0",
+      "last_changed": "2026-11-07T08:33:22.373742+00:00"
+    },
+    {
+      "state": "80.0",
+      "last_changed": "2026-11-07T08:34:22.011808+00:00"
+    },
+    {
+      "state": "79.0",
+      "last_changed": "2026-11-07T08:35:21.952032+00:00"
+    },
+    {
+      "state": "78.0",
+      "last_changed": "2026-11-07T08:36:18.772855+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-07T08:37:14.874912+00:00"
+    },
+    {
+      "state": "76.0",
+      "last_changed": "2026-11-07T08:38:20.872432+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-07T08:39:20.689502+00:00"
+    },
+    {
+      "state": "74.0",
+      "last_changed": "2026-11-07T08:40:18.351800+00:00"
+    },
+    {
+      "state": "73.0",
+      "last_changed": "2026-11-07T08:41:23.972650+00:00"
+    },
+    {
+      "state": "72.0",
+      "last_changed": "2026-11-07T08:42:22.878664+00:00"
+    },
+    {
+      "state": "71.0",
+      "last_changed": "2026-11-07T08:43:30.947789+00:00"
+    },
+    {
+      "state": "70.0",
+      "last_changed": "2026-11-07T08:44:30.462846+00:00"
+    },
+    {
+      "state": "69.0",
+      "last_changed": "2026-11-07T08:45:28.263013+00:00"
+    },
+    {
+      "state": "68.0",
+      "last_changed": "2026-11-07T08:46:29.571028+00:00"
+    },
+    {
+      "state": "67.0",
+      "last_changed": "2026-11-07T08:47:33.127687+00:00"
+    },
+    {
+      "state": "68.0",
+      "last_changed": "2026-11-07T08:51:19.118725+00:00"
+    },
+    {
+      "state": "69.0",
+      "last_changed": "2026-11-07T08:54:31.643068+00:00"
+    },
+    {
+      "state": "70.0",
+      "last_changed": "2026-11-07T08:57:44.281308+00:00"
+    },
+    {
+      "state": "71.0",
+      "last_changed": "2026-11-07T09:00:51.202152+00:00"
+    },
+    {
+      "state": "72.0",
+      "last_changed": "2026-11-07T09:03:54.744275+00:00"
+    },
+    {
+      "state": "73.0",
+      "last_changed": "2026-11-07T09:06:59.962871+00:00"
+    },
+    {
+      "state": "74.0",
+      "last_changed": "2026-11-07T09:10:05.175317+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-07T09:13:10.412244+00:00"
+    },
+    {
+      "state": "76.0",
+      "last_changed": "2026-11-07T09:16:15.645095+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-07T09:19:20.876882+00:00"
+    },
+    {
+      "state": "78.0",
+      "last_changed": "2026-11-07T09:22:26.111904+00:00"
+    },
+    {
+      "state": "79.0",
+      "last_changed": "2026-11-07T09:25:31.342483+00:00"
+    },
+    {
+      "state": "80.0",
+      "last_changed": "2026-11-07T09:28:36.820549+00:00"
+    },
+    {
+      "state": "81.0",
+      "last_changed": "2026-11-07T09:31:34.394082+00:00"
+    },
+    {
+      "state": "82.0",
+      "last_changed": "2026-11-07T09:34:32.205776+00:00"
+    },
+    {
+      "state": "83.0",
+      "last_changed": "2026-11-07T09:37:30.240241+00:00"
+    },
+    {
+      "state": "84.0",
+      "last_changed": "2026-11-07T09:40:27.871108+00:00"
+    },
+    {
+      "state": "85.0",
+      "last_changed": "2026-11-07T09:43:25.694546+00:00"
+    },
+    {
+      "state": "86.0",
+      "last_changed": "2026-11-07T09:46:23.524090+00:00"
+    },
+    {
+      "state": "87.0",
+      "last_changed": "2026-11-07T09:49:21.348522+00:00"
+    },
+    {
+      "state": "88.0",
+      "last_changed": "2026-11-07T09:52:19.229305+00:00"
+    },
+    {
+      "state": "89.0",
+      "last_changed": "2026-11-07T09:55:17.002605+00:00"
+    },
+    {
+      "state": "90.0",
+      "last_changed": "2026-11-07T09:58:14.827024+00:00"
+    },
+    {
+      "state": "91.0",
+      "last_changed": "2026-11-07T10:01:05.653967+00:00"
+    },
+    {
+      "state": "92.0",
+      "last_changed": "2026-11-07T10:03:55.707639+00:00"
+    },
+    {
+      "state": "93.0",
+      "last_changed": "2026-11-07T10:06:46.242704+00:00"
+    },
+    {
+      "state": "94.0",
+      "last_changed": "2026-11-07T10:09:36.898355+00:00"
+    },
+    {
+      "state": "95.0",
+      "last_changed": "2026-11-07T10:12:28.062048+00:00"
+    },
+    {
+      "state": "96.0",
+      "last_changed": "2026-11-07T10:15:21.482896+00:00"
+    },
+    {
+      "state": "97.0",
+      "last_changed": "2026-11-07T10:18:51.095982+00:00"
+    },
+    {
+      "state": "98.0",
+      "last_changed": "2026-11-07T10:21:31.048919+00:00"
+    },
+    {
+      "state": "99.0",
+      "last_changed": "2026-11-07T10:24:20.958161+00:00"
+    },
+    {
+      "state": "100.0",
+      "last_changed": "2026-11-07T10:27:55.665065+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:36.021892+00:00"
+    },
+    {
+      "state": "100.0",
+      "last_changed": "2026-11-08T07:03:36.546646+00:00"
+    }
+  ],
+  "sensor.bion_klimatsensor_senaste_batteribyte": [
+    {
+      "state": "2025-12-21T07:58:07+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "binary_sensor.bion_klimatsensor_lag_batteriniva": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.644526+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:25:17.612079+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.567529+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:40.928042+00:00"
+    }
+  ],
+  "button.bion_klimatsensor_batteri_bytt": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.bion_klimatsensor_batterityp": [
+    {
+      "state": "CR2032",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.bion_klimatsensor_batteriinformation": [
+    {
+      "state": "69.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "68.0",
+      "last_changed": "2026-11-07T09:37:30.381126+00:00"
+    },
+    {
+      "state": "69.0",
+      "last_changed": "2026-11-07T09:52:59.651935+00:00"
+    },
+    {
+      "state": "68.0",
+      "last_changed": "2026-11-07T10:23:37.746799+00:00"
+    },
+    {
+      "state": "69.0",
+      "last_changed": "2026-11-07T10:39:02.920223+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:13.671433+00:00"
+    },
+    {
+      "state": "69.0",
+      "last_changed": "2026-11-07T13:25:17.612676+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.594988+00:00"
+    },
+    {
+      "state": "69.0",
+      "last_changed": "2026-11-08T07:03:40.928669+00:00"
+    }
+  ],
+  "binary_sensor.poolen_bilresa_dual_button_lag_batteriniva": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "button.poolen_bilresa_dual_button_batteri_bytt": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.poolen_bilresa_dual_button_batterityp_battery_notes": [
+    {
+      "state": "2× AAA",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.poolen_bilresa_dual_button_senaste_batteribyte": [
+    {
+      "state": "2026-07-28T08:38:03+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.poolen_bilresa_dual_button_batteriinformation": [
+    {
+      "state": "100.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "button.ateljen_vattensensor_torkskap_batteri_bytt_batteripost_076c2eba": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.ateljen_vattensensor_torkskap_batterityp_batteripost_076c2eba": [
+    {
+      "state": "CR123A",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.ateljen_vattensensor_torkskap_senaste_batteribyte_batteripost_076c2eba": [
+    {
+      "state": "2025-01-17T03:56:57+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "binary_sensor.koket_max_s6_maxv_lag_batteriniva_batteripost_f66541be": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:35.574440+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:36.546001+00:00"
+    }
+  ],
+  "button.koket_max_s6_maxv_batteri_bytt_batteripost_f66541be": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.koket_max_s6_maxv_batterityp_batteripost_f66541be": [
+    {
+      "state": "Rechargeable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.koket_max_s6_maxv_senaste_batteribyte_batteripost_f66541be": [
+    {
+      "state": "2026-06-28T09:03:08+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    }
+  ],
+  "sensor.koket_max_s6_maxv_batteriinformation_batteripost_f66541be": [
+    {
+      "state": "100.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:21.704627+00:00",
+      "last_updated": "2026-11-07T07:44:21.704627+00:00"
+    },
+    {
+      "state": "99.0",
+      "last_changed": "2026-11-07T08:14:03.687248+00:00"
+    },
+    {
+      "state": "98.0",
+      "last_changed": "2026-11-07T08:15:14.544003+00:00"
+    },
+    {
+      "state": "97.0",
+      "last_changed": "2026-11-07T08:16:25.234096+00:00"
+    },
+    {
+      "state": "96.0",
+      "last_changed": "2026-11-07T08:17:34.720368+00:00"
+    },
+    {
+      "state": "95.0",
+      "last_changed": "2026-11-07T08:18:44.560266+00:00"
+    },
+    {
+      "state": "94.0",
+      "last_changed": "2026-11-07T08:19:55.610239+00:00"
+    },
+    {
+      "state": "93.0",
+      "last_changed": "2026-11-07T08:21:05.058125+00:00"
+    },
+    {
+      "state": "92.0",
+      "last_changed": "2026-11-07T08:22:12.709206+00:00"
+    },
+    {
+      "state": "91.0",
+      "last_changed": "2026-11-07T08:23:12.568778+00:00"
+    },
+    {
+      "state": "90.0",
+      "last_changed": "2026-11-07T08:24:09.152735+00:00"
+    },
+    {
+      "state": "89.0",
+      "last_changed": "2026-11-07T08:25:10.552341+00:00"
+    },
+    {
+      "state": "88.0",
+      "last_changed": "2026-11-07T08:26:10.957200+00:00"
+    },
+    {
+      "state": "87.0",
+      "last_changed": "2026-11-07T08:27:07.804152+00:00"
+    },
+    {
+      "state": "86.0",
+      "last_changed": "2026-11-07T08:28:05.272495+00:00"
+    },
+    {
+      "state": "85.0",
+      "last_changed": "2026-11-07T08:29:07.490675+00:00"
+    },
+    {
+      "state": "84.0",
+      "last_changed": "2026-11-07T08:30:12.936066+00:00"
+    },
+    {
+      "state": "83.0",
+      "last_changed": "2026-11-07T08:31:20.980081+00:00"
+    },
+    {
+      "state": "82.0",
+      "last_changed": "2026-11-07T08:32:23.959310+00:00"
+    },
+    {
+      "state": "81.0",
+      "last_changed": "2026-11-07T08:33:22.374453+00:00"
+    },
+    {
+      "state": "80.0",
+      "last_changed": "2026-11-07T08:34:22.013044+00:00"
+    },
+    {
+      "state": "79.0",
+      "last_changed": "2026-11-07T08:35:21.953354+00:00"
+    },
+    {
+      "state": "78.0",
+      "last_changed": "2026-11-07T08:36:18.774085+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-07T08:37:14.875397+00:00"
+    },
+    {
+      "state": "76.0",
+      "last_changed": "2026-11-07T08:38:20.873542+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-07T08:39:20.689954+00:00"
+    },
+    {
+      "state": "74.0",
+      "last_changed": "2026-11-07T08:40:18.352756+00:00"
+    },
+    {
+      "state": "73.0",
+      "last_changed": "2026-11-07T08:41:23.973123+00:00"
+    },
+    {
+      "state": "72.0",
+      "last_changed": "2026-11-07T08:42:22.879944+00:00"
+    },
+    {
+      "state": "71.0",
+      "last_changed": "2026-11-07T08:43:30.949144+00:00"
+    },
+    {
+      "state": "70.0",
+      "last_changed": "2026-11-07T08:44:30.464163+00:00"
+    },
+    {
+      "state": "69.0",
+      "last_changed": "2026-11-07T08:45:28.264042+00:00"
+    },
+    {
+      "state": "68.0",
+      "last_changed": "2026-11-07T08:46:29.572144+00:00"
+    },
+    {
+      "state": "67.0",
+      "last_changed": "2026-11-07T08:47:33.128616+00:00"
+    },
+    {
+      "state": "68.0",
+      "last_changed": "2026-11-07T08:51:19.119184+00:00"
+    },
+    {
+      "state": "69.0",
+      "last_changed": "2026-11-07T08:54:31.644258+00:00"
+    },
+    {
+      "state": "70.0",
+      "last_changed": "2026-11-07T08:57:44.282405+00:00"
+    },
+    {
+      "state": "71.0",
+      "last_changed": "2026-11-07T09:00:51.203460+00:00"
+    },
+    {
+      "state": "72.0",
+      "last_changed": "2026-11-07T09:03:54.745598+00:00"
+    },
+    {
+      "state": "73.0",
+      "last_changed": "2026-11-07T09:06:59.964176+00:00"
+    },
+    {
+      "state": "74.0",
+      "last_changed": "2026-11-07T09:10:05.175765+00:00"
+    },
+    {
+      "state": "75.0",
+      "last_changed": "2026-11-07T09:13:10.413080+00:00"
+    },
+    {
+      "state": "76.0",
+      "last_changed": "2026-11-07T09:16:15.645603+00:00"
+    },
+    {
+      "state": "77.0",
+      "last_changed": "2026-11-07T09:19:20.878192+00:00"
+    },
+    {
+      "state": "78.0",
+      "last_changed": "2026-11-07T09:22:26.112417+00:00"
+    },
+    {
+      "state": "79.0",
+      "last_changed": "2026-11-07T09:25:31.343657+00:00"
+    },
+    {
+      "state": "80.0",
+      "last_changed": "2026-11-07T09:28:36.821634+00:00"
+    },
+    {
+      "state": "81.0",
+      "last_changed": "2026-11-07T09:31:34.395005+00:00"
+    },
+    {
+      "state": "82.0",
+      "last_changed": "2026-11-07T09:34:32.206258+00:00"
+    },
+    {
+      "state": "83.0",
+      "last_changed": "2026-11-07T09:37:30.240696+00:00"
+    },
+    {
+      "state": "84.0",
+      "last_changed": "2026-11-07T09:40:27.871997+00:00"
+    },
+    {
+      "state": "85.0",
+      "last_changed": "2026-11-07T09:43:25.695691+00:00"
+    },
+    {
+      "state": "86.0",
+      "last_changed": "2026-11-07T09:46:23.524554+00:00"
+    },
+    {
+      "state": "87.0",
+      "last_changed": "2026-11-07T09:49:21.349557+00:00"
+    },
+    {
+      "state": "88.0",
+      "last_changed": "2026-11-07T09:52:19.230670+00:00"
+    },
+    {
+      "state": "89.0",
+      "last_changed": "2026-11-07T09:55:17.003073+00:00"
+    },
+    {
+      "state": "90.0",
+      "last_changed": "2026-11-07T09:58:14.828352+00:00"
+    },
+    {
+      "state": "91.0",
+      "last_changed": "2026-11-07T10:01:05.654469+00:00"
+    },
+    {
+      "state": "92.0",
+      "last_changed": "2026-11-07T10:03:55.708906+00:00"
+    },
+    {
+      "state": "93.0",
+      "last_changed": "2026-11-07T10:06:46.243177+00:00"
+    },
+    {
+      "state": "94.0",
+      "last_changed": "2026-11-07T10:09:36.899694+00:00"
+    },
+    {
+      "state": "95.0",
+      "last_changed": "2026-11-07T10:12:28.063323+00:00"
+    },
+    {
+      "state": "96.0",
+      "last_changed": "2026-11-07T10:15:21.484251+00:00"
+    },
+    {
+      "state": "97.0",
+      "last_changed": "2026-11-07T10:18:51.096456+00:00"
+    },
+    {
+      "state": "98.0",
+      "last_changed": "2026-11-07T10:21:31.050373+00:00"
+    },
+    {
+      "state": "99.0",
+      "last_changed": "2026-11-07T10:24:20.958619+00:00"
+    },
+    {
+      "state": "100.0",
+      "last_changed": "2026-11-07T10:27:55.665527+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:36.025148+00:00"
+    },
+    {
+      "state": "100.0",
+      "last_changed": "2026-11-08T07:03:36.547643+00:00"
+    }
+  ]
+}

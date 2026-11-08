@@ -1,0 +1,1 @@
+{"model": {"id": "LED2201G8", "name": "TRADFRI bulb E27 1055 lumen, smart wireless dimmable/white spectrum globe", "aliases": ["TRADFRI bulb E27 WS globe 1055lm"], "hash": "ae83fc366e6d805e000c3dd3babf2cc7", "device_type": "light"}, "resources": ["color_temp.csv.gz", "model.json"]}

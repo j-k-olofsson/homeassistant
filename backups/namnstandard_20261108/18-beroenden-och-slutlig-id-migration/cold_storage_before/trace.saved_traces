@@ -1,0 +1,2937 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "trace.saved_traces",
+  "data": {
+    "automation.aqara_taklampor_monitor_service_calls": [
+      {
+        "extended_dict": {
+          "last_step": "condition/1",
+          "run_id": "19e8eec9c84d9f573db0f4ebd285308f",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:19:19.471714+00:00",
+            "finish": "2026-11-08T09:19:19.471975+00:00"
+          },
+          "domain": "automation",
+          "item_id": "aqara_taklampor_monitor_service_calls",
+          "trigger": "event 'call_service'",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2026-11-08T09:19:19.471749+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aqara_taklampor_monitor_service_calls",
+                    "state": "on",
+                    "attributes": {
+                      "id": "aqara_taklampor_monitor_service_calls",
+                      "last_triggered": "2026-11-06T20:29:57.253953+00:00",
+                      "mode": "queued",
+                      "current": 0,
+                      "max": 50,
+                      "friendly_name": "Aqara taklampor \u00f6vervakning \u2013 \u00e5tg\u00e4rdsanrop"
+                    },
+                    "last_changed": "2026-11-08T09:09:40.597930+00:00",
+                    "last_reported": "2026-11-08T09:09:40.597930+00:00",
+                    "last_updated": "2026-11-08T09:09:40.597930+00:00",
+                    "context": {
+                      "id": "01M6X6QAKNPBMKBSBV20WCVBZZ",
+                      "parent_id": null,
+                      "user_id": "11c3c69645984f0c814370add793f07e"
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "event",
+                    "event": {
+                      "event_type": "call_service",
+                      "data": {
+                        "domain": "automation",
+                        "service": "turn_off",
+                        "service_data": {
+                          "entity_id": "automation.thread_automatisk_natverksdiagnostik",
+                          "stop_actions": false
+                        }
+                      },
+                      "origin": "LOCAL",
+                      "time_fired": "2026-11-08T09:19:19.471147+00:00",
+                      "context": {
+                        "id": "01M6X78ZXFMHH1NJC19BD1DPFV",
+                        "parent_id": null,
+                        "user_id": "11c3c69645984f0c814370add793f07e"
+                      }
+                    },
+                    "description": "event 'call_service'"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2026-11-08T09:19:19.471770+00:00",
+                "result": {
+                  "result": true,
+                  "entities": []
+                }
+              }
+            ],
+            "condition/1": [
+              {
+                "path": "condition/1",
+                "timestamp": "2026-11-08T09:19:19.471890+00:00",
+                "result": {
+                  "result": false,
+                  "entities": []
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "aqara_taklampor_monitor_service_calls",
+            "alias": "Aqara taklampor \u00f6vervakning \u2013 \u00e5tg\u00e4rdsanrop",
+            "description": "Loggar senaste service-kommando som riktar sig mot taklamporna.",
+            "triggers": [
+              {
+                "trigger": "event",
+                "event_type": "call_service"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "template",
+                "value_template": "{{ trigger.event.data.domain not in ['logbook', 'system_log', 'input_text', 'input_datetime'] }}"
+              },
+              {
+                "condition": "template",
+                "value_template": "{% set sd = trigger.event.data.service_data if trigger.event and trigger.event.data else {} %} {% set eid = sd.entity_id if sd is mapping and 'entity_id' in sd else none %} {% if eid is string %}\n  {{ eid in ['light.taklampor_kokson', 'light.grupp_taklampor_kok'] }}\n{% elif eid is iterable and eid is not string %}\n  {{ 'light.taklampor_kokson' in eid or 'light.grupp_taklampor_kok' in eid }}\n{% else %}\n  false\n{% endif %}"
+              }
+            ],
+            "actions": [
+              {
+                "action": "input_datetime.set_datetime",
+                "target": {
+                  "entity_id": "input_datetime.aqara_taklampor_senaste_kommando_tid"
+                },
+                "data": {
+                  "datetime": "{{ now().strftime('%Y-%m-%d %H:%M:%S') }}"
+                }
+              },
+              {
+                "variables": {
+                  "msg": "CMD {{ trigger.event.data.domain }}.{{ trigger.event.data.service }} entity={{ trigger.event.data.service_data.entity_id }} brightness={{ trigger.event.data.service_data.brightness if trigger.event.data.service_data is mapping and 'brightness' in trigger.event.data.service_data else 'na' }} user_id={{ trigger.event.context.user_id if trigger.event and trigger.event.context else 'none' }} ctx={{ trigger.event.context.id if trigger.event and trigger.event.context else 'none' }}"
+                }
+              },
+              {
+                "action": "input_text.set_value",
+                "target": {
+                  "entity_id": "input_text.aqara_taklampor_senaste_kommando"
+                },
+                "data": {
+                  "value": "{{ msg[:255] }}"
+                }
+              },
+              {
+                "action": "logbook.log",
+                "data": {
+                  "name": "Aqara taklampor monitor",
+                  "message": "{{ msg }}",
+                  "entity_id": "light.taklampor_kokson"
+                }
+              }
+            ],
+            "mode": "queued",
+            "max": 50
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01M6X78ZXFYKEBZW8X33VFJJAQ",
+            "parent_id": "01M6X78ZXFMHH1NJC19BD1DPFV",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/1",
+          "run_id": "19e8eec9c84d9f573db0f4ebd285308f",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:19:19.471714+00:00",
+            "finish": "2026-11-08T09:19:19.471975+00:00"
+          },
+          "domain": "automation",
+          "item_id": "aqara_taklampor_monitor_service_calls",
+          "trigger": "event 'call_service'"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/1",
+          "run_id": "070490389facef698cc9805958f9ce0f",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:19:19.476967+00:00",
+            "finish": "2026-11-08T09:19:19.477275+00:00"
+          },
+          "domain": "automation",
+          "item_id": "aqara_taklampor_monitor_service_calls",
+          "trigger": "event 'call_service'",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2026-11-08T09:19:19.477008+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aqara_taklampor_monitor_service_calls",
+                    "state": "on",
+                    "attributes": {
+                      "id": "aqara_taklampor_monitor_service_calls",
+                      "last_triggered": "2026-11-06T20:29:57.253953+00:00",
+                      "mode": "queued",
+                      "current": 0,
+                      "max": 50,
+                      "friendly_name": "Aqara taklampor \u00f6vervakning \u2013 \u00e5tg\u00e4rdsanrop"
+                    },
+                    "last_changed": "2026-11-08T09:09:40.597930+00:00",
+                    "last_reported": "2026-11-08T09:09:40.597930+00:00",
+                    "last_updated": "2026-11-08T09:09:40.597930+00:00",
+                    "context": {
+                      "id": "01M6X6QAKNPBMKBSBV20WCVBZZ",
+                      "parent_id": null,
+                      "user_id": "11c3c69645984f0c814370add793f07e"
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "event",
+                    "event": {
+                      "event_type": "call_service",
+                      "data": {
+                        "domain": "automation",
+                        "service": "turn_off",
+                        "service_data": {
+                          "entity_id": "automation.kontrollpanel_3d_utskrift_fardig",
+                          "stop_actions": false
+                        }
+                      },
+                      "origin": "LOCAL",
+                      "time_fired": "2026-11-08T09:19:19.476118+00:00",
+                      "context": {
+                        "id": "01M6X78ZXK12QMYT42CVYZ20F4",
+                        "parent_id": null,
+                        "user_id": "11c3c69645984f0c814370add793f07e"
+                      }
+                    },
+                    "description": "event 'call_service'"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2026-11-08T09:19:19.477035+00:00",
+                "result": {
+                  "result": true,
+                  "entities": []
+                }
+              }
+            ],
+            "condition/1": [
+              {
+                "path": "condition/1",
+                "timestamp": "2026-11-08T09:19:19.477177+00:00",
+                "result": {
+                  "result": false,
+                  "entities": []
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "aqara_taklampor_monitor_service_calls",
+            "alias": "Aqara taklampor \u00f6vervakning \u2013 \u00e5tg\u00e4rdsanrop",
+            "description": "Loggar senaste service-kommando som riktar sig mot taklamporna.",
+            "triggers": [
+              {
+                "trigger": "event",
+                "event_type": "call_service"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "template",
+                "value_template": "{{ trigger.event.data.domain not in ['logbook', 'system_log', 'input_text', 'input_datetime'] }}"
+              },
+              {
+                "condition": "template",
+                "value_template": "{% set sd = trigger.event.data.service_data if trigger.event and trigger.event.data else {} %} {% set eid = sd.entity_id if sd is mapping and 'entity_id' in sd else none %} {% if eid is string %}\n  {{ eid in ['light.taklampor_kokson', 'light.grupp_taklampor_kok'] }}\n{% elif eid is iterable and eid is not string %}\n  {{ 'light.taklampor_kokson' in eid or 'light.grupp_taklampor_kok' in eid }}\n{% else %}\n  false\n{% endif %}"
+              }
+            ],
+            "actions": [
+              {
+                "action": "input_datetime.set_datetime",
+                "target": {
+                  "entity_id": "input_datetime.aqara_taklampor_senaste_kommando_tid"
+                },
+                "data": {
+                  "datetime": "{{ now().strftime('%Y-%m-%d %H:%M:%S') }}"
+                }
+              },
+              {
+                "variables": {
+                  "msg": "CMD {{ trigger.event.data.domain }}.{{ trigger.event.data.service }} entity={{ trigger.event.data.service_data.entity_id }} brightness={{ trigger.event.data.service_data.brightness if trigger.event.data.service_data is mapping and 'brightness' in trigger.event.data.service_data else 'na' }} user_id={{ trigger.event.context.user_id if trigger.event and trigger.event.context else 'none' }} ctx={{ trigger.event.context.id if trigger.event and trigger.event.context else 'none' }}"
+                }
+              },
+              {
+                "action": "input_text.set_value",
+                "target": {
+                  "entity_id": "input_text.aqara_taklampor_senaste_kommando"
+                },
+                "data": {
+                  "value": "{{ msg[:255] }}"
+                }
+              },
+              {
+                "action": "logbook.log",
+                "data": {
+                  "name": "Aqara taklampor monitor",
+                  "message": "{{ msg }}",
+                  "entity_id": "light.taklampor_kokson"
+                }
+              }
+            ],
+            "mode": "queued",
+            "max": 50
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01M6X78ZXM2B5FY67XV1GFJWCW",
+            "parent_id": "01M6X78ZXK12QMYT42CVYZ20F4",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/1",
+          "run_id": "070490389facef698cc9805958f9ce0f",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:19:19.476967+00:00",
+            "finish": "2026-11-08T09:19:19.477275+00:00"
+          },
+          "domain": "automation",
+          "item_id": "aqara_taklampor_monitor_service_calls",
+          "trigger": "event 'call_service'"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/1",
+          "run_id": "51c424b63329d007b56e72cde482409d",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:19:19.483812+00:00",
+            "finish": "2026-11-08T09:19:19.484094+00:00"
+          },
+          "domain": "automation",
+          "item_id": "aqara_taklampor_monitor_service_calls",
+          "trigger": "event 'call_service'",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2026-11-08T09:19:19.483856+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aqara_taklampor_monitor_service_calls",
+                    "state": "on",
+                    "attributes": {
+                      "id": "aqara_taklampor_monitor_service_calls",
+                      "last_triggered": "2026-11-06T20:29:57.253953+00:00",
+                      "mode": "queued",
+                      "current": 0,
+                      "max": 50,
+                      "friendly_name": "Aqara taklampor \u00f6vervakning \u2013 \u00e5tg\u00e4rdsanrop"
+                    },
+                    "last_changed": "2026-11-08T09:09:40.597930+00:00",
+                    "last_reported": "2026-11-08T09:09:40.597930+00:00",
+                    "last_updated": "2026-11-08T09:09:40.597930+00:00",
+                    "context": {
+                      "id": "01M6X6QAKNPBMKBSBV20WCVBZZ",
+                      "parent_id": null,
+                      "user_id": "11c3c69645984f0c814370add793f07e"
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "event",
+                    "event": {
+                      "event_type": "call_service",
+                      "data": {
+                        "domain": "automation",
+                        "service": "turn_off",
+                        "service_data": {
+                          "entity_id": "automation.kontrollpanel_tvatt_fardig",
+                          "stop_actions": false
+                        }
+                      },
+                      "origin": "LOCAL",
+                      "time_fired": "2026-11-08T09:19:19.482460+00:00",
+                      "context": {
+                        "id": "01M6X78ZXT9ER6SRHGACRF89QK",
+                        "parent_id": null,
+                        "user_id": "11c3c69645984f0c814370add793f07e"
+                      }
+                    },
+                    "description": "event 'call_service'"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2026-11-08T09:19:19.483883+00:00",
+                "result": {
+                  "result": true,
+                  "entities": []
+                }
+              }
+            ],
+            "condition/1": [
+              {
+                "path": "condition/1",
+                "timestamp": "2026-11-08T09:19:19.484003+00:00",
+                "result": {
+                  "result": false,
+                  "entities": []
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "aqara_taklampor_monitor_service_calls",
+            "alias": "Aqara taklampor \u00f6vervakning \u2013 \u00e5tg\u00e4rdsanrop",
+            "description": "Loggar senaste service-kommando som riktar sig mot taklamporna.",
+            "triggers": [
+              {
+                "trigger": "event",
+                "event_type": "call_service"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "template",
+                "value_template": "{{ trigger.event.data.domain not in ['logbook', 'system_log', 'input_text', 'input_datetime'] }}"
+              },
+              {
+                "condition": "template",
+                "value_template": "{% set sd = trigger.event.data.service_data if trigger.event and trigger.event.data else {} %} {% set eid = sd.entity_id if sd is mapping and 'entity_id' in sd else none %} {% if eid is string %}\n  {{ eid in ['light.taklampor_kokson', 'light.grupp_taklampor_kok'] }}\n{% elif eid is iterable and eid is not string %}\n  {{ 'light.taklampor_kokson' in eid or 'light.grupp_taklampor_kok' in eid }}\n{% else %}\n  false\n{% endif %}"
+              }
+            ],
+            "actions": [
+              {
+                "action": "input_datetime.set_datetime",
+                "target": {
+                  "entity_id": "input_datetime.aqara_taklampor_senaste_kommando_tid"
+                },
+                "data": {
+                  "datetime": "{{ now().strftime('%Y-%m-%d %H:%M:%S') }}"
+                }
+              },
+              {
+                "variables": {
+                  "msg": "CMD {{ trigger.event.data.domain }}.{{ trigger.event.data.service }} entity={{ trigger.event.data.service_data.entity_id }} brightness={{ trigger.event.data.service_data.brightness if trigger.event.data.service_data is mapping and 'brightness' in trigger.event.data.service_data else 'na' }} user_id={{ trigger.event.context.user_id if trigger.event and trigger.event.context else 'none' }} ctx={{ trigger.event.context.id if trigger.event and trigger.event.context else 'none' }}"
+                }
+              },
+              {
+                "action": "input_text.set_value",
+                "target": {
+                  "entity_id": "input_text.aqara_taklampor_senaste_kommando"
+                },
+                "data": {
+                  "value": "{{ msg[:255] }}"
+                }
+              },
+              {
+                "action": "logbook.log",
+                "data": {
+                  "name": "Aqara taklampor monitor",
+                  "message": "{{ msg }}",
+                  "entity_id": "light.taklampor_kokson"
+                }
+              }
+            ],
+            "mode": "queued",
+            "max": 50
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01M6X78ZXVR7TVKMMF0N5M6JAC",
+            "parent_id": "01M6X78ZXT9ER6SRHGACRF89QK",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/1",
+          "run_id": "51c424b63329d007b56e72cde482409d",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:19:19.483812+00:00",
+            "finish": "2026-11-08T09:19:19.484094+00:00"
+          },
+          "domain": "automation",
+          "item_id": "aqara_taklampor_monitor_service_calls",
+          "trigger": "event 'call_service'"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/1",
+          "run_id": "213f1507ef41668c6b1f8a03c5aeb5c0",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:19:19.488747+00:00",
+            "finish": "2026-11-08T09:19:19.488977+00:00"
+          },
+          "domain": "automation",
+          "item_id": "aqara_taklampor_monitor_service_calls",
+          "trigger": "event 'call_service'",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2026-11-08T09:19:19.488784+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aqara_taklampor_monitor_service_calls",
+                    "state": "on",
+                    "attributes": {
+                      "id": "aqara_taklampor_monitor_service_calls",
+                      "last_triggered": "2026-11-06T20:29:57.253953+00:00",
+                      "mode": "queued",
+                      "current": 0,
+                      "max": 50,
+                      "friendly_name": "Aqara taklampor \u00f6vervakning \u2013 \u00e5tg\u00e4rdsanrop"
+                    },
+                    "last_changed": "2026-11-08T09:09:40.597930+00:00",
+                    "last_reported": "2026-11-08T09:09:40.597930+00:00",
+                    "last_updated": "2026-11-08T09:09:40.597930+00:00",
+                    "context": {
+                      "id": "01M6X6QAKNPBMKBSBV20WCVBZZ",
+                      "parent_id": null,
+                      "user_id": "11c3c69645984f0c814370add793f07e"
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "event",
+                    "event": {
+                      "event_type": "call_service",
+                      "data": {
+                        "domain": "automation",
+                        "service": "turn_off",
+                        "service_data": {
+                          "entity_id": "automation.kontrollpanel_disk_fardig",
+                          "stop_actions": false
+                        }
+                      },
+                      "origin": "LOCAL",
+                      "time_fired": "2026-11-08T09:19:19.488097+00:00",
+                      "context": {
+                        "id": "01M6X78ZXZ87XR3PK8Y63MMND7",
+                        "parent_id": null,
+                        "user_id": "11c3c69645984f0c814370add793f07e"
+                      }
+                    },
+                    "description": "event 'call_service'"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2026-11-08T09:19:19.488805+00:00",
+                "result": {
+                  "result": true,
+                  "entities": []
+                }
+              }
+            ],
+            "condition/1": [
+              {
+                "path": "condition/1",
+                "timestamp": "2026-11-08T09:19:19.488906+00:00",
+                "result": {
+                  "result": false,
+                  "entities": []
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "aqara_taklampor_monitor_service_calls",
+            "alias": "Aqara taklampor \u00f6vervakning \u2013 \u00e5tg\u00e4rdsanrop",
+            "description": "Loggar senaste service-kommando som riktar sig mot taklamporna.",
+            "triggers": [
+              {
+                "trigger": "event",
+                "event_type": "call_service"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "template",
+                "value_template": "{{ trigger.event.data.domain not in ['logbook', 'system_log', 'input_text', 'input_datetime'] }}"
+              },
+              {
+                "condition": "template",
+                "value_template": "{% set sd = trigger.event.data.service_data if trigger.event and trigger.event.data else {} %} {% set eid = sd.entity_id if sd is mapping and 'entity_id' in sd else none %} {% if eid is string %}\n  {{ eid in ['light.taklampor_kokson', 'light.grupp_taklampor_kok'] }}\n{% elif eid is iterable and eid is not string %}\n  {{ 'light.taklampor_kokson' in eid or 'light.grupp_taklampor_kok' in eid }}\n{% else %}\n  false\n{% endif %}"
+              }
+            ],
+            "actions": [
+              {
+                "action": "input_datetime.set_datetime",
+                "target": {
+                  "entity_id": "input_datetime.aqara_taklampor_senaste_kommando_tid"
+                },
+                "data": {
+                  "datetime": "{{ now().strftime('%Y-%m-%d %H:%M:%S') }}"
+                }
+              },
+              {
+                "variables": {
+                  "msg": "CMD {{ trigger.event.data.domain }}.{{ trigger.event.data.service }} entity={{ trigger.event.data.service_data.entity_id }} brightness={{ trigger.event.data.service_data.brightness if trigger.event.data.service_data is mapping and 'brightness' in trigger.event.data.service_data else 'na' }} user_id={{ trigger.event.context.user_id if trigger.event and trigger.event.context else 'none' }} ctx={{ trigger.event.context.id if trigger.event and trigger.event.context else 'none' }}"
+                }
+              },
+              {
+                "action": "input_text.set_value",
+                "target": {
+                  "entity_id": "input_text.aqara_taklampor_senaste_kommando"
+                },
+                "data": {
+                  "value": "{{ msg[:255] }}"
+                }
+              },
+              {
+                "action": "logbook.log",
+                "data": {
+                  "name": "Aqara taklampor monitor",
+                  "message": "{{ msg }}",
+                  "entity_id": "light.taklampor_kokson"
+                }
+              }
+            ],
+            "mode": "queued",
+            "max": 50
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01M6X78ZY01125WRA0HWYCKDPW",
+            "parent_id": "01M6X78ZXZ87XR3PK8Y63MMND7",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/1",
+          "run_id": "213f1507ef41668c6b1f8a03c5aeb5c0",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:19:19.488747+00:00",
+            "finish": "2026-11-08T09:19:19.488977+00:00"
+          },
+          "domain": "automation",
+          "item_id": "aqara_taklampor_monitor_service_calls",
+          "trigger": "event 'call_service'"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/1",
+          "run_id": "ae418796e1fc0ca7c511a1144597fb8c",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:19:19.493116+00:00",
+            "finish": "2026-11-08T09:19:19.493328+00:00"
+          },
+          "domain": "automation",
+          "item_id": "aqara_taklampor_monitor_service_calls",
+          "trigger": "event 'call_service'",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2026-11-08T09:19:19.493147+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aqara_taklampor_monitor_service_calls",
+                    "state": "on",
+                    "attributes": {
+                      "id": "aqara_taklampor_monitor_service_calls",
+                      "last_triggered": "2026-11-06T20:29:57.253953+00:00",
+                      "mode": "queued",
+                      "current": 0,
+                      "max": 50,
+                      "friendly_name": "Aqara taklampor \u00f6vervakning \u2013 \u00e5tg\u00e4rdsanrop"
+                    },
+                    "last_changed": "2026-11-08T09:09:40.597930+00:00",
+                    "last_reported": "2026-11-08T09:09:40.597930+00:00",
+                    "last_updated": "2026-11-08T09:09:40.597930+00:00",
+                    "context": {
+                      "id": "01M6X6QAKNPBMKBSBV20WCVBZZ",
+                      "parent_id": null,
+                      "user_id": "11c3c69645984f0c814370add793f07e"
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "event",
+                    "event": {
+                      "event_type": "call_service",
+                      "data": {
+                        "domain": "automation",
+                        "service": "turn_off",
+                        "service_data": {
+                          "entity_id": "automation.aqara_taklampor_overvakning_knapphandelser",
+                          "stop_actions": false
+                        }
+                      },
+                      "origin": "LOCAL",
+                      "time_fired": "2026-11-08T09:19:19.492521+00:00",
+                      "context": {
+                        "id": "01M6X78ZY47RBEE0REJW7E2BA9",
+                        "parent_id": null,
+                        "user_id": "11c3c69645984f0c814370add793f07e"
+                      }
+                    },
+                    "description": "event 'call_service'"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2026-11-08T09:19:19.493168+00:00",
+                "result": {
+                  "result": true,
+                  "entities": []
+                }
+              }
+            ],
+            "condition/1": [
+              {
+                "path": "condition/1",
+                "timestamp": "2026-11-08T09:19:19.493261+00:00",
+                "result": {
+                  "result": false,
+                  "entities": []
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "aqara_taklampor_monitor_service_calls",
+            "alias": "Aqara taklampor \u00f6vervakning \u2013 \u00e5tg\u00e4rdsanrop",
+            "description": "Loggar senaste service-kommando som riktar sig mot taklamporna.",
+            "triggers": [
+              {
+                "trigger": "event",
+                "event_type": "call_service"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "template",
+                "value_template": "{{ trigger.event.data.domain not in ['logbook', 'system_log', 'input_text', 'input_datetime'] }}"
+              },
+              {
+                "condition": "template",
+                "value_template": "{% set sd = trigger.event.data.service_data if trigger.event and trigger.event.data else {} %} {% set eid = sd.entity_id if sd is mapping and 'entity_id' in sd else none %} {% if eid is string %}\n  {{ eid in ['light.taklampor_kokson', 'light.grupp_taklampor_kok'] }}\n{% elif eid is iterable and eid is not string %}\n  {{ 'light.taklampor_kokson' in eid or 'light.grupp_taklampor_kok' in eid }}\n{% else %}\n  false\n{% endif %}"
+              }
+            ],
+            "actions": [
+              {
+                "action": "input_datetime.set_datetime",
+                "target": {
+                  "entity_id": "input_datetime.aqara_taklampor_senaste_kommando_tid"
+                },
+                "data": {
+                  "datetime": "{{ now().strftime('%Y-%m-%d %H:%M:%S') }}"
+                }
+              },
+              {
+                "variables": {
+                  "msg": "CMD {{ trigger.event.data.domain }}.{{ trigger.event.data.service }} entity={{ trigger.event.data.service_data.entity_id }} brightness={{ trigger.event.data.service_data.brightness if trigger.event.data.service_data is mapping and 'brightness' in trigger.event.data.service_data else 'na' }} user_id={{ trigger.event.context.user_id if trigger.event and trigger.event.context else 'none' }} ctx={{ trigger.event.context.id if trigger.event and trigger.event.context else 'none' }}"
+                }
+              },
+              {
+                "action": "input_text.set_value",
+                "target": {
+                  "entity_id": "input_text.aqara_taklampor_senaste_kommando"
+                },
+                "data": {
+                  "value": "{{ msg[:255] }}"
+                }
+              },
+              {
+                "action": "logbook.log",
+                "data": {
+                  "name": "Aqara taklampor monitor",
+                  "message": "{{ msg }}",
+                  "entity_id": "light.taklampor_kokson"
+                }
+              }
+            ],
+            "mode": "queued",
+            "max": 50
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01M6X78ZY53EGSV8QYZ0JHWQH4",
+            "parent_id": "01M6X78ZY47RBEE0REJW7E2BA9",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/1",
+          "run_id": "ae418796e1fc0ca7c511a1144597fb8c",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:19:19.493116+00:00",
+            "finish": "2026-11-08T09:19:19.493328+00:00"
+          },
+          "domain": "automation",
+          "item_id": "aqara_taklampor_monitor_service_calls",
+          "trigger": "event 'call_service'"
+        }
+      }
+    ],
+    "automation.aqara_banklampor_monitor_service_calls": [
+      {
+        "extended_dict": {
+          "last_step": "condition/1",
+          "run_id": "371916dcb694a6027af7fb5300f8c2f4",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:19:19.489011+00:00",
+            "finish": "2026-11-08T09:19:19.489175+00:00"
+          },
+          "domain": "automation",
+          "item_id": "aqara_banklampor_monitor_service_calls",
+          "trigger": "event 'call_service'",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2026-11-08T09:19:19.489034+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aqara_banklampor_overvakning_atgardsanrop",
+                    "state": "on",
+                    "attributes": {
+                      "id": "aqara_banklampor_monitor_service_calls",
+                      "last_triggered": "2026-11-06T20:29:57.310160+00:00",
+                      "mode": "queued",
+                      "current": 0,
+                      "max": 50,
+                      "friendly_name": "Aqara banklampor \u00f6vervakning \u2013 \u00e5tg\u00e4rdsanrop"
+                    },
+                    "last_changed": "2026-11-08T09:09:40.614985+00:00",
+                    "last_reported": "2026-11-08T09:09:40.614985+00:00",
+                    "last_updated": "2026-11-08T09:09:40.614985+00:00",
+                    "context": {
+                      "id": "01M6X6QAM66KJ37P050PQK88XZ",
+                      "parent_id": null,
+                      "user_id": "11c3c69645984f0c814370add793f07e"
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "event",
+                    "event": {
+                      "event_type": "call_service",
+                      "data": {
+                        "domain": "automation",
+                        "service": "turn_off",
+                        "service_data": {
+                          "entity_id": "automation.kontrollpanel_disk_fardig",
+                          "stop_actions": false
+                        }
+                      },
+                      "origin": "LOCAL",
+                      "time_fired": "2026-11-08T09:19:19.488097+00:00",
+                      "context": {
+                        "id": "01M6X78ZXZ87XR3PK8Y63MMND7",
+                        "parent_id": null,
+                        "user_id": "11c3c69645984f0c814370add793f07e"
+                      }
+                    },
+                    "description": "event 'call_service'"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2026-11-08T09:19:19.489046+00:00",
+                "result": {
+                  "result": true,
+                  "entities": []
+                }
+              }
+            ],
+            "condition/1": [
+              {
+                "path": "condition/1",
+                "timestamp": "2026-11-08T09:19:19.489119+00:00",
+                "result": {
+                  "result": false,
+                  "entities": []
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "aqara_banklampor_monitor_service_calls",
+            "alias": "Aqara banklampor \u00f6vervakning \u2013 \u00e5tg\u00e4rdsanrop",
+            "description": "Loggar senaste service-kommando som riktar sig mot banklamporna.",
+            "triggers": [
+              {
+                "trigger": "event",
+                "event_type": "call_service"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "template",
+                "value_template": "{{ trigger.event.data.domain not in ['logbook', 'system_log', 'input_text', 'input_datetime'] }}"
+              },
+              {
+                "condition": "template",
+                "value_template": "{% set sd = trigger.event.data.service_data if trigger.event and trigger.event.data else {} %} {% set eid = sd.entity_id if sd is mapping and 'entity_id' in sd else none %} {% if eid is string %}\n  {{ eid in ['light.banklampor'] }}\n{% elif eid is iterable and eid is not string %}\n  {{ 'light.banklampor' in eid }}\n{% else %}\n  false\n{% endif %}"
+              }
+            ],
+            "actions": [
+              {
+                "action": "input_datetime.set_datetime",
+                "target": {
+                  "entity_id": "input_datetime.aqara_banklampor_senaste_kommando_tid"
+                },
+                "data": {
+                  "datetime": "{{ now().strftime('%Y-%m-%d %H:%M:%S') }}"
+                }
+              },
+              {
+                "variables": {
+                  "msg": "CMD {{ trigger.event.data.domain }}.{{ trigger.event.data.service }} entity={{ trigger.event.data.service_data.entity_id }} brightness={{ trigger.event.data.service_data.brightness if trigger.event.data.service_data is mapping and 'brightness' in trigger.event.data.service_data else 'na' }} user_id={{ trigger.event.context.user_id if trigger.event and trigger.event.context else 'none' }} ctx={{ trigger.event.context.id if trigger.event and trigger.event.context else 'none' }}"
+                }
+              },
+              {
+                "action": "input_text.set_value",
+                "target": {
+                  "entity_id": "input_text.aqara_banklampor_senaste_kommando"
+                },
+                "data": {
+                  "value": "{{ msg[:255] }}"
+                }
+              },
+              {
+                "action": "logbook.log",
+                "data": {
+                  "name": "Aqara banklampor monitor",
+                  "message": "{{ msg }}",
+                  "entity_id": "light.banklampor"
+                }
+              }
+            ],
+            "mode": "queued",
+            "max": 50
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01M6X78ZY1NPKCP085DVSYREJN",
+            "parent_id": "01M6X78ZXZ87XR3PK8Y63MMND7",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/1",
+          "run_id": "371916dcb694a6027af7fb5300f8c2f4",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:19:19.489011+00:00",
+            "finish": "2026-11-08T09:19:19.489175+00:00"
+          },
+          "domain": "automation",
+          "item_id": "aqara_banklampor_monitor_service_calls",
+          "trigger": "event 'call_service'"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/1",
+          "run_id": "568afbd364f117a5f4c13056a4ddd14c",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:19:19.493359+00:00",
+            "finish": "2026-11-08T09:19:19.493508+00:00"
+          },
+          "domain": "automation",
+          "item_id": "aqara_banklampor_monitor_service_calls",
+          "trigger": "event 'call_service'",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2026-11-08T09:19:19.493380+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aqara_banklampor_overvakning_atgardsanrop",
+                    "state": "on",
+                    "attributes": {
+                      "id": "aqara_banklampor_monitor_service_calls",
+                      "last_triggered": "2026-11-06T20:29:57.310160+00:00",
+                      "mode": "queued",
+                      "current": 0,
+                      "max": 50,
+                      "friendly_name": "Aqara banklampor \u00f6vervakning \u2013 \u00e5tg\u00e4rdsanrop"
+                    },
+                    "last_changed": "2026-11-08T09:09:40.614985+00:00",
+                    "last_reported": "2026-11-08T09:09:40.614985+00:00",
+                    "last_updated": "2026-11-08T09:09:40.614985+00:00",
+                    "context": {
+                      "id": "01M6X6QAM66KJ37P050PQK88XZ",
+                      "parent_id": null,
+                      "user_id": "11c3c69645984f0c814370add793f07e"
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "event",
+                    "event": {
+                      "event_type": "call_service",
+                      "data": {
+                        "domain": "automation",
+                        "service": "turn_off",
+                        "service_data": {
+                          "entity_id": "automation.aqara_taklampor_overvakning_knapphandelser",
+                          "stop_actions": false
+                        }
+                      },
+                      "origin": "LOCAL",
+                      "time_fired": "2026-11-08T09:19:19.492521+00:00",
+                      "context": {
+                        "id": "01M6X78ZY47RBEE0REJW7E2BA9",
+                        "parent_id": null,
+                        "user_id": "11c3c69645984f0c814370add793f07e"
+                      }
+                    },
+                    "description": "event 'call_service'"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2026-11-08T09:19:19.493392+00:00",
+                "result": {
+                  "result": true,
+                  "entities": []
+                }
+              }
+            ],
+            "condition/1": [
+              {
+                "path": "condition/1",
+                "timestamp": "2026-11-08T09:19:19.493448+00:00",
+                "result": {
+                  "result": false,
+                  "entities": []
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "aqara_banklampor_monitor_service_calls",
+            "alias": "Aqara banklampor \u00f6vervakning \u2013 \u00e5tg\u00e4rdsanrop",
+            "description": "Loggar senaste service-kommando som riktar sig mot banklamporna.",
+            "triggers": [
+              {
+                "trigger": "event",
+                "event_type": "call_service"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "template",
+                "value_template": "{{ trigger.event.data.domain not in ['logbook', 'system_log', 'input_text', 'input_datetime'] }}"
+              },
+              {
+                "condition": "template",
+                "value_template": "{% set sd = trigger.event.data.service_data if trigger.event and trigger.event.data else {} %} {% set eid = sd.entity_id if sd is mapping and 'entity_id' in sd else none %} {% if eid is string %}\n  {{ eid in ['light.banklampor'] }}\n{% elif eid is iterable and eid is not string %}\n  {{ 'light.banklampor' in eid }}\n{% else %}\n  false\n{% endif %}"
+              }
+            ],
+            "actions": [
+              {
+                "action": "input_datetime.set_datetime",
+                "target": {
+                  "entity_id": "input_datetime.aqara_banklampor_senaste_kommando_tid"
+                },
+                "data": {
+                  "datetime": "{{ now().strftime('%Y-%m-%d %H:%M:%S') }}"
+                }
+              },
+              {
+                "variables": {
+                  "msg": "CMD {{ trigger.event.data.domain }}.{{ trigger.event.data.service }} entity={{ trigger.event.data.service_data.entity_id }} brightness={{ trigger.event.data.service_data.brightness if trigger.event.data.service_data is mapping and 'brightness' in trigger.event.data.service_data else 'na' }} user_id={{ trigger.event.context.user_id if trigger.event and trigger.event.context else 'none' }} ctx={{ trigger.event.context.id if trigger.event and trigger.event.context else 'none' }}"
+                }
+              },
+              {
+                "action": "input_text.set_value",
+                "target": {
+                  "entity_id": "input_text.aqara_banklampor_senaste_kommando"
+                },
+                "data": {
+                  "value": "{{ msg[:255] }}"
+                }
+              },
+              {
+                "action": "logbook.log",
+                "data": {
+                  "name": "Aqara banklampor monitor",
+                  "message": "{{ msg }}",
+                  "entity_id": "light.banklampor"
+                }
+              }
+            ],
+            "mode": "queued",
+            "max": 50
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01M6X78ZY5WE5P3HW541CKD7ZE",
+            "parent_id": "01M6X78ZY47RBEE0REJW7E2BA9",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/1",
+          "run_id": "568afbd364f117a5f4c13056a4ddd14c",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:19:19.493359+00:00",
+            "finish": "2026-11-08T09:19:19.493508+00:00"
+          },
+          "domain": "automation",
+          "item_id": "aqara_banklampor_monitor_service_calls",
+          "trigger": "event 'call_service'"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/1",
+          "run_id": "9f627287fe3ebd252e9c0bd3d90f91ab",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:19:19.497428+00:00",
+            "finish": "2026-11-08T09:19:19.497634+00:00"
+          },
+          "domain": "automation",
+          "item_id": "aqara_banklampor_monitor_service_calls",
+          "trigger": "event 'call_service'",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2026-11-08T09:19:19.497459+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aqara_banklampor_overvakning_atgardsanrop",
+                    "state": "on",
+                    "attributes": {
+                      "id": "aqara_banklampor_monitor_service_calls",
+                      "last_triggered": "2026-11-06T20:29:57.310160+00:00",
+                      "mode": "queued",
+                      "current": 0,
+                      "max": 50,
+                      "friendly_name": "Aqara banklampor \u00f6vervakning \u2013 \u00e5tg\u00e4rdsanrop"
+                    },
+                    "last_changed": "2026-11-08T09:09:40.614985+00:00",
+                    "last_reported": "2026-11-08T09:09:40.614985+00:00",
+                    "last_updated": "2026-11-08T09:09:40.614985+00:00",
+                    "context": {
+                      "id": "01M6X6QAM66KJ37P050PQK88XZ",
+                      "parent_id": null,
+                      "user_id": "11c3c69645984f0c814370add793f07e"
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "event",
+                    "event": {
+                      "event_type": "call_service",
+                      "data": {
+                        "domain": "automation",
+                        "service": "turn_off",
+                        "service_data": {
+                          "entity_id": "automation.aqara_taklampor_monitor_service_calls",
+                          "stop_actions": false
+                        }
+                      },
+                      "origin": "LOCAL",
+                      "time_fired": "2026-11-08T09:19:19.496879+00:00",
+                      "context": {
+                        "id": "01M6X78ZY8K59YXAQ7ATRPHRSJ",
+                        "parent_id": null,
+                        "user_id": "11c3c69645984f0c814370add793f07e"
+                      }
+                    },
+                    "description": "event 'call_service'"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2026-11-08T09:19:19.497478+00:00",
+                "result": {
+                  "result": true,
+                  "entities": []
+                }
+              }
+            ],
+            "condition/1": [
+              {
+                "path": "condition/1",
+                "timestamp": "2026-11-08T09:19:19.497569+00:00",
+                "result": {
+                  "result": false,
+                  "entities": []
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "aqara_banklampor_monitor_service_calls",
+            "alias": "Aqara banklampor \u00f6vervakning \u2013 \u00e5tg\u00e4rdsanrop",
+            "description": "Loggar senaste service-kommando som riktar sig mot banklamporna.",
+            "triggers": [
+              {
+                "trigger": "event",
+                "event_type": "call_service"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "template",
+                "value_template": "{{ trigger.event.data.domain not in ['logbook', 'system_log', 'input_text', 'input_datetime'] }}"
+              },
+              {
+                "condition": "template",
+                "value_template": "{% set sd = trigger.event.data.service_data if trigger.event and trigger.event.data else {} %} {% set eid = sd.entity_id if sd is mapping and 'entity_id' in sd else none %} {% if eid is string %}\n  {{ eid in ['light.banklampor'] }}\n{% elif eid is iterable and eid is not string %}\n  {{ 'light.banklampor' in eid }}\n{% else %}\n  false\n{% endif %}"
+              }
+            ],
+            "actions": [
+              {
+                "action": "input_datetime.set_datetime",
+                "target": {
+                  "entity_id": "input_datetime.aqara_banklampor_senaste_kommando_tid"
+                },
+                "data": {
+                  "datetime": "{{ now().strftime('%Y-%m-%d %H:%M:%S') }}"
+                }
+              },
+              {
+                "variables": {
+                  "msg": "CMD {{ trigger.event.data.domain }}.{{ trigger.event.data.service }} entity={{ trigger.event.data.service_data.entity_id }} brightness={{ trigger.event.data.service_data.brightness if trigger.event.data.service_data is mapping and 'brightness' in trigger.event.data.service_data else 'na' }} user_id={{ trigger.event.context.user_id if trigger.event and trigger.event.context else 'none' }} ctx={{ trigger.event.context.id if trigger.event and trigger.event.context else 'none' }}"
+                }
+              },
+              {
+                "action": "input_text.set_value",
+                "target": {
+                  "entity_id": "input_text.aqara_banklampor_senaste_kommando"
+                },
+                "data": {
+                  "value": "{{ msg[:255] }}"
+                }
+              },
+              {
+                "action": "logbook.log",
+                "data": {
+                  "name": "Aqara banklampor monitor",
+                  "message": "{{ msg }}",
+                  "entity_id": "light.banklampor"
+                }
+              }
+            ],
+            "mode": "queued",
+            "max": 50
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01M6X78ZY9T7VV8TW4667TVKBC",
+            "parent_id": "01M6X78ZY8K59YXAQ7ATRPHRSJ",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/1",
+          "run_id": "9f627287fe3ebd252e9c0bd3d90f91ab",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:19:19.497428+00:00",
+            "finish": "2026-11-08T09:19:19.497634+00:00"
+          },
+          "domain": "automation",
+          "item_id": "aqara_banklampor_monitor_service_calls",
+          "trigger": "event 'call_service'"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/1",
+          "run_id": "255bee8fff677ffd53d293c34def0403",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:19:19.502086+00:00",
+            "finish": "2026-11-08T09:19:19.502350+00:00"
+          },
+          "domain": "automation",
+          "item_id": "aqara_banklampor_monitor_service_calls",
+          "trigger": "event 'call_service'",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2026-11-08T09:19:19.502127+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aqara_banklampor_overvakning_atgardsanrop",
+                    "state": "on",
+                    "attributes": {
+                      "id": "aqara_banklampor_monitor_service_calls",
+                      "last_triggered": "2026-11-06T20:29:57.310160+00:00",
+                      "mode": "queued",
+                      "current": 0,
+                      "max": 50,
+                      "friendly_name": "Aqara banklampor \u00f6vervakning \u2013 \u00e5tg\u00e4rdsanrop"
+                    },
+                    "last_changed": "2026-11-08T09:09:40.614985+00:00",
+                    "last_reported": "2026-11-08T09:09:40.614985+00:00",
+                    "last_updated": "2026-11-08T09:09:40.614985+00:00",
+                    "context": {
+                      "id": "01M6X6QAM66KJ37P050PQK88XZ",
+                      "parent_id": null,
+                      "user_id": "11c3c69645984f0c814370add793f07e"
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "event",
+                    "event": {
+                      "event_type": "call_service",
+                      "data": {
+                        "domain": "automation",
+                        "service": "turn_off",
+                        "service_data": {
+                          "entity_id": "automation.aqara_taklampor_overvakning_blinkningsdetektor",
+                          "stop_actions": false
+                        }
+                      },
+                      "origin": "LOCAL",
+                      "time_fired": "2026-11-08T09:19:19.501242+00:00",
+                      "context": {
+                        "id": "01M6X78ZYDQG7R86AFFBPT3V65",
+                        "parent_id": null,
+                        "user_id": "11c3c69645984f0c814370add793f07e"
+                      }
+                    },
+                    "description": "event 'call_service'"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2026-11-08T09:19:19.502151+00:00",
+                "result": {
+                  "result": true,
+                  "entities": []
+                }
+              }
+            ],
+            "condition/1": [
+              {
+                "path": "condition/1",
+                "timestamp": "2026-11-08T09:19:19.502263+00:00",
+                "result": {
+                  "result": false,
+                  "entities": []
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "aqara_banklampor_monitor_service_calls",
+            "alias": "Aqara banklampor \u00f6vervakning \u2013 \u00e5tg\u00e4rdsanrop",
+            "description": "Loggar senaste service-kommando som riktar sig mot banklamporna.",
+            "triggers": [
+              {
+                "trigger": "event",
+                "event_type": "call_service"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "template",
+                "value_template": "{{ trigger.event.data.domain not in ['logbook', 'system_log', 'input_text', 'input_datetime'] }}"
+              },
+              {
+                "condition": "template",
+                "value_template": "{% set sd = trigger.event.data.service_data if trigger.event and trigger.event.data else {} %} {% set eid = sd.entity_id if sd is mapping and 'entity_id' in sd else none %} {% if eid is string %}\n  {{ eid in ['light.banklampor'] }}\n{% elif eid is iterable and eid is not string %}\n  {{ 'light.banklampor' in eid }}\n{% else %}\n  false\n{% endif %}"
+              }
+            ],
+            "actions": [
+              {
+                "action": "input_datetime.set_datetime",
+                "target": {
+                  "entity_id": "input_datetime.aqara_banklampor_senaste_kommando_tid"
+                },
+                "data": {
+                  "datetime": "{{ now().strftime('%Y-%m-%d %H:%M:%S') }}"
+                }
+              },
+              {
+                "variables": {
+                  "msg": "CMD {{ trigger.event.data.domain }}.{{ trigger.event.data.service }} entity={{ trigger.event.data.service_data.entity_id }} brightness={{ trigger.event.data.service_data.brightness if trigger.event.data.service_data is mapping and 'brightness' in trigger.event.data.service_data else 'na' }} user_id={{ trigger.event.context.user_id if trigger.event and trigger.event.context else 'none' }} ctx={{ trigger.event.context.id if trigger.event and trigger.event.context else 'none' }}"
+                }
+              },
+              {
+                "action": "input_text.set_value",
+                "target": {
+                  "entity_id": "input_text.aqara_banklampor_senaste_kommando"
+                },
+                "data": {
+                  "value": "{{ msg[:255] }}"
+                }
+              },
+              {
+                "action": "logbook.log",
+                "data": {
+                  "name": "Aqara banklampor monitor",
+                  "message": "{{ msg }}",
+                  "entity_id": "light.banklampor"
+                }
+              }
+            ],
+            "mode": "queued",
+            "max": 50
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01M6X78ZYECKBKEJK64Y2298VX",
+            "parent_id": "01M6X78ZYDQG7R86AFFBPT3V65",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/1",
+          "run_id": "255bee8fff677ffd53d293c34def0403",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:19:19.502086+00:00",
+            "finish": "2026-11-08T09:19:19.502350+00:00"
+          },
+          "domain": "automation",
+          "item_id": "aqara_banklampor_monitor_service_calls",
+          "trigger": "event 'call_service'"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/1",
+          "run_id": "55039e6030547859621fc211db5a1fdb",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:19:19.510673+00:00",
+            "finish": "2026-11-08T09:19:19.510936+00:00"
+          },
+          "domain": "automation",
+          "item_id": "aqara_banklampor_monitor_service_calls",
+          "trigger": "event 'call_service'",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2026-11-08T09:19:19.510714+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aqara_banklampor_overvakning_atgardsanrop",
+                    "state": "on",
+                    "attributes": {
+                      "id": "aqara_banklampor_monitor_service_calls",
+                      "last_triggered": "2026-11-06T20:29:57.310160+00:00",
+                      "mode": "queued",
+                      "current": 0,
+                      "max": 50,
+                      "friendly_name": "Aqara banklampor \u00f6vervakning \u2013 \u00e5tg\u00e4rdsanrop"
+                    },
+                    "last_changed": "2026-11-08T09:09:40.614985+00:00",
+                    "last_reported": "2026-11-08T09:09:40.614985+00:00",
+                    "last_updated": "2026-11-08T09:09:40.614985+00:00",
+                    "context": {
+                      "id": "01M6X6QAM66KJ37P050PQK88XZ",
+                      "parent_id": null,
+                      "user_id": "11c3c69645984f0c814370add793f07e"
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "event",
+                    "event": {
+                      "event_type": "call_service",
+                      "data": {
+                        "domain": "automation",
+                        "service": "turn_off",
+                        "service_data": {
+                          "entity_id": "automation.aqara_banklampor_overvakning_knapphandelser",
+                          "stop_actions": false
+                        }
+                      },
+                      "origin": "LOCAL",
+                      "time_fired": "2026-11-08T09:19:19.509269+00:00",
+                      "context": {
+                        "id": "01M6X78ZYNN04KQ1MNKBQ3GE14",
+                        "parent_id": null,
+                        "user_id": "11c3c69645984f0c814370add793f07e"
+                      }
+                    },
+                    "description": "event 'call_service'"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2026-11-08T09:19:19.510737+00:00",
+                "result": {
+                  "result": true,
+                  "entities": []
+                }
+              }
+            ],
+            "condition/1": [
+              {
+                "path": "condition/1",
+                "timestamp": "2026-11-08T09:19:19.510854+00:00",
+                "result": {
+                  "result": false,
+                  "entities": []
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "aqara_banklampor_monitor_service_calls",
+            "alias": "Aqara banklampor \u00f6vervakning \u2013 \u00e5tg\u00e4rdsanrop",
+            "description": "Loggar senaste service-kommando som riktar sig mot banklamporna.",
+            "triggers": [
+              {
+                "trigger": "event",
+                "event_type": "call_service"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "template",
+                "value_template": "{{ trigger.event.data.domain not in ['logbook', 'system_log', 'input_text', 'input_datetime'] }}"
+              },
+              {
+                "condition": "template",
+                "value_template": "{% set sd = trigger.event.data.service_data if trigger.event and trigger.event.data else {} %} {% set eid = sd.entity_id if sd is mapping and 'entity_id' in sd else none %} {% if eid is string %}\n  {{ eid in ['light.banklampor'] }}\n{% elif eid is iterable and eid is not string %}\n  {{ 'light.banklampor' in eid }}\n{% else %}\n  false\n{% endif %}"
+              }
+            ],
+            "actions": [
+              {
+                "action": "input_datetime.set_datetime",
+                "target": {
+                  "entity_id": "input_datetime.aqara_banklampor_senaste_kommando_tid"
+                },
+                "data": {
+                  "datetime": "{{ now().strftime('%Y-%m-%d %H:%M:%S') }}"
+                }
+              },
+              {
+                "variables": {
+                  "msg": "CMD {{ trigger.event.data.domain }}.{{ trigger.event.data.service }} entity={{ trigger.event.data.service_data.entity_id }} brightness={{ trigger.event.data.service_data.brightness if trigger.event.data.service_data is mapping and 'brightness' in trigger.event.data.service_data else 'na' }} user_id={{ trigger.event.context.user_id if trigger.event and trigger.event.context else 'none' }} ctx={{ trigger.event.context.id if trigger.event and trigger.event.context else 'none' }}"
+                }
+              },
+              {
+                "action": "input_text.set_value",
+                "target": {
+                  "entity_id": "input_text.aqara_banklampor_senaste_kommando"
+                },
+                "data": {
+                  "value": "{{ msg[:255] }}"
+                }
+              },
+              {
+                "action": "logbook.log",
+                "data": {
+                  "name": "Aqara banklampor monitor",
+                  "message": "{{ msg }}",
+                  "entity_id": "light.banklampor"
+                }
+              }
+            ],
+            "mode": "queued",
+            "max": 50
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01M6X78ZYP2PQ0G19NR5QTSJ6Q",
+            "parent_id": "01M6X78ZYNN04KQ1MNKBQ3GE14",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/1",
+          "run_id": "55039e6030547859621fc211db5a1fdb",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:19:19.510673+00:00",
+            "finish": "2026-11-08T09:19:19.510936+00:00"
+          },
+          "domain": "automation",
+          "item_id": "aqara_banklampor_monitor_service_calls",
+          "trigger": "event 'call_service'"
+        }
+      }
+    ],
+    "automation.1787050345503": [
+      {
+        "extended_dict": {
+          "last_step": "action/0",
+          "run_id": "5421ab8bbd1d0a2c709b58cbaaaa047b",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2026-11-08T09:10:00.268629+00:00",
+            "finish": "2026-11-08T09:10:35.290643+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1787050345503",
+          "trigger": "time pattern",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2026-11-08T09:10:00.268738+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.thread_automatisk_natverksdiagnostik",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1787050345503",
+                      "last_triggered": "2026-11-08T08:40:00.322536+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Thread \u2013 Automatisk n\u00e4tverksdiagnostik"
+                    },
+                    "last_changed": "2026-11-08T09:09:40.577920+00:00",
+                    "last_reported": "2026-11-08T09:09:40.577920+00:00",
+                    "last_updated": "2026-11-08T09:09:40.577920+00:00",
+                    "context": {
+                      "id": "01M6X6QAK13H7RQX74RYECN44Q",
+                      "parent_id": null,
+                      "user_id": "11c3c69645984f0c814370add793f07e"
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "time_pattern",
+                    "now": "2026-11-08T10:10:00.268033+01:00",
+                    "description": "time pattern"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2026-11-08T09:10:00.269967+00:00",
+                "child_id": {
+                  "domain": "automation",
+                  "item_id": "aqara_banklampor_monitor_service_calls",
+                  "run_id": "1db2ecacd604ada76d77d52331cf2b48"
+                },
+                "changed_variables": {
+                  "context": {
+                    "id": "01M6X6QXTCCK8P7KY0ZERQVRYM",
+                    "parent_id": null,
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "script",
+                    "service": "thread_uppdatera_natverksdiagnostik",
+                    "service_data": {},
+                    "target": {}
+                  },
+                  "running_script": true
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1787050345503",
+            "alias": "Thread \u2013 Automatisk n\u00e4tverksdiagnostik",
+            "description": "Uppdaterar Thread mesh-diagnostiken var 10:e minut",
+            "triggers": [
+              {
+                "trigger": "time_pattern",
+                "minutes": "/10"
+              }
+            ],
+            "actions": [
+              {
+                "action": "script.thread_uppdatera_natverksdiagnostik"
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01M6X6QXTCCK8P7KY0ZERQVRYM",
+            "parent_id": null,
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0",
+          "run_id": "5421ab8bbd1d0a2c709b58cbaaaa047b",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2026-11-08T09:10:00.268629+00:00",
+            "finish": "2026-11-08T09:10:35.290643+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1787050345503",
+          "trigger": "time pattern"
+        }
+      }
+    ],
+    "script.thread_uppdatera_natverksdiagnostik": [
+      {
+        "extended_dict": {
+          "last_step": "sequence/4",
+          "run_id": "7fe2d5fce1671bffb504d4290e3ac585",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2026-11-08T09:10:00.270602+00:00",
+            "finish": "2026-11-08T09:10:35.289863+00:00"
+          },
+          "domain": "script",
+          "item_id": "thread_uppdatera_natverksdiagnostik",
+          "trace": {
+            "sequence/0": [
+              {
+                "path": "sequence/0",
+                "timestamp": "2026-11-08T09:10:00.271249+00:00",
+                "child_id": {
+                  "domain": "automation",
+                  "item_id": "aqara_banklampor_monitor_service_calls",
+                  "run_id": "46c4c4d38f1cb46730c2349afbeb21c5"
+                },
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "script.thread_uppdatera_natverksdiagnostik",
+                    "state": "off",
+                    "attributes": {
+                      "last_triggered": "2026-11-08T08:40:00.324304+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Thread \u2013 Uppdatera n\u00e4tverksdiagnostik"
+                    },
+                    "last_changed": "2026-11-08T09:09:16.850811+00:00",
+                    "last_reported": "2026-11-08T09:09:16.850811+00:00",
+                    "last_updated": "2026-11-08T09:09:16.850811+00:00",
+                    "context": {
+                      "id": "01M6X6PKDJXZ2R0A5FEMVW6CR5",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "context": {
+                    "id": "01M6X6QXTCCK8P7KY0ZERQVRYM",
+                    "parent_id": null,
+                    "user_id": null
+                  },
+                  "devices_response": {
+                    "content": [
+                      {
+                        "extAddress": "4680256a41cebb3f",
+                        "mlEidIid": "0000000000000000",
+                        "omrIpv6Address": "::",
+                        "hostname": "",
+                        "role": "",
+                        "mode": {
+                          "fullThreadDevice": false,
+                          "rxOnWhenIdle": false,
+                          "fullNetworkData": false
+                        },
+                        "baId": "923991a16d4f16b422b4e9ab3ce431a5",
+                        "baState": "enabled",
+                        "state": "disabled",
+                        "routerCount": 0,
+                        "rlocAddress": "::",
+                        "networkName": "",
+                        "rloc16": "0x0000",
+                        "routerId": 0,
+                        "leaderData": {
+                          "partitionId": 0,
+                          "weighting": 52,
+                          "dataVersion": 1,
+                          "stableDataVersion": 3,
+                          "leaderRouterId": 0
+                        },
+                        "extPanId": "b802559b4caef87a"
+                      }
+                    ],
+                    "status": 200,
+                    "headers": {
+                      "Content-Type": "application/json",
+                      "Content-Length": "599",
+                      "Access-Control-Allow-Origin": "*",
+                      "Keep-Alive": "timeout=5, max=100",
+                      "Access-Control-Allow-Methods": "DELETE, GET, OPTIONS, POST, PUT",
+                      "Access-Control-Allow-Headers": "Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, If-None-Match"
+                    }
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "rest_command",
+                    "service": "thread_get_devices",
+                    "service_data": {},
+                    "target": {}
+                  },
+                  "running_script": false
+                }
+              },
+              {
+                "path": "sequence/0",
+                "timestamp": "2026-11-08T09:10:35.288776+00:00",
+                "child_id": {
+                  "domain": "automation",
+                  "item_id": "aqara_banklampor_monitor_service_calls",
+                  "run_id": "3cc0497ad5b121985ef24238fcbbcdc8"
+                },
+                "changed_variables": {
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "script.thread_uppdatera_natverksdiagnostik",
+                    "from_state": {
+                      "entity_id": "script.thread_uppdatera_natverksdiagnostik",
+                      "state": "on",
+                      "attributes": {
+                        "last_triggered": "2026-11-08T09:10:00.270767+00:00",
+                        "mode": "single",
+                        "current": 1,
+                        "last_action": "delay 0:00:35",
+                        "friendly_name": "Thread \u2013 Uppdatera n\u00e4tverksdiagnostik"
+                      },
+                      "last_changed": "2026-11-08T09:10:00.270827+00:00",
+                      "last_reported": "2026-11-08T09:10:00.282564+00:00",
+                      "last_updated": "2026-11-08T09:10:00.282564+00:00",
+                      "context": {
+                        "id": "01M6X6QXTCCK8P7KY0ZERQVRYM",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "script.thread_uppdatera_natverksdiagnostik",
+                      "state": "off",
+                      "attributes": {
+                        "last_triggered": "2026-11-08T09:10:00.270767+00:00",
+                        "mode": "single",
+                        "current": 0,
+                        "friendly_name": "Thread \u2013 Uppdatera n\u00e4tverksdiagnostik"
+                      },
+                      "last_changed": "2026-11-08T09:10:35.288604+00:00",
+                      "last_reported": "2026-11-08T09:10:35.288604+00:00",
+                      "last_updated": "2026-11-08T09:10:35.288604+00:00",
+                      "context": {
+                        "id": "01M6X6S00R2WVPRZ05WZA99DFP",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of script.thread_uppdatera_natverksdiagnostik"
+                  },
+                  "context": {
+                    "id": "01M6X6S00RRTMFW2YX64TK8XC5",
+                    "parent_id": "01M6X6S00R2WVPRZ05WZA99DFP",
+                    "user_id": null
+                  },
+                  "thread_diag": {
+                    "content": [],
+                    "status": 200,
+                    "headers": {
+                      "Content-Type": "application/json",
+                      "Content-Length": "2",
+                      "Access-Control-Allow-Origin": "*",
+                      "Keep-Alive": "timeout=5, max=100",
+                      "Access-Control-Allow-Methods": "DELETE, GET, OPTIONS, POST, PUT",
+                      "Access-Control-Allow-Headers": "Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, If-None-Match"
+                    }
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "rest_command",
+                    "service": "thread_get_diagnostics_result",
+                    "service_data": {},
+                    "target": {}
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "sequence/1": [
+              {
+                "path": "sequence/1",
+                "timestamp": "2026-11-08T09:10:00.281303+00:00",
+                "changed_variables": {
+                  "thread_routers": []
+                }
+              }
+            ],
+            "sequence/2": [
+              {
+                "path": "sequence/2",
+                "timestamp": "2026-11-08T09:10:00.281731+00:00"
+              }
+            ],
+            "sequence/3": [
+              {
+                "path": "sequence/3",
+                "timestamp": "2026-11-08T09:10:00.281918+00:00",
+                "result": {
+                  "delay": 35.0,
+                  "done": true
+                }
+              }
+            ],
+            "sequence/4": [
+              {
+                "path": "sequence/4",
+                "timestamp": "2026-11-08T09:10:35.283694+00:00",
+                "child_id": {
+                  "domain": "automation",
+                  "item_id": "aqara_banklampor_monitor_service_calls",
+                  "run_id": "abaaaaeccd0a17217ca892dea725efd3"
+                },
+                "changed_variables": {
+                  "diagnostics_response": {
+                    "content": [],
+                    "status": 200,
+                    "headers": {
+                      "Content-Type": "application/json",
+                      "Content-Length": "2",
+                      "Access-Control-Allow-Origin": "*",
+                      "Keep-Alive": "timeout=5, max=100",
+                      "Access-Control-Allow-Methods": "DELETE, GET, OPTIONS, POST, PUT",
+                      "Access-Control-Allow-Headers": "Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, If-None-Match"
+                    }
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "rest_command",
+                    "service": "thread_get_diagnostics_result",
+                    "service_data": {},
+                    "target": {}
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "alias": "Thread \u2013 Uppdatera n\u00e4tverksdiagnostik",
+            "mode": "single",
+            "sequence": [
+              {
+                "action": "rest_command.thread_get_devices",
+                "response_variable": "devices_response"
+              },
+              {
+                "variables": {
+                  "thread_routers": "{{ devices_response.content\n   | selectattr('role', 'eq', 'router')\n   | map(attribute='extAddress')\n   | list }}"
+                }
+              },
+              {
+                "repeat": {
+                  "for_each": "{{ thread_routers }}",
+                  "sequence": [
+                    {
+                      "action": "rest_command.thread_get_diagnostics",
+                      "data": {
+                        "destination": "{{ repeat.item }}"
+                      }
+                    },
+                    {
+                      "delay": {
+                        "seconds": 1
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "delay": {
+                  "seconds": 35
+                }
+              },
+              {
+                "action": "rest_command.thread_get_diagnostics_result",
+                "response_variable": "diagnostics_response"
+              }
+            ]
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01M6X6QXTCCK8P7KY0ZERQVRYM",
+            "parent_id": null,
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "sequence/4",
+          "run_id": "7fe2d5fce1671bffb504d4290e3ac585",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2026-11-08T09:10:00.270602+00:00",
+            "finish": "2026-11-08T09:10:35.289863+00:00"
+          },
+          "domain": "script",
+          "item_id": "thread_uppdatera_natverksdiagnostik"
+        }
+      }
+    ],
+    "automation.1669463747067": [
+      {
+        "extended_dict": {
+          "last_step": "condition/0/entity_id/0",
+          "run_id": "31cdaff6de81b11315d3bd17051df6c8",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:15:01.169936+00:00",
+            "finish": "2026-11-08T09:15:01.170341+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1669463747067",
+          "trigger": "state of sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2026-11-08T09:15:01.170106+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.varning_frysboxen",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1669463747067",
+                      "last_triggered": "2026-08-03T19:08:03.006212+00:00",
+                      "mode": "queued",
+                      "current": 0,
+                      "max": 10,
+                      "friendly_name": "Varning \u2013 Frysboxen"
+                    },
+                    "last_changed": "2026-11-08T09:09:40.317076+00:00",
+                    "last_reported": "2026-11-08T09:09:40.317076+00:00",
+                    "last_updated": "2026-11-08T09:09:40.317076+00:00",
+                    "context": {
+                      "id": "01M6X6QAAW5YMC9S4DBNVQA1GD",
+                      "parent_id": null,
+                      "user_id": "11c3c69645984f0c814370add793f07e"
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+                    "from_state": {
+                      "entity_id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+                      "state": "-17.9366302490234",
+                      "attributes": {
+                        "state_class": "measurement",
+                        "unit_of_measurement": "\u00b0C",
+                        "device_class": "temperature",
+                        "friendly_name": "Klimatsensor Temperatur frysbox"
+                      },
+                      "last_changed": "2026-11-08T09:14:01.164354+00:00",
+                      "last_reported": "2026-11-08T09:14:01.164354+00:00",
+                      "last_updated": "2026-11-08T09:14:01.164354+00:00",
+                      "context": {
+                        "id": "01M6X6Z92CWSNMP1R3VV18A0T9",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+                      "state": "-17.8244781494141",
+                      "attributes": {
+                        "state_class": "measurement",
+                        "unit_of_measurement": "\u00b0C",
+                        "device_class": "temperature",
+                        "friendly_name": "Klimatsensor Temperatur frysbox"
+                      },
+                      "last_changed": "2026-11-08T09:15:01.169605+00:00",
+                      "last_reported": "2026-11-08T09:15:01.169605+00:00",
+                      "last_updated": "2026-11-08T09:15:01.169605+00:00",
+                      "context": {
+                        "id": "01M6X713NHWG6Q8EHVE0ZF772M",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2026-11-08T09:15:01.170188+00:00",
+                "result": {
+                  "result": false
+                }
+              }
+            ],
+            "condition/0/entity_id/0": [
+              {
+                "path": "condition/0/entity_id/0",
+                "timestamp": "2026-11-08T09:15:01.170245+00:00",
+                "result": {
+                  "result": false,
+                  "state": -17.8244781494141,
+                  "wanted_state_above": -10.0
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1669463747067",
+            "alias": "Varning \u2013 Frysboxen",
+            "description": "Meddela mobilen att frysboxen \u00e4r f\u00f6r varm och att \u00e5tg\u00e4rder kan beh\u00f6vas.",
+            "triggers": [
+              {
+                "entity_id": [
+                  "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature"
+                ],
+                "trigger": "state"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "numeric_state",
+                "entity_id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+                "above": -10
+              }
+            ],
+            "actions": [
+              {
+                "action": "script.granny_broadcast",
+                "metadata": {},
+                "data": {
+                  "severity": "crit",
+                  "humor_level": 2,
+                  "tts_media_player": "media_player.kokets_skarm_ma",
+                  "task": "Meddela att frysboxen i gamla verkstaden blivit f\u00f6r varm och att den beh\u00f6ver kontrolleras",
+                  "channels": [
+                    "tts",
+                    "tv",
+                    "ha",
+                    "mobile"
+                  ]
+                }
+              }
+            ],
+            "mode": "queued",
+            "max": 10
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01M6X713NH19T924GN3N640T0X",
+            "parent_id": "01M6X713NHWG6Q8EHVE0ZF772M",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/0/entity_id/0",
+          "run_id": "31cdaff6de81b11315d3bd17051df6c8",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:15:01.169936+00:00",
+            "finish": "2026-11-08T09:15:01.170341+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1669463747067",
+          "trigger": "state of sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/0/entity_id/0",
+          "run_id": "d5e775950eaa743dd5437ca0b67f98b2",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:16:01.172194+00:00",
+            "finish": "2026-11-08T09:16:01.172503+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1669463747067",
+          "trigger": "state of sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2026-11-08T09:16:01.172301+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.varning_frysboxen",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1669463747067",
+                      "last_triggered": "2026-08-03T19:08:03.006212+00:00",
+                      "mode": "queued",
+                      "current": 0,
+                      "max": 10,
+                      "friendly_name": "Varning \u2013 Frysboxen"
+                    },
+                    "last_changed": "2026-11-08T09:09:40.317076+00:00",
+                    "last_reported": "2026-11-08T09:09:40.317076+00:00",
+                    "last_updated": "2026-11-08T09:09:40.317076+00:00",
+                    "context": {
+                      "id": "01M6X6QAAW5YMC9S4DBNVQA1GD",
+                      "parent_id": null,
+                      "user_id": "11c3c69645984f0c814370add793f07e"
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+                    "from_state": {
+                      "entity_id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+                      "state": "-17.8244781494141",
+                      "attributes": {
+                        "state_class": "measurement",
+                        "unit_of_measurement": "\u00b0C",
+                        "device_class": "temperature",
+                        "friendly_name": "Klimatsensor Temperatur frysbox"
+                      },
+                      "last_changed": "2026-11-08T09:15:01.169605+00:00",
+                      "last_reported": "2026-11-08T09:15:01.169605+00:00",
+                      "last_updated": "2026-11-08T09:15:01.169605+00:00",
+                      "context": {
+                        "id": "01M6X713NHWG6Q8EHVE0ZF772M",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+                      "state": "-17.7283477783203",
+                      "attributes": {
+                        "state_class": "measurement",
+                        "unit_of_measurement": "\u00b0C",
+                        "device_class": "temperature",
+                        "friendly_name": "Klimatsensor Temperatur frysbox"
+                      },
+                      "last_changed": "2026-11-08T09:16:01.171859+00:00",
+                      "last_reported": "2026-11-08T09:16:01.171859+00:00",
+                      "last_updated": "2026-11-08T09:16:01.171859+00:00",
+                      "context": {
+                        "id": "01M6X72Y8KMHFG0NJ2Y5R5V4D0",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2026-11-08T09:16:01.172367+00:00",
+                "result": {
+                  "result": false
+                }
+              }
+            ],
+            "condition/0/entity_id/0": [
+              {
+                "path": "condition/0/entity_id/0",
+                "timestamp": "2026-11-08T09:16:01.172420+00:00",
+                "result": {
+                  "result": false,
+                  "state": -17.7283477783203,
+                  "wanted_state_above": -10.0
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1669463747067",
+            "alias": "Varning \u2013 Frysboxen",
+            "description": "Meddela mobilen att frysboxen \u00e4r f\u00f6r varm och att \u00e5tg\u00e4rder kan beh\u00f6vas.",
+            "triggers": [
+              {
+                "entity_id": [
+                  "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature"
+                ],
+                "trigger": "state"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "numeric_state",
+                "entity_id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+                "above": -10
+              }
+            ],
+            "actions": [
+              {
+                "action": "script.granny_broadcast",
+                "metadata": {},
+                "data": {
+                  "severity": "crit",
+                  "humor_level": 2,
+                  "tts_media_player": "media_player.kokets_skarm_ma",
+                  "task": "Meddela att frysboxen i gamla verkstaden blivit f\u00f6r varm och att den beh\u00f6ver kontrolleras",
+                  "channels": [
+                    "tts",
+                    "tv",
+                    "ha",
+                    "mobile"
+                  ]
+                }
+              }
+            ],
+            "mode": "queued",
+            "max": 10
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01M6X72Y8MCJAVEE3HWRE5GA0Q",
+            "parent_id": "01M6X72Y8KMHFG0NJ2Y5R5V4D0",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/0/entity_id/0",
+          "run_id": "d5e775950eaa743dd5437ca0b67f98b2",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:16:01.172194+00:00",
+            "finish": "2026-11-08T09:16:01.172503+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1669463747067",
+          "trigger": "state of sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/0/entity_id/0",
+          "run_id": "d8e3af57182a0211259ae06395f84a93",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:17:01.173437+00:00",
+            "finish": "2026-11-08T09:17:01.173776+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1669463747067",
+          "trigger": "state of sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2026-11-08T09:17:01.173554+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.varning_frysboxen",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1669463747067",
+                      "last_triggered": "2026-08-03T19:08:03.006212+00:00",
+                      "mode": "queued",
+                      "current": 0,
+                      "max": 10,
+                      "friendly_name": "Varning \u2013 Frysboxen"
+                    },
+                    "last_changed": "2026-11-08T09:09:40.317076+00:00",
+                    "last_reported": "2026-11-08T09:09:40.317076+00:00",
+                    "last_updated": "2026-11-08T09:09:40.317076+00:00",
+                    "context": {
+                      "id": "01M6X6QAAW5YMC9S4DBNVQA1GD",
+                      "parent_id": null,
+                      "user_id": "11c3c69645984f0c814370add793f07e"
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+                    "from_state": {
+                      "entity_id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+                      "state": "-17.7283477783203",
+                      "attributes": {
+                        "state_class": "measurement",
+                        "unit_of_measurement": "\u00b0C",
+                        "device_class": "temperature",
+                        "friendly_name": "Klimatsensor Temperatur frysbox"
+                      },
+                      "last_changed": "2026-11-08T09:16:01.171859+00:00",
+                      "last_reported": "2026-11-08T09:16:01.171859+00:00",
+                      "last_updated": "2026-11-08T09:16:01.171859+00:00",
+                      "context": {
+                        "id": "01M6X72Y8KMHFG0NJ2Y5R5V4D0",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+                      "state": "-17.6295471191406",
+                      "attributes": {
+                        "state_class": "measurement",
+                        "unit_of_measurement": "\u00b0C",
+                        "device_class": "temperature",
+                        "friendly_name": "Klimatsensor Temperatur frysbox"
+                      },
+                      "last_changed": "2026-11-08T09:17:01.173102+00:00",
+                      "last_reported": "2026-11-08T09:17:01.173102+00:00",
+                      "last_updated": "2026-11-08T09:17:01.173102+00:00",
+                      "context": {
+                        "id": "01M6X74RVNT7MJDHM0MBXZZ0MQ",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2026-11-08T09:17:01.173628+00:00",
+                "result": {
+                  "result": false
+                }
+              }
+            ],
+            "condition/0/entity_id/0": [
+              {
+                "path": "condition/0/entity_id/0",
+                "timestamp": "2026-11-08T09:17:01.173683+00:00",
+                "result": {
+                  "result": false,
+                  "state": -17.6295471191406,
+                  "wanted_state_above": -10.0
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1669463747067",
+            "alias": "Varning \u2013 Frysboxen",
+            "description": "Meddela mobilen att frysboxen \u00e4r f\u00f6r varm och att \u00e5tg\u00e4rder kan beh\u00f6vas.",
+            "triggers": [
+              {
+                "entity_id": [
+                  "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature"
+                ],
+                "trigger": "state"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "numeric_state",
+                "entity_id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+                "above": -10
+              }
+            ],
+            "actions": [
+              {
+                "action": "script.granny_broadcast",
+                "metadata": {},
+                "data": {
+                  "severity": "crit",
+                  "humor_level": 2,
+                  "tts_media_player": "media_player.kokets_skarm_ma",
+                  "task": "Meddela att frysboxen i gamla verkstaden blivit f\u00f6r varm och att den beh\u00f6ver kontrolleras",
+                  "channels": [
+                    "tts",
+                    "tv",
+                    "ha",
+                    "mobile"
+                  ]
+                }
+              }
+            ],
+            "mode": "queued",
+            "max": 10
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01M6X74RVNR1SJND80ZW59T846",
+            "parent_id": "01M6X74RVNT7MJDHM0MBXZZ0MQ",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/0/entity_id/0",
+          "run_id": "d8e3af57182a0211259ae06395f84a93",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:17:01.173437+00:00",
+            "finish": "2026-11-08T09:17:01.173776+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1669463747067",
+          "trigger": "state of sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/0/entity_id/0",
+          "run_id": "917407ef15aa3426d9b4dea9a0a2247b",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:18:01.159421+00:00",
+            "finish": "2026-11-08T09:18:01.159517+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1669463747067",
+          "trigger": "state of sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2026-11-08T09:18:01.159456+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.varning_frysboxen",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1669463747067",
+                      "last_triggered": "2026-08-03T19:08:03.006212+00:00",
+                      "mode": "queued",
+                      "current": 0,
+                      "max": 10,
+                      "friendly_name": "Varning \u2013 Frysboxen"
+                    },
+                    "last_changed": "2026-11-08T09:09:40.317076+00:00",
+                    "last_reported": "2026-11-08T09:09:40.317076+00:00",
+                    "last_updated": "2026-11-08T09:09:40.317076+00:00",
+                    "context": {
+                      "id": "01M6X6QAAW5YMC9S4DBNVQA1GD",
+                      "parent_id": null,
+                      "user_id": "11c3c69645984f0c814370add793f07e"
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+                    "from_state": {
+                      "entity_id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+                      "state": "-17.6295471191406",
+                      "attributes": {
+                        "state_class": "measurement",
+                        "unit_of_measurement": "\u00b0C",
+                        "device_class": "temperature",
+                        "friendly_name": "Klimatsensor Temperatur frysbox"
+                      },
+                      "last_changed": "2026-11-08T09:17:01.173102+00:00",
+                      "last_reported": "2026-11-08T09:17:01.173102+00:00",
+                      "last_updated": "2026-11-08T09:17:01.173102+00:00",
+                      "context": {
+                        "id": "01M6X74RVNT7MJDHM0MBXZZ0MQ",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+                      "state": "-17.5254058837891",
+                      "attributes": {
+                        "state_class": "measurement",
+                        "unit_of_measurement": "\u00b0C",
+                        "device_class": "temperature",
+                        "friendly_name": "Klimatsensor Temperatur frysbox"
+                      },
+                      "last_changed": "2026-11-08T09:18:01.159313+00:00",
+                      "last_reported": "2026-11-08T09:18:01.159313+00:00",
+                      "last_updated": "2026-11-08T09:18:01.159313+00:00",
+                      "context": {
+                        "id": "01M6X76KE7MH73RZWGKWE1RCG9",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2026-11-08T09:18:01.159477+00:00",
+                "result": {
+                  "result": false
+                }
+              }
+            ],
+            "condition/0/entity_id/0": [
+              {
+                "path": "condition/0/entity_id/0",
+                "timestamp": "2026-11-08T09:18:01.159493+00:00",
+                "result": {
+                  "result": false,
+                  "state": -17.5254058837891,
+                  "wanted_state_above": -10.0
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1669463747067",
+            "alias": "Varning \u2013 Frysboxen",
+            "description": "Meddela mobilen att frysboxen \u00e4r f\u00f6r varm och att \u00e5tg\u00e4rder kan beh\u00f6vas.",
+            "triggers": [
+              {
+                "entity_id": [
+                  "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature"
+                ],
+                "trigger": "state"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "numeric_state",
+                "entity_id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+                "above": -10
+              }
+            ],
+            "actions": [
+              {
+                "action": "script.granny_broadcast",
+                "metadata": {},
+                "data": {
+                  "severity": "crit",
+                  "humor_level": 2,
+                  "tts_media_player": "media_player.kokets_skarm_ma",
+                  "task": "Meddela att frysboxen i gamla verkstaden blivit f\u00f6r varm och att den beh\u00f6ver kontrolleras",
+                  "channels": [
+                    "tts",
+                    "tv",
+                    "ha",
+                    "mobile"
+                  ]
+                }
+              }
+            ],
+            "mode": "queued",
+            "max": 10
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01M6X76KE71B20KJH8RNQ2BX3P",
+            "parent_id": "01M6X76KE7MH73RZWGKWE1RCG9",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/0/entity_id/0",
+          "run_id": "917407ef15aa3426d9b4dea9a0a2247b",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:18:01.159421+00:00",
+            "finish": "2026-11-08T09:18:01.159517+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1669463747067",
+          "trigger": "state of sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/0/entity_id/0",
+          "run_id": "7fd32476ddfea7dcc326635367a35a57",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:19:01.160013+00:00",
+            "finish": "2026-11-08T09:19:01.160385+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1669463747067",
+          "trigger": "state of sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2026-11-08T09:19:01.160162+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.varning_frysboxen",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1669463747067",
+                      "last_triggered": "2026-08-03T19:08:03.006212+00:00",
+                      "mode": "queued",
+                      "current": 0,
+                      "max": 10,
+                      "friendly_name": "Varning \u2013 Frysboxen"
+                    },
+                    "last_changed": "2026-11-08T09:09:40.317076+00:00",
+                    "last_reported": "2026-11-08T09:09:40.317076+00:00",
+                    "last_updated": "2026-11-08T09:09:40.317076+00:00",
+                    "context": {
+                      "id": "01M6X6QAAW5YMC9S4DBNVQA1GD",
+                      "parent_id": null,
+                      "user_id": "11c3c69645984f0c814370add793f07e"
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+                    "from_state": {
+                      "entity_id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+                      "state": "-17.5254058837891",
+                      "attributes": {
+                        "state_class": "measurement",
+                        "unit_of_measurement": "\u00b0C",
+                        "device_class": "temperature",
+                        "friendly_name": "Klimatsensor Temperatur frysbox"
+                      },
+                      "last_changed": "2026-11-08T09:18:01.159313+00:00",
+                      "last_reported": "2026-11-08T09:18:01.159313+00:00",
+                      "last_updated": "2026-11-08T09:18:01.159313+00:00",
+                      "context": {
+                        "id": "01M6X76KE7MH73RZWGKWE1RCG9",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+                      "state": "-17.4372863769531",
+                      "attributes": {
+                        "state_class": "measurement",
+                        "unit_of_measurement": "\u00b0C",
+                        "device_class": "temperature",
+                        "friendly_name": "Klimatsensor Temperatur frysbox"
+                      },
+                      "last_changed": "2026-11-08T09:19:01.159679+00:00",
+                      "last_reported": "2026-11-08T09:19:01.159679+00:00",
+                      "last_updated": "2026-11-08T09:19:01.159679+00:00",
+                      "context": {
+                        "id": "01M6X78E173EGHDHXGN3C2S2Q5",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2026-11-08T09:19:01.160232+00:00",
+                "result": {
+                  "result": false
+                }
+              }
+            ],
+            "condition/0/entity_id/0": [
+              {
+                "path": "condition/0/entity_id/0",
+                "timestamp": "2026-11-08T09:19:01.160290+00:00",
+                "result": {
+                  "result": false,
+                  "state": -17.4372863769531,
+                  "wanted_state_above": -10.0
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1669463747067",
+            "alias": "Varning \u2013 Frysboxen",
+            "description": "Meddela mobilen att frysboxen \u00e4r f\u00f6r varm och att \u00e5tg\u00e4rder kan beh\u00f6vas.",
+            "triggers": [
+              {
+                "entity_id": [
+                  "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature"
+                ],
+                "trigger": "state"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "numeric_state",
+                "entity_id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature",
+                "above": -10
+              }
+            ],
+            "actions": [
+              {
+                "action": "script.granny_broadcast",
+                "metadata": {},
+                "data": {
+                  "severity": "crit",
+                  "humor_level": 2,
+                  "tts_media_player": "media_player.kokets_skarm_ma",
+                  "task": "Meddela att frysboxen i gamla verkstaden blivit f\u00f6r varm och att den beh\u00f6ver kontrolleras",
+                  "channels": [
+                    "tts",
+                    "tv",
+                    "ha",
+                    "mobile"
+                  ]
+                }
+              }
+            ],
+            "mode": "queued",
+            "max": 10
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01M6X78E17XZQCHJ48V4X37GXJ",
+            "parent_id": "01M6X78E173EGHDHXGN3C2S2Q5",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/0/entity_id/0",
+          "run_id": "7fd32476ddfea7dcc326635367a35a57",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2026-11-08T09:19:01.160013+00:00",
+            "finish": "2026-11-08T09:19:01.160385+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1669463747067",
+          "trigger": "state of sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature"
+        }
+      }
+    ]
+  }
+}

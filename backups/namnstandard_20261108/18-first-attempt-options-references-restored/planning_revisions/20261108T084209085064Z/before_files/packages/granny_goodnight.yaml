@@ -1,0 +1,25 @@
+granny_goodnight:
+
+automation:
+  - id: granny_goodnight_prepare_audio
+    alias: Godnatt – förbered kvällens korta hälsning
+    mode: single
+    triggers:
+      - trigger: homeassistant
+        event: start
+      - trigger: time
+        at: '18:00:00'
+    actions:
+      # Do not compete with the current greeting or startup. Prepare the next one.
+      - delay: '00:01:00'
+      - condition: template
+        value_template: "{{ state_attr('automation.godnatt', 'current') | int(0) == 0 }}"
+      - action: granny_goodnight.prepare
+
+script:
+  godnatt_forbered_nasta_halsning:
+    alias: Godnatt – förbered nästa hälsning efter rutinen
+    description: Förbereder den fasta godnatthälsningens ljud.
+    mode: single
+    sequence:
+      - action: granny_goodnight.prepare

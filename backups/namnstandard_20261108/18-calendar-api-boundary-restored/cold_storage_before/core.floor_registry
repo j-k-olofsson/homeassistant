@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "minor_version": 3,
+  "key": "core.floor_registry",
+  "data": {
+    "floors": [
+      {
+        "aliases": [],
+        "floor_id": "entreplan",
+        "icon": null,
+        "level": 0,
+        "name": "Entreplan",
+        "created_at": "1970-01-01T00:00:00+00:00",
+        "modified_at": "1970-01-01T00:00:00+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "kallaren",
+        "icon": null,
+        "level": -1,
+        "name": "Källaren",
+        "created_at": "1970-01-01T00:00:00+00:00",
+        "modified_at": "1970-01-01T00:00:00+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "vinden",
+        "icon": null,
+        "level": 1,
+        "name": "Vinden",
+        "created_at": "1970-01-01T00:00:00+00:00",
+        "modified_at": "1970-01-01T00:00:00+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "utomhus",
+        "icon": "phu:rooms-outdoor",
+        "level": null,
+        "name": "Utomhus",
+        "created_at": "1970-01-01T00:00:00+00:00",
+        "modified_at": "1970-01-01T00:00:00+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "utanfor_tomten",
+        "icon": null,
+        "level": null,
+        "name": "Utanför tomten",
+        "created_at": "2025-03-27T11:00:05.386969+00:00",
+        "modified_at": "2025-03-27T11:00:05.386977+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "infrastruktur",
+        "icon": "phu:desktop-computer",
+        "level": 1,
+        "name": "Infrastruktur",
+        "created_at": "2026-09-23T14:41:10.527216+00:00",
+        "modified_at": "2026-09-23T14:41:10.527227+00:00"
+      }
+    ]
+  }
+}

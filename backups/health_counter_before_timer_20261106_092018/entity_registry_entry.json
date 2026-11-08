@@ -1,0 +1,47 @@
+{
+  "aliases": [],
+  "aliases_v2": [
+    null
+  ],
+  "area_id": null,
+  "categories": {},
+  "capabilities": null,
+  "compat_name": null,
+  "config_entry_id": "01K276DQ9KHYAR396NT0QBWFGN",
+  "config_subentry_id": null,
+  "created_at": "2025-08-09T10:36:02.742235+00:00",
+  "device_class": null,
+  "device_id": null,
+  "disabled_by": null,
+  "entity_category": null,
+  "entity_id": "sensor.ha_antal_otillgangliga_enheter",
+  "hidden_by": null,
+  "icon": null,
+  "id": "910798d5d204f3416aad7f4bc75d2831",
+  "has_entity_name": false,
+  "labels": [],
+  "modified_at": "2026-05-12T10:34:44.734006+00:00",
+  "name": null,
+  "object_id_base": "HA - Antal otillgängliga enheter",
+  "options": {
+    "cloud.google_assistant": {
+      "should_expose": false
+    },
+    "conversation": {
+      "should_expose": false
+    },
+    "sensor": {
+      "display_precision": null
+    }
+  },
+  "original_device_class": null,
+  "original_icon": null,
+  "original_name": "HA - Antal otillgängliga enheter",
+  "platform": "template",
+  "suggested_object_id": null,
+  "supported_features": 0,
+  "translation_key": null,
+  "unique_id": "01K276DQ9KHYAR396NT0QBWFGN",
+  "previous_unique_id": null,
+  "unit_of_measurement": "enheter"
+}

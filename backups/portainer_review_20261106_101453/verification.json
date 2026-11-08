@@ -1,0 +1,9 @@
+{
+  "other_containers_unchanged": 16,
+  "agent": {
+    "Version": "2.45.3",
+    "PreviousVersion": "2.45.2"
+  },
+  "caddy_ui_http": 200,
+  "caddy_ui_manifest_digest": "sha256:78d9f77ac94c9256f3cc5b255d76d002647fc19d6f00084b277710a584c5537a"
+}

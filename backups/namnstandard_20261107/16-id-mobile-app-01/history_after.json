@@ -1,0 +1,106 @@
+{
+  "sensor.heimdal_ha_sm_g930f_batteristatus": [
+    {
+      "state": "charging",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "binary_sensor.heimdal_ha_sm_g930f_laddar": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "sensor.heimdal_ha_sm_g930f_laddartyp": [
+    {
+      "state": "ac",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "sensor.heimdal_ha_sm_g930f_batterihalsa": [
+    {
+      "state": "good",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "sensor.heimdal_ha_sm_g930f_batterieffekt": [
+    {
+      "state": "0.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "binary_sensor.entren_galaxy_tab_2_hallen_mikrofon_avstangd": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "sensor.entren_galaxy_tab_2_hallen_batteristatus": [
+    {
+      "state": "discharging",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "sensor.entren_galaxy_tab_2_hallen_laddartyp": [
+    {
+      "state": "none",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "sensor.entren_galaxy_tab_2_hallen_skarmljusstyrka": [
+    {
+      "state": "208",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "sensor.entren_galaxy_tab_2_hallen_tid_till_skarmavstangning": [
+    {
+      "state": "300000",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "sensor.entren_galaxy_tab_2_hallen_belysningsstyrka": [
+    {
+      "state": "1",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "sensor.heimdal_ha_sm_t835_batteristatus_app_8356c624": [
+    {
+      "state": "full",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "sensor.heimdal_ha_sm_t835_laddartyp_app_8356c624": [
+    {
+      "state": "ac",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ]
+}

@@ -24,12 +24,14 @@
                         "data": {
                             "battery_percentage_template": "Battery percentage template",
                             "battery_low_template": "低電量模板",
+                            "retain_state": "Retain state",
                             "filter_outliers": "Filter outliers"
                         },
                         "data_description": {
-                            "battery_percentage_template": "Template to create a battery percentage\nOnly needed for devices that do not have a standard battery percentage",
+                            "battery_percentage_template": "Template to create a battery percentage.\nOnly needed for devices that do not have a standard battery percentage.",
                             "battery_low_template": "判斷電池是否低電量的模板，若為低電量應回傳 true\n僅在電池電量非標準時需要",
-                            "filter_outliers": "Filter out large battery level drops, reducing falsely firing events on devices that erroneously report levels occasionally"
+                            "retain_state": "Retain the last battery state when the source entity is unavailable.\nUseful for devices that sleep and become unavailable.",
+                            "filter_outliers": "Filter out large battery level drops, reducing falsely firing events on devices that erroneously report levels occasionally."
                         }
                     }
                 }
@@ -91,7 +93,7 @@
                     },
                     "data_description": {
                         "battery_low_threshold": "若為零，將使用全域預設閾值",
-                        "battery_increase_threshold": "The threshold is the difference in increase between previous and current battery level\n0 will use the global default threshold"
+                        "battery_increase_threshold": "The threshold is the difference in increase between previous and current battery level.\n0 will use the global default threshold."
                     },
                     "sections": {
                         "advanced_settings": {
@@ -99,12 +101,14 @@
                             "data": {
                                 "battery_percentage_template": "Battery percentage template",
                                 "battery_low_template": "低電量模板",
+                                "retain_state": "Retain state",
                                 "filter_outliers": "Filter outliers"
                             },
                             "data_description": {
-                                "battery_percentage_template": "Template to create a battery percentage\nOnly needed for devices that do not have a standard battery percentage",
+                                "battery_percentage_template": "Template to create a battery percentage.\nOnly needed for devices that do not have a standard battery percentage.",
                                 "battery_low_template": "判斷電池是否低電量的模板，若為低電量應回傳 true\n僅在電池電量非標準時需要",
-                                "filter_outliers": "Filter out large battery level drops, reducing falsely firing events on devices that erroneously report levels occasionally"
+                                "retain_state": "Retain the last battery state when the source entity is unavailable.\nUseful for devices that sleep and become unavailable.",
+                                "filter_outliers": "Filter out large battery level drops, reducing falsely firing events on devices that erroneously report levels occasionally."
                             }
                         }
                     }
@@ -126,7 +130,7 @@
                     "data_description": {
                         "name": "若留空，將使用來源装置的名稱",
                         "battery_low_threshold": "若為零，將使用全域預設閾值",
-                        "battery_increase_threshold": "The threshold is the difference in increase between previous and current battery level\n0 will use the global default threshold"
+                        "battery_increase_threshold": "The threshold is the difference in increase between previous and current battery level.\n0 will use the global default threshold."
                     },
                     "sections": {
                         "advanced_settings": {
@@ -134,12 +138,14 @@
                             "data": {
                                 "battery_percentage_template": "Battery percentage template",
                                 "battery_low_template": "低電量模板",
+                                "retain_state": "Retain state",
                                 "filter_outliers": "Filter outliers"
                             },
                             "data_description": {
-                                "battery_percentage_template": "Template to create a battery percentage\nOnly needed for devices that do not have a standard battery percentage",
+                                "battery_percentage_template": "Template to create a battery percentage.\nOnly needed for devices that do not have a standard battery percentage.",
                                 "battery_low_template": "判斷電池是否低電量的模板，若為低電量應回傳 true\n僅在電池電量非標準時需要",
-                                "filter_outliers": "Filter out large battery level drops, reducing falsely firing events on devices that erroneously report levels occasionally"
+                                "retain_state": "Retain the last battery state when the source entity is unavailable.\nUseful for devices that sleep and become unavailable.",
+                                "filter_outliers": "Filter out large battery level drops, reducing falsely firing events on devices that erroneously report levels occasionally."
                             }
                         }
                     }
@@ -287,7 +293,7 @@
                     "description": "已更換電池的裝置。",
                     "name": "裝置"
                 },
-                "entity_id": {
+                "source_entity_id": {
                     "description": "已更換電池的實體（僅用於關聯至實體的 Battery Notes）。",
                     "name": "實體"
                 },
@@ -301,7 +307,7 @@
         "check_battery_last_replaced": {
             "description": "Get a response or raise events for devices that haven't had their battery replaced.",
             "fields": {
-                "days_last_reported": {
+                "days_last_replaced": {
                     "description": "Number of days since a device last had its battery replaced.",
                     "name": "天數"
                 },
@@ -375,6 +381,47 @@
         "deprecated_yaml": {
             "title": "The {integration_title} YAML configuration is being removed",
             "description": "Configuring {integration_title} using YAML is being removed.\n\nYour existing YAML configuration has been imported into the UI automatically.\n\nRemove the `{domain}` configuration from your configuration.yaml file and restart Home Assistant to fix this issue."
+        }
+    },
+    "selector": {
+        "battery_low_event_types": {
+            "options": {
+                "all": "All",
+                "low_state_transitions": "Low-state transitions",
+                "reminders": "Reminders"
+            }
+        }
+    },
+    "triggers": {
+        "battery_has_increased": {
+            "name": "Battery has increased",
+            "description": "Triggers when a battery level increases by at least its configured increase threshold, or a binary or templated low battery state becomes healthy."
+        },
+        "battery_was_not_reported": {
+            "name": "Battery was not reported",
+            "description": "Triggers from events raised by the Check battery last reported action when a battery has not reported for longer than the specified number of days, or has never reported. Schedule or call that action with Raise events enabled to trigger this automation.\nAutomations using this trigger must use Queued mode (`mode: queued`) because one action call can raise events for multiple battery notes in quick succession."
+        },
+        "battery_was_not_replaced": {
+            "name": "Battery was not replaced",
+            "description": "Triggers from events raised by the Check battery last replaced action when a battery has not been replaced for longer than the specified number of days. Schedule or call that action with Raise events enabled to trigger this automation.\nAutomations using this trigger must use Queued mode (`mode: queued`) because one action call can raise events for multiple battery notes in quick succession."
+        },
+        "battery_no_longer_low": {
+            "name": "Battery no longer low",
+            "description": "Triggers when a battery is no longer low."
+        },
+        "battery_became_low": {
+            "name": "Battery became low",
+            "description": "Triggers when a battery becomes low or a low battery reminder is raised.\nAutomations using this trigger must use Queued mode (`mode: queued`) because one action call can raise events for multiple battery notes in quick succession.",
+            "fields": {
+                "event_types": {
+                    "name": "Event types",
+                    "description": "All triggers when a battery becomes low and on reminders raised by Check Battery Low. Select Low-state transitions for low battery transitions only, or Reminders for action reminders."
+                }
+            }
+        },
+        "battery_was_replaced": {
+            "name": "Battery was replaced",
+            "description": "Triggers when a battery is marked as replaced."
         }
     },
     "exceptions": {

@@ -1,0 +1,98 @@
+[
+  {
+    "id": 42,
+    "dns_addresses": [
+      "fd58:1d15:b4f6:1:9ba6:6485:96b:c122"
+    ],
+    "dns_api": {
+      "fd58:1d15:b4f6:1:9ba6:6485:96b:c122": {
+        "name": "esphome42",
+        "version": "2026.10.1",
+        "matches": true
+      }
+    },
+    "dns_ota": {
+      "fd58:1d15:b4f6:1:9ba6:6485:96b:c122": "open"
+    }
+  },
+  {
+    "id": 45,
+    "dns_addresses": [
+      "fd58:1d15:b4f6:1:d6bb:8c94:37a5:b3e4"
+    ],
+    "dns_api": {
+      "fd58:1d15:b4f6:1:d6bb:8c94:37a5:b3e4": {
+        "name": "esphome45",
+        "version": "2026.10.1",
+        "matches": true
+      }
+    },
+    "dns_ota": {
+      "fd58:1d15:b4f6:1:d6bb:8c94:37a5:b3e4": "open"
+    }
+  },
+  {
+    "id": 46,
+    "dns_addresses": [
+      "fd58:1d15:b4f6:1:883f:63fa:3b60:4a07"
+    ],
+    "dns_api": {
+      "fd58:1d15:b4f6:1:883f:63fa:3b60:4a07": {
+        "name": "esphome46",
+        "version": "2026.10.1",
+        "matches": true
+      }
+    },
+    "dns_ota": {
+      "fd58:1d15:b4f6:1:883f:63fa:3b60:4a07": "open"
+    }
+  },
+  {
+    "id": 47,
+    "dns_addresses": [
+      "fd58:1d15:b4f6:1:da90:2de:b235:4dc6"
+    ],
+    "dns_api": {
+      "fd58:1d15:b4f6:1:da90:2de:b235:4dc6": {
+        "name": "esphome47",
+        "version": "2026.10.1",
+        "matches": true
+      }
+    },
+    "dns_ota": {
+      "fd58:1d15:b4f6:1:da90:2de:b235:4dc6": "open"
+    }
+  },
+  {
+    "id": 49,
+    "dns_addresses": [
+      "fd58:1d15:b4f6:1:3e7b:2005:62a0:b24c"
+    ],
+    "dns_api": {
+      "fd58:1d15:b4f6:1:3e7b:2005:62a0:b24c": {
+        "name": "esphome49",
+        "version": "2026.10.1",
+        "matches": true
+      }
+    },
+    "dns_ota": {
+      "fd58:1d15:b4f6:1:3e7b:2005:62a0:b24c": "open"
+    }
+  },
+  {
+    "id": 58,
+    "dns_addresses": [
+      "fd58:1d15:b4f6:1:776f:4bc0:effb:919b"
+    ],
+    "dns_api": {
+      "fd58:1d15:b4f6:1:776f:4bc0:effb:919b": {
+        "name": "esphome58",
+        "version": "2026.10.1",
+        "matches": true
+      }
+    },
+    "dns_ota": {
+      "fd58:1d15:b4f6:1:776f:4bc0:effb:919b": "open"
+    }
+  }
+]

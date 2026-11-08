@@ -1,0 +1,34 @@
+{
+  "input_boolean.standardkontrollpanel": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:00.767302+00:00",
+      "last_updated": "2026-11-07T07:51:00.767302+00:00"
+    }
+  ],
+  "input_boolean.standardkontrollpanel_2": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:00.767302+00:00",
+      "last_updated": "2026-11-07T07:51:00.767302+00:00"
+    }
+  ],
+  "input_boolean.standardkontrollpanel_3": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:00.767302+00:00",
+      "last_updated": "2026-11-07T07:51:00.767302+00:00"
+    }
+  ],
+  "input_boolean.standardkontrollpanel_4": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:00.767302+00:00",
+      "last_updated": "2026-11-07T07:51:00.767302+00:00"
+    }
+  ]
+}

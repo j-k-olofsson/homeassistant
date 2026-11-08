@@ -1,0 +1,42 @@
+{
+  "area_id": null,
+  "categories": {},
+  "config_entry_id": "01KHBMCW54ZYMABN5FRZY31HD5",
+  "config_subentry_id": null,
+  "created_at": 1786961804.453317,
+  "device_id": "e80cd70cfca9a3dc1015e3c62fee06ca",
+  "disabled_by": null,
+  "entity_category": null,
+  "entity_id": "light.taklampor_kokson",
+  "has_entity_name": true,
+  "hidden_by": null,
+  "icon": null,
+  "id": "9474b5a9c8d9aaaaa0be225be245ad0e",
+  "labels": [],
+  "modified_at": 1788855555.613308,
+  "name": null,
+  "next_name_part": "device",
+  "options": {
+    "conversation": {
+      "should_expose": true
+    },
+    "cloud.google_assistant": {
+      "should_expose": true
+    }
+  },
+  "original_name": null,
+  "platform": "matter",
+  "translation_key": "light",
+  "unique_id": "9452696A70D3B0D6-0000000000000028-MatterNodeDevice-1-MatterLight-6-0",
+  "aliases": [
+    null
+  ],
+  "capabilities": {
+    "supported_color_modes": [
+      "brightness"
+    ]
+  },
+  "device_class": null,
+  "original_device_class": null,
+  "original_icon": null
+}

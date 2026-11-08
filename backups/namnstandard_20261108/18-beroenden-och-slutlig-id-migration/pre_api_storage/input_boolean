@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "input_boolean",
+  "data": {
+    "items": [
+      {
+        "id": "winter_equipment",
+        "name": "TILLSTÅND - Vinterprylar",
+        "icon": "mdi:snowflake"
+      },
+      {
+        "id": "pool_equipment",
+        "name": "TILLSTÅND - Poolprylar",
+        "icon": "mdi:pool"
+      },
+      {
+        "name": "Default Dashboard",
+        "initial": true,
+        "id": "default_dashboard"
+      },
+      {
+        "id": "default_dashboard_2",
+        "name": "Default Dashboard",
+        "initial": true
+      },
+      {
+        "id": "automatisk_bilvarme",
+        "name": "Automatisk bilvärme",
+        "icon": "mdi:car-seat-heater"
+      },
+      {
+        "id": "guest_mode",
+        "name": "TILLSTÅND - Gästläge",
+        "icon": "mdi:bed-outline"
+      },
+      {
+        "id": "default_dashboard_3",
+        "name": "Default Dashboard",
+        "initial": true
+      },
+      {
+        "id": "default_dashboard_4",
+        "name": "Default Dashboard",
+        "initial": true
+      },
+      {
+        "id": "override_billaddning",
+        "name": "Override billaddning",
+        "icon": "mdi:debug-step-over"
+      },
+      {
+        "id": "ha_ready",
+        "name": "HA Ready",
+        "icon": "mdi:home-automation"
+      },
+      {
+        "id": "underhallslage",
+        "name": "Underhållsläge",
+        "icon": "mdi:toolbox-outline"
+      },
+      {
+        "id": "tand_ljusen",
+        "name": "Tänd ljusen",
+        "icon": "mdi:lightbulb-on"
+      },
+      {
+        "id": "slack_ljusen",
+        "name": "Släck ljusen",
+        "icon": "mdi:lightbulb-off"
+      }
+    ]
+  }
+}

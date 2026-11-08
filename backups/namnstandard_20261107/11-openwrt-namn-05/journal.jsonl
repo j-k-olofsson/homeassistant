@@ -1,0 +1,500 @@
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_dnsmasq", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst dnsmasq", "aliases": [null, "OpenWrt One - Router Sovrum Stop dnsmasq"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_dnsmasq"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_done", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst done", "aliases": [null, "OpenWrt One - Router Sovrum Restart done"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_done"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_done", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst done", "aliases": [null, "OpenWrt One - Router Sovrum Stop done"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_done"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_dropbear", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst dropbear", "aliases": [null, "OpenWrt One - Router Sovrum Restart dropbear"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_dropbear"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_dropbear", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst dropbear", "aliases": [null, "OpenWrt One - Router Sovrum Stop dropbear"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_dropbear"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_firewall", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst firewall", "aliases": [null, "OpenWrt One - Router Sovrum Restart firewall"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_firewall"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_firewall", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst firewall", "aliases": [null, "OpenWrt One - Router Sovrum Stop firewall"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_firewall"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_gpio_switch", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst gpio_switch", "aliases": [null, "OpenWrt One - Router Sovrum Restart gpio_switch"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_gpio_switch"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_gpio_switch", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst gpio_switch", "aliases": [null, "OpenWrt One - Router Sovrum Stop gpio_switch"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_gpio_switch"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_led", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst led", "aliases": [null, "OpenWrt One - Router Sovrum Restart led"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_led"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_led", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst led", "aliases": [null, "OpenWrt One - Router Sovrum Stop led"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_led"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_log", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst log", "aliases": [null, "OpenWrt One - Router Sovrum Restart log"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_log"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_log", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst log", "aliases": [null, "OpenWrt One - Router Sovrum Stop log"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_log"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_miniupnpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst miniupnpd", "aliases": [null, "OpenWrt One - Router Sovrum Restart miniupnpd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_miniupnpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_miniupnpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst miniupnpd", "aliases": [null, "OpenWrt One - Router Sovrum Stop miniupnpd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_miniupnpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_network", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst network", "aliases": [null, "OpenWrt One - Router Sovrum Restart network"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_network"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_network", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst network", "aliases": [null, "OpenWrt One - Router Sovrum Stop network"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_network"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_nlbwmon", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst nlbwmon", "aliases": [null, "OpenWrt One - Router Sovrum Restart nlbwmon"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_nlbwmon"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_nlbwmon", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst nlbwmon", "aliases": [null, "OpenWrt One - Router Sovrum Stop nlbwmon"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_nlbwmon"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_odhcpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst odhcpd", "aliases": [null, "OpenWrt One - Router Sovrum Restart odhcpd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_odhcpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_odhcpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst odhcpd", "aliases": [null, "OpenWrt One - Router Sovrum Stop odhcpd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_odhcpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_packet_steering", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst packet_steering", "aliases": [null, "OpenWrt One - Router Sovrum Restart packet_steering"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_packet_steering"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_packet_steering", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst packet_steering", "aliases": [null, "OpenWrt One - Router Sovrum Stop packet_steering"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_packet_steering"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_rpcd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst rpcd", "aliases": [null, "OpenWrt One - Router Sovrum Restart rpcd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_rpcd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_rpcd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst rpcd", "aliases": [null, "OpenWrt One - Router Sovrum Stop rpcd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_rpcd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_sysctl", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst sysctl", "aliases": [null, "OpenWrt One - Router Sovrum Restart sysctl"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_sysctl"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_sysctl", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst sysctl", "aliases": [null, "OpenWrt One - Router Sovrum Stop sysctl"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_sysctl"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_sysfixtime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst sysfixtime", "aliases": [null, "OpenWrt One - Router Sovrum Restart sysfixtime"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_sysfixtime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_sysfixtime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst sysfixtime", "aliases": [null, "OpenWrt One - Router Sovrum Stop sysfixtime"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_sysfixtime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_sysntpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst sysntpd", "aliases": [null, "OpenWrt One - Router Sovrum Restart sysntpd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_sysntpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_sysntpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst sysntpd", "aliases": [null, "OpenWrt One - Router Sovrum Stop sysntpd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_sysntpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_system", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst system", "aliases": [null, "OpenWrt One - Router Sovrum Restart system"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_system"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_system", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst system", "aliases": [null, "OpenWrt One - Router Sovrum Stop system"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_system"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_ubihealthd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst ubihealthd", "aliases": [null, "OpenWrt One - Router Sovrum Restart ubihealthd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_ubihealthd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_ubihealthd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst ubihealthd", "aliases": [null, "OpenWrt One - Router Sovrum Stop ubihealthd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_ubihealthd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_ucitrack", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst ucitrack", "aliases": [null, "OpenWrt One - Router Sovrum Restart ucitrack"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_ucitrack"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_ucitrack", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst ucitrack", "aliases": [null, "OpenWrt One - Router Sovrum Stop ucitrack"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_ucitrack"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_uhttpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst uhttpd", "aliases": [null, "OpenWrt One - Router Sovrum Restart uhttpd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_uhttpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_uhttpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst uhttpd", "aliases": [null, "OpenWrt One - Router Sovrum Stop uhttpd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_uhttpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_umount", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst umount", "aliases": [null, "OpenWrt One - Router Sovrum Restart umount"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_umount"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_umount", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst umount", "aliases": [null, "OpenWrt One - Router Sovrum Stop umount"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_umount"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_urandom_seed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst urandom_seed", "aliases": [null, "OpenWrt One - Router Sovrum Restart urandom_seed"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_urandom_seed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_urandom_seed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst urandom_seed", "aliases": [null, "OpenWrt One - Router Sovrum Stop urandom_seed"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_urandom_seed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_urngd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst urngd", "aliases": [null, "OpenWrt One - Router Sovrum Restart urngd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_urngd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_urngd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst urngd", "aliases": [null, "OpenWrt One - Router Sovrum Stop urngd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_urngd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_wpad", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst wpad", "aliases": [null, "OpenWrt One - Router Sovrum Restart wpad"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_restart_wpad"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_wpad", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst wpad", "aliases": [null, "OpenWrt One - Router Sovrum Stop wpad"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_stop_wpad"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_reconnect_wan", "before": {"name": null, "aliases": [null]}, "after": {"name": "Återanslut WAN", "aliases": [null, "OpenWrt One - Router Sovrum Reconnect WAN"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_reconnect_wan"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_flush_dns_cache", "before": {"name": null, "aliases": [null]}, "after": {"name": "Töm DNS-cache", "aliases": [null, "OpenWrt One - Router Sovrum Flush DNS Cache"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_openwrt_one_router_sovrum_flush_dns_cache"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_cpu_usage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Processoranvändning", "aliases": [null, "OpenWrt One - Router Sovrum CPU Usage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_cpu_usage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_public_ip", "before": {"name": null, "aliases": [null]}, "after": {"name": "Publik IP-adress", "aliases": [null, "OpenWrt One - Router Sovrum Public IP"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_public_ip"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_memory_usage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Minnesanvändning", "aliases": [null, "OpenWrt One - Router Sovrum Memory Usage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_memory_usage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_memory_used", "before": {"name": null, "aliases": [null]}, "after": {"name": "Använt minne", "aliases": [null, "OpenWrt One - Router Sovrum Memory Used"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_memory_used"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_swap_usage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Växlingsminnesanvändning", "aliases": [null, "OpenWrt One - Router Sovrum Swap Usage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_swap_usage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_load_1m", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belastning senaste minuten", "aliases": [null, "OpenWrt One - Router Sovrum Load (1m)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_load_1m"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_load_5m", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belastning senaste 5 minuterna", "aliases": [null, "OpenWrt One - Router Sovrum Load (5m)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_load_5m"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_load_15m", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belastning senaste 15 minuterna", "aliases": [null, "OpenWrt One - Router Sovrum Load (15m)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_load_15m"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_connection_tracking", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutningsspårning", "aliases": [null, "OpenWrt One - Router Sovrum Connection Tracking"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_connection_tracking"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid", "aliases": [null, "OpenWrt One - Router Sovrum Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Temperatur", "aliases": [null, "OpenWrt One - Router Sovrum Temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_storage_usage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Diskanvändning", "aliases": [null, "OpenWrt One - Router Sovrum Storage Usage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_storage_usage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_filesystem_free", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ledigt diskutrymme", "aliases": [null, "OpenWrt One - Router Sovrum Filesystem Free"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_filesystem_free"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_kernel_version", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kärnversion", "aliases": [null, "OpenWrt One - Router Sovrum Kernel Version"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_kernel_version"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_architecture", "before": {"name": null, "aliases": [null]}, "after": {"name": "Arkitektur", "aliases": [null, "OpenWrt One - Router Sovrum Architecture"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_architecture"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_connected_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutna klienter", "aliases": [null, "OpenWrt One - Router Sovrum Connected Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_connected_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_wireless_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Trådlösa klienter", "aliases": [null, "OpenWrt One - Router Sovrum Wireless Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_wireless_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_neighbor_devices", "before": {"name": null, "aliases": [null]}, "after": {"name": "Grannenheter", "aliases": [null, "OpenWrt One - Router Sovrum Neighbor Devices"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_neighbor_devices"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_system_logs", "before": {"name": null, "aliases": [null]}, "after": {"name": "Systemloggar", "aliases": [null, "OpenWrt One - Router Sovrum System Logs"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_system_logs"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_top_processes", "before": {"name": null, "aliases": [null]}, "after": {"name": "Processöversikt", "aliases": [null, "OpenWrt One - Router Sovrum Top Processes"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_top_processes"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_usb_devices", "before": {"name": null, "aliases": [null]}, "after": {"name": "USB-enheter", "aliases": [null, "OpenWrt One - Router Sovrum USB Devices"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_usb_devices"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_temperature_zone_0", "before": {"name": null, "aliases": [null]}, "after": {"name": "Temperatur zon 0", "aliases": [null, "OpenWrt One - Router Sovrum Temperature Zone 0"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_temperature_zone_0"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_rom_total_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Totalt diskutrymme /rom", "aliases": [null, "OpenWrt One - Router Sovrum /rom Total Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_rom_total_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_rom_used_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Använt diskutrymme /rom", "aliases": [null, "OpenWrt One - Router Sovrum /rom Used Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_rom_used_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_rom_free_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ledigt diskutrymme /rom", "aliases": [null, "OpenWrt One - Router Sovrum /rom Free Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_rom_free_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_rom_storage_usage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Diskanvändning /rom", "aliases": [null, "OpenWrt One - Router Sovrum /rom Storage Usage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_rom_storage_usage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_tmp_total_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Totalt diskutrymme /tmp", "aliases": [null, "OpenWrt One - Router Sovrum /tmp Total Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_tmp_total_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_tmp_used_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Använt diskutrymme /tmp", "aliases": [null, "OpenWrt One - Router Sovrum /tmp Used Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_tmp_used_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_tmp_free_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ledigt diskutrymme /tmp", "aliases": [null, "OpenWrt One - Router Sovrum /tmp Free Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_tmp_free_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_tmp_storage_usage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Diskanvändning /tmp", "aliases": [null, "OpenWrt One - Router Sovrum /tmp Storage Usage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_tmp_storage_usage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_overlay_total_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Totalt diskutrymme /overlay", "aliases": [null, "OpenWrt One - Router Sovrum /overlay Total Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_overlay_total_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_overlay_used_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Använt diskutrymme /overlay", "aliases": [null, "OpenWrt One - Router Sovrum /overlay Used Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_overlay_used_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_overlay_free_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ledigt diskutrymme /overlay", "aliases": [null, "OpenWrt One - Router Sovrum /overlay Free Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_overlay_free_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_overlay_storage_usage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Diskanvändning /overlay", "aliases": [null, "OpenWrt One - Router Sovrum /overlay Storage Usage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_overlay_storage_usage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_total_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Totalt diskutrymme /", "aliases": [null, "OpenWrt One - Router Sovrum / Total Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_total_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_used_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Använt diskutrymme /", "aliases": [null, "OpenWrt One - Router Sovrum / Used Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_used_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_free_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ledigt diskutrymme /", "aliases": [null, "OpenWrt One - Router Sovrum / Free Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_free_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_storage_usage_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Diskanvändning /", "aliases": [null, "OpenWrt One - Router Sovrum / Storage Usage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_storage_usage_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_dev_total_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Totalt diskutrymme /dev", "aliases": [null, "OpenWrt One - Router Sovrum /dev Total Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_dev_total_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_dev_used_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Använt diskutrymme /dev", "aliases": [null, "OpenWrt One - Router Sovrum /dev Used Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_dev_used_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_dev_free_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ledigt diskutrymme /dev", "aliases": [null, "OpenWrt One - Router Sovrum /dev Free Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_dev_free_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_dev_storage_usage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Diskanvändning /dev", "aliases": [null, "OpenWrt One - Router Sovrum /dev Storage Usage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_dev_storage_usage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_dhcp_leases", "before": {"name": null, "aliases": [null]}, "after": {"name": "DHCP-tilldelningar", "aliases": [null, "OpenWrt One - Router Sovrum DHCP Leases"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_dhcp_leases"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_guest_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd guest", "aliases": [null, "OpenWrt One - Router Sovrum guest RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_guest_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_guest_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd guest", "aliases": [null, "OpenWrt One - Router Sovrum guest TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_guest_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_guest_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet guest", "aliases": [null, "OpenWrt One - Router Sovrum guest Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_guest_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_guest_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid guest", "aliases": [null, "OpenWrt One - Router Sovrum guest Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_guest_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_guest_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet guest", "aliases": [null, "OpenWrt One - Router Sovrum guest RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_guest_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_guest_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet guest", "aliases": [null, "OpenWrt One - Router Sovrum guest TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_guest_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_iot_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd iot", "aliases": [null, "OpenWrt One - Router Sovrum iot RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_iot_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_iot_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd iot", "aliases": [null, "OpenWrt One - Router Sovrum iot TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_iot_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_iot_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet iot", "aliases": [null, "OpenWrt One - Router Sovrum iot Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_iot_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_iot_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid iot", "aliases": [null, "OpenWrt One - Router Sovrum iot Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_iot_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_iot_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet iot", "aliases": [null, "OpenWrt One - Router Sovrum iot RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_iot_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_iot_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet iot", "aliases": [null, "OpenWrt One - Router Sovrum iot TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_iot_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_lan_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd lan", "aliases": [null, "OpenWrt One - Router Sovrum lan RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_lan_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_lan_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd lan", "aliases": [null, "OpenWrt One - Router Sovrum lan TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_lan_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_lan_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet lan", "aliases": [null, "OpenWrt One - Router Sovrum lan Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_lan_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_lan_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid lan", "aliases": [null, "OpenWrt One - Router Sovrum lan Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_lan_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_lan_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet lan", "aliases": [null, "OpenWrt One - Router Sovrum lan RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_lan_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_lan_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet lan", "aliases": [null, "OpenWrt One - Router Sovrum lan TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_lan_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_loopback_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd loopback", "aliases": [null, "OpenWrt One - Router Sovrum loopback RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_loopback_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_loopback_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd loopback", "aliases": [null, "OpenWrt One - Router Sovrum loopback TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_loopback_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_loopback_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet loopback", "aliases": [null, "OpenWrt One - Router Sovrum loopback Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_loopback_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_loopback_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid loopback", "aliases": [null, "OpenWrt One - Router Sovrum loopback Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_loopback_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_loopback_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet loopback", "aliases": [null, "OpenWrt One - Router Sovrum loopback RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_loopback_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_loopback_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet loopback", "aliases": [null, "OpenWrt One - Router Sovrum loopback TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_loopback_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_wan_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd wan", "aliases": [null, "OpenWrt One - Router Sovrum wan RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_wan_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_wan_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd wan", "aliases": [null, "OpenWrt One - Router Sovrum wan TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_wan_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_wan_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet wan", "aliases": [null, "OpenWrt One - Router Sovrum wan Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_wan_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_wan_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid wan", "aliases": [null, "OpenWrt One - Router Sovrum wan Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_wan_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_wan_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet wan", "aliases": [null, "OpenWrt One - Router Sovrum wan RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_wan_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_wan_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet wan", "aliases": [null, "OpenWrt One - Router Sovrum wan TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_wan_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_br_lan_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd br-lan", "aliases": [null, "OpenWrt One - Router Sovrum br-lan RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_br_lan_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_br_lan_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd br-lan", "aliases": [null, "OpenWrt One - Router Sovrum br-lan TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_br_lan_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_br_lan_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet br-lan", "aliases": [null, "OpenWrt One - Router Sovrum br-lan Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_br_lan_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_br_lan_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid br-lan", "aliases": [null, "OpenWrt One - Router Sovrum br-lan Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_br_lan_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_br_lan_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet br-lan", "aliases": [null, "OpenWrt One - Router Sovrum br-lan RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_br_lan_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_br_lan_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet br-lan", "aliases": [null, "OpenWrt One - Router Sovrum br-lan TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_br_lan_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_eth1_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd eth1", "aliases": [null, "OpenWrt One - Router Sovrum eth1 RX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_eth1_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_eth1_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd eth1", "aliases": [null, "OpenWrt One - Router Sovrum eth1 TX"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_eth1_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_eth1_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Länkhastighet eth1", "aliases": [null, "OpenWrt One - Router Sovrum eth1 Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_eth1_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_eth1_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid eth1", "aliases": [null, "OpenWrt One - Router Sovrum eth1 Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_eth1_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_eth1_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet eth1", "aliases": [null, "OpenWrt One - Router Sovrum eth1 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_eth1_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_eth1_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet eth1", "aliases": [null, "OpenWrt One - Router Sovrum eth1 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_eth1_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_wan_latency", "before": {"name": null, "aliases": [null]}, "after": {"name": "WAN-svarstid", "aliases": [null, "OpenWrt One - Router Sovrum WAN Latency"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sovrummet_openwrt_one_router_sovrum_wan_latency"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_dhcp_renew", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brandväggsregel Allow-DHCP-Renew", "aliases": [null, "OpenWrt One - Router Sovrum Firewall Rule: Allow-DHCP-Renew"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_dhcp_renew"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_ping", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brandväggsregel Allow-Ping", "aliases": [null, "OpenWrt One - Router Sovrum Firewall Rule: Allow-Ping"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_ping"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_igmp", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brandväggsregel Allow-IGMP", "aliases": [null, "OpenWrt One - Router Sovrum Firewall Rule: Allow-IGMP"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_igmp"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_dhcpv6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brandväggsregel Allow-DHCPv6", "aliases": [null, "OpenWrt One - Router Sovrum Firewall Rule: Allow-DHCPv6"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_dhcpv6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_mld", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brandväggsregel Allow-MLD", "aliases": [null, "OpenWrt One - Router Sovrum Firewall Rule: Allow-MLD"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_mld"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_icmpv6_input", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brandväggsregel Allow-ICMPv6-Input", "aliases": [null, "OpenWrt One - Router Sovrum Firewall Rule: Allow-ICMPv6-Input"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_icmpv6_input"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_icmpv6_forward", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brandväggsregel Allow-ICMPv6-Forward", "aliases": [null, "OpenWrt One - Router Sovrum Firewall Rule: Allow-ICMPv6-Forward"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_icmpv6_forward"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_ipsec_esp", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brandväggsregel Allow-IPSec-ESP", "aliases": [null, "OpenWrt One - Router Sovrum Firewall Rule: Allow-IPSec-ESP"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_ipsec_esp"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_isakmp", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brandväggsregel Allow-ISAKMP", "aliases": [null, "OpenWrt One - Router Sovrum Firewall Rule: Allow-ISAKMP"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_isakmp"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_dns_dhcp_guest", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brandväggsregel Allow-DNS-DHCP-GUEST", "aliases": [null, "OpenWrt One - Router Sovrum Firewall Rule: Allow-DNS-DHCP-GUEST"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_dns_dhcp_guest"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_mdns", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brandväggsregel Allow-MDNS", "aliases": [null, "OpenWrt One - Router Sovrum Firewall Rule: Allow-MDNS"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_mdns"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_ntp", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brandväggsregel Allow-NTP", "aliases": [null, "OpenWrt One - Router Sovrum Firewall Rule: Allow-NTP"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_allow_ntp"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_block_ipv6_ra_from_google_nest_1", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brandväggsregel Block IPv6 RA from Google Nest 1", "aliases": [null, "OpenWrt One - Router Sovrum Firewall Rule: Block IPv6 RA from Google Nest 1"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_block_ipv6_ra_from_google_nest_1"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_block_ipv6_ra_from_google_nest_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brandväggsregel Block IPv6 RA from Google Nest 2", "aliases": [null, "OpenWrt One - Router Sovrum Firewall Rule: Block IPv6 RA from Google Nest 2"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.sovrummet_openwrt_one_router_sovrum_firewall_rule_block_ipv6_ra_from_google_nest_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_connected", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "OpenWrt One - AP Köket Connected"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_connected"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_reboot_required", "before": {"name": null, "aliases": [null]}, "after": {"name": "Omstart krävs", "aliases": [null, "OpenWrt One - AP Köket Reboot Required"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_reboot_required"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_wps_active", "before": {"name": null, "aliases": [null]}, "after": {"name": "WPS aktivt", "aliases": [null, "OpenWrt One - AP Köket WPS Active"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_wps_active"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_boot", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst boot", "aliases": [null, "OpenWrt One - AP Köket Service boot"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_boot"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_bootcount", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst bootcount", "aliases": [null, "OpenWrt One - AP Köket Service bootcount"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_bootcount"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_cron", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst cron", "aliases": [null, "OpenWrt One - AP Köket Service cron"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_cron"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_dnsmasq", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst dnsmasq", "aliases": [null, "OpenWrt One - AP Köket Service dnsmasq"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_dnsmasq"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_done", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst done", "aliases": [null, "OpenWrt One - AP Köket Service done"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_done"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_dropbear", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst dropbear", "aliases": [null, "OpenWrt One - AP Köket Service dropbear"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_dropbear"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_firewall", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst firewall", "aliases": [null, "OpenWrt One - AP Köket Service firewall"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_firewall"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_gpio_switch", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst gpio_switch", "aliases": [null, "OpenWrt One - AP Köket Service gpio_switch"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_gpio_switch"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_led", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst led", "aliases": [null, "OpenWrt One - AP Köket Service led"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_led"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_log", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst log", "aliases": [null, "OpenWrt One - AP Köket Service log"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_log"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_network", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst network", "aliases": [null, "OpenWrt One - AP Köket Service network"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_network"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_odhcpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst odhcpd", "aliases": [null, "OpenWrt One - AP Köket Service odhcpd"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_odhcpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_packet_steering", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst packet_steering", "aliases": [null, "OpenWrt One - AP Köket Service packet_steering"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_packet_steering"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_rpcd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst rpcd", "aliases": [null, "OpenWrt One - AP Köket Service rpcd"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_rpcd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_sysctl", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst sysctl", "aliases": [null, "OpenWrt One - AP Köket Service sysctl"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_sysctl"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_sysfixtime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst sysfixtime", "aliases": [null, "OpenWrt One - AP Köket Service sysfixtime"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_sysfixtime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_sysntpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst sysntpd", "aliases": [null, "OpenWrt One - AP Köket Service sysntpd"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_sysntpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_system", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst system", "aliases": [null, "OpenWrt One - AP Köket Service system"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_system"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_ubihealthd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst ubihealthd", "aliases": [null, "OpenWrt One - AP Köket Service ubihealthd"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_ubihealthd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_ucitrack", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst ucitrack", "aliases": [null, "OpenWrt One - AP Köket Service ucitrack"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_ucitrack"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_uhttpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst uhttpd", "aliases": [null, "OpenWrt One - AP Köket Service uhttpd"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_uhttpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_umount", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst umount", "aliases": [null, "OpenWrt One - AP Köket Service umount"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_umount"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_urandom_seed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst urandom_seed", "aliases": [null, "OpenWrt One - AP Köket Service urandom_seed"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_urandom_seed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_urngd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst urngd", "aliases": [null, "OpenWrt One - AP Köket Service urngd"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_urngd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_wpad", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tjänst wpad", "aliases": [null, "OpenWrt One - AP Köket Service wpad"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.koket_openwrt_one_ap_koket_service_wpad"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_reboot_router", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om router", "aliases": [null, "OpenWrt One - AP Köket Reboot Router"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_reboot_router"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_start_wps", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta WPS", "aliases": [null, "OpenWrt One - AP Köket Start WPS"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_start_wps"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_cancel_wps", "before": {"name": null, "aliases": [null]}, "after": {"name": "Avbryt WPS", "aliases": [null, "OpenWrt One - AP Köket Cancel WPS"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_cancel_wps"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_create_backup", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skapa säkerhetskopia", "aliases": [null, "OpenWrt One - AP Köket Create Backup"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_create_backup"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_boot", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst boot", "aliases": [null, "OpenWrt One - AP Köket Restart boot"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_boot"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_boot", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst boot", "aliases": [null, "OpenWrt One - AP Köket Stop boot"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_boot"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_bootcount", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst bootcount", "aliases": [null, "OpenWrt One - AP Köket Restart bootcount"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_bootcount"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_bootcount", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst bootcount", "aliases": [null, "OpenWrt One - AP Köket Stop bootcount"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_bootcount"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_cron", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst cron", "aliases": [null, "OpenWrt One - AP Köket Restart cron"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_cron"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_cron", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst cron", "aliases": [null, "OpenWrt One - AP Köket Stop cron"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_cron"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_dnsmasq", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst dnsmasq", "aliases": [null, "OpenWrt One - AP Köket Restart dnsmasq"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_dnsmasq"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_dnsmasq", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst dnsmasq", "aliases": [null, "OpenWrt One - AP Köket Stop dnsmasq"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_dnsmasq"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_done", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst done", "aliases": [null, "OpenWrt One - AP Köket Restart done"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_done"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_done", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst done", "aliases": [null, "OpenWrt One - AP Köket Stop done"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_done"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_dropbear", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst dropbear", "aliases": [null, "OpenWrt One - AP Köket Restart dropbear"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_dropbear"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_dropbear", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst dropbear", "aliases": [null, "OpenWrt One - AP Köket Stop dropbear"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_dropbear"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_firewall", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst firewall", "aliases": [null, "OpenWrt One - AP Köket Restart firewall"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_firewall"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_firewall", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst firewall", "aliases": [null, "OpenWrt One - AP Köket Stop firewall"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_firewall"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_gpio_switch", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst gpio_switch", "aliases": [null, "OpenWrt One - AP Köket Restart gpio_switch"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_gpio_switch"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_gpio_switch", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst gpio_switch", "aliases": [null, "OpenWrt One - AP Köket Stop gpio_switch"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_gpio_switch"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_led", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst led", "aliases": [null, "OpenWrt One - AP Köket Restart led"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_led"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_led", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst led", "aliases": [null, "OpenWrt One - AP Köket Stop led"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_led"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_log", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst log", "aliases": [null, "OpenWrt One - AP Köket Restart log"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_log"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_log", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst log", "aliases": [null, "OpenWrt One - AP Köket Stop log"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_log"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_network", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst network", "aliases": [null, "OpenWrt One - AP Köket Restart network"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_network"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_network", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst network", "aliases": [null, "OpenWrt One - AP Köket Stop network"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_network"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_odhcpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst odhcpd", "aliases": [null, "OpenWrt One - AP Köket Restart odhcpd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_odhcpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_odhcpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst odhcpd", "aliases": [null, "OpenWrt One - AP Köket Stop odhcpd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_odhcpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_packet_steering", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst packet_steering", "aliases": [null, "OpenWrt One - AP Köket Restart packet_steering"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_packet_steering"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_packet_steering", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst packet_steering", "aliases": [null, "OpenWrt One - AP Köket Stop packet_steering"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_packet_steering"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_rpcd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst rpcd", "aliases": [null, "OpenWrt One - AP Köket Restart rpcd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_rpcd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_rpcd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst rpcd", "aliases": [null, "OpenWrt One - AP Köket Stop rpcd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_rpcd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_sysctl", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst sysctl", "aliases": [null, "OpenWrt One - AP Köket Restart sysctl"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_sysctl"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_sysctl", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst sysctl", "aliases": [null, "OpenWrt One - AP Köket Stop sysctl"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_sysctl"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_sysfixtime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst sysfixtime", "aliases": [null, "OpenWrt One - AP Köket Restart sysfixtime"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_sysfixtime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_sysfixtime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst sysfixtime", "aliases": [null, "OpenWrt One - AP Köket Stop sysfixtime"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_sysfixtime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_sysntpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst sysntpd", "aliases": [null, "OpenWrt One - AP Köket Restart sysntpd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_sysntpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_sysntpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst sysntpd", "aliases": [null, "OpenWrt One - AP Köket Stop sysntpd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_sysntpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_system", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst system", "aliases": [null, "OpenWrt One - AP Köket Restart system"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_system"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_system", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst system", "aliases": [null, "OpenWrt One - AP Köket Stop system"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_system"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_ubihealthd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst ubihealthd", "aliases": [null, "OpenWrt One - AP Köket Restart ubihealthd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_ubihealthd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_ubihealthd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst ubihealthd", "aliases": [null, "OpenWrt One - AP Köket Stop ubihealthd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_ubihealthd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_ucitrack", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst ucitrack", "aliases": [null, "OpenWrt One - AP Köket Restart ucitrack"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_ucitrack"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_ucitrack", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst ucitrack", "aliases": [null, "OpenWrt One - AP Köket Stop ucitrack"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_ucitrack"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_uhttpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst uhttpd", "aliases": [null, "OpenWrt One - AP Köket Restart uhttpd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_uhttpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_uhttpd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst uhttpd", "aliases": [null, "OpenWrt One - AP Köket Stop uhttpd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_uhttpd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_umount", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst umount", "aliases": [null, "OpenWrt One - AP Köket Restart umount"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_umount"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_umount", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst umount", "aliases": [null, "OpenWrt One - AP Köket Stop umount"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_umount"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_urandom_seed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst urandom_seed", "aliases": [null, "OpenWrt One - AP Köket Restart urandom_seed"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_urandom_seed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_urandom_seed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst urandom_seed", "aliases": [null, "OpenWrt One - AP Köket Stop urandom_seed"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_urandom_seed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_urngd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst urngd", "aliases": [null, "OpenWrt One - AP Köket Restart urngd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_urngd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_urngd", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst urngd", "aliases": [null, "OpenWrt One - AP Köket Stop urngd"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_urngd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_wpad", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om tjänst wpad", "aliases": [null, "OpenWrt One - AP Köket Restart wpad"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_restart_wpad"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_wpad", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stoppa tjänst wpad", "aliases": [null, "OpenWrt One - AP Köket Stop wpad"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_stop_wpad"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_wps_push_phy1_ap1", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta WPS (phy1-ap1)", "aliases": [null, "OpenWrt One - AP Köket WPS Push (phy1-ap1)"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_wps_push_phy1_ap1"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_wps_push_phy1_ap2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta WPS (phy1-ap2)", "aliases": [null, "OpenWrt One - AP Köket WPS Push (phy1-ap2)"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_wps_push_phy1_ap2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_wps_push_phy0_ap0", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta WPS (phy0-ap0)", "aliases": [null, "OpenWrt One - AP Köket WPS Push (phy0-ap0)"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_wps_push_phy0_ap0"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_wps_push_phy0_ap2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta WPS (phy0-ap2)", "aliases": [null, "OpenWrt One - AP Köket WPS Push (phy0-ap2)"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_wps_push_phy0_ap2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_wps_push_phy1_ap0", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta WPS (phy1-ap0)", "aliases": [null, "OpenWrt One - AP Köket WPS Push (phy1-ap0)"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_wps_push_phy1_ap0"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_wps_push_phy0_ap1", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta WPS (phy0-ap1)", "aliases": [null, "OpenWrt One - AP Köket WPS Push (phy0-ap1)"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_wps_push_phy0_ap1"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_openwrt_one_ap_koket_flush_dns_cache", "before": {"name": null, "aliases": [null]}, "after": {"name": "Töm DNS-cache", "aliases": [null, "OpenWrt One - AP Köket Flush DNS Cache"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_openwrt_one_ap_koket_flush_dns_cache"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_cpu_usage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Processoranvändning", "aliases": [null, "OpenWrt One - AP Köket CPU Usage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_cpu_usage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_public_ip", "before": {"name": null, "aliases": [null]}, "after": {"name": "Publik IP-adress", "aliases": [null, "OpenWrt One - AP Köket Public IP"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_public_ip"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_memory_usage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Minnesanvändning", "aliases": [null, "OpenWrt One - AP Köket Memory Usage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_memory_usage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_memory_used", "before": {"name": null, "aliases": [null]}, "after": {"name": "Använt minne", "aliases": [null, "OpenWrt One - AP Köket Memory Used"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_memory_used"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_swap_usage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Växlingsminnesanvändning", "aliases": [null, "OpenWrt One - AP Köket Swap Usage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_swap_usage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_load_1m", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belastning senaste minuten", "aliases": [null, "OpenWrt One - AP Köket Load (1m)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_load_1m"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_load_5m", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belastning senaste 5 minuterna", "aliases": [null, "OpenWrt One - AP Köket Load (5m)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_load_5m"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_load_15m", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belastning senaste 15 minuterna", "aliases": [null, "OpenWrt One - AP Köket Load (15m)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_load_15m"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_connection_tracking", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutningsspårning", "aliases": [null, "OpenWrt One - AP Köket Connection Tracking"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_connection_tracking"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid", "aliases": [null, "OpenWrt One - AP Köket Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Temperatur", "aliases": [null, "OpenWrt One - AP Köket Temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_storage_usage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Diskanvändning", "aliases": [null, "OpenWrt One - AP Köket Storage Usage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_openwrt_one_ap_koket_storage_usage"}

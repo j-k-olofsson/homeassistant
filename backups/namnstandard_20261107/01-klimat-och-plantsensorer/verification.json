@@ -1,0 +1,16 @@
+{
+  "stage": "01-klimat-och-plantsensorer",
+  "status": "verified",
+  "operations": 98,
+  "devices": 11,
+  "entities": 87,
+  "entity_ids_unchanged": 10129,
+  "invariants_unchanged": true,
+  "missing_target_states": [],
+  "new_unavailable_targets": [],
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  }
+}

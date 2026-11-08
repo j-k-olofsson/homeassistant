@@ -1,0 +1,26 @@
+{
+  "sensor.home_sannolikhet_for_aska": [
+    {
+      "state": "1",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:57.644134+00:00",
+      "last_updated": "2026-11-07T07:55:57.644134+00:00"
+    }
+  ],
+  "sensor.home_nederbordskategori": [
+    {
+      "state": "no_precipitation",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:57.644134+00:00",
+      "last_updated": "2026-11-07T07:55:57.644134+00:00"
+    }
+  ],
+  "sensor.home_fryst_nederbord": [
+    {
+      "state": "0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:57.644134+00:00",
+      "last_updated": "2026-11-07T07:55:57.644134+00:00"
+    }
+  ]
+}

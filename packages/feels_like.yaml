@@ -1,5 +1,5 @@
 sensor:
   - platform: temperature_feels_like
-    name: 'SMHI temp (inkl vindfaktor)'
+    name: "Upplevd utomhustemperatur"
     unique_id: outside_temp_feels_like
-    source: weather.forecast_met_no_home
+    source: weather.molnet_vaderprognos_met_no

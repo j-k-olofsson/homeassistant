@@ -1,0 +1,31 @@
+{
+  "source_files": [
+    "automations.yaml"
+  ],
+  "dashboards": [
+    "lovelace-friggan",
+    "lovelace"
+  ],
+  "frontend_favorites_changed": true,
+  "auto_updated_config_entries": [
+    "01JCB5GMYV2TT2EYFXTN65B9Z5",
+    "01JH6FAN92A4F016KC6376MT5T",
+    "01JHJEPVEW4JG1G2NQG1RGH69D",
+    "01JHJER99149TSQTVQA3MCNQK8",
+    "01JHRFTY6RDGMP3XTAAYCEAR2X",
+    "01JQ8CT2TZBV3TC6KQPM1NVYZ8",
+    "01KAPN7N4RFX0HHVC6DCSKXGVN"
+  ],
+  "automation_consumers": [
+    [
+      "automation.styrning_varmare_till_honsens_vatten",
+      "1673780941087",
+      "on"
+    ],
+    [
+      "automation.styrning_honsluckan",
+      "1673781338782",
+      "on"
+    ]
+  ]
+}

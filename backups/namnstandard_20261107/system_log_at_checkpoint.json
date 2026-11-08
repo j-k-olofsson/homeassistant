@@ -1,0 +1,258 @@
+[
+  {
+    "name": "pyportainer.listener",
+    "message": [
+      "Connection lost on endpoint 14, reconnecting in 4.9s: Connection lost while streaming from http://192.168.10.200:9000/api/endpoints/14/docker/events: Response payload is not completed: <TransferEncodingError: 400, message='Not enough data to satisfy transfer length header.'>",
+      "Connection lost on endpoint 14, reconnecting in 4.3s: Connection lost while streaming from http://192.168.10.200:9000/api/endpoints/14/docker/events: Response payload is not completed: <TransferEncodingError: 400, message='Not enough data to satisfy transfer length header.'>",
+      "Connection lost on endpoint 14, reconnecting in 4.4s: Connection lost while streaming from http://192.168.10.200:9000/api/endpoints/14/docker/events: Response payload is not completed: <TransferEncodingError: 400, message='Not enough data to satisfy transfer length header.'>",
+      "Connection lost on endpoint 14, reconnecting in 4.1s: Connection lost while streaming from http://192.168.10.200:9000/api/endpoints/14/docker/events: Response payload is not completed: <TransferEncodingError: 400, message='Not enough data to satisfy transfer length header.'>",
+      "Connection lost on endpoint 14, reconnecting in 4.7s: Connection lost while streaming from http://192.168.10.200:9000/api/endpoints/14/docker/events: Response payload is not completed: <TransferEncodingError: 400, message='Not enough data to satisfy transfer length header.'>"
+    ],
+    "level": "WARNING",
+    "source": [
+      "runner.py",
+      280
+    ],
+    "timestamp": 1794075960.5413756,
+    "exception": "",
+    "count": 10,
+    "first_occurred": 1794059721.1692991
+  },
+  {
+    "name": "homeassistant.components.cloud.google_config",
+    "message": [
+      "Error reporting state - 5: Device ID cannot be found. This is usually an indication that the device may have been removed. Send a Request Sync to re-sync the device in Google."
+    ],
+    "level": "WARNING",
+    "source": [
+      "components/cloud/google_config.py",
+      419
+    ],
+    "timestamp": 1794073226.081234,
+    "exception": "",
+    "count": 1,
+    "first_occurred": 1794073226.081234
+  },
+  {
+    "name": "custom_components.bermuda",
+    "message": [
+      "Unexpectedly got 6 device registry matches for Ledstjärnor (utomhus) [SHPLS] (08:F9:E0:FD:43:06): ** Ledstjärnor (utomhus) [SHPLS] (08:F9:E0:FD:43:06)\n** Led-stjärnor (utomhus) [SHPLS]\n** Växtlampa frösådd (bion) [SHPLS]\n** Växtlampa frösådd (bion) [SHPLS]\n** Växtlampa frösådd (bion) [SHPLS]\n** shellyplusplugs-08f9e0fd4304\n\n",
+      "Unexpectedly got 7 device registry matches for Golvvärme (duschen) [SHP1PM] (E4:65:B8:F1:C1:BA): ** Golvvärme (duschen) [SHP1PM] (E4:65:B8:F1:C1:BA)\n** Golvvärme (duschen)\n** Golvvärme (duschen)\n** shelly-1pm-shower-floor-heating\n** shelly-1pm-shower-floor-heating\n** shelly-1pm-shower-floor-heating\n** Golvvärme (duschen)\n\n",
+      "Unexpectedly got 6 device registry matches for Golvvärme (entrén) [SHP1PM] (C4:D8:D5:54:F8:A6): ** Golvvärme (entrén) [SHP1PM] (C4:D8:D5:54:F8:A6)\n** Golvvärme (entrén)\n** Golvvärme (entrén)\n** shelly-1pm-entry-floor-heating\n** shelly-1pm-entry-floor-heating\n** Golvvärme (entrén)\n\n",
+      "Unexpectedly got 8 device registry matches for Golvvärme (ateljén) [SHP1PM] (A0:DD:6C:2B:31:4E): ** Golvvärme (ateljén)\n** shelly-1pm-studio-floor-heating\n** Golvvärme (ateljén)\n** shelly-1pm-studio-floor-heating\n** shelly-1pm-studio-floor-heating\n** shelly-1pm-studio-floor-heating\n** Golvvärme (ateljén)\n** Golvvärme (ateljén) [SHP1PM] (A0:DD:6C:2B:31:4E)\n\n",
+      "Unexpectedly got 4 device registry matches for esphome74 (C4:4F:33:72:73:E3): ** Vattennivå (hönshuset)\n** c4:4f:33:72:73:e1\n** c4:4f:33:72:73:e1\n** Vattennivå (hönshuset) (C4:4F:33:72:73:E3)\n\n"
+    ],
+    "level": "WARNING",
+    "source": [
+      "custom_components/bermuda/log_spam_less.py",
+      86
+    ],
+    "timestamp": 1794070810.0249279,
+    "exception": "",
+    "count": 12,
+    "first_occurred": 1794057918.3384113
+  },
+  {
+    "name": "homeassistant.helpers.entity",
+    "message": [
+      "Update of sensor.openuv_aktuellt_uv_index is taking over 10 seconds"
+    ],
+    "level": "WARNING",
+    "source": [
+      "helpers/entity.py",
+      1390
+    ],
+    "timestamp": 1794067210.3770335,
+    "exception": "",
+    "count": 3,
+    "first_occurred": 1794060010.3775153
+  },
+  {
+    "name": "homeassistant.components.xiaomi_ble",
+    "message": [
+      "5C:85:7E:13:61:70: Bluetooth error whilst polling: 5C:85:7E:13:61:70 - 5C:85:7E:13:61:70: Failed to connect after 10 attempt(s): No backend with an available connection slot that can reach address 5C:85:7E:13:61:70 was found: in connectable history; seen by 6 scanner(s) but none with a connectable path; 11 scanner(s) registered, 11 scanning, 2 connectable; Väggkontakt x2 (verandan) (30:C9:22:86:74:6A) (connectable=False, rssi=-80, failures=0, in_progress=0); Golvvärme (verandan) [SHP1PM] (C4:D8:D5:54:CC:82) (connectable=False, rssi=-56, failures=0, in_progress=0); Golvvärme (köket) [SHP1PM] (A0:DD:6C:29:B1:36) (connectable=False, rssi=-83, failures=0, in_progress=0); Golvvärme (duschen) [SHP1PM] (E4:65:B8:F1:C1:BA) (connectable=False, rssi=-88, failures=0, in_progress=0); Golvvärme (entrén) [SHP1PM] (C4:D8:D5:54:F8:A6) (connectable=False, rssi=-85, failures=0, in_progress=0); Golvvärme (ateljén) [SHP1PM] (A0:DD:6C:2B:31:4E) (connectable=False, rssi=-83, failures=0, in_progress=0); last advertisement 0s ago via Golvvärme (verandan) [SHP1PM] (C4:D8:D5:54:CC:82): The proxy/adapter is out of connection slots or the device is no longer reachable; Add additional proxies (https://esphome.io/projects/?type=bluetooth) near this device",
+      "5C:85:7E:13:61:DD: Bluetooth error whilst polling: 5C:85:7E:13:61:DD - 5C:85:7E:13:61:DD: Failed to connect after 10 attempt(s): No backend with an available connection slot that can reach address 5C:85:7E:13:61:DD was found: in connectable history; seen by 5 scanner(s) but none with a connectable path; 11 scanner(s) registered, 11 scanning, 2 connectable; Väggkontakt x2 (verandan) (30:C9:22:86:74:6A) (connectable=False, rssi=-77, failures=0, in_progress=0); Golvvärme (verandan) [SHP1PM] (C4:D8:D5:54:CC:82) (connectable=False, rssi=-81, failures=0, in_progress=0); Golvvärme (köket) [SHP1PM] (A0:DD:6C:29:B1:36) (connectable=False, rssi=-89, failures=0, in_progress=0); Golvvärme (entrén) [SHP1PM] (C4:D8:D5:54:F8:A6) (connectable=False, rssi=-85, failures=0, in_progress=0); Golvvärme (ateljén) [SHP1PM] (A0:DD:6C:2B:31:4E) (connectable=False, rssi=-86, failures=0, in_progress=0); last advertisement 2s ago via Väggkontakt x2 (verandan) (30:C9:22:86:74:6A): The proxy/adapter is out of connection slots or the device is no longer reachable; Add additional proxies (https://esphome.io/projects/?type=bluetooth) near this device"
+    ],
+    "level": "ERROR",
+    "source": [
+      "components/bluetooth/active_update_processor.py",
+      134
+    ],
+    "timestamp": 1794066118.2334292,
+    "exception": "",
+    "count": 2,
+    "first_occurred": 1794057986.1155376
+  },
+  {
+    "name": "homeassistant.components.system_log.external",
+    "message": [
+      "FLASH upptäckt på light.banklampor: 128 -> 255. Orsak: Spontan rapport från enhet/driver/last (ingen nylig knapp eller tjänst). effekt=2.0W ström=0.03A. cmd_age=68904s btn_age=732s. ctx=01M6VAJ9WYGFHRN7DDQ40QC6W9 parent=none user=none"
+    ],
+    "level": "WARNING",
+    "source": [
+      "components/system_log/services.py",
+      41
+    ],
+    "timestamp": 1794065901.4756744,
+    "exception": "",
+    "count": 1,
+    "first_occurred": 1794065901.4756744
+  },
+  {
+    "name": "homeassistant.components.media_player",
+    "message": [
+      "Error retrieving proxied image from http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png"
+    ],
+    "level": "WARNING",
+    "source": [
+      "components/media_player/entity.py",
+      902
+    ],
+    "timestamp": 1794064829.2433715,
+    "exception": "",
+    "count": 1,
+    "first_occurred": 1794064829.2433715
+  },
+  {
+    "name": "homeassistant.components.shelly",
+    "message": [
+      "Error fetching Plus1PM-Duschen data: An error occurred while retrieving data from Plus1PM-Duschen"
+    ],
+    "level": "ERROR",
+    "source": [
+      "helpers/update_coordinator.py",
+      527
+    ],
+    "timestamp": 1794063375.8185434,
+    "exception": "",
+    "count": 1,
+    "first_occurred": 1794063375.8185434
+  },
+  {
+    "name": "homeassistant.components.ps4.media_player",
+    "message": [
+      "PS4 could not be reached"
+    ],
+    "level": "WARNING",
+    "source": [
+      "components/ps4/media_player.py",
+      234
+    ],
+    "timestamp": 1794057946.589623,
+    "exception": "",
+    "count": 1,
+    "first_occurred": 1794057946.589623
+  },
+  {
+    "name": "homeassistant.helpers.frame",
+    "message": [
+      "Detected that custom integration 'toyota' reads the deprecated ToyotaClimate._attr_target_temperature, use _attr_native_target_temperature instead at custom_components/toyota/climate.py, line 318: self._attr_target_temperature,. This will stop working in Home Assistant 2027.11, please create a bug report at https://github.com/pytoyoda/ha_toyota/issues",
+      "Detected that custom integration 'toyota' writes the deprecated ToyotaClimate._attr_current_temperature, use _attr_native_current_temperature instead at custom_components/toyota/climate.py, line 379: self._attr_current_temperature = (. This will stop working in Home Assistant 2027.11, please create a bug report at https://github.com/pytoyoda/ha_toyota/issues",
+      "Detected that custom integration 'toyota' reads the deprecated ToyotaClimate._attr_current_temperature, use _attr_native_current_temperature instead at custom_components/toyota/climate.py, line 436: return self._attr_current_temperature. This will stop working in Home Assistant 2027.11, please create a bug report at https://github.com/pytoyoda/ha_toyota/issues",
+      "Detected that custom integration 'toyota' reads the deprecated ToyotaClimate._attr_target_temperature, use _attr_native_target_temperature instead at custom_components/toyota/climate.py, line 441: return self._attr_target_temperature. This will stop working in Home Assistant 2027.11, please create a bug report at https://github.com/pytoyoda/ha_toyota/issues",
+      "Detected that custom integration 'bermuda' uses `device_registry.devices` as a mapping or calls its lookup methods, which is deprecated; iterate it to get the device entries, or use `async_get`, `async_entries_for_config_entry` and similar helpers for lookups at custom_components/bermuda/bermuda_device.py, line 321: devreg_devices = self._coordinator.dr.devices.get_entries(None, connections=connlist). This will stop working in Home Assistant 2027.9.0, please create a bug report at https://github.com/agittins/bermuda/issues"
+    ],
+    "level": "WARNING",
+    "source": [
+      "helpers/frame.py",
+      348
+    ],
+    "timestamp": 1794057918.3382325,
+    "exception": "",
+    "count": 9,
+    "first_occurred": 1794057914.1064198
+  },
+  {
+    "name": "aioesphomeapi.reconnect_logic",
+    "message": [
+      "Can't connect to ESPHome API for esphome02 @ 192.168.30.102: Error connecting to [AddrInfo(family=<AddressFamily.AF_INET: 2>, type=<SocketKind.SOCK_STREAM: 1>, proto=6, sockaddr=IPv4Sockaddr(address='192.168.30.102', port=6053))]: [Errno 113] Connect call failed ('192.168.30.102', 6053) (SocketAPIError)"
+    ],
+    "level": "WARNING",
+    "source": [
+      "runner.py",
+      280
+    ],
+    "timestamp": 1794057917.5995417,
+    "exception": "",
+    "count": 1,
+    "first_occurred": 1794057917.5995417
+  },
+  {
+    "name": "custom_components.toyota.climate",
+    "message": [
+      "custom_components.toyota.climate::ToyotaClimate provides the deprecated _attr_temperature_unit, this will stop working in Home Assistant 2027.11, use _attr_native_temperature_unit instead, please report it to the custom integration author",
+      "custom_components.toyota.climate::ToyotaClimate provides the deprecated current_temperature, this will stop working in Home Assistant 2027.11, use native_current_temperature instead, please report it to the custom integration author",
+      "custom_components.toyota.climate::ToyotaClimate provides the deprecated target_temperature, this will stop working in Home Assistant 2027.11, use native_target_temperature instead, please report it to the custom integration author"
+    ],
+    "level": "WARNING",
+    "source": [
+      "helpers/deprecation.py",
+      706
+    ],
+    "timestamp": 1794057913.9235802,
+    "exception": "",
+    "count": 3,
+    "first_occurred": 1794057913.9233983
+  },
+  {
+    "name": "homeassistant.components.openuv",
+    "message": [
+      "Skipping update due to missing data"
+    ],
+    "level": "WARNING",
+    "source": [
+      "components/openuv/binary_sensor.py",
+      61
+    ],
+    "timestamp": 1794057912.608387,
+    "exception": "",
+    "count": 1,
+    "first_occurred": 1794057912.608387
+  },
+  {
+    "name": "homeassistant.config_entries",
+    "message": [
+      "The deprecated constant CONN_CLASS_CLOUD_POLL was used from nordpool. It will be removed in HA Core 2027.5.0. Please report it to the author of the 'nordpool' custom integration",
+      "The deprecated constant CONN_CLASS_CLOUD_POLL was used from pollenprognos. It will be removed in HA Core 2027.5.0. Please report it to the author of the 'pollenprognos' custom integration"
+    ],
+    "level": "WARNING",
+    "source": [
+      "helpers/deprecation.py",
+      297
+    ],
+    "timestamp": 1794057909.489615,
+    "exception": "",
+    "count": 2,
+    "first_occurred": 1794057901.417451
+  },
+  {
+    "name": "homeassistant.components.openuv",
+    "message": [
+      "Skipping update due to missing data: from_time"
+    ],
+    "level": "WARNING",
+    "source": [
+      "components/openuv/coordinator.py",
+      90
+    ],
+    "timestamp": 1794057902.1019585,
+    "exception": "",
+    "count": 1,
+    "first_occurred": 1794057902.1019585
+  },
+  {
+    "name": "homeassistant.helpers.translation",
+    "message": [
+      "Validation of translation placeholders for localized (sv) string component.adaptive_lighting.options.step.init.description failed: (set() != {'docs_url', 'webapp_url'})"
+    ],
+    "level": "ERROR",
+    "source": [
+      "helpers/translation.py",
+      326
+    ],
+    "timestamp": 1794057898.5333674,
+    "exception": "",
+    "count": 1,
+    "first_occurred": 1794057898.5333674
+  }
+]

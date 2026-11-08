@@ -17,6 +17,22 @@
         },
         "description": "Upload Plant-sensors data to OpenPlantbook. Please consider enabling it to contribute to a creation of a Worldwide Browsable dataset. [More info]({sensor_data_url})",
         "title": "Plant-sensors data uploading"
+      },
+      "reauth_confirm": {
+        "data": {
+          "client_id": "Client ID",
+          "client_secret": "Secret"
+        },
+        "description": "The OpenPlantbook credentials are no longer valid. Log in to [OpenPlantbook]({apikey_url}) and enter your API client id and secret.",
+        "title": "Reauthenticate OpenPlantbook"
+      },
+      "reconfigure": {
+        "data": {
+          "client_id": "Client ID",
+          "client_secret": "Secret"
+        },
+        "description": "Log in to [OpenPlantbook]({apikey_url}) and enter your API client id and secret.",
+        "title": "Reconfigure OpenPlantbook"
       }
     },
     "error": {
@@ -25,7 +41,9 @@
       "unknown": "[%key:common::config_flow::error::unknown%]"
     },
     "abort": {
-      "already_configured": "[%key:common::config_flow::abort::already_configured_device%]"
+      "already_configured": "[%key:common::config_flow::abort::already_configured_device%]",
+      "reauth_successful": "[%key:common::config_flow::abort::reauth_successful%]",
+      "reconfigure_successful": "[%key:common::config_flow::abort::reconfigure_successful%]"
     }
   },
   "options": {
@@ -45,6 +63,50 @@
     },
     "error": {
       "invalid_path": "Invalid download path"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "upload_status": {
+        "name": "Upload status",
+        "state": {
+          "uploaded": "Uploaded",
+          "nothing_new": "Nothing new",
+          "failed": "Failed",
+          "rate_limited": "Rate limited",
+          "disabled": "Disabled"
+        }
+      },
+      "last_upload": {
+        "name": "Last upload"
+      }
+    },
+    "binary_sensor": {
+      "upload_problem": {
+        "name": "Upload problem"
+      }
+    }
+  },
+  "triggers": {
+    "upload_problem_started": {
+      "name": "Upload problem started",
+      "description": "Triggers when uploading plant-sensor data to OpenPlantbook needs attention: an upload failed, no data has arrived for 3 days, or plants cannot be registered.",
+      "fields": {
+        "for": {
+          "name": "For",
+          "description": "How long the problem must last, or be gone, before the trigger fires."
+        }
+      }
+    },
+    "upload_problem_cleared": {
+      "name": "Upload problem cleared",
+      "description": "Triggers when uploading plant-sensor data to OpenPlantbook works again.",
+      "fields": {
+        "for": {
+          "name": "For",
+          "description": "How long the problem must last, or be gone, before the trigger fires."
+        }
+      }
     }
   }
 }

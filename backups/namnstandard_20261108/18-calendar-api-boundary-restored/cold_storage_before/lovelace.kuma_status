@@ -1,0 +1,178 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.kuma_status",
+  "data": {
+    "config": {
+      "title": "Driftstatus",
+      "views": [
+        {
+          "title": "Driftöversikt",
+          "path": "oversikt",
+          "type": "panel",
+          "cards": [
+            {
+              "type": "custom:kuma-status-card",
+              "entities": [
+                "sensor.portainer_status",
+                "sensor.open_webui_status",
+                "sensor.wyoming_whisper_status",
+                "sensor.uptime_via_caddy_status",
+                "sensor.eir_status",
+                "sensor.ping_status_2",
+                "sensor.home_assistant_ui_status",
+                "sensor.supervisor_health_status",
+                "sensor.core_api_wake_up_status",
+                "sensor.frigg_status",
+                "sensor.ping_status_3",
+                "sensor.ssh_status",
+                "sensor.caddy_reverse_proxy_status",
+                "sensor.docker_api_status",
+                "sensor.glances_ui_status",
+                "sensor.ollama_api_status",
+                "sensor.uptime_proxy_status",
+                "sensor.ollama_container_status",
+                "sensor.caddy_container_status",
+                "sensor.ha_test_container_status",
+                "sensor.esphome_test_container_status",
+                "sensor.glances_container_status",
+                "sensor.portainer_agent_container_status",
+                "sensor.docker_socket_proxy_container_status",
+                "sensor.open_webui_container_status",
+                "sensor.openwrt_backup_container_status",
+                "sensor.portainer_container_status",
+                "sensor.uptime_kuma_container_status",
+                "sensor.home_status",
+                "sensor.gw_home_arpa_status",
+                "sensor.ap_kontoret_home_arpa_status",
+                "sensor.ap_koket_home_arpa_status",
+                "sensor.ap_kallaren_home_arpa_status",
+                "sensor.ap_verkstaden_home_arpa_status",
+                "sensor.ap_friggan_home_arpa_status",
+                "sensor.ap_honshuset_home_arpa_status",
+                "sensor.ap_poolen_home_arpa_status",
+                "sensor.gw_buck_status",
+                "sensor.ap_buck_status",
+                "sensor.buck_status",
+                "sensor.ha_buck_status",
+                "sensor.kiwi_status",
+                "sensor.gw_kiwi_status",
+                "sensor.ap_kiwi_status",
+                "sensor.ha_kiwi_status",
+                "sensor.sippan_status",
+                "sensor.gw_sippan_status",
+                "sensor.ha_sippan_status",
+                "sensor.adguard_dns_status",
+                "sensor.sw_vinden_status",
+                "sensor.sw_kontoret_status",
+                "sensor.ssh_borg_atkomst_status",
+                "sensor.tor_mimer_verifierad_backup_status",
+                "sensor.mimer_status",
+                "sensor.diskhalsa_och_lagring_status"
+              ],
+              "groups": [
+                {
+                  "name": "Home",
+                  "entities": [
+                    "sensor.home_status",
+                    "sensor.gw_home_arpa_status",
+                    "sensor.ap_kontoret_home_arpa_status",
+                    "sensor.ap_koket_home_arpa_status",
+                    "sensor.ap_kallaren_home_arpa_status",
+                    "sensor.ap_verkstaden_home_arpa_status",
+                    "sensor.ap_friggan_home_arpa_status",
+                    "sensor.ap_honshuset_home_arpa_status",
+                    "sensor.ap_poolen_home_arpa_status",
+                    "sensor.sw_vinden_status",
+                    "sensor.sw_kontoret_status"
+                  ],
+                  "description": "Infrastruktur i hemmet"
+                },
+                {
+                  "name": "Heimdal",
+                  "entities": [
+                    "sensor.eir_status",
+                    "sensor.ping_status_2",
+                    "sensor.home_assistant_ui_status",
+                    "sensor.supervisor_health_status",
+                    "sensor.core_api_wake_up_status",
+                    "sensor.adguard_dns_status"
+                  ],
+                  "description": "Tjänster och containrar i denna server"
+                },
+                {
+                  "name": "Tor",
+                  "entities": [
+                    "sensor.portainer_status",
+                    "sensor.open_webui_status",
+                    "sensor.wyoming_whisper_status",
+                    "sensor.uptime_via_caddy_status",
+                    "sensor.frigg_status",
+                    "sensor.ping_status_3",
+                    "sensor.ssh_status",
+                    "sensor.caddy_reverse_proxy_status",
+                    "sensor.docker_api_status",
+                    "sensor.glances_ui_status",
+                    "sensor.ollama_api_status",
+                    "sensor.uptime_proxy_status",
+                    "sensor.ollama_container_status",
+                    "sensor.caddy_container_status",
+                    "sensor.ha_test_container_status",
+                    "sensor.esphome_test_container_status",
+                    "sensor.glances_container_status",
+                    "sensor.portainer_agent_container_status",
+                    "sensor.docker_socket_proxy_container_status",
+                    "sensor.open_webui_container_status",
+                    "sensor.openwrt_backup_container_status",
+                    "sensor.portainer_container_status",
+                    "sensor.uptime_kuma_container_status"
+                  ],
+                  "description": "Tjänster och containrar i denna server"
+                },
+                {
+                  "name": "Mimer",
+                  "entities": [
+                    "sensor.ssh_borg_atkomst_status",
+                    "sensor.tor_mimer_verifierad_backup_status",
+                    "sensor.mimer_status",
+                    "sensor.diskhalsa_och_lagring_status"
+                  ],
+                  "description": "Tjänster och containrar i denna server"
+                },
+                {
+                  "name": "Buck",
+                  "entities": [
+                    "sensor.gw_buck_status",
+                    "sensor.ap_buck_status",
+                    "sensor.buck_status",
+                    "sensor.ha_buck_status"
+                  ],
+                  "description": "Infrastruktur hos Magnus"
+                },
+                {
+                  "name": "Kiwi",
+                  "entities": [
+                    "sensor.kiwi_status",
+                    "sensor.gw_kiwi_status",
+                    "sensor.ap_kiwi_status",
+                    "sensor.ha_kiwi_status"
+                  ],
+                  "description": "Infrastruktur hos Julia"
+                },
+                {
+                  "name": "Sippan",
+                  "entities": [
+                    "sensor.sippan_status",
+                    "sensor.gw_sippan_status",
+                    "sensor.ha_sippan_status"
+                  ],
+                  "description": "Infrastruktur hos Cecilia"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

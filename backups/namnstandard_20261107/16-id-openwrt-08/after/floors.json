@@ -1,0 +1,56 @@
+[
+  {
+    "aliases": [],
+    "created_at": 0.0,
+    "floor_id": "entreplan",
+    "icon": null,
+    "level": 0,
+    "name": "Entreplan",
+    "modified_at": 0.0
+  },
+  {
+    "aliases": [],
+    "created_at": 0.0,
+    "floor_id": "kallaren",
+    "icon": null,
+    "level": -1,
+    "name": "Källaren",
+    "modified_at": 0.0
+  },
+  {
+    "aliases": [],
+    "created_at": 0.0,
+    "floor_id": "vinden",
+    "icon": null,
+    "level": 1,
+    "name": "Vinden",
+    "modified_at": 0.0
+  },
+  {
+    "aliases": [],
+    "created_at": 0.0,
+    "floor_id": "utomhus",
+    "icon": "phu:rooms-outdoor",
+    "level": null,
+    "name": "Utomhus",
+    "modified_at": 0.0
+  },
+  {
+    "aliases": [],
+    "created_at": 1743073205.386969,
+    "floor_id": "utanfor_tomten",
+    "icon": null,
+    "level": null,
+    "name": "Utanför tomten",
+    "modified_at": 1743073205.386977
+  },
+  {
+    "aliases": [],
+    "created_at": 1790174470.527216,
+    "floor_id": "infrastruktur",
+    "icon": "phu:desktop-computer",
+    "level": 1,
+    "name": "Infrastruktur",
+    "modified_at": 1790174470.527227
+  }
+]

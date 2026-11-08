@@ -1,0 +1,2142 @@
+{
+  "sensor.homeconnect_status": [
+    {
+      "state": "READY",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "INIT",
+      "last_changed": "2026-11-07T13:25:15.644855+00:00"
+    },
+    {
+      "state": "READY",
+      "last_changed": "2026-11-07T13:25:45.645804+00:00"
+    },
+    {
+      "state": "INIT",
+      "last_changed": "2026-11-08T07:03:39.286966+00:00"
+    },
+    {
+      "state": "READY",
+      "last_changed": "2026-11-08T07:04:09.288154+00:00"
+    }
+  ],
+  "button.homeconnect_refresh": [
+    {
+      "state": "2026-09-21T13:34:44.792368+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "button.homeconnect_debug": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "binary_sensor.siemens_tvatt_tork_lucka": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "binary_sensor.siemens_tvatt_tork_lokaldrift_aktiv": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "binary_sensor.siemens_tvatt_tork_fjarrstyrning": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "binary_sensor.siemens_tvatt_tork_fjarrstart": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "binary_sensor.siemens_tvatt_tork_beraknad_aterstaende_programtid": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "binary_sensor.siemens_tvatt_tork_tyst": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "binary_sensor.siemens_tvatt_tork_variospeed": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "binary_sensor.siemens_tvatt_tork_i_dos_flytande_tvattmedel_fack_1": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "binary_sensor.siemens_tvatt_tork_i_dos_skoljmedel_fack_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "binary_sensor.siemens_tvatt_tork_mindre_strykning": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "binary_sensor.siemens_tvatt_tork_fortvatt": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "binary_sensor.siemens_tvatt_tork_pausa_skoljning": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "binary_sensor.siemens_tvatt_tork_vatten_plus": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "binary_sensor.siemens_tvatt_tork_hygiene_care": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "binary_sensor.siemens_tvatt_tork_barnsparr": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:20.832848+00:00"
+    }
+  ],
+  "binary_sensor.siemens_tvatt_tork_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "switch.siemens_tvatt_tork_barnsparr": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:20.832857+00:00"
+    }
+  ],
+  "switch.siemens_tvatt_tork_stromstatus": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "number.siemens_tvatt_tork_doseringsvolym_i_dos_tvattmedel": [
+    {
+      "state": "70",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "number.siemens_tvatt_tork_doseringsvolym_i_dos_tvattmedel_eller_skoljmedel": [
+    {
+      "state": "35",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "sensor.siemens_tvatt_tork_selected_program": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:20.832867+00:00"
+    }
+  ],
+  "sensor.siemens_tvatt_tork_active_program": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:20.832875+00:00"
+    }
+  ],
+  "sensor.siemens_tvatt_tork_sluttid": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "sensor.siemens_tvatt_tork_beraknad_total_programlangd": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "sensor.siemens_tvatt_tork_blotlaggning": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "sensor.siemens_tvatt_tork_extraskoljning": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "sensor.siemens_tvatt_tork_centrifugeringsvarvtal": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "sensor.siemens_tvatt_tork_autostain": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "sensor.siemens_tvatt_tork_temperatur": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "sensor.siemens_tvatt_tork_programme_mode": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "sensor.siemens_tvatt_tork_stromstatus": [
+    {
+      "state": "BSH.Common.EnumType.PowerState.Off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "sensor.siemens_tvatt_tork_doseringsvolym_i_dos_tvattmedel": [
+    {
+      "state": "70",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "sensor.siemens_tvatt_tork_doseringsvolym_i_dos_tvattmedel_eller_skoljmedel": [
+    {
+      "state": "35",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "select.siemens_tvatt_tork_sluttid": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "button.siemens_tvatt_tork_pause": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "button.siemens_tvatt_tork_stop": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "select.siemens_tvatt_tork_programs": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "sensor.siemens_tvatt_tork_rek_tvattmangd": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "select.siemens_016050395510002818_programs": [
+    {
+      "state": "Dishcare.Dishwasher.Program.Eco50",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-07T13:41:29.764486+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:41:33.174557+00:00"
+    },
+    {
+      "state": "Dishcare.Dishwasher.Program.Eco50",
+      "last_changed": "2026-11-07T15:20:59.223750+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-07T19:31:51.025644+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T19:31:55.348444+00:00"
+    },
+    {
+      "state": "Dishcare.Dishwasher.Program.Eco50",
+      "last_changed": "2026-11-07T21:11:23.355690+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529486+00:00"
+    },
+    {
+      "state": "Dishcare.Dishwasher.Program.Eco50",
+      "last_changed": "2026-11-08T07:03:42.614581+00:00"
+    }
+  ],
+  "select.siemens_016050395510002818_bsh_common_option_startinrelative": [
+    {
+      "state": "0:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:41:29.763735+00:00"
+    },
+    {
+      "state": "0:00",
+      "last_changed": "2026-11-07T15:20:59.222886+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T19:31:51.024782+00:00"
+    },
+    {
+      "state": "0:00",
+      "last_changed": "2026-11-07T21:11:23.354824+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529499+00:00"
+    },
+    {
+      "state": "0:00",
+      "last_changed": "2026-11-08T07:03:42.614931+00:00"
+    }
+  ],
+  "switch.siemens_016050395510002818_dishcare_dishwasher_option_hygieneplus": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:41:29.764581+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T15:20:59.224445+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T19:31:51.025738+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T21:11:23.356538+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529512+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:42.622474+00:00"
+    }
+  ],
+  "switch.siemens_016050395510002818_dishcare_dishwasher_option_halfload": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:41:29.764671+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T15:20:59.225252+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T19:31:51.025824+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T21:11:23.357411+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529526+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:42.622734+00:00"
+    }
+  ],
+  "switch.siemens_016050395510002818_dishcare_dishwasher_option_variospeedplus": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:41:29.765068+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T15:20:59.226348+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T19:31:51.026266+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T21:11:23.358701+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529539+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:42.622919+00:00"
+    }
+  ],
+  "switch.siemens_016050395510002818_dishcare_dishwasher_option_brilliancedry": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:41:29.763463+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T15:20:59.221732+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T19:31:51.024510+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T21:11:23.353531+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529551+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:42.623117+00:00"
+    }
+  ],
+  "switch.siemens_016050395510002818_bsh_common_setting_powerstate": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T13:41:26.187992+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T15:20:58.801345+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T19:31:47.234015+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T21:11:22.972164+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529568+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:42.623329+00:00"
+    }
+  ],
+  "switch.siemens_016050395510002818_bsh_common_setting_childlock": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529583+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:42.623507+00:00"
+    }
+  ],
+  "button.siemens_016050395510002818_start_pause": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:41:33.126159+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-07T15:20:59.228477+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T19:31:55.299583+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-07T21:11:23.361070+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529597+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-08T07:03:42.626575+00:00"
+    }
+  ],
+  "button.siemens_016050395510002818_stop": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-07T13:41:33.125948+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T15:20:25.218326+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-07T19:31:55.299372+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T21:10:21.936156+00:00"
+    }
+  ],
+  "binary_sensor.siemens_016050395510002818_bsh_common_status_remotecontrolactive": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529636+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-08T07:03:42.608930+00:00"
+    }
+  ],
+  "binary_sensor.siemens_016050395510002818_bsh_common_status_doorstate": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:41:24.895085+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T15:20:54.096035+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T19:31:46.405353+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-08T05:18:05.147579+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529649+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-08T07:03:42.609128+00:00"
+    }
+  ],
+  "binary_sensor.siemens_016050395510002818_bsh_common_option_smartenergyservice_smartstartenabled": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529663+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:42.609361+00:00"
+    }
+  ],
+  "binary_sensor.siemens_016050395510002818_dishcare_dishwasher_option_hygieneplus": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529677+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:42.609548+00:00"
+    }
+  ],
+  "binary_sensor.siemens_016050395510002818_dishcare_dishwasher_option_halfload": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529691+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:42.609726+00:00"
+    }
+  ],
+  "binary_sensor.siemens_016050395510002818_dishcare_dishwasher_option_variospeedplus": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T13:41:29.764320+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T15:20:58.356030+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T19:31:51.025481+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T21:11:22.502729+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529704+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:42.610602+00:00"
+    }
+  ],
+  "binary_sensor.siemens_016050395510002818_dishcare_dishwasher_option_brilliancedry": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529717+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:42.610801+00:00"
+    }
+  ],
+  "binary_sensor.siemens_016050395510002818_dishcare_dishwasher_option_silenceondemand": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529732+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:42.610981+00:00"
+    }
+  ],
+  "binary_sensor.siemens_016050395510002818_bsh_common_option_remainingprogramtimeisestimated": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529746+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-08T07:03:42.611168+00:00"
+    }
+  ],
+  "binary_sensor.siemens_016050395510002818_bsh_common_setting_childlock": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529760+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:42.611372+00:00"
+    }
+  ],
+  "binary_sensor.siemens_016050395510002818_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529773+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-08T07:03:42.611580+00:00"
+    }
+  ],
+  "sensor.siemens_016050395510002818_selected_program": [
+    {
+      "state": "Dishcare.Dishwasher.Program.Eco50",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "BSH.Common.Program.Favorite.001",
+      "last_changed": "2026-11-07T13:41:29.763860+00:00"
+    },
+    {
+      "state": "Dishcare.Dishwasher.Program.Eco50",
+      "last_changed": "2026-11-07T15:20:58.354350+00:00"
+    },
+    {
+      "state": "BSH.Common.Program.Favorite.001",
+      "last_changed": "2026-11-07T19:31:51.024909+00:00"
+    },
+    {
+      "state": "Dishcare.Dishwasher.Program.Eco50",
+      "last_changed": "2026-11-07T21:11:22.499174+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529787+00:00"
+    },
+    {
+      "state": "Dishcare.Dishwasher.Program.Eco50",
+      "last_changed": "2026-11-08T07:03:42.634645+00:00"
+    }
+  ],
+  "sensor.siemens_016050395510002818_bsh_common_option_startinrelative": [
+    {
+      "state": "0:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529800+00:00"
+    },
+    {
+      "state": "0:00",
+      "last_changed": "2026-11-08T07:03:42.635017+00:00"
+    }
+  ],
+  "sensor.siemens_016050395510002818_bsh_common_option_energyforecast": [
+    {
+      "state": "30",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "51",
+      "last_changed": "2026-11-07T13:41:29.764819+00:00"
+    },
+    {
+      "state": "30",
+      "last_changed": "2026-11-07T15:20:58.356461+00:00"
+    },
+    {
+      "state": "51",
+      "last_changed": "2026-11-07T19:31:51.026023+00:00"
+    },
+    {
+      "state": "30",
+      "last_changed": "2026-11-07T21:11:22.503179+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529817+00:00"
+    },
+    {
+      "state": "30",
+      "last_changed": "2026-11-08T07:03:42.635309+00:00"
+    }
+  ],
+  "sensor.siemens_016050395510002818_bsh_common_option_waterforecast": [
+    {
+      "state": "40",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "67",
+      "last_changed": "2026-11-07T13:41:29.763214+00:00"
+    },
+    {
+      "state": "40",
+      "last_changed": "2026-11-07T15:20:58.353789+00:00"
+    },
+    {
+      "state": "67",
+      "last_changed": "2026-11-07T19:31:51.024238+00:00"
+    },
+    {
+      "state": "40",
+      "last_changed": "2026-11-07T21:11:22.498613+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529831+00:00"
+    },
+    {
+      "state": "40",
+      "last_changed": "2026-11-08T07:03:42.635565+00:00"
+    }
+  ],
+  "sensor.siemens_016050395510002818_bsh_common_setting_powerstate": [
+    {
+      "state": "BSH.Common.EnumType.PowerState.Off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "BSH.Common.EnumType.PowerState.On",
+      "last_changed": "2026-11-07T13:41:26.189396+00:00"
+    },
+    {
+      "state": "BSH.Common.EnumType.PowerState.Off",
+      "last_changed": "2026-11-07T15:20:58.802692+00:00"
+    },
+    {
+      "state": "BSH.Common.EnumType.PowerState.On",
+      "last_changed": "2026-11-07T19:31:47.235442+00:00"
+    },
+    {
+      "state": "BSH.Common.EnumType.PowerState.Off",
+      "last_changed": "2026-11-07T21:11:22.973012+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529858+00:00"
+    },
+    {
+      "state": "BSH.Common.EnumType.PowerState.Off",
+      "last_changed": "2026-11-08T07:03:42.636697+00:00"
+    }
+  ],
+  "sensor.siemens_016050395510002818_bsh_common_option_programname": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "",
+      "last_changed": "2026-11-07T13:41:29.738751+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T15:20:58.356811+00:00"
+    },
+    {
+      "state": "",
+      "last_changed": "2026-11-07T19:31:51.026421+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T21:11:22.503536+00:00"
+    }
+  ],
+  "sensor.siemens_016050395510002818_bsh_common_option_baseprogram": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "Dishcare.Dishwasher.Program.Auto2",
+      "last_changed": "2026-11-07T13:41:29.739098+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T15:20:58.356954+00:00"
+    },
+    {
+      "state": "Dishcare.Dishwasher.Program.Auto2",
+      "last_changed": "2026-11-07T19:31:51.026571+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T21:11:22.503679+00:00"
+    }
+  ],
+  "sensor.siemens_016050395510002818_bsh_common_option_remainingprogramtime": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "2026-11-07T15:26:29+00:00",
+      "last_changed": "2026-11-07T13:41:29.966917+00:00"
+    },
+    {
+      "state": "2026-11-07T15:26:30+00:00",
+      "last_changed": "2026-11-07T13:41:33.174040+00:00"
+    },
+    {
+      "state": "2026-11-07T15:27:31+00:00",
+      "last_changed": "2026-11-07T13:42:34.360444+00:00"
+    },
+    {
+      "state": "2026-11-07T15:26:34+00:00",
+      "last_changed": "2026-11-07T13:42:34.494478+00:00"
+    },
+    {
+      "state": "2026-11-07T15:27:34+00:00",
+      "last_changed": "2026-11-07T13:43:34.386893+00:00"
+    },
+    {
+      "state": "2026-11-07T15:26:34+00:00",
+      "last_changed": "2026-11-07T13:43:34.519254+00:00"
+    },
+    {
+      "state": "2026-11-07T15:27:34+00:00",
+      "last_changed": "2026-11-07T13:44:34.419582+00:00"
+    },
+    {
+      "state": "2026-11-07T15:26:34+00:00",
+      "last_changed": "2026-11-07T13:44:34.546546+00:00"
+    },
+    {
+      "state": "2026-11-07T15:27:34+00:00",
+      "last_changed": "2026-11-07T13:45:34.502731+00:00"
+    },
+    {
+      "state": "2026-11-07T15:26:34+00:00",
+      "last_changed": "2026-11-07T13:45:34.623615+00:00"
+    },
+    {
+      "state": "2026-11-07T15:27:34+00:00",
+      "last_changed": "2026-11-07T13:46:34.417833+00:00"
+    },
+    {
+      "state": "2026-11-07T15:26:34+00:00",
+      "last_changed": "2026-11-07T13:46:34.554205+00:00"
+    },
+    {
+      "state": "2026-11-07T15:27:34+00:00",
+      "last_changed": "2026-11-07T13:47:34.337799+00:00"
+    },
+    {
+      "state": "2026-11-07T15:26:34+00:00",
+      "last_changed": "2026-11-07T13:47:34.455081+00:00"
+    },
+    {
+      "state": "2026-11-07T15:27:34+00:00",
+      "last_changed": "2026-11-07T13:48:34.345919+00:00"
+    },
+    {
+      "state": "2026-11-07T15:26:34+00:00",
+      "last_changed": "2026-11-07T13:48:34.505780+00:00"
+    },
+    {
+      "state": "2026-11-07T15:27:34+00:00",
+      "last_changed": "2026-11-07T13:49:34.485914+00:00"
+    },
+    {
+      "state": "2026-11-07T15:26:34+00:00",
+      "last_changed": "2026-11-07T13:49:34.607341+00:00"
+    },
+    {
+      "state": "2026-11-07T15:27:34+00:00",
+      "last_changed": "2026-11-07T13:50:34.403406+00:00"
+    },
+    {
+      "state": "2026-11-07T15:26:34+00:00",
+      "last_changed": "2026-11-07T13:50:34.537037+00:00"
+    },
+    {
+      "state": "2026-11-07T15:27:34+00:00",
+      "last_changed": "2026-11-07T13:51:34.457353+00:00"
+    },
+    {
+      "state": "2026-11-07T15:26:34+00:00",
+      "last_changed": "2026-11-07T13:51:34.588914+00:00"
+    },
+    {
+      "state": "2026-11-07T15:20:57+00:00",
+      "last_changed": "2026-11-07T14:45:57.331559+00:00"
+    },
+    {
+      "state": "2026-11-07T15:20:56+00:00",
+      "last_changed": "2026-11-07T14:46:56.420566+00:00"
+    },
+    {
+      "state": "2026-11-07T15:20:57+00:00",
+      "last_changed": "2026-11-07T14:53:57.195731+00:00"
+    },
+    {
+      "state": "2026-11-07T15:20:56+00:00",
+      "last_changed": "2026-11-07T14:54:56.432671+00:00"
+    },
+    {
+      "state": "2026-11-07T15:20:12+00:00",
+      "last_changed": "2026-11-07T14:58:12.765224+00:00"
+    },
+    {
+      "state": "2026-11-07T15:20:11+00:00",
+      "last_changed": "2026-11-07T14:59:11.765457+00:00"
+    },
+    {
+      "state": "2026-11-07T15:20:13+00:00",
+      "last_changed": "2026-11-07T15:12:13.565204+00:00"
+    },
+    {
+      "state": "2026-11-07T15:20:11+00:00",
+      "last_changed": "2026-11-07T15:13:11.660272+00:00"
+    },
+    {
+      "state": "2026-11-07T15:20:23+00:00",
+      "last_changed": "2026-11-07T15:20:23.972848+00:00"
+    },
+    {
+      "state": "2026-11-07T15:20:25+00:00",
+      "last_changed": "2026-11-07T15:20:25.250139+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T15:20:58.354865+00:00"
+    },
+    {
+      "state": "2026-11-07T21:16:51+00:00",
+      "last_changed": "2026-11-07T19:31:51.385658+00:00"
+    },
+    {
+      "state": "2026-11-07T21:17:52+00:00",
+      "last_changed": "2026-11-07T19:32:56.668617+00:00"
+    },
+    {
+      "state": "2026-11-07T21:16:56+00:00",
+      "last_changed": "2026-11-07T19:32:56.799364+00:00"
+    },
+    {
+      "state": "2026-11-07T21:17:56+00:00",
+      "last_changed": "2026-11-07T19:33:56.537068+00:00"
+    },
+    {
+      "state": "2026-11-07T21:16:56+00:00",
+      "last_changed": "2026-11-07T19:33:56.662391+00:00"
+    },
+    {
+      "state": "2026-11-07T21:17:57+00:00",
+      "last_changed": "2026-11-07T19:34:57.857411+00:00"
+    },
+    {
+      "state": "2026-11-07T21:16:57+00:00",
+      "last_changed": "2026-11-07T19:34:57.975667+00:00"
+    },
+    {
+      "state": "2026-11-07T21:17:56+00:00",
+      "last_changed": "2026-11-07T19:35:56.527324+00:00"
+    },
+    {
+      "state": "2026-11-07T21:16:56+00:00",
+      "last_changed": "2026-11-07T19:35:56.657638+00:00"
+    },
+    {
+      "state": "2026-11-07T21:17:56+00:00",
+      "last_changed": "2026-11-07T19:36:56.500825+00:00"
+    },
+    {
+      "state": "2026-11-07T21:16:56+00:00",
+      "last_changed": "2026-11-07T19:36:56.621236+00:00"
+    },
+    {
+      "state": "2026-11-07T21:17:56+00:00",
+      "last_changed": "2026-11-07T19:37:56.480898+00:00"
+    },
+    {
+      "state": "2026-11-07T21:16:56+00:00",
+      "last_changed": "2026-11-07T19:37:56.599148+00:00"
+    },
+    {
+      "state": "2026-11-07T21:10:51+00:00",
+      "last_changed": "2026-11-07T20:35:51.262960+00:00"
+    },
+    {
+      "state": "2026-11-07T21:10:50+00:00",
+      "last_changed": "2026-11-07T20:36:50.319933+00:00"
+    },
+    {
+      "state": "2026-11-07T21:10:51+00:00",
+      "last_changed": "2026-11-07T20:47:51.194363+00:00"
+    },
+    {
+      "state": "2026-11-07T21:10:11+00:00",
+      "last_changed": "2026-11-07T20:48:11.267791+00:00"
+    },
+    {
+      "state": "2026-11-07T21:10:10+00:00",
+      "last_changed": "2026-11-07T20:49:10.293715+00:00"
+    },
+    {
+      "state": "2026-11-07T21:10:21+00:00",
+      "last_changed": "2026-11-07T21:10:21.449381+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T21:11:22.499692+00:00"
+    }
+  ],
+  "sensor.siemens_016050395510002818_active_program": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "BSH.Common.Program.Favorite.001",
+      "last_changed": "2026-11-07T13:41:33.097549+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-07T15:20:25.250798+00:00"
+    },
+    {
+      "state": "BSH.Common.Program.Favorite.001",
+      "last_changed": "2026-11-07T19:31:55.347989+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-07T21:10:21.974914+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529912+00:00"
+    }
+  ],
+  "sensor.siemens_016050395510002818_bsh_common_option_programprogress": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    },
+    {
+      "state": "0",
+      "last_changed": "2026-11-07T13:41:33.099083+00:00"
+    },
+    {
+      "state": "1",
+      "last_changed": "2026-11-07T13:42:34.362138+00:00"
+    },
+    {
+      "state": "2",
+      "last_changed": "2026-11-07T13:43:34.388596+00:00"
+    },
+    {
+      "state": "3",
+      "last_changed": "2026-11-07T13:44:34.421279+00:00"
+    },
+    {
+      "state": "4",
+      "last_changed": "2026-11-07T13:45:34.504508+00:00"
+    },
+    {
+      "state": "5",
+      "last_changed": "2026-11-07T13:46:34.419517+00:00"
+    },
+    {
+      "state": "6",
+      "last_changed": "2026-11-07T13:47:34.339501+00:00"
+    },
+    {
+      "state": "7",
+      "last_changed": "2026-11-07T13:48:34.347708+00:00"
+    },
+    {
+      "state": "8",
+      "last_changed": "2026-11-07T13:49:34.487808+00:00"
+    },
+    {
+      "state": "9",
+      "last_changed": "2026-11-07T13:50:34.405102+00:00"
+    },
+    {
+      "state": "10",
+      "last_changed": "2026-11-07T13:51:34.459048+00:00"
+    },
+    {
+      "state": "11",
+      "last_changed": "2026-11-07T13:53:34.300022+00:00"
+    },
+    {
+      "state": "12",
+      "last_changed": "2026-11-07T13:54:34.318930+00:00"
+    },
+    {
+      "state": "13",
+      "last_changed": "2026-11-07T13:55:34.176848+00:00"
+    },
+    {
+      "state": "14",
+      "last_changed": "2026-11-07T13:56:34.356664+00:00"
+    },
+    {
+      "state": "15",
+      "last_changed": "2026-11-07T13:57:34.347660+00:00"
+    },
+    {
+      "state": "16",
+      "last_changed": "2026-11-07T13:58:34.347651+00:00"
+    },
+    {
+      "state": "17",
+      "last_changed": "2026-11-07T13:59:34.285993+00:00"
+    },
+    {
+      "state": "18",
+      "last_changed": "2026-11-07T14:00:34.358966+00:00"
+    },
+    {
+      "state": "19",
+      "last_changed": "2026-11-07T14:01:34.321967+00:00"
+    },
+    {
+      "state": "20",
+      "last_changed": "2026-11-07T14:02:34.309718+00:00"
+    },
+    {
+      "state": "21",
+      "last_changed": "2026-11-07T14:03:34.289120+00:00"
+    },
+    {
+      "state": "22",
+      "last_changed": "2026-11-07T14:04:34.297168+00:00"
+    },
+    {
+      "state": "23",
+      "last_changed": "2026-11-07T14:05:34.324935+00:00"
+    },
+    {
+      "state": "24",
+      "last_changed": "2026-11-07T14:06:34.363328+00:00"
+    },
+    {
+      "state": "25",
+      "last_changed": "2026-11-07T14:07:34.290445+00:00"
+    },
+    {
+      "state": "26",
+      "last_changed": "2026-11-07T14:08:34.140964+00:00"
+    },
+    {
+      "state": "27",
+      "last_changed": "2026-11-07T14:09:34.260353+00:00"
+    },
+    {
+      "state": "28",
+      "last_changed": "2026-11-07T14:10:34.278004+00:00"
+    },
+    {
+      "state": "29",
+      "last_changed": "2026-11-07T14:11:34.301199+00:00"
+    },
+    {
+      "state": "30",
+      "last_changed": "2026-11-07T14:12:34.289534+00:00"
+    },
+    {
+      "state": "31",
+      "last_changed": "2026-11-07T14:14:34.302696+00:00"
+    },
+    {
+      "state": "32",
+      "last_changed": "2026-11-07T14:15:34.283039+00:00"
+    },
+    {
+      "state": "33",
+      "last_changed": "2026-11-07T14:16:34.302980+00:00"
+    },
+    {
+      "state": "34",
+      "last_changed": "2026-11-07T14:17:34.307006+00:00"
+    },
+    {
+      "state": "35",
+      "last_changed": "2026-11-07T14:18:34.320217+00:00"
+    },
+    {
+      "state": "36",
+      "last_changed": "2026-11-07T14:19:34.285586+00:00"
+    },
+    {
+      "state": "37",
+      "last_changed": "2026-11-07T14:20:34.308077+00:00"
+    },
+    {
+      "state": "38",
+      "last_changed": "2026-11-07T14:21:34.208908+00:00"
+    },
+    {
+      "state": "39",
+      "last_changed": "2026-11-07T14:22:34.194574+00:00"
+    },
+    {
+      "state": "40",
+      "last_changed": "2026-11-07T14:23:34.138098+00:00"
+    },
+    {
+      "state": "41",
+      "last_changed": "2026-11-07T14:24:34.205248+00:00"
+    },
+    {
+      "state": "42",
+      "last_changed": "2026-11-07T14:25:34.194870+00:00"
+    },
+    {
+      "state": "43",
+      "last_changed": "2026-11-07T14:26:34.202184+00:00"
+    },
+    {
+      "state": "44",
+      "last_changed": "2026-11-07T14:27:34.298488+00:00"
+    },
+    {
+      "state": "45",
+      "last_changed": "2026-11-07T14:28:34.296836+00:00"
+    },
+    {
+      "state": "46",
+      "last_changed": "2026-11-07T14:29:34.306761+00:00"
+    },
+    {
+      "state": "47",
+      "last_changed": "2026-11-07T14:30:34.262236+00:00"
+    },
+    {
+      "state": "48",
+      "last_changed": "2026-11-07T14:31:34.209272+00:00"
+    },
+    {
+      "state": "49",
+      "last_changed": "2026-11-07T14:32:34.270513+00:00"
+    },
+    {
+      "state": "50",
+      "last_changed": "2026-11-07T14:33:34.293303+00:00"
+    },
+    {
+      "state": "51",
+      "last_changed": "2026-11-07T14:35:34.283521+00:00"
+    },
+    {
+      "state": "52",
+      "last_changed": "2026-11-07T14:36:34.280329+00:00"
+    },
+    {
+      "state": "54",
+      "last_changed": "2026-11-07T14:38:34.306081+00:00"
+    },
+    {
+      "state": "55",
+      "last_changed": "2026-11-07T14:39:34.308680+00:00"
+    },
+    {
+      "state": "56",
+      "last_changed": "2026-11-07T14:40:34.321263+00:00"
+    },
+    {
+      "state": "57",
+      "last_changed": "2026-11-07T14:41:34.312143+00:00"
+    },
+    {
+      "state": "58",
+      "last_changed": "2026-11-07T14:42:34.243348+00:00"
+    },
+    {
+      "state": "60",
+      "last_changed": "2026-11-07T14:44:34.265597+00:00"
+    },
+    {
+      "state": "61",
+      "last_changed": "2026-11-07T14:45:34.271448+00:00"
+    },
+    {
+      "state": "67",
+      "last_changed": "2026-11-07T14:45:57.333493+00:00"
+    },
+    {
+      "state": "68",
+      "last_changed": "2026-11-07T14:46:56.415690+00:00"
+    },
+    {
+      "state": "69",
+      "last_changed": "2026-11-07T14:47:56.434209+00:00"
+    },
+    {
+      "state": "70",
+      "last_changed": "2026-11-07T14:48:56.513762+00:00"
+    },
+    {
+      "state": "71",
+      "last_changed": "2026-11-07T14:50:56.510582+00:00"
+    },
+    {
+      "state": "72",
+      "last_changed": "2026-11-07T14:51:56.407881+00:00"
+    },
+    {
+      "state": "73",
+      "last_changed": "2026-11-07T14:52:56.527459+00:00"
+    },
+    {
+      "state": "74",
+      "last_changed": "2026-11-07T14:53:57.192109+00:00"
+    },
+    {
+      "state": "75",
+      "last_changed": "2026-11-07T14:54:56.428599+00:00"
+    },
+    {
+      "state": "76",
+      "last_changed": "2026-11-07T14:55:56.447850+00:00"
+    },
+    {
+      "state": "77",
+      "last_changed": "2026-11-07T14:56:56.444530+00:00"
+    },
+    {
+      "state": "78",
+      "last_changed": "2026-11-07T14:57:56.428315+00:00"
+    },
+    {
+      "state": "79",
+      "last_changed": "2026-11-07T14:58:12.766703+00:00"
+    },
+    {
+      "state": "80",
+      "last_changed": "2026-11-07T14:59:11.761486+00:00"
+    },
+    {
+      "state": "81",
+      "last_changed": "2026-11-07T15:00:11.812275+00:00"
+    },
+    {
+      "state": "82",
+      "last_changed": "2026-11-07T15:01:11.801567+00:00"
+    },
+    {
+      "state": "83",
+      "last_changed": "2026-11-07T15:02:11.826304+00:00"
+    },
+    {
+      "state": "84",
+      "last_changed": "2026-11-07T15:03:11.716487+00:00"
+    },
+    {
+      "state": "85",
+      "last_changed": "2026-11-07T15:04:11.709401+00:00"
+    },
+    {
+      "state": "86",
+      "last_changed": "2026-11-07T15:05:11.795171+00:00"
+    },
+    {
+      "state": "87",
+      "last_changed": "2026-11-07T15:06:11.792351+00:00"
+    },
+    {
+      "state": "88",
+      "last_changed": "2026-11-07T15:07:11.670721+00:00"
+    },
+    {
+      "state": "89",
+      "last_changed": "2026-11-07T15:08:11.803015+00:00"
+    },
+    {
+      "state": "90",
+      "last_changed": "2026-11-07T15:09:11.743109+00:00"
+    },
+    {
+      "state": "91",
+      "last_changed": "2026-11-07T15:11:11.771564+00:00"
+    },
+    {
+      "state": "92",
+      "last_changed": "2026-11-07T15:12:13.562306+00:00"
+    },
+    {
+      "state": "93",
+      "last_changed": "2026-11-07T15:13:11.657670+00:00"
+    },
+    {
+      "state": "94",
+      "last_changed": "2026-11-07T15:14:11.722373+00:00"
+    },
+    {
+      "state": "95",
+      "last_changed": "2026-11-07T15:15:11.725756+00:00"
+    },
+    {
+      "state": "96",
+      "last_changed": "2026-11-07T15:16:11.749274+00:00"
+    },
+    {
+      "state": "97",
+      "last_changed": "2026-11-07T15:17:11.759600+00:00"
+    },
+    {
+      "state": "98",
+      "last_changed": "2026-11-07T15:18:11.789440+00:00"
+    },
+    {
+      "state": "99",
+      "last_changed": "2026-11-07T15:19:11.741469+00:00"
+    },
+    {
+      "state": "100",
+      "last_changed": "2026-11-07T15:20:23.968877+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T15:20:25.251453+00:00"
+    },
+    {
+      "state": "0",
+      "last_changed": "2026-11-07T19:31:55.350952+00:00"
+    },
+    {
+      "state": "1",
+      "last_changed": "2026-11-07T19:32:56.670337+00:00"
+    },
+    {
+      "state": "2",
+      "last_changed": "2026-11-07T19:33:56.538797+00:00"
+    },
+    {
+      "state": "3",
+      "last_changed": "2026-11-07T19:34:57.859102+00:00"
+    },
+    {
+      "state": "4",
+      "last_changed": "2026-11-07T19:35:56.529066+00:00"
+    },
+    {
+      "state": "5",
+      "last_changed": "2026-11-07T19:36:56.502553+00:00"
+    },
+    {
+      "state": "6",
+      "last_changed": "2026-11-07T19:37:56.482617+00:00"
+    },
+    {
+      "state": "7",
+      "last_changed": "2026-11-07T19:38:56.321591+00:00"
+    },
+    {
+      "state": "8",
+      "last_changed": "2026-11-07T19:39:56.313045+00:00"
+    },
+    {
+      "state": "9",
+      "last_changed": "2026-11-07T19:40:56.304722+00:00"
+    },
+    {
+      "state": "10",
+      "last_changed": "2026-11-07T19:41:56.271536+00:00"
+    },
+    {
+      "state": "11",
+      "last_changed": "2026-11-07T19:43:56.388588+00:00"
+    },
+    {
+      "state": "12",
+      "last_changed": "2026-11-07T19:44:56.353365+00:00"
+    },
+    {
+      "state": "13",
+      "last_changed": "2026-11-07T19:45:56.395535+00:00"
+    },
+    {
+      "state": "14",
+      "last_changed": "2026-11-07T19:46:56.389444+00:00"
+    },
+    {
+      "state": "15",
+      "last_changed": "2026-11-07T19:47:56.352002+00:00"
+    },
+    {
+      "state": "16",
+      "last_changed": "2026-11-07T19:48:56.352786+00:00"
+    },
+    {
+      "state": "17",
+      "last_changed": "2026-11-07T19:49:56.353864+00:00"
+    },
+    {
+      "state": "18",
+      "last_changed": "2026-11-07T19:50:56.364163+00:00"
+    },
+    {
+      "state": "19",
+      "last_changed": "2026-11-07T19:51:56.381772+00:00"
+    },
+    {
+      "state": "20",
+      "last_changed": "2026-11-07T19:52:56.379912+00:00"
+    },
+    {
+      "state": "21",
+      "last_changed": "2026-11-07T19:53:56.349412+00:00"
+    },
+    {
+      "state": "22",
+      "last_changed": "2026-11-07T19:54:56.494161+00:00"
+    },
+    {
+      "state": "23",
+      "last_changed": "2026-11-07T19:55:56.490757+00:00"
+    },
+    {
+      "state": "24",
+      "last_changed": "2026-11-07T19:56:56.485528+00:00"
+    },
+    {
+      "state": "25",
+      "last_changed": "2026-11-07T19:57:56.472051+00:00"
+    },
+    {
+      "state": "26",
+      "last_changed": "2026-11-07T19:58:56.493547+00:00"
+    },
+    {
+      "state": "27",
+      "last_changed": "2026-11-07T19:59:56.484806+00:00"
+    },
+    {
+      "state": "28",
+      "last_changed": "2026-11-07T20:00:56.478789+00:00"
+    },
+    {
+      "state": "29",
+      "last_changed": "2026-11-07T20:01:56.527390+00:00"
+    },
+    {
+      "state": "30",
+      "last_changed": "2026-11-07T20:02:56.508262+00:00"
+    },
+    {
+      "state": "31",
+      "last_changed": "2026-11-07T20:04:56.448716+00:00"
+    },
+    {
+      "state": "32",
+      "last_changed": "2026-11-07T20:05:56.485894+00:00"
+    },
+    {
+      "state": "33",
+      "last_changed": "2026-11-07T20:06:56.467738+00:00"
+    },
+    {
+      "state": "34",
+      "last_changed": "2026-11-07T20:07:56.448133+00:00"
+    },
+    {
+      "state": "35",
+      "last_changed": "2026-11-07T20:08:56.415959+00:00"
+    },
+    {
+      "state": "36",
+      "last_changed": "2026-11-07T20:09:56.454618+00:00"
+    },
+    {
+      "state": "37",
+      "last_changed": "2026-11-07T20:10:56.501678+00:00"
+    },
+    {
+      "state": "38",
+      "last_changed": "2026-11-07T20:11:56.527980+00:00"
+    },
+    {
+      "state": "39",
+      "last_changed": "2026-11-07T20:12:56.503749+00:00"
+    },
+    {
+      "state": "40",
+      "last_changed": "2026-11-07T20:13:56.510039+00:00"
+    },
+    {
+      "state": "41",
+      "last_changed": "2026-11-07T20:14:56.366746+00:00"
+    },
+    {
+      "state": "42",
+      "last_changed": "2026-11-07T20:15:56.455980+00:00"
+    },
+    {
+      "state": "43",
+      "last_changed": "2026-11-07T20:16:56.448426+00:00"
+    },
+    {
+      "state": "44",
+      "last_changed": "2026-11-07T20:17:56.527230+00:00"
+    },
+    {
+      "state": "45",
+      "last_changed": "2026-11-07T20:18:56.500378+00:00"
+    },
+    {
+      "state": "46",
+      "last_changed": "2026-11-07T20:19:56.403496+00:00"
+    },
+    {
+      "state": "47",
+      "last_changed": "2026-11-07T20:20:56.403848+00:00"
+    },
+    {
+      "state": "48",
+      "last_changed": "2026-11-07T20:21:56.400382+00:00"
+    },
+    {
+      "state": "49",
+      "last_changed": "2026-11-07T20:22:56.414415+00:00"
+    },
+    {
+      "state": "50",
+      "last_changed": "2026-11-07T20:23:56.333558+00:00"
+    },
+    {
+      "state": "51",
+      "last_changed": "2026-11-07T20:25:56.354168+00:00"
+    },
+    {
+      "state": "52",
+      "last_changed": "2026-11-07T20:26:56.449335+00:00"
+    },
+    {
+      "state": "54",
+      "last_changed": "2026-11-07T20:28:56.514518+00:00"
+    },
+    {
+      "state": "55",
+      "last_changed": "2026-11-07T20:29:56.438678+00:00"
+    },
+    {
+      "state": "56",
+      "last_changed": "2026-11-07T20:30:56.464007+00:00"
+    },
+    {
+      "state": "57",
+      "last_changed": "2026-11-07T20:31:56.433827+00:00"
+    },
+    {
+      "state": "58",
+      "last_changed": "2026-11-07T20:32:56.473198+00:00"
+    },
+    {
+      "state": "60",
+      "last_changed": "2026-11-07T20:34:56.400977+00:00"
+    },
+    {
+      "state": "67",
+      "last_changed": "2026-11-07T20:35:51.264858+00:00"
+    },
+    {
+      "state": "68",
+      "last_changed": "2026-11-07T20:36:50.316137+00:00"
+    },
+    {
+      "state": "69",
+      "last_changed": "2026-11-07T20:37:50.368641+00:00"
+    },
+    {
+      "state": "70",
+      "last_changed": "2026-11-07T20:38:50.198317+00:00"
+    },
+    {
+      "state": "71",
+      "last_changed": "2026-11-07T20:40:50.250915+00:00"
+    },
+    {
+      "state": "72",
+      "last_changed": "2026-11-07T20:41:50.265051+00:00"
+    },
+    {
+      "state": "73",
+      "last_changed": "2026-11-07T20:42:50.246127+00:00"
+    },
+    {
+      "state": "74",
+      "last_changed": "2026-11-07T20:43:50.237740+00:00"
+    },
+    {
+      "state": "75",
+      "last_changed": "2026-11-07T20:44:50.215560+00:00"
+    },
+    {
+      "state": "76",
+      "last_changed": "2026-11-07T20:45:50.231504+00:00"
+    },
+    {
+      "state": "77",
+      "last_changed": "2026-11-07T20:46:50.268202+00:00"
+    },
+    {
+      "state": "78",
+      "last_changed": "2026-11-07T20:47:51.190307+00:00"
+    },
+    {
+      "state": "79",
+      "last_changed": "2026-11-07T20:48:11.268726+00:00"
+    },
+    {
+      "state": "80",
+      "last_changed": "2026-11-07T20:49:10.290280+00:00"
+    },
+    {
+      "state": "81",
+      "last_changed": "2026-11-07T20:50:10.135274+00:00"
+    },
+    {
+      "state": "82",
+      "last_changed": "2026-11-07T20:51:10.124087+00:00"
+    },
+    {
+      "state": "83",
+      "last_changed": "2026-11-07T20:52:10.229522+00:00"
+    },
+    {
+      "state": "84",
+      "last_changed": "2026-11-07T20:53:10.247432+00:00"
+    },
+    {
+      "state": "85",
+      "last_changed": "2026-11-07T20:54:10.273843+00:00"
+    },
+    {
+      "state": "86",
+      "last_changed": "2026-11-07T20:55:10.279614+00:00"
+    },
+    {
+      "state": "87",
+      "last_changed": "2026-11-07T20:56:10.240091+00:00"
+    },
+    {
+      "state": "88",
+      "last_changed": "2026-11-07T20:57:10.265989+00:00"
+    },
+    {
+      "state": "89",
+      "last_changed": "2026-11-07T20:58:10.148802+00:00"
+    },
+    {
+      "state": "90",
+      "last_changed": "2026-11-07T20:59:10.263277+00:00"
+    },
+    {
+      "state": "91",
+      "last_changed": "2026-11-07T21:01:10.302182+00:00"
+    },
+    {
+      "state": "92",
+      "last_changed": "2026-11-07T21:02:10.310107+00:00"
+    },
+    {
+      "state": "93",
+      "last_changed": "2026-11-07T21:03:10.300298+00:00"
+    },
+    {
+      "state": "94",
+      "last_changed": "2026-11-07T21:04:10.308094+00:00"
+    },
+    {
+      "state": "95",
+      "last_changed": "2026-11-07T21:05:10.384667+00:00"
+    },
+    {
+      "state": "96",
+      "last_changed": "2026-11-07T21:06:10.250658+00:00"
+    },
+    {
+      "state": "97",
+      "last_changed": "2026-11-07T21:07:10.291151+00:00"
+    },
+    {
+      "state": "98",
+      "last_changed": "2026-11-07T21:08:10.265597+00:00"
+    },
+    {
+      "state": "99",
+      "last_changed": "2026-11-07T21:09:10.239480+00:00"
+    },
+    {
+      "state": "100",
+      "last_changed": "2026-11-07T21:10:21.445993+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T21:10:21.975625+00:00"
+    }
+  ],
+  "select.siemens_tvatt_tork_centrifugeringsvarvtal": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "switch.siemens_tvatt_tork_i_dos_flytande_tvattmedel_fack_1": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "switch.siemens_tvatt_tork_i_dos_skoljmedel_fack_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "binary_sensor.siemens_tvatt_tork_intensiv_plus": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "select.siemens_tvatt_tork_temperatur": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "sensor.siemens_tvatt_tork_processfas": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "binary_sensor.siemens_875050393114000431_laundrycare_washerdryer_option_wrinkleguardboost": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ],
+  "sensor.siemens_875050393114000431_laundrycare_washerdryer_option_dryingtarget": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:50:51.378098+00:00",
+      "last_updated": "2026-11-07T07:50:51.378098+00:00"
+    }
+  ]
+}

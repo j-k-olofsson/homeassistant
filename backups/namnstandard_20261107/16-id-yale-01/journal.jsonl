@@ -1,0 +1,12 @@
+{"status": "rename_intent", "old": "binary_sensor.ytterdorren_dorrklockan_ringer", "new": "binary_sensor.entren_ytterdorren_dorrklockan_ringer"}
+{"status": "renamed", "old": "binary_sensor.ytterdorren_dorrklockan_ringer", "new": "binary_sensor.entren_ytterdorren_dorrklockan_ringer"}
+{"status": "rename_intent", "old": "button.ytterdorren_vack", "new": "button.entren_ytterdorren_vack"}
+{"status": "renamed", "old": "button.ytterdorren_vack", "new": "button.entren_ytterdorren_vack"}
+{"status": "rename_intent", "old": "sensor.ytterdorren_batteri", "new": "sensor.entren_ytterdorren_batteriniva"}
+{"status": "renamed", "old": "sensor.ytterdorren_batteri", "new": "sensor.entren_ytterdorren_batteriniva"}
+{"status": "rename_intent", "old": "binary_sensor.ytterdorren_dorr", "new": "binary_sensor.entren_ytterdorren_dorr"}
+{"status": "renamed", "old": "binary_sensor.ytterdorren_dorr", "new": "binary_sensor.entren_ytterdorren_dorr"}
+{"status": "rename_intent", "old": "sensor.ytterdorren_operator", "new": "sensor.entren_ytterdorren_operator"}
+{"status": "renamed", "old": "sensor.ytterdorren_operator", "new": "sensor.entren_ytterdorren_operator"}
+{"status": "rename_intent", "old": "event.ytterdorren_dorrklocka", "new": "event.entren_ytterdorren_dorrklocka"}
+{"status": "renamed", "old": "event.ytterdorren_dorrklocka", "new": "event.entren_ytterdorren_dorrklocka"}

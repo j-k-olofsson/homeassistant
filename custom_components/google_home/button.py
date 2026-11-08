@@ -1,0 +1,49 @@
+"""Button platform for Google Home."""
+
+from typing import override
+
+from homeassistant.components.button import ButtonEntity
+from homeassistant.components.button.const import ButtonDeviceClass
+from homeassistant.const import EntityCategory
+from homeassistant.core import HomeAssistant
+from homeassistant.helpers.entity_platform import AddEntitiesCallback
+
+from .const import LABEL_REBOOT
+from .entity import GoogleHomeAddressedEntity, async_add_device_entities
+from .types import GoogleHomeConfigEntry
+
+# The coordinator does the updates. A limit on presses would count every
+# speaker's reboot button together, so it would make speakers wait for each other.
+PARALLEL_UPDATES = 0
+
+
+async def async_setup_entry(
+    _hass: HomeAssistant,
+    entry: GoogleHomeConfigEntry,
+    async_add_devices: AddEntitiesCallback,
+) -> bool:
+    """Set up button platform."""
+    # Rebooting doesn't need alarms, so devices without them get a button too.
+    async_add_device_entities(
+        entry, async_add_devices, RebootButton, needs_answer=False
+    )
+    return True
+
+
+class RebootButton(GoogleHomeAddressedEntity, ButtonEntity):
+    """Google Home Reboot button."""
+
+    _attr_translation_key = "reboot"
+    _attr_device_class = ButtonDeviceClass.RESTART
+    _attr_entity_category = EntityCategory.CONFIG
+
+    @property
+    @override
+    def label(self) -> str:
+        """Label to use for unique id."""
+        return LABEL_REBOOT
+
+    @override
+    async def async_press(self) -> None:
+        """Reboot the device."""
+        await self.async_reboot_device()

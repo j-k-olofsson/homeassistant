@@ -1,0 +1,330 @@
+{
+  "switch.2_4_ghz_physical_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.5_ghz_physical_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.koket_ap_olofsson_wifi_2_4_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.koket_ap_olofsson_guest_2_4_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.ap_olofsson_iot_2_4_ghz_radio_2": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.koket_ap_olofsson_wifi_5_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.koket_ap_olofsson_guest_5_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.koket_ap_olofsson_iot_5_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.2_4_ghz_physical_radio_2": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.5_ghz_physical_radio_2": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.ap_olofsson_wifi_2_4_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.ap_olofsson_guest_2_4_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.ap_olofsson_iot_2_4_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.ap_olofsson_wifi_5_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.ap_olofsson_guest_5_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.ap_olofsson_iot_5_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.2_4_ghz_physical_radio_5": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.5_ghz_physical_radio_5": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.bion_ap_olofsson_wifi_2_4_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.bion_ap_olofsson_guest_2_4_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.bion_ap_olofsson_iot_2_4_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.bion_ap_olofsson_wifi_5_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.bion_ap_olofsson_guest_5_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.bion_ap_olofsson_iot_5_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.2_4_ghz_physical_radio_3": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.5_ghz_physical_radio_3": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.friggan_ap_olofsson_wifi_2_4_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.friggan_ap_olofsson_wifi_5_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.friggan_ap_olofsson_guest_5_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.friggan_ap_olofsson_iot_5_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.friggan_ap_olofsson_guest_2_4_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.friggan_ap_olofsson_iot_2_4_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.5_ghz_physical_radio_6": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.2_4_ghz_physical_radio_6": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.poolen_ap_repeat_iot_5_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.poolen_ap_olofsson_wifi_2_4_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.poolen_ap_olofsson_guest_2_4_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "switch.poolen_ap_olofsson_iot_2_4_ghz_radio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "device_tracker.00_e0_4c_fc_8d_bc_00_e0_4c_fc_8d_bc": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "device_tracker.00_e0_4c_5a_e7_b3_00_e0_4c_5a_e7_b3": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ],
+  "device_tracker.00_e0_4c_50_00_fa_00_e0_4c_50_00_fa": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:32.608887+00:00",
+      "last_updated": "2026-11-07T07:43:32.608887+00:00"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "sensor.temp_hum_toalett_battery": "sensor.toaletten_klimatsensor_batteriniva",
+  "sensor.temp_hum_toalett_humidity": "sensor.toaletten_klimatsensor_luftfuktighet",
+  "sensor.temp_hum_toalett_signal_strength": "sensor.toaletten_klimatsensor_signalstyrka",
+  "sensor.temp_hum_toalett_temperature": "sensor.toaletten_klimatsensor_temperatur",
+  "sensor.temp_hum_toalett_voltage": "sensor.toaletten_klimatsensor_spanning"
+}

@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "openwrt_01M0CQWZG3NKV22ZVEVFEN0KWF_history",
+  "data": {
+    "devices": {
+      "8c:f5:a3:7f:d3:b4": {
+        "initially_seen": 1787134123,
+        "last_seen": 1794129525,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "c8:2b:96:07:7d:6e": {
+        "initially_seen": 1787134123,
+        "last_seen": 1794129525,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "c8:2b:96:e6:99:4f": {
+        "initially_seen": 1787134123,
+        "last_seen": 1794129525,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "98:f4:ab:e2:71:12": {
+        "initially_seen": 1787134123,
+        "last_seen": 1794129525,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "20:05:b6:01:99:b1": {
+        "initially_seen": 1787134123,
+        "last_seen": 1794129525,
+        "is_wireless": false,
+        "hostname": "gw.home.arpa"
+      },
+      "e8:ff:1e:db:ea:f8": {
+        "initially_seen": 1787134123,
+        "last_seen": 1794129525,
+        "is_wireless": false,
+        "hostname": "heimdal.home.arpa"
+      },
+      "ac:16:2d:04:99:b2": {
+        "initially_seen": 1787134123,
+        "last_seen": 1791229164,
+        "is_wireless": false,
+        "hostname": "fulla.home.arpa"
+      },
+      "60:cf:84:cd:9c:e2": {
+        "initially_seen": 1787234225,
+        "last_seen": 1794129525,
+        "is_wireless": false,
+        "hostname": "tor.home.arpa"
+      },
+      "68:f7:28:79:0e:04": {
+        "initially_seen": 1787295647,
+        "last_seen": 1791229164,
+        "is_wireless": false,
+        "hostname": "192.168.10.50"
+      },
+      "72:0e:b3:71:8f:ef": {
+        "initially_seen": 1787298851,
+        "last_seen": 1791229164,
+        "is_wireless": false,
+        "hostname": "Pixel-9-Pro-XL.home.arpa"
+      }
+    },
+    "last_version": "25.12.6",
+    "mqtt_cleanup_done": false,
+    "mqtt_presence_configured": false
+  }
+}

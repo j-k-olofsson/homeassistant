@@ -7,7 +7,7 @@ from homeassistant.components.sensor import (
     SensorEntity,
     SensorStateClass,
 )
-from homeassistant.const import ATTR_UNIT_OF_MEASUREMENT, CONF_NAME, UnitOfPower
+from homeassistant.const import ATTR_UNIT_OF_MEASUREMENT, CONF_NAME, EntityCategory, UnitOfPower
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.dispatcher import async_dispatcher_connect
 from homeassistant.helpers.entity import Entity
@@ -15,9 +15,11 @@ from homeassistant.helpers.typing import ConfigType
 
 from custom_components.powercalc.common import create_source_entity
 from custom_components.powercalc.const import (
+    ATTR_ENTITIES,
     ATTR_MEMBERS,
     ATTR_STATE,
     CONF_CREATE_ENERGY_SENSORS,
+    CONF_POWER_SENSOR_CATEGORY,
     CONF_POWER_SENSOR_PRECISION,
     DATA_STANDBY_POWER_SENSORS,
     DEFAULT_POWER_SENSOR_PRECISION,
@@ -40,6 +42,7 @@ def create_general_standby_sensors(
     power_sensor = StandbyPowerSensor(
         hass,
         rounding_digits=int(config.get(CONF_POWER_SENSOR_PRECISION, DEFAULT_POWER_SENSOR_PRECISION)),
+        entity_category=config.get(CONF_POWER_SENSOR_CATEGORY),
     )
     sensors.append(power_sensor)
     if config.get(CONF_CREATE_ENERGY_SENSORS):
@@ -66,9 +69,16 @@ class StandbyPowerSensor(PowerSensor, SensorEntity):
     _attr_unique_id = "powercalc_standby_group"
     _attr_name = "All standby power"
 
-    def __init__(self, hass: HomeAssistant, rounding_digits: int = 2) -> None:
+    def __init__(
+        self,
+        hass: HomeAssistant,
+        rounding_digits: int = 2,
+        entity_category: str | None = None,
+    ) -> None:
         self.standby_sensors: dict[str, Decimal] = hass.data[DOMAIN][DATA_STANDBY_POWER_SENSORS]
         self._rounding_digits = rounding_digits
+        if entity_category:
+            self._attr_entity_category = EntityCategory(entity_category)
 
     async def async_added_to_hass(self) -> None:
         """Register state listeners."""
@@ -94,6 +104,9 @@ class StandbyPowerSensor(PowerSensor, SensorEntity):
         else:
             self._attr_native_value = None
         self.async_schedule_update_ha_state(True)
+
+    def get_group_entities(self) -> dict[str, set[str]]:
+        return {ATTR_ENTITIES: set(self.standby_sensors)}
 
     def debug_group(self) -> dict[str, Any]:
         """Return the current standby contribution of each tracked power sensor."""

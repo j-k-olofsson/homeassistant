@@ -1,0 +1,16 @@
+{"status": "rename_intent", "old": "binary_sensor.levoit_luftfukare_300s_lagt_vatten", "new": "binary_sensor.verandan_levoit_luftfukare_300s_lagt_vatten"}
+{"status": "renamed", "old": "binary_sensor.levoit_luftfukare_300s_lagt_vatten", "new": "binary_sensor.verandan_levoit_luftfukare_300s_lagt_vatten"}
+{"status": "rename_intent", "old": "binary_sensor.levoit_luftfukare_300s_vattentanken_lyft", "new": "binary_sensor.verandan_levoit_luftfukare_300s_vattentanken_lyft"}
+{"status": "renamed", "old": "binary_sensor.levoit_luftfukare_300s_vattentanken_lyft", "new": "binary_sensor.verandan_levoit_luftfukare_300s_vattentanken_lyft"}
+{"status": "rename_intent", "old": "number.levoit_luftfukare_300s_dimniva", "new": "number.verandan_levoit_luftfukare_300s_dimniva"}
+{"status": "renamed", "old": "number.levoit_luftfukare_300s_dimniva", "new": "number.verandan_levoit_luftfukare_300s_dimniva"}
+{"status": "rename_intent", "old": "select.levoit_luftfukare_300s_niva_for_nattljus", "new": "select.verandan_levoit_luftfukare_300s_niva_for_nattljus"}
+{"status": "renamed", "old": "select.levoit_luftfukare_300s_niva_for_nattljus", "new": "select.verandan_levoit_luftfukare_300s_niva_for_nattljus"}
+{"status": "rename_intent", "old": "switch.levoit_luftfukare_300s_visa", "new": "switch.verandan_levoit_luftfukare_300s_visa"}
+{"status": "renamed", "old": "switch.levoit_luftfukare_300s_visa", "new": "switch.verandan_levoit_luftfukare_300s_visa"}
+{"status": "rename_intent", "old": "sensor.levoit_luftfukare_300s_luftfuktighet", "new": "sensor.verandan_levoit_luftfukare_300s_luftfuktighet"}
+{"status": "renamed", "old": "sensor.levoit_luftfukare_300s_luftfuktighet", "new": "sensor.verandan_levoit_luftfukare_300s_luftfuktighet"}
+{"status": "rename_intent", "old": "update.levoit_luftfukare_300s_firmware", "new": "update.verandan_levoit_luftfukare_300s_firmware"}
+{"status": "renamed", "old": "update.levoit_luftfukare_300s_firmware", "new": "update.verandan_levoit_luftfukare_300s_firmware"}
+{"status": "rename_intent", "old": "switch.levoit_luftfukare_300s_automatisk_avstangning", "new": "switch.verandan_levoit_luftfukare_300s_automatisk_avstangning"}
+{"status": "renamed", "old": "switch.levoit_luftfukare_300s_automatisk_avstangning", "new": "switch.verandan_levoit_luftfukare_300s_automatisk_avstangning"}

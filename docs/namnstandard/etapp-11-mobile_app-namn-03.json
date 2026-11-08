@@ -1,0 +1,4256 @@
+{
+  "stage": "11-mobile_app-namn-03",
+  "description": "Svenska funktionsnamn enligt granskad ordlista. Inga ID:n, inställningar eller värden ändras.",
+  "operations": [
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_current_version_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appversion",
+        "aliases": [
+          null,
+          "SM-T835 Current version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_app_rx_gb_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens mottagna data",
+        "aliases": [
+          null,
+          "SM-T835 App Rx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_app_tx_gb_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens skickade data",
+        "aliases": [
+          null,
+          "SM-T835 App Tx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_app_memory_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens minnesanvändning",
+        "aliases": [
+          null,
+          "SM-T835 App memory"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_t835_app_inactive_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appen inaktiv",
+        "aliases": [
+          null,
+          "SM-T835 App inactive"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_app_standby_bucket_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens energisparklass",
+        "aliases": [
+          null,
+          "SM-T835 App standby bucket"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_app_importance_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens prioritet",
+        "aliases": [
+          null,
+          "SM-T835 App importance"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_ringer_mode_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ringsignalläge",
+        "aliases": [
+          null,
+          "SM-T835 Ringer mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_audio_mode_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ljudläge",
+        "aliases": [
+          null,
+          "SM-T835 Audio mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_t835_headphones_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hörlurar",
+        "aliases": [
+          null,
+          "SM-T835 Headphones"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_t835_mic_muted_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mikrofon avstängd",
+        "aliases": [
+          null,
+          "SM-T835 Mic muted"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_t835_speakerphone_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Högtalartelefon",
+        "aliases": [
+          null,
+          "SM-T835 Speakerphone"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_t835_music_active_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Musik aktiv",
+        "aliases": [
+          null,
+          "SM-T835 Music active"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_volume_level_alarm_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Alarmvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level alarm"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_volume_level_call_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Samtalsvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level call"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_volume_level_music_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Musikvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level music"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_volume_level_ringer_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ringsignalvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level ringer"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_volume_level_notification_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Aviseringsvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_volume_level_system_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Systemvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level system"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_volume_level_dtmf_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Knappvalsvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level DTMF"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_volume_level_accessibility_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tillgänglighetsvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level accessibility"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_battery_level_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "SM-T835 Battery level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_battery_state_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batteristatus",
+        "aliases": [
+          null,
+          "SM-T835 Battery state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_t835_is_charging_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Laddar",
+        "aliases": [
+          null,
+          "SM-T835 Is charging"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_charger_type_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Laddartyp",
+        "aliases": [
+          null,
+          "SM-T835 Charger type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_battery_health_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterihälsa",
+        "aliases": [
+          null,
+          "SM-T835 Battery health"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_battery_temperature_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batteritemperatur",
+        "aliases": [
+          null,
+          "SM-T835 Battery temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_battery_power_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterieffekt",
+        "aliases": [
+          null,
+          "SM-T835 Battery power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_remaining_charge_time_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Återstående laddningstid",
+        "aliases": [
+          null,
+          "SM-T835 Remaining charge time"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_bluetooth_connection_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bluetooth-anslutning",
+        "aliases": [
+          null,
+          "SM-T835 Bluetooth connection"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_t835_bluetooth_state_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bluetooth-status",
+        "aliases": [
+          null,
+          "SM-T835 Bluetooth state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_ble_transmitter_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "BLE-sändare",
+        "aliases": [
+          null,
+          "SM-T835 BLE transmitter"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_beacon_monitor_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Övervakning av Bluetooth-sändare",
+        "aliases": [
+          null,
+          "SM-T835 Beacon monitor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_car_battery_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens batterinivå",
+        "aliases": [
+          null,
+          "SM-T835 Car battery"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_car_name_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens namn",
+        "aliases": [
+          null,
+          "SM-T835 Car name"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_car_charging_status_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens laddningsstatus",
+        "aliases": [
+          null,
+          "SM-T835 Car charging status"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_car_ev_connector_type_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens laddkontakt",
+        "aliases": [
+          null,
+          "SM-T835 Car EV connector type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_car_fuel_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens bränslenivå",
+        "aliases": [
+          null,
+          "SM-T835 Car fuel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_car_fuel_type_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens bränsletyp",
+        "aliases": [
+          null,
+          "SM-T835 Car fuel type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_car_odometer_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens vägmätare",
+        "aliases": [
+          null,
+          "SM-T835 Car odometer"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_car_speed_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens hastighet",
+        "aliases": [
+          null,
+          "SM-T835 Car speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_car_range_remaining_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens återstående räckvidd",
+        "aliases": [
+          null,
+          "SM-T835 Car range remaining"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_screen_brightness_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmljusstyrka",
+        "aliases": [
+          null,
+          "SM-T835 Screen brightness"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_screen_off_timeout_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tid till skärmavstängning",
+        "aliases": [
+          null,
+          "SM-T835 Screen off timeout"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_screen_orientation_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmriktning",
+        "aliases": [
+          null,
+          "SM-T835 Screen orientation"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_screen_rotation_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmrotation",
+        "aliases": [
+          null,
+          "SM-T835 Screen rotation"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_do_not_disturb_sensor_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stör ej-läge",
+        "aliases": [
+          null,
+          "SM-T835 Do Not Disturb sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_t835_work_profile_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Arbetsprofil",
+        "aliases": [
+          null,
+          "SM-T835 Work profile"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_geocoded_location_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Platsadress",
+        "aliases": [
+          null,
+          "SM-T835 Geocoded location"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_t835_device_locked_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Enheten låst",
+        "aliases": [
+          null,
+          "SM-T835 Device locked"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_t835_device_secure_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Enheten skyddad",
+        "aliases": [
+          null,
+          "SM-T835 Device secure"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_t835_keyguard_locked_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmlåset låst",
+        "aliases": [
+          null,
+          "SM-T835 Keyguard locked"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_t835_keyguard_secure_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmlåset skyddat",
+        "aliases": [
+          null,
+          "SM-T835 Keyguard secure"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_last_used_app_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senast använda app",
+        "aliases": [
+          null,
+          "SM-T835 Last used app"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_last_reboot_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senaste omstart",
+        "aliases": [
+          null,
+          "SM-T835 Last reboot"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_last_update_trigger_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senaste uppdateringsorsak",
+        "aliases": [
+          null,
+          "SM-T835 Last update trigger"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_light_sensor_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Belysningsstyrka",
+        "aliases": [
+          null,
+          "SM-T835 Light sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_t835_high_accuracy_mode_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Platsläge med hög precision",
+        "aliases": [
+          null,
+          "SM-T835 High accuracy mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_high_accuracy_update_interval_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Uppdateringsintervall för hög precision",
+        "aliases": [
+          null,
+          "SM-T835 High accuracy update interval"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_t835_mobile_data_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mobildata",
+        "aliases": [
+          null,
+          "SM-T835 Mobile data"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_t835_mobile_data_roaming_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Dataroaming",
+        "aliases": [
+          null,
+          "SM-T835 Mobile data roaming"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_wi_fi_connection",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-anslutning",
+        "aliases": [
+          null,
+          "SM-T835 Wi-Fi connection"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_wi_fi_ip_address",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi IP-adress",
+        "aliases": [
+          null,
+          "SM-T835 Wi-Fi IP address"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_wi_fi_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-länkhastighet",
+        "aliases": [
+          null,
+          "SM-T835 Wi-Fi link speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_t835_wi_fi_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-status",
+        "aliases": [
+          null,
+          "SM-T835 Wi-Fi state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_wi_fi_frequency",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-frekvens",
+        "aliases": [
+          null,
+          "SM-T835 Wi-Fi frequency"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_wi_fi_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-signalstyrka",
+        "aliases": [
+          null,
+          "SM-T835 Wi-Fi signal strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_public_ip_address_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Publik IP-adress",
+        "aliases": [
+          null,
+          "SM-T835 Public IP address"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_t835_hotspot_state_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Internetdelningsstatus",
+        "aliases": [
+          null,
+          "SM-T835 Hotspot state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_network_type_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Nätverkstyp",
+        "aliases": [
+          null,
+          "SM-T835 Network type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_ipv6_addresses_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "IPv6-adresser",
+        "aliases": [
+          null,
+          "SM-T835 IPv6 addresses"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_next_alarm_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Nästa alarm",
+        "aliases": [
+          null,
+          "SM-T835 Next alarm"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_last_notification_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senaste avisering",
+        "aliases": [
+          null,
+          "SM-T835 Last notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_last_removed_notification_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senast borttagna avisering",
+        "aliases": [
+          null,
+          "SM-T835 Last removed notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_active_notification_count_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Antal aktiva aviseringar",
+        "aliases": [
+          null,
+          "SM-T835 Active notification count"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_media_session_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mediasession",
+        "aliases": [
+          null,
+          "SM-T835 Media session"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_phone_state_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Telefonstatus",
+        "aliases": [
+          null,
+          "SM-T835 Phone state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_t835_interactive_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmen interaktiv",
+        "aliases": [
+          null,
+          "SM-T835 Interactive"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_t835_doze_mode_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Viloläge",
+        "aliases": [
+          null,
+          "SM-T835 Doze mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_t835_power_save_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Energisparläge",
+        "aliases": [
+          null,
+          "SM-T835 Power save"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_proximity_sensor_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Närhetssensor",
+        "aliases": [
+          null,
+          "SM-T835 Proximity sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_steps_sensor_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Steg",
+        "aliases": [
+          null,
+          "SM-T835 Steps sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_internal_storage_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Intern lagring",
+        "aliases": [
+          null,
+          "SM-T835 Internal storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_external_storage_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Extern lagring",
+        "aliases": [
+          null,
+          "SM-T835 External storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_current_time_zone_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Aktuell tidszon",
+        "aliases": [
+          null,
+          "SM-T835 Current time zone"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_total_rx_gb_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt mottagna data",
+        "aliases": [
+          null,
+          "SM-T835 Total Rx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_t835_total_tx_gb_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt skickade data",
+        "aliases": [
+          null,
+          "SM-T835 Total Tx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_detected_activity",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Identifierad aktivitet",
+        "aliases": [
+          null,
+          "SM-G986B Detected activity"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_sleep_confidence",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Säkerhet i sömndetektering",
+        "aliases": [
+          null,
+          "SM-G986B Sleep confidence"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_sleep_segment",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sömnperiod",
+        "aliases": [
+          null,
+          "SM-G986B Sleep segment"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_os_version",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Operativsystemsversion",
+        "aliases": [
+          null,
+          "SM-G986B OS version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_security_patch",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Säkerhetsuppdatering",
+        "aliases": [
+          null,
+          "SM-G986B Security patch"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_current_version",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appversion",
+        "aliases": [
+          null,
+          "SM-G986B Current version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_app_rx_gb",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens mottagna data",
+        "aliases": [
+          null,
+          "SM-G986B App Rx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_app_tx_gb",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens skickade data",
+        "aliases": [
+          null,
+          "SM-G986B App Tx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_app_memory",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens minnesanvändning",
+        "aliases": [
+          null,
+          "SM-G986B App memory"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_app_inactive",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appen inaktiv",
+        "aliases": [
+          null,
+          "SM-G986B App inactive"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_app_standby_bucket",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens energisparklass",
+        "aliases": [
+          null,
+          "SM-G986B App standby bucket"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_app_importance",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens prioritet",
+        "aliases": [
+          null,
+          "SM-G986B App importance"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_ringer_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ringsignalläge",
+        "aliases": [
+          null,
+          "SM-G986B Ringer mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_audio_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ljudläge",
+        "aliases": [
+          null,
+          "SM-G986B Audio mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_headphones",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hörlurar",
+        "aliases": [
+          null,
+          "SM-G986B Headphones"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_mic_muted",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mikrofon avstängd",
+        "aliases": [
+          null,
+          "SM-G986B Mic muted"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_speakerphone",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Högtalartelefon",
+        "aliases": [
+          null,
+          "SM-G986B Speakerphone"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_music_active",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Musik aktiv",
+        "aliases": [
+          null,
+          "SM-G986B Music active"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_volume_level_alarm",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Alarmvolym",
+        "aliases": [
+          null,
+          "SM-G986B Volume level alarm"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_volume_level_call",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Samtalsvolym",
+        "aliases": [
+          null,
+          "SM-G986B Volume level call"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_volume_level_music",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Musikvolym",
+        "aliases": [
+          null,
+          "SM-G986B Volume level music"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_volume_level_ringer",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ringsignalvolym",
+        "aliases": [
+          null,
+          "SM-G986B Volume level ringer"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_volume_level_notification",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Aviseringsvolym",
+        "aliases": [
+          null,
+          "SM-G986B Volume level notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_volume_level_system",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Systemvolym",
+        "aliases": [
+          null,
+          "SM-G986B Volume level system"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_volume_level_dtmf",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Knappvalsvolym",
+        "aliases": [
+          null,
+          "SM-G986B Volume level DTMF"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_volume_level_accessibility",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tillgänglighetsvolym",
+        "aliases": [
+          null,
+          "SM-G986B Volume level accessibility"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_battery_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "SM-G986B Battery level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_battery_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batteristatus",
+        "aliases": [
+          null,
+          "SM-G986B Battery state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_is_charging",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Laddar",
+        "aliases": [
+          null,
+          "SM-G986B Is charging"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_charger_type",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Laddartyp",
+        "aliases": [
+          null,
+          "SM-G986B Charger type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_battery_health",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterihälsa",
+        "aliases": [
+          null,
+          "SM-G986B Battery health"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_battery_temperature",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batteritemperatur",
+        "aliases": [
+          null,
+          "SM-G986B Battery temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_battery_power",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterieffekt",
+        "aliases": [
+          null,
+          "SM-G986B Battery power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_remaining_charge_time",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Återstående laddningstid",
+        "aliases": [
+          null,
+          "SM-G986B Remaining charge time"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_bluetooth_connection",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bluetooth-anslutning",
+        "aliases": [
+          null,
+          "SM-G986B Bluetooth connection"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_bluetooth_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bluetooth-status",
+        "aliases": [
+          null,
+          "SM-G986B Bluetooth state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_ble_transmitter",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "BLE-sändare",
+        "aliases": [
+          null,
+          "SM-G986B BLE transmitter"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_beacon_monitor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Övervakning av Bluetooth-sändare",
+        "aliases": [
+          null,
+          "SM-G986B Beacon monitor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_car_battery",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens batterinivå",
+        "aliases": [
+          null,
+          "SM-G986B Car battery"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_car_name",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens namn",
+        "aliases": [
+          null,
+          "SM-G986B Car name"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_car_charging_status",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens laddningsstatus",
+        "aliases": [
+          null,
+          "SM-G986B Car charging status"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_car_ev_connector_type",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens laddkontakt",
+        "aliases": [
+          null,
+          "SM-G986B Car EV connector type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_car_fuel",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens bränslenivå",
+        "aliases": [
+          null,
+          "SM-G986B Car fuel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_car_fuel_type",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens bränsletyp",
+        "aliases": [
+          null,
+          "SM-G986B Car fuel type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_car_odometer",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens vägmätare",
+        "aliases": [
+          null,
+          "SM-G986B Car odometer"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_car_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens hastighet",
+        "aliases": [
+          null,
+          "SM-G986B Car speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_car_range_remaining",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens återstående räckvidd",
+        "aliases": [
+          null,
+          "SM-G986B Car range remaining"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_screen_brightness",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmljusstyrka",
+        "aliases": [
+          null,
+          "SM-G986B Screen brightness"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_screen_off_timeout",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tid till skärmavstängning",
+        "aliases": [
+          null,
+          "SM-G986B Screen off timeout"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_screen_orientation",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmriktning",
+        "aliases": [
+          null,
+          "SM-G986B Screen orientation"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_screen_rotation",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmrotation",
+        "aliases": [
+          null,
+          "SM-G986B Screen rotation"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_do_not_disturb_sensor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stör ej-läge",
+        "aliases": [
+          null,
+          "SM-G986B Do Not Disturb sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_accent_color",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Accentfärg",
+        "aliases": [
+          null,
+          "SM-G986B Accent color"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_work_profile",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Arbetsprofil",
+        "aliases": [
+          null,
+          "SM-G986B Work profile"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_geocoded_location",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Platsadress",
+        "aliases": [
+          null,
+          "SM-G986B Geocoded location"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_device_locked",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Enheten låst",
+        "aliases": [
+          null,
+          "SM-G986B Device locked"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_device_secure",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Enheten skyddad",
+        "aliases": [
+          null,
+          "SM-G986B Device secure"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_keyguard_locked",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmlåset låst",
+        "aliases": [
+          null,
+          "SM-G986B Keyguard locked"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_keyguard_secure",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmlåset skyddat",
+        "aliases": [
+          null,
+          "SM-G986B Keyguard secure"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_last_used_app",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senast använda app",
+        "aliases": [
+          null,
+          "SM-G986B Last used app"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_last_reboot",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senaste omstart",
+        "aliases": [
+          null,
+          "SM-G986B Last reboot"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_last_update_trigger",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senaste uppdateringsorsak",
+        "aliases": [
+          null,
+          "SM-G986B Last update trigger"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_light_sensor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Belysningsstyrka",
+        "aliases": [
+          null,
+          "SM-G986B Light sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_high_accuracy_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Platsläge med hög precision",
+        "aliases": [
+          null,
+          "SM-G986B High accuracy mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_high_accuracy_update_interval",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Uppdateringsintervall för hög precision",
+        "aliases": [
+          null,
+          "SM-G986B High accuracy update interval"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_mobile_data",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mobildata",
+        "aliases": [
+          null,
+          "SM-G986B Mobile data"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_mobile_data_roaming",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Dataroaming",
+        "aliases": [
+          null,
+          "SM-G986B Mobile data roaming"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_wi_fi_connection",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-anslutning",
+        "aliases": [
+          null,
+          "SM-G986B Wi-Fi connection"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_wi_fi_ip_address",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi IP-adress",
+        "aliases": [
+          null,
+          "SM-G986B Wi-Fi IP address"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_wi_fi_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-länkhastighet",
+        "aliases": [
+          null,
+          "SM-G986B Wi-Fi link speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_wi_fi_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-status",
+        "aliases": [
+          null,
+          "SM-G986B Wi-Fi state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_wi_fi_frequency",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-frekvens",
+        "aliases": [
+          null,
+          "SM-G986B Wi-Fi frequency"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_wi_fi_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-signalstyrka",
+        "aliases": [
+          null,
+          "SM-G986B Wi-Fi signal strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_public_ip_address",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Publik IP-adress",
+        "aliases": [
+          null,
+          "SM-G986B Public IP address"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_hotspot_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Internetdelningsstatus",
+        "aliases": [
+          null,
+          "SM-G986B Hotspot state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_network_type",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Nätverkstyp",
+        "aliases": [
+          null,
+          "SM-G986B Network type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_ipv6_addresses",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "IPv6-adresser",
+        "aliases": [
+          null,
+          "SM-G986B IPv6 addresses"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_nfc_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "NFC-status",
+        "aliases": [
+          null,
+          "SM-G986B NFC state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_next_alarm",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Nästa alarm",
+        "aliases": [
+          null,
+          "SM-G986B Next alarm"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_last_notification",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senaste avisering",
+        "aliases": [
+          null,
+          "SM-G986B Last notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_last_removed_notification",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senast borttagna avisering",
+        "aliases": [
+          null,
+          "SM-G986B Last removed notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_active_notification_count",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Antal aktiva aviseringar",
+        "aliases": [
+          null,
+          "SM-G986B Active notification count"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_media_session",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mediasession",
+        "aliases": [
+          null,
+          "SM-G986B Media session"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_phone_state",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Telefonstatus",
+        "aliases": [
+          null,
+          "SM-G986B Phone state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_signal_strength_sim_1",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka SIM 1",
+        "aliases": [
+          null,
+          "SM-G986B Signal strength (SIM 1)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_signal_strength_sim_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka SIM 2",
+        "aliases": [
+          null,
+          "SM-G986B Signal strength (SIM 2)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_data_network_type_sim_1",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Datanätverkstyp SIM 1",
+        "aliases": [
+          null,
+          "SM-G986B Data network type (SIM 1)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_data_network_type_sim_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Datanätverkstyp SIM 2",
+        "aliases": [
+          null,
+          "SM-G986B Data network type (SIM 2)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_interactive",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmen interaktiv",
+        "aliases": [
+          null,
+          "SM-G986B Interactive"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_doze_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Viloläge",
+        "aliases": [
+          null,
+          "SM-G986B Doze mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_power_save",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Energisparläge",
+        "aliases": [
+          null,
+          "SM-G986B Power save"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_pressure_sensor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Lufttryck",
+        "aliases": [
+          null,
+          "SM-G986B Pressure sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_proximity_sensor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Närhetssensor",
+        "aliases": [
+          null,
+          "SM-G986B Proximity sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_steps_sensor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Steg",
+        "aliases": [
+          null,
+          "SM-G986B Steps sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_internal_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Intern lagring",
+        "aliases": [
+          null,
+          "SM-G986B Internal storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_external_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Extern lagring",
+        "aliases": [
+          null,
+          "SM-G986B External storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_current_time_zone",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Aktuell tidszon",
+        "aliases": [
+          null,
+          "SM-G986B Current time zone"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_total_rx_gb",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt mottagna data",
+        "aliases": [
+          null,
+          "SM-G986B Total Rx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_total_tx_gb",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt skickade data",
+        "aliases": [
+          null,
+          "SM-G986B Total Tx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.garmin_device_battery_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "Garmin Device Battery Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.garmin_device_heart_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Puls",
+        "aliases": [
+          null,
+          "Garmin Device Heart rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_detected_activity_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Identifierad aktivitet",
+        "aliases": [
+          null,
+          "SM-G986B Detected activity"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_sleep_confidence_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Säkerhet i sömndetektering",
+        "aliases": [
+          null,
+          "SM-G986B Sleep confidence"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_sleep_segment_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sömnperiod",
+        "aliases": [
+          null,
+          "SM-G986B Sleep segment"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_os_version_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Operativsystemsversion",
+        "aliases": [
+          null,
+          "SM-G986B OS version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_security_patch_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Säkerhetsuppdatering",
+        "aliases": [
+          null,
+          "SM-G986B Security patch"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_current_version_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appversion",
+        "aliases": [
+          null,
+          "SM-G986B Current version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_app_rx_gb_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens mottagna data",
+        "aliases": [
+          null,
+          "SM-G986B App Rx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_app_tx_gb_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens skickade data",
+        "aliases": [
+          null,
+          "SM-G986B App Tx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_app_memory_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens minnesanvändning",
+        "aliases": [
+          null,
+          "SM-G986B App memory"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_app_inactive_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appen inaktiv",
+        "aliases": [
+          null,
+          "SM-G986B App inactive"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_app_standby_bucket_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens energisparklass",
+        "aliases": [
+          null,
+          "SM-G986B App standby bucket"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_app_importance_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Appens prioritet",
+        "aliases": [
+          null,
+          "SM-G986B App importance"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_ringer_mode_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ringsignalläge",
+        "aliases": [
+          null,
+          "SM-G986B Ringer mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_audio_mode_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ljudläge",
+        "aliases": [
+          null,
+          "SM-G986B Audio mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_headphones_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Hörlurar",
+        "aliases": [
+          null,
+          "SM-G986B Headphones"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_mic_muted_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mikrofon avstängd",
+        "aliases": [
+          null,
+          "SM-G986B Mic muted"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_speakerphone_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Högtalartelefon",
+        "aliases": [
+          null,
+          "SM-G986B Speakerphone"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_music_active_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Musik aktiv",
+        "aliases": [
+          null,
+          "SM-G986B Music active"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_volume_level_alarm_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Alarmvolym",
+        "aliases": [
+          null,
+          "SM-G986B Volume level alarm"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_volume_level_call_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Samtalsvolym",
+        "aliases": [
+          null,
+          "SM-G986B Volume level call"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_volume_level_music_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Musikvolym",
+        "aliases": [
+          null,
+          "SM-G986B Volume level music"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_volume_level_ringer_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ringsignalvolym",
+        "aliases": [
+          null,
+          "SM-G986B Volume level ringer"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_volume_level_notification_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Aviseringsvolym",
+        "aliases": [
+          null,
+          "SM-G986B Volume level notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_volume_level_system_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Systemvolym",
+        "aliases": [
+          null,
+          "SM-G986B Volume level system"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_volume_level_dtmf_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Knappvalsvolym",
+        "aliases": [
+          null,
+          "SM-G986B Volume level DTMF"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_volume_level_accessibility_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tillgänglighetsvolym",
+        "aliases": [
+          null,
+          "SM-G986B Volume level accessibility"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_battery_level_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "SM-G986B Battery level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_battery_state_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batteristatus",
+        "aliases": [
+          null,
+          "SM-G986B Battery state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_is_charging_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Laddar",
+        "aliases": [
+          null,
+          "SM-G986B Is charging"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_charger_type_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Laddartyp",
+        "aliases": [
+          null,
+          "SM-G986B Charger type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_battery_health_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterihälsa",
+        "aliases": [
+          null,
+          "SM-G986B Battery health"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_battery_temperature_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batteritemperatur",
+        "aliases": [
+          null,
+          "SM-G986B Battery temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_battery_power_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterieffekt",
+        "aliases": [
+          null,
+          "SM-G986B Battery power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_remaining_charge_time_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Återstående laddningstid",
+        "aliases": [
+          null,
+          "SM-G986B Remaining charge time"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_bluetooth_connection_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bluetooth-anslutning",
+        "aliases": [
+          null,
+          "SM-G986B Bluetooth connection"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_bluetooth_state_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bluetooth-status",
+        "aliases": [
+          null,
+          "SM-G986B Bluetooth state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_ble_transmitter_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "BLE-sändare",
+        "aliases": [
+          null,
+          "SM-G986B BLE transmitter"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_beacon_monitor_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Övervakning av Bluetooth-sändare",
+        "aliases": [
+          null,
+          "SM-G986B Beacon monitor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_car_battery_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens batterinivå",
+        "aliases": [
+          null,
+          "SM-G986B Car battery"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_car_name_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens namn",
+        "aliases": [
+          null,
+          "SM-G986B Car name"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_car_charging_status_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens laddningsstatus",
+        "aliases": [
+          null,
+          "SM-G986B Car charging status"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_car_ev_connector_type_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens laddkontakt",
+        "aliases": [
+          null,
+          "SM-G986B Car EV connector type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_car_fuel_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens bränslenivå",
+        "aliases": [
+          null,
+          "SM-G986B Car fuel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_car_fuel_type_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens bränsletyp",
+        "aliases": [
+          null,
+          "SM-G986B Car fuel type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_car_odometer_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens vägmätare",
+        "aliases": [
+          null,
+          "SM-G986B Car odometer"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_car_speed_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens hastighet",
+        "aliases": [
+          null,
+          "SM-G986B Car speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_car_range_remaining_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Bilens återstående räckvidd",
+        "aliases": [
+          null,
+          "SM-G986B Car range remaining"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_screen_brightness_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmljusstyrka",
+        "aliases": [
+          null,
+          "SM-G986B Screen brightness"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_screen_off_timeout_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tid till skärmavstängning",
+        "aliases": [
+          null,
+          "SM-G986B Screen off timeout"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_screen_orientation_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmriktning",
+        "aliases": [
+          null,
+          "SM-G986B Screen orientation"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_screen_rotation_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmrotation",
+        "aliases": [
+          null,
+          "SM-G986B Screen rotation"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_do_not_disturb_sensor_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stör ej-läge",
+        "aliases": [
+          null,
+          "SM-G986B Do Not Disturb sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_accent_color_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Accentfärg",
+        "aliases": [
+          null,
+          "SM-G986B Accent color"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_work_profile_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Arbetsprofil",
+        "aliases": [
+          null,
+          "SM-G986B Work profile"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_geocoded_location_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Platsadress",
+        "aliases": [
+          null,
+          "SM-G986B Geocoded location"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_device_locked_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Enheten låst",
+        "aliases": [
+          null,
+          "SM-G986B Device locked"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_device_secure_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Enheten skyddad",
+        "aliases": [
+          null,
+          "SM-G986B Device secure"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_keyguard_locked_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmlåset låst",
+        "aliases": [
+          null,
+          "SM-G986B Keyguard locked"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sm_g986b_keyguard_secure_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skärmlåset skyddat",
+        "aliases": [
+          null,
+          "SM-G986B Keyguard secure"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_last_used_app_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senast använda app",
+        "aliases": [
+          null,
+          "SM-G986B Last used app"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_last_reboot_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senaste omstart",
+        "aliases": [
+          null,
+          "SM-G986B Last reboot"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g986b_last_update_trigger_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senaste uppdateringsorsak",
+        "aliases": [
+          null,
+          "SM-G986B Last update trigger"
+        ]
+      }
+    }
+  ]
+}

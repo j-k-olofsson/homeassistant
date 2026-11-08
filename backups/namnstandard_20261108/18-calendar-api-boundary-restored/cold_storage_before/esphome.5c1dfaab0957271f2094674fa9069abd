@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.5c1dfaab0957271f2094674fa9069abd",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "esphome01",
+      "friendly_name": "Lampa i redet (Hönshuset)",
+      "mac_address": "C8:2B:96:5C:68:69",
+      "compilation_time": "Dec 27 2024, 18:45:54",
+      "model": "esp8285",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2024.12.2",
+      "project_name": "",
+      "project_version": "",
+      "webserver_port": 80,
+      "legacy_voice_assistant_version": 0,
+      "voice_assistant_feature_flags": 0,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0,
+      "suggested_area": ""
+    },
+    "services": [
+      {
+        "name": "scan_wifi",
+        "key": 846330570,
+        "args": []
+      }
+    ],
+    "api_version": {
+      "major": 1,
+      "minor": 10
+    },
+    "sensor": [
+      {
+        "object_id": "wifi_rssi",
+        "key": 939579340,
+        "name": "Wifi RSSI",
+        "unique_id": "c82b965c6869-wifisignal",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_class": "signal_strength",
+        "unit_of_measurement": "dBm",
+        "accuracy_decimals": 0,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      }
+    ],
+    "text_sensor": [
+      {
+        "object_id": "wifi_bssid",
+        "key": 1220733680,
+        "name": "Wifi BSSID",
+        "unique_id": "c82b965c6869-wifiinfo-bssid",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_class": ""
+      }
+    ],
+    "update": [],
+    "light": [
+      {
+        "object_id": "esphome01_light",
+        "key": 3240160746,
+        "name": "esphome01 Light",
+        "unique_id": "esphome01lightesphome01_light",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "supported_color_modes": [
+          1
+        ],
+        "min_mireds": 0.0,
+        "max_mireds": 0.0,
+        "effects": [],
+        "legacy_supports_brightness": false,
+        "legacy_supports_rgb": false,
+        "legacy_supports_white_value": false,
+        "legacy_supports_color_temperature": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,4256 @@
+{
+  "stage": "11-openwrt-namn-04",
+  "description": "Svenska funktionsnamn enligt granskad ordlista. Inga ID:n, inställningar eller värden ändras.",
+  "operations": [
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_service_log",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst log",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Service log"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_service_network",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst network",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Service network"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_service_packet_steering",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst packet_steering",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Service packet_steering"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_service_poe",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst poe",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Service poe"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_service_rpcd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst rpcd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Service rpcd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_service_sysctl",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst sysctl",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Service sysctl"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_service_sysfixtime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst sysfixtime",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Service sysfixtime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_service_sysntpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst sysntpd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Service sysntpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_service_system",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst system",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Service system"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_service_ucitrack",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst ucitrack",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Service ucitrack"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_service_uhttpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst uhttpd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Service uhttpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_service_umount",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst umount",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Service umount"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_service_urandom_seed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst urandom_seed",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Service urandom_seed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_service_urngd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst urngd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Service urngd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_reboot_router",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om router",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Reboot Router"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_start_wps",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta WPS",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Start WPS"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_cancel_wps",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avbryt WPS",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Cancel WPS"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_create_backup",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skapa säkerhetskopia",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Create Backup"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_restart_boot",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst boot",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Restart boot"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_stop_boot",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst boot",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Stop boot"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_restart_cron",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst cron",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Restart cron"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_stop_cron",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst cron",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Stop cron"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_restart_done",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst done",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Restart done"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_stop_done",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst done",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Stop done"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_restart_dropbear",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst dropbear",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Restart dropbear"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_stop_dropbear",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst dropbear",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Stop dropbear"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_restart_firewall",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst firewall",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Restart firewall"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_stop_firewall",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst firewall",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Stop firewall"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_restart_gpio_switch",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst gpio_switch",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Restart gpio_switch"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_stop_gpio_switch",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst gpio_switch",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Stop gpio_switch"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_restart_hwmon_fancontrol",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst hwmon_fancontrol",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Restart hwmon_fancontrol"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_stop_hwmon_fancontrol",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst hwmon_fancontrol",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Stop hwmon_fancontrol"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_restart_led",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst led",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Restart led"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_stop_led",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst led",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Stop led"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_restart_log",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst log",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Restart log"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_stop_log",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst log",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Stop log"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_restart_network",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst network",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Restart network"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_stop_network",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst network",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Stop network"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_restart_packet_steering",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst packet_steering",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Restart packet_steering"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_stop_packet_steering",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst packet_steering",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Stop packet_steering"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_restart_poe",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst poe",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Restart poe"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_stop_poe",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst poe",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Stop poe"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_restart_rpcd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst rpcd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Restart rpcd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_stop_rpcd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst rpcd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Stop rpcd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_restart_sysctl",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst sysctl",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Restart sysctl"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_stop_sysctl",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst sysctl",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Stop sysctl"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_restart_sysfixtime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst sysfixtime",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Restart sysfixtime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_stop_sysfixtime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst sysfixtime",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Stop sysfixtime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_restart_sysntpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst sysntpd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Restart sysntpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_stop_sysntpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst sysntpd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Stop sysntpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_restart_system",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst system",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Restart system"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_stop_system",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst system",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Stop system"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_restart_ucitrack",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst ucitrack",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Restart ucitrack"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_stop_ucitrack",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst ucitrack",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Stop ucitrack"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_restart_uhttpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst uhttpd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Restart uhttpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_stop_uhttpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst uhttpd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Stop uhttpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_restart_umount",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst umount",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Restart umount"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_stop_umount",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst umount",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Stop umount"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_restart_urandom_seed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst urandom_seed",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Restart urandom_seed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_stop_urandom_seed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst urandom_seed",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Stop urandom_seed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_restart_urngd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst urngd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Restart urngd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_stop_urngd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst urngd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Stop urngd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_flush_dns_cache",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Töm DNS-cache",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Flush DNS Cache"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_cpu_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Processoranvändning",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret CPU Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_public_ip",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Publik IP-adress",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Public IP"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_memory_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Minnesanvändning",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Memory Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_memory_used",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt minne",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Memory Used"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_swap_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Växlingsminnesanvändning",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Swap Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_load_1m",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Belastning senaste minuten",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Load (1m)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_load_5m",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Belastning senaste 5 minuterna",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Load (5m)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_load_15m",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Belastning senaste 15 minuterna",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Load (15m)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_temperature",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Temperatur",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_filesystem_free",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Filesystem Free"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_kernel_version",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kärnversion",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Kernel Version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_architecture",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Arkitektur",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Architecture"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_connected_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Anslutna klienter",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Connected Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_wireless_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Trådlösa klienter",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Wireless Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_neighbor_devices",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Grannenheter",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Neighbor Devices"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_system_logs",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Systemloggar",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret System Logs"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_top_processes",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Processöversikt",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Top Processes"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_usb_devices",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "USB-enheter",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret USB Devices"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_temperature_zone_0",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Temperatur zon 0",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Temperature Zone 0"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_rom_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /rom",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret /rom Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_rom_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /rom",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret /rom Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_rom_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /rom",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret /rom Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_rom_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /rom",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret /rom Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_tmp_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /tmp",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret /tmp Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_tmp_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /tmp",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret /tmp Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_tmp_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /tmp",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret /tmp Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_tmp_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /tmp",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret /tmp Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_overlay_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /overlay",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret /overlay Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_overlay_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /overlay",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret /overlay Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_overlay_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /overlay",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret /overlay Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_overlay_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /overlay",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret /overlay Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret / Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret / Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret / Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_storage_usage_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret / Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_dev_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /dev",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret /dev Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_dev_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /dev",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret /dev Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_dev_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /dev",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret /dev Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_dev_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /dev",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret /dev Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_dhcp_leases",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "DHCP-tilldelningar",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret DHCP Leases"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_guest_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd guest",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret guest RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_guest_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd guest",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret guest TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_guest_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet guest",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret guest Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_guest_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid guest",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret guest Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_guest_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet guest",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret guest RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_guest_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet guest",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret guest TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_iot_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd iot",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret iot RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_iot_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd iot",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret iot TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_iot_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet iot",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret iot Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_iot_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid iot",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret iot Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_iot_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet iot",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret iot RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_iot_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet iot",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret iot TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_loopback_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd loopback",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret loopback RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_loopback_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd loopback",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret loopback TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_loopback_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet loopback",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret loopback Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_loopback_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid loopback",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret loopback Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_loopback_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet loopback",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret loopback RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_loopback_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet loopback",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret loopback TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_eth0_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd eth0",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret eth0 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_eth0_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd eth0",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret eth0 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_eth0_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet eth0",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret eth0 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_eth0_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid eth0",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret eth0 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_eth0_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet eth0",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret eth0 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_eth0_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet eth0",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret eth0 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan1_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan1",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan1 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan1_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan1",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan1 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan1_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan1",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan1 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan1_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan1",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan1 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan1_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan1",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan1 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan1_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan1",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan1 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan2_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan2",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan2 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan2_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan2",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan2 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan2_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan2",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan2 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan2_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan2",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan2 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan2_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan2",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan2 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan2_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan2",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan2 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan3_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan3",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan3 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan3_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan3",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan3 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan3_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan3",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan3 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan3_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan3",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan3 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan3_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan3",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan3 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan3_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan3",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan3 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan4_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan4",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan4 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan4_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan4",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan4 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan4_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan4",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan4 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan4_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan4",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan4 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan4_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan4",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan4 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan4_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan4",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan4 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan5_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan5",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan5 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan5_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan5",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan5 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan5_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan5",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan5 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan5_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan5",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan5 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan5_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan5",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan5 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan5_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan5",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan5 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan6_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan6",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan6 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan6_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan6",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan6 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan6_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan6",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan6 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan6_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan6",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan6 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan6_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan6",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan6 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan6_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan6",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan6 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan7_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan7",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan7 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan7_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan7",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan7 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan7_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan7",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan7 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan7_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan7",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan7 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan7_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan7",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan7 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan7_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan7",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan7 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan8_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan8",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan8 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan8_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan8",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan8 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan8_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan8",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan8 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan8_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan8",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan8 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan8_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan8",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan8 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_lan8_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan8",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret lan8 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_switch_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd switch",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret switch RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_switch_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd switch",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret switch TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_switch_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet switch",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret switch Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_switch_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid switch",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret switch Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_switch_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet switch",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret switch RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_switch_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet switch",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret switch TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_wan_latency",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "WAN-svarstid",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret WAN Latency"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_firewall_rule_allow_dhcp_renew",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brandväggsregel Allow-DHCP-Renew",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Firewall Rule: Allow-DHCP-Renew"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_firewall_rule_allow_ping",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brandväggsregel Allow-Ping",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Firewall Rule: Allow-Ping"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_firewall_rule_allow_igmp",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brandväggsregel Allow-IGMP",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Firewall Rule: Allow-IGMP"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_firewall_rule_allow_dhcpv6",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brandväggsregel Allow-DHCPv6",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Firewall Rule: Allow-DHCPv6"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_firewall_rule_allow_mld",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brandväggsregel Allow-MLD",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Firewall Rule: Allow-MLD"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_firewall_rule_allow_icmpv6_input",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brandväggsregel Allow-ICMPv6-Input",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Firewall Rule: Allow-ICMPv6-Input"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_firewall_rule_allow_icmpv6_forward",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brandväggsregel Allow-ICMPv6-Forward",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Firewall Rule: Allow-ICMPv6-Forward"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_firewall_rule_allow_ipsec_esp",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brandväggsregel Allow-IPSec-ESP",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Firewall Rule: Allow-IPSec-ESP"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_firewall_rule_allow_isakmp",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brandväggsregel Allow-ISAKMP",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Firewall Rule: Allow-ISAKMP"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_connection_tracking",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Anslutningsspårning",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Källaren Connection Tracking"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_connection_tracking",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Anslutningsspårning",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Connection Tracking"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_connection_tracking",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Anslutningsspårning",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Connection Tracking"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_connection_tracking",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Anslutningsspårning",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Connection Tracking"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_connected",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Anslutning",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Connected"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_reboot_required",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Omstart krävs",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Reboot Required"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_wps_active",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "WPS aktivt",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum WPS Active"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_avahi_daemon",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst avahi-daemon",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service avahi-daemon"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_boot",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst boot",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service boot"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_bootcount",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst bootcount",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service bootcount"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_cron",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst cron",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service cron"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_dbus",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst dbus",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service dbus"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_dnsmasq",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst dnsmasq",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service dnsmasq"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_done",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst done",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service done"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_dropbear",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst dropbear",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service dropbear"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_firewall",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst firewall",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service firewall"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_gpio_switch",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst gpio_switch",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service gpio_switch"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_led",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst led",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service led"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_log",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst log",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service log"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_miniupnpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst miniupnpd",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service miniupnpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_network",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst network",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service network"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_nlbwmon",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst nlbwmon",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service nlbwmon"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_odhcpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst odhcpd",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service odhcpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_packet_steering",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst packet_steering",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service packet_steering"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_rpcd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst rpcd",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service rpcd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_sysctl",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst sysctl",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service sysctl"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_sysfixtime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst sysfixtime",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service sysfixtime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_sysntpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst sysntpd",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service sysntpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_system",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst system",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service system"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_ubihealthd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst ubihealthd",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service ubihealthd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_ucitrack",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst ucitrack",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service ucitrack"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_uhttpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst uhttpd",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service uhttpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_umount",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst umount",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service umount"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_urandom_seed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst urandom_seed",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service urandom_seed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_urngd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst urngd",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service urngd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.sovrummet_openwrt_one_router_sovrum_service_wpad",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst wpad",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Service wpad"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.sovrummet_openwrt_one_router_sovrum_reboot_router",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om router",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Reboot Router"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.sovrummet_openwrt_one_router_sovrum_start_wps",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta WPS",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Start WPS"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.sovrummet_openwrt_one_router_sovrum_cancel_wps",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avbryt WPS",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Cancel WPS"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.sovrummet_openwrt_one_router_sovrum_create_backup",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skapa säkerhetskopia",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Create Backup"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.sovrummet_openwrt_one_router_sovrum_restart_avahi_daemon",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst avahi-daemon",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Restart avahi-daemon"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.sovrummet_openwrt_one_router_sovrum_stop_avahi_daemon",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst avahi-daemon",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Stop avahi-daemon"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.sovrummet_openwrt_one_router_sovrum_restart_boot",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst boot",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Restart boot"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.sovrummet_openwrt_one_router_sovrum_stop_boot",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst boot",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Stop boot"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.sovrummet_openwrt_one_router_sovrum_restart_bootcount",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst bootcount",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Restart bootcount"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.sovrummet_openwrt_one_router_sovrum_stop_bootcount",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst bootcount",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Stop bootcount"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.sovrummet_openwrt_one_router_sovrum_restart_cron",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst cron",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Restart cron"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.sovrummet_openwrt_one_router_sovrum_stop_cron",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst cron",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Stop cron"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.sovrummet_openwrt_one_router_sovrum_restart_dbus",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst dbus",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Restart dbus"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.sovrummet_openwrt_one_router_sovrum_stop_dbus",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst dbus",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Stop dbus"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.sovrummet_openwrt_one_router_sovrum_restart_dnsmasq",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst dnsmasq",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Restart dnsmasq"
+        ]
+      }
+    }
+  ]
+}

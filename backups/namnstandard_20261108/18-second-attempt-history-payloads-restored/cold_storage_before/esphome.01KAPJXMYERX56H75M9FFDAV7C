@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.01KAPJXMYERX56H75M9FFDAV7C",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "esphome63",
+      "friendly_name": "Taklampor (duschen)",
+      "mac_address": "48:E7:29:67:DE:7F",
+      "compilation_time": "2026-11-04 06:51:19 +0100",
+      "model": "esp01_1m",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2026.10.2",
+      "project_name": "",
+      "project_version": "",
+      "webserver_port": 80,
+      "legacy_voice_assistant_version": 0,
+      "voice_assistant_feature_flags": 0,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0,
+      "zwave_proxy_feature_flags": 0,
+      "zwave_home_id": 0,
+      "suggested_area": "",
+      "bluetooth_mac_address": "",
+      "api_encryption_supported": true,
+      "api_encryption_provisionable": false,
+      "api_outgoing_connection_supported": true,
+      "devices": [],
+      "areas": [],
+      "area": {
+        "area_id": 0,
+        "name": ""
+      },
+      "serial_proxies": []
+    },
+    "services": [],
+    "api_version": {
+      "major": 1,
+      "minor": 19
+    },
+    "device_capabilities": {
+      "bluetooth_proxy": {
+        "feature_flags": 0,
+        "mac_address": ""
+      },
+      "voice_assistant": {
+        "feature_flags": 0
+      },
+      "zwave_proxy": {
+        "feature_flags": 0,
+        "home_id": 0
+      },
+      "serial_proxies": [],
+      "wizard": {
+        "configured": false
+      },
+      "sendspin": {
+        "feature_flags": 0,
+        "client_id": ""
+      },
+      "store_yaml": {
+        "supported": false
+      }
+    },
+    "light": [
+      {
+        "object_id": "esphome63_light",
+        "key": 1723777242,
+        "name": "esphome63 Light",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "supported_color_modes": [
+          3
+        ],
+        "min_mireds": 0.0,
+        "max_mireds": 0.0,
+        "effects": [],
+        "legacy_supports_brightness": false,
+        "legacy_supports_rgb": false,
+        "legacy_supports_white_value": false,
+        "legacy_supports_color_temperature": false
+      }
+    ],
+    "sensor": [
+      {
+        "object_id": "esphome63_light_power",
+        "key": 1689013692,
+        "name": "esphome63 Light Power",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "power",
+        "unit_of_measurement": "W",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome63_light_voltage",
+        "key": 3576383689,
+        "name": "esphome63 Light Voltage",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "voltage",
+        "unit_of_measurement": "V",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome63_light_current",
+        "key": 1262297316,
+        "name": "esphome63 Light Current",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "current",
+        "unit_of_measurement": "A",
+        "accuracy_decimals": 2,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      }
+    ],
+    "text_sensor": [],
+    "binary_sensor": [
+      {
+        "object_id": "status",
+        "key": 939730931,
+        "name": "Status",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_id": 0,
+        "device_class": "connectivity",
+        "is_status_binary_sensor": true
+      }
+    ],
+    "update": []
+  }
+}

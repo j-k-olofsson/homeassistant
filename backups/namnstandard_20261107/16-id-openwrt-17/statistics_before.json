@@ -1,0 +1,51 @@
+{
+  "metadata": [
+    {
+      "statistic_id": "sensor.koket_ap_olofsson_wifi_5_ghz_clients",
+      "display_unit_of_measurement": null,
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.ap_olofsson_iot_2_4_ghz_clients_2",
+      "display_unit_of_measurement": null,
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.koket_ap_olofsson_wifi_2_4_ghz_clients",
+      "display_unit_of_measurement": null,
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.koket_ap_olofsson_guest_2_4_ghz_clients",
+      "display_unit_of_measurement": null,
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    }
+  ],
+  "series": {},
+  "start": "2026-11-07T07:00:00+00:00",
+  "end": "2026-11-08T06:00:00+00:00"
+}

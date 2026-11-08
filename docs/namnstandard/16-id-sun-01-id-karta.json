@@ -1,0 +1,11 @@
+{
+  "sensor.sun_next_dawn": "sensor.heimdal_ha_sun_nasta_gryning",
+  "sensor.sun_next_dusk": "sensor.heimdal_ha_sun_nasta_skymning",
+  "sensor.sun_next_midnight": "sensor.heimdal_ha_sun_nasta_midnatt",
+  "sensor.sun_next_noon": "sensor.heimdal_ha_sun_nasta_middag",
+  "sensor.sun_next_rising": "sensor.heimdal_ha_sun_nasta_soluppgang",
+  "sensor.sun_next_setting": "sensor.heimdal_ha_sun_nasta_solnedgang",
+  "sensor.sun_solar_elevation": "sensor.heimdal_ha_sun_solhojd",
+  "sensor.sun_solar_azimuth": "sensor.heimdal_ha_sun_solens_azimut",
+  "binary_sensor.sun_solar_rising": "binary_sensor.heimdal_ha_sun_stigande_sol"
+}

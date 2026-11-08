@@ -16,7 +16,7 @@
                 },
                 "data_description": {
                     "battery_low_threshold": "0 verwendet den globalen Standardschwellenwert für eine leere Batterie.",
-                    "battery_increase_threshold": "Der Schwellenwert ist die Differenz der Erhöhung zwischen dem vorherigen und dem aktuellen Batteriestand.\n0 verwendet den globalen Standardschwellenwert"
+                    "battery_increase_threshold": "Der Schwellenwert ist die Differenz der Erhöhung zwischen dem vorherigen und dem aktuellen Batteriestand.\n0 verwendet den globalen Standardschwellenwert."
                 },
                 "sections": {
                     "advanced_settings": {
@@ -24,11 +24,13 @@
                         "data": {
                             "battery_percentage_template": "Vorlage zur Ermittlung eines Prozentwertes für den Batterieladezustand.",
                             "battery_low_template": "Vorlage zur Ermittlung einer leeren Batterie.",
+                            "retain_state": "Status beibehalten",
                             "filter_outliers": "Ausreißer filtern"
                         },
                         "data_description": {
-                            "battery_percentage_template": "Vorlage zum Erstellen des Batterieladezustandes.\nNur erforderlich für Geräte, die keinen normalen Batterieladezustand haben",
+                            "battery_percentage_template": "Vorlage zum Erstellen des Batterieladezustandes.\nNur erforderlich für Geräte, die keinen normalen Batterieladezustand haben.",
                             "battery_low_template": "Vorlage zur Ermittlung einer leeren Batterie; muss \"wahr\" (true) zurückmelden, wenn die Batterie leer ist.\nWird nur benötigt, wenn der Schwellenwert für eine leere Batterie nicht dem Standardwert entspricht.",
+                            "retain_state": "Behalten Sie den letzten Batteriestatus bei, wenn die Quellentität nicht verfügbar ist.\nNützlich für Geräte, die in den Ruhemodus wechseln und nicht verfügbar werden.",
                             "filter_outliers": "Größere Sprünge des Ladezustandes der Batterie bei Geräten ausfiltern, die ihren Ladezustand nur sporadisch mitteilen, um fehlerhafte Auslösungen zu verhindern."
                         }
                     }
@@ -90,8 +92,8 @@
                         "battery_increase_threshold": "Batterieanstieg-Schwellenwert"
                     },
                     "data_description": {
-                        "battery_low_threshold": "0 verwendet den globalen Standardschwellenwert",
-                        "battery_increase_threshold": "Der Schwellenwert ist die Differenz der Erhöhung zwischen dem vorherigen und dem aktuellen Batteriestand.\n0 verwendet den globalen Standardschwellenwert"
+                        "battery_low_threshold": "0 verwendet den globalen Standardschwellenwert.",
+                        "battery_increase_threshold": "Der Schwellenwert ist die Differenz der Erhöhung zwischen dem vorherigen und dem aktuellen Batteriestand.\n0 verwendet den globalen Standardschwellenwert."
                     },
                     "sections": {
                         "advanced_settings": {
@@ -99,11 +101,13 @@
                             "data": {
                                 "battery_percentage_template": "Vorlage zur Ermittlung eines Prozentwertes für den Batterieladezustand.",
                                 "battery_low_template": "Vorlage zur Ermittlung einer leeren Batterie.",
+                                "retain_state": "Status beibehalten",
                                 "filter_outliers": "Ausreißer filtern"
                             },
                             "data_description": {
                                 "battery_percentage_template": "Vorlage zur Ermittlung eines Prozentwertes für den Batterieladezustand.\nNur für Geräte, die den Füllstand der Batterie nicht als Prozentwert anzeigen.",
                                 "battery_low_template": "Vorlage zur Ermittlung einer leeren Batterie; muss \"wahr\" (true) zurückmelden, wenn die Batterie leer ist.\nWird nur benötigt, wenn der Schwellenwert für eine leere Batterie nicht dem Standardwert entspricht.",
+                                "retain_state": "Behalten Sie den letzten Batteriestatus bei, wenn die Quellentität nicht verfügbar ist.\nNützlich für Geräte, die in den Ruhemodus wechseln und nicht verfügbar werden.",
                                 "filter_outliers": "Größere Sprünge des Ladezustandes der Batterie bei Geräten ausfiltern, die ihren Ladezustand nur sporadisch mitteilen, um fehlerhafte Auslösungen zu verhindern."
                             }
                         }
@@ -134,12 +138,14 @@
                             "data": {
                                 "battery_percentage_template": "Vorlage zur Ermittlung eines Prozentwertes für den Batterieladezustand",
                                 "battery_low_template": "Vorlage zur Ermittlung, ob die Batterie leer ist.",
+                                "retain_state": "Status beibehalten",
                                 "filter_outliers": "Ausreißer filtern"
                             },
                             "data_description": {
                                 "battery_percentage_template": "Vorlage zur Ermittlung eines Prozentwertes für den Batterieladezustand.\nNur für Geräte, die den Batterieladezustand nicht als Prozentwert  anzeigen.",
                                 "battery_low_template": "Vorlage zur Ermittlung einer leeren Batterie; muss \"wahr\" (true) zurückmelden, wenn die Batterie leer ist.\nWird nur benötigt, wenn der Schwellenwert für eine leere Batterie nicht dem Standardwert entspricht.",
-                                "filter_outliers": "Filtere größere Sprünge des Ladezustandes der Batterie bei Geräten, die ihren Ladezustand nur sporadisch mitteilen, um fehlerhafte Auslösungen zu verhindern"
+                                "retain_state": "Behalten Sie den letzten Batteriestatus bei, wenn die Quellentität nicht verfügbar ist.\nNützlich für Geräte, die in den Ruhemodus wechseln und nicht verfügbar werden.",
+                                "filter_outliers": "Filtere größere Sprünge des Ladezustandes der Batterie bei Geräten, die ihren Ladezustand nur sporadisch mitteilen, um fehlerhafte Auslösungen zu verhindern."
                             }
                         }
                     }
@@ -287,7 +293,7 @@
                     "description": "Gerät, bei dem die Batterie ersetzt wurde.",
                     "name": "Gerät"
                 },
-                "entity_id": {
+                "source_entity_id": {
                     "description": "Entität, dessen Batterie(n) ersetzt wurde(n). (Wird nur für Batterie-Notizen benötigt, die mit Entitäten verknüpft sind.)",
                     "name": "Entität"
                 },
@@ -301,7 +307,7 @@
         "check_battery_last_replaced": {
             "description": "Erhalte eine Antwort oder löse Ereignisse für Geräte aus, deren Batterie noch nicht ausgetauscht wurde.",
             "fields": {
-                "days_last_reported": {
+                "days_last_replaced": {
                     "description": "Anzahl der Tage seit dem letzten Batteriewechsel eines Geräts.",
                     "name": "Tage"
                 },
@@ -375,6 +381,47 @@
         "deprecated_yaml": {
             "title": "Die {integration_title} YAML-Konfiguration wurde entfernt",
             "description": "Das Konfigurieren von {integration_title} mit YAML wird entfernt.\n\nDeine bestehende YAML-Konfiguration wurde automatisch in die Benutzeroberfläche importiert.\n\nEntferne die `{domain}`-Konfiguration von deiner configuration.yaml-Datei und starte Home Assistant neu, um dieses Problem zu beheben."
+        }
+    },
+    "selector": {
+        "battery_low_event_types": {
+            "options": {
+                "all": "Alle",
+                "low_state_transitions": "Wechsel zu niedrigem Batteriestand",
+                "reminders": "Erinnerungen"
+            }
+        }
+    },
+    "triggers": {
+        "battery_has_increased": {
+            "name": "Batteriestand ist gestiegen",
+            "description": "Löst aus, wenn der Batteriestand um mindestens den konfigurierten Schwellenwert für den Anstieg steigt oder wenn ein binärer Sensor oder ein Template für einen niedrigen Batteriestand wieder einen ausreichenden Batteriestand meldet."
+        },
+        "battery_was_not_reported": {
+            "name": "Batteriestand wurde nicht gemeldet",
+            "description": "Löst bei Ereignissen der Aktion „Prüfe auf letzte Batteriestands-Meldungen“ aus, wenn eine Batterie ihren Stand länger als die angegebene Anzahl von Tagen nicht oder noch nie gemeldet hat. Plane diese Aktion oder rufe sie mit aktivierter Option „Ereignisse auslösen“ auf, um diese Automatisierung auszulösen.\nAutomatisierungen mit diesem Auslöser müssen den Warteschlangenmodus (`mode: queued`) verwenden, da ein einzelner Aktionsaufruf Ereignisse für mehrere Batterienotizen kurz hintereinander auslösen kann."
+        },
+        "battery_was_not_replaced": {
+            "name": "Batterie wurde nicht ausgetauscht",
+            "description": "Löst bei Ereignissen der Aktion „Überprüfe, wann die Batterie zuletzt ausgetauscht wurde.“ aus, wenn eine Batterie länger als die angegebene Anzahl von Tagen nicht ausgetauscht wurde. Plane diese Aktion oder rufe sie mit aktivierter Option „Ereignisse auslösen“ auf, um diese Automatisierung auszulösen.\nAutomatisierungen mit diesem Auslöser müssen den Warteschlangenmodus (`mode: queued`) verwenden, da ein einzelner Aktionsaufruf Ereignisse für mehrere Batterienotizen kurz hintereinander auslösen kann."
+        },
+        "battery_no_longer_low": {
+            "name": "Batteriestand ist nicht mehr niedrig",
+            "description": "Löst aus, wenn der Batteriestand nicht mehr niedrig ist."
+        },
+        "battery_became_low": {
+            "name": "Batteriestand ist niedrig geworden",
+            "description": "Löst aus, wenn der Batteriestand niedrig wird oder eine Erinnerung an einen niedrigen Batteriestand ausgelöst wird.\nAutomatisierungen mit diesem Auslöser müssen den Warteschlangenmodus (`mode: queued`) verwenden, da ein einzelner Aktionsaufruf Ereignisse für mehrere Batterienotizen kurz hintereinander auslösen kann.",
+            "fields": {
+                "event_types": {
+                    "name": "Ereignistypen",
+                    "description": "„Alle“ löst aus, wenn der Batteriestand niedrig wird und bei Erinnerungen der Aktion „Prüfe auf schwache Batterien“. Wähle „Wechsel zu niedrigem Batteriestand“, um nur auf Wechsel zu einem niedrigen Batteriestand zu reagieren, oder „Erinnerungen“ für Erinnerungen der Aktion."
+                }
+            }
+        },
+        "battery_was_replaced": {
+            "name": "Batterie wurde ausgetauscht",
+            "description": "Löst aus, wenn eine Batterie als ausgetauscht markiert wird."
         }
     },
     "exceptions": {

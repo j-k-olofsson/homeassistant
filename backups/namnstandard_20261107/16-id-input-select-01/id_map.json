@@ -1,0 +1,10 @@
+{
+  "input_select.growligth_scen": "input_select.heimdal_ha_vaxtbelysningsscen_aldre_hjalpare",
+  "input_select.default_dashboard": "input_select.standardkontrollpanel",
+  "input_select.default_dashboard_2": "input_select.standardkontrollpanel_2",
+  "input_select.default_dashboard_3": "input_select.standardkontrollpanel_3",
+  "input_select.default_dashboard_4": "input_select.standardkontrollpanel_4",
+  "input_select.default_dashboard_5": "input_select.standardkontrollpanel_5",
+  "input_select.default_dashboard_6": "input_select.standardkontrollpanel_6",
+  "input_select.default_dashboard_7": "input_select.standardkontrollpanel_7"
+}

@@ -1,0 +1,115 @@
+{
+  "views": [
+    {
+      "type": "sections",
+      "max_columns": 2,
+      "title": "Bio",
+      "path": "bio",
+      "sections": [
+        {
+          "type": "grid",
+          "cards": [
+            {
+              "type": "tile",
+              "grid_options": {
+                "columns": 4,
+                "rows": 2
+              },
+              "entity": "switch.grupp_hemmabio",
+              "name": "Bio På/Av",
+              "show_entity_picture": false,
+              "hide_state": false,
+              "vertical": true,
+              "tap_action": {
+                "action": "toggle"
+              },
+              "features_position": "bottom"
+            },
+            {
+              "type": "tile",
+              "entity": "button.esphome76_lexicon_volume_down",
+              "name": "Sänk volymen",
+              "icon": "mdi:volume-minus",
+              "show_entity_picture": false,
+              "hide_state": true,
+              "vertical": true,
+              "tap_action": {
+                "action": "toggle"
+              },
+              "features_position": "bottom",
+              "grid_options": {
+                "rows": 2,
+                "columns": 4
+              }
+            },
+            {
+              "type": "tile",
+              "entity": "button.esphome76_lexicon_volume_up",
+              "name": "Höj volymen",
+              "icon": "mdi:volume-plus",
+              "hide_state": true,
+              "vertical": true,
+              "tap_action": {
+                "action": "toggle"
+              },
+              "features_position": "bottom",
+              "grid_options": {
+                "columns": 4,
+                "rows": 2
+              }
+            },
+            {
+              "type": "tile",
+              "grid_options": {
+                "columns": "full",
+                "rows": "auto"
+              },
+              "entity": "light.esphome57_esphome57_light",
+              "icon": "mdi:ceiling-light-multiple-outline",
+              "vertical": false,
+              "tap_action": {
+                "action": "toggle"
+              },
+              "features": [
+                {
+                  "type": "light-brightness"
+                }
+              ],
+              "features_position": "bottom"
+            },
+            {
+              "type": "tile",
+              "grid_options": {
+                "columns": "full",
+                "rows": "auto"
+              },
+              "entity": "light.grupp_bordslampor_bion",
+              "name": "Bordslampor",
+              "icon": "mdi:lightbulb-on",
+              "vertical": false,
+              "tap_action": {
+                "action": "toggle"
+              },
+              "features": [
+                {
+                  "type": "light-brightness"
+                }
+              ],
+              "features_position": "bottom"
+            }
+          ],
+          "column_span": 1
+        }
+      ],
+      "cards": [],
+      "background": {
+        "opacity": 100,
+        "alignment": "center",
+        "size": "cover",
+        "repeat": "repeat",
+        "attachment": "fixed"
+      },
+      "dense_section_placement": true
+    }
+  ]
+}

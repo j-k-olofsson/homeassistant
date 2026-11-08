@@ -7,7 +7,7 @@ substitutions:
   log_level: INFO
   num_leds: "98"
   gpio_pin: "GPIO3"
-  night_brightness: "25%"
+  night_brightness: "40%"
 
 # Include packages for this device specific type
 packages:

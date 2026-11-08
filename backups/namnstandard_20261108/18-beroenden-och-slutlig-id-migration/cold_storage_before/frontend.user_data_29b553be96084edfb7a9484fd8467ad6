@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "frontend.user_data_29b553be96084edfb7a9484fd8467ad6",
+  "data": {
+    "language": {
+      "language": "sv",
+      "number_format": "language",
+      "time_format": "language",
+      "date_format": "language",
+      "time_zone": "local",
+      "first_weekday": "language"
+    },
+    "core": {
+      "showAdvanced": true
+    },
+    "sidebar": {
+      "panelOrder": [
+        "lovelace",
+        "d5369777_music_assistant",
+        "ha-admin",
+        "todo",
+        "5c53de3b_esphome",
+        "esphome-update-manager",
+        "hacs",
+        "calendar",
+        "a0d7b954_ssh",
+        "dashboard-hemmabio",
+        "ai_agent_ha",
+        "9b396a0a_ai-config-agent",
+        "core_configurator",
+        "maintenance",
+        "climate"
+      ],
+      "hiddenPanels": [
+        "security",
+        "history",
+        "media-browser",
+        "logbook",
+        "energy"
+      ]
+    }
+  }
+}

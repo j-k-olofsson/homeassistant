@@ -1,0 +1,19 @@
+{
+  "files": {
+    "configuration.yaml": 1,
+    "automations.yaml": 36,
+    "scripts.yaml": 6,
+    "packages/aqara_taklampor_monitor.yaml": 16,
+    "packages/db_optimize.yaml": 2,
+    "packages/granny.yaml": 1,
+    "packages/ha_health_counter.yaml": 1,
+    "packages/ir_lights.yaml": 3,
+    "packages/presence_simulation.yaml": 20
+  },
+  "ambiguous_source_names_left_unchanged": {
+    "SCEN - Växtlampor": [
+      "Belysning – Växtlampor",
+      "Växtbelysningsscen äldre hjälpare"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "options": {
+    "step": {
+      "init": {
+        "data_description": {
+          "interval": "Frecuencia para adaptar as luces, en segundos. 🔄",
+          "sleep_brightness": "Porcentaxe de brillo das luces en modo durmir. 😴"
+        },
+        "title": "Configuración de Iluminación Adaptativa",
+        "sections": {
+          "advanced": {
+            "data": {},
+            "data_description": {
+              "sunrise_offset": "Axusta a hora do amencer cun desfasamento positivo ou negativo en segundos. ⏰",
+              "sunset_offset": "Axusta a hora da posta de sol cun desfasamento positivo ou negativo en segundos. ⏰",
+              "send_split_delay": "Retraso (ms) entre `separate_turn_on_commands`"
+            }
+          }
+        },
+        "data": {}
+      }
+    }
+  },
+  "title": "Iluminación Adaptativa",
+  "services": {
+    "change_switch_settings": {
+      "fields": {
+        "sleep_brightness": {
+          "description": "Porcentaxe de brillo das luces en modo durmir. 😴"
+        },
+        "only_once": {
+          "description": "Adaptar luces só cando estean acesas (`true`) ou mantelas adaptándose (`false`). 🔄"
+        },
+        "sunrise_offset": {
+          "description": "Axusta a hora do amencer cun desfasamento positivo ou negativo en segundos. ⏰"
+        },
+        "sunset_offset": {
+          "description": "Axusta a hora da posta de sol cun desfasamento positivo ou negativo en segundos. ⏰"
+        },
+        "transition": {
+          "description": "Duración da transición cando as luces cambian, en segundos. 🕑"
+        }
+      }
+    }
+  },
+  "config": {
+    "step": {
+      "user": {
+        "title": "Escolle un nome para a instancia de Iluminación Dinámica"
+      }
+    }
+  }
+}

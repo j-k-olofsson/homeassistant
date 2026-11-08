@@ -52,41 +52,83 @@ godnatt_slack_belysning:
     response_variable: _godnatt_result
 ange_starttid_for_bilvarmen:
   alias: Ange starttid för bilvärmen
+  description: Bokar bilvärme en gång. Laddningen slås på en minut före vald värmestart.
   sequence:
-  - service: input_datetime.set_datetime
-    metadata: {}
+  - variables:
+      _requested_ts: '{{ as_timestamp(starttid, 0) }}'
+      _start_ts: '{{ ((_requested_ts | float / 60) | round(0, "ceil")) * 60 }}'
+      _laddstart_ts: '{{ _start_ts | float - 60 }}'
+  - if:
+    - condition: template
+      value_template: '{{ _laddstart_ts | float <= as_timestamp(now()) + 60 }}'
+    then:
+    - stop: Välj värmestart minst två minuter framåt så att laddningen hinner slås på först.
+      error: true
+  - action: scheduler.add
     data:
-      datetime: '{{ starttid }}'
-    target:
-      entity_id: input_datetime.starta_bilvarmen
+      name: 'Bilvärme {{ _start_ts | timestamp_custom("%d/%m %H:%M", true) }}'
+      weekdays:
+      - daily
+      start_date: '{{ _laddstart_ts | timestamp_custom("%Y-%m-%d", true) }}'
+      end_date: '{{ _laddstart_ts | timestamp_custom("%Y-%m-%d", true) }}'
+      repeat_type: single
+      tags:
+      - bilvarme_ad_hoc
+      timeslots:
+      - start: '{{ _laddstart_ts | timestamp_custom("%H:%M", true) }}'
+        actions:
+        - service: script.turn_on
+          entity_id: script.bilvarme_starta_en_gang
   mode: single
   icon: mdi:clock-time-five-outline
   fields:
     starttid:
       selector:
         datetime: {}
-      name: starttid
+      name: Datum och starttid för bilvärmen
+      description: Laddningen aktiveras en minut tidigare. Välj minst två minuter framåt.
       required: true
 rescan_wifi_on_esphome_nodes:
-  alias: Rescan wifi on all esphome nodes
+  alias: ESPHome – sök efter Wi-Fi-nät
   description: ''
   sequence:
   - repeat:
-      for_each: '{{ integration_entities(''esphome'') | select(''search'', ''_wifi_bssid$'')
+      for_each: '{{ integration_entities(''esphome'') | select(''search'', ''_(?:wifi|wi_fi)_bssid$'')
         | list | sort }}'
       sequence:
       - variables:
-          _esphome_node: "{% set dev = device_id(repeat.item) %}\n            {% set
-            ns = namespace(node='') %}\n            {% if 'esphome' in repeat.item
-            %}\n              {% set matches = repeat.item | regex_findall('esphome\\\\d{2}')
-            %}\n              {% if matches %}\n                {% set ns.node = matches[0]
-            %}\n              {% endif %}\n            {% endif %}\n            {%
-            if dev and ns.node == '' %}\n              {% for ent in device_entities(dev)
-            %}\n                {% set matches = ent | regex_findall('esphome\\\\d{2}')
-            %}\n                {% if matches %}\n                  {% set ns.node
-            = matches[0] %}\n                  {% break %}\n                {% endif
-            %}\n              {% endfor %}\n            {% endif %}\n            {{
-            ns.node }}\n"
+          _esphome_node: '{% set nodes = {"0249e80380345f05f61980d53923d55d": "esphome26",
+            "f45920512715a4c126f3b20f730689cc": "esphome21", "d7e410a0ce1697b5ffab766c93e0a0db":
+            "esphome25", "62443fd492a8098b6c871c19046cd74b": "esphome40", "3278b28828a082ad759604be25439883":
+            "esphome03", "61c8ce0db41fe07f62c70aec687f5f7a": "esphome46", "6597c0a3542beb368b8ebec821b973f2":
+            "esphome44", "95a7be79a7ac770811ea13372776e817": "esphome47", "f6d459f5eedf7c2022ada3f5e776825f":
+            "esphome50", "20d6df4ba61d5de9cdbf8d6d2f37aa5e": "esphome73", "5369acf45d06d0c1043a0acd753c0319":
+            "esphome83", "71b5e58a07ac25d7f7410dde1e9cd18d": "esphome81", "f0d1cdb104011b286fdf24cf73eefe8f":
+            "esphome80", "edf4247bda773861ca5dac0fdaa21a6d": "esphome23", "cda69fe8b334483c32d0de95ac2a5753":
+            "esphome20", "8ae17fb3f15256a4d3462f249b41b9e3": "esphome54", "24d346f265a46ef31a713136677f9f01":
+            "esphome27", "34864cbc2b4c06598d52c1011b0eecd3": "esphome51", "8cd70df280e7a39db4e75c2606d4ff2f":
+            "esphome48", "500843e37fe53aaa20e8506cb87e747f": "esphome49", "3f1f0cda20e56e993fccc3f1fe0b373e":
+            "esphome52", "e18f8c3bc28d9ea7e2ee46911726a053": "esphome41", "12e5d382fbafaab1bef78c6079431383":
+            "esphome09", "6f392bd6d870e50df054bc593b21d393": "esphome29", "305516721dd12e74b046ad2e14d553ee":
+            "esphome71", "28b4948962ebab67adfbd5d3b839cfd5": "esphome94", "5c1dfaab0957271f2094674fa9069abd":
+            "esphome01", "1044157cf3579e6de5f8599f1e5913f5": "esphome74", "093df378c502bf0cde52459691675cb0":
+            "esphome53", "02879362ee92b1b838f9ab8fa53005db": "esphome76", "b74f73eebc379e3e022e2e4584bff274":
+            "esphome30", "a9cf92165392d9f87846319ead4eab8f": "esphome31", "c73a6932ff128cb774f98ccb632cb171":
+            "esphome89", "7732da98abce27269f6932e6113ecad8": "esphome07", "d355741678ee5dcb0af19a393004b7e3":
+            "esphome24", "6e59259f9f34c8346dcd0f7dc0b8e554": "esphome93", "01JBHA57S62YS7QY9S1ZVTB8W2":
+            "esphome95", "01JDHJE6X9ADFHHQ6BHZNA3RHT": "esphome45", "01JFJPYESA9071F2SHAPH56VTG":
+            "esphome08", "01JGH8FK8E46A5FYP2X3NA4JWF": "esphome57", "01JHJVE441RWEVAH5NMD6CEZVC":
+            "esphome59", "01JHJVZB2735ZM1M7VSKCRZT04": "esphome60", "01JHMVY5408Z8Q1X16KC3B4JSX":
+            "esphome61", "01JMMMFSXV89KWRQ0VKZQTRHM0": "esphome43", "01JNG64NY6SS337MF5HPZBK0JF":
+            "esphome75", "01JNRCXSYQ4HHT9RZ0QD7PAFA7": "home-assistant-voice-096460",
+            "01JX2F3NAP9KZF8Q91T523N7BE": "esphome28", "01K9Y5V4WPK219WJKFDTSY2GBE":
+            "esphome02", "01KA1JV2ZCY810SXGZ7YFTSKY5": "esphome98", "01KAPJXMYERX56H75M9FFDAV7C":
+            "esphome63", "01KBAY8REAVQ8GGXTC84569FRD": "esphome05", "01KC72KW2XNR11WW7YQVV2RKJK":
+            "esphome32", "01KCP2M8N8K0ATTJWDBFAS7KNM": "esphome84", "01KYSQW4N181HCAK7GZBYHV8JS":
+            "esphome42", "01KYVYFZ6K3NPDRHQDWY4PP0M9": "esphome90", "01KYWEQ0XD3977EXMHXYHCBRFS":
+            "esphome58", "01M0YP3EP86ZSG7NM64ZZGR9KN": "esphome96", "01M0YRZP5SX6690MW0JFWH1R29":
+            "esphome97", "01M4NV08QGBA7BMVPXMS7V71W5": "esphome56"} %}{{ nodes.get(config_entry_id(repeat.item),
+            '''') }}'
       - if:
         - condition: template
           value_template: '{{ _esphome_node | length > 0 }}'
@@ -98,9 +140,9 @@ rescan_wifi_on_esphome_nodes:
           data:
             message: 'Rescan wifi: {{ _esphome_node }}'
           target:
-            entity_id: notify.file
+            entity_id: notify.skriptlogg_skriv_meddelande
 granny_broadcast:
-  alias: Granny Broadcast (kanalneutral)
+  alias: "Granny – skicka meddelande"
   description: 'Grannifiera en uppgift och (valfritt) skicka till valda kanaler. Returnerar
     alltid final_message.
 
@@ -147,7 +189,7 @@ granny_broadcast:
             value: tts
           - label: Mobil (notify.mobile_app_pixel_9_pro_xl)
             value: mobile
-          - label: TV (notify.android_tv_fire_tv)
+          - label: TV
             value: tv
           - label: HA-notis (persistent_notification)
             value: ha
@@ -155,7 +197,7 @@ granny_broadcast:
             value: slack
     tts_media_player:
       name: tts_media_player
-      description: 'Music Assistant-spelare för TTS (standard: Grannys synkroniserade högtalargrupp)
+      description: 'Music Assistant-spelare för TTS (standard: Grannys synkroniserade Chromecast-grupp)
 
         '
       selector:
@@ -174,6 +216,12 @@ granny_broadcast:
       default: false
       selector:
         boolean: {}
+    message:
+      name: Färdigt meddelande
+      description: Läs upp och visa exakt denna text utan AI-omskrivning.
+      selector:
+        text:
+          multiline: true
     fallback_message:
       name: fallback_message
       description: 'Eget fallbackmeddelande om AI inte svarar. Lämna tomt för neutral
@@ -197,10 +245,11 @@ granny_broadcast:
       _humor: '{{ humor_level | default(2) | int(2) }}'
       _recipient: '{{ (recipient | default('''', true)) | trim }}'
       _tts_player: "{{ tts_media_player\n   if tts_media_player is defined and tts_media_player|length
-        > 0\n   else 'media_player.grannys_hogtalare' }}\n"
-      _tts_engine: "{% if states('tts.piper') not in ['unknown','unavailable','']
-        %}\n  tts.piper\n{% elif states('tts.cloud') not in ['unknown','unavailable','']
-        %}\n  tts.cloud\n{% else %}\n  tts.cloud\n{% endif %}\n"
+        > 0\n   else 'media_player.grannys_hogtalare_music_assistant' }}\n"
+      _tts_engine: >-
+        {{ 'tts.heimdal_ha_piper' if states.tts.heimdal_ha_piper is defined and
+           states('tts.heimdal_ha_piper') != 'unavailable' else 'tts.home_assistant_cloud' }}
+      _message_input: '{{ message | default("", true) | trim }}'
       _fallback_input: '{{ (fallback_message | default('''', true)) | trim }}'
       _fallback_default: Jag har glömt bort vad jag skulle säga, och även vad jag
         heter…
@@ -226,12 +275,13 @@ granny_broadcast:
   - choose:
     - conditions:
       - condition: template
-        value_template: '{{ states(_ai_entity) not in [''unknown'',''unavailable'','''']
+        value_template: '{{ _message_input | length == 0 and states(_ai_entity) not in [''unknown'',''unavailable'','''']
           }}
 
           '
       sequence:
       - action: ai_task.generate_data
+        continue_on_error: true
         data:
           entity_id: '{{ _ai_entity }}'
           instructions: >-
@@ -245,7 +295,7 @@ granny_broadcast:
     - variables:
         ai_text: ''
   - variables:
-      final_message: '{{ ai_text if (ai_text | length) > 0 else _fallback_final }}
+      final_message: '{{ _message_input if _message_input | length > 0 else (ai_text if (ai_text | length) > 0 else _fallback_final) }}
 
         '
   - choose:
@@ -276,7 +326,9 @@ granny_broadcast:
       - condition: template
         value_template: '{{ ''tv'' in _channels }}'
       sequence:
-      - action: notify.android_tv_fire_tv
+      - action: notify.send_message
+        target:
+          entity_id: notify.android_tv_fire_tv
         data:
           title: Granny
           message: '{{ final_message }}'
@@ -307,7 +359,7 @@ granny_broadcast:
   - stop: '{{ final_message }}'
     response_variable: broadcast_response
 granny_car_charge_plan:
-  alias: Granny Bil-laddningsplan
+  alias: "Granny – planera billaddning"
   description: Planerar bilens laddning via en lokal prisoptimering och uppdaterar
     kalendern.
   mode: restart
@@ -332,11 +384,11 @@ granny_car_charge_plan:
       deadline_local_iso: '{{ as_local(as_datetime(deadline_iso)).isoformat() }}'
       cleanup_end_iso: '{{ (today_at(''23:59:59'') + timedelta(days=1)).isoformat()
         }}'
-      car_soc: '{{ states("sensor.sef_42h_battery_level") | float(0) }}'
-      car_target: '{{ states("input_number.car_target_soc") | float(100) }}'
-      car_capacity_kwh: '{{ states("input_number.car_bat_capacity") | float(0) }}'
-      car_charger_kw: '{{ states("input_number.car_charger_capacity") | float(0) }}'
-      car_efficiency: '{{ states("input_number.car_charger_efficiency") | float(1)
+      car_soc: '{{ states("sensor.utomhus_sef_42h_batteriniva") | float(0) }}'
+      car_target: '{{ states("input_number.malladdning") | float(100) }}'
+      car_capacity_kwh: '{{ states("input_number.utomhus_bilbatteriets_kapacitet") | float(0) }}'
+      car_charger_kw: '{{ states("input_number.utomhus_laddeffekt") | float(0) }}'
+      car_efficiency: '{{ states("input_number.laddverkningsgrad") | float(1)
         }}'
       energy_needed_kwh: "{% set diff = (car_target | float(0)) - (car_soc | float(0))
         %} {% if diff <= 0 or (car_capacity_kwh | float(0)) <= 0 %}\n  {{ 0.0 }}\n{%
@@ -394,7 +446,7 @@ granny_car_charge_plan:
       - action: persistent_notification.create
         data:
           title: Laddningsplan saknar batterikapacitet
-          message: Ange bilens batterikapacitet i input_number.car_bat_capacity för
+          message: Ange bilens batterikapacitet i input_number.utomhus_bilbatteriets_kapacitet för
             att kunna planera laddningen.
           notification_id: granny_car_charge_plan_config_error
       - stop: Saknar batterikapacitet.
@@ -409,7 +461,7 @@ granny_car_charge_plan:
       - action: persistent_notification.create
         data:
           title: Laddningsplan saknar laddareffekt
-          message: Ange laddarens effekt i input_number.car_charger_capacity för att
+          message: Ange laddarens effekt i input_number.utomhus_laddeffekt för att
             kunna planera laddningen.
           notification_id: granny_car_charge_plan_config_error
       - stop: Saknar laddareffekt.
@@ -776,8 +828,8 @@ granny_car_charge_plan:
       window_end: '{{ cleanup_end_iso }}'
       plan_json: '{{ plan_json }}'
   - action: homeassistant.reload_config_entry
-    target:
-      entity_id: '{{ calendar_entity }}'
+    data:
+      entry_id: '{{ config_entry_id(calendar_entity) }}'
   - action: homeassistant.update_entity
     target:
       entity_id: '{{ calendar_entity }}'
@@ -835,7 +887,7 @@ granny_car_charge_plan:
     data:
       datetime: '{{ now_iso }}'
     target:
-      entity_id: input_datetime.granny_charger_trigger
+      entity_id: input_datetime.laddplan_starttid
   - variables:
       schedule_lines: "{% if plan_schedule_effective | length == 0 %} - Inga laddningsslotar
         behövs just nu. {% else %} {%- for slot in plan_schedule_effective %} {% set
@@ -894,7 +946,7 @@ granny_car_charge_plan:
         total_energy_kwh | float(0) | round(2) }} kWh, kostnad ≈ {{ total_cost_value
         | float(0) | round(2) }} {{ plan_currency }}.'
 thread_uppdatera_natverksdiagnostik:
-  alias: Thread - Uppdatera nätverksdiagnostik
+  alias: "Thread – Uppdatera nätverksdiagnostik"
   mode: single
   sequence:
   - action: rest_command.thread_get_devices
@@ -916,7 +968,7 @@ thread_uppdatera_natverksdiagnostik:
     response_variable: diagnostics_response
 
 hissmusik_starta:
-  alias: Hissmusik - Starta lokal musik
+  alias: "Hissmusik – Starta lokal musik"
   description: >-
     Spelar angiven lokal MA-spellista (standard Hissmusik) på
     Dassens högtalare med 15 % volym, shuffle och repeat all. Högst tre
@@ -938,7 +990,7 @@ hissmusik_starta:
     stored_traces: 10
   sequence:
   - variables:
-      hissmusik_player: media_player.dassens_hogtalare_ma
+      hissmusik_player: media_player.dassens_hogtalare
       # Verifierade lokala MA-listor, inte namnsökning bland streaminglistor.
       hissmusik_playlists:
         hissmusik:
@@ -1038,35 +1090,32 @@ hissmusik_starta:
     error: true
 
 hissmusik_stoppa:
-  alias: Hissmusik - Stoppa
+  alias: "Hissmusik – Stoppa"
   description: Avbryter pågående startförsök och stoppar gruppen Dassens högtalare.
   mode: restart
   sequence:
   - action: script.turn_off
     target:
-      entity_id: script.hissmusik_starta
+      entity_id: script.hissmusik_starta_lokal_musik
   - action: media_player.media_stop
     target:
-      entity_id: media_player.dassens_hogtalare_ma
+      entity_id: media_player.dassens_hogtalare
 
-# Multiroom speech is always one synchronized group stream.
+# Serialize announcements, retry transient errors and report exhausted attempts.
 granny_announce:
-  alias: Granny – synkroniserat meddelande via Music Assistant
-  description: >-
-    Ett gemensamt utrop till Grannys synkgrupp. MA sköter synkronisering och
-    meddelandevolym; separat spelande MA-köer återupptas efteråt. Inget pling
-    eller separat tyst förberedelse. Inga individuella flerrumsutrop.
+  alias: Granny – synkroniserat tal via vanlig Chromecast
+  description: Ett enda utrop till en riktig Chromecast-grupp. Inga separata flerrumsutrop.
   mode: queued
   max: 50
   fields:
     media_player:
-      default: media_player.grannys_hogtalare
+      default: media_player.grannys_hogtalare_music_assistant
       selector:
         entity:
           domain: media_player
           integration: music_assistant
     tts_engine:
-      default: tts.piper
+      default: tts.heimdal_ha_piper
       selector:
         entity:
           domain: tts
@@ -1077,22 +1126,147 @@ granny_announce:
           multiline: true
   sequence:
   - variables:
-      requested: "{{ media_player | default('media_player.grannys_hogtalare', true) }}"
+      requested: '{{ media_player | default("media_player.grannys_hogtalare_music_assistant", true) | trim }}'
+      is_granny_group: '{{ requested in ["media_player.grannys_hogtalare_music_assistant", "media_player.grannys_hogtalare_group"] }}'
+      native_group_entity: media_player.granny_utrop_music_assistant
+      native_group_candidates: >-
+        {{ [native_group_entity]
+           if state_attr(native_group_entity, 'mass_player_type') == 'group'
+              and (state_attr(native_group_entity, 'active_queue') | default('', true)
+                   | regex_match('^[0-9a-f]{8}-[0-9a-f-]{27}$'))
+           else [] }}
       player: >-
-        {{ 'media_player.kokets_skarm_ma' if requested == 'media_player.kokets_skarm'
-           else requested }}
-  - if: "{{ player == 'media_player.grannys_hogtalare' }}"
+        {% if is_granny_group %}
+          {{ native_group_candidates[0] if native_group_candidates | length == 1 else '' }}
+        {% elif requested == 'media_player.kokets_skarm' %}
+          media_player.kokets_skarm_spelare
+        {% else %}
+          {{ requested }}
+        {% endif %}
+  - if: '{{ is_granny_group and player | length == 0 }}'
     then:
-    - action: granny_sync.speak
+    - action: persistent_notification.create
       data:
-        entity_id: media_player.grannys_hogtalare
-        tts_entity_id: "{{ tts_engine | default('tts.piper', true) }}"
-        message: '{{ message }}'
-    else:
-    - action: tts.speak
-      target:
-        entity_id: "{{ tts_engine | default('tts.piper', true) }}"
-      data:
-        media_player_entity_id: '{{ player }}'
-        message: '{{ message }}'
-        cache: true
+        notification_id: granny_speech_failed_group
+        title: Granny saknar en synkroniserad Chromecast-grupp
+        message: >-
+          Kontrollera att {{ native_group_entity }} finns i Music Assistant och motsvarar
+          den vanliga Chromecast-gruppen Granny utrop i Google Home.
+          Gruppen ska ha en Chromecast-kö, inte en Music Assistant-synkkö.
+          Meddelande: {{ message }}
+    - stop: Grannys konfigurerade Chromecast-grupp saknas eller har fel grupptyp.
+      error: true
+  - action: persistent_notification.dismiss
+    data:
+      notification_id: granny_speech_failed_group
+  - action: script.granny_announce_player
+    data:
+      media_player: '{{ player | trim }}'
+      tts_engine: '{{ tts_engine | default("tts.heimdal_ha_piper", true) }}'
+      message: '{{ message }}'
+
+granny_announce_player:
+  alias: Granny – tal till ett Chromecast-mål
+  description: Köat utrop med två försök, reservröst och synlig felnotis.
+  mode: parallel
+  max: 50
+  fields:
+    media_player:
+      default: media_player.grannys_hogtalare_music_assistant
+      selector:
+        entity:
+          domain: media_player
+          integration: music_assistant
+    tts_engine:
+      default: tts.heimdal_ha_piper
+      selector:
+        entity:
+          domain: tts
+    message:
+      required: true
+      selector:
+        text:
+          multiline: true
+  sequence:
+  - variables:
+      requested: "{{ media_player | default('media_player.grannys_hogtalare_music_assistant', true) | trim }}"
+      player: >-
+        {{ 'media_player.kokets_skarm_spelare' if requested == 'media_player.kokets_skarm'
+           else requested }}
+      primary_engine: "{{ tts_engine | default('tts.heimdal_ha_piper', true) | trim }}"
+      notification_id: '{{ "granny_speech_failed_" ~ player | replace(".", "_") }}'
+      announcement_result: {}
+  - repeat:
+      count: 2
+      sequence:
+      - variables:
+          announcement_result: {}
+          engine: >-
+            {{ 'tts.home_assistant_cloud' if
+               (repeat.index == 2 or states(primary_engine) == 'unavailable') and
+               states.tts.home_assistant_cloud is defined and
+               states('tts.home_assistant_cloud') != 'unavailable'
+               else primary_engine }}
+      - action: script.granny_speak_attempt
+        continue_on_error: true
+        data:
+          player: '{{ player }}'
+          engine: '{{ engine }}'
+          message: '{{ message }}'
+        response_variable: announcement_result
+      - if: '{{ announcement_result.get("success", false) }}'
+        then:
+        - action: persistent_notification.dismiss
+          data:
+            notification_id: '{{ notification_id }}'
+        - stop: Meddelandet har skickats till Music Assistant.
+      - if: '{{ repeat.index < 2 }}'
+        then:
+        - delay:
+            seconds: 3
+  - action: persistent_notification.create
+    data:
+      notification_id: '{{ notification_id }}'
+      title: Granny kunde inte läsa upp meddelandet
+      message: >-
+        Två talförsök misslyckades på {{ player }}. Meddelande: {{ message }}.
+        Kontrollera högtalarens anslutning, Music Assistant och TTS.
+        Övriga valda meddelandekanaler fortsätter.
+  - action: system_log.write
+    data:
+      level: error
+      logger: granny_broadcast
+      message: 'Två talförsök misslyckades på {{ player }}.'
+  - stop: Granny kunde inte skicka tal efter två försök.
+    error: true
+
+granny_speak_attempt:
+  alias: Granny – ett talförsök
+  description: Intern hjälpfunktion. Fel returneras till det köade utropsskriptet.
+  mode: parallel
+  max: 50
+  sequence:
+  - wait_template: '{{ states(player) not in ["unknown", "unavailable"] }}'
+    timeout:
+      seconds: 15
+    continue_on_timeout: false
+  - if: '{{ message | default("", true) | trim | length == 0 }}'
+    then:
+    - stop: Talmeddelandet är tomt.
+      error: true
+  - if: '{{ states[engine] is none or states(engine) == "unavailable" }}'
+    then:
+    - stop: 'TTS-motorn {{ engine }} saknas eller är otillgänglig.'
+      error: true
+  - action: tts.speak
+    target:
+      entity_id: '{{ engine }}'
+    data:
+      media_player_entity_id: '{{ player }}'
+      message: '{{ message }}'
+      cache: true
+  - variables:
+      result:
+        success: true
+  - stop: Talsteget slutfördes.
+    response_variable: result

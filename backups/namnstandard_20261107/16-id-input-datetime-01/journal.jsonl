@@ -1,0 +1,4 @@
+{"status": "rename_intent", "old": "input_datetime.starta_bilvarmen", "new": "input_datetime.heimdal_ha_starta_bilvarmen"}
+{"status": "renamed", "old": "input_datetime.starta_bilvarmen", "new": "input_datetime.heimdal_ha_starta_bilvarmen"}
+{"status": "rename_intent", "old": "input_datetime.granny_charger_done_trigger", "new": "input_datetime.laddplan_sluttid"}
+{"status": "renamed", "old": "input_datetime.granny_charger_done_trigger", "new": "input_datetime.laddplan_sluttid"}

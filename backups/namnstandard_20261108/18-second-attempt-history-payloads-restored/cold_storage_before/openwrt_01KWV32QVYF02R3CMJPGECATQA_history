@@ -1,0 +1,373 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "openwrt_01KWV32QVYF02R3CMJPGECATQA_history",
+  "data": {
+    "devices": {
+      "6c:47:60:0b:55:77": {
+        "initially_seen": 1783320641,
+        "last_seen": 1794128262,
+        "is_wireless": true
+      },
+      "6c:47:60:1a:87:36": {
+        "initially_seen": 1783320641,
+        "last_seen": 1791229168,
+        "is_wireless": true
+      },
+      "80:64:6f:91:e9:d5": {
+        "initially_seen": 1783320641,
+        "last_seen": 1794128262,
+        "is_wireless": true
+      },
+      "94:b9:7e:16:d2:02": {
+        "initially_seen": 1783320641,
+        "last_seen": 1794128262,
+        "is_wireless": true
+      },
+      "48:e7:29:67:de:7f": {
+        "initially_seen": 1783320641,
+        "last_seen": 1794128262,
+        "is_wireless": true
+      },
+      "e0:98:06:d5:c4:ca": {
+        "initially_seen": 1783320641,
+        "last_seen": 1794128262,
+        "is_wireless": true
+      },
+      "08:b6:1f:38:0b:64": {
+        "initially_seen": 1783320641,
+        "last_seen": 1794128262,
+        "is_wireless": true
+      },
+      "08:3a:8d:c3:44:dd": {
+        "initially_seen": 1783320641,
+        "last_seen": 1794128262,
+        "is_wireless": true
+      },
+      "08:b6:1f:34:55:50": {
+        "initially_seen": 1783320641,
+        "last_seen": 1792428706,
+        "is_wireless": true
+      },
+      "08:b6:1f:38:26:78": {
+        "initially_seen": 1783320641,
+        "last_seen": 1794128262,
+        "is_wireless": true
+      },
+      "ec:62:60:89:ed:bc": {
+        "initially_seen": 1783320641,
+        "last_seen": 1794128262,
+        "is_wireless": true
+      },
+      "e8:db:84:d3:1d:ce": {
+        "initially_seen": 1783320641,
+        "last_seen": 1792671377,
+        "is_wireless": true
+      },
+      "28:39:26:d3:14:5f": {
+        "initially_seen": 1783320641,
+        "last_seen": 1791229168,
+        "is_wireless": true,
+        "hostname": "192.168.10.55"
+      },
+      "00:2b:67:01:db:4e": {
+        "initially_seen": 1783320641,
+        "last_seen": 1791229168,
+        "is_wireless": false,
+        "hostname": "LenovoL340.home.arpa"
+      },
+      "20:05:b6:01:99:b1": {
+        "initially_seen": 1783320641,
+        "last_seen": 1794128262,
+        "is_wireless": false,
+        "hostname": "gw.home.arpa"
+      },
+      "ac:16:2d:04:99:b2": {
+        "initially_seen": 1783320641,
+        "last_seen": 1791229168,
+        "is_wireless": false,
+        "hostname": "fulla.home.arpa"
+      },
+      "e8:ff:1e:db:ea:f8": {
+        "initially_seen": 1783320641,
+        "last_seen": 1794128262,
+        "is_wireless": false,
+        "hostname": "heimdal.home.arpa"
+      },
+      "78:9c:85:2a:70:af": {
+        "initially_seen": 1783322459,
+        "last_seen": 1794064962,
+        "is_wireless": true
+      },
+      "2c:bc:bb:c1:87:2c": {
+        "initially_seen": 1783322525,
+        "last_seen": 1794128262,
+        "is_wireless": true
+      },
+      "00:11:f8:1e:af:0f": {
+        "initially_seen": 1783324409,
+        "last_seen": 1787135418,
+        "is_wireless": true
+      },
+      "80:c5:f2:67:aa:69": {
+        "initially_seen": 1783378857,
+        "last_seen": 1793614162,
+        "is_wireless": true
+      },
+      "4c:75:25:06:bc:9c": {
+        "initially_seen": 1783444443,
+        "last_seen": 1789726746,
+        "is_wireless": true
+      },
+      "24:6f:28:c1:b9:60": {
+        "initially_seen": 1783572679,
+        "last_seen": 1786478884,
+        "is_wireless": true
+      },
+      "c8:c9:a3:25:a9:24": {
+        "initially_seen": 1783577075,
+        "last_seen": 1794128262,
+        "is_wireless": true
+      },
+      "a0:cb:fd:3a:3a:d8": {
+        "initially_seen": 1784244524,
+        "last_seen": 1784277081,
+        "is_wireless": true
+      },
+      "94:27:70:89:d1:ad": {
+        "initially_seen": 1784549761,
+        "last_seen": 1793376383,
+        "is_wireless": true
+      },
+      "08:f9:e0:46:ed:b4": {
+        "initially_seen": 1784571434,
+        "last_seen": 1792661017,
+        "is_wireless": true
+      },
+      "08:3a:8d:c1:7e:b4": {
+        "initially_seen": 1785065157,
+        "last_seen": 1793763697,
+        "is_wireless": true
+      },
+      "60:f2:62:30:7a:32": {
+        "initially_seen": 1786183772,
+        "last_seen": 1786183898,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "80:64:6f:e3:be:f0": {
+        "initially_seen": 1786482397,
+        "last_seen": 1794128262,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "30:c9:22:86:74:68": {
+        "initially_seen": 1786512231,
+        "last_seen": 1792428706,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "60:cf:84:cd:9c:e2": {
+        "initially_seen": 1787234224,
+        "last_seen": 1794128262,
+        "is_wireless": false,
+        "hostname": "tor.home.arpa"
+      },
+      "68:f7:28:79:0e:04": {
+        "initially_seen": 1787295663,
+        "last_seen": 1791229168,
+        "is_wireless": false,
+        "hostname": "192.168.10.50"
+      },
+      "a2:1c:1c:8a:c6:30": {
+        "initially_seen": 1787298912,
+        "last_seen": 1793802712,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "72:0e:b3:71:8f:ef": {
+        "initially_seen": 1787306296,
+        "last_seen": 1794035683,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "8c:f5:a3:b9:6c:53": {
+        "initially_seen": 1787463509,
+        "last_seen": 1787464327,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "22:e6:07:30:77:c1": {
+        "initially_seen": 1787475665,
+        "last_seen": 1793981807,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "a0:dd:6c:2b:31:4c": {
+        "initially_seen": 1787596661,
+        "last_seen": 1788446783,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "1e:7e:df:81:36:be": {
+        "initially_seen": 1787786466,
+        "last_seen": 1794046882,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "cc:50:e3:fe:16:ed": {
+        "initially_seen": 1788419684,
+        "last_seen": 1794128262,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "e4:65:b8:f1:c1:b8": {
+        "initially_seen": 1788446469,
+        "last_seen": 1794128262,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "c4:d8:d5:54:f8:a4": {
+        "initially_seen": 1788446657,
+        "last_seen": 1792428706,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "7c:9e:bd:06:e7:bc": {
+        "initially_seen": 1788447097,
+        "last_seen": 1789565186,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "c8:85:41:68:f7:c4": {
+        "initially_seen": 1788447097,
+        "last_seen": 1794128262,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "8c:ce:4e:0c:ca:58": {
+        "initially_seen": 1788447097,
+        "last_seen": 1788964867,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "1c:69:20:5b:b6:00": {
+        "initially_seen": 1788605830,
+        "last_seen": 1789493388,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "c4:4f:33:7a:51:11": {
+        "initially_seen": 1788605830,
+        "last_seen": 1792419709,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "00:e0:4c:8e:59:b7": {
+        "initially_seen": 1788616634,
+        "last_seen": 1788616758,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "c8:c9:a3:25:b7:f7": {
+        "initially_seen": 1788705553,
+        "last_seen": 1788705929,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "b0:4a:39:24:a4:cb": {
+        "initially_seen": 1788749015,
+        "last_seen": 1790947109,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "c8:85:41:4d:db:3c": {
+        "initially_seen": 1788963863,
+        "last_seen": 1792428706,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "f4:cf:a2:15:d0:e3": {
+        "initially_seen": 1788963863,
+        "last_seen": 1788964553,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "88:12:ac:7f:8c:0d": {
+        "initially_seen": 1789318927,
+        "last_seen": 1792428706,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "40:22:d8:76:66:c0": {
+        "initially_seen": 1789318927,
+        "last_seen": 1793207396,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "40:22:d8:76:6f:70": {
+        "initially_seen": 1789318927,
+        "last_seen": 1793207396,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "a0:dd:6c:29:b1:34": {
+        "initially_seen": 1789318927,
+        "last_seen": 1792428706,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "f4:cf:a2:15:d8:ac": {
+        "initially_seen": 1789318927,
+        "last_seen": 1793207707,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "0c:b8:15:22:91:d4": {
+        "initially_seen": 1791544705,
+        "last_seen": 1791608462,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "f2:0d:b2:db:b3:bc": {
+        "initially_seen": 1791637468,
+        "last_seen": 1793977959,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "3c:61:05:fe:29:08": {
+        "initially_seen": 1791720857,
+        "last_seen": 1791721549,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "34:94:54:70:7c:a2": {
+        "initially_seen": 1792419393,
+        "last_seen": 1792419771,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "34:8e:89:ea:14:9d": {
+        "initially_seen": 1792419583,
+        "last_seen": 1792428706,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "d2:e3:60:1d:da:f3": {
+        "initially_seen": 1793037891,
+        "last_seen": 1793082982,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "96:b9:ce:b9:46:0b": {
+        "initially_seen": 1794083689,
+        "last_seen": 1794083811,
+        "is_wireless": true,
+        "hostname": ""
+      }
+    },
+    "last_version": "25.12.6",
+    "mqtt_cleanup_done": false,
+    "mqtt_presence_configured": false
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.01JNRCXSYQ4HHT9RZ0QD7PAFA7",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "home-assistant-voice-096460",
+      "friendly_name": "HA Voice PE 096460",
+      "mac_address": "20:F8:3B:09:64:60",
+      "compilation_time": "2026-11-04 06:58:37 +0100",
+      "model": "esp32-s3-devkitc-1",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2026.10.2",
+      "project_name": "",
+      "project_version": "",
+      "webserver_port": 0,
+      "legacy_voice_assistant_version": 0,
+      "voice_assistant_feature_flags": 125,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0,
+      "zwave_proxy_feature_flags": 0,
+      "zwave_home_id": 0,
+      "suggested_area": "",
+      "bluetooth_mac_address": "",
+      "api_encryption_supported": true,
+      "api_encryption_provisionable": false,
+      "api_outgoing_connection_supported": true,
+      "devices": [],
+      "areas": [],
+      "area": {
+        "area_id": 0,
+        "name": ""
+      },
+      "serial_proxies": []
+    },
+    "services": [],
+    "api_version": {
+      "major": 1,
+      "minor": 19
+    },
+    "device_capabilities": {
+      "bluetooth_proxy": {
+        "feature_flags": 0,
+        "mac_address": ""
+      },
+      "voice_assistant": {
+        "feature_flags": 125
+      },
+      "zwave_proxy": {
+        "feature_flags": 0,
+        "home_id": 0
+      },
+      "serial_proxies": [],
+      "wizard": {
+        "configured": false
+      },
+      "sendspin": {
+        "feature_flags": 1,
+        "client_id": "ITuTpwmmRzhRZLoQxESiP237nHcd5SyOoRo6td7EA2Y"
+      },
+      "store_yaml": {
+        "supported": false
+      }
+    },
+    "light": [
+      {
+        "object_id": "led_ring",
+        "key": 1459351809,
+        "name": "LED Ring",
+        "disabled_by_default": false,
+        "icon": "mdi:circle-outline",
+        "entity_category": 1,
+        "device_id": 0,
+        "supported_color_modes": [
+          35
+        ],
+        "min_mireds": 0.0,
+        "max_mireds": 0.0,
+        "effects": [],
+        "legacy_supports_brightness": false,
+        "legacy_supports_rgb": false,
+        "legacy_supports_white_value": false,
+        "legacy_supports_color_temperature": false
+      }
+    ],
+    "media_player": [
+      {
+        "object_id": "media_player",
+        "key": 2232357057,
+        "name": "Media Player",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "supports_pause": false,
+        "supported_formats": [
+          {
+            "format": "flac",
+            "sample_rate": 48000,
+            "num_channels": 2,
+            "purpose": 0,
+            "sample_bytes": 2,
+            "bitrate": 0
+          },
+          {
+            "format": "flac",
+            "sample_rate": 48000,
+            "num_channels": 1,
+            "purpose": 1,
+            "sample_bytes": 2,
+            "bitrate": 0
+          }
+        ],
+        "feature_flags": 1200653
+      }
+    ],
+    "button": [
+      {
+        "object_id": "restart",
+        "key": 1203400786,
+        "name": "Restart",
+        "disabled_by_default": true,
+        "icon": "mdi:restart",
+        "entity_category": 1,
+        "device_id": 0,
+        "device_class": "restart"
+      }
+    ],
+    "update": [],
+    "select": [
+      {
+        "object_id": "wake_word_sensitivity",
+        "key": 666792156,
+        "name": "Wake word sensitivity",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 1,
+        "device_id": 0,
+        "options": [
+          "Slightly sensitive",
+          "Moderately sensitive",
+          "Very sensitive"
+        ]
+      }
+    ],
+    "event": [
+      {
+        "object_id": "button_press",
+        "key": 2698747613,
+        "name": "Button press",
+        "disabled_by_default": false,
+        "icon": "mdi:button-pointer",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "button",
+        "event_types": [
+          "double_press",
+          "triple_press",
+          "long_press",
+          "easter_egg_press"
+        ]
+      }
+    ],
+    "switch": [
+      {
+        "object_id": "mute",
+        "key": 2974103762,
+        "name": "Mute",
+        "disabled_by_default": false,
+        "icon": "mdi:microphone-off",
+        "entity_category": 1,
+        "device_id": 0,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "wake_sound",
+        "key": 3517166597,
+        "name": "Wake sound",
+        "disabled_by_default": false,
+        "icon": "mdi:bullhorn",
+        "entity_category": 1,
+        "device_id": 0,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "disable_physical_controls",
+        "key": 4231319678,
+        "name": "Disable physical controls",
+        "disabled_by_default": true,
+        "icon": "mdi:button-pointer",
+        "entity_category": 1,
+        "device_id": 0,
+        "assumed_state": false,
+        "device_class": ""
+      }
+    ],
+    "binary_sensor": []
+  }
+}

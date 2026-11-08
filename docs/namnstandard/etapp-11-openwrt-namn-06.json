@@ -1,0 +1,4256 @@
+{
+  "stage": "11-openwrt-namn-06",
+  "description": "Svenska funktionsnamn enligt granskad ordlista. Inga ID:n, inställningar eller värden ändras.",
+  "operations": [
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_filesystem_free",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket Filesystem Free"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_kernel_version",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kärnversion",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket Kernel Version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_architecture",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Arkitektur",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket Architecture"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_connected_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Anslutna klienter",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket Connected Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_wireless_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Trådlösa klienter",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket Wireless Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_neighbor_devices",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Grannenheter",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket Neighbor Devices"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_system_logs",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Systemloggar",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket System Logs"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_top_processes",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Processöversikt",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket Top Processes"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_usb_devices",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "USB-enheter",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket USB Devices"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_temperature_zone_0",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Temperatur zon 0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket Temperature Zone 0"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_rom_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /rom",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket /rom Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_rom_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /rom",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket /rom Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_rom_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /rom",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket /rom Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_rom_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /rom",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket /rom Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_tmp_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /tmp",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket /tmp Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_tmp_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /tmp",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket /tmp Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_tmp_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /tmp",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket /tmp Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_tmp_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /tmp",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket /tmp Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_overlay_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /overlay",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket /overlay Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_overlay_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /overlay",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket /overlay Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_overlay_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /overlay",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket /overlay Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_overlay_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /overlay",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket /overlay Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket / Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket / Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket / Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_storage_usage_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket / Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_dev_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /dev",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket /dev Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_dev_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /dev",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket /dev Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_dev_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /dev",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket /dev Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_dev_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /dev",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket /dev Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_dhcp_leases",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "DHCP-tilldelningar",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket DHCP Leases"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_guest_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd guest",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket guest RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_guest_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd guest",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket guest TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_guest_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet guest",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket guest Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_guest_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid guest",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket guest Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_guest_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet guest",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket guest RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_guest_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet guest",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket guest TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_iot_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd iot",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket iot RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_iot_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd iot",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket iot TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_iot_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet iot",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket iot Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_iot_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid iot",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket iot Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_iot_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet iot",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket iot RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_iot_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet iot",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket iot TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_lan_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket lan RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_lan_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket lan TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_lan_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket lan Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_lan_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket lan Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_lan_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket lan RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_lan_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket lan TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_loopback_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd loopback",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket loopback RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_loopback_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd loopback",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket loopback TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_loopback_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet loopback",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket loopback Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_loopback_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid loopback",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket loopback Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_loopback_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet loopback",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket loopback RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_loopback_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet loopback",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket loopback TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_br_lan_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd br-lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket br-lan RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_br_lan_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd br-lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket br-lan TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_br_lan_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet br-lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket br-lan Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_br_lan_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid br-lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket br-lan Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_br_lan_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet br-lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket br-lan RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_br_lan_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet br-lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket br-lan TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_eth0_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd eth0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket eth0 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_eth0_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd eth0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket eth0 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_eth0_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet eth0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket eth0 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_eth0_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid eth0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket eth0 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_eth0_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet eth0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket eth0 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_eth0_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet eth0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket eth0 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_eth1_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd eth1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket eth1 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_eth1_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd eth1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket eth1 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_eth1_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet eth1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket eth1 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_eth1_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid eth1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket eth1 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_eth1_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet eth1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket eth1 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_eth1_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet eth1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket eth1 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy0_ap0_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd phy0-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy0-ap0 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy0_ap0_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd phy0-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy0-ap0 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy0_ap0_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet phy0-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy0-ap0 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy0_ap0_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid phy0-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy0-ap0 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy0_ap0_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet phy0-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy0-ap0 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy0_ap0_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet phy0-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy0-ap0 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy0_ap1_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd phy0-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy0-ap1 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy0_ap1_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd phy0-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy0-ap1 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy0_ap1_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet phy0-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy0-ap1 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy0_ap1_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid phy0-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy0-ap1 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy0_ap1_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet phy0-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy0-ap1 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy0_ap1_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet phy0-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy0-ap1 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy0_ap2_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd phy0-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy0-ap2 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy0_ap2_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd phy0-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy0-ap2 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy0_ap2_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet phy0-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy0-ap2 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy0_ap2_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid phy0-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy0-ap2 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy0_ap2_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet phy0-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy0-ap2 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy0_ap2_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet phy0-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy0-ap2 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy1_ap0_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd phy1-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy1-ap0 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy1_ap0_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd phy1-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy1-ap0 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy1_ap0_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet phy1-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy1-ap0 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy1_ap0_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid phy1-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy1-ap0 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy1_ap0_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet phy1-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy1-ap0 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy1_ap0_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet phy1-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy1-ap0 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy1_ap1_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd phy1-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy1-ap1 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy1_ap1_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd phy1-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy1-ap1 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy1_ap1_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet phy1-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy1-ap1 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy1_ap1_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid phy1-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy1-ap1 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy1_ap1_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet phy1-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy1-ap1 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy1_ap1_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet phy1-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy1-ap1 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy1_ap2_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd phy1-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy1-ap2 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy1_ap2_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd phy1-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy1-ap2 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy1_ap2_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet phy1-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy1-ap2 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy1_ap2_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid phy1-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy1-ap2 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy1_ap2_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet phy1-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy1-ap2 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_phy1_ap2_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet phy1-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket phy1-ap2 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_openwrt_one_ap_koket_wan_latency",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "WAN-svarstid",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket WAN Latency"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "image.koket_openwrt_one_ap_koket_wi_fi_qr_code_olofsson_wifi",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi QR-kod (OLOFSSON_WIFI)",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket Wi-Fi QR Code (OLOFSSON_WIFI)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "image.koket_openwrt_one_ap_koket_wi_fi_qr_code_olofsson_guest",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi QR-kod (OLOFSSON_GUEST)",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket Wi-Fi QR Code (OLOFSSON_GUEST)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "image.koket_openwrt_one_ap_koket_wi_fi_qr_code_olofsson_iot",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi QR-kod (OLOFSSON_IOT)",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Köket Wi-Fi QR Code (OLOFSSON_IOT)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_connected",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Anslutning",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Connected"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_reboot_required",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Omstart krävs",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Reboot Required"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_wps_active",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "WPS aktivt",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret WPS Active"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_boot",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst boot",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service boot"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_bootcount",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst bootcount",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service bootcount"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_cron",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst cron",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service cron"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_dnsmasq",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst dnsmasq",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service dnsmasq"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_done",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst done",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service done"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_dropbear",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst dropbear",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service dropbear"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_firewall",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst firewall",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service firewall"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_gpio_switch",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst gpio_switch",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service gpio_switch"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_led",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst led",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service led"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_log",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst log",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service log"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_network",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst network",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service network"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_odhcpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst odhcpd",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service odhcpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_packet_steering",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst packet_steering",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service packet_steering"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_rpcd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst rpcd",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service rpcd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_sysctl",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst sysctl",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service sysctl"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_sysfixtime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst sysfixtime",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service sysfixtime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_sysntpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst sysntpd",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service sysntpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_system",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst system",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service system"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_ubihealthd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst ubihealthd",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service ubihealthd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_ucitrack",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst ucitrack",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service ucitrack"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_uhttpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst uhttpd",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service uhttpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_umount",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst umount",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service umount"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_urandom_seed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst urandom_seed",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service urandom_seed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_urngd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst urngd",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service urngd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.kontoret_openwrt_one_ap_kontoret_service_wpad",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst wpad",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Service wpad"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_reboot_router",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om router",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Reboot Router"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_start_wps",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta WPS",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Start WPS"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_cancel_wps",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avbryt WPS",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Cancel WPS"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_create_backup",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skapa säkerhetskopia",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Create Backup"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_boot",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst boot",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart boot"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_boot",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst boot",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop boot"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_bootcount",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst bootcount",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart bootcount"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_bootcount",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst bootcount",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop bootcount"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_cron",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst cron",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart cron"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_cron",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst cron",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop cron"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_dnsmasq",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst dnsmasq",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart dnsmasq"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_dnsmasq",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst dnsmasq",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop dnsmasq"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_done",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst done",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart done"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_done",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst done",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop done"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_dropbear",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst dropbear",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart dropbear"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_dropbear",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst dropbear",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop dropbear"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_firewall",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst firewall",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart firewall"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_firewall",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst firewall",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop firewall"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_gpio_switch",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst gpio_switch",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart gpio_switch"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_gpio_switch",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst gpio_switch",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop gpio_switch"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_led",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst led",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart led"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_led",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst led",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop led"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_log",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst log",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart log"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_log",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst log",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop log"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_network",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst network",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart network"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_network",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst network",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop network"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_odhcpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst odhcpd",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart odhcpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_odhcpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst odhcpd",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop odhcpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_packet_steering",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst packet_steering",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart packet_steering"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_packet_steering",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst packet_steering",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop packet_steering"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_rpcd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst rpcd",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart rpcd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_rpcd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst rpcd",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop rpcd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_sysctl",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst sysctl",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart sysctl"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_sysctl",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst sysctl",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop sysctl"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_sysfixtime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst sysfixtime",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart sysfixtime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_sysfixtime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst sysfixtime",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop sysfixtime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_sysntpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst sysntpd",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart sysntpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_sysntpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst sysntpd",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop sysntpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_system",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst system",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart system"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_system",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst system",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop system"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_ubihealthd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst ubihealthd",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart ubihealthd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_ubihealthd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst ubihealthd",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop ubihealthd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_ucitrack",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst ucitrack",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart ucitrack"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_ucitrack",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst ucitrack",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop ucitrack"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_uhttpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst uhttpd",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart uhttpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_uhttpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst uhttpd",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop uhttpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_umount",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst umount",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart umount"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_umount",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst umount",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop umount"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_urandom_seed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst urandom_seed",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart urandom_seed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_urandom_seed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst urandom_seed",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop urandom_seed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_urngd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst urngd",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart urngd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_urngd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst urngd",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop urngd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_restart_wpad",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst wpad",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Restart wpad"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_stop_wpad",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst wpad",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Stop wpad"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_wps_push_phy1_ap1",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta WPS (phy1-ap1)",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret WPS Push (phy1-ap1)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_wps_push_phy1_ap2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta WPS (phy1-ap2)",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret WPS Push (phy1-ap2)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_wps_push_phy0_ap0",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta WPS (phy0-ap0)",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret WPS Push (phy0-ap0)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_wps_push_phy0_ap2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta WPS (phy0-ap2)",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret WPS Push (phy0-ap2)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_wps_push_phy1_ap0",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta WPS (phy1-ap0)",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret WPS Push (phy1-ap0)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_wps_push_phy0_ap1",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta WPS (phy0-ap1)",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret WPS Push (phy0-ap1)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_openwrt_one_ap_kontoret_flush_dns_cache",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Töm DNS-cache",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Flush DNS Cache"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_cpu_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Processoranvändning",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret CPU Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_public_ip",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Publik IP-adress",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Public IP"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_memory_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Minnesanvändning",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Memory Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_memory_used",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt minne",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Memory Used"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_swap_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Växlingsminnesanvändning",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Swap Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_load_1m",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Belastning senaste minuten",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Load (1m)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_load_5m",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Belastning senaste 5 minuterna",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Load (5m)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_load_15m",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Belastning senaste 15 minuterna",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Load (15m)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_connection_tracking",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Anslutningsspårning",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Connection Tracking"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_temperature",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Temperatur",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_filesystem_free",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Filesystem Free"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_kernel_version",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kärnversion",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Kernel Version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_architecture",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Arkitektur",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Architecture"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_connected_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Anslutna klienter",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Connected Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_wireless_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Trådlösa klienter",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Wireless Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_neighbor_devices",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Grannenheter",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Neighbor Devices"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_system_logs",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Systemloggar",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret System Logs"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_top_processes",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Processöversikt",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Top Processes"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_usb_devices",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "USB-enheter",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret USB Devices"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_temperature_zone_0",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Temperatur zon 0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Temperature Zone 0"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_rom_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /rom",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret /rom Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_rom_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /rom",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret /rom Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_rom_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /rom",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret /rom Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_rom_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /rom",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret /rom Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_tmp_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /tmp",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret /tmp Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_tmp_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /tmp",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret /tmp Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_tmp_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /tmp",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret /tmp Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_tmp_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /tmp",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret /tmp Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_overlay_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /overlay",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret /overlay Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_overlay_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /overlay",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret /overlay Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_overlay_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /overlay",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret /overlay Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_overlay_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /overlay",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret /overlay Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret / Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret / Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret / Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_storage_usage_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret / Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_dev_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /dev",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret /dev Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_dev_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /dev",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret /dev Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_dev_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /dev",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret /dev Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_dev_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /dev",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret /dev Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_dhcp_leases",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "DHCP-tilldelningar",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret DHCP Leases"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_guest_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd guest",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret guest RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_guest_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd guest",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret guest TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_guest_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet guest",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret guest Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_guest_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid guest",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret guest Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_guest_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet guest",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret guest RX Rate"
+        ]
+      }
+    }
+  ]
+}

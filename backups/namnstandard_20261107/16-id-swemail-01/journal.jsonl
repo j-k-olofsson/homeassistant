@@ -1,0 +1,8 @@
+{"status": "rename_intent", "old": "binary_sensor.utomhus_postnord_76017_mail_delivery_today_76017", "new": "binary_sensor.utomhus_postnord_76017_postutdelning_idag"}
+{"status": "renamed", "old": "binary_sensor.utomhus_postnord_76017_mail_delivery_today_76017", "new": "binary_sensor.utomhus_postnord_76017_postutdelning_idag"}
+{"status": "rename_intent", "old": "binary_sensor.utomhus_postnord_76017_mail_delivery_tomorrow_76017", "new": "binary_sensor.utomhus_postnord_76017_postutdelning_imorgon"}
+{"status": "renamed", "old": "binary_sensor.utomhus_postnord_76017_mail_delivery_tomorrow_76017", "new": "binary_sensor.utomhus_postnord_76017_postutdelning_imorgon"}
+{"status": "rename_intent", "old": "binary_sensor.utomhus_postnord_76017_postnord_delivery_today_76017", "new": "binary_sensor.utomhus_postnord_76017_postnord_utdelning_idag"}
+{"status": "renamed", "old": "binary_sensor.utomhus_postnord_76017_postnord_delivery_today_76017", "new": "binary_sensor.utomhus_postnord_76017_postnord_utdelning_idag"}
+{"status": "rename_intent", "old": "calendar.utomhus_postnord_76017_mail_delivery_calendar_76017", "new": "calendar.utomhus_postnord_76017_postutdelningskalender"}
+{"status": "renamed", "old": "calendar.utomhus_postnord_76017_mail_delivery_calendar_76017", "new": "calendar.utomhus_postnord_76017_postutdelningskalender"}

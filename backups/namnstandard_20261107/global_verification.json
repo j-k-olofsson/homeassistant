@@ -1,0 +1,159 @@
+{
+  "full_task_complete": false,
+  "registered_entities": 10129,
+  "registered_devices": 1066,
+  "state_entities_without_registry": 111,
+  "device_names_changed_unique": 261,
+  "entity_names_changed_unique": 7173,
+  "aliases_secured_unique": 7774,
+  "device_areas_changed_unique": 103,
+  "ids_changed": 90,
+  "history_records_verified": 1773,
+  "statistics_points_verified": 989,
+  "statistics_metadata_migrated": 43,
+  "name_stages_verified": [
+    "01-klimat-och-plantsensorer",
+    "02-esphome-visningsnamn",
+    "03-shelly-vitvaror-batterier",
+    "04-hjalpare-grupper-automationer",
+    "06-vaxt-och-energisensorer",
+    "07-bekraftade-rum",
+    "10-lankade-natverksenheter",
+    "11-mobile_app-namn-01",
+    "11-mobile_app-namn-02",
+    "11-mobile_app-namn-03",
+    "11-mobile_app-namn-04",
+    "11-mobile_app-namn-05",
+    "11-mobile_app-namn-06",
+    "11-openwrt-namn-01",
+    "11-openwrt-namn-02",
+    "11-openwrt-namn-03",
+    "11-openwrt-namn-04",
+    "11-openwrt-namn-05",
+    "11-openwrt-namn-06",
+    "11-openwrt-namn-07",
+    "11-openwrt-namn-08",
+    "11-openwrt-namn-09",
+    "11-openwrt-namn-10",
+    "11-openwrt-namn-11",
+    "11-openwrt-namn-12",
+    "11-openwrt-namn-13",
+    "11-openwrt-namn-14",
+    "11-openwrt-namn-15",
+    "11-openwrt-namn-16",
+    "11-openwrt-namn-17",
+    "11-openwrt-namn-18",
+    "11-openwrt-namn-19",
+    "11-openwrt-namn-20",
+    "12-natverk-och-ovriga-namn"
+  ],
+  "id_stages": [
+    {
+      "status": "verified",
+      "stage": "08-id-pilot-toaletten",
+      "renamed_entities": 5,
+      "same_unique_ids_and_settings": true,
+      "statistics_series_verified": 92,
+      "history_records_verified": 85,
+      "statistics_metadata_moved": 4,
+      "source_files_updated": [],
+      "dashboards_updated": [],
+      "frontend_favorites_updated": false,
+      "helper_config_entries_auto_updated": [],
+      "automation_consumers_reloaded": [],
+      "config_check": {
+        "result": "valid",
+        "errors": null,
+        "warnings": null
+      }
+    },
+    {
+      "status": "verified",
+      "stage": "09-id-klimatsensorer",
+      "renamed_entities": 50,
+      "same_unique_ids_and_settings": true,
+      "statistics_series_verified": 897,
+      "history_records_verified": 1654,
+      "statistics_metadata_moved": 39,
+      "source_files_updated": [
+        "automations.yaml"
+      ],
+      "dashboards_updated": [
+        "lovelace-friggan",
+        "lovelace"
+      ],
+      "frontend_favorites_updated": true,
+      "helper_config_entries_auto_updated": [
+        "01JCB5GMYV2TT2EYFXTN65B9Z5",
+        "01JH6FAN92A4F016KC6376MT5T",
+        "01JHJEPVEW4JG1G2NQG1RGH69D",
+        "01JHJER99149TSQTVQA3MCNQK8",
+        "01JHRFTY6RDGMP3XTAAYCEAR2X",
+        "01JQ8CT2TZBV3TC6KQPM1NVYZ8",
+        "01KAPN7N4RFX0HHVC6DCSKXGVN"
+      ],
+      "automation_consumers_reloaded": [
+        "automation.styrning_varmare_till_honsens_vatten",
+        "automation.styrning_honsluckan"
+      ],
+      "config_check": {
+        "result": "valid",
+        "errors": null,
+        "warnings": null
+      }
+    },
+    {
+      "status": "verified",
+      "stage": "14-id-firmware",
+      "renamed_entities": 35,
+      "same_unique_ids_and_settings": true,
+      "statistics_series_verified": 0,
+      "history_records_verified": 34,
+      "statistics_metadata_moved": 0,
+      "source_files_updated": [],
+      "dashboards_updated": [],
+      "frontend_favorites_updated": false,
+      "helper_config_entries_auto_updated": [],
+      "automation_consumers_reloaded": [],
+      "config_check": {
+        "result": "valid",
+        "errors": null,
+        "warnings": null
+      }
+    }
+  ],
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  },
+  "global_registry_invariants": "verified, with explicit approved device area changes and equivalent exposure false normalization",
+  "equivalent_explicit_google_exposure_false_additions": 152,
+  "old_migrated_ids_in_active_sources": 0,
+  "entity_id_settings": {
+    "entity_id_parts": null
+  },
+  "pending_information": [],
+  "deferred_items": {
+    "status": "Utreds senare enligt användarens besked",
+    "protected_entity_ids": [
+      "input_number.slider"
+    ],
+    "protected_device_ids": [
+      "0cc979ea34852945574729129825a6b2",
+      "227724855ae674b89183ee9f92632aa2",
+      "3f468b4d72344090ba3fc494f7562e9f",
+      "72464832ea5d50edac5e918c2018497a",
+      "7938b2ad630e3f5c590057a1fd59df79",
+      "7c98ea31c0db5d9db1de8cc6641c6606"
+    ],
+    "reason": "Syftet med Slider och placeringen för ESPHome09 är oklara. Ingen fortsatt namn-/ID-/områdesändring för dessa innan de har utretts."
+  },
+  "user_confirmed_external_dependencies": "Inga externa beroenden vad användaren vet",
+  "user_confirmed_locations": {
+    "Blomlampa 2": "Köket",
+    "Taklampor tidigare i Entrén": "Köket",
+    "LED-lister": "Rummen i deras namn",
+    "Frösåddslampa": "Inte aktiv; driftstatus oförändrad"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "area_id": null,
+  "categories": {},
+  "config_entry_id": "01KHBMCW54ZYMABN5FRZY31HD5",
+  "config_subentry_id": null,
+  "created_at": 1786961804.427927,
+  "device_id": "e80cd70cfca9a3dc1015e3c62fee06ca",
+  "disabled_by": "user",
+  "entity_category": "diagnostic",
+  "entity_id": "sensor.taklampor_kokson_aktiv_strom",
+  "hidden_by": null,
+  "icon": null,
+  "id": "658da1a329483a286c9e3764e4a25c65",
+  "labels": [],
+  "modified_at": 1792582461.934536,
+  "name": null,
+  "next_name_part": "device",
+  "options": {
+    "sensor.private": {
+      "suggested_unit_of_measurement": "A"
+    },
+    "cloud.google_assistant": {
+      "should_expose": false
+    },
+    "sensor": {
+      "suggested_display_precision": 2
+    },
+    "conversation": {
+      "should_expose": false
+    }
+  },
+  "original_name": "Aktiv ström",
+  "platform": "matter",
+  "translation_key": "active_current",
+  "unique_id": "9452696A70D3B0D6-0000000000000028-MatterNodeDevice-0-ElectricalPowerMeasurementActiveCurrent-144-5",
+  "aliases": [
+    null
+  ],
+  "capabilities": {
+    "state_class": "measurement"
+  },
+  "device_class": null,
+  "original_device_class": "current",
+  "original_icon": null
+}

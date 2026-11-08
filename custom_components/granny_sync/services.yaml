@@ -9,7 +9,7 @@ speak:
           integration: music_assistant
           domain: media_player
     tts_entity_id:
-      default: tts.piper
+      default: tts.heimdal_ha_piper
       selector:
         entity:
           domain: tts

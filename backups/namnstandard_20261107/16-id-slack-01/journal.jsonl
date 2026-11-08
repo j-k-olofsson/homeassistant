@@ -1,0 +1,2 @@
+{"status": "rename_intent", "old": "sensor.slack_u15kalfh7_do_not_disturb_until", "new": "sensor.flocken"}
+{"status": "renamed", "old": "sensor.slack_u15kalfh7_do_not_disturb_until", "new": "sensor.flocken"}

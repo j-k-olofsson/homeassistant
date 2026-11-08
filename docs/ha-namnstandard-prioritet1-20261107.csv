@@ -1,0 +1,51 @@
+﻿entity_id,nuvarande_entitetsnamn,nuvarande_enhetsnamn,område,förslag_entitetsnamn_eller_val,kommentar,referenser
+sensor.temp_hum_sovrum_humidity,Sovrummet Fukt,Temp/Hum (Sovrum),Sovrummet,Luftfuktighet,Behåll entity_id. Anpassa enhetsnamnet separat.,
+sensor.temp_hum_utomhus_humidity,Utomhus Fukt,Temp/Hum (Utomhus),Utomhus,Luftfuktighet,Behåll entity_id. Anpassa enhetsnamnet separat.,lovelace.lovelace/Kameror/views[4].sections[0].cards[0].badges[2] | lovelace.lovelace/Kameror/views[4].sections[0].cards[0].badges[2].entity
+sensor.termostat_friggan_esphome21_temperature,Friggan Temp,Termostat (friggan),Friggan,Temperatur,Behåll entity_id. Anpassa enhetsnamnet separat.,lovelace.lovelace_friggan/Home/views[0].cards[0].cards[0] | lovelace.lovelace_friggan/Home/views[0].cards[0].cards[0].entity
+sensor.termostat_friggan_esphome21_humidity,Friggan Fukt,Termostat (friggan),Friggan,Luftfuktighet,Behåll entity_id. Anpassa enhetsnamnet separat.,
+climate.termostat_friggan_esphome21_thermostat,Element Termostat (friggan),Termostat (friggan),Friggan,Huvudentitet för enheten,Sätt huvudfunktion i HA efter att enhetens namn och område kontrollerats.,lovelace.lovelace/Värme/views[1].sections[0].cards[9] | lovelace.lovelace/Värme/views[1].sections[0].cards[9].entity | lovelace.lovelace_friggan/Home/views[0].cards[1] | lovelace.lovelace_friggan/Home/views[0].cards[1].entity
+sensor.termostat_toaletten_esphome83_temperature,Toaletten Temp,Termostat (toaletten),Toaletten,Temperatur,Behåll entity_id. Anpassa enhetsnamnet separat.,
+climate.termostat_toaletten_esphome83_thermostat,Golvvärme Termostat (toaletten),Termostat (toaletten),Toaletten,Huvudentitet för enheten,Sätt huvudfunktion i HA efter att enhetens namn och område kontrollerats.,lovelace.lovelace/Värme/views[1].sections[0].cards[7] | lovelace.lovelace/Värme/views[1].sections[0].cards[7].entity
+switch.golvvarme_sovrum_kontor_esphome81_relay_state,Golvvärme (sovrum/kontor),Golvvärme (sovrum och kontor),Sovrummet,Huvudentitet för enheten,Kontrollera att detta är enhetens huvudfunktion. Gemensam värmestyrning för flera rum kräver manuell bedömning.,lovelace.lovelace/Värme/views[1].sections[0].cards[12] | lovelace.lovelace/Värme/views[1].sections[0].cards[12].entity
+sensor.golvvarme_sovrum_kontor_esphome81_energy,Golvvärme Sovrum energy,Golvvärme (sovrum och kontor),Sovrummet,Energi,Behåll entity_id. Anpassa enhetsnamnet separat.,
+sensor.golvvarme_friggan_esphome80_energy,Golvvärmer Friggan energy,Golvvärme (friggan),Friggan,Energi,Behåll entity_id. Anpassa enhetsnamnet separat.,
+sensor.termostat_kontoret_esphome20_temperature,Kontoret Temp,Termostat (kontoret),Kontoret,Temperatur,Behåll entity_id. Anpassa enhetsnamnet separat.,
+sensor.termostat_kontoret_esphome20_humidity,Kontoret Fukt,Termostat (kontoret),Kontoret,Luftfuktighet,Behåll entity_id. Anpassa enhetsnamnet separat.,
+light.taklampor_sovrum_esphome54_light,Taklampor,Taklampor (sovrum),Sovrummet,Huvudentitet för enheten,Sätt huvudfunktion i HA efter att enhetens namn och område kontrollerats.,
+sensor.poolbelysning_temp_esphome29_temperature,Poolen,Poolbelysning & temp,Poolen,Temperatur,Behåll entity_id. Anpassa enhetsnamnet separat.,automations.yaml:1105 | lovelace.lovelace/Pool/views[2].badges[3] | lovelace.lovelace/Pool/views[2].badges[3].entity
+switch.poolpump_utomhus_esphome27_relay_state,Poolpump,Poolpump (utomhus),Poolen,Huvudentitet för enheten,Sätt huvudfunktion i HA efter att enhetens namn och område kontrollerats.,automations.yaml:2189 | automations.yaml:2199 | lovelace.lovelace/0/views[0].sections[3].cards[2] | lovelace.lovelace/0/views[0].sections[3].cards[2].entity | lovelace.lovelace/Pool/views[2].badges[0] | lovelace.lovelace/Pool/views[2].badges[0].entity
+sensor.temp_hyg_gamla_verkstan_esphome71_room_temperature,G:a verkstan Temp,TempHyg (gamla verkstan),Gamla verkstaden,Temperatur,Behåll entity_id. Anpassa enhetsnamnet separat.,
+sensor.temp_hyg_gamla_verkstan_esphome71_room_humidity,G:a verkstan Fukt,TempHyg (gamla verkstan),Gamla verkstaden,Luftfuktighet,Behåll entity_id. Anpassa enhetsnamnet separat.,
+binary_sensor.shelly_blu_door_window_2a6d_window,Verandan,BTHome sensor 2A6D,Verandan,Öppning,Ge enheten ett beskrivande namn för dörren/fönstret; kontrollera vilken öppning det är.,automations.yaml:830
+sensor.shelly_blu_door_window_2a6d_battery_plus,Dörrar (Verandan),BTHome sensor 2A6D,Verandan,Batteriinformation,Battery Notes: kontrollera vad som ska visas och läsas upp.,
+binary_sensor.vattensensor_torkskap_flood,Vattensensor (Torkskåpet),Vattensensor (torkskåp),Ateljén,Läckage,Behåll entity_id. Anpassa enhetsnamnet separat.,automations.yaml:850
+sensor.vattensensor_torkskap_temperature,Vattensensor Temp (Torkskåpet),Vattensensor (torkskåp),Ateljén,Temperatur,Behåll entity_id. Anpassa enhetsnamnet separat.,
+light.esphome57_esphome57_light,Taklampor,Taklampor (källaren),Bion,Huvudentitet för enheten,Sätt huvudfunktion i HA efter att enhetens namn och område kontrollerats.,lovelace.dashboard_hemmabio/Bio/views[0].cards[0].cards[3] | lovelace.dashboard_hemmabio/Bio/views[0].cards[0].cards[3].entity
+light.esphome60_esphome60_light,Taklampor,Taklampor (köket),Entrén,Huvudentitet för enheten,Sätt huvudfunktion i HA efter att enhetens namn och område kontrollerats.,packages/presence_simulation.yaml:67
+light.taklampa_kontoret,Taklampor,Taklampor (kontoret),Kontoret,Huvudentitet för enheten,Sätt huvudfunktion i HA efter att enhetens namn och område kontrollerats.,
+light.esphome63_light,Taklampor,Taklampor (duschen),Duschen,Huvudentitet för enheten,Sätt huvudfunktion i HA efter att enhetens namn och område kontrollerats.,
+light.esphome05_light,Blomlampa,Blomlampa (kontoret),Kontoret,Huvudentitet för enheten,Sätt huvudfunktion i HA efter att enhetens namn och område kontrollerats.,
+sensor.dusch_fukt,Dusch Fukt,Temp/Hum (Dusch),Duschen,Luftfuktighet,Behåll entity_id. Anpassa enhetsnamnet separat.,
+sensor.dusch_temp,Dusch Temp,Temp/Hum (Dusch),Duschen,Temperatur,Behåll entity_id. Anpassa enhetsnamnet separat.,
+sensor.koket_temp,Köket Temp,Temp/Hum (Kök),Köket,Temperatur,Behåll entity_id. Anpassa enhetsnamnet separat.,
+sensor.verkstan_batteriniva,Verkstan Batterinivå,Temp/Hum (Verkstad),Verkstaden,Batterinivå,Behåll entity_id. Anpassa enhetsnamnet separat.,
+sensor.verkstan_hum,Verkstan Hum,Temp/Hum (Verkstad),Verkstaden,Luftfuktighet,Behåll entity_id. Anpassa enhetsnamnet separat.,lovelace.lovelace/Verkstaden/views[8].sections[0].cards[3] | lovelace.lovelace/Verkstaden/views[8].sections[0].cards[3].entity
+sensor.verkstan_temp,Verkstan Temp,Temp/Hum (Verkstad),Verkstaden,Temperatur,Behåll entity_id. Anpassa enhetsnamnet separat.,lovelace.lovelace/Verkstaden/views[8].sections[0].cards[4] | lovelace.lovelace/Verkstaden/views[8].sections[0].cards[4].entity
+sensor.ateljen_batteriniva,Ateljén Batterinivå,Temp/Hum (Ateljé),Ateljén,Batterinivå,Behåll entity_id. Anpassa enhetsnamnet separat.,
+sensor.ateljen_temp,Ateljén Temp,Temp/Hum (Ateljé),Ateljén,Temperatur,Behåll entity_id. Anpassa enhetsnamnet separat.,
+sensor.temp_hum_atelje_humidity,Ateljén Fukt,Temp/Hum (Ateljé),Ateljén,Luftfuktighet,Behåll entity_id. Anpassa enhetsnamnet separat.,
+sensor.bio_temp,Bio Temp,Temp/Hum (Hemmabio),Bion,Temperatur,Behåll entity_id. Anpassa enhetsnamnet separat.,
+sensor.temp_hum_hemmabio_humidity,Bio Fukt,Temp/Hum (Hemmabio),Bion,Luftfuktighet,Behåll entity_id. Anpassa enhetsnamnet separat.,
+sensor.sovrum_batteriniva,Sovrum Batterinivå,Temp/Hum (Sovrum),Sovrummet,Batterinivå,Behåll entity_id. Anpassa enhetsnamnet separat.,
+sensor.sovrummet_temp,Sovrummet Temp,Temp/Hum (Sovrum),Sovrummet,Temperatur,Behåll entity_id. Anpassa enhetsnamnet separat.,
+sensor.fuktighet_entren,Entrén Fukt,Temp/Hum (Entré),Entrén,Bedöm manuellt,Behåll entity_id. Anpassa enhetsnamnet separat.,
+sensor.temperatur_entren,Entrén Temp,Temp/Hum (Entré),Entrén,Bedöm manuellt,Behåll entity_id. Anpassa enhetsnamnet separat.,
+sensor.honshuset_batteriniva,Hönshuset Batterinivå,Temp/Hum (Hönshus),Hönshuset,Batterinivå,Behåll entity_id. Anpassa enhetsnamnet separat.,
+sensor.honshuset_temp,Hönshuset Temp,Temp/Hum (Hönshus),Hönshuset,Temperatur,Behåll entity_id. Anpassa enhetsnamnet separat.,automations.yaml:460 | automations.yaml:465 | automations.yaml:515 | lovelace.lovelace/Kameror/views[4].sections[0].cards[2].badges[0] | lovelace.lovelace/Kameror/views[4].sections[0].cards[2].badges[0].entity
+sensor.temp_hum_honshuset_humidity,Temp/Hum (Hönshuset) Humidity,Temp/Hum (Hönshus),Hönshuset,Luftfuktighet,Behåll entity_id. Anpassa enhetsnamnet separat.,lovelace.lovelace/Kameror/views[4].sections[0].cards[2].badges[1] | lovelace.lovelace/Kameror/views[4].sections[0].cards[2].badges[1].entity
+sensor.temp_hum_veranda_humidity,Verandan Fukt,Temp/Hum (Veranda),Verandan,Luftfuktighet,Behåll entity_id. Anpassa enhetsnamnet separat.,
+sensor.verandan_batteriniva,Verandan Batterinivå,Temp/Hum (Veranda),Verandan,Batterinivå,Behåll entity_id. Anpassa enhetsnamnet separat.,
+sensor.verandan_temp,Verandan Temp,Temp/Hum (Veranda),Verandan,Temperatur,Behåll entity_id. Anpassa enhetsnamnet separat.,
+sensor.utomhus_batteriniva,Utomhus Batterinivå,Temp/Hum (Utomhus),Utomhus,Batterinivå,Behåll entity_id. Anpassa enhetsnamnet separat.,
+sensor.utomhus_temp,Utomhus Temp,Temp/Hum (Utomhus),Utomhus,Temperatur,Behåll entity_id. Anpassa enhetsnamnet separat.,lovelace.lovelace/0/views[0].sections[0].cards[1].current.temperature_entity | lovelace.lovelace/Kameror/views[4].sections[0].cards[0].badges[0] | lovelace.lovelace/Kameror/views[4].sections[0].cards[0].badges[0].entity | lovelace.lovelace_friggan/Home/views[0].cards[0].cards[1] | lovelace.lovelace_friggan/Home/views[0].cards[0].cards[1].entity
+sensor.temp_hum_kok_humidity,Köket Fukt,Temp/Hum (Kök),Köket,Luftfuktighet,Behåll entity_id. Anpassa enhetsnamnet separat.,

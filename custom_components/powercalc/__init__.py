@@ -30,7 +30,8 @@ from homeassistant.helpers.event import async_call_later, async_track_time_inter
 from homeassistant.helpers.reload import async_integration_yaml_config
 from homeassistant.helpers.service import async_register_admin_service
 from homeassistant.helpers.typing import ConfigType
-import voluptuous as vol
+
+from custom_components.powercalc.validation import vol
 
 from .analytics.analytics import ANALYTICS_INTERVAL, Analytics
 from .common import validate_name_pattern
@@ -111,6 +112,7 @@ from .const import (
 )
 from .device_binding import is_composite_device_id
 from .discovery import DiscoveryManager, DiscoveryStatus, get_discovery_manager
+from .issues import async_create_config_entry_issue
 from .measure import MeasureAppCoordinator
 from .migrate import async_fix_legacy_profile_config_entry, async_migrate_config_entry
 from .power_profile.power_profile import DeviceType
@@ -427,7 +429,7 @@ async def setup_yaml_sensors(
         else:
             primary_sensors.append(sensor_config)
 
-    async def _load_secondary_sensors(_: None) -> None:
+    async def _load_secondary_sensors(_: Event) -> None:
         """Load secondary sensors after primary sensors."""
         await asyncio.gather(
             *(
@@ -524,7 +526,9 @@ async def async_unload_entry(hass: HomeAssistant, config_entry: ConfigEntry) -> 
 
 async def async_remove_entry(hass: HomeAssistant, config_entry: ConfigEntry) -> None:
     """Called after a config entry is removed."""
+    # Older HA releases and issues created before ownership was set need explicit cleanup.
     ir.async_delete_issue(hass, DOMAIN, _composite_device_issue_id(config_entry.entry_id))
+    ir.async_delete_issue(hass, DOMAIN, f"sub_profile_{config_entry.entry_id}")
 
     discovery_manager = get_discovery_manager(hass)
     discovery_manager.remove_initialized_flow(config_entry)
@@ -556,13 +560,10 @@ def _async_handle_composite_device_issue(hass: HomeAssistant, entry: ConfigEntry
         ir.async_delete_issue(hass, DOMAIN, issue_id)
         return
 
-    ir.async_create_issue(
+    async_create_config_entry_issue(
         hass,
-        DOMAIN,
+        entry,
         issue_id,
-        data={"config_entry_id": entry.entry_id},
-        is_fixable=True,
-        severity=ir.IssueSeverity.WARNING,
         translation_key=ISSUE_COMPOSITE_DEVICE_ID,
         translation_placeholders={"name": entry.title},
     )

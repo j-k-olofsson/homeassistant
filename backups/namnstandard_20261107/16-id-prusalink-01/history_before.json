@@ -1,0 +1,26 @@
+{
+  "sensor.prusaxl_munstycke_maltemperatur": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:31.849281+00:00",
+      "last_updated": "2026-11-07T07:55:31.849281+00:00"
+    }
+  ],
+  "sensor.pixel_nozzle_diameter": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:31.849281+00:00",
+      "last_updated": "2026-11-07T07:55:31.849281+00:00"
+    }
+  ],
+  "button.kontoret_prusa_xl_continue_job": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:31.849281+00:00",
+      "last_updated": "2026-11-07T07:55:31.849281+00:00"
+    }
+  ]
+}

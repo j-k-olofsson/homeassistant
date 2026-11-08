@@ -3,7 +3,8 @@
 from enum import StrEnum
 from typing import Literal
 
-from homeassistant.components import cover, device_tracker
+from homeassistant.components import cover
+from homeassistant.components.device_tracker.const import DOMAIN as DEVICE_TRACKER_DOMAIN
 from homeassistant.components.utility_meter.const import DAILY, MONTHLY, WEEKLY
 from homeassistant.const import (
     STATE_CLOSED,
@@ -52,6 +53,8 @@ ENTRY_GLOBAL_CONFIG_UNIQUE_ID = "powercalc_global_configuration"
 
 PLACEHOLDER_ENTITY_BY_DEVICE_CLASS = "entity_by_device_class:"
 PLACEHOLDER_ENTITY_BY_TRANSLATION_KEY = "entity_by_translation_key:"
+PLACEHOLDER_ENTITY_BY_UNIQUE_ID_SUFFIX = "entity_by_unique_id_suffix:"
+PLACEHOLDER_OPTIONAL_PREFIX = "optional:"
 
 DUMMY_ENTITY_ID = "sensor.dummy"
 
@@ -117,6 +120,7 @@ CONF_FIXED = "fixed"
 CONF_FLOOR = "floor"
 CONF_FORCE_CALCULATE_GROUP_ENERGY = "force_calculate_group_energy"
 CONF_FORCE_ENERGY_SENSOR_CREATION = "force_energy_sensor_creation"
+CONF_FOLLOW_DEVICE_NAME = "follow_device_name"
 CONF_GAMMA_CURVE = "gamma_curve"
 CONF_GROUP = "group"
 CONF_GROUP_ENERGY_ENTITIES = "group_energy_entities"
@@ -260,6 +264,7 @@ ATTR_INTEGRATION = "integration"
 ATTR_IS_GROUP = "is_group"
 ATTR_STATE = "state"
 ATTR_SOURCE_ENTITY = "source_entity"
+ATTR_SOURCE_GROUP = "source_group"
 ATTR_SOURCE_DOMAIN = "source_domain"
 
 SERVICE_ACTIVATE_PLAYBOOK = "activate_playbook"
@@ -284,7 +289,7 @@ OFF_STATES = {STATE_OFF, STATE_STANDBY, STATE_UNAVAILABLE}
 UNAVAILABLE_STATES = frozenset({STATE_UNAVAILABLE, STATE_UNKNOWN})
 OFF_STATES_BY_DOMAIN: dict[str, set[str]] = {
     cover.DOMAIN: {STATE_CLOSED, STATE_OPEN},
-    device_tracker.DOMAIN: {STATE_NOT_HOME},
+    DEVICE_TRACKER_DOMAIN: {STATE_NOT_HOME},
 }
 
 DOCS_URI = "https://docs.powercalc.nl/configuration/global-configuration/"

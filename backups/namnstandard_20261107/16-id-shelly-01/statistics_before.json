@@ -1,0 +1,8368 @@
+{
+  "metadata": [
+    {
+      "statistic_id": "sensor.sanglampor_diego_power",
+      "display_unit_of_measurement": "W",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "W",
+      "unit_class": "power"
+    },
+    {
+      "statistic_id": "sensor.sanglampor_manni_power",
+      "display_unit_of_measurement": "W",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "W",
+      "unit_class": "power"
+    },
+    {
+      "statistic_id": "sensor.shellyplus1pm_a0dd6c29b134_switch_0_current",
+      "display_unit_of_measurement": "A",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "A",
+      "unit_class": "electric_current"
+    },
+    {
+      "statistic_id": "sensor.sanglampor_manni_energy",
+      "display_unit_of_measurement": "kWh",
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "kWh",
+      "unit_class": "energy"
+    },
+    {
+      "statistic_id": "sensor.shellyplug_s_083a8dc344dd_power",
+      "display_unit_of_measurement": "W",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "W",
+      "unit_class": "power"
+    },
+    {
+      "statistic_id": "sensor.julstjarnor_verandan_power",
+      "display_unit_of_measurement": "W",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "W",
+      "unit_class": "power"
+    },
+    {
+      "statistic_id": "sensor.golvvarme_verandan_switch_0_current",
+      "display_unit_of_measurement": "A",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "A",
+      "unit_class": "electric_current"
+    },
+    {
+      "statistic_id": "sensor.verandan_julstjarnor_verandan_effektfaktor",
+      "display_unit_of_measurement": null,
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.vattensensor_torkskap_battery",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.shellyplus1pm_a0dd6c29b134_switch_0_voltage",
+      "display_unit_of_measurement": "V",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "V",
+      "unit_class": "voltage"
+    },
+    {
+      "statistic_id": "sensor.julstjarnor_verandan_energy",
+      "display_unit_of_measurement": "kWh",
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "kWh",
+      "unit_class": "energy"
+    },
+    {
+      "statistic_id": "sensor.shellyplus1pm_e465b8f1c1b8_signal_strength",
+      "display_unit_of_measurement": "dBm",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "dBm",
+      "unit_class": null
+    },
+    {
+      "statistic_id": "sensor.taklampor_verandan_energy_returned",
+      "display_unit_of_measurement": "kWh",
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "kWh",
+      "unit_class": "energy"
+    },
+    {
+      "statistic_id": "sensor.julstjarnor_verandan_energy_returned",
+      "display_unit_of_measurement": "kWh",
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "kWh",
+      "unit_class": "energy"
+    },
+    {
+      "statistic_id": "sensor.golvvarme_verandan_switch_0_device_temperature",
+      "display_unit_of_measurement": "°C",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "°C",
+      "unit_class": "temperature"
+    },
+    {
+      "statistic_id": "sensor.golvvarme_entren_switch_0_voltage",
+      "display_unit_of_measurement": "V",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "V",
+      "unit_class": "voltage"
+    },
+    {
+      "statistic_id": "sensor.golvvarme_bion_switch_0_current",
+      "display_unit_of_measurement": "A",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "A",
+      "unit_class": "electric_current"
+    },
+    {
+      "statistic_id": "sensor.golvvarme_bion_switch_0_voltage",
+      "display_unit_of_measurement": "V",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "V",
+      "unit_class": "voltage"
+    },
+    {
+      "statistic_id": "sensor.golvvarme_bion_switch_0_device_temperature",
+      "display_unit_of_measurement": "°C",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "°C",
+      "unit_class": "temperature"
+    },
+    {
+      "statistic_id": "sensor.sanglampor_diego_energy",
+      "display_unit_of_measurement": "kWh",
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "kWh",
+      "unit_class": "energy"
+    },
+    {
+      "statistic_id": "sensor.vattensensor_torkskap_temperature",
+      "display_unit_of_measurement": "°C",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "°C",
+      "unit_class": "temperature"
+    },
+    {
+      "statistic_id": "sensor.shellyplus1pm_e465b8f1c1b8_current",
+      "display_unit_of_measurement": "A",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "A",
+      "unit_class": "electric_current"
+    },
+    {
+      "statistic_id": "sensor.utomhus_led_stjarnor_utomhus_shpls_signalstyrka",
+      "display_unit_of_measurement": "dBm",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "dBm",
+      "unit_class": null
+    },
+    {
+      "statistic_id": "sensor.taklampor_verandan_energy",
+      "display_unit_of_measurement": "kWh",
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "kWh",
+      "unit_class": "energy"
+    },
+    {
+      "statistic_id": "sensor.golvvarme_entren_switch_0_current",
+      "display_unit_of_measurement": "A",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "A",
+      "unit_class": "electric_current"
+    },
+    {
+      "statistic_id": "sensor.golvvarme_ateljen_switch_0_voltage",
+      "display_unit_of_measurement": "V",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "V",
+      "unit_class": "voltage"
+    },
+    {
+      "statistic_id": "sensor.golvvarme_entren_switch_0_device_temperature",
+      "display_unit_of_measurement": "°C",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "°C",
+      "unit_class": "temperature"
+    },
+    {
+      "statistic_id": "sensor.golvvarme_ateljen_switch_0_current",
+      "display_unit_of_measurement": "A",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "A",
+      "unit_class": "electric_current"
+    },
+    {
+      "statistic_id": "sensor.utomhus_led_stjarnor_utomhus_shpls_effekt",
+      "display_unit_of_measurement": "W",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "W",
+      "unit_class": "power"
+    },
+    {
+      "statistic_id": "sensor.utomhus_led_stjarnor_utomhus_shpls_energi",
+      "display_unit_of_measurement": "kWh",
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "kWh",
+      "unit_class": "energy"
+    },
+    {
+      "statistic_id": "sensor.verandan_taklampor_verandan_effektfaktor",
+      "display_unit_of_measurement": null,
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.golvvarme_ateljen_switch_0_device_temperature",
+      "display_unit_of_measurement": "°C",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "°C",
+      "unit_class": "temperature"
+    },
+    {
+      "statistic_id": "sensor.taklampor_verandan_power",
+      "display_unit_of_measurement": "W",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "W",
+      "unit_class": "power"
+    },
+    {
+      "statistic_id": "sensor.golvvarme_verandan_switch_0_voltage",
+      "display_unit_of_measurement": "V",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "V",
+      "unit_class": "voltage"
+    },
+    {
+      "statistic_id": "sensor.shellyplus1pm_e465b8f1c1b8_power",
+      "display_unit_of_measurement": "W",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "W",
+      "unit_class": "power"
+    },
+    {
+      "statistic_id": "sensor.shellyplus1pm_e465b8f1c1b8_voltage",
+      "display_unit_of_measurement": "V",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "V",
+      "unit_class": "voltage"
+    },
+    {
+      "statistic_id": "sensor.shellyplug_s_083a8dc344dd_energy",
+      "display_unit_of_measurement": "kWh",
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "kWh",
+      "unit_class": "energy"
+    },
+    {
+      "statistic_id": "sensor.shellyplus1pm_e465b8f1c1b8_energy",
+      "display_unit_of_measurement": "kWh",
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "kWh",
+      "unit_class": "energy"
+    }
+  ],
+  "series": {
+    "sensor.golvvarme_verandan_switch_0_current": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      }
+    ],
+    "sensor.golvvarme_ateljen_switch_0_device_temperature": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 68.9,
+        "state": null,
+        "mean": 69.44066843922222,
+        "sum": null,
+        "max": 70.1
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 69.6,
+        "state": null,
+        "mean": 69.9306604973889,
+        "sum": null,
+        "max": 70.3
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 69.2,
+        "state": null,
+        "mean": 69.78470834997222,
+        "sum": null,
+        "max": 70.1
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 69.2,
+        "state": null,
+        "mean": 69.45180382061112,
+        "sum": null,
+        "max": 69.9
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 68.5,
+        "state": null,
+        "mean": 69.12451867316666,
+        "sum": null,
+        "max": 69.5
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 69.1,
+        "state": null,
+        "mean": 69.52310039102777,
+        "sum": null,
+        "max": 70.1
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 69.6,
+        "state": null,
+        "mean": 69.82670574091667,
+        "sum": null,
+        "max": 70.2
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 69.4,
+        "state": null,
+        "mean": 69.8468050288889,
+        "sum": null,
+        "max": 70.1
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 69.2,
+        "state": null,
+        "mean": 69.56786037519446,
+        "sum": null,
+        "max": 70.1
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 69.3,
+        "state": null,
+        "mean": 69.68268667633332,
+        "sum": null,
+        "max": 70.1
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 69.2,
+        "state": null,
+        "mean": 69.47215652433333,
+        "sum": null,
+        "max": 69.9
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 69.1,
+        "state": null,
+        "mean": 69.36104006130556,
+        "sum": null,
+        "max": 69.8
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 68.5,
+        "state": null,
+        "mean": 68.95725835797222,
+        "sum": null,
+        "max": 69.4
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 68.2,
+        "state": null,
+        "mean": 68.46260850172222,
+        "sum": null,
+        "max": 69.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 67.7,
+        "state": null,
+        "mean": 68.01947257391667,
+        "sum": null,
+        "max": 68.5
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 67.3,
+        "state": null,
+        "mean": 67.54032509547223,
+        "sum": null,
+        "max": 68.1
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 66.7,
+        "state": null,
+        "mean": 67.13937205616666,
+        "sum": null,
+        "max": 67.5
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 66.5,
+        "state": null,
+        "mean": 66.7059747648889,
+        "sum": null,
+        "max": 67.2
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 66.0,
+        "state": null,
+        "mean": 66.3931248828611,
+        "sum": null,
+        "max": 66.9
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 65.8,
+        "state": null,
+        "mean": 66.13879251994445,
+        "sum": null,
+        "max": 66.5
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 65.0,
+        "state": null,
+        "mean": 65.78816141488888,
+        "sum": null,
+        "max": 66.3
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 64.7,
+        "state": null,
+        "mean": 65.12166658455554,
+        "sum": null,
+        "max": 65.8
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 64.4,
+        "state": null,
+        "mean": 64.89266816533333,
+        "sum": null,
+        "max": 65.8
+      }
+    ],
+    "sensor.taklampor_verandan_power": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      }
+    ],
+    "sensor.utomhus_led_stjarnor_utomhus_shpls_signalstyrka": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": -67.0,
+        "state": null,
+        "mean": -66.21747573472223,
+        "sum": null,
+        "max": -64.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": -69.0,
+        "state": null,
+        "mean": -66.99100250916666,
+        "sum": null,
+        "max": -63.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": -69.0,
+        "state": null,
+        "mean": -67.92885898861111,
+        "sum": null,
+        "max": -65.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": -70.0,
+        "state": null,
+        "mean": -63.39704811444444,
+        "sum": null,
+        "max": -61.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": -64.0,
+        "state": null,
+        "mean": -63.04970376861112,
+        "sum": null,
+        "max": -62.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": -65.0,
+        "state": null,
+        "mean": -63.879615530555554,
+        "sum": null,
+        "max": -63.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": -66.0,
+        "state": null,
+        "mean": -64.98315549194444,
+        "sum": null,
+        "max": -64.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": -65.0,
+        "state": null,
+        "mean": -64.0423509363889,
+        "sum": null,
+        "max": -63.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": -68.0,
+        "state": null,
+        "mean": -64.42526399944444,
+        "sum": null,
+        "max": -62.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": -66.0,
+        "state": null,
+        "mean": -64.69260053583334,
+        "sum": null,
+        "max": -62.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": -65.0,
+        "state": null,
+        "mean": -64.10671336388889,
+        "sum": null,
+        "max": -62.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": -67.0,
+        "state": null,
+        "mean": -64.46661733361111,
+        "sum": null,
+        "max": -61.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": -65.0,
+        "state": null,
+        "mean": -64.63318324805556,
+        "sum": null,
+        "max": -63.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": -65.0,
+        "state": null,
+        "mean": -63.75163573916666,
+        "sum": null,
+        "max": -61.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": -63.0,
+        "state": null,
+        "mean": -61.969943291944446,
+        "sum": null,
+        "max": -61.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": -64.0,
+        "state": null,
+        "mean": -62.433090248333336,
+        "sum": null,
+        "max": -61.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": -66.0,
+        "state": null,
+        "mean": -63.88055258027779,
+        "sum": null,
+        "max": -61.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": -63.0,
+        "state": null,
+        "mean": -61.74987376861111,
+        "sum": null,
+        "max": -60.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": -65.0,
+        "state": null,
+        "mean": -63.990825546111125,
+        "sum": null,
+        "max": -61.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": -66.0,
+        "state": null,
+        "mean": -62.128472030833336,
+        "sum": null,
+        "max": -60.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": -65.0,
+        "state": null,
+        "mean": -62.301625505555556,
+        "sum": null,
+        "max": -60.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": -64.0,
+        "state": null,
+        "mean": -61.71863431388889,
+        "sum": null,
+        "max": -60.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": -64.0,
+        "state": null,
+        "mean": -62.51673163444445,
+        "sum": null,
+        "max": -59.0
+      }
+    ],
+    "sensor.golvvarme_verandan_switch_0_voltage": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 228.3,
+        "state": null,
+        "mean": 230.91988454125,
+        "sum": null,
+        "max": 235.1
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 226.1,
+        "state": null,
+        "mean": 229.59186055927776,
+        "sum": null,
+        "max": 231.9
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 225.6,
+        "state": null,
+        "mean": 230.6620142282778,
+        "sum": null,
+        "max": 234.2
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 228.5,
+        "state": null,
+        "mean": 232.3483324035278,
+        "sum": null,
+        "max": 234.7
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 230.7,
+        "state": null,
+        "mean": 232.971696213,
+        "sum": null,
+        "max": 234.7
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 230.5,
+        "state": null,
+        "mean": 233.75166843983337,
+        "sum": null,
+        "max": 236.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 229.8,
+        "state": null,
+        "mean": 232.95799159391666,
+        "sum": null,
+        "max": 235.4
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 225.7,
+        "state": null,
+        "mean": 231.85124080130552,
+        "sum": null,
+        "max": 238.2
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 228.3,
+        "state": null,
+        "mean": 232.16944716413892,
+        "sum": null,
+        "max": 236.7
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 229.7,
+        "state": null,
+        "mean": 233.76697834394443,
+        "sum": null,
+        "max": 237.3
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 231.1,
+        "state": null,
+        "mean": 234.88309173316668,
+        "sum": null,
+        "max": 237.3
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 232.6,
+        "state": null,
+        "mean": 236.89111845822222,
+        "sum": null,
+        "max": 240.7
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 227.8,
+        "state": null,
+        "mean": 233.24580769236107,
+        "sum": null,
+        "max": 236.9
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 226.3,
+        "state": null,
+        "mean": 231.3739811505,
+        "sum": null,
+        "max": 237.4
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 230.4,
+        "state": null,
+        "mean": 232.67500655194445,
+        "sum": null,
+        "max": 234.6
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 230.4,
+        "state": null,
+        "mean": 233.54950355227777,
+        "sum": null,
+        "max": 235.7
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 230.3,
+        "state": null,
+        "mean": 232.28452118861117,
+        "sum": null,
+        "max": 234.9
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 228.5,
+        "state": null,
+        "mean": 232.2910351361944,
+        "sum": null,
+        "max": 233.7
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 222.5,
+        "state": null,
+        "mean": 226.9991584885,
+        "sum": null,
+        "max": 233.2
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 227.1,
+        "state": null,
+        "mean": 233.48088687441665,
+        "sum": null,
+        "max": 237.2
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 229.5,
+        "state": null,
+        "mean": 232.81846728563892,
+        "sum": null,
+        "max": 237.2
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 224.7,
+        "state": null,
+        "mean": 228.21293182916668,
+        "sum": null,
+        "max": 234.7
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 225.1,
+        "state": null,
+        "mean": 230.1225910401944,
+        "sum": null,
+        "max": 232.2
+      }
+    ],
+    "sensor.vattensensor_torkskap_temperature": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 18.0,
+        "state": null,
+        "mean": 18.0,
+        "sum": null,
+        "max": 18.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 18.0,
+        "state": null,
+        "mean": 18.0,
+        "sum": null,
+        "max": 18.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 18.0,
+        "state": null,
+        "mean": 18.0,
+        "sum": null,
+        "max": 18.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 18.0,
+        "state": null,
+        "mean": 18.0,
+        "sum": null,
+        "max": 18.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 18.0,
+        "state": null,
+        "mean": 18.0,
+        "sum": null,
+        "max": 18.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 18.0,
+        "state": null,
+        "mean": 18.0,
+        "sum": null,
+        "max": 18.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 18.0,
+        "state": null,
+        "mean": 18.0,
+        "sum": null,
+        "max": 18.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 18.0,
+        "state": null,
+        "mean": 18.0,
+        "sum": null,
+        "max": 18.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 18.0,
+        "state": null,
+        "mean": 18.0,
+        "sum": null,
+        "max": 18.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 18.0,
+        "state": null,
+        "mean": 18.0,
+        "sum": null,
+        "max": 18.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 18.0,
+        "state": null,
+        "mean": 18.0,
+        "sum": null,
+        "max": 18.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 18.0,
+        "state": null,
+        "mean": 18.0,
+        "sum": null,
+        "max": 18.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 18.0,
+        "state": null,
+        "mean": 18.0,
+        "sum": null,
+        "max": 18.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 18.0,
+        "state": null,
+        "mean": 18.0,
+        "sum": null,
+        "max": 18.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 18.0,
+        "state": null,
+        "mean": 18.0,
+        "sum": null,
+        "max": 18.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 18.0,
+        "state": null,
+        "mean": 18.0,
+        "sum": null,
+        "max": 18.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 18.0,
+        "state": null,
+        "mean": 18.0,
+        "sum": null,
+        "max": 18.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 18.0,
+        "state": null,
+        "mean": 18.0,
+        "sum": null,
+        "max": 18.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 18.0,
+        "state": null,
+        "mean": 18.0,
+        "sum": null,
+        "max": 18.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 18.0,
+        "state": null,
+        "mean": 18.0,
+        "sum": null,
+        "max": 18.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 18.0,
+        "state": null,
+        "mean": 18.0,
+        "sum": null,
+        "max": 18.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 18.0,
+        "state": null,
+        "mean": 18.0,
+        "sum": null,
+        "max": 18.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 18.0,
+        "state": null,
+        "mean": 18.0,
+        "sum": null,
+        "max": 18.0
+      }
+    ],
+    "sensor.golvvarme_entren_switch_0_voltage": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 228.9,
+        "state": null,
+        "mean": 231.97886764111107,
+        "sum": null,
+        "max": 233.8
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 231.0,
+        "state": null,
+        "mean": 233.46207313402775,
+        "sum": null,
+        "max": 235.6
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 234.0,
+        "state": null,
+        "mean": 236.27499406519442,
+        "sum": null,
+        "max": 239.1
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 233.9,
+        "state": null,
+        "mean": 236.11270846761113,
+        "sum": null,
+        "max": 237.9
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 234.6,
+        "state": null,
+        "mean": 236.66353506777776,
+        "sum": null,
+        "max": 238.2
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 234.5,
+        "state": null,
+        "mean": 236.85678069480556,
+        "sum": null,
+        "max": 238.5
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 235.1,
+        "state": null,
+        "mean": 237.37801588558332,
+        "sum": null,
+        "max": 239.4
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 232.2,
+        "state": null,
+        "mean": 235.8173285394167,
+        "sum": null,
+        "max": 238.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 230.8,
+        "state": null,
+        "mean": 233.5367265845,
+        "sum": null,
+        "max": 236.2
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 229.1,
+        "state": null,
+        "mean": 231.39578309394446,
+        "sum": null,
+        "max": 235.6
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 233.9,
+        "state": null,
+        "mean": 236.74859137180556,
+        "sum": null,
+        "max": 238.8
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 233.2,
+        "state": null,
+        "mean": 236.50739522522227,
+        "sum": null,
+        "max": 239.5
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 232.7,
+        "state": null,
+        "mean": 234.2186883195278,
+        "sum": null,
+        "max": 236.7
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 232.5,
+        "state": null,
+        "mean": 236.07730679491667,
+        "sum": null,
+        "max": 239.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 233.3,
+        "state": null,
+        "mean": 235.31585361116666,
+        "sum": null,
+        "max": 237.9
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 234.4,
+        "state": null,
+        "mean": 235.85178837494445,
+        "sum": null,
+        "max": 237.3
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 232.0,
+        "state": null,
+        "mean": 234.1524375311111,
+        "sum": null,
+        "max": 236.6
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 233.0,
+        "state": null,
+        "mean": 234.85486339222226,
+        "sum": null,
+        "max": 236.4
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 232.2,
+        "state": null,
+        "mean": 234.76225752361108,
+        "sum": null,
+        "max": 238.8
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 236.5,
+        "state": null,
+        "mean": 238.03528980252773,
+        "sum": null,
+        "max": 239.8
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 233.9,
+        "state": null,
+        "mean": 236.2299444351667,
+        "sum": null,
+        "max": 239.4
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 231.9,
+        "state": null,
+        "mean": 234.10171152236111,
+        "sum": null,
+        "max": 237.6
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 229.6,
+        "state": null,
+        "mean": 232.39224473247225,
+        "sum": null,
+        "max": 234.5
+      }
+    ],
+    "sensor.verandan_julstjarnor_verandan_effektfaktor": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      }
+    ],
+    "sensor.shellyplug_s_083a8dc344dd_power": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 23.63,
+        "state": null,
+        "mean": 23.85742353138889,
+        "sum": null,
+        "max": 24.07
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 23.66,
+        "state": null,
+        "mean": 23.860603244558334,
+        "sum": null,
+        "max": 24.06
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 23.63,
+        "state": null,
+        "mean": 23.86397142622222,
+        "sum": null,
+        "max": 24.06
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 23.63,
+        "state": null,
+        "mean": 23.861544309897223,
+        "sum": null,
+        "max": 24.1
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 16.20264460411111,
+        "sum": null,
+        "max": 24.16
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.10578856264166665,
+        "sum": null,
+        "max": 23.77
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      }
+    ],
+    "sensor.golvvarme_entren_switch_0_current": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 0.818,
+        "state": null,
+        "mean": 0.828627332303611,
+        "sum": null,
+        "max": 0.84
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.08064328889416666,
+        "sum": null,
+        "max": 0.826
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 1.0332525286891667,
+        "sum": null,
+        "max": 1.959
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 0.919,
+        "state": null,
+        "mean": 0.9525982027944444,
+        "sum": null,
+        "max": 0.998
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 0.886,
+        "state": null,
+        "mean": 0.9042174215188887,
+        "sum": null,
+        "max": 0.928
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 0.863,
+        "state": null,
+        "mean": 0.8757996419505556,
+        "sum": null,
+        "max": 0.891
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 0.855,
+        "state": null,
+        "mean": 0.865482771293889,
+        "sum": null,
+        "max": 0.874
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 0.848,
+        "state": null,
+        "mean": 0.8577815931769446,
+        "sum": null,
+        "max": 0.87
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 0.855,
+        "state": null,
+        "mean": 0.8607294109436112,
+        "sum": null,
+        "max": 0.871
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 0.842,
+        "state": null,
+        "mean": 0.850363833381111,
+        "sum": null,
+        "max": 0.863
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 0.837,
+        "state": null,
+        "mean": 0.8452481290099999,
+        "sum": null,
+        "max": 0.857
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 0.829,
+        "state": null,
+        "mean": 0.8424230439180557,
+        "sum": null,
+        "max": 0.851
+      }
+    ],
+    "sensor.vattensensor_torkskap_battery": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 12.0,
+        "state": null,
+        "mean": 12.0,
+        "sum": null,
+        "max": 12.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 12.0,
+        "state": null,
+        "mean": 12.0,
+        "sum": null,
+        "max": 12.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 12.0,
+        "state": null,
+        "mean": 12.0,
+        "sum": null,
+        "max": 12.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 12.0,
+        "state": null,
+        "mean": 12.0,
+        "sum": null,
+        "max": 12.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 12.0,
+        "state": null,
+        "mean": 12.0,
+        "sum": null,
+        "max": 12.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 12.0,
+        "state": null,
+        "mean": 12.0,
+        "sum": null,
+        "max": 12.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 12.0,
+        "state": null,
+        "mean": 12.0,
+        "sum": null,
+        "max": 12.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 12.0,
+        "state": null,
+        "mean": 12.0,
+        "sum": null,
+        "max": 12.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 12.0,
+        "state": null,
+        "mean": 12.0,
+        "sum": null,
+        "max": 12.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 12.0,
+        "state": null,
+        "mean": 12.0,
+        "sum": null,
+        "max": 12.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 12.0,
+        "state": null,
+        "mean": 12.0,
+        "sum": null,
+        "max": 12.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 12.0,
+        "state": null,
+        "mean": 12.0,
+        "sum": null,
+        "max": 12.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 12.0,
+        "state": null,
+        "mean": 12.0,
+        "sum": null,
+        "max": 12.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 12.0,
+        "state": null,
+        "mean": 12.0,
+        "sum": null,
+        "max": 12.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 12.0,
+        "state": null,
+        "mean": 12.0,
+        "sum": null,
+        "max": 12.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 12.0,
+        "state": null,
+        "mean": 12.0,
+        "sum": null,
+        "max": 12.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 12.0,
+        "state": null,
+        "mean": 12.0,
+        "sum": null,
+        "max": 12.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 12.0,
+        "state": null,
+        "mean": 12.0,
+        "sum": null,
+        "max": 12.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 12.0,
+        "state": null,
+        "mean": 12.0,
+        "sum": null,
+        "max": 12.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 12.0,
+        "state": null,
+        "mean": 12.0,
+        "sum": null,
+        "max": 12.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 12.0,
+        "state": null,
+        "mean": 12.0,
+        "sum": null,
+        "max": 12.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 12.0,
+        "state": null,
+        "mean": 12.0,
+        "sum": null,
+        "max": 12.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 12.0,
+        "state": null,
+        "mean": 12.0,
+        "sum": null,
+        "max": 12.0
+      }
+    ],
+    "sensor.golvvarme_ateljen_switch_0_voltage": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 227.5,
+        "state": null,
+        "mean": 231.43479885277773,
+        "sum": null,
+        "max": 234.3
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 228.9,
+        "state": null,
+        "mean": 231.9565479785,
+        "sum": null,
+        "max": 235.4
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 226.9,
+        "state": null,
+        "mean": 232.06466691386115,
+        "sum": null,
+        "max": 235.8
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 231.1,
+        "state": null,
+        "mean": 234.77077534422222,
+        "sum": null,
+        "max": 238.2
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 230.6,
+        "state": null,
+        "mean": 234.48533559191665,
+        "sum": null,
+        "max": 238.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 232.9,
+        "state": null,
+        "mean": 236.15773530280555,
+        "sum": null,
+        "max": 238.9
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 233.7,
+        "state": null,
+        "mean": 236.57079216902775,
+        "sum": null,
+        "max": 239.1
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 231.5,
+        "state": null,
+        "mean": 234.70753577427774,
+        "sum": null,
+        "max": 238.1
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 223.0,
+        "state": null,
+        "mean": 230.96003914333335,
+        "sum": null,
+        "max": 235.9
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 226.3,
+        "state": null,
+        "mean": 232.2996572206944,
+        "sum": null,
+        "max": 237.4
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 230.9,
+        "state": null,
+        "mean": 234.36126226405557,
+        "sum": null,
+        "max": 237.8
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 231.9,
+        "state": null,
+        "mean": 236.1407701167499,
+        "sum": null,
+        "max": 239.7
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 230.9,
+        "state": null,
+        "mean": 233.18197736169444,
+        "sum": null,
+        "max": 235.2
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 232.4,
+        "state": null,
+        "mean": 235.29642346622222,
+        "sum": null,
+        "max": 237.5
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 233.3,
+        "state": null,
+        "mean": 236.06451221091672,
+        "sum": null,
+        "max": 238.8
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 233.7,
+        "state": null,
+        "mean": 235.32402328008334,
+        "sum": null,
+        "max": 237.7
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 232.3,
+        "state": null,
+        "mean": 234.49910211230554,
+        "sum": null,
+        "max": 236.2
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 231.6,
+        "state": null,
+        "mean": 234.48192634274997,
+        "sum": null,
+        "max": 236.6
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 230.8,
+        "state": null,
+        "mean": 233.7238648053889,
+        "sum": null,
+        "max": 238.1
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 235.4,
+        "state": null,
+        "mean": 237.88862872883328,
+        "sum": null,
+        "max": 240.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 233.4,
+        "state": null,
+        "mean": 236.06377046677778,
+        "sum": null,
+        "max": 238.8
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 230.1,
+        "state": null,
+        "mean": 234.1224220130833,
+        "sum": null,
+        "max": 238.3
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 227.4,
+        "state": null,
+        "mean": 231.5355275188056,
+        "sum": null,
+        "max": 234.9
+      }
+    ],
+    "sensor.utomhus_led_stjarnor_utomhus_shpls_energi": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 73.735522,
+        "mean": null,
+        "sum": 0.16852200000001005,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 73.735522,
+        "mean": null,
+        "sum": 0.16852200000001005,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 73.735522,
+        "mean": null,
+        "sum": 0.16852200000001005,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 73.735522,
+        "mean": null,
+        "sum": 0.16852200000001005,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 73.735522,
+        "mean": null,
+        "sum": 0.16852200000001005,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 73.735522,
+        "mean": null,
+        "sum": 0.16852200000001005,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 73.735522,
+        "mean": null,
+        "sum": 0.16852200000001005,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 73.736227,
+        "mean": null,
+        "sum": 0.16922700000000646,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 73.737129,
+        "mean": null,
+        "sum": 0.17012900000000286,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 73.738008,
+        "mean": null,
+        "sum": 0.1710080000000005,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 73.738875,
+        "mean": null,
+        "sum": 0.171875,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 73.739738,
+        "mean": null,
+        "sum": 0.1727380000000096,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 73.740605,
+        "mean": null,
+        "sum": 0.1736050000000091,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 73.741462,
+        "mean": null,
+        "sum": 0.17446200000000545,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 73.742302,
+        "mean": null,
+        "sum": 0.17530200000000207,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 73.743128,
+        "mean": null,
+        "sum": 0.1761280000000056,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 73.743958,
+        "mean": null,
+        "sum": 0.17695800000001327,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 73.744786,
+        "mean": null,
+        "sum": 0.17778600000001177,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 73.745609,
+        "mean": null,
+        "sum": 0.17860900000000868,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 73.746413,
+        "mean": null,
+        "sum": 0.17941300000001092,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 73.747216,
+        "mean": null,
+        "sum": 0.18021600000000149,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 73.748017,
+        "mean": null,
+        "sum": 0.1810170000000113,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 73.748819,
+        "mean": null,
+        "sum": 0.1818190000000044,
+        "max": null
+      }
+    ],
+    "sensor.utomhus_led_stjarnor_utomhus_shpls_effekt": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.6992161375,
+        "sum": null,
+        "max": 1.1
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.8870670461944443,
+        "sum": null,
+        "max": 1.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.8845038275,
+        "sum": null,
+        "max": 1.1
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.8298489567777777,
+        "sum": null,
+        "max": 1.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.8529005504166668,
+        "sum": null,
+        "max": 1.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.8544306045833333,
+        "sum": null,
+        "max": 1.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.8372991020833332,
+        "sum": null,
+        "max": 1.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.8404337616666667,
+        "sum": null,
+        "max": 1.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.7926690446944443,
+        "sum": null,
+        "max": 1.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.8133649852500001,
+        "sum": null,
+        "max": 0.9
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.8199954496111111,
+        "sum": null,
+        "max": 0.9
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.8183046928611111,
+        "sum": null,
+        "max": 1.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.7667031335555556,
+        "sum": null,
+        "max": 0.9
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.7752067803888889,
+        "sum": null,
+        "max": 0.9
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.8150305819444444,
+        "sum": null,
+        "max": 0.9
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.7916520648333334,
+        "sum": null,
+        "max": 0.9
+      }
+    ],
+    "sensor.shellyplus1pm_e465b8f1c1b8_power": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 9.230831868805558,
+        "sum": null,
+        "max": 195.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 189.2,
+        "state": null,
+        "mean": 192.6750476864444,
+        "sum": null,
+        "max": 195.7
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 190.2,
+        "state": null,
+        "mean": 193.70617670241666,
+        "sum": null,
+        "max": 196.3
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 190.7,
+        "state": null,
+        "mean": 194.13302540347226,
+        "sum": null,
+        "max": 196.8
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 191.7,
+        "state": null,
+        "mean": 195.0618983516389,
+        "sum": null,
+        "max": 198.4
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 186.4,
+        "state": null,
+        "mean": 192.3874565238889,
+        "sum": null,
+        "max": 196.2
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 183.7,
+        "state": null,
+        "mean": 188.5999224347222,
+        "sum": null,
+        "max": 192.8
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 181.0,
+        "state": null,
+        "mean": 185.16150875922222,
+        "sum": null,
+        "max": 191.8
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 189.3,
+        "state": null,
+        "mean": 193.9932945518611,
+        "sum": null,
+        "max": 197.3
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 188.0,
+        "state": null,
+        "mean": 193.48363684636112,
+        "sum": null,
+        "max": 198.4
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 157.8264775513056,
+        "sum": null,
+        "max": 191.8
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 135.89625282980555,
+        "sum": null,
+        "max": 190.7
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 180.9,
+        "state": null,
+        "mean": 186.72517487972223,
+        "sum": null,
+        "max": 190.1
+      }
+    ],
+    "sensor.shellyplus1pm_e465b8f1c1b8_voltage": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 228.7,
+        "state": null,
+        "mean": 231.9064920795278,
+        "sum": null,
+        "max": 233.7
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 230.8,
+        "state": null,
+        "mean": 233.26549428911107,
+        "sum": null,
+        "max": 235.7
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 233.8,
+        "state": null,
+        "mean": 236.11973960025,
+        "sum": null,
+        "max": 238.9
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 233.5,
+        "state": null,
+        "mean": 235.59575986219443,
+        "sum": null,
+        "max": 237.5
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 234.1,
+        "state": null,
+        "mean": 236.22046400941667,
+        "sum": null,
+        "max": 237.7
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 234.3,
+        "state": null,
+        "mean": 236.44152017638888,
+        "sum": null,
+        "max": 238.1
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 234.9,
+        "state": null,
+        "mean": 236.9901570877222,
+        "sum": null,
+        "max": 239.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 231.6,
+        "state": null,
+        "mean": 235.34533239291667,
+        "sum": null,
+        "max": 237.6
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 229.9,
+        "state": null,
+        "mean": 232.9840062354722,
+        "sum": null,
+        "max": 235.9
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 228.3,
+        "state": null,
+        "mean": 230.8823688926111,
+        "sum": null,
+        "max": 235.2
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 232.9,
+        "state": null,
+        "mean": 236.27637369838888,
+        "sum": null,
+        "max": 238.3
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 232.6,
+        "state": null,
+        "mean": 235.9817050815556,
+        "sum": null,
+        "max": 239.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 231.0,
+        "state": null,
+        "mean": 233.72902764449995,
+        "sum": null,
+        "max": 236.1
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 232.6,
+        "state": null,
+        "mean": 236.04315350744443,
+        "sum": null,
+        "max": 238.6
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 233.4,
+        "state": null,
+        "mean": 235.26548113427782,
+        "sum": null,
+        "max": 238.1
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 234.0,
+        "state": null,
+        "mean": 235.68468843069442,
+        "sum": null,
+        "max": 237.3
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 231.7,
+        "state": null,
+        "mean": 234.00294931341668,
+        "sum": null,
+        "max": 236.4
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 233.2,
+        "state": null,
+        "mean": 234.70114677105553,
+        "sum": null,
+        "max": 236.2
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 232.1,
+        "state": null,
+        "mean": 234.62378061127774,
+        "sum": null,
+        "max": 238.7
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 236.5,
+        "state": null,
+        "mean": 237.85838288005553,
+        "sum": null,
+        "max": 239.6
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 233.0,
+        "state": null,
+        "mean": 236.06820922219438,
+        "sum": null,
+        "max": 239.7
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 231.5,
+        "state": null,
+        "mean": 233.81568803352778,
+        "sum": null,
+        "max": 237.4
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 228.4,
+        "state": null,
+        "mean": 232.00306459905553,
+        "sum": null,
+        "max": 234.1
+      }
+    ],
+    "sensor.taklampor_verandan_energy_returned": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      }
+    ],
+    "sensor.shellyplug_s_083a8dc344dd_energy": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 0.636933333333333,
+        "mean": null,
+        "sum": 17.69451666666697,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 0.6608,
+        "mean": null,
+        "sum": 17.71838333333363,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 0.68465,
+        "mean": null,
+        "sum": 17.742233333333623,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 0.708516666666667,
+        "mean": null,
+        "sum": 17.766100000000282,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 0.725233333333333,
+        "mean": null,
+        "sum": 17.78281666666694,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 0.725233333333333,
+        "mean": null,
+        "sum": 17.78281666666694,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 0.725233333333333,
+        "mean": null,
+        "sum": 17.78281666666694,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 0.725233333333333,
+        "mean": null,
+        "sum": 17.78281666666694,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 0.725233333333333,
+        "mean": null,
+        "sum": 17.78281666666694,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 0.725233333333333,
+        "mean": null,
+        "sum": 17.78281666666694,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 0.725233333333333,
+        "mean": null,
+        "sum": 17.78281666666694,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 0.725233333333333,
+        "mean": null,
+        "sum": 17.78281666666694,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 0.725233333333333,
+        "mean": null,
+        "sum": 17.78281666666694,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 0.7256,
+        "mean": null,
+        "sum": 17.783183333333607,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 0.7256,
+        "mean": null,
+        "sum": 17.783183333333607,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 0.7256,
+        "mean": null,
+        "sum": 17.783183333333607,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 0.7256,
+        "mean": null,
+        "sum": 17.783183333333607,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 0.7256,
+        "mean": null,
+        "sum": 17.783183333333607,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 0.7256,
+        "mean": null,
+        "sum": 17.783183333333607,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 0.7256,
+        "mean": null,
+        "sum": 17.783183333333607,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 0.7256,
+        "mean": null,
+        "sum": 17.783183333333607,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 0.7256,
+        "mean": null,
+        "sum": 17.783183333333607,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 0.7256,
+        "mean": null,
+        "sum": 17.783183333333607,
+        "max": null
+      }
+    ],
+    "sensor.julstjarnor_verandan_power": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      }
+    ],
+    "sensor.julstjarnor_verandan_energy_returned": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      }
+    ],
+    "sensor.taklampor_verandan_energy": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 1.314,
+        "mean": null,
+        "sum": 1.314,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 1.314,
+        "mean": null,
+        "sum": 1.314,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 1.314,
+        "mean": null,
+        "sum": 1.314,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 1.314,
+        "mean": null,
+        "sum": 1.314,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 1.314,
+        "mean": null,
+        "sum": 1.314,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 1.314,
+        "mean": null,
+        "sum": 1.314,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 1.314,
+        "mean": null,
+        "sum": 1.314,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 1.314,
+        "mean": null,
+        "sum": 1.314,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 1.314,
+        "mean": null,
+        "sum": 1.314,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 1.314,
+        "mean": null,
+        "sum": 1.314,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 1.314,
+        "mean": null,
+        "sum": 1.314,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 1.314,
+        "mean": null,
+        "sum": 1.314,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 1.314,
+        "mean": null,
+        "sum": 1.314,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 1.314,
+        "mean": null,
+        "sum": 1.314,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 1.314,
+        "mean": null,
+        "sum": 1.314,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 1.314,
+        "mean": null,
+        "sum": 1.314,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 1.314,
+        "mean": null,
+        "sum": 1.314,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 1.314,
+        "mean": null,
+        "sum": 1.314,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 1.314,
+        "mean": null,
+        "sum": 1.314,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 1.314,
+        "mean": null,
+        "sum": 1.314,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 1.314,
+        "mean": null,
+        "sum": 1.314,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 1.314,
+        "mean": null,
+        "sum": 1.314,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 1.314,
+        "mean": null,
+        "sum": 1.314,
+        "max": null
+      }
+    ],
+    "sensor.shellyplus1pm_a0dd6c29b134_switch_0_current": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      }
+    ],
+    "sensor.golvvarme_bion_switch_0_current": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 4.866362110180278,
+        "sum": null,
+        "max": 6.139
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 5.961,
+        "state": null,
+        "mean": 6.026279297010556,
+        "sum": null,
+        "max": 6.08
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 5.908,
+        "state": null,
+        "mean": 6.048719278860278,
+        "sum": null,
+        "max": 6.129
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 6.0,
+        "state": null,
+        "mean": 6.085418297463055,
+        "sum": null,
+        "max": 6.135
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 6.041,
+        "state": null,
+        "mean": 6.0970935581844445,
+        "sum": null,
+        "max": 6.141
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 6.022,
+        "state": null,
+        "mean": 6.109548982374999,
+        "sum": null,
+        "max": 6.159
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 6.012,
+        "state": null,
+        "mean": 6.087997846776667,
+        "sum": null,
+        "max": 6.15
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 3.732390741103334,
+        "sum": null,
+        "max": 6.122
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 4.583414867687222,
+        "sum": null,
+        "max": 6.336
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 6.075,
+        "state": null,
+        "mean": 6.12235807721639,
+        "sum": null,
+        "max": 6.175
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 6.073,
+        "state": null,
+        "mean": 6.133469427232499,
+        "sum": null,
+        "max": 6.186
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 6.053,
+        "state": null,
+        "mean": 6.0960119443963885,
+        "sum": null,
+        "max": 6.175
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 6.002,
+        "state": null,
+        "mean": 6.0912540477677775,
+        "sum": null,
+        "max": 6.128
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 5.86,
+        "state": null,
+        "mean": 5.965492817085277,
+        "sum": null,
+        "max": 6.111
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 5.968,
+        "state": null,
+        "mean": 6.111552596650276,
+        "sum": null,
+        "max": 6.196
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 6.014,
+        "state": null,
+        "mean": 6.0921076910888905,
+        "sum": null,
+        "max": 6.192
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 5.899,
+        "state": null,
+        "mean": 5.982976669665,
+        "sum": null,
+        "max": 6.136
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 5.899,
+        "state": null,
+        "mean": 6.0262278780008325,
+        "sum": null,
+        "max": 6.076
+      }
+    ],
+    "sensor.sanglampor_diego_energy": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 0.605783333333333,
+        "mean": null,
+        "sum": 16.36375000000202,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 0.605783333333333,
+        "mean": null,
+        "sum": 16.36375000000202,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 0.605783333333333,
+        "mean": null,
+        "sum": 16.36375000000202,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 0.605783333333333,
+        "mean": null,
+        "sum": 16.36375000000202,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 0.605783333333333,
+        "mean": null,
+        "sum": 16.36375000000202,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 0.605783333333333,
+        "mean": null,
+        "sum": 16.36375000000202,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 0.605783333333333,
+        "mean": null,
+        "sum": 16.36375000000202,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 0.605783333333333,
+        "mean": null,
+        "sum": 16.36375000000202,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 0.605783333333333,
+        "mean": null,
+        "sum": 16.36375000000202,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 0.605783333333333,
+        "mean": null,
+        "sum": 16.36375000000202,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 0.605783333333333,
+        "mean": null,
+        "sum": 16.36375000000202,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 0.605783333333333,
+        "mean": null,
+        "sum": 16.36375000000202,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 0.605783333333333,
+        "mean": null,
+        "sum": 16.36375000000202,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 0.605783333333333,
+        "mean": null,
+        "sum": 16.36375000000202,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 0.605783333333333,
+        "mean": null,
+        "sum": 16.36375000000202,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 0.605783333333333,
+        "mean": null,
+        "sum": 16.36375000000202,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 0.605783333333333,
+        "mean": null,
+        "sum": 16.36375000000202,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 0.605783333333333,
+        "mean": null,
+        "sum": 16.36375000000202,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 0.605783333333333,
+        "mean": null,
+        "sum": 16.36375000000202,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 0.605783333333333,
+        "mean": null,
+        "sum": 16.36375000000202,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 0.605783333333333,
+        "mean": null,
+        "sum": 16.36375000000202,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 0.605783333333333,
+        "mean": null,
+        "sum": 16.36375000000202,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 0.605783333333333,
+        "mean": null,
+        "sum": 16.36375000000202,
+        "max": null
+      }
+    ],
+    "sensor.golvvarme_bion_switch_0_voltage": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 225.8,
+        "state": null,
+        "mean": 228.48835884452774,
+        "sum": null,
+        "max": 233.3
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 223.8,
+        "state": null,
+        "mean": 227.02623942475,
+        "sum": null,
+        "max": 229.1
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 222.5,
+        "state": null,
+        "mean": 228.1153475569722,
+        "sum": null,
+        "max": 231.6
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 226.3,
+        "state": null,
+        "mean": 229.77169373219442,
+        "sum": null,
+        "max": 232.1
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 228.0,
+        "state": null,
+        "mean": 230.39448761666668,
+        "sum": null,
+        "max": 232.2
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 227.1,
+        "state": null,
+        "mean": 231.11325902911116,
+        "sum": null,
+        "max": 233.3
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 227.3,
+        "state": null,
+        "mean": 230.3923568868889,
+        "sum": null,
+        "max": 232.9
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 223.3,
+        "state": null,
+        "mean": 229.488207083,
+        "sum": null,
+        "max": 234.6
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 226.7,
+        "state": null,
+        "mean": 230.3134496579444,
+        "sum": null,
+        "max": 234.9
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 228.1,
+        "state": null,
+        "mean": 231.93756782150004,
+        "sum": null,
+        "max": 235.3
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 228.4,
+        "state": null,
+        "mean": 233.02414192733337,
+        "sum": null,
+        "max": 235.5
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 230.8,
+        "state": null,
+        "mean": 235.02925919516667,
+        "sum": null,
+        "max": 238.8
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 225.8,
+        "state": null,
+        "mean": 231.40011989466666,
+        "sum": null,
+        "max": 235.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 223.5,
+        "state": null,
+        "mean": 229.02231463394446,
+        "sum": null,
+        "max": 235.7
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 228.1,
+        "state": null,
+        "mean": 230.0794458868056,
+        "sum": null,
+        "max": 231.8
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 228.2,
+        "state": null,
+        "mean": 230.94037943283334,
+        "sum": null,
+        "max": 233.1
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 228.1,
+        "state": null,
+        "mean": 229.65140208961114,
+        "sum": null,
+        "max": 232.8
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 226.0,
+        "state": null,
+        "mean": 229.6512148086389,
+        "sum": null,
+        "max": 231.1
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 220.0,
+        "state": null,
+        "mean": 224.44553303458335,
+        "sum": null,
+        "max": 230.5
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 224.5,
+        "state": null,
+        "mean": 230.87327710572222,
+        "sum": null,
+        "max": 234.5
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 227.1,
+        "state": null,
+        "mean": 230.22902588941665,
+        "sum": null,
+        "max": 234.6
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 222.0,
+        "state": null,
+        "mean": 225.6120058314722,
+        "sum": null,
+        "max": 231.9
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 225.8,
+        "state": null,
+        "mean": 227.5556702433333,
+        "sum": null,
+        "max": 229.7
+      }
+    ],
+    "sensor.shellyplus1pm_e465b8f1c1b8_energy": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 168.442058,
+        "mean": null,
+        "sum": 168.442058,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 168.442058,
+        "mean": null,
+        "sum": 168.442058,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 168.450355,
+        "mean": null,
+        "sum": 168.450355,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 168.642923,
+        "mean": null,
+        "sum": 168.642923,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 168.836801,
+        "mean": null,
+        "sum": 168.836801,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 169.030871,
+        "mean": null,
+        "sum": 169.030871,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 169.224165,
+        "mean": null,
+        "sum": 169.224165,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 169.416639,
+        "mean": null,
+        "sum": 169.416639,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 169.607303,
+        "mean": null,
+        "sum": 169.607303,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 169.789244,
+        "mean": null,
+        "sum": 169.789244,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 169.984678,
+        "mean": null,
+        "sum": 169.984678,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 170.178224,
+        "mean": null,
+        "sum": 170.178224,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 170.337834,
+        "mean": null,
+        "sum": 170.337834,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 170.337834,
+        "mean": null,
+        "sum": 170.337834,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 170.337834,
+        "mean": null,
+        "sum": 170.337834,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 170.337834,
+        "mean": null,
+        "sum": 170.337834,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 170.337834,
+        "mean": null,
+        "sum": 170.337834,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 170.337834,
+        "mean": null,
+        "sum": 170.337834,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 170.337834,
+        "mean": null,
+        "sum": 170.337834,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 170.337834,
+        "mean": null,
+        "sum": 170.337834,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 170.337834,
+        "mean": null,
+        "sum": 170.337834,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 170.470978,
+        "mean": null,
+        "sum": 170.470978,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 170.657802,
+        "mean": null,
+        "sum": 170.657802,
+        "max": null
+      }
+    ],
+    "sensor.shellyplus1pm_e465b8f1c1b8_current": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.03867409608472222,
+        "sum": null,
+        "max": 0.812
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 0.798,
+        "state": null,
+        "mean": 0.8058846396419446,
+        "sum": null,
+        "max": 0.812
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 0.801,
+        "state": null,
+        "mean": 0.808152571856389,
+        "sum": null,
+        "max": 0.814
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 0.801,
+        "state": null,
+        "mean": 0.8091159020986112,
+        "sum": null,
+        "max": 0.815
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 0.805,
+        "state": null,
+        "mean": 0.8109999134083333,
+        "sum": null,
+        "max": 0.818
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 0.793,
+        "state": null,
+        "mean": 0.8055659185133335,
+        "sum": null,
+        "max": 0.814
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 0.787,
+        "state": null,
+        "mean": 0.7975734589408333,
+        "sum": null,
+        "max": 0.806
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 0.781,
+        "state": null,
+        "mean": 0.7902858297213888,
+        "sum": null,
+        "max": 0.804
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 0.8,
+        "state": null,
+        "mean": 0.8089585498633332,
+        "sum": null,
+        "max": 0.816
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 0.796,
+        "state": null,
+        "mean": 0.8078474799983334,
+        "sum": null,
+        "max": 0.818
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.6660651036405556,
+        "sum": null,
+        "max": 0.805
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.5750221176119444,
+        "sum": null,
+        "max": 0.803
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 0.787,
+        "state": null,
+        "mean": 0.7935427116983332,
+        "sum": null,
+        "max": 0.801
+      }
+    ],
+    "sensor.golvvarme_verandan_switch_0_device_temperature": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 49.1,
+        "state": null,
+        "mean": 49.590807074555556,
+        "sum": null,
+        "max": 50.1
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 49.9,
+        "state": null,
+        "mean": 50.20960636972222,
+        "sum": null,
+        "max": 50.3
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 50.0,
+        "state": null,
+        "mean": 50.255864978472225,
+        "sum": null,
+        "max": 50.5
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 50.3,
+        "state": null,
+        "mean": 50.39494405061111,
+        "sum": null,
+        "max": 50.6
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 50.3,
+        "state": null,
+        "mean": 50.503528145194444,
+        "sum": null,
+        "max": 50.9
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 50.9,
+        "state": null,
+        "mean": 51.31358128691667,
+        "sum": null,
+        "max": 51.9
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 51.7,
+        "state": null,
+        "mean": 51.92582014824999,
+        "sum": null,
+        "max": 52.3
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 51.7,
+        "state": null,
+        "mean": 52.011319540333346,
+        "sum": null,
+        "max": 52.2
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 51.4,
+        "state": null,
+        "mean": 51.720887305055555,
+        "sum": null,
+        "max": 52.1
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 51.6,
+        "state": null,
+        "mean": 51.76775880858333,
+        "sum": null,
+        "max": 52.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 51.4,
+        "state": null,
+        "mean": 51.66364818222223,
+        "sum": null,
+        "max": 51.9
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 51.3,
+        "state": null,
+        "mean": 51.43993744188888,
+        "sum": null,
+        "max": 51.6
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 50.4,
+        "state": null,
+        "mean": 50.907643420833324,
+        "sum": null,
+        "max": 51.4
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 49.9,
+        "state": null,
+        "mean": 50.21227338583333,
+        "sum": null,
+        "max": 50.5
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 49.3,
+        "state": null,
+        "mean": 49.64182770513889,
+        "sum": null,
+        "max": 50.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 48.8,
+        "state": null,
+        "mean": 49.10658160249999,
+        "sum": null,
+        "max": 49.4
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 48.3,
+        "state": null,
+        "mean": 48.583247693444456,
+        "sum": null,
+        "max": 49.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 47.8,
+        "state": null,
+        "mean": 48.16922494275,
+        "sum": null,
+        "max": 48.5
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 47.3,
+        "state": null,
+        "mean": 47.61691986747223,
+        "sum": null,
+        "max": 48.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 47.2,
+        "state": null,
+        "mean": 47.330922765749996,
+        "sum": null,
+        "max": 47.5
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 46.9,
+        "state": null,
+        "mean": 47.092219775555556,
+        "sum": null,
+        "max": 47.3
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 46.3,
+        "state": null,
+        "mean": 46.56105600377777,
+        "sum": null,
+        "max": 47.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 46.3,
+        "state": null,
+        "mean": 46.645161780194435,
+        "sum": null,
+        "max": 47.3
+      }
+    ],
+    "sensor.golvvarme_bion_switch_0_device_temperature": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 47.6,
+        "state": null,
+        "mean": 60.22738231219444,
+        "sum": null,
+        "max": 66.4
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 66.1,
+        "state": null,
+        "mean": 66.33683583638889,
+        "sum": null,
+        "max": 66.6
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 66.0,
+        "state": null,
+        "mean": 66.25715713447221,
+        "sum": null,
+        "max": 66.6
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 66.2,
+        "state": null,
+        "mean": 66.59400024616666,
+        "sum": null,
+        "max": 66.9
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 66.4,
+        "state": null,
+        "mean": 66.84227336691667,
+        "sum": null,
+        "max": 67.5
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 67.2,
+        "state": null,
+        "mean": 67.70263760222223,
+        "sum": null,
+        "max": 67.9
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 67.8,
+        "state": null,
+        "mean": 67.94762059250002,
+        "sum": null,
+        "max": 68.3
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 51.6,
+        "state": null,
+        "mean": 63.73588338469444,
+        "sum": null,
+        "max": 68.1
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 47.5,
+        "state": null,
+        "mean": 48.648379677722225,
+        "sum": null,
+        "max": 51.6
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 47.0,
+        "state": null,
+        "mean": 47.271648647055564,
+        "sum": null,
+        "max": 47.5
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 46.9,
+        "state": null,
+        "mean": 47.022059913722224,
+        "sum": null,
+        "max": 47.2
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 46.9,
+        "state": null,
+        "mean": 46.9966764128611,
+        "sum": null,
+        "max": 47.1
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 46.7,
+        "state": null,
+        "mean": 46.862580216611114,
+        "sum": null,
+        "max": 47.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 46.6,
+        "state": null,
+        "mean": 60.11579120597222,
+        "sum": null,
+        "max": 68.9
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 68.9,
+        "state": null,
+        "mean": 69.46180299452779,
+        "sum": null,
+        "max": 69.6
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 69.3,
+        "state": null,
+        "mean": 69.51716436350002,
+        "sum": null,
+        "max": 69.6
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 68.8,
+        "state": null,
+        "mean": 69.28060794361112,
+        "sum": null,
+        "max": 69.6
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 68.9,
+        "state": null,
+        "mean": 69.14755419919445,
+        "sum": null,
+        "max": 69.5
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 68.1,
+        "state": null,
+        "mean": 68.5358865191111,
+        "sum": null,
+        "max": 69.4
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 68.1,
+        "state": null,
+        "mean": 68.91402631341666,
+        "sum": null,
+        "max": 69.6
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 68.7,
+        "state": null,
+        "mean": 68.98926686469446,
+        "sum": null,
+        "max": 69.5
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 67.9,
+        "state": null,
+        "mean": 68.2344221733889,
+        "sum": null,
+        "max": 68.7
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 68.1,
+        "state": null,
+        "mean": 68.34548509,
+        "sum": null,
+        "max": 68.5
+      }
+    ],
+    "sensor.sanglampor_manni_energy": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 0.873266666666667,
+        "mean": null,
+        "sum": 21.08750000000082,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 0.873266666666667,
+        "mean": null,
+        "sum": 21.08750000000082,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 0.873266666666667,
+        "mean": null,
+        "sum": 21.08750000000082,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 0.873266666666667,
+        "mean": null,
+        "sum": 21.08750000000082,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 0.873266666666667,
+        "mean": null,
+        "sum": 21.08750000000082,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 0.873266666666667,
+        "mean": null,
+        "sum": 21.08750000000082,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 0.873266666666667,
+        "mean": null,
+        "sum": 21.08750000000082,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 0.873266666666667,
+        "mean": null,
+        "sum": 21.08750000000082,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 0.873266666666667,
+        "mean": null,
+        "sum": 21.08750000000082,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 0.873266666666667,
+        "mean": null,
+        "sum": 21.08750000000082,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 0.873266666666667,
+        "mean": null,
+        "sum": 21.08750000000082,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 0.873266666666667,
+        "mean": null,
+        "sum": 21.08750000000082,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 0.873266666666667,
+        "mean": null,
+        "sum": 21.08750000000082,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 0.873266666666667,
+        "mean": null,
+        "sum": 21.08750000000082,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 0.873266666666667,
+        "mean": null,
+        "sum": 21.08750000000082,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 0.873266666666667,
+        "mean": null,
+        "sum": 21.08750000000082,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 0.873266666666667,
+        "mean": null,
+        "sum": 21.08750000000082,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 0.873266666666667,
+        "mean": null,
+        "sum": 21.08750000000082,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 0.873266666666667,
+        "mean": null,
+        "sum": 21.08750000000082,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 0.873266666666667,
+        "mean": null,
+        "sum": 21.08750000000082,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 0.873266666666667,
+        "mean": null,
+        "sum": 21.08750000000082,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 0.873266666666667,
+        "mean": null,
+        "sum": 21.08750000000082,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 0.873266666666667,
+        "mean": null,
+        "sum": 21.08750000000082,
+        "max": null
+      }
+    ],
+    "sensor.sanglampor_diego_power": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      }
+    ],
+    "sensor.shellyplus1pm_a0dd6c29b134_switch_0_voltage": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 227.8,
+        "state": null,
+        "mean": 231.3514720443333,
+        "sum": null,
+        "max": 234.3
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 228.7,
+        "state": null,
+        "mean": 231.92664846797223,
+        "sum": null,
+        "max": 234.5
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 227.0,
+        "state": null,
+        "mean": 232.00653126644443,
+        "sum": null,
+        "max": 235.8
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 231.2,
+        "state": null,
+        "mean": 234.74471467497224,
+        "sum": null,
+        "max": 238.2
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 231.3,
+        "state": null,
+        "mean": 234.46325868097222,
+        "sum": null,
+        "max": 238.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 233.3,
+        "state": null,
+        "mean": 236.1183717625,
+        "sum": null,
+        "max": 238.6
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 233.9,
+        "state": null,
+        "mean": 236.54661178533334,
+        "sum": null,
+        "max": 238.7
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 231.2,
+        "state": null,
+        "mean": 234.6982739521667,
+        "sum": null,
+        "max": 237.7
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 223.5,
+        "state": null,
+        "mean": 231.0480475284444,
+        "sum": null,
+        "max": 235.6
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 226.6,
+        "state": null,
+        "mean": 232.32146390119445,
+        "sum": null,
+        "max": 237.6
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 231.1,
+        "state": null,
+        "mean": 234.36997257733333,
+        "sum": null,
+        "max": 237.9
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 232.0,
+        "state": null,
+        "mean": 236.12179051705553,
+        "sum": null,
+        "max": 239.7
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 231.0,
+        "state": null,
+        "mean": 233.2067330656944,
+        "sum": null,
+        "max": 235.2
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 232.4,
+        "state": null,
+        "mean": 235.23322981905554,
+        "sum": null,
+        "max": 237.3
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 233.7,
+        "state": null,
+        "mean": 236.03581071986108,
+        "sum": null,
+        "max": 238.9
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 233.7,
+        "state": null,
+        "mean": 235.27340337161107,
+        "sum": null,
+        "max": 237.4
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 232.3,
+        "state": null,
+        "mean": 234.50664281569445,
+        "sum": null,
+        "max": 236.1
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 231.6,
+        "state": null,
+        "mean": 234.48323778863892,
+        "sum": null,
+        "max": 236.6
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 231.0,
+        "state": null,
+        "mean": 233.71187947725002,
+        "sum": null,
+        "max": 238.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 235.5,
+        "state": null,
+        "mean": 237.8783445028889,
+        "sum": null,
+        "max": 240.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 233.4,
+        "state": null,
+        "mean": 236.04494982927778,
+        "sum": null,
+        "max": 238.8
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 230.1,
+        "state": null,
+        "mean": 234.1404868781111,
+        "sum": null,
+        "max": 237.7
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 227.4,
+        "state": null,
+        "mean": 231.52970764683334,
+        "sum": null,
+        "max": 234.9
+      }
+    ],
+    "sensor.golvvarme_entren_switch_0_device_temperature": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 64.0,
+        "state": null,
+        "mean": 64.5947313341111,
+        "sum": null,
+        "max": 65.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 58.6,
+        "state": null,
+        "mean": 60.56596038749999,
+        "sum": null,
+        "max": 65.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 57.9,
+        "state": null,
+        "mean": 58.185511804111115,
+        "sum": null,
+        "max": 58.7
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 57.6,
+        "state": null,
+        "mean": 57.88115560666666,
+        "sum": null,
+        "max": 58.2
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 57.5,
+        "state": null,
+        "mean": 57.62544896624999,
+        "sum": null,
+        "max": 57.9
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 57.7,
+        "state": null,
+        "mean": 58.18914694374999,
+        "sum": null,
+        "max": 58.5
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 58.3,
+        "state": null,
+        "mean": 58.43511558783333,
+        "sum": null,
+        "max": 58.7
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 58.3,
+        "state": null,
+        "mean": 58.416093111,
+        "sum": null,
+        "max": 58.6
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 57.6,
+        "state": null,
+        "mean": 58.015528051138894,
+        "sum": null,
+        "max": 58.5
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 57.8,
+        "state": null,
+        "mean": 57.969046376027784,
+        "sum": null,
+        "max": 58.1
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 57.7,
+        "state": null,
+        "mean": 57.97428723655555,
+        "sum": null,
+        "max": 58.2
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 57.9,
+        "state": null,
+        "mean": 58.12786116344444,
+        "sum": null,
+        "max": 58.4
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 57.4,
+        "state": null,
+        "mean": 57.67678421327778,
+        "sum": null,
+        "max": 58.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 57.4,
+        "state": null,
+        "mean": 62.3555369238889,
+        "sum": null,
+        "max": 64.1
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 63.4,
+        "state": null,
+        "mean": 63.74065441241666,
+        "sum": null,
+        "max": 64.1
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 63.2,
+        "state": null,
+        "mean": 63.416980397555555,
+        "sum": null,
+        "max": 63.7
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 63.0,
+        "state": null,
+        "mean": 63.17000460186111,
+        "sum": null,
+        "max": 63.4
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 62.5,
+        "state": null,
+        "mean": 62.860172947027785,
+        "sum": null,
+        "max": 63.2
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 62.4,
+        "state": null,
+        "mean": 62.536420902277776,
+        "sum": null,
+        "max": 62.9
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 62.0,
+        "state": null,
+        "mean": 62.34976293955555,
+        "sum": null,
+        "max": 62.6
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 61.8,
+        "state": null,
+        "mean": 62.016042134972224,
+        "sum": null,
+        "max": 62.4
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 61.3,
+        "state": null,
+        "mean": 61.686075473861116,
+        "sum": null,
+        "max": 62.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 61.3,
+        "state": null,
+        "mean": 61.63975755713889,
+        "sum": null,
+        "max": 62.1
+      }
+    ],
+    "sensor.julstjarnor_verandan_energy": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 2.364,
+        "mean": null,
+        "sum": 2.364,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 2.364,
+        "mean": null,
+        "sum": 2.364,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 2.364,
+        "mean": null,
+        "sum": 2.364,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 2.364,
+        "mean": null,
+        "sum": 2.364,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 2.364,
+        "mean": null,
+        "sum": 2.364,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 2.364,
+        "mean": null,
+        "sum": 2.364,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 2.364,
+        "mean": null,
+        "sum": 2.364,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 2.364,
+        "mean": null,
+        "sum": 2.364,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 2.364,
+        "mean": null,
+        "sum": 2.364,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 2.364,
+        "mean": null,
+        "sum": 2.364,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 2.364,
+        "mean": null,
+        "sum": 2.364,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 2.364,
+        "mean": null,
+        "sum": 2.364,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 2.364,
+        "mean": null,
+        "sum": 2.364,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 2.364,
+        "mean": null,
+        "sum": 2.364,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 2.364,
+        "mean": null,
+        "sum": 2.364,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 2.364,
+        "mean": null,
+        "sum": 2.364,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 2.364,
+        "mean": null,
+        "sum": 2.364,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 2.364,
+        "mean": null,
+        "sum": 2.364,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 2.364,
+        "mean": null,
+        "sum": 2.364,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 2.364,
+        "mean": null,
+        "sum": 2.364,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 2.364,
+        "mean": null,
+        "sum": 2.364,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 2.364,
+        "mean": null,
+        "sum": 2.364,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 2.364,
+        "mean": null,
+        "sum": 2.364,
+        "max": null
+      }
+    ],
+    "sensor.golvvarme_ateljen_switch_0_current": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      }
+    ],
+    "sensor.shellyplus1pm_e465b8f1c1b8_signal_strength": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": -71.0,
+        "state": null,
+        "mean": -63.89685751805555,
+        "sum": null,
+        "max": -62.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": -68.0,
+        "state": null,
+        "mean": -64.31587305749999,
+        "sum": null,
+        "max": -62.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": -68.0,
+        "state": null,
+        "mean": -65.10539837777777,
+        "sum": null,
+        "max": -64.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": -71.0,
+        "state": null,
+        "mean": -66.57602415914559,
+        "sum": null,
+        "max": -63.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": -68.0,
+        "state": null,
+        "mean": -64.10567330472223,
+        "sum": null,
+        "max": -62.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": -65.0,
+        "state": null,
+        "mean": -64.07090899138889,
+        "sum": null,
+        "max": -63.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": -72.0,
+        "state": null,
+        "mean": -64.28460870388888,
+        "sum": null,
+        "max": -62.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": -70.0,
+        "state": null,
+        "mean": -62.74017828638889,
+        "sum": null,
+        "max": -60.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": -66.0,
+        "state": null,
+        "mean": -64.60599481805555,
+        "sum": null,
+        "max": -64.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": -71.0,
+        "state": null,
+        "mean": -65.83512493305555,
+        "sum": null,
+        "max": -64.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": -70.0,
+        "state": null,
+        "mean": -64.25925250388889,
+        "sum": null,
+        "max": -63.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": -70.0,
+        "state": null,
+        "mean": -65.93557865722222,
+        "sum": null,
+        "max": -62.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": -69.0,
+        "state": null,
+        "mean": -63.889050180833344,
+        "sum": null,
+        "max": -62.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": -69.0,
+        "state": null,
+        "mean": -62.56778293027778,
+        "sum": null,
+        "max": -62.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": -63.0,
+        "state": null,
+        "mean": -62.083477563611105,
+        "sum": null,
+        "max": -62.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": -63.0,
+        "state": null,
+        "mean": -62.18390295222223,
+        "sum": null,
+        "max": -62.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": -64.0,
+        "state": null,
+        "mean": -62.370776451388885,
+        "sum": null,
+        "max": -61.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": -64.0,
+        "state": null,
+        "mean": -62.99981090833334,
+        "sum": null,
+        "max": -62.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": -63.0,
+        "state": null,
+        "mean": -62.96665923416666,
+        "sum": null,
+        "max": -62.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": -63.0,
+        "state": null,
+        "mean": -62.900431975000004,
+        "sum": null,
+        "max": -62.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": -63.0,
+        "state": null,
+        "mean": -62.86638448333333,
+        "sum": null,
+        "max": -62.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": -64.0,
+        "state": null,
+        "mean": -62.69973988500001,
+        "sum": null,
+        "max": -61.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": -65.0,
+        "state": null,
+        "mean": -63.18325748916667,
+        "sum": null,
+        "max": -62.0
+      }
+    ],
+    "sensor.verandan_taklampor_verandan_effektfaktor": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      }
+    ],
+    "sensor.sanglampor_manni_power": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.0,
+        "sum": null,
+        "max": 0.0
+      }
+    ]
+  },
+  "start": "2026-11-07T07:00:00+00:00",
+  "end": "2026-11-08T06:00:00+00:00"
+}

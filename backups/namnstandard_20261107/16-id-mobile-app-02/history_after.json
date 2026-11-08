@@ -1,0 +1,66 @@
+{
+  "sensor.heimdal_ha_nspanelpro_batteriniva": [
+    {
+      "state": "100",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:44.622596+00:00",
+      "last_updated": "2026-11-07T07:51:44.622596+00:00"
+    }
+  ],
+  "sensor.heimdal_ha_nspanelpro_batteristatus": [
+    {
+      "state": "charging",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:44.622596+00:00",
+      "last_updated": "2026-11-07T07:51:44.622596+00:00"
+    }
+  ],
+  "sensor.heimdal_ha_nspanelpro_laddartyp": [
+    {
+      "state": "ac",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:44.622596+00:00",
+      "last_updated": "2026-11-07T07:51:44.622596+00:00"
+    }
+  ],
+  "sensor.heimdal_ha_sm_g965f_batteriniva": [
+    {
+      "state": "100",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:44.622596+00:00",
+      "last_updated": "2026-11-07T07:51:44.622596+00:00"
+    }
+  ],
+  "sensor.heimdal_ha_sm_g965f_batteristatus": [
+    {
+      "state": "full",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:44.622596+00:00",
+      "last_updated": "2026-11-07T07:51:44.622596+00:00"
+    }
+  ],
+  "sensor.heimdal_ha_sm_g965f_laddartyp": [
+    {
+      "state": "usb",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:44.622596+00:00",
+      "last_updated": "2026-11-07T07:51:44.622596+00:00"
+    }
+  ],
+  "sensor.heimdal_ha_mt_1011qr_batteristatus": [
+    {
+      "state": "charging",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:44.622596+00:00",
+      "last_updated": "2026-11-07T07:51:44.622596+00:00"
+    }
+  ],
+  "sensor.heimdal_ha_mt_1011qr_laddartyp": [
+    {
+      "state": "usb",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:44.622596+00:00",
+      "last_updated": "2026-11-07T07:51:44.622596+00:00"
+    }
+  ]
+}

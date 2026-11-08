@@ -1,0 +1,24 @@
+speak:
+  name: Synkroniserat Granny-meddelande
+  description: Ett gemensamt MA-grupputrop och återupptagning av tidigare spelande MA-köer.
+  fields:
+    entity_id:
+      required: true
+      selector:
+        entity:
+          integration: music_assistant
+          domain: media_player
+    tts_entity_id:
+      default: tts.heimdal_ha_piper
+      selector:
+        entity:
+          domain: tts
+    message:
+      selector:
+        text:
+          multiline: true
+    test_only:
+      default: false
+      description: Kontrollera mål och köer utan att spela ljud eller ändra spelarna.
+      selector:
+        boolean:

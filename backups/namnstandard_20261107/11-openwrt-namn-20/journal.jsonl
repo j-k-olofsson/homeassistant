@@ -1,0 +1,48 @@
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s7_traffic_rx_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "Galaxy-S7 Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s7_traffic_rx_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s7_traffic_tx_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd", "aliases": [null, "Galaxy-S7 Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s7_traffic_tx_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.galaxy_s7_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Galaxy-S7 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.galaxy_s7_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s7_signal_strength_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Galaxy-S7 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s7_signal_strength_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s7_rx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Galaxy-S7 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s7_rx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s7_tx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Galaxy-S7 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s7_tx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s7_noise_level_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Galaxy-S7 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s7_noise_level_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.galaxy_s7_friggan_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Galaxy-S7-Friggan Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.galaxy_s7_friggan_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s7_friggan_signal_strength_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Galaxy-S7-Friggan Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s7_friggan_signal_strength_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s7_friggan_rx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Galaxy-S7-Friggan RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s7_friggan_rx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s7_friggan_tx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Galaxy-S7-Friggan TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s7_friggan_tx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s7_friggan_noise_level_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Galaxy-S7-Friggan Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s7_friggan_noise_level_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.galaxy_s7_friggan_disconnect_device_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Galaxy-S7-Friggan Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.galaxy_s7_friggan_disconnect_device_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s7_friggan_signal_strength_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Galaxy-S7-Friggan Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s7_friggan_signal_strength_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s7_friggan_rx_rate_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Galaxy-S7-Friggan RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s7_friggan_rx_rate_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s7_friggan_tx_rate_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Galaxy-S7-Friggan TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s7_friggan_tx_rate_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s7_friggan_noise_level_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Galaxy-S7-Friggan Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s7_friggan_noise_level_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.nothing_phone_3a_disconnect_device_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Nothing-Phone-3a Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.nothing_phone_3a_disconnect_device_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_phone_3a_signal_strength_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Nothing-Phone-3a Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_phone_3a_signal_strength_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_phone_3a_rx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Nothing-Phone-3a RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_phone_3a_rx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_phone_3a_tx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Nothing-Phone-3a TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_phone_3a_tx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_phone_3a_noise_level_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Nothing-Phone-3a Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_phone_3a_noise_level_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.nothing_phone_3a_internet_access_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Nothing-Phone-3a Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.nothing_phone_3a_internet_access_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.nothing_phone_3a_disconnect_device_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Nothing-Phone-3a Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.nothing_phone_3a_disconnect_device_4"}

@@ -1,0 +1,9 @@
+{
+  "sensor.verkstaden_klimatsensor_temperatur": "sensor.verkstan_temp",
+  "sensor.ateljen_klimatsensor_temperatur": "sensor.ateljen_temp",
+  "sensor.bion_klimatsensor_temperatur": "sensor.bio_temp",
+  "sensor.sovrummet_klimatsensor_temperatur": "sensor.sovrummet_temp",
+  "sensor.honshuset_klimatsensor_temperatur": "sensor.honshuset_temp",
+  "sensor.verandan_klimatsensor_temperatur": "sensor.verandan_temp",
+  "sensor.utomhus_klimatsensor_temperatur": "sensor.utomhus_temp"
+}

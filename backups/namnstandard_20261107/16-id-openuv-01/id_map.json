@@ -1,0 +1,11 @@
+{
+  "binary_sensor.openuv_skyddsfonster": "binary_sensor.molnet_openuv_skyddsfonster",
+  "sensor.openuv_aktuell_ozonniva": "sensor.molnet_openuv_aktuell_ozonniva",
+  "sensor.openuv_aktuell_uv_niva": "sensor.molnet_openuv_aktuell_uv_niva",
+  "sensor.openuv_saker_exponeringstid_for_hudtyp_1": "sensor.molnet_openuv_saker_exponeringstid_for_hudtyp_1",
+  "sensor.openuv_saker_exponeringstid_for_hudtyp_2": "sensor.molnet_openuv_saker_exponeringstid_for_hudtyp_2",
+  "sensor.openuv_saker_exponeringstid_for_hudtyp_3": "sensor.molnet_openuv_saker_exponeringstid_for_hudtyp_3",
+  "sensor.openuv_saker_exponeringstid_for_hudtyp_4": "sensor.molnet_openuv_saker_exponeringstid_for_hudtyp_4",
+  "sensor.openuv_saker_exponeringstid_for_hudtyp_5": "sensor.molnet_openuv_saker_exponeringstid_for_hudtyp_5",
+  "sensor.openuv_saker_exponeringstid_for_hudtyp_6": "sensor.molnet_openuv_saker_exponeringstid_for_hudtyp_6"
+}

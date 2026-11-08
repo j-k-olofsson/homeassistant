@@ -1,0 +1,500 @@
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_ap_olofsson_guest_2_4_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_GUEST (2.4 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_ap_olofsson_guest_2_4_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_ap_olofsson_guest_2_4_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_GUEST (2.4 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_ap_olofsson_guest_2_4_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_ap_olofsson_guest_2_4_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_GUEST (2.4 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_ap_olofsson_guest_2_4_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_iot_2_4_ghz_clients_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_iot_2_4_ghz_clients_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_iot_2_4_ghz_channel_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_iot_2_4_ghz_channel_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_iot_2_4_ghz_tx_power_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_iot_2_4_ghz_tx_power_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_iot_2_4_ghz_ht_mode_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_iot_2_4_ghz_ht_mode_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_iot_2_4_ghz_hardware_mode_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_iot_2_4_ghz_hardware_mode_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_ap_olofsson_wifi_5_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_WIFI (5 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_ap_olofsson_wifi_5_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_ap_olofsson_wifi_5_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_WIFI (5 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_ap_olofsson_wifi_5_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_ap_olofsson_wifi_5_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_WIFI (5 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_ap_olofsson_wifi_5_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_ap_olofsson_wifi_5_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_WIFI (5 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_ap_olofsson_wifi_5_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_ap_olofsson_wifi_5_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_WIFI (5 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_ap_olofsson_wifi_5_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_ap_olofsson_guest_5_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_GUEST (5 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_ap_olofsson_guest_5_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_ap_olofsson_guest_5_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_GUEST (5 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_ap_olofsson_guest_5_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_ap_olofsson_guest_5_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_GUEST (5 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_ap_olofsson_guest_5_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_ap_olofsson_guest_5_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_GUEST (5 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_ap_olofsson_guest_5_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_ap_olofsson_guest_5_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_GUEST (5 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_ap_olofsson_guest_5_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_ap_olofsson_iot_5_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_IOT (5 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_ap_olofsson_iot_5_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_ap_olofsson_iot_5_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_IOT (5 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_ap_olofsson_iot_5_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_ap_olofsson_iot_5_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_IOT (5 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_ap_olofsson_iot_5_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_ap_olofsson_iot_5_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_IOT (5 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_ap_olofsson_iot_5_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_ap_olofsson_iot_5_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_IOT (5 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_ap_olofsson_iot_5_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.2_4_ghz_physical_radio", "before": {"name": null, "aliases": [null]}, "after": {"name": "Fysisk radio", "aliases": [null, "2.4 GHz Physical radio"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.2_4_ghz_physical_radio"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.5_ghz_physical_radio", "before": {"name": null, "aliases": [null]}, "after": {"name": "Fysisk radio", "aliases": [null, "5 GHz Physical radio"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.5_ghz_physical_radio"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_wifi_2_4_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_WIFI (2.4 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_wifi_2_4_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_wifi_2_4_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_WIFI (2.4 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_wifi_2_4_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_wifi_2_4_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_WIFI (2.4 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_wifi_2_4_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_wifi_2_4_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_WIFI (2.4 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_wifi_2_4_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_wifi_2_4_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_WIFI (2.4 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_wifi_2_4_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_guest_2_4_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_GUEST (2.4 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_guest_2_4_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_guest_2_4_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_GUEST (2.4 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_guest_2_4_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_guest_2_4_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_GUEST (2.4 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_guest_2_4_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_guest_2_4_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_GUEST (2.4 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_guest_2_4_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_guest_2_4_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_GUEST (2.4 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_guest_2_4_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_iot_2_4_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_iot_2_4_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_iot_2_4_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_iot_2_4_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_iot_2_4_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_iot_2_4_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_iot_2_4_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_iot_2_4_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_iot_2_4_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_iot_2_4_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_wifi_5_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_WIFI (5 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_wifi_5_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_wifi_5_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_WIFI (5 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_wifi_5_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_wifi_5_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_WIFI (5 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_wifi_5_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_wifi_5_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_WIFI (5 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_wifi_5_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_wifi_5_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_WIFI (5 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_wifi_5_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_guest_5_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_GUEST (5 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_guest_5_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_guest_5_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_GUEST (5 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_guest_5_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_guest_5_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_GUEST (5 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_guest_5_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_guest_5_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_GUEST (5 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_guest_5_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_guest_5_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_GUEST (5 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_guest_5_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_iot_5_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_IOT (5 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_iot_5_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_iot_5_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_IOT (5 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_iot_5_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_iot_5_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_IOT (5 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_iot_5_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_iot_5_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_IOT (5 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_iot_5_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ap_olofsson_iot_5_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_IOT (5 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ap_olofsson_iot_5_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.e8_db_84_d3_1d_ce_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Termostat Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.e8_db_84_d3_1d_ce_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.e8_db_84_d3_1d_ce_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Termostat RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.e8_db_84_d3_1d_ce_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.e8_db_84_d3_1d_ce_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Termostat TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.e8_db_84_d3_1d_ce_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.e8_db_84_d3_1d_ce_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Termostat Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.e8_db_84_d3_1d_ce_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.2_4_ghz_physical_radio_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Fysisk radio", "aliases": [null, "2.4 GHz Physical radio"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.2_4_ghz_physical_radio_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.5_ghz_physical_radio_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Fysisk radio", "aliases": [null, "5 GHz Physical radio"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.5_ghz_physical_radio_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.e8_db_84_d3_1d_ce_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Termostat Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.e8_db_84_d3_1d_ce_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_wifi_2_4_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_WIFI (2.4 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_wifi_2_4_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_wifi_2_4_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_WIFI (2.4 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_wifi_2_4_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_wifi_2_4_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_WIFI (2.4 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_wifi_2_4_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_wifi_2_4_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_WIFI (2.4 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_wifi_2_4_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_wifi_2_4_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_WIFI (2.4 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_wifi_2_4_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_guest_2_4_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_GUEST (2.4 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_guest_2_4_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_guest_2_4_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_GUEST (2.4 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_guest_2_4_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_guest_2_4_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_GUEST (2.4 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_guest_2_4_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_guest_2_4_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_GUEST (2.4 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_guest_2_4_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_guest_2_4_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_GUEST (2.4 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_guest_2_4_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_iot_2_4_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_iot_2_4_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_iot_2_4_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_iot_2_4_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_iot_2_4_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_iot_2_4_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_iot_2_4_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_iot_2_4_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_iot_2_4_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_iot_2_4_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_wifi_5_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_WIFI (5 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_wifi_5_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_wifi_5_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_WIFI (5 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_wifi_5_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_wifi_5_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_WIFI (5 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_wifi_5_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_wifi_5_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_WIFI (5 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_wifi_5_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_wifi_5_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_WIFI (5 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_wifi_5_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_guest_5_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_GUEST (5 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_guest_5_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_guest_5_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_GUEST (5 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_guest_5_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_guest_5_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_GUEST (5 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_guest_5_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_guest_5_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_GUEST (5 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_guest_5_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_guest_5_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_GUEST (5 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_guest_5_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_iot_5_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_IOT (5 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_iot_5_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_iot_5_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_IOT (5 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_iot_5_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_iot_5_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_IOT (5 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_iot_5_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_iot_5_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_IOT (5 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_iot_5_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ap_olofsson_iot_5_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_IOT (5 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ap_olofsson_iot_5_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.2_4_ghz_physical_radio_5", "before": {"name": null, "aliases": [null]}, "after": {"name": "Fysisk radio", "aliases": [null, "2.4 GHz Physical radio"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.2_4_ghz_physical_radio_5"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.5_ghz_physical_radio_5", "before": {"name": null, "aliases": [null]}, "after": {"name": "Fysisk radio", "aliases": [null, "5 GHz Physical radio"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.5_ghz_physical_radio_5"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_wifi_2_4_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_WIFI (2.4 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_wifi_2_4_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_wifi_2_4_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_WIFI (2.4 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_wifi_2_4_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_wifi_2_4_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_WIFI (2.4 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_wifi_2_4_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_wifi_2_4_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_WIFI (2.4 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_wifi_2_4_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_wifi_2_4_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_WIFI (2.4 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_wifi_2_4_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_wifi_5_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_WIFI (5 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_wifi_5_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_wifi_5_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_WIFI (5 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_wifi_5_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_wifi_5_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_WIFI (5 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_wifi_5_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_wifi_5_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_WIFI (5 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_wifi_5_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_wifi_5_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_WIFI (5 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_wifi_5_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_guest_5_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_GUEST (5 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_guest_5_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_guest_5_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_GUEST (5 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_guest_5_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_guest_5_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_GUEST (5 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_guest_5_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_guest_5_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_GUEST (5 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_guest_5_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_guest_5_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_GUEST (5 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_guest_5_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_iot_5_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_IOT (5 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_iot_5_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_iot_5_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_IOT (5 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_iot_5_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_iot_5_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_IOT (5 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_iot_5_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_iot_5_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_IOT (5 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_iot_5_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_iot_5_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_IOT (5 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_iot_5_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_guest_2_4_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_GUEST (2.4 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_guest_2_4_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_guest_2_4_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_GUEST (2.4 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_guest_2_4_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_guest_2_4_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_GUEST (2.4 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_guest_2_4_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_guest_2_4_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_GUEST (2.4 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_guest_2_4_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_guest_2_4_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_GUEST (2.4 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_guest_2_4_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_iot_2_4_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_iot_2_4_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_iot_2_4_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_iot_2_4_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_iot_2_4_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_iot_2_4_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_iot_2_4_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_iot_2_4_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.friggan_ap_olofsson_iot_2_4_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.friggan_ap_olofsson_iot_2_4_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.2_4_ghz_physical_radio_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Fysisk radio", "aliases": [null, "2.4 GHz Physical radio"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.2_4_ghz_physical_radio_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.5_ghz_physical_radio_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Fysisk radio", "aliases": [null, "5 GHz Physical radio"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.5_ghz_physical_radio_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_ap_repeat_iot_5_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID REPEAT_IOT (5 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_ap_repeat_iot_5_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_ap_repeat_iot_5_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID REPEAT_IOT (5 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_ap_repeat_iot_5_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_ap_repeat_iot_5_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID REPEAT_IOT (5 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_ap_repeat_iot_5_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_ap_repeat_iot_5_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID REPEAT_IOT (5 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_ap_repeat_iot_5_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_ap_repeat_iot_5_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID REPEAT_IOT (5 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_ap_repeat_iot_5_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_ap_olofsson_wifi_2_4_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_WIFI (2.4 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_ap_olofsson_wifi_2_4_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_ap_olofsson_wifi_2_4_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_WIFI (2.4 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_ap_olofsson_wifi_2_4_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_ap_olofsson_wifi_2_4_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_WIFI (2.4 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_ap_olofsson_wifi_2_4_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_ap_olofsson_wifi_2_4_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_WIFI (2.4 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_ap_olofsson_wifi_2_4_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_ap_olofsson_wifi_2_4_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_WIFI (2.4 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_ap_olofsson_wifi_2_4_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_ap_olofsson_guest_2_4_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_GUEST (2.4 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_ap_olofsson_guest_2_4_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_ap_olofsson_guest_2_4_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_GUEST (2.4 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_ap_olofsson_guest_2_4_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_ap_olofsson_guest_2_4_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_GUEST (2.4 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_ap_olofsson_guest_2_4_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_ap_olofsson_guest_2_4_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_GUEST (2.4 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_ap_olofsson_guest_2_4_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_ap_olofsson_guest_2_4_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_GUEST (2.4 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_ap_olofsson_guest_2_4_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_ap_olofsson_iot_2_4_ghz_clients", "before": {"name": null, "aliases": [null]}, "after": {"name": "Klienter", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) Clients"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_ap_olofsson_iot_2_4_ghz_clients"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_ap_olofsson_iot_2_4_ghz_channel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kanal", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) Channel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_ap_olofsson_iot_2_4_ghz_channel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_ap_olofsson_iot_2_4_ghz_tx_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändareffekt", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) TX Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_ap_olofsson_iot_2_4_ghz_tx_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_ap_olofsson_iot_2_4_ghz_ht_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "HT-läge", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) HT Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_ap_olofsson_iot_2_4_ghz_ht_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_ap_olofsson_iot_2_4_ghz_hardware_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hårdvaruläge", "aliases": [null, "SSID OLOFSSON_IOT (2.4 GHz) Hardware Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_ap_olofsson_iot_2_4_ghz_hardware_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.5_ghz_physical_radio_6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Fysisk radio", "aliases": [null, "5 GHz Physical radio"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.5_ghz_physical_radio_6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.2_4_ghz_physical_radio_6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Fysisk radio", "aliases": [null, "2.4 GHz Physical radio"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.2_4_ghz_physical_radio_6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.6c_47_60_1a_87_36_signal_strength_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "chromecast-toans-speaker Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.6c_47_60_1a_87_36_signal_strength_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.6c_47_60_1a_87_36_rx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "chromecast-toans-speaker RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.6c_47_60_1a_87_36_rx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.6c_47_60_1a_87_36_tx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "chromecast-toans-speaker TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.6c_47_60_1a_87_36_tx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.6c_47_60_1a_87_36_noise_level_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "chromecast-toans-speaker Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.6c_47_60_1a_87_36_noise_level_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.00_e0_4c_fc_8d_bc_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "192.168.10.99 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.00_e0_4c_fc_8d_bc_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.00_e0_4c_fc_8d_bc_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "192.168.10.99 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.00_e0_4c_fc_8d_bc_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.00_e0_4c_fc_8d_bc_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "192.168.10.99 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.00_e0_4c_fc_8d_bc_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.00_e0_4c_fc_8d_bc_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "192.168.10.99 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.00_e0_4c_fc_8d_bc_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.00_e0_4c_fc_8d_bc_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "192.168.10.99 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.00_e0_4c_fc_8d_bc_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_99_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "192.168.10.99 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_99_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_99_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "192.168.10.99 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_99_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_99_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "192.168.10.99 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_99_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_99_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "192.168.10.99 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_99_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_99_traffic_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "192.168.10.99 Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_99_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_99_traffic_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd", "aliases": [null, "192.168.10.99 Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_99_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.192_168_10_99_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "192.168.10.99 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.192_168_10_99_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_99_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "192.168.10.99 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_99_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_99_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "192.168.10.99 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_99_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_99_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "192.168.10.99 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_99_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_99_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "192.168.10.99 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_99_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.192_168_10_99_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "192.168.10.99 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.192_168_10_99_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.00_e0_4c_5a_e7_b3_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "192.168.10.60 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.00_e0_4c_5a_e7_b3_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.00_e0_4c_5a_e7_b3_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "192.168.10.60 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.00_e0_4c_5a_e7_b3_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.00_e0_4c_5a_e7_b3_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "192.168.10.60 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.00_e0_4c_5a_e7_b3_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.00_e0_4c_5a_e7_b3_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "192.168.10.60 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.00_e0_4c_5a_e7_b3_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.00_e0_4c_5a_e7_b3_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "192.168.10.60 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.00_e0_4c_5a_e7_b3_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_60_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "192.168.10.60 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_60_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_60_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "192.168.10.60 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_60_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_60_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "192.168.10.60 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_60_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_60_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "192.168.10.60 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_60_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_60_traffic_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "192.168.10.60 Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_60_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_60_traffic_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd", "aliases": [null, "192.168.10.60 Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_60_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.192_168_10_60_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "192.168.10.60 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.192_168_10_60_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_60_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "192.168.10.60 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_60_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_60_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "192.168.10.60 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_60_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_60_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "192.168.10.60 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_60_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_60_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "192.168.10.60 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_60_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.192_168_10_60_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "192.168.10.60 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.192_168_10_60_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c8_2b_96_5c_72_08_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Blomlampor Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c8_2b_96_5c_72_08_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c8_2b_96_5c_72_08_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Blomlampor RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c8_2b_96_5c_72_08_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c8_2b_96_5c_72_08_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Blomlampor TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c8_2b_96_5c_72_08_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c8_2b_96_5c_72_08_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Blomlampor Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c8_2b_96_5c_72_08_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.c8_2b_96_5c_72_08_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Blomlampor Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.c8_2b_96_5c_72_08_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.00_e0_4c_50_00_fa_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "192.168.10.82 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.00_e0_4c_50_00_fa_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.00_e0_4c_50_00_fa_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "192.168.10.82 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.00_e0_4c_50_00_fa_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.00_e0_4c_50_00_fa_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "192.168.10.82 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.00_e0_4c_50_00_fa_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.00_e0_4c_50_00_fa_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "192.168.10.82 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.00_e0_4c_50_00_fa_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.00_e0_4c_50_00_fa_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "192.168.10.82 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.00_e0_4c_50_00_fa_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_82_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "192.168.10.82 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_82_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_82_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "192.168.10.82 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_82_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_82_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "192.168.10.82 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_82_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_82_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "192.168.10.82 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_82_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_82_traffic_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "192.168.10.82 Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_82_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_82_traffic_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd", "aliases": [null, "192.168.10.82 Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_82_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.192_168_10_82_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "192.168.10.82 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.192_168_10_82_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_82_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "192.168.10.82 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_82_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_82_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "192.168.10.82 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_82_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_82_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "192.168.10.82 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_82_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_82_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "192.168.10.82 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_82_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.192_168_10_82_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "192.168.10.82 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.192_168_10_82_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.28_39_26_d3_14_5f_signal_strength_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "192.168.10.55 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.28_39_26_d3_14_5f_signal_strength_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.28_39_26_d3_14_5f_rx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "192.168.10.55 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.28_39_26_d3_14_5f_rx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.28_39_26_d3_14_5f_tx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "192.168.10.55 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.28_39_26_d3_14_5f_tx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.28_39_26_d3_14_5f_noise_level_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "192.168.10.55 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.28_39_26_d3_14_5f_noise_level_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.28_39_26_d3_14_5f_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "LenovoL340 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.28_39_26_d3_14_5f_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.28_39_26_d3_14_5f_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "LenovoL340 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.28_39_26_d3_14_5f_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.28_39_26_d3_14_5f_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "LenovoL340 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.28_39_26_d3_14_5f_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.28_39_26_d3_14_5f_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "LenovoL340 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.28_39_26_d3_14_5f_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_55_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "LenovoL340.home.arpa Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_55_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_55_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "LenovoL340.home.arpa RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_55_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_55_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "LenovoL340.home.arpa TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_55_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_55_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "LenovoL340.home.arpa Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_55_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.192_168_10_55_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "LenovoL340.home.arpa Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.192_168_10_55_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.28_39_26_d3_14_5f_signal_strength_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "192.168.10.55 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.28_39_26_d3_14_5f_signal_strength_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.28_39_26_d3_14_5f_rx_rate_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "192.168.10.55 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.28_39_26_d3_14_5f_rx_rate_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.28_39_26_d3_14_5f_tx_rate_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "192.168.10.55 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.28_39_26_d3_14_5f_tx_rate_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.28_39_26_d3_14_5f_noise_level_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "192.168.10.55 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.28_39_26_d3_14_5f_noise_level_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "2c:bc:bb:c1:87:2c Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "2c:bc:bb:c1:87:2c RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "2c:bc:bb:c1:87:2c TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "2c:bc:bb:c1:87:2c Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.e8_db_84_d3_1d_ce_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Termostat Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.e8_db_84_d3_1d_ce_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.e8_db_84_d3_1d_ce_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Termostat RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.e8_db_84_d3_1d_ce_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.e8_db_84_d3_1d_ce_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Termostat TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.e8_db_84_d3_1d_ce_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.e8_db_84_d3_1d_ce_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Termostat Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.e8_db_84_d3_1d_ce_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.e8_db_84_d3_1d_ce_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Termostat Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.e8_db_84_d3_1d_ce_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_signal_strength_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "2c:bc:bb:c1:87:2c Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_signal_strength_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_rx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "2c:bc:bb:c1:87:2c RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_rx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_tx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "2c:bc:bb:c1:87:2c TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_tx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_noise_level_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "2c:bc:bb:c1:87:2c Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_noise_level_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.80_c5_f2_3e_08_43_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "chromecast-verkstadens-speaker Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.80_c5_f2_3e_08_43_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_c5_f2_3e_08_43_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "chromecast-verkstadens-speaker Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_c5_f2_3e_08_43_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_c5_f2_3e_08_43_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "chromecast-verkstadens-speaker RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_c5_f2_3e_08_43_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_c5_f2_3e_08_43_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "chromecast-verkstadens-speaker TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_c5_f2_3e_08_43_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_c5_f2_3e_08_43_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "chromecast-verkstadens-speaker Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_c5_f2_3e_08_43_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.ec_62_60_89_ed_bc_disconnect_device_2", "before": {"name": null, "aliases": [null, "shellypro-3-shop-central Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "shellypro-3-shop-central Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.ec_62_60_89_ed_bc_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.q28756_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Q28756 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.q28756_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.pixel_9_pro_xl_home_arpa_disconnect_device_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Pixel-9-Pro-XL Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.pixel_9_pro_xl_home_arpa_disconnect_device_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.pixel_9_pro_xl_home_arpa_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Pixel-9-Pro-XL Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.pixel_9_pro_xl_home_arpa_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.carolas_s25_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Carolas-S25 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.carolas_s25_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.carolas_s25_disconnect_device_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Carolas-S25 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.carolas_s25_disconnect_device_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_b0_4a_39_24_a4_cb_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "roborock-max Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_b0_4a_39_24_a4_cb_disconnect_device_2"}

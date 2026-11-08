@@ -1,0 +1,202 @@
+{
+  "sensor.kokets_skarm_device": [
+    {
+      "state": "192.168.10.209",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "sensor.nya_tvn_device": [
+    {
+      "state": "192.168.10.19",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "sensor.stereo_hoger_device": [
+    {
+      "state": "192.168.10.207",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "sensor.diegos_vackarklocka_device": [
+    {
+      "state": "192.168.10.210",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "sensor.diegos_vackarklocka_timers": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "switch.kokets_skarm_do_not_disturb": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "switch.diegos_vackarklocka_do_not_disturb": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "number.kokets_skarm_alarm_volume": [
+    {
+      "state": "50",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "number.diegos_vackarklocka_alarm_volume": [
+    {
+      "state": "50",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "sensor.stereo_vanster_device_2": [
+    {
+      "state": "192.168.10.206",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "sensor.jbl_bar_5_0_device": [
+    {
+      "state": "192.168.10.203",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "sensor.google_home_ateljens_hogtalare_ateljens_hogtalare_device_2": [
+    {
+      "state": "192.168.10.205",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "sensor.google_home_ateljens_hogtalare_ateljens_hogtalare_alarms_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "sensor.google_home_ateljens_hogtalare_ateljens_hogtalare_timers_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "switch.google_home_ateljens_hogtalare_ateljens_hogtalare_do_not_disturb_2": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "number.google_home_ateljens_hogtalare_ateljens_hogtalare_alarm_volume_2": [
+    {
+      "state": "62",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "button.ateljens_hogtalare_reboot": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "button.koket_kokets_skarm_reboot": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "button.verandans_hogtalare_vanster_reboot": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "button.verandan_tvs_soundbar_reboot": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "button.verandan_nya_tvn_reboot": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "button.verandan_verandans_hogtalare_hoger_reboot": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "button.toalettens_hogtalare_reboot": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "button.duschens_hogtalare_reboot": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "button.sovrummet_diegos_vackarklocka_reboot": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ]
+}

@@ -38,7 +38,7 @@ from homeassistant.const import (
 )
 from homeassistant.core import HomeAssistant, State, callback, split_entity_id
 from homeassistant.helpers import config_validation as cv
-from homeassistant.helpers.event import async_track_state_change
+from homeassistant.helpers.event import async_track_state_change_event
 from homeassistant.helpers.typing import ConfigType
 from homeassistant.util.unit_conversion import TemperatureConverter
 from homeassistant.util.unit_system import METRIC_SYSTEM, TEMPERATURE_UNITS
@@ -149,7 +149,7 @@ class TemperatureFeelingSensor(SensorEntity):
 
         # pylint: disable=unused-argument
         @callback
-        def sensor_state_listener(entity, old_state, new_state):
+        def sensor_state_listener(event):
             """Handle device state changes."""
             self.async_schedule_update_ha_state(True)
 
@@ -160,6 +160,8 @@ class TemperatureFeelingSensor(SensorEntity):
             entities = set()
             for entity_id in self._sources:
                 state: State = self.hass.states.get(entity_id)
+                if state is None:
+                    continue
                 domain = split_entity_id(state.entity_id)[0]
                 device_class = state.attributes.get(ATTR_DEVICE_CLASS)
                 unit_of_measurement = state.attributes.get(ATTR_UNIT_OF_MEASUREMENT)
@@ -197,11 +199,22 @@ class TemperatureFeelingSensor(SensorEntity):
                     self._name += " Temperature"
                 self._name += " Feels Like"
 
-            async_track_state_change(self.hass, list(entities), sensor_state_listener)
+            self.async_on_remove(
+                async_track_state_change_event(
+                    self.hass, list(entities), sensor_state_listener
+                )
+            )
 
             self.async_schedule_update_ha_state(True)
 
-        self.hass.bus.async_listen_once(EVENT_HOMEASSISTANT_START, sensor_startup)
+        if self.hass.is_running:
+            sensor_startup(None)
+        else:
+            self.async_on_remove(
+                self.hass.bus.async_listen_once(
+                    EVENT_HOMEASSISTANT_START, sensor_startup
+                )
+            )
 
     @staticmethod
     def _has_state(state) -> bool:
@@ -224,10 +237,14 @@ class TemperatureFeelingSensor(SensorEntity):
         domain = split_entity_id(state.entity_id)[0]
         if domain == WEATHER:
             temperature = state.attributes.get(ATTR_WEATHER_TEMPERATURE)
-            entity_unit = self.unit_of_measurement
+            entity_unit = state.attributes.get(
+                "temperature_unit", self.unit_of_measurement
+            )
         elif domain == CLIMATE:
             temperature = state.attributes.get(ATTR_CURRENT_TEMPERATURE)
-            entity_unit = self.unit_of_measurement
+            entity_unit = state.attributes.get(
+                "temperature_unit", self.unit_of_measurement
+            )
         else:
             temperature = state.state
             entity_unit = state.attributes.get(ATTR_UNIT_OF_MEASUREMENT)
@@ -277,7 +294,7 @@ class TemperatureFeelingSensor(SensorEntity):
         domain = split_entity_id(state.entity_id)[0]
         if domain == WEATHER:
             wind_speed = state.attributes.get(ATTR_WEATHER_WIND_SPEED)
-            entity_unit = (
+            entity_unit = state.attributes.get("wind_speed_unit") or (
                 UnitOfSpeed.KILOMETERS_PER_HOUR
                 if self.hass.config.units is METRIC_SYSTEM
                 else UnitOfSpeed.MILES_PER_HOUR

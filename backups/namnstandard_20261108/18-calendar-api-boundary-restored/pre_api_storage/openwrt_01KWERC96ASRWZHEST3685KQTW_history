@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "openwrt_01KWERC96ASRWZHEST3685KQTW_history",
+  "data": {
+    "devices": {
+      "cc:ba:bd:a5:eb:19": {
+        "initially_seen": 1782906770,
+        "last_seen": 1783319215,
+        "is_wireless": true
+      },
+      "50:03:cf:84:6f:51": {
+        "initially_seen": 1782906770,
+        "last_seen": 1783319215,
+        "is_wireless": true
+      },
+      "28:39:26:d3:14:5f": {
+        "initially_seen": 1782906770,
+        "last_seen": 1783319215,
+        "is_wireless": true
+      },
+      "00:11:f8:1e:af:0f": {
+        "initially_seen": 1782906770,
+        "last_seen": 1783319215,
+        "is_wireless": true
+      },
+      "c8:2b:96:07:35:26": {
+        "initially_seen": 1782906770,
+        "last_seen": 1783319215,
+        "is_wireless": true
+      },
+      "24:a1:60:10:5f:96": {
+        "initially_seen": 1782906770,
+        "last_seen": 1783319215,
+        "is_wireless": true
+      },
+      "24:a1:60:10:eb:a9": {
+        "initially_seen": 1782906770,
+        "last_seen": 1783319215,
+        "is_wireless": true
+      },
+      "c4:4f:33:72:73:e1": {
+        "initially_seen": 1782906770,
+        "last_seen": 1783319215,
+        "is_wireless": true
+      },
+      "e8:ff:1e:db:ea:f8": {
+        "initially_seen": 1782906770,
+        "last_seen": 1783319215,
+        "is_wireless": false
+      },
+      "ac:16:2d:04:99:b2": {
+        "initially_seen": 1782906770,
+        "last_seen": 1783319215,
+        "is_wireless": false
+      },
+      "20:05:b6:01:99:b1": {
+        "initially_seen": 1782906770,
+        "last_seen": 1783319215,
+        "is_wireless": false
+      },
+      "2c:bc:bb:c1:87:2c": {
+        "initially_seen": 1782907794,
+        "last_seen": 1783319215,
+        "is_wireless": true
+      },
+      "20:f8:3b:09:64:60": {
+        "initially_seen": 1782925958,
+        "last_seen": 1782997199,
+        "is_wireless": true
+      },
+      "dc:06:75:9d:82:74": {
+        "initially_seen": 1782925958,
+        "last_seen": 1783001540,
+        "is_wireless": true
+      },
+      "48:e7:29:89:81:90": {
+        "initially_seen": 1782925958,
+        "last_seen": 1783319215,
+        "is_wireless": true
+      },
+      "a4:cf:12:d8:0a:dd": {
+        "initially_seen": 1782925958,
+        "last_seen": 1782997199,
+        "is_wireless": true
+      },
+      "40:22:d8:61:53:f8": {
+        "initially_seen": 1782925958,
+        "last_seen": 1782997199,
+        "is_wireless": true
+      },
+      "08:3a:8d:c1:7e:39": {
+        "initially_seen": 1782925958,
+        "last_seen": 1783002171,
+        "is_wireless": true
+      },
+      "08:3a:8d:c1:7e:b4": {
+        "initially_seen": 1782925958,
+        "last_seen": 1782997004,
+        "is_wireless": true
+      }
+    },
+    "last_version": "25.12.5"
+  }
+}

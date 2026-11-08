@@ -1,0 +1,18 @@
+{
+  "script.rescan_wifi_on_esphome_nodes": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:40.757697+00:00",
+      "last_updated": "2026-11-07T07:55:40.757697+00:00"
+    }
+  ],
+  "script.godnatt_forbered_nasta_halsning": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:40.757697+00:00",
+      "last_updated": "2026-11-07T07:55:40.757697+00:00"
+    }
+  ]
+}

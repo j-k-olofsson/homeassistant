@@ -1,0 +1,13 @@
+[
+  {
+    "statistic_id": "sensor.temp_hum_toalett_temperature",
+    "display_unit_of_measurement": "°C",
+    "has_mean": true,
+    "mean_type": 1,
+    "has_sum": false,
+    "name": null,
+    "source": "recorder",
+    "statistics_unit_of_measurement": "°C",
+    "unit_class": "temperature"
+  }
+]

@@ -1,0 +1,10 @@
+{"status": "rename_intent", "old": "camera.c200c_minorstream", "new": "camera.honshuset_tapo_c200c_videostrom_lag_upplosning"}
+{"status": "renamed", "old": "camera.c200c_minorstream", "new": "camera.honshuset_tapo_c200c_videostrom_lag_upplosning"}
+{"status": "rename_intent", "old": "button.honshuset_tapo_c200c_reboot", "new": "button.honshuset_tapo_c200c_starta_om"}
+{"status": "renamed", "old": "button.honshuset_tapo_c200c_reboot", "new": "button.honshuset_tapo_c200c_starta_om"}
+{"status": "rename_intent", "old": "button.honshuset_tapo_c200c_set_system_date_and_time", "new": "button.honshuset_tapo_c200c_synkronisera_datum_och_tid"}
+{"status": "renamed", "old": "button.honshuset_tapo_c200c_set_system_date_and_time", "new": "button.honshuset_tapo_c200c_synkronisera_datum_och_tid"}
+{"status": "rename_intent", "old": "binary_sensor.honshuset_tapo_c200c_c200c_cell_motion_detection", "new": "binary_sensor.honshuset_tapo_c200c_rorelsedetektering"}
+{"status": "renamed", "old": "binary_sensor.honshuset_tapo_c200c_c200c_cell_motion_detection", "new": "binary_sensor.honshuset_tapo_c200c_rorelsedetektering"}
+{"status": "rename_intent", "old": "binary_sensor.honshuset_tapo_c200c_c200c_person_detection", "new": "binary_sensor.honshuset_tapo_c200c_persondetektering"}
+{"status": "renamed", "old": "binary_sensor.honshuset_tapo_c200c_c200c_person_detection", "new": "binary_sensor.honshuset_tapo_c200c_persondetektering"}

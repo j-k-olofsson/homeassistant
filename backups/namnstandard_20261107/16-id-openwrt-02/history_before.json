@@ -1,0 +1,74 @@
+{
+  "switch.vinden_zyxel_gs1900_24e_a1_switch_vinden_wps": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:41:50.041474+00:00",
+      "last_updated": "2026-11-07T07:41:50.041474+00:00"
+    }
+  ],
+  "update.vinden_zyxel_gs1900_24e_a1_switch_vinden": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:41:50.041474+00:00",
+      "last_updated": "2026-11-07T07:41:50.041474+00:00"
+    }
+  ],
+  "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:41:50.041474+00:00",
+      "last_updated": "2026-11-07T07:41:50.041474+00:00"
+    }
+  ],
+  "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_reboot_required": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:41:50.041474+00:00",
+      "last_updated": "2026-11-07T07:41:50.041474+00:00"
+    }
+  ],
+  "button.bion_asus_lyra_map_ac2200_ap_kallaren_reboot_router": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:41:50.041474+00:00",
+      "last_updated": "2026-11-07T07:41:50.041474+00:00"
+    }
+  ],
+  "button.bion_asus_lyra_map_ac2200_ap_kallaren_start_wps": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:41:50.041474+00:00",
+      "last_updated": "2026-11-07T07:41:50.041474+00:00"
+    }
+  ],
+  "button.bion_asus_lyra_map_ac2200_ap_kallaren_cancel_wps": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:41:50.041474+00:00",
+      "last_updated": "2026-11-07T07:41:50.041474+00:00"
+    }
+  ],
+  "button.bion_asus_lyra_map_ac2200_ap_kallaren_create_backup": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:41:50.041474+00:00",
+      "last_updated": "2026-11-07T07:41:50.041474+00:00"
+    }
+  ],
+  "button.bion_asus_lyra_map_ac2200_ap_kallaren_reconnect_wan": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:41:50.041474+00:00",
+      "last_updated": "2026-11-07T07:41:50.041474+00:00"
+    }
+  ]
+}

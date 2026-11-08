@@ -1,0 +1,47 @@
+{
+  "result": "ok",
+  "data": {
+    "slug": "d59ec955",
+    "type": "partial",
+    "name": "Kontrollpunkt namnsättning – svenska namn och 55 klimat-ID 2026-11-07",
+    "date": "2026-11-07T17:55:42.210298+00:00",
+    "size": 4640.75,
+    "size_bytes": 4866181120,
+    "compressed": true,
+    "protected": false,
+    "location_attributes": {
+      "Backup": {
+        "protected": false,
+        "size_bytes": 4866181120
+      }
+    },
+    "supervisor_version": "2026.10.5",
+    "homeassistant": "2026.11.0",
+    "location": "Backup",
+    "locations": [
+      "Backup"
+    ],
+    "repositories": [
+      "https://github.com/adamoutler/HassOSConfigurator",
+      "https://github.com/tsujamin/hass-addons",
+      "https://github.com/yinzara/ha-config-ai-agent",
+      "https://github.com/Rbillon59/hass-n8n",
+      "https://github.com/CoolKit-Technologies/ha-addon",
+      "https://github.com/dianlight/hassio-addons",
+      "https://github.com/hassio-addons/repository",
+      "https://github.com/music-assistant/home-assistant-addon",
+      "https://github.com/esphome/home-assistant-addon"
+    ],
+    "folders": [],
+    "homeassistant_exclude_database": false,
+    "extra": {},
+    "addons": [
+      {
+        "slug": "core_mariadb",
+        "name": "MariaDB",
+        "version": "3.0.1",
+        "size": 0.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "binary_sensor.aqara_taklampor_blinkningar_senaste_dygnet": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:56:28.846431+00:00",
+      "last_updated": "2026-11-07T07:56:28.846431+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T09:58:20.625942+00:00"
+    }
+  ],
+  "binary_sensor.aqara_banklampor_blinkningar_senaste_dygnet": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:56:28.846431+00:00",
+      "last_updated": "2026-11-07T07:56:28.846431+00:00"
+    }
+  ]
+}

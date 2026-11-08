@@ -1,0 +1,16 @@
+# Device specific substitutions
+substitutions:
+  node_id: "42"
+  node_name: esphome42
+  node_friendly_name: Ledstrip (vitrinskåp)
+  node_comment: ESP32-C6-Zero over Thread
+  log_level: INFO
+  num_leds: "107"
+  gpio_pin: "GPIO3"
+  night_brightness: "40%"
+  day_brightness: "60%"
+
+packages:
+  device: !include common/.device_esp32_c6_ledstrip_indoors.yaml
+
+safe_mode:

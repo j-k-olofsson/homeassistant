@@ -1,0 +1,16 @@
+{
+  "sensor.adguard_home_dns_forfragningar": "sensor.heimdal_ha_adguard_home_dns_forfragningar",
+  "switch.adguard_home_skydd": "switch.heimdal_ha_adguard_home_skydd",
+  "sensor.adguard_home_blockerade_av_foraldrakontroll": "sensor.heimdal_ha_adguard_home_blockerade_av_foraldrakontroll",
+  "sensor.adguard_home_andel_blockerade_dns_forfragningar": "sensor.heimdal_ha_adguard_home_andel_blockerade_dns_forfragningar",
+  "sensor.adguard_home_blockerade_dns_forfragningar": "sensor.heimdal_ha_adguard_home_blockerade_dns_forfragningar",
+  "sensor.adguard_home_blockerade_for_saker_surfning": "sensor.heimdal_ha_adguard_home_blockerade_for_saker_surfning",
+  "switch.adguard_home_foraldrakontroll": "switch.heimdal_ha_adguard_home_foraldrakontroll",
+  "sensor.adguard_home_antal_regler": "sensor.heimdal_ha_adguard_home_antal_regler",
+  "sensor.adguard_home_sakra_sokningar_framtvingade": "sensor.heimdal_ha_adguard_home_sakra_sokningar_framtvingade",
+  "sensor.adguard_home_genomsnittlig_bearbetningshastighet": "sensor.heimdal_ha_adguard_home_genomsnittlig_bearbetningshastighet",
+  "switch.adguard_home_saker_sokning": "switch.heimdal_ha_adguard_home_saker_sokning",
+  "switch.adguard_home_saker_surfning": "switch.heimdal_ha_adguard_home_saker_surfning",
+  "switch.adguard_home_filtrering": "switch.heimdal_ha_adguard_home_filtrering",
+  "switch.adguard_home_forfragningslogg": "switch.heimdal_ha_adguard_home_forfragningslogg"
+}

@@ -1,0 +1,8 @@
+{
+  "binary_sensor.ytterdorren_dorrklockan_ringer": "binary_sensor.entren_ytterdorren_dorrklockan_ringer",
+  "button.ytterdorren_vack": "button.entren_ytterdorren_vack",
+  "sensor.ytterdorren_batteri": "sensor.entren_ytterdorren_batteriniva",
+  "binary_sensor.ytterdorren_dorr": "binary_sensor.entren_ytterdorren_dorr",
+  "sensor.ytterdorren_operator": "sensor.entren_ytterdorren_operator",
+  "event.ytterdorren_dorrklocka": "event.entren_ytterdorren_dorrklocka"
+}

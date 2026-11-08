@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "minor_version": 7,
+  "key": "backup",
+  "data": {
+    "backups": [
+      {
+        "backup_id": "9f269edc",
+        "failed_addons": [],
+        "failed_agent_ids": [
+          "cloud.cloud"
+        ],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "76c7541c",
+        "failed_addons": [],
+        "failed_agent_ids": [
+          "cloud.cloud"
+        ],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "ebfb934c",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "37bfa068",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "9f9f206f",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "08c397a4",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "59c081d2",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "b16fb022",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "13a13971",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "df274b0a",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "ef0cb33a",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      }
+    ],
+    "config": {
+      "agents": {
+        "onedrive.9FB7061AFB66D13B": {
+          "protected": true,
+          "retention": null
+        },
+        "hassio.disk1T": {
+          "protected": false,
+          "retention": null
+        },
+        "hassio.local": {
+          "protected": false,
+          "retention": null
+        },
+        "hassio.Backups": {
+          "protected": false,
+          "retention": null
+        }
+      },
+      "automatic_backups_configured": true,
+      "create_backup": {
+        "agent_ids": [
+          "hassio.local",
+          "cloud.cloud",
+          "onedrive.9FB7061AFB66D13B",
+          "google_drive.j_k_olofsson_gmail_com",
+          "hassio.Backups"
+        ],
+        "include_addons": [
+          "a0d7b954_ssh",
+          "89d439b6_chromadb",
+          "core_duckdns",
+          "5c53de3b_esphome",
+          "f4f71350_ewelink_smart_home_slug",
+          "core_configurator",
+          "1f3d020e_hassos_ssh_configurator_addon",
+          "a0d7b954_logviewer",
+          "core_mariadb",
+          "core_matter_server",
+          "6560bdea_hass-n8n",
+          "a0d7b954_nginxproxymanager",
+          "core_openwakeword",
+          "a0d7b954_phpmyadmin",
+          "core_piper",
+          "1a32f091_sambanas",
+          "core_silabs_multiprotocol",
+          "a0d7b954_spotify",
+          "a0d7b954_vscode",
+          "948e3081_tailscale",
+          "core_whisper",
+          "a0d7b954_adguard"
+        ],
+        "include_all_addons": false,
+        "include_database": true,
+        "include_folders": null,
+        "name": null,
+        "password": "17TD-WOTI-QLKG-W1HP-74R2-L24L-3L16"
+      },
+      "last_attempted_automatic_backup": "2026-03-13T02:22:00.001261+01:00",
+      "last_completed_automatic_backup": "2026-03-13T02:34:01.861793+01:00",
+      "retention": {
+        "copies": 3,
+        "days": null
+      },
+      "schedule": {
+        "days": [
+          "mon",
+          "tue",
+          "wed",
+          "thu",
+          "fri",
+          "sat",
+          "sun"
+        ],
+        "recurrence": "custom_days",
+        "time": "02:22:00"
+      }
+    }
+  }
+}

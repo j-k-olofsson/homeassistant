@@ -1,0 +1,6 @@
+{"status": "rename_intent", "old": "update.blueprints_battery_notes_battery_not_reported", "new": "update.batterier_utebliven_rapport"}
+{"status": "renamed", "old": "update.blueprints_battery_notes_battery_not_reported", "new": "update.batterier_utebliven_rapport"}
+{"status": "rename_intent", "old": "update.blueprints_battery_notes_battery_replaced", "new": "update.batterier_batteribyte"}
+{"status": "renamed", "old": "update.blueprints_battery_notes_battery_replaced", "new": "update.batterier_batteribyte"}
+{"status": "rename_intent", "old": "update.blueprints_battery_notes_battery_threshold", "new": "update.batterier_varningsgrans"}
+{"status": "renamed", "old": "update.blueprints_battery_notes_battery_threshold", "new": "update.batterier_varningsgrans"}

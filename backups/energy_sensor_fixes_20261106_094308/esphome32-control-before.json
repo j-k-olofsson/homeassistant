@@ -1,0 +1,40 @@
+{
+  "entity_id": "light.blomlampa_shelly_plus_rgbw_pm_esphome32_growlight",
+  "state": "on",
+  "attributes": {
+    "supported_color_modes": [
+      "rgbw"
+    ],
+    "color_mode": "rgbw",
+    "brightness": 255,
+    "hs_color": [
+      0.0,
+      0.0
+    ],
+    "rgb_color": [
+      255,
+      255,
+      255
+    ],
+    "xy_color": [
+      0.323,
+      0.329
+    ],
+    "rgbw_color": [
+      250,
+      250,
+      250,
+      255
+    ],
+    "friendly_name": "Blomlampa (Shelly Plus RGBW PM) esphome32 Growlight",
+    "supported_features": 40
+  },
+  "last_changed": "2026-11-06T08:13:22.420592+00:00",
+  "last_reported": "2026-11-06T08:13:22.420592+00:00",
+  "last_updated": "2026-11-06T08:13:22.420592+00:00",
+  "context": {
+    "id": "01M6QYPSKMTVB069CRETXRWYYF",
+    "parent_id": null,
+    "user_id": null
+  }
+}

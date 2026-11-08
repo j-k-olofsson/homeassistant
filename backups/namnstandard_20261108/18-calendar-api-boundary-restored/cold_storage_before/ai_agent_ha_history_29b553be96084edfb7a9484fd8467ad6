@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "ai_agent_ha_history_29b553be96084edfb7a9484fd8467ad6",
+  "data": {
+    "history": [
+      "Analysera de enheter/entiteter som Spook flaggat som zombies. Vilka av dessa kan faktiskt tas bort och vilka bör behållas?",
+      "I vilka automationer tänds mina sänglampor kl 21:00?"
+    ]
+  }
+}

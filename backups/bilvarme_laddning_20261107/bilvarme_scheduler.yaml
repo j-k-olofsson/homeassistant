@@ -1,0 +1,22 @@
+script:
+  bilvarme_starta_en_gang:
+    alias: Bilvärme – starta en gång
+    description: Startar Toyotas kupévärme med bilens senast valda inställningar.
+    icon: mdi:car-seat-heater
+    mode: single
+    sequence:
+      - if:
+          - condition: template
+            value_template: >-
+              {{ states('climate.sef_42h_climate') in ['unknown', 'unavailable'] }}
+        then:
+          - stop: Toyota är inte tillgänglig; ingen start skickades.
+            error: true
+      - if:
+          - condition: template
+            value_template: "{{ not is_state('climate.sef_42h_climate', 'off') }}"
+        then:
+          - stop: Bilens klimatanläggning är redan aktiv; ingen extra start skickades.
+      - action: toyota.start_climate
+        data:
+          device_id: "{{ device_id('climate.sef_42h_climate') }}"

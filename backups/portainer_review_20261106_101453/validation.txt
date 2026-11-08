@@ -1,0 +1,2 @@
+docker compose config --quiet: passed
+Only the caddy-ui image and PORTAINER_AGENT_IMAGE changed. No service restarted.

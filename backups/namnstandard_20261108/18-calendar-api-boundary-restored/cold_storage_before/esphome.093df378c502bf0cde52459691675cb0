@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.093df378c502bf0cde52459691675cb0",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "esphome53",
+      "friendly_name": "Julgran",
+      "mac_address": "08:3A:F2:7F:37:5C",
+      "compilation_time": "Jan  1 2026, 09:42:15",
+      "model": "lolin32",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2025.12.4",
+      "project_name": "",
+      "project_version": "",
+      "webserver_port": 80,
+      "legacy_voice_assistant_version": 0,
+      "voice_assistant_feature_flags": 0,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0,
+      "zwave_proxy_feature_flags": 0,
+      "zwave_home_id": 0,
+      "suggested_area": "",
+      "bluetooth_mac_address": "",
+      "api_encryption_supported": true,
+      "devices": [],
+      "areas": [],
+      "area": {
+        "area_id": 0,
+        "name": ""
+      }
+    },
+    "services": [
+      {
+        "name": "scan_wifi",
+        "key": 846330570,
+        "args": []
+      }
+    ],
+    "api_version": {
+      "major": 1,
+      "minor": 13
+    },
+    "update": [],
+    "light": [
+      {
+        "object_id": "esphome53_light",
+        "key": 874477255,
+        "name": "esphome53 Light",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "supported_color_modes": [
+          3
+        ],
+        "min_mireds": 0.0,
+        "max_mireds": 0.0,
+        "effects": [
+          "None",
+          "Slow Pulse",
+          "Fast Pulse"
+        ],
+        "legacy_supports_brightness": false,
+        "legacy_supports_rgb": false,
+        "legacy_supports_white_value": false,
+        "legacy_supports_color_temperature": false
+      }
+    ],
+    "sensor": [
+      {
+        "object_id": "wifi_rssi",
+        "key": 939579340,
+        "name": "Wifi RSSI",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_id": 0,
+        "device_class": "signal_strength",
+        "unit_of_measurement": "dBm",
+        "accuracy_decimals": 0,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      }
+    ],
+    "text_sensor": [
+      {
+        "object_id": "wifi_bssid",
+        "key": 1220733680,
+        "name": "Wifi BSSID",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_id": 0,
+        "device_class": ""
+      }
+    ]
+  }
+}

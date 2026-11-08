@@ -1,0 +1,130 @@
+{
+  "button.dassens_hogtalare_favorite_current_song": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:52:18.791338+00:00",
+      "last_updated": "2026-11-07T07:52:18.791338+00:00"
+    }
+  ],
+  "button.diegos_vackarklocka_favorite_current_song": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:52:18.791338+00:00",
+      "last_updated": "2026-11-07T07:52:18.791338+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T04:01:58.045739+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-08T04:02:03.579949+00:00"
+    }
+  ],
+  "button.stereo_hoger_favorite_current_song": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:52:18.791338+00:00",
+      "last_updated": "2026-11-07T07:52:18.791338+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T02:15:36.164092+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-08T02:15:58.202377+00:00"
+    }
+  ],
+  "button.stereo_vanster_favorite_current_song": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:52:18.791338+00:00",
+      "last_updated": "2026-11-07T07:52:18.791338+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T03:27:18.204179+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-08T03:27:41.395234+00:00"
+    }
+  ],
+  "button.alla_hogtalare_favorite_current_song_2": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:52:18.791338+00:00",
+      "last_updated": "2026-11-07T07:52:18.791338+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T02:15:10.702521+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-08T02:15:15.737966+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T02:15:54.610350+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-08T02:16:00.041936+00:00"
+    }
+  ],
+  "button.nesthubf174_favoritmarkera_nuvarande_lat_3": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:52:18.791338+00:00",
+      "last_updated": "2026-11-07T07:52:18.791338+00:00"
+    }
+  ],
+  "button.ha_voice_pe_096460_media_player_favorite_current_song": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:52:18.791338+00:00",
+      "last_updated": "2026-11-07T07:52:18.791338+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:20.832660+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-07T13:26:48.683216+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.529005+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-08T07:05:11.027307+00:00"
+    }
+  ],
+  "button.ateljen_favoritmarkera_nuvarande_lat": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:52:18.791338+00:00",
+      "last_updated": "2026-11-07T07:52:18.791338+00:00"
+    }
+  ],
+  "button.chromecast5575_favoritmarkera_nuvarande_lat": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:52:18.791338+00:00",
+      "last_updated": "2026-11-07T07:52:18.791338+00:00"
+    }
+  ]
+}

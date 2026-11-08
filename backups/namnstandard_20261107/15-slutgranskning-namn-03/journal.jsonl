@@ -1,0 +1,58 @@
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.atc_b999ba_unfiltered_distance_to_shelly_1pm_shower_floor_heating", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ofiltrerat avstånd till Golvvärme", "aliases": ["Unfiltered Distance to Golvvärme"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.atc_b999ba_unfiltered_distance_to_shelly_1pm_shower_floor_heating"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.atc_b999ba_distance_to_golvvarme_verandan", "before": {"name": null, "aliases": [null]}, "after": {"name": "Avstånd till Golvvärme", "aliases": ["Distance to Golvvärme"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.atc_b999ba_distance_to_golvvarme_verandan"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.atc_b999ba_unfiltered_distance_to_golvvarme_verandan", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ofiltrerat avstånd till Golvvärme", "aliases": ["Unfiltered Distance to Golvvärme"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.atc_b999ba_unfiltered_distance_to_golvvarme_verandan"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.atc_b999ba_distance_to_shelly_1pm_celler_floor_heating", "before": {"name": null, "aliases": [null]}, "after": {"name": "Avstånd till Golvvärme", "aliases": ["Distance to Golvvärme"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.atc_b999ba_distance_to_shelly_1pm_celler_floor_heating"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.atc_b999ba_unfiltered_distance_to_shelly_1pm_celler_floor_heating", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ofiltrerat avstånd till Golvvärme", "aliases": ["Unfiltered Distance to Golvvärme"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.atc_b999ba_unfiltered_distance_to_shelly_1pm_celler_floor_heating"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.atc_b999ba_distance_to_golvvarme_koket", "before": {"name": null, "aliases": [null]}, "after": {"name": "Avstånd till Golvvärme", "aliases": ["Distance to Golvvärme"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.atc_b999ba_distance_to_golvvarme_koket"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.atc_b999ba_unfiltered_distance_to_golvvarme_koket", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ofiltrerat avstånd till Golvvärme", "aliases": ["Unfiltered Distance to Golvvärme"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.atc_b999ba_unfiltered_distance_to_golvvarme_koket"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.atc_b999ba_distance_to_golvvarme_entren", "before": {"name": null, "aliases": [null]}, "after": {"name": "Avstånd till Golvvärme", "aliases": ["Distance to Golvvärme"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.atc_b999ba_distance_to_golvvarme_entren"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.atc_b999ba_unfiltered_distance_to_golvvarme_entren", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ofiltrerat avstånd till Golvvärme", "aliases": ["Unfiltered Distance to Golvvärme"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.atc_b999ba_unfiltered_distance_to_golvvarme_entren"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.atc_b999ba_distance_to_golvvarme_ateljen", "before": {"name": null, "aliases": [null]}, "after": {"name": "Avstånd till Golvvärme", "aliases": ["Distance to Golvvärme"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.atc_b999ba_distance_to_golvvarme_ateljen"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.atc_b999ba_unfiltered_distance_to_golvvarme_ateljen", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ofiltrerat avstånd till Golvvärme", "aliases": ["Unfiltered Distance to Golvvärme"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.atc_b999ba_unfiltered_distance_to_golvvarme_ateljen"}
+{"status": "intent", "operation": {"kind": "entity", "id": "device_tracker.atc_b999ba_bermuda_tracker", "before": {"name": null, "aliases": [null]}, "after": {"name": "Position", "aliases": ["ATC_B999BA Bermuda Tracker"]}}}
+{"status": "applied", "kind": "entity", "id": "device_tracker.atc_b999ba_bermuda_tracker"}
+{"status": "intent", "operation": {"kind": "entity", "id": "number.atc_b999ba_calibration_ref_power_at_1m_0_for_default", "before": {"name": null, "aliases": [null]}, "after": {"name": "Referenssignalstyrka vid 1 meter (0 = standard)", "aliases": ["ATC_B999BA Calibration Ref Power at 1m. 0 for default."]}}}
+{"status": "applied", "kind": "entity", "id": "number.atc_b999ba_calibration_ref_power_at_1m_0_for_default"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.adaptive_lighting_bio_sleep_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Viloläge", "aliases": ["Adaptive Lighting: Bio Sleep Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.adaptive_lighting_bio_sleep_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.adaptive_lighting_bio_adapt_color", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anpassa färg", "aliases": ["Adaptive Lighting: Bio Adapt Color"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.adaptive_lighting_bio_adapt_color"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.adaptive_lighting_bio_adapt_brightness", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anpassa ljusstyrka", "aliases": ["Adaptive Lighting: Bio Adapt Brightness"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.adaptive_lighting_bio_adapt_brightness"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.openplantbook_upload_problem", "before": {"name": null, "aliases": [null]}, "after": {"name": "Uppladdningsproblem", "aliases": ["OpenPlantbook Upload problem"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.openplantbook_upload_problem"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.openplantbook_upload_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Uppladdningsstatus", "aliases": ["OpenPlantbook Upload status"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.openplantbook_upload_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.openplantbook_last_upload", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senaste uppladdning", "aliases": ["OpenPlantbook Last upload"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.openplantbook_last_upload"}
+{"status": "intent", "operation": {"kind": "device", "id": "ea5503ed4d33725385af206895421979", "before": {"name_by_user": null}, "after": {"name_by_user": "Docker-volym 2f8eb40be8a9"}}}
+{"status": "applied", "kind": "device", "id": "ea5503ed4d33725385af206895421979"}
+{"status": "intent", "operation": {"kind": "device", "id": "cf7317f9d10170d7791809995928cf61", "before": {"name_by_user": null}, "after": {"name_by_user": "Docker-volym 36b2ef5c23d0"}}}
+{"status": "applied", "kind": "device", "id": "cf7317f9d10170d7791809995928cf61"}
+{"status": "intent", "operation": {"kind": "device", "id": "900be997608bc9930451738e5de4dd8f", "before": {"name_by_user": null}, "after": {"name_by_user": "Docker-volym bcfdb3c18423"}}}
+{"status": "applied", "kind": "device", "id": "900be997608bc9930451738e5de4dd8f"}
+{"status": "intent", "operation": {"kind": "device", "id": "2dea8d0e73731d15e9b9827403d56add", "before": {"name_by_user": null}, "after": {"name_by_user": "Docker-volym b7dd2fc85426"}}}
+{"status": "applied", "kind": "device", "id": "2dea8d0e73731d15e9b9827403d56add"}
+{"status": "intent", "operation": {"kind": "device", "id": "4bc95649bedf82a77a27ada6cfba8748", "before": {"name_by_user": null}, "after": {"name_by_user": "Docker-volym 978c39c7e107"}}}
+{"status": "applied", "kind": "device", "id": "4bc95649bedf82a77a27ada6cfba8748"}
+{"status": "intent", "operation": {"kind": "device", "id": "40d8b58c9393066df0f02003281a937f", "before": {"name_by_user": null}, "after": {"name_by_user": "Docker-volym 4ea82b29fda0"}}}
+{"status": "applied", "kind": "device", "id": "40d8b58c9393066df0f02003281a937f"}
+{"status": "intent", "operation": {"kind": "device", "id": "9d18fe042790fd558072d886b3c35faa", "before": {"name_by_user": null}, "after": {"name_by_user": "Docker-volym 59a9bfe12dad"}}}
+{"status": "applied", "kind": "device", "id": "9d18fe042790fd558072d886b3c35faa"}
+{"status": "intent", "operation": {"kind": "device", "id": "d7b6146dbc4f6906187a6d174c1ce682", "before": {"name_by_user": null}, "after": {"name_by_user": "Docker-volym fd01a2046897"}}}
+{"status": "applied", "kind": "device", "id": "d7b6146dbc4f6906187a6d174c1ce682"}
+{"status": "intent", "operation": {"kind": "device", "id": "77dad1a258c544fc963583d36f9fe4d3", "before": {"name_by_user": null}, "after": {"name_by_user": "Docker-volym 523a75b1eee9"}}}
+{"status": "applied", "kind": "device", "id": "77dad1a258c544fc963583d36f9fe4d3"}
+{"status": "intent", "operation": {"kind": "device", "id": "98ddab4c0034750e1f0a183bedec3b80", "before": {"name_by_user": null}, "after": {"name_by_user": "Docker-volym f7f13a0b9033"}}}
+{"status": "applied", "kind": "device", "id": "98ddab4c0034750e1f0a183bedec3b80"}

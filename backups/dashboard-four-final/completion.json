@@ -1,0 +1,17 @@
+{
+  "prusa": {
+    "timer": "timer.dashboard_prusa_klar",
+    "automation_id": "dashboard_completion_prusa",
+    "source": "sensor.prusaxl"
+  },
+  "tvatt": {
+    "timer": "timer.dashboard_tvatt_klar",
+    "automation_id": "dashboard_completion_tvatt",
+    "source": "sensor.siemens_tvatt_tork_driftsstatus"
+  },
+  "disk": {
+    "timer": "timer.dashboard_disk_klar",
+    "automation_id": "dashboard_completion_disk",
+    "source": "sensor.siemens_016050395510002818_bsh_common_status_operationstate"
+  }
+}

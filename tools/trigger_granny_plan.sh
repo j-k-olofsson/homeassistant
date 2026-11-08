@@ -10,7 +10,7 @@ if [[ -f "${ENV_FILE}" ]]; then
   source "${ENV_FILE}"
 fi
 
-ENTITY_ID="${1:-automation.sef_42h_plan_charging}"
+ENTITY_ID="${1:-automation.billaddning_starta_planering}"
 BASE_URL="${HA_BASE_URL:-http://eir.local}"
 TOKEN="${HA_TOKEN:-}"
 LOG_LINES="${HA_LOG_LINES:-150}"

@@ -1,0 +1,75 @@
+script:
+  bilvarme_starta_en_gang:
+    alias: Bilvärme – starta en gång
+    description: Aktiverar laddningen före bilvärmen och håller strömmen tillgänglig under uppvärmningen.
+    icon: mdi:car-seat-heater
+    mode: single
+    sequence:
+      - if:
+          - condition: template
+            value_template: >-
+              {{ states('climate.utomhus_sef_42h') in ['unknown', 'unavailable'] }}
+        then:
+          - stop: Toyota är inte tillgänglig; ingen start skickades.
+            error: true
+      - if:
+          - condition: template
+            value_template: "{{ not is_state('climate.utomhus_sef_42h', 'off') }}"
+        then:
+          - stop: Bilens klimatanläggning är redan aktiv; ingen extra start skickades.
+      - if:
+          - condition: template
+            value_template: "{{ states('switch.billaddare') not in ['on', 'off'] }}"
+        then:
+          - stop: Ladduttaget är inte tillgängligt; ingen värmestart skickades.
+            error: true
+      - variables:
+          _laddare_var_pa: "{{ is_state('switch.billaddare', 'on') }}"
+          _laddkalender_var_pa: "{{ is_state('calendar.billaddning', 'on') }}"
+          _varmetid_minuter: "{{ state_attr('climate.utomhus_sef_42h', 'duration_minutes') | int(20) }}"
+      - action: script.bilvarme_med_laddning
+        continue_on_error: true
+        data:
+          varmetid_minuter: '{{ _varmetid_minuter }}'
+      - if:
+          - condition: template
+            value_template: >-
+              {{ not is_state('calendar.billaddning', 'on')
+                 and not (_laddare_var_pa and not _laddkalender_var_pa) }}
+        then:
+          - action: switch.turn_off
+            target:
+              entity_id: switch.billaddare
+
+  bilvarme_med_laddning:
+    alias: Bilvärme – laddning och uppvärmning
+    description: Används av engångsstarten för att ordna laddning före värme.
+    mode: single
+    fields:
+      varmetid_minuter:
+        required: true
+        selector:
+          number:
+            min: 1
+            max: 30
+            unit_of_measurement: min
+    sequence:
+      - action: switch.turn_on
+        target:
+          entity_id: switch.billaddare
+      - wait_template: "{{ is_state('switch.billaddare', 'on') }}"
+        timeout: '00:00:15'
+        continue_on_timeout: false
+      - delay: '00:01:00'
+      - if:
+          - condition: template
+            value_template: "{{ not is_state('switch.billaddare', 'on') }}"
+        then:
+          - stop: Ladduttaget bekräftar inte påslagen ström; ingen värmestart skickades.
+            error: true
+      - action: toyota.start_climate
+        continue_on_error: true
+        data:
+          device_id: "{{ device_id('climate.utomhus_sef_42h') }}"
+      - delay:
+          minutes: '{{ varmetid_minuter | int(20) + 2 }}'

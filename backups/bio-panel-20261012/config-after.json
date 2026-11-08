@@ -1,0 +1,164 @@
+{
+  "views": [
+    {
+      "type": "panel",
+      "title": "Bio",
+      "path": "bio",
+      "theme": "Bio Panel",
+      "cards": [
+        {
+          "type": "custom:bio-panel-card",
+          "cards": [
+            {
+              "type": "tile",
+              "entity": "switch.grupp_hemmabio",
+              "name": "Bio",
+              "show_entity_picture": false,
+              "hide_state": false,
+              "vertical": true,
+              "tap_action": {
+                "action": "toggle"
+              },
+              "features_position": "bottom",
+              "hold_action": {
+                "action": "none"
+              },
+              "double_tap_action": {
+                "action": "none"
+              },
+              "icon_tap_action": {
+                "action": "toggle"
+              },
+              "icon": "mdi:power",
+              "color": "green"
+            },
+            {
+              "type": "tile",
+              "entity": "button.esphome76_lexicon_volume_down",
+              "name": "Volym −",
+              "icon": "mdi:volume-minus",
+              "show_entity_picture": false,
+              "hide_state": true,
+              "vertical": true,
+              "tap_action": {
+                "action": "perform-action",
+                "perform_action": "button.press",
+                "target": {
+                  "entity_id": "button.esphome76_lexicon_volume_down"
+                }
+              },
+              "features_position": "bottom",
+              "hold_action": {
+                "action": "none"
+              },
+              "double_tap_action": {
+                "action": "none"
+              },
+              "icon_tap_action": {
+                "action": "perform-action",
+                "perform_action": "button.press",
+                "target": {
+                  "entity_id": "button.esphome76_lexicon_volume_down"
+                }
+              },
+              "color": "disabled"
+            },
+            {
+              "type": "tile",
+              "entity": "button.esphome76_lexicon_volume_up",
+              "name": "Volym +",
+              "icon": "mdi:volume-plus",
+              "hide_state": true,
+              "vertical": true,
+              "tap_action": {
+                "action": "perform-action",
+                "perform_action": "button.press",
+                "target": {
+                  "entity_id": "button.esphome76_lexicon_volume_up"
+                }
+              },
+              "features_position": "bottom",
+              "hold_action": {
+                "action": "none"
+              },
+              "double_tap_action": {
+                "action": "none"
+              },
+              "icon_tap_action": {
+                "action": "perform-action",
+                "perform_action": "button.press",
+                "target": {
+                  "entity_id": "button.esphome76_lexicon_volume_up"
+                }
+              },
+              "color": "disabled"
+            },
+            {
+              "type": "tile",
+              "entity": "light.esphome57_esphome57_light",
+              "icon": "mdi:ceiling-light-multiple-outline",
+              "vertical": false,
+              "tap_action": {
+                "action": "toggle"
+              },
+              "features": [
+                {
+                  "type": "light-brightness"
+                }
+              ],
+              "features_position": "bottom",
+              "hold_action": {
+                "action": "none"
+              },
+              "double_tap_action": {
+                "action": "none"
+              },
+              "icon_tap_action": {
+                "action": "toggle"
+              },
+              "name": "Taklampor",
+              "color": "amber",
+              "state_content": [
+                "state",
+                "brightness"
+              ]
+            },
+            {
+              "type": "tile",
+              "entity": "light.grupp_bordslampor_bion",
+              "name": "Bordslampor",
+              "icon": "mdi:lightbulb-on",
+              "vertical": false,
+              "tap_action": {
+                "action": "toggle"
+              },
+              "features": [
+                {
+                  "type": "light-brightness"
+                }
+              ],
+              "features_position": "bottom",
+              "hold_action": {
+                "action": "none"
+              },
+              "double_tap_action": {
+                "action": "none"
+              },
+              "icon_tap_action": {
+                "action": "toggle"
+              },
+              "color": "amber",
+              "state_content": [
+                "state",
+                "brightness"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "kiosk_mode": {
+    "kiosk": true
+  }
+}

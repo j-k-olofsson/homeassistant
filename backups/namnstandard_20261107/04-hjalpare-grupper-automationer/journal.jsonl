@@ -1,0 +1,256 @@
+{"status": "intent", "operation": {"kind": "entity", "id": "light.fonsterlampor_sovrum", "before": {"name": "GRUPP - Ledstrips i sovrummet", "aliases": [null, "Fönsterlister", "Fönsterlampa", "Fönsterlampor", "Ledlister"]}, "after": {"name": "LED-lister", "aliases": [null, "Fönsterlister", "Fönsterlampa", "Fönsterlampor", "Ledlister", "GRUPP - Ledstrips i sovrummet"]}}}
+{"status": "applied", "kind": "entity", "id": "light.fonsterlampor_sovrum"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_boolean.winter_equipment", "before": {"name": null, "aliases": [null]}, "after": {"name": "Vinterutrustning", "aliases": [null, "TILLSTÅND - Vinterprylar"]}}}
+{"status": "applied", "kind": "entity", "id": "input_boolean.winter_equipment"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_boolean.pool_equipment", "before": {"name": null, "aliases": [null]}, "after": {"name": "Poolutrustning", "aliases": [null, "TILLSTÅND - Poolprylar"]}}}
+{"status": "applied", "kind": "entity", "id": "input_boolean.pool_equipment"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.frysboxen_varmevarning", "before": {"name": null, "aliases": [null]}, "after": {"name": "Varning – Frysboxen", "aliases": [null, "PERSISTENT VARNING - Frysboxen"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.frysboxen_varmevarning"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_select.sun_phase", "before": {"name": null, "aliases": [null]}, "after": {"name": "Solens dygnsfas", "aliases": [null, "TILLSTÅND - Solens dygnsfas"]}}}
+{"status": "applied", "kind": "entity", "id": "input_select.sun_phase"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.lampornas_scen", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysning – Dagsljus och Nattbelysning", "aliases": [null, "SCEN - Dagsljus och Nattbelysning"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.lampornas_scen"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_datetime.lights_off", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lampor släcks", "aliases": [null, "TID - Lamporna #2 släcks"]}}}
+{"status": "applied", "kind": "entity", "id": "input_datetime.lights_off"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_datetime.lights_on", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lampor tänds", "aliases": [null, "TID - Lamporna #1 tänds"]}}}
+{"status": "applied", "kind": "entity", "id": "input_datetime.lights_on"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_datetime.growlights_off", "before": {"name": null, "aliases": [null]}, "after": {"name": "Växtlampor släcks", "aliases": [null, "TID - Växtlampor #3 släcks"]}}}
+{"status": "applied", "kind": "entity", "id": "input_datetime.growlights_off"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.scen_vaxtlampor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysning – Växtlampor", "aliases": [null, "SCEN - Växtlampor"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.scen_vaxtlampor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_datetime.growlights_late_on", "before": {"name": null, "aliases": [null]}, "after": {"name": "Växtlampor tänds senare", "aliases": [null, "TID - Växtlampor #2 tänds senare"]}}}
+{"status": "applied", "kind": "entity", "id": "input_datetime.growlights_late_on"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_select.growligth_scen", "before": {"name": null, "aliases": [null]}, "after": {"name": "Växtbelysningsscen äldre hjälpare", "aliases": [null, "SCEN - Växtlampor"]}}}
+{"status": "applied", "kind": "entity", "id": "input_select.growligth_scen"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_datetime.growlights_on", "before": {"name": null, "aliases": [null]}, "after": {"name": "Växtlampor tänds", "aliases": [null, "TID - Växtlampor #1 tänds"]}}}
+{"status": "applied", "kind": "entity", "id": "input_datetime.growlights_on"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.tvattmaskin_notifiera_tv", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tvätt/tork – Färdig", "aliases": [null, "Tvätt/tork - Färdig"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.tvattmaskin_notifiera_tv"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.scen_morgonljus_fran_vackarklockans_alarm", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysning – Morgonljus före väckarklockan", "aliases": [null, "SCEN - Morgonljus före väckarklockan"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.scen_morgonljus_fran_vackarklockans_alarm"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.alla_blomlampor", "before": {"name": "GRUPP - Alla blomlampor", "aliases": [null, "Blomlamporna", "Blomlampor"]}, "after": {"name": "Alla blomlampor", "aliases": [null, "Blomlamporna", "Blomlampor", "GRUPP - Alla blomlampor"]}}}
+{"status": "applied", "kind": "entity", "id": "light.alla_blomlampor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.grupp_taklampor_kok", "before": {"name": null, "aliases": [null, "Alla taklampor", "Köket", "Taklampor"]}, "after": {"name": "Taklampor", "aliases": [null, "Alla taklampor", "Köket", "Taklampor", "GRUPP - Taklampor kök"]}}}
+{"status": "applied", "kind": "entity", "id": "light.grupp_taklampor_kok"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.godnatt", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysning – Godnatt", "aliases": [null, "SCEN - Godnatt"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.godnatt"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.grupp_godnatt", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysning för godnatt", "aliases": [null, "GRUPP - Lampor som släcks med godnatt"]}}}
+{"status": "applied", "kind": "entity", "id": "light.grupp_godnatt"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.grupp_lampor_vid_tvn", "before": {"name": "GRUPP - TV lampor", "aliases": [null, "Tevelampor", "TV lampor", "TV-lampor"]}, "after": {"name": "TV-belysning", "aliases": [null, "Tevelampor", "TV lampor", "TV-lampor", "GRUPP - TV lampor"]}}}
+{"status": "applied", "kind": "entity", "id": "light.grupp_lampor_vid_tvn"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_datetime.oppna_honsluckan", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hönsluckan öppnas", "aliases": [null, "TID - Öppna hönsluckan"]}}}
+{"status": "applied", "kind": "entity", "id": "input_datetime.oppna_honsluckan"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.styrning_diskmaskinen", "before": {"name": null, "aliases": [null]}, "after": {"name": "Diskmaskinen – Färdig", "aliases": [null, "Diskmaskinen - Färdig"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.styrning_diskmaskinen"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.tillstand_dorrklocka", "before": {"name": null, "aliases": [null]}, "after": {"name": "Varning – Dörrklocka", "aliases": [null, "PERSISTENT VARNING - Dörrklocka"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.tillstand_dorrklocka"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.tillstand_ytterdorren_kranglar", "before": {"name": null, "aliases": [null]}, "after": {"name": "Varning – Ytterdörren krånglar", "aliases": [null, "PERSISTENT VARNING - Ytterdörren krånglar"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.tillstand_ytterdorren_kranglar"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.tillstand_balkongdorren", "before": {"name": null, "aliases": [null]}, "after": {"name": "Varning – Balkongdörren", "aliases": [null, "PERSISTENT VARNING - Balkongdörren"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.tillstand_balkongdorren"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.tillstand_vattenlacka_under_torkskapet", "before": {"name": null, "aliases": [null]}, "after": {"name": "Varning – Vattenläcka under torkskåpet", "aliases": [null, "PERSISTENT VARNING - Vattenläcka under torkskåpet"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.tillstand_vattenlacka_under_torkskapet"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_select.light_scene", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysningsscen", "aliases": [null, "TILLSTÅND - Lampornas Scen"]}}}
+{"status": "applied", "kind": "entity", "id": "input_select.light_scene"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_select.growlight_scene", "before": {"name": null, "aliases": [null]}, "after": {"name": "Växtbelysningsscen", "aliases": [null, "TILLSTÅND - Växtlampornas Scen"]}}}
+{"status": "applied", "kind": "entity", "id": "input_select.growlight_scene"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.scen_mysbelysning", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysning – Mysbelysning", "aliases": [null, "SCEN - Mysbelysning"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.scen_mysbelysning"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.scen_julbelysning", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysning – Julbelysning", "aliases": [null, "SCEN - Julbelysning"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.scen_julbelysning"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.scen_partybelysning", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysning – Festbelysning", "aliases": [null, "SCEN - Festbelysning"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.scen_partybelysning"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.scen_alarm", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysning – Alarm", "aliases": [null, "SCEN - Alarm"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.scen_alarm"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.grupp_hemmabio", "before": {"name": null, "aliases": [null, "Bion", "Hemmabio", "Bio", "Hemmabion", "Hembio"]}, "after": {"name": "Bioutrustning", "aliases": [null, "Bion", "Hemmabio", "Bio", "Hemmabion", "Hembio", "GRUPP - Hemmabio"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.grupp_hemmabio"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.scen_matbelysning", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysning – Matbelysning", "aliases": [null, "SCEN - Matbelysning"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.scen_matbelysning"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.assistent_poolens_tempetatur", "before": {"name": null, "aliases": [null]}, "after": {"name": "Röststyrning – Pooltemperatur", "aliases": [null, "INTENT - Pooltemperatur"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.assistent_poolens_tempetatur"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.assistent_aterstall_ljudnivaer", "before": {"name": null, "aliases": [null]}, "after": {"name": "Röststyrning – Återställ ljudnivåer", "aliases": [null, "INTENT - Återställ ljudnivåer"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.assistent_aterstall_ljudnivaer"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.grupp_lampor_som_tands_vid_skymning", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skymningsbelysning", "aliases": [null, "GRUPP - Lampor som tänds vid skymning"]}}}
+{"status": "applied", "kind": "entity", "id": "light.grupp_lampor_som_tands_vid_skymning"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.battery_not_reported", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterier – kontrollera uteblivna rapporter", "aliases": [null, "Batteri Noterat"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.battery_not_reported"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.battery_replaced", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterier – registrera batteribyte", "aliases": [null, "Batteri Bytt"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.battery_replaced"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.battery_threshold", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterier – kontrollera varningsgräns", "aliases": [null, "Batteri Tröskel"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.battery_threshold"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_boolean.guest_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Gästläge", "aliases": [null, "TILLSTÅND - Gästläge"]}}}
+{"status": "applied", "kind": "entity", "id": "input_boolean.guest_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.elmatare_on_off_line", "before": {"name": null, "aliases": [null]}, "after": {"name": "Elmätare – kontrollera anslutning", "aliases": [null, "Elmätare Online Status"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.elmatare_on_off_line"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_number.nordpool_trade_fee", "before": {"name": null, "aliases": [null]}, "after": {"name": "Elpris handelsavgift", "aliases": [null, "Nordpool_trade_fee"]}}}
+{"status": "applied", "kind": "entity", "id": "input_number.nordpool_trade_fee"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_number.nordpool_spot_fee", "before": {"name": null, "aliases": [null]}, "after": {"name": "Elpris spotpåslag", "aliases": [null, "Nordpool_spot_fee"]}}}
+{"status": "applied", "kind": "entity", "id": "input_number.nordpool_spot_fee"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_number.nordpool_certificate_fee", "before": {"name": null, "aliases": [null]}, "after": {"name": "Elpris certifikatsavgift", "aliases": [null, "Nordpool_certificate_fee"]}}}
+{"status": "applied", "kind": "entity", "id": "input_number.nordpool_certificate_fee"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_number.nordpool_energy_transfer_fee", "before": {"name": null, "aliases": [null]}, "after": {"name": "Elpris överföringsavgift", "aliases": [null, "Nordpool_energy_transfer_fee"]}}}
+{"status": "applied", "kind": "entity", "id": "input_number.nordpool_energy_transfer_fee"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_number.nordpool_energy_tax", "before": {"name": null, "aliases": [null]}, "after": {"name": "Elpris energiskatt", "aliases": [null, "Nordpool_energy_tax"]}}}
+{"status": "applied", "kind": "entity", "id": "input_number.nordpool_energy_tax"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_number.nordpool_vat", "before": {"name": null, "aliases": [null]}, "after": {"name": "Elpris moms", "aliases": [null, "Nordpool_vat"]}}}
+{"status": "applied", "kind": "entity", "id": "input_number.nordpool_vat"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.scen_slack_koket", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysning – Släck köket", "aliases": [null, "SCEN - Släck köket"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.scen_slack_koket"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.hemmavarme", "before": {"name": null, "aliases": [null]}, "after": {"name": "Röststyrning – Hemmavärme", "aliases": [null, "INTENT - Hemmavärme"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.hemmavarme"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.intent_komfortvarme", "before": {"name": null, "aliases": [null]}, "after": {"name": "Röststyrning – Justera Värme", "aliases": [null, "INTENT - Justera Värme"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.intent_komfortvarme"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.intent_bortavarme", "before": {"name": null, "aliases": [null]}, "after": {"name": "Röststyrning – Bortavärme", "aliases": [null, "INTENT - Bortavärme"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.intent_bortavarme"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.scen_tv_lampor_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysning – TV och Belysning", "aliases": [null, "SCEN - TV och Belysning"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.scen_tv_lampor_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "script.rescan_wifi_on_esphome_nodes", "before": {"name": null, "aliases": [null]}, "after": {"name": "ESPHome – sök efter Wi-Fi-nät", "aliases": [null, "Rescan wifi on all esphome nodes"]}}}
+{"status": "applied", "kind": "entity", "id": "script.rescan_wifi_on_esphome_nodes"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_datetime.granny_charger_trigger", "before": {"name": null, "aliases": [null]}, "after": {"name": "Laddplan starttid", "aliases": [null, "Granny Charger Trigger"]}}}
+{"status": "applied", "kind": "entity", "id": "input_datetime.granny_charger_trigger"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_number.car_bat_capacity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilbatteriets kapacitet", "aliases": [null, "Batteriets kapacitet"]}}}
+{"status": "applied", "kind": "entity", "id": "input_number.car_bat_capacity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_number.car_charger_capacity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Laddeffekt", "aliases": [null, "Elladdningen kapacitet"]}}}
+{"status": "applied", "kind": "entity", "id": "input_number.car_charger_capacity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_boolean.car_man_override", "before": {"name": null, "aliases": [null]}, "after": {"name": "Manuell laddstyrning", "aliases": [null, "Override billaddning"]}}}
+{"status": "applied", "kind": "entity", "id": "input_boolean.car_man_override"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_datetime.granny_charger_done_trigger", "before": {"name": null, "aliases": [null]}, "after": {"name": "Laddplan sluttid", "aliases": [null, "Granny Charger Done Trigger"]}}}
+{"status": "applied", "kind": "entity", "id": "input_datetime.granny_charger_done_trigger"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_boolean.ha_ready", "before": {"name": null, "aliases": [null]}, "after": {"name": "Home Assistant redo", "aliases": [null, "HA Ready"]}}}
+{"status": "applied", "kind": "entity", "id": "input_boolean.ha_ready"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.ha_ready", "before": {"name": null, "aliases": [null]}, "after": {"name": "Home Assistant – markera systemet redo", "aliases": [null, "HA Redo"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.ha_ready"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.kritiska_entiteter_styrning_larm", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kritiska entiteter för styrning och larm", "aliases": [null, "Kritiska entiteter (styrning & larm)"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.kritiska_entiteter_styrning_larm"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_antal_otillgangliga_kritiska_enheter", "before": {"name": null, "aliases": [null]}, "after": {"name": "HA – Antal otillgängliga kritiska enheter", "aliases": [null, "HA - Antal otillgängliga kritiska enheter"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_antal_otillgangliga_kritiska_enheter"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_antal_enheter", "before": {"name": null, "aliases": [null]}, "after": {"name": "HA – Antal enheter", "aliases": [null, "HA - Antal enheter"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_antal_enheter"}
+{"status": "intent", "operation": {"kind": "entity", "id": "script.granny_broadcast", "before": {"name": null, "aliases": [null]}, "after": {"name": "Granny – skicka meddelande", "aliases": [null, "Granny Broadcast (kanalneutral)"]}}}
+{"status": "applied", "kind": "entity", "id": "script.granny_broadcast"}
+{"status": "intent", "operation": {"kind": "entity", "id": "media_player.grupp_grannys_hogtalare", "before": {"name": null, "aliases": [null]}, "after": {"name": "Grannys högtalare", "aliases": [null, "GRUPP - Grannys högtalare"]}}}
+{"status": "applied", "kind": "entity", "id": "media_player.grupp_grannys_hogtalare"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_number.car_target_soc", "before": {"name": null, "aliases": [null]}, "after": {"name": "Målladdning", "aliases": [null, "Bilens mål-SOC"]}}}
+{"status": "applied", "kind": "entity", "id": "input_number.car_target_soc"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.sef_42h_plan_charging", "before": {"name": null, "aliases": [null]}, "after": {"name": "Billaddning – starta planering", "aliases": [null, "Starta Granny Bil-laddning"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.sef_42h_plan_charging"}
+{"status": "intent", "operation": {"kind": "entity", "id": "script.granny_car_charge_plan", "before": {"name": null, "aliases": [null]}, "after": {"name": "Granny – planera billaddning", "aliases": [null, "Granny Bil-laddningsplan"]}}}
+{"status": "applied", "kind": "entity", "id": "script.granny_car_charge_plan"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.grupp_bordslampor_bion", "before": {"name": "GRUPP - Bordslampor (bion)", "aliases": [null]}, "after": {"name": "Bordslampor", "aliases": [null, "GRUPP - Bordslampor (bion)"]}}}
+{"status": "applied", "kind": "entity", "id": "light.grupp_bordslampor_bion"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.bordslampor_hemmabio", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hemmabio – bordslampor att/dag & bio av/på", "aliases": [null, "Hemmabio - bordslampor att/dag & bio av/på"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.bordslampor_hemmabio"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_datetime.aqara_taklampor_senaste_knapp_tid", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aqara taklampor senaste knapptryckning", "aliases": [null, "Aqara taklampor senaste knapp tid"]}}}
+{"status": "applied", "kind": "entity", "id": "input_datetime.aqara_taklampor_senaste_knapp_tid"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_datetime.aqara_taklampor_senaste_kommando_tid", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aqara taklampor senaste kommandotid", "aliases": [null, "Aqara taklampor senaste kommando tid"]}}}
+{"status": "applied", "kind": "entity", "id": "input_datetime.aqara_taklampor_senaste_kommando_tid"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_datetime.aqara_taklampor_senaste_flash_tid", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aqara taklampor senaste blinkning", "aliases": [null, "Aqara taklampor senaste flash tid"]}}}
+{"status": "applied", "kind": "entity", "id": "input_datetime.aqara_taklampor_senaste_flash_tid"}
+{"status": "intent", "operation": {"kind": "entity", "id": "counter.aqara_taklampor_flash_count", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aqara taklampor antal blinkningar", "aliases": [null, "Aqara taklampor flash count"]}}}
+{"status": "applied", "kind": "entity", "id": "counter.aqara_taklampor_flash_count"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.aqara_taklampor_flash_senaste_24h", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aqara taklampor blinkningar senaste dygnet", "aliases": [null, "Aqara taklampor flash senaste 24h"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.aqara_taklampor_flash_senaste_24h"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.aqara_taklampor_monitor_knapp_event", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aqara taklampor övervakning – knapphändelser", "aliases": [null, "Aqara taklampor monitor - knapp event"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.aqara_taklampor_monitor_knapp_event"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.aqara_taklampor_monitor_service_calls", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aqara taklampor övervakning – åtgärdsanrop", "aliases": [null, "Aqara taklampor monitor - service calls"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.aqara_taklampor_monitor_service_calls"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.aqara_taklampor_monitor_flash_detector", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aqara taklampor övervakning – blinkningsdetektor", "aliases": [null, "Aqara taklampor monitor - flash detector"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.aqara_taklampor_monitor_flash_detector"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.aqara_banklampor_monitor_knapp_event", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aqara banklampor övervakning – knapphändelser", "aliases": [null, "Aqara banklampor monitor - knapp event"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.aqara_banklampor_monitor_knapp_event"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.aqara_banklampor_monitor_service_calls", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aqara banklampor övervakning – åtgärdsanrop", "aliases": [null, "Aqara banklampor monitor - service calls"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.aqara_banklampor_monitor_service_calls"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.aqara_banklampor_monitor_flash_detector", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aqara banklampor övervakning – blinkningsdetektor", "aliases": [null, "Aqara banklampor monitor - flash detector"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.aqara_banklampor_monitor_flash_detector"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.aqara_banklampor_flash_senaste_24h", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aqara banklampor blinkningar senaste dygnet", "aliases": [null, "Aqara banklampor flash senaste 24h"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.aqara_banklampor_flash_senaste_24h"}
+{"status": "intent", "operation": {"kind": "entity", "id": "counter.aqara_banklampor_flash_count", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aqara banklampor antal blinkningar", "aliases": [null, "Aqara banklampor flash count"]}}}
+{"status": "applied", "kind": "entity", "id": "counter.aqara_banklampor_flash_count"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_datetime.aqara_banklampor_senaste_knapp_tid", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aqara banklampor senaste knapptryckning", "aliases": [null, "Aqara banklampor senaste knapp tid"]}}}
+{"status": "applied", "kind": "entity", "id": "input_datetime.aqara_banklampor_senaste_knapp_tid"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_datetime.aqara_banklampor_senaste_kommando_tid", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aqara banklampor senaste kommandotid", "aliases": [null, "Aqara banklampor senaste kommando tid"]}}}
+{"status": "applied", "kind": "entity", "id": "input_datetime.aqara_banklampor_senaste_kommando_tid"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_datetime.aqara_banklampor_senaste_flash_tid", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aqara banklampor senaste blinkning", "aliases": [null, "Aqara banklampor senaste flash tid"]}}}
+{"status": "applied", "kind": "entity", "id": "input_datetime.aqara_banklampor_senaste_flash_tid"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.3d_skrivaren_fardig", "before": {"name": null, "aliases": [null]}, "after": {"name": "3D-skrivare – meddela färdig utskrift", "aliases": [null, "3D‑skrivaren - Färdig"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.3d_skrivaren_fardig"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.db_optimera_mariadb_tabeller_natt", "before": {"name": null, "aliases": [null]}, "after": {"name": "Databas – Optimera MariaDB-tabeller natt", "aliases": [null, "DB - Optimera MariaDB-tabeller natt"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.db_optimera_mariadb_tabeller_natt"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.db_notifiera_resultat_av_mariadb_optimering", "before": {"name": null, "aliases": [null]}, "after": {"name": "Databas – Notifiera resultat av MariaDB-optimering", "aliases": [null, "DB - Notifiera resultat av MariaDB-optimering"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.db_notifiera_resultat_av_mariadb_optimering"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.narvarosimulering_lampor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysning för närvarosimulering", "aliases": [null, "Narvarosimulering lampor"]}}}
+{"status": "applied", "kind": "entity", "id": "light.narvarosimulering_lampor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "script.narvarosimulering_start", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närvarosimulering – starta", "aliases": [null, "Narvarosimulering start"]}}}
+{"status": "applied", "kind": "entity", "id": "script.narvarosimulering_start"}
+{"status": "intent", "operation": {"kind": "entity", "id": "script.narvarosimulering_stop", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närvarosimulering – stoppa", "aliases": [null, "Narvarosimulering stop"]}}}
+{"status": "applied", "kind": "entity", "id": "script.narvarosimulering_stop"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_number.narvarosimulering_delta_dagar", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närvarosimulering – historikförskjutning i dagar", "aliases": [null, "Narvarosimulering delta dagar"]}}}
+{"status": "applied", "kind": "entity", "id": "input_number.narvarosimulering_delta_dagar"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_number.narvarosimulering_random_sekunder", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närvarosimulering – slumpförskjutning i sekunder", "aliases": [null, "Narvarosimulering random sekunder"]}}}
+{"status": "applied", "kind": "entity", "id": "input_number.narvarosimulering_random_sekunder"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_number.narvarosimulering_brightness_procent", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närvarosimulering – ljusstyrka", "aliases": [null, "Narvarosimulering brightness procent"]}}}
+{"status": "applied", "kind": "entity", "id": "input_number.narvarosimulering_brightness_procent"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_boolean.narvarosimulering_aktiv", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närvarosimulering aktiv", "aliases": [null, "Narvarosimulering aktiv"]}}}
+{"status": "applied", "kind": "entity", "id": "input_boolean.narvarosimulering_aktiv"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_text.narvarosimulering_switch_entity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närvarosimulering – brytarentitet", "aliases": [null, "Narvarosimulering switch entity"]}}}
+{"status": "applied", "kind": "entity", "id": "input_text.narvarosimulering_switch_entity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.narvarosimulering_start_nar_helper_slas_pa", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närvarosimulering – starta när hjälparen slås på", "aliases": [null, "Narvarosimulering - start nar helper slas pa"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.narvarosimulering_start_nar_helper_slas_pa"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.narvarosimulering_start_vid_solnedgang_om_aktiv", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närvarosimulering – starta vid solnedgång om aktiv", "aliases": [null, "Narvarosimulering - start vid solnedgang om aktiv"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.narvarosimulering_start_vid_solnedgang_om_aktiv"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.narvarosimulering_stop_nar_helper_slas_av", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närvarosimulering – stoppa när hjälparen slås av", "aliases": [null, "Narvarosimulering - stop nar helper slas av"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.narvarosimulering_stop_nar_helper_slas_av"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.narvarosimulering_stop_nar_nagon_kommer_hem", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närvarosimulering – stoppa när någon kommer hem", "aliases": [null, "Narvarosimulering - stop nar nagon kommer hem"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.narvarosimulering_stop_nar_nagon_kommer_hem"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_boolean.narvarosimulering_testlage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närvarosimulering testläge", "aliases": [null, "Narvarosimulering testlage"]}}}
+{"status": "applied", "kind": "entity", "id": "input_boolean.narvarosimulering_testlage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.narvarosimulering_dry_run_logg", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närvarosimulering – logga testkörning", "aliases": [null, "Narvarosimulering - dry run logg"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.narvarosimulering_dry_run_logg"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_number.narvarosimulering_test_events", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närvarosimulering – testhändelser", "aliases": [null, "Narvarosimulering test events"]}}}
+{"status": "applied", "kind": "entity", "id": "input_number.narvarosimulering_test_events"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.narvarosimulering_dry_run_sammanfattning", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närvarosimulering – sammanfatta testkörning", "aliases": [null, "Narvarosimulering - dry run sammanfattning"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.narvarosimulering_dry_run_sammanfattning"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.poolpump_on_off_bilresa_knappar", "before": {"name": null, "aliases": [null]}, "after": {"name": "Poolpump – styr med Bilresa-knappar", "aliases": [null, "Poolpump on/off (Bilresa knappar("]}}}
+{"status": "applied", "kind": "entity", "id": "automation.poolpump_on_off_bilresa_knappar"}
+{"status": "intent", "operation": {"kind": "entity", "id": "script.thread_uppdatera_natverksdiagnostik", "before": {"name": null, "aliases": [null]}, "after": {"name": "Thread – Uppdatera nätverksdiagnostik", "aliases": [null, "Thread - Uppdatera nätverksdiagnostik"]}}}
+{"status": "applied", "kind": "entity", "id": "script.thread_uppdatera_natverksdiagnostik"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.thread_network_diagnostics", "before": {"name": null, "aliases": [null]}, "after": {"name": "Thread-nätverksdiagnostik", "aliases": [null, "Thread Network Diagnostics"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.thread_network_diagnostics"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.thread_automatisk_natverksdiagnostik", "before": {"name": null, "aliases": [null]}, "after": {"name": "Thread – Automatisk nätverksdiagnostik", "aliases": [null, "Thread - Automatisk nätverksdiagnostik"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.thread_automatisk_natverksdiagnostik"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_number.ir_lights_before_diego_alarm", "before": {"name": null, "aliases": [null]}, "after": {"name": "IR-ljus före Diegos alarm", "aliases": [null, "TID – IR-ljus före Diegos alarm"]}}}
+{"status": "applied", "kind": "entity", "id": "input_number.ir_lights_before_diego_alarm"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_datetime.ir_lights_on", "before": {"name": null, "aliases": [null]}, "after": {"name": "IR-ljus tänds", "aliases": [null, "TID – IR-ljus tänds"]}}}
+{"status": "applied", "kind": "entity", "id": "input_datetime.ir_lights_on"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_datetime.ir_lights_off", "before": {"name": null, "aliases": [null]}, "after": {"name": "IR-ljus släcks", "aliases": [null, "TID – IR-ljus släcks"]}}}
+{"status": "applied", "kind": "entity", "id": "input_datetime.ir_lights_off"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.narvarosimulering_permanent_aktivitetslogg", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närvarosimulering – permanent aktivitetslogg", "aliases": [null, "Narvarosimulering - permanent aktivitetslogg"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.narvarosimulering_permanent_aktivitetslogg"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.narvarosimulering_stoppa_24_timmarstest", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närvarosimulering – stoppa 24-timmarstest", "aliases": [null, "Narvarosimulering - stoppa 24-timmarstest"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.narvarosimulering_stoppa_24_timmarstest"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_number.narvarosimulering_test_minuter", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närvarosimulering – testlängd", "aliases": [null, "Narvarosimulering testlangd"]}}}
+{"status": "applied", "kind": "entity", "id": "input_number.narvarosimulering_test_minuter"}
+{"status": "intent", "operation": {"kind": "entity", "id": "input_datetime.narvarosimulering_test_sluttid", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närvarosimulering – testets sluttid", "aliases": [null, "Narvarosimulering test sluttid"]}}}
+{"status": "applied", "kind": "entity", "id": "input_datetime.narvarosimulering_test_sluttid"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.narvarosimulering_stoppa_test_vid_bestandig_sluttid", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närvarosimulering – stoppa test vid beständig sluttid", "aliases": [null, "Narvarosimulering - stoppa test vid beständig sluttid"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.narvarosimulering_stoppa_test_vid_bestandig_sluttid"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.narvarosimulering_aterstall_aktiv_korning_efter_omstart", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närvarosimulering – återställ aktiv körning efter omstart", "aliases": [null, "Narvarosimulering - aterstall aktiv korning efter omstart"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.narvarosimulering_aterstall_aktiv_korning_efter_omstart"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.narvarosimulering_synka_helper_efter_ovantat_stopp", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närvarosimulering – synkronisera hjälparen efter oväntat stopp", "aliases": [null, "Narvarosimulering - synka helper efter ovantat stopp"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.narvarosimulering_synka_helper_efter_ovantat_stopp"}
+{"status": "intent", "operation": {"kind": "entity", "id": "script.hissmusik_starta", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hissmusik – Starta lokal musik", "aliases": [null, "Hissmusik - Starta lokal musik"]}}}
+{"status": "applied", "kind": "entity", "id": "script.hissmusik_starta"}
+{"status": "intent", "operation": {"kind": "entity", "id": "script.hissmusik_stoppa", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hissmusik – Stoppa", "aliases": [null, "Hissmusik - Stoppa"]}}}
+{"status": "applied", "kind": "entity", "id": "script.hissmusik_stoppa"}
+{"status": "intent", "operation": {"kind": "entity", "id": "timer.dashboard_prusa_klar", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kontrollpanel – färdig 3D-utskrift", "aliases": [null, "Dashboard prusa klar"]}}}
+{"status": "applied", "kind": "entity", "id": "timer.dashboard_prusa_klar"}
+{"status": "intent", "operation": {"kind": "entity", "id": "timer.dashboard_tvatt_klar", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kontrollpanel – färdig tvätt", "aliases": [null, "Dashboard tvatt klar"]}}}
+{"status": "applied", "kind": "entity", "id": "timer.dashboard_tvatt_klar"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.kontrollpanel_prusa_fardig", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kontrollpanel – 3D-utskrift färdig", "aliases": [null, "Kontrollpanel – prusa färdig"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.kontrollpanel_prusa_fardig"}
+{"status": "intent", "operation": {"kind": "entity", "id": "timer.dashboard_disk_klar", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kontrollpanel – färdig disk", "aliases": [null, "Dashboard disk klar"]}}}
+{"status": "applied", "kind": "entity", "id": "timer.dashboard_disk_klar"}
+{"status": "intent", "operation": {"kind": "entity", "id": "automation.kontrollpanel_tvatt_fardig", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kontrollpanel – tvätt färdig", "aliases": [null, "Kontrollpanel – tvatt färdig"]}}}
+{"status": "applied", "kind": "entity", "id": "automation.kontrollpanel_tvatt_fardig"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_antal_otillgangliga_enheter", "before": {"name": null, "aliases": [null]}, "after": {"name": "HA – Antal otillgängliga enheter", "aliases": [null, "HA - Antal otillgängliga enheter"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_antal_otillgangliga_enheter"}

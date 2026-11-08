@@ -1,0 +1,18 @@
+{
+  "script.esphome_sok_efter_wi_fi_nat": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:40.757697+00:00",
+      "last_updated": "2026-11-07T07:55:40.757697+00:00"
+    }
+  ],
+  "script.godnatt_forbered_nasta_halsning_efter_rutinen": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:55:40.757697+00:00",
+      "last_updated": "2026-11-07T07:55:40.757697+00:00"
+    }
+  ]
+}

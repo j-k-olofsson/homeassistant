@@ -1,0 +1,20 @@
+{
+  "status": "verified",
+  "stage": "16-id-battery-notes-01",
+  "renamed_entities": 126,
+  "same_unique_ids_and_settings": true,
+  "statistics_series_verified": 552,
+  "history_records_verified": 745,
+  "statistics_metadata_moved": 24,
+  "source_files_updated": [],
+  "dashboards_updated": [],
+  "frontend_favorites_updated": false,
+  "helper_config_entries_auto_updated": [],
+  "automation_consumers_reloaded": [],
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  },
+  "legacy_false_cleanup_pending": true
+}

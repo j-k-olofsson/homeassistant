@@ -1,0 +1,29 @@
+[
+  {
+    "domain": "spotifyplus",
+    "entry_id": "01K2ACBMW0AFHVRV6F9F5M7V6F",
+    "repository": "763230666",
+    "delete": {
+      "require_restart": false
+    },
+    "uninstall": null
+  },
+  {
+    "domain": "watchman",
+    "entry_id": "01KJAKB9F7QYHA6H91Q44BWS7H",
+    "repository": "455174197",
+    "delete": {
+      "require_restart": false
+    },
+    "uninstall": null
+  },
+  {
+    "domain": "ai_agent_ha",
+    "entry_id": "01KPWPF9AWP6MBTM2H1ZKT64Z1",
+    "repository": "985868486",
+    "delete": {
+      "require_restart": false
+    },
+    "uninstall": null
+  }
+]

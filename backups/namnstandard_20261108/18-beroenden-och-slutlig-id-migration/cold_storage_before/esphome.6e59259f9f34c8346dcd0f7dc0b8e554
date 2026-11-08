@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.6e59259f9f34c8346dcd0f7dc0b8e554",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "esphome93",
+      "friendly_name": "Markis (utomhus)",
+      "mac_address": "08:B6:1F:34:55:50",
+      "compilation_time": "2026-11-04 06:50:32 +0100",
+      "model": "wemos_d1_mini32",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2026.10.2",
+      "project_name": "",
+      "project_version": "",
+      "webserver_port": 80,
+      "legacy_voice_assistant_version": 0,
+      "voice_assistant_feature_flags": 0,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0,
+      "zwave_proxy_feature_flags": 0,
+      "zwave_home_id": 0,
+      "suggested_area": "",
+      "bluetooth_mac_address": "",
+      "api_encryption_supported": true,
+      "api_encryption_provisionable": false,
+      "api_outgoing_connection_supported": true,
+      "devices": [],
+      "areas": [],
+      "area": {
+        "area_id": 0,
+        "name": ""
+      },
+      "serial_proxies": []
+    },
+    "services": [],
+    "api_version": {
+      "major": 1,
+      "minor": 19
+    },
+    "device_capabilities": {
+      "bluetooth_proxy": {
+        "feature_flags": 0,
+        "mac_address": ""
+      },
+      "voice_assistant": {
+        "feature_flags": 0
+      },
+      "zwave_proxy": {
+        "feature_flags": 0,
+        "home_id": 0
+      },
+      "serial_proxies": [],
+      "wizard": {
+        "configured": false
+      },
+      "sendspin": {
+        "feature_flags": 0,
+        "client_id": ""
+      },
+      "store_yaml": {
+        "supported": false
+      }
+    },
+    "light": [
+      {
+        "object_id": "esphome93_led",
+        "key": 1468962392,
+        "name": "esphome93 LED",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "supported_color_modes": [
+          1
+        ],
+        "min_mireds": 0.0,
+        "max_mireds": 0.0,
+        "effects": [],
+        "legacy_supports_brightness": false,
+        "legacy_supports_rgb": false,
+        "legacy_supports_white_value": false,
+        "legacy_supports_color_temperature": false
+      }
+    ],
+    "cover": [
+      {
+        "object_id": "esphome93_markis",
+        "key": 4095642258,
+        "name": "esphome93 markis",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "assumed_state": true,
+        "supports_stop": true,
+        "supports_toggle": false,
+        "supports_position": true,
+        "supports_tilt": false,
+        "device_class": "awning",
+        "supports_stop_tilt": false
+      }
+    ],
+    "binary_sensor": [
+      {
+        "object_id": "status",
+        "key": 939730931,
+        "name": "Status",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_id": 0,
+        "device_class": "connectivity",
+        "is_status_binary_sensor": true
+      }
+    ],
+    "update": []
+  }
+}

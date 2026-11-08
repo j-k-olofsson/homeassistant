@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "frontend.system_data",
+  "data": {
+    "core": {
+      "default_panel": "lovelace"
+    },
+    "home": {
+      "favorite_entities": [
+        "sensor.utomhus_temp",
+        "sensor.koket_klimatsensor_temperatur",
+        "sensor.poolbelysning_temp_esphome29_temperature"
+      ]
+    }
+  }
+}

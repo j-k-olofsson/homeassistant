@@ -1,0 +1,4 @@
+{
+  "script.rescan_wifi_on_esphome_nodes": "script.esphome_sok_efter_wi_fi_nat",
+  "script.godnatt_forbered_nasta_halsning": "script.godnatt_forbered_nasta_halsning_efter_rutinen"
+}

@@ -1,0 +1,16 @@
+{
+  "stage": "15-slutgranskning-namn-03",
+  "status": "verified",
+  "operations": 29,
+  "devices": 10,
+  "entities": 19,
+  "entity_ids_unchanged": 10150,
+  "invariants_unchanged": true,
+  "missing_target_states": [],
+  "new_unavailable_targets": [],
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  }
+}

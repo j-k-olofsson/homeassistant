@@ -1,0 +1,142 @@
+{
+  "result": "ok",
+  "data": {
+    "slug": "d1a7d04b",
+    "type": "full",
+    "name": "Före slutförande av namnstandard 2026-11-08",
+    "date": "2026-11-08T07:20:25.322442+00:00",
+    "size": 5991.11,
+    "size_bytes": 6282137600,
+    "compressed": true,
+    "protected": false,
+    "location_attributes": {
+      "Backup": {
+        "protected": false,
+        "size_bytes": 6282137600
+      }
+    },
+    "supervisor_version": "2026.10.5",
+    "homeassistant": "2026.11.0",
+    "location": "Backup",
+    "locations": [
+      "Backup"
+    ],
+    "repositories": [
+      "https://github.com/adamoutler/HassOSConfigurator",
+      "https://github.com/tsujamin/hass-addons",
+      "https://github.com/yinzara/ha-config-ai-agent",
+      "https://github.com/Rbillon59/hass-n8n",
+      "https://github.com/CoolKit-Technologies/ha-addon",
+      "https://github.com/dianlight/hassio-addons",
+      "https://github.com/hassio-addons/repository",
+      "https://github.com/music-assistant/home-assistant-addon",
+      "https://github.com/esphome/home-assistant-addon"
+    ],
+    "folders": [
+      "share",
+      "addons/local",
+      "ssl",
+      "media"
+    ],
+    "homeassistant_exclude_database": false,
+    "extra": {},
+    "addons": [
+      {
+        "slug": "5c53de3b_esphome",
+        "name": "ESPHome Device Builder",
+        "version": "2026.10.2",
+        "size": 0.0
+      },
+      {
+        "slug": "a0d7b954_phpmyadmin",
+        "name": "phpMyAdmin",
+        "version": "0.14.1",
+        "size": 0.0
+      },
+      {
+        "slug": "core_mariadb",
+        "name": "MariaDB",
+        "version": "3.0.1",
+        "size": 0.0
+      },
+      {
+        "slug": "a0d7b954_spotify",
+        "name": "Spotify Connect",
+        "version": "0.19.0",
+        "size": 0.0
+      },
+      {
+        "slug": "1f3d020e_hassos_ssh_configurator_addon",
+        "name": "HassOS SSH port 22222 Configurator",
+        "version": "0.9.3",
+        "size": 0.0
+      },
+      {
+        "slug": "a0d7b954_ssh",
+        "name": "Advanced SSH & Web Terminal",
+        "version": "24.2.1",
+        "size": 0.0
+      },
+      {
+        "slug": "1a32f091_sambanas",
+        "name": "Samba NAS",
+        "version": "12.5.0-nas",
+        "size": 0.0
+      },
+      {
+        "slug": "948e3081_tailscale",
+        "name": "Tailscale",
+        "version": "1.104.5.0",
+        "size": 0.0
+      },
+      {
+        "slug": "core_piper",
+        "name": "Piper",
+        "version": "2.5.2",
+        "size": 0.0
+      },
+      {
+        "slug": "a0d7b954_adguard",
+        "name": "AdGuard Home",
+        "version": "6.3.2",
+        "size": 0.0
+      },
+      {
+        "slug": "d5369777_music_assistant",
+        "name": "Music Assistant",
+        "version": "2.10.9",
+        "size": 0.0
+      },
+      {
+        "slug": "core_matter_server",
+        "name": "Matter Server",
+        "version": "9.3.0",
+        "size": 0.0
+      },
+      {
+        "slug": "core_openthread_border_router",
+        "name": "OpenThread Border Router",
+        "version": "3.3.0",
+        "size": 0.0
+      },
+      {
+        "slug": "core_duckdns",
+        "name": "Duck DNS",
+        "version": "2.0.1",
+        "size": 0.0
+      },
+      {
+        "slug": "core_configurator",
+        "name": "File editor",
+        "version": "6.3.0",
+        "size": 0.0
+      },
+      {
+        "slug": "9b396a0a_ai-config-agent",
+        "name": "AI Configuration Agent",
+        "version": "0.2.0",
+        "size": 0.0
+      }
+    ]
+  }
+}

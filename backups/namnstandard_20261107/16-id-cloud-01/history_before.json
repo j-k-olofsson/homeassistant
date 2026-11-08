@@ -1,0 +1,26 @@
+{
+  "binary_sensor.remote_ui": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:49.594984+00:00",
+      "last_updated": "2026-11-07T07:44:49.594984+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:24:46.443444+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T13:25:08.280994+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:08.764723+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-08T07:03:31.251683+00:00"
+    }
+  ]
+}

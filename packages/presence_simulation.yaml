@@ -1,20 +1,20 @@
 input_boolean:
   narvarosimulering_aktiv:
-    name: Narvarosimulering aktiv
+    name: "Närvarosimulering aktiv"
     icon: mdi:home-lightbulb
   narvarosimulering_testlage:
-    name: Narvarosimulering testlage
+    name: "Närvarosimulering testläge"
     icon: mdi:test-tube
 
 input_text:
   narvarosimulering_switch_entity:
-    name: Narvarosimulering switch entity
+    name: "Närvarosimulering – brytarentitet"
     max: 100
-    initial: switch.presence_simulation_hemma
+    initial: switch.narvarosimulering_hemma
 
 input_number:
   narvarosimulering_delta_dagar:
-    name: Narvarosimulering delta dagar
+    name: "Närvarosimulering – historikförskjutning i dagar"
     min: 1
     max: 30
     step: 1
@@ -22,7 +22,7 @@ input_number:
     unit_of_measurement: dagar
     initial: 7
   narvarosimulering_random_sekunder:
-    name: Narvarosimulering random sekunder
+    name: "Närvarosimulering – slumpförskjutning i sekunder"
     min: 0
     max: 3600
     step: 60
@@ -30,7 +30,7 @@ input_number:
     unit_of_measurement: s
     initial: 900
   narvarosimulering_brightness_procent:
-    name: Narvarosimulering brightness procent
+    name: "Närvarosimulering – ljusstyrka"
     min: 0
     max: 100
     step: 1
@@ -38,13 +38,13 @@ input_number:
     unit_of_measurement: "%"
     initial: 0
   narvarosimulering_test_events:
-    name: Narvarosimulering test events
+    name: "Närvarosimulering – testhändelser"
     min: 0
     max: 5000
     step: 1
     mode: box
   narvarosimulering_test_minuter:
-    name: Narvarosimulering testlangd
+    name: "Närvarosimulering – testlängd"
     min: 1
     max: 10080
     step: 1
@@ -54,13 +54,13 @@ input_number:
 
 input_datetime:
   narvarosimulering_test_sluttid:
-    name: Narvarosimulering test sluttid
+    name: "Närvarosimulering – testets sluttid"
     has_date: true
     has_time: true
 
 light:
   - platform: group
-    name: Narvarosimulering lampor
+    name: "Belysning för närvarosimulering"
     unique_id: narvarosimulering_lampor_group
     entities:
       - light.grupp_taklampor_kok
@@ -68,31 +68,31 @@ light:
 
 script:
   narvarosimulering_start:
-    alias: Narvarosimulering start
+    alias: "Närvarosimulering – starta"
     mode: restart
     sequence:
       - action: presence_simulation.start
         data:
-          switch_id: "{{ states('input_text.narvarosimulering_switch_entity') }}"
+          switch_id: "{{ states('input_text.narvarosimulering_brytarentitet') }}"
           entity_id:
-            - light.narvarosimulering_lampor
-          delta: "{{ states('input_number.narvarosimulering_delta_dagar') | int(7) }}"
+            - light.belysning_for_narvarosimulering
+          delta: "{{ states('input_number.narvarosimulering_historikforskjutning_i_dagar') | int(7) }}"
           restore_states: true
-          random: "{{ states('input_number.narvarosimulering_random_sekunder') | int(900) }}"
-          brightness: "{{ states('input_number.narvarosimulering_brightness_procent') | int(0) }}"
+          random: "{{ states('input_number.narvarosimulering_slumpforskjutning_i_sekunder') | int(900) }}"
+          brightness: "{{ states('input_number.narvarosimulering_ljusstyrka') | int(0) }}"
           dry_run: "{{ is_state('input_boolean.narvarosimulering_testlage', 'on') }}"
 
   narvarosimulering_stop:
-    alias: Narvarosimulering stop
+    alias: "Närvarosimulering – stoppa"
     mode: restart
     sequence:
       - action: presence_simulation.stop
         data:
-          switch_id: "{{ states('input_text.narvarosimulering_switch_entity') }}"
+          switch_id: "{{ states('input_text.narvarosimulering_brytarentitet') }}"
 
 automation:
   - id: narvarosimulering_start_nar_toggle_on
-    alias: Narvarosimulering - start nar helper slas pa
+    alias: "Närvarosimulering – starta när hjälparen slås på"
     mode: single
     triggers:
       - trigger: state
@@ -107,20 +107,20 @@ automation:
         then:
           - action: input_number.set_value
             target:
-              entity_id: input_number.narvarosimulering_test_events
+              entity_id: input_number.narvarosimulering_testhandelser
             data:
               value: 0
           - action: input_datetime.set_datetime
             target:
-              entity_id: input_datetime.narvarosimulering_test_sluttid
+              entity_id: input_datetime.narvarosimulering_testets_sluttid
             data:
               timestamp: >-
                 {{ as_timestamp(now()) +
-                   states('input_number.narvarosimulering_test_minuter') | int(1440) * 60 }}
+                   states('input_number.narvarosimulering_testlangd') | int(1440) * 60 }}
       - action: script.narvarosimulering_start
 
   - id: narvarosimulering_stop_nar_toggle_off
-    alias: Narvarosimulering - stop nar helper slas av
+    alias: "Närvarosimulering – stoppa när hjälparen slås av"
     mode: single
     triggers:
       - trigger: state
@@ -131,7 +131,7 @@ automation:
       - action: script.narvarosimulering_stop
 
   - id: narvarosimulering_dry_run_logg
-    alias: Narvarosimulering - dry run logg
+    alias: "Närvarosimulering – logga testkörning"
     mode: queued
     triggers:
       - trigger: event
@@ -143,9 +143,9 @@ automation:
     actions:
       - action: input_number.set_value
         target:
-          entity_id: input_number.narvarosimulering_test_events
+          entity_id: input_number.narvarosimulering_testhandelser
         data:
-          value: "{{ states('input_number.narvarosimulering_test_events') | int(0) + 1 }}"
+          value: "{{ states('input_number.narvarosimulering_testhandelser') | int(0) + 1 }}"
       - action: logbook.log
         data:
           name: Narvarosimulering Dry Run
@@ -161,7 +161,7 @@ automation:
           entity_id: input_boolean.narvarosimulering_testlage
 
   - id: narvarosimulering_permanent_aktivitetslogg
-    alias: Narvarosimulering - permanent aktivitetslogg
+    alias: "Närvarosimulering – permanent aktivitetslogg"
     mode: queued
     max: 100
     triggers:
@@ -171,7 +171,7 @@ automation:
       - action: notify.send_message
         continue_on_error: true
         target:
-          entity_id: notify.file
+          entity_id: notify.skriptlogg_skriv_meddelande
         data:
           message: >-
             PS {{ 'T' if trigger.event.data.dry_run | default(false) else 'S' }}
@@ -184,7 +184,7 @@ automation:
             r={{ trigger.event.data.resumed_after_restart | int }}
 
   - id: narvarosimulering_dry_run_sammanfattning
-    alias: Narvarosimulering - dry run sammanfattning
+    alias: "Närvarosimulering – sammanfatta testkörning"
     mode: single
     triggers:
       - trigger: state
@@ -200,24 +200,24 @@ automation:
           title: Narvarosimulering dry run sammanfattning
           message: >-
             Testkörning avslutad.
-            Antal simulerade åtgärder: {{ states('input_number.narvarosimulering_test_events') | int(0) }}.
+            Antal simulerade åtgärder: {{ states('input_number.narvarosimulering_testhandelser') | int(0) }}.
             Detaljer finns i /config/file_notifications/scripts.log.
       - action: notify.send_message
         continue_on_error: true
         target:
-          entity_id: notify.file
+          entity_id: notify.skriptlogg_skriv_meddelande
         data:
           message: >-
             Narvarosimulering TEST SLUT:
-            events={{ states('input_number.narvarosimulering_test_events') | int(0) }};
-            deadline={{ states('input_datetime.narvarosimulering_test_sluttid') }}
+            events={{ states('input_number.narvarosimulering_testhandelser') | int(0) }};
+            deadline={{ states('input_datetime.narvarosimulering_testets_sluttid') }}
 
   - id: narvarosimulering_test_deadline_autostopp
-    alias: Narvarosimulering - stoppa test vid beständig sluttid
+    alias: "Närvarosimulering – stoppa test vid beständig sluttid"
     mode: restart
     triggers:
       - trigger: time
-        at: input_datetime.narvarosimulering_test_sluttid
+        at: input_datetime.narvarosimulering_testets_sluttid
       - trigger: homeassistant
         event: start
     conditions:
@@ -238,10 +238,10 @@ automation:
         state: "on"
       - condition: template
         value_template: >-
-          {{ states('input_datetime.narvarosimulering_test_sluttid') not in
+          {{ states('input_datetime.narvarosimulering_testets_sluttid') not in
              ['unknown', 'unavailable', ''] and
              as_timestamp(now()) >=
-             as_timestamp(states('input_datetime.narvarosimulering_test_sluttid')) }}
+             as_timestamp(states('input_datetime.narvarosimulering_testets_sluttid')) }}
       - action: input_boolean.turn_off
         target:
           entity_id: input_boolean.narvarosimulering_aktiv
@@ -251,7 +251,7 @@ automation:
           entity_id: input_boolean.narvarosimulering_testlage
 
   - id: narvarosimulering_startup_aterstallning
-    alias: Narvarosimulering - aterstall aktiv korning efter omstart
+    alias: "Närvarosimulering – återställ aktiv körning efter omstart"
     mode: single
     triggers:
       - trigger: homeassistant
@@ -262,19 +262,19 @@ automation:
         entity_id: input_boolean.narvarosimulering_aktiv
         state: "on"
       - condition: state
-        entity_id: switch.presence_simulation_hemma
+        entity_id: switch.narvarosimulering_hemma
         state: "off"
       - action: script.narvarosimulering_start
       - delay: "00:00:15"
       - if:
           - condition: state
-            entity_id: switch.presence_simulation_hemma
+            entity_id: switch.narvarosimulering_hemma
             state: "off"
         then:
           - action: notify.send_message
             continue_on_error: true
             target:
-              entity_id: notify.file
+              entity_id: notify.skriptlogg_skriv_meddelande
             data:
               message: >-
                 Narvarosimulering FEL: kunde inte aterstalla aktiv korning efter omstart
@@ -283,11 +283,11 @@ automation:
               entity_id: input_boolean.narvarosimulering_aktiv
 
   - id: narvarosimulering_synka_ovantat_stopp
-    alias: Narvarosimulering - synka helper efter ovantat stopp
+    alias: "Närvarosimulering – synkronisera hjälparen efter oväntat stopp"
     mode: restart
     triggers:
       - trigger: state
-        entity_id: switch.presence_simulation_hemma
+        entity_id: switch.narvarosimulering_hemma
         from: "on"
         to: "off"
     actions:
@@ -296,12 +296,12 @@ automation:
         entity_id: input_boolean.narvarosimulering_aktiv
         state: "on"
       - condition: state
-        entity_id: switch.presence_simulation_hemma
+        entity_id: switch.narvarosimulering_hemma
         state: "off"
       - action: notify.send_message
         continue_on_error: true
         target:
-          entity_id: notify.file
+          entity_id: notify.skriptlogg_skriv_meddelande
         data:
           message: >-
             Narvarosimulering VARNING: integrationsswitchen stannade ovantat;

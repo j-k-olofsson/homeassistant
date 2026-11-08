@@ -1,0 +1,1 @@
+{"hostname": "ha-tailscale", "userspace_networking": true, "auth_key": "tskey-auth-k3uLszFJwt11CNTRL-Ti9T4rJ3zHHmKFEM2QhEJHgGvPyk6cbP6", "accept_routes": true, "advertise_exit_node": false, "reset": false, "force_reauth": false, "advertise_routes": "192.168.10.0/24,192.168.30.0/24,fd28:df00:825c:1::/64"}

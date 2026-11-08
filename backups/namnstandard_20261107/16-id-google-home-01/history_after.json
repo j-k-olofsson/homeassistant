@@ -1,0 +1,202 @@
+{
+  "sensor.koket_kokets_skarm_enhet": [
+    {
+      "state": "192.168.10.209",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "sensor.verandan_nya_tvn_enhet": [
+    {
+      "state": "192.168.10.19",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "sensor.verandan_verandans_hogtalare_hoger_enhet": [
+    {
+      "state": "192.168.10.207",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "sensor.sovrummet_diegos_vackarklocka_enhet": [
+    {
+      "state": "192.168.10.210",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "sensor.sovrummet_diegos_vackarklocka_timers": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "switch.koket_kokets_skarm_stor_ej": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "switch.sovrummet_diegos_vackarklocka_stor_ej": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "number.koket_kokets_skarm_alarmvolym": [
+    {
+      "state": "50",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "number.sovrummet_diegos_vackarklocka_alarmvolym": [
+    {
+      "state": "50",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "sensor.verandans_hogtalare_vanster_enhet": [
+    {
+      "state": "192.168.10.206",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "sensor.verandan_tvs_soundbar_enhet": [
+    {
+      "state": "192.168.10.203",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "sensor.ateljens_hogtalare_enhet": [
+    {
+      "state": "192.168.10.205",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "sensor.ateljens_hogtalare_alarm": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "sensor.ateljens_hogtalare_timers": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "switch.ateljens_hogtalare_stor_ej": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "number.ateljens_hogtalare_alarmvolym": [
+    {
+      "state": "62",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "button.ateljens_hogtalare_starta_om": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "button.koket_kokets_skarm_starta_om": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "button.verandans_hogtalare_vanster_starta_om": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "button.verandan_tvs_soundbar_starta_om": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "button.verandan_nya_tvn_starta_om": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "button.verandan_verandans_hogtalare_hoger_starta_om": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "button.toalettens_hogtalare_starta_om": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "button.duschens_hogtalare_starta_om": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ],
+  "button.sovrummet_diegos_vackarklocka_starta_om": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:45:06.910612+00:00",
+      "last_updated": "2026-11-07T07:45:06.910612+00:00"
+    }
+  ]
+}

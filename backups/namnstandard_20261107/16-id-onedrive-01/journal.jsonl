@@ -1,0 +1,8 @@
+{"status": "rename_intent", "old": "sensor.onedrive_totalt_tillgangligt_lagringsutrymme", "new": "sensor.heimdal_ha_onedrive_totalt_tillgangligt_lagringsutrymme"}
+{"status": "renamed", "old": "sensor.onedrive_totalt_tillgangligt_lagringsutrymme", "new": "sensor.heimdal_ha_onedrive_totalt_tillgangligt_lagringsutrymme"}
+{"status": "rename_intent", "old": "sensor.onedrive_anvant_lagringsutrymme", "new": "sensor.heimdal_ha_onedrive_anvant_lagringsutrymme"}
+{"status": "renamed", "old": "sensor.onedrive_anvant_lagringsutrymme", "new": "sensor.heimdal_ha_onedrive_anvant_lagringsutrymme"}
+{"status": "rename_intent", "old": "sensor.onedrive_aterstaende_lagringsutrymme", "new": "sensor.heimdal_ha_onedrive_aterstaende_lagringsutrymme"}
+{"status": "renamed", "old": "sensor.onedrive_aterstaende_lagringsutrymme", "new": "sensor.heimdal_ha_onedrive_aterstaende_lagringsutrymme"}
+{"status": "rename_intent", "old": "sensor.onedrive_drive_status", "new": "sensor.heimdal_ha_onedrive_lagringsstatus"}
+{"status": "renamed", "old": "sensor.onedrive_drive_status", "new": "sensor.heimdal_ha_onedrive_lagringsstatus"}

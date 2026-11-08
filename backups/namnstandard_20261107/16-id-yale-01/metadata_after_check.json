@@ -1,0 +1,13 @@
+[
+  {
+    "statistic_id": "sensor.entren_ytterdorren_batteriniva",
+    "display_unit_of_measurement": "%",
+    "has_mean": true,
+    "mean_type": 1,
+    "has_sum": false,
+    "name": null,
+    "source": "recorder",
+    "statistics_unit_of_measurement": "%",
+    "unit_class": "unitless"
+  }
+]

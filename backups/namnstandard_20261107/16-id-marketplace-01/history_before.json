@@ -1,0 +1,290 @@
+{
+  "update.apexcharts_card_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.home_assistant_plant_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-08T07:03:46.558913+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:36:50.217101+00:00"
+    }
+  ],
+  "update.card_mod_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.nordpool_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.spook_not_your_homie_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.pollenprognos_card_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.openplantbook_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T19:25:21.331706+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:00.734529+00:00"
+    }
+  ],
+  "update.svensk_postutdelning_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.custom_brand_icons_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.auto_entities_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.home_connect_alt_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.kiosk_mode_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.battery_state_card_entity_row_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.powercalc_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.battery_notes_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.flex_table_highly_customizable_data_visualization_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "switch.battery_state_card_entity_row_pre_release": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.mini_graph_card_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.pollenprognos_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.config_template_card_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.gauge_card_pro_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.google_home_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.toyota_eu_community_integration_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "switch.toyota_eu_community_integration_pre_release": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.meteogram_card_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T19:25:21.144519+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:01.695428+00:00"
+    }
+  ],
+  "update.weather_forecast_card_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.presence_simulation_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.openwrt_update_2": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T10:58:42.417760+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:24:32.952435+00:00"
+    }
+  ],
+  "update.alsavopro_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "switch.alsavopro_pre_release": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.haghs_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.advanced_camera_card_update": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ]
+}

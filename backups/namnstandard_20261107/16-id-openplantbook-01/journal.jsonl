@@ -1,0 +1,6 @@
+{"status": "rename_intent", "old": "binary_sensor.openplantbook_upload_problem", "new": "binary_sensor.openplantbook_uppladdningsproblem"}
+{"status": "renamed", "old": "binary_sensor.openplantbook_upload_problem", "new": "binary_sensor.openplantbook_uppladdningsproblem"}
+{"status": "rename_intent", "old": "sensor.openplantbook_upload_status", "new": "sensor.openplantbook_uppladdningsstatus"}
+{"status": "renamed", "old": "sensor.openplantbook_upload_status", "new": "sensor.openplantbook_uppladdningsstatus"}
+{"status": "rename_intent", "old": "sensor.openplantbook_last_upload", "new": "sensor.openplantbook_senaste_uppladdning"}
+{"status": "renamed", "old": "sensor.openplantbook_last_upload", "new": "sensor.openplantbook_senaste_uppladdning"}

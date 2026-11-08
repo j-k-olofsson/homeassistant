@@ -1,0 +1,9 @@
+{
+  "value": {
+    "favorite_entities": [
+      "sensor.utomhus_temp",
+      "sensor.koket_temp",
+      "sensor.poolbelysning_temp_esphome29_temperature"
+    ]
+  }
+}

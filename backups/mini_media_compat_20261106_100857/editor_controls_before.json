@@ -1,0 +1,14 @@
+[
+  [
+    "Group cards",
+    "<ha-switch .checked=${this._group} .configValue=\"${\"group\"}\" @change=${this.valueChanged}>"
+  ],
+  [
+    "Swap volume slider for buttons",
+    "<ha-switch\n                .checked=\"${this._volume_stateless}\"\n                .configValue=\"${\"volume_stateless\"}\"\n                @change=${this.valueChanged}\n              >"
+  ],
+  [
+    "Toggle power button behavior",
+    "<ha-switch\n                .checked=\"${this._toggle_power}\"\n                .configValue=\"${\"toggle_power\"}\"\n                @change=${this.valueChanged}\n              >"
+  ]
+]

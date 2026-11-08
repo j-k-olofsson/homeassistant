@@ -1,0 +1,2 @@
+{"status": "rename_intent", "old": "calendar.workday_sensor_calendar", "new": "calendar.heimdal_ha_workday_sensor_kalender"}
+{"status": "renamed", "old": "calendar.workday_sensor_calendar", "new": "calendar.heimdal_ha_workday_sensor_kalender"}

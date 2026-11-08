@@ -1,0 +1,636 @@
+{
+  "metadata": [
+    {
+      "statistic_id": "sensor.molnet_openuv_aktuell_ozonniva",
+      "display_unit_of_measurement": "du",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "du",
+      "unit_class": null
+    },
+    {
+      "statistic_id": "sensor.molnet_openuv_saker_exponeringstid_for_hudtyp_1",
+      "display_unit_of_measurement": "min",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "min",
+      "unit_class": "duration"
+    },
+    {
+      "statistic_id": "sensor.molnet_openuv_saker_exponeringstid_for_hudtyp_2",
+      "display_unit_of_measurement": "min",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "min",
+      "unit_class": "duration"
+    },
+    {
+      "statistic_id": "sensor.molnet_openuv_saker_exponeringstid_for_hudtyp_3",
+      "display_unit_of_measurement": "min",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "min",
+      "unit_class": "duration"
+    },
+    {
+      "statistic_id": "sensor.molnet_openuv_saker_exponeringstid_for_hudtyp_4",
+      "display_unit_of_measurement": "min",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "min",
+      "unit_class": "duration"
+    },
+    {
+      "statistic_id": "sensor.molnet_openuv_saker_exponeringstid_for_hudtyp_5",
+      "display_unit_of_measurement": "min",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "min",
+      "unit_class": "duration"
+    },
+    {
+      "statistic_id": "sensor.molnet_openuv_saker_exponeringstid_for_hudtyp_6",
+      "display_unit_of_measurement": "min",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "min",
+      "unit_class": "duration"
+    }
+  ],
+  "series": {
+    "sensor.molnet_openuv_aktuell_ozonniva": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 346.0,
+        "mean": 346.0,
+        "max": 346.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 346.0,
+        "mean": 346.0,
+        "max": 346.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 346.0,
+        "mean": 346.0,
+        "max": 346.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 346.0,
+        "mean": 346.0,
+        "max": 346.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 346.0,
+        "mean": 346.0,
+        "max": 346.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 346.0,
+        "mean": 346.0,
+        "max": 346.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 346.0,
+        "mean": 346.0,
+        "max": 346.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 346.0,
+        "mean": 346.0,
+        "max": 346.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 346.0,
+        "mean": 346.0,
+        "max": 346.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 346.0,
+        "mean": 346.0,
+        "max": 346.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 346.0,
+        "mean": 346.0,
+        "max": 346.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 346.0,
+        "mean": 346.0,
+        "max": 346.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 346.0,
+        "mean": 346.0,
+        "max": 346.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 346.0,
+        "mean": 346.0,
+        "max": 346.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 346.0,
+        "mean": 346.0,
+        "max": 346.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 346.0,
+        "mean": 346.0,
+        "max": 346.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 346.0,
+        "mean": 346.0,
+        "max": 346.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 346.0,
+        "mean": 346.0,
+        "max": 346.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 346.0,
+        "mean": 346.0,
+        "max": 346.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 346.0,
+        "mean": 346.0,
+        "max": 346.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 346.0,
+        "mean": 346.0,
+        "max": 346.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 346.0,
+        "mean": 346.0,
+        "max": 346.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 346.0,
+        "mean": 346.0,
+        "max": 346.0
+      }
+    ],
+    "sensor.molnet_openuv_saker_exponeringstid_for_hudtyp_6": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 19611.0,
+        "mean": 19611.0,
+        "max": 19611.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 6537.0,
+        "mean": 6572.328530115,
+        "max": 19611.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 3381.0,
+        "mean": 3391.150776053333,
+        "max": 6537.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 2884.0,
+        "mean": 2885.486870482222,
+        "max": 3381.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 2884.0,
+        "mean": 2884.0,
+        "max": 2884.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 2884.0,
+        "mean": 3918.6513275183333,
+        "max": 3922.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 3922.0,
+        "mean": 8421.567940443889,
+        "max": 9805.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 9805.0,
+        "mean": 24461.068266145,
+        "max": 24514.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 24514.0,
+        "mean": 24514.0,
+        "max": 24514.0
+      }
+    ],
+    "sensor.molnet_openuv_saker_exponeringstid_for_hudtyp_1": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 3268.0,
+        "mean": 3268.0,
+        "max": 3268.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 1089.0,
+        "mean": 1094.8875091016666,
+        "max": 3268.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 564.0,
+        "mean": 565.6884370416666,
+        "max": 1089.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 481.0,
+        "mean": 481.2482991802778,
+        "max": 564.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 481.0,
+        "mean": 481.0,
+        "max": 481.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 481.0,
+        "mean": 653.4419306891667,
+        "max": 654.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 654.0,
+        "mean": 1403.2914925861112,
+        "max": 1634.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 1634.0,
+        "mean": 4077.1768805366664,
+        "max": 4086.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 4086.0,
+        "mean": 4086.0,
+        "max": 4086.0
+      }
+    ],
+    "sensor.molnet_openuv_saker_exponeringstid_for_hudtyp_4": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 6537.0,
+        "mean": 6537.0,
+        "max": 6537.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 2179.0,
+        "mean": 2190.7757723794443,
+        "max": 6537.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 1127.0,
+        "mean": 1130.38348974,
+        "max": 2179.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 961.0,
+        "mean": 961.4966119633333,
+        "max": 1127.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 961.0,
+        "mean": 961.0,
+        "max": 961.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 961.0,
+        "mean": 1305.8838067872223,
+        "max": 1307.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 1307.0,
+        "mean": 2806.994918007778,
+        "max": 3268.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 3268.0,
+        "mean": 8153.356550414166,
+        "max": 8171.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 8171.0,
+        "mean": 8171.0,
+        "max": 8171.0
+      }
+    ],
+    "sensor.molnet_openuv_saker_exponeringstid_for_hudtyp_3": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 5230.0,
+        "mean": 5230.0,
+        "max": 5230.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 1743.0,
+        "mean": 1752.4220599733333,
+        "max": 5230.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 902.0,
+        "mean": 904.7048181261111,
+        "max": 1743.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 769.0,
+        "mean": 769.3978844255556,
+        "max": 902.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 769.0,
+        "mean": 769.0,
+        "max": 769.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 769.0,
+        "mean": 1045.1064133119444,
+        "max": 1046.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 1046.0,
+        "mean": 2245.8622519883334,
+        "max": 2615.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 2615.0,
+        "mean": 6522.886866026667,
+        "max": 6537.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 6537.0,
+        "mean": 6537.0,
+        "max": 6537.0
+      }
+    ],
+    "sensor.molnet_openuv_saker_exponeringstid_for_hudtyp_5": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 10459.0,
+        "mean": 10459.0,
+        "max": 10459.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 3486.0,
+        "mean": 3504.842115193333,
+        "max": 10459.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 1803.0,
+        "mean": 1808.4130258875,
+        "max": 3486.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 1538.0,
+        "mean": 1538.7927907833334,
+        "max": 1803.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 1538.0,
+        "mean": 1538.0,
+        "max": 1538.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 1538.0,
+        "mean": 2090.212775532778,
+        "max": 2092.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 2092.0,
+        "mean": 4491.724173026667,
+        "max": 5230.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 5230.0,
+        "mean": 13045.772997767779,
+        "max": 13074.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 13074.0,
+        "mean": 13074.0,
+        "max": 13074.0
+      }
+    ],
+    "sensor.molnet_openuv_saker_exponeringstid_for_hudtyp_2": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 3922.0,
+        "mean": 3922.0,
+        "max": 3922.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 1307.0,
+        "mean": 1314.0657278208334,
+        "max": 3922.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 676.0,
+        "mean": 678.0293831130556,
+        "max": 1307.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 577.0,
+        "mean": 577.296166915,
+        "max": 676.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 577.0,
+        "mean": 577.0,
+        "max": 577.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 577.0,
+        "mean": 783.33223962,
+        "max": 784.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 784.0,
+        "mean": 1684.145772586111,
+        "max": 1961.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 1961.0,
+        "mean": 4892.413502296667,
+        "max": 4903.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 4903.0,
+        "mean": 4903.0,
+        "max": 4903.0
+      }
+    ]
+  }
+}

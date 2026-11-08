@@ -1,0 +1,10 @@
+{"status": "rename_intent", "old": "sensor.temp_hum_toalett_battery", "new": "sensor.toaletten_klimatsensor_batteriniva"}
+{"status": "renamed", "old": "sensor.temp_hum_toalett_battery", "new": "sensor.toaletten_klimatsensor_batteriniva"}
+{"status": "rename_intent", "old": "sensor.temp_hum_toalett_humidity", "new": "sensor.toaletten_klimatsensor_luftfuktighet"}
+{"status": "renamed", "old": "sensor.temp_hum_toalett_humidity", "new": "sensor.toaletten_klimatsensor_luftfuktighet"}
+{"status": "rename_intent", "old": "sensor.temp_hum_toalett_signal_strength", "new": "sensor.toaletten_klimatsensor_signalstyrka"}
+{"status": "renamed", "old": "sensor.temp_hum_toalett_signal_strength", "new": "sensor.toaletten_klimatsensor_signalstyrka"}
+{"status": "rename_intent", "old": "sensor.temp_hum_toalett_temperature", "new": "sensor.toaletten_klimatsensor_temperatur"}
+{"status": "renamed", "old": "sensor.temp_hum_toalett_temperature", "new": "sensor.toaletten_klimatsensor_temperatur"}
+{"status": "rename_intent", "old": "sensor.temp_hum_toalett_voltage", "new": "sensor.toaletten_klimatsensor_spanning"}
+{"status": "renamed", "old": "sensor.temp_hum_toalett_voltage", "new": "sensor.toaletten_klimatsensor_spanning"}

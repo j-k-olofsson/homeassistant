@@ -1,0 +1,10 @@
+{
+  "device_tracker.192_168_30_83": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:26.509890+00:00",
+      "last_updated": "2026-11-07T07:43:26.509890+00:00"
+    }
+  ]
+}

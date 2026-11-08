@@ -1,0 +1,500 @@
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_last_reboot", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senaste omstart", "aliases": [null, "Pixel 9 Pro XL Last reboot"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_last_reboot"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_last_update_trigger", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senaste uppdateringsorsak", "aliases": [null, "Pixel 9 Pro XL Last update trigger"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_last_update_trigger"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_light_sensor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysningsstyrka", "aliases": [null, "Pixel 9 Pro XL Light sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_light_sensor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.ha_servern_pixel_9_pro_xl_high_accuracy_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Platsläge med hög precision", "aliases": [null, "Pixel 9 Pro XL High accuracy mode"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.ha_servern_pixel_9_pro_xl_high_accuracy_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_high_accuracy_update_interval", "before": {"name": null, "aliases": [null]}, "after": {"name": "Uppdateringsintervall för hög precision", "aliases": [null, "Pixel 9 Pro XL High accuracy update interval"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_high_accuracy_update_interval"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.ha_servern_pixel_9_pro_xl_mobile_data", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mobildata", "aliases": [null, "Pixel 9 Pro XL Mobile data"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.ha_servern_pixel_9_pro_xl_mobile_data"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.ha_servern_pixel_9_pro_xl_mobile_data_roaming", "before": {"name": null, "aliases": [null]}, "after": {"name": "Dataroaming", "aliases": [null, "Pixel 9 Pro XL Mobile data roaming"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.ha_servern_pixel_9_pro_xl_mobile_data_roaming"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_wi_fi_connection", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-anslutning", "aliases": [null, "Pixel 9 Pro XL Wi-Fi connection"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_wi_fi_connection"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_wi_fi_ip_address", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi IP-adress", "aliases": [null, "Pixel 9 Pro XL Wi-Fi IP address"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_wi_fi_ip_address"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_wi_fi_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-länkhastighet", "aliases": [null, "Pixel 9 Pro XL Wi-Fi link speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_wi_fi_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.ha_servern_pixel_9_pro_xl_wi_fi_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-status", "aliases": [null, "Pixel 9 Pro XL Wi-Fi state"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.ha_servern_pixel_9_pro_xl_wi_fi_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_wi_fi_frequency", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-frekvens", "aliases": [null, "Pixel 9 Pro XL Wi-Fi frequency"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_wi_fi_frequency"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_wi_fi_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-signalstyrka", "aliases": [null, "Pixel 9 Pro XL Wi-Fi signal strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_wi_fi_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_public_ip_address", "before": {"name": null, "aliases": [null]}, "after": {"name": "Publik IP-adress", "aliases": [null, "Pixel 9 Pro XL Public IP address"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_public_ip_address"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.ha_servern_pixel_9_pro_xl_hotspot_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetdelningsstatus", "aliases": [null, "Pixel 9 Pro XL Hotspot state"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.ha_servern_pixel_9_pro_xl_hotspot_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_network_type", "before": {"name": null, "aliases": [null]}, "after": {"name": "Nätverkstyp", "aliases": [null, "Pixel 9 Pro XL Network type"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_network_type"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_ipv6_addresses", "before": {"name": null, "aliases": [null]}, "after": {"name": "IPv6-adresser", "aliases": [null, "Pixel 9 Pro XL IPv6 addresses"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_ipv6_addresses"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.ha_servern_pixel_9_pro_xl_nfc_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "NFC-status", "aliases": [null, "Pixel 9 Pro XL NFC state"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.ha_servern_pixel_9_pro_xl_nfc_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_next_alarm", "before": {"name": null, "aliases": [null]}, "after": {"name": "Nästa alarm", "aliases": [null, "Pixel 9 Pro XL Next alarm"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_next_alarm"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_last_notification", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senaste avisering", "aliases": [null, "Pixel 9 Pro XL Last notification"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_last_notification"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_last_removed_notification", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senast borttagna avisering", "aliases": [null, "Pixel 9 Pro XL Last removed notification"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_last_removed_notification"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_active_notification_count", "before": {"name": null, "aliases": [null]}, "after": {"name": "Antal aktiva aviseringar", "aliases": [null, "Pixel 9 Pro XL Active notification count"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_active_notification_count"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_media_session", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mediasession", "aliases": [null, "Pixel 9 Pro XL Media session"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_media_session"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_phone_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "Telefonstatus", "aliases": [null, "Pixel 9 Pro XL Phone state"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_phone_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_signal_strength_sim_1", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka SIM 1", "aliases": [null, "Pixel 9 Pro XL Signal strength (SIM 1)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_signal_strength_sim_1"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_signal_strength_sim_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka SIM 2", "aliases": [null, "Pixel 9 Pro XL Signal strength (SIM 2)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_signal_strength_sim_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_data_network_type_sim_1", "before": {"name": null, "aliases": [null]}, "after": {"name": "Datanätverkstyp SIM 1", "aliases": [null, "Pixel 9 Pro XL Data network type (SIM 1)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_data_network_type_sim_1"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_data_network_type_sim_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Datanätverkstyp SIM 2", "aliases": [null, "Pixel 9 Pro XL Data network type (SIM 2)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_data_network_type_sim_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.ha_servern_pixel_9_pro_xl_interactive", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmen interaktiv", "aliases": [null, "Pixel 9 Pro XL Interactive"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.ha_servern_pixel_9_pro_xl_interactive"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.ha_servern_pixel_9_pro_xl_doze_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Viloläge", "aliases": [null, "Pixel 9 Pro XL Doze mode"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.ha_servern_pixel_9_pro_xl_doze_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.ha_servern_pixel_9_pro_xl_power_save", "before": {"name": null, "aliases": [null]}, "after": {"name": "Energisparläge", "aliases": [null, "Pixel 9 Pro XL Power save"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.ha_servern_pixel_9_pro_xl_power_save"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_pressure_sensor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lufttryck", "aliases": [null, "Pixel 9 Pro XL Pressure sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_pressure_sensor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_proximity_sensor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närhetssensor", "aliases": [null, "Pixel 9 Pro XL Proximity sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_proximity_sensor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_steps_sensor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Steg", "aliases": [null, "Pixel 9 Pro XL Steps sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_steps_sensor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_internal_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Intern lagring", "aliases": [null, "Pixel 9 Pro XL Internal storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_internal_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_external_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Extern lagring", "aliases": [null, "Pixel 9 Pro XL External storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_external_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_current_time_zone", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aktuell tidszon", "aliases": [null, "Pixel 9 Pro XL Current time zone"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_current_time_zone"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_mobile_rx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagna mobildata", "aliases": [null, "Pixel 9 Pro XL Mobile Rx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_mobile_rx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_mobile_tx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickade mobildata", "aliases": [null, "Pixel 9 Pro XL Mobile Tx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_mobile_tx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_total_rx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Totalt mottagna data", "aliases": [null, "Pixel 9 Pro XL Total Rx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_total_rx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_total_tx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Totalt skickade data", "aliases": [null, "Pixel 9 Pro XL Total Tx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_pixel_9_pro_xl_total_tx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_detected_activity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Identifierad aktivitet", "aliases": [null, "Nothing mobil Detected activity"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_detected_activity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_sleep_confidence", "before": {"name": null, "aliases": [null]}, "after": {"name": "Säkerhet i sömndetektering", "aliases": [null, "Nothing mobil Sleep confidence"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_sleep_confidence"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_sleep_segment", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sömnperiod", "aliases": [null, "Nothing mobil Sleep segment"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_sleep_segment"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_os_version", "before": {"name": null, "aliases": [null]}, "after": {"name": "Operativsystemsversion", "aliases": [null, "Nothing mobil OS version"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_os_version"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_security_patch", "before": {"name": null, "aliases": [null]}, "after": {"name": "Säkerhetsuppdatering", "aliases": [null, "Nothing mobil Security patch"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_security_patch"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_current_version", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appversion", "aliases": [null, "Nothing mobil Current version"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_current_version"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_app_rx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens mottagna data", "aliases": [null, "Nothing mobil App Rx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_app_rx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_app_tx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens skickade data", "aliases": [null, "Nothing mobil App Tx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_app_tx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_app_memory", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens minnesanvändning", "aliases": [null, "Nothing mobil App memory"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_app_memory"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.nothing_mobil_app_inactive", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appen inaktiv", "aliases": [null, "Nothing mobil App inactive"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.nothing_mobil_app_inactive"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_app_standby_bucket", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens energisparklass", "aliases": [null, "Nothing mobil App standby bucket"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_app_standby_bucket"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_app_importance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens prioritet", "aliases": [null, "Nothing mobil App importance"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_app_importance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_ringer_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ringsignalläge", "aliases": [null, "Nothing mobil Ringer mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_ringer_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_audio_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ljudläge", "aliases": [null, "Nothing mobil Audio mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_audio_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.nothing_mobil_headphones", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hörlurar", "aliases": [null, "Nothing mobil Headphones"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.nothing_mobil_headphones"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.nothing_mobil_mic_muted", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mikrofon avstängd", "aliases": [null, "Nothing mobil Mic muted"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.nothing_mobil_mic_muted"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.nothing_mobil_speakerphone", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högtalartelefon", "aliases": [null, "Nothing mobil Speakerphone"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.nothing_mobil_speakerphone"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.nothing_mobil_music_active", "before": {"name": null, "aliases": [null]}, "after": {"name": "Musik aktiv", "aliases": [null, "Nothing mobil Music active"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.nothing_mobil_music_active"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_volume_level_alarm", "before": {"name": null, "aliases": [null]}, "after": {"name": "Alarmvolym", "aliases": [null, "Nothing mobil Volume level alarm"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_volume_level_alarm"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_volume_level_call", "before": {"name": null, "aliases": [null]}, "after": {"name": "Samtalsvolym", "aliases": [null, "Nothing mobil Volume level call"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_volume_level_call"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_volume_level_music", "before": {"name": null, "aliases": [null]}, "after": {"name": "Musikvolym", "aliases": [null, "Nothing mobil Volume level music"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_volume_level_music"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_volume_level_ringer", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ringsignalvolym", "aliases": [null, "Nothing mobil Volume level ringer"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_volume_level_ringer"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_volume_level_notification", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aviseringsvolym", "aliases": [null, "Nothing mobil Volume level notification"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_volume_level_notification"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_volume_level_system", "before": {"name": null, "aliases": [null]}, "after": {"name": "Systemvolym", "aliases": [null, "Nothing mobil Volume level system"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_volume_level_system"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_volume_level_dtmf", "before": {"name": null, "aliases": [null]}, "after": {"name": "Knappvalsvolym", "aliases": [null, "Nothing mobil Volume level DTMF"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_volume_level_dtmf"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_volume_level_accessibility", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tillgänglighetsvolym", "aliases": [null, "Nothing mobil Volume level accessibility"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_volume_level_accessibility"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_battery_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterinivå", "aliases": [null, "Nothing mobil Battery level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_battery_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_battery_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batteristatus", "aliases": [null, "Nothing mobil Battery state"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_battery_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.nothing_mobil_is_charging", "before": {"name": null, "aliases": [null]}, "after": {"name": "Laddar", "aliases": [null, "Nothing mobil Is charging"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.nothing_mobil_is_charging"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_charger_type", "before": {"name": null, "aliases": [null]}, "after": {"name": "Laddartyp", "aliases": [null, "Nothing mobil Charger type"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_charger_type"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_battery_health", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterihälsa", "aliases": [null, "Nothing mobil Battery health"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_battery_health"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_battery_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batteritemperatur", "aliases": [null, "Nothing mobil Battery temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_battery_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_battery_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterieffekt", "aliases": [null, "Nothing mobil Battery power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_battery_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_remaining_charge_time", "before": {"name": null, "aliases": [null]}, "after": {"name": "Återstående laddningstid", "aliases": [null, "Nothing mobil Remaining charge time"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_remaining_charge_time"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_battery_cycle_count", "before": {"name": null, "aliases": [null]}, "after": {"name": "Antal battericykler", "aliases": [null, "Nothing mobil Battery cycle count"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_battery_cycle_count"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_bluetooth_connection", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bluetooth-anslutning", "aliases": [null, "Nothing mobil Bluetooth connection"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_bluetooth_connection"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.nothing_mobil_bluetooth_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bluetooth-status", "aliases": [null, "Nothing mobil Bluetooth state"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.nothing_mobil_bluetooth_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_ble_transmitter", "before": {"name": null, "aliases": [null]}, "after": {"name": "BLE-sändare", "aliases": [null, "Nothing mobil BLE transmitter"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_ble_transmitter"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_beacon_monitor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Övervakning av Bluetooth-sändare", "aliases": [null, "Nothing mobil Beacon monitor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_beacon_monitor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_car_battery", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens batterinivå", "aliases": [null, "Nothing mobil Car battery"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_car_battery"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_car_name", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens namn", "aliases": [null, "Nothing mobil Car name"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_car_name"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_car_charging_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens laddningsstatus", "aliases": [null, "Nothing mobil Car charging status"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_car_charging_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_car_ev_connector_type", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens laddkontakt", "aliases": [null, "Nothing mobil Car EV connector type"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_car_ev_connector_type"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_car_fuel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens bränslenivå", "aliases": [null, "Nothing mobil Car fuel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_car_fuel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_car_fuel_type", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens bränsletyp", "aliases": [null, "Nothing mobil Car fuel type"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_car_fuel_type"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_car_odometer", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens vägmätare", "aliases": [null, "Nothing mobil Car odometer"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_car_odometer"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_car_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens hastighet", "aliases": [null, "Nothing mobil Car speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_car_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_car_range_remaining", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens återstående räckvidd", "aliases": [null, "Nothing mobil Car range remaining"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_car_range_remaining"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_screen_brightness", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmljusstyrka", "aliases": [null, "Nothing mobil Screen brightness"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_screen_brightness"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_screen_off_timeout", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tid till skärmavstängning", "aliases": [null, "Nothing mobil Screen off timeout"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_screen_off_timeout"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_screen_orientation", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmriktning", "aliases": [null, "Nothing mobil Screen orientation"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_screen_orientation"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_screen_rotation", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmrotation", "aliases": [null, "Nothing mobil Screen rotation"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_screen_rotation"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_do_not_disturb_sensor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stör ej-läge", "aliases": [null, "Nothing mobil Do Not Disturb sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_do_not_disturb_sensor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_accent_color", "before": {"name": null, "aliases": [null]}, "after": {"name": "Accentfärg", "aliases": [null, "Nothing mobil Accent color"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_accent_color"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.nothing_mobil_work_profile", "before": {"name": null, "aliases": [null]}, "after": {"name": "Arbetsprofil", "aliases": [null, "Nothing mobil Work profile"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.nothing_mobil_work_profile"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_geocoded_location", "before": {"name": null, "aliases": [null]}, "after": {"name": "Platsadress", "aliases": [null, "Nothing mobil Geocoded location"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_geocoded_location"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_active_calories_burned", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aktiv energiförbrukning", "aliases": [null, "Nothing mobil Active calories burned"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_active_calories_burned"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_basal_body_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Basal kroppstemperatur", "aliases": [null, "Nothing mobil Basal body temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_basal_body_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_basal_metabolic_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Basal ämnesomsättning", "aliases": [null, "Nothing mobil Basal metabolic rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_basal_metabolic_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_blood_glucose", "before": {"name": null, "aliases": [null]}, "after": {"name": "Blodsocker", "aliases": [null, "Nothing mobil Blood glucose"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_blood_glucose"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_body_fat", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kroppsfett", "aliases": [null, "Nothing mobil Body fat"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_body_fat"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_body_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kroppstemperatur", "aliases": [null, "Nothing mobil Body temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_body_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_body_water_mass", "before": {"name": null, "aliases": [null]}, "after": {"name": "Kroppsvattenmassa", "aliases": [null, "Nothing mobil Body water mass"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_body_water_mass"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_bone_mass", "before": {"name": null, "aliases": [null]}, "after": {"name": "Benmassa", "aliases": [null, "Nothing mobil Bone mass"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_bone_mass"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_diastolic_blood_pressure", "before": {"name": null, "aliases": [null]}, "after": {"name": "Diastoliskt blodtryck", "aliases": [null, "Nothing mobil Diastolic blood pressure"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_diastolic_blood_pressure"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_daily_distance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Dagens sträcka", "aliases": [null, "Nothing mobil Daily distance"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_daily_distance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_daily_elevation_gained", "before": {"name": null, "aliases": [null]}, "after": {"name": "Dagens stigning", "aliases": [null, "Nothing mobil Daily elevation gained"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_daily_elevation_gained"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_daily_floors", "before": {"name": null, "aliases": [null]}, "after": {"name": "Dagens våningar", "aliases": [null, "Nothing mobil Daily floors"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_daily_floors"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_heart_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Puls", "aliases": [null, "Nothing mobil Heart rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_heart_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_heart_rate_variability", "before": {"name": null, "aliases": [null]}, "after": {"name": "Pulsvariation", "aliases": [null, "Nothing mobil Heart rate variability"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_heart_rate_variability"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_height", "before": {"name": null, "aliases": [null]}, "after": {"name": "Längd", "aliases": [null, "Nothing mobil Height"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_height"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_daily_hydration", "before": {"name": null, "aliases": [null]}, "after": {"name": "Dagens vätskeintag", "aliases": [null, "Nothing mobil Daily hydration"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_daily_hydration"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_lean_body_mass", "before": {"name": null, "aliases": [null]}, "after": {"name": "Fettfri kroppsmassa", "aliases": [null, "Nothing mobil Lean body mass"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_lean_body_mass"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_oxygen_saturation", "before": {"name": null, "aliases": [null]}, "after": {"name": "Syremättnad", "aliases": [null, "Nothing mobil Oxygen saturation"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_oxygen_saturation"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_respiratory_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Andningsfrekvens", "aliases": [null, "Nothing mobil Respiratory rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_respiratory_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_resting_heart_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Vilopuls", "aliases": [null, "Nothing mobil Resting heart rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_resting_heart_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_sleep_duration", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sömnlängd", "aliases": [null, "Nothing mobil Sleep duration"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_sleep_duration"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_daily_steps", "before": {"name": null, "aliases": [null]}, "after": {"name": "Dagens steg", "aliases": [null, "Nothing mobil Daily steps"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_daily_steps"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_systolic_blood_pressure", "before": {"name": null, "aliases": [null]}, "after": {"name": "Systoliskt blodtryck", "aliases": [null, "Nothing mobil Systolic blood pressure"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_systolic_blood_pressure"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_total_calories_burned", "before": {"name": null, "aliases": [null]}, "after": {"name": "Total energiförbrukning", "aliases": [null, "Nothing mobil Total calories burned"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_total_calories_burned"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_weight", "before": {"name": null, "aliases": [null]}, "after": {"name": "Vikt", "aliases": [null, "Nothing mobil Weight"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_weight"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.nothing_mobil_device_locked", "before": {"name": null, "aliases": [null]}, "after": {"name": "Enheten låst", "aliases": [null, "Nothing mobil Device locked"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.nothing_mobil_device_locked"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.nothing_mobil_device_secure", "before": {"name": null, "aliases": [null]}, "after": {"name": "Enheten skyddad", "aliases": [null, "Nothing mobil Device secure"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.nothing_mobil_device_secure"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.nothing_mobil_keyguard_locked", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmlåset låst", "aliases": [null, "Nothing mobil Keyguard locked"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.nothing_mobil_keyguard_locked"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.nothing_mobil_keyguard_secure", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmlåset skyddat", "aliases": [null, "Nothing mobil Keyguard secure"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.nothing_mobil_keyguard_secure"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_last_used_app", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senast använda app", "aliases": [null, "Nothing mobil Last used app"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_last_used_app"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_last_reboot", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senaste omstart", "aliases": [null, "Nothing mobil Last reboot"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_last_reboot"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_light_sensor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysningsstyrka", "aliases": [null, "Nothing mobil Light sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_light_sensor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.nothing_mobil_mobile_data", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mobildata", "aliases": [null, "Nothing mobil Mobile data"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.nothing_mobil_mobile_data"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.nothing_mobil_mobile_data_roaming", "before": {"name": null, "aliases": [null]}, "after": {"name": "Dataroaming", "aliases": [null, "Nothing mobil Mobile data roaming"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.nothing_mobil_mobile_data_roaming"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_wi_fi_connection", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-anslutning", "aliases": [null, "Nothing mobil Wi-Fi connection"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_wi_fi_connection"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_wi_fi_ip_address", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi IP-adress", "aliases": [null, "Nothing mobil Wi-Fi IP address"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_wi_fi_ip_address"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_wi_fi_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-länkhastighet", "aliases": [null, "Nothing mobil Wi-Fi link speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_wi_fi_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.nothing_mobil_wi_fi_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-status", "aliases": [null, "Nothing mobil Wi-Fi state"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.nothing_mobil_wi_fi_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_wi_fi_frequency", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-frekvens", "aliases": [null, "Nothing mobil Wi-Fi frequency"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_wi_fi_frequency"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_wi_fi_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-signalstyrka", "aliases": [null, "Nothing mobil Wi-Fi signal strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_wi_fi_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_public_ip_address", "before": {"name": null, "aliases": [null]}, "after": {"name": "Publik IP-adress", "aliases": [null, "Nothing mobil Public IP address"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_public_ip_address"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.nothing_mobil_hotspot_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetdelningsstatus", "aliases": [null, "Nothing mobil Hotspot state"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.nothing_mobil_hotspot_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_network_type", "before": {"name": null, "aliases": [null]}, "after": {"name": "Nätverkstyp", "aliases": [null, "Nothing mobil Network type"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_network_type"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_ipv6_addresses", "before": {"name": null, "aliases": [null]}, "after": {"name": "IPv6-adresser", "aliases": [null, "Nothing mobil IPv6 addresses"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_ipv6_addresses"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.nothing_mobil_nfc_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "NFC-status", "aliases": [null, "Nothing mobil NFC state"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.nothing_mobil_nfc_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_next_alarm", "before": {"name": null, "aliases": [null]}, "after": {"name": "Nästa alarm", "aliases": [null, "Nothing mobil Next alarm"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_next_alarm"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_media_session", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mediasession", "aliases": [null, "Nothing mobil Media session"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_media_session"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_phone_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "Telefonstatus", "aliases": [null, "Nothing mobil Phone state"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_phone_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_signal_strength_sim_1", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka SIM 1", "aliases": [null, "Nothing mobil Signal strength (SIM 1)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_signal_strength_sim_1"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_signal_strength_sim_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka SIM 2", "aliases": [null, "Nothing mobil Signal strength (SIM 2)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_signal_strength_sim_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_data_network_type_sim_1", "before": {"name": null, "aliases": [null]}, "after": {"name": "Datanätverkstyp SIM 1", "aliases": [null, "Nothing mobil Data network type (SIM 1)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_data_network_type_sim_1"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_data_network_type_sim_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Datanätverkstyp SIM 2", "aliases": [null, "Nothing mobil Data network type (SIM 2)"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_data_network_type_sim_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.nothing_mobil_interactive", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmen interaktiv", "aliases": [null, "Nothing mobil Interactive"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.nothing_mobil_interactive"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.nothing_mobil_doze_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Viloläge", "aliases": [null, "Nothing mobil Doze mode"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.nothing_mobil_doze_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.nothing_mobil_power_save", "before": {"name": null, "aliases": [null]}, "after": {"name": "Energisparläge", "aliases": [null, "Nothing mobil Power save"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.nothing_mobil_power_save"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_proximity_sensor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närhetssensor", "aliases": [null, "Nothing mobil Proximity sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_proximity_sensor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_steps_sensor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Steg", "aliases": [null, "Nothing mobil Steps sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_steps_sensor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_internal_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Intern lagring", "aliases": [null, "Nothing mobil Internal storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_internal_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_external_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Extern lagring", "aliases": [null, "Nothing mobil External storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_external_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_current_time_zone", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aktuell tidszon", "aliases": [null, "Nothing mobil Current time zone"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_current_time_zone"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_mobile_rx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagna mobildata", "aliases": [null, "Nothing mobil Mobile Rx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_mobile_rx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_mobile_tx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickade mobildata", "aliases": [null, "Nothing mobil Mobile Tx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_mobile_tx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_total_rx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Totalt mottagna data", "aliases": [null, "Nothing mobil Total Rx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_total_rx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_total_tx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Totalt skickade data", "aliases": [null, "Nothing mobil Total Tx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_total_tx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_detected_activity_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Identifierad aktivitet", "aliases": [null, "SM-G930F Detected activity"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_detected_activity_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_sleep_confidence_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Säkerhet i sömndetektering", "aliases": [null, "SM-G930F Sleep confidence"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_sleep_confidence_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_sleep_segment_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sömnperiod", "aliases": [null, "SM-G930F Sleep segment"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_sleep_segment_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_os_version_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Operativsystemsversion", "aliases": [null, "SM-G930F OS version"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_os_version_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_security_patch_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Säkerhetsuppdatering", "aliases": [null, "SM-G930F Security patch"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_security_patch_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_current_version_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appversion", "aliases": [null, "SM-G930F Current version"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_current_version_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_app_rx_gb_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens mottagna data", "aliases": [null, "SM-G930F App Rx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_app_rx_gb_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_app_tx_gb_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens skickade data", "aliases": [null, "SM-G930F App Tx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_app_tx_gb_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_app_memory_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens minnesanvändning", "aliases": [null, "SM-G930F App memory"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_app_memory_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_app_inactive_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appen inaktiv", "aliases": [null, "SM-G930F App inactive"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_app_inactive_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_app_importance_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens prioritet", "aliases": [null, "SM-G930F App importance"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_app_importance_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_ringer_mode_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ringsignalläge", "aliases": [null, "SM-G930F Ringer mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_ringer_mode_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_audio_mode_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ljudläge", "aliases": [null, "SM-G930F Audio mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_audio_mode_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_headphones_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hörlurar", "aliases": [null, "SM-G930F Headphones"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_headphones_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_mic_muted_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mikrofon avstängd", "aliases": [null, "SM-G930F Mic muted"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_mic_muted_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_speakerphone_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högtalartelefon", "aliases": [null, "SM-G930F Speakerphone"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_speakerphone_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_music_active_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Musik aktiv", "aliases": [null, "SM-G930F Music active"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_music_active_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_volume_level_alarm_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Alarmvolym", "aliases": [null, "SM-G930F Volume level alarm"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_volume_level_alarm_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_volume_level_call_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Samtalsvolym", "aliases": [null, "SM-G930F Volume level call"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_volume_level_call_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_volume_level_music_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Musikvolym", "aliases": [null, "SM-G930F Volume level music"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_volume_level_music_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_volume_level_ringer_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ringsignalvolym", "aliases": [null, "SM-G930F Volume level ringer"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_volume_level_ringer_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_volume_level_notification_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aviseringsvolym", "aliases": [null, "SM-G930F Volume level notification"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_volume_level_notification_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_volume_level_system_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Systemvolym", "aliases": [null, "SM-G930F Volume level system"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_volume_level_system_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_volume_level_dtmf_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Knappvalsvolym", "aliases": [null, "SM-G930F Volume level DTMF"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_volume_level_dtmf_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_volume_level_accessibility_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tillgänglighetsvolym", "aliases": [null, "SM-G930F Volume level accessibility"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_volume_level_accessibility_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_battery_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterinivå", "aliases": [null, "SM-G930F Battery level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_battery_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_battery_state_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batteristatus", "aliases": [null, "SM-G930F Battery state"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_battery_state_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_is_charging_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Laddar", "aliases": [null, "SM-G930F Is charging"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_is_charging_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_charger_type_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Laddartyp", "aliases": [null, "SM-G930F Charger type"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_charger_type_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_battery_health_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterihälsa", "aliases": [null, "SM-G930F Battery health"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_battery_health_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_battery_temperature_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batteritemperatur", "aliases": [null, "SM-G930F Battery temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_battery_temperature_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_battery_power_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterieffekt", "aliases": [null, "SM-G930F Battery power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_battery_power_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_bluetooth_connection_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bluetooth-anslutning", "aliases": [null, "SM-G930F Bluetooth connection"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_bluetooth_connection_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_bluetooth_state_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bluetooth-status", "aliases": [null, "SM-G930F Bluetooth state"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_bluetooth_state_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_ble_transmitter_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "BLE-sändare", "aliases": [null, "SM-G930F BLE transmitter"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_ble_transmitter_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_beacon_monitor_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Övervakning av Bluetooth-sändare", "aliases": [null, "SM-G930F Beacon monitor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_beacon_monitor_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_car_battery_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens batterinivå", "aliases": [null, "SM-G930F Car battery"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_car_battery_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_car_name_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens namn", "aliases": [null, "SM-G930F Car name"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_car_name_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_car_charging_status_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens laddningsstatus", "aliases": [null, "SM-G930F Car charging status"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_car_charging_status_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_car_ev_connector_type_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens laddkontakt", "aliases": [null, "SM-G930F Car EV connector type"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_car_ev_connector_type_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_car_fuel_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens bränslenivå", "aliases": [null, "SM-G930F Car fuel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_car_fuel_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_car_fuel_type_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens bränsletyp", "aliases": [null, "SM-G930F Car fuel type"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_car_fuel_type_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_car_odometer_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens vägmätare", "aliases": [null, "SM-G930F Car odometer"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_car_odometer_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_screen_brightness_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmljusstyrka", "aliases": [null, "SM-G930F Screen brightness"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_screen_brightness_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_screen_off_timeout_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tid till skärmavstängning", "aliases": [null, "SM-G930F Screen off timeout"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_screen_off_timeout_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_screen_orientation", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmriktning", "aliases": [null, "SM-G930F Screen orientation"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_screen_orientation"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_screen_rotation", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmrotation", "aliases": [null, "SM-G930F Screen rotation"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_screen_rotation"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_do_not_disturb_sensor_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stör ej-läge", "aliases": [null, "SM-G930F Do Not Disturb sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_do_not_disturb_sensor_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_work_profile_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Arbetsprofil", "aliases": [null, "SM-G930F Work profile"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_work_profile_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_geocoded_location_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Platsadress", "aliases": [null, "SM-G930F Geocoded location"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_geocoded_location_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_device_locked_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Enheten låst", "aliases": [null, "SM-G930F Device locked"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_device_locked_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_device_secure_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Enheten skyddad", "aliases": [null, "SM-G930F Device secure"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_device_secure_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_keyguard_locked_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmlåset låst", "aliases": [null, "SM-G930F Keyguard locked"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_keyguard_locked_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_keyguard_secure_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmlåset skyddat", "aliases": [null, "SM-G930F Keyguard secure"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_keyguard_secure_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_last_used_app_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senast använda app", "aliases": [null, "SM-G930F Last used app"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_last_used_app_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_last_reboot_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senaste omstart", "aliases": [null, "SM-G930F Last reboot"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_last_reboot_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_last_update_trigger_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senaste uppdateringsorsak", "aliases": [null, "SM-G930F Last update trigger"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_last_update_trigger_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_light_sensor_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysningsstyrka", "aliases": [null, "SM-G930F Light sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_light_sensor_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_high_accuracy_mode_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Platsläge med hög precision", "aliases": [null, "SM-G930F High accuracy mode"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_high_accuracy_mode_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_high_accuracy_update_interval_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Uppdateringsintervall för hög precision", "aliases": [null, "SM-G930F High accuracy update interval"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_high_accuracy_update_interval_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_mobile_data_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mobildata", "aliases": [null, "SM-G930F Mobile data"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_mobile_data_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_mobile_data_roaming_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Dataroaming", "aliases": [null, "SM-G930F Mobile data roaming"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_mobile_data_roaming_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_wifi_connection_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-anslutning", "aliases": [null, "SM-G930F WiFi connection"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_wifi_connection_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_wifi_bssid_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi BSSID", "aliases": [null, "SM-G930F WiFi BSSID"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_wifi_bssid_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_wifi_ip_address_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi IP-adress", "aliases": [null, "SM-G930F WiFi IP address"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_wifi_ip_address_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_wifi_link_speed_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-länkhastighet", "aliases": [null, "SM-G930F WiFi link speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_wifi_link_speed_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_wifi_state_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-status", "aliases": [null, "SM-G930F WiFi state"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_wifi_state_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_wifi_frequency_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-frekvens", "aliases": [null, "SM-G930F WiFi frequency"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_wifi_frequency_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_wifi_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-signalstyrka", "aliases": [null, "SM-G930F WiFi signal strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_wifi_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_public_ip_address_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Publik IP-adress", "aliases": [null, "SM-G930F Public IP address"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_public_ip_address_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_hotspot_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetdelningsstatus", "aliases": [null, "SM-G930F Hotspot state"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_hotspot_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_network_type_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Nätverkstyp", "aliases": [null, "SM-G930F Network type"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_network_type_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_ipv6_addresses", "before": {"name": null, "aliases": [null]}, "after": {"name": "IPv6-adresser", "aliases": [null, "SM-G930F IPv6 addresses"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_ipv6_addresses"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_nfc_state_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "NFC-status", "aliases": [null, "SM-G930F NFC state"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_nfc_state_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_next_alarm_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Nästa alarm", "aliases": [null, "SM-G930F Next alarm"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_next_alarm_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_last_notification_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senaste avisering", "aliases": [null, "SM-G930F Last notification"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_last_notification_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_last_removed_notification_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senast borttagna avisering", "aliases": [null, "SM-G930F Last removed notification"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_last_removed_notification_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_active_notification_count_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Antal aktiva aviseringar", "aliases": [null, "SM-G930F Active notification count"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_active_notification_count_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_media_session_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mediasession", "aliases": [null, "SM-G930F Media session"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_media_session_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_phone_state_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Telefonstatus", "aliases": [null, "SM-G930F Phone state"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_phone_state_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_interactive_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmen interaktiv", "aliases": [null, "SM-G930F Interactive"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_interactive_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_doze_mode_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Viloläge", "aliases": [null, "SM-G930F Doze mode"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_doze_mode_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_power_save_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Energisparläge", "aliases": [null, "SM-G930F Power save"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_power_save_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_pressure_sensor_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lufttryck", "aliases": [null, "SM-G930F Pressure sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_pressure_sensor_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_proximity_sensor_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närhetssensor", "aliases": [null, "SM-G930F Proximity sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_proximity_sensor_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_steps_sensor_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Steg", "aliases": [null, "SM-G930F Steps sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_steps_sensor_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_internal_storage_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Intern lagring", "aliases": [null, "SM-G930F Internal storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_internal_storage_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_external_storage_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Extern lagring", "aliases": [null, "SM-G930F External storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_external_storage_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_current_time_zone_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aktuell tidszon", "aliases": [null, "SM-G930F Current time zone"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_current_time_zone_2"}

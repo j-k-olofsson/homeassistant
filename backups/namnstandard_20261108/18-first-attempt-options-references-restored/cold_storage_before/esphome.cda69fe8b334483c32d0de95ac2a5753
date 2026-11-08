@@ -1,0 +1,166 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.cda69fe8b334483c32d0de95ac2a5753",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "esphome20",
+      "friendly_name": "Termostat (kontoret)",
+      "mac_address": "A4:CF:12:D8:0A:DD",
+      "compilation_time": "2026-11-04 06:51:56 +0100",
+      "model": "esp8285",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2026.10.2",
+      "project_name": "",
+      "project_version": "",
+      "webserver_port": 80,
+      "legacy_voice_assistant_version": 0,
+      "voice_assistant_feature_flags": 0,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0,
+      "zwave_proxy_feature_flags": 0,
+      "zwave_home_id": 0,
+      "suggested_area": "",
+      "bluetooth_mac_address": "",
+      "api_encryption_supported": true,
+      "api_encryption_provisionable": false,
+      "api_outgoing_connection_supported": true,
+      "devices": [],
+      "areas": [],
+      "area": {
+        "area_id": 0,
+        "name": ""
+      },
+      "serial_proxies": []
+    },
+    "services": [],
+    "api_version": {
+      "major": 1,
+      "minor": 19
+    },
+    "device_capabilities": {
+      "bluetooth_proxy": {
+        "feature_flags": 0,
+        "mac_address": ""
+      },
+      "voice_assistant": {
+        "feature_flags": 0
+      },
+      "zwave_proxy": {
+        "feature_flags": 0,
+        "home_id": 0
+      },
+      "serial_proxies": [],
+      "wizard": {
+        "configured": false
+      },
+      "sendspin": {
+        "feature_flags": 0,
+        "client_id": ""
+      },
+      "store_yaml": {
+        "supported": false
+      }
+    },
+    "climate": [
+      {
+        "object_id": "esphome20_thermostat",
+        "key": 2221992440,
+        "name": "esphome20 Thermostat",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "feature_flags": 33,
+        "supports_current_temperature": true,
+        "supports_two_point_target_temperature": false,
+        "supported_modes": [
+          0,
+          3
+        ],
+        "visual_min_temperature": 0.0,
+        "visual_max_temperature": 30.0,
+        "visual_target_temperature_step": 0.5,
+        "visual_current_temperature_step": 0.5,
+        "temperature_unit": 0,
+        "legacy_supports_away": false,
+        "supports_action": true,
+        "supported_fan_modes": [],
+        "supported_swing_modes": [],
+        "supported_custom_fan_modes": [],
+        "supported_presets": [
+          1,
+          2,
+          4
+        ],
+        "supported_custom_presets": [],
+        "supports_current_humidity": false,
+        "supports_target_humidity": false,
+        "visual_min_humidity": 30.0,
+        "visual_max_humidity": 99.0
+      }
+    ],
+    "sensor": [
+      {
+        "object_id": "esphome20_temperature",
+        "key": 645240451,
+        "name": "esphome20 Temperature",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "temperature",
+        "unit_of_measurement": "°C",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome20_humidity",
+        "key": 2091334524,
+        "name": "esphome20 Humidity",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "humidity",
+        "unit_of_measurement": "%",
+        "accuracy_decimals": 0,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      }
+    ],
+    "text_sensor": [],
+    "switch": [
+      {
+        "object_id": "esphome20_relay_state",
+        "key": 3044689980,
+        "name": "esphome20 Relay State",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "assumed_state": false,
+        "device_class": ""
+      }
+    ],
+    "binary_sensor": [
+      {
+        "object_id": "status",
+        "key": 939730931,
+        "name": "Status",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_id": 0,
+        "device_class": "connectivity",
+        "is_status_binary_sensor": true
+      }
+    ],
+    "update": []
+  }
+}

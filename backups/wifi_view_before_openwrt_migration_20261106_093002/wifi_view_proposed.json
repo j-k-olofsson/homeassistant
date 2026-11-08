@@ -1,0 +1,574 @@
+{
+  "type": "sections",
+  "max_columns": 4,
+  "title": "WiFi",
+  "path": "wifi",
+  "header": {
+    "card": {
+      "type": "markdown",
+      "text_only": true,
+      "content": "{% set ns = namespace(total=0, missing=0) %}\n{% for entity in ['sensor.kontoret_openwrt_one_ap_kontoret_connected_clients', 'sensor.koket_openwrt_one_ap_koket_connected_clients', 'sensor.bion_asus_lyra_map_ac2200_ap_kallaren_connected_clients', 'sensor.friggan_asus_lyra_map_ac2200_ap_friggan_connected_clients', 'sensor.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_connected_clients', 'sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_connected_clients'] %}\n  {% set count = state_attr(entity, 'wireless') %}\n  {% if states(entity) not in ['unavailable', 'unknown'] and count is number %}\n    {% set ns.total = ns.total + count %}\n  {% else %}\n    {% set ns.missing = ns.missing + 1 %}\n  {% endif %}\n{% endfor %}\n### Accesspunkter – Wi-Fi-klienter: {{ ns.total }} st\n{% if ns.missing > 0 %}Ofullständig uppgift: {{ ns.missing }} accesspunkt(er) saknar aktuella data.{% endif %}\n"
+    }
+  },
+  "sections": [
+    {
+      "type": "grid",
+      "cards": [
+        {
+          "type": "heading",
+          "heading_style": "title",
+          "heading": "AP Kontoret (192.168.10.4)",
+          "icon": "mdi:router-network-wireless",
+          "badges": [
+            {
+              "type": "entity",
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.kontoret_openwrt_one_ap_kontoret_connected_clients",
+              "state_content": "wireless",
+              "icon": "mdi:wifi",
+              "color": "state"
+            }
+          ]
+        },
+        {
+          "type": "custom:auto-entities",
+          "card": {
+            "type": "custom:flex-table-card",
+            "sort_by": "rssi_raw",
+            "sort_desc": false,
+            "columns": [
+              {
+                "name": "Namn",
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy1\": \"5G\", \"phy0\": \"2G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; const badge=(x.band_short==='2G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#c9a227;color:#161616;font-size:7px;font-weight:700;vertical-align:middle;\">2G<\\/span>' : (x.band_short==='5G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#2f8f66;color:#eaf7ef;font-size:7px;font-weight:700;vertical-align:middle;\">5G<\\/span>' : (x.band_short==='6G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#4b63c6;color:#eef2ff;font-size:7px;font-weight:700;vertical-align:middle;\">6G<\\/span>' : ''; return `<span class=\"host-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 6px;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:${bg};\">${badge}${x.hostname || \"-\"}</span>`; })() : '';\n}).call(this)"
+              },
+              {
+                "name": "IP",
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy1\": \"5G\", \"phy0\": \"2G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"ip-cell\" title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 4px;margin:0;white-space:nowrap;text-align:right;background:${bg};\">${x.ip || '-'}</span>`; })() : '';\n}).call(this)"
+              },
+              {
+                "name": "RSSI",
+                "sort_unmodified": true,
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy1\": \"5G\", \"phy0\": \"2G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"rssi-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 1px;margin:0;text-align:right;white-space:nowrap;background:${bg};\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>`; })() : '';\n}).call(this)"
+              },
+              {
+                "name": "rssi_raw",
+                "hidden": true,
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy1\": \"5G\", \"phy0\": \"2G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999;\n}).call(this)"
+              }
+            ],
+            "css": {
+              "table+": "width:100% !important; border-collapse:separate !important; border-spacing:0 1px !important; table-layout:fixed !important; margin:0 !important;",
+              "th+": "text-align:left; font-size:13px; font-weight:600; padding:2px 6px 2px 6px !important;",
+              "th:nth-child(1)+": "width:auto;",
+              "th:nth-child(2)+": "width:90px !important; text-align:right; white-space:nowrap;",
+              "th:nth-child(3)+": "width:10px !important; text-align:right; white-space:nowrap;",
+              "tr+": "background:transparent;",
+              "tbody tr:nth-child(odd)+": "background:transparent;",
+              "tbody tr:nth-child(even)+": "background:transparent;",
+              "tbody tr+": "height:19px !important;",
+              "tbody tr td+": "padding:0 !important; margin:0 !important; height:18px !important; line-height:18px !important; vertical-align:middle !important; border:0 !important;",
+              "td+": "padding:0 !important; margin:0 !important; font-size:13px; line-height:1; background:transparent !important; border:0 !important; white-space:nowrap;",
+              "td:nth-child(1)+": "width:auto; max-width:0;",
+              "td:nth-child(2)+": "width:90px !important; text-align:right;",
+              "td:nth-child(3)+": "width:10px !important; text-align:right;",
+              ".host-cell": "display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;",
+              ".ip-cell": "display:block; white-space:nowrap;",
+              ".rssi-cell": "display:block; text-align:right; white-space:nowrap;"
+            },
+            "strict": false
+          },
+          "card_param": "entities",
+          "filter": {
+            "include": [
+              {
+                "domain": "device_tracker",
+                "integration": "openwrt",
+                "state": "home",
+                "attributes": {
+                  "connection_type": "wireless",
+                  "connected_ap_entry_id": "01KWV2SPH2EV1C7PC398AHYHMG"
+                }
+              }
+            ]
+          },
+          "unique": true,
+          "show_empty": true,
+          "else": {
+            "type": "markdown",
+            "content": "Inga anslutna Wi-Fi-klienter rapporteras för denna accesspunkt."
+          }
+        }
+      ]
+    },
+    {
+      "type": "grid",
+      "cards": [
+        {
+          "type": "heading",
+          "heading_style": "title",
+          "icon": "mdi:router-network-wireless",
+          "badges": [
+            {
+              "type": "entity",
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.koket_openwrt_one_ap_koket_connected_clients",
+              "state_content": "wireless",
+              "icon": "mdi:wifi"
+            }
+          ],
+          "heading": "AP Köket (192.168.10.5)"
+        },
+        {
+          "type": "custom:auto-entities",
+          "card": {
+            "type": "custom:flex-table-card",
+            "sort_by": "rssi_raw",
+            "sort_desc": false,
+            "columns": [
+              {
+                "name": "Namn",
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy1\": \"5G\", \"phy0\": \"2G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; const badge=(x.band_short==='2G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#c9a227;color:#161616;font-size:7px;font-weight:700;vertical-align:middle;\">2G<\\/span>' : (x.band_short==='5G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#2f8f66;color:#eaf7ef;font-size:7px;font-weight:700;vertical-align:middle;\">5G<\\/span>' : (x.band_short==='6G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#4b63c6;color:#eef2ff;font-size:7px;font-weight:700;vertical-align:middle;\">6G<\\/span>' : ''; return `<span class=\"host-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 6px;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:${bg};\">${badge}${x.hostname || \"-\"}</span>`; })() : '';\n}).call(this)"
+              },
+              {
+                "name": "IP",
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy1\": \"5G\", \"phy0\": \"2G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"ip-cell\" title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 4px;margin:0;white-space:nowrap;text-align:right;background:${bg};\">${x.ip || '-'}</span>`; })() : '';\n}).call(this)"
+              },
+              {
+                "name": "RSSI",
+                "sort_unmodified": true,
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy1\": \"5G\", \"phy0\": \"2G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"rssi-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 1px;margin:0;text-align:right;white-space:nowrap;background:${bg};\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>`; })() : '';\n}).call(this)"
+              },
+              {
+                "name": "rssi_raw",
+                "hidden": true,
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy1\": \"5G\", \"phy0\": \"2G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999;\n}).call(this)"
+              }
+            ],
+            "css": {
+              "table+": "width:100% !important; border-collapse:separate !important; border-spacing:0 1px !important; table-layout:fixed !important; margin:0 !important;",
+              "th+": "text-align:left; font-size:13px; font-weight:600; padding:2px 6px 2px 6px !important;",
+              "th:nth-child(1)+": "width:auto;",
+              "th:nth-child(2)+": "width:90px !important; text-align:right; white-space:nowrap;",
+              "th:nth-child(3)+": "width:10px !important; text-align:right; white-space:nowrap;",
+              "tr+": "background:transparent;",
+              "tbody tr:nth-child(odd)+": "background:transparent;",
+              "tbody tr:nth-child(even)+": "background:transparent;",
+              "tbody tr+": "height:19px !important;",
+              "tbody tr td+": "padding:0 !important; margin:0 !important; height:18px !important; line-height:18px !important; vertical-align:middle !important; border:0 !important;",
+              "td+": "padding:0 !important; margin:0 !important; font-size:13px; line-height:1; background:transparent !important; border:0 !important; white-space:nowrap;",
+              "td:nth-child(1)+": "width:auto; max-width:0;",
+              "td:nth-child(2)+": "width:90px !important; text-align:right;",
+              "td:nth-child(3)+": "width:10px !important; text-align:right;",
+              ".host-cell": "display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;",
+              ".ip-cell": "display:block; white-space:nowrap;",
+              ".rssi-cell": "display:block; text-align:right; white-space:nowrap;"
+            },
+            "strict": false
+          },
+          "card_param": "entities",
+          "filter": {
+            "include": [
+              {
+                "domain": "device_tracker",
+                "integration": "openwrt",
+                "state": "home",
+                "attributes": {
+                  "connection_type": "wireless",
+                  "connected_ap_entry_id": "01KWV2WFX49FPJBWGVVGYSQ1XH"
+                }
+              }
+            ]
+          },
+          "unique": true,
+          "show_empty": true,
+          "else": {
+            "type": "markdown",
+            "content": "Inga anslutna Wi-Fi-klienter rapporteras för denna accesspunkt."
+          }
+        }
+      ],
+      "column_span": 1
+    },
+    {
+      "type": "grid",
+      "cards": [
+        {
+          "type": "heading",
+          "heading_style": "title",
+          "heading": "AP Källaren (192.168.10.6)",
+          "icon": "mdi:router-network-wireless",
+          "badges": [
+            {
+              "type": "entity",
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_connected_clients",
+              "state_content": "wireless",
+              "color": "state",
+              "icon": "mdi:wifi"
+            }
+          ]
+        },
+        {
+          "type": "custom:auto-entities",
+          "card": {
+            "type": "custom:flex-table-card",
+            "sort_by": "rssi_raw",
+            "sort_desc": false,
+            "columns": [
+              {
+                "name": "Namn",
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy2\": \"5G\", \"phy1\": \"2G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; const badge=(x.band_short==='2G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#c9a227;color:#161616;font-size:7px;font-weight:700;vertical-align:middle;\">2G<\\/span>' : (x.band_short==='5G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#2f8f66;color:#eaf7ef;font-size:7px;font-weight:700;vertical-align:middle;\">5G<\\/span>' : (x.band_short==='6G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#4b63c6;color:#eef2ff;font-size:7px;font-weight:700;vertical-align:middle;\">6G<\\/span>' : ''; return `<span class=\"host-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 6px;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:${bg};\">${badge}${x.hostname || \"-\"}</span>`; })() : '';\n}).call(this)"
+              },
+              {
+                "name": "IP",
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy2\": \"5G\", \"phy1\": \"2G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"ip-cell\" title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 4px;margin:0;white-space:nowrap;text-align:right;background:${bg};\">${x.ip || '-'}</span>`; })() : '';\n}).call(this)"
+              },
+              {
+                "name": "RSSI",
+                "sort_unmodified": true,
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy2\": \"5G\", \"phy1\": \"2G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"rssi-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 1px;margin:0;text-align:right;white-space:nowrap;background:${bg};\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>`; })() : '';\n}).call(this)"
+              },
+              {
+                "name": "rssi_raw",
+                "hidden": true,
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy2\": \"5G\", \"phy1\": \"2G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999;\n}).call(this)"
+              }
+            ],
+            "css": {
+              "table+": "width:100% !important; border-collapse:separate !important; border-spacing:0 1px !important; table-layout:fixed !important; margin:0 !important;",
+              "th+": "text-align:left; font-size:13px; font-weight:600; padding:2px 6px 2px 6px !important;",
+              "th:nth-child(1)+": "width:auto;",
+              "th:nth-child(2)+": "width:90px !important; text-align:right; white-space:nowrap;",
+              "th:nth-child(3)+": "width:10px !important; text-align:right; white-space:nowrap;",
+              "tr+": "background:transparent;",
+              "tbody tr:nth-child(odd)+": "background:transparent;",
+              "tbody tr:nth-child(even)+": "background:transparent;",
+              "tbody tr+": "height:19px !important;",
+              "tbody tr td+": "padding:0 !important; margin:0 !important; height:18px !important; line-height:18px !important; vertical-align:middle !important; border:0 !important;",
+              "td+": "padding:0 !important; margin:0 !important; font-size:13px; line-height:1; background:transparent !important; border:0 !important; white-space:nowrap;",
+              "td:nth-child(1)+": "width:auto; max-width:0;",
+              "td:nth-child(2)+": "width:90px !important; text-align:right;",
+              "td:nth-child(3)+": "width:10px !important; text-align:right;",
+              ".host-cell": "display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;",
+              ".ip-cell": "display:block; white-space:nowrap;",
+              ".rssi-cell": "display:block; text-align:right; white-space:nowrap;"
+            },
+            "strict": false
+          },
+          "card_param": "entities",
+          "filter": {
+            "include": [
+              {
+                "domain": "device_tracker",
+                "integration": "openwrt",
+                "state": "home",
+                "attributes": {
+                  "connection_type": "wireless",
+                  "connected_ap_entry_id": "01KWV2Z8K78KQF3WPGXCWZDBSY"
+                }
+              }
+            ]
+          },
+          "unique": true,
+          "show_empty": true,
+          "else": {
+            "type": "markdown",
+            "content": "Inga anslutna Wi-Fi-klienter rapporteras för denna accesspunkt."
+          }
+        },
+        {
+          "type": "heading",
+          "heading_style": "title",
+          "heading": "AP Friggan (192.168.10.8)",
+          "icon": "mdi:router-network-wireless",
+          "badges": [
+            {
+              "type": "entity",
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.friggan_asus_lyra_map_ac2200_ap_friggan_connected_clients",
+              "state_content": "wireless",
+              "icon": "mdi:wifi",
+              "color": "state"
+            }
+          ]
+        },
+        {
+          "type": "custom:auto-entities",
+          "card": {
+            "type": "custom:flex-table-card",
+            "sort_by": "rssi_raw",
+            "sort_desc": false,
+            "columns": [
+              {
+                "name": "Namn",
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy2\": \"5G\", \"phy1\": \"2G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; const badge=(x.band_short==='2G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#c9a227;color:#161616;font-size:7px;font-weight:700;vertical-align:middle;\">2G<\\/span>' : (x.band_short==='5G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#2f8f66;color:#eaf7ef;font-size:7px;font-weight:700;vertical-align:middle;\">5G<\\/span>' : (x.band_short==='6G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#4b63c6;color:#eef2ff;font-size:7px;font-weight:700;vertical-align:middle;\">6G<\\/span>' : ''; return `<span class=\"host-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 6px;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:${bg};\">${badge}${x.hostname || \"-\"}</span>`; })() : '';\n}).call(this)"
+              },
+              {
+                "name": "IP",
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy2\": \"5G\", \"phy1\": \"2G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"ip-cell\" title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 4px;margin:0;white-space:nowrap;text-align:right;background:${bg};\">${x.ip || '-'}</span>`; })() : '';\n}).call(this)"
+              },
+              {
+                "name": "RSSI",
+                "sort_unmodified": true,
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy2\": \"5G\", \"phy1\": \"2G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"rssi-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 1px;margin:0;text-align:right;white-space:nowrap;background:${bg};\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>`; })() : '';\n}).call(this)"
+              },
+              {
+                "name": "rssi_raw",
+                "hidden": true,
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy2\": \"5G\", \"phy1\": \"2G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999;\n}).call(this)"
+              }
+            ],
+            "css": {
+              "table+": "width:100% !important; border-collapse:separate !important; border-spacing:0 1px !important; table-layout:fixed !important; margin:0 !important;",
+              "th+": "text-align:left; font-size:13px; font-weight:600; padding:2px 6px 2px 6px !important;",
+              "th:nth-child(1)+": "width:auto;",
+              "th:nth-child(2)+": "width:90px !important; text-align:right; white-space:nowrap;",
+              "th:nth-child(3)+": "width:10px !important; text-align:right; white-space:nowrap;",
+              "tr+": "background:transparent;",
+              "tbody tr:nth-child(odd)+": "background:transparent;",
+              "tbody tr:nth-child(even)+": "background:transparent;",
+              "tbody tr+": "height:19px !important;",
+              "tbody tr td+": "padding:0 !important; margin:0 !important; height:18px !important; line-height:18px !important; vertical-align:middle !important; border:0 !important;",
+              "td+": "padding:0 !important; margin:0 !important; font-size:13px; line-height:1; background:transparent !important; border:0 !important; white-space:nowrap;",
+              "td:nth-child(1)+": "width:auto; max-width:0;",
+              "td:nth-child(2)+": "width:90px !important; text-align:right;",
+              "td:nth-child(3)+": "width:10px !important; text-align:right;",
+              ".host-cell": "display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;",
+              ".ip-cell": "display:block; white-space:nowrap;",
+              ".rssi-cell": "display:block; text-align:right; white-space:nowrap;"
+            },
+            "strict": false
+          },
+          "card_param": "entities",
+          "filter": {
+            "include": [
+              {
+                "domain": "device_tracker",
+                "integration": "openwrt",
+                "state": "home",
+                "attributes": {
+                  "connection_type": "wireless",
+                  "connected_ap_entry_id": "01M0CQWZG3NKV22ZVEVFEN0KWF"
+                }
+              }
+            ]
+          },
+          "unique": true,
+          "show_empty": true,
+          "else": {
+            "type": "markdown",
+            "content": "Inga anslutna Wi-Fi-klienter rapporteras för denna accesspunkt."
+          }
+        }
+      ]
+    },
+    {
+      "type": "grid",
+      "cards": [
+        {
+          "type": "heading",
+          "heading_style": "title",
+          "heading": "AP Verkstaden (192.168.10.7)",
+          "icon": "mdi:router-network-wireless",
+          "badges": [
+            {
+              "type": "entity",
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_connected_clients",
+              "state_content": "wireless",
+              "icon": "mdi:wifi",
+              "color": "state"
+            }
+          ]
+        },
+        {
+          "type": "custom:auto-entities",
+          "card": {
+            "type": "custom:flex-table-card",
+            "sort_by": "rssi_raw",
+            "sort_desc": false,
+            "columns": [
+              {
+                "name": "Namn",
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy2\": \"5G\", \"phy1\": \"2G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; const badge=(x.band_short==='2G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#c9a227;color:#161616;font-size:7px;font-weight:700;vertical-align:middle;\">2G<\\/span>' : (x.band_short==='5G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#2f8f66;color:#eaf7ef;font-size:7px;font-weight:700;vertical-align:middle;\">5G<\\/span>' : (x.band_short==='6G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#4b63c6;color:#eef2ff;font-size:7px;font-weight:700;vertical-align:middle;\">6G<\\/span>' : ''; return `<span class=\"host-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 6px;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:${bg};\">${badge}${x.hostname || \"-\"}</span>`; })() : '';\n}).call(this)"
+              },
+              {
+                "name": "IP",
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy2\": \"5G\", \"phy1\": \"2G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"ip-cell\" title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 4px;margin:0;white-space:nowrap;text-align:right;background:${bg};\">${x.ip || '-'}</span>`; })() : '';\n}).call(this)"
+              },
+              {
+                "name": "RSSI",
+                "sort_unmodified": true,
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy2\": \"5G\", \"phy1\": \"2G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"rssi-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 1px;margin:0;text-align:right;white-space:nowrap;background:${bg};\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>`; })() : '';\n}).call(this)"
+              },
+              {
+                "name": "rssi_raw",
+                "hidden": true,
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy2\": \"5G\", \"phy1\": \"2G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999;\n}).call(this)"
+              }
+            ],
+            "css": {
+              "table+": "width:100% !important; border-collapse:separate !important; border-spacing:0 1px !important; table-layout:fixed !important; margin:0 !important;",
+              "th+": "text-align:left; font-size:13px; font-weight:600; padding:2px 6px 2px 6px !important;",
+              "th:nth-child(1)+": "width:auto;",
+              "th:nth-child(2)+": "width:90px !important; text-align:right; white-space:nowrap;",
+              "th:nth-child(3)+": "width:10px !important; text-align:right; white-space:nowrap;",
+              "tr+": "background:transparent;",
+              "tbody tr:nth-child(odd)+": "background:transparent;",
+              "tbody tr:nth-child(even)+": "background:transparent;",
+              "tbody tr+": "height:19px !important;",
+              "tbody tr td+": "padding:0 !important; margin:0 !important; height:18px !important; line-height:18px !important; vertical-align:middle !important; border:0 !important;",
+              "td+": "padding:0 !important; margin:0 !important; font-size:13px; line-height:1; background:transparent !important; border:0 !important; white-space:nowrap;",
+              "td:nth-child(1)+": "width:auto; max-width:0;",
+              "td:nth-child(2)+": "width:90px !important; text-align:right;",
+              "td:nth-child(3)+": "width:10px !important; text-align:right;",
+              ".host-cell": "display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;",
+              ".ip-cell": "display:block; white-space:nowrap;",
+              ".rssi-cell": "display:block; text-align:right; white-space:nowrap;"
+            },
+            "strict": false
+          },
+          "card_param": "entities",
+          "filter": {
+            "include": [
+              {
+                "domain": "device_tracker",
+                "integration": "openwrt",
+                "state": "home",
+                "attributes": {
+                  "connection_type": "wireless",
+                  "connected_ap_entry_id": "01KWV32QVYF02R3CMJPGECATQA"
+                }
+              }
+            ]
+          },
+          "unique": true,
+          "show_empty": true,
+          "else": {
+            "type": "markdown",
+            "content": "Inga anslutna Wi-Fi-klienter rapporteras för denna accesspunkt."
+          }
+        },
+        {
+          "type": "heading",
+          "heading_style": "title",
+          "heading": "AP Poolen (192.168.10.10)",
+          "icon": "mdi:router-network-wireless",
+          "badges": [
+            {
+              "type": "entity",
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_connected_clients",
+              "state_content": "wireless",
+              "icon": "mdi:wifi",
+              "color": "state"
+            }
+          ]
+        },
+        {
+          "type": "custom:auto-entities",
+          "card": {
+            "type": "custom:flex-table-card",
+            "sort_by": "rssi_raw",
+            "sort_desc": false,
+            "columns": [
+              {
+                "name": "Namn",
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy1\": \"2G\", \"phy0\": \"5G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; const badge=(x.band_short==='2G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#c9a227;color:#161616;font-size:7px;font-weight:700;vertical-align:middle;\">2G<\\/span>' : (x.band_short==='5G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#2f8f66;color:#eaf7ef;font-size:7px;font-weight:700;vertical-align:middle;\">5G<\\/span>' : (x.band_short==='6G') ? '<span style=\"display:inline-flex;align-items:center;justify-content:center;height:10px;line-height:10px;margin-right:4px;padding:0 2px;border-radius:4px;background:#4b63c6;color:#eef2ff;font-size:7px;font-weight:700;vertical-align:middle;\">6G<\\/span>' : ''; return `<span class=\"host-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 6px;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:${bg};\">${badge}${x.hostname || \"-\"}</span>`; })() : '';\n}).call(this)"
+              },
+              {
+                "name": "IP",
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy1\": \"2G\", \"phy0\": \"5G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"ip-cell\" title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 4px;margin:0;white-space:nowrap;text-align:right;background:${bg};\">${x.ip || '-'}</span>`; })() : '';\n}).call(this)"
+              },
+              {
+                "name": "RSSI",
+                "sort_unmodified": true,
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy1\": \"2G\", \"phy0\": \"5G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object') ? (function(){ const bg=(x.rssi_level === 'bad') ? 'rgba(118,61,29,.65)' : (x.rssi_level === 'warn') ? 'rgba(151,114,26,.52)' : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? 'rgba(45,106,49,.42)' : 'rgba(45,106,49,.34)'; return `<span class=\"rssi-cell\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;padding:0 1px;margin:0;text-align:right;white-space:nowrap;background:${bg};\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>`; })() : '';\n}).call(this)"
+              },
+              {
+                "name": "rssi_raw",
+                "hidden": true,
+                "data": "entity_id",
+                "modify": "(function(){\nconst a=this.entity.attributes || {};\nconst esc=(v)=>String(v ?? '').replace(/[&<>\"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst n=Number(a.signal_strength);\nconst rssi=(a.signal_strength !== undefined && a.signal_strength !== null && Number.isFinite(n) && n<0) ? n : null;\nconst bands={\"phy1\": \"2G\", \"phy0\": \"5G\"};\nconst x={hostname:esc(a.host_name || this.entity.entity_id),ip:esc(a.ip || ''),mac:esc(a.mac || ''),rssi:rssi,rssi_level:rssi===null ? null : rssi<=-81 ? 'bad' : rssi<=-71 ? 'warn' : rssi<=-68 ? 'ok' : 'good',band_short:bands[String(a.interface || '').split('-')[0]] || ''};\nreturn (x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999;\n}).call(this)"
+              }
+            ],
+            "css": {
+              "table+": "width:100% !important; border-collapse:separate !important; border-spacing:0 1px !important; table-layout:fixed !important; margin:0 !important;",
+              "th+": "text-align:left; font-size:13px; font-weight:600; padding:2px 6px 2px 6px !important;",
+              "th:nth-child(1)+": "width:auto;",
+              "th:nth-child(2)+": "width:90px !important; text-align:right; white-space:nowrap;",
+              "th:nth-child(3)+": "width:10px !important; text-align:right; white-space:nowrap;",
+              "tr+": "background:transparent;",
+              "tbody tr:nth-child(odd)+": "background:transparent;",
+              "tbody tr:nth-child(even)+": "background:transparent;",
+              "tbody tr+": "height:19px !important;",
+              "tbody tr td+": "padding:0 !important; margin:0 !important; height:18px !important; line-height:18px !important; vertical-align:middle !important; border:0 !important;",
+              "td+": "padding:0 !important; margin:0 !important; font-size:13px; line-height:1; background:transparent !important; border:0 !important; white-space:nowrap;",
+              "td:nth-child(1)+": "width:auto; max-width:0;",
+              "td:nth-child(2)+": "width:90px !important; text-align:right;",
+              "td:nth-child(3)+": "width:10px !important; text-align:right;",
+              ".host-cell": "display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;",
+              ".ip-cell": "display:block; white-space:nowrap;",
+              ".rssi-cell": "display:block; text-align:right; white-space:nowrap;"
+            },
+            "strict": false
+          },
+          "card_param": "entities",
+          "filter": {
+            "include": [
+              {
+                "domain": "device_tracker",
+                "integration": "openwrt",
+                "state": "home",
+                "attributes": {
+                  "connection_type": "wireless",
+                  "connected_ap_entry_id": "01KWV37NP1NFRTCQ76KJ6B0PRE"
+                }
+              }
+            ]
+          },
+          "unique": true,
+          "show_empty": true,
+          "else": {
+            "type": "markdown",
+            "content": "Inga anslutna Wi-Fi-klienter rapporteras för denna accesspunkt."
+          }
+        }
+      ]
+    }
+  ],
+  "icon": "mdi:wifi",
+  "cards": [],
+  "show_icon_and_title": false,
+  "dense_section_placement": true,
+  "visible": []
+}

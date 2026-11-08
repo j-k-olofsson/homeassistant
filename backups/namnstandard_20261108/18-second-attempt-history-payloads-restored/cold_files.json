@@ -1,0 +1,21 @@
+[
+  "/homeassistant/.storage/core.config_entries",
+  "/homeassistant/.storage/person",
+  "/homeassistant/.storage/ai_task",
+  "/homeassistant/.storage/assist_pipeline.pipelines",
+  "/homeassistant/.storage/powercalc_group",
+  "/homeassistant/.storage/energy",
+  "/homeassistant/.storage/input_boolean",
+  "/homeassistant/.storage/input_number",
+  "/homeassistant/.storage/input_datetime",
+  "/homeassistant/.storage/input_select",
+  "/homeassistant/.storage/timer",
+  "/homeassistant/.storage/homeassistant.exposed_entities",
+  "/homeassistant/.storage/lovelace.dashboard_hemmabio",
+  "/homeassistant/.storage/lovelace.kuma_status",
+  "/homeassistant/.storage/lovelace.dashboard_ai",
+  "/homeassistant/.storage/lovelace.lovelace",
+  "/homeassistant/.storage/lovelace_resources",
+  "/homeassistant/.storage/lovelace.dashboard_elpris",
+  "/homeassistant/.storage/lovelace.ha_admin"
+]

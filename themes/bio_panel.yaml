@@ -1,0 +1,33 @@
+Bio Panel:
+  modes:
+    dark:
+      primary-background-color: '#101216'
+      secondary-background-color: '#101216'
+      card-background-color: '#1C2026'
+      ha-card-background: '#1C2026'
+      primary-text-color: '#F1F3F5'
+      secondary-text-color: '#B8BEC8'
+      primary-color: '#E6B875'
+      accent-color: '#E6B875'
+      state-light-active-color: '#E6B875'
+      state-switch-active-color: '#86B8A0'
+      ha-card-border-color: '#343A43'
+      ha-card-border-width: 1px
+      ha-card-border-radius: 12px
+      ha-card-box-shadow: none
+      ha-view-sections-column-gap: 8px
+  primary-background-color: '#101216'
+  secondary-background-color: '#101216'
+  card-background-color: '#1C2026'
+  ha-card-background: '#1C2026'
+  primary-text-color: '#F1F3F5'
+  secondary-text-color: '#B8BEC8'
+  primary-color: '#E6B875'
+  accent-color: '#E6B875'
+  state-light-active-color: '#E6B875'
+  state-switch-active-color: '#86B8A0'
+  ha-card-border-color: '#343A43'
+  ha-card-border-width: 1px
+  ha-card-border-radius: 12px
+  ha-card-box-shadow: none
+  ha-view-sections-column-gap: 8px

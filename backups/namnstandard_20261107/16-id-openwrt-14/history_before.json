@@ -1,0 +1,170 @@
+{
+  "device_tracker.98_f4_ab_e2_71_12_98_f4_ab_e2_71_12": [
+    {
+      "state": "home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    },
+    {
+      "state": "not_home",
+      "last_changed": "2026-11-07T13:25:14.951409+00:00"
+    },
+    {
+      "state": "home",
+      "last_changed": "2026-11-07T13:25:16.429882+00:00"
+    }
+  ],
+  "event.friggan_asus_lyra_map_ac2200_ap_friggan_new_device": [
+    {
+      "state": "2026-11-04T14:24:03.190+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    }
+  ],
+  "device_tracker.14_5d_34_95_70_d1_14_5d_34_95_70_d1": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    },
+    {
+      "state": "home",
+      "last_changed": "2026-11-07T13:25:14.903236+00:00"
+    }
+  ],
+  "device_tracker.hf_lpt220_hf_lpt220": [
+    {
+      "state": "home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    },
+    {
+      "state": "not_home",
+      "last_changed": "2026-11-08T07:05:37.982342+00:00"
+    }
+  ],
+  "device_tracker.4c_cf_7c_3f_10_25_4c_cf_7c_3f_10_25": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    }
+  ],
+  "device_tracker.a0_cb_fd_3a_3a_d8_a0_cb_fd_3a_3a_d8": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    }
+  ],
+  "device_tracker.58_cd_c9_33_8f_ab_58_cd_c9_33_8f_ab": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    }
+  ],
+  "device_tracker.ha_servern_7c_9e_bd_06_e4_54_7c_9e_bd_06_e4_54": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    }
+  ],
+  "device_tracker.24_6f_28_c1_b9_60_24_6f_28_c1_b9_60": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    }
+  ],
+  "device_tracker.7c_9e_bd_06_5d_e8_7c_9e_bd_06_5d_e8": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    }
+  ],
+  "device_tracker.7c_9e_bd_06_e4_88_7c_9e_bd_06_e4_88": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    }
+  ],
+  "device_tracker.48_e7_29_89_81_90_48_e7_29_89_81_90": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    }
+  ],
+  "device_tracker.14_13_0b_d5_3c_71_14_13_0b_d5_3c_71": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    }
+  ],
+  "device_tracker.desktop_vf5t4dk_desktop_vf5t4dk": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    }
+  ],
+  "device_tracker.galaxy_s7_friggan_galaxy_s7_friggan": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    },
+    {
+      "state": "home",
+      "last_changed": "2026-11-07T10:10:20.766120+00:00"
+    },
+    {
+      "state": "not_home",
+      "last_changed": "2026-11-08T07:05:37.987050+00:00"
+    }
+  ],
+  "device_tracker.galaxy_s7_galaxy_s7_2": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    },
+    {
+      "state": "home",
+      "last_changed": "2026-11-07T10:11:21.752805+00:00"
+    },
+    {
+      "state": "not_home",
+      "last_changed": "2026-11-07T10:38:03.270921+00:00"
+    },
+    {
+      "state": "home",
+      "last_changed": "2026-11-07T13:25:14.858323+00:00"
+    },
+    {
+      "state": "not_home",
+      "last_changed": "2026-11-08T07:05:37.987330+00:00"
+    }
+  ]
+}

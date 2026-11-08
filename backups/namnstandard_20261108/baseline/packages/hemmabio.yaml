@@ -1,0 +1,4 @@
+input_boolean:
+  hemmabio_restore_hygrostat:
+    name: Hemmabio återställ hygrostat
+    icon: mdi:water-percent

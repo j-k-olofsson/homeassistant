@@ -59,7 +59,7 @@ class UbusFeaturesMixin:
             )
             raise UbusError(f"firewall reload failed after updating rule {section_id}")
 
-        self._last_full_poll = 0
+        self._invalidate_slow_poll()
         return True
 
     async def get_firewall_rules(self) -> list[FirewallRule]:
@@ -149,7 +149,7 @@ class UbusFeaturesMixin:
             )
             await self._call("uci", "commit", {"config": "firewall"})
             await self._call("service", "reloading", {"service": "firewall"})
-            self._last_full_poll = 0
+            self._invalidate_slow_poll()
             return True
         except UbusError:
             return False
@@ -240,10 +240,42 @@ class UbusFeaturesMixin:
                 )
 
             await self._call("uci", "commit", {"config": "firewall"})
-            await self._call("service", "reloading", {"service": "firewall"})
-            self._last_full_poll = 0
+
+            # NOTE: this previously called ubus "service"/"reloading", which is
+            # not a real ubus method on stock OpenWrt (the "service" object only
+            # exposes list/set/add/delete/signal/state/watchdog/event) and would
+            # raise UbusError, so the whole function returned False *silently*
+            # before ever actually reloading the firewall - the UCI rule was
+            # committed to config but never applied to the running ruleset.
+            # Use the same proven reload-and-verify pattern as
+            # set_firewall_rule_enabled() above instead.
+            reload_result = await self.execute_command(
+                "/etc/init.d/firewall reload; echo RC=$?"
+            )
+            if "RC=0" not in (reload_result or ""):
+                _LOGGER.warning(
+                    "[openwrt-access-control] Firewall reload failed after "
+                    "setting access control for %s (blocked=%s): %s",
+                    mac_upper,
+                    blocked,
+                    reload_result,
+                )
+                return False
+
+            self._invalidate_slow_poll()
+
+            if blocked:
+                return await self._flush_conntrack_for_mac(mac_upper)
+
             return True
-        except UbusError:
+        except UbusError as err:
+            _LOGGER.warning(
+                "[openwrt-access-control] Failed to set access control for "
+                "%s (blocked=%s): %s",
+                mac_upper,
+                blocked,
+                err,
+            )
             return False
 
     async def get_adblock_status(self) -> AdBlockStatus:
@@ -276,11 +308,9 @@ class UbusFeaturesMixin:
                         )
 
                         blocked = res.get("blocked_domains") or res.get("blocked") or 0
-                        blocked_str = str(blocked).replace(",", "").replace(".", "")
-                        try:
-                            status.blocked_domains = int(float(blocked_str))
-                        except (ValueError, TypeError):
-                            pass
+                        from ...helpers import parse_blocked_domains
+
+                        status.blocked_domains = parse_blocked_domains(blocked)
 
                         last_run = res.get("last_run") or res.get("last_update")
                         if isinstance(last_run, dict):
@@ -298,14 +328,11 @@ class UbusFeaturesMixin:
                 status.enabled = res.get("adblock_status") == "enabled"
                 status.status = res.get("adblock_status", "disabled")
                 status.version = res.get("adblock_version")
-                # Handle formatted numbers like "57,861" or "57.861"
-                blocked = (
-                    str(res.get("blocked_domains", 0)).replace(",", "").replace(".", "")
+                from ...helpers import parse_blocked_domains
+
+                status.blocked_domains = parse_blocked_domains(
+                    res.get("blocked_domains", 0)
                 )
-                try:
-                    status.blocked_domains = int(float(blocked))
-                except (ValueError, TypeError):
-                    pass
                 status.last_update = res.get("last_run")
                 return status
         except Exception as err:
@@ -332,7 +359,7 @@ class UbusFeaturesMixin:
             )
             action = "start" if enabled else "stop"
             await self.execute_command(f"/etc/init.d/adblock {action}")
-            self._last_full_poll = 0
+            self._invalidate_slow_poll()
             return True
         except Exception:
             return False
@@ -365,7 +392,7 @@ class UbusFeaturesMixin:
             )
             action = "start" if enabled else "stop"
             await self.execute_command(f"/etc/init.d/simple-adblock {action}")
-            self._last_full_poll = 0
+            self._invalidate_slow_poll()
             return True
         except Exception:
             return False
@@ -426,7 +453,7 @@ class UbusFeaturesMixin:
                 "exec",
                 {"command": "/etc/init.d/sqm", "params": ["reload"]},
             )
-            self._last_full_poll = 0
+            self._invalidate_slow_poll()
             return True
         except UbusPermissionError as err:
             _LOGGER.debug("SQM config via ubus denied (permissions): %s", err)

@@ -1,8 +1,49 @@
 """Common functions for battery_notes."""
 
-from homeassistant.core import HomeAssistant
-from homeassistant.helpers import device_registry as dr
+from homeassistant.core import HomeAssistant, callback
+from homeassistant.helpers import device_registry as dr, entity_registry as er
 from homeassistant.helpers.device_registry import DeviceEntry
+
+from .store import BatteryNotesStorage
+
+
+@callback
+def async_hide_source_battery(
+    hass: HomeAssistant,
+    store: BatteryNotesStorage,
+    subentry_id: str,
+    entity_id: str,
+) -> None:
+    """Hide a visible source and remember which note hid it."""
+    registry = er.async_get(hass)
+    entity = registry.async_get(entity_id)
+    if entity is None or entity.hidden_by is not None:
+        return
+
+    store.async_set_hidden_entities(
+        subentry_id, store.hidden_entities.get(subentry_id, set()) | {entity.id}
+    )
+    registry.async_update_entity(
+        entity.entity_id, hidden_by=er.RegistryEntryHider.INTEGRATION
+    )
+
+
+@callback
+def async_unhide_source_batteries(
+    hass: HomeAssistant,
+    store: BatteryNotesStorage,
+    subentry_id: str,
+    keep_hidden: set[str] | None = None,
+) -> None:
+    """Restore only sources hidden by this note, preserving user hiding."""
+    registry = er.async_get(hass)
+    hidden_entities = store.hidden_entities.get(subentry_id, set())
+    retained = hidden_entities & (keep_hidden or set())
+    for registry_id in hidden_entities - retained:
+        entity = registry.async_get(registry_id)
+        if entity and entity.hidden_by == er.RegistryEntryHider.INTEGRATION:
+            registry.async_update_entity(entity.entity_id, hidden_by=None)
+    store.async_set_hidden_entities(subentry_id, retained)
 
 
 def validate_is_float(num):

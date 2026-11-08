@@ -1,0 +1,74 @@
+{
+  "update.batterier_utebliven_rapport": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:56:02.532989+00:00",
+      "last_updated": "2026-11-07T07:56:02.532989+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:20.832545+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:25:21.606720+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.528881+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:43.391975+00:00"
+    }
+  ],
+  "update.batterier_batteribyte": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:56:02.532989+00:00",
+      "last_updated": "2026-11-07T07:56:02.532989+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:20.832559+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:25:21.606942+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.528896+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:43.392201+00:00"
+    }
+  ],
+  "update.batterier_varningsgrans": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:56:02.532989+00:00",
+      "last_updated": "2026-11-07T07:56:02.532989+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:20.832571+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:25:21.607121+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.528908+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:43.392369+00:00"
+    }
+  ]
+}

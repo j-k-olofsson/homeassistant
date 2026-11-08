@@ -1,0 +1,4256 @@
+{
+  "stage": "11-openwrt-namn-01",
+  "description": "Svenska funktionsnamn enligt granskad ordlista. Inga ID:n, inställningar eller värden ändras.",
+  "operations": [
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_connected",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Anslutning",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Connected"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_reboot_required",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Omstart krävs",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Reboot Required"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_wps_active",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "WPS aktivt",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden WPS Active"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_service_boot",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst boot",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Service boot"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_service_cron",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst cron",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Service cron"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_service_done",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst done",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Service done"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_service_dropbear",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst dropbear",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Service dropbear"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_service_firewall",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst firewall",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Service firewall"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_service_gpio_switch",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst gpio_switch",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Service gpio_switch"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_service_hwmon_fancontrol",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst hwmon_fancontrol",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Service hwmon_fancontrol"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_service_led",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst led",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Service led"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_service_log",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst log",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Service log"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_service_network",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst network",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Service network"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_service_packet_steering",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst packet_steering",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Service packet_steering"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_service_rpcd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst rpcd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Service rpcd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_service_sysctl",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst sysctl",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Service sysctl"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_service_sysfixtime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst sysfixtime",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Service sysfixtime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_service_sysntpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst sysntpd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Service sysntpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_service_system",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst system",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Service system"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_service_ucitrack",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst ucitrack",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Service ucitrack"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_service_uhttpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst uhttpd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Service uhttpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_service_umount",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst umount",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Service umount"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_service_urandom_seed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst urandom_seed",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Service urandom_seed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_service_urngd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst urngd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Service urngd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_reboot_router",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om router",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Reboot Router"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_start_wps",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta WPS",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Start WPS"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_cancel_wps",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avbryt WPS",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Cancel WPS"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_create_backup",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skapa säkerhetskopia",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Create Backup"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_restart_boot",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst boot",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Restart boot"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_stop_boot",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst boot",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Stop boot"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_restart_cron",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst cron",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Restart cron"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_stop_cron",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst cron",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Stop cron"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_restart_done",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst done",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Restart done"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_stop_done",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst done",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Stop done"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_restart_dropbear",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst dropbear",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Restart dropbear"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_stop_dropbear",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst dropbear",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Stop dropbear"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_restart_firewall",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst firewall",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Restart firewall"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_stop_firewall",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst firewall",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Stop firewall"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_restart_gpio_switch",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst gpio_switch",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Restart gpio_switch"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_stop_gpio_switch",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst gpio_switch",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Stop gpio_switch"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_restart_hwmon_fancontrol",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst hwmon_fancontrol",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Restart hwmon_fancontrol"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_stop_hwmon_fancontrol",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst hwmon_fancontrol",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Stop hwmon_fancontrol"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_restart_led",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst led",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Restart led"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_stop_led",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst led",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Stop led"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_restart_log",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst log",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Restart log"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_stop_log",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst log",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Stop log"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_restart_network",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst network",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Restart network"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_stop_network",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst network",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Stop network"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_restart_packet_steering",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst packet_steering",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Restart packet_steering"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_stop_packet_steering",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst packet_steering",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Stop packet_steering"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_restart_rpcd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst rpcd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Restart rpcd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_stop_rpcd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst rpcd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Stop rpcd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_restart_sysctl",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst sysctl",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Restart sysctl"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_stop_sysctl",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst sysctl",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Stop sysctl"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_restart_sysfixtime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst sysfixtime",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Restart sysfixtime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_stop_sysfixtime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst sysfixtime",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Stop sysfixtime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_restart_sysntpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst sysntpd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Restart sysntpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_stop_sysntpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst sysntpd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Stop sysntpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_restart_system",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst system",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Restart system"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_stop_system",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst system",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Stop system"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_restart_ucitrack",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst ucitrack",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Restart ucitrack"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_stop_ucitrack",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst ucitrack",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Stop ucitrack"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_restart_uhttpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst uhttpd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Restart uhttpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_stop_uhttpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst uhttpd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Stop uhttpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_restart_umount",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst umount",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Restart umount"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_stop_umount",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst umount",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Stop umount"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_restart_urandom_seed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst urandom_seed",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Restart urandom_seed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_stop_urandom_seed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst urandom_seed",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Stop urandom_seed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_restart_urngd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst urngd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Restart urngd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_stop_urngd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst urngd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Stop urngd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.vinden_zyxel_gs1900_24e_a1_switch_vinden_flush_dns_cache",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Töm DNS-cache",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Flush DNS Cache"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_cpu_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Processoranvändning",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden CPU Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_public_ip",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Publik IP-adress",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Public IP"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_memory_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Minnesanvändning",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Memory Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_memory_used",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt minne",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Memory Used"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_swap_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Växlingsminnesanvändning",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Swap Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_load_1m",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Belastning senaste minuten",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Load (1m)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_load_5m",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Belastning senaste 5 minuterna",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Load (5m)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_load_15m",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Belastning senaste 15 minuterna",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Load (15m)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_temperature",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Temperatur",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_filesystem_free",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Filesystem Free"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_kernel_version",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kärnversion",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Kernel Version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_architecture",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Arkitektur",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Architecture"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_connected_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Anslutna klienter",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Connected Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_wireless_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Trådlösa klienter",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Wireless Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_neighbor_devices",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Grannenheter",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Neighbor Devices"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_system_logs",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Systemloggar",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden System Logs"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_top_processes",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Processöversikt",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Top Processes"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_usb_devices",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "USB-enheter",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden USB Devices"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_temperature_zone_0",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Temperatur zon 0",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Temperature Zone 0"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_rom_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /rom",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden /rom Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_rom_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /rom",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden /rom Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_rom_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /rom",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden /rom Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_rom_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /rom",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden /rom Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_tmp_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /tmp",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden /tmp Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_tmp_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /tmp",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden /tmp Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_tmp_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /tmp",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden /tmp Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_tmp_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /tmp",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden /tmp Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_overlay_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /overlay",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden /overlay Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_overlay_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /overlay",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden /overlay Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_overlay_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /overlay",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden /overlay Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_overlay_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /overlay",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden /overlay Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden / Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden / Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden / Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_storage_usage_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden / Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_dev_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /dev",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden /dev Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_dev_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /dev",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden /dev Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_dev_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /dev",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden /dev Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_dev_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /dev",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden /dev Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_dhcp_leases",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "DHCP-tilldelningar",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden DHCP Leases"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_guest_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd guest",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden guest RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_guest_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd guest",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden guest TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_guest_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet guest",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden guest Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_guest_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid guest",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden guest Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_guest_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet guest",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden guest RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_guest_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet guest",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden guest TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_iot_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd iot",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden iot RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_iot_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd iot",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden iot TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_iot_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet iot",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden iot Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_iot_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid iot",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden iot Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_iot_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet iot",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden iot RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_iot_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet iot",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden iot TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_loopback_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd loopback",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden loopback RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_loopback_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd loopback",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden loopback TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_loopback_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet loopback",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden loopback Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_loopback_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid loopback",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden loopback Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_loopback_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet loopback",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden loopback RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_loopback_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet loopback",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden loopback TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_eth0_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd eth0",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden eth0 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_eth0_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd eth0",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden eth0 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_eth0_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet eth0",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden eth0 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_eth0_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid eth0",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden eth0 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_eth0_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet eth0",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden eth0 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_eth0_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet eth0",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden eth0 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan1_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan1",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan1 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan1_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan1",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan1 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan1_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan1",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan1 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan1_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan1",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan1 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan1_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan1",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan1 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan1_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan1",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan1 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan10_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan10",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan10 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan10_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan10",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan10 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan10_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan10",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan10 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan10_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan10",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan10 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan10_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan10",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan10 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan10_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan10",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan10 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan11_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan11",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan11 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan11_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan11",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan11 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan11_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan11",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan11 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan11_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan11",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan11 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan11_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan11",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan11 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan11_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan11",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan11 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan12_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan12",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan12 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan12_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan12",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan12 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan12_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan12",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan12 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan12_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan12",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan12 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan12_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan12",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan12 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan12_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan12",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan12 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan13_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan13",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan13 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan13_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan13",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan13 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan13_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan13",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan13 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan13_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan13",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan13 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan13_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan13",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan13 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan13_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan13",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan13 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan14_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan14",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan14 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan14_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan14",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan14 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan14_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan14",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan14 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan14_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan14",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan14 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan14_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan14",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan14 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan14_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan14",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan14 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan15_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan15",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan15 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan15_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan15",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan15 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan15_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan15",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan15 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan15_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan15",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan15 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan15_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan15",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan15 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan15_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan15",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan15 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan16_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan16",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan16 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan16_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan16",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan16 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan16_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan16",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan16 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan16_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan16",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan16 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan16_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan16",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan16 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan16_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan16",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan16 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan17_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan17",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan17 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan17_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan17",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan17 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan17_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan17",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan17 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan17_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan17",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan17 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan17_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan17",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan17 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan17_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan17",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan17 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan18_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan18",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan18 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan18_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan18",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan18 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan18_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan18",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan18 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan18_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan18",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan18 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan18_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan18",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan18 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan18_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan18",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan18 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan19_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan19",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan19 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan19_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan19",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan19 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan19_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan19",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan19 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan19_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan19",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan19 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan19_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan19",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan19 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan19_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan19",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan19 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan2_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan2",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan2 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan2_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan2",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan2 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan2_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan2",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan2 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan2_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan2",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan2 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan2_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan2",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan2 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan2_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan2",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan2 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan20_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan20",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan20 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan20_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan20",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan20 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan20_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan20",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan20 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan20_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan20",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan20 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan20_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan20",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan20 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan20_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan20",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan20 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan21_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan21",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan21 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan21_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan21",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan21 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan21_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan21",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan21 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan21_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan21",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan21 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan21_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan21",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan21 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan21_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan21",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan21 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan22_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan22",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan22 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan22_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan22",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan22 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan22_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan22",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan22 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan22_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan22",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan22 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan22_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan22",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan22 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan22_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan22",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan22 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan23_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan23",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan23 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan23_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan23",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan23 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan23_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan23",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan23 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan23_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan23",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan23 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan23_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan23",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan23 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan23_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan23",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan23 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan24_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan24",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan24 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan24_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan24",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan24 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan24_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan24",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan24 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan24_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan24",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan24 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan24_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan24",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan24 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan24_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan24",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan24 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan3_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan3",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan3 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan3_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan3",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan3 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan3_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan3",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan3 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan3_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan3",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan3 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_lan3_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan3",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden lan3 RX Rate"
+        ]
+      }
+    }
+  ]
+}

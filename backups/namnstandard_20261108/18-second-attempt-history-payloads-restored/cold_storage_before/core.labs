@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "core.labs",
+  "data": {
+    "preview_feature_status": [
+      {
+        "domain": "cloud",
+        "preview_feature": "stt_v2"
+      },
+      {
+        "domain": "analytics",
+        "preview_feature": "snapshots"
+      }
+    ]
+  }
+}

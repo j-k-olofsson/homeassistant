@@ -1,0 +1,7 @@
+{
+  "sensor.shelly_blu_door_window_2a6d_packet_id": "sensor.verandan_balkongdorr_paket_id",
+  "sensor.shelly_blu_door_window_2a6d_battery": "sensor.verandan_balkongdorr_batteriniva",
+  "sensor.shelly_blu_door_window_2a6d_illuminance": "sensor.verandan_balkongdorr_belysningsstyrka",
+  "sensor.shelly_blu_door_window_2a6d_rotation": "sensor.verandan_balkongdorr_vinkel",
+  "sensor.shelly_blu_door_window_2a6d_signal_strength": "sensor.verandan_balkongdorr_signalstyrka"
+}

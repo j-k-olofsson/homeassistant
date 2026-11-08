@@ -1,0 +1,10 @@
+{
+  "binary_sensor.pixel_mmu": "binary_sensor.kontoret_pixl_mmu",
+  "camera.prusaxl_forhandsvisning": "camera.kontoret_pixl_forhandsvisning",
+  "sensor.prusaxl_munstycke_maltemperatur": "sensor.kontoret_pixl_munstyckets_maltemperatur",
+  "sensor.pixel_nozzle_diameter": "sensor.kontoret_pixl_munstyckets_diameter",
+  "button.kontoret_prusa_xl_continue_job": "button.kontoret_pixl_fortsatt_jobb",
+  "sensor.kontoret_prusa_xl_x_position": "sensor.kontoret_pixl_x_position",
+  "sensor.kontoret_prusa_xl_y_position": "sensor.kontoret_pixl_y_position",
+  "sensor.kontoret_prusa_xl_minimum_extrusion_temperature": "sensor.kontoret_pixl_lagsta_extruderingstemperatur"
+}

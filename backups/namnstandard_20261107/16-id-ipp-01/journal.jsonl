@@ -1,0 +1,14 @@
+{"status": "rename_intent", "old": "sensor.canon_g3070_series_drifttid", "new": "sensor.kontoret_canon_g3070_series_drifttid"}
+{"status": "renamed", "old": "sensor.canon_g3070_series_drifttid", "new": "sensor.kontoret_canon_g3070_series_drifttid"}
+{"status": "rename_intent", "old": "sensor.canon_g3070_series_black_pgbk", "new": "sensor.kontoret_canon_g3070_series_pigmentsvart_pgbk"}
+{"status": "renamed", "old": "sensor.canon_g3070_series_black_pgbk", "new": "sensor.kontoret_canon_g3070_series_pigmentsvart_pgbk"}
+{"status": "rename_intent", "old": "sensor.canon_g3070_series_cyan", "new": "sensor.kontoret_canon_g3070_series_cyan"}
+{"status": "renamed", "old": "sensor.canon_g3070_series_cyan", "new": "sensor.kontoret_canon_g3070_series_cyan"}
+{"status": "rename_intent", "old": "sensor.canon_g3070_series_mc", "new": "sensor.kontoret_canon_g3070_series_mc"}
+{"status": "renamed", "old": "sensor.canon_g3070_series_mc", "new": "sensor.kontoret_canon_g3070_series_mc"}
+{"status": "rename_intent", "old": "sensor.canon_g3070_series_magenta", "new": "sensor.kontoret_canon_g3070_series_magenta"}
+{"status": "renamed", "old": "sensor.canon_g3070_series_magenta", "new": "sensor.kontoret_canon_g3070_series_magenta"}
+{"status": "rename_intent", "old": "sensor.canon_g3070_series_yellow", "new": "sensor.kontoret_canon_g3070_series_gul"}
+{"status": "renamed", "old": "sensor.canon_g3070_series_yellow", "new": "sensor.kontoret_canon_g3070_series_gul"}
+{"status": "rename_intent", "old": "sensor.canon_g3070_series", "new": "sensor.kontoret_canon_g3070_series"}
+{"status": "renamed", "old": "sensor.canon_g3070_series", "new": "sensor.kontoret_canon_g3070_series"}

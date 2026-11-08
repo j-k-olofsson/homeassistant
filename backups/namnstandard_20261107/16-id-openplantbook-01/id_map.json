@@ -1,0 +1,5 @@
+{
+  "binary_sensor.openplantbook_upload_problem": "binary_sensor.openplantbook_uppladdningsproblem",
+  "sensor.openplantbook_upload_status": "sensor.openplantbook_uppladdningsstatus",
+  "sensor.openplantbook_last_upload": "sensor.openplantbook_senaste_uppladdning"
+}

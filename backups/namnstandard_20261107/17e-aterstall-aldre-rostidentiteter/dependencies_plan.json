@@ -1,0 +1,27 @@
+{
+  "source_files": [
+    "automations.yaml"
+  ],
+  "dashboards": [
+    "lovelace-friggan",
+    "lovelace"
+  ],
+  "frontend_favorites_changed": true,
+  "auto_updated_config_entries": [
+    "01JCB5GMYV2TT2EYFXTN65B9Z5",
+    "01JHJEPVEW4JG1G2NQG1RGH69D",
+    "01JHJER99149TSQTVQA3MCNQK8"
+  ],
+  "automation_consumers": [
+    [
+      "automation.varma_honsens_vatten",
+      "1673780941087",
+      "on"
+    ],
+    [
+      "automation.automatisk_honslucka",
+      "1673781338782",
+      "on"
+    ]
+  ]
+}

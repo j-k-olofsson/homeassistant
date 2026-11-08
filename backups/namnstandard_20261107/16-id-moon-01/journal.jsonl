@@ -1,0 +1,2 @@
+{"status": "rename_intent", "old": "sensor.moon_phase", "new": "sensor.heimdal_ha_moon_fas"}
+{"status": "renamed", "old": "sensor.moon_phase", "new": "sensor.heimdal_ha_moon_fas"}

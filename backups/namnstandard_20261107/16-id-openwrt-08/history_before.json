@@ -1,0 +1,114 @@
+{
+  "switch.kontoret_openwrt_one_ap_kontoret_wps": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:26.925371+00:00",
+      "last_updated": "2026-11-07T07:42:26.925371+00:00"
+    }
+  ],
+  "update.kontoret_openwrt_one_ap_kontoret": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:26.925371+00:00",
+      "last_updated": "2026-11-07T07:42:26.925371+00:00"
+    }
+  ],
+  "image.kontoret_openwrt_one_ap_kontoret_wi_fi_qr_code_olofsson_wifi": [
+    {
+      "state": "2026-11-07T04:58:36.182407+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:26.925371+00:00",
+      "last_updated": "2026-11-07T07:42:26.925371+00:00"
+    },
+    {
+      "state": "2026-11-07T13:25:15.255860+00:00",
+      "last_changed": "2026-11-07T13:25:15.256086+00:00"
+    },
+    {
+      "state": "2026-11-08T07:03:38.477473+00:00",
+      "last_changed": "2026-11-08T07:03:38.477693+00:00"
+    }
+  ],
+  "image.kontoret_openwrt_one_ap_kontoret_wi_fi_qr_code_olofsson_guest": [
+    {
+      "state": "2026-11-07T04:58:36.182430+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:26.925371+00:00",
+      "last_updated": "2026-11-07T07:42:26.925371+00:00"
+    },
+    {
+      "state": "2026-11-07T13:25:15.255882+00:00",
+      "last_changed": "2026-11-07T13:25:15.256260+00:00"
+    },
+    {
+      "state": "2026-11-08T07:03:38.477495+00:00",
+      "last_changed": "2026-11-08T07:03:38.477875+00:00"
+    }
+  ],
+  "image.kontoret_openwrt_one_ap_kontoret_wi_fi_qr_code_olofsson_iot": [
+    {
+      "state": "2026-11-07T04:58:36.182450+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:26.925371+00:00",
+      "last_updated": "2026-11-07T07:42:26.925371+00:00"
+    },
+    {
+      "state": "2026-11-07T13:25:15.255902+00:00",
+      "last_changed": "2026-11-07T13:25:15.256418+00:00"
+    },
+    {
+      "state": "2026-11-08T07:03:38.477517+00:00",
+      "last_changed": "2026-11-08T07:03:38.478046+00:00"
+    }
+  ],
+  "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:26.925371+00:00",
+      "last_updated": "2026-11-07T07:42:26.925371+00:00"
+    }
+  ],
+  "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_reboot_required": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:26.925371+00:00",
+      "last_updated": "2026-11-07T07:42:26.925371+00:00"
+    }
+  ],
+  "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_reboot_router": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:26.925371+00:00",
+      "last_updated": "2026-11-07T07:42:26.925371+00:00"
+    }
+  ],
+  "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_start_wps": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:26.925371+00:00",
+      "last_updated": "2026-11-07T07:42:26.925371+00:00"
+    }
+  ],
+  "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_cancel_wps": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:26.925371+00:00",
+      "last_updated": "2026-11-07T07:42:26.925371+00:00"
+    }
+  ],
+  "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_create_backup": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:26.925371+00:00",
+      "last_updated": "2026-11-07T07:42:26.925371+00:00"
+    }
+  ]
+}

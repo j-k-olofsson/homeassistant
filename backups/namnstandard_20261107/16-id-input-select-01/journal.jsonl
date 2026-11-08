@@ -1,0 +1,16 @@
+{"status": "rename_intent", "old": "input_select.growligth_scen", "new": "input_select.heimdal_ha_vaxtbelysningsscen_aldre_hjalpare"}
+{"status": "renamed", "old": "input_select.growligth_scen", "new": "input_select.heimdal_ha_vaxtbelysningsscen_aldre_hjalpare"}
+{"status": "rename_intent", "old": "input_select.default_dashboard", "new": "input_select.standardkontrollpanel"}
+{"status": "renamed", "old": "input_select.default_dashboard", "new": "input_select.standardkontrollpanel"}
+{"status": "rename_intent", "old": "input_select.default_dashboard_2", "new": "input_select.standardkontrollpanel_2"}
+{"status": "renamed", "old": "input_select.default_dashboard_2", "new": "input_select.standardkontrollpanel_2"}
+{"status": "rename_intent", "old": "input_select.default_dashboard_3", "new": "input_select.standardkontrollpanel_3"}
+{"status": "renamed", "old": "input_select.default_dashboard_3", "new": "input_select.standardkontrollpanel_3"}
+{"status": "rename_intent", "old": "input_select.default_dashboard_4", "new": "input_select.standardkontrollpanel_4"}
+{"status": "renamed", "old": "input_select.default_dashboard_4", "new": "input_select.standardkontrollpanel_4"}
+{"status": "rename_intent", "old": "input_select.default_dashboard_5", "new": "input_select.standardkontrollpanel_5"}
+{"status": "renamed", "old": "input_select.default_dashboard_5", "new": "input_select.standardkontrollpanel_5"}
+{"status": "rename_intent", "old": "input_select.default_dashboard_6", "new": "input_select.standardkontrollpanel_6"}
+{"status": "renamed", "old": "input_select.default_dashboard_6", "new": "input_select.standardkontrollpanel_6"}
+{"status": "rename_intent", "old": "input_select.default_dashboard_7", "new": "input_select.standardkontrollpanel_7"}
+{"status": "renamed", "old": "input_select.default_dashboard_7", "new": "input_select.standardkontrollpanel_7"}

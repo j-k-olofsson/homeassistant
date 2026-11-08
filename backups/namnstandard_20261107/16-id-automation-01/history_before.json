@@ -1,0 +1,586 @@
+{
+  "automation.frysboxen_varmevarning": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.gaasol_varna_for_lag_niva_2": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.vaxter_torr_blomma": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T17:27:07.730370+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T17:27:07.731672+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T17:27:07.994177+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T17:27:07.995336+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T17:27:30.817940+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T17:27:30.819286+00:00"
+    }
+  ],
+  "automation.honshuset_varna_for_lite_vatten": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.batteri_varna_om_for_lag_niva": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T17:27:07.837358+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T17:27:07.838461+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T17:27:08.103048+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T17:27:08.104379+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T17:27:30.924545+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T17:27:30.925664+00:00"
+    }
+  ],
+  "automation.lampornas_scen": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.tillstand_soljuset": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.scen_vaxtlampor": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.varna_for_lag_saltniva": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.tvattmaskin_notifiera_tv": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.styrning_varmare_till_honsens_vatten": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T17:40:16.178503+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T17:40:16.762393+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T17:40:16.764806+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T17:40:16.773722+00:00"
+    }
+  ],
+  "automation.styrning_honsluckan": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T17:40:16.184814+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T17:40:16.890855+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T17:40:16.892242+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T17:40:16.900189+00:00"
+    }
+  ],
+  "automation.spela_hissmusik_pa_dassen": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.scen_morgonljus_fran_vackarklockans_alarm": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.styrning_start_vid_lagsta_elpris": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.tillstand_elpriser_imorgon": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.styrning_diskmaskinen": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.tillstand_dorrklocka": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.tillstand_ytterdorren_kranglar": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.tillstand_balkongdorren": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.tillstand_vattenlacka_under_torkskapet": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.scen_mysbelysning": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.scen_julbelysning": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.scen_partybelysning": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.scen_alarm": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.styrning_flakten_inkallaren": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.scen_matbelysning": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.assistent_poolens_tempetatur": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.assistent_aterstall_ljudnivaer": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.battery_not_reported": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.battery_replaced": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.battery_threshold": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.elmatare_on_off_line": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.kontrollera_om_honsluckan_ar_stangd": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.luftfuktarens_vatten": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.internet_status": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.scen_slack_koket": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.hemmavarme": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.intent_komfortvarme": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.intent_bortavarme": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.scen_tv_lampor_2": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.ha_ready": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.bil_laddning_trigger": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.bordslampa_ateljen": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.bordslampor_hemmabio": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T08:57:42.775809+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T08:57:42.777459+00:00"
+    }
+  ],
+  "automation.aqara_taklampor_monitor_knapp_event": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.aqara_taklampor_monitor_flash_detector": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.aqara_banklampor_monitor_knapp_event": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.aqara_banklampor_monitor_service_calls": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.aqara_banklampor_monitor_flash_detector": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.3d_skrivaren_fardig": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.db_optimera_mariadb_tabeller_natt": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.db_notifiera_resultat_av_mariadb_optimering": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.narvarosimulering_start_nar_helper_slas_pa": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.narvarosimulering_start_vid_solnedgang_om_aktiv": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.narvarosimulering_stop_nar_helper_slas_av": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.narvarosimulering_stop_nar_nagon_kommer_hem": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.narvarosimulering_dry_run_logg": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.narvarosimulering_dry_run_sammanfattning": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.poolpump_on_off_bilresa_knappar": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.narvarosimulering_synka_helper_efter_ovantat_stopp": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ],
+  "automation.kontrollpanel_prusa_fardig": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:16.883395+00:00",
+      "last_updated": "2026-11-07T07:44:16.883395+00:00"
+    }
+  ]
+}

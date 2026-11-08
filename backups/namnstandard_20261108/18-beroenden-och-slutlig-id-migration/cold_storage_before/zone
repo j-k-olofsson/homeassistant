@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "zone",
+  "data": {
+    "items": [
+      {
+        "latitude": 59.75323800347044,
+        "longitude": 18.698543667560447,
+        "name": "Norrtälje",
+        "icon": "mdi:map-marker",
+        "passive": false,
+        "radius": 1401.8646881558452,
+        "id": "norrtalje"
+      },
+      {
+        "latitude": 59.36149722844605,
+        "longitude": 17.975201487970484,
+        "name": "Kontoret",
+        "icon": "mdi:map-marker",
+        "passive": false,
+        "radius": 93.0,
+        "id": "kontoret"
+      }
+    ]
+  }
+}

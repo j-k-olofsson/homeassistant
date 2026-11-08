@@ -1,0 +1,16 @@
+{"status": "rename_intent", "old": "binary_sensor.pixel_mmu", "new": "binary_sensor.kontoret_pixl_mmu"}
+{"status": "renamed", "old": "binary_sensor.pixel_mmu", "new": "binary_sensor.kontoret_pixl_mmu"}
+{"status": "rename_intent", "old": "camera.prusaxl_forhandsvisning", "new": "camera.kontoret_pixl_forhandsvisning"}
+{"status": "renamed", "old": "camera.prusaxl_forhandsvisning", "new": "camera.kontoret_pixl_forhandsvisning"}
+{"status": "rename_intent", "old": "sensor.prusaxl_munstycke_maltemperatur", "new": "sensor.kontoret_pixl_munstyckets_maltemperatur"}
+{"status": "renamed", "old": "sensor.prusaxl_munstycke_maltemperatur", "new": "sensor.kontoret_pixl_munstyckets_maltemperatur"}
+{"status": "rename_intent", "old": "sensor.pixel_nozzle_diameter", "new": "sensor.kontoret_pixl_munstyckets_diameter"}
+{"status": "renamed", "old": "sensor.pixel_nozzle_diameter", "new": "sensor.kontoret_pixl_munstyckets_diameter"}
+{"status": "rename_intent", "old": "button.kontoret_prusa_xl_continue_job", "new": "button.kontoret_pixl_fortsatt_jobb"}
+{"status": "renamed", "old": "button.kontoret_prusa_xl_continue_job", "new": "button.kontoret_pixl_fortsatt_jobb"}
+{"status": "rename_intent", "old": "sensor.kontoret_prusa_xl_x_position", "new": "sensor.kontoret_pixl_x_position"}
+{"status": "renamed", "old": "sensor.kontoret_prusa_xl_x_position", "new": "sensor.kontoret_pixl_x_position"}
+{"status": "rename_intent", "old": "sensor.kontoret_prusa_xl_y_position", "new": "sensor.kontoret_pixl_y_position"}
+{"status": "renamed", "old": "sensor.kontoret_prusa_xl_y_position", "new": "sensor.kontoret_pixl_y_position"}
+{"status": "rename_intent", "old": "sensor.kontoret_prusa_xl_minimum_extrusion_temperature", "new": "sensor.kontoret_pixl_lagsta_extruderingstemperatur"}
+{"status": "renamed", "old": "sensor.kontoret_prusa_xl_minimum_extrusion_temperature", "new": "sensor.kontoret_pixl_lagsta_extruderingstemperatur"}

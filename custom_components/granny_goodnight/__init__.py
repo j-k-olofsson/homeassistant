@@ -19,7 +19,7 @@ from .text import FALLBACK, checks_message
 from .playback import play_verified
 
 DOMAIN = "granny_goodnight"
-PLAYER = "media_player.diegos_vackarklocka_ma"
+PLAYER = "media_player.sovrummet_diegos_vackarklocka_music_assistant"
 LOGGER = logging.getLogger(__name__)
 CONFIG_SCHEMA = vol.Schema({DOMAIN: vol.Schema({})}, extra=vol.ALLOW_EXTRA)
 
@@ -41,7 +41,7 @@ async def async_setup(hass, config):
         return clip
 
     async def render_audio(message):
-        engine = "tts.piper"
+        engine = "tts.heimdal_ha_piper"
         state = hass.states.get(engine)
         if not state or state.state in ("unknown", "unavailable"):
             engine = "tts.cloud"

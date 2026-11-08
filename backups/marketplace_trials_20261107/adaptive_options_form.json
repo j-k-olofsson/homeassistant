@@ -1,0 +1,389 @@
+{
+  "type": "form",
+  "flow_id": "3a549f392a15e5ec154fae253aba0057",
+  "handler": "01M6TBMYHV84JKCMHQ8JD71F70",
+  "data_schema": [
+    {
+      "selector": {
+        "entity": {
+          "domain": [
+            "light"
+          ],
+          "multiple": true,
+          "reorder": false
+        }
+      },
+      "name": "lights",
+      "required": false,
+      "optional": true,
+      "default": []
+    },
+    {
+      "type": "integer",
+      "valueMin": 0,
+      "name": "interval",
+      "required": false,
+      "optional": true,
+      "default": 90
+    },
+    {
+      "type": "float",
+      "valueMin": 0,
+      "valueMax": 6553,
+      "name": "transition",
+      "required": false,
+      "optional": true,
+      "default": 45
+    },
+    {
+      "type": "integer",
+      "valueMin": 1,
+      "valueMax": 100,
+      "name": "min_brightness",
+      "required": false,
+      "optional": true,
+      "default": 1
+    },
+    {
+      "type": "integer",
+      "valueMin": 1,
+      "valueMax": 100,
+      "name": "max_brightness",
+      "required": false,
+      "optional": true,
+      "default": 100
+    },
+    {
+      "type": "integer",
+      "valueMin": 1000,
+      "valueMax": 10000,
+      "name": "min_color_temp",
+      "required": false,
+      "optional": true,
+      "default": 2000
+    },
+    {
+      "type": "integer",
+      "valueMin": 1000,
+      "valueMax": 10000,
+      "name": "max_color_temp",
+      "required": false,
+      "optional": true,
+      "default": 5500
+    },
+    {
+      "type": "integer",
+      "valueMin": 1,
+      "valueMax": 100,
+      "name": "sleep_brightness",
+      "required": false,
+      "optional": true,
+      "default": 1
+    },
+    {
+      "type": "integer",
+      "valueMin": 1000,
+      "valueMax": 10000,
+      "name": "sleep_color_temp",
+      "required": false,
+      "optional": true,
+      "default": 1000
+    },
+    {
+      "type": "expandable",
+      "schema": [
+        {
+          "type": "float",
+          "valueMin": 0,
+          "valueMax": 6553,
+          "name": "initial_transition",
+          "required": false,
+          "optional": true,
+          "default": 1
+        },
+        {
+          "type": "boolean",
+          "name": "prefer_rgb_color",
+          "required": false,
+          "optional": true,
+          "default": false
+        },
+        {
+          "selector": {
+            "select": {
+              "options": [
+                "color_temp",
+                "rgb_color"
+              ],
+              "multiple": false,
+              "mode": "dropdown",
+              "custom_value": false,
+              "sort": false
+            }
+          },
+          "name": "sleep_rgb_or_color_temp",
+          "required": false,
+          "optional": true,
+          "default": "color_temp"
+        },
+        {
+          "selector": {
+            "color_rgb": {}
+          },
+          "name": "sleep_rgb_color",
+          "required": false,
+          "optional": true,
+          "default": [
+            255,
+            56,
+            0
+          ]
+        },
+        {
+          "type": "float",
+          "valueMin": 0,
+          "valueMax": 6553,
+          "name": "sleep_transition",
+          "required": false,
+          "optional": true,
+          "default": 1
+        },
+        {
+          "type": "boolean",
+          "name": "transition_until_sleep",
+          "required": false,
+          "optional": true,
+          "default": false
+        },
+        {
+          "type": "string",
+          "name": "sunrise_time",
+          "required": false,
+          "optional": true,
+          "default": "None"
+        },
+        {
+          "type": "string",
+          "name": "min_sunrise_time",
+          "required": false,
+          "optional": true,
+          "default": "None"
+        },
+        {
+          "type": "string",
+          "name": "max_sunrise_time",
+          "required": false,
+          "optional": true,
+          "default": "None"
+        },
+        {
+          "type": "integer",
+          "name": "sunrise_offset",
+          "required": false,
+          "optional": true,
+          "default": 0
+        },
+        {
+          "type": "string",
+          "name": "sunset_time",
+          "required": false,
+          "optional": true,
+          "default": "None"
+        },
+        {
+          "type": "string",
+          "name": "min_sunset_time",
+          "required": false,
+          "optional": true,
+          "default": "None"
+        },
+        {
+          "type": "string",
+          "name": "max_sunset_time",
+          "required": false,
+          "optional": true,
+          "default": "None"
+        },
+        {
+          "type": "integer",
+          "name": "sunset_offset",
+          "required": false,
+          "optional": true,
+          "default": 0
+        },
+        {
+          "selector": {
+            "select": {
+              "options": [
+                "default",
+                "linear",
+                "tanh"
+              ],
+              "multiple": false,
+              "mode": "dropdown",
+              "custom_value": false,
+              "sort": false
+            }
+          },
+          "name": "brightness_mode",
+          "required": false,
+          "optional": true,
+          "default": "default"
+        },
+        {
+          "type": "integer",
+          "name": "brightness_mode_time_dark",
+          "required": false,
+          "optional": true,
+          "default": 900
+        },
+        {
+          "type": "integer",
+          "name": "brightness_mode_time_light",
+          "required": false,
+          "optional": true,
+          "default": 3600
+        },
+        {
+          "type": "boolean",
+          "name": "take_over_control",
+          "required": false,
+          "optional": true,
+          "default": true
+        },
+        {
+          "selector": {
+            "select": {
+              "options": [
+                "pause_all",
+                "pause_changed"
+              ],
+              "multiple": false,
+              "mode": "dropdown",
+              "custom_value": false,
+              "sort": false
+            }
+          },
+          "name": "take_over_control_mode",
+          "required": false,
+          "optional": true,
+          "default": "pause_all"
+        },
+        {
+          "type": "boolean",
+          "name": "detect_non_ha_changes",
+          "required": false,
+          "optional": true,
+          "default": false
+        },
+        {
+          "type": "integer",
+          "valueMin": 0,
+          "valueMax": 31536000,
+          "name": "autoreset_control_seconds",
+          "required": false,
+          "optional": true,
+          "default": 0
+        },
+        {
+          "type": "boolean",
+          "name": "only_once",
+          "required": false,
+          "optional": true,
+          "default": false
+        },
+        {
+          "type": "boolean",
+          "name": "adapt_only_on_bare_turn_on",
+          "required": false,
+          "optional": true,
+          "default": false
+        },
+        {
+          "type": "boolean",
+          "name": "manual_control_on_external_turn_on",
+          "required": false,
+          "optional": true,
+          "default": false
+        },
+        {
+          "type": "boolean",
+          "name": "reset_manual_control_on_sleep_mode_change",
+          "required": false,
+          "optional": true,
+          "default": true
+        },
+        {
+          "type": "boolean",
+          "name": "separate_turn_on_commands",
+          "required": false,
+          "optional": true,
+          "default": false
+        },
+        {
+          "type": "integer",
+          "valueMin": 0,
+          "valueMax": 10000,
+          "name": "send_split_delay",
+          "required": false,
+          "optional": true,
+          "default": 0
+        },
+        {
+          "type": "float",
+          "valueMin": 0,
+          "name": "adapt_delay",
+          "required": false,
+          "optional": true,
+          "default": 0
+        },
+        {
+          "type": "boolean",
+          "name": "skip_redundant_commands",
+          "required": false,
+          "optional": true,
+          "default": false
+        },
+        {
+          "type": "boolean",
+          "name": "intercept",
+          "required": false,
+          "optional": true,
+          "default": true
+        },
+        {
+          "type": "boolean",
+          "name": "multi_light_intercept",
+          "required": false,
+          "optional": true,
+          "default": true
+        },
+        {
+          "type": "boolean",
+          "name": "include_config_in_attributes",
+          "required": false,
+          "optional": true,
+          "default": false
+        },
+        {
+          "type": "boolean",
+          "name": "expand_light_groups",
+          "required": false,
+          "optional": true,
+          "default": true
+        }
+      ],
+      "expanded": false,
+      "name": "advanced",
+      "required": true
+    }
+  ],
+  "errors": {},
+  "description_placeholders": {
+    "webapp_url": "https://basnijholt.github.io/adaptive-lighting",
+    "docs_url": "https://github.com/basnijholt/adaptive-lighting#readme"
+  },
+  "last_step": null,
+  "preview": null,
+  "step_id": "init"
+}

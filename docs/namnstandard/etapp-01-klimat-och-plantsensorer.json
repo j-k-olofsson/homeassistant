@@ -1,0 +1,1581 @@
+{
+  "stage": "01-klimat-och-plantsensorer",
+  "description": "Enhetliga visningsnamn för Xiaomi BLE-klimatsensorer och plantsensorer. Oförändrade ID:n och områden.",
+  "operations": [
+    {
+      "kind": "device",
+      "id": "cf61f1423e655523f6d921f46f3f1daf",
+      "before": {
+        "name_by_user": "Temp/Hum (Veranda)"
+      },
+      "after": {
+        "name_by_user": "Klimatsensor"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "2f5421e7f9e52c0299c95b9f10d88901",
+      "before": {
+        "name_by_user": "Temp/Hum (Sovrum)"
+      },
+      "after": {
+        "name_by_user": "Klimatsensor"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "42865fcfc600bba2e28060108d65f52d",
+      "before": {
+        "name_by_user": "Temp/Hum (Hemmabio)"
+      },
+      "after": {
+        "name_by_user": "Klimatsensor"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "889b90b31932ce33eed47460a645c3aa",
+      "before": {
+        "name_by_user": "Temp/Hum (Verkstad)"
+      },
+      "after": {
+        "name_by_user": "Klimatsensor"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "aaa3151216f3c1ff7bbe37bbbc2a3826",
+      "before": {
+        "name_by_user": "Temp/Hum (Ateljé)"
+      },
+      "after": {
+        "name_by_user": "Klimatsensor"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "79a20aa4a5899b2a2e9a0da4fed17acd",
+      "before": {
+        "name_by_user": "Temp/Hum (Utomhus)"
+      },
+      "after": {
+        "name_by_user": "Klimatsensor"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "3768dc19fb5e0da38a61a8dd68d9f796",
+      "before": {
+        "name_by_user": "Temp/Hum (Hönshus)"
+      },
+      "after": {
+        "name_by_user": "Klimatsensor"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "42b814b5ee4b8bde1951fbd5a46bbbc4",
+      "before": {
+        "name_by_user": "Temp/Hum (Kök)"
+      },
+      "after": {
+        "name_by_user": "Klimatsensor"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "4daabf598d80be9b00151a9b176cf120",
+      "before": {
+        "name_by_user": "Temp/Hum (Entré)"
+      },
+      "after": {
+        "name_by_user": "Klimatsensor"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "3477478c12505c16e52e6958bfd13c06",
+      "before": {
+        "name_by_user": "Temp/Hum (Dusch)"
+      },
+      "after": {
+        "name_by_user": "Klimatsensor"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "c9360f9d0be75ed3cc336e32cad66c57",
+      "before": {
+        "name_by_user": "Temp/Hum (Toalett)"
+      },
+      "after": {
+        "name_by_user": "Klimatsensor"
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_sovrum_voltage",
+      "before": {
+        "name": "Voltage",
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Spänning",
+        "aliases": [
+          null,
+          "Temp/Hum (Sovrum) Voltage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_sovrum_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Temp/Hum (Sovrum) Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_sovrum_humidity",
+      "before": {
+        "name": "Sovrummet Fukt",
+        "aliases": [
+          "Sovrummet Fukt"
+        ]
+      },
+      "after": {
+        "name": "Luftfuktighet",
+        "aliases": [
+          "Sovrummet Fukt"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_utomhus_humidity",
+      "before": {
+        "name": "Utomhus Fukt",
+        "aliases": [
+          "Utomhus Fukt"
+        ]
+      },
+      "after": {
+        "name": "Luftfuktighet",
+        "aliases": [
+          "Utomhus Fukt"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_utomhus_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Temp/Hum (Utomhus) Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_utomhus_voltage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Spänning",
+        "aliases": [
+          null,
+          "Temp/Hum (Utomhus) Voltage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_3_illuminance",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Belysningsstyrka",
+        "aliases": [
+          null,
+          "Plantsensor 3 Illuminance"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_3_moisture",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Jordfuktighet",
+        "aliases": [
+          null,
+          "Plantsensor 3 Moisture"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_3_temperature",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Temperatur",
+        "aliases": [
+          null,
+          "Plantsensor 3 Temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_3_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Plantsensor 3 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_4_moisture",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Jordfuktighet",
+        "aliases": [
+          null,
+          "Plantsensor 4 Moisture"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_4_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Plantsensor 4 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_3_conductivity",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledningsförmåga",
+        "aliases": [
+          null,
+          "Plantsensor 3 Conductivity"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_4_battery",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "Plantsensor 4 Battery"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_4_conductivity",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledningsförmåga",
+        "aliases": [
+          null,
+          "Plantsensor 4 Conductivity"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_4_temperature",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Temperatur",
+        "aliases": [
+          null,
+          "Plantsensor 4 Temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_4_illuminance",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Belysningsstyrka",
+        "aliases": [
+          null,
+          "Plantsensor 4 Illuminance"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_3_battery",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "Plantsensor 3 Battery"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_1_illuminance",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Belysningsstyrka",
+        "aliases": [
+          null,
+          "Plantsensor 1 Illuminance"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_1_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Plantsensor 1 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_2_battery",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "Plantsensor 2 Battery"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_2_conductivity",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledningsförmåga",
+        "aliases": [
+          null,
+          "Plantsensor 2 Conductivity"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_2_illuminance",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Belysningsstyrka",
+        "aliases": [
+          null,
+          "Plantsensor 2 Illuminance"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_2_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Plantsensor 2 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_2_temperature",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Temperatur",
+        "aliases": [
+          null,
+          "Plantsensor 2 Temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_1_moisture",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Jordfuktighet",
+        "aliases": [
+          null,
+          "Plantsensor 1 Moisture"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_1_conductivity",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledningsförmåga",
+        "aliases": [
+          null,
+          "Plantsensor 1 Conductivity"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_1_temperature",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Temperatur",
+        "aliases": [
+          null,
+          "Plantsensor 1 Temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_2_moisture",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Jordfuktighet",
+        "aliases": [
+          null,
+          "Plantsensor 2 Moisture"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_1_battery",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "Plantsensor 1 Battery"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plant_sensor_78ff_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Plantsensor 5 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_5_conductivity",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledningsförmåga",
+        "aliases": [
+          null,
+          "Plantsensor 5 Conductivity"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_5_illuminance",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Belysningsstyrka",
+        "aliases": [
+          null,
+          "Plantsensor 5 Illuminance"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_5_moisture",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Jordfuktighet",
+        "aliases": [
+          null,
+          "Plantsensor 5 Moisture"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_5_temperature",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Temperatur",
+        "aliases": [
+          null,
+          "Plantsensor 5 Temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plantsensor_5_battery",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "Plantsensor 5 Battery"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plant_sensor_6_monstera_batteri",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "Plantsensor 6 Batteri"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.plant_sensor_6_monstera_fukt",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Jordfuktighet",
+        "aliases": [
+          null,
+          "Plantsensor 6 Fukt"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.dusch_fukt",
+      "before": {
+        "name": "Dusch Fukt",
+        "aliases": [
+          "Dusch Fukt"
+        ]
+      },
+      "after": {
+        "name": "Luftfuktighet",
+        "aliases": [
+          "Dusch Fukt"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.dusch_temp",
+      "before": {
+        "name": "Dusch Temp",
+        "aliases": [
+          "Dusch Temp"
+        ]
+      },
+      "after": {
+        "name": "Temperatur",
+        "aliases": [
+          "Dusch Temp"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_temp",
+      "before": {
+        "name": "Köket Temp",
+        "aliases": [
+          "Köket Temp"
+        ]
+      },
+      "after": {
+        "name": "Temperatur",
+        "aliases": [
+          "Köket Temp"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstan_batteriniva",
+      "before": {
+        "name": "Verkstan Batterinivå",
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "Verkstan Batterinivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstan_hum",
+      "before": {
+        "name": "Verkstan Hum",
+        "aliases": [
+          "Verkstan Hum"
+        ]
+      },
+      "after": {
+        "name": "Luftfuktighet",
+        "aliases": [
+          "Verkstan Hum"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstan_temp",
+      "before": {
+        "name": "Verkstan Temp",
+        "aliases": [
+          "Verkstan Temp"
+        ]
+      },
+      "after": {
+        "name": "Temperatur",
+        "aliases": [
+          "Verkstan Temp"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ateljen_batteriniva",
+      "before": {
+        "name": "Ateljén Batterinivå",
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "Ateljén Batterinivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ateljen_temp",
+      "before": {
+        "name": "Ateljén Temp",
+        "aliases": [
+          "Ateljén Temp"
+        ]
+      },
+      "after": {
+        "name": "Temperatur",
+        "aliases": [
+          "Ateljén Temp"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_atelje_humidity",
+      "before": {
+        "name": "Ateljén Fukt",
+        "aliases": [
+          "Ateljén Fukt"
+        ]
+      },
+      "after": {
+        "name": "Luftfuktighet",
+        "aliases": [
+          "Ateljén Fukt"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_atelje_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Temp/Hum (Ateljé) Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_atelje_voltage",
+      "before": {
+        "name": "Voltage",
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Spänning",
+        "aliases": [
+          null,
+          "Temp/Hum (Ateljé) Voltage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_toalett_battery",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "Temp/Hum (Toalett) Battery"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_toalett_humidity",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Luftfuktighet",
+        "aliases": [
+          null,
+          "Temp/Hum (Toalett) Humidity"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_toalett_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Temp/Hum (Toalett) Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_toalett_temperature",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Temperatur",
+        "aliases": [
+          null,
+          "Temp/Hum (Toalett) Temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_toalett_voltage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Spänning",
+        "aliases": [
+          null,
+          "Temp/Hum (Toalett) Voltage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bio_temp",
+      "before": {
+        "name": "Bio Temp",
+        "aliases": [
+          "Bio Temp"
+        ]
+      },
+      "after": {
+        "name": "Temperatur",
+        "aliases": [
+          "Bio Temp"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_hemmabio_humidity",
+      "before": {
+        "name": "Bio Fukt",
+        "aliases": [
+          "Bio Fukt"
+        ]
+      },
+      "after": {
+        "name": "Luftfuktighet",
+        "aliases": [
+          "Bio Fukt"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kallaren_batteriniva",
+      "before": {
+        "name": "Källaren Batterinivå",
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "Källaren Batterinivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_hemmabio_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Temp/Hum (Hemmabio) Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_hemmabio_voltage",
+      "before": {
+        "name": "Voltage",
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Spänning",
+        "aliases": [
+          null,
+          "Temp/Hum (Hemmabio) Voltage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sovrum_batteriniva",
+      "before": {
+        "name": "Sovrum Batterinivå",
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "Sovrum Batterinivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sovrummet_temp",
+      "before": {
+        "name": "Sovrummet Temp",
+        "aliases": [
+          "Sovrummet Temp"
+        ]
+      },
+      "after": {
+        "name": "Temperatur",
+        "aliases": [
+          "Sovrummet Temp"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_entre_battery",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "Temp/Hum (Entré) Battery"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.fuktighet_entren",
+      "before": {
+        "name": "Entrén Fukt",
+        "aliases": [
+          "Entrén Fukt"
+        ]
+      },
+      "after": {
+        "name": "Luftfuktighet",
+        "aliases": [
+          "Entrén Fukt"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_entre_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Temp/Hum (Entré) Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temperatur_entren",
+      "before": {
+        "name": "Entrén Temp",
+        "aliases": [
+          "Entrén Temp"
+        ]
+      },
+      "after": {
+        "name": "Temperatur",
+        "aliases": [
+          "Entrén Temp"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_entre_voltage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Spänning",
+        "aliases": [
+          null,
+          "Temp/Hum (Entré) Voltage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.honshuset_batteriniva",
+      "before": {
+        "name": "Hönshuset Batterinivå",
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "Hönshuset Batterinivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.honshuset_temp",
+      "before": {
+        "name": "Hönshuset Temp",
+        "aliases": [
+          "Hönshuset Temp"
+        ]
+      },
+      "after": {
+        "name": "Temperatur",
+        "aliases": [
+          "Hönshuset Temp"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_honshuset_humidity",
+      "before": {
+        "name": "Temp/Hum (Hönshuset) Humidity",
+        "aliases": [
+          "Temp/Hum (Hönshuset) Humidity"
+        ]
+      },
+      "after": {
+        "name": "Luftfuktighet",
+        "aliases": [
+          "Temp/Hum (Hönshuset) Humidity"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_veranda_humidity",
+      "before": {
+        "name": "Verandan Fukt",
+        "aliases": [
+          "Verandan Fukt"
+        ]
+      },
+      "after": {
+        "name": "Luftfuktighet",
+        "aliases": [
+          "Verandan Fukt"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_veranda_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Temp/Hum (Veranda) Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verandan_batteriniva",
+      "before": {
+        "name": "Verandan Batterinivå",
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "Verandan Batterinivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verandan_temp",
+      "before": {
+        "name": "Verandan Temp",
+        "aliases": [
+          "Verandan Temp"
+        ]
+      },
+      "after": {
+        "name": "Temperatur",
+        "aliases": [
+          "Verandan Temp"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_veranda_voltage",
+      "before": {
+        "name": "Voltage",
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Spänning",
+        "aliases": [
+          null,
+          "Temp/Hum (Veranda) Voltage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.utomhus_batteriniva",
+      "before": {
+        "name": "Utomhus Batterinivå",
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "Utomhus Batterinivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.utomhus_temp",
+      "before": {
+        "name": "Utomhus Temp",
+        "aliases": [
+          "Utomhus Temp",
+          "Temperatur utomhus",
+          "Utomhustemperatur",
+          "Utomhus"
+        ]
+      },
+      "after": {
+        "name": "Temperatur",
+        "aliases": [
+          "Utomhus Temp",
+          "Temperatur utomhus",
+          "Utomhustemperatur",
+          "Utomhus"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_verkstad_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Temp/Hum (Verkstad) Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_verkstad_voltage",
+      "before": {
+        "name": "Voltage",
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Spänning",
+        "aliases": [
+          null,
+          "Temp/Hum (Verkstad) Voltage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_kok_battery",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "Temp/Hum (Kök) Battery"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_kok_humidity",
+      "before": {
+        "name": "Köket Fukt",
+        "aliases": [
+          "Köket Fukt"
+        ]
+      },
+      "after": {
+        "name": "Luftfuktighet",
+        "aliases": [
+          "Köket Fukt"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_kok_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Temp/Hum (Kök) Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_kok_voltage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Spänning",
+        "aliases": [
+          null,
+          "Temp/Hum (Kök) Voltage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_dusch_battery",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "Temp/Hum (Dusch) Battery"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_dusch_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Temp/Hum (Dusch) Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_dusch_voltage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Spänning",
+        "aliases": [
+          null,
+          "Temp/Hum (Dusch) Voltage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_honshus_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Temp/Hum (Hönshus) Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.temp_hum_honshus_voltage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Spänning",
+        "aliases": [
+          null,
+          "Temp/Hum (Hönshus) Voltage"
+        ]
+      }
+    }
+  ]
+}

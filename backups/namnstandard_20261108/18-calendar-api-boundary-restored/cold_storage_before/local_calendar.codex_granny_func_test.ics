@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+PRODID:-//homeassistant.io//local_calendar 1.0//EN
+VERSION:2.0
+BEGIN:VEVENT
+DTSTAMP:20260317T112553Z
+UID:17f8e58c-d2ff-4564-9e7a-dec23db4ada9
+DTSTART:20260317T110000
+DTEND:20260317T120000
+SUMMARY:Bil-laddning (Granny-plan)
+CREATED:20260317T112553Z
+DESCRIPTION:Granny's test Åäö ≈ | Slotar: 1 | Energi ≈ 1.20 kWh | Ko
+ stnad ≈ 1.50 SEK | Pris ≈ 1.250 SEK/kWh | Källa: Nord Pool's day-ahe
+ ad | Status: ok
+SEQUENCE:0
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTAMP:20260317T112553Z
+UID:21396e31-c6de-4ef8-bfe5-7fd5208ee8e2
+DTSTART:20260317T120000
+DTEND:20260317T130000
+SUMMARY:Bil-laddning (Granny-plan)
+CREATED:20260317T112553Z
+DESCRIPTION:Granny's test Åäö ≈ | Slotar: 1 | Energi ≈ 1.10 kWh | Ko
+ stnad ≈ 2.00 SEK | Pris ≈ 1.750 SEK/kWh | Källa: Nord Pool's day-ahe
+ ad | Status: ok
+SEQUENCE:0
+END:VEVENT
+
+END:VCALENDAR

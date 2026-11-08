@@ -141,6 +141,13 @@ _FIRST_CHECK_WINDOW = (timedelta(minutes=5), timedelta(minutes=30))
 _CHECK_INTERVAL = timedelta(hours=24)
 _SPREAD = timedelta(hours=4)
 
+# Looking at the folder costs a directory listing and a few file reads, so it
+# does not have to keep to the cadence the fetching does. Blueprints fire no
+# events, and this is the only thing that ever notices one deleted, so on the
+# daily round somebody who removed a blueprint was left looking at an update
+# for it until the next day (#1664).
+_RECONCILE_INTERVAL = timedelta(minutes=5)
+
 _FETCH_TIMEOUT = 30
 
 # The one kind of address the importer recognises by prefix rather than by
@@ -1076,9 +1083,11 @@ class _BlueprintUpdates:  # pylint: disable=too-few-public-methods
     """Keeps the update entities in step with the blueprints on disk.
 
     Blueprints fire no events at all. Nothing announces one arriving or being
-    deleted, so the only way to notice is to look, which happens on the same
-    round as the checks.
+    deleted, so the only way to notice is to look, and that is a timer of its
+    own, running far more often than the round that goes out to the sources.
     """
+
+    # pylint: disable=too-many-instance-attributes
 
     def __init__(
         self,
@@ -1093,6 +1102,12 @@ class _BlueprintUpdates:  # pylint: disable=too-few-public-methods
         self._entities: dict[tuple[str, str], BlueprintUpdateEntity] = {}
         self._stopped = False
         self._cancel: CALLBACK_TYPE | None = None
+        self._cancel_reconcile: CALLBACK_TYPE | None = None
+
+        # The two rounds run on timers of their own, and both of them go
+        # through the folder. One at a time, or a blueprint read by both at
+        # once is added twice.
+        self._taking_stock = asyncio.Lock()
 
     async def async_start(self) -> None:
         """Begin now, or once Home Assistant is up.
@@ -1129,6 +1144,10 @@ class _BlueprintUpdates:  # pylint: disable=too-few-public-methods
         if self._cancel is not None:
             self._cancel()
             self._cancel = None
+
+        if self._cancel_reconcile is not None:
+            self._cancel_reconcile()
+            self._cancel_reconcile = None
 
     async def _async_started(self, _event: Event[Any]) -> None:
         """Begin once the blueprint domains have registered themselves."""
@@ -1176,6 +1195,7 @@ class _BlueprintUpdates:  # pylint: disable=too-few-public-methods
     async def _async_begin(self) -> None:
         """Take stock, then arrange to keep looking."""
         await self._async_take_stock()
+        self._async_schedule_reconcile()
         self._async_schedule(
             random.uniform(  # noqa: S311
                 _FIRST_CHECK_WINDOW[0].total_seconds(),
@@ -1191,7 +1211,40 @@ class _BlueprintUpdates:  # pylint: disable=too-few-public-methods
 
         self._cancel = async_call_later(self.hass, delay, self._async_check_all)
 
+    @callback
+    def _async_schedule_reconcile(self) -> None:
+        """Arrange the next look at the folder, unless there are to be no more."""
+        if self._stopped:
+            return
+
+        self._cancel_reconcile = async_call_later(
+            self.hass,
+            _RECONCILE_INTERVAL.total_seconds(),
+            self._async_reconcile,
+        )
+
+    async def _async_reconcile(self, _now: datetime | None = None) -> None:
+        """Look at the folder, and arrange to look again."""
+        self._cancel_reconcile = None
+
+        if self._stopped:
+            return
+
+        try:
+            await self._async_take_stock()
+        finally:
+            self._async_schedule_reconcile()
+
+    async def _async_blueprint_is_gone(self, domain: str, path: str) -> None:
+        """Drop the entity of a blueprint that turned out not to be there."""
+        await self._async_forget({(domain, path)})
+
     async def _async_take_stock(self) -> None:
+        """Match the entities to the blueprints that are on disk."""
+        async with self._taking_stock:
+            await self._async_stock()
+
+    async def _async_stock(self) -> None:
         """Match the entities to the blueprints that are on disk."""
         found = await self._async_look()
         on_disk = await self.hass.async_add_executor_job(
@@ -1229,7 +1282,11 @@ class _BlueprintUpdates:  # pylint: disable=too-few-public-methods
                 entity.async_seen(followed[key])
                 continue
 
-            entity = BlueprintUpdateEntity(*key, followed[key])
+            entity = BlueprintUpdateEntity(
+                *key,
+                followed[key],
+                gone=self._async_blueprint_is_gone,
+            )
             self._entities[key] = entity
             added.append(entity)
 
@@ -1348,7 +1405,9 @@ class _BlueprintUpdates:  # pylint: disable=too-few-public-methods
 
         registry = er.async_get(self.hass)
         for key in keys:
-            entity = self._entities.pop(key)
+            if (entity := self._entities.pop(key, None)) is None:
+                continue
+
             await entity.async_remove(force_remove=True)
 
             # Gone for good, so the registration goes with it rather than
@@ -1417,6 +1476,8 @@ class BlueprintUpdateEntity(  # pylint: disable=too-many-instance-attributes
         blueprint_domain: str,
         blueprint_path: str,
         said: _OnDisk,
+        *,
+        gone: Callable[[str, str], Awaitable[None]] | None = None,
     ) -> None:
         """Initialize the entity."""
         super().__init__(
@@ -1427,6 +1488,7 @@ class BlueprintUpdateEntity(  # pylint: disable=too-many-instance-attributes
         )
         self.blueprint_domain = blueprint_domain
         self.blueprint_path = blueprint_path
+        self._gone = gone
 
         self._attr_unique_id = _unique_id(blueprint_domain, blueprint_path)
 
@@ -1447,11 +1509,21 @@ class BlueprintUpdateEntity(  # pylint: disable=too-many-instance-attributes
         # saying an update is waiting for a version that had just been
         # installed.
         self._one_at_a_time = asyncio.Lock()
+        self._checking = False
 
         self._attr_name = said.name
         self._attr_title = said.name
         self._attr_installed_version = said.fingerprint
         self._attr_latest_version = said.fingerprint
+
+        # Whether the latest version is the source's word, or only the file
+        # standing in until the source has answered. Only the source's word
+        # survives the file changing underneath it. #1653.
+        self._latest_from_source = False
+
+        # Whether that word was only remembered from before a restart, and the
+        # source has not said it again since. #1817.
+        self._offer_restored = False
 
         # Deliberately no `release_url`. Home Assistant would put it in the
         # state attributes, which every signed-in person can read, and it lets
@@ -1486,6 +1558,11 @@ class BlueprintUpdateEntity(  # pylint: disable=too-many-instance-attributes
             is not None
         ):
             self._attr_latest_version = offered
+            # Only an offer proves the source said something. Until it first
+            # answers, the file is written down as both versions, so the same
+            # value on both sides says nothing about where it came from.
+            self._latest_from_source = offered != self._attr_installed_version
+            self._offer_restored = self._latest_from_source
 
     @callback
     def async_seen(self, said: _OnDisk) -> None:
@@ -1501,22 +1578,58 @@ class BlueprintUpdateEntity(  # pylint: disable=too-many-instance-attributes
         # over while one is running is of a file being replaced as it arrives.
         # Taking it would leave the entity carrying the name, the address and
         # the version of what has just been written over.
-        if self._one_at_a_time.locked():
+        if self._one_at_a_time.locked() and not self._checking:
             LOGGER.debug(
                 "Spook is dropping a reading of %s taken while installing",
                 self.blueprint_path,
             )
             return
 
+        content_changed = said.fingerprint != self._said.fingerprint
+        source_changed = said.source_url != self._said.source_url
+        check_source = source_changed or (content_changed and self._latest_from_source)
+
+        # The previous installed copy is no longer a useful comparison after
+        # an external change. A different offer still stands, including one
+        # just imported, in case the source cannot be reached this time.
+        discard_offer = source_changed or (
+            content_changed and self._attr_latest_version == self._said.fingerprint
+        )
+        offer_installed = (
+            content_changed and said.fingerprint == self._attr_latest_version
+        )
         self._said = said
         self._attr_name = said.name
         self._attr_title = said.name
         self._attr_installed_version = said.fingerprint
 
+        if discard_offer:
+            self._fetched = None
+            self._set_aside = None
+            self._latest_from_source = False
+            self._offer_restored = False
+            self._attr_latest_version = said.fingerprint
+        elif offer_installed:
+            # Keep the source's word, but not a payload installed elsewhere.
+            self._fetched = None
+
+        # With nothing heard from the source, the latest version was only ever
+        # this file, and it goes along with it. Left as it was, an edit by hand
+        # turned the version from before the edit into an update, offered for
+        # ever by a source that cannot be reached to install it from: what a
+        # blueprint of somebody's own, with an address that goes nowhere, did
+        # after every change they made. #1653.
+        if not self._latest_from_source:
+            self._attr_latest_version = said.fingerprint
+
         # A disabled entity was never added, so there is no state to write.
         # The reading is still kept, for the check that follows.
         if self.hass is not None:
             self.async_write_ha_state()
+            if check_source and not self._checking:
+                # A local edit and an external import look alike on disk.
+                # Ask the source now instead of waiting for the daily round.
+                self.hass.async_create_task(self.async_check())
 
     def version_is_newer(self, latest_version: str, installed_version: str) -> bool:
         """Return whether the source says something other than what is here.
@@ -1530,29 +1643,65 @@ class BlueprintUpdateEntity(  # pylint: disable=too-many-instance-attributes
     async def async_check(self) -> None:
         """See whether the source still says what this blueprint says."""
         async with self._one_at_a_time:
-            await self._async_check()
+            self._checking = True
+            try:
+                while not await self._async_check():
+                    # A reading changed during the fetch. Ask again before
+                    # releasing the lock to anybody waiting to install.
+                    pass
+            finally:
+                self._checking = False
 
-    async def _async_check(self) -> None:
-        """Fetch and compare, with the blueprint to ourselves."""
+    async def _async_check(self) -> bool:
+        """Fetch and compare, returning whether the reading still stands."""
+        said = self._said
+        source_url = said.source_url
         try:
             fetched = await self._async_fetch()
         except HomeAssistantError as err:
+            if said != self._said:
+                return False
+
             # Leave the last answer standing. A source that is down for an
             # afternoon should not take the update it was offering with it.
             # The reason is kept so the dialog can say why nothing happens
             # here, rather than looking simply idle.
-            self._set_aside = str(err)
+            #
+            # Named as the link below the note names it, with the address
+            # that was actually tried. The note escapes what it is given, which
+            # put backslashes in an address, and the blueprint can have been
+            # pointed elsewhere by the time the note is read.
+            self._set_aside = str(err).replace(
+                source_url, "the address it was imported from"
+            )
             LOGGER.debug(
                 "Spook could not check blueprint %s: %s",
                 self.blueprint_path,
                 err,
             )
-            return
+
+            # An offer only remembered from before a restart is not the
+            # source's word until the source says it again. Kept standing, an
+            # offer saved by an older Spook, for a source that never answers,
+            # came back after every restart with nothing to install it from.
+            if self._offer_restored:
+                self._offer_restored = False
+                self._latest_from_source = False
+                self._fetched = None
+                self._attr_latest_version = self._attr_installed_version
+                self.async_write_ha_state()
+            return True
+
+        if said != self._said:
+            return False
 
         self._set_aside = None
         self._fetched = fetched
         self._attr_latest_version = _fingerprint(fetched)
+        self._latest_from_source = True
+        self._offer_restored = False
         self.async_write_ha_state()
+        return True
 
     async def async_install(
         self,
@@ -1577,6 +1726,46 @@ class BlueprintUpdateEntity(  # pylint: disable=too-many-instance-attributes
         Only fetched here when there is nothing to install from, which means
         somebody has called this before a round ever ran.
         """
+        domain_blueprints: dict[str, blueprint.DomainBlueprints] = self.hass.data.get(
+            blueprint.DOMAIN,
+            {},
+        )
+        if (domain_blueprint := domain_blueprints.get(self.blueprint_domain)) is None:
+            raise HomeAssistantError(
+                translation_domain=DOMAIN,
+                translation_key="blueprints_not_loaded",
+                translation_placeholders={
+                    "domain": self.blueprint_domain,
+                },
+            )
+
+        # Installing over a blueprint that is not there any more would write
+        # it back, which is Spook restoring a file somebody deleted on
+        # purpose. Pressing install is also the obvious way to try and clear a
+        # row for a blueprint that has gone, so this is the button they reach
+        # for (#1664). The entity goes instead.
+        #
+        # Asked before anything else, because it takes a look at one file and
+        # the rest goes out to the internet. A source that is down, or a
+        # blueprint this Home Assistant is too old for, would otherwise be
+        # what somebody is told about a blueprint that is not even there.
+        file = domain_blueprint.blueprint_folder / self.blueprint_path
+        if not await self.hass.async_add_executor_job(file.is_file):
+            LOGGER.debug(
+                "Spook was asked to install %s, which is no longer here",
+                self.blueprint_path,
+            )
+            if self._gone is not None:
+                await self._gone(self.blueprint_domain, self.blueprint_path)
+
+            raise HomeAssistantError(
+                translation_domain=DOMAIN,
+                translation_key="blueprint_gone",
+                translation_placeholders={
+                    "name": self._said.name,
+                },
+            )
+
         fetched = (
             self._fetched if self._fetched is not None else await self._async_fetch()
         )
@@ -1585,37 +1774,30 @@ class BlueprintUpdateEntity(  # pylint: disable=too-many-instance-attributes
         # Writing it anyway would break every consumer on a version that is
         # never going to work.
         if errors := fetched.validate():
-            msg = (
-                f"{self._said.name} cannot run here: {'; '.join(errors)}. "
-                f"Nothing has been written."
+            raise HomeAssistantError(
+                translation_domain=DOMAIN,
+                translation_key="blueprint_cannot_run",
+                translation_placeholders={
+                    "name": self._said.name,
+                    "errors": "; ".join(errors),
+                },
             )
-            raise HomeAssistantError(msg)
-
-        domain_blueprints: dict[str, blueprint.DomainBlueprints] = self.hass.data.get(
-            blueprint.DOMAIN,
-            {},
-        )
-        if (domain_blueprint := domain_blueprints.get(self.blueprint_domain)) is None:
-            msg = f"{self.blueprint_domain} blueprints are not loaded right now"
-            raise HomeAssistantError(msg)
 
         if backup:
-            file = self._file()
-            if file is None:  # pragma: no cover - the domain is right here
-                msg = f"Could not work out where {self.blueprint_path} lives"
-                raise HomeAssistantError(msg)
-
             try:
                 await self.hass.async_add_executor_job(_keep_a_copy, file)
             except OSError as err:
                 # Asked for a copy and did not get one. Writing anyway would
                 # take the version that works with nothing to fall back on,
                 # which is the opposite of what was asked for.
-                msg = (
-                    f"Could not put a copy of {self.blueprint_path} aside: "
-                    f"{err}. Nothing has been written."
-                )
-                raise HomeAssistantError(msg) from err
+                raise HomeAssistantError(
+                    translation_domain=DOMAIN,
+                    translation_key="blueprint_backup_failed",
+                    translation_placeholders={
+                        "path": self.blueprint_path,
+                        "error": str(err),
+                    },
+                ) from err
 
         try:
             await domain_blueprint.async_add_blueprint(
@@ -1624,8 +1806,13 @@ class BlueprintUpdateEntity(  # pylint: disable=too-many-instance-attributes
                 allow_override=True,
             )
         except OSError as err:
-            msg = f"Could not write {self.blueprint_path}"
-            raise HomeAssistantError(msg) from err
+            raise HomeAssistantError(
+                translation_domain=DOMAIN,
+                translation_key="blueprint_could_not_write",
+                translation_placeholders={
+                    "path": self.blueprint_path,
+                },
+            ) from err
 
         # A fetch that worked, so whatever the last one could not do is no
         # longer the news. Left standing, the dialog would go on saying the
@@ -1646,6 +1833,8 @@ class BlueprintUpdateEntity(  # pylint: disable=too-many-instance-attributes
 
         self._attr_installed_version = _fingerprint(fetched)
         self._attr_latest_version = self._attr_installed_version
+        self._latest_from_source = True
+        self._offer_restored = False
         self.async_write_ha_state()
 
     @callback

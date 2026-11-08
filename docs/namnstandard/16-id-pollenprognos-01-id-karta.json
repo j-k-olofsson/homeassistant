@@ -1,0 +1,17 @@
+{
+  "sensor.pollen_stockholm_hassel": "sensor.utomhus_pollenprognos_stockholm_hassel",
+  "sensor.pollen_stockholm_al": "sensor.utomhus_pollenprognos_stockholm_al",
+  "sensor.pollen_stockholm_tall": "sensor.utomhus_pollenprognos_stockholm_tall",
+  "sensor.pollen_stockholm_salg_och_viden": "sensor.utomhus_pollenprognos_stockholm_salg_och_viden",
+  "sensor.pollen_stockholm_alm": "sensor.utomhus_pollenprognos_stockholm_alm",
+  "sensor.pollen_stockholm_bjork": "sensor.utomhus_pollenprognos_stockholm_bjork",
+  "sensor.pollen_stockholm_bok": "sensor.utomhus_pollenprognos_stockholm_bok",
+  "sensor.pollen_stockholm_ek": "sensor.utomhus_pollenprognos_stockholm_ek",
+  "sensor.pollen_stockholm_gran": "sensor.utomhus_pollenprognos_stockholm_gran",
+  "sensor.pollen_stockholm_gras": "sensor.utomhus_pollenprognos_stockholm_gras",
+  "sensor.pollen_stockholm_grabo": "sensor.utomhus_pollenprognos_stockholm_grabo",
+  "sensor.pollen_stockholm_malortsambrosia": "sensor.utomhus_pollenprognos_stockholm_malortsambrosia",
+  "sensor.pollen_stockholm_alternaria": "sensor.utomhus_pollenprognos_stockholm_alternaria",
+  "sensor.pollen_stockholm_cladosporium": "sensor.utomhus_pollenprognos_stockholm_cladosporium",
+  "sensor.pollen_stockholm_epicoccum": "sensor.utomhus_pollenprognos_stockholm_epicoccum"
+}

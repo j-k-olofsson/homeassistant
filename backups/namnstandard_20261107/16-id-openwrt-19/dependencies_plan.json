@@ -1,0 +1,9 @@
+{
+  "source_files": [
+    "recorder_excluded_entities.yaml"
+  ],
+  "dashboards": [],
+  "frontend_favorites_changed": false,
+  "auto_updated_config_entries": [],
+  "automation_consumers": []
+}

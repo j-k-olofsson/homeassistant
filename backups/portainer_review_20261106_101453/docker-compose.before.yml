@@ -1,0 +1,94 @@
+name: admin
+services:
+  caddy:
+    image: ${CADDY_IMAGE}
+    container_name: caddy
+    restart: unless-stopped
+    networks: [default, edge]
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+      - "2019:2019"
+    volumes:
+      - /opt/admin/data/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - /opt/admin/data/caddy/conf.d:/etc/caddy/conf.d:ro
+      - /opt/admin/data/caddy/data:/data
+      - /opt/admin/data/caddy/config:/config
+    environment:
+      - TZ=${TZ}
+
+  glances:
+    image: ${GLANCES_IMAGE}
+    container_name: glances
+    restart: unless-stopped
+    networks: [default, edge]
+    ports:
+      - "61208:61208"
+      - "61209:61209"
+    command: glances -w --bind 0.0.0.0 --port 61208
+    environment:
+      - TZ=${TZ}
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    gpus: all
+    tmpfs:
+      - /sys/class/drm
+
+  portainer-agent:
+    image: ${PORTAINER_AGENT_IMAGE}
+    container_name: portainer_agent
+    restart: unless-stopped
+    networks: [default]
+    ports:
+      - "9001:9001"
+    environment:
+      - TZ=${TZ}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/lib/docker/volumes:/var/lib/docker/volumes
+      - /:/host
+
+  docker-socket-proxy:
+    image: ${DOCKER_SOCKET_PROXY_IMAGE}
+    container_name: docker-socket-proxy
+    restart: unless-stopped
+    environment:
+      - CONTAINERS=1
+      - INFO=1
+      - NETWORKS=1
+      - PING=1
+      - EVENTS=0
+      - POST=0
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    expose:
+      - "2375"
+    read_only: true
+    tmpfs:
+      - /run
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+
+  caddy-ui:
+    image: perteus/caddy-ui:3.1.0
+    container_name: caddy-ui
+    restart: unless-stopped
+    networks: [default]
+    expose:
+      - "8501"
+    environment:
+      - CONTAINER_NAME=caddy
+      - DEFAULT_IP=192.168.10.200
+    volumes:
+      - /opt/admin/data/caddy:/caddy-config
+      - /opt/admin/data/caddy/data:/caddy-data
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+
+networks:
+  edge:
+    external: true

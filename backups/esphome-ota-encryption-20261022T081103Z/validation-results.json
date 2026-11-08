@@ -1,0 +1,282 @@
+[
+  {
+    "file": "esphome02.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome03.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome05.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome07.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome08.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome09.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome20.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome21.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome23.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome24.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome25.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome26.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome27.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome28.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome29.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome30.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome31.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome32.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome40.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome41.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome42.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome43.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome44.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome45.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome46.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome47.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome48.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome49.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome50.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome51.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome52.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome54.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome56.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome57.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome58.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome59.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome60.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome61.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome63.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome71.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome73.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome74.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome75.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome76.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome80.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome81.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome83.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome84.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome89.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome90.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome93.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome94.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome95.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome96.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome97.yaml",
+    "valid": true,
+    "ota_warnings": []
+  },
+  {
+    "file": "esphome98.yaml",
+    "valid": true,
+    "ota_warnings": []
+  }
+]

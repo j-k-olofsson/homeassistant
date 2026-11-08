@@ -1,0 +1,8 @@
+{"status": "rename_intent", "old": "input_boolean.default_dashboard", "new": "input_boolean.standardkontrollpanel"}
+{"status": "renamed", "old": "input_boolean.default_dashboard", "new": "input_boolean.standardkontrollpanel"}
+{"status": "rename_intent", "old": "input_boolean.default_dashboard_2", "new": "input_boolean.standardkontrollpanel_2"}
+{"status": "renamed", "old": "input_boolean.default_dashboard_2", "new": "input_boolean.standardkontrollpanel_2"}
+{"status": "rename_intent", "old": "input_boolean.default_dashboard_3", "new": "input_boolean.standardkontrollpanel_3"}
+{"status": "renamed", "old": "input_boolean.default_dashboard_3", "new": "input_boolean.standardkontrollpanel_3"}
+{"status": "rename_intent", "old": "input_boolean.default_dashboard_4", "new": "input_boolean.standardkontrollpanel_4"}
+{"status": "renamed", "old": "input_boolean.default_dashboard_4", "new": "input_boolean.standardkontrollpanel_4"}

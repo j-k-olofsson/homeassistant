@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "openwrt_01KWV352EWYG4M5EDWBS31TPF3_history",
+  "data": {
+    "devices": {
+      "8c:f5:a3:7f:d3:b4": {
+        "initially_seen": 1783320717,
+        "last_seen": 1787133596,
+        "is_wireless": true
+      },
+      "c8:2b:96:e6:99:4f": {
+        "initially_seen": 1783320717,
+        "last_seen": 1787133596,
+        "is_wireless": true
+      },
+      "c8:2b:96:07:7d:6e": {
+        "initially_seen": 1783320717,
+        "last_seen": 1787133596,
+        "is_wireless": true
+      },
+      "98:f4:ab:e2:71:12": {
+        "initially_seen": 1783320717,
+        "last_seen": 1787133596,
+        "is_wireless": true
+      },
+      "20:05:b6:01:99:b1": {
+        "initially_seen": 1783320717,
+        "last_seen": 1787133596,
+        "is_wireless": false,
+        "hostname": "gw.home.arpa"
+      },
+      "e8:ff:1e:db:ea:f8": {
+        "initially_seen": 1783320717,
+        "last_seen": 1787133596,
+        "is_wireless": false,
+        "hostname": "eir.home.arpa"
+      },
+      "ac:16:2d:04:99:b2": {
+        "initially_seen": 1783320717,
+        "last_seen": 1787133596,
+        "is_wireless": false,
+        "hostname": "fulla.home.arpa"
+      },
+      "6c:47:60:1a:87:36": {
+        "initially_seen": 1786198092,
+        "last_seen": 1786198718,
+        "is_wireless": true,
+        "hostname": ""
+      },
+      "6c:47:60:0b:55:77": {
+        "initially_seen": 1786198972,
+        "last_seen": 1786200352,
+        "is_wireless": true,
+        "hostname": ""
+      }
+    },
+    "last_version": "25.12.5"
+  }
+}

@@ -1,0 +1,17 @@
+# ADMIN STACK
+TZ=Europe/Stockholm
+CADDY_IMAGE=caddy:2.8.4
+PORTAINER_AGENT_IMAGE=portainer/agent:2.45.3
+GLANCES_IMAGE=nicolargo/glances:ubuntu-latest-full
+DIUN_IMAGE=crazymax/diun:latest
+
+# LAN-begränsning för vhosts
+LAN_CIDR=192.168.10.0/24
+# Intern domän
+HOME_DOMAIN=home.arpa
+
+DOCKER_SOCKET_PROXY_IMAGE=tecnativa/docker-socket-proxy:0.1.1
+DIUN_WATCH_SCHEDULE=0 */6 * * *
+DIUN_NTFY_ENDPOINT=https://ntfy.sh
+DIUN_NTFY_TOPIC=diun-5681b6207c02b318615cc50a47bdbad9a121bc8b6c01dad9
+DIUN_NTFY_CLICK=https://portainer.home.arpa

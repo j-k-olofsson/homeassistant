@@ -1,0 +1,6 @@
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.heimdal_ha_sun_solhojd", "before": {"name": null, "aliases": ["Sun Solhöjd"]}, "after": {"name": "Höjd", "aliases": ["Solen Solhöjd", "Sun Solhöjd"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.heimdal_ha_sun_solhojd"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.heimdal_ha_sun_solens_azimut", "before": {"name": null, "aliases": ["Sun Solens azimut"]}, "after": {"name": "Azimut", "aliases": ["Solen Solens azimut", "Sun Solens azimut"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.heimdal_ha_sun_solens_azimut"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.heimdal_ha_sun_stigande_sol", "before": {"name": null, "aliases": ["Sun Stigande sol"]}, "after": {"name": "Stiger", "aliases": ["Solen Stigande sol", "Sun Stigande sol"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.heimdal_ha_sun_stigande_sol"}

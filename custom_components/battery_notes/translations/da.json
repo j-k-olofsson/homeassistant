@@ -24,11 +24,13 @@
                         "data": {
                             "battery_percentage_template": "Batteriprocentskabelon",
                             "battery_low_template": "Lavt batteri-skabelon",
+                            "retain_state": "Behold tilstand",
                             "filter_outliers": "Filtrer afvigere"
                         },
                         "data_description": {
-                            "battery_percentage_template": "Skabelon til at oprette en batteriprocent\nKun nødvendigt for enheder, der ikke har en standard batteriprocent",
-                            "battery_low_template": "Skabelon til at afgøre om batteriet er lavt, skal returnere ‘true’, hvis det er lavt.\nKun nødvendig for ikke-standard batteriniveauer.",
+                            "battery_percentage_template": "Skabelon til at oprette en batteriprocent.\nKun nødvendigt for enheder, der ikke har en standard batteriprocent.",
+                            "battery_low_template": "Skabelon til at afgøre om batteriet er lavt, skal returnere 'true', hvis det er lavt.\nKun nødvendig for ikke-standard batteriniveauer.",
+                            "retain_state": "Behold tilstanden fra det sidste batteriniveau, når kildeenheden er utilgængelig.\nNyttigt for enheder, der hviler og bliver utilgængelige.",
                             "filter_outliers": "Filtrer store fald i batteriniveau fra, så falske hændelser reduceres på enheder, der af og til rapporterer forkerte niveauer."
                         }
                     }
@@ -68,7 +70,7 @@
                         "name": "Navn"
                     },
                     "data_description": {
-                        "name": "Hvis du lader dette felt være tomt, hentes navnet fra kildeenheden"
+                        "name": "Hvis du lader dette felt være tomt, hentes navnet fra kildeenheden."
                     }
                 },
                 "entity": {
@@ -77,7 +79,7 @@
                         "name": "Navn"
                     },
                     "data_description": {
-                        "name": "Hvis du lader stå tomt, tages navnet fra kildeenheden"
+                        "name": "Hvis du lader stå tomt, tages navnet fra kildeenheden."
                     }
                 },
                 "battery": {
@@ -90,8 +92,8 @@
                         "battery_increase_threshold": "Tærskel for batteriladestigning"
                     },
                     "data_description": {
-                        "battery_low_threshold": "0 vil bruge den globale standardtærskel",
-                        "battery_increase_threshold": "Tærsklen er forskellen i stigning mellem tidligere og aktuelt batteriniveau.\n0 vil bruge den globale standardtærskel"
+                        "battery_low_threshold": "0 vil bruge den globale standardtærskel.",
+                        "battery_increase_threshold": "Tærsklen er forskellen i stigning mellem tidligere og aktuelt batteriniveau.\n0 vil bruge den globale standardtærskel."
                     },
                     "sections": {
                         "advanced_settings": {
@@ -99,11 +101,13 @@
                             "data": {
                                 "battery_percentage_template": "Batteriprocentskabelon",
                                 "battery_low_template": "Lavt batteri-skabelon",
+                                "retain_state": "Behold tilstand",
                                 "filter_outliers": "Filtrer afvigere"
                             },
                             "data_description": {
-                                "battery_percentage_template": "Skabelon til at oprette en batteriprocent\nKun nødvendigt for enheder, der ikke har en standard batteriprocent",
-                                "battery_low_template": "Skabelon til at afgøre om batteriet er lavt, skal returnere ‘true’, hvis det er lavt.\nKun nødvendig for ikke-standard batteriniveauer.",
+                                "battery_percentage_template": "Skabelon til at oprette en batteriprocent.\nKun nødvendigt for enheder, der ikke har en standard batteriprocent.",
+                                "battery_low_template": "Skabelon til at afgøre om batteriet er lavt, skal returnere 'true', hvis det er lavt.\nKun nødvendig for ikke-standard batteriniveauer.",
+                                "retain_state": "Behold tilstanden fra det sidste batteriniveau, når kildeenheden er utilgængelig.\nNyttigt for enheder, der hviler og bliver utilgængelige.",
                                 "filter_outliers": "Filtrer store fald i batteriniveau fra, så falske hændelser reduceres på enheder, der af og til rapporterer forkerte niveauer."
                             }
                         }
@@ -124,9 +128,9 @@
                         "battery_increase_threshold": "Tærskel for batteriladestigning"
                     },
                     "data_description": {
-                        "name": "Hvis du lader dette felt være tomt, hentes navnet fra kildeenheden",
-                        "battery_low_threshold": "0 vil bruge den globale standardtærskel",
-                        "battery_increase_threshold": "Tærsklen er forskellen i stigning mellem tidligere og aktuelt batteriniveau.\n0 vil bruge den globale standardtærskel"
+                        "name": "Hvis du lader dette felt være tomt, hentes navnet fra kildeenheden.",
+                        "battery_low_threshold": "0 vil bruge den globale standardtærskel.",
+                        "battery_increase_threshold": "Tærsklen er forskellen i stigning mellem tidligere og aktuelt batteriniveau.\n0 vil bruge den globale standardtærskel."
                     },
                     "sections": {
                         "advanced_settings": {
@@ -134,11 +138,13 @@
                             "data": {
                                 "battery_percentage_template": "Batteriprocentskabelon",
                                 "battery_low_template": "Lavt batteri-skabelon",
+                                "retain_state": "Behold tilstand",
                                 "filter_outliers": "Filtrer afvigere"
                             },
                             "data_description": {
-                                "battery_percentage_template": "Skabelon til at oprette en batteriprocent\nKun nødvendigt for enheder, der ikke har en standard batteriprocent",
+                                "battery_percentage_template": "Skabelon til at oprette en batteriprocent.\nKun nødvendigt for enheder, der ikke har en standard batteriprocent.",
                                 "battery_low_template": "Skabelon til at afgøre om batteriet er lavt, skal returnere ‘true’, hvis det er lavt.\nKun nødvendig for ikke-standard batteriniveauer.",
+                                "retain_state": "Behold tilstanden fra det sidste batteriniveau, når kildeenheden er utilgængelig.\nNyttigt for enheder, der hviler og bliver utilgængelige.",
                                 "filter_outliers": "Filtrer store fald i batteriniveau fra, så falske hændelser reduceres på enheder, der af og til rapporterer forkerte niveauer."
                             }
                         }
@@ -287,7 +293,7 @@
                     "description": "Enhed, der har fået skiftet batteri.",
                     "name": "Enhed"
                 },
-                "entity_id": {
+                "source_entity_id": {
                     "description": "Entitet hvor batteriet er blevet udskiftet (bruges kun til batterinoter knyttet til entiteter).",
                     "name": "Entitet"
                 },
@@ -301,7 +307,7 @@
         "check_battery_last_replaced": {
             "description": "Få et svar eller udløs hændelser for enheder, der ikke har fået udskiftet batteri.",
             "fields": {
-                "days_last_reported": {
+                "days_last_replaced": {
                     "description": "Antal dage siden en enhed sidst fik sit batteri udskiftet.",
                     "name": "Dage"
                 },
@@ -375,6 +381,47 @@
         "deprecated_yaml": {
             "title": "YAML-konfigurationen for {integration_title} bliver fjernet",
             "description": "Konfiguration af  {integration_title}  via YAML bliver fjernet.\n\nDin eksisterende YAML-konfiguration er automatisk blevet importeret til brugerfladen.\n\nFjern `{domain}`-konfigurationen fra din configuration.yaml-fil og genstart Home Assistant for at løse problemet."
+        }
+    },
+    "selector": {
+        "battery_low_event_types": {
+            "options": {
+                "all": "Alle",
+                "low_state_transitions": "Overgange til lavt batteriniveau",
+                "reminders": "Påmindelser"
+            }
+        }
+    },
+    "triggers": {
+        "battery_has_increased": {
+            "name": "Batteriniveauet er steget",
+            "description": "Udløses, når et batteriniveau stiger med mindst den konfigurerede stigningstærskel, eller når en tilstand for lavt batteriniveau fra en binær sensor eller skabelon ikke længere angiver lavt batteriniveau."
+        },
+        "battery_was_not_reported": {
+            "name": "Batteriniveauet blev ikke rapporteret",
+            "description": "Udløses af hændelser fra handlingen \"Tjek sidste batterirapportering\", når et batteri ikke har rapporteret i længere tid end det angivne antal dage eller aldrig har rapporteret. Planlæg eller kald denne handling med \"Udløs hændelser\" aktiveret for at udløse denne automatisering.\nAutomatiseringer, der bruger denne udløser, skal bruge køtilstand (`mode: queued`), da ét kald til en handling kan udløse hændelser for flere batterinoter hurtigt efter hinanden."
+        },
+        "battery_was_not_replaced": {
+            "name": "Batteriet blev ikke udskiftet",
+            "description": "Udløses af hændelser fra handlingen \"Tjek hvornår batteriet sidst blev udskiftet\", når et batteri ikke er blevet udskiftet i længere tid end det angivne antal dage. Planlæg eller kald denne handling med \"Udløs hændelser\" aktiveret for at udløse denne automatisering.\nAutomatiseringer, der bruger denne udløser, skal bruge køtilstand (`mode: queued`), da ét kald til en handling kan udløse hændelser for flere batterinoter hurtigt efter hinanden."
+        },
+        "battery_no_longer_low": {
+            "name": "Batteriniveauet er ikke længere lavt",
+            "description": "Udløses, når et batteriniveau ikke længere er lavt."
+        },
+        "battery_became_low": {
+            "name": "Batteriniveauet blev lavt",
+            "description": "Udløses, når et batteriniveau bliver lavt, eller der udløses en påmindelse om lavt batteriniveau.\nAutomatiseringer, der bruger denne udløser, skal bruge køtilstand (`mode: queued`), da ét kald til en handling kan udløse hændelser for flere batterinoter hurtigt efter hinanden.",
+            "fields": {
+                "event_types": {
+                    "name": "Hændelsestyper",
+                    "description": "\"Alle\" udløser automatiseringen, når et batteriniveau bliver lavt, og ved påmindelser fra \"Kontrollér lavt batteriniveau\". Vælg \"Overgange til lavt batteriniveau\" for kun at reagere på overgange til lavt batteriniveau, eller \"Påmindelser\" for påmindelser fra handlingen."
+                }
+            }
+        },
+        "battery_was_replaced": {
+            "name": "Batteriet blev udskiftet",
+            "description": "Udløses, når et batteri markeres som udskiftet."
         }
     },
     "exceptions": {

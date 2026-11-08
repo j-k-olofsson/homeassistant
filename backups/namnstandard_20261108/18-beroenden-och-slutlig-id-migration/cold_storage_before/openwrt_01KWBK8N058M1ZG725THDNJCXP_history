@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "openwrt_01KWBK8N058M1ZG725THDNJCXP_history",
+  "data": {
+    "devices": {
+      "20:05:b6:01:99:b1": {
+        "initially_seen": 1782800748,
+        "last_seen": 1782806243,
+        "is_wireless": false
+      },
+      "ac:16:2d:04:99:b2": {
+        "initially_seen": 1782800748,
+        "last_seen": 1782806243,
+        "is_wireless": false
+      },
+      "e8:ff:1e:db:ea:f8": {
+        "initially_seen": 1782800748,
+        "last_seen": 1782806243,
+        "is_wireless": false
+      }
+    },
+    "last_version": "25.12.4"
+  }
+}

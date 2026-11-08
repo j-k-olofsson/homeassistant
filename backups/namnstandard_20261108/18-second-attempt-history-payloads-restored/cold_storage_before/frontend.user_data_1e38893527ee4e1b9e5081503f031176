@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "frontend.user_data_1e38893527ee4e1b9e5081503f031176",
+  "data": {
+    "language": {
+      "language": "sv",
+      "number_format": "language",
+      "time_format": "language",
+      "date_format": "language",
+      "time_zone": "local",
+      "first_weekday": "language"
+    },
+    "core": {
+      "showAdvanced": true,
+      "default_panel": "lovelace"
+    },
+    "sidebar": {
+      "panelOrder": [
+        "lovelace",
+        "d5369777_music_assistant",
+        "ha-admin",
+        "todo",
+        "5c53de3b_esphome",
+        "hacs",
+        "a0d7b954_ssh",
+        "core_configurator",
+        "9b396a0a_ai-config-agent",
+        "dashboard-hemmabio",
+        "calendar",
+        "ai_agent_ha",
+        "maintenance",
+        "energy",
+        "light",
+        "core_matter_server",
+        "climate"
+      ],
+      "hiddenPanels": [
+        "security",
+        "history",
+        "media-browser",
+        "logbook"
+      ]
+    }
+  }
+}

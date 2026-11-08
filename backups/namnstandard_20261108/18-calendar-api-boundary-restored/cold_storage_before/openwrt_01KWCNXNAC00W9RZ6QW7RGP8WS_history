@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "openwrt_01KWCNXNAC00W9RZ6QW7RGP8WS_history",
+  "data": {
+    "devices": {
+      "00:2b:67:01:db:4e": {
+        "initially_seen": 1782837108,
+        "last_seen": 1782882037,
+        "is_wireless": false
+      },
+      "20:05:b6:01:99:b1": {
+        "initially_seen": 1782837108,
+        "last_seen": 1782894392,
+        "is_wireless": false
+      },
+      "e8:ff:1e:db:ea:f8": {
+        "initially_seen": 1782837108,
+        "last_seen": 1782894392,
+        "is_wireless": false
+      },
+      "ac:16:2d:04:99:b2": {
+        "initially_seen": 1782837108,
+        "last_seen": 1782894392,
+        "is_wireless": false
+      },
+      "8c:f5:a3:7f:d3:b4": {
+        "initially_seen": 1782837108,
+        "last_seen": 1782894392,
+        "is_wireless": true
+      },
+      "c8:2b:96:07:7d:6e": {
+        "initially_seen": 1782837108,
+        "last_seen": 1782894392,
+        "is_wireless": true
+      },
+      "98:f4:ab:e2:71:12": {
+        "initially_seen": 1782837108,
+        "last_seen": 1782894392,
+        "is_wireless": true
+      },
+      "c8:2b:96:e6:99:4f": {
+        "initially_seen": 1782837108,
+        "last_seen": 1782894392,
+        "is_wireless": true
+      }
+    },
+    "last_version": "25.12.5"
+  }
+}

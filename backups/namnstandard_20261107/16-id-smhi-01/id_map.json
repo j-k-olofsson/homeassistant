@@ -1,0 +1,20 @@
+{
+  "weather.smhi_home": "weather.heimdal_ha_home",
+  "sensor.home_sannolikhet_for_aska": "sensor.heimdal_ha_home_sannolikhet_for_aska",
+  "sensor.home_total_molntackning": "sensor.heimdal_ha_home_total_molntackning",
+  "sensor.home_lite_moln": "sensor.heimdal_ha_home_lite_moln",
+  "sensor.home_halvklart": "sensor.heimdal_ha_home_halvklart",
+  "sensor.home_mycket_moln": "sensor.heimdal_ha_home_mycket_moln",
+  "sensor.home_nederbordskategori": "sensor.heimdal_ha_home_nederbordskategori",
+  "sensor.home_fryst_nederbord": "sensor.heimdal_ha_home_fryst_nederbord",
+  "sensor.home_fwi_index": "sensor.heimdal_ha_home_fwi_index",
+  "sensor.home_brandriskprognos": "sensor.heimdal_ha_home_brandriskprognos_fwi",
+  "sensor.home_initialt_spridningsindex": "sensor.heimdal_ha_home_initialt_spridningsindex_isi",
+  "sensor.home_build_up_index": "sensor.heimdal_ha_home_build_up_index_bui",
+  "sensor.home_fine_fuel_moisture_code": "sensor.heimdal_ha_home_fine_fuel_moisture_code_ffmc",
+  "sensor.home_duff_moisture_code": "sensor.heimdal_ha_home_duff_moisture_code_dmc",
+  "sensor.home_drought_code": "sensor.heimdal_ha_home_drought_code_dc",
+  "sensor.home_storst_risk_for_grasbrand": "sensor.heimdal_ha_home_storst_risk_for_grasbrand",
+  "sensor.home_potentiell_spridningshastighet": "sensor.heimdal_ha_home_potentiell_spridningshastighet",
+  "sensor.home_bransleuttorkning": "sensor.heimdal_ha_home_bransleuttorkning"
+}

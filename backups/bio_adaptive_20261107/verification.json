@@ -1,0 +1,30 @@
+{
+  "check_config": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  },
+  "repairs": {
+    "issues": []
+  },
+  "scene": "DAY",
+  "cinema": "off",
+  "profile": "on",
+  "brightness_adaptation": "off",
+  "lights": {
+    "light.bordslampa_vanster": {
+      "state": "on",
+      "before_kelvin": 3003,
+      "after_kelvin": 3039,
+      "before_brightness": 63,
+      "after_brightness": 63
+    },
+    "light.bordslampa_hoger": {
+      "state": "on",
+      "before_kelvin": 3003,
+      "after_kelvin": 3039,
+      "before_brightness": 63,
+      "after_brightness": 63
+    }
+  }
+}

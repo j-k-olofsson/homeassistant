@@ -42,7 +42,8 @@ from .const import (
     DOMAIN,
 )
 from .coordinator import OpenWrtDataCoordinator
-from .helpers import get_via_device, is_random_mac, resolve_client_name
+from .device_trackers import OpenWrtDeviceTracker, compute_device_tracker_attrs
+from .helpers import get_via_device_id, is_random_mac, resolve_client_name
 from .helpers.mac_vendor import get_mac_vendor_info
 
 _LOGGER = logging.getLogger(__name__)
@@ -74,6 +75,7 @@ async def async_setup_entry(
         )
 
         mqtt_enabled = entry.options.get(CONF_MQTT_PRESENCE, False)
+        whitelist = coordinator._async_get_tracked_devices_whitelist()
 
         for ent in entries:
             if ent.domain != "device_tracker":
@@ -84,11 +86,19 @@ async def async_setup_entry(
                 ent_reg.async_remove(ent.entity_id)
                 continue
 
-            # Remove wired trackers if wired tracking is disabled
-            # We identify them by their unique_id which ends with mac
             unique_id = ent.unique_id
-            mac = unique_id.split("_")[-1].lower()
+            mac = (
+                unique_id.removeprefix("openwrt_tracker_").lower()
+                if unique_id.startswith("openwrt_tracker_")
+                else unique_id.split("_")[-1].lower()
+            )
 
+            # Remove if not in whitelist when whitelist is active
+            if whitelist is not None and mac not in whitelist:
+                ent_reg.async_remove(ent.entity_id)
+                continue
+
+            # Remove wired trackers if wired tracking is disabled
             # Check history to see if it's wired
             if not track_wired and mac in coordinator._device_history:
                 if not coordinator._device_history[mac].get("is_wireless"):
@@ -138,7 +148,9 @@ async def async_setup_entry(
         if not perms.read_network and not perms.read_wireless:
             return
 
-        # Collect all unique MACs from both connected devices and DHCP leases
+        whitelist = coordinator._async_get_tracked_devices_whitelist()
+
+        # Collect all unique MACs from connected devices, DHCP leases, persistent history, and registry
         unique_devices: dict[str, str | None] = {}
         for device in coordinator.data.connected_devices:
             if device.mac:
@@ -149,15 +161,33 @@ async def async_setup_entry(
                 if mac_lower not in unique_devices or not unique_devices[mac_lower]:
                     unique_devices[mac_lower] = lease.hostname
 
-        # Registry entries survive restarts, so previously seen clients must be
-        # instantiated even when they happen to be offline during startup.
-        # Otherwise Home Assistant restores the old registry entry without a
-        # backing entity and repair integrations correctly report it as dead.
-        for mac, history in coordinator._device_history.items():
-            unique_devices.setdefault(
-                mac.lower(),
-                history.get("hostname") or history.get("name") or mac,
-            )
+        # Include historical tracked devices so offline devices persist across restarts
+        for mac, hist in coordinator._device_history.items():
+            mac_lower = mac.lower()
+            if whitelist is not None and mac_lower not in whitelist:
+                continue
+            if mac_lower not in unique_devices or not unique_devices[mac_lower]:
+                unique_devices[mac_lower] = hist.get("hostname")
+
+        # Include any explicit whitelist entries
+        if whitelist is not None:
+            for mac in whitelist:
+                mac_lower = mac.lower()
+                if mac_lower not in unique_devices:
+                    unique_devices[mac_lower] = None
+
+        # Include any existing registered entities for this config entry
+        ent_reg = er.async_get(hass)
+        entries = er.async_entries_for_config_entry(ent_reg, entry.entry_id)
+        for ent in entries:
+            if ent.domain == "device_tracker" and ent.unique_id.startswith(
+                "openwrt_tracker_"
+            ):
+                mac_lower = ent.unique_id.removeprefix("openwrt_tracker_").lower()
+                if whitelist is not None and mac_lower not in whitelist:
+                    continue
+                if mac_lower not in unique_devices:
+                    unique_devices[mac_lower] = None
 
         # An access point has no DHCP data, so fall back to the hostname another
         # config entry resolved. Without this its trackers are named by MAC.
@@ -166,10 +196,20 @@ async def async_setup_entry(
             if not hostname or hostname == "*":
                 unique_devices[mac_lower] = shared_hostnames.get(mac_lower) or hostname
 
+        own_macs = (
+            coordinator._get_own_macs(coordinator.data) if coordinator.data else set()
+        )
+        interface_regex = (
+            r"^(wlan|eth|lan|wan|br-|radio|phy|veth|lo|bond|team)[0-9]*([.-].*)?$"
+        )
+
         new_entities: list[OpenWrtDeviceTracker] = []
 
         for mac, hostname in unique_devices.items():
             if mac in tracked_macs:
+                continue
+
+            if mac in own_macs or re.match(interface_regex, mac):
                 continue
 
             # Determine if it's currently wireless on THIS node
@@ -257,331 +297,43 @@ async def async_setup_entry(
     entry.async_on_unload(coordinator.async_add_listener(_async_add_new_devices))
 
 
-class OpenWrtDeviceTracker(CoordinatorEntity[OpenWrtDataCoordinator], ScannerEntity):
-    """Representation of a tracked device on the OpenWrt router."""
-
-    _attr_has_entity_name = True
-
-    def __init__(
-        self,
-        coordinator: OpenWrtDataCoordinator,
-        entry: ConfigEntry,
-        mac: str,
-        hostname: str | None = None,
-    ) -> None:
-        """Initialize."""
-        super().__init__(coordinator)
-        self._mac = mac.lower()
-        self._entry = entry
-        self._attr_unique_id = f"openwrt_tracker_{self._mac}"
-
-        if is_random_mac(self._mac):
-            self._attr_entity_registry_enabled_default = False
-
-        # Initial device name fallback
-        self._initial_name = hostname or mac
-        options = getattr(entry, "options", {})
-        if not hasattr(options, "get"):
-            options = {}
-        data = getattr(entry, "data", {})
-        if not hasattr(data, "get"):
-            data = {}
-        self._consider_home = timedelta(
-            seconds=options.get(
-                CONF_CONSIDER_HOME,
-                data.get(CONF_CONSIDER_HOME, DEFAULT_CONSIDER_HOME),
-            ),
-        )
-        self._last_seen: datetime | None = None
-
-        # Track all created entity instances globally to enable cross-entry peer notification
-        domain_data = coordinator.hass.data.setdefault(DOMAIN, {})
-        all_trackers = domain_data.setdefault("all_trackers", {})
-        trackers = all_trackers.setdefault(self._mac, [])
-        if self not in trackers:
-            trackers.append(self)
-
-    @property
-    def device_info(self) -> DeviceInfo:
-        """Return device info."""
-        # Standard values for tracked devices
-        manufacturer = ATTR_MANUFACTURER
-        model = "Tracked device"
-
-        # Try to identify manufacturer/model by MAC OUI
-        if vendor_info := get_mac_vendor_info(self._mac):
-            manufacturer, model = vendor_info
-
-        return DeviceInfo(
-            connections={(dr.CONNECTION_NETWORK_MAC, self._mac)},
-            identifiers={(DOMAIN, self._mac)},
-            name=self.name or self._initial_name,
-            manufacturer=manufacturer,
-            model=model,
-            via_device=get_via_device(
-                self.coordinator.hass, self.coordinator, self._entry, self._mac
-            ),
-        )
-
-    @property
-    def source_type(self) -> SourceType:
-        """Return source type."""
-        return SourceType.ROUTER
-
-    @callback
-    def _handle_coordinator_update(self) -> None:
-        """Handle updated data from the coordinator."""
-        # The global state is already updated by the coordinator.
-        # We just need to trigger a write if we are the active entity.
-        if getattr(self, "hass", None):
-            self.async_write_ha_state()
-
-    async def async_will_remove_from_hass(self) -> None:
-        """Call when entity is being removed from hass."""
-        await super().async_will_remove_from_hass()
-        domain_data = self.coordinator.hass.data.get(DOMAIN, {})
-        if "registered_macs" in domain_data:
-            domain_data["registered_macs"].discard(self._mac)
-        if "all_trackers" in domain_data and self._mac in domain_data["all_trackers"]:
-            if self in domain_data["all_trackers"][self._mac]:
-                domain_data["all_trackers"][self._mac].remove(self)
-
-    @property
-    def is_connected(self) -> bool:
-        """Return connection status."""
-        domain_data = self.coordinator.hass.data.get(DOMAIN, {})
-        wireless_states = domain_data.get("tracker_wireless_state", {})
-        state_info = wireless_states.get(self._mac)
-
-        # Authority-based connection state:
-        # If any AP has confirmed a wireless association, respect its global state.
-        if state_info and "connected" in state_info:
-            return self._check_consider_home(state_info["connected"])
-
-        # Fallback for pure wired devices or when no wireless owner has claimed the device yet
-        device = self._raw_get_device_data()
-        if not device:
-            return self._check_consider_home(False)
-
-        # Handle historically wireless devices to prevent stale ARP/FDB records from keeping them 'home'
-        wireless_history = domain_data.get("wireless_history", {})
-        device_hist = getattr(self.coordinator, "_device_history", {})
-        if not isinstance(device_hist, dict):
-            device_hist = {}
-        was_ever_wireless = wireless_history.get(self._mac) or device_hist.get(
-            self._mac, {}
-        ).get("is_wireless", False)
-
-        if was_ever_wireless and not device.is_wireless:
-            return self._check_consider_home(False)
-
-        def _config_get(key: str, default: Any = None) -> Any:
-            entry = self._entry
-            options = getattr(entry, "options", None)
-            if isinstance(options, dict) and key in options:
-                return options[key]
-            data = getattr(entry, "data", None)
-            if isinstance(data, dict) and key in data:
-                return data[key]
-            if options is not None and hasattr(options, "get"):
-                try:
-                    val = options.get(key)
-                    if val is not None and type(val).__name__ != "MagicMock":
-                        return val
-                except Exception:
-                    pass
-            if data is not None and hasattr(data, "get"):
-                try:
-                    val = data.get(key)
-                    if val is not None and type(val).__name__ != "MagicMock":
-                        return val
-                except Exception:
-                    pass
-            return default
-
-        trust_stale = _config_get(CONF_TRUST_STALE_ARP, True)
-        valid_arp_states = ["REACHABLE", "DELAY", "PROBE", "PERMANENT"]
-        if trust_stale:
-            valid_arp_states.append("STALE")
-
-        if device.neighbor_state:
-            active_arp = device.neighbor_state.upper() in valid_arp_states
-            if not active_arp:
-                return self._check_consider_home(False)
-        elif (device.is_wireless or was_ever_wireless) and not trust_stale:
-            return self._check_consider_home(False)
-
-        track_wired = _config_get(CONF_TRACK_WIRED, DEFAULT_TRACK_WIRED)
-        if not track_wired and not device.is_wireless:
-            return self._check_consider_home(False)
-
-        return self._check_consider_home(device.connected)
-
-    def _raw_get_device_data(self) -> Any | None:
-        """Get raw device data from own coordinator."""
-        if not self.coordinator.data:
-            return None
-        return next(
-            (
-                d
-                for d in self.coordinator.data.connected_devices
-                if d.mac and d.mac.lower() == self._mac
-            ),
-            None,
-        )
-
-    # Maintain backward compatibility with existing internal callers if any
-    _get_device_data = _raw_get_device_data
-
-    def _check_consider_home(self, connected: bool) -> bool:
-        """Apply consider_home logic."""
-        now = datetime.now()
-        if connected:
-            self._last_seen = now
-            return True
-
-        # Not currently seen, check if within consider_home window
-        return bool(self._last_seen and now - self._last_seen < self._consider_home)
-
-    @property
-    def mac_address(self) -> str:
-        """Return MAC."""
-        # Intentionally return bare MAC so HA deduplicates and registers exactly 1 entity per device
-        return self._mac
-
-    @property
-    def hostname(self) -> str | None:
-        """Return hostname."""
-        device = self._raw_get_device_data()
-        return device.hostname if device else None
-
-    @property
-    def ip_address(self) -> str | None:
-        """Return IP."""
-        device = self._raw_get_device_data()
-        return device.ip if device else None
-
-    @property
-    def name(self) -> str:
-        """Return name."""
-        hostname = self.hostname
-        if hostname and hostname != "*":
-            # Avoid using the router's hostname as a generic fallback for other devices
-            router_hostname = ""
-            if self.coordinator.data and self.coordinator.data.device_info:
-                router_hostname = self.coordinator.data.device_info.hostname
-
-            if hostname != router_hostname:
-                return hostname
-
-        # This entry resolved no hostname of its own -- an access point runs no
-        # DHCP server, so it only ever sees a MAC. Borrow the name another entry
-        # learned before falling back to the bare address.
-        return resolve_client_name(self.coordinator.hass, self._mac, self._initial_name)
-
-    @property
-    def extra_state_attributes(self) -> dict[str, Any]:
-        """Return attributes."""
-        domain_data = self.coordinator.hass.data.get(DOMAIN, {})
-        wireless_states = domain_data.get("tracker_wireless_state", {})
-        state_info = wireless_states.get(self._mac)
-
-        device = self._raw_get_device_data()
-        attrs: dict[str, Any] = {
-            "mac": self._mac,
-        }
-
-        if device:
-            attrs.update(
-                {
-                    "is_wireless": device.is_wireless,
-                    "connection_type": device.connection_type,
-                }
-            )
-        elif state_info:
-            attrs.update(
-                {
-                    "is_wireless": True,
-                    "connection_type": state_info.get("connection_type"),
-                }
-            )
-
-        # Add attribution attributes
-        if state_info and state_info.get("connected"):
-            attrs.update(
-                {
-                    "connected_ap": state_info.get("connected_ap"),
-                    "connected_ap_entry_id": state_info.get("connected_ap_entry_id"),
-                    "interface": state_info.get("interface"),
-                    "signal_strength": state_info.get("signal_strength"),
-                    "connection_type": state_info.get("connection_type"),
-                }
-            )
-        elif device:
-            attrs.update(
-                {
-                    "interface": device.interface,
-                    "signal_strength": device.signal,
-                    "connected_ap": None,
-                }
-            )
-        else:
-            attrs["connected_ap"] = None
-
-        # Add historical seen data
-        if self._mac in self.coordinator._device_history:
-            history = self.coordinator._device_history[self._mac]
-            attrs.update(
-                {
-                    "initially_seen": datetime.fromtimestamp(
-                        history["initially_seen"]
-                    ).isoformat(),
-                    "last_seen": datetime.fromtimestamp(
-                        history["last_seen"]
-                    ).isoformat(),
-                }
-            )
-
-        # Add optional metrics
-        optional_metrics = {}
-        if device:
-            optional_metrics.update(
-                {
-                    "port": device.port,
-                    "fdb_age": device.fdb_age,
-                    "rx_bytes": device.rx_bytes,
-                    "tx_bytes": device.tx_bytes,
-                    "uptime": device.uptime,
-                    "neighbor_state": device.neighbor_state,
-                    "connection_info": device.connection_info,
-                }
-            )
-            if device.is_wireless:
-                optional_metrics.update(
-                    {
-                        "signal_strength": device.signal,
-                        "rx_rate": device.rx_rate,
-                        "tx_rate": device.tx_rate,
-                    }
-                )
-        elif state_info and state_info.get("connected"):
-            optional_metrics["signal_strength"] = state_info.get("signal_strength")
-
-        attrs.update(
-            {k: v for k, v in optional_metrics.items() if v is not None and v != ""}
-        )
-
-        # Add Mesh info
-        if (
-            self.coordinator.data
-            and self._mac in self.coordinator.data.batman_translation_table
-        ):
-            originator_mac = self.coordinator.data.batman_translation_table[self._mac]
-            attrs["mesh_node"] = originator_mac
-            if (
-                originator_mac.lower()
-                != self.coordinator.data.device_info.mac_address.lower()
-            ):
-                attrs["is_via_mesh"] = True
-
-        return attrs
+__all__ = [
+    "ATTR_MANUFACTURER",
+    "AddEntitiesCallback",
+    "Any",
+    "CONF_CONSIDER_HOME",
+    "CONF_HOST",
+    "CONF_MQTT_PRESENCE",
+    "CONF_SKIP_RANDOM_MAC",
+    "CONF_TRACK_DEVICES",
+    "CONF_TRACK_WIRED",
+    "CONF_TRUST_STALE_ARP",
+    "ConfigEntry",
+    "CoordinatorEntity",
+    "DATA_COORDINATOR",
+    "DEFAULT_CONSIDER_HOME",
+    "DEFAULT_SKIP_RANDOM_MAC",
+    "DEFAULT_TRACK_DEVICES",
+    "DEFAULT_TRACK_WIRED",
+    "DOMAIN",
+    "DeviceInfo",
+    "HomeAssistant",
+    "OpenWrtDataCoordinator",
+    "OpenWrtDeviceTracker",
+    "ScannerEntity",
+    "SourceType",
+    "_LOGGER",
+    "async_setup_entry",
+    "callback",
+    "compute_device_tracker_attrs",
+    "datetime",
+    "dr",
+    "er",
+    "get_mac_vendor_info",
+    "get_via_device_id",
+    "is_random_mac",
+    "logging",
+    "re",
+    "resolve_client_name",
+    "timedelta",
+]

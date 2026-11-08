@@ -1,0 +1,1760 @@
+[
+  {
+    "queue_id": "syncgroup_rk7qfzy6",
+    "active": true,
+    "display_name": "Grannys h\u00f6gtalare",
+    "available": true,
+    "items": 0,
+    "shuffle_enabled": false,
+    "repeat_mode": "off",
+    "crossfade_enabled": false,
+    "autoplay_enabled": false,
+    "overlay_enabled": false,
+    "overlay_source": null,
+    "overlay_volume": 100,
+    "smart_fades_active": false,
+    "smart_shuffle_active": false,
+    "current_index": null,
+    "index_in_buffer": null,
+    "ended": false,
+    "elapsed_time": 0.0,
+    "elapsed_time_last_updated": 1789888374.8524072,
+    "playback_speed": 1.0,
+    "state": "idle",
+    "current_item": null,
+    "next_item": null,
+    "sources": [],
+    "flow_mode": false,
+    "resume_pos": 11,
+    "is_dynamic": false,
+    "extra_attributes": {
+      "play_action_in_progress": false
+    },
+    "dont_stop_the_music_enabled": false,
+    "radio_source": []
+  },
+  {
+    "queue_id": "up2d920741",
+    "active": true,
+    "display_name": "TVs soundbar",
+    "available": true,
+    "items": 0,
+    "shuffle_enabled": false,
+    "repeat_mode": "off",
+    "crossfade_enabled": false,
+    "autoplay_enabled": false,
+    "overlay_enabled": false,
+    "overlay_source": null,
+    "overlay_volume": 100,
+    "smart_fades_active": false,
+    "smart_shuffle_active": false,
+    "current_index": null,
+    "index_in_buffer": null,
+    "ended": false,
+    "elapsed_time": 0.0,
+    "elapsed_time_last_updated": 1788615043.594454,
+    "playback_speed": 1.0,
+    "state": "idle",
+    "current_item": null,
+    "next_item": null,
+    "sources": [],
+    "flow_mode": false,
+    "resume_pos": 0,
+    "is_dynamic": false,
+    "extra_attributes": {
+      "play_action_in_progress": false
+    },
+    "dont_stop_the_music_enabled": false,
+    "radio_source": []
+  },
+  {
+    "queue_id": "up366fb600",
+    "active": false,
+    "display_name": "Toalettens h\u00f6gtalare",
+    "available": true,
+    "items": 0,
+    "shuffle_enabled": false,
+    "repeat_mode": "off",
+    "crossfade_enabled": false,
+    "autoplay_enabled": false,
+    "overlay_enabled": false,
+    "overlay_source": null,
+    "overlay_volume": 100,
+    "smart_fades_active": false,
+    "smart_shuffle_active": false,
+    "current_index": null,
+    "index_in_buffer": null,
+    "ended": false,
+    "elapsed_time": 0.0,
+    "elapsed_time_last_updated": 1790960083.6317239,
+    "playback_speed": 1.0,
+    "state": "idle",
+    "current_item": null,
+    "next_item": null,
+    "sources": [],
+    "flow_mode": false,
+    "resume_pos": 0,
+    "is_dynamic": false,
+    "extra_attributes": {
+      "play_action_in_progress": false
+    },
+    "dont_stop_the_music_enabled": false,
+    "radio_source": []
+  },
+  {
+    "queue_id": "upb2965530",
+    "active": true,
+    "display_name": "K\u00f6kets sk\u00e4rm",
+    "available": true,
+    "items": 1,
+    "shuffle_enabled": false,
+    "repeat_mode": "off",
+    "crossfade_enabled": false,
+    "autoplay_enabled": false,
+    "overlay_enabled": false,
+    "overlay_source": null,
+    "overlay_volume": 100,
+    "smart_fades_active": false,
+    "smart_shuffle_active": false,
+    "current_index": 0,
+    "index_in_buffer": null,
+    "ended": false,
+    "elapsed_time": 0.0,
+    "elapsed_time_last_updated": 1791012550.2571383,
+    "playback_speed": 1.0,
+    "state": "idle",
+    "current_item": {
+      "queue_id": "upb2965530",
+      "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+      "name": "Julkanalen",
+      "duration": 0,
+      "sort_index": 0,
+      "streamdetails": null,
+      "media_item": {
+        "item_id": "19",
+        "provider": "library",
+        "name": "Julkanalen",
+        "version": "",
+        "sort_name": "julkanalen",
+        "uri": "library://radio/19",
+        "external_ids": [],
+        "is_playable": true,
+        "media_type": "radio",
+        "provider_mappings": [
+          {
+            "item_id": "2d71c5a8-6fde-4624-8d1b-1d77b7a04150",
+            "provider_domain": "radiobrowser",
+            "provider_instance": "radiobrowser",
+            "available": true,
+            "in_library": true,
+            "is_unique": null,
+            "audio_format": {
+              "content_type": "?",
+              "codec_type": "?",
+              "sample_rate": 44100,
+              "bit_depth": 16,
+              "channels": 2,
+              "output_format_str": "?",
+              "bit_rate": 0
+            },
+            "url": null,
+            "details": null
+          }
+        ],
+        "metadata": {
+          "description": null,
+          "description_language": null,
+          "life_span": null,
+          "artist_entity_type": null,
+          "review": null,
+          "explicit": null,
+          "images": [
+            {
+              "type": "thumb",
+              "path": "https://www.ilikeradio.se/wp-content/themes/ilikeradio/favicon.png",
+              "provider": "radiobrowser",
+              "remotely_accessible": true,
+              "proxy_id": "dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9"
+            }
+          ],
+          "grouping": null,
+          "genres": null,
+          "mood": null,
+          "style": null,
+          "copyright": null,
+          "lyrics": null,
+          "lrc_lyrics": null,
+          "transcript": null,
+          "transcript_cues": null,
+          "has_transcript": null,
+          "label": null,
+          "links": [
+            {
+              "type": "website",
+              "url": "https://www.ilikeradio.se/"
+            }
+          ],
+          "performers": null,
+          "preview": null,
+          "popularity": 90,
+          "release_date": null,
+          "languages": null,
+          "chapters": null,
+          "collections": null,
+          "last_refresh": null
+        },
+        "favorite": false,
+        "position": null,
+        "date_added": "2025-11-30T11:30:51+00:00",
+        "duration": 0,
+        "is_dynamic": false
+      },
+      "image": {
+        "type": "thumb",
+        "path": "https://www.ilikeradio.se/wp-content/themes/ilikeradio/favicon.png",
+        "provider": "radiobrowser",
+        "remotely_accessible": true,
+        "proxy_id": "dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9"
+      },
+      "index": 0,
+      "available": true,
+      "extra_attributes": {}
+    },
+    "next_item": null,
+    "sources": [],
+    "flow_mode": false,
+    "resume_pos": 179,
+    "is_dynamic": false,
+    "extra_attributes": {
+      "play_action_in_progress": false
+    },
+    "dont_stop_the_music_enabled": false,
+    "radio_source": []
+  },
+  {
+    "queue_id": "upc1652555",
+    "active": true,
+    "display_name": "Nya TVn",
+    "available": true,
+    "items": 0,
+    "shuffle_enabled": false,
+    "repeat_mode": "off",
+    "crossfade_enabled": false,
+    "autoplay_enabled": false,
+    "overlay_enabled": false,
+    "overlay_source": null,
+    "overlay_volume": 100,
+    "smart_fades_active": false,
+    "smart_shuffle_active": false,
+    "current_index": null,
+    "index_in_buffer": null,
+    "ended": false,
+    "elapsed_time": 0.0,
+    "elapsed_time_last_updated": 1788615083.8676896,
+    "playback_speed": 1.0,
+    "state": "idle",
+    "current_item": null,
+    "next_item": null,
+    "sources": [],
+    "flow_mode": false,
+    "resume_pos": 0,
+    "is_dynamic": false,
+    "extra_attributes": {
+      "play_action_in_progress": false
+    },
+    "dont_stop_the_music_enabled": false,
+    "radio_source": []
+  },
+  {
+    "queue_id": "up74890f07",
+    "active": false,
+    "display_name": "Duschens h\u00f6gtalare",
+    "available": true,
+    "items": 0,
+    "shuffle_enabled": false,
+    "repeat_mode": "off",
+    "crossfade_enabled": false,
+    "autoplay_enabled": false,
+    "overlay_enabled": false,
+    "overlay_source": null,
+    "overlay_volume": 100,
+    "smart_fades_active": false,
+    "smart_shuffle_active": false,
+    "current_index": null,
+    "index_in_buffer": null,
+    "ended": false,
+    "elapsed_time": 0.0,
+    "elapsed_time_last_updated": 1788615287.7098978,
+    "playback_speed": 1.0,
+    "state": "idle",
+    "current_item": null,
+    "next_item": null,
+    "sources": [],
+    "flow_mode": false,
+    "resume_pos": 0,
+    "is_dynamic": false,
+    "extra_attributes": {
+      "play_action_in_progress": false
+    },
+    "dont_stop_the_music_enabled": false,
+    "radio_source": []
+  },
+  {
+    "queue_id": "upf3ea6c7e",
+    "active": true,
+    "display_name": "Kontorets h\u00f6gtalare",
+    "available": false,
+    "items": 20,
+    "shuffle_enabled": false,
+    "repeat_mode": "off",
+    "crossfade_enabled": false,
+    "autoplay_enabled": false,
+    "overlay_enabled": false,
+    "overlay_source": null,
+    "overlay_volume": 100,
+    "smart_fades_active": false,
+    "smart_shuffle_active": false,
+    "current_index": null,
+    "index_in_buffer": null,
+    "ended": false,
+    "elapsed_time": 0.0,
+    "elapsed_time_last_updated": 1789472161.7478154,
+    "playback_speed": 1.0,
+    "state": "idle",
+    "current_item": null,
+    "next_item": null,
+    "sources": [],
+    "flow_mode": false,
+    "resume_pos": 0,
+    "is_dynamic": false,
+    "extra_attributes": {
+      "play_action_in_progress": false
+    },
+    "dont_stop_the_music_enabled": false,
+    "radio_source": []
+  },
+  {
+    "queue_id": "up0ba23cfe",
+    "active": true,
+    "display_name": "Atelj\u00e9ns h\u00f6gtalare",
+    "available": false,
+    "items": 0,
+    "shuffle_enabled": false,
+    "repeat_mode": "off",
+    "crossfade_enabled": false,
+    "autoplay_enabled": false,
+    "overlay_enabled": false,
+    "overlay_source": null,
+    "overlay_volume": 100,
+    "smart_fades_active": false,
+    "smart_shuffle_active": false,
+    "current_index": null,
+    "index_in_buffer": null,
+    "ended": false,
+    "elapsed_time": 0.0,
+    "elapsed_time_last_updated": 1790921499.522372,
+    "playback_speed": 1.0,
+    "state": "idle",
+    "current_item": null,
+    "next_item": null,
+    "sources": [],
+    "flow_mode": false,
+    "resume_pos": 0,
+    "is_dynamic": false,
+    "extra_attributes": {
+      "play_action_in_progress": false
+    },
+    "dont_stop_the_music_enabled": false,
+    "radio_source": []
+  },
+  {
+    "queue_id": "up1a2803a2",
+    "active": true,
+    "display_name": "Atelj\u00e9n",
+    "available": true,
+    "items": 0,
+    "shuffle_enabled": false,
+    "repeat_mode": "off",
+    "crossfade_enabled": false,
+    "autoplay_enabled": false,
+    "overlay_enabled": false,
+    "overlay_source": null,
+    "overlay_volume": 100,
+    "smart_fades_active": false,
+    "smart_shuffle_active": false,
+    "current_index": null,
+    "index_in_buffer": null,
+    "ended": false,
+    "elapsed_time": 0.0,
+    "elapsed_time_last_updated": 1789816089.0600264,
+    "playback_speed": 1.0,
+    "state": "idle",
+    "current_item": null,
+    "next_item": null,
+    "sources": [],
+    "flow_mode": false,
+    "resume_pos": 0,
+    "is_dynamic": false,
+    "extra_attributes": {
+      "play_action_in_progress": false
+    },
+    "dont_stop_the_music_enabled": false,
+    "radio_source": []
+  },
+  {
+    "queue_id": "media_player.home_assistant_voice_096460_media_player",
+    "active": true,
+    "display_name": "HA Voice PE 096460 Media Player",
+    "available": true,
+    "items": 0,
+    "shuffle_enabled": false,
+    "repeat_mode": "off",
+    "crossfade_enabled": false,
+    "autoplay_enabled": false,
+    "overlay_enabled": false,
+    "overlay_source": null,
+    "overlay_volume": 100,
+    "smart_fades_active": false,
+    "smart_shuffle_active": false,
+    "current_index": null,
+    "index_in_buffer": null,
+    "ended": false,
+    "elapsed_time": 0.0,
+    "elapsed_time_last_updated": 1789470573.0303812,
+    "playback_speed": 1.0,
+    "state": "idle",
+    "current_item": null,
+    "next_item": null,
+    "sources": [],
+    "flow_mode": false,
+    "resume_pos": 0,
+    "is_dynamic": false,
+    "extra_attributes": {
+      "play_action_in_progress": false
+    },
+    "dont_stop_the_music_enabled": false,
+    "radio_source": []
+  },
+  {
+    "queue_id": "112179a2-361d-8781-2474-d01839f340eb",
+    "active": true,
+    "display_name": "Verandans h\u00f6gtalare h\u00f6ger",
+    "available": true,
+    "items": 0,
+    "shuffle_enabled": false,
+    "repeat_mode": "off",
+    "crossfade_enabled": false,
+    "autoplay_enabled": false,
+    "overlay_enabled": false,
+    "overlay_source": null,
+    "overlay_volume": 100,
+    "smart_fades_active": false,
+    "smart_shuffle_active": false,
+    "current_index": null,
+    "index_in_buffer": null,
+    "ended": false,
+    "elapsed_time": 0.0,
+    "elapsed_time_last_updated": 1790956958.418801,
+    "playback_speed": 1.0,
+    "state": "idle",
+    "current_item": null,
+    "next_item": null,
+    "sources": [],
+    "flow_mode": false,
+    "resume_pos": 0,
+    "is_dynamic": false,
+    "extra_attributes": {
+      "play_action_in_progress": false
+    },
+    "dont_stop_the_music_enabled": false,
+    "radio_source": []
+  },
+  {
+    "queue_id": "81cfbae8-4ee1-4c8c-84fc-4f1be6360cb2",
+    "active": true,
+    "display_name": "Alla h\u00f6gtalare",
+    "available": true,
+    "items": 73,
+    "shuffle_enabled": false,
+    "repeat_mode": "off",
+    "crossfade_enabled": false,
+    "autoplay_enabled": false,
+    "overlay_enabled": false,
+    "overlay_source": null,
+    "overlay_volume": 100,
+    "smart_fades_active": false,
+    "smart_shuffle_active": false,
+    "current_index": 3,
+    "index_in_buffer": 4,
+    "ended": false,
+    "elapsed_time": 294.9069661302948,
+    "elapsed_time_last_updated": 1790957950.4423518,
+    "playback_speed": 1.0,
+    "state": "idle",
+    "current_item": {
+      "queue_id": "81cfbae8-4ee1-4c8c-84fc-4f1be6360cb2",
+      "queue_item_id": "063b6a670748476faa877b2646aefc2e",
+      "name": "Tina Turner - Proud Mary",
+      "duration": 327,
+      "sort_index": 3,
+      "streamdetails": {
+        "provider": "spotify--FMAF5tEG",
+        "item_id": "3dLg6cqxvKQl2E6lnD62ZT",
+        "audio_format": {
+          "content_type": "ogg",
+          "codec_type": "vorbis",
+          "sample_rate": 44100,
+          "bit_depth": 16,
+          "channels": 2,
+          "output_format_str": "ogg",
+          "bit_rate": 320
+        },
+        "media_type": "track",
+        "stream_type": "custom",
+        "duration": 327,
+        "size": null,
+        "stream_metadata": null,
+        "audio_processing": {
+          "input_fidelity": {
+            "quality": "standard",
+            "bit_perfect": null
+          },
+          "queue_processing": {
+            "pcm_format": {
+              "content_type": "f32le",
+              "codec_type": "f32le",
+              "sample_rate": 44100,
+              "bit_depth": 32,
+              "channels": 2,
+              "output_format_str": "pcm;codec=pcm;rate=44100;bitrate=32;channels=2",
+              "bit_rate": 2822
+            },
+            "normalization": {
+              "mode": "measurement_only",
+              "measurement_source": "track",
+              "target_lufs": -19.0,
+              "measured_lufs": -15.0,
+              "applied_gain_db": -4.0
+            },
+            "playback_speed": 1.0,
+            "crossfade_mode": "disabled",
+            "overlay_active": false
+          },
+          "outputs": [
+            {
+              "player_ids": [
+                "112179a2-361d-8781-2474-d01839f340eb",
+                "741eea0d-05a3-445b-a807-71d6884f1a90",
+                "81cfbae8-4ee1-4c8c-84fc-4f1be6360cb2",
+                "up1a2803a2",
+                "up74890f07",
+                "upb2965530"
+              ],
+              "dsp": {
+                "state": "disabled",
+                "input_gain": 0.0,
+                "filters": [],
+                "output_gain": 0.0,
+                "preset_id": null
+              },
+              "source_channel": null,
+              "output_format": {
+                "content_type": "flac",
+                "codec_type": "?",
+                "sample_rate": 44100,
+                "bit_depth": 16,
+                "channels": 2,
+                "output_format_str": "flac",
+                "bit_rate": 1054
+              },
+              "fidelity": {
+                "quality": "standard",
+                "bit_perfect": false
+              }
+            }
+          ]
+        },
+        "loudness": -15.0,
+        "loudness_album": null,
+        "prefer_album_loudness": false,
+        "volume_normalization_mode": "measurement_only",
+        "volume_normalization_gain_correct": -4.0,
+        "target_loudness": -19.0,
+        "stream_title": null
+      },
+      "media_item": {
+        "item_id": "3dLg6cqxvKQl2E6lnD62ZT",
+        "provider": "spotify--FMAF5tEG",
+        "name": "Proud Mary",
+        "version": "",
+        "sort_name": "proud mary",
+        "uri": "spotify--FMAF5tEG://track/3dLg6cqxvKQl2E6lnD62ZT",
+        "external_ids": [
+          [
+            "isrc",
+            "GBAYE9300862"
+          ]
+        ],
+        "is_playable": true,
+        "media_type": "track",
+        "provider_mappings": [
+          {
+            "item_id": "3dLg6cqxvKQl2E6lnD62ZT",
+            "provider_domain": "spotify",
+            "provider_instance": "spotify--FMAF5tEG",
+            "available": true,
+            "in_library": null,
+            "is_unique": null,
+            "audio_format": {
+              "content_type": "ogg",
+              "codec_type": "?",
+              "sample_rate": 44100,
+              "bit_depth": 16,
+              "channels": 2,
+              "output_format_str": "ogg",
+              "bit_rate": 320
+            },
+            "url": "https://open.spotify.com/track/3dLg6cqxvKQl2E6lnD62ZT",
+            "details": null
+          }
+        ],
+        "metadata": {
+          "description": null,
+          "description_language": null,
+          "life_span": null,
+          "artist_entity_type": null,
+          "review": null,
+          "explicit": false,
+          "images": [
+            {
+              "type": "thumb",
+              "path": "https://i.scdn.co/image/ab67616d0000b2736f797e607164ef94ab773398",
+              "provider": "spotify--FMAF5tEG",
+              "remotely_accessible": true,
+              "proxy_id": "998f0e215d23fa17c4ee6625ed71b0a39d51b50fee0521edf8585c413de40e3b"
+            }
+          ],
+          "grouping": null,
+          "genres": null,
+          "mood": null,
+          "style": null,
+          "copyright": null,
+          "lyrics": null,
+          "lrc_lyrics": null,
+          "transcript": null,
+          "transcript_cues": null,
+          "has_transcript": null,
+          "label": null,
+          "links": null,
+          "performers": null,
+          "preview": "https://p.scdn.co/mp3-preview/d1a72c9656807231e95ed6c493809d305708ec35?cid=2eb96f9b37494be1824999d58028a305",
+          "popularity": 45,
+          "release_date": null,
+          "languages": null,
+          "chapters": null,
+          "collections": null,
+          "last_refresh": null
+        },
+        "favorite": false,
+        "position": null,
+        "date_added": null,
+        "duration": 327,
+        "artists": [
+          {
+            "item_id": "1zuJe6b1roixEKMOtyrEak",
+            "provider": "spotify--FMAF5tEG",
+            "name": "Tina Turner",
+            "version": "",
+            "sort_name": "tina turner",
+            "uri": "spotify--FMAF5tEG://artist/1zuJe6b1roixEKMOtyrEak",
+            "external_ids": [],
+            "is_playable": true,
+            "media_type": "artist",
+            "provider_mappings": [
+              {
+                "item_id": "1zuJe6b1roixEKMOtyrEak",
+                "provider_domain": "spotify",
+                "provider_instance": "spotify--FMAF5tEG",
+                "available": true,
+                "in_library": null,
+                "is_unique": null,
+                "audio_format": {
+                  "content_type": "?",
+                  "codec_type": "?",
+                  "sample_rate": 44100,
+                  "bit_depth": 16,
+                  "channels": 2,
+                  "output_format_str": "?",
+                  "bit_rate": 0
+                },
+                "url": "https://open.spotify.com/artist/1zuJe6b1roixEKMOtyrEak",
+                "details": null
+              }
+            ],
+            "metadata": {
+              "description": null,
+              "description_language": null,
+              "life_span": null,
+              "artist_entity_type": null,
+              "review": null,
+              "explicit": null,
+              "images": [],
+              "grouping": null,
+              "genres": null,
+              "mood": null,
+              "style": null,
+              "copyright": null,
+              "lyrics": null,
+              "lrc_lyrics": null,
+              "transcript": null,
+              "transcript_cues": null,
+              "has_transcript": null,
+              "label": null,
+              "links": null,
+              "performers": null,
+              "preview": null,
+              "popularity": null,
+              "release_date": null,
+              "languages": null,
+              "chapters": null,
+              "collections": null,
+              "last_refresh": null
+            },
+            "favorite": false,
+            "position": null,
+            "date_added": null,
+            "artist_type": "singer"
+          }
+        ],
+        "last_played": 0,
+        "album": {
+          "item_id": "6FkWiSUX7YAdxOlHPrIzMj",
+          "provider": "spotify--FMAF5tEG",
+          "name": "Tina!",
+          "version": "",
+          "sort_name": "tina!",
+          "uri": "spotify--FMAF5tEG://album/6FkWiSUX7YAdxOlHPrIzMj",
+          "external_ids": [],
+          "is_playable": true,
+          "media_type": "album",
+          "available": true,
+          "image": {
+            "type": "thumb",
+            "path": "https://i.scdn.co/image/ab67616d0000b2736f797e607164ef94ab773398",
+            "provider": "spotify--FMAF5tEG",
+            "remotely_accessible": true,
+            "proxy_id": "998f0e215d23fa17c4ee6625ed71b0a39d51b50fee0521edf8585c413de40e3b"
+          },
+          "year": 2008
+        },
+        "disc_number": 1,
+        "track_number": 15,
+        "audio_metadata": {
+          "bpm": 170.50417054907552,
+          "musical_key": "D major"
+        }
+      },
+      "image": {
+        "type": "thumb",
+        "path": "https://i.scdn.co/image/ab67616d0000b2736f797e607164ef94ab773398",
+        "provider": "spotify--FMAF5tEG",
+        "remotely_accessible": true,
+        "proxy_id": "998f0e215d23fa17c4ee6625ed71b0a39d51b50fee0521edf8585c413de40e3b"
+      },
+      "index": 0,
+      "available": true,
+      "extra_attributes": {}
+    },
+    "next_item": {
+      "queue_id": "81cfbae8-4ee1-4c8c-84fc-4f1be6360cb2",
+      "queue_item_id": "a575d1daef1e406ab4948b06f9751685",
+      "name": "Simon & Garfunkel - Scarborough Fair / Canticle",
+      "duration": 190,
+      "sort_index": 4,
+      "streamdetails": {
+        "provider": "spotify--FMAF5tEG",
+        "item_id": "3g2fYZW5v2od8KIF7VktT0",
+        "audio_format": {
+          "content_type": "ogg",
+          "codec_type": "vorbis",
+          "sample_rate": 44100,
+          "bit_depth": 16,
+          "channels": 2,
+          "output_format_str": "ogg",
+          "bit_rate": 320
+        },
+        "media_type": "track",
+        "stream_type": "custom",
+        "duration": 194,
+        "size": null,
+        "stream_metadata": null,
+        "audio_processing": {
+          "input_fidelity": {
+            "quality": "standard",
+            "bit_perfect": null
+          },
+          "queue_processing": {
+            "pcm_format": {
+              "content_type": "f32le",
+              "codec_type": "f32le",
+              "sample_rate": 44100,
+              "bit_depth": 32,
+              "channels": 2,
+              "output_format_str": "pcm;codec=pcm;rate=44100;bitrate=32;channels=2",
+              "bit_rate": 2822
+            },
+            "normalization": {
+              "mode": "measurement_only",
+              "measurement_source": "track",
+              "target_lufs": -19.0,
+              "measured_lufs": -15.3,
+              "applied_gain_db": -3.7
+            },
+            "playback_speed": 1.0,
+            "crossfade_mode": "disabled",
+            "overlay_active": false
+          },
+          "outputs": [
+            {
+              "player_ids": [
+                "112179a2-361d-8781-2474-d01839f340eb",
+                "741eea0d-05a3-445b-a807-71d6884f1a90",
+                "81cfbae8-4ee1-4c8c-84fc-4f1be6360cb2",
+                "up1a2803a2",
+                "up74890f07",
+                "upb2965530"
+              ],
+              "dsp": {
+                "state": "disabled",
+                "input_gain": 0.0,
+                "filters": [],
+                "output_gain": 0.0,
+                "preset_id": null
+              },
+              "source_channel": null,
+              "output_format": {
+                "content_type": "flac",
+                "codec_type": "?",
+                "sample_rate": 44100,
+                "bit_depth": 16,
+                "channels": 2,
+                "output_format_str": "flac",
+                "bit_rate": 1054
+              },
+              "fidelity": {
+                "quality": "standard",
+                "bit_perfect": false
+              }
+            }
+          ]
+        },
+        "loudness": -15.3,
+        "loudness_album": null,
+        "prefer_album_loudness": false,
+        "volume_normalization_mode": "measurement_only",
+        "volume_normalization_gain_correct": -3.7,
+        "target_loudness": -19.0,
+        "stream_title": null
+      },
+      "media_item": {
+        "item_id": "3g2fYZW5v2od8KIF7VktT0",
+        "provider": "spotify--FMAF5tEG",
+        "name": "Scarborough Fair / Canticle",
+        "version": "",
+        "sort_name": "scarborough fair / canticle",
+        "uri": "spotify--FMAF5tEG://track/3g2fYZW5v2od8KIF7VktT0",
+        "external_ids": [
+          [
+            "isrc",
+            "USSM16600723"
+          ]
+        ],
+        "is_playable": true,
+        "media_type": "track",
+        "provider_mappings": [
+          {
+            "item_id": "3g2fYZW5v2od8KIF7VktT0",
+            "provider_domain": "spotify",
+            "provider_instance": "spotify--FMAF5tEG",
+            "available": true,
+            "in_library": null,
+            "is_unique": null,
+            "audio_format": {
+              "content_type": "ogg",
+              "codec_type": "?",
+              "sample_rate": 44100,
+              "bit_depth": 16,
+              "channels": 2,
+              "output_format_str": "ogg",
+              "bit_rate": 320
+            },
+            "url": "https://open.spotify.com/track/3g2fYZW5v2od8KIF7VktT0",
+            "details": null
+          }
+        ],
+        "metadata": {
+          "description": null,
+          "description_language": null,
+          "life_span": null,
+          "artist_entity_type": null,
+          "review": null,
+          "explicit": false,
+          "images": [
+            {
+              "type": "thumb",
+              "path": "https://i.scdn.co/image/ab67616d0000b273ebb9f3c341e85db31408652e",
+              "provider": "spotify--FMAF5tEG",
+              "remotely_accessible": true,
+              "proxy_id": "64180eb67f3952399924f4fd214da9d5105fc499451b7fa3e9ecb42f7d72a278"
+            },
+            {
+              "type": "thumb",
+              "path": "https://i.scdn.co/image/ab67616d0000b273829468fa0ea3f4d41af8ad35",
+              "provider": "spotify--FMAF5tEG",
+              "remotely_accessible": true,
+              "proxy_id": "de56a65c62b830722aa947dfd7f7c3d9a21cc064ca84766b0d639a9110e562cc"
+            }
+          ],
+          "grouping": null,
+          "genres": null,
+          "mood": null,
+          "style": null,
+          "copyright": null,
+          "lyrics": null,
+          "lrc_lyrics": null,
+          "transcript": null,
+          "transcript_cues": null,
+          "has_transcript": null,
+          "label": null,
+          "links": null,
+          "performers": null,
+          "preview": "https://p.scdn.co/mp3-preview/07ecb4a16c138534d636f4771fd5b58f0c7f26e6?cid=2eb96f9b37494be1824999d58028a305",
+          "popularity": 64,
+          "release_date": null,
+          "languages": null,
+          "chapters": null,
+          "collections": null,
+          "last_refresh": null
+        },
+        "favorite": false,
+        "position": null,
+        "date_added": null,
+        "duration": 194,
+        "artists": [
+          {
+            "item_id": "70cRZdQywnSFp9pnc2WTCE",
+            "provider": "spotify--FMAF5tEG",
+            "name": "Simon & Garfunkel",
+            "version": "",
+            "sort_name": "simon & garfunkel",
+            "uri": "spotify--FMAF5tEG://artist/70cRZdQywnSFp9pnc2WTCE",
+            "external_ids": [],
+            "is_playable": true,
+            "media_type": "artist",
+            "provider_mappings": [
+              {
+                "item_id": "70cRZdQywnSFp9pnc2WTCE",
+                "provider_domain": "spotify",
+                "provider_instance": "spotify--FMAF5tEG",
+                "available": true,
+                "in_library": null,
+                "is_unique": null,
+                "audio_format": {
+                  "content_type": "?",
+                  "codec_type": "?",
+                  "sample_rate": 44100,
+                  "bit_depth": 16,
+                  "channels": 2,
+                  "output_format_str": "?",
+                  "bit_rate": 0
+                },
+                "url": "https://open.spotify.com/artist/70cRZdQywnSFp9pnc2WTCE",
+                "details": null
+              }
+            ],
+            "metadata": {
+              "description": null,
+              "description_language": null,
+              "life_span": null,
+              "artist_entity_type": null,
+              "review": null,
+              "explicit": null,
+              "images": [],
+              "grouping": null,
+              "genres": null,
+              "mood": null,
+              "style": null,
+              "copyright": null,
+              "lyrics": null,
+              "lrc_lyrics": null,
+              "transcript": null,
+              "transcript_cues": null,
+              "has_transcript": null,
+              "label": null,
+              "links": null,
+              "performers": null,
+              "preview": null,
+              "popularity": null,
+              "release_date": null,
+              "languages": null,
+              "chapters": null,
+              "collections": null,
+              "last_refresh": null
+            },
+            "favorite": false,
+            "position": null,
+            "date_added": null,
+            "artist_type": "singer"
+          }
+        ],
+        "last_played": 0,
+        "album": {
+          "item_id": "25irJgxRNTlyg8pUmWfDVG",
+          "provider": "spotify--FMAF5tEG",
+          "name": "Greatest Hits",
+          "version": "",
+          "sort_name": "greatest hits",
+          "uri": "spotify--FMAF5tEG://album/25irJgxRNTlyg8pUmWfDVG",
+          "external_ids": [],
+          "is_playable": true,
+          "media_type": "album",
+          "available": true,
+          "image": {
+            "type": "thumb",
+            "path": "https://i.scdn.co/image/ab67616d0000b273ebb9f3c341e85db31408652e",
+            "provider": "spotify--FMAF5tEG",
+            "remotely_accessible": true,
+            "proxy_id": "64180eb67f3952399924f4fd214da9d5105fc499451b7fa3e9ecb42f7d72a278"
+          },
+          "year": 1972
+        },
+        "disc_number": 1,
+        "track_number": 1,
+        "audio_metadata": {
+          "bpm": 128.68008871088762,
+          "musical_key": "E minor"
+        }
+      },
+      "image": {
+        "type": "thumb",
+        "path": "https://i.scdn.co/image/ab67616d0000b273ebb9f3c341e85db31408652e",
+        "provider": "spotify--FMAF5tEG",
+        "remotely_accessible": true,
+        "proxy_id": "64180eb67f3952399924f4fd214da9d5105fc499451b7fa3e9ecb42f7d72a278"
+      },
+      "index": 0,
+      "available": true,
+      "extra_attributes": {}
+    },
+    "sources": [
+      {
+        "item_id": "28",
+        "provider": "library",
+        "name": "Mammas favvisar",
+        "version": "",
+        "sort_name": "mammas favvisar",
+        "uri": "library://playlist/28",
+        "external_ids": [],
+        "is_playable": true,
+        "media_type": "playlist",
+        "available": true,
+        "image": {
+          "type": "thumb",
+          "path": "https://mosaic.scdn.co/640/ab67616d00001e02021463190197caeb844dd8d6ab67616d00001e026f797e607164ef94ab773398ab67616d00001e02a04b4373fd72bf81c8784adfab67616d00001e02c0fa62ae53b2aeae3766f13d",
+          "provider": "spotify",
+          "remotely_accessible": true,
+          "proxy_id": "33b52eea06a2c2f502f2024e1df0dc31880b4baa9383d7a4d2ee7b101812c055"
+        },
+        "year": null
+      }
+    ],
+    "flow_mode": true,
+    "resume_pos": 0,
+    "is_dynamic": false,
+    "extra_attributes": {
+      "play_action_in_progress": false
+    },
+    "dont_stop_the_music_enabled": false,
+    "radio_source": []
+  },
+  {
+    "queue_id": "919454fc-c108-40cd-8ac5-23808d3fa5a9",
+    "active": true,
+    "display_name": "Verandans h\u00f6gtalare",
+    "available": true,
+    "items": 0,
+    "shuffle_enabled": false,
+    "repeat_mode": "off",
+    "crossfade_enabled": false,
+    "autoplay_enabled": false,
+    "overlay_enabled": false,
+    "overlay_source": null,
+    "overlay_volume": 100,
+    "smart_fades_active": false,
+    "smart_shuffle_active": false,
+    "current_index": null,
+    "index_in_buffer": null,
+    "ended": false,
+    "elapsed_time": 0.0,
+    "elapsed_time_last_updated": 1788615068.9897668,
+    "playback_speed": 1.0,
+    "state": "idle",
+    "current_item": null,
+    "next_item": null,
+    "sources": [],
+    "flow_mode": false,
+    "resume_pos": 0,
+    "is_dynamic": false,
+    "extra_attributes": {
+      "play_action_in_progress": false
+    },
+    "dont_stop_the_music_enabled": false,
+    "radio_source": []
+  },
+  {
+    "queue_id": "aea84eaf-2bc6-4267-8f3d-2fbeec03a194",
+    "active": true,
+    "display_name": "Dassens h\u00f6gtalare",
+    "available": true,
+    "items": 92,
+    "shuffle_enabled": true,
+    "repeat_mode": "all",
+    "crossfade_enabled": false,
+    "autoplay_enabled": false,
+    "overlay_enabled": false,
+    "overlay_source": null,
+    "overlay_volume": 100,
+    "smart_fades_active": false,
+    "smart_shuffle_active": false,
+    "current_index": 26,
+    "index_in_buffer": 26,
+    "ended": false,
+    "elapsed_time": 38.5952263836316,
+    "elapsed_time_last_updated": 1791012679.8027215,
+    "playback_speed": 1.0,
+    "state": "playing",
+    "current_item": {
+      "queue_id": "aea84eaf-2bc6-4267-8f3d-2fbeec03a194",
+      "queue_item_id": "5ebe200d8e9e4004b22e158440f177a6",
+      "name": "Sam Cooke - Bring It On Home To Me",
+      "duration": 162,
+      "sort_index": 51,
+      "streamdetails": {
+        "provider": "filesystem_local--d4bbESrb",
+        "item_id": "Motown & Soul (60s, 70s & 80s)/Sam Cooke - Bring It On Home To Me (SPOTISAVER).mp3",
+        "audio_format": {
+          "content_type": "mp3",
+          "codec_type": "mp3",
+          "sample_rate": 44100,
+          "bit_depth": 16,
+          "channels": 2,
+          "output_format_str": "mp3",
+          "bit_rate": 320
+        },
+        "media_type": "track",
+        "stream_type": "local_file",
+        "duration": 162,
+        "size": 7013074,
+        "stream_metadata": null,
+        "audio_processing": {
+          "input_fidelity": {
+            "quality": "standard",
+            "bit_perfect": null
+          },
+          "queue_processing": {
+            "pcm_format": {
+              "content_type": "f32le",
+              "codec_type": "f32le",
+              "sample_rate": 48000,
+              "bit_depth": 32,
+              "channels": 2,
+              "output_format_str": "pcm;codec=pcm;rate=48000;bitrate=32;channels=2",
+              "bit_rate": 3072
+            },
+            "normalization": {
+              "mode": "measurement_only",
+              "measurement_source": "track",
+              "target_lufs": -19.0,
+              "measured_lufs": -10.4,
+              "applied_gain_db": -8.6
+            },
+            "playback_speed": 1.0,
+            "crossfade_mode": "disabled",
+            "overlay_active": false
+          },
+          "outputs": [
+            {
+              "player_ids": [
+                "aea84eaf-2bc6-4267-8f3d-2fbeec03a194",
+                "up366fb600",
+                "up74890f07"
+              ],
+              "dsp": {
+                "state": "disabled",
+                "input_gain": 0.0,
+                "filters": [],
+                "output_gain": 0.0,
+                "preset_id": null
+              },
+              "source_channel": null,
+              "output_format": {
+                "content_type": "flac",
+                "codec_type": "?",
+                "sample_rate": 48000,
+                "bit_depth": 16,
+                "channels": 2,
+                "output_format_str": "flac",
+                "bit_rate": 1147
+              },
+              "fidelity": {
+                "quality": "standard",
+                "bit_perfect": false
+              }
+            }
+          ]
+        },
+        "loudness": -10.4,
+        "loudness_album": null,
+        "prefer_album_loudness": false,
+        "volume_normalization_mode": "measurement_only",
+        "volume_normalization_gain_correct": -8.6,
+        "target_loudness": -19.0,
+        "stream_title": null
+      },
+      "media_item": {
+        "item_id": "797",
+        "provider": "library",
+        "name": "Bring It On Home To Me",
+        "version": "",
+        "sort_name": "bring it on home to me",
+        "uri": "library://track/797",
+        "external_ids": [],
+        "is_playable": true,
+        "media_type": "track",
+        "provider_mappings": [
+          {
+            "item_id": "Motown & Soul (60s, 70s & 80s)/Sam Cooke - Bring It On Home To Me (SPOTISAVER).mp3",
+            "provider_domain": "filesystem_local",
+            "provider_instance": "filesystem_local--d4bbESrb",
+            "available": true,
+            "in_library": true,
+            "is_unique": null,
+            "audio_format": {
+              "content_type": "mp3",
+              "codec_type": "mp3",
+              "sample_rate": 44100,
+              "bit_depth": 16,
+              "channels": 2,
+              "output_format_str": "mp3",
+              "bit_rate": 345
+            },
+            "url": null,
+            "details": "1788771876"
+          }
+        ],
+        "metadata": {
+          "description": null,
+          "description_language": null,
+          "life_span": null,
+          "artist_entity_type": null,
+          "review": null,
+          "explicit": null,
+          "images": [
+            {
+              "type": "thumb",
+              "path": "Motown & Soul (60s, 70s & 80s)/Sam Cooke - Chain Gang (SPOTISAVER).mp3",
+              "provider": "filesystem_local--d4bbESrb",
+              "remotely_accessible": false,
+              "proxy_id": "4fac8aea5972da98be7df6049e526f5c5fd69847caf295b291c5d049f31a4241"
+            },
+            {
+              "type": "thumb",
+              "path": "Motown & Soul (60s, 70s & 80s)/Sam Cooke - Bring It On Home To Me (SPOTISAVER).mp3",
+              "provider": "filesystem_local--d4bbESrb",
+              "remotely_accessible": false,
+              "proxy_id": "899d067ff6b6bd79146285400ce82d3c80af61b528f55fb38e10d57df7ff58cd"
+            }
+          ],
+          "grouping": null,
+          "genres": [],
+          "mood": null,
+          "style": null,
+          "copyright": null,
+          "lyrics": null,
+          "lrc_lyrics": "[00:14.26] If you ever change your mind\n[00:20.86] About leaving, leaving me behind\n[00:26.89] Baby, bring it to me\n[00:29.92] Bring your sweet loving\n[00:33.18] Bring it on home to me\n[00:36.28] Yeah (yeah) yeah (yeah) yeah (yeah)\n[00:41.26] I know I laughed when you left\n[00:47.53] But now I know I only hurt myself\n[00:53.53] Baby, bring it to me\n[00:57.04] Bring your sweet loving\n[01:00.47] Bring it on home to me\n[01:03.05] Yeah (yeah) yeah (yeah) yeah (yeah)\n[01:08.09] I'll give you jewellery and money, too\n[01:14.58] That ain't all, that ain't all I'll do for you\n[01:20.83] Oh, if you bring it to me\n[01:24.36] Bring your sweet loving\n[01:27.30] Bring it on home to me\n[01:30.17] Yeah (yeah) yeah (yeah) yeah (yeah)\n[01:35.28] You know I'll always be your slave\n[01:41.71] 'Til I'm buried, buried in my grave\n[01:47.97] Oh honey, bring it to me\n[01:50.70] Bring your sweet loving\n[01:54.15] Bring it on home to me\n[01:56.94] Yeah (yeah) yeah (yeah) yeah (yeah)\n[02:02.05] One more thing\n[02:05.37] I tried to treat you right\n[02:08.87] But you stayed out, stayed out at night\n[02:14.54] But I forgive you, bring it to me\n[02:18.17] Bring your sweet loving\n[02:21.37] Bring it on home to me\n[02:24.18] Yeah (yeah) yeah (yeah) yeah (yeah)\n[02:29.13] Yeah (yeah) yeah (yeah) yeah (yeah)\n[02:32.64] Yeah (yeah) yeah (yeah) yeah (yeah)\n[02:35.78] Yeah (yeah) yeah\n[02:37.86] ",
+          "transcript": null,
+          "transcript_cues": null,
+          "has_transcript": null,
+          "label": null,
+          "links": null,
+          "performers": null,
+          "preview": null,
+          "popularity": null,
+          "release_date": null,
+          "languages": null,
+          "chapters": null,
+          "collections": null,
+          "last_refresh": 1789904888
+        },
+        "favorite": false,
+        "position": null,
+        "date_added": "2026-09-07T09:05:07+00:00",
+        "duration": 162,
+        "artists": [
+          {
+            "item_id": "396",
+            "provider": "library",
+            "name": "Sam Cooke",
+            "version": "",
+            "sort_name": "sam cooke",
+            "uri": "library://artist/396",
+            "external_ids": [
+              [
+                "musicbrainz_artistid",
+                "6c8fd0be-d961-454c-aee0-4366a6dbc993"
+              ]
+            ],
+            "is_playable": true,
+            "media_type": "artist",
+            "available": true,
+            "image": null,
+            "year": null
+          }
+        ],
+        "last_played": 1790862300,
+        "album": {
+          "item_id": "142",
+          "provider": "library",
+          "name": "30 Greatest Hits: Portrait of a Legend 1951-1964",
+          "version": "",
+          "sort_name": "30 greatest hits: portrait of a legend 1951-1964",
+          "uri": "library://album/142",
+          "external_ids": [],
+          "is_playable": true,
+          "media_type": "album",
+          "provider_mappings": [
+            {
+              "item_id": "Various Artists/30 Greatest Hits: Portrait of a Legend 1951-1964",
+              "provider_domain": "filesystem_local",
+              "provider_instance": "filesystem_local--d4bbESrb",
+              "available": true,
+              "in_library": true,
+              "is_unique": null,
+              "audio_format": {
+                "content_type": "?",
+                "codec_type": "?",
+                "sample_rate": 44100,
+                "bit_depth": 16,
+                "channels": 2,
+                "output_format_str": "?",
+                "bit_rate": 0
+              },
+              "url": null,
+              "details": null
+            }
+          ],
+          "metadata": {
+            "description": null,
+            "description_language": null,
+            "life_span": null,
+            "artist_entity_type": null,
+            "review": null,
+            "explicit": null,
+            "images": [
+              {
+                "type": "thumb",
+                "path": "Motown & Soul (60s, 70s & 80s)/Sam Cooke - Chain Gang (SPOTISAVER).mp3",
+                "provider": "filesystem_local--d4bbESrb",
+                "remotely_accessible": false,
+                "proxy_id": "4fac8aea5972da98be7df6049e526f5c5fd69847caf295b291c5d049f31a4241"
+              }
+            ],
+            "grouping": null,
+            "genres": null,
+            "mood": null,
+            "style": null,
+            "copyright": null,
+            "lyrics": null,
+            "lrc_lyrics": null,
+            "transcript": null,
+            "transcript_cues": null,
+            "has_transcript": null,
+            "label": null,
+            "links": null,
+            "performers": null,
+            "preview": null,
+            "popularity": null,
+            "release_date": null,
+            "languages": null,
+            "chapters": null,
+            "collections": null,
+            "last_refresh": 1788784469
+          },
+          "favorite": false,
+          "position": null,
+          "date_added": "2026-09-07T09:05:08+00:00",
+          "year": 2003,
+          "artists": [
+            {
+              "item_id": "21",
+              "provider": "library",
+              "name": "Blandade Artister",
+              "version": "",
+              "sort_name": "blandade artister",
+              "uri": "library://artist/21",
+              "external_ids": [],
+              "is_playable": true,
+              "media_type": "artist",
+              "available": true,
+              "image": null,
+              "year": null
+            }
+          ],
+          "album_type": "unknown"
+        },
+        "disc_number": 1,
+        "track_number": 17,
+        "audio_metadata": null
+      },
+      "image": {
+        "type": "thumb",
+        "path": "Motown & Soul (60s, 70s & 80s)/Sam Cooke - Chain Gang (SPOTISAVER).mp3",
+        "provider": "filesystem_local--d4bbESrb",
+        "remotely_accessible": false,
+        "proxy_id": "4fac8aea5972da98be7df6049e526f5c5fd69847caf295b291c5d049f31a4241"
+      },
+      "index": 0,
+      "available": true,
+      "extra_attributes": {}
+    },
+    "next_item": {
+      "queue_id": "aea84eaf-2bc6-4267-8f3d-2fbeec03a194",
+      "queue_item_id": "620314f5f2b445d395c77eab5352c1f5",
+      "name": "Hot Chocolate - It Started with a Kiss (2011 Remaster)",
+      "duration": 243,
+      "sort_index": 23,
+      "streamdetails": {
+        "provider": "filesystem_local--d4bbESrb",
+        "item_id": "Motown & Soul (60s, 70s & 80s)/Hot Chocolate - It Started with a Kiss - 2011 Remaster (SPOTISAVER).mp3",
+        "audio_format": {
+          "content_type": "mp3",
+          "codec_type": "mp3",
+          "sample_rate": 44100,
+          "bit_depth": 16,
+          "channels": 2,
+          "output_format_str": "mp3",
+          "bit_rate": 332
+        },
+        "media_type": "track",
+        "stream_type": "local_file",
+        "duration": 243,
+        "size": 10087116,
+        "stream_metadata": null,
+        "audio_processing": null,
+        "loudness": null,
+        "loudness_album": null,
+        "prefer_album_loudness": false,
+        "volume_normalization_mode": "dynamic",
+        "volume_normalization_gain_correct": null,
+        "target_loudness": -19.0,
+        "stream_title": null
+      },
+      "media_item": {
+        "item_id": "810",
+        "provider": "library",
+        "name": "It Started with a Kiss",
+        "version": "2011 Remaster",
+        "sort_name": "it started with a kiss",
+        "uri": "library://track/810",
+        "external_ids": [],
+        "is_playable": true,
+        "media_type": "track",
+        "provider_mappings": [
+          {
+            "item_id": "Motown & Soul (60s, 70s & 80s)/Hot Chocolate - It Started with a Kiss - 2011 Remaster (SPOTISAVER).mp3",
+            "provider_domain": "filesystem_local",
+            "provider_instance": "filesystem_local--d4bbESrb",
+            "available": true,
+            "in_library": true,
+            "is_unique": null,
+            "audio_format": {
+              "content_type": "mp3",
+              "codec_type": "mp3",
+              "sample_rate": 44100,
+              "bit_depth": 16,
+              "channels": 2,
+              "output_format_str": "mp3",
+              "bit_rate": 332
+            },
+            "url": null,
+            "details": "1788771877"
+          }
+        ],
+        "metadata": {
+          "description": null,
+          "description_language": null,
+          "life_span": null,
+          "artist_entity_type": null,
+          "review": null,
+          "explicit": null,
+          "images": [
+            {
+              "type": "thumb",
+              "path": "Motown & Soul (60s, 70s & 80s)/Hot Chocolate - It Started with a Kiss - 2011 Remaster (SPOTISAVER).mp3",
+              "provider": "filesystem_local--d4bbESrb",
+              "remotely_accessible": false,
+              "proxy_id": "da4be328b81cbffacfc7ee351bb4c825dede6accd9d148ac2cfffec92f009e2f"
+            }
+          ],
+          "grouping": null,
+          "genres": [],
+          "mood": null,
+          "style": null,
+          "copyright": null,
+          "lyrics": "It started with a kiss, in the back row of the classroom\nHow could I resist the aroma of your perfume\nYou and I were inseparable, it was love at first sight\nYou made me promise to marry you, I made you promise to be my bride\nBut you were only eight years old and I had just about turned nine\nI thought that life was always good,\nI thought you always would be mine\nIt started with a kiss, I never thought it would come to this\nIt started with a kiss, I never thought it would come to this\nI remember every little thing, like fighting in the playground\nSome good looking boys had started to hang around\nThat boy hurt me so bad but I was happy 'cause you cried\nStill I couldn't help but notice that new distant look in your eyes\nThen when you were sixteen I had just turned seventeen\nI couldn't hold on to my love, I couldn't hold on to my dream\nIt started with a kiss, I never thought it would come to this\nIt started with a kiss, I never thought it would come to this\nYou don't remember me do you?\nYou don't remember me do you?\nWalking down the streets again, the star of my love story\nAnd my heart began to beat so fast, so clear was my memory\nI heard my voice call out your name as you looked then looked away\nI felt so hurt, I felt so small, it was all that I could say\nYou don't remember me do you?\nYou don't remember me do you?\nIt started with a kiss, I never thought it would come to this\nIt started with a kiss, I never thought it would come to this\nFuente: LyricFind",
+          "lrc_lyrics": null,
+          "transcript": null,
+          "transcript_cues": null,
+          "has_transcript": null,
+          "label": null,
+          "links": null,
+          "performers": null,
+          "preview": null,
+          "popularity": null,
+          "release_date": null,
+          "languages": null,
+          "chapters": null,
+          "collections": null,
+          "last_refresh": 1789822584
+        },
+        "favorite": false,
+        "position": null,
+        "date_added": "2026-09-07T09:04:56+00:00",
+        "duration": 243,
+        "artists": [
+          {
+            "item_id": "381",
+            "provider": "library",
+            "name": "Hot Chocolate",
+            "version": "",
+            "sort_name": "hot chocolate",
+            "uri": "library://artist/381",
+            "external_ids": [
+              [
+                "musicbrainz_artistid",
+                "a749130e-c2d8-4a7c-b740-908ea4574961"
+              ]
+            ],
+            "is_playable": true,
+            "media_type": "artist",
+            "available": true,
+            "image": null,
+            "year": null
+          }
+        ],
+        "last_played": 1790868197,
+        "album": {
+          "item_id": "174",
+          "provider": "library",
+          "name": "Mystery",
+          "version": "",
+          "sort_name": "mystery",
+          "uri": "library://album/174",
+          "external_ids": [],
+          "is_playable": true,
+          "media_type": "album",
+          "provider_mappings": [
+            {
+              "item_id": "Various Artists/Mystery",
+              "provider_domain": "filesystem_local",
+              "provider_instance": "filesystem_local--d4bbESrb",
+              "available": true,
+              "in_library": true,
+              "is_unique": null,
+              "audio_format": {
+                "content_type": "?",
+                "codec_type": "?",
+                "sample_rate": 44100,
+                "bit_depth": 16,
+                "channels": 2,
+                "output_format_str": "?",
+                "bit_rate": 0
+              },
+              "url": null,
+              "details": null
+            }
+          ],
+          "metadata": {
+            "description": null,
+            "description_language": null,
+            "life_span": null,
+            "artist_entity_type": null,
+            "review": null,
+            "explicit": null,
+            "images": [
+              {
+                "type": "thumb",
+                "path": "Motown & Soul (60s, 70s & 80s)/Hot Chocolate - It Started with a Kiss - 2011 Remaster (SPOTISAVER).mp3",
+                "provider": "filesystem_local--d4bbESrb",
+                "remotely_accessible": false,
+                "proxy_id": "da4be328b81cbffacfc7ee351bb4c825dede6accd9d148ac2cfffec92f009e2f"
+              }
+            ],
+            "grouping": null,
+            "genres": null,
+            "mood": null,
+            "style": null,
+            "copyright": null,
+            "lyrics": null,
+            "lrc_lyrics": null,
+            "transcript": null,
+            "transcript_cues": null,
+            "has_transcript": null,
+            "label": null,
+            "links": null,
+            "performers": null,
+            "preview": null,
+            "popularity": null,
+            "release_date": null,
+            "languages": null,
+            "chapters": null,
+            "collections": null,
+            "last_refresh": 1788780735
+          },
+          "favorite": false,
+          "position": null,
+          "date_added": "2026-09-07T09:04:56+00:00",
+          "year": 1982,
+          "artists": [
+            {
+              "item_id": "21",
+              "provider": "library",
+              "name": "Blandade Artister",
+              "version": "",
+              "sort_name": "blandade artister",
+              "uri": "library://artist/21",
+              "external_ids": [],
+              "is_playable": true,
+              "media_type": "artist",
+              "available": true,
+              "image": null,
+              "year": null
+            }
+          ],
+          "album_type": "unknown"
+        },
+        "disc_number": 1,
+        "track_number": 6,
+        "audio_metadata": null
+      },
+      "image": {
+        "type": "thumb",
+        "path": "Motown & Soul (60s, 70s & 80s)/Hot Chocolate - It Started with a Kiss - 2011 Remaster (SPOTISAVER).mp3",
+        "provider": "filesystem_local--d4bbESrb",
+        "remotely_accessible": false,
+        "proxy_id": "da4be328b81cbffacfc7ee351bb4c825dede6accd9d148ac2cfffec92f009e2f"
+      },
+      "index": 0,
+      "available": true,
+      "extra_attributes": {}
+    },
+    "sources": [
+      {
+        "item_id": "59",
+        "provider": "library",
+        "name": "Motown & Soul (60s, 70s & 80s)",
+        "version": "",
+        "sort_name": "motown & soul (60s, 70s & 80s)",
+        "uri": "library://playlist/59",
+        "external_ids": [],
+        "is_playable": true,
+        "media_type": "playlist",
+        "available": true,
+        "image": {
+          "type": "thumb",
+          "path": "/data/playlist_metadata_images/59_1788773071_thumb.jpg",
+          "provider": "playlist_metadata",
+          "remotely_accessible": false,
+          "proxy_id": "6621da7f9db2b4c4a5faee9dcb063f83798beaa7bec2e5b618d1668d663eb6da"
+        },
+        "year": null
+      }
+    ],
+    "flow_mode": true,
+    "resume_pos": 0,
+    "is_dynamic": false,
+    "extra_attributes": {
+      "play_action_in_progress": false
+    },
+    "dont_stop_the_music_enabled": false,
+    "radio_source": []
+  },
+  {
+    "queue_id": "a56bb45d-aa7e-3a34-132d-5baa281f1f23",
+    "active": true,
+    "display_name": "Diegos v\u00e4ckarklocka",
+    "available": true,
+    "items": 0,
+    "shuffle_enabled": false,
+    "repeat_mode": "off",
+    "crossfade_enabled": false,
+    "autoplay_enabled": false,
+    "overlay_enabled": false,
+    "overlay_source": null,
+    "overlay_volume": 100,
+    "smart_fades_active": false,
+    "smart_shuffle_active": false,
+    "current_index": null,
+    "index_in_buffer": null,
+    "ended": false,
+    "elapsed_time": 0.0,
+    "elapsed_time_last_updated": 1790971537.8974051,
+    "playback_speed": 1.0,
+    "state": "idle",
+    "current_item": null,
+    "next_item": null,
+    "sources": [],
+    "flow_mode": false,
+    "resume_pos": 0,
+    "is_dynamic": false,
+    "extra_attributes": {
+      "play_action_in_progress": false
+    },
+    "dont_stop_the_music_enabled": false,
+    "radio_source": []
+  },
+  {
+    "queue_id": "741eea0d-05a3-445b-a807-71d6884f1a90",
+    "active": true,
+    "display_name": "Verandans h\u00f6gtalare v\u00e4nster",
+    "available": true,
+    "items": 0,
+    "shuffle_enabled": false,
+    "repeat_mode": "off",
+    "crossfade_enabled": false,
+    "autoplay_enabled": false,
+    "overlay_enabled": false,
+    "overlay_source": null,
+    "overlay_volume": 100,
+    "smart_fades_active": false,
+    "smart_shuffle_active": false,
+    "current_index": null,
+    "index_in_buffer": null,
+    "ended": false,
+    "elapsed_time": 0.0,
+    "elapsed_time_last_updated": 1790956957.0963411,
+    "playback_speed": 1.0,
+    "state": "idle",
+    "current_item": null,
+    "next_item": null,
+    "sources": [],
+    "flow_mode": false,
+    "resume_pos": 0,
+    "is_dynamic": false,
+    "extra_attributes": {
+      "play_action_in_progress": false
+    },
+    "dont_stop_the_music_enabled": false,
+    "radio_source": []
+  }
+]

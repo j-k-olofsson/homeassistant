@@ -1,0 +1,5 @@
+# Shared API connection behavior for Wi-Fi, Thread and Voice devices.
+# The including device/base package supplies its existing api.encryption key.
+# Requires ESPHome 2026.10.0+ and Home Assistant 2026.10.0+.
+api:
+  outgoing_connection:

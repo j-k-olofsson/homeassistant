@@ -1,0 +1,4 @@
+{"status": "rename_intent", "old": "script.rescan_wifi_on_esphome_nodes", "new": "script.esphome_sok_efter_wi_fi_nat"}
+{"status": "renamed", "old": "script.rescan_wifi_on_esphome_nodes", "new": "script.esphome_sok_efter_wi_fi_nat"}
+{"status": "rename_intent", "old": "script.godnatt_forbered_nasta_halsning", "new": "script.godnatt_forbered_nasta_halsning_efter_rutinen"}
+{"status": "renamed", "old": "script.godnatt_forbered_nasta_halsning", "new": "script.godnatt_forbered_nasta_halsning_efter_rutinen"}

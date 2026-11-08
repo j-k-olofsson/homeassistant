@@ -1,0 +1,2888 @@
+{
+  "stage": "15-slutgranskning-namn-02",
+  "description": "Svenska funktionsnamn och bevarade särskiljande tekniska identiteter.",
+  "operations": [
+    {
+      "kind": "entity",
+      "id": "sensor.core_api_wake_up_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Core API Wake-up Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.frigg_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Tor Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ping_svarstid_o_30_dagar_3",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Ping Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssh_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "SSH Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.caddy_reverse_proxy_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Caddy Reverse Proxy Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.docker_api_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Docker API Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.glances_ui_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Glances UI Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ollama_api_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Ollama API Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.uptime_proxy_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Uptime proxy Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ollama_container_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Ollama Container Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.caddy_container_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Caddy Container Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_test_container_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "HA (Test) Container Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.esphome_test_container_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "ESPHome (Test) Container Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.glances_container_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Glances Container Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.portainer_agent_container_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Portainer Agent Container Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.docker_socket_proxy_container_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Docker Socket Proxy Container Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.open_webui_container_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Open webUI Container Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.openwrt_backup_container_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "OpenWRT Backup Container Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.portainer_container_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Portainer Container Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.uptime_kuma_container_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Uptime-kuma Container Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.home_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Home Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.gw_home_arpa_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "gw.home.arpa Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_kontoret_home_arpa_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "ap_kontoret.home.arpa Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_koket_home_arpa_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "ap_koket.home.arpa Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_kallaren_home_arpa_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "ap_kallaren.home.arpa Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_verkstaden_home_arpa_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "ap_verkstaden.home.arpa Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_friggan_home_arpa_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "ap_friggan.home.arpa Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_honshuset_home_arpa_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "ap_honshuset.home.arpa Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_poolen_home_arpa_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "ap_poolen.home.arpa Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.gw_buck_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "gw_buck Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_buck_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "ap_buck Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.buck_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Buck Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_buck_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "ha_buck Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kiwi_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Kiwi Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.gw_kiwi_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "gw_kiwi Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_kiwi_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "ap_kiwi Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_kiwi_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "ha_kiwi Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sippan_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Sippan Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.gw_sippan_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "gw_sippan Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_sippan_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "ha_sippan Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.adguard_dns_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "AdGuard DNS Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sw_vinden_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "sw_vinden Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sw_kontoret_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "sw_kontoret Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.portainer_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Portainer Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.open_webui_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Open WebUI Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.wyoming_whisper_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Wyoming Whisper Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.uptime_via_caddy_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Uptime Kuma – direkt Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.eir_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Heimdal Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ping_svarstid_o_365_dagar_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Ping Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.home_assistant_ui_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Home Assistant UI Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.supervisor_health_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Supervisor Health Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.core_api_wake_up_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Core API Wake-up Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.frigg_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Tor Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ping_svarstid_o_365_dagar_3",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Ping Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssh_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "SSH Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.caddy_reverse_proxy_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Caddy Reverse Proxy Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.docker_api_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Docker API Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.glances_ui_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Glances UI Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ollama_api_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Ollama API Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.uptime_proxy_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Uptime proxy Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ollama_container_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Ollama Container Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.caddy_container_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Caddy Container Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_test_container_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "HA (Test) Container Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.esphome_test_container_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "ESPHome (Test) Container Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.glances_container_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Glances Container Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.portainer_agent_container_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Portainer Agent Container Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.docker_socket_proxy_container_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Docker Socket Proxy Container Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.open_webui_container_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Open webUI Container Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.openwrt_backup_container_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "OpenWRT Backup Container Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.portainer_container_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Portainer Container Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.uptime_kuma_container_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Uptime-kuma Container Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.home_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Home Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.gw_home_arpa_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "gw.home.arpa Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_kontoret_home_arpa_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "ap_kontoret.home.arpa Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_koket_home_arpa_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "ap_koket.home.arpa Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_kallaren_home_arpa_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "ap_kallaren.home.arpa Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_verkstaden_home_arpa_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "ap_verkstaden.home.arpa Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_friggan_home_arpa_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "ap_friggan.home.arpa Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_honshuset_home_arpa_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "ap_honshuset.home.arpa Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_poolen_home_arpa_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "ap_poolen.home.arpa Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.gw_buck_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "gw_buck Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_buck_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "ap_buck Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.buck_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Buck Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_buck_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "ha_buck Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kiwi_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Kiwi Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.gw_kiwi_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "gw_kiwi Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_kiwi_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "ap_kiwi Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_kiwi_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "ha_kiwi Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sippan_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Sippan Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.gw_sippan_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "gw_sippan Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_sippan_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "ha_sippan Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.adguard_dns_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "AdGuard DNS Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sw_vinden_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "sw_vinden Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sw_kontoret_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "sw_kontoret Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "update.192_168_10_100_uptime_kuma_version",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Version",
+        "aliases": [
+          "Uptime Kuma (Tor) Uptime Kuma version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.frigg_kernel_version",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kärnversion",
+        "aliases": [
+          "Kernel-version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.utomhus_sef_42h_usable_battery_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Användbar batterinivå",
+        "aliases": [
+          "SEF 42H Usable battery level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kajplats_e27_cws_globe_1055lm_thread_routing_roll",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Thread-routingroll",
+        "aliases": [
+          "Thread-routing roll"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "number.kajplats_e27_cws_globe_1055lm_pa_niva",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Nivå vid påslagning",
+        "aliases": [
+          "Bordslampa vänster På nivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "number.kajplats_e27_cws_globe_1055lm_power_on_niva",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Nivå vid uppstart",
+        "aliases": [
+          "Bordslampa vänster Power on-nivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "number.kajplats_e27_cws_globe_1055lm_pa_overgangstid",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Övergångstid vid påslagning",
+        "aliases": [
+          "Bordslampa vänster På övergångstid"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "number.kajplats_e27_cws_globe_1055lm_av_overgangstid",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Övergångstid vid avslagning",
+        "aliases": [
+          "Bordslampa vänster Av övergångstid"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "number.kajplats_e27_cws_globe_1055lm_pa_av_overgangstid",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Övergångstid på/av",
+        "aliases": [
+          "Bordslampa vänster På/av övergångstid"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.honsbelysning_esphome56_lokal_tid",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Lokal tid",
+        "aliases": [
+          "Hönsbelysning esphome56 Lokal tid"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssh_borg_atkomst_svarstid_o_1_dag",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (1 dag)",
+        "aliases": [
+          "Mimer – tillgänglighet (SSH) Svarstid Ø (1 dag)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_mimer_verifierad_backup_svarstid_o_1_dag",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (1 dag)",
+        "aliases": [
+          "Svarstid Ø (1 dag)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mimer_svarstid_o_1_dag",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (1 dag)",
+        "aliases": [
+          "Mimer – samlad hälsa Svarstid Ø (1 dag)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssh_borg_atkomst_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Mimer – tillgänglighet (SSH) Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_mimer_verifierad_backup_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mimer_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Mimer – samlad hälsa Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ssh_borg_atkomst_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Mimer – tillgänglighet (SSH) Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_mimer_verifierad_backup_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mimer_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Mimer – samlad hälsa Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.diskhalsa_och_lagring_svarstid_o_1_dag",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (1 dag)",
+        "aliases": [
+          "Svarstid Ø (1 dag)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.diskhalsa_och_lagring_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.diskhalsa_och_lagring_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.glances_https_svarstid_o_1_dag",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (1 dag)",
+        "aliases": [
+          "Glances HTTPS Svarstid Ø (1 dag)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.glances_https_svarstid_o_30_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          "Glances HTTPS Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.glances_https_svarstid_o_365_dagar",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          "Glances HTTPS Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.utomhus_led_stjarnor_utomhus_shpls_aioshelly_ble_integration",
+      "before": {
+        "name": null,
+        "aliases": [
+          null,
+          "Led-stjärnor (utomhus) [SHPLS] aioshelly_ble_integration"
+        ]
+      },
+      "after": {
+        "name": "Bluetooth-integration",
+        "aliases": [
+          "Led-stjärnor (utomhus) [SHPLS] aioshelly_ble_integration",
+          "aioshelly_ble_integration"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_pixel_9_pro_xl_tonal_palette",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Färgpalett",
+        "aliases": [
+          "Tonal palette"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_pixel_9_pro_xl_volume_level_assistant",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Assistentens ljudvolym",
+        "aliases": [
+          "Volume level assistant"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nothing_mobil_tonal_palette",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Färgpalett",
+        "aliases": [
+          "Tonal palette"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_bilresa_dual_button_batteri",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterinivå",
+        "aliases": [
+          "BILRESA dual button Batteri"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bermuda_global_total_proxy_count",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Antal proxyer totalt",
+        "aliases": [
+          "Bermuda Global Total proxy count"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bermuda_global_active_proxy_count",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Antal aktiva proxyer",
+        "aliases": [
+          "Bermuda Global Active proxy count"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bermuda_global_total_device_count",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Antal enheter totalt",
+        "aliases": [
+          "Bermuda Global Total device count"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bermuda_global_visible_device_count",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Antal synliga enheter",
+        "aliases": [
+          "Bermuda Global Visible device count"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.adaptive_lighting_ateljen_test_sleep_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Viloläge",
+        "aliases": [
+          "Adaptive Lighting: Ateljén – test Sleep Mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.adaptive_lighting_ateljen_test_adapt_color",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Anpassa färg",
+        "aliases": [
+          "Adaptive Lighting: Ateljén – test Adapt Color"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.adaptive_lighting_ateljen_test_adapt_brightness",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Anpassa ljusstyrka",
+        "aliases": [
+          "Adaptive Lighting: Ateljén – test Adapt Brightness"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_area",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Område",
+        "aliases": [
+          "ATC_BFE81B Area"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_floor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Våning",
+        "aliases": [
+          "ATC_BFE81B Floor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_distance",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avstånd",
+        "aliases": [
+          "ATC_BFE81B Distance"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_nearest_scanner",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Närmaste skanner",
+        "aliases": [
+          "Nearest Scanner"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_nearest_rssi",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Närmaste signalstyrka",
+        "aliases": [
+          "Nearest RSSI"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_area_last_seen",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Område senast sett",
+        "aliases": [
+          "Area Last Seen"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_area_switch_diagnostic",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diagnostik för områdesbyte",
+        "aliases": [
+          "Area Switch Diagnostic"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_distance_to_shelly_pro_3_verkstaden",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Shelly Pro 3",
+        "aliases": [
+          "Distance to Shelly Pro 3"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_unfiltered_distance_to_shelly_pro_3_verkstaden",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Shelly Pro 3",
+        "aliases": [
+          "Unfiltered Distance to Shelly Pro 3"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_distance_to_c4_4f_33_72_73_e1",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Vattennivå",
+        "aliases": [
+          "Distance to Vattennivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_unfiltered_distance_to_c4_4f_33_72_73_e1",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Vattennivå",
+        "aliases": [
+          "Unfiltered Distance to Vattennivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_distance_to_shellyplusplugs_08f9e0fd4304",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avstånd till LED-stjärnor",
+        "aliases": [
+          "Distance to LED-stjärnor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_unfiltered_distance_to_shellyplusplugs_08f9e0fd4304",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till LED-stjärnor",
+        "aliases": [
+          "Unfiltered Distance to LED-stjärnor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_distance_to_vaggkontakt_x2_verandan",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Väggkontakt x2",
+        "aliases": [
+          "Distance to Väggkontakt x2"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_unfiltered_distance_to_vaggkontakt_x2_verandan",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Väggkontakt x2",
+        "aliases": [
+          "Unfiltered Distance to Väggkontakt x2"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_distance_to_hci0_54_e4_ed_a9_cd_05",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avstånd till hci0 (54:E4:ED:A9:CD:05)",
+        "aliases": [
+          "Distance to hci0 (54:E4:ED:A9:CD:05)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_unfiltered_distance_to_hci0_54_e4_ed_a9_cd_05",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till hci0 (54:E4:ED:A9:CD:05)",
+        "aliases": [
+          "Unfiltered Distance to hci0 (54:E4:ED:A9:CD:05)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_distance_to_shelly_1pm_shower_floor_heating",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Golvvärme",
+        "aliases": [
+          "Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_unfiltered_distance_to_shelly_1pm_shower_floor_heating",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Golvvärme",
+        "aliases": [
+          "Unfiltered Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_distance_to_golvvarme_verandan",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Golvvärme",
+        "aliases": [
+          "Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_unfiltered_distance_to_golvvarme_verandan",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Golvvärme",
+        "aliases": [
+          "Unfiltered Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_distance_to_shelly_1pm_celler_floor_heating",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Golvvärme",
+        "aliases": [
+          "Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_unfiltered_distance_to_shelly_1pm_celler_floor_heating",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Golvvärme",
+        "aliases": [
+          "Unfiltered Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_distance_to_golvvarme_koket",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Golvvärme",
+        "aliases": [
+          "Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_unfiltered_distance_to_golvvarme_koket",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Golvvärme",
+        "aliases": [
+          "Unfiltered Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_distance_to_golvvarme_entren",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Golvvärme",
+        "aliases": [
+          "Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_unfiltered_distance_to_golvvarme_entren",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Golvvärme",
+        "aliases": [
+          "Unfiltered Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_distance_to_golvvarme_ateljen",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Golvvärme",
+        "aliases": [
+          "Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_bfe81b_unfiltered_distance_to_golvvarme_ateljen",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Golvvärme",
+        "aliases": [
+          "Unfiltered Distance to Golvvärme"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.atc_bfe81b_bermuda_tracker",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Position",
+        "aliases": [
+          "ATC_BFE81B Bermuda Tracker"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "number.atc_bfe81b_calibration_ref_power_at_1m_0_for_default",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Referenssignalstyrka vid 1 meter (0 = standard)",
+        "aliases": [
+          "ATC_BFE81B Calibration Ref Power at 1m. 0 for default."
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_area",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Område",
+        "aliases": [
+          "ATC_B999BA Area"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_floor",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Våning",
+        "aliases": [
+          "ATC_B999BA Floor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_distance",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avstånd",
+        "aliases": [
+          "ATC_B999BA Distance"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_nearest_scanner",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Närmaste skanner",
+        "aliases": [
+          "Nearest Scanner"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_nearest_rssi",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Närmaste signalstyrka",
+        "aliases": [
+          "Nearest RSSI"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_area_last_seen",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Område senast sett",
+        "aliases": [
+          "Area Last Seen"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_area_switch_diagnostic",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diagnostik för områdesbyte",
+        "aliases": [
+          "Area Switch Diagnostic"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_distance_to_shelly_pro_3_verkstaden",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Shelly Pro 3",
+        "aliases": [
+          "Distance to Shelly Pro 3"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_unfiltered_distance_to_shelly_pro_3_verkstaden",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Shelly Pro 3",
+        "aliases": [
+          "Unfiltered Distance to Shelly Pro 3"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_distance_to_c4_4f_33_72_73_e1",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Vattennivå",
+        "aliases": [
+          "Distance to Vattennivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_unfiltered_distance_to_c4_4f_33_72_73_e1",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Vattennivå",
+        "aliases": [
+          "Unfiltered Distance to Vattennivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_distance_to_shellyplusplugs_08f9e0fd4304",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avstånd till LED-stjärnor",
+        "aliases": [
+          "Distance to LED-stjärnor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_unfiltered_distance_to_shellyplusplugs_08f9e0fd4304",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till LED-stjärnor",
+        "aliases": [
+          "Unfiltered Distance to LED-stjärnor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_distance_to_vaggkontakt_x2_verandan",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Väggkontakt x2",
+        "aliases": [
+          "Distance to Väggkontakt x2"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_unfiltered_distance_to_vaggkontakt_x2_verandan",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till Väggkontakt x2",
+        "aliases": [
+          "Unfiltered Distance to Väggkontakt x2"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_distance_to_hci0_54_e4_ed_a9_cd_05",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avstånd till hci0 (54:E4:ED:A9:CD:05)",
+        "aliases": [
+          "Distance to hci0 (54:E4:ED:A9:CD:05)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_unfiltered_distance_to_hci0_54_e4_ed_a9_cd_05",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ofiltrerat avstånd till hci0 (54:E4:ED:A9:CD:05)",
+        "aliases": [
+          "Unfiltered Distance to hci0 (54:E4:ED:A9:CD:05)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.atc_b999ba_distance_to_shelly_1pm_shower_floor_heating",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avstånd till Golvvärme",
+        "aliases": [
+          "Distance to Golvvärme"
+        ]
+      }
+    }
+  ]
+}

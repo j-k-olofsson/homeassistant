@@ -1,0 +1,4184 @@
+{
+  "metadata": [
+    {
+      "statistic_id": "sensor.plant_sensor_78ff_battery_plus",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.ytterdorren_battery_plus",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.plantsensor_2_battery_plus",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.temp_hum_ateljen_battery_plus",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.temp_hum_kallaren_battery_plus",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.max_s6_maxv_battery_plus_2",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.sm_s936b_battery_plus",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.temp_hum_entren_battery_plus",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.temperature_humidity_sensor_1121_battery_plus",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.max_s6_maxv_battery_plus",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.temp_hum_verandan_battery_plus",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.bilresa_dual_button_battery_plus",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.temp_hum_duschen_battery_plus",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.plantsensor_6_battery_plus",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.plantsensor_3_battery_plus",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.temp_hum_sovrum_battery_plus",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.shelly_blu_door_window_2a6d_battery_plus",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.plantsensor_4_battery_plus",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.tem_hum_honshuset_battery_plus",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.pixel_9_pro_xl_battery_plus",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.temp_hum_verkstan_battery_plus",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.plantsensor_1_battery_plus",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.temp_hum_utomhus_battery_plus",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.temp_hum_koket_battery_plus",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    }
+  ],
+  "series": {
+    "sensor.temp_hum_sovrum_battery_plus": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 86.0,
+        "mean": 86.57350733666665,
+        "max": 87.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 87.0,
+        "mean": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 87.0,
+        "mean": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 87.0,
+        "mean": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 87.0,
+        "mean": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 87.0,
+        "mean": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 87.0,
+        "mean": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 87.0,
+        "mean": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 87.0,
+        "mean": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 87.0,
+        "mean": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 87.0,
+        "mean": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 87.0,
+        "mean": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 87.0,
+        "mean": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 87.0,
+        "mean": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 87.0,
+        "mean": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 87.0,
+        "mean": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 87.0,
+        "mean": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 86.0,
+        "mean": 86.871869135,
+        "max": 87.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 86.0,
+        "mean": 86.44630356083333,
+        "max": 87.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      }
+    ],
+    "sensor.pixel_9_pro_xl_battery_plus": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 61.0,
+        "mean": 64.66695024138889,
+        "max": 69.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 57.0,
+        "mean": 59.148605464444444,
+        "max": 61.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 52.0,
+        "mean": 53.600992686944444,
+        "max": 57.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 52.0,
+        "mean": 61.56380219916667,
+        "max": 69.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 69.0,
+        "mean": 80.63949595055557,
+        "max": 93.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 87.0,
+        "mean": 89.70190620777778,
+        "max": 93.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 84.0,
+        "mean": 85.66265854166666,
+        "max": 87.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 81.0,
+        "mean": 82.02656435666667,
+        "max": 84.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 78.0,
+        "mean": 78.59432219638889,
+        "max": 81.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 75.0,
+        "mean": 76.08610493638889,
+        "max": 78.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 72.0,
+        "mean": 73.11308946083334,
+        "max": 75.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 68.0,
+        "mean": 70.18459176916666,
+        "max": 72.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 66.0,
+        "mean": 67.22637609055555,
+        "max": 68.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 62.0,
+        "mean": 64.89080636916667,
+        "max": 66.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 51.0,
+        "mean": 57.40302389111111,
+        "max": 62.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 50.0,
+        "mean": 50.724023258888884,
+        "max": 51.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 48.0,
+        "mean": 49.042504944166666,
+        "max": 50.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 46.0,
+        "mean": 47.00922284999999,
+        "max": 48.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 44.0,
+        "mean": 44.58622244333333,
+        "max": 46.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 42.0,
+        "mean": 42.83350904416667,
+        "max": 44.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 40.0,
+        "mean": 41.15083095888889,
+        "max": 42.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 38.0,
+        "mean": 39.139238321111115,
+        "max": 40.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 37.0,
+        "mean": 41.36827772583333,
+        "max": 51.0
+      }
+    ],
+    "sensor.temp_hum_verkstan_battery_plus": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 71.0,
+        "mean": 71.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 71.0,
+        "mean": 71.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 71.0,
+        "mean": 71.91039324805556,
+        "max": 72.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 72.0,
+        "mean": 72.0,
+        "max": 72.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 72.0,
+        "mean": 72.51271506583333,
+        "max": 73.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 72.0,
+        "mean": 72.0,
+        "max": 72.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 71.0,
+        "mean": 71.74595197722222,
+        "max": 72.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 71.0,
+        "mean": 71.21024070944445,
+        "max": 72.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 71.0,
+        "mean": 71.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 71.0,
+        "mean": 71.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 71.0,
+        "mean": 71.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 71.0,
+        "mean": 71.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 70.0,
+        "mean": 70.84211577805556,
+        "max": 71.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 70.0,
+        "mean": 70.76777517555556,
+        "max": 71.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 70.0,
+        "mean": 70.62173274777778,
+        "max": 71.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 71.0,
+        "mean": 71.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 70.0,
+        "mean": 70.17321207111111,
+        "max": 71.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 70.0,
+        "mean": 70.0,
+        "max": 70.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 70.0,
+        "mean": 70.0,
+        "max": 70.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 70.0,
+        "mean": 70.0,
+        "max": 70.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 70.0,
+        "mean": 70.0,
+        "max": 70.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 70.0,
+        "mean": 70.0,
+        "max": 70.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 70.0,
+        "mean": 70.0,
+        "max": 70.0
+      }
+    ],
+    "sensor.shelly_blu_door_window_2a6d_battery_plus": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 81.0,
+        "mean": 82.0075272411111,
+        "max": 83.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 81.0,
+        "mean": 81.0,
+        "max": 81.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 81.0,
+        "mean": 81.0,
+        "max": 81.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 81.0,
+        "mean": 81.50000307222221,
+        "max": 82.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 80.0,
+        "mean": 80.00735276611111,
+        "max": 81.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 80.0,
+        "mean": 80.0,
+        "max": 80.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 79.0,
+        "mean": 79.50001794083333,
+        "max": 80.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 80.0,
+        "mean": 80.0,
+        "max": 80.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 79.0,
+        "mean": 79.0071161161111,
+        "max": 80.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 79.0,
+        "mean": 79.499995005,
+        "max": 80.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 79.0,
+        "mean": 79.993015985,
+        "max": 80.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 80.0,
+        "mean": 80.0,
+        "max": 80.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 80.0,
+        "mean": 80.0,
+        "max": 80.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 80.0,
+        "mean": 80.49322189277778,
+        "max": 81.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 80.0,
+        "mean": 80.00677409222222,
+        "max": 81.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 80.0,
+        "mean": 80.99999370333333,
+        "max": 82.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 80.0,
+        "mean": 80.99336584361112,
+        "max": 81.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 81.0,
+        "mean": 81.49997958638889,
+        "max": 82.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 80.0,
+        "mean": 80.99352004055555,
+        "max": 82.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 81.0,
+        "mean": 81.50644004638889,
+        "max": 82.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 81.0,
+        "mean": 81.99360977027777,
+        "max": 82.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 82.0,
+        "mean": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 82.0,
+        "mean": 82.49372738694444,
+        "max": 83.0
+      }
+    ],
+    "sensor.temp_hum_entren_battery_plus": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 78.0,
+        "mean": 78.0,
+        "max": 78.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 77.0,
+        "mean": 77.62280900444445,
+        "max": 78.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 78.0,
+        "mean": 78.32846717805556,
+        "max": 79.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 79.0,
+        "mean": 79.69983582416667,
+        "max": 80.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 80.0,
+        "mean": 80.0,
+        "max": 80.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 80.0,
+        "mean": 80.0,
+        "max": 80.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 80.0,
+        "mean": 80.0,
+        "max": 80.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 80.0,
+        "mean": 80.0,
+        "max": 80.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 80.0,
+        "mean": 80.12599897888889,
+        "max": 81.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 80.0,
+        "mean": 80.12485326277778,
+        "max": 81.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 80.0,
+        "mean": 80.01443065333333,
+        "max": 81.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 80.0,
+        "mean": 80.11102836583333,
+        "max": 81.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 80.0,
+        "mean": 80.0,
+        "max": 80.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 80.0,
+        "mean": 80.0,
+        "max": 80.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 80.0,
+        "mean": 80.0,
+        "max": 80.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 80.0,
+        "mean": 80.0,
+        "max": 80.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 80.0,
+        "mean": 80.0,
+        "max": 80.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 80.0,
+        "mean": 80.0,
+        "max": 80.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 80.0,
+        "mean": 80.0,
+        "max": 80.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 80.0,
+        "mean": 80.0,
+        "max": 80.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 80.0,
+        "mean": 80.0,
+        "max": 80.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 80.0,
+        "mean": 80.0,
+        "max": 80.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 80.0,
+        "mean": 80.0,
+        "max": 80.0
+      }
+    ],
+    "sensor.temperature_humidity_sensor_1121_battery_plus": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 86.0,
+        "mean": 86.0,
+        "max": 86.0
+      }
+    ],
+    "sensor.max_s6_maxv_battery_plus": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 67.0,
+        "mean": 84.41162765166665,
+        "max": 100.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 70.0,
+        "mean": 80.06149136916666,
+        "max": 90.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 90.0,
+        "mean": 97.63532896222222,
+        "max": 100.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      }
+    ],
+    "sensor.plant_sensor_78ff_battery_plus": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 27.0,
+        "mean": 27.0,
+        "max": 27.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 27.0,
+        "mean": 27.0,
+        "max": 27.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 27.0,
+        "mean": 27.0,
+        "max": 27.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 27.0,
+        "mean": 27.0,
+        "max": 27.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 27.0,
+        "mean": 27.0,
+        "max": 27.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 27.0,
+        "mean": 27.0,
+        "max": 27.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 27.0,
+        "mean": 29.295540230555556,
+        "max": 32.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 31.0,
+        "mean": 31.0,
+        "max": 31.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 31.0,
+        "mean": 31.0,
+        "max": 31.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 31.0,
+        "mean": 31.0,
+        "max": 31.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 31.0,
+        "mean": 31.0,
+        "max": 31.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 31.0,
+        "mean": 31.0,
+        "max": 31.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 31.0,
+        "mean": 31.0,
+        "max": 31.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 31.0,
+        "mean": 31.0,
+        "max": 31.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 31.0,
+        "mean": 31.0,
+        "max": 31.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 31.0,
+        "mean": 31.0,
+        "max": 31.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 31.0,
+        "mean": 31.0,
+        "max": 31.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 31.0,
+        "mean": 31.0,
+        "max": 31.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 31.0,
+        "mean": 31.0,
+        "max": 31.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 31.0,
+        "mean": 31.0,
+        "max": 31.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 31.0,
+        "mean": 31.0,
+        "max": 31.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 31.0,
+        "mean": 31.0,
+        "max": 31.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 31.0,
+        "mean": 31.0,
+        "max": 31.0
+      }
+    ],
+    "sensor.ytterdorren_battery_plus": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 56.0,
+        "mean": 56.0,
+        "max": 56.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 56.0,
+        "mean": 56.0,
+        "max": 56.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 56.0,
+        "mean": 56.0,
+        "max": 56.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 56.0,
+        "mean": 56.0,
+        "max": 56.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 56.0,
+        "mean": 56.0,
+        "max": 56.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 56.0,
+        "mean": 56.0,
+        "max": 56.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 55.0,
+        "mean": 55.42159176472222,
+        "max": 56.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 55.0,
+        "mean": 55.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 55.0,
+        "mean": 55.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 55.0,
+        "mean": 55.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 55.0,
+        "mean": 55.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 55.0,
+        "mean": 55.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 55.0,
+        "mean": 55.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 55.0,
+        "mean": 55.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 55.0,
+        "mean": 55.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 55.0,
+        "mean": 55.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 55.0,
+        "mean": 55.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 55.0,
+        "mean": 55.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 55.0,
+        "mean": 55.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 55.0,
+        "mean": 55.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 55.0,
+        "mean": 55.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 55.0,
+        "mean": 55.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 55.0,
+        "mean": 55.0,
+        "max": 55.0
+      }
+    ],
+    "sensor.plantsensor_4_battery_plus": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 18.0,
+        "mean": 18.0,
+        "max": 18.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 18.0,
+        "mean": 18.0,
+        "max": 18.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 18.0,
+        "mean": 18.0,
+        "max": 18.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 18.0,
+        "mean": 18.0,
+        "max": 18.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 18.0,
+        "mean": 18.0,
+        "max": 18.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 18.0,
+        "mean": 18.0,
+        "max": 18.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 18.0,
+        "mean": 18.0,
+        "max": 18.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 18.0,
+        "mean": 18.0,
+        "max": 18.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 18.0,
+        "mean": 18.0,
+        "max": 18.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 18.0,
+        "mean": 18.0,
+        "max": 18.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 18.0,
+        "mean": 18.0,
+        "max": 18.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 18.0,
+        "mean": 18.0,
+        "max": 18.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 18.0,
+        "mean": 18.0,
+        "max": 18.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 18.0,
+        "mean": 18.0,
+        "max": 18.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 18.0,
+        "mean": 18.0,
+        "max": 18.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 18.0,
+        "mean": 18.0,
+        "max": 18.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 18.0,
+        "mean": 18.0,
+        "max": 18.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 18.0,
+        "mean": 18.0,
+        "max": 18.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 18.0,
+        "mean": 18.0,
+        "max": 18.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 18.0,
+        "mean": 18.0,
+        "max": 18.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 18.0,
+        "mean": 18.0,
+        "max": 18.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 18.0,
+        "mean": 18.0,
+        "max": 18.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 18.0,
+        "mean": 18.0,
+        "max": 18.0
+      }
+    ],
+    "sensor.plantsensor_1_battery_plus": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 90.0,
+        "mean": 90.0,
+        "max": 90.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 90.0,
+        "mean": 90.0,
+        "max": 90.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 90.0,
+        "mean": 90.0,
+        "max": 90.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 90.0,
+        "mean": 90.0,
+        "max": 90.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 90.0,
+        "mean": 90.0,
+        "max": 90.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 90.0,
+        "mean": 90.0,
+        "max": 90.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 90.0,
+        "mean": 92.85530555416666,
+        "max": 95.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      }
+    ],
+    "sensor.plantsensor_2_battery_plus": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 42.0,
+        "mean": 42.0,
+        "max": 42.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 42.0,
+        "mean": 42.0,
+        "max": 42.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 42.0,
+        "mean": 42.0,
+        "max": 42.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 42.0,
+        "mean": 42.0,
+        "max": 42.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 42.0,
+        "mean": 42.0,
+        "max": 42.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 42.0,
+        "mean": 42.0,
+        "max": 42.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 42.0,
+        "mean": 44.29945273111111,
+        "max": 46.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 46.0,
+        "mean": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 46.0,
+        "mean": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 46.0,
+        "mean": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 46.0,
+        "mean": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 46.0,
+        "mean": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 46.0,
+        "mean": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 46.0,
+        "mean": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 46.0,
+        "mean": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 46.0,
+        "mean": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 46.0,
+        "mean": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 46.0,
+        "mean": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 46.0,
+        "mean": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 46.0,
+        "mean": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 46.0,
+        "mean": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 46.0,
+        "mean": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 46.0,
+        "mean": 46.0,
+        "max": 46.0
+      }
+    ],
+    "sensor.temp_hum_verandan_battery_plus": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 75.0,
+        "mean": 75.84860271833334,
+        "max": 76.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 76.0,
+        "mean": 76.0,
+        "max": 76.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 76.0,
+        "mean": 76.12378636777778,
+        "max": 77.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 76.0,
+        "mean": 76.0,
+        "max": 76.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 76.0,
+        "mean": 76.0,
+        "max": 76.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 75.0,
+        "mean": 76.44852325611112,
+        "max": 77.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 75.0,
+        "mean": 75.92822501527779,
+        "max": 76.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 76.0,
+        "mean": 76.0,
+        "max": 76.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 76.0,
+        "mean": 76.15990555194445,
+        "max": 77.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 76.0,
+        "mean": 76.62381459055557,
+        "max": 77.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 76.0,
+        "mean": 76.62421735611112,
+        "max": 77.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 76.0,
+        "mean": 76.60462485750001,
+        "max": 77.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 76.0,
+        "mean": 76.0,
+        "max": 76.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 76.0,
+        "mean": 76.0,
+        "max": 76.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 75.0,
+        "mean": 75.88500850861111,
+        "max": 76.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 75.0,
+        "mean": 75.75789960916667,
+        "max": 76.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 74.0,
+        "mean": 74.9018148425,
+        "max": 75.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 74.0,
+        "mean": 74.25131129194445,
+        "max": 75.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 74.0,
+        "mean": 74.25084114222223,
+        "max": 75.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 74.0,
+        "mean": 74.45065126333333,
+        "max": 75.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 74.0,
+        "mean": 74.3045664225,
+        "max": 75.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 73.0,
+        "mean": 73.62222622638889,
+        "max": 74.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 74.0,
+        "mean": 75.06213596527778,
+        "max": 76.0
+      }
+    ],
+    "sensor.bilresa_dual_button_battery_plus": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      }
+    ],
+    "sensor.temp_hum_utomhus_battery_plus": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 52.0,
+        "mean": 52.74365804805556,
+        "max": 53.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 53.0,
+        "mean": 53.568707556944446,
+        "max": 54.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 54.0,
+        "mean": 54.03335449805556,
+        "max": 55.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 55.0,
+        "mean": 55.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 55.0,
+        "mean": 55.255382435,
+        "max": 56.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 55.0,
+        "mean": 55.472105411388895,
+        "max": 56.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 55.0,
+        "mean": 55.54979683027778,
+        "max": 56.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 55.0,
+        "mean": 55.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 54.0,
+        "mean": 54.59681010194444,
+        "max": 55.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 54.0,
+        "mean": 54.0,
+        "max": 54.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 54.0,
+        "mean": 54.0,
+        "max": 54.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 54.0,
+        "mean": 54.0,
+        "max": 54.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 54.0,
+        "mean": 54.0,
+        "max": 54.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 54.0,
+        "mean": 54.0,
+        "max": 54.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 53.0,
+        "mean": 53.23167864500001,
+        "max": 54.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 53.0,
+        "mean": 53.24976298805556,
+        "max": 54.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 53.0,
+        "mean": 53.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 53.0,
+        "mean": 53.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 53.0,
+        "mean": 53.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 53.0,
+        "mean": 53.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 53.0,
+        "mean": 53.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 53.0,
+        "mean": 53.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 52.0,
+        "mean": 52.9292171575,
+        "max": 53.0
+      }
+    ],
+    "sensor.temp_hum_ateljen_battery_plus": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 73.0,
+        "mean": 73.56134055944445,
+        "max": 74.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 74.0,
+        "mean": 74.0,
+        "max": 74.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 74.0,
+        "mean": 74.0,
+        "max": 74.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 74.0,
+        "mean": 74.0,
+        "max": 74.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 74.0,
+        "mean": 74.15430977861111,
+        "max": 75.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 74.0,
+        "mean": 74.87768403388888,
+        "max": 75.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 75.0,
+        "mean": 75.0,
+        "max": 75.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 75.0,
+        "mean": 75.0,
+        "max": 75.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 75.0,
+        "mean": 75.0,
+        "max": 75.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 75.0,
+        "mean": 75.0,
+        "max": 75.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 75.0,
+        "mean": 75.0,
+        "max": 75.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 74.0,
+        "mean": 74.8756837261111,
+        "max": 75.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 74.0,
+        "mean": 74.52175787583333,
+        "max": 75.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 74.0,
+        "mean": 74.0,
+        "max": 74.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 73.0,
+        "mean": 73.67350018361111,
+        "max": 74.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 73.0,
+        "mean": 73.0,
+        "max": 73.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 73.0,
+        "mean": 73.0,
+        "max": 73.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 72.0,
+        "mean": 72.69571683055555,
+        "max": 73.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 72.0,
+        "mean": 72.0,
+        "max": 72.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 72.0,
+        "mean": 72.0,
+        "max": 72.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 71.0,
+        "mean": 71.58888941666666,
+        "max": 72.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 71.0,
+        "mean": 71.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 71.0,
+        "mean": 71.0,
+        "max": 71.0
+      }
+    ],
+    "sensor.temp_hum_koket_battery_plus": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 67.0,
+        "mean": 67.95834102916666,
+        "max": 68.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 68.0,
+        "mean": 68.0,
+        "max": 68.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 68.0,
+        "mean": 68.0,
+        "max": 68.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 68.0,
+        "mean": 68.0,
+        "max": 68.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 68.0,
+        "mean": 68.17595218583334,
+        "max": 69.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 68.0,
+        "mean": 68.45871529055556,
+        "max": 69.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 68.0,
+        "mean": 68.0,
+        "max": 68.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 67.0,
+        "mean": 67.84749865944444,
+        "max": 68.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 67.0,
+        "mean": 67.14706410888888,
+        "max": 68.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 67.0,
+        "mean": 67.10349142638889,
+        "max": 68.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 67.0,
+        "mean": 67.0,
+        "max": 67.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 67.0,
+        "mean": 67.0,
+        "max": 67.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 66.0,
+        "mean": 66.87467515694445,
+        "max": 67.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 66.0,
+        "mean": 66.00882739111111,
+        "max": 67.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 66.0,
+        "mean": 66.0,
+        "max": 66.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 65.0,
+        "mean": 65.36021120888888,
+        "max": 66.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 65.0,
+        "mean": 65.52705811416666,
+        "max": 66.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 65.0,
+        "mean": 65.25271329694445,
+        "max": 66.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 65.0,
+        "mean": 65.0,
+        "max": 65.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 65.0,
+        "mean": 65.0,
+        "max": 65.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 64.0,
+        "mean": 64.68275410333332,
+        "max": 65.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 63.0,
+        "mean": 63.43615998333334,
+        "max": 64.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 63.0,
+        "mean": 64.28369619527778,
+        "max": 66.0
+      }
+    ],
+    "sensor.temp_hum_kallaren_battery_plus": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 69.0,
+        "mean": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 69.0,
+        "mean": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 68.0,
+        "mean": 68.74186921972222,
+        "max": 69.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 68.0,
+        "mean": 68.74300738222222,
+        "max": 69.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 69.0,
+        "mean": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 69.0,
+        "mean": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 69.0,
+        "mean": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 69.0,
+        "mean": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 69.0,
+        "mean": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 69.0,
+        "mean": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 69.0,
+        "mean": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 69.0,
+        "mean": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 69.0,
+        "mean": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 69.0,
+        "mean": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 69.0,
+        "mean": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 69.0,
+        "mean": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 69.0,
+        "mean": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 69.0,
+        "mean": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 69.0,
+        "mean": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 69.0,
+        "mean": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 69.0,
+        "mean": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 69.0,
+        "mean": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 69.0,
+        "mean": 69.0,
+        "max": 69.0
+      }
+    ],
+    "sensor.max_s6_maxv_battery_plus_2": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 67.0,
+        "mean": 84.41163591611111,
+        "max": 100.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 70.0,
+        "mean": 80.06148626805556,
+        "max": 90.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 90.0,
+        "mean": 97.63532644583331,
+        "max": 100.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      }
+    ],
+    "sensor.tem_hum_honshuset_battery_plus": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 51.0,
+        "mean": 51.82558080222222,
+        "max": 52.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 52.0,
+        "mean": 52.693016691666664,
+        "max": 53.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 53.0,
+        "mean": 53.938397208333335,
+        "max": 54.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 54.0,
+        "mean": 54.377565695277774,
+        "max": 55.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 54.0,
+        "mean": 54.67323211444445,
+        "max": 55.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 54.0,
+        "mean": 54.74786740138888,
+        "max": 55.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 54.0,
+        "mean": 54.74883325444444,
+        "max": 55.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 54.0,
+        "mean": 54.473093505,
+        "max": 55.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 53.0,
+        "mean": 53.98364431833334,
+        "max": 54.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 53.0,
+        "mean": 53.37754039916666,
+        "max": 54.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 53.0,
+        "mean": 53.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 53.0,
+        "mean": 53.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 53.0,
+        "mean": 53.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 53.0,
+        "mean": 53.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 52.0,
+        "mean": 52.64666939777778,
+        "max": 53.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 52.0,
+        "mean": 52.25224889416666,
+        "max": 53.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 52.0,
+        "mean": 52.0,
+        "max": 52.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 52.0,
+        "mean": 52.37757802194445,
+        "max": 53.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 52.0,
+        "mean": 52.12583995472222,
+        "max": 53.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 52.0,
+        "mean": 52.25210835527778,
+        "max": 53.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 52.0,
+        "mean": 52.125843188333334,
+        "max": 53.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 52.0,
+        "mean": 52.0,
+        "max": 52.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 52.0,
+        "mean": 52.0,
+        "max": 52.0
+      }
+    ],
+    "sensor.temp_hum_duschen_battery_plus": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 82.0,
+        "mean": 82.12284541055556,
+        "max": 83.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 82.0,
+        "mean": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 82.0,
+        "mean": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 82.0,
+        "mean": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 82.0,
+        "mean": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 82.0,
+        "mean": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 82.0,
+        "mean": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 82.0,
+        "mean": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 82.0,
+        "mean": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 82.0,
+        "mean": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 82.0,
+        "mean": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 78.0,
+        "mean": 79.95391011833333,
+        "max": 82.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 77.0,
+        "mean": 78.66357173888889,
+        "max": 79.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 79.0,
+        "mean": 79.0,
+        "max": 79.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 79.0,
+        "mean": 79.0,
+        "max": 79.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 79.0,
+        "mean": 79.0,
+        "max": 79.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 79.0,
+        "mean": 79.0,
+        "max": 79.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 79.0,
+        "mean": 79.0,
+        "max": 79.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 77.0,
+        "mean": 78.39021327305556,
+        "max": 79.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 77.0,
+        "mean": 78.17609688527777,
+        "max": 79.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 77.0,
+        "mean": 78.29043329972222,
+        "max": 79.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 78.0,
+        "mean": 78.71756637277778,
+        "max": 79.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 77.0,
+        "mean": 77.353961325,
+        "max": 78.0
+      }
+    ],
+    "sensor.sm_s936b_battery_plus": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 95.0,
+        "mean": 95.0,
+        "max": 95.0
+      }
+    ],
+    "sensor.plantsensor_6_battery_plus": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 54.0,
+        "mean": 54.0,
+        "max": 54.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 54.0,
+        "mean": 54.0,
+        "max": 54.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 54.0,
+        "mean": 54.0,
+        "max": 54.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 54.0,
+        "mean": 54.0,
+        "max": 54.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 54.0,
+        "mean": 54.0,
+        "max": 54.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 54.0,
+        "mean": 54.0,
+        "max": 54.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 54.0,
+        "mean": 59.1136286,
+        "max": 63.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 63.0,
+        "mean": 63.0,
+        "max": 63.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 63.0,
+        "mean": 63.0,
+        "max": 63.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 63.0,
+        "mean": 63.0,
+        "max": 63.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 63.0,
+        "mean": 63.0,
+        "max": 63.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 63.0,
+        "mean": 63.0,
+        "max": 63.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 63.0,
+        "mean": 63.0,
+        "max": 63.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 63.0,
+        "mean": 63.0,
+        "max": 63.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 63.0,
+        "mean": 63.0,
+        "max": 63.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 63.0,
+        "mean": 63.0,
+        "max": 63.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 63.0,
+        "mean": 63.0,
+        "max": 63.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 63.0,
+        "mean": 63.0,
+        "max": 63.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 63.0,
+        "mean": 63.0,
+        "max": 63.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 63.0,
+        "mean": 63.0,
+        "max": 63.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 63.0,
+        "mean": 63.0,
+        "max": 63.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 63.0,
+        "mean": 63.0,
+        "max": 63.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 63.0,
+        "mean": 63.0,
+        "max": 63.0
+      }
+    ],
+    "sensor.plantsensor_3_battery_plus": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 25.0,
+        "mean": 28.900706931944445,
+        "max": 30.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 30.0,
+        "mean": 30.0,
+        "max": 30.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 30.0,
+        "mean": 30.0,
+        "max": 30.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 30.0,
+        "mean": 30.0,
+        "max": 30.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 30.0,
+        "mean": 30.0,
+        "max": 30.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 30.0,
+        "mean": 30.0,
+        "max": 30.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 30.0,
+        "mean": 30.0,
+        "max": 30.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 30.0,
+        "mean": 30.0,
+        "max": 30.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 30.0,
+        "mean": 30.0,
+        "max": 30.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 30.0,
+        "mean": 30.0,
+        "max": 30.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 30.0,
+        "mean": 30.0,
+        "max": 30.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 30.0,
+        "mean": 30.0,
+        "max": 30.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 30.0,
+        "mean": 30.0,
+        "max": 30.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 30.0,
+        "mean": 30.0,
+        "max": 30.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 30.0,
+        "mean": 30.0,
+        "max": 30.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 30.0,
+        "mean": 30.0,
+        "max": 30.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 30.0,
+        "mean": 30.0,
+        "max": 30.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 30.0,
+        "mean": 30.0,
+        "max": 30.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 30.0,
+        "mean": 30.0,
+        "max": 30.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 30.0,
+        "mean": 30.0,
+        "max": 30.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 30.0,
+        "mean": 30.0,
+        "max": 30.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 30.0,
+        "mean": 30.0,
+        "max": 30.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 30.0,
+        "mean": 30.0,
+        "max": 30.0
+      }
+    ]
+  },
+  "start": "2026-11-07T07:00:00+00:00",
+  "end": "2026-11-08T06:00:00+00:00"
+}

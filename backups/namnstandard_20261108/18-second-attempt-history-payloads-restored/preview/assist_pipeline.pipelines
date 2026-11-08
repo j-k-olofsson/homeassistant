@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "minor_version": 2,
+  "key": "assist_pipeline.pipelines",
+  "data": {
+    "items": [
+      {
+        "conversation_engine": "conversation.home_assistant",
+        "conversation_language": "sv",
+        "id": "01jnrcyfqnazy0anpncwhc6xc6",
+        "language": "sv",
+        "name": "Home Assistant (HA Cloud)",
+        "stt_engine": "stt.home_assistant_cloud",
+        "stt_language": "sv-SE",
+        "tts_engine": "tts.home_assistant_cloud",
+        "tts_language": "sv-SE",
+        "tts_voice": "MattiasNeural",
+        "wake_word_entity": null,
+        "wake_word_id": null,
+        "prefer_local_intents": true
+      },
+      {
+        "conversation_engine": "conversation.ollama_conversation",
+        "conversation_language": "*",
+        "id": "01k47r34sraw7qdxdtsw1rbv1e",
+        "language": "sv",
+        "name": "Lokal (Ollama, Whisper & Piper)",
+        "stt_engine": "stt.faster_whisper",
+        "stt_language": "sv",
+        "tts_engine": "tts.heimdal_ha_piper",
+        "tts_language": "sv_SE",
+        "tts_voice": "sv_SE-lisa-medium",
+        "wake_word_entity": null,
+        "wake_word_id": null,
+        "prefer_local_intents": true
+      }
+    ],
+    "preferred_item": "01k47r34sraw7qdxdtsw1rbv1e"
+  }
+}

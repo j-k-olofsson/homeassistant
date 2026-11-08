@@ -1,0 +1,170 @@
+{
+  "device_tracker.friggan_termostat": [
+    {
+      "state": "home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    },
+    {
+      "state": "not_home",
+      "last_changed": "2026-11-07T13:25:14.951409+00:00"
+    },
+    {
+      "state": "home",
+      "last_changed": "2026-11-07T13:25:16.429882+00:00"
+    }
+  ],
+  "event.friggan_accesspunkt_ny_enhet": [
+    {
+      "state": "2026-11-04T14:24:03.190+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    }
+  ],
+  "device_tracker.buddy3dcam": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    },
+    {
+      "state": "home",
+      "last_changed": "2026-11-07T13:25:14.903236+00:00"
+    }
+  ],
+  "device_tracker.hf_lpt220": [
+    {
+      "state": "home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    },
+    {
+      "state": "not_home",
+      "last_changed": "2026-11-08T07:05:37.982342+00:00"
+    }
+  ],
+  "device_tracker.q28756": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    }
+  ],
+  "device_tracker.a0_cb_fd_3a_3a_d8": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    }
+  ],
+  "device_tracker.58_cd_c9_33_8f_ab": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    }
+  ],
+  "device_tracker.heimdal_ha_7c_9e_bd_06_e4_54": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    }
+  ],
+  "device_tracker.heimdal_ha_192_168_30_146": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    }
+  ],
+  "device_tracker.heimdal_ha_192_168_30_142": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    }
+  ],
+  "device_tracker.heimdal_ha_7c_9e_bd_06_e4_88": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    }
+  ],
+  "device_tracker.heimdal_ha_48_e7_29_89_81_90": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    }
+  ],
+  "device_tracker.192_168_10_104": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    }
+  ],
+  "device_tracker.desktop_vf5t4dk": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    }
+  ],
+  "device_tracker.galaxy_s7_friggan": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    },
+    {
+      "state": "home",
+      "last_changed": "2026-11-07T10:10:20.766120+00:00"
+    },
+    {
+      "state": "not_home",
+      "last_changed": "2026-11-08T07:05:37.987050+00:00"
+    }
+  ],
+  "device_tracker.galaxy_s7_mac_7fd391": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:08.045951+00:00",
+      "last_updated": "2026-11-07T07:43:08.045951+00:00"
+    },
+    {
+      "state": "home",
+      "last_changed": "2026-11-07T10:11:21.752805+00:00"
+    },
+    {
+      "state": "not_home",
+      "last_changed": "2026-11-07T10:38:03.270921+00:00"
+    },
+    {
+      "state": "home",
+      "last_changed": "2026-11-07T13:25:14.858323+00:00"
+    },
+    {
+      "state": "not_home",
+      "last_changed": "2026-11-08T07:05:37.987330+00:00"
+    }
+  ]
+}

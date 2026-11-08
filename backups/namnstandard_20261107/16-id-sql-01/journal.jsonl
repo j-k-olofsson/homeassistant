@@ -1,0 +1,2 @@
+{"status": "rename_intent", "old": "sensor.elkostnad_t_o_m_idag", "new": "sensor.heimdal_ha_energisammanstallning_forbrukad_energi_denna_manad"}
+{"status": "renamed", "old": "sensor.elkostnad_t_o_m_idag", "new": "sensor.heimdal_ha_energisammanstallning_forbrukad_energi_denna_manad"}

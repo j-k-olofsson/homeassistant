@@ -1,0 +1,142 @@
+{
+  "stage": "11-mobile_app-namn-06",
+  "description": "Svenska funktionsnamn enligt granskad ordlista. Inga ID:n, inställningar eller värden ändras.",
+  "operations": [
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g930f_total_rx_gb_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt mottagna data",
+        "aliases": [
+          null,
+          "SM-G930F Total Rx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sm_g930f_total_tx_gb_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt skickade data",
+        "aliases": [
+          null,
+          "SM-G930F Total Tx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nothing_mobil_last_notification",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senaste avisering",
+        "aliases": [
+          null,
+          "Nothing mobil Last notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nothing_mobil_last_removed_notification",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senast borttagna avisering",
+        "aliases": [
+          null,
+          "Nothing mobil Last removed notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nothing_mobil_active_notification_count",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Antal aktiva aviseringar",
+        "aliases": [
+          null,
+          "Nothing mobil Active notification count"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.nothing_mobil_high_accuracy_mode",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Platsläge med hög precision",
+        "aliases": [
+          null,
+          "Nothing mobil High accuracy mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nothing_mobil_high_accuracy_update_interval",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Uppdateringsintervall för hög precision",
+        "aliases": [
+          null,
+          "Nothing mobil High accuracy update interval"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.nothing_mobil_last_update_trigger",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Senaste uppdateringsorsak",
+        "aliases": [
+          null,
+          "Nothing mobil Last update trigger"
+        ]
+      }
+    }
+  ]
+}

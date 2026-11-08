@@ -1,0 +1,4 @@
+{"status": "rename_intent", "old": "input_number.car_bat_capacity_2", "new": "input_number.bilens_batterikapacitet"}
+{"status": "renamed", "old": "input_number.car_bat_capacity_2", "new": "input_number.bilens_batterikapacitet"}
+{"status": "rename_intent", "old": "input_number.car_charger_capacity_2", "new": "input_number.laddeffekt"}
+{"status": "renamed", "old": "input_number.car_charger_capacity_2", "new": "input_number.laddeffekt"}

@@ -1,0 +1,4 @@
+{"status": "rename_intent", "old": "binary_sensor.aqara_taklampor_flash_senaste_24h", "new": "binary_sensor.aqara_taklampor_blinkningar_senaste_dygnet"}
+{"status": "renamed", "old": "binary_sensor.aqara_taklampor_flash_senaste_24h", "new": "binary_sensor.aqara_taklampor_blinkningar_senaste_dygnet"}
+{"status": "rename_intent", "old": "binary_sensor.aqara_banklampor_flash_senaste_24h", "new": "binary_sensor.aqara_banklampor_blinkningar_senaste_dygnet"}
+{"status": "renamed", "old": "binary_sensor.aqara_banklampor_flash_senaste_24h", "new": "binary_sensor.aqara_banklampor_blinkningar_senaste_dygnet"}

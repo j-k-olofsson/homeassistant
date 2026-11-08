@@ -1,0 +1,56 @@
+﻿gammalt_id,föreslaget_id,status,beroenden
+sensor.temp_hum_sovrum_voltage,sensor.sovrummet_klimatsensor_spanning,Förberett förslag; inväntar externa beroenden och etappkontroll,
+sensor.temp_hum_sovrum_signal_strength,sensor.sovrummet_klimatsensor_signalstyrka,Förberett förslag; inväntar externa beroenden och etappkontroll,
+sensor.temp_hum_sovrum_humidity,sensor.sovrummet_klimatsensor_luftfuktighet,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.area_registry:data.data.areas[5].humidity_entity_id
+sensor.temp_hum_utomhus_humidity,sensor.utomhus_klimatsensor_luftfuktighet,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.area_registry:data.data.areas[17].humidity_entity_id | dashboard/lovelace:config.views[4].sections[0].cards[0].badges[2].entity
+sensor.temp_hum_utomhus_signal_strength,sensor.utomhus_klimatsensor_signalstyrka,Förberett förslag; inväntar externa beroenden och etappkontroll,
+sensor.temp_hum_utomhus_voltage,sensor.utomhus_klimatsensor_spanning,Förberett förslag; inväntar externa beroenden och etappkontroll,
+sensor.dusch_fukt,sensor.duschen_klimatsensor_luftfuktighet,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.area_registry:data.data.areas[1].humidity_entity_id
+sensor.dusch_temp,sensor.duschen_klimatsensor_temperatur,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.area_registry:data.data.areas[1].temperature_entity_id | .storage/core.config_entries:data.data.entries[207].options.target_sensor
+sensor.koket_temp,sensor.koket_klimatsensor_temperatur,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.area_registry:data.data.areas[4].temperature_entity_id | .storage/core.config_entries:data.data.entries[124].options.target_sensor
+sensor.verkstan_batteriniva,sensor.verkstaden_klimatsensor_batteriniva,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.entity_registry:sensor.temp_hum_verkstan_battery_plus.options.battery_notes.entity_id
+sensor.verkstan_hum,sensor.verkstaden_klimatsensor_luftfuktighet,Förberett förslag; inväntar externa beroenden och etappkontroll,dashboard/lovelace:config.views[8].sections[0].cards[3].entity
+sensor.verkstan_temp,sensor.verkstaden_klimatsensor_temperatur,Förberett förslag; inväntar externa beroenden och etappkontroll,dashboard/lovelace:config.views[8].sections[0].cards[4].entity
+sensor.ateljen_batteriniva,sensor.ateljen_klimatsensor_batteriniva,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.entity_registry:sensor.temp_hum_ateljen_battery_plus.options.battery_notes.entity_id
+sensor.ateljen_temp,sensor.ateljen_klimatsensor_temperatur,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.area_registry:data.data.areas[0].temperature_entity_id | .storage/core.config_entries:data.data.entries[119].options.target_sensor
+sensor.temp_hum_atelje_humidity,sensor.ateljen_klimatsensor_luftfuktighet,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.area_registry:data.data.areas[0].humidity_entity_id
+sensor.temp_hum_atelje_signal_strength,sensor.ateljen_klimatsensor_signalstyrka,Förberett förslag; inväntar externa beroenden och etappkontroll,
+sensor.temp_hum_atelje_voltage,sensor.ateljen_klimatsensor_spanning,Förberett förslag; inväntar externa beroenden och etappkontroll,
+sensor.temp_hum_toalett_battery,sensor.toaletten_klimatsensor_batteriniva,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.entity_registry:sensor.temperature_humidity_sensor_1121_battery_plus.options.battery_notes.entity_id
+sensor.temp_hum_toalett_humidity,sensor.toaletten_klimatsensor_luftfuktighet,Förberett förslag; inväntar externa beroenden och etappkontroll,
+sensor.temp_hum_toalett_signal_strength,sensor.toaletten_klimatsensor_signalstyrka,Förberett förslag; inväntar externa beroenden och etappkontroll,
+sensor.temp_hum_toalett_temperature,sensor.toaletten_klimatsensor_temperatur,Förberett förslag; inväntar externa beroenden och etappkontroll,
+sensor.temp_hum_toalett_voltage,sensor.toaletten_klimatsensor_spanning,Förberett förslag; inväntar externa beroenden och etappkontroll,
+sensor.bio_temp,sensor.bion_klimatsensor_temperatur,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.area_registry:data.data.areas[9].temperature_entity_id | .storage/core.config_entries:data.data.entries[103].options.target_sensor
+sensor.temp_hum_hemmabio_humidity,sensor.bion_klimatsensor_luftfuktighet,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.area_registry:data.data.areas[9].humidity_entity_id | .storage/core.config_entries:data.data.entries[142].options.target_sensor
+sensor.kallaren_batteriniva,sensor.bion_klimatsensor_batteriniva,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.entity_registry:sensor.temp_hum_kallaren_battery_plus.options.battery_notes.entity_id
+sensor.temp_hum_hemmabio_signal_strength,sensor.bion_klimatsensor_signalstyrka,Förberett förslag; inväntar externa beroenden och etappkontroll,
+sensor.temp_hum_hemmabio_voltage,sensor.bion_klimatsensor_spanning,Förberett förslag; inväntar externa beroenden och etappkontroll,
+sensor.sovrum_batteriniva,sensor.sovrummet_klimatsensor_batteriniva,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.entity_registry:sensor.temp_hum_sovrum_battery_plus.options.battery_notes.entity_id
+sensor.sovrummet_temp,sensor.sovrummet_klimatsensor_temperatur,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.area_registry:data.data.areas[5].temperature_entity_id
+sensor.temp_hum_entre_battery,sensor.entren_klimatsensor_batteriniva,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.entity_registry:sensor.temp_hum_entren_battery_plus.options.battery_notes.entity_id
+sensor.fuktighet_entren,sensor.entren_klimatsensor_luftfuktighet,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.area_registry:data.data.areas[2].humidity_entity_id
+sensor.temp_hum_entre_signal_strength,sensor.entren_klimatsensor_signalstyrka,Förberett förslag; inväntar externa beroenden och etappkontroll,
+sensor.temperatur_entren,sensor.entren_klimatsensor_temperatur,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.area_registry:data.data.areas[2].temperature_entity_id | .storage/core.config_entries:data.data.entries[112].options.target_sensor
+sensor.temp_hum_entre_voltage,sensor.entren_klimatsensor_spanning,Förberett förslag; inväntar externa beroenden och etappkontroll,
+sensor.honshuset_batteriniva,sensor.honshuset_klimatsensor_batteriniva,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.entity_registry:sensor.tem_hum_honshuset_battery_plus.options.battery_notes.entity_id
+sensor.honshuset_temp,sensor.honshuset_klimatsensor_temperatur,Förberett förslag; inväntar externa beroenden och etappkontroll,automations.yaml:443 | automations.yaml:448 | automations.yaml:498 | dashboard/lovelace:config.views[4].sections[0].cards[2].badges[0].entity
+sensor.temp_hum_honshuset_humidity,sensor.honshuset_klimatsensor_luftfuktighet,Förberett förslag; inväntar externa beroenden och etappkontroll,dashboard/lovelace:config.views[4].sections[0].cards[2].badges[1].entity
+sensor.temp_hum_veranda_humidity,sensor.verandan_klimatsensor_luftfuktighet,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.area_registry:data.data.areas[7].humidity_entity_id
+sensor.temp_hum_veranda_signal_strength,sensor.verandan_klimatsensor_signalstyrka,Förberett förslag; inväntar externa beroenden och etappkontroll,
+sensor.verandan_batteriniva,sensor.verandan_klimatsensor_batteriniva,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.entity_registry:sensor.temp_hum_verandan_battery_plus.options.battery_notes.entity_id
+sensor.verandan_temp,sensor.verandan_klimatsensor_temperatur,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.area_registry:data.data.areas[7].temperature_entity_id | .storage/core.config_entries:data.data.entries[118].options.target_sensor
+sensor.temp_hum_veranda_voltage,sensor.verandan_klimatsensor_spanning,Förberett förslag; inväntar externa beroenden och etappkontroll,
+sensor.utomhus_batteriniva,sensor.utomhus_klimatsensor_batteriniva,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.entity_registry:sensor.temp_hum_utomhus_battery_plus.options.battery_notes.entity_id
+sensor.utomhus_temp,sensor.utomhus_klimatsensor_temperatur,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.area_registry:data.data.areas[17].temperature_entity_id | dashboard/lovelace-friggan:config.views[0].cards[0].cards[1].entity | dashboard/lovelace:config.views[0].sections[0].cards[1].current.temperature_entity | dashboard/lovelace:config.views[4].sections[0].cards[0].badges[0].entity
+sensor.temp_hum_verkstad_signal_strength,sensor.verkstaden_klimatsensor_signalstyrka,Förberett förslag; inväntar externa beroenden och etappkontroll,
+sensor.temp_hum_verkstad_voltage,sensor.verkstaden_klimatsensor_spanning,Förberett förslag; inväntar externa beroenden och etappkontroll,
+sensor.temp_hum_kok_battery,sensor.koket_klimatsensor_batteriniva,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.entity_registry:sensor.temp_hum_koket_battery_plus.options.battery_notes.entity_id
+sensor.temp_hum_kok_humidity,sensor.koket_klimatsensor_luftfuktighet,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.area_registry:data.data.areas[4].humidity_entity_id
+sensor.temp_hum_kok_signal_strength,sensor.koket_klimatsensor_signalstyrka,Förberett förslag; inväntar externa beroenden och etappkontroll,
+sensor.temp_hum_kok_voltage,sensor.koket_klimatsensor_spanning,Förberett förslag; inväntar externa beroenden och etappkontroll,
+sensor.temp_hum_dusch_battery,sensor.duschen_klimatsensor_batteriniva,Förberett förslag; inväntar externa beroenden och etappkontroll,.storage/core.entity_registry:sensor.temp_hum_duschen_battery_plus.options.battery_notes.entity_id
+sensor.temp_hum_dusch_signal_strength,sensor.duschen_klimatsensor_signalstyrka,Förberett förslag; inväntar externa beroenden och etappkontroll,
+sensor.temp_hum_dusch_voltage,sensor.duschen_klimatsensor_spanning,Förberett förslag; inväntar externa beroenden och etappkontroll,
+sensor.temp_hum_honshus_signal_strength,sensor.honshuset_klimatsensor_signalstyrka,Förberett förslag; inväntar externa beroenden och etappkontroll,
+sensor.temp_hum_honshus_voltage,sensor.honshuset_klimatsensor_spanning,Förberett förslag; inväntar externa beroenden och etappkontroll,

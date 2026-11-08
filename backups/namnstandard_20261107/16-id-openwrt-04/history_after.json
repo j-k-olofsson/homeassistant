@@ -1,0 +1,114 @@
+{
+  "switch.verkstaden_accesspunkt_wps": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:02.252480+00:00",
+      "last_updated": "2026-11-07T07:42:02.252480+00:00"
+    }
+  ],
+  "update.verkstaden_accesspunkt": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:02.252480+00:00",
+      "last_updated": "2026-11-07T07:42:02.252480+00:00"
+    }
+  ],
+  "image.verkstaden_accesspunkt_wi_fi_qr_kod_olofsson_wifi_via_ap_verkstaden": [
+    {
+      "state": "2026-11-07T04:58:37.952022+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:02.252480+00:00",
+      "last_updated": "2026-11-07T07:42:02.252480+00:00"
+    },
+    {
+      "state": "2026-11-07T13:25:17.518316+00:00",
+      "last_changed": "2026-11-07T13:25:17.518551+00:00"
+    },
+    {
+      "state": "2026-11-08T07:03:39.050772+00:00",
+      "last_changed": "2026-11-08T07:03:39.050995+00:00"
+    }
+  ],
+  "image.verkstaden_accesspunkt_wi_fi_qr_kod_olofsson_guest_via_ap_verkstaden": [
+    {
+      "state": "2026-11-07T04:58:37.952045+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:02.252480+00:00",
+      "last_updated": "2026-11-07T07:42:02.252480+00:00"
+    },
+    {
+      "state": "2026-11-07T13:25:17.518339+00:00",
+      "last_changed": "2026-11-07T13:25:17.518750+00:00"
+    },
+    {
+      "state": "2026-11-08T07:03:39.050798+00:00",
+      "last_changed": "2026-11-08T07:03:39.051164+00:00"
+    }
+  ],
+  "image.verkstaden_accesspunkt_wi_fi_qr_kod_olofsson_iot_via_ap_verkstaden": [
+    {
+      "state": "2026-11-07T04:58:37.952068+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:02.252480+00:00",
+      "last_updated": "2026-11-07T07:42:02.252480+00:00"
+    },
+    {
+      "state": "2026-11-07T13:25:17.518358+00:00",
+      "last_changed": "2026-11-07T13:25:17.518928+00:00"
+    },
+    {
+      "state": "2026-11-08T07:03:39.050816+00:00",
+      "last_changed": "2026-11-08T07:03:39.051314+00:00"
+    }
+  ],
+  "binary_sensor.kontoret_natverksswitch_anslutning": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:02.252480+00:00",
+      "last_updated": "2026-11-07T07:42:02.252480+00:00"
+    }
+  ],
+  "binary_sensor.kontoret_natverksswitch_omstart_kravs": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:02.252480+00:00",
+      "last_updated": "2026-11-07T07:42:02.252480+00:00"
+    }
+  ],
+  "button.kontoret_natverksswitch_starta_om_router": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:02.252480+00:00",
+      "last_updated": "2026-11-07T07:42:02.252480+00:00"
+    }
+  ],
+  "button.kontoret_natverksswitch_starta_wps": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:02.252480+00:00",
+      "last_updated": "2026-11-07T07:42:02.252480+00:00"
+    }
+  ],
+  "button.kontoret_natverksswitch_avbryt_wps": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:02.252480+00:00",
+      "last_updated": "2026-11-07T07:42:02.252480+00:00"
+    }
+  ],
+  "button.kontoret_natverksswitch_skapa_sakerhetskopia": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:02.252480+00:00",
+      "last_updated": "2026-11-07T07:42:02.252480+00:00"
+    }
+  ]
+}

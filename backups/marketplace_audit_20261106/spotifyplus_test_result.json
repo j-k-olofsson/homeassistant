@@ -1,0 +1,944 @@
+{
+  "domain": "spotifyplus",
+  "entry_id": "01K2ACBMW0AFHVRV6F9F5M7V6F",
+  "started": 1793985180.1596806,
+  "disable_response": {
+    "require_restart": false
+  },
+  "disabled_entry": {
+    "created_at": 1754842649.47267,
+    "entry_id": "01K2ACBMW0AFHVRV6F9F5M7V6F",
+    "domain": "spotifyplus",
+    "modified_at": 1793981809.150947,
+    "title": "mammaochpapppa",
+    "source": "user",
+    "state": "not_loaded",
+    "supports_options": true,
+    "supports_remove_device": false,
+    "supports_unload": true,
+    "supports_reconfigure": false,
+    "supported_subentry_types": {},
+    "pref_disable_new_entities": false,
+    "pref_disable_polling": false,
+    "disabled_by": "user",
+    "reason": null,
+    "error_reason_translation_domain": null,
+    "error_reason_translation_key": null,
+    "error_reason_translation_placeholders": null,
+    "num_subentries": 0
+  },
+  "checks_disabled": {
+    "logs": [
+      {
+        "name": "homeassistant.components.shelly",
+        "message": [
+          "Error fetching Plus1PM-Duschen data: An error occurred while retrieving data from Plus1PM-Duschen"
+        ],
+        "level": "ERROR",
+        "source": [
+          "helpers/update_coordinator.py",
+          527
+        ],
+        "timestamp": 1793985069.5173461,
+        "exception": "",
+        "count": 1,
+        "first_occurred": 1793985069.5173461
+      },
+      {
+        "name": "pyportainer.listener",
+        "message": [
+          "Connection lost on endpoint 14, reconnecting in 4.8s: Connection lost while streaming from http://192.168.10.200:9000/api/endpoints/14/docker/events: Response payload is not completed: <TransferEncodingError: 400, message='Not enough data to satisfy transfer length header.'>",
+          "Connection lost on endpoint 14, reconnecting in 4.9s: Connection lost while streaming from http://192.168.10.200:9000/api/endpoints/14/docker/events: Response payload is not completed: <TransferEncodingError: 400, message='Not enough data to satisfy transfer length header.'>",
+          "Connection lost on endpoint 14, reconnecting in 4.6s: Connection lost while streaming from http://192.168.10.200:9000/api/endpoints/14/docker/events: Response payload is not completed: <TransferEncodingError: 400, message='Not enough data to satisfy transfer length header.'>",
+          "Connection lost on endpoint 14, reconnecting in 5.0s: Connection lost while streaming from http://192.168.10.200:9000/api/endpoints/14/docker/events: Response payload is not completed: <TransferEncodingError: 400, message='Not enough data to satisfy transfer length header.'>",
+          "Connection lost on endpoint 14, reconnecting in 4.7s: Connection lost while streaming from http://192.168.10.200:9000/api/endpoints/14/docker/events: Response payload is not completed: <TransferEncodingError: 400, message='Not enough data to satisfy transfer length header.'>"
+        ],
+        "level": "WARNING",
+        "source": [
+          "runner.py",
+          280
+        ],
+        "timestamp": 1793984895.8987713,
+        "exception": "",
+        "count": 14,
+        "first_occurred": 1793961435.9346075
+      },
+      {
+        "name": "custom_components.ai_agent_ha.agent",
+        "message": [
+          "Error processing AI response: Failed after 10 retries. Last error: OpenAI API error 429: {\n  \"error\": {\n    \"message\": \"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\n    \"type\": \"insufficient_quota\",\n    \"param\": null,\n    \"code\": \"credit_balance_exhausted\"\n  }\n}"
+        ],
+        "level": "ERROR",
+        "source": [
+          "custom_components/ai_agent_ha/agent.py",
+          3384
+        ],
+        "timestamp": 1793984642.7715282,
+        "exception": "Traceback (most recent call last):\n  File \"/config/custom_components/ai_agent_ha/agent.py\", line 3384, in process_query\n    response = await self._get_ai_response()\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/config/custom_components/ai_agent_ha/agent.py\", line 4226, in _get_ai_response\n    raise Exception(\n        f\"Failed after {retry_count} retries. Last error: {str(last_error)}\"\n    )\nException: Failed after 10 retries. Last error: OpenAI API error 429: {\n  \"error\": {\n    \"message\": \"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\n    \"type\": \"insufficient_quota\",\n    \"param\": null,\n    \"code\": \"credit_balance_exhausted\"\n  }\n}",
+        "count": 1,
+        "first_occurred": 1793984642.7715282
+      },
+      {
+        "name": "custom_components.ai_agent_ha.agent",
+        "message": [
+          "AI client error on attempt 6: OpenAI API error 429: {\n  \"error\": {\n    \"message\": \"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\n    \"type\": \"insufficient_quota\",\n    \"param\": null,\n    \"code\": \"credit_balance_exhausted\"\n  }\n}",
+          "AI client error on attempt 7: OpenAI API error 429: {\n  \"error\": {\n    \"message\": \"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\n    \"type\": \"insufficient_quota\",\n    \"param\": null,\n    \"code\": \"credit_balance_exhausted\"\n  }\n}",
+          "AI client error on attempt 8: OpenAI API error 429: {\n  \"error\": {\n    \"message\": \"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\n    \"type\": \"insufficient_quota\",\n    \"param\": null,\n    \"code\": \"credit_balance_exhausted\"\n  }\n}",
+          "AI client error on attempt 9: OpenAI API error 429: {\n  \"error\": {\n    \"message\": \"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\n    \"type\": \"insufficient_quota\",\n    \"param\": null,\n    \"code\": \"credit_balance_exhausted\"\n  }\n}",
+          "AI client error on attempt 10: OpenAI API error 429: {\n  \"error\": {\n    \"message\": \"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\n    \"type\": \"insufficient_quota\",\n    \"param\": null,\n    \"code\": \"credit_balance_exhausted\"\n  }\n}"
+        ],
+        "level": "ERROR",
+        "source": [
+          "custom_components/ai_agent_ha/agent.py",
+          4212
+        ],
+        "timestamp": 1793984642.7713628,
+        "exception": "",
+        "count": 10,
+        "first_occurred": 1793984593.638084
+      },
+      {
+        "name": "custom_components.ai_agent_ha.agent",
+        "message": [
+          "OpenAI API error 429: {\n  \"error\": {\n    \"message\": \"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\n    \"type\": \"insufficient_quota\",\n    \"param\": null,\n    \"code\": \"credit_balance_exhausted\"\n  }\n}"
+        ],
+        "level": "ERROR",
+        "source": [
+          "custom_components/ai_agent_ha/agent.py",
+          892
+        ],
+        "timestamp": 1793984642.7707257,
+        "exception": "",
+        "count": 10,
+        "first_occurred": 1793984593.635674
+      },
+      {
+        "name": "homeassistant.components.go2rtc.server",
+        "message": [
+          "17:51:46.749 WRN github.com/AlexxIT/go2rtc/internal/streams/producer.go:170 > error=EOF url=rtsp://****@192.168.30.210:554/stream1",
+          "17:51:46.867 WRN github.com/AlexxIT/go2rtc/internal/streams/producer.go:170 > error=EOF url=rtsp://****@192.168.30.210:554/stream1",
+          "17:51:46.931 WRN github.com/AlexxIT/go2rtc/internal/streams/producer.go:170 > error=EOF url=rtsp://****@192.168.30.210:554/stream1",
+          "17:51:47.331 WRN github.com/AlexxIT/go2rtc/internal/streams/producer.go:170 > error=EOF url=rtsp://****@192.168.30.210:554/stream1",
+          "17:51:47.449 WRN github.com/AlexxIT/go2rtc/internal/streams/producer.go:170 > error=EOF url=rtsp://****@192.168.30.210:554/stream1"
+        ],
+        "level": "WARNING",
+        "source": [
+          "components/go2rtc/server.py",
+          262
+        ],
+        "timestamp": 1793983907.4498153,
+        "exception": "",
+        "count": 27,
+        "first_occurred": 1793963213.3781116
+      },
+      {
+        "name": "custom_components.google_home",
+        "message": [
+          "Failed to fetch Google's device list: Could not get the home graph: INTERNAL (Internal error encountered.)"
+        ],
+        "level": "ERROR",
+        "source": [
+          "custom_components/google_home/api.py",
+          298
+        ],
+        "timestamp": 1793982533.5884736,
+        "exception": "",
+        "count": 1,
+        "first_occurred": 1793982533.5884736
+      },
+      {
+        "name": "granny_broadcast",
+        "message": [
+          "Två talförsök misslyckades på media_player.granny_utrop."
+        ],
+        "level": "ERROR",
+        "source": [
+          "components/system_log/services.py",
+          41
+        ],
+        "timestamp": 1793978610.5324943,
+        "exception": "",
+        "count": 1,
+        "first_occurred": 1793978610.5324943
+      },
+      {
+        "name": "homeassistant.components.script.granny_announce_player",
+        "message": [
+          "Granny – tal till ett Chromecast-mål: Repeat at step 2: Error executing script. Error for call_service at pos 2: Timed out launching app on Granny utrop.",
+          "Granny – tal till ett Chromecast-mål: Repeat at step 2: Error executing script. Error for call_service at pos 2: Granny utrop refused to launch the cast app. Try toggling the 'Use Music Assistant Cast App' option in the player settings."
+        ],
+        "level": "ERROR",
+        "source": [
+          "helpers/script.py",
+          2308
+        ],
+        "timestamp": 1793978610.5296457,
+        "exception": "",
+        "count": 2,
+        "first_occurred": 1793978580.3022668
+      },
+      {
+        "name": "homeassistant.components.script.granny_speak_attempt",
+        "message": [
+          "Granny – ett talförsök: Error executing script. Error for call_service at pos 4: Timed out launching app on Granny utrop.",
+          "Granny – ett talförsök: Error executing script. Error for call_service at pos 4: Granny utrop refused to launch the cast app. Try toggling the 'Use Music Assistant Cast App' option in the player settings."
+        ],
+        "level": "ERROR",
+        "source": [
+          "helpers/script.py",
+          2308
+        ],
+        "timestamp": 1793978610.5270877,
+        "exception": "",
+        "count": 2,
+        "first_occurred": 1793978580.2999194
+      },
+      {
+        "name": "homeassistant.components.template.template_entity",
+        "message": [
+          "TemplateError('ValueError: Template error: float got invalid input 'None' when rendering template '{% set current_price = state_attr(\"sensor.nordpool\", \"current_price\") | float %}\n          {% set additional_costs = state_attr(\"sensor.nordpool\", \"additional_costs_current_hour\") | float %}\n          {{ (current_price - ((current_price - additional_costs) / 1.25)) | round(2) }}' but no default was specified') while processing template 'Template<template=({% set current_price = state_attr(\"sensor.nordpool\", \"current_price\") | float %}\n          {% set additional_costs = state_attr(\"sensor.nordpool\", \"additional_costs_current_hour\") | float %}\n          {{ (current_price - ((current_price - additional_costs) / 1.25)) | round(2) }}) renders=50>' for attribute '_attr_native_value' in entity 'sensor.template_nordpool_additional_costs_current_hour'",
+          "TemplateError('ValueError: Template error: float got invalid input 'None' when rendering template '{% set current_price = state_attr(\"sensor.nordpool\", \"current_price\") | float %}\n          {% set additional_costs = state_attr(\"sensor.nordpool\", \"additional_costs_current_hour\") | float %}\n          {{ ((current_price - additional_costs) / 1.25) | round(2) }}' but no default was specified') while processing template 'Template<template=({% set current_price = state_attr(\"sensor.nordpool\", \"current_price\") | float %}\n          {% set additional_costs = state_attr(\"sensor.nordpool\", \"additional_costs_current_hour\") | float %}\n          {{ ((current_price - additional_costs) / 1.25) | round(2) }}) renders=50>' for attribute '_attr_native_value' in entity 'sensor.template_nordpool_base_cost_current_hour'"
+        ],
+        "level": "ERROR",
+        "source": [
+          "components/template/template_entity.py",
+          100
+        ],
+        "timestamp": 1793978543.2881744,
+        "exception": "",
+        "count": 2,
+        "first_occurred": 1793978543.2868657
+      },
+      {
+        "name": "homeassistant.helpers.entity",
+        "message": [
+          "Update of climate.sef_42h_climate is taking over 10 seconds",
+          "Update of sensor.openuv_aktuellt_uv_index is taking over 10 seconds"
+        ],
+        "level": "WARNING",
+        "source": [
+          "helpers/entity.py",
+          1390
+        ],
+        "timestamp": 1793973610.1181962,
+        "exception": "",
+        "count": 2,
+        "first_occurred": 1793963830.8080502
+      },
+      {
+        "name": "homeassistant.helpers.entity",
+        "message": [
+          "Updating state for media_player.spotifyplus_mammaochpapppa (<class 'custom_components.spotifyplus.media_player.SpotifyMediaPlayer'>) took 0.743 seconds. Please create a bug report at https://github.com/thlucas1/homeassistantcomponent_spotifyplus/issues"
+        ],
+        "level": "WARNING",
+        "source": [
+          "helpers/entity.py",
+          1307
+        ],
+        "timestamp": 1793967756.2300842,
+        "exception": "",
+        "count": 1,
+        "first_occurred": 1793967756.2300842
+      },
+      {
+        "name": "custom_components.toyota.climate",
+        "message": [
+          "Error updating climate status"
+        ],
+        "level": "ERROR",
+        "source": [
+          "custom_components/toyota/climate.py",
+          559
+        ],
+        "timestamp": 1793963837.4308424,
+        "exception": "Traceback (most recent call last):\n  File \"/config/custom_components/toyota/climate.py\", line 559, in async_update\n    await self._poll_status()\n  File \"/config/custom_components/toyota/climate.py\", line 523, in _poll_status\n    if await self.vehicle.refresh_climate_status():\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.14/site-packages/pytoyoda/models/vehicle.py\", line 916, in refresh_climate_status\n    return await self._api.refresh_climate_status(self.vin)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.14/site-packages/pytoyoda/api.py\", line 366, in refresh_climate_status\n    return await self._request_and_parse(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        StatusModel, \"POST\", VEHICLE_CLIMATE_STATUS_REFRESH_ENDPOINT, vin=vin\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/usr/local/lib/python3.14/site-packages/pytoyoda/api.py\", line 106, in _request_and_parse\n    response = await self.controller.request_json(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        method=method, endpoint=endpoint, **kwargs\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/usr/local/lib/python3.14/site-packages/pytoyoda/controller.py\", line 571, in request_json\n    response = await self.request_raw(method, endpoint, vin, body, params, headers)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.14/site-packages/pytoyoda/controller.py\", line 478, in request_raw\n    raise ToyotaApiError(msg)\npytoyoda.exceptions.ToyotaApiError: Request Failed. 500, {\"status\":{\"messages\":[{\"description\":\"Remote command interrupted. Try again.\",\"detailedDescription\":\"Remote command invocation(Spec-B) failed\",\"responseCode\":\"ONE-GLOBAL-RS-40009\"}],\"serviceIdentifier\":null}}.",
+        "count": 1,
+        "first_occurred": 1793963837.4308424
+      },
+      {
+        "name": "custom_components.toyota",
+        "message": [
+          "2026-11-06 12:17:01.454 | WARNING  | pytoyoda.controller:request_raw:467 - Toyota API 500 on /v1/remote/refresh-climate-status; retrying in 2s (attempt 2 of 4)\n",
+          "2026-11-06 12:17:03.959 | WARNING  | pytoyoda.controller:request_raw:467 - Toyota API 500 on /v1/remote/refresh-climate-status; retrying in 4s (attempt 3 of 4)\n",
+          "2026-11-06 12:17:08.896 | WARNING  | pytoyoda.controller:request_raw:467 - Toyota API 500 on /v1/remote/refresh-climate-status; retrying in 8s (attempt 4 of 4)\n"
+        ],
+        "level": "WARNING",
+        "source": [
+          "custom_components/toyota/__init__.py",
+          101
+        ],
+        "timestamp": 1793963828.896676,
+        "exception": "",
+        "count": 3,
+        "first_occurred": 1793963821.4541876
+      },
+      {
+        "name": "homeassistant.helpers.frame",
+        "message": [
+          "Detected that custom integration 'toyota' writes the deprecated ToyotaClimate._attr_temperature_unit, use _attr_native_temperature_unit instead at custom_components/toyota/climate.py, line 336: self._attr_temperature_unit = (. This will stop working in Home Assistant 2027.11, please create a bug report at https://github.com/pytoyoda/ha_toyota/issues",
+          "Detected that custom integration 'toyota' reads the deprecated ToyotaClimate._attr_target_temperature, use _attr_native_target_temperature instead at custom_components/toyota/climate.py, line 318: self._attr_target_temperature,. This will stop working in Home Assistant 2027.11, please create a bug report at https://github.com/pytoyoda/ha_toyota/issues",
+          "Detected that custom integration 'toyota' writes the deprecated ToyotaClimate._attr_current_temperature, use _attr_native_current_temperature instead at custom_components/toyota/climate.py, line 379: self._attr_current_temperature = (. This will stop working in Home Assistant 2027.11, please create a bug report at https://github.com/pytoyoda/ha_toyota/issues",
+          "Detected that custom integration 'toyota' reads the deprecated ToyotaClimate._attr_current_temperature, use _attr_native_current_temperature instead at custom_components/toyota/climate.py, line 436: return self._attr_current_temperature. This will stop working in Home Assistant 2027.11, please create a bug report at https://github.com/pytoyoda/ha_toyota/issues",
+          "Detected that custom integration 'toyota' reads the deprecated ToyotaClimate._attr_target_temperature, use _attr_native_target_temperature instead at custom_components/toyota/climate.py, line 441: return self._attr_target_temperature. This will stop working in Home Assistant 2027.11, please create a bug report at https://github.com/pytoyoda/ha_toyota/issues"
+        ],
+        "level": "WARNING",
+        "source": [
+          "helpers/frame.py",
+          348
+        ],
+        "timestamp": 1793963700.806292,
+        "exception": "",
+        "count": 8,
+        "first_occurred": 1793963700.715793
+      },
+      {
+        "name": "custom_components.toyota.climate",
+        "message": [
+          "custom_components.toyota.climate::ToyotaClimate provides the deprecated _attr_temperature_unit, this will stop working in Home Assistant 2027.11, use _attr_native_temperature_unit instead, please report it to the custom integration author",
+          "custom_components.toyota.climate::ToyotaClimate provides the deprecated current_temperature, this will stop working in Home Assistant 2027.11, use native_current_temperature instead, please report it to the custom integration author",
+          "custom_components.toyota.climate::ToyotaClimate provides the deprecated target_temperature, this will stop working in Home Assistant 2027.11, use native_target_temperature instead, please report it to the custom integration author"
+        ],
+        "level": "WARNING",
+        "source": [
+          "helpers/deprecation.py",
+          706
+        ],
+        "timestamp": 1793963700.66883,
+        "exception": "",
+        "count": 3,
+        "first_occurred": 1793963700.668584
+      },
+      {
+        "name": "homeassistant.components.prusalink.coordinator",
+        "message": [
+          "Error fetching prusalink data: Cannot connect"
+        ],
+        "level": "ERROR",
+        "source": [
+          "helpers/update_coordinator.py",
+          527
+        ],
+        "timestamp": 1793962314.847885,
+        "exception": "",
+        "count": 4,
+        "first_occurred": 1793962314.6097736
+      },
+      {
+        "name": "custom_components.toyota",
+        "message": [
+          "Config entry 'j.k.olofsson@gmail.com' for toyota integration could not authenticate: Authentication Failed. 502, <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.25.5</center>\r\n</body>\r\n</html>\r\n."
+        ],
+        "level": "WARNING",
+        "source": [
+          "config_entries.py",
+          813
+        ],
+        "timestamp": 1793959674.2010972,
+        "exception": "",
+        "count": 1,
+        "first_occurred": 1793959674.2010972
+      },
+      {
+        "name": "custom_components.toyota",
+        "message": [
+          "2026-11-06 11:07:15.622 | ERROR    | pytoyoda.client:login:109 - Login failed: 'Authentication Failed. 504, <!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<HTML><HEAD><META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=UTF-8\">\n<TITLE>ERROR: The request could not be satisfied</TITLE>\n</HEAD><BODY>\n<H1>504 Gateway Timeout ERROR</H1>\n<H2>The request could not be satisfied.</H2>\n<HR noshade size=\"1px\">\nWe can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again later, or contact the app or website owner.\n<BR clear=\"all\">\nIf you provide content to customers through CloudFront, you can find steps to troubleshoot and help prevent this error by reviewing the CloudFront documentation.\n<BR clear=\"all\">\n<HR noshade size=\"1px\">\n<PRE>\nGenerated by cloudfront (CloudFront) HTTP3 Server\nRequest ID: ByMj9gKC_G4_UTlRJN1HScssyfrvCB9jmJKaUp94y9jSszTsEq8ojw&#x3D;&#x3D;\n</PRE>\n<ADDRESS>\n</ADDRESS>\n</BODY></HTML>.'.\n",
+          "2026-11-06 11:07:54.200 | ERROR    | pytoyoda.client:login:109 - Login failed: 'Authentication Failed. 502, <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.25.5</center>\r\n</body>\r\n</html>\r\n.'.\n"
+        ],
+        "level": "ERROR",
+        "source": [
+          "custom_components/toyota/__init__.py",
+          103
+        ],
+        "timestamp": 1793959674.2008212,
+        "exception": "",
+        "count": 2,
+        "first_occurred": 1793959635.6231163
+      },
+      {
+        "name": "homeassistant.components.ps4.media_player",
+        "message": [
+          "PS4 could not be reached"
+        ],
+        "level": "WARNING",
+        "source": [
+          "components/ps4/media_player.py",
+          234
+        ],
+        "timestamp": 1793959643.6194658,
+        "exception": "",
+        "count": 1,
+        "first_occurred": 1793959643.6194658
+      },
+      {
+        "name": "homeassistant.config_entries",
+        "message": [
+          "Config entry 'j.k.olofsson@gmail.com' for toyota integration could not authenticate: Authentication Failed. 504, <!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<HTML><HEAD><META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=UTF-8\">\n<TITLE>ERROR: The request could not be satisfied</TITLE>\n</HEAD><BODY>\n<H1>504 Gateway Timeout ERROR</H1>\n<H2>The request could not be satisfied.</H2>\n<HR noshade size=\"1px\">\nWe can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again later, or contact the app or website owner.\n<BR clear=\"all\">\nIf you provide content to customers through CloudFront, you can find steps to troubleshoot and help prevent this error by reviewing the CloudFront documentation.\n<BR clear=\"all\">\n<HR noshade size=\"1px\">\n<PRE>\nGenerated by cloudfront (CloudFront) HTTP3 Server\nRequest ID: ByMj9gKC_G4_UTlRJN1HScssyfrvCB9jmJKaUp94y9jSszTsEq8ojw&#x3D;&#x3D;\n</PRE>\n<ADDRESS>\n</ADDRESS>\n</BODY></HTML>."
+        ],
+        "level": "WARNING",
+        "source": [
+          "config_entries.py",
+          813
+        ],
+        "timestamp": 1793959635.6234791,
+        "exception": "",
+        "count": 1,
+        "first_occurred": 1793959635.6234791
+      },
+      {
+        "name": "aioesphomeapi.reconnect_logic",
+        "message": [
+          "Can't connect to ESPHome API for esphome02 @ 192.168.30.102: Error connecting to [AddrInfo(family=<AddressFamily.AF_INET: 2>, type=<SocketKind.SOCK_STREAM: 1>, proto=6, sockaddr=IPv4Sockaddr(address='192.168.30.102', port=6053))]: [Errno 113] Connect call failed ('192.168.30.102', 6053) (SocketAPIError)"
+        ],
+        "level": "WARNING",
+        "source": [
+          "runner.py",
+          280
+        ],
+        "timestamp": 1793959614.2443602,
+        "exception": "",
+        "count": 1,
+        "first_occurred": 1793959614.2443602
+      },
+      {
+        "name": "homeassistant.components.openuv",
+        "message": [
+          "Skipping update due to missing data"
+        ],
+        "level": "WARNING",
+        "source": [
+          "components/openuv/binary_sensor.py",
+          61
+        ],
+        "timestamp": 1793959611.1925347,
+        "exception": "",
+        "count": 1,
+        "first_occurred": 1793959611.1925347
+      },
+      {
+        "name": "pyvesync.vesync",
+        "message": [
+          "No online devices (excluding air fryers) to check firmware for"
+        ],
+        "level": "WARNING",
+        "source": [
+          "components/vesync/__init__.py",
+          81
+        ],
+        "timestamp": 1793959609.3750243,
+        "exception": "",
+        "count": 1,
+        "first_occurred": 1793959609.3750243
+      },
+      {
+        "name": "homeassistant.components.openuv",
+        "message": [
+          "Skipping update due to missing data: from_time"
+        ],
+        "level": "WARNING",
+        "source": [
+          "components/openuv/coordinator.py",
+          90
+        ],
+        "timestamp": 1793959608.656818,
+        "exception": "",
+        "count": 1,
+        "first_occurred": 1793959608.656818
+      },
+      {
+        "name": "homeassistant.config_entries",
+        "message": [
+          "The deprecated constant CONN_CLASS_CLOUD_POLL was used from ai_agent_ha. It will be removed in HA Core 2027.5.0. Please report it to the author of the 'ai_agent_ha' custom integration",
+          "The deprecated constant CONN_CLASS_CLOUD_POLL was used from nordpool. It will be removed in HA Core 2027.5.0. Please report it to the author of the 'nordpool' custom integration",
+          "The deprecated constant CONN_CLASS_CLOUD_POLL was used from pollenprognos. It will be removed in HA Core 2027.5.0. Please report it to the author of the 'pollenprognos' custom integration"
+        ],
+        "level": "WARNING",
+        "source": [
+          "helpers/deprecation.py",
+          297
+        ],
+        "timestamp": 1793959605.1353462,
+        "exception": "",
+        "count": 3,
+        "first_occurred": 1793959604.7736323
+      }
+    ],
+    "check_config": {
+      "http": 200,
+      "body": {
+        "result": "valid",
+        "errors": null,
+        "warnings": null
+      }
+    }
+  },
+  "enable_response": {
+    "require_restart": false
+  },
+  "restored_entry": {
+    "created_at": 1754842649.47267,
+    "entry_id": "01K2ACBMW0AFHVRV6F9F5M7V6F",
+    "domain": "spotifyplus",
+    "modified_at": 1793981809.150947,
+    "title": "mammaochpapppa",
+    "source": "user",
+    "state": "loaded",
+    "supports_options": true,
+    "supports_remove_device": false,
+    "supports_unload": true,
+    "supports_reconfigure": false,
+    "supported_subentry_types": {},
+    "pref_disable_new_entities": false,
+    "pref_disable_polling": false,
+    "disabled_by": null,
+    "reason": null,
+    "error_reason_translation_domain": null,
+    "error_reason_translation_key": null,
+    "error_reason_translation_placeholders": null,
+    "num_subentries": 0
+  },
+  "checks_restored": {
+    "logs": [
+      {
+        "name": "homeassistant.components.shelly",
+        "message": [
+          "Error fetching Plus1PM-Duschen data: An error occurred while retrieving data from Plus1PM-Duschen"
+        ],
+        "level": "ERROR",
+        "source": [
+          "helpers/update_coordinator.py",
+          527
+        ],
+        "timestamp": 1793985069.5173461,
+        "exception": "",
+        "count": 1,
+        "first_occurred": 1793985069.5173461
+      },
+      {
+        "name": "pyportainer.listener",
+        "message": [
+          "Connection lost on endpoint 14, reconnecting in 4.8s: Connection lost while streaming from http://192.168.10.200:9000/api/endpoints/14/docker/events: Response payload is not completed: <TransferEncodingError: 400, message='Not enough data to satisfy transfer length header.'>",
+          "Connection lost on endpoint 14, reconnecting in 4.9s: Connection lost while streaming from http://192.168.10.200:9000/api/endpoints/14/docker/events: Response payload is not completed: <TransferEncodingError: 400, message='Not enough data to satisfy transfer length header.'>",
+          "Connection lost on endpoint 14, reconnecting in 4.6s: Connection lost while streaming from http://192.168.10.200:9000/api/endpoints/14/docker/events: Response payload is not completed: <TransferEncodingError: 400, message='Not enough data to satisfy transfer length header.'>",
+          "Connection lost on endpoint 14, reconnecting in 5.0s: Connection lost while streaming from http://192.168.10.200:9000/api/endpoints/14/docker/events: Response payload is not completed: <TransferEncodingError: 400, message='Not enough data to satisfy transfer length header.'>",
+          "Connection lost on endpoint 14, reconnecting in 4.7s: Connection lost while streaming from http://192.168.10.200:9000/api/endpoints/14/docker/events: Response payload is not completed: <TransferEncodingError: 400, message='Not enough data to satisfy transfer length header.'>"
+        ],
+        "level": "WARNING",
+        "source": [
+          "runner.py",
+          280
+        ],
+        "timestamp": 1793984895.8987713,
+        "exception": "",
+        "count": 14,
+        "first_occurred": 1793961435.9346075
+      },
+      {
+        "name": "custom_components.ai_agent_ha.agent",
+        "message": [
+          "Error processing AI response: Failed after 10 retries. Last error: OpenAI API error 429: {\n  \"error\": {\n    \"message\": \"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\n    \"type\": \"insufficient_quota\",\n    \"param\": null,\n    \"code\": \"credit_balance_exhausted\"\n  }\n}"
+        ],
+        "level": "ERROR",
+        "source": [
+          "custom_components/ai_agent_ha/agent.py",
+          3384
+        ],
+        "timestamp": 1793984642.7715282,
+        "exception": "Traceback (most recent call last):\n  File \"/config/custom_components/ai_agent_ha/agent.py\", line 3384, in process_query\n    response = await self._get_ai_response()\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/config/custom_components/ai_agent_ha/agent.py\", line 4226, in _get_ai_response\n    raise Exception(\n        f\"Failed after {retry_count} retries. Last error: {str(last_error)}\"\n    )\nException: Failed after 10 retries. Last error: OpenAI API error 429: {\n  \"error\": {\n    \"message\": \"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\n    \"type\": \"insufficient_quota\",\n    \"param\": null,\n    \"code\": \"credit_balance_exhausted\"\n  }\n}",
+        "count": 1,
+        "first_occurred": 1793984642.7715282
+      },
+      {
+        "name": "custom_components.ai_agent_ha.agent",
+        "message": [
+          "AI client error on attempt 6: OpenAI API error 429: {\n  \"error\": {\n    \"message\": \"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\n    \"type\": \"insufficient_quota\",\n    \"param\": null,\n    \"code\": \"credit_balance_exhausted\"\n  }\n}",
+          "AI client error on attempt 7: OpenAI API error 429: {\n  \"error\": {\n    \"message\": \"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\n    \"type\": \"insufficient_quota\",\n    \"param\": null,\n    \"code\": \"credit_balance_exhausted\"\n  }\n}",
+          "AI client error on attempt 8: OpenAI API error 429: {\n  \"error\": {\n    \"message\": \"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\n    \"type\": \"insufficient_quota\",\n    \"param\": null,\n    \"code\": \"credit_balance_exhausted\"\n  }\n}",
+          "AI client error on attempt 9: OpenAI API error 429: {\n  \"error\": {\n    \"message\": \"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\n    \"type\": \"insufficient_quota\",\n    \"param\": null,\n    \"code\": \"credit_balance_exhausted\"\n  }\n}",
+          "AI client error on attempt 10: OpenAI API error 429: {\n  \"error\": {\n    \"message\": \"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\n    \"type\": \"insufficient_quota\",\n    \"param\": null,\n    \"code\": \"credit_balance_exhausted\"\n  }\n}"
+        ],
+        "level": "ERROR",
+        "source": [
+          "custom_components/ai_agent_ha/agent.py",
+          4212
+        ],
+        "timestamp": 1793984642.7713628,
+        "exception": "",
+        "count": 10,
+        "first_occurred": 1793984593.638084
+      },
+      {
+        "name": "custom_components.ai_agent_ha.agent",
+        "message": [
+          "OpenAI API error 429: {\n  \"error\": {\n    \"message\": \"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\n    \"type\": \"insufficient_quota\",\n    \"param\": null,\n    \"code\": \"credit_balance_exhausted\"\n  }\n}"
+        ],
+        "level": "ERROR",
+        "source": [
+          "custom_components/ai_agent_ha/agent.py",
+          892
+        ],
+        "timestamp": 1793984642.7707257,
+        "exception": "",
+        "count": 10,
+        "first_occurred": 1793984593.635674
+      },
+      {
+        "name": "homeassistant.components.go2rtc.server",
+        "message": [
+          "17:51:46.749 WRN github.com/AlexxIT/go2rtc/internal/streams/producer.go:170 > error=EOF url=rtsp://****@192.168.30.210:554/stream1",
+          "17:51:46.867 WRN github.com/AlexxIT/go2rtc/internal/streams/producer.go:170 > error=EOF url=rtsp://****@192.168.30.210:554/stream1",
+          "17:51:46.931 WRN github.com/AlexxIT/go2rtc/internal/streams/producer.go:170 > error=EOF url=rtsp://****@192.168.30.210:554/stream1",
+          "17:51:47.331 WRN github.com/AlexxIT/go2rtc/internal/streams/producer.go:170 > error=EOF url=rtsp://****@192.168.30.210:554/stream1",
+          "17:51:47.449 WRN github.com/AlexxIT/go2rtc/internal/streams/producer.go:170 > error=EOF url=rtsp://****@192.168.30.210:554/stream1"
+        ],
+        "level": "WARNING",
+        "source": [
+          "components/go2rtc/server.py",
+          262
+        ],
+        "timestamp": 1793983907.4498153,
+        "exception": "",
+        "count": 27,
+        "first_occurred": 1793963213.3781116
+      },
+      {
+        "name": "custom_components.google_home",
+        "message": [
+          "Failed to fetch Google's device list: Could not get the home graph: INTERNAL (Internal error encountered.)"
+        ],
+        "level": "ERROR",
+        "source": [
+          "custom_components/google_home/api.py",
+          298
+        ],
+        "timestamp": 1793982533.5884736,
+        "exception": "",
+        "count": 1,
+        "first_occurred": 1793982533.5884736
+      },
+      {
+        "name": "granny_broadcast",
+        "message": [
+          "Två talförsök misslyckades på media_player.granny_utrop."
+        ],
+        "level": "ERROR",
+        "source": [
+          "components/system_log/services.py",
+          41
+        ],
+        "timestamp": 1793978610.5324943,
+        "exception": "",
+        "count": 1,
+        "first_occurred": 1793978610.5324943
+      },
+      {
+        "name": "homeassistant.components.script.granny_announce_player",
+        "message": [
+          "Granny – tal till ett Chromecast-mål: Repeat at step 2: Error executing script. Error for call_service at pos 2: Timed out launching app on Granny utrop.",
+          "Granny – tal till ett Chromecast-mål: Repeat at step 2: Error executing script. Error for call_service at pos 2: Granny utrop refused to launch the cast app. Try toggling the 'Use Music Assistant Cast App' option in the player settings."
+        ],
+        "level": "ERROR",
+        "source": [
+          "helpers/script.py",
+          2308
+        ],
+        "timestamp": 1793978610.5296457,
+        "exception": "",
+        "count": 2,
+        "first_occurred": 1793978580.3022668
+      },
+      {
+        "name": "homeassistant.components.script.granny_speak_attempt",
+        "message": [
+          "Granny – ett talförsök: Error executing script. Error for call_service at pos 4: Timed out launching app on Granny utrop.",
+          "Granny – ett talförsök: Error executing script. Error for call_service at pos 4: Granny utrop refused to launch the cast app. Try toggling the 'Use Music Assistant Cast App' option in the player settings."
+        ],
+        "level": "ERROR",
+        "source": [
+          "helpers/script.py",
+          2308
+        ],
+        "timestamp": 1793978610.5270877,
+        "exception": "",
+        "count": 2,
+        "first_occurred": 1793978580.2999194
+      },
+      {
+        "name": "homeassistant.components.template.template_entity",
+        "message": [
+          "TemplateError('ValueError: Template error: float got invalid input 'None' when rendering template '{% set current_price = state_attr(\"sensor.nordpool\", \"current_price\") | float %}\n          {% set additional_costs = state_attr(\"sensor.nordpool\", \"additional_costs_current_hour\") | float %}\n          {{ (current_price - ((current_price - additional_costs) / 1.25)) | round(2) }}' but no default was specified') while processing template 'Template<template=({% set current_price = state_attr(\"sensor.nordpool\", \"current_price\") | float %}\n          {% set additional_costs = state_attr(\"sensor.nordpool\", \"additional_costs_current_hour\") | float %}\n          {{ (current_price - ((current_price - additional_costs) / 1.25)) | round(2) }}) renders=50>' for attribute '_attr_native_value' in entity 'sensor.template_nordpool_additional_costs_current_hour'",
+          "TemplateError('ValueError: Template error: float got invalid input 'None' when rendering template '{% set current_price = state_attr(\"sensor.nordpool\", \"current_price\") | float %}\n          {% set additional_costs = state_attr(\"sensor.nordpool\", \"additional_costs_current_hour\") | float %}\n          {{ ((current_price - additional_costs) / 1.25) | round(2) }}' but no default was specified') while processing template 'Template<template=({% set current_price = state_attr(\"sensor.nordpool\", \"current_price\") | float %}\n          {% set additional_costs = state_attr(\"sensor.nordpool\", \"additional_costs_current_hour\") | float %}\n          {{ ((current_price - additional_costs) / 1.25) | round(2) }}) renders=50>' for attribute '_attr_native_value' in entity 'sensor.template_nordpool_base_cost_current_hour'"
+        ],
+        "level": "ERROR",
+        "source": [
+          "components/template/template_entity.py",
+          100
+        ],
+        "timestamp": 1793978543.2881744,
+        "exception": "",
+        "count": 2,
+        "first_occurred": 1793978543.2868657
+      },
+      {
+        "name": "homeassistant.helpers.entity",
+        "message": [
+          "Update of climate.sef_42h_climate is taking over 10 seconds",
+          "Update of sensor.openuv_aktuellt_uv_index is taking over 10 seconds"
+        ],
+        "level": "WARNING",
+        "source": [
+          "helpers/entity.py",
+          1390
+        ],
+        "timestamp": 1793973610.1181962,
+        "exception": "",
+        "count": 2,
+        "first_occurred": 1793963830.8080502
+      },
+      {
+        "name": "homeassistant.helpers.entity",
+        "message": [
+          "Updating state for media_player.spotifyplus_mammaochpapppa (<class 'custom_components.spotifyplus.media_player.SpotifyMediaPlayer'>) took 0.743 seconds. Please create a bug report at https://github.com/thlucas1/homeassistantcomponent_spotifyplus/issues"
+        ],
+        "level": "WARNING",
+        "source": [
+          "helpers/entity.py",
+          1307
+        ],
+        "timestamp": 1793967756.2300842,
+        "exception": "",
+        "count": 1,
+        "first_occurred": 1793967756.2300842
+      },
+      {
+        "name": "custom_components.toyota.climate",
+        "message": [
+          "Error updating climate status"
+        ],
+        "level": "ERROR",
+        "source": [
+          "custom_components/toyota/climate.py",
+          559
+        ],
+        "timestamp": 1793963837.4308424,
+        "exception": "Traceback (most recent call last):\n  File \"/config/custom_components/toyota/climate.py\", line 559, in async_update\n    await self._poll_status()\n  File \"/config/custom_components/toyota/climate.py\", line 523, in _poll_status\n    if await self.vehicle.refresh_climate_status():\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.14/site-packages/pytoyoda/models/vehicle.py\", line 916, in refresh_climate_status\n    return await self._api.refresh_climate_status(self.vin)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.14/site-packages/pytoyoda/api.py\", line 366, in refresh_climate_status\n    return await self._request_and_parse(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        StatusModel, \"POST\", VEHICLE_CLIMATE_STATUS_REFRESH_ENDPOINT, vin=vin\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/usr/local/lib/python3.14/site-packages/pytoyoda/api.py\", line 106, in _request_and_parse\n    response = await self.controller.request_json(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        method=method, endpoint=endpoint, **kwargs\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/usr/local/lib/python3.14/site-packages/pytoyoda/controller.py\", line 571, in request_json\n    response = await self.request_raw(method, endpoint, vin, body, params, headers)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.14/site-packages/pytoyoda/controller.py\", line 478, in request_raw\n    raise ToyotaApiError(msg)\npytoyoda.exceptions.ToyotaApiError: Request Failed. 500, {\"status\":{\"messages\":[{\"description\":\"Remote command interrupted. Try again.\",\"detailedDescription\":\"Remote command invocation(Spec-B) failed\",\"responseCode\":\"ONE-GLOBAL-RS-40009\"}],\"serviceIdentifier\":null}}.",
+        "count": 1,
+        "first_occurred": 1793963837.4308424
+      },
+      {
+        "name": "custom_components.toyota",
+        "message": [
+          "2026-11-06 12:17:01.454 | WARNING  | pytoyoda.controller:request_raw:467 - Toyota API 500 on /v1/remote/refresh-climate-status; retrying in 2s (attempt 2 of 4)\n",
+          "2026-11-06 12:17:03.959 | WARNING  | pytoyoda.controller:request_raw:467 - Toyota API 500 on /v1/remote/refresh-climate-status; retrying in 4s (attempt 3 of 4)\n",
+          "2026-11-06 12:17:08.896 | WARNING  | pytoyoda.controller:request_raw:467 - Toyota API 500 on /v1/remote/refresh-climate-status; retrying in 8s (attempt 4 of 4)\n"
+        ],
+        "level": "WARNING",
+        "source": [
+          "custom_components/toyota/__init__.py",
+          101
+        ],
+        "timestamp": 1793963828.896676,
+        "exception": "",
+        "count": 3,
+        "first_occurred": 1793963821.4541876
+      },
+      {
+        "name": "homeassistant.helpers.frame",
+        "message": [
+          "Detected that custom integration 'toyota' writes the deprecated ToyotaClimate._attr_temperature_unit, use _attr_native_temperature_unit instead at custom_components/toyota/climate.py, line 336: self._attr_temperature_unit = (. This will stop working in Home Assistant 2027.11, please create a bug report at https://github.com/pytoyoda/ha_toyota/issues",
+          "Detected that custom integration 'toyota' reads the deprecated ToyotaClimate._attr_target_temperature, use _attr_native_target_temperature instead at custom_components/toyota/climate.py, line 318: self._attr_target_temperature,. This will stop working in Home Assistant 2027.11, please create a bug report at https://github.com/pytoyoda/ha_toyota/issues",
+          "Detected that custom integration 'toyota' writes the deprecated ToyotaClimate._attr_current_temperature, use _attr_native_current_temperature instead at custom_components/toyota/climate.py, line 379: self._attr_current_temperature = (. This will stop working in Home Assistant 2027.11, please create a bug report at https://github.com/pytoyoda/ha_toyota/issues",
+          "Detected that custom integration 'toyota' reads the deprecated ToyotaClimate._attr_current_temperature, use _attr_native_current_temperature instead at custom_components/toyota/climate.py, line 436: return self._attr_current_temperature. This will stop working in Home Assistant 2027.11, please create a bug report at https://github.com/pytoyoda/ha_toyota/issues",
+          "Detected that custom integration 'toyota' reads the deprecated ToyotaClimate._attr_target_temperature, use _attr_native_target_temperature instead at custom_components/toyota/climate.py, line 441: return self._attr_target_temperature. This will stop working in Home Assistant 2027.11, please create a bug report at https://github.com/pytoyoda/ha_toyota/issues"
+        ],
+        "level": "WARNING",
+        "source": [
+          "helpers/frame.py",
+          348
+        ],
+        "timestamp": 1793963700.806292,
+        "exception": "",
+        "count": 8,
+        "first_occurred": 1793963700.715793
+      },
+      {
+        "name": "custom_components.toyota.climate",
+        "message": [
+          "custom_components.toyota.climate::ToyotaClimate provides the deprecated _attr_temperature_unit, this will stop working in Home Assistant 2027.11, use _attr_native_temperature_unit instead, please report it to the custom integration author",
+          "custom_components.toyota.climate::ToyotaClimate provides the deprecated current_temperature, this will stop working in Home Assistant 2027.11, use native_current_temperature instead, please report it to the custom integration author",
+          "custom_components.toyota.climate::ToyotaClimate provides the deprecated target_temperature, this will stop working in Home Assistant 2027.11, use native_target_temperature instead, please report it to the custom integration author"
+        ],
+        "level": "WARNING",
+        "source": [
+          "helpers/deprecation.py",
+          706
+        ],
+        "timestamp": 1793963700.66883,
+        "exception": "",
+        "count": 3,
+        "first_occurred": 1793963700.668584
+      },
+      {
+        "name": "homeassistant.components.prusalink.coordinator",
+        "message": [
+          "Error fetching prusalink data: Cannot connect"
+        ],
+        "level": "ERROR",
+        "source": [
+          "helpers/update_coordinator.py",
+          527
+        ],
+        "timestamp": 1793962314.847885,
+        "exception": "",
+        "count": 4,
+        "first_occurred": 1793962314.6097736
+      },
+      {
+        "name": "custom_components.toyota",
+        "message": [
+          "Config entry 'j.k.olofsson@gmail.com' for toyota integration could not authenticate: Authentication Failed. 502, <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.25.5</center>\r\n</body>\r\n</html>\r\n."
+        ],
+        "level": "WARNING",
+        "source": [
+          "config_entries.py",
+          813
+        ],
+        "timestamp": 1793959674.2010972,
+        "exception": "",
+        "count": 1,
+        "first_occurred": 1793959674.2010972
+      },
+      {
+        "name": "custom_components.toyota",
+        "message": [
+          "2026-11-06 11:07:15.622 | ERROR    | pytoyoda.client:login:109 - Login failed: 'Authentication Failed. 504, <!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<HTML><HEAD><META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=UTF-8\">\n<TITLE>ERROR: The request could not be satisfied</TITLE>\n</HEAD><BODY>\n<H1>504 Gateway Timeout ERROR</H1>\n<H2>The request could not be satisfied.</H2>\n<HR noshade size=\"1px\">\nWe can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again later, or contact the app or website owner.\n<BR clear=\"all\">\nIf you provide content to customers through CloudFront, you can find steps to troubleshoot and help prevent this error by reviewing the CloudFront documentation.\n<BR clear=\"all\">\n<HR noshade size=\"1px\">\n<PRE>\nGenerated by cloudfront (CloudFront) HTTP3 Server\nRequest ID: ByMj9gKC_G4_UTlRJN1HScssyfrvCB9jmJKaUp94y9jSszTsEq8ojw&#x3D;&#x3D;\n</PRE>\n<ADDRESS>\n</ADDRESS>\n</BODY></HTML>.'.\n",
+          "2026-11-06 11:07:54.200 | ERROR    | pytoyoda.client:login:109 - Login failed: 'Authentication Failed. 502, <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.25.5</center>\r\n</body>\r\n</html>\r\n.'.\n"
+        ],
+        "level": "ERROR",
+        "source": [
+          "custom_components/toyota/__init__.py",
+          103
+        ],
+        "timestamp": 1793959674.2008212,
+        "exception": "",
+        "count": 2,
+        "first_occurred": 1793959635.6231163
+      },
+      {
+        "name": "homeassistant.components.ps4.media_player",
+        "message": [
+          "PS4 could not be reached"
+        ],
+        "level": "WARNING",
+        "source": [
+          "components/ps4/media_player.py",
+          234
+        ],
+        "timestamp": 1793959643.6194658,
+        "exception": "",
+        "count": 1,
+        "first_occurred": 1793959643.6194658
+      },
+      {
+        "name": "homeassistant.config_entries",
+        "message": [
+          "Config entry 'j.k.olofsson@gmail.com' for toyota integration could not authenticate: Authentication Failed. 504, <!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<HTML><HEAD><META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=UTF-8\">\n<TITLE>ERROR: The request could not be satisfied</TITLE>\n</HEAD><BODY>\n<H1>504 Gateway Timeout ERROR</H1>\n<H2>The request could not be satisfied.</H2>\n<HR noshade size=\"1px\">\nWe can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again later, or contact the app or website owner.\n<BR clear=\"all\">\nIf you provide content to customers through CloudFront, you can find steps to troubleshoot and help prevent this error by reviewing the CloudFront documentation.\n<BR clear=\"all\">\n<HR noshade size=\"1px\">\n<PRE>\nGenerated by cloudfront (CloudFront) HTTP3 Server\nRequest ID: ByMj9gKC_G4_UTlRJN1HScssyfrvCB9jmJKaUp94y9jSszTsEq8ojw&#x3D;&#x3D;\n</PRE>\n<ADDRESS>\n</ADDRESS>\n</BODY></HTML>."
+        ],
+        "level": "WARNING",
+        "source": [
+          "config_entries.py",
+          813
+        ],
+        "timestamp": 1793959635.6234791,
+        "exception": "",
+        "count": 1,
+        "first_occurred": 1793959635.6234791
+      },
+      {
+        "name": "aioesphomeapi.reconnect_logic",
+        "message": [
+          "Can't connect to ESPHome API for esphome02 @ 192.168.30.102: Error connecting to [AddrInfo(family=<AddressFamily.AF_INET: 2>, type=<SocketKind.SOCK_STREAM: 1>, proto=6, sockaddr=IPv4Sockaddr(address='192.168.30.102', port=6053))]: [Errno 113] Connect call failed ('192.168.30.102', 6053) (SocketAPIError)"
+        ],
+        "level": "WARNING",
+        "source": [
+          "runner.py",
+          280
+        ],
+        "timestamp": 1793959614.2443602,
+        "exception": "",
+        "count": 1,
+        "first_occurred": 1793959614.2443602
+      },
+      {
+        "name": "homeassistant.components.openuv",
+        "message": [
+          "Skipping update due to missing data"
+        ],
+        "level": "WARNING",
+        "source": [
+          "components/openuv/binary_sensor.py",
+          61
+        ],
+        "timestamp": 1793959611.1925347,
+        "exception": "",
+        "count": 1,
+        "first_occurred": 1793959611.1925347
+      },
+      {
+        "name": "pyvesync.vesync",
+        "message": [
+          "No online devices (excluding air fryers) to check firmware for"
+        ],
+        "level": "WARNING",
+        "source": [
+          "components/vesync/__init__.py",
+          81
+        ],
+        "timestamp": 1793959609.3750243,
+        "exception": "",
+        "count": 1,
+        "first_occurred": 1793959609.3750243
+      },
+      {
+        "name": "homeassistant.components.openuv",
+        "message": [
+          "Skipping update due to missing data: from_time"
+        ],
+        "level": "WARNING",
+        "source": [
+          "components/openuv/coordinator.py",
+          90
+        ],
+        "timestamp": 1793959608.656818,
+        "exception": "",
+        "count": 1,
+        "first_occurred": 1793959608.656818
+      },
+      {
+        "name": "homeassistant.config_entries",
+        "message": [
+          "The deprecated constant CONN_CLASS_CLOUD_POLL was used from ai_agent_ha. It will be removed in HA Core 2027.5.0. Please report it to the author of the 'ai_agent_ha' custom integration",
+          "The deprecated constant CONN_CLASS_CLOUD_POLL was used from nordpool. It will be removed in HA Core 2027.5.0. Please report it to the author of the 'nordpool' custom integration",
+          "The deprecated constant CONN_CLASS_CLOUD_POLL was used from pollenprognos. It will be removed in HA Core 2027.5.0. Please report it to the author of the 'pollenprognos' custom integration"
+        ],
+        "level": "WARNING",
+        "source": [
+          "helpers/deprecation.py",
+          297
+        ],
+        "timestamp": 1793959605.1353462,
+        "exception": "",
+        "count": 3,
+        "first_occurred": 1793959604.7736323
+      }
+    ],
+    "check_config": {
+      "http": 200,
+      "body": {
+        "result": "valid",
+        "errors": null,
+        "warnings": null
+      }
+    }
+  },
+  "finished": 1793985252.9348168
+}

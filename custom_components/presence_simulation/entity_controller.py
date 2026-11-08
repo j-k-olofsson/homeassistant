@@ -1,8 +1,13 @@
+import asyncio
 import logging
 from homeassistant.core import HomeAssistant, Context
 from typing import Any, Optional
 
 _LOGGER = logging.getLogger(__name__)
+
+# Max time to wait for a cover to finish moving before sending the tilt command
+COVER_MOVE_TIMEOUT = 180
+COVER_POLL_INTERVAL = 1
 
 
 class EntityController:
@@ -22,11 +27,9 @@ class EntityController:
         state: Any,
         unavailable_as_off: bool,
         brightness: int,
-        dry_run: bool,
         should_send_event: bool,
         event_fire_callback: Any,
         event_name: str,
-        event_metadata: Optional[dict] = None,
     ) -> Optional[dict]:
         """Switch the entity to the given state."""
         domain = entity_id.split(".")[0]
@@ -35,24 +38,25 @@ class EntityController:
 
         if domain == "light":
             event_data = await self._handle_light(
-                entity_id, state, unavailable_as_off, brightness, context, dry_run
+                entity_id, state, unavailable_as_off, brightness, context
             )
         elif domain == "cover":
-            event_data = await self._handle_cover(entity_id, state, unavailable_as_off, context, dry_run)
+            event_data = await self._handle_cover(entity_id, state, unavailable_as_off, context)
         elif domain == "media_player":
             event_data = await self._handle_media_player(
-                entity_id, state, unavailable_as_off, context, dry_run
+                entity_id, state, unavailable_as_off, context
             )
         elif domain == "input_select":
-            event_data = await self._handle_input_select(entity_id, state, context, dry_run)
+            event_data = await self._handle_input_select(entity_id, state, context)
+        elif domain == "select":
+            event_data = await self._handle_select(entity_id, state, context)
         else:
             event_data = await self._handle_generic(
-                entity_id, state, unavailable_as_off, context, dry_run
+                entity_id, state, unavailable_as_off, context
             )
 
         if event_data is not None and should_send_event:
-            event_payload = {**event_data, **(event_metadata or {})}
-            event_fire_callback(event_name, event_payload)
+            event_fire_callback(event_name, event_data)
 
         return event_data
 
@@ -63,7 +67,6 @@ class EntityController:
         unavailable_as_off: bool,
         brightness: int,
         context: Context,
-        dry_run: bool,
     ) -> Optional[dict]:
         """Handle light entity state changes."""
         _LOGGER.debug("Switching light %s to %s", entity_id, state.state)
@@ -91,8 +94,6 @@ class EntityController:
             state.state == "unavailable" and unavailable_as_off
         ):
             service = "turn_on" if state.state == "on" else "turn_off"
-            if dry_run:
-                return {"entity_id": entity_id, "service": f"light.{service}", "service_data": service_data, "dry_run": True}
             _LOGGER.debug(
                 "calling service %s with target %s and data %s",
                 service,
@@ -112,13 +113,34 @@ class EntityController:
         _LOGGER.debug("State in neither on nor off (is %s), do nothing", state.state)
         return None
 
+    async def _wait_for_cover_stop(self, entity_id: str) -> None:
+        """Wait until the cover is no longer opening/closing (or timeout).
+
+        Sending set_cover_tilt_position while the cover is still travelling
+        stops the travel on many integrations (e.g. Shelly), so the tilt must
+        only be applied once the requested position has been reached.
+        """
+        # Give the integration a moment to report the movement start
+        await asyncio.sleep(2)
+        waited = 2
+        while waited < COVER_MOVE_TIMEOUT:
+            current = self._hass.states.get(entity_id)
+            if current is None or current.state not in ("opening", "closing"):
+                return
+            await asyncio.sleep(COVER_POLL_INTERVAL)
+            waited += COVER_POLL_INTERVAL
+        _LOGGER.warning(
+            "Cover %s still moving after %s s, applying tilt anyway",
+            entity_id,
+            COVER_MOVE_TIMEOUT,
+        )
+
     async def _handle_cover(
         self,
         entity_id: str,
         state: Any,
         unavailable_as_off: bool,
         context: Context,
-        dry_run: bool,
     ) -> Optional[dict]:
         """Handle cover entity state changes."""
         _LOGGER.debug("Switching Cover %s to %s", entity_id, state.state)
@@ -127,8 +149,6 @@ class EntityController:
         blocking = "current_tilt_position" in state.attributes
 
         if state.state == "closed" or (state.state == "unavailable" and unavailable_as_off):
-            if dry_run:
-                return {"entity_id": entity_id, "service": "cover.close_cover", "service_data": service_data, "dry_run": True}
             _LOGGER.debug("Closing cover %s", entity_id)
             await self._hass.services.async_call(
                 "cover",
@@ -148,13 +168,6 @@ class EntityController:
                     entity_id,
                     state.attributes["current_position"],
                 )
-                if dry_run:
-                    return {
-                        "entity_id": entity_id,
-                        "service": "cover.set_cover_position",
-                        "service_data": {"position": state.attributes["current_position"]},
-                        "dry_run": True,
-                    }
                 await self._hass.services.async_call(
                     "cover",
                     "set_cover_position",
@@ -169,7 +182,12 @@ class EntityController:
                     "service_data": service_data.copy(),
                 }
                 del service_data["position"]
-                if "current_tilt_position" in state.attributes:
+                if (
+                    "current_tilt_position" in state.attributes
+                    and state.attributes["current_position"] < 100
+                ):
+                    # Do not interrupt the travel: wait until the cover has stopped
+                    await self._wait_for_cover_stop(entity_id)
                     service_data["tilt_position"] = state.attributes["current_tilt_position"]
                     await self._hass.services.async_call(
                         "cover",
@@ -181,8 +199,6 @@ class EntityController:
                     )
                 return event_data
             else:
-                if dry_run:
-                    return {"entity_id": entity_id, "service": "cover.open_cover", "service_data": service_data, "dry_run": True}
                 _LOGGER.debug("Opening cover %s", entity_id)
                 await self._hass.services.async_call(
                     "cover",
@@ -194,6 +210,8 @@ class EntityController:
                 )
                 event_data = {"entity_id": entity_id, "service": "cover.open_cover", "service_data": service_data}
                 if "current_tilt_position" in state.attributes:
+                    # Do not interrupt the travel: wait until the cover has stopped
+                    await self._wait_for_cover_stop(entity_id)
                     service_data["tilt_position"] = state.attributes["current_tilt_position"]
                     await self._hass.services.async_call(
                         "cover",
@@ -207,13 +225,6 @@ class EntityController:
 
         if state.state in ["closed", "open"] and "current_tilt_position" in state.attributes:
             service_data["tilt_position"] = state.attributes["current_tilt_position"]
-            if dry_run:
-                return {
-                    "entity_id": entity_id,
-                    "service": "cover.set_cover_tilt_position",
-                    "service_data": service_data,
-                    "dry_run": True,
-                }
             _LOGGER.debug(
                 "Changing cover %s tilt position to %s",
                 entity_id,
@@ -241,15 +252,12 @@ class EntityController:
         state: Any,
         unavailable_as_off: bool,
         context: Context,
-        dry_run: bool,
     ) -> Optional[dict]:
         """Handle media_player entity state changes."""
         _LOGGER.debug("Switching media_player %s to %s", entity_id, state.state)
         service_data: dict = {}
 
         if state.state == "playing":
-            if dry_run:
-                return {"entity_id": entity_id, "service": "media_player.media_play", "service_data": service_data, "dry_run": True}
             await self._hass.services.async_call(
                 "media_player",
                 "media_play",
@@ -261,8 +269,6 @@ class EntityController:
             return {"entity_id": entity_id, "service": "media_player.media_play", "service_data": service_data}
 
         if state.state != "unavailable" or unavailable_as_off:
-            if dry_run:
-                return {"entity_id": entity_id, "service": "media_player.media_stop", "service_data": service_data, "dry_run": True}
             await self._hass.services.async_call(
                 "media_player",
                 "media_stop",
@@ -281,19 +287,11 @@ class EntityController:
         entity_id: str,
         state: Any,
         context: Context,
-        dry_run: bool,
     ) -> Optional[dict]:
         """Handle input_select entity state changes."""
         _LOGGER.debug("Setting input select option %s to %s", entity_id, state.state)
 
         service_data = {"entity_id": entity_id, "option": state.state}
-        if dry_run:
-            return {
-                "entity_id": entity_id,
-                "service": "input_select.select_option",
-                "service_data": service_data,
-                "dry_run": True,
-            }
         await self._hass.services.async_call(
             "input_select",
             "select_option",
@@ -307,13 +305,39 @@ class EntityController:
             "service_data": service_data,
         }
 
+    async def _handle_select(
+        self,
+        entity_id: str,
+        state: Any,
+        context: Context,
+    ) -> Optional[dict]:
+        """Handle select entity state changes."""
+        if state.state in ("unavailable", "unknown", "undefined"):
+            _LOGGER.debug("State of %s is %s, do nothing", entity_id, state.state)
+            return None
+
+        _LOGGER.debug("Setting select option %s to %s", entity_id, state.state)
+
+        service_data = {"entity_id": entity_id, "option": state.state}
+        await self._hass.services.async_call(
+            "select",
+            "select_option",
+            service_data,
+            blocking=False,
+            context=context,
+        )
+        return {
+            "entity_id": entity_id,
+            "service": "select.select_option",
+            "service_data": service_data,
+        }
+
     async def _handle_generic(
         self,
         entity_id: str,
         state: Any,
         unavailable_as_off: bool,
         context: Context,
-        dry_run: bool,
     ) -> Optional[dict]:
         """Handle generic on/off entities."""
         _LOGGER.debug("Switching entity %s to %s", entity_id, state.state)
@@ -323,8 +347,6 @@ class EntityController:
             state.state == "unavailable" and unavailable_as_off
         ):
             service = "turn_on" if state.state == "on" else "turn_off"
-            if dry_run:
-                return {"entity_id": entity_id, "service": f"homeassistant.{service}", "service_data": service_data, "dry_run": True}
             await self._hass.services.async_call(
                 "homeassistant",
                 service,

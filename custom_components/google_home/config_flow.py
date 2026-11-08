@@ -1,174 +1,697 @@
 """Adds config flow for Google Home."""
 
-from __future__ import annotations
-
+from collections.abc import Mapping
+import ipaddress
 import logging
-from typing import TYPE_CHECKING, Self
+from typing import NotRequired, TypedDict, cast, override
 
-from requests.exceptions import RequestException
-import voluptuous as vol
+from aiohttp import ClientError, ClientResponseError
+from glocaltokens import const as glocaltokens_const
+from glocaltokens.exceptions import AuthenticationError
+from glocaltokens.utils.token import is_aas_et
+import probatio
 
-from homeassistant.config_entries import ConfigFlow, ConfigFlowResult, OptionsFlow
+from homeassistant.config_entries import (
+    SOURCE_REAUTH,
+    ConfigEntry,
+    ConfigEntryState,
+    ConfigFlow,
+    ConfigFlowResult,
+    ConfigSubentryFlow,
+    OptionsFlow,
+    SubentryFlowResult,
+    UnknownSubEntry,
+)
+from homeassistant.const import CONF_MAC, CONF_NAME, UnitOfTime
 from homeassistant.core import callback
-from homeassistant.helpers.aiohttp_client import async_create_clientsession
+from homeassistant.data_entry_flow import section
+from homeassistant.helpers.aiohttp_client import async_get_clientsession
+from homeassistant.helpers.selector import (
+    SelectOptionDict,
+    SelectSelector,
+    SelectSelectorConfig,
+    SelectSelectorMode,
+)
 
+from . import const
 from .api import GlocaltokensApiClient
+from .bluetooth import IRK_LENGTH, parse_irk, parse_mac
 from .const import (
+    BLUETOOTH_PRESENCE_WINDOW,
+    BROWSER_TITLE,
+    CONF_ADDITIONAL_DEPARTURE_DELAY,
     CONF_ANDROID_ID,
+    CONF_BLUETOOTH_EXCLUDED,
+    CONF_BLUETOOTH_TRACKING,
+    CONF_EXCLUDED_HOMES,
+    CONF_HOMES,
+    CONF_IRK,
+    CONF_IRK_OR_MAC,
+    CONF_KNOWN_HOSTS,
     CONF_MASTER_TOKEN,
+    CONF_OAUTH_TOKEN,
     CONF_PASSWORD,
     CONF_UPDATE_INTERVAL,
     CONF_USERNAME,
+    DEPARTURE_DELAY_VALUES,
     DOMAIN,
-    MANUFACTURER,
-    MAX_PASSWORD_LENGTH,
-    UPDATE_INTERVAL,
+    MASTER_TOKEN_TITLE,
+    NO_DEVICES_DOCS_URL,
+    SUBENTRY_BLUETOOTH_DEVICE,
 )
 from .exceptions import InvalidMasterToken
-
-if TYPE_CHECKING:
-    from .types import ConfigFlowDict, GoogleHomeConfigEntry, OptionsFlowDict
+from .types import GoogleHomeConfigEntry, OptionsFlowDict
 
 _LOGGER: logging.Logger = logging.getLogger(__package__)
+
+STEP_BROWSER = "browser"
+STEP_HOMES = "homes"
+# The section of the options form with the Bluetooth options
+SECTION_BLUETOOTH = "bluetooth"
+STEP_MASTER_TOKEN = "master_token"
+STEP_REAUTH = "reauth"
+
+OAUTH_TOKEN_PREFIX = "oauth2_4/"
+
+# Domains where Google ignores dots before the @, and which are the same accounts
+GMAIL_DOMAINS = {"gmail.com", "googlemail.com"}
+
+DESCRIPTION_PLACEHOLDERS = {
+    "docs_url": "https://ha-google-home.pages.dev/installation/",
+    "browser_docs_url": "https://ha-google-home.pages.dev/installation/#browser-sign-in",
+    "embedded_setup_url": "https://accounts.google.com/EmbeddedSetup",
+}
+BLUETOOTH_DOCS_URL = "https://ha-google-home.pages.dev/bluetooth/"
 
 
 class GoogleHomeFlowHandler(ConfigFlow, domain=DOMAIN):
     """Config flow for GoogleHome."""
 
     VERSION = 1
+    # 2: app passwords that older versions saved are cleared
+    MINOR_VERSION = 2
 
     def __init__(self) -> None:
-        """Initialize."""
-        self.username: str | None = None
-        self._errors: dict[str, str] = {}
+        """Start without an entry to create."""
+        # The entry that the homes step creates, and the account's homes by ID, with
+        # their names
+        self._title = ""
+        self._data: dict[str, str] = {}
+        self._homes: dict[str, str] = {}
 
-    def is_matching(self, other_flow: Self) -> bool:
-        """Return True if other_flow is matching this flow."""
-        return other_flow.username == self.username
-
+    @override
     async def async_step_user(
         self,
-        user_input: ConfigFlowDict | None = None,  # type: ignore[override]
+        user_input: dict[str, str] | None = None,
     ) -> ConfigFlowResult:
-        """Handle a flow initialized by the user."""
-        self._errors = {}
+        """Ask how to sign in."""
+        return self.async_show_menu(
+            step_id="user",
+            menu_options=[STEP_BROWSER, STEP_MASTER_TOKEN],
+            description_placeholders=DESCRIPTION_PLACEHOLDERS,
+        )
 
-        # Only a single instance of the integration is allowed:
-        if self._async_current_entries():
-            return self.async_abort(reason="single_instance_allowed")
+    async def async_step_reauth(
+        self, _entry_data: Mapping[str, object]
+    ) -> ConfigFlowResult:
+        """Ask how to sign in again when Google rejects the saved master token."""
+        return self.async_show_menu(
+            step_id=STEP_REAUTH,
+            menu_options=[STEP_BROWSER, STEP_MASTER_TOKEN],
+            description_placeholders={"name": self._get_reauth_entry().title},
+        )
 
+    async def async_step_reauth_browser(
+        self, user_input: dict[str, str] | None = None
+    ) -> ConfigFlowResult:
+        """Sign in again with the oauth_token cookie from a browser sign-in."""
+        return await self.async_step_browser(user_input)
+
+    async def async_step_reauth_master_token(
+        self, user_input: dict[str, str] | None = None
+    ) -> ConfigFlowResult:
+        """Sign in again with an existing master token."""
+        return await self.async_step_master_token(user_input)
+
+    async def async_step_browser(
+        self, user_input: dict[str, str] | None = None
+    ) -> ConfigFlowResult:
+        """Sign in with the oauth_token cookie from a browser sign-in."""
+        errors: dict[str, str] = {}
         if user_input is not None:
-            session = async_create_clientsession(self.hass)
-            username = user_input.get(CONF_USERNAME, "")
-            self.username = username
-            password = user_input.get(CONF_PASSWORD, "")
-            master_token = user_input.get(CONF_MASTER_TOKEN, "")
-
-            if master_token or (username and password):
-                client = None
-                title = username
-
-                if master_token:
-                    client = GlocaltokensApiClient(
-                        hass=self.hass,
-                        session=session,
-                        username="",
-                        password="",
-                        master_token=master_token,
-                    )
-                    access_token = await self._get_access_token(client)
-                    if access_token:
-                        title = f"{MANUFACTURER} (master_token)"
-                    else:
-                        self._errors["base"] = "master-token-invalid"
-                # master_token not provided, so use username/password authentication
-                elif len(password) < MAX_PASSWORD_LENGTH:
-                    client = GlocaltokensApiClient(
-                        hass=self.hass,
-                        session=session,
-                        username=username,
-                        password=password,
-                    )
-                    master_token = await self._get_master_token(client)
-                    if not master_token:
-                        self._errors["base"] = "auth"
-                else:
-                    self._errors["base"] = "pass-len"
-
-                if client and not self._errors:
-                    config_data: dict[str, str] = {}
-                    config_data[CONF_MASTER_TOKEN] = master_token
-                    config_data[CONF_USERNAME] = username
-                    config_data[CONF_PASSWORD] = password
-                    config_data[CONF_ANDROID_ID] = await client.get_android_id()
-                    return self.async_create_entry(title=title, data=config_data)
+            oauth_token = user_input[CONF_OAUTH_TOKEN].strip()
+            if not oauth_token.startswith(OAUTH_TOKEN_PREFIX):
+                errors[CONF_OAUTH_TOKEN] = "oauth-token-format"
             else:
-                self._errors["base"] = "missing-inputs"
-        return await self._show_config_form()
+                client = GlocaltokensApiClient(
+                    hass=self.hass,
+                    session=async_get_clientsession(self.hass),
+                    oauth_token=oauth_token,
+                    android_id=self._saved_android_id(),
+                )
+                # Getting the master token exchanges the cookie for it
+                error = await self._sign_in(client, "oauth-token-invalid")
+                if error is None:
+                    username = await client.async_get_email() or ""
+                    if not self._is_other_account(username):
+                        return await self._create_entry(
+                            client, username, username or BROWSER_TITLE
+                        )
+                    error = "other-account"
+                errors["base"] = error
+        return self._show_form(
+            STEP_BROWSER,
+            {probatio.Required(CONF_OAUTH_TOKEN): str},
+            errors,
+        )
+
+    async def async_step_master_token(
+        self, user_input: dict[str, str] | None = None
+    ) -> ConfigFlowResult:
+        """Sign in with an existing master token."""
+        errors: dict[str, str] = {}
+        if user_input is not None:
+            master_token = user_input[CONF_MASTER_TOKEN].strip()
+            if not is_aas_et(master_token):
+                errors[CONF_MASTER_TOKEN] = "master-token-format"
+            else:
+                client = GlocaltokensApiClient(
+                    hass=self.hass,
+                    session=async_get_clientsession(self.hass),
+                    username="",
+                    password="",
+                    master_token=master_token,
+                    android_id=self._saved_android_id(),
+                )
+                error = await self._sign_in(client, "master-token-invalid")
+                if error is None:
+                    username = await client.async_get_email() or ""
+                    if not self._is_other_account(username):
+                        return await self._create_entry(
+                            client, username, username or MASTER_TOKEN_TITLE
+                        )
+                    error = "other-account"
+                errors["base"] = error
+        return self._show_form(
+            STEP_MASTER_TOKEN,
+            {probatio.Required(CONF_MASTER_TOKEN): str},
+            errors,
+        )
+
+    async def _create_entry(
+        self,
+        client: GlocaltokensApiClient,
+        username: str,
+        title: str,
+    ) -> ConfigFlowResult:
+        """Save the master token that every sign-in method ends with.
+
+        Signing in again saves it in the existing entry instead.
+        """
+        data = {
+            CONF_MASTER_TOKEN: await client.async_get_master_token(),
+            CONF_USERNAME: username,
+            # Older versions saved an app password here
+            CONF_PASSWORD: "",
+            CONF_ANDROID_ID: client.get_android_id(),
+        }
+        if self.source != SOURCE_REAUTH:
+            homes = await client.async_get_homes()
+            # Stop rather than add an entry without devices, and not with a form
+            # error: a browser cookie works only once, so it couldn't be submitted
+            # again.
+            if homes is None:
+                return self.async_abort(
+                    reason="no-home",
+                    description_placeholders={"docs_url": NO_DEVICES_DOCS_URL},
+                )
+            # Without a choice, or the homes, every home's devices are added
+            if len(homes) > 1:
+                self._title, self._data, self._homes = title, data, homes
+                return await self.async_step_homes()
+            return self.async_create_entry(title=title, data=data)
+        entry = self._get_reauth_entry()
+        # Keep the saved address when Google doesn't give one
+        data[CONF_USERNAME] = username or entry.data.get(CONF_USERNAME, "")
+        result = self.async_update_and_abort(entry, data_updates=data)
+        # Not async_update_reload_and_abort(), which Home Assistant warns will stop
+        # working in 2026.12 for an entry with an update listener. This entry's
+        # listener reloads it only when known hosts, homes, Bluetooth options or
+        # tracked Bluetooth devices change, never for new sign-in details. An entry
+        # that failed setup has no listener at all.
+        self.hass.config_entries.async_schedule_reload(entry.entry_id)
+        return result
+
+    async def async_step_homes(
+        self, user_input: dict[str, list[str]] | None = None
+    ) -> ConfigFlowResult:
+        """Choose the homes whose devices are added, when the account has several."""
+        errors: dict[str, str] = {}
+        selected = list(self._homes)
+        if user_input is not None:
+            selected = user_input[CONF_HOMES]
+            if selected:
+                excluded = sorted(self._homes.keys() - set(selected))
+                return self.async_create_entry(
+                    title=self._title,
+                    data=self._data,
+                    options={CONF_EXCLUDED_HOMES: excluded} if excluded else None,
+                )
+            errors[CONF_HOMES] = "no-home-selected"
+        return self.async_show_form(
+            step_id=STEP_HOMES,
+            data_schema=probatio.Schema(
+                {
+                    probatio.Required(CONF_HOMES, default=selected): _homes_selector(
+                        self._homes
+                    )
+                }
+            ),
+            errors=errors,
+        )
+
+    def _saved_android_id(self) -> str | None:
+        """Return the entry's Android ID when signing in again, to save it unchanged.
+
+        Without one, glocaltokens makes up a new Android ID.
+        """
+        if self.source != SOURCE_REAUTH:
+            return None
+        return cast(str | None, self._get_reauth_entry().data.get(CONF_ANDROID_ID))
+
+    def _is_other_account(self, username: str) -> bool:
+        """Return whether signing in again gives another account than the entry's.
+
+        An address that Google doesn't give, or an entry without a known address,
+        can't be compared, so it counts as the same account.
+        """
+        if self.source != SOURCE_REAUTH or not username:
+            return False
+        accounts = _get_accounts(self._get_reauth_entry())
+        return bool(accounts) and _account_id(username) not in accounts
+
+    def _show_form(
+        self,
+        step_id: str,
+        schema: dict[probatio.Marker, type],
+        errors: dict[str, str],
+    ) -> ConfigFlowResult:
+        """Show the form of one sign-in method."""
+        if self.source == SOURCE_REAUTH:
+            # The same form, with text that doesn't suggest adding the integration
+            # again: closing the window keeps the sign-in open
+            step_id = f"{STEP_REAUTH}_{step_id}"
+        return self.async_show_form(
+            step_id=step_id,
+            data_schema=probatio.Schema(schema),
+            errors=errors,
+            description_placeholders={
+                **DESCRIPTION_PLACEHOLDERS,
+                "token_length": str(
+                    len("aas_et/") + glocaltokens_const.MASTER_TOKEN_LENGTH
+                ),
+            },
+        )
 
     @staticmethod
     @callback
+    @override
     def async_get_options_flow(
         config_entry: GoogleHomeConfigEntry,
     ) -> GoogleHomeOptionsFlowHandler:
         """Handle options flow."""
         return GoogleHomeOptionsFlowHandler()
 
-    async def _show_config_form(self) -> ConfigFlowResult:
-        """Show the configuration form to edit login information."""
-        return self.async_show_form(
-            step_id="user",
-            data_schema=vol.Schema(
-                {
-                    vol.Optional(CONF_USERNAME): str,
-                    vol.Optional(CONF_PASSWORD): str,
-                    vol.Optional(CONF_MASTER_TOKEN): str,
-                }
-            ),
-            errors=self._errors,
-        )
+    @classmethod
+    @callback
+    @override
+    def async_get_supported_subentry_types(  # type: ignore[explicit-any]
+        cls, config_entry: ConfigEntry
+    ) -> dict[str, type[ConfigSubentryFlow]]:
+        """Return the subentries this integration supports.
+
+        Always offered: Home Assistant keeps this until it restarts, so it
+        wouldn't follow the Bluetooth tracking option.
+        """
+        return {SUBENTRY_BLUETOOTH_DEVICE: BluetoothDeviceSubentryFlow}
 
     @staticmethod
-    async def _get_master_token(client: GlocaltokensApiClient) -> str:
-        """Return master token if credentials are valid."""
-        master_token = ""
-        try:
-            master_token = await client.async_get_master_token()
-        except (InvalidMasterToken, RequestException):
-            _LOGGER.exception("Failed to get master token")
-        return master_token
+    async def _sign_in(client: GlocaltokensApiClient, rejected: str) -> str | None:
+        """Return the form error saying why Google gives no master or access token.
 
-    @staticmethod
-    async def _get_access_token(client: GlocaltokensApiClient) -> str:
-        """Return access token if master token is valid."""
-        access_token = ""
+        None means that Google gives both. rejected is the form's error for the cookie
+        or master token that Google refuses.
+        """
         try:
-            access_token = await client.async_get_access_token()
-        except (InvalidMasterToken, RequestException):
-            _LOGGER.exception("Failed to get access token")
-        return access_token
+            await client.async_get_master_token()
+            await client.async_get_access_token()
+        except (InvalidMasterToken, ClientError, TimeoutError) as error:
+            # The form shows the error, so a traceback would only look like a bug.
+            # A timeout has no message of its own.
+            _LOGGER.warning("Failed to sign in: %s", str(error) or type(error).__name__)
+            return _sign_in_error(error, rejected)
+        return None
 
 
 class GoogleHomeOptionsFlowHandler(OptionsFlow):
     """Config flow options handler for GoogleHome."""
 
+    def __init__(self) -> None:
+        """Start without offering homes."""
+        # The homes that the form offers, by ID, with their names. A home that the
+        # integration finds while the form is open is neither offered nor excluded.
+        self._homes: dict[str, str] = {}
+
     async def async_step_init(
         self, user_input: OptionsFlowDict | None = None
     ) -> ConfigFlowResult:
         """Manage the options."""
+        errors: dict[str, str] = {}
+        options: dict[str, object] = dict(self.config_entry.options)
+        saved = set(cast(list[str], options.get(CONF_EXCLUDED_HOMES, [])))
+        excluded = saved
         if user_input is not None:
-            return self.async_create_entry(data=user_input)
+            submitted: dict[str, object] = dict(user_input)
+            # The Bluetooth options are saved with the others, not in their section
+            submitted |= cast(dict[str, object], submitted.pop(SECTION_BLUETOOTH, {}))
+            # Keep the order, which decides between hosts that report the same device
+            known_hosts = list(
+                dict.fromkeys(
+                    host.strip()
+                    for host in user_input.get(CONF_KNOWN_HOSTS, [])
+                    if host.strip()
+                )
+            )
+            if not all(_is_ip_address(host) for host in known_hosts):
+                errors[CONF_KNOWN_HOSTS] = "known-host-not-ip"
+            # A home that the form didn't offer keeps its choice
+            offered = self._homes.keys()
+            excluded = (saved - offered) | (
+                offered - set(user_input.get(CONF_HOMES, []))
+            )
+            # Choosing no home is refused, unless none of them was added before
+            if offered and offered <= excluded and not offered <= saved:
+                errors[CONF_HOMES] = "no-home-selected"
+            if not errors:
+                data: dict[str, object] = {
+                    **submitted,
+                    CONF_KNOWN_HOSTS: known_hosts,
+                }
+                data.pop(CONF_HOMES, None)
+                if excluded:
+                    data[CONF_EXCLUDED_HOMES] = sorted(excluded)
+                return self.async_create_entry(data=data)
+            options = {**options, **submitted}
 
+        entry = self.config_entry
+        homes = (
+            entry.runtime_data.client.homes
+            if entry.state is ConfigEntryState.LOADED
+            else {}
+        )
+        # Offer the homes when there's a choice, or a home to add again
+        self._homes = dict(homes) if len(homes) > 1 or homes.keys() & excluded else {}
+        schema: dict[probatio.Marker, object] = {
+            probatio.Optional(
+                CONF_UPDATE_INTERVAL,
+                default=options.get(CONF_UPDATE_INTERVAL, const.UPDATE_INTERVAL),
+            ): probatio.All(int, probatio.Range(min=const.MIN_UPDATE_INTERVAL)),
+            probatio.Optional(
+                CONF_KNOWN_HOSTS,
+                default=options.get(CONF_KNOWN_HOSTS, []),
+            ): SelectSelector(
+                SelectSelectorConfig(custom_value=True, options=[], multiple=True)
+            ),
+        }
+        if self._homes:
+            schema[
+                probatio.Required(
+                    CONF_HOMES,
+                    default=[home for home in self._homes if home not in excluded],
+                )
+            ] = _homes_selector(self._homes)
+        bluetooth: dict[str, object] = {
+            CONF_BLUETOOTH_TRACKING: options.get(CONF_BLUETOOTH_TRACKING, False),
+            CONF_BLUETOOTH_EXCLUDED: options.get(CONF_BLUETOOTH_EXCLUDED, []),
+        }
+        # Under a heading of their own, so they don't run on from the homes. The
+        # frontend shows a section's default, not the defaults of its fields.
+        schema[probatio.Optional(SECTION_BLUETOOTH, default=bluetooth)] = section(
+            probatio.Schema(
+                {
+                    probatio.Optional(
+                        CONF_BLUETOOTH_TRACKING,
+                        default=bluetooth[CONF_BLUETOOTH_TRACKING],
+                    ): bool,
+                    probatio.Optional(
+                        CONF_BLUETOOTH_EXCLUDED,
+                        default=bluetooth[CONF_BLUETOOTH_EXCLUDED],
+                    ): SelectSelector(
+                        SelectSelectorConfig(
+                            options=self._speaker_options(
+                                bluetooth[CONF_BLUETOOTH_EXCLUDED]
+                            ),
+                            multiple=True,
+                        )
+                    ),
+                }
+            )
+        )
         return self.async_show_form(
             step_id="init",
-            data_schema=vol.Schema(
-                {
-                    vol.Optional(
-                        CONF_UPDATE_INTERVAL,
-                        default=self.config_entry.options.get(
-                            CONF_UPDATE_INTERVAL, UPDATE_INTERVAL
-                        ),
-                    ): int,
-                }
-            ),
+            data_schema=probatio.Schema(schema),
+            errors=errors,
+            description_placeholders={"default_interval": str(const.UPDATE_INTERVAL)},
         )
+
+    def _speaker_options(self, excluded: object) -> list[SelectOptionDict]:
+        """Return the entry's speakers to choose from, by name.
+
+        Excluded speakers that Google no longer lists stay, so saving the form
+        doesn't silently drop them.
+        """
+        entry = self.config_entry
+        devices = (
+            entry.runtime_data.account.data or {}
+            if entry.state is ConfigEntryState.LOADED
+            else {}
+        )
+        names = {device_id: device.name for device_id, device in devices.items()}
+        for device_id in excluded if isinstance(excluded, list) else []:
+            names.setdefault(str(device_id), str(device_id))
+        return [
+            SelectOptionDict(value=device_id, label=name)
+            for device_id, name in sorted(
+                names.items(), key=lambda item: item[1].casefold()
+            )
+        ]
+
+
+class BluetoothDeviceInput(TypedDict):
+    """Submitted Bluetooth identity and optional departure timing."""
+
+    name: str
+    irk_or_mac: str
+    additional_departure_delay: NotRequired[str]
+
+
+class DepartureDelaySelector(SelectSelector):
+    """Translate invalid selections from either Bluetooth device form."""
+
+    @override
+    def __call__(self, data: object) -> str:
+        try:
+            return cast(str, super().__call__(data))
+        except probatio.Invalid as err:
+            raise probatio.Invalid("departure-delay-invalid") from err
+
+
+def _departure_delay_selector() -> DepartureDelaySelector:
+    """Provide policy-derived fallbacks for localized radio labels."""
+    return DepartureDelaySelector(
+        SelectSelectorConfig(
+            options=[
+                SelectOptionDict(
+                    value=str(seconds), label=f"{seconds} {UnitOfTime.SECONDS}"
+                )
+                for seconds in DEPARTURE_DELAY_VALUES
+            ],
+            mode=SelectSelectorMode.LIST,
+            translation_key="departure_delay",
+        )
+    )
+
+
+class BluetoothDeviceSubentryFlow(ConfigSubentryFlow):
+    """Add a tracked Bluetooth device or adjust its departure timing."""
+
+    async def async_step_user(
+        self, user_input: BluetoothDeviceInput | None = None
+    ) -> SubentryFlowResult:
+        """Ask for the device's name, and its IRK or MAC address in one field.
+
+        They're told apart by their format: a MAC address is six hex pairs, an IRK
+        16 bytes. An IRK is saved as {"irk": hex}, a MAC address as
+        {"mac": "AA:BB:CC:DD:EE:FF"}.
+        """
+        entry = self._get_entry()
+        if not entry.options.get(CONF_BLUETOOTH_TRACKING):
+            return self.async_abort(reason="bluetooth-tracking-off")
+        errors: dict[str, str] = {}
+        if user_input is not None:
+            name = user_input[CONF_NAME].strip()
+            value = user_input[CONF_IRK_OR_MAC].strip()
+            delay = int(user_input.get(CONF_ADDITIONAL_DEPARTURE_DELAY, "0"))
+            data: dict[str, str | int] = {}
+            if not name:
+                errors[CONF_NAME] = "name-empty"
+            elif not value:
+                errors[CONF_IRK_OR_MAC] = "irk-or-mac"
+            elif (address := parse_mac(value)) is not None:
+                data = {CONF_MAC: address}
+            elif (irk := parse_irk(value)) is not None:
+                data = {CONF_IRK: irk.hex()}
+            else:
+                # Up to 17 characters, the length of a MAC address with separators,
+                # was probably meant as one
+                errors[CONF_IRK_OR_MAC] = (
+                    "mac-invalid" if len(value) <= 17 else "irk-invalid"
+                )
+            if data and any(
+                (subentry.data.get(CONF_IRK), subentry.data.get(CONF_MAC))
+                == (data.get(CONF_IRK), data.get(CONF_MAC))
+                for subentry in entry.get_subentries_of_type(SUBENTRY_BLUETOOTH_DEVICE)
+            ):
+                errors["base"] = "already-tracked"
+            elif data and not errors:
+                if delay:
+                    data[CONF_ADDITIONAL_DEPARTURE_DELAY] = delay
+                return self.async_create_entry(title=name, data=data)
+        return self.async_show_form(
+            step_id="user",
+            data_schema=self.add_suggested_values_to_schema(
+                probatio.Schema(
+                    {
+                        probatio.Required(CONF_NAME): str,
+                        probatio.Required(CONF_IRK_OR_MAC): str,
+                        probatio.Optional(
+                            CONF_ADDITIONAL_DEPARTURE_DELAY, default="0"
+                        ): _departure_delay_selector(),
+                    }
+                ),
+                user_input,
+            ),
+            errors=errors,
+            description_placeholders={
+                "docs_url": BLUETOOTH_DOCS_URL,
+                "presence_window": str(BLUETOOTH_PRESENCE_WINDOW),
+                "irk_bytes": str(IRK_LENGTH),
+                "irk_hex_length": str(IRK_LENGTH * 2),
+            },
+        )
+
+    async def async_step_reconfigure(
+        self, user_input: dict[str, str] | None = None
+    ) -> SubentryFlowResult:
+        """Change only timing, retaining the current identity and subentry."""
+        entry = self._get_entry()
+        try:
+            subentry = self._get_reconfigure_subentry()
+        except UnknownSubEntry:
+            return self.async_abort(reason="device-removed")
+        if user_input is not None:
+            return self.async_update_and_abort(
+                entry,
+                subentry,
+                data_updates={
+                    CONF_ADDITIONAL_DEPARTURE_DELAY: int(
+                        user_input[CONF_ADDITIONAL_DEPARTURE_DELAY]
+                    )
+                },
+            )
+        return self.async_show_form(
+            step_id="reconfigure",
+            data_schema=self.add_suggested_values_to_schema(
+                probatio.Schema(
+                    {
+                        probatio.Required(
+                            CONF_ADDITIONAL_DEPARTURE_DELAY,
+                            default=str(
+                                subentry.data.get(CONF_ADDITIONAL_DEPARTURE_DELAY, 0)
+                            ),
+                        ): _departure_delay_selector(),
+                    }
+                ),
+                user_input,
+            ),
+            description_placeholders={
+                "presence_window": str(BLUETOOTH_PRESENCE_WINDOW)
+            },
+        )
+
+
+def _homes_selector(homes: Mapping[str, str]) -> SelectSelector:
+    """Return a checkbox for each home, by name."""
+    return SelectSelector(
+        SelectSelectorConfig(
+            options=[
+                SelectOptionDict(value=home_id, label=name or home_id)
+                for home_id, name in sorted(homes.items(), key=lambda home: home[1])
+            ],
+            multiple=True,
+            mode=SelectSelectorMode.LIST,
+        )
+    )
+
+
+def _sign_in_error(
+    error: InvalidMasterToken | ClientError | TimeoutError, rejected: str
+) -> str:
+    """Return the form error for why Google gave no master token or access token."""
+    # glocaltokens raises ClientResponseError for Google's 5xx or 429 answers, and
+    # aiohttp for an answer that it can't read
+    if isinstance(error, ClientResponseError):
+        return "google-busy"
+    if isinstance(error, ClientError | TimeoutError):
+        return "google-unreachable"
+    # Google refuses a used or expired cookie and a revoked master token with
+    # BadAuthentication. Other reasons don't say that a new one would help.
+    cause = error.__cause__
+    if isinstance(cause, AuthenticationError) and cause.error == "BadAuthentication":
+        return rejected
+    return "google-rejected"
+
+
+def _get_accounts(entry: GoogleHomeConfigEntry) -> set[str]:
+    """Return the known email addresses of the entry's Google account.
+
+    Older versions saved the address that the user typed, and gave master token
+    entries a generic title, which has no @ until it's renamed after the address
+    that Google gives.
+    """
+    return {
+        _account_id(account)
+        for account in (entry.data.get(CONF_USERNAME), entry.title)
+        if account and "@" in account
+    }
+
+
+def _account_id(email: str) -> str:
+    """Return an email address in a form that is the same for one Google account.
+
+    Case doesn't matter, and Gmail addresses are the same with or without dots and
+    with either domain.
+    """
+    local, _, domain = email.strip().casefold().rpartition("@")
+    if domain in GMAIL_DOMAINS:
+        return f"{local.replace('.', '')}@gmail.com"
+    return f"{local}@{domain}"
+
+
+def _is_ip_address(host: str) -> bool:
+    """Return whether a known host is an IP address, which requests need."""
+    try:
+        ipaddress.ip_address(host)
+    except ValueError:
+        return False
+    return True

@@ -1,0 +1,12 @@
+{"status": "rename_intent", "old": "sensor.plantsensor_3_signal_strength", "new": "sensor.verandan_plantsensor_3_signalstyrka"}
+{"status": "renamed", "old": "sensor.plantsensor_3_signal_strength", "new": "sensor.verandan_plantsensor_3_signalstyrka"}
+{"status": "rename_intent", "old": "sensor.plantsensor_4_signal_strength", "new": "sensor.verandan_plantsensor_4_signalstyrka"}
+{"status": "renamed", "old": "sensor.plantsensor_4_signal_strength", "new": "sensor.verandan_plantsensor_4_signalstyrka"}
+{"status": "rename_intent", "old": "sensor.plantsensor_1_signal_strength", "new": "sensor.koket_plantsensor_1_signalstyrka"}
+{"status": "renamed", "old": "sensor.plantsensor_1_signal_strength", "new": "sensor.koket_plantsensor_1_signalstyrka"}
+{"status": "rename_intent", "old": "sensor.plantsensor_2_signal_strength", "new": "sensor.verandan_plantsensor_2_signalstyrka"}
+{"status": "renamed", "old": "sensor.plantsensor_2_signal_strength", "new": "sensor.verandan_plantsensor_2_signalstyrka"}
+{"status": "rename_intent", "old": "sensor.plant_sensor_78ff_signal_strength", "new": "sensor.koket_plantsensor_5_signalstyrka"}
+{"status": "renamed", "old": "sensor.plant_sensor_78ff_signal_strength", "new": "sensor.koket_plantsensor_5_signalstyrka"}
+{"status": "rename_intent", "old": "sensor.plant_sensor_ff62_signalstyrka", "new": "sensor.kontoret_plantsensor_6_signalstyrka"}
+{"status": "renamed", "old": "sensor.plant_sensor_ff62_signalstyrka", "new": "sensor.kontoret_plantsensor_6_signalstyrka"}

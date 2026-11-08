@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "openwrt_ssh_host_keys",
+  "data": {
+    "192.168.10.1:22": {
+      "ssh-ed25519": "AAAAC3NzaC1lZDI1NTE5AAAAIFrBn8RIK0wrsKiX/lB2lRiZ9nlpYAQ4k6nXwL/aSvYC"
+    },
+    "192.168.10.3:22": {
+      "ssh-ed25519": "AAAAC3NzaC1lZDI1NTE5AAAAIAwwoNvXMbOZr1Bv8eSjV3GckXs602Y9On9ss/QVBkv/"
+    },
+    "192.168.10.4:22": {
+      "ssh-ed25519": "AAAAC3NzaC1lZDI1NTE5AAAAIGWkW/GkCdeaE3QLePYoxvPdNQxi1xTzgwccWB3jENSk"
+    },
+    "192.168.10.5:22": {
+      "ssh-ed25519": "AAAAC3NzaC1lZDI1NTE5AAAAIGWkW/GkCdeaE3QLePYoxvPdNQxi1xTzgwccWB3jENSk"
+    },
+    "192.168.10.6:22": {
+      "ssh-ed25519": "AAAAC3NzaC1lZDI1NTE5AAAAILARetrjGy7IcWsM1Jbj18XuzSbciMfB/Diaee6mOAKt"
+    },
+    "192.168.10.7:22": {
+      "ssh-ed25519": "AAAAC3NzaC1lZDI1NTE5AAAAILARetrjGy7IcWsM1Jbj18XuzSbciMfB/Diaee6mOAKt"
+    },
+    "192.168.10.8:22": {
+      "ssh-ed25519": "AAAAC3NzaC1lZDI1NTE5AAAAIL2hKhsqI6r2cY7YT/0KIYW4KFZ2MIRmRU1xiMbUv5az"
+    },
+    "192.168.10.10:22": {
+      "ssh-ed25519": "AAAAC3NzaC1lZDI1NTE5AAAAILPEtRKcjD1JljW8rYl3Dx3w5DH8ffNCHYD43Ht2koKz"
+    },
+    "192.168.10.12:22": {
+      "ssh-ed25519": "AAAAC3NzaC1lZDI1NTE5AAAAIPOksyVTdLFfovV8dXf+Gh3Gtz2w3D3RPBPoy+PJ8UWJ"
+    }
+  }
+}

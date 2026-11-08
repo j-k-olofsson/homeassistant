@@ -1,0 +1,106 @@
+{
+  "sensor.sm_g930f_battery_state": [
+    {
+      "state": "charging",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "binary_sensor.sm_g930f_is_charging": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "sensor.sm_g930f_charger_type": [
+    {
+      "state": "ac",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "sensor.sm_g930f_battery_health": [
+    {
+      "state": "good",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "sensor.sm_g930f_battery_power": [
+    {
+      "state": "0.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "binary_sensor.galaxy_tab_2_hallen_mic_muted": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "sensor.galaxy_tab_2_hallen_battery_state": [
+    {
+      "state": "discharging",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "sensor.galaxy_tab_2_hallen_charger_type": [
+    {
+      "state": "none",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "sensor.galaxy_tab_2_hallen_screen_brightness": [
+    {
+      "state": "208",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "sensor.galaxy_tab_2_hallen_screen_off_timeout": [
+    {
+      "state": "300000",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "sensor.galaxy_tab_2_hallen_light_sensor": [
+    {
+      "state": "1",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "sensor.sm_t835_battery_state": [
+    {
+      "state": "full",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ],
+  "sensor.sm_t835_charger_type": [
+    {
+      "state": "ac",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:38.025353+00:00",
+      "last_updated": "2026-11-07T07:51:38.025353+00:00"
+    }
+  ]
+}

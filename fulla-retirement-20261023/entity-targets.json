@@ -1,0 +1,4323 @@
+[
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980126.139458,
+    "device_id": "4c55f537867fc493fd77e74baea02df8",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.fulla_svarstid",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "81af3e3c51450f14ae97bb16ddce2edf",
+    "labels": [],
+    "modified_at": 1789980126.141767,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 0
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Svarstid",
+    "platform": "uptime_kuma",
+    "translation_key": "response_time",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_2_response_time"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980126.142812,
+    "device_id": "713fb5f884ea6a2b3572445d83aff054",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.ping_svarstid",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "6b3de6c68e38ab72b85e192b1007994d",
+    "labels": [],
+    "modified_at": 1789980126.144832,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 0
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Svarstid",
+    "platform": "uptime_kuma",
+    "translation_key": "response_time",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_3_response_time"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980126.190312,
+    "device_id": "7a567aaf80afa9a096efd5e39aa09501",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.ssh_svarstid_2",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "8320d1e364cb938a1881241688626ce4",
+    "labels": [],
+    "modified_at": 1789980126.19244,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 0
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Svarstid",
+    "platform": "uptime_kuma",
+    "translation_key": "response_time",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_17_response_time"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980126.249623,
+    "device_id": "d5bc3f167d9070f6f7ccd7515049b872",
+    "disabled_by": "user",
+    "entity_category": null,
+    "entity_id": "sensor.glances_container_svarstid_2",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "384e99e2441141e4ea4caf6e2c9cb921",
+    "labels": [],
+    "modified_at": 1792583848.815995,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 0
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Svarstid",
+    "platform": "uptime_kuma",
+    "translation_key": "response_time",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_31_response_time"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980126.371561,
+    "device_id": "4c55f537867fc493fd77e74baea02df8",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.fulla_status",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "99b52df5c35d1d4757e59a86989ced2c",
+    "labels": [],
+    "modified_at": 1789980126.372879,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Status",
+    "platform": "uptime_kuma",
+    "translation_key": "status",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_2_status"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980126.373763,
+    "device_id": "713fb5f884ea6a2b3572445d83aff054",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.ping_status",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "b0e51459ba1a05199fd7507dea33fd95",
+    "labels": [],
+    "modified_at": 1789980126.374925,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Status",
+    "platform": "uptime_kuma",
+    "translation_key": "status",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_3_status"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980126.4203,
+    "device_id": "7a567aaf80afa9a096efd5e39aa09501",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.ssh_status_2",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "cef811c530eb51eb6193ace681886cf3",
+    "labels": [],
+    "modified_at": 1789980126.421469,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Status",
+    "platform": "uptime_kuma",
+    "translation_key": "status",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_17_status"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980126.453414,
+    "device_id": "d5bc3f167d9070f6f7ccd7515049b872",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.glances_container_status_2",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "2f1110f2d3183bccc04ca57f0e2b1640",
+    "labels": [],
+    "modified_at": 1789980126.454557,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Status",
+    "platform": "uptime_kuma",
+    "translation_key": "status",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_31_status"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980126.53771,
+    "device_id": "4c55f537867fc493fd77e74baea02df8",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.fulla_monitortyp",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "052079f38814a39967ec2b4d9fbdf5e0",
+    "labels": [],
+    "modified_at": 1791442526.517981,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Monitortyp",
+    "platform": "uptime_kuma",
+    "translation_key": "type",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_2_type"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980126.541196,
+    "device_id": "713fb5f884ea6a2b3572445d83aff054",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.ping_monitortyp",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "8fca111497b6a88517a4e541f862f561",
+    "labels": [],
+    "modified_at": 1791442526.518517,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Monitortyp",
+    "platform": "uptime_kuma",
+    "translation_key": "type",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_3_type"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980126.580849,
+    "device_id": "7a567aaf80afa9a096efd5e39aa09501",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.ssh_monitortyp_2",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "9d7e8ed93f4ff7750510aa1aa320435a",
+    "labels": [],
+    "modified_at": 1791442526.523222,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Monitortyp",
+    "platform": "uptime_kuma",
+    "translation_key": "type",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_17_type"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980126.617208,
+    "device_id": "d5bc3f167d9070f6f7ccd7515049b872",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.glances_container_monitortyp_2",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "df3dc7e00dd8842ba74935b89f5f0737",
+    "labels": [],
+    "modified_at": 1791442526.533262,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Monitortyp",
+    "platform": "uptime_kuma",
+    "translation_key": "type",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_31_type"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980126.714447,
+    "device_id": "713fb5f884ea6a2b3572445d83aff054",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.ping_overvakat_vardnamn",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "4879353ffcff307387aa92f6b1670b29",
+    "labels": [],
+    "modified_at": 1789980126.715583,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "\u00d6vervakat v\u00e4rdnamn",
+    "platform": "uptime_kuma",
+    "translation_key": "hostname",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_3_hostname"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980126.727212,
+    "device_id": "7a567aaf80afa9a096efd5e39aa09501",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.ssh_overvakat_vardnamn_2",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "a71660c26006393e4befd580b6b60608",
+    "labels": [],
+    "modified_at": 1789980126.729866,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "\u00d6vervakat v\u00e4rdnamn",
+    "platform": "uptime_kuma",
+    "translation_key": "hostname",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_17_hostname"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980126.79161,
+    "device_id": "7a567aaf80afa9a096efd5e39aa09501",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.ssh_overvakad_port_2",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "1198dfe9a57e849405ef523299a5d63f",
+    "labels": [],
+    "modified_at": 1789980126.792789,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "\u00d6vervakad port",
+    "platform": "uptime_kuma",
+    "translation_key": "port",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_17_port"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980126.796776,
+    "device_id": "4c55f537867fc493fd77e74baea02df8",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.fulla_upptid_1_dag",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "f86d1697910fc966b36f4ebbf3f13481",
+    "labels": [],
+    "modified_at": 1789980126.798892,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Upptid (1 dag)",
+    "platform": "uptime_kuma",
+    "translation_key": "uptime_1d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_2_uptime_1d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980126.799792,
+    "device_id": "713fb5f884ea6a2b3572445d83aff054",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.ping_upptid_1_dag",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "7dd589d457f41fb7e91224a6fccc109e",
+    "labels": [],
+    "modified_at": 1789980126.801561,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Upptid (1 dag)",
+    "platform": "uptime_kuma",
+    "translation_key": "uptime_1d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_3_uptime_1d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980126.843388,
+    "device_id": "7a567aaf80afa9a096efd5e39aa09501",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.ssh_upptid_1_dag_2",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "c61d5ee3a8a56f0b55067d7a3fce5470",
+    "labels": [],
+    "modified_at": 1789980126.844948,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Upptid (1 dag)",
+    "platform": "uptime_kuma",
+    "translation_key": "uptime_1d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_17_uptime_1d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980126.886395,
+    "device_id": "d5bc3f167d9070f6f7ccd7515049b872",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.glances_container_upptid_1_dag_2",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "f590514a2a5cce9d894e6e5c45d7fcc3",
+    "labels": [],
+    "modified_at": 1789980126.890887,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Upptid (1 dag)",
+    "platform": "uptime_kuma",
+    "translation_key": "uptime_1d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_31_uptime_1d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980127.00281,
+    "device_id": "4c55f537867fc493fd77e74baea02df8",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.fulla_upptid_30_dagar",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "74406295a01fa1ce929e63f76a77ec09",
+    "labels": [],
+    "modified_at": 1789980127.004787,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Upptid (30 dagar)",
+    "platform": "uptime_kuma",
+    "translation_key": "uptime_30d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_2_uptime_30d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980127.00566,
+    "device_id": "713fb5f884ea6a2b3572445d83aff054",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.ping_upptid_30_dagar",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "2af4b1f6daa76d4d90d1cc2d9bbbbfa7",
+    "labels": [],
+    "modified_at": 1789980127.007325,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Upptid (30 dagar)",
+    "platform": "uptime_kuma",
+    "translation_key": "uptime_30d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_3_uptime_30d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980127.04981,
+    "device_id": "7a567aaf80afa9a096efd5e39aa09501",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.ssh_upptid_30_dagar_2",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "532ed7a5d249006a6b95de164065de23",
+    "labels": [],
+    "modified_at": 1789980127.052474,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Upptid (30 dagar)",
+    "platform": "uptime_kuma",
+    "translation_key": "uptime_30d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_17_uptime_30d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980127.089814,
+    "device_id": "d5bc3f167d9070f6f7ccd7515049b872",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.glances_container_upptid_30_dagar_2",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "e9b14de9d67e11060cab6e69eb38929b",
+    "labels": [],
+    "modified_at": 1789980127.091452,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Upptid (30 dagar)",
+    "platform": "uptime_kuma",
+    "translation_key": "uptime_30d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_31_uptime_30d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980127.190509,
+    "device_id": "4c55f537867fc493fd77e74baea02df8",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.fulla_upptid_365_dagar",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "004eff2ab0902fd4ee6b536d06370fcd",
+    "labels": [],
+    "modified_at": 1789980127.192581,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Upptid (365 dagar)",
+    "platform": "uptime_kuma",
+    "translation_key": "uptime_365d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_2_uptime_365d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980127.193405,
+    "device_id": "713fb5f884ea6a2b3572445d83aff054",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.ping_upptid_365_dagar",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "e9fcb51847eba0a6980598f73b1c405f",
+    "labels": [],
+    "modified_at": 1789980127.194979,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Upptid (365 dagar)",
+    "platform": "uptime_kuma",
+    "translation_key": "uptime_365d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_3_uptime_365d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980127.237105,
+    "device_id": "7a567aaf80afa9a096efd5e39aa09501",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.ssh_upptid_365_dagar_2",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "1ed38505e7f50b8023b84ff75e454656",
+    "labels": [],
+    "modified_at": 1789980127.241415,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Upptid (365 dagar)",
+    "platform": "uptime_kuma",
+    "translation_key": "uptime_365d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_17_uptime_365d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980127.278626,
+    "device_id": "d5bc3f167d9070f6f7ccd7515049b872",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.glances_container_upptid_365_dagar_2",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "bba8bc5145c97ba4f07667a136b11a66",
+    "labels": [],
+    "modified_at": 1789980127.285108,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Upptid (365 dagar)",
+    "platform": "uptime_kuma",
+    "translation_key": "uptime_365d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_31_uptime_365d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980128.041667,
+    "device_id": "4c55f537867fc493fd77e74baea02df8",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.fulla_svarstid_o_1_dag",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "dc47483b6296d33bf20659310d0c3d49",
+    "labels": [],
+    "modified_at": 1789980128.043383,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "ms"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 0
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Svarstid \u00d8 (1 dag)",
+    "platform": "uptime_kuma",
+    "translation_key": "avg_response_time_1d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_2_avg_response_time_1d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980128.044195,
+    "device_id": "713fb5f884ea6a2b3572445d83aff054",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.ping_svarstid_o_1_dag",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "6a2775098e4ea1ca3e66d2db9033115a",
+    "labels": [],
+    "modified_at": 1789980128.048348,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "ms"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 0
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Svarstid \u00d8 (1 dag)",
+    "platform": "uptime_kuma",
+    "translation_key": "avg_response_time_1d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_3_avg_response_time_1d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980128.090058,
+    "device_id": "7a567aaf80afa9a096efd5e39aa09501",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.ssh_svarstid_o_1_dag_2",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "c181add2e1ae055b7ddf0ed76a815ee1",
+    "labels": [],
+    "modified_at": 1789980128.09165,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "ms"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 0
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Svarstid \u00d8 (1 dag)",
+    "platform": "uptime_kuma",
+    "translation_key": "avg_response_time_1d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_17_avg_response_time_1d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980128.140271,
+    "device_id": "d5bc3f167d9070f6f7ccd7515049b872",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.glances_container_svarstid_o_1_dag_2",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "1448308c9a217cb7978a2de8ca96bf5e",
+    "labels": [],
+    "modified_at": 1789980128.142004,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "ms"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 0
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Svarstid \u00d8 (1 dag)",
+    "platform": "uptime_kuma",
+    "translation_key": "avg_response_time_1d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_31_avg_response_time_1d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980128.245396,
+    "device_id": "4c55f537867fc493fd77e74baea02df8",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.fulla_svarstid_o_30_dagar",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "485ae4ae71ac401ab8ff644c9e1ae8e6",
+    "labels": [],
+    "modified_at": 1789980128.248273,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "ms"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 0
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Svarstid \u00d8 (30 dagar)",
+    "platform": "uptime_kuma",
+    "translation_key": "avg_response_time_30d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_2_avg_response_time_30d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980128.249143,
+    "device_id": "713fb5f884ea6a2b3572445d83aff054",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.ping_svarstid_o_30_dagar",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "e519277c094d50fb162a4d1f47d4544c",
+    "labels": [],
+    "modified_at": 1789980128.250769,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "ms"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 0
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Svarstid \u00d8 (30 dagar)",
+    "platform": "uptime_kuma",
+    "translation_key": "avg_response_time_30d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_3_avg_response_time_30d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980128.291432,
+    "device_id": "7a567aaf80afa9a096efd5e39aa09501",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.ssh_svarstid_o_30_dagar_2",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "7c464fb5d325b2f4d437b07c87d07046",
+    "labels": [],
+    "modified_at": 1789980128.293022,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "ms"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 0
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Svarstid \u00d8 (30 dagar)",
+    "platform": "uptime_kuma",
+    "translation_key": "avg_response_time_30d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_17_avg_response_time_30d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980128.34576,
+    "device_id": "d5bc3f167d9070f6f7ccd7515049b872",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.glances_container_svarstid_o_30_dagar_2",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "efdc98a3150dc507df424a694595cdf6",
+    "labels": [],
+    "modified_at": 1789980128.347472,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "ms"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 0
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Svarstid \u00d8 (30 dagar)",
+    "platform": "uptime_kuma",
+    "translation_key": "avg_response_time_30d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_31_avg_response_time_30d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980128.446591,
+    "device_id": "4c55f537867fc493fd77e74baea02df8",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.fulla_svarstid_o_365_dagar",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "04ab93293b5ab610f2a29e0204bf298f",
+    "labels": [],
+    "modified_at": 1789980128.448547,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "ms"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 0
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Svarstid \u00d8 (365 dagar)",
+    "platform": "uptime_kuma",
+    "translation_key": "avg_response_time_365d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_2_avg_response_time_365d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980128.44936,
+    "device_id": "713fb5f884ea6a2b3572445d83aff054",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.ping_svarstid_o_365_dagar",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "52db43a5293ce695d00d5b92a5107519",
+    "labels": [],
+    "modified_at": 1789980128.452365,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "ms"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 0
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Svarstid \u00d8 (365 dagar)",
+    "platform": "uptime_kuma",
+    "translation_key": "avg_response_time_365d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_3_avg_response_time_365d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980128.510673,
+    "device_id": "7a567aaf80afa9a096efd5e39aa09501",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.ssh_svarstid_o_365_dagar_2",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "b65c4d8c1ce0e633c05db70ad46d32e2",
+    "labels": [],
+    "modified_at": 1789980128.512851,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "ms"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 0
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Svarstid \u00d8 (365 dagar)",
+    "platform": "uptime_kuma",
+    "translation_key": "avg_response_time_365d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_17_avg_response_time_365d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980128.549649,
+    "device_id": "d5bc3f167d9070f6f7ccd7515049b872",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.glances_container_svarstid_o_365_dagar_2",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "99974dd3983e24f9b95164b57e389fb3",
+    "labels": [],
+    "modified_at": 1789980128.551285,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "ms"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 0
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Svarstid \u00d8 (365 dagar)",
+    "platform": "uptime_kuma",
+    "translation_key": "avg_response_time_365d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_31_avg_response_time_365d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980128.640638,
+    "device_id": "4c55f537867fc493fd77e74baea02df8",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.fulla_taggar",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "0f615122290209ff99536e07c2ed27fa",
+    "labels": [],
+    "modified_at": 1789980128.640806,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Taggar",
+    "platform": "uptime_kuma",
+    "translation_key": "tags",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_2_tags"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980128.641742,
+    "device_id": "713fb5f884ea6a2b3572445d83aff054",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.ping_taggar",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "324245ecf1a77908878587e5ec617a8c",
+    "labels": [],
+    "modified_at": 1789980128.64191,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Taggar",
+    "platform": "uptime_kuma",
+    "translation_key": "tags",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_3_tags"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980128.667528,
+    "device_id": "7a567aaf80afa9a096efd5e39aa09501",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.ssh_taggar_2",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "7e2812c297caa17b32da217b52d8ea1c",
+    "labels": [],
+    "modified_at": 1789980128.66769,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Taggar",
+    "platform": "uptime_kuma",
+    "translation_key": "tags",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_17_tags"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1789980128.687586,
+    "device_id": "d5bc3f167d9070f6f7ccd7515049b872",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.glances_container_taggar_2",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "2f5a4e94a5c83bd8d8e37fd7174cef8e",
+    "labels": [],
+    "modified_at": 1789980128.687818,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Taggar",
+    "platform": "uptime_kuma",
+    "translation_key": "tags",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_31_tags"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790321018.290055,
+    "device_id": "cfc8dd2b36f8a59be86c19c7c262c6c3",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "binary_sensor.fulla_agent_status",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "bbc25757661448b8f1d6ea20052391a5",
+    "labels": [],
+    "modified_at": 1790321018.291913,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Status",
+    "platform": "portainer",
+    "translation_key": "status",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_15_status"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790321018.292908,
+    "device_id": "cfc8dd2b36f8a59be86c19c7c262c6c3",
+    "disabled_by": null,
+    "entity_category": "config",
+    "entity_id": "button.fulla_agent_rensa_oanvanda_avbildningar",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "436c3a935ef7954574afb6e6f05bbf52",
+    "labels": [],
+    "modified_at": 1790321018.29482,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Rensa oanv\u00e4nda avbildningar",
+    "platform": "portainer",
+    "translation_key": "images_prune",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_15_images_prune"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790321018.296949,
+    "device_id": "cfc8dd2b36f8a59be86c19c7c262c6c3",
+    "disabled_by": null,
+    "entity_category": "config",
+    "entity_id": "button.fulla_agent_rensa_oanvanda_volymer",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "c3d84f3531279e845979272036235865",
+    "labels": [],
+    "modified_at": 1790321018.298273,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Rensa oanv\u00e4nda volymer",
+    "platform": "portainer",
+    "translation_key": "volumes_prune",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_15_volumes_prune"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790321018.29926,
+    "device_id": "cfc8dd2b36f8a59be86c19c7c262c6c3",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.fulla_agent_api_version",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "67cb7cce6241d09e65dfb71f13c7314f",
+    "labels": [],
+    "modified_at": 1790321018.299451,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "API-version",
+    "platform": "portainer",
+    "translation_key": "api_version",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_15_api_version"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790321018.300384,
+    "device_id": "cfc8dd2b36f8a59be86c19c7c262c6c3",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.fulla_agent_kernel_version",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "839614d9bdbea7ece3b4c7e3b0e1fafd",
+    "labels": [],
+    "modified_at": 1790321018.300555,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Kernel-version",
+    "platform": "portainer",
+    "translation_key": "kernel_version",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_15_kernel_version"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790321018.301481,
+    "device_id": "cfc8dd2b36f8a59be86c19c7c262c6c3",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.fulla_agent_operativsystem",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "7570ecffea2de16060b6ef56d24b8bb1",
+    "labels": [],
+    "modified_at": 1790321018.30165,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Operativsystem",
+    "platform": "portainer",
+    "translation_key": "operating_system",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_15_operating_system"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790321018.303166,
+    "device_id": "cfc8dd2b36f8a59be86c19c7c262c6c3",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.fulla_agent_operativsystemets_version",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "fe1f1a44bcae4f9fe41a0df9001f10cd",
+    "labels": [],
+    "modified_at": 1790321018.303412,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Operativsystemets version",
+    "platform": "portainer",
+    "translation_key": "operating_system_version",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_15_operating_system_version"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790321018.30448,
+    "device_id": "cfc8dd2b36f8a59be86c19c7c262c6c3",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.fulla_agent_docker_version",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "cdd4e39f57912c5de89ee59d47ef88eb",
+    "labels": [],
+    "modified_at": 1790321018.304652,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Docker-version",
+    "platform": "portainer",
+    "translation_key": "docker_version",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_15_docker_version"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790321018.305594,
+    "device_id": "cfc8dd2b36f8a59be86c19c7c262c6c3",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.fulla_agent_arkitektur",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "781bce5a22df7e27ec26d53bd92f8546",
+    "labels": [],
+    "modified_at": 1790321018.305761,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Arkitektur",
+    "platform": "portainer",
+    "translation_key": "architecture",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_15_architecture"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790321018.306687,
+    "device_id": "cfc8dd2b36f8a59be86c19c7c262c6c3",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.fulla_agent_antal_behallare",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "9f2d8f7c3fe8850631dc45a1ae8352bd",
+    "labels": [],
+    "modified_at": 1790321018.308097,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Antal beh\u00e5llare",
+    "platform": "portainer",
+    "translation_key": "containers_count",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_15_containers_count"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790321018.309337,
+    "device_id": "cfc8dd2b36f8a59be86c19c7c262c6c3",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.fulla_agent_behallare_som_kors",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "54c5a2eed86830d00a4a069bfa06b8e0",
+    "labels": [],
+    "modified_at": 1790321018.310579,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Beh\u00e5llare som k\u00f6rs",
+    "platform": "portainer",
+    "translation_key": "containers_running",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_15_containers_running"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790321018.311402,
+    "device_id": "cfc8dd2b36f8a59be86c19c7c262c6c3",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.fulla_agent_behallare_stoppade",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "a386ffe8800943ff30471d38cb4ba896",
+    "labels": [],
+    "modified_at": 1790321018.312534,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Beh\u00e5llare stoppade",
+    "platform": "portainer",
+    "translation_key": "containers_stopped",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_15_containers_stopped"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790321018.313315,
+    "device_id": "cfc8dd2b36f8a59be86c19c7c262c6c3",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.fulla_agent_behallare_pausade",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "7e4cae44fef73e20b78ffb49789704c8",
+    "labels": [],
+    "modified_at": 1790321018.315313,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Beh\u00e5llare pausade",
+    "platform": "portainer",
+    "translation_key": "containers_paused",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_15_containers_paused"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790321018.316147,
+    "device_id": "cfc8dd2b36f8a59be86c19c7c262c6c3",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.fulla_agent_antal_avbildningar",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "e95de14b68d91cc20e07c91fcd616ac1",
+    "labels": [],
+    "modified_at": 1790321018.317252,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Antal avbildningar",
+    "platform": "portainer",
+    "translation_key": "images_count",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_15_images_count"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790321018.318026,
+    "device_id": "cfc8dd2b36f8a59be86c19c7c262c6c3",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.fulla_agent_totalt_minne",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "23eae92cf3716c7c148d9c3262a5a107",
+    "labels": [],
+    "modified_at": 1790321018.318203,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "MiB"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Totalt minne",
+    "platform": "portainer",
+    "translation_key": "memory_total",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_15_memory_total"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790321018.319109,
+    "device_id": "cfc8dd2b36f8a59be86c19c7c262c6c3",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.fulla_agent_totalt_cpu",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "14ed1da683c77caeee27b049bf21e56b",
+    "labels": [],
+    "modified_at": 1790321018.319283,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Totalt CPU",
+    "platform": "portainer",
+    "translation_key": "cpu_total",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_15_cpu_total"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790321018.322283,
+    "device_id": "cfc8dd2b36f8a59be86c19c7c262c6c3",
+    "disabled_by": "user",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.fulla_agent_atervinningsbar_containerdiskanvandning",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "6155bd5ecfbadcb65731693cf9296635",
+    "labels": [],
+    "modified_at": 1792583848.770413,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "MiB"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "\u00c5tervinningsbar containerdiskanv\u00e4ndning",
+    "platform": "portainer",
+    "translation_key": "container_disk_usage_reclaimable",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_15_container_disk_usage_reclaimable"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790321018.324811,
+    "device_id": "cfc8dd2b36f8a59be86c19c7c262c6c3",
+    "disabled_by": "user",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.fulla_agent_total_storlek_pa_containerdiskanvandning",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "99ad240b0f03c30f4cf360c036626495",
+    "labels": [],
+    "modified_at": 1792583848.772484,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "MiB"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Total storlek p\u00e5 containerdiskanv\u00e4ndning",
+    "platform": "portainer",
+    "translation_key": "container_disk_usage_total_size",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_15_container_disk_usage_total_size"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790321018.327554,
+    "device_id": "cfc8dd2b36f8a59be86c19c7c262c6c3",
+    "disabled_by": "user",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.fulla_agent_atervinningsbar_avbildningsdiskanvandning",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "278423b12aa1aab2a01bd4bab57ff1e0",
+    "labels": [],
+    "modified_at": 1792583848.774486,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "MiB"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "\u00c5tervinningsbar avbildningsdiskanv\u00e4ndning",
+    "platform": "portainer",
+    "translation_key": "image_disk_usage_reclaimable",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_15_image_disk_usage_reclaimable"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790321018.330005,
+    "device_id": "cfc8dd2b36f8a59be86c19c7c262c6c3",
+    "disabled_by": "user",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.fulla_agent_total_storlek_pa_avbildningsdiskanvandning",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "f86ece2c62e1646d5c2cb670659ec8f9",
+    "labels": [],
+    "modified_at": 1792583848.776443,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "MiB"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Total storlek p\u00e5 avbildningsdiskanv\u00e4ndning",
+    "platform": "portainer",
+    "translation_key": "image_disk_usage_total_size",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_15_image_disk_usage_total_size"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790321018.334543,
+    "device_id": "cfc8dd2b36f8a59be86c19c7c262c6c3",
+    "disabled_by": "user",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.fulla_agent_total_storlek_pa_volymdiskanvandning",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "a97ebe961f3f3baa8d20d3a4e064e3b5",
+    "labels": [],
+    "modified_at": 1792583848.778981,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "MiB"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Total storlek p\u00e5 volymdiskanv\u00e4ndning",
+    "platform": "portainer",
+    "translation_key": "volume_disk_usage_total_size",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_15_volume_disk_usage_total"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.702389,
+    "device_id": "17eccc9bcb8cb826105a789ef10fc0e3",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "binary_sensor.docker_socket_proxy_fulla_status",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "7d7ae4c597cc21229332e7c7c04d2071",
+    "labels": [],
+    "modified_at": 1790519926.704167,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Status",
+    "platform": "portainer",
+    "translation_key": "status",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_docker-socket-proxy-fulla_status"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.705304,
+    "device_id": "84cd666ec2a0296d528eb7a37f117b29",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "binary_sensor.portainer_agent_fulla_status",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "665b99cbf82944c927fbe50025906a2d",
+    "labels": [],
+    "modified_at": 1790519926.706415,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Status",
+    "platform": "portainer",
+    "translation_key": "status",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_portainer_agent_fulla_status"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.707582,
+    "device_id": "22d2bc5881f2d9ad9ebe8ac62eceb151",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "binary_sensor.glances_fulla_status",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "e46e617bc436bc0d9a6ee9b470488d7c",
+    "labels": [],
+    "modified_at": 1790519926.710365,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Status",
+    "platform": "portainer",
+    "translation_key": "status",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_glances_fulla_status"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.730731,
+    "device_id": "17eccc9bcb8cb826105a789ef10fc0e3",
+    "disabled_by": null,
+    "entity_category": "config",
+    "entity_id": "button.docker_socket_proxy_fulla_starta_om_container",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "5d9352c36bc1afd3e4d61461f2903136",
+    "labels": [],
+    "modified_at": 1790519926.732181,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Starta om container",
+    "platform": "portainer",
+    "translation_key": "restart_container",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_docker-socket-proxy-fulla_restart"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.73373,
+    "device_id": "17eccc9bcb8cb826105a789ef10fc0e3",
+    "disabled_by": null,
+    "entity_category": "config",
+    "entity_id": "button.docker_socket_proxy_fulla_pausa_container",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "e0ccbac9a994aa33c3186b651bfc8d94",
+    "labels": [],
+    "modified_at": 1790519926.734993,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Pausa container",
+    "platform": "portainer",
+    "translation_key": "pause_container",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_docker-socket-proxy-fulla_pause"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.735853,
+    "device_id": "17eccc9bcb8cb826105a789ef10fc0e3",
+    "disabled_by": null,
+    "entity_category": "config",
+    "entity_id": "button.docker_socket_proxy_fulla_ateruppta_container",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "432af8e732532548f8e52b6973422d65",
+    "labels": [],
+    "modified_at": 1790519926.737158,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "\u00c5teruppta container",
+    "platform": "portainer",
+    "translation_key": "resume_container",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_docker-socket-proxy-fulla_resume"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.739198,
+    "device_id": "17eccc9bcb8cb826105a789ef10fc0e3",
+    "disabled_by": null,
+    "entity_category": "config",
+    "entity_id": "button.docker_socket_proxy_fulla_aterskapa_containern",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "2f77fda095ff06007c6880d085dfe603",
+    "labels": [],
+    "modified_at": 1790519926.740611,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "\u00c5terskapa containern",
+    "platform": "portainer",
+    "translation_key": "recreate_container",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_docker-socket-proxy-fulla_recreate"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.74155,
+    "device_id": "17eccc9bcb8cb826105a789ef10fc0e3",
+    "disabled_by": null,
+    "entity_category": "config",
+    "entity_id": "button.docker_socket_proxy_fulla_doda_container",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "8427eecca98f66da01d7b0543ba21274",
+    "labels": [],
+    "modified_at": 1790519926.742757,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "D\u00f6da container",
+    "platform": "portainer",
+    "translation_key": "kill_container",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_docker-socket-proxy-fulla_kill"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.743587,
+    "device_id": "84cd666ec2a0296d528eb7a37f117b29",
+    "disabled_by": null,
+    "entity_category": "config",
+    "entity_id": "button.portainer_agent_fulla_starta_om_container",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "f945719c946e36fb1d4332e607b1eecd",
+    "labels": [],
+    "modified_at": 1790519926.745284,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Starta om container",
+    "platform": "portainer",
+    "translation_key": "restart_container",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_portainer_agent_fulla_restart"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.746107,
+    "device_id": "84cd666ec2a0296d528eb7a37f117b29",
+    "disabled_by": null,
+    "entity_category": "config",
+    "entity_id": "button.portainer_agent_fulla_pausa_container",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "f3e2597da8a7a2d08f84c53e66543286",
+    "labels": [],
+    "modified_at": 1790519926.74758,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Pausa container",
+    "platform": "portainer",
+    "translation_key": "pause_container",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_portainer_agent_fulla_pause"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.748373,
+    "device_id": "84cd666ec2a0296d528eb7a37f117b29",
+    "disabled_by": null,
+    "entity_category": "config",
+    "entity_id": "button.portainer_agent_fulla_ateruppta_container",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "3fb5ab99c2fdf766991b11e6808c8dc7",
+    "labels": [],
+    "modified_at": 1790519926.749491,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "\u00c5teruppta container",
+    "platform": "portainer",
+    "translation_key": "resume_container",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_portainer_agent_fulla_resume"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.750821,
+    "device_id": "84cd666ec2a0296d528eb7a37f117b29",
+    "disabled_by": null,
+    "entity_category": "config",
+    "entity_id": "button.portainer_agent_fulla_aterskapa_containern",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "9b22ffcd53b07f9ee6b36eaab752ee20",
+    "labels": [],
+    "modified_at": 1790519926.751977,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "\u00c5terskapa containern",
+    "platform": "portainer",
+    "translation_key": "recreate_container",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_portainer_agent_fulla_recreate"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.752776,
+    "device_id": "84cd666ec2a0296d528eb7a37f117b29",
+    "disabled_by": null,
+    "entity_category": "config",
+    "entity_id": "button.portainer_agent_fulla_doda_container",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "6b0b47ec6427979bd90de8ba8c035110",
+    "labels": [],
+    "modified_at": 1790519926.753861,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "D\u00f6da container",
+    "platform": "portainer",
+    "translation_key": "kill_container",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_portainer_agent_fulla_kill"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.756698,
+    "device_id": "22d2bc5881f2d9ad9ebe8ac62eceb151",
+    "disabled_by": null,
+    "entity_category": "config",
+    "entity_id": "button.glances_fulla_starta_om_container",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "5ceb1952c19f827769c2656d1025bea1",
+    "labels": [],
+    "modified_at": 1790519926.75789,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Starta om container",
+    "platform": "portainer",
+    "translation_key": "restart_container",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_glances_fulla_restart"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.758724,
+    "device_id": "22d2bc5881f2d9ad9ebe8ac62eceb151",
+    "disabled_by": null,
+    "entity_category": "config",
+    "entity_id": "button.glances_fulla_pausa_container",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "4608c83538812787cabcb0d5c182c95f",
+    "labels": [],
+    "modified_at": 1790519926.760043,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Pausa container",
+    "platform": "portainer",
+    "translation_key": "pause_container",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_glances_fulla_pause"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.762163,
+    "device_id": "22d2bc5881f2d9ad9ebe8ac62eceb151",
+    "disabled_by": null,
+    "entity_category": "config",
+    "entity_id": "button.glances_fulla_ateruppta_container",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "a9deb1a2a62931b94a185403fe6bcf40",
+    "labels": [],
+    "modified_at": 1790519926.763454,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "\u00c5teruppta container",
+    "platform": "portainer",
+    "translation_key": "resume_container",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_glances_fulla_resume"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.764245,
+    "device_id": "22d2bc5881f2d9ad9ebe8ac62eceb151",
+    "disabled_by": null,
+    "entity_category": "config",
+    "entity_id": "button.glances_fulla_aterskapa_containern",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "fa37b0adcd8e5a84e4baedd5ea98b964",
+    "labels": [],
+    "modified_at": 1790519926.765319,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "\u00c5terskapa containern",
+    "platform": "portainer",
+    "translation_key": "recreate_container",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_glances_fulla_recreate"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.766067,
+    "device_id": "22d2bc5881f2d9ad9ebe8ac62eceb151",
+    "disabled_by": null,
+    "entity_category": "config",
+    "entity_id": "button.glances_fulla_doda_container",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "281cbe85b9981d49c43b2a49df5cf55c",
+    "labels": [],
+    "modified_at": 1790519926.767457,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "D\u00f6da container",
+    "platform": "portainer",
+    "translation_key": "kill_container",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_glances_fulla_kill"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.774934,
+    "device_id": "17eccc9bcb8cb826105a789ef10fc0e3",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "event.docker_socket_proxy_fulla_docker_handelse",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "70a77669fa63fd4010e3d32cb17bdd30",
+    "labels": [],
+    "modified_at": 1790519926.776298,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Docker-h\u00e4ndelse",
+    "platform": "portainer",
+    "translation_key": "docker_event",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_docker-socket-proxy-fulla_docker_event"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.777107,
+    "device_id": "84cd666ec2a0296d528eb7a37f117b29",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "event.portainer_agent_fulla_docker_handelse",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "32b85f4e072e199c30290e4ce5b03dd5",
+    "labels": [],
+    "modified_at": 1790519926.778215,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Docker-h\u00e4ndelse",
+    "platform": "portainer",
+    "translation_key": "docker_event",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_portainer_agent_fulla_docker_event"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.780943,
+    "device_id": "22d2bc5881f2d9ad9ebe8ac62eceb151",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "event.glances_fulla_docker_handelse",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "d19e84ae1ac13a842199c417dde65139",
+    "labels": [],
+    "modified_at": 1790519926.782185,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Docker-h\u00e4ndelse",
+    "platform": "portainer",
+    "translation_key": "docker_event",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_glances_fulla_docker_event"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.822929,
+    "device_id": "17eccc9bcb8cb826105a789ef10fc0e3",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.docker_socket_proxy_fulla_bild",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "a549c82b63d389735f22e1894a345388",
+    "labels": [],
+    "modified_at": 1790519926.824318,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Bild",
+    "platform": "portainer",
+    "translation_key": "image",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_docker-socket-proxy-fulla_image"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.825146,
+    "device_id": "17eccc9bcb8cb826105a789ef10fc0e3",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.docker_socket_proxy_fulla_avbildning_version",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "295d1052abc4e8bcbd2db2f137b00cba",
+    "labels": [],
+    "modified_at": 1790519926.828088,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Avbildning version",
+    "platform": "portainer",
+    "translation_key": "image_version",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_docker-socket-proxy-fulla_image_version"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.829137,
+    "device_id": "17eccc9bcb8cb826105a789ef10fc0e3",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.docker_socket_proxy_fulla_avbildning_skapad",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "63324881a5a98d571c21f8b065d5906a",
+    "labels": [],
+    "modified_at": 1790519926.830415,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Avbildning skapad",
+    "platform": "portainer",
+    "translation_key": "image_created",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_docker-socket-proxy-fulla_image_created"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.831275,
+    "device_id": "17eccc9bcb8cb826105a789ef10fc0e3",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.docker_socket_proxy_fulla_tillstand",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "ffd37e1791e71fa16750dbe1e1a35c3c",
+    "labels": [],
+    "modified_at": 1790519926.84242,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Tillst\u00e5nd",
+    "platform": "portainer",
+    "translation_key": "container_state",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_docker-socket-proxy-fulla_container_state"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.843344,
+    "device_id": "17eccc9bcb8cb826105a789ef10fc0e3",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.docker_socket_proxy_fulla_minnesgrans",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "dabbf802067df0da7be097eaec9b69c9",
+    "labels": [],
+    "modified_at": 1790519926.844986,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "MB"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 1
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Minnesgr\u00e4ns",
+    "platform": "portainer",
+    "translation_key": "memory_limit",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_docker-socket-proxy-fulla_memory_limit"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.845783,
+    "device_id": "17eccc9bcb8cb826105a789ef10fc0e3",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.docker_socket_proxy_fulla_minnesanvandning",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "44ea0807dd0460c34c7b44e711f4eefd",
+    "labels": [],
+    "modified_at": 1790519926.848524,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "MB"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 1
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Minnesanv\u00e4ndning",
+    "platform": "portainer",
+    "translation_key": "memory_usage",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_docker-socket-proxy-fulla_memory_usage"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.849382,
+    "device_id": "17eccc9bcb8cb826105a789ef10fc0e3",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.docker_socket_proxy_fulla_minnesanvandning_i_procent",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "4e4b1168a577d215f304c713bebc211e",
+    "labels": [],
+    "modified_at": 1790519926.85113,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Minnesanv\u00e4ndning i procent",
+    "platform": "portainer",
+    "translation_key": "memory_usage_percentage",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_docker-socket-proxy-fulla_memory_usage_percentage"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.852098,
+    "device_id": "17eccc9bcb8cb826105a789ef10fc0e3",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.docker_socket_proxy_fulla_cpu_anvandning_totalt",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "22e6c54a6f6ec3c1d60ff6d5b2d8cfd6",
+    "labels": [],
+    "modified_at": 1790519926.855116,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "CPU-anv\u00e4ndning totalt",
+    "platform": "portainer",
+    "translation_key": "cpu_usage_total",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_docker-socket-proxy-fulla_cpu_usage_total"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.856942,
+    "device_id": "84cd666ec2a0296d528eb7a37f117b29",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.portainer_agent_fulla_bild",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "8236b3dc6a761ff47bb3ab41226a0055",
+    "labels": [],
+    "modified_at": 1790519926.858706,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Bild",
+    "platform": "portainer",
+    "translation_key": "image",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_portainer_agent_fulla_image"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.859814,
+    "device_id": "84cd666ec2a0296d528eb7a37f117b29",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.portainer_agent_fulla_tillstand",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "e540edf90c642f4a9160fa6e3abf925c",
+    "labels": [],
+    "modified_at": 1790519926.861113,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Tillst\u00e5nd",
+    "platform": "portainer",
+    "translation_key": "container_state",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_portainer_agent_fulla_container_state"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.86195,
+    "device_id": "84cd666ec2a0296d528eb7a37f117b29",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.portainer_agent_fulla_minnesgrans",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "1a1ad2f24001557f93716c1e421c0fd7",
+    "labels": [],
+    "modified_at": 1790519926.86454,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "MB"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 1
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Minnesgr\u00e4ns",
+    "platform": "portainer",
+    "translation_key": "memory_limit",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_portainer_agent_fulla_memory_limit"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.865387,
+    "device_id": "84cd666ec2a0296d528eb7a37f117b29",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.portainer_agent_fulla_minnesanvandning",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "1b68638673e708ea44cb7af4be13488d",
+    "labels": [],
+    "modified_at": 1790519926.866981,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "MB"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 1
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Minnesanv\u00e4ndning",
+    "platform": "portainer",
+    "translation_key": "memory_usage",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_portainer_agent_fulla_memory_usage"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.867778,
+    "device_id": "84cd666ec2a0296d528eb7a37f117b29",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.portainer_agent_fulla_minnesanvandning_i_procent",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "4165765470fe3937be6493d621361239",
+    "labels": [],
+    "modified_at": 1790519926.871573,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Minnesanv\u00e4ndning i procent",
+    "platform": "portainer",
+    "translation_key": "memory_usage_percentage",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_portainer_agent_fulla_memory_usage_percentage"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.872453,
+    "device_id": "84cd666ec2a0296d528eb7a37f117b29",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.portainer_agent_fulla_cpu_anvandning_totalt",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "33fa0747a2fd947b02d0837c0d5e906a",
+    "labels": [],
+    "modified_at": 1790519926.874114,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "CPU-anv\u00e4ndning totalt",
+    "platform": "portainer",
+    "translation_key": "cpu_usage_total",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_portainer_agent_fulla_cpu_usage_total"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.87905,
+    "device_id": "22d2bc5881f2d9ad9ebe8ac62eceb151",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.glances_fulla_bild",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "2437f2b845cce60ac351669d72ef922b",
+    "labels": [],
+    "modified_at": 1790519926.88033,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Bild",
+    "platform": "portainer",
+    "translation_key": "image",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_glances_fulla_image"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.881154,
+    "device_id": "22d2bc5881f2d9ad9ebe8ac62eceb151",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.glances_fulla_avbildning_version",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "1b2cb0936e0befe311fd5ca01e070363",
+    "labels": [],
+    "modified_at": 1790519926.883046,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Avbildning version",
+    "platform": "portainer",
+    "translation_key": "image_version",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_glances_fulla_image_version"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.883963,
+    "device_id": "22d2bc5881f2d9ad9ebe8ac62eceb151",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.glances_fulla_avbildning_skapad",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "dedc447df0d9c7d5e65dca60fbf7abe9",
+    "labels": [],
+    "modified_at": 1790519926.88516,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Avbildning skapad",
+    "platform": "portainer",
+    "translation_key": "image_created",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_glances_fulla_image_created"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.886317,
+    "device_id": "22d2bc5881f2d9ad9ebe8ac62eceb151",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.glances_fulla_tillstand",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "0ef680d538c35dbecd948a42f049d88d",
+    "labels": [],
+    "modified_at": 1790519926.888874,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Tillst\u00e5nd",
+    "platform": "portainer",
+    "translation_key": "container_state",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_glances_fulla_container_state"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.889801,
+    "device_id": "22d2bc5881f2d9ad9ebe8ac62eceb151",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.glances_fulla_minnesgrans",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "0bb84324379ce965aa13d02649d60357",
+    "labels": [],
+    "modified_at": 1790519926.891652,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "MB"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 1
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Minnesgr\u00e4ns",
+    "platform": "portainer",
+    "translation_key": "memory_limit",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_glances_fulla_memory_limit"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.892683,
+    "device_id": "22d2bc5881f2d9ad9ebe8ac62eceb151",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.glances_fulla_minnesanvandning",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "812e9cb16bfe8e50a7c326915cf4ee14",
+    "labels": [],
+    "modified_at": 1790519926.894437,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "MB"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 1
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Minnesanv\u00e4ndning",
+    "platform": "portainer",
+    "translation_key": "memory_usage",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_glances_fulla_memory_usage"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.896577,
+    "device_id": "22d2bc5881f2d9ad9ebe8ac62eceb151",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.glances_fulla_minnesanvandning_i_procent",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "2e8b9110c0570fcb535551f85cff1e73",
+    "labels": [],
+    "modified_at": 1790519926.898441,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Minnesanv\u00e4ndning i procent",
+    "platform": "portainer",
+    "translation_key": "memory_usage_percentage",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_glances_fulla_memory_usage_percentage"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.899278,
+    "device_id": "22d2bc5881f2d9ad9ebe8ac62eceb151",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.glances_fulla_cpu_anvandning_totalt",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "c517f2bef650bc2e2d1a085844d1913c",
+    "labels": [],
+    "modified_at": 1790519926.901211,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "CPU-anv\u00e4ndning totalt",
+    "platform": "portainer",
+    "translation_key": "cpu_usage_total",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_glances_fulla_cpu_usage_total"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.911885,
+    "device_id": "17eccc9bcb8cb826105a789ef10fc0e3",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "switch.docker_socket_proxy_fulla_behallare",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "11fb96f5ed84555b74c2b6fa87417294",
+    "labels": [],
+    "modified_at": 1790519926.914775,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Beh\u00e5llare",
+    "platform": "portainer",
+    "translation_key": "container",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_docker-socket-proxy-fulla_container"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.915639,
+    "device_id": "84cd666ec2a0296d528eb7a37f117b29",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "switch.portainer_agent_fulla_behallare",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "053bcdfc52341ff8d29e5941ba40d75c",
+    "labels": [],
+    "modified_at": 1790519926.916773,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Beh\u00e5llare",
+    "platform": "portainer",
+    "translation_key": "container",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_portainer_agent_fulla_container"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.918031,
+    "device_id": "22d2bc5881f2d9ad9ebe8ac62eceb151",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "switch.glances_fulla_behallare",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "de6661232e5b5a7c86544b208a798c86",
+    "labels": [],
+    "modified_at": 1790519926.919098,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Beh\u00e5llare",
+    "platform": "portainer",
+    "translation_key": "container",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_glances_fulla_container"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.925335,
+    "device_id": "17eccc9bcb8cb826105a789ef10fc0e3",
+    "disabled_by": null,
+    "entity_category": "config",
+    "entity_id": "update.docker_socket_proxy_fulla_avbildningsuppdatering_tillganglig",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "f738102a8b8c3e10d3d26dd610ea74b5",
+    "labels": [],
+    "modified_at": 1790519926.928537,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Avbildningsuppdatering tillg\u00e4nglig",
+    "platform": "portainer",
+    "translation_key": "container_image_update",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_docker-socket-proxy-fulla_container_image_update"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.929534,
+    "device_id": "84cd666ec2a0296d528eb7a37f117b29",
+    "disabled_by": null,
+    "entity_category": "config",
+    "entity_id": "update.portainer_agent_fulla_avbildningsuppdatering_tillganglig",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "7a776333b176435246b555193017a410",
+    "labels": [],
+    "modified_at": 1790519926.930964,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Avbildningsuppdatering tillg\u00e4nglig",
+    "platform": "portainer",
+    "translation_key": "container_image_update",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_portainer_agent_fulla_container_image_update"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1790519926.933662,
+    "device_id": "22d2bc5881f2d9ad9ebe8ac62eceb151",
+    "disabled_by": null,
+    "entity_category": "config",
+    "entity_id": "update.glances_fulla_avbildningsuppdatering_tillganglig",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "923bb0793060047115fc023e97c60c29",
+    "labels": [],
+    "modified_at": 1790519926.935549,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Avbildningsuppdatering tillg\u00e4nglig",
+    "platform": "portainer",
+    "translation_key": "container_image_update",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_glances_fulla_container_image_update"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1790666089.345692,
+    "device_id": "91dabea5d915204f1936d09e56cf7bc2",
+    "disabled_by": "user",
+    "entity_category": null,
+    "entity_id": "sensor.frigg_fulla_backup_och_diskhalsa_svarstid",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "480a490ae240f660ae2639720a2a61f6",
+    "labels": [],
+    "modified_at": 1792583848.826225,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 0
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Svarstid",
+    "platform": "uptime_kuma",
+    "translation_key": "response_time",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_62_response_time"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1790666089.368038,
+    "device_id": "91dabea5d915204f1936d09e56cf7bc2",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.frigg_fulla_backup_och_diskhalsa_status",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "455bc50ddf864fbb9aa66aa58dcb652e",
+    "labels": [],
+    "modified_at": 1790666089.371075,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Status",
+    "platform": "uptime_kuma",
+    "translation_key": "status",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_62_status"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1790666089.373845,
+    "device_id": "91dabea5d915204f1936d09e56cf7bc2",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.frigg_fulla_backup_och_diskhalsa_monitortyp",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "776fb1238cc9e77fcef3a263ab2ea358",
+    "labels": [],
+    "modified_at": 1791442526.543294,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Monitortyp",
+    "platform": "uptime_kuma",
+    "translation_key": "type",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_62_type"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1790666089.378604,
+    "device_id": "91dabea5d915204f1936d09e56cf7bc2",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.frigg_fulla_backup_och_diskhalsa_upptid_1_dag",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "8724b487948b526143a564284c1aba3a",
+    "labels": [],
+    "modified_at": 1790666089.388862,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Upptid (1 dag)",
+    "platform": "uptime_kuma",
+    "translation_key": "uptime_1d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_62_uptime_1d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1790666089.390565,
+    "device_id": "91dabea5d915204f1936d09e56cf7bc2",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.frigg_fulla_backup_och_diskhalsa_upptid_30_dagar",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "eb111686a16298af814136f743d4d1c4",
+    "labels": [],
+    "modified_at": 1790666089.394271,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Upptid (30 dagar)",
+    "platform": "uptime_kuma",
+    "translation_key": "uptime_30d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_62_uptime_30d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1790666089.395443,
+    "device_id": "91dabea5d915204f1936d09e56cf7bc2",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.frigg_fulla_backup_och_diskhalsa_upptid_365_dagar",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "186952817e3d41d95c9d96da8cf0ddf7",
+    "labels": [],
+    "modified_at": 1790666089.397245,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Upptid (365 dagar)",
+    "platform": "uptime_kuma",
+    "translation_key": "uptime_365d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_62_uptime_365d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1790666089.398041,
+    "device_id": "91dabea5d915204f1936d09e56cf7bc2",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.frigg_fulla_backup_och_diskhalsa_svarstid_o_1_dag",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "03568dfeca41ece0749dfc417af30520",
+    "labels": [],
+    "modified_at": 1790666089.401328,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "ms"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 0
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Svarstid \u00d8 (1 dag)",
+    "platform": "uptime_kuma",
+    "translation_key": "avg_response_time_1d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_62_avg_response_time_1d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1790666089.402197,
+    "device_id": "91dabea5d915204f1936d09e56cf7bc2",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.frigg_fulla_backup_och_diskhalsa_svarstid_o_30_dagar",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "6177e47b5bfea116bb1876684a3a280d",
+    "labels": [],
+    "modified_at": 1790666089.403842,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "ms"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 0
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Svarstid \u00d8 (30 dagar)",
+    "platform": "uptime_kuma",
+    "translation_key": "avg_response_time_30d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_62_avg_response_time_30d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1790666089.414726,
+    "device_id": "91dabea5d915204f1936d09e56cf7bc2",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.frigg_fulla_backup_och_diskhalsa_svarstid_o_365_dagar",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "9530f094c9d6bf395a08b37115e3af38",
+    "labels": [],
+    "modified_at": 1790666089.416571,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "sensor.private": {
+        "suggested_unit_of_measurement": "ms"
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 0
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Svarstid \u00d8 (365 dagar)",
+    "platform": "uptime_kuma",
+    "translation_key": "avg_response_time_365d",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_62_avg_response_time_365d"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M31J2AFQWF2F5QCJFMNC0HBV",
+    "config_subentry_id": null,
+    "created_at": 1790666089.417402,
+    "device_id": "91dabea5d915204f1936d09e56cf7bc2",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.frigg_fulla_backup_och_diskhalsa_taggar",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "6c5149b5fac958017f5bb8fd29510385",
+    "labels": [],
+    "modified_at": 1790666089.417616,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Taggar",
+    "platform": "uptime_kuma",
+    "translation_key": "tags",
+    "unique_id": "01M31J2AFQWF2F5QCJFMNC0HBV_62_tags"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1791524623.030139,
+    "device_id": "22d2bc5881f2d9ad9ebe8ac62eceb151",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "binary_sensor.glances_fulla_out_of_memory",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "4b8a7482078674ba5ab145b9817a7188",
+    "labels": [],
+    "modified_at": 1791524623.031598,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Out of memory",
+    "platform": "portainer",
+    "translation_key": "container_out_of_memory",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_glances_fulla_container_out_of_memory"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1791524623.035432,
+    "device_id": "17eccc9bcb8cb826105a789ef10fc0e3",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "binary_sensor.docker_socket_proxy_fulla_out_of_memory",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "c2c06645d5fa8bd8e035a3479b827385",
+    "labels": [],
+    "modified_at": 1791524623.036983,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Out of memory",
+    "platform": "portainer",
+    "translation_key": "container_out_of_memory",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_docker-socket-proxy-fulla_container_out_of_memory"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1791524623.038344,
+    "device_id": "84cd666ec2a0296d528eb7a37f117b29",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "binary_sensor.portainer_agent_fulla_out_of_memory",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "c07e7d6d1ebae18225ecb43d5f44568c",
+    "labels": [],
+    "modified_at": 1791524623.041516,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Out of memory",
+    "platform": "portainer",
+    "translation_key": "container_out_of_memory",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_portainer_agent_fulla_container_out_of_memory"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1791524624.032085,
+    "device_id": "22d2bc5881f2d9ad9ebe8ac62eceb151",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.glances_fulla_started",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "8ca7fd907dc16322356c14ee8563abd1",
+    "labels": [],
+    "modified_at": 1791524624.033692,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Started",
+    "platform": "portainer",
+    "translation_key": "container_started_at",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_glances_fulla_container_started_at"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1791524624.03464,
+    "device_id": "22d2bc5881f2d9ad9ebe8ac62eceb151",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.glances_fulla_restart_count",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "0c7adaf8567aee837872efd57de94744",
+    "labels": [],
+    "modified_at": 1791524624.036511,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Restart count",
+    "platform": "portainer",
+    "translation_key": "container_restart_count",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_glances_fulla_container_restart_count"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1791524624.046949,
+    "device_id": "17eccc9bcb8cb826105a789ef10fc0e3",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.docker_socket_proxy_fulla_started",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "78f613fbb38d64542ea2d9b4bf3bd5e2",
+    "labels": [],
+    "modified_at": 1791524624.048554,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Started",
+    "platform": "portainer",
+    "translation_key": "container_started_at",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_docker-socket-proxy-fulla_container_started_at"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1791524624.049486,
+    "device_id": "17eccc9bcb8cb826105a789ef10fc0e3",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.docker_socket_proxy_fulla_restart_count",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "507b06e014a89c46051f60408bc4613a",
+    "labels": [],
+    "modified_at": 1791524624.051237,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Restart count",
+    "platform": "portainer",
+    "translation_key": "container_restart_count",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_docker-socket-proxy-fulla_container_restart_count"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1791524624.053483,
+    "device_id": "84cd666ec2a0296d528eb7a37f117b29",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.portainer_agent_fulla_started",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "4e4fcd4afafce2a40d98bba0a7435edd",
+    "labels": [],
+    "modified_at": 1791524624.054878,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Started",
+    "platform": "portainer",
+    "translation_key": "container_started_at",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_portainer_agent_fulla_container_started_at"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1791524624.055794,
+    "device_id": "84cd666ec2a0296d528eb7a37f117b29",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.portainer_agent_fulla_restart_count",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "79e5d35cf7725ef8f84249f903e93b9c",
+    "labels": [],
+    "modified_at": 1791524624.058676,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Restart count",
+    "platform": "portainer",
+    "translation_key": "container_restart_count",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_portainer_agent_fulla_container_restart_count"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01M37AX18H7MF9N0SVTAV2SMCW",
+    "config_subentry_id": null,
+    "created_at": 1791528813.431533,
+    "device_id": "84cd666ec2a0296d528eb7a37f117b29",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.portainer_agent_fulla_avbildning_skapad",
+    "has_entity_name": true,
+    "hidden_by": null,
+    "icon": null,
+    "id": "f8c808c22074557579a2dc5a04908f42",
+    "labels": [],
+    "modified_at": 1792429777.153514,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "conversation": {
+        "should_expose": false
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Avbildning skapad",
+    "platform": "portainer",
+    "translation_key": "image_created",
+    "unique_id": "01M37AX18H7MF9N0SVTAV2SMCW_portainer_agent_fulla_image_created"
+  }
+]

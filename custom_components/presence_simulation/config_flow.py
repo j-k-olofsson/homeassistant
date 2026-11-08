@@ -5,7 +5,7 @@ from homeassistant.helpers.selector import (
     SelectSelectorConfig,
     SelectSelectorMode,
     LabelSelector,
-    LabelSelectorConfig
+    LabelSelectorConfig,
 )
 import re
 import logging
@@ -24,7 +24,7 @@ BRIGHTNESS_VALIDATOR = vol.All(vol.Coerce(int), vol.Range(min=0, max=100))
 
 
 class PresenceSimulationConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
-    VERSION = 5
+    VERSION = 6
 
     def __init__(self):
         super().__init__()
@@ -71,7 +71,7 @@ class PresenceSimulationConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             )
         else:
             self.data["entities"] = ",".join(self.data["entities"])
-            return self.async_create_entry(title="Simulation Presence", data=self.data)
+            return self.async_create_entry(title=self.data["switch"], data=self.data)
 
     @staticmethod
     def async_get_options_flow(entry):
@@ -81,7 +81,6 @@ class PresenceSimulationConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 class OptionsFlowHandler(config_entries.OptionsFlow):
 
     async def async_step_init(self, info=None):
-        errors: Dict[str, str] = {}
         _LOGGER.debug("config flow init %s", info)
         all_entities = self.hass.states.async_entity_ids()
 
@@ -92,7 +91,7 @@ class OptionsFlowHandler(config_entries.OptionsFlow):
         if "restore" in self.config_entry.options:
             restore = self.config_entry.options["restore"]
         else:
-            restore = 0
+            restore = False
         if "random" in self.config_entry.options:
             random = self.config_entry.options["random"]
         else:
@@ -111,9 +110,27 @@ class OptionsFlowHandler(config_entries.OptionsFlow):
         labels_val = self.config_entry.options.get("labels", self.config_entry.data.get("labels", []))
         delta_val = self.config_entry.options.get("delta", self.config_entry.data["delta"])
 
+        entities_default = [
+            elm.strip()
+            for elm in (entities_val if isinstance(entities_val, list) else entities_val.split(","))
+            if elm.strip()
+        ]
+        # drop entities that no longer exist: keeping them makes the
+        # selector fail validation with "value must be one of ..."
+        missing = [elm for elm in entities_default if elm not in all_entities]
+        if missing:
+            _LOGGER.warning(
+                "Entities from the configuration no longer exist and will be removed: %s",
+                ", ".join(missing),
+            )
+            entities_default = [elm for elm in entities_default if elm in all_entities]
+
         data_schema = {
-            vol.Required("switch", default=switch_val): str,
-            vol.Required("entities", default=entities_val.split(",")): SelectSelector(SelectSelectorConfig(options=all_entities, multiple=True, mode=SelectSelectorMode.DROPDOWN)),
+            # name is immutable: shown as a single-option dropdown so it can't be edited
+            vol.Required("switch", default=switch_val): SelectSelector(
+                SelectSelectorConfig(options=[switch_val], mode=SelectSelectorMode.DROPDOWN)
+            ),
+            vol.Required("entities", default=entities_default): SelectSelector(SelectSelectorConfig(options=all_entities, multiple=True, mode=SelectSelectorMode.DROPDOWN)),
             vol.Required("labels", default=labels_val): LabelSelector(LabelSelectorConfig(multiple=True)),
             vol.Required("delta", default=delta_val): DELTA_VALIDATOR,
             vol.Required("interval", default=interval): INTERVAL_VALIDATOR,
@@ -131,14 +148,5 @@ class OptionsFlowHandler(config_entries.OptionsFlow):
                 step_id="init", data_schema=vol.Schema(data_schema)
             )
 
-        #if pop-up is saved but the name has changed, log an error and ask again
-        if info["switch"] != self.config_entry.data["switch"]:
-            _LOGGER.error("Presence Simulation Switch name can't be changed")
-            errors["base"] = "cannot_change_name"
-            return self.async_show_form(
-                step_id="init", data_schema=vol.Schema(data_schema), errors=errors
-            )
-
         info["entities"] = ",".join(info["entities"])
-        self.hass.config_entries.async_update_entry(self.config_entry, options=info)
-        return self.async_abort(reason="")
+        return self.async_create_entry(title="", data=info)

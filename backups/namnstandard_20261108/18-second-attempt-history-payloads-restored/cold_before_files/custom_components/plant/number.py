@@ -1,0 +1,1261 @@
+"""Max/Min threshold classes for the plant device"""
+
+from __future__ import annotations
+
+import logging
+from typing import Any
+
+from homeassistant.components.number import (
+    DOMAIN as NUMBER_DOMAIN,
+    NumberDeviceClass,
+    NumberMode,
+    RestoreNumber,
+)
+from homeassistant.components.sensor import SensorDeviceClass
+from homeassistant.config_entries import ConfigEntry
+from homeassistant.const import (
+    ATTR_UNIT_OF_MEASUREMENT,
+    LIGHT_LUX,
+    PERCENTAGE,
+    STATE_UNKNOWN,
+    UnitOfConductivity,
+    UnitOfTemperature,
+)
+from homeassistant.core import CALLBACK_TYPE, Event, HomeAssistant, callback
+from homeassistant.exceptions import HomeAssistantError
+from homeassistant.helpers.device_registry import DeviceInfo
+from homeassistant.helpers.entity import (
+    Entity,
+    EntityCategory,
+    async_generate_entity_id,
+)
+from homeassistant.helpers.entity_platform import AddEntitiesCallback
+from homeassistant.helpers.entity_registry import async_get as er_async_get
+from homeassistant.helpers.event import async_track_state_change_event
+from homeassistant.util.unit_conversion import TemperatureConverter
+
+from .const import (
+    ATTR_CONDUCTIVITY,
+    ATTR_DLI,
+    ATTR_MAX,
+    ATTR_MIN,
+    ATTR_MOISTURE,
+    ATTR_PLANT,
+    ATTR_THRESHOLDS,
+    ATTR_VPD,
+    CONF_LUX_TO_PPFD,
+    CONF_MAX_CO2,
+    CONF_MAX_CONDUCTIVITY,
+    CONF_MAX_DLI,
+    CONF_MAX_HUMIDITY,
+    CONF_MAX_ILLUMINANCE,
+    CONF_MAX_MOISTURE,
+    CONF_MAX_SOIL_TEMPERATURE,
+    CONF_MAX_TEMPERATURE,
+    CONF_MAX_VPD,
+    CONF_MIN_CO2,
+    CONF_MIN_CONDUCTIVITY,
+    CONF_MIN_DLI,
+    CONF_MIN_HUMIDITY,
+    CONF_MIN_ILLUMINANCE,
+    CONF_MIN_MOISTURE,
+    CONF_MIN_SOIL_TEMPERATURE,
+    CONF_MIN_TEMPERATURE,
+    CONF_MIN_VPD,
+    DEFAULT_LUX_TO_PPFD,
+    DEFAULT_MAX_CO2,
+    DEFAULT_MAX_CONDUCTIVITY,
+    DEFAULT_MAX_DLI,
+    DEFAULT_MAX_HUMIDITY,
+    DEFAULT_MAX_ILLUMINANCE,
+    DEFAULT_MAX_MOISTURE,
+    DEFAULT_MAX_SOIL_TEMPERATURE,
+    DEFAULT_MAX_TEMPERATURE,
+    DEFAULT_MAX_VPD,
+    DEFAULT_MIN_CO2,
+    DEFAULT_MIN_CONDUCTIVITY,
+    DEFAULT_MIN_DLI,
+    DEFAULT_MIN_HUMIDITY,
+    DEFAULT_MIN_ILLUMINANCE,
+    DEFAULT_MIN_MOISTURE,
+    DEFAULT_MIN_SOIL_TEMPERATURE,
+    DEFAULT_MIN_TEMPERATURE,
+    DEFAULT_MIN_VPD,
+    DOMAIN,
+    FLOW_LIMITS_TEMPERATURE_UNIT,
+    FLOW_PLANT_INFO,
+    FLOW_PLANT_LIMITS,
+    FLOW_SENSOR_CO2,
+    FLOW_SENSOR_CONDUCTIVITY,
+    FLOW_SENSOR_HUMIDITY,
+    FLOW_SENSOR_ILLUMINANCE,
+    FLOW_SENSOR_MOISTURE,
+    FLOW_SENSOR_SOIL_TEMPERATURE,
+    FLOW_SENSOR_TEMPERATURE,
+    ICON_CO2,
+    ICON_CONDUCTIVITY,
+    ICON_DLI,
+    ICON_HUMIDITY,
+    ICON_ILLUMINANCE,
+    ICON_MOISTURE,
+    ICON_PPFD,
+    ICON_SOIL_TEMPERATURE,
+    ICON_TEMPERATURE,
+    ICON_VPD,
+    READING_CO2,
+    READING_CONDUCTIVITY,
+    READING_DLI,
+    READING_HUMIDITY,
+    READING_ILLUMINANCE,
+    READING_MOISTURE,
+    READING_SOIL_TEMPERATURE,
+    READING_TEMPERATURE,
+    READING_VPD,
+    TEMPERATURE_MAX_VALUE,
+    TEMPERATURE_MAX_VALUE_FAHRENHEIT,
+    TEMPERATURE_MIN_VALUE,
+    TEMPERATURE_MIN_VALUE_FAHRENHEIT,
+    TRANSLATION_KEY_LUX_TO_PPFD,
+    TRANSLATION_KEY_MAX_CO2,
+    TRANSLATION_KEY_MAX_CONDUCTIVITY,
+    TRANSLATION_KEY_MAX_DLI,
+    TRANSLATION_KEY_MAX_HUMIDITY,
+    TRANSLATION_KEY_MAX_ILLUMINANCE,
+    TRANSLATION_KEY_MAX_MOISTURE,
+    TRANSLATION_KEY_MAX_SOIL_TEMPERATURE,
+    TRANSLATION_KEY_MAX_TEMPERATURE,
+    TRANSLATION_KEY_MAX_VPD,
+    TRANSLATION_KEY_MIN_CO2,
+    TRANSLATION_KEY_MIN_CONDUCTIVITY,
+    TRANSLATION_KEY_MIN_DLI,
+    TRANSLATION_KEY_MIN_HUMIDITY,
+    TRANSLATION_KEY_MIN_ILLUMINANCE,
+    TRANSLATION_KEY_MIN_MOISTURE,
+    TRANSLATION_KEY_MIN_SOIL_TEMPERATURE,
+    TRANSLATION_KEY_MIN_TEMPERATURE,
+    TRANSLATION_KEY_MIN_VPD,
+    UNIT_DLI,
+    UNIT_VPD,
+)
+
+_LOGGER = logging.getLogger(__name__)
+
+
+async def async_setup_entry(
+    hass: HomeAssistant, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
+) -> bool:
+    """Set up Threshold from a config entry."""
+    _LOGGER.debug(entry.data)
+    plant = hass.data[DOMAIN][entry.entry_id][ATTR_PLANT]
+    pmaxm = PlantMaxMoisture(hass, entry, plant)
+    pminm = PlantMinMoisture(hass, entry, plant)
+    pmaxt = PlantMaxTemperature(hass, entry, plant)
+    pmint = PlantMinTemperature(hass, entry, plant)
+    pmaxb = PlantMaxIlluminance(hass, entry, plant)
+    pminb = PlantMinIlluminance(hass, entry, plant)
+    pmaxc = PlantMaxConductivity(hass, entry, plant)
+    pminc = PlantMinConductivity(hass, entry, plant)
+    pmaxh = PlantMaxHumidity(hass, entry, plant)
+    pminh = PlantMinHumidity(hass, entry, plant)
+    pmaxco2 = PlantMaxCo2(hass, entry, plant)
+    pminco2 = PlantMinCo2(hass, entry, plant)
+    pmaxst = PlantMaxSoilTemperature(hass, entry, plant)
+    pminst = PlantMinSoilTemperature(hass, entry, plant)
+    pmaxmm = PlantMaxDli(hass, entry, plant)
+    pminmm = PlantMinDli(hass, entry, plant)
+    pmaxvpd = PlantMaxVpd(hass, entry, plant)
+    pminvpd = PlantMinVpd(hass, entry, plant)
+    plux_ppfd = PlantLuxToPpfd(hass, entry, plant)
+
+    number_entities = [
+        pmaxm,
+        pminm,
+        pmaxt,
+        pmint,
+        pmaxb,
+        pminb,
+        pmaxc,
+        pminc,
+        pmaxh,
+        pminh,
+        pmaxco2,
+        pminco2,
+        pmaxst,
+        pminst,
+        pmaxmm,
+        pminmm,
+        pmaxvpd,
+        pminvpd,
+        plux_ppfd,
+    ]
+
+    # Default-disable threshold entities when no corresponding sensor is configured.
+    # HA only applies entity_registry_enabled_default on first registration,
+    # so user-enabled entities survive config entry reloads.
+    plant_info = entry.data.get(FLOW_PLANT_INFO, {})
+    sensor_groups = {
+        FLOW_SENSOR_MOISTURE: [pmaxm, pminm],
+        FLOW_SENSOR_TEMPERATURE: [pmaxt, pmint],
+        FLOW_SENSOR_ILLUMINANCE: [pmaxb, pminb, pmaxmm, pminmm, plux_ppfd],
+        FLOW_SENSOR_CONDUCTIVITY: [pmaxc, pminc],
+        FLOW_SENSOR_HUMIDITY: [pmaxh, pminh],
+        FLOW_SENSOR_CO2: [pmaxco2, pminco2],
+        FLOW_SENSOR_SOIL_TEMPERATURE: [pmaxst, pminst],
+    }
+    for sensor_key, entities in sensor_groups.items():
+        has_sensor = plant_info.get(sensor_key) is not None
+        for entity in entities:
+            entity._attr_entity_registry_enabled_default = has_sensor
+
+    # VPD thresholds require both temperature and humidity sensors
+    has_vpd = (
+        plant_info.get(FLOW_SENSOR_TEMPERATURE) is not None
+        and plant_info.get(FLOW_SENSOR_HUMIDITY) is not None
+    )
+    pmaxvpd._attr_entity_registry_enabled_default = has_vpd
+    pminvpd._attr_entity_registry_enabled_default = has_vpd
+
+    async_add_entities(number_entities)
+
+    hass.data[DOMAIN][entry.entry_id][ATTR_THRESHOLDS] = number_entities
+    plant.add_lux_to_ppfd(plux_ppfd)
+    plant.add_thresholds(
+        max_moisture=pmaxm,
+        min_moisture=pminm,
+        max_temperature=pmaxt,
+        min_temperature=pmint,
+        max_illuminance=pmaxb,
+        min_illuminance=pminb,
+        max_conductivity=pmaxc,
+        min_conductivity=pminc,
+        max_humidity=pmaxh,
+        min_humidity=pminh,
+        max_co2=pmaxco2,
+        min_co2=pminco2,
+        max_soil_temperature=pmaxst,
+        min_soil_temperature=pminst,
+        max_dli=pmaxmm,
+        min_dli=pminmm,
+        max_vpd=pmaxvpd,
+        min_vpd=pminvpd,
+    )
+    return True
+
+
+async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
+    """Unload a config entry."""
+    return True
+
+
+def _convert_default_temp(value_c: float, target_unit: UnitOfTemperature) -> float:
+    """Convert a Celsius default value to ``target_unit``, rounded.
+
+    Defaults in ``const.py`` and from OpenPlantbook are expressed in °C.
+    When HA's system unit is °F we need to convert before stamping the
+    value onto a temperature threshold entity, otherwise the user gets a
+    °C-numeric value labelled °F (e.g. a 40 °F max-temp ceiling).
+    """
+    if target_unit == UnitOfTemperature.CELSIUS:
+        return value_c
+    return round(
+        TemperatureConverter.convert(value_c, UnitOfTemperature.CELSIUS, target_unit)
+    )
+
+
+def _get_temperature_default(
+    hass: HomeAssistant,
+    config: ConfigEntry,
+    config_key: str,
+    fallback_default: float,
+) -> float:
+    """Get the temperature default value, handling unit conversion.
+
+    Config entries created with the updated flow store `limits_temperature_unit`
+    explicitly. When present, we compare it to the system unit and convert if
+    they differ.
+
+    Legacy entries (without `limits_temperature_unit`) assume stored values are
+    already in the user's system unit — both OpenPlantbook (pre-converted by
+    generate_configentry) and manual configs (user typed values in their unit).
+
+    Args:
+        hass: Home Assistant instance
+        config: Config entry containing plant data
+        config_key: The CONF_*_TEMPERATURE key to look up
+        fallback_default: The DEFAULT_*_TEMPERATURE value to use if not stored
+
+    Returns:
+        Temperature value in the user's configured unit system
+    """
+    plant_info = config.data[FLOW_PLANT_INFO]
+    stored = plant_info[FLOW_PLANT_LIMITS].get(config_key)
+    system_unit = hass.config.units.temperature_unit
+
+    # Check for explicit unit marker (new config entries)
+    stored_unit = plant_info.get(FLOW_LIMITS_TEMPERATURE_UNIT)
+    if stored_unit is not None:
+        if stored is not None:
+            # Value exists - convert if units differ
+            if stored_unit == system_unit:
+                return stored
+            # Convert from stored unit to system unit
+            return round(TemperatureConverter.convert(stored, stored_unit, system_unit))
+        # No stored value - convert fallback default from Celsius
+        return _convert_default_temp(fallback_default, system_unit)
+
+    # Legacy fallback: stored values are assumed to be in user's system unit
+    # - OpenPlantbook: pre-converted by generate_configentry via display_temp()
+    # - Manual: user typed values in their configured unit
+    if stored is not None:
+        return stored
+
+    # No stored value - convert fallback default from Celsius
+    return _convert_default_temp(fallback_default, system_unit)
+
+
+class PlantMinMax(RestoreNumber):
+    """Parent class for the min/max classes below"""
+
+    _attr_has_entity_name = True
+    _attr_entity_category = EntityCategory.CONFIG
+    _attr_mode = NumberMode.BOX
+    # Subclasses should override this for entity_id generation
+    _entity_id_key: str | None = None
+    # Whether a value restored in another unit is converted into the
+    # entity's own. Only the temperature thresholds can be stored in °C or
+    # °F; everywhere else the unit belongs to the entity type and the
+    # restored one is ignored.
+    _converts_restored_unit = False
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the Plant component."""
+        self._config = config
+        self.hass = hass
+        self._plant = plantdevice
+        self._own_state_unsub: CALLBACK_TYPE | None = None
+        # Only force entity_id for existing entities (backwards compat).
+        # New entities let has_entity_name derive the entity_id automatically,
+        # which enables auto-rename when the device is renamed.
+        ent_reg = er_async_get(hass)
+        # Track whether this is a brand-new config entry. HA's RestoreState
+        # keyed by entity_id preserves deleted entities' last state for ~7
+        # days, so a delete + re-add with the same plant name would restore
+        # stale values over the fresh ones from OpenPlantbook. Skip restore
+        # when the unique_id is new.
+        self._is_new_entity = (
+            ent_reg.async_get_entity_id(NUMBER_DOMAIN, DOMAIN, self._attr_unique_id)
+            is None
+        )
+        if not self._is_new_entity:
+            self.entity_id = async_generate_entity_id(
+                f"{NUMBER_DOMAIN}.{{}}",
+                f"{self._plant.name} {self._entity_id_key}",
+                current_ids={},
+            )
+        # pylint: disable=no-member
+        if (
+            not hasattr(self, "_attr_native_value")
+            or self._attr_native_value is None
+            or self._attr_native_value == STATE_UNKNOWN
+        ):
+            self._attr_native_value = self._default_value
+
+    @property
+    def device_info(self) -> DeviceInfo:
+        """Device info for devices"""
+        return DeviceInfo(
+            identifiers={(DOMAIN, self._plant.unique_id)},
+            name=self._plant.name,
+        )
+
+    async def async_set_native_value(self, value: float) -> None:
+        _LOGGER.debug("Setting value of %s to %s", self.entity_id, value)
+        self._attr_native_value = value
+        self.async_write_ha_state()
+
+    @callback
+    def _state_changed_event(self, event: Event) -> None:
+        if event.data.get("old_state") is None or event.data.get("new_state") is None:
+            return
+        if event.data.get("old_state").state == event.data.get("new_state").state:
+            self.state_attributes_changed(
+                old_attributes=event.data.get("old_state").attributes,
+                new_attributes=event.data.get("new_state").attributes,
+            )
+            return
+        self.state_changed(
+            old_state=event.data.get("old_state").state,
+            new_state=event.data.get("new_state").state,
+            unit=event.data.get("new_state").attributes.get(ATTR_UNIT_OF_MEASUREMENT),
+        )
+
+    @callback
+    def state_changed(
+        self,
+        old_state: str | None,
+        new_state: str | None,
+        unit: str | None = None,
+    ) -> None:
+        """Store the state if changed from the UI.
+
+        The state is in the displayed unit, which for a temperature can
+        differ from the native one, so it is converted back before storing.
+        """
+        _LOGGER.debug(
+            "State of %s changed from %s to %s, native_value = %s",
+            self.entity_id,
+            old_state,
+            new_state,
+            self._attr_native_value,
+        )
+        if new_state is None:
+            self._attr_native_value = new_state
+            return
+        try:
+            value = float(new_state)
+        except (ValueError, TypeError):
+            self._attr_native_value = new_state
+            return
+        native_unit = self._attr_native_unit_of_measurement
+        if (
+            unit is not None
+            and native_unit is not None
+            and unit != native_unit
+            and unit in TemperatureConverter.VALID_UNITS
+            and native_unit in TemperatureConverter.VALID_UNITS
+        ):
+            value = TemperatureConverter.convert(value, unit, native_unit)
+        self._attr_native_value = value
+
+    @callback
+    def state_attributes_changed(
+        self, old_attributes: dict[str, Any], new_attributes: dict[str, Any]
+    ) -> None:
+        """Handle attribute changes (placeholder for subclasses)."""
+
+    @callback
+    def self_updated(self) -> None:
+        """Allow the state to be changed from the UI and saved in restore_state."""
+        if self._attr_state != self.hass.states.get(self.entity_id).state:
+            _LOGGER.debug(
+                "Updating state of %s from %s to %s",
+                self.entity_id,
+                self._attr_state,
+                self.hass.states.get(self.entity_id).state,
+            )
+            self._attr_state = self.hass.states.get(self.entity_id).state
+            self.async_write_ha_state()
+
+    async def async_added_to_hass(self) -> None:
+        """Restore state of thresholds on startup."""
+        await super().async_added_to_hass()
+        self.async_on_remove(self._untrack_own_state)
+        if self._is_new_entity:
+            _LOGGER.debug(
+                "New entity %s, using default %s (skipping restore)",
+                self.entity_id,
+                self._default_value,
+            )
+            self.async_write_ha_state()
+            self._track_own_state()
+            return
+        state = await self.async_get_last_number_data()
+        if not state:
+            _LOGGER.debug(
+                "No restore data for %s, keeping default %s",
+                self.entity_id,
+                self._default_value,
+            )
+            self.async_write_ha_state()
+            self._track_own_state()
+            return
+        _LOGGER.debug(
+            "Restoring %s: native_value=%r, unit=%s",
+            self.entity_id,
+            state.native_value,
+            state.native_unit_of_measurement,
+        )
+        if state.native_value is not None:
+            try:
+                float(state.native_value)
+            except (ValueError, TypeError):
+                _LOGGER.warning(
+                    "Ignoring invalid restored value %r for %s, using default %s",
+                    state.native_value,
+                    self.entity_id,
+                    self._default_value,
+                )
+            else:
+                self._attr_native_value = self._in_own_unit(
+                    state.native_value, state.native_unit_of_measurement
+                )
+        # Final safety net: ensure we always have a valid numeric value
+        if self._attr_native_value is None:
+            _LOGGER.warning(
+                "No valid value for %s after restore, resetting to default %s",
+                self.entity_id,
+                self._default_value,
+            )
+            self._attr_native_value = self._default_value
+        # We track changes to our own state so we can update ourselves if state is changed
+        # from the UI or by other means
+        self._track_own_state()
+
+    @callback
+    def async_entity_id_changed(self, old_entity_id: str) -> None:
+        """Take entity_id changes in place (HA 2026.11+).
+
+        A rename of a plant entity reloads the plant, which resubscribes
+        everything under the new entity_id (see async_setup_entry); the own
+        listener moves right away so no edit is lost in between.
+        """
+        self._track_own_state()
+        if (parent := getattr(super(), "async_entity_id_changed", None)) is not None:
+            parent(old_entity_id)
+
+    def _in_own_unit(self, value, unit: str | None):
+        """Return a restored ``value`` converted from ``unit`` into the
+        entity's own unit, where that unit can vary."""
+        own_unit = self._attr_native_unit_of_measurement
+        if not self._converts_restored_unit or unit is None or unit == own_unit:
+            return value
+        try:
+            return round(TemperatureConverter.convert(float(value), unit, own_unit))
+        except (ValueError, TypeError, HomeAssistantError):
+            _LOGGER.warning(
+                "Cannot convert restored %s %s for %s, using default %s",
+                value,
+                unit,
+                self.entity_id,
+                self._default_value,
+            )
+            return self._default_value
+
+    @callback
+    def _track_own_state(self) -> None:
+        """Follow edits of this entity's own state, under its current entity_id."""
+        self._untrack_own_state()
+        self._own_state_unsub = async_track_state_change_event(
+            self.hass, [self.entity_id], self._state_changed_event
+        )
+
+    @callback
+    def _untrack_own_state(self) -> None:
+        if self._own_state_unsub is not None:
+            self._own_state_unsub()
+            self._own_state_unsub = None
+
+    @callback
+    def _schedule_immediate_update(self):
+        self.async_schedule_update_ha_state(True)
+
+
+class PlantMaxMoisture(PlantMinMax):
+    """Entity class for max moisture threshold"""
+
+    _attr_device_class = f"{ATTR_MOISTURE} threshold"
+    _attr_icon = ICON_MOISTURE
+    _attr_native_unit_of_measurement = PERCENTAGE
+    _attr_native_max_value = 100
+    _attr_native_min_value = 0
+    _attr_native_step = 1
+    _attr_translation_key = TRANSLATION_KEY_MAX_MOISTURE
+    _entity_id_key = f"{ATTR_MAX} {READING_MOISTURE}"
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the component."""
+        self._default_value = config.data[FLOW_PLANT_INFO][FLOW_PLANT_LIMITS].get(
+            CONF_MAX_MOISTURE, DEFAULT_MAX_MOISTURE
+        )
+        self._attr_unique_id = f"{config.entry_id}-max-moisture"
+        super().__init__(hass, config, plantdevice)
+
+
+class PlantMinMoisture(PlantMinMax):
+    """Entity class for min moisture threshold"""
+
+    _attr_device_class = f"{ATTR_MOISTURE} threshold"
+    _attr_icon = ICON_MOISTURE
+    _attr_native_unit_of_measurement = PERCENTAGE
+    _attr_native_max_value = 100
+    _attr_native_min_value = 0
+    _attr_native_step = 1
+    _attr_translation_key = TRANSLATION_KEY_MIN_MOISTURE
+    _entity_id_key = f"{ATTR_MIN} {READING_MOISTURE}"
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the Plant component."""
+        self._default_value = config.data[FLOW_PLANT_INFO][FLOW_PLANT_LIMITS].get(
+            CONF_MIN_MOISTURE, DEFAULT_MIN_MOISTURE
+        )
+        self._attr_unique_id = f"{config.entry_id}-min-moisture"
+        super().__init__(hass, config, plantdevice)
+
+
+class PlantMaxTemperature(PlantMinMax):
+    """Entity class for max temperature threshold"""
+
+    _attr_device_class = NumberDeviceClass.TEMPERATURE
+    _converts_restored_unit = True
+    _attr_icon = ICON_TEMPERATURE
+    _attr_native_max_value = TEMPERATURE_MAX_VALUE
+    _attr_native_min_value = TEMPERATURE_MIN_VALUE
+    _attr_native_step = 1
+    _attr_translation_key = TRANSLATION_KEY_MAX_TEMPERATURE
+    _entity_id_key = f"{ATTR_MAX} {READING_TEMPERATURE}"
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the Plant component."""
+        self._attr_unique_id = f"{config.entry_id}-max-temperature"
+        self._default_value = _get_temperature_default(
+            hass, config, CONF_MAX_TEMPERATURE, DEFAULT_MAX_TEMPERATURE
+        )
+        if hass.config.units.temperature_unit == UnitOfTemperature.FAHRENHEIT:
+            self._attr_native_max_value = TEMPERATURE_MAX_VALUE_FAHRENHEIT
+            self._attr_native_min_value = TEMPERATURE_MIN_VALUE_FAHRENHEIT
+        super().__init__(hass, config, plantdevice)
+        self._attr_native_unit_of_measurement = self.hass.config.units.temperature_unit
+
+    @callback
+    def state_attributes_changed(
+        self, old_attributes: dict[str, Any], new_attributes: dict[str, Any]
+    ) -> None:
+        """Convert temperature between Celsius and Fahrenheit."""
+        if new_attributes.get(ATTR_UNIT_OF_MEASUREMENT) is None:
+            return
+        if old_attributes.get(ATTR_UNIT_OF_MEASUREMENT) is None:
+            return
+        if new_attributes.get(ATTR_UNIT_OF_MEASUREMENT) == old_attributes.get(
+            ATTR_UNIT_OF_MEASUREMENT
+        ):
+            return
+        try:
+            current_value = float(self.state)
+        except (ValueError, TypeError):
+            _LOGGER.debug(
+                "Cannot convert temperature for %s: state is %s",
+                self.entity_id,
+                self.state,
+            )
+            return
+        new_state = self._attr_state
+        if (
+            old_attributes.get(ATTR_UNIT_OF_MEASUREMENT) == UnitOfTemperature.FAHRENHEIT
+            and new_attributes.get(ATTR_UNIT_OF_MEASUREMENT)
+            == UnitOfTemperature.CELSIUS
+        ):
+            new_state = round(
+                TemperatureConverter.convert(
+                    current_value,
+                    UnitOfTemperature.FAHRENHEIT,
+                    UnitOfTemperature.CELSIUS,
+                )
+            )
+            _LOGGER.debug(
+                "Changing from F to C measurement is %s new is %s",
+                self.state,
+                new_state,
+            )
+
+        if (
+            old_attributes.get(ATTR_UNIT_OF_MEASUREMENT) == UnitOfTemperature.CELSIUS
+            and new_attributes.get(ATTR_UNIT_OF_MEASUREMENT)
+            == UnitOfTemperature.FAHRENHEIT
+        ):
+            new_state = round(
+                TemperatureConverter.convert(
+                    current_value,
+                    UnitOfTemperature.CELSIUS,
+                    UnitOfTemperature.FAHRENHEIT,
+                )
+            )
+            _LOGGER.debug(
+                "Changing from C to F measurement is %s new is %s",
+                self.state,
+                new_state,
+            )
+
+        # Update internal state AND publish via hass.states.async_set.
+        # Setting only _attr_native_value (without async_set) leaves the
+        # state machine stale until the next entity update; setting only
+        # via async_set leaves _attr_native_value stale so the next
+        # async_write_ha_state silently reverts the conversion. Both are
+        # required.
+        self._attr_native_value = new_state
+        self._attr_native_unit_of_measurement = new_attributes.get(
+            ATTR_UNIT_OF_MEASUREMENT
+        )
+        self.hass.states.async_set(self.entity_id, new_state, new_attributes)
+
+
+class PlantMinTemperature(PlantMinMax):
+    """Entity class for min temperature threshold"""
+
+    _attr_device_class = NumberDeviceClass.TEMPERATURE
+    _converts_restored_unit = True
+    _attr_icon = ICON_TEMPERATURE
+    _attr_native_max_value = TEMPERATURE_MAX_VALUE
+    _attr_native_min_value = TEMPERATURE_MIN_VALUE
+    _attr_native_step = 1
+    _attr_translation_key = TRANSLATION_KEY_MIN_TEMPERATURE
+    _entity_id_key = f"{ATTR_MIN} {READING_TEMPERATURE}"
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the component."""
+        self._attr_unique_id = f"{config.entry_id}-min-temperature"
+        self._default_value = _get_temperature_default(
+            hass, config, CONF_MIN_TEMPERATURE, DEFAULT_MIN_TEMPERATURE
+        )
+        if hass.config.units.temperature_unit == UnitOfTemperature.FAHRENHEIT:
+            self._attr_native_max_value = TEMPERATURE_MAX_VALUE_FAHRENHEIT
+            self._attr_native_min_value = TEMPERATURE_MIN_VALUE_FAHRENHEIT
+        super().__init__(hass, config, plantdevice)
+        self._attr_native_unit_of_measurement = self.hass.config.units.temperature_unit
+
+    @callback
+    def state_attributes_changed(
+        self, old_attributes: dict[str, Any], new_attributes: dict[str, Any]
+    ) -> None:
+        """Convert temperature between Celsius and Fahrenheit."""
+        if new_attributes.get(ATTR_UNIT_OF_MEASUREMENT) is None:
+            return
+        if old_attributes.get(ATTR_UNIT_OF_MEASUREMENT) is None:
+            return
+        if new_attributes.get(ATTR_UNIT_OF_MEASUREMENT) == old_attributes.get(
+            ATTR_UNIT_OF_MEASUREMENT
+        ):
+            return
+        try:
+            current_value = float(self.state)
+        except (ValueError, TypeError):
+            _LOGGER.debug(
+                "Cannot convert temperature for %s: state is %s",
+                self.entity_id,
+                self.state,
+            )
+            return
+        new_state = self._attr_state
+        if (
+            old_attributes.get(ATTR_UNIT_OF_MEASUREMENT) == UnitOfTemperature.FAHRENHEIT
+            and new_attributes.get(ATTR_UNIT_OF_MEASUREMENT)
+            == UnitOfTemperature.CELSIUS
+        ):
+            new_state = round(
+                TemperatureConverter.convert(
+                    current_value,
+                    UnitOfTemperature.FAHRENHEIT,
+                    UnitOfTemperature.CELSIUS,
+                )
+            )
+            _LOGGER.debug(
+                "Changing from F to C measurement is %s new is %s",
+                self.state,
+                new_state,
+            )
+
+        if (
+            old_attributes.get(ATTR_UNIT_OF_MEASUREMENT) == UnitOfTemperature.CELSIUS
+            and new_attributes.get(ATTR_UNIT_OF_MEASUREMENT)
+            == UnitOfTemperature.FAHRENHEIT
+        ):
+            new_state = round(
+                TemperatureConverter.convert(
+                    current_value,
+                    UnitOfTemperature.CELSIUS,
+                    UnitOfTemperature.FAHRENHEIT,
+                )
+            )
+            _LOGGER.debug(
+                "Changing from C to F measurement is %s new is %s",
+                self.state,
+                new_state,
+            )
+
+        self._attr_native_value = new_state
+        self._attr_native_unit_of_measurement = new_attributes.get(
+            ATTR_UNIT_OF_MEASUREMENT
+        )
+        self.hass.states.async_set(self.entity_id, new_state, new_attributes)
+
+
+class PlantMaxIlluminance(PlantMinMax):
+    """Entity class for max illuminance threshold"""
+
+    _attr_device_class = f"{SensorDeviceClass.ILLUMINANCE} threshold"
+    _attr_icon = ICON_ILLUMINANCE
+    _attr_native_unit_of_measurement = LIGHT_LUX
+    _attr_native_max_value = 200000
+    _attr_native_min_value = 0
+    _attr_native_step = 500
+    _attr_translation_key = TRANSLATION_KEY_MAX_ILLUMINANCE
+    _entity_id_key = f"{ATTR_MAX} {READING_ILLUMINANCE}"
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the component."""
+        self._default_value = config.data[FLOW_PLANT_INFO][FLOW_PLANT_LIMITS].get(
+            CONF_MAX_ILLUMINANCE, DEFAULT_MAX_ILLUMINANCE
+        )
+        self._attr_unique_id = f"{config.entry_id}-max-illuminance"
+        super().__init__(hass, config, plantdevice)
+
+
+class PlantMinIlluminance(PlantMinMax):
+    """Entity class for min illuminance threshold"""
+
+    _attr_device_class = SensorDeviceClass.ILLUMINANCE
+    _attr_icon = ICON_ILLUMINANCE
+    _attr_native_unit_of_measurement = LIGHT_LUX
+    _attr_native_max_value = 200000
+    _attr_native_min_value = 0
+    _attr_native_step = 500
+    _attr_translation_key = TRANSLATION_KEY_MIN_ILLUMINANCE
+    _entity_id_key = f"{ATTR_MIN} {READING_ILLUMINANCE}"
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the Plant component."""
+        self._default_value = config.data[FLOW_PLANT_INFO][FLOW_PLANT_LIMITS].get(
+            CONF_MIN_ILLUMINANCE, DEFAULT_MIN_ILLUMINANCE
+        )
+        self._attr_unique_id = f"{config.entry_id}-min-illuminance"
+        super().__init__(hass, config, plantdevice)
+
+
+class PlantMaxDli(PlantMinMax):
+    """Entity class for max DLI threshold"""
+
+    _attr_device_class = f"{ATTR_DLI} threshold"
+    _attr_icon = ICON_DLI
+    _attr_native_unit_of_measurement = UNIT_DLI
+    _attr_native_max_value = 100
+    _attr_native_min_value = 0
+    _attr_native_step = 0.1
+    _attr_translation_key = TRANSLATION_KEY_MAX_DLI
+    _entity_id_key = f"{ATTR_MAX} {READING_DLI}"
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the component."""
+        self._default_value = config.data[FLOW_PLANT_INFO][FLOW_PLANT_LIMITS].get(
+            CONF_MAX_DLI, DEFAULT_MAX_DLI
+        )
+        self._attr_unique_id = f"{config.entry_id}-max-dli"
+        super().__init__(hass, config, plantdevice)
+
+
+class PlantMinDli(PlantMinMax):
+    """Entity class for min DLI threshold"""
+
+    _attr_device_class = f"{ATTR_DLI} threshold"
+    _attr_icon = ICON_DLI
+    _attr_native_unit_of_measurement = UNIT_DLI
+    _attr_native_max_value = 100
+    _attr_native_min_value = 0
+    _attr_native_step = 0.1
+    _attr_translation_key = TRANSLATION_KEY_MIN_DLI
+    _entity_id_key = f"{ATTR_MIN} {READING_DLI}"
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the component."""
+        self._default_value = config.data[FLOW_PLANT_INFO][FLOW_PLANT_LIMITS].get(
+            CONF_MIN_DLI, DEFAULT_MIN_DLI
+        )
+        self._attr_unique_id = f"{config.entry_id}-min-dli"
+        super().__init__(hass, config, plantdevice)
+
+
+class PlantMaxVpd(PlantMinMax):
+    """Entity class for max VPD threshold"""
+
+    _attr_device_class = f"{ATTR_VPD} threshold"
+    _attr_icon = ICON_VPD
+    _attr_native_unit_of_measurement = UNIT_VPD
+    _attr_native_max_value = 5.0
+    _attr_native_min_value = 0
+    _attr_native_step = 0.1
+    _attr_translation_key = TRANSLATION_KEY_MAX_VPD
+    _entity_id_key = f"{ATTR_MAX} {READING_VPD}"
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the component."""
+        self._default_value = config.data[FLOW_PLANT_INFO][FLOW_PLANT_LIMITS].get(
+            CONF_MAX_VPD, DEFAULT_MAX_VPD
+        )
+        self._attr_unique_id = f"{config.entry_id}-max-vpd"
+        super().__init__(hass, config, plantdevice)
+
+
+class PlantMinVpd(PlantMinMax):
+    """Entity class for min VPD threshold"""
+
+    _attr_device_class = f"{ATTR_VPD} threshold"
+    _attr_icon = ICON_VPD
+    _attr_native_unit_of_measurement = UNIT_VPD
+    _attr_native_max_value = 5.0
+    _attr_native_min_value = 0
+    _attr_native_step = 0.1
+    _attr_translation_key = TRANSLATION_KEY_MIN_VPD
+    _entity_id_key = f"{ATTR_MIN} {READING_VPD}"
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the component."""
+        self._default_value = config.data[FLOW_PLANT_INFO][FLOW_PLANT_LIMITS].get(
+            CONF_MIN_VPD, DEFAULT_MIN_VPD
+        )
+        self._attr_unique_id = f"{config.entry_id}-min-vpd"
+        super().__init__(hass, config, plantdevice)
+
+
+class PlantMaxConductivity(PlantMinMax):
+    """Entity class for max conductivity threshold"""
+
+    _attr_device_class = f"{ATTR_CONDUCTIVITY} threshold"
+    _attr_icon = ICON_CONDUCTIVITY
+    _attr_native_unit_of_measurement = UnitOfConductivity.MICROSIEMENS_PER_CM
+    _attr_native_max_value = 3000
+    _attr_native_min_value = 0
+    _attr_native_step = 50
+    _attr_translation_key = TRANSLATION_KEY_MAX_CONDUCTIVITY
+    _entity_id_key = f"{ATTR_MAX} {READING_CONDUCTIVITY}"
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the component."""
+        self._default_value = config.data[FLOW_PLANT_INFO][FLOW_PLANT_LIMITS].get(
+            CONF_MAX_CONDUCTIVITY, DEFAULT_MAX_CONDUCTIVITY
+        )
+        self._attr_unique_id = f"{config.entry_id}-max-conductivity"
+        super().__init__(hass, config, plantdevice)
+
+
+class PlantMinConductivity(PlantMinMax):
+    """Entity class for min conductivity threshold"""
+
+    _attr_device_class = f"{ATTR_CONDUCTIVITY} threshold"
+    _attr_icon = ICON_CONDUCTIVITY
+    _attr_native_unit_of_measurement = UnitOfConductivity.MICROSIEMENS_PER_CM
+    _attr_native_max_value = 3000
+    _attr_native_min_value = 0
+    _attr_native_step = 50
+    _attr_translation_key = TRANSLATION_KEY_MIN_CONDUCTIVITY
+    _entity_id_key = f"{ATTR_MIN} {READING_CONDUCTIVITY}"
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the component."""
+        self._default_value = config.data[FLOW_PLANT_INFO][FLOW_PLANT_LIMITS].get(
+            CONF_MIN_CONDUCTIVITY, DEFAULT_MIN_CONDUCTIVITY
+        )
+        self._attr_unique_id = f"{config.entry_id}-min-conductivity"
+        super().__init__(hass, config, plantdevice)
+
+
+class PlantMaxHumidity(PlantMinMax):
+    """Entity class for max humidity threshold"""
+
+    _attr_device_class = f"{SensorDeviceClass.HUMIDITY} threshold"
+    _attr_icon = ICON_HUMIDITY
+    _attr_native_unit_of_measurement = PERCENTAGE
+    _attr_native_max_value = 100
+    _attr_native_min_value = 0
+    _attr_native_step = 1
+    _attr_translation_key = TRANSLATION_KEY_MAX_HUMIDITY
+    _entity_id_key = f"{ATTR_MAX} {READING_HUMIDITY}"
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the component."""
+        self._default_value = config.data[FLOW_PLANT_INFO][FLOW_PLANT_LIMITS].get(
+            CONF_MAX_HUMIDITY, DEFAULT_MAX_HUMIDITY
+        )
+        self._attr_unique_id = f"{config.entry_id}-max-humidity"
+        super().__init__(hass, config, plantdevice)
+
+
+class PlantMinHumidity(PlantMinMax):
+    """Entity class for min humidity threshold"""
+
+    _attr_device_class = f"{SensorDeviceClass.HUMIDITY} threshold"
+    _attr_icon = ICON_HUMIDITY
+    _attr_native_unit_of_measurement = PERCENTAGE
+    _attr_native_max_value = 100
+    _attr_native_min_value = 0
+    _attr_native_step = 1
+    _attr_translation_key = TRANSLATION_KEY_MIN_HUMIDITY
+    _entity_id_key = f"{ATTR_MIN} {READING_HUMIDITY}"
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the component."""
+        self._default_value = config.data[FLOW_PLANT_INFO][FLOW_PLANT_LIMITS].get(
+            CONF_MIN_HUMIDITY, DEFAULT_MIN_HUMIDITY
+        )
+        self._attr_unique_id = f"{config.entry_id}-min-humidity"
+        super().__init__(hass, config, plantdevice)
+
+
+class PlantMaxCo2(PlantMinMax):
+    """Entity class for max CO2 threshold"""
+
+    _attr_device_class = f"{SensorDeviceClass.CO2} threshold"
+    _attr_icon = ICON_CO2
+    _attr_native_unit_of_measurement = "ppm"
+    _attr_native_max_value = 5000
+    _attr_native_min_value = 0
+    _attr_native_step = 50
+    _attr_translation_key = TRANSLATION_KEY_MAX_CO2
+    _entity_id_key = f"{ATTR_MAX} {READING_CO2}"
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the component."""
+        self._default_value = config.data[FLOW_PLANT_INFO][FLOW_PLANT_LIMITS].get(
+            CONF_MAX_CO2, DEFAULT_MAX_CO2
+        )
+        self._attr_unique_id = f"{config.entry_id}-max-co2"
+        super().__init__(hass, config, plantdevice)
+
+
+class PlantMinCo2(PlantMinMax):
+    """Entity class for min CO2 threshold"""
+
+    _attr_device_class = f"{SensorDeviceClass.CO2} threshold"
+    _attr_icon = ICON_CO2
+    _attr_native_unit_of_measurement = "ppm"
+    _attr_native_max_value = 5000
+    _attr_native_min_value = 0
+    _attr_native_step = 50
+    _attr_translation_key = TRANSLATION_KEY_MIN_CO2
+    _entity_id_key = f"{ATTR_MIN} {READING_CO2}"
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the component."""
+        self._default_value = config.data[FLOW_PLANT_INFO][FLOW_PLANT_LIMITS].get(
+            CONF_MIN_CO2, DEFAULT_MIN_CO2
+        )
+        self._attr_unique_id = f"{config.entry_id}-min-co2"
+        super().__init__(hass, config, plantdevice)
+
+
+class PlantMaxSoilTemperature(PlantMinMax):
+    """Entity class for max soil temperature threshold"""
+
+    _attr_device_class = NumberDeviceClass.TEMPERATURE
+    _converts_restored_unit = True
+    _attr_icon = ICON_SOIL_TEMPERATURE
+    _attr_native_max_value = TEMPERATURE_MAX_VALUE
+    _attr_native_min_value = TEMPERATURE_MIN_VALUE
+    _attr_native_step = 1
+    _attr_translation_key = TRANSLATION_KEY_MAX_SOIL_TEMPERATURE
+    _entity_id_key = f"{ATTR_MAX} {READING_SOIL_TEMPERATURE}"
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the Plant component."""
+        self._attr_unique_id = f"{config.entry_id}-max-soil-temperature"
+        self._default_value = _get_temperature_default(
+            hass, config, CONF_MAX_SOIL_TEMPERATURE, DEFAULT_MAX_SOIL_TEMPERATURE
+        )
+        if hass.config.units.temperature_unit == UnitOfTemperature.FAHRENHEIT:
+            self._attr_native_max_value = TEMPERATURE_MAX_VALUE_FAHRENHEIT
+            self._attr_native_min_value = TEMPERATURE_MIN_VALUE_FAHRENHEIT
+        super().__init__(hass, config, plantdevice)
+        self._attr_native_unit_of_measurement = self.hass.config.units.temperature_unit
+
+    @callback
+    def state_attributes_changed(
+        self, old_attributes: dict[str, Any], new_attributes: dict[str, Any]
+    ) -> None:
+        """Convert temperature between Celsius and Fahrenheit."""
+        if new_attributes.get(ATTR_UNIT_OF_MEASUREMENT) is None:
+            return
+        if old_attributes.get(ATTR_UNIT_OF_MEASUREMENT) is None:
+            return
+        if new_attributes.get(ATTR_UNIT_OF_MEASUREMENT) == old_attributes.get(
+            ATTR_UNIT_OF_MEASUREMENT
+        ):
+            return
+        try:
+            current_value = float(self.state)
+        except (ValueError, TypeError):
+            _LOGGER.debug(
+                "Cannot convert temperature for %s: state is %s",
+                self.entity_id,
+                self.state,
+            )
+            return
+        new_state = self._attr_state
+        if (
+            old_attributes.get(ATTR_UNIT_OF_MEASUREMENT) == UnitOfTemperature.FAHRENHEIT
+            and new_attributes.get(ATTR_UNIT_OF_MEASUREMENT)
+            == UnitOfTemperature.CELSIUS
+        ):
+            new_state = round(
+                TemperatureConverter.convert(
+                    current_value,
+                    UnitOfTemperature.FAHRENHEIT,
+                    UnitOfTemperature.CELSIUS,
+                )
+            )
+
+        if (
+            old_attributes.get(ATTR_UNIT_OF_MEASUREMENT) == UnitOfTemperature.CELSIUS
+            and new_attributes.get(ATTR_UNIT_OF_MEASUREMENT)
+            == UnitOfTemperature.FAHRENHEIT
+        ):
+            new_state = round(
+                TemperatureConverter.convert(
+                    current_value,
+                    UnitOfTemperature.CELSIUS,
+                    UnitOfTemperature.FAHRENHEIT,
+                )
+            )
+
+        self._attr_native_value = new_state
+        self._attr_native_unit_of_measurement = new_attributes.get(
+            ATTR_UNIT_OF_MEASUREMENT
+        )
+        self.hass.states.async_set(self.entity_id, new_state, new_attributes)
+
+
+class PlantMinSoilTemperature(PlantMinMax):
+    """Entity class for min soil temperature threshold"""
+
+    _attr_device_class = NumberDeviceClass.TEMPERATURE
+    _converts_restored_unit = True
+    _attr_icon = ICON_SOIL_TEMPERATURE
+    _attr_native_max_value = TEMPERATURE_MAX_VALUE
+    _attr_native_min_value = TEMPERATURE_MIN_VALUE
+    _attr_native_step = 1
+    _attr_translation_key = TRANSLATION_KEY_MIN_SOIL_TEMPERATURE
+    _entity_id_key = f"{ATTR_MIN} {READING_SOIL_TEMPERATURE}"
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the component."""
+        self._attr_unique_id = f"{config.entry_id}-min-soil-temperature"
+        self._default_value = _get_temperature_default(
+            hass, config, CONF_MIN_SOIL_TEMPERATURE, DEFAULT_MIN_SOIL_TEMPERATURE
+        )
+        if hass.config.units.temperature_unit == UnitOfTemperature.FAHRENHEIT:
+            self._attr_native_max_value = TEMPERATURE_MAX_VALUE_FAHRENHEIT
+            self._attr_native_min_value = TEMPERATURE_MIN_VALUE_FAHRENHEIT
+        super().__init__(hass, config, plantdevice)
+        self._attr_native_unit_of_measurement = self.hass.config.units.temperature_unit
+
+    @callback
+    def state_attributes_changed(
+        self, old_attributes: dict[str, Any], new_attributes: dict[str, Any]
+    ) -> None:
+        """Convert temperature between Celsius and Fahrenheit."""
+        if new_attributes.get(ATTR_UNIT_OF_MEASUREMENT) is None:
+            return
+        if old_attributes.get(ATTR_UNIT_OF_MEASUREMENT) is None:
+            return
+        if new_attributes.get(ATTR_UNIT_OF_MEASUREMENT) == old_attributes.get(
+            ATTR_UNIT_OF_MEASUREMENT
+        ):
+            return
+        try:
+            current_value = float(self.state)
+        except (ValueError, TypeError):
+            _LOGGER.debug(
+                "Cannot convert temperature for %s: state is %s",
+                self.entity_id,
+                self.state,
+            )
+            return
+        new_state = self._attr_state
+        if (
+            old_attributes.get(ATTR_UNIT_OF_MEASUREMENT) == UnitOfTemperature.FAHRENHEIT
+            and new_attributes.get(ATTR_UNIT_OF_MEASUREMENT)
+            == UnitOfTemperature.CELSIUS
+        ):
+            new_state = round(
+                TemperatureConverter.convert(
+                    current_value,
+                    UnitOfTemperature.FAHRENHEIT,
+                    UnitOfTemperature.CELSIUS,
+                )
+            )
+
+        if (
+            old_attributes.get(ATTR_UNIT_OF_MEASUREMENT) == UnitOfTemperature.CELSIUS
+            and new_attributes.get(ATTR_UNIT_OF_MEASUREMENT)
+            == UnitOfTemperature.FAHRENHEIT
+        ):
+            new_state = round(
+                TemperatureConverter.convert(
+                    current_value,
+                    UnitOfTemperature.CELSIUS,
+                    UnitOfTemperature.FAHRENHEIT,
+                )
+            )
+
+        self._attr_native_value = new_state
+        self._attr_native_unit_of_measurement = new_attributes.get(
+            ATTR_UNIT_OF_MEASUREMENT
+        )
+        self.hass.states.async_set(self.entity_id, new_state, new_attributes)
+
+
+class PlantLuxToPpfd(PlantMinMax):
+    """Entity class for lux to PPFD conversion factor.
+
+    The conversion factor varies based on light source:
+    - Sunlight: ~0.0185 (default)
+    - LED grow lights: ~0.014-0.020 depending on spectrum
+    - HPS lights: ~0.013
+    - Fluorescent: ~0.013-0.014
+
+    See https://www.apogeeinstruments.com/conversion-ppfd-to-lux/
+    """
+
+    _attr_device_class = None
+    _attr_icon = ICON_PPFD
+    _attr_native_unit_of_measurement = None
+    _attr_native_max_value = 0.1
+    _attr_native_min_value = 0.001
+    _attr_native_step = 0.0001
+    _attr_suggested_display_precision = 4
+    _attr_translation_key = TRANSLATION_KEY_LUX_TO_PPFD
+    _entity_id_key = "lux to ppfd"
+
+    def __init__(
+        self, hass: HomeAssistant, config: ConfigEntry, plantdevice: Entity
+    ) -> None:
+        """Initialize the component."""
+        self._default_value = config.data[FLOW_PLANT_INFO].get(
+            CONF_LUX_TO_PPFD, DEFAULT_LUX_TO_PPFD
+        )
+        self._attr_unique_id = f"{config.entry_id}-lux-to-ppfd"
+        super().__init__(hass, config, plantdevice)

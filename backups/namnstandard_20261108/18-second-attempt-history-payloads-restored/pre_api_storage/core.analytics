@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "core.analytics",
+  "data": {
+    "onboarded": true,
+    "preferences": {
+      "base": true,
+      "diagnostics": true,
+      "usage": true,
+      "statistics": true,
+      "snapshots": true
+    },
+    "uuid": "73c237ae76ef44c68d1a37edfee17f54",
+    "submission_identifier": "jIpUI-aaUFCvJZKhJk5P5u-i24AWhBqbDGNGNyZ90wE|eyJyb2xlIjoic25hcHNob3Qtc3VibWlzc2lvbiIsImF0IjoxNzk0MTU0NzU5LCJpZCI6IjQxY2RjNjI5LWFlNTQtNGZjYS1iNGFmLWMzM2JkZjc0Y2VlNSIsInN1YiI6IjNiOGY0N2MxLTMyY2QtNDM4YS1iMGUwLWQ3MzEyNmI5ODA1ZSIsInNlcSI6MzZ9",
+    "snapshot_submission_time": 62358.99397489378
+  }
+}

@@ -1,0 +1,6 @@
+{"status": "rename_intent", "old": "media_player.nya_tvn_television", "new": "media_player.verandan_nya_tvn_tv"}
+{"status": "renamed", "old": "media_player.nya_tvn_television", "new": "media_player.verandan_nya_tvn_tv"}
+{"status": "rename_intent", "old": "button.nya_tvn_identify", "new": "button.verandan_nya_tvn_identifiera"}
+{"status": "renamed", "old": "button.nya_tvn_identify", "new": "button.verandan_nya_tvn_identifiera"}
+{"status": "rename_intent", "old": "switch.nya_tvn_mute", "new": "switch.verandan_nya_tvn_ljud_av"}
+{"status": "renamed", "old": "switch.nya_tvn_mute", "new": "switch.verandan_nya_tvn_ljud_av"}

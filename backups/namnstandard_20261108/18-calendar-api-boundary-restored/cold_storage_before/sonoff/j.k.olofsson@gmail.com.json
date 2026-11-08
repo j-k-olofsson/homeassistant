@@ -1,0 +1,467 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "sonoff/j.k.olofsson@gmail.com.json",
+  "data": [
+    {
+      "name": "IKEA of Sweden TRADFRI bulb E27 WS globe 1055lm",
+      "deviceid": "ac0800b6a0",
+      "apikey": "f4fc9095-bd8d-4cf0-8c03-241895d0c33a",
+      "extra": {
+        "ui": "HA双色灯",
+        "uiid": 20007,
+        "mac": "00:00:00:00:00:00",
+        "apmac": "00:00:00:00:00:00",
+        "model": "NON-OTA-GL",
+        "modelInfo": "620c5a598d85576e68376d3a",
+        "manufacturer": "Home Assistant",
+        "brandId": "6209cab37c8edd83ab4d5c77"
+      },
+      "brandName": "Home Assistant",
+      "brandLogo": "",
+      "showBrand": true,
+      "productModel": "NON-OTA-GL(20007)",
+      "tags": {},
+      "devConfig": {},
+      "settings": {},
+      "devGroups": [],
+      "family": {
+        "familyid": "63f24a7e508efd0008d5b029",
+        "index": -10,
+        "members": [],
+        "guests": []
+      },
+      "shareTo": [],
+      "devicekey": "6bac3aab-7d86-4496-9791-483d8d19eb63",
+      "online": false,
+      "params": {
+        "bindInfos": {
+          "gaction": [
+            "f4fc9095-bd8d-4cf0-8c03-241895d0c33a_ewelinkGoogleHome"
+          ]
+        },
+        "uniqueID": "475cf4bfa38f96d9d9d5f37c1fbf7952",
+        "parentid": "abf8004123",
+        "switch": "off",
+        "brightness": 6,
+        "colorTemp": 0
+      },
+      "isSupportGroup": false,
+      "isSupportedOnMP": false,
+      "isSupportChannelSplit": false,
+      "deviceFeature": {}
+    },
+    {
+      "name": "Blomlampa (trappan)",
+      "deviceid": "ac0800b61f",
+      "apikey": "f4fc9095-bd8d-4cf0-8c03-241895d0c33a",
+      "extra": {
+        "ui": "HA开关灯",
+        "uiid": 20005,
+        "mac": "00:00:00:00:00:00",
+        "apmac": "00:00:00:00:00:00",
+        "model": "NON-OTA-GL",
+        "modelInfo": "620c59fd8d85576e68376d38",
+        "manufacturer": "Home Assistant",
+        "brandId": "6209cab37c8edd83ab4d5c77"
+      },
+      "brandName": "Home Assistant",
+      "brandLogo": "",
+      "showBrand": true,
+      "productModel": "NON-OTA-GL(20005)",
+      "tags": {},
+      "devConfig": {},
+      "settings": {},
+      "devGroups": [],
+      "family": {
+        "familyid": "63f24a7e508efd0008d5b029",
+        "index": -9,
+        "members": [],
+        "guests": []
+      },
+      "shareTo": [],
+      "devicekey": "962521e0-1b39-4f3c-a407-c233454f9e1a",
+      "online": false,
+      "params": {
+        "bindInfos": {
+          "gaction": [
+            "f4fc9095-bd8d-4cf0-8c03-241895d0c33a_ewelinkGoogleHome"
+          ]
+        },
+        "uniqueID": "59dfa01985c8b3965287d04661f4dd58",
+        "parentid": "abf8004123",
+        "switch": "on"
+      },
+      "isSupportGroup": false,
+      "isSupportedOnMP": false,
+      "isSupportChannelSplit": false,
+      "deviceFeature": {}
+    },
+    {
+      "name": "Taklampor (källaren)",
+      "deviceid": "ac0800b3b2",
+      "apikey": "f4fc9095-bd8d-4cf0-8c03-241895d0c33a",
+      "extra": {
+        "model": "NON-OTA-GL",
+        "ui": "HA调光灯",
+        "uiid": 20006,
+        "manufacturer": "Home Assistant",
+        "mac": "00:00:00:00:00:00",
+        "apmac": "00:00:00:00:00:00",
+        "modelInfo": "620c5a148d85576e68376d39",
+        "brandId": "6209cab37c8edd83ab4d5c77"
+      },
+      "brandName": "Home Assistant",
+      "brandLogo": "",
+      "showBrand": true,
+      "productModel": "NON-OTA-GL(20006)",
+      "tags": {},
+      "devConfig": {},
+      "settings": {},
+      "devGroups": [],
+      "family": {
+        "familyid": "63f24a7e508efd0008d5b029",
+        "index": -8,
+        "members": [],
+        "guests": []
+      },
+      "shareTo": [],
+      "devicekey": "4c703d4f-8842-4cbd-a512-2be1aeb2a395",
+      "online": false,
+      "params": {
+        "bindInfos": {
+          "gaction": [
+            "f4fc9095-bd8d-4cf0-8c03-241895d0c33a_ewelinkGoogleHome"
+          ]
+        },
+        "uniqueID": "b19c0d42de7c8f817098059821ce961e",
+        "parentid": "abf8004123",
+        "switch": "on",
+        "brightness": 100
+      },
+      "isSupportGroup": false,
+      "isSupportedOnMP": false,
+      "isSupportChannelSplit": false,
+      "deviceFeature": {}
+    },
+    {
+      "name": "Taklampor (källaren)",
+      "deviceid": "ac0800b5c8",
+      "apikey": "f4fc9095-bd8d-4cf0-8c03-241895d0c33a",
+      "extra": {
+        "ui": "HA三通道开关",
+        "uiid": 20003,
+        "mac": "00:00:00:00:00:00",
+        "apmac": "00:00:00:00:00:00",
+        "model": "NON-OTA-GL",
+        "modelInfo": "620c59d58d85576e68376d36",
+        "manufacturer": "Home Assistant",
+        "brandId": "6209cab37c8edd83ab4d5c77"
+      },
+      "brandName": "Home Assistant",
+      "brandLogo": "",
+      "showBrand": true,
+      "productModel": "NON-OTA-GL(20003)",
+      "tags": {},
+      "devConfig": {},
+      "settings": {},
+      "devGroups": [],
+      "family": {
+        "familyid": "63f24a7e508efd0008d5b029",
+        "index": -7,
+        "members": [],
+        "guests": []
+      },
+      "shareTo": [],
+      "devicekey": "2ade2576-71ab-42bb-a27c-ebb8bee0d63b",
+      "online": false,
+      "params": {
+        "bindInfos": {
+          "gaction": [
+            "f4fc9095-bd8d-4cf0-8c03-241895d0c33a_ewelinkGoogleHome"
+          ]
+        },
+        "uniqueID": "179c93b85d2fc88c8bcc7b9c3e61f261",
+        "parentid": "abf8004123"
+      },
+      "isSupportGroup": false,
+      "isSupportedOnMP": false,
+      "isSupportChannelSplit": false,
+      "deviceFeature": {}
+    },
+    {
+      "name": "Device004123",
+      "deviceid": "abf8004123",
+      "apikey": "f4fc9095-bd8d-4cf0-8c03-241895d0c33a",
+      "extra": {
+        "ui": "HA网关",
+        "uiid": 20000,
+        "mac": "00:00:00:00:00:00",
+        "apmac": "00:00:00:00:00:00",
+        "model": "NON-OTA-GL",
+        "modelInfo": "620c57de8d85576e68376d33",
+        "manufacturer": "深圳酷宅科技有限公司",
+        "brandId": "59e0dbc25c1af3a660cc1ac0"
+      },
+      "brandName": "coolkit",
+      "brandLogo": "",
+      "showBrand": false,
+      "productModel": "NON-OTA-GL(20000)",
+      "tags": {},
+      "devConfig": {},
+      "settings": {},
+      "devGroups": [],
+      "family": {
+        "familyid": "63f24a7e508efd0008d5b029",
+        "index": -6,
+        "members": [],
+        "guests": []
+      },
+      "shareTo": [],
+      "devicekey": "f8b31e0b-63a3-4b21-ac1b-1031823b14b0",
+      "online": true,
+      "params": {
+        "bindInfos": {
+          "gaction": [
+            "f4fc9095-bd8d-4cf0-8c03-241895d0c33a_ewelinkGoogleHome"
+          ]
+        },
+        "partnerDevice": {
+          "ezVedioSerial": "b9d8f6f5-cdcd-4a0d-9306-ef85af3270af"
+        },
+        "subDevices": [
+          {
+            "deviceid": "ac0800b5c8"
+          },
+          {
+            "deviceid": "ac0800b3b2"
+          },
+          {
+            "deviceid": "ac0800b61f"
+          },
+          {
+            "deviceid": "ac0800b6a0"
+          }
+        ]
+      },
+      "isSupportGroup": false,
+      "isSupportedOnMP": false,
+      "isSupportChannelSplit": false,
+      "deviceFeature": {}
+    },
+    {
+      "name": "NSPanel86PW",
+      "deviceid": "1001ecf919",
+      "apikey": "f4fc9095-bd8d-4cf0-8c03-241895d0c33a",
+      "extra": {
+        "uiid": 195,
+        "description": "",
+        "itCredential": "3NiDf3DcVWT691iT",
+        "brandId": "5c4c1aee3a7d24c7100be054",
+        "apmac": "d0:27:03:50:b2:05",
+        "mac": "d0:27:03:50:b2:04",
+        "ui": "NSPanel Pro",
+        "modelInfo": "6228417de9996d416dcc77bb",
+        "model": "SN-RKPX30-NSP-01",
+        "manufacturer": "深圳松诺技术有限公司"
+      },
+      "brandName": "SONOFF",
+      "brandLogo": "https://eu-ota.coolkit.cc/logo/q62PevoglDNmwUJ9oPE7kRrpt1nL1CoA.png",
+      "showBrand": true,
+      "productModel": "NSPanel86PW",
+      "tags": {
+        "m_c33a_jkol": "on"
+      },
+      "devConfig": {},
+      "settings": {
+        "opsNotify": 1,
+        "opsHistory": 1,
+        "alarmNotify": 1
+      },
+      "devGroups": [],
+      "family": {
+        "familyid": "63f24a7e508efd0008d5b029",
+        "index": -5,
+        "members": [],
+        "guests": [],
+        "roomid": "63f24a7e508efd0008d5b02c"
+      },
+      "shareTo": [],
+      "devicekey": "435a929f-9d07-403b-ac6d-a5cb6eef91ef",
+      "online": true,
+      "params": {
+        "bindInfos": {
+          "gaction": [
+            "f4fc9095-bd8d-4cf0-8c03-241895d0c33a_ewelinkGoogleHome"
+          ]
+        },
+        "rooted": true,
+        "cityId": "WA@59.767,18.7",
+        "dst": 0,
+        "dstChange": "2025-03-30T01:00:00.000Z",
+        "tempRange": "-1.5,4.2",
+        "temperature": 2.3,
+        "timeZone": 1,
+        "weather": 22,
+        "version": 7,
+        "theme": "layout4",
+        "layout2": [
+          {
+            "type": "weather-time"
+          },
+          {
+            "type": "security"
+          }
+        ],
+        "screenList1": [
+          "ac0800b6a0",
+          "ac0800b61f",
+          "ac0800b3b2"
+        ],
+        "screenList2": [],
+        "screenList3": [],
+        "appVersion": "3.7.0",
+        "sysVersion": "3.7.0",
+        "fwVersion": "3.7.0",
+        "zigbeeVersion": "1.0.0",
+        "securityType": 0,
+        "subDevices": [],
+        "supportMatterDeviceType": [
+          "266",
+          "269",
+          "14",
+          "259",
+          "268",
+          "770",
+          "21",
+          "775",
+          "263",
+          "15",
+          "257",
+          "256",
+          "262"
+        ],
+        "zigbeeNetworkRole": "Repeater",
+        "layout1": [
+          {
+            "type": "weather-time"
+          }
+        ],
+        "geo": "59.75799,18.70496",
+        "showablePannels": [
+          "thingList",
+          "main",
+          "custom_webShortcut_gded58xf1rc0pz76hh5yxdd",
+          "custom_webShortcut_f0dd7ebace4a47e1a9faf1652f8803bd"
+        ],
+        "websites": [],
+        "layout4": [
+          {
+            "type": "weather-time"
+          },
+          {
+            "type": "device",
+            "payload": {
+              "id": "ac0800b6a0",
+              "type": "device"
+            }
+          },
+          {
+            "type": "device",
+            "payload": {
+              "id": "ac0800b3b2",
+              "type": "device"
+            }
+          },
+          {
+            "type": "device",
+            "payload": {
+              "id": "ac0800b61f",
+              "type": "device"
+            }
+          }
+        ],
+        "buzzerAlarm": {
+          "test": false,
+          "mode": "stop"
+        },
+        "gatewayBindRelations": [],
+        "webShortcutList": [
+          {
+            "type": "custom",
+            "id": "gded58xf1rc0pz76hh5yxdd",
+            "url": "http://192.168.0.2:8123/dashboard-nestgen2/0?kiosk",
+            "name": "HA"
+          }
+        ],
+        "foundWebShortcutList": [
+          {
+            "name": "Home",
+            "type": "ha",
+            "id": "52e498419a2b4c50a137be500143bc3d",
+            "url": "http://192.168.10.40:8123"
+          },
+          {
+            "name": "Home",
+            "type": "ha",
+            "id": "f1be4d7a1be1421f8f5f6ae459f87ae0",
+            "url": "http://192.168.10.40:8123"
+          },
+          {
+            "name": "Hem",
+            "type": "ha",
+            "id": "f0dd7ebace4a47e1a9faf1652f8803bd",
+            "url": "http://192.168.10.40:8123"
+          }
+        ],
+        "autoSearchWebShortcut": true,
+        "screenName1": "Split Screen1",
+        "webShortcutAction": "update",
+        "payload": {
+          "type": "custom",
+          "id": "gded58xf1rc0pz76hh5yxdd",
+          "url": "http://192.168.0.2:8123/dashboard-nestgen2/0?kiosk",
+          "name": "HA"
+        },
+        "addSubDevState": "off",
+        "addTimeOut": 10,
+        "addType": "ble",
+        "isBlur": true,
+        "searchWebShortcut": "on",
+        "layout3": [
+          {
+            "type": "weather-time"
+          },
+          {
+            "type": "device",
+            "payload": {
+              "id": "ac0800b3b2",
+              "type": "device"
+            }
+          },
+          {
+            "type": "device",
+            "payload": {
+              "id": "ac0800b61f",
+              "type": "device"
+            }
+          }
+        ]
+      },
+      "denyFeatures": [
+        "isSupportSecurityDelay",
+        "value_open_ratio",
+        "supportRebootDevice",
+        "webShortcutZoom"
+      ],
+      "isSupportGroup": false,
+      "isSupportedOnMP": false,
+      "isSupportChannelSplit": false,
+      "deviceFeature": {},
+      "matterInfoData": {
+        "matterFabricId": "018E62692B4ABDD9",
+        "matterNodeId": "000000000000000A"
+      }
+    }
+  ]
+}

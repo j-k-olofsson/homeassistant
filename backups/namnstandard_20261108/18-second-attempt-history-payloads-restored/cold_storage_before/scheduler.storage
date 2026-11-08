@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "minor_version": 1,
+  "key": "scheduler.storage",
+  "data": {
+    "schedules": [],
+    "tags": [],
+    "time_shutdown": "2026-11-08T08:58:33.229348+00:00"
+  }
+}

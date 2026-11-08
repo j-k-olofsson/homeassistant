@@ -1,0 +1,4256 @@
+{
+  "stage": "11-openwrt-namn-07",
+  "description": "Svenska funktionsnamn enligt granskad ordlista. Inga ID:n, inställningar eller värden ändras.",
+  "operations": [
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_guest_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet guest",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret guest TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_iot_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd iot",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret iot RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_iot_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd iot",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret iot TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_iot_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet iot",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret iot Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_iot_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid iot",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret iot Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_iot_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet iot",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret iot RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_iot_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet iot",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret iot TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_lan_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret lan RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_lan_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret lan TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_lan_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret lan Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_lan_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret lan Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_lan_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret lan RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_lan_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret lan TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_loopback_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd loopback",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret loopback RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_loopback_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd loopback",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret loopback TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_loopback_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet loopback",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret loopback Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_loopback_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid loopback",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret loopback Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_loopback_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet loopback",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret loopback RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_loopback_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet loopback",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret loopback TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_br_lan_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd br-lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret br-lan RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_br_lan_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd br-lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret br-lan TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_br_lan_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet br-lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret br-lan Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_br_lan_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid br-lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret br-lan Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_br_lan_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet br-lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret br-lan RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_br_lan_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet br-lan",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret br-lan TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_eth0_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd eth0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret eth0 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_eth0_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd eth0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret eth0 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_eth0_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet eth0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret eth0 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_eth0_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid eth0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret eth0 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_eth0_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet eth0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret eth0 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_eth0_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet eth0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret eth0 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_eth1_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd eth1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret eth1 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_eth1_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd eth1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret eth1 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_eth1_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet eth1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret eth1 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_eth1_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid eth1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret eth1 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_eth1_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet eth1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret eth1 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_eth1_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet eth1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret eth1 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy0_ap0_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd phy0-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy0-ap0 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy0_ap0_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd phy0-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy0-ap0 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy0_ap0_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet phy0-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy0-ap0 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy0_ap0_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid phy0-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy0-ap0 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy0_ap0_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet phy0-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy0-ap0 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy0_ap0_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet phy0-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy0-ap0 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy0_ap1_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd phy0-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy0-ap1 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy0_ap1_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd phy0-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy0-ap1 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy0_ap1_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet phy0-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy0-ap1 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy0_ap1_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid phy0-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy0-ap1 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy0_ap1_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet phy0-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy0-ap1 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy0_ap1_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet phy0-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy0-ap1 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy0_ap2_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd phy0-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy0-ap2 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy0_ap2_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd phy0-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy0-ap2 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy0_ap2_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet phy0-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy0-ap2 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy0_ap2_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid phy0-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy0-ap2 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy0_ap2_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet phy0-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy0-ap2 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy0_ap2_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet phy0-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy0-ap2 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy1_ap0_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd phy1-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy1-ap0 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy1_ap0_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd phy1-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy1-ap0 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy1_ap0_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet phy1-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy1-ap0 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy1_ap0_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid phy1-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy1-ap0 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy1_ap0_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet phy1-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy1-ap0 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy1_ap0_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet phy1-ap0",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy1-ap0 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy1_ap1_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd phy1-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy1-ap1 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy1_ap1_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd phy1-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy1-ap1 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy1_ap1_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet phy1-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy1-ap1 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy1_ap1_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid phy1-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy1-ap1 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy1_ap1_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet phy1-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy1-ap1 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy1_ap1_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet phy1-ap1",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy1-ap1 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy1_ap2_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd phy1-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy1-ap2 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy1_ap2_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd phy1-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy1-ap2 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy1_ap2_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet phy1-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy1-ap2 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy1_ap2_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid phy1-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy1-ap2 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy1_ap2_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet phy1-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy1-ap2 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_phy1_ap2_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet phy1-ap2",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret phy1-ap2 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_openwrt_one_ap_kontoret_wan_latency",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "WAN-svarstid",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret WAN Latency"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "image.kontoret_openwrt_one_ap_kontoret_wi_fi_qr_code_olofsson_wifi",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi QR-kod (OLOFSSON_WIFI)",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Wi-Fi QR Code (OLOFSSON_WIFI)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "image.kontoret_openwrt_one_ap_kontoret_wi_fi_qr_code_olofsson_guest",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi QR-kod (OLOFSSON_GUEST)",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Wi-Fi QR Code (OLOFSSON_GUEST)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "image.kontoret_openwrt_one_ap_kontoret_wi_fi_qr_code_olofsson_iot",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi QR-kod (OLOFSSON_IOT)",
+        "aliases": [
+          null,
+          "OpenWrt One - AP Kontoret Wi-Fi QR Code (OLOFSSON_IOT)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_connected",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Anslutning",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Connected"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_reboot_required",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Omstart krävs",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Reboot Required"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_wps_active",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "WPS aktivt",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen WPS Active"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_boot",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst boot",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service boot"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_bootcount",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst bootcount",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service bootcount"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_cron",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst cron",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service cron"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_dnsmasq",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst dnsmasq",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service dnsmasq"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_done",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst done",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service done"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_dropbear",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst dropbear",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service dropbear"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_firewall",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst firewall",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service firewall"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_gpio_switch",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst gpio_switch",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service gpio_switch"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_led",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst led",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service led"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_log",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst log",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service log"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_network",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst network",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service network"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_odhcpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst odhcpd",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service odhcpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_packet_steering",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst packet_steering",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service packet_steering"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_rpcd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst rpcd",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service rpcd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_sysctl",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst sysctl",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service sysctl"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_sysfixtime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst sysfixtime",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service sysfixtime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_sysntpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst sysntpd",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service sysntpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_system",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst system",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service system"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_ucitrack",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst ucitrack",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service ucitrack"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_uhttpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst uhttpd",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service uhttpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_umount",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst umount",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service umount"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_urandom_seed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst urandom_seed",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service urandom_seed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_urngd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst urngd",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service urngd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_service_wpad",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Tjänst wpad",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Service wpad"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_reboot_router",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om router",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Reboot Router"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_start_wps",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta WPS",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Start WPS"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_cancel_wps",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Avbryt WPS",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Cancel WPS"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_create_backup",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skapa säkerhetskopia",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Create Backup"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_boot",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst boot",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart boot"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_boot",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst boot",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop boot"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_bootcount",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst bootcount",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart bootcount"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_bootcount",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst bootcount",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop bootcount"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_cron",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst cron",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart cron"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_cron",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst cron",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop cron"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_dnsmasq",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst dnsmasq",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart dnsmasq"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_dnsmasq",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst dnsmasq",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop dnsmasq"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_done",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst done",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart done"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_done",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst done",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop done"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_dropbear",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst dropbear",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart dropbear"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_dropbear",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst dropbear",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop dropbear"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_firewall",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst firewall",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart firewall"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_firewall",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst firewall",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop firewall"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_gpio_switch",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst gpio_switch",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart gpio_switch"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_gpio_switch",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst gpio_switch",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop gpio_switch"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_led",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst led",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart led"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_led",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst led",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop led"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_log",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst log",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart log"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_log",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst log",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop log"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_network",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst network",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart network"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_network",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst network",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop network"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_odhcpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst odhcpd",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart odhcpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_odhcpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst odhcpd",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop odhcpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_packet_steering",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst packet_steering",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart packet_steering"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_packet_steering",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst packet_steering",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop packet_steering"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_rpcd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst rpcd",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart rpcd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_rpcd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst rpcd",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop rpcd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_sysctl",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst sysctl",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart sysctl"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_sysctl",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst sysctl",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop sysctl"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_sysfixtime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst sysfixtime",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart sysfixtime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_sysfixtime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst sysfixtime",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop sysfixtime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_sysntpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst sysntpd",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart sysntpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_sysntpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst sysntpd",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop sysntpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_system",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst system",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart system"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_system",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst system",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop system"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_ucitrack",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst ucitrack",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart ucitrack"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_ucitrack",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst ucitrack",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop ucitrack"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_uhttpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst uhttpd",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart uhttpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_uhttpd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst uhttpd",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop uhttpd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_umount",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst umount",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart umount"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_umount",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst umount",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop umount"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_urandom_seed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst urandom_seed",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart urandom_seed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_urandom_seed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst urandom_seed",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop urandom_seed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_urngd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst urngd",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart urngd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_urngd",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst urngd",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop urngd"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_restart_wpad",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta om tjänst wpad",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Restart wpad"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_stop_wpad",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Stoppa tjänst wpad",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Stop wpad"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_wps_push_phy1_ap1",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta WPS (phy1-ap1)",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen WPS Push (phy1-ap1)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_wps_push_phy1_ap0",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta WPS (phy1-ap0)",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen WPS Push (phy1-ap0)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_wps_push_phy1_ap2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta WPS (phy1-ap2)",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen WPS Push (phy1-ap2)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_wps_push_phy0_ap0",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Starta WPS (phy0-ap0)",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen WPS Push (phy0-ap0)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_tp_link_eap225_outdoor_v3_ap_poolen_flush_dns_cache",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Töm DNS-cache",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Flush DNS Cache"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_cpu_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Processoranvändning",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen CPU Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_public_ip",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Publik IP-adress",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Public IP"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_memory_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Minnesanvändning",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Memory Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_memory_used",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt minne",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Memory Used"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_swap_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Växlingsminnesanvändning",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Swap Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_load_1m",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Belastning senaste minuten",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Load (1m)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_load_5m",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Belastning senaste 5 minuterna",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Load (5m)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_load_15m",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Belastning senaste 15 minuterna",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Load (15m)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_connection_tracking",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Anslutningsspårning",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Connection Tracking"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_temperature",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Temperatur",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_filesystem_free",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Filesystem Free"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_kernel_version",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Kärnversion",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Kernel Version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_architecture",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Arkitektur",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Architecture"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_connected_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Anslutna klienter",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Connected Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_wireless_clients",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Trådlösa klienter",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Wireless Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_neighbor_devices",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Grannenheter",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Neighbor Devices"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_system_logs",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Systemloggar",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen System Logs"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_top_processes",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Processöversikt",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Top Processes"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_usb_devices",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "USB-enheter",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen USB Devices"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_temperature_hwmon_0",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Temperatur hwmon 0",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen Temperature Hwmon 0"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_rom_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /rom",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen /rom Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_rom_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /rom",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen /rom Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_rom_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /rom",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen /rom Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_rom_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /rom",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen /rom Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_tmp_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /tmp",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen /tmp Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_tmp_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /tmp",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen /tmp Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_tmp_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /tmp",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen /tmp Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_tmp_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /tmp",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen /tmp Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_overlay_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /overlay",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen /overlay Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_overlay_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /overlay",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen /overlay Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_overlay_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /overlay",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen /overlay Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_overlay_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /overlay",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen /overlay Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen / Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen / Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen / Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_storage_usage_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen / Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_dev_total_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme /dev",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen /dev Total Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_dev_used_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme /dev",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen /dev Used Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_dev_free_storage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme /dev",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen /dev Free Storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_dev_storage_usage",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning /dev",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen /dev Storage Usage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_dhcp_leases",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "DHCP-tilldelningar",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen DHCP Leases"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_guest_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd guest",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen guest RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_guest_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd guest",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen guest TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_guest_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet guest",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen guest Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_guest_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid guest",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen guest Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_guest_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet guest",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen guest RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_guest_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet guest",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen guest TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_iot_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd iot",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen iot RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_iot_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd iot",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen iot TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_iot_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet iot",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen iot Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_iot_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid iot",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen iot Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_iot_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet iot",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen iot RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_iot_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet iot",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen iot TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_lan_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd lan",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen lan RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_lan_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd lan",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen lan TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_lan_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet lan",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen lan Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_lan_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid lan",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen lan Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_lan_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet lan",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen lan RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_lan_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet lan",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen lan TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_loopback_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd loopback",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen loopback RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_loopback_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd loopback",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen loopback TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_loopback_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet loopback",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen loopback Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_loopback_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid loopback",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen loopback Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_loopback_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet loopback",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen loopback RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_loopback_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet loopback",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen loopback TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_br_lan_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd br-lan",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen br-lan RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_br_lan_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd br-lan",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen br-lan TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_br_lan_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet br-lan",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen br-lan Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_br_lan_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid br-lan",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen br-lan Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_br_lan_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet br-lan",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen br-lan RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_br_lan_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet br-lan",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen br-lan TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_eth0_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd eth0",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen eth0 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_eth0_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd eth0",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen eth0 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_eth0_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet eth0",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen eth0 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_eth0_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid eth0",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen eth0 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_eth0_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet eth0",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen eth0 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_eth0_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet eth0",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen eth0 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_phy0_ap0_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd phy0-ap0",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen phy0-ap0 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_phy0_ap0_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd phy0-ap0",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen phy0-ap0 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_phy0_ap0_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet phy0-ap0",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen phy0-ap0 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_phy0_ap0_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid phy0-ap0",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen phy0-ap0 Uptime"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_phy0_ap0_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet phy0-ap0",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen phy0-ap0 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_phy0_ap0_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet phy0-ap0",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen phy0-ap0 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_phy1_ap0_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd phy1-ap0",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen phy1-ap0 RX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_phy1_ap0_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd phy1-ap0",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen phy1-ap0 TX"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_phy1_ap0_link_speed",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Länkhastighet phy1-ap0",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen phy1-ap0 Link Speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_phy1_ap0_uptime",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Upptid phy1-ap0",
+        "aliases": [
+          null,
+          "TP-Link EAP225-Outdoor v3 - AP Poolen phy1-ap0 Uptime"
+        ]
+      }
+    }
+  ]
+}

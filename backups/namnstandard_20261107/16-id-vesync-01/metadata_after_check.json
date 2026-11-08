@@ -1,0 +1,13 @@
+[
+  {
+    "statistic_id": "sensor.verandan_levoit_luftfukare_300s_luftfuktighet",
+    "display_unit_of_measurement": "%",
+    "has_mean": true,
+    "mean_type": 1,
+    "has_sum": false,
+    "name": null,
+    "source": "recorder",
+    "statistics_unit_of_measurement": "%",
+    "unit_class": "unitless"
+  }
+]

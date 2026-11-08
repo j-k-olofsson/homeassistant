@@ -1,0 +1,911 @@
+{
+  "metadata": [
+    {
+      "statistic_id": "sensor.mimer_tillganglighet_ssh_svarstid",
+      "display_unit_of_measurement": "ms",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "ms",
+      "unit_class": "duration"
+    },
+    {
+      "statistic_id": "sensor.mimer_bckp_mimer_samlad_halsa_svarstid",
+      "display_unit_of_measurement": "ms",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "ms",
+      "unit_class": "duration"
+    },
+    {
+      "statistic_id": "sensor.mimer_tillganglighet_ssh_upptid_1_dag",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.mimer_bckp_mimer_samlad_halsa_upptid_1_dag",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.mimer_tillganglighet_ssh_upptid_30_dagar",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.mimer_bckp_mimer_samlad_halsa_upptid_30_dagar",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.mimer_tillganglighet_ssh_upptid_365_dagar",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.mimer_bckp_mimer_samlad_halsa_upptid_365_dagar",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.mimer_tillganglighet_ssh_genomsnittlig_svarstid_1_dag",
+      "display_unit_of_measurement": "ms",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "ms",
+      "unit_class": "duration"
+    },
+    {
+      "statistic_id": "sensor.mimer_bckp_mimer_samlad_halsa_genomsnittlig_svarstid_1_dag",
+      "display_unit_of_measurement": "ms",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "ms",
+      "unit_class": "duration"
+    },
+    {
+      "statistic_id": "sensor.mimer_tillganglighet_ssh_genomsnittlig_svarstid_30_dagar",
+      "display_unit_of_measurement": "ms",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "ms",
+      "unit_class": "duration"
+    },
+    {
+      "statistic_id": "sensor.mimer_bckp_mimer_samlad_halsa_genomsnittlig_svarstid_30_dagar",
+      "display_unit_of_measurement": "ms",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "ms",
+      "unit_class": "duration"
+    },
+    {
+      "statistic_id": "sensor.mimer_tillganglighet_ssh_genomsnittlig_svarstid_365_dagar",
+      "display_unit_of_measurement": "ms",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "ms",
+      "unit_class": "duration"
+    },
+    {
+      "statistic_id": "sensor.mimer_bckp_mimer_samlad_halsa_genomsnittlig_svarstid_365_dagar",
+      "display_unit_of_measurement": "ms",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "ms",
+      "unit_class": "duration"
+    },
+    {
+      "statistic_id": "sensor.mimer_bckp_backupjobb_verifierade_sakerhetskopior_upptid_1_dag",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.mimer_bckp_backupjobb_verifierade_sakerhetskopior_upptid_30_dagar",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.mimer_bckp_backupjobb_verifierade_sakerhetskopior_upptid_365_dagar",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.mimer_bckp_backupjobb_verifierade_sakerhetskopior_genomsnittlig_svarstid_1_dag",
+      "display_unit_of_measurement": "ms",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "ms",
+      "unit_class": "duration"
+    },
+    {
+      "statistic_id": "sensor.mimer_bckp_backupjobb_verifierade_sakerhetskopior_genomsnittlig_svarstid_30_dagar",
+      "display_unit_of_measurement": "ms",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "ms",
+      "unit_class": "duration"
+    },
+    {
+      "statistic_id": "sensor.mimer_bckp_backupjobb_verifierade_sakerhetskopior_genomsnittlig_svarstid_365_dagar",
+      "display_unit_of_measurement": "ms",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "ms",
+      "unit_class": "duration"
+    },
+    {
+      "statistic_id": "sensor.glances_https_genomsnittlig_svarstid_1_dag",
+      "display_unit_of_measurement": "ms",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "ms",
+      "unit_class": "duration"
+    },
+    {
+      "statistic_id": "sensor.glances_https_genomsnittlig_svarstid_30_dagar",
+      "display_unit_of_measurement": "ms",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "ms",
+      "unit_class": "duration"
+    },
+    {
+      "statistic_id": "sensor.glances_https_genomsnittlig_svarstid_365_dagar",
+      "display_unit_of_measurement": "ms",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "ms",
+      "unit_class": "duration"
+    }
+  ],
+  "series": {
+    "sensor.mimer_tillganglighet_ssh_upptid_1_dag": [
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794117600000,
+        "end": 1794121200000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      }
+    ],
+    "sensor.mimer_bckp_mimer_samlad_halsa_svarstid": [
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 1.0,
+        "mean": 1.2166734941666666,
+        "max": 2.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 1.0,
+        "mean": 1.149993398888889,
+        "max": 2.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 0.0,
+        "mean": 1.0500053950000001,
+        "max": 2.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 0.0,
+        "mean": 1.1333272297222223,
+        "max": 2.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 0.0,
+        "mean": 1.0833247291666666,
+        "max": 2.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 1.0,
+        "mean": 1.1854303188888888,
+        "max": 2.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 1.0,
+        "mean": 1.2333348525,
+        "max": 2.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 1.0,
+        "mean": 1.2499967533333332,
+        "max": 2.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 0.0,
+        "mean": 1.2500067880555557,
+        "max": 3.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 1.0,
+        "mean": 1.1333354480555555,
+        "max": 3.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 0.0,
+        "mean": 1.2000074797222222,
+        "max": 2.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 1.0,
+        "mean": 1.2000063819444444,
+        "max": 2.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 0.0,
+        "mean": 1.2464750022222224,
+        "max": 2.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 1.0,
+        "mean": 1.286855979722222,
+        "max": 2.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 1.0,
+        "mean": 1.0833390097222224,
+        "max": 2.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 1.0,
+        "mean": 1.0333330802777778,
+        "max": 2.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 0.0,
+        "mean": 1.066673012777778,
+        "max": 2.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 1.0,
+        "mean": 1.1128593052777778,
+        "max": 2.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 1.0,
+        "mean": 1.1499838969444445,
+        "max": 2.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 0.0,
+        "mean": 1.1038087797222222,
+        "max": 2.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 1.0,
+        "mean": 1.1875897763888887,
+        "max": 2.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 1.0,
+        "mean": 1.2457556925000002,
+        "max": 2.0
+      },
+      {
+        "start": 1794117600000,
+        "end": 1794121200000,
+        "min": 0.0,
+        "mean": 1.2509177794444446,
+        "max": 2.0
+      }
+    ],
+    "sensor.mimer_tillganglighet_ssh_svarstid": [
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 0.0,
+        "mean": 0.0,
+        "max": 0.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 0.0,
+        "mean": 0.01666492138888889,
+        "max": 1.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 0.0,
+        "mean": 0.0,
+        "max": 0.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 0.0,
+        "mean": 0.01666442361111111,
+        "max": 1.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 0.0,
+        "mean": 0.0,
+        "max": 0.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 0.0,
+        "mean": 0.0,
+        "max": 0.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 0.0,
+        "mean": 0.016666743888888887,
+        "max": 1.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 0.0,
+        "mean": 0.0,
+        "max": 0.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 0.0,
+        "mean": 0.016666188055555555,
+        "max": 1.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 0.0,
+        "mean": 0.03333716361111111,
+        "max": 1.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 0.0,
+        "mean": 0.0,
+        "max": 0.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 0.0,
+        "mean": 0.0,
+        "max": 0.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 0.0,
+        "mean": 0.0,
+        "max": 0.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 0.0,
+        "mean": 0.0,
+        "max": 0.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 0.0,
+        "mean": 0.016669097777777777,
+        "max": 1.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 0.0,
+        "mean": 0.0,
+        "max": 0.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 0.0,
+        "mean": 0.0,
+        "max": 0.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 0.0,
+        "mean": 0.033331813333333335,
+        "max": 2.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 0.0,
+        "mean": 0.0,
+        "max": 0.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 0.0,
+        "mean": 0.0999936025,
+        "max": 3.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 0.0,
+        "mean": 0.016665545555555557,
+        "max": 1.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 0.0,
+        "mean": 0.016669622777777778,
+        "max": 1.0
+      },
+      {
+        "start": 1794117600000,
+        "end": 1794121200000,
+        "min": 0.0,
+        "mean": 0.033336743333333335,
+        "max": 1.0
+      }
+    ],
+    "sensor.mimer_bckp_mimer_samlad_halsa_upptid_1_dag": [
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      },
+      {
+        "start": 1794117600000,
+        "end": 1794121200000,
+        "min": 100.0,
+        "mean": 100.0,
+        "max": 100.0
+      }
+    ]
+  }
+}

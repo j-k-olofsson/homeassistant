@@ -1,0 +1,24 @@
+{
+  "config_entry": {
+    "created_at": 1731246707.675968,
+    "entry_id": "01JCB5GMYV2TT2EYFXTN65B9Z5",
+    "domain": "generic_thermostat",
+    "modified_at": 1775065566.219351,
+    "title": "Golvvärme Termostat (bion)",
+    "source": "user",
+    "state": "loaded",
+    "supports_options": true,
+    "supports_remove_device": false,
+    "supports_unload": true,
+    "supports_reconfigure": false,
+    "supported_subentry_types": {},
+    "pref_disable_new_entities": false,
+    "pref_disable_polling": false,
+    "disabled_by": null,
+    "reason": null,
+    "error_reason_translation_domain": null,
+    "error_reason_translation_key": null,
+    "error_reason_translation_placeholders": null,
+    "num_subentries": 0
+  }
+}

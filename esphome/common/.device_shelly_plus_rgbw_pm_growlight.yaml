@@ -122,10 +122,14 @@ sensor:
     attenuation: 12db
     id: growlight_current
     name: ${node_name} Current
+    device_class: current
     accuracy_decimals: 2
     filters:
       - offset: -0.794
       - multiply: 16.13
+      # Clamp calibration noise below zero; leave NaN invalid for the power sensor.
+      - lambda: |-
+          return x < 0.0f ? 0.0f : x;
     unit_of_measurement: A
   - platform: template
     name: ${node_name} Power

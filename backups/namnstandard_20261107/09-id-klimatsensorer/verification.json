@@ -1,0 +1,35 @@
+{
+  "status": "verified",
+  "stage": "09-id-klimatsensorer",
+  "renamed_entities": 50,
+  "same_unique_ids_and_settings": true,
+  "statistics_series_verified": 897,
+  "history_records_verified": 1654,
+  "statistics_metadata_moved": 39,
+  "source_files_updated": [
+    "automations.yaml"
+  ],
+  "dashboards_updated": [
+    "lovelace-friggan",
+    "lovelace"
+  ],
+  "frontend_favorites_updated": true,
+  "helper_config_entries_auto_updated": [
+    "01JCB5GMYV2TT2EYFXTN65B9Z5",
+    "01JH6FAN92A4F016KC6376MT5T",
+    "01JHJEPVEW4JG1G2NQG1RGH69D",
+    "01JHJER99149TSQTVQA3MCNQK8",
+    "01JHRFTY6RDGMP3XTAAYCEAR2X",
+    "01JQ8CT2TZBV3TC6KQPM1NVYZ8",
+    "01KAPN7N4RFX0HHVC6DCSKXGVN"
+  ],
+  "automation_consumers_reloaded": [
+    "automation.styrning_varmare_till_honsens_vatten",
+    "automation.styrning_honsluckan"
+  ],
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  }
+}

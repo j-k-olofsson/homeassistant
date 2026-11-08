@@ -1,0 +1,68 @@
+[
+  {
+    "case": "charger_off_calendar_off",
+    "calls": [
+      "on",
+      "heat",
+      "off"
+    ],
+    "final_relay": "off"
+  },
+  {
+    "case": "manual_charger_on",
+    "calls": [
+      "on",
+      "heat"
+    ],
+    "final_relay": "on"
+  },
+  {
+    "case": "calendar_still_charging",
+    "calls": [
+      "on",
+      "heat"
+    ],
+    "final_relay": "on"
+  },
+  {
+    "case": "calendar_ends_during_warming",
+    "calls": [
+      "on",
+      "heat",
+      "off"
+    ],
+    "final_relay": "off"
+  },
+  {
+    "case": "cloud_error_still_restores",
+    "calls": [
+      "on",
+      "heat",
+      "off"
+    ],
+    "final_relay": "off"
+  },
+  {
+    "case": "no_relay_ack_no_heating",
+    "calls": [
+      "on",
+      "off"
+    ],
+    "final_relay": "off"
+  },
+  {
+    "case": "already_heating",
+    "calls": [],
+    "final_relay": "off"
+  },
+  {
+    "case": "charger_unavailable",
+    "calls": [],
+    "final_relay": "unavailable"
+  },
+  {
+    "case": "calendar_guard",
+    "active_blocks_stop": true,
+    "idle_allows_stop": true
+  }
+]

@@ -1,0 +1,41 @@
+-== Watchman Report ==- 
+
+-== Congratulations, all 46 actions from your config are available!
+
+-== Missing 19 entity(ies) from 307 found in your config:
++--------------------------------+----------+---------------------------------------------------------------+
+| Entity ID                      | State    | Location                                                      |
++--------------------------------+----------+---------------------------------------------------------------+
+| template.nordpool_additional_c | missing  | 🧩 Template:                                                  |
+| ost_current_hour_2             |          | "template.nordpool_additional_cost_current_hour_2"            |
+| sensor.template_nordpool_base_ | missing  | 🧩 Template:                                                  |
+| cost_current_hour_2            |          | "sensor.template_nordpool_base_cost_current_hour_2"           |
+| weather.vaderprognos_hem       | missing  | 🧩 Template: "UV-index denna timme"                           |
+| sensor.unavailable_count       | missing  | 🧩 Template: "HA - Antal otillgängliga enheter"               |
+| group.kritiska_entiteter_styrn | missing  | 🧩 Template: "HA - Antal otillgängliga kritiska enheter"      |
+| ing_larm                       |          |                                                               |
+| sensor.temp_hum_utomhus_temper | missing  | 📄 .storage/lovelace.lovelace:1691                            |
+| ature                          |          |                                                               |
+| sensor.tem_hum_honshuset_tempe | missing  | 📄 .storage/lovelace.lovelace:1720                            |
+| rature                         |          |                                                               |
+| sensor.tem_hum_honshuset_humid | missing  | 📄 .storage/lovelace.lovelace:1724                            |
+| ity                            |          |                                                               |
+| plant.state                    | missing  | 📄 automations.yaml:87                                        |
+| plant.name                     | missing  | 📄 automations.yaml:87                                        |
+| light.grupp_lampor_som_tands_v | unavail  | 📄 automations.yaml:229,252,280                               |
+| id_skymning                    |          |                                                               |
+| sensor.diegos_vackarklocka_ala | unavail  | 📄 automations.yaml:671                                       |
+| rms                            |          |                                                               |
+| sensor.mannis_vackarklocka_ala | unavail  | 📄 automations.yaml:676                                       |
+| rms                            |          |                                                               |
+| media_player.playstation_4     | unknown  | 📄 automations.yaml:1108,1206                                 |
+| media_player.jbl_link_kontoret | unavail  | 📄 automations.yaml:1271                                      |
+| tts.cloud                      | missing  | 📄 scripts.yaml:126                                           |
+| nordpool.today                 | missing  | 📄 scripts.yaml:264,332                                       |
+| nordpool.tomorrow              | missing  | 📄 scripts.yaml:264,332                                       |
+| nordpool.unknown               | missing  | 📄 scripts.yaml:332                                           |
++--------------------------------+----------+---------------------------------------------------------------+
+
+-== Report created on 27 Feb 2026 15:21:55
+-== Parsed 154 files in 0.02s., ignored 0 files 
+-== Generated in: 0.02s. Validated in: 0.00s.

@@ -1,0 +1,41 @@
+# HAGHS: sista 29 mätposterna inaktiverade
+
+Utfört 2026-10-21 13:57 CEST.
+
+20 Uptime Kuma-sensorer och nio Portainer-sensorer inaktiverades med disabled_by=user via Home Assistants entitetsregister-API. Inga registerposter raderades. Före-/efterkontroll bekräftar att exakt dessa 29 ändrat inaktiveringsstatus. Statusövervakningen levererar fortfarande värden: Portainer up, backupmonitorn Tor → Fulla up, Fulla up och Portainers endpoint/container-statusar on.
+
+Efter HAGHS-uppdatering: **29 → 0 zombies**, **98 → 100 % hälsopoäng**. Detta är HAGHS bedömning efter avsiktliga undantag/inaktiveringar, inte ett test av alla fysiska funktioner. Luftfuktarens haghs_ignore-etikett och tidigare avvecklade poster behålls.
+
+Backup och verifiering: `/homeassistant/backups/haghs_disable29_20261021T115717Z`.
+
+## Inaktiverade entiteter
+
+- `sensor.frigg_atervinningsbar_containerdiskanvandning`
+- `sensor.fulla_agent_atervinningsbar_containerdiskanvandning`
+- `sensor.fulla_agent_total_storlek_pa_containerdiskanvandning`
+- `sensor.fulla_agent_atervinningsbar_avbildningsdiskanvandning`
+- `sensor.fulla_agent_total_storlek_pa_avbildningsdiskanvandning`
+- `sensor.fulla_agent_total_storlek_pa_volymdiskanvandning`
+- `sensor.ha_esphome_config_share_volymstorlek`
+- `sensor.6733e369c5ba97b5d5633e88d4a71b8db760f05943cb6d19d41fce5eeb813487_volymstorlek_2`
+- `sensor.ef4abfd89188cf4c457ab1d11945269ec83484ac5766f0d59171fc4e647ace49_volymstorlek_2`
+- `sensor.portainer_certifikatets_utgangsdatum`
+- `sensor.uptime_via_caddy_certifikatets_utgangsdatum`
+- `sensor.home_assistant_ui_certifikatets_utgangsdatum`
+- `sensor.supervisor_health_certifikatets_utgangsdatum`
+- `sensor.core_api_wake_up_certifikatets_utgangsdatum`
+- `sensor.glances_ui_certifikatets_utgangsdatum`
+- `sensor.ollama_api_certifikatets_utgangsdatum`
+- `sensor.ollama_container_svarstid`
+- `sensor.caddy_container_svarstid`
+- `sensor.ha_test_container_svarstid`
+- `sensor.esphome_test_container_svarstid`
+- `sensor.glances_container_svarstid`
+- `sensor.portainer_agent_container_svarstid`
+- `sensor.docker_socket_proxy_container_svarstid`
+- `sensor.glances_container_svarstid_2`
+- `sensor.open_webui_container_svarstid`
+- `sensor.openwrt_backup_container_svarstid`
+- `sensor.portainer_container_svarstid`
+- `sensor.uptime_kuma_container_svarstid`
+- `sensor.frigg_fulla_backup_och_diskhalsa_svarstid`

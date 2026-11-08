@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "timer",
+  "data": {
+    "items": [
+      {
+        "id": "dashboard_prusa_klar",
+        "name": "Dashboard prusa klar",
+        "duration": "1:00:00",
+        "restore": true
+      },
+      {
+        "id": "dashboard_tvatt_klar",
+        "name": "Dashboard tvatt klar",
+        "duration": "1:00:00",
+        "restore": true
+      },
+      {
+        "id": "dashboard_disk_klar",
+        "name": "Dashboard disk klar",
+        "duration": "1:00:00",
+        "restore": true
+      }
+    ]
+  }
+}

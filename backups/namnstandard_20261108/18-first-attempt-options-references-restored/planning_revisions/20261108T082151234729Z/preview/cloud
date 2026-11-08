@@ -1,0 +1,483 @@
+{
+  "version": 1,
+  "minor_version": 4,
+  "key": "cloud",
+  "data": {
+    "alexa_default_expose": [
+      "climate",
+      "cover",
+      "fan",
+      "humidifier",
+      "light",
+      "lock",
+      "scene",
+      "script",
+      "sensor",
+      "switch",
+      "vacuum",
+      "water_heater"
+    ],
+    "alexa_entity_configs": {},
+    "cloud_user": "7cd0e491364940c0a6c79888f8f8a4c8",
+    "cloudhooks": {
+      "cc6a0b18f06a14210ee8bb4aecb8e572613415785907d5fa121abf2ee81ec188": {
+        "webhook_id": "cc6a0b18f06a14210ee8bb4aecb8e572613415785907d5fa121abf2ee81ec188",
+        "cloudhook_id": "062a664f40124679ac5259f7dd6b7997",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABjfhbponk38p6eTqBVCkaKpUYkcERopWpsjQ5gPaNutQjUFpI6TwWlTnV7tndf-Iw4FULGTeLNE11aEXfKLGPE75ZaTnL4Xfof6_Co_HyLZgFv8PIsGBKSAnNHRLVUibkSnAnzcJk76kFY6xKYroXl9MD_xSWsUMolgKLlXC-hGHM9gaU=",
+        "managed": false
+      },
+      "3e3857b0d49a07e7d03b92aa2252f366464c6b1b159570ca6f49699e8ed61af7": {
+        "webhook_id": "3e3857b0d49a07e7d03b92aa2252f366464c6b1b159570ca6f49699e8ed61af7",
+        "cloudhook_id": "adf8526afb7547f3aad7bb2db2fa8b4c",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABjfhbvwNeTooieDxZRSpGcDCLDH6p6jpykureRA4SN6XAq4dipHIKkO-X6CYBh0VSwjvcm_jEPvgJ-Li7X6kspOBqIk09WbSMJQDKFJneHXQVNwKx_kR3PeRMEZ_uZriuS1eYlyclo4qwwf-lH2Mj_EN-whF2HqQDV5U8Em7fd1xkvpoc=",
+        "managed": false
+      },
+      "119e0a501c2208be2e34801b137b29fc17d66c7d947fff2f8c29e8f237d4f0bf": {
+        "webhook_id": "119e0a501c2208be2e34801b137b29fc17d66c7d947fff2f8c29e8f237d4f0bf",
+        "cloudhook_id": "04d012940b1f4f61a7a9817cd88a69a8",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABkosBIZYlyhBvsH137b07jT18uBIVhx8Bb66CtYMVG6ClyDaemFZXXloFzHkbFUPakKZvhBBRHOzYLNQ0sEkyQmBN0jp9_gdx68DJIALDnLHji2sZfXY0NvmnYZl6O9MzJ3fP6_zYyFxr0JTpPH7OXOF6YwcYk6oKKuE7JNP7TBnGfduo=",
+        "managed": true
+      },
+      "35e6cef2edd02a1ffa3ee2afc5cb670fa959b8197cbed64fbd0e694e169de495": {
+        "webhook_id": "35e6cef2edd02a1ffa3ee2afc5cb670fa959b8197cbed64fbd0e694e169de495",
+        "cloudhook_id": "14e3fe85e81e406894fb46bd45fe9564",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABlm_c0mT3BT2EWiJO0zmnQThvCv4yA_MEF8qyKowtW_kshZwpHaMcW-TRAs_B0Kc3w_doqCXuwKEJgrcP4fmUBn7eu8Ww6cCy2x9dhbnI6saVBWXhNCSS-jPnCReBcsCHuZA4sUZgV9yMr9oijRBRYwn38frblNP7Pqx4xu0XOs27JcSM=",
+        "managed": true
+      },
+      "fea902c4870fd1e13f3bf7dc2bd6cd47c785d921669443585546accb07b600f0": {
+        "webhook_id": "fea902c4870fd1e13f3bf7dc2bd6cd47c785d921669443585546accb07b600f0",
+        "cloudhook_id": "602d9ee0d7304e4f8982669897c948fb",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABlqDLVuaMC_OUjlXZakc8aOOI5ow2emZQHnKIVR9PwiSX-adl8zeV3CsRmjzOKRQptIpb5TtdQV2lCPQQtXZ8MjQ15CUpIs_uiZGKrZnj01PeVsBtRUFQne8hmpcSzMm694vZx-lO-FLs5dP7LqpBGkPoTFmy3QesvzLV0JXFOMPsRi5o=",
+        "managed": true
+      },
+      "b93335abf1e6f1df618ccbeb511369801767f08642056afe05395dade259f58c": {
+        "webhook_id": "b93335abf1e6f1df618ccbeb511369801767f08642056afe05395dade259f58c",
+        "cloudhook_id": "bd6eb2446ba841ae8b591c4f22d89f8d",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABmRb1VBrHwi1s7j2Jd4t15wSEVr4Lfe9poFpCoSF_8qJCwqlwQ2Wj-A3086AovDXiHRNSA9fdUuQzLmBmDMTI78i6YFGVzhO8M6x7D7YIyuDFWWOT5FpH9nAg7AROw98QYASK4E_v-q3rpfKB0rp-EvI-F4PgqKzMaDA4s5zPsBYGjXck=",
+        "managed": true
+      },
+      "e9e3fc0a20968e747054307edb40c9f984220a2bf9e615b13c9e1166d8f2ba6d": {
+        "webhook_id": "e9e3fc0a20968e747054307edb40c9f984220a2bf9e615b13c9e1166d8f2ba6d",
+        "cloudhook_id": "04c84bc66d2744dfa7f419a6695f93e4",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABmUhL5S5aEMZ117BvDyVUoxNrpXI8Rzj8oPQgfBjKNr_yRjSXYwKEfmTfTDNmvpK4mMliRwfO3rkZw2F5fG7s_YDSUxgUaWicLo9aUfM0YNESCteLjYE_7FnrEYCsQ0xQpLi71nzLt1vSnT4vqNTrYykKSzvZkk35B-e8sXlDLWiMKA5Y=",
+        "managed": true
+      },
+      "943592611a3b01d714b3f91a8d4a389966036c15ddaf716369c16ee7f84f7a18": {
+        "webhook_id": "943592611a3b01d714b3f91a8d4a389966036c15ddaf716369c16ee7f84f7a18",
+        "cloudhook_id": "3560dcfb98a64652a19e6bd1a5937653",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABmiuRAyWdwm2TZAF9P4MUjRdInNKxmiyU3znpt6sB5nwLcPK7h8gvMOhqH_KNW-10Ivl-zxIcbpsxyA8vBQYUlOQKYJtG_rRZUgVWSgVNiUw1QyfkqMme3DIwKVxtumsA0bRt0yXLRK5IccKBeatNE7L7kjMgG9gAbt_PJau4KPagZYZw=",
+        "managed": true
+      },
+      "049400ec373213d2118ea7a338a20fec81c7684068e3d014d80d8e186c679867": {
+        "webhook_id": "049400ec373213d2118ea7a338a20fec81c7684068e3d014d80d8e186c679867",
+        "cloudhook_id": "b41411450b0748f5bf1d7f105358af3b",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABnUJtzFtLhorR_9VlY7DjxKUcBOtUvM_Q4s70Zw5Wd8aeumwPQyM9y-owobyEfkN3neHaFZ6pMPrhw8yN9PRzptWF9Sybwdg6qa2BqdZQsK1SbXrcavfbmjvS4wfkMvt3qygJMh_gYsx4JMjzerT7yjRGRxpBNmF7d0ZktdVfV0mpzjqI=",
+        "managed": true
+      },
+      "f951d41fb73b33fadac0abbb38d02cf2918791a27ea2a8b296dde1d6b5b448ac": {
+        "webhook_id": "f951d41fb73b33fadac0abbb38d02cf2918791a27ea2a8b296dde1d6b5b448ac",
+        "cloudhook_id": "dd86baecc3c1498a8828624621809edd",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABnfRW0vl_SAWjDwzbih4vXlOiaGtX-e-bRh3rXRc0aVdeMsCa3irFoNyLsUTUKXCDr08lLEavguvwTj8064lRQq6sO5hqRPTXKDY1BYHLL1YANZAql2zwtCGKJI4DVYgjR1PXuR77V_HT5Us1v4RwcdcSmRHgqlKk_ZDXw-_dA21kqy0A=",
+        "managed": true
+      },
+      "c15b1ca01485fa5a00072a754a6edd91d386543b1fa923c1bc2c32953ca124ee": {
+        "webhook_id": "c15b1ca01485fa5a00072a754a6edd91d386543b1fa923c1bc2c32953ca124ee",
+        "cloudhook_id": "1198a59e33e84a2cbf0f6ef1c0587a10",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABnhq3DMpLNpEJLRrbUXAgVlRZTcVUayourwZWS6BgtOrz2O1YRXxUKL6E5oUMrK_GFqNBc4opwNC-U0QCzAPB9BsXibOLXk1iXofM20yeoAziW1HvmHZ9LPfZ6nnt3kpSShghdsP4QY_JA4K3AOR5-wFPTzUdorywkdksZLD0b5KteODk=",
+        "managed": true
+      },
+      "d5e7c51a5731a51207d30f864a95a069d0cf53586b8ba421228c40256ea91d12": {
+        "webhook_id": "d5e7c51a5731a51207d30f864a95a069d0cf53586b8ba421228c40256ea91d12",
+        "cloudhook_id": "4bdc6609f9ad4e7aa902a464ea7c4401",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABnruFhl272Yj8NUNt90gPu07UznaUlitF1ncQilGZFm4MfFvskU0WPopzU3GfkXVYTFAq4lvB0N2q5mRpfwSIcw2IF0-S6kl8fuJb-zeNr9XGDJr3PQDSRoLeCN6aq2ILq3XanmwrpgbmGhv6OyJHeOclu_my9VspIz5w-Gs5uye7cjWY=",
+        "managed": true
+      },
+      "b4523df56b84e5ab183c0078f2c4c88cd244f104411f4b650392326c0deca445": {
+        "webhook_id": "b4523df56b84e5ab183c0078f2c4c88cd244f104411f4b650392326c0deca445",
+        "cloudhook_id": "bcb9d63ac0034286bb5da50b6ce3c6c9",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABnucoS1PFePi3YTZ1yzmHEN0tEP9nmph4fSzHhMbNXeeu6rj36p8i8Ro7BU8VFgntC0rCnAl2AUaQ-we040oO5zh1w3cAritKJp1jJFaNYoS5Iw2lUQjYcTcvxlYGJHZpxdNs0Kvi3NJZOWkTE3yOH6tHMd-2um-5Nn4OOGP-hOu8agfA=",
+        "managed": true
+      },
+      "640fe7d678ac8d187b587988f255919d53a59eb129bb80afe8b9d7eb3b2081e2": {
+        "webhook_id": "640fe7d678ac8d187b587988f255919d53a59eb129bb80afe8b9d7eb3b2081e2",
+        "cloudhook_id": "796ed5e605714f4594cb09c2ad82b028",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABnugAd-t4fyIbrELpEsSip6RPtNSdL4KRNyh8i0gm5z0AUWg-5Rw_WxCyfNhailqkNJVxS7scQn2Dw39JbpnHLBRIbkEARH8psjbMICoRsc3C0pkmbOLvgvCnLwnSXJfNZolkmM7ZTn1kCMW1BlGOcEkErDDsZWwQpOmeXtNE_sv3kHlk=",
+        "managed": true
+      },
+      "4eb9b2bdffa609a3c7c2c48372589123d86498027c98d1fb0826a98386760a0e": {
+        "webhook_id": "4eb9b2bdffa609a3c7c2c48372589123d86498027c98d1fb0826a98386760a0e",
+        "cloudhook_id": "929c9e08072d46eea441ed4a0ac49561",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABoANTmt42eEQew_aOHG1C_GxGwVdhu90I7JY3n5uBbU3lgOYFIvioDPrC0eGuH0d4aN1NvO5rgQl9NALWucAiZcEUh6mygMg6io91g_RgGYqo5EzSCHwwjDK_NTL1vEe_vg1oNu7bTGfnut_FQkE9OsawY9wpx1Ml1vGxZNmJ7qD2Olb8=",
+        "managed": true
+      },
+      "148b2dc36ef3cd2aa6f38a551af33984db25f7635be6c84f53c6ac823ec7abb8": {
+        "webhook_id": "148b2dc36ef3cd2aa6f38a551af33984db25f7635be6c84f53c6ac823ec7abb8",
+        "cloudhook_id": "d482682fc8be4928aefca60580fdb750",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABoSSe8vGFad4kWY51PYKJ3z30AgOO_rlL8aMFn2QkpQtq0ANb0QNmZdgtDDlq_o-J05Q3Kieex9hC1UMGF9UIxN1vINXpxEDFVV01Lo-RX9df-NcopdpTFXvJKYDaRtxUJy_Kyka0i1Gk70rmVA_71zw-BC2dpqNlLbnF8egoF4G2bYM8=",
+        "managed": true
+      },
+      "334d555122e101d97c26765e133bd17d49298341e3cd7585e620b27660e6e16a": {
+        "webhook_id": "334d555122e101d97c26765e133bd17d49298341e3cd7585e620b27660e6e16a",
+        "cloudhook_id": "31f747aa9fec444b8266931b881b6e13",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABolx__KgfYJldPDppuK7hwL5r-3gyDjNNrLkXIw1iSFltQov2Wx9eVhthDj6pCBXjVUWrq4m9Sw_tzAIEJTt7fnDSedkkz7V7r4s0W6CyavhXbfnuqD5Oa7Ffj4nJ47SOBYNhswP0jsVF_gs9KUJPTOQlvc0eAA0rGZb4fybgiyGB4bc0=",
+        "managed": true
+      },
+      "2a33983e86e00cb92ade7e817ed330b109a879365f4459f1224a15dea8cbec31": {
+        "webhook_id": "2a33983e86e00cb92ade7e817ed330b109a879365f4459f1224a15dea8cbec31",
+        "cloudhook_id": "f5b3df9ea2d648a3be947456ec1eddd4",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABpHyOXJibyeuLjnrthw7qWTapgDSNKqDYCRF2C7QP3lLMzANaRhXoXBPrDbYDIml2VArT-icmBshgtUdK-bq0ZH4thCyH0oCEYsWQRowyDQW81CZZG6lP3VMPtkVJvNNJp0uLdq718H_y0uQguF_J7cQzfxymKcmzQeyxC4_UQIkzvCQo=",
+        "managed": true
+      },
+      "3e4e73eb12db9bf9961c611e43cfafcadfb0b4ffbe6b34480d2c3cd028ed45c3": {
+        "webhook_id": "3e4e73eb12db9bf9961c611e43cfafcadfb0b4ffbe6b34480d2c3cd028ed45c3",
+        "cloudhook_id": "8912565a76b142baadc953f15cd7e2e5",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABqKv5E98e1RgGpkNTYttfsgdyxJNUMdVOxv9kugdIYV3-zk9WlaTrZpAP9aN7y8cFt3Xnm0T-8kZz4RxISCPUG-vQt60eLaICecMLnpbVmB5ABz51RjIgaWJRpCr0bH1UGBVo4IWQb6lttDAAIrpbFMsspRlKidbauBEXJKfDv1lxWgnE=",
+        "managed": true
+      },
+      "0b5c8a648927afeb65da1c0ad20fcedafc0cdb9ae50f21195f4675b37712cda7": {
+        "webhook_id": "0b5c8a648927afeb65da1c0ad20fcedafc0cdb9ae50f21195f4675b37712cda7",
+        "cloudhook_id": "a01d463b1d30411b9e3fb8384c4da4ef",
+        "cloudhook_url": "https://hooks.nabu.casa/gAAAAABqSVH3HaS4DEjs8BaWQy_s2QP1Bj0a_q5tAYMdt7saQKob3P8Y3_8HqLqy4i_I81XTxw168mupPq0EzdO5l5kr8o22gsvIPCnGwHNuYLv_trHdfozgWidRxwGJ6wcWEGOZcBakU-rcAv82tZ8pFZidHZSkLtVIsoGAJwEs_WzClvpJw-8=",
+        "managed": true
+      }
+    },
+    "alexa_enabled": false,
+    "google_enabled": true,
+    "remote_enabled": true,
+    "google_default_expose": [
+      "cover",
+      "fan",
+      "humidifier",
+      "lock",
+      "scene",
+      "script",
+      "vacuum",
+      "water_heater"
+    ],
+    "google_entity_configs": {
+      "sensor.atc_ateljen_hum": {
+        "should_expose": false
+      },
+      "sensor.atc_ateljen_temp": {
+        "should_expose": false
+      },
+      "sensor.atc_bedrom_hum": {
+        "should_expose": false
+      },
+      "sensor.atc_bedrom_temp": {
+        "should_expose": false
+      },
+      "sensor.atc_bilen_hum": {
+        "should_expose": false
+      },
+      "sensor.atc_bilen_temp": {
+        "should_expose": false
+      },
+      "sensor.atc_outside_hum": {
+        "should_expose": false
+      },
+      "sensor.atc_outside_temp": {
+        "should_expose": false
+      },
+      "sensor.atc_verandan_hum": {
+        "should_expose": false
+      },
+      "sensor.atc_verandan_temp": {
+        "should_expose": false
+      },
+      "sensor.miflora_verandan_temp": {
+        "should_expose": false
+      },
+      "switch.esphome01_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome02_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome03_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome04_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome06_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome07_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome08_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome09_relay_state": {
+        "should_expose": false
+      },
+      "sensor.esphome20_humidity": {
+        "should_expose": false
+      },
+      "switch.esphome20_relay_state": {
+        "should_expose": false
+      },
+      "climate.esphome20_thermostat": {
+        "should_expose": false
+      },
+      "sensor.esphome21_humidity": {
+        "should_expose": false
+      },
+      "switch.esphome21_relay_state": {
+        "should_expose": false
+      },
+      "climate.esphome21_thermostat": {
+        "should_expose": false
+      },
+      "switch.esphome22_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome23_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome24_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome25_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome26_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome27_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome28_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome29_relay_state": {
+        "should_expose": false
+      },
+      "sensor.esphome29_temperature": {
+        "should_expose": false
+      },
+      "switch.esphome40_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome41_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome42_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome43_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome44_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome45_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome46_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome47_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome48_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome49_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome50_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome51_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome52_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome53_relay_state": {
+        "should_expose": false
+      },
+      "light.esphome53_led_light": {
+        "should_expose": false
+      },
+      "light.esphome54_light": {
+        "should_expose": null
+      },
+      "switch.esphome54_relay_state": {
+        "should_expose": false
+      },
+      "sensor.esphome71_humidity": {
+        "should_expose": false
+      },
+      "sensor.esphome71_temperature": {
+        "should_expose": false
+      },
+      "sensor.esphome71b_temperature": {
+        "should_expose": false
+      },
+      "switch.esphome80_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome81_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome82_relay_state": {
+        "should_expose": false
+      },
+      "switch.esphome83_relay_state": {
+        "should_expose": false
+      },
+      "climate.esphome83_thermostat": {
+        "should_expose": false
+      },
+      "switch.esphome91_flashlight": {
+        "should_expose": false
+      },
+      "light.esphome91_onboard_led": {
+        "should_expose": null
+      },
+      "sensor.esphome99_humidity": {
+        "should_expose": false
+      },
+      "sensor.esphome99_temperature": {
+        "should_expose": false
+      },
+      "light.julgranen_led_light": {
+        "should_expose": true
+      },
+      "light.taklampor_light": {
+        "should_expose": true
+      },
+      "light.fonsterlampor_sovrum": {
+        "should_expose": true
+      },
+      "switch.blomlampa_verandan_relay_state": {
+        "should_expose": true
+      },
+      "switch.bordslampa_kontoret_relay_state": {
+        "should_expose": true
+      },
+      "switch.bilvarmare_relay_state": {
+        "should_expose": true
+      },
+      "sensor.temp_hum_utomhus_temperature": {
+        "should_expose": true
+      },
+      "climate.varme_kontoret_thermostat": {
+        "should_expose": true
+      },
+      "switch.energimatare_relay_state": {
+        "should_expose": true
+      },
+      "light.taklampor_sovrummet_light": {
+        "should_expose": true
+      },
+      "sensor.varme_friggan_humidity": {
+        "should_expose": false
+      },
+      "climate.varme_friggan_thermostat": {
+        "should_expose": true
+      },
+      "cover.honslucka_cover": {
+        "disable_2fa": true
+      },
+      "light.esphome07_light": {
+        "should_expose": true
+      },
+      "light.blomlampa_verandan_light": {
+        "should_expose": true
+      },
+      "light.poolbelysning_light": {
+        "should_expose": true
+      },
+      "sensor.poolbelysning_temperature": {
+        "should_expose": true
+      },
+      "switch.poolpump_relay_state": {
+        "should_expose": true
+      },
+      "climate.termostat_kontoret_thermostat": {
+        "should_expose": true
+      },
+      "light.fonsterlampa_light": {
+        "should_expose": true
+      },
+      "switch.ventilflakt_relay_state": {
+        "should_expose": true
+      },
+      "camera.192_168_0_6": {
+        "should_expose": false
+      },
+      "input_button.google_assistant_starta_hissmusik": {
+        "should_expose": true
+      },
+      "light.alla_blomlampor": {
+        "should_expose": true
+      },
+      "light.blomlampa_verandan_esphome07_light": {
+        "should_expose": true
+      },
+      "sensor.poolbelysning_temp_esphome29_temperature": {
+        "should_expose": true
+      },
+      "light.taklampor_sovrum_esphome54_light": {
+        "should_expose": true
+      },
+      "climate.kontoret_termostat": {
+        "should_expose": true
+      },
+      "switch.ventilflakt_kallaren_esphome08_relay_state": {
+        "should_expose": true
+      },
+      "light.taklampor_kokson_kok_esphome55_light": {
+        "should_expose": true
+      },
+      "light.bordslampor_kok_esphome55_light": {
+        "should_expose": true
+      },
+      "script.meddelande_via_hogtalare": {
+        "should_expose": false
+      },
+      "script.notifera_enheter": {
+        "should_expose": false
+      },
+      "light.grupp_taklampor_kok": {
+        "should_expose": true
+      },
+      "light.kokslampor_kok_esphome56_light": {
+        "should_expose": true
+      },
+      "light.taklampor_kallaren_esphome57_light": {
+        "should_expose": true
+      },
+      "input_button.spela_hissmusik": {
+        "should_expose": true
+      },
+      "input_button.godnatt": {
+        "should_expose": true
+      }
+    },
+    "google_local_webhook_id": "e01122c3a3aa3e72cf48513b704d529d940ab05fb501a970214b7b0405170acf",
+    "google_secure_devices_pin": null,
+    "remote_domain": "rhmfoo0crpvzret2q6rn4efxm2ydsdmp.ui.nabu.casa",
+    "username": "7dee0479-1328-40ec-bd9d-61e1d9732493",
+    "tts_default_voice": [
+      "sv-SE",
+      "SofieNeural"
+    ],
+    "alexa_settings_version": 4,
+    "google_settings_version": 4,
+    "instance_id": "5aafd59cd1b14a35996f9e0864441385",
+    "alexa_report_state": false,
+    "google_connected": true,
+    "google_report_state": true,
+    "onboarded_items": [
+      "remote",
+      "voice",
+      "streaming",
+      "backup"
+    ]
+  }
+}

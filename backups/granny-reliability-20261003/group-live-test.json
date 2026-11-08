@@ -1,0 +1,2737 @@
+{
+  "response": {
+    "changed_states": [
+      {
+        "entity_id": "script.granny_broadcast",
+        "state": "on",
+        "attributes": {
+          "last_triggered": "2026-10-03T10:32:15.712372+00:00",
+          "mode": "parallel",
+          "current": 1,
+          "max": 50,
+          "friendly_name": "Granny Broadcast (kanalneutral)"
+        },
+        "last_changed": "2026-10-03T10:32:15.712406+00:00",
+        "last_reported": "2026-10-03T10:32:15.712406+00:00",
+        "last_updated": "2026-10-03T10:32:15.712406+00:00",
+        "context": {
+          "id": "01M40N4NK0CVRCFK986FFWM3FT",
+          "parent_id": null,
+          "user_id": "11c3c69645984f0c814370add793f07e"
+        }
+      },
+      {
+        "entity_id": "script.granny_announce",
+        "state": "on",
+        "attributes": {
+          "last_triggered": "2026-10-03T10:32:15.714605+00:00",
+          "mode": "queued",
+          "current": 1,
+          "max": 50,
+          "friendly_name": "Granny \u2013 alla utrop via vanlig Chromecast"
+        },
+        "last_changed": "2026-10-03T10:32:15.714624+00:00",
+        "last_reported": "2026-10-03T10:32:15.714624+00:00",
+        "last_updated": "2026-10-03T10:32:15.714624+00:00",
+        "context": {
+          "id": "01M40N4NK0CVRCFK986FFWM3FT",
+          "parent_id": null,
+          "user_id": "11c3c69645984f0c814370add793f07e"
+        }
+      },
+      {
+        "entity_id": "script.granny_announce_player",
+        "state": "on",
+        "attributes": {
+          "last_triggered": "2026-10-03T10:32:15.716605+00:00",
+          "mode": "parallel",
+          "current": 1,
+          "max": 50,
+          "friendly_name": "Granny \u2013 tal till en h\u00f6gtalare"
+        },
+        "last_changed": "2026-10-03T10:32:15.716624+00:00",
+        "last_reported": "2026-10-03T10:32:15.716624+00:00",
+        "last_updated": "2026-10-03T10:32:15.716624+00:00",
+        "context": {
+          "id": "01M40N4NK0CVRCFK986FFWM3FT",
+          "parent_id": null,
+          "user_id": "11c3c69645984f0c814370add793f07e"
+        }
+      },
+      {
+        "entity_id": "script.granny_speak_attempt",
+        "state": "on",
+        "attributes": {
+          "last_triggered": "2026-10-03T10:32:15.720293+00:00",
+          "mode": "parallel",
+          "current": 1,
+          "max": 50,
+          "friendly_name": "Granny \u2013 ett talf\u00f6rs\u00f6k"
+        },
+        "last_changed": "2026-10-03T10:32:15.720321+00:00",
+        "last_reported": "2026-10-03T10:32:15.720321+00:00",
+        "last_updated": "2026-10-03T10:32:15.720321+00:00",
+        "context": {
+          "id": "01M40N4NK0CVRCFK986FFWM3FT",
+          "parent_id": null,
+          "user_id": "11c3c69645984f0c814370add793f07e"
+        }
+      },
+      {
+        "entity_id": "script.granny_speak_attempt",
+        "state": "on",
+        "attributes": {
+          "last_triggered": "2026-10-03T10:32:15.720293+00:00",
+          "mode": "parallel",
+          "current": 1,
+          "max": 50,
+          "last_action": "wait template",
+          "friendly_name": "Granny \u2013 ett talf\u00f6rs\u00f6k"
+        },
+        "last_changed": "2026-10-03T10:32:15.720321+00:00",
+        "last_reported": "2026-10-03T10:32:15.720700+00:00",
+        "last_updated": "2026-10-03T10:32:15.720700+00:00",
+        "context": {
+          "id": "01M40N4NK0CVRCFK986FFWM3FT",
+          "parent_id": null,
+          "user_id": "11c3c69645984f0c814370add793f07e"
+        }
+      },
+      {
+        "entity_id": "media_player.kokets_skarm_ma",
+        "state": "idle",
+        "attributes": {
+          "group_members": [],
+          "volume_level": 0.4,
+          "is_volume_muted": false,
+          "media_content_id": "library://radio/19",
+          "media_content_type": "music",
+          "media_duration": 0,
+          "media_position": 0,
+          "media_position_updated_at": "2026-10-03T09:53:14.515128+00:00",
+          "media_title": "Julkanalen",
+          "app_id": "music_assistant",
+          "source": "Music Assistant Queue",
+          "shuffle": false,
+          "repeat": "off",
+          "entity_picture_local": "/api/media_player_proxy/media_player.kokets_skarm_ma?token=bbbf83ccc0f0afcb364e523009d8406c52ef5b2d7c9cf17a713843d91b6c58b0&cache=2c0c0ac85c2efb49",
+          "mass_player_type": "player",
+          "active_queue": "upb2965530",
+          "device_class": "speaker",
+          "entity_picture": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+          "icon": "mdi:speaker",
+          "friendly_name": "K\u00f6kets sk\u00e4rm",
+          "supported_features": 8320575
+        },
+        "last_changed": "2026-10-03T09:56:27.741964+00:00",
+        "last_reported": "2026-10-03T10:32:16.041253+00:00",
+        "last_updated": "2026-10-03T10:32:16.041253+00:00",
+        "context": {
+          "id": "01M40N4NK0CVRCFK986FFWM3FT",
+          "parent_id": null,
+          "user_id": "11c3c69645984f0c814370add793f07e"
+        }
+      },
+      {
+        "entity_id": "media_player.kokets_skarm_ma",
+        "state": "playing",
+        "attributes": {
+          "group_members": [],
+          "volume_level": 0.4,
+          "is_volume_muted": false,
+          "media_content_id": "library://radio/19",
+          "media_content_type": "music",
+          "media_duration": 0,
+          "media_position": 0,
+          "media_position_updated_at": "2026-10-03T09:56:27.739081+00:00",
+          "media_title": "Julkanalen",
+          "app_id": "music_assistant",
+          "source": "Music Assistant Queue",
+          "shuffle": false,
+          "repeat": "off",
+          "entity_picture_local": "/api/media_player_proxy/media_player.kokets_skarm_ma?token=bbbf83ccc0f0afcb364e523009d8406c52ef5b2d7c9cf17a713843d91b6c58b0&cache=2c0c0ac85c2efb49",
+          "mass_player_type": "player",
+          "active_queue": "upb2965530",
+          "device_class": "speaker",
+          "entity_picture": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+          "icon": "mdi:speaker",
+          "friendly_name": "K\u00f6kets sk\u00e4rm",
+          "supported_features": 8320575
+        },
+        "last_changed": "2026-10-03T10:32:17.689118+00:00",
+        "last_reported": "2026-10-03T10:32:17.689118+00:00",
+        "last_updated": "2026-10-03T10:32:17.689118+00:00",
+        "context": {
+          "id": "01M40N4NK0CVRCFK986FFWM3FT",
+          "parent_id": null,
+          "user_id": "11c3c69645984f0c814370add793f07e"
+        }
+      },
+      {
+        "entity_id": "script.granny_announce_player",
+        "state": "on",
+        "attributes": {
+          "last_triggered": "2026-10-03T10:32:23.364542+00:00",
+          "mode": "parallel",
+          "current": 1,
+          "max": 50,
+          "friendly_name": "Granny \u2013 tal till en h\u00f6gtalare"
+        },
+        "last_changed": "2026-10-03T10:32:23.364557+00:00",
+        "last_reported": "2026-10-03T10:32:23.364557+00:00",
+        "last_updated": "2026-10-03T10:32:23.364557+00:00",
+        "context": {
+          "id": "01M40N4NK0CVRCFK986FFWM3FT",
+          "parent_id": null,
+          "user_id": "11c3c69645984f0c814370add793f07e"
+        }
+      },
+      {
+        "entity_id": "script.granny_speak_attempt",
+        "state": "on",
+        "attributes": {
+          "last_triggered": "2026-10-03T10:32:23.365671+00:00",
+          "mode": "parallel",
+          "current": 1,
+          "max": 50,
+          "friendly_name": "Granny \u2013 ett talf\u00f6rs\u00f6k"
+        },
+        "last_changed": "2026-10-03T10:32:23.365685+00:00",
+        "last_reported": "2026-10-03T10:32:23.365685+00:00",
+        "last_updated": "2026-10-03T10:32:23.365685+00:00",
+        "context": {
+          "id": "01M40N4NK0CVRCFK986FFWM3FT",
+          "parent_id": null,
+          "user_id": "11c3c69645984f0c814370add793f07e"
+        }
+      },
+      {
+        "entity_id": "script.granny_speak_attempt",
+        "state": "on",
+        "attributes": {
+          "last_triggered": "2026-10-03T10:32:23.365671+00:00",
+          "mode": "parallel",
+          "current": 1,
+          "max": 50,
+          "last_action": "wait template",
+          "friendly_name": "Granny \u2013 ett talf\u00f6rs\u00f6k"
+        },
+        "last_changed": "2026-10-03T10:32:23.365685+00:00",
+        "last_reported": "2026-10-03T10:32:23.366052+00:00",
+        "last_updated": "2026-10-03T10:32:23.366052+00:00",
+        "context": {
+          "id": "01M40N4NK0CVRCFK986FFWM3FT",
+          "parent_id": null,
+          "user_id": "11c3c69645984f0c814370add793f07e"
+        }
+      },
+      {
+        "entity_id": "media_player.ateljen",
+        "state": "idle",
+        "attributes": {
+          "group_members": [],
+          "volume_level": 0.4,
+          "is_volume_muted": false,
+          "media_content_type": "music",
+          "app_id": "music_assistant",
+          "source": "Music Assistant Queue",
+          "shuffle": false,
+          "repeat": "off",
+          "entity_picture_local": null,
+          "mass_player_type": "player",
+          "active_queue": "up1a2803a2",
+          "device_class": "speaker",
+          "icon": "mdi:speaker",
+          "friendly_name": "Atelj\u00e9n",
+          "supported_features": 8320575
+        },
+        "last_changed": "2026-10-03T07:34:13.231496+00:00",
+        "last_reported": "2026-10-03T10:32:23.415010+00:00",
+        "last_updated": "2026-10-03T10:32:23.415010+00:00",
+        "context": {
+          "id": "01M40N4NK0CVRCFK986FFWM3FT",
+          "parent_id": null,
+          "user_id": "11c3c69645984f0c814370add793f07e"
+        }
+      },
+      {
+        "entity_id": "media_player.ateljen",
+        "state": "playing",
+        "attributes": {
+          "group_members": [],
+          "volume_level": 0.4,
+          "is_volume_muted": false,
+          "media_content_type": "music",
+          "app_id": "music_assistant",
+          "source": "Music Assistant Queue",
+          "shuffle": false,
+          "repeat": "off",
+          "entity_picture_local": null,
+          "mass_player_type": "player",
+          "active_queue": "up1a2803a2",
+          "device_class": "speaker",
+          "icon": "mdi:speaker",
+          "friendly_name": "Atelj\u00e9n",
+          "supported_features": 8320575
+        },
+        "last_changed": "2026-10-03T10:32:26.879173+00:00",
+        "last_reported": "2026-10-03T10:32:26.879173+00:00",
+        "last_updated": "2026-10-03T10:32:26.879173+00:00",
+        "context": {
+          "id": "01M40N4NK0CVRCFK986FFWM3FT",
+          "parent_id": null,
+          "user_id": "11c3c69645984f0c814370add793f07e"
+        }
+      }
+    ],
+    "service_response": {
+      "final_message": "Det h\u00e4r \u00e4r ett gemensamt test av Granny i k\u00f6ket och atelj\u00e9n."
+    }
+  },
+  "samples": [
+    {
+      "at": 1791023535.7089677,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021194.5151277
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 24,
+          "elapsed_time": null,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023536.1145873,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 40,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021194.5151277
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 24,
+          "elapsed_time": null,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023536.5187297,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 40,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021194.5151277
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 24,
+          "elapsed_time": null,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023536.9229283,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 40,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021194.5151277
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 24,
+          "elapsed_time": null,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023537.3258557,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 40,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021194.5151277
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 24,
+          "elapsed_time": null,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023537.73336,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000387,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 24,
+          "elapsed_time": null,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023538.1425285,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000387,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 24,
+          "elapsed_time": null,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023538.5504816,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000387,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 24,
+          "elapsed_time": null,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023538.9593484,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000387,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 24,
+          "elapsed_time": null,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023539.3666265,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000387,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 24,
+          "elapsed_time": null,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023539.775063,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000387,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 24,
+          "elapsed_time": null,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023540.177746,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000387,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 24,
+          "elapsed_time": null,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023540.5853586,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000387,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 24,
+          "elapsed_time": null,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023540.9948978,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000387,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 24,
+          "elapsed_time": null,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023541.4048479,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000387,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 24,
+          "elapsed_time": null,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023541.8116717,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 40,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 24,
+          "elapsed_time": null,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023542.2197623,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 40,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 24,
+          "elapsed_time": null,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023542.6259003,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 40,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 24,
+          "elapsed_time": null,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023543.0339015,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 40,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 24,
+          "elapsed_time": null,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023543.438502,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 40,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "elapsed_time": 0.0,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023543.8464944,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "elapsed_time": 0.0,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023544.2551112,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "elapsed_time": 0.0,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023544.6578639,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "elapsed_time": 0.0,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023545.065935,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "elapsed_time": 0.0,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023545.473629,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "elapsed_time": 0.0,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023545.88192,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "elapsed_time": 0.0,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023546.2877066,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "elapsed_time": 0.0,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023546.693112,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "elapsed_time": 0.0,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023547.1004972,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000241,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023547.506012,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000241,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023547.912615,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000241,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023548.318534,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000241,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023548.7256024,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000241,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023549.133473,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000241,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023549.5397146,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000241,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023549.9482327,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000241,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023550.356073,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000241,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023550.7647738,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000241,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023551.1733634,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000241,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023551.5816474,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000241,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023551.9884114,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000241,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023552.391456,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "elapsed_time": 0.000241,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023552.7970722,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "elapsed_time": 0.0,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023553.2047715,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "elapsed_time": 0.0,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023553.6120832,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "elapsed_time": 0.0,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023554.0197172,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "elapsed_time": 0.0,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    },
+    {
+      "at": 1791023554.4226007,
+      "players": [
+        {
+          "player_id": "syncgroup_rk7qfzy6",
+          "state": "idle",
+          "volume_level": null,
+          "elapsed_time": null,
+          "active_source": "syncgroup_rk7qfzy6",
+          "current_media": null
+        },
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "current_media": {
+            "uri": "library://radio/19",
+            "media_type": "radio",
+            "title": "Julkanalen",
+            "artist": null,
+            "album": null,
+            "album_artist": null,
+            "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+            "palette": {
+              "background_dark": null,
+              "background_light": null,
+              "primary": null,
+              "accent": null,
+              "on_dark": null,
+              "on_light": null
+            },
+            "duration": 0,
+            "stream_duration": null,
+            "source_id": "upb2965530",
+            "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+            "custom_data": null,
+            "elapsed_time": 0,
+            "elapsed_time_last_updated": 1791021387.7390811
+          }
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "elapsed_time": 0.0,
+          "active_source": "up1a2803a2",
+          "current_media": null
+        }
+      ]
+    }
+  ]
+}

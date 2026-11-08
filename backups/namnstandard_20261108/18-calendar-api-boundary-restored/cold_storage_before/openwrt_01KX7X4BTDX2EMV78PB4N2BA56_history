@@ -1,0 +1,834 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "openwrt_01KX7X4BTDX2EMV78PB4N2BA56_history",
+  "data": {
+    "devices": {
+      "68:a4:0e:0c:1a:5c": {
+        "initially_seen": 1783750607,
+        "last_seen": 1784607514,
+        "is_wireless": false
+      },
+      "94:27:70:89:d1:ad": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "siemens-washerdryer"
+      },
+      "a0:dd:6c:2b:31:4c": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "shelly-1pm-studio-floor-heating"
+      },
+      "a0:dd:6c:29:b1:34": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "shelly-1pm-kitchen-floor-heating"
+      },
+      "b0:4a:39:24:a4:cb": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "roborock-max"
+      },
+      "30:c9:22:86:74:68": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "shellyplus2pm-porch-lamps-x2"
+      },
+      "cc:ba:bd:a5:eb:18": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "ap-honshuset"
+      },
+      "28:39:26:d3:14:5f": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "LenovoL340"
+      },
+      "54:60:09:d6:4f:22": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "chromecast-stereo-left-speaker"
+      },
+      "2c:fd:b3:12:5c:49": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "chromecast-tv-soundbar"
+      },
+      "08:3a:8d:c1:7e:b4": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "shellyplug-s-diego-bed-lamp"
+      },
+      "00:e0:4c:8e:59:b7": {
+        "initially_seen": 1783750607,
+        "last_seen": 1791229170,
+        "is_wireless": false,
+        "hostname": "192.168.10.46"
+      },
+      "14:3f:a6:03:6b:40": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "sony-tv"
+      },
+      "80:c5:f2:3e:08:43": {
+        "initially_seen": 1783750607,
+        "last_seen": 1790958268,
+        "is_wireless": false,
+        "hostname": "chromecast-verkstadens-speaker"
+      },
+      "88:12:ac:7f:8c:0d": {
+        "initially_seen": 1783750607,
+        "last_seen": 1793248162,
+        "is_wireless": false,
+        "hostname": "SmartHomeControlPanel"
+      },
+      "00:2b:67:01:db:4e": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "192.168.10.68"
+      },
+      "d8:eb:46:96:63:e4": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "chromecast-mannis-screen"
+      },
+      "00:8c:fa:b1:9a:e3": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "hp-pavilion"
+      },
+      "d8:eb:46:81:a7:f3": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "chromecast-diegos-screen"
+      },
+      "c4:d8:d5:54:f8:a4": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "shelly-1pm-entry-floor-heating"
+      },
+      "c4:d8:d5:54:cc:80": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "shelly-1pm-porch-floor-heating"
+      },
+      "50:03:cf:84:6f:51": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "canon-g3070"
+      },
+      "ac:16:2d:04:99:b2": {
+        "initially_seen": 1783750607,
+        "last_seen": 1793080466,
+        "is_wireless": false,
+        "hostname": "fulla"
+      },
+      "08:f9:e0:fd:43:04": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "shellyplusplugs-08f9e0fd4304"
+      },
+      "4c:75:25:06:bc:9c": {
+        "initially_seen": 1783750607,
+        "last_seen": 1792495352,
+        "is_wireless": false,
+        "hostname": "shellyflood-dryercabinet"
+      },
+      "20:f8:3b:09:64:60": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "home-assistant-voice-096460"
+      },
+      "6c:47:60:0b:55:77": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "chromecast-duschens-speaker"
+      },
+      "6c:47:60:1a:87:36": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "chromecast-toans-speaker"
+      },
+      "08:3a:8d:c3:44:dd": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "shellyplug-s-shop-roof-lamps"
+      },
+      "1c:69:20:5b:b6:00": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "levoit-humidifier-verandan"
+      },
+      "80:c5:f2:67:aa:69": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "chromecast-vaxtskapets-speaker"
+      },
+      "78:9c:85:2a:70:af": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "gw-august-connect"
+      },
+      "e4:65:b8:f1:c1:b8": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "shelly-1pm-shower-floor-heating"
+      },
+      "ec:62:60:89:ed:bc": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "shellypro-3-shop-central"
+      },
+      "80:64:6f:e3:be:f0": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "shelly-1pm-celler-floor-heating"
+      },
+      "8c:f5:a3:7f:d3:b4": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "Galaxy-S7"
+      },
+      "08:3a:8d:c1:7e:39": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "shellyplug-s-manni-bed-lamp"
+      },
+      "00:11:f8:1e:af:0f": {
+        "initially_seen": 1783750607,
+        "last_seen": 1789754952,
+        "is_wireless": false,
+        "hostname": "192.168.10.30"
+      },
+      "00:f4:8d:97:d9:b5": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "chromecast-kokets-screen"
+      },
+      "54:60:09:e8:fc:56": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "chromecast-stereo-right-speaker"
+      },
+      "68:f7:28:79:0e:04": {
+        "initially_seen": 1783750607,
+        "last_seen": 1789754952,
+        "is_wireless": false,
+        "hostname": "172.17.0.1"
+      },
+      "cc:ba:bd:a5:eb:19": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "ap-honshuset.home.arpa"
+      },
+      "2c:fd:a1:13:65:c9": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "ap_kallaren.home.arpa"
+      },
+      "4c:0f:3e:0f:a8:02": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "192.168.20.62"
+      },
+      "2c:fd:a1:12:27:f9": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "ap_friggan.home.arpa"
+      },
+      "e8:ff:1e:db:ea:f8": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "heimdal.home.arpa"
+      },
+      "b8:ec:a3:13:ae:e2": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "wds-ap.home.arpa"
+      },
+      "00:00:5e:00:01:6f": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "80-68-110-1.customers.ownit.se"
+      },
+      "98:0d:67:01:eb:9b": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "sw_vinden.home.arpa"
+      },
+      "14:5d:34:95:70:d1": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "buddy3dcam"
+      },
+      "20:05:b7:00:78:f0": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "ap_koket.home.arpa"
+      },
+      "2c:fd:a1:12:4e:19": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "ap_verkstaden.home.arpa"
+      },
+      "14:36:0e:f8:a9:e5": {
+        "initially_seen": 1783750607,
+        "last_seen": 1789754952,
+        "is_wireless": false,
+        "hostname": "switch-2.home.arpa"
+      },
+      "60:cf:84:cd:9c:e2": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "tor.home.arpa"
+      },
+      "20:05:b6:ff:ea:40": {
+        "initially_seen": 1783750607,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "ap_kontoret.home.arpa"
+      },
+      "f0:fe:6b:c1:a0:06": {
+        "initially_seen": 1783755346,
+        "last_seen": 1794121335,
+        "is_wireless": false,
+        "hostname": "HF-LPT220"
+      },
+      "0c:b8:15:22:91:d4": {
+        "initially_seen": 1783757011,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "prusa-xl"
+      },
+      "10:9c:70:27:d7:1a": {
+        "initially_seen": 1783757382,
+        "last_seen": 1793987883,
+        "is_wireless": false,
+        "hostname": "prusa-xl.home.arpa"
+      },
+      "4c:cf:7c:3f:10:25": {
+        "initially_seen": 1783911000,
+        "last_seen": 1788426159,
+        "is_wireless": false,
+        "hostname": "Q28756"
+      },
+      "a0:cb:fd:3a:3a:d8": {
+        "initially_seen": 1784184944,
+        "last_seen": 1784543014,
+        "is_wireless": false
+      },
+      "58:cd:c9:33:8f:ab": {
+        "initially_seen": 1784362216,
+        "last_seen": 1784818481,
+        "is_wireless": false
+      },
+      "7c:9e:bd:06:e4:54": {
+        "initially_seen": 1784379060,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "a4:cf:12:d8:0a:dd": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "7c:9e:bd:47:e2:88": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "24:a1:60:10:5f:96": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "34:94:54:70:7c:a2": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "f4:cf:a2:15:d0:e3": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "40:22:d8:76:66:c0": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "c8:c9:a3:25:b7:f7": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "c4:4f:33:7a:51:11": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "08:b6:1f:38:26:78": {
+        "initially_seen": 1784462035,
+        "last_seen": 1786478799,
+        "is_wireless": false,
+        "hostname": "192.168.30.171"
+      },
+      "dc:06:75:9d:82:74": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "c4:4f:33:72:7c:01": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "c4:4f:33:72:73:e1": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "24:62:ab:57:80:ad": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "c4:4f:33:7a:51:6d": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "a4:cf:12:d8:77:59": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "c8:2b:96:e6:99:4f": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "94:b9:7e:16:d2:02": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "40:22:d8:61:53:f8": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "c8:2b:96:5c:72:08": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "08:f9:e0:46:ed:b4": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "8c:ce:4e:0c:ca:58": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "80:64:6f:91:e9:d5": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "dc:06:75:9d:65:c0": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "24:6f:28:c1:b9:60": {
+        "initially_seen": 1784462035,
+        "last_seen": 1786478799,
+        "is_wireless": false,
+        "hostname": "192.168.30.146"
+      },
+      "c8:2b:96:07:7d:6e": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "c8:2b:96:07:35:26": {
+        "initially_seen": 1784462035,
+        "last_seen": 1786478799,
+        "is_wireless": false,
+        "hostname": "192.168.30.129"
+      },
+      "c8:2b:96:5c:71:55": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "2c:bc:bb:c1:87:2c": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "48:e7:29:67:de:7f": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "08:b6:1f:38:0b:64": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "f4:cf:a2:15:d8:ac": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "7c:9e:bd:06:5d:e8": {
+        "initially_seen": 1784462035,
+        "last_seen": 1786478799,
+        "is_wireless": false,
+        "hostname": "192.168.30.142"
+      },
+      "c4:4f:33:7a:2e:79": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "7c:9e:bd:06:e4:88": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "cc:50:e3:fe:16:ed": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "7c:9e:bd:46:f5:80": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "e8:db:84:d3:1d:ce": {
+        "initially_seen": 1784462035,
+        "last_seen": 1792429763,
+        "is_wireless": false,
+        "hostname": "192.168.30.183"
+      },
+      "24:a1:60:10:eb:a9": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "c8:c9:a3:25:a9:24": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "08:b6:1f:34:55:50": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "98:f4:ab:e2:71:12": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "7c:9e:bd:06:c3:b4": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "e0:98:06:d5:c4:ca": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "40:22:d8:76:6f:70": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "48:e7:29:89:81:90": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "f0:08:d1:f2:b8:08": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "24:a1:60:1b:1f:92": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "7c:9e:bd:06:e7:bc": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "c4:4f:33:7a:51:d5": {
+        "initially_seen": 1784462035,
+        "last_seen": 1785103968,
+        "is_wireless": false
+      },
+      "48:26:4c:9a:d6:4c": {
+        "initially_seen": 1784540817,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "siemens-dishwasher-016050395510002818"
+      },
+      "14:13:0b:d5:3c:71": {
+        "initially_seen": 1785217950,
+        "last_seen": 1786478799,
+        "is_wireless": false,
+        "hostname": "192.168.10.104"
+      },
+      "60:f2:62:30:7a:32": {
+        "initially_seen": 1785569268,
+        "last_seen": 1786246347,
+        "is_wireless": false,
+        "hostname": "DESKTOP-VF5T4DK"
+      },
+      "a2:1c:1c:8a:c6:30": {
+        "initially_seen": 1787298116,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "Galaxy-A36-5G"
+      },
+      "72:0e:b3:71:8f:ef": {
+        "initially_seen": 1787298116,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "Pixel-9-Pro-XL"
+      },
+      "22:e6:07:30:77:c1": {
+        "initially_seen": 1787298116,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "Carolas-S25"
+      },
+      "0a:80:2d:cd:7a:31": {
+        "initially_seen": 1787298116,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "TV-Galaxy-S9"
+      },
+      "1e:7e:df:81:36:be": {
+        "initially_seen": 1787298116,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "DiegoTab"
+      },
+      "3a:64:cf:24:c6:06": {
+        "initially_seen": 1787298116,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "ap_poolen.home.arpa"
+      },
+      "16:52:93:3b:7f:1d": {
+        "initially_seen": 1787298116,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "SM-R875F"
+      },
+      "8c:f5:a3:b9:6c:53": {
+        "initially_seen": 1787379347,
+        "last_seen": 1794121335,
+        "is_wireless": false,
+        "hostname": "Galaxy-S7-Friggan"
+      },
+      "8c:f5:a3:7f:d3:91": {
+        "initially_seen": 1787379347,
+        "last_seen": 1794121335,
+        "is_wireless": false,
+        "hostname": "Galaxy-S7"
+      },
+      "c8:85:41:4d:db:3c": {
+        "initially_seen": 1787728683,
+        "last_seen": 1789754952,
+        "is_wireless": false,
+        "hostname": "192.168.30.196"
+      },
+      "c8:85:41:68:f7:c4": {
+        "initially_seen": 1787739244,
+        "last_seen": 1789754952,
+        "is_wireless": false,
+        "hostname": "192.168.30.197"
+      },
+      "70:9e:29:44:47:8d": {
+        "initially_seen": 1787849140,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "playstation4"
+      },
+      "34:e6:ad:56:bd:cd": {
+        "initially_seen": 1788355133,
+        "last_seen": 1791229170,
+        "is_wireless": false,
+        "hostname": "192.168.10.53"
+      },
+      "34:8e:89:ea:14:9d": {
+        "initially_seen": 1788784745,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "BroadLink-Remote-ea-14-9d"
+      },
+      "f2:0d:b2:db:b3:bc": {
+        "initially_seen": 1788790312,
+        "last_seen": 1794027485,
+        "is_wireless": false,
+        "hostname": "192.168.30.83"
+      },
+      "00:e0:4c:fc:8d:bc": {
+        "initially_seen": 1790328373,
+        "last_seen": 1790569718,
+        "is_wireless": false,
+        "hostname": "192.168.10.99"
+      },
+      "00:e0:4c:5a:e7:b3": {
+        "initially_seen": 1790497746,
+        "last_seen": 1791229170,
+        "is_wireless": false,
+        "hostname": "192.168.10.60"
+      },
+      "00:e0:4c:50:00:fa": {
+        "initially_seen": 1790665431,
+        "last_seen": 1791981149,
+        "is_wireless": false,
+        "hostname": "192.168.10.82"
+      },
+      "2c:6e:85:5e:3b:20": {
+        "initially_seen": 1791313243,
+        "last_seen": 1792029864,
+        "is_wireless": false,
+        "hostname": "diego-Lenovo-E31-70"
+      },
+      "dc:62:79:8c:a5:37": {
+        "initially_seen": 1791376534,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "C200C"
+      },
+      "00:e0:4c:13:94:de": {
+        "initially_seen": 1791535479,
+        "last_seen": 1792064846,
+        "is_wireless": false,
+        "hostname": "192.168.10.91"
+      },
+      "3c:61:05:fe:29:08": {
+        "initially_seen": 1791719689,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "192.168.30.156"
+      },
+      "1c:39:47:b7:e3:f3": {
+        "initially_seen": 1791981209,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "mimer"
+      },
+      "f4:f5:d8:9d:b9:62": {
+        "initially_seen": 1791993501,
+        "last_seen": 1792064846,
+        "is_wireless": false,
+        "hostname": "chromecast-gamla-tv"
+      },
+      "00:e0:4c:c2:df:1d": {
+        "initially_seen": 1792502916,
+        "last_seen": 1792671343,
+        "is_wireless": false,
+        "hostname": "192.168.10.48"
+      },
+      "00:e0:4c:d9:ea:b9": {
+        "initially_seen": 1792571611,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "192.168.10.58"
+      },
+      "00:e0:4c:81:05:82": {
+        "initially_seen": 1792749654,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "192.168.10.42"
+      },
+      "d2:e3:60:1d:da:f3": {
+        "initially_seen": 1793037890,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "Duschens-Galaxy-S9"
+      },
+      "4a:5a:fd:0e:91:c9": {
+        "initially_seen": 1793977825,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "Alicias-Tab-A7-Lite"
+      },
+      "12:90:f2:4d:97:e0": {
+        "initially_seen": 1793978309,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "anova-sous-vide"
+      },
+      "96:b9:ce:b9:46:0b": {
+        "initially_seen": 1794043749,
+        "last_seen": 1794128849,
+        "is_wireless": false,
+        "hostname": "Nothing-Phone-3a"
+      }
+    },
+    "last_version": "25.12.6",
+    "mqtt_cleanup_done": false,
+    "mqtt_presence_configured": false
+  }
+}

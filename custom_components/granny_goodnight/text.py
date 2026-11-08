@@ -2,11 +2,11 @@
 
 FALLBACK = "Godnatt och sov sött!"
 CHECKS = (
-    ("binary_sensor.shelly_blu_door_window_2a6d_window", "off", {"on"},
+    ("binary_sensor.verandan_balkongdorr_oppning", "off", {"on"},
      "Stäng verandans dörrar.", "Kontrollera att verandans dörrar är stängda."),
-    ("cover.honsluckan_esphome75_cover", "closed", {"open", "opening", "closing"},
+    ("cover.honshuset_lucka", "closed", {"open", "opening", "closing"},
      "Stäng hönshusets lucka.", "Kontrollera att hönshusets lucka är stängd."),
-    ("lock.ytterdorren", "locked", {"unlocked", "unlocking", "locking", "open"},
+    ("lock.entren_ytterdorren", "locked", {"unlocked", "unlocking", "locking", "open"},
      "Lås entrédörren.", "Kontrollera att entrédörren är låst."),
 )
 

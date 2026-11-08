@@ -1,0 +1,6 @@
+{
+  "sensor.onedrive_totalt_tillgangligt_lagringsutrymme": "sensor.heimdal_ha_onedrive_totalt_tillgangligt_lagringsutrymme",
+  "sensor.onedrive_anvant_lagringsutrymme": "sensor.heimdal_ha_onedrive_anvant_lagringsutrymme",
+  "sensor.onedrive_aterstaende_lagringsutrymme": "sensor.heimdal_ha_onedrive_aterstaende_lagringsutrymme",
+  "sensor.onedrive_drive_status": "sensor.heimdal_ha_onedrive_lagringsstatus"
+}

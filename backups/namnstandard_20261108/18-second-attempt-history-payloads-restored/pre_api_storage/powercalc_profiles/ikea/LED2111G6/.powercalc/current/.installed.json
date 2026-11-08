@@ -1,0 +1,1 @@
+{"model": {"id": "LED2111G6", "name": "TRADFRI bulb E14 CWS globe 806lm", "aliases": ["TRADFRI bulb E14 CWS globe 806lm"], "hash": "026de0d57dcfc08af3cecb858a5db2e9", "device_type": "light"}, "resources": ["hs.csv.gz", "color_temp.csv.gz", "model.json"]}

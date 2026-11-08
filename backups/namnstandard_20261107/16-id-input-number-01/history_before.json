@@ -1,0 +1,18 @@
+{
+  "input_number.car_bat_capacity_2": [
+    {
+      "state": "18.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:09.396543+00:00",
+      "last_updated": "2026-11-07T07:51:09.396543+00:00"
+    }
+  ],
+  "input_number.car_charger_capacity_2": [
+    {
+      "state": "3.6",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:09.396543+00:00",
+      "last_updated": "2026-11-07T07:51:09.396543+00:00"
+    }
+  ]
+}

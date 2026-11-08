@@ -1,0 +1,14 @@
+{
+    "SpotifyWebApiAuthCodePkce/65b708073fc0480ea92a077233ca87bd/mammaochpapppa": {
+        "access_token": "BQDINS69krWsQ9DCRoxv3lLgo0uvwPG2P4_y38QzMZwW1uHNWdAL4ZqCaSCYWLTpRSUGtNLZyNHyQzc4fjeCiS9vi4o8o3Nbg5P1buSqbl4abtdwqwum6aUMbKIOUDjPWOHRjZr0YajNZXV6rr3OzTopdz3PyF4FG8v3orl6NdPTSLbFyKDHUESMxUose8Qik9hD8_OXXT9em_FMkORhCdCRPcJDSSkqoPMUIs0uRZs",
+        "expires_at": 1777264205,
+        "expires_in": 3600,
+        "refresh_token": "AQAjvWgTH-Pex7wLsgqBjsNLYgGYfDbgCU6LfE9wOnghJztiZTWWs1WdN7f20Gk1BhSCaFEwyYsjuUjlZpGlSaiRvVEswfViTd3uIGF0xlsMH81SkG6t5g_ucqDI2ADkoKiseQ",
+        "scope": [
+            "streaming"
+        ],
+        "title": "Spotify Desktop App Client (mammaochpapppa [premium])",
+        "token_type": "Bearer",
+        "username": "mammaochpapppa"
+    }
+}

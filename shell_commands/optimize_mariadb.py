@@ -4,12 +4,12 @@
 from __future__ import annotations
 
 import datetime as dt
+import argparse
 import pathlib
-import re
 import sys
-from urllib.parse import parse_qs, urlparse
+from urllib.parse import parse_qs, urlparse, unquote
 
-import MySQLdb
+import yaml
 
 
 CONFIG_PATH = pathlib.Path("/config/configuration.yaml")
@@ -27,15 +27,36 @@ TABLES = (
 def log(msg: str) -> None:
     ts = dt.datetime.now(dt.UTC).strftime("%Y-%m-%d %H:%M:%S UTC")
     line = f"[{ts}] {msg}"
-    print(line)
+    print(line, flush=True)
 
 
 def read_db_url() -> str:
-    text = CONFIG_PATH.read_text(encoding="utf-8")
-    match = re.search(r"^\s*db_url:\s*(\S+)\s*$", text, flags=re.MULTILINE)
-    if not match:
-        raise RuntimeError("Could not find recorder db_url in configuration.yaml")
-    return match.group(1).strip().strip("'\"")
+    # Inspect only recorder.db_url; other HA tags (!include etc.) need not
+    # be constructed, and commented/other integrations' db_url cannot match.
+    def child(node: yaml.Node, key: str) -> yaml.Node:
+        if not isinstance(node, yaml.MappingNode):
+            raise ValueError("Expected YAML mapping")
+        matches = [value for name, value in node.value if name.value == key]
+        if len(matches) != 1:
+            raise ValueError(f"Expected exactly one {key} setting")
+        return matches[0]
+
+    root = yaml.compose(CONFIG_PATH.read_text(encoding="utf-8"))
+    node = child(child(root, "recorder"), "db_url")
+    if not isinstance(node, yaml.ScalarNode):
+        raise ValueError("recorder.db_url must be a scalar")
+    if node.tag == "!secret":
+        secrets = yaml.safe_load(
+            (CONFIG_PATH.parent / "secrets.yaml").read_text(encoding="utf-8")
+        )
+        value = secrets[node.value]
+    elif node.tag == "tag:yaml.org,2002:str":
+        value = node.value
+    else:
+        raise ValueError("Unsupported recorder.db_url YAML tag")
+    if not isinstance(value, str) or not value:
+        raise ValueError("recorder.db_url must resolve to a nonempty string")
+    return value
 
 
 def parse_mysql_conn(db_url: str) -> dict:
@@ -49,30 +70,40 @@ def parse_mysql_conn(db_url: str) -> dict:
     return {
         "host": parsed.hostname or "core-mariadb",
         "port": parsed.port or 3306,
-        "user": parsed.username or "",
-        "passwd": parsed.password or "",
-        "db": (parsed.path or "/homeassistant").lstrip("/") or "homeassistant",
+        "user": unquote(parsed.username or ""),
+        "passwd": unquote(parsed.password or ""),
+        "db": unquote((parsed.path or "/homeassistant").lstrip("/")),
         "charset": charset,
         "autocommit": True,
+        "connect_timeout": 15,
     }
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--check", action="store_true", help="Check config and connection without optimizing")
+    args = parser.parse_args()
     try:
         db_url = read_db_url()
         conn_args = parse_mysql_conn(db_url)
-    except Exception as err:  # pragma: no cover
-        log(f"ERROR: {err}")
+    except Exception as err:
+        log(f"ERROR: OPTIMIZE failed: configuration ({type(err).__name__})")
         return 1
 
     try:
+        import MySQLdb
         conn = MySQLdb.connect(**conn_args)
     except Exception as err:
-        log(f"ERROR: Could not connect to MariaDB: {err}")
+        log(f"ERROR: OPTIMIZE failed: database connection ({type(err).__name__})")
         return 1
 
     try:
         with conn.cursor() as cur:
+            if args.check:
+                cur.execute("SELECT DATABASE(), VERSION()")
+                db, version = cur.fetchone()
+                log(f"CHECK OK: recorder connection to '{db}', MariaDB {version}; no tables changed.")
+                return 0
             cur.execute("SELECT GET_LOCK(%s, %s)", (LOCK_NAME, LOCK_WAIT_SECONDS))
             lock_row = cur.fetchone()
             if not lock_row or lock_row[0] != 1:
@@ -88,12 +119,14 @@ def main() -> int:
                 for row in rows:
                     # row format: (Table, Op, Msg_type, Msg_text)
                     log(f"Result {table}: {row}")
+                    if row[2] == "error":
+                        raise RuntimeError(f"OPTIMIZE returned an error for {table}")
 
             cur.execute("SELECT RELEASE_LOCK(%s)", (LOCK_NAME,))
             log("Done: OPTIMIZE completed.")
         return 0
     except Exception as err:
-        log(f"ERROR: OPTIMIZE failed: {err}")
+        log(f"ERROR: OPTIMIZE failed: table maintenance ({type(err).__name__})")
         return 1
     finally:
         try:

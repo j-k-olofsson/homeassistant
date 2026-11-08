@@ -1,0 +1,21 @@
+{
+  "button.dassens_hogtalare_favorite_current_song": "button.dassens_hogtalare_favoritmarkera_nuvarande_lat",
+  "button.diegos_vackarklocka_favorite_current_song": "button.sovrummet_diegos_vackarklocka_favoritmarkera_nuvarande_lat",
+  "button.stereo_hoger_favorite_current_song": "button.verandan_verandans_hogtalare_hoger_favoritmarkera_nuvarande_lat",
+  "button.stereo_vanster_favorite_current_song": "button.verandan_verandans_hogtalare_vanster_favoritmarkera_nuvarande_lat",
+  "button.alla_hogtalare_favorite_current_song_2": "button.alla_hogtalare_favoritmarkera_nuvarande_lat",
+  "button.nesthubf174_favoritmarkera_nuvarande_lat_3": "button.mannis_vackarklocka_favoritmarkera_nuvarande_lat",
+  "media_player.verandans_hogtalare_hoger_ma": "media_player.verandan_verandans_hogtalare_hoger_music_assistant",
+  "media_player.verandans_hogtalare_vanster_ma": "media_player.verandan_verandans_hogtalare_vanster",
+  "media_player.alla_hogtalare_ma": "media_player.alla_hogtalare_music_assistant",
+  "media_player.tvs_soundbar_ma": "media_player.tvs_soundbar",
+  "media_player.nya_tvn_ma": "media_player.nya_tvn_spelare",
+  "media_player.duschens_hogtalare_ma": "media_player.duschens_hogtalare",
+  "button.ha_voice_pe_096460_media_player_favorite_current_song": "button.ha_voice_pe_096460_mediaspelare_favoritmarkera_nuvarande_lat",
+  "media_player.ha_voice_pe_096460_media_player": "media_player.ha_voice_pe_096460_mediaspelare",
+  "button.ateljen_favoritmarkera_nuvarande_lat": "button.ateljens_hogtalare_favoritmarkera_nuvarande_lat",
+  "media_player.ateljen": "media_player.ateljens_hogtalare_music_assistant",
+  "button.chromecast5575_favoritmarkera_nuvarande_lat": "button.huset_favoritmarkera_nuvarande_lat",
+  "media_player.nya_tvn_3": "media_player.nya_tvn_kontrollpanel",
+  "media_player.kokets_skarm_2": "media_player.kokets_skarm_kontrollpanel"
+}

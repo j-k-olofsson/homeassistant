@@ -1,0 +1,213 @@
+{
+  "mapping": {
+    "update.termostat_friggan_firmware": "update.friggan_termostat_firmware",
+    "update.vattenvarmare_honshuset_firmware": "update.honshuset_vattenvarmare_firmware",
+    "update.ledstrip_sovrum_ostra_firmware": "update.sovrummet_led_list_ostra_firmware",
+    "update.ledstrip_atelje_norra_firmware": "update.ateljen_led_list_norra_firmware",
+    "update.ledstrip_sovrum_norra_firmware": "update.sovrummet_led_list_norra_firmware",
+    "update.ledstrip_atelje_sodra_firmware": "update.ateljen_led_list_sodra_firmware",
+    "update.ledstrip_kok_sodra_firmware": "update.koket_led_list_sodra_firmware",
+    "update.termostat_toaletten_firmware": "update.toaletten_termostat_firmware",
+    "update.golvvarme_friggan_firmware": "update.friggan_golvvarme_firmware",
+    "update.julbelysning_utomhus_firmware": "update.utomhus_julbelysning_firmware",
+    "update.termostat_kontoret_firmware": "update.kontoret_termostat_firmware",
+    "update.taklampor_sovrum_firmware": "update.sovrummet_taklampor_firmware",
+    "update.ledstrip_kok_sydostra_firmware": "update.koket_led_list_sydostra_firmware",
+    "update.ledstrip_verandan_firmware": "update.verandan_led_list_firmware",
+    "update.ledstrip_kok_smafonster_firmware": "update.koket_led_list_smafonster_firmware",
+    "update.ledstrip_kok_ostra_firmware": "update.koket_led_list_ostra_firmware",
+    "update.ledstrip_entren_firmware": "update.entren_led_list_firmware",
+    "update.poolbelysning_temp_firmware": "update.poolen_poolbelysning_och_temperatur_firmware",
+    "update.temp_hyg_gamla_verkstan_firmware": "update.gamla_verkstaden_klimatsensor_firmware",
+    "update.rf_bridge_firmware": "update.kontoret_rf_brygga_firmware",
+    "update.vattenniva_honshuset_firmware": "update.honshuset_vattenniva_firmware",
+    "update.ir_gateway_firmware": "update.bion_ir_gateway_firmware",
+    "update.esp32_kamera_firmware": "update.utomhus_esp32_kamera_firmware",
+    "update.bilvarmare_utomhus_firmware": "update.utomhus_billaddare_firmware",
+    "update.markis_utomhus_firmware": "update.utomhus_markis_firmware",
+    "update.ledstrip_toalett_firmware": "update.toaletten_led_list_firmware",
+    "update.julgranen_firmware": "update.verandan_julgranen_firmware",
+    "update.taklampor_kallaren_firmware": "update.bion_taklampor_firmware",
+    "update.ventilflakt_bion_firmware": "update.bion_ventilflakt_firmware",
+    "update.taklampor_ateljen_firmware": "update.ateljen_taklampor_firmware",
+    "update.taklampor_koket_firmware": "update.koket_taklampor_esphome_firmware",
+    "update.lucka_honshuset_firmware": "update.honshuset_lucka_firmware",
+    "update.poolvarmepump_poolen_firmware": "update.poolen_poolvarmepump_firmware",
+    "update.taklampa_firmware": "update.kontoret_taklampor_firmware",
+    "update.blomlampa_1_verandan_firmware": "update.verandan_blomlampa_1_firmware",
+    "update.blomlampa_2_verandan_firmware": "update.koket_blomlampa_2_firmware",
+    "update.blomlampor_bion_firmware": "update.bion_blomlampor_firmware",
+    "update.lux_uv_labbet_firmware": "update.utomhus_ljussensor_firmware",
+    "update.taklampor_duschen_firmware": "update.duschen_taklampor_firmware",
+    "update.blomlampa_kontoret_firmware": "update.kontoret_blomlampa_firmware",
+    "update.huvudstrombrytaren_prusa_xl_firmware_2": "update.kontoret_huvudstrombrytaren_prusa_xl_firmware",
+    "update.honsbelysning_firmware": "update.honshuset_honsbelysning_firmware"
+  },
+  "excluded": [
+    {
+      "entity_id": "update.golvvarme_sovrum_kontor_firmware",
+      "name": "Golvvärme (sovrum och kontor)",
+      "reason": "Ytterligare namnkontext behöver granskas före permanent ID"
+    },
+    {
+      "entity_id": "update.poolpup_utomhus_firmware",
+      "name": "Poolpump (utomhus)",
+      "reason": "Ytterligare namnkontext behöver granskas före permanent ID"
+    },
+    {
+      "entity_id": "update.blomlampa_ateljen_firmware",
+      "name": "Blomlampa (ateljén)",
+      "reason": "Restpunkt: ESPHome09"
+    },
+    {
+      "entity_id": "update.hemmabio_el_2_firmware",
+      "name": "Hemmabio El #2",
+      "reason": "Enhetsnamnet behöver ytterligare granskning före permanent ID"
+    },
+    {
+      "entity_id": "update.hemmabio_el_1_firmware",
+      "name": "Hemmabio El #1",
+      "reason": "Enhetsnamnet behöver ytterligare granskning före permanent ID"
+    },
+    {
+      "entity_id": "update.gasol_utomhus_firmware",
+      "name": "Gasol",
+      "reason": "Primärfunktion och enhetsnamn behöver samordnas före ID"
+    },
+    {
+      "entity_id": "update.elmatare_elstolpen_firmware",
+      "name": "Elmätare (elstolpen)",
+      "reason": "Ytterligare namnkontext behöver granskas före permanent ID"
+    },
+    {
+      "entity_id": "update.ledstrip_balkongdorrar_firmware",
+      "name": "LED-list (balkongdörrar)",
+      "reason": "Ytterligare namnkontext behöver granskas före permanent ID"
+    },
+    {
+      "entity_id": "update.home_assistant_voice_096460_firmware",
+      "name": "HA Voice PE 096460",
+      "reason": "Enhetsnamnet behöver ytterligare granskning före permanent ID"
+    },
+    {
+      "entity_id": "update.blomlampa_shelly_plus_rgbw_pm_firmware",
+      "name": "Blomlampa (Shelly Plus RGBW PM)",
+      "reason": "Ytterligare namnkontext behöver granskas före permanent ID"
+    },
+    {
+      "entity_id": "update.ledstrip_vitrinskap_firmware",
+      "name": "LED-list (vitrinskåp)",
+      "reason": "Ytterligare namnkontext behöver granskas före permanent ID"
+    },
+    {
+      "entity_id": "update.salt_verkstan_firmware",
+      "name": "Salt",
+      "reason": "Primärfunktion och enhetsnamn behöver samordnas före ID"
+    },
+    {
+      "entity_id": "update.thread_test_esp32_c6_zero_firmware",
+      "name": "LED-list (korridoren)",
+      "reason": "Ytterligare namnkontext behöver granskas före permanent ID"
+    },
+    {
+      "entity_id": "update.ir_proxy_1_firmware",
+      "name": "IR-proxy 1",
+      "reason": "Område saknas"
+    },
+    {
+      "entity_id": "update.ir_proxy_2_firmware",
+      "name": "IR-proxy 2",
+      "reason": "Område saknas"
+    }
+  ],
+  "references": {
+    "update.rf_bridge_firmware": [
+      ".storage/homeassistant.exposed_entities"
+    ],
+    "update.vattenniva_honshuset_firmware": [
+      ".storage/homeassistant.exposed_entities"
+    ],
+    "update.bilvarmare_utomhus_firmware": [
+      ".storage/homeassistant.exposed_entities"
+    ],
+    "update.markis_utomhus_firmware": [
+      ".storage/homeassistant.exposed_entities"
+    ],
+    "update.ledstrip_toalett_firmware": [
+      ".storage/homeassistant.exposed_entities"
+    ],
+    "update.julgranen_firmware": [
+      ".storage/homeassistant.exposed_entities"
+    ],
+    "update.poolvarmepump_poolen_firmware": [
+      ".storage/homeassistant.exposed_entities"
+    ]
+  },
+  "ready_mapping": {
+    "update.termostat_friggan_firmware": "update.friggan_termostat_firmware",
+    "update.vattenvarmare_honshuset_firmware": "update.honshuset_vattenvarmare_firmware",
+    "update.ledstrip_sovrum_ostra_firmware": "update.sovrummet_led_list_ostra_firmware",
+    "update.ledstrip_atelje_norra_firmware": "update.ateljen_led_list_norra_firmware",
+    "update.ledstrip_sovrum_norra_firmware": "update.sovrummet_led_list_norra_firmware",
+    "update.ledstrip_atelje_sodra_firmware": "update.ateljen_led_list_sodra_firmware",
+    "update.ledstrip_kok_sodra_firmware": "update.koket_led_list_sodra_firmware",
+    "update.termostat_toaletten_firmware": "update.toaletten_termostat_firmware",
+    "update.golvvarme_friggan_firmware": "update.friggan_golvvarme_firmware",
+    "update.julbelysning_utomhus_firmware": "update.utomhus_julbelysning_firmware",
+    "update.termostat_kontoret_firmware": "update.kontoret_termostat_firmware",
+    "update.taklampor_sovrum_firmware": "update.sovrummet_taklampor_firmware",
+    "update.ledstrip_kok_sydostra_firmware": "update.koket_led_list_sydostra_firmware",
+    "update.ledstrip_verandan_firmware": "update.verandan_led_list_firmware",
+    "update.ledstrip_kok_smafonster_firmware": "update.koket_led_list_smafonster_firmware",
+    "update.ledstrip_kok_ostra_firmware": "update.koket_led_list_ostra_firmware",
+    "update.ledstrip_entren_firmware": "update.entren_led_list_firmware",
+    "update.poolbelysning_temp_firmware": "update.poolen_poolbelysning_och_temperatur_firmware",
+    "update.temp_hyg_gamla_verkstan_firmware": "update.gamla_verkstaden_klimatsensor_firmware",
+    "update.ir_gateway_firmware": "update.bion_ir_gateway_firmware",
+    "update.esp32_kamera_firmware": "update.utomhus_esp32_kamera_firmware",
+    "update.taklampor_kallaren_firmware": "update.bion_taklampor_firmware",
+    "update.ventilflakt_bion_firmware": "update.bion_ventilflakt_firmware",
+    "update.taklampor_ateljen_firmware": "update.ateljen_taklampor_firmware",
+    "update.taklampor_koket_firmware": "update.koket_taklampor_esphome_firmware",
+    "update.lucka_honshuset_firmware": "update.honshuset_lucka_firmware",
+    "update.taklampa_firmware": "update.kontoret_taklampor_firmware",
+    "update.blomlampa_1_verandan_firmware": "update.verandan_blomlampa_1_firmware",
+    "update.blomlampa_2_verandan_firmware": "update.koket_blomlampa_2_firmware",
+    "update.blomlampor_bion_firmware": "update.bion_blomlampor_firmware",
+    "update.lux_uv_labbet_firmware": "update.utomhus_ljussensor_firmware",
+    "update.taklampor_duschen_firmware": "update.duschen_taklampor_firmware",
+    "update.blomlampa_kontoret_firmware": "update.kontoret_blomlampa_firmware",
+    "update.huvudstrombrytaren_prusa_xl_firmware_2": "update.kontoret_huvudstrombrytaren_prusa_xl_firmware",
+    "update.honsbelysning_firmware": "update.honshuset_honsbelysning_firmware"
+  },
+  "deferred_legacy_exposure": [
+    {
+      "entity_id": "update.rf_bridge_firmware",
+      "reason": "Äldre exponeringspost måste hanteras separat; ID behålls tills dess"
+    },
+    {
+      "entity_id": "update.vattenniva_honshuset_firmware",
+      "reason": "Äldre exponeringspost måste hanteras separat; ID behålls tills dess"
+    },
+    {
+      "entity_id": "update.bilvarmare_utomhus_firmware",
+      "reason": "Äldre exponeringspost måste hanteras separat; ID behålls tills dess"
+    },
+    {
+      "entity_id": "update.markis_utomhus_firmware",
+      "reason": "Äldre exponeringspost måste hanteras separat; ID behålls tills dess"
+    },
+    {
+      "entity_id": "update.ledstrip_toalett_firmware",
+      "reason": "Äldre exponeringspost måste hanteras separat; ID behålls tills dess"
+    },
+    {
+      "entity_id": "update.julgranen_firmware",
+      "reason": "Äldre exponeringspost måste hanteras separat; ID behålls tills dess"
+    },
+    {
+      "entity_id": "update.poolvarmepump_poolen_firmware",
+      "reason": "Äldre exponeringspost måste hanteras separat; ID behålls tills dess"
+    }
+  ]
+}

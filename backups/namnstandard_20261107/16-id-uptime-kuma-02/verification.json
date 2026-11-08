@@ -1,0 +1,24 @@
+{
+  "status": "verified",
+  "stage": "16-id-uptime-kuma-02",
+  "renamed_entities": 250,
+  "same_unique_ids_and_settings": true,
+  "statistics_series_verified": 0,
+  "history_records_verified": 0,
+  "statistics_metadata_moved": 189,
+  "new_statistics_metadata_created": 12,
+  "source_files_updated": [
+    "recorder_excluded_entities.yaml"
+  ],
+  "dashboards_updated": [],
+  "frontend_favorites_updated": false,
+  "helper_config_entries_auto_updated": [],
+  "automation_consumers_reloaded": [],
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  },
+  "legacy_false_cleanup_pending": true,
+  "equivalent_explicit_google_false_additions": []
+}

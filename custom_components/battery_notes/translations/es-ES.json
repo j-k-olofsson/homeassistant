@@ -15,8 +15,8 @@
                     "battery_increase_threshold": "Umbral de aumento de batería"
                 },
                 "data_description": {
-                    "battery_low_threshold": "0 usará el umbral global por defecto",
-                    "battery_increase_threshold": "El umbral es la diferencia de aumento entre el nivel anterior y el actual de la batería\n0 utilizará el umbral global por defecto"
+                    "battery_low_threshold": "0 usará el umbral global por defecto.",
+                    "battery_increase_threshold": "El umbral es la diferencia de aumento entre el nivel anterior y el actual de la batería.\n0 utilizará el umbral global por defecto."
                 },
                 "sections": {
                     "advanced_settings": {
@@ -24,11 +24,13 @@
                         "data": {
                             "battery_percentage_template": "Plantilla de porcentaje de batería",
                             "battery_low_template": "Plantilla de batería baja",
+                            "retain_state": "Mantener estado",
                             "filter_outliers": "Filtrar valores atípicos"
                         },
                         "data_description": {
-                            "battery_percentage_template": "Plantilla para crear un porcentaje de batería\nSolo necesario para dispositivos que no tienen un porcentaje de batería estándar",
-                            "battery_low_template": "Plantilla para determinar que una batería es baja, debe devolver verdadero si es baja\nSolo necesario para niveles de batería no estándar",
+                            "battery_percentage_template": "Plantilla para crear un porcentaje de batería\nSolo necesario para dispositivos que no tienen un porcentaje de batería estándar.",
+                            "battery_low_template": "Plantilla para determinar que una batería es baja, debe devolver verdadero si es baja.\nSolo necesario para niveles de batería no estándar.",
+                            "retain_state": "Mantiene el último estado de la batería cuando la entidad de origen no está disponible.\nÚtil para dispositivos que entran en modo de suspensión y se vuelven no disponibles.",
                             "filter_outliers": "Filtra las grandes caídas del nivel de batería, reduciendo los eventos que se disparan falsamente en los dispositivos que informan erróneamente de los niveles de forma ocasional."
                         }
                     }
@@ -90,8 +92,8 @@
                         "battery_increase_threshold": "Umbral de aumento de batería"
                     },
                     "data_description": {
-                        "battery_low_threshold": "0 usará el umbral global por defecto",
-                        "battery_increase_threshold": "El umbral es la diferencia de aumento entre el nivel anterior y el actual de la batería\n0 utilizará el umbral global por defecto"
+                        "battery_low_threshold": "0 usará el umbral global por defecto.",
+                        "battery_increase_threshold": "El umbral es la diferencia de aumento entre el nivel anterior y el actual de la batería.\n0 utilizará el umbral global por defecto."
                     },
                     "sections": {
                         "advanced_settings": {
@@ -99,11 +101,13 @@
                             "data": {
                                 "battery_percentage_template": "Plantilla de porcentaje de batería",
                                 "battery_low_template": "Plantilla de batería baja",
+                                "retain_state": "Mantener estado",
                                 "filter_outliers": "Filtrar valores atípicos"
                             },
                             "data_description": {
-                                "battery_percentage_template": "Plantilla para crear un porcentaje de batería\nSolo necesario para dispositivos que no tienen un porcentaje de batería estándar",
-                                "battery_low_template": "Plantilla para determinar que una batería es baja, debe devolver verdadero si es baja\nSolo necesario para niveles de batería no estándar",
+                                "battery_percentage_template": "Plantilla para crear un porcentaje de batería.\nSolo necesario para dispositivos que no tienen un porcentaje de batería estándar.",
+                                "battery_low_template": "Plantilla para determinar que una batería es baja, debe devolver verdadero si es baja\nSolo necesario para niveles de batería no estándar.",
+                                "retain_state": "Mantiene el último estado de la batería cuando la entidad de origen no está disponible.\nÚtil para dispositivos que entran en modo de suspensión y se vuelven no disponibles.",
                                 "filter_outliers": "Filtra las grandes caídas del nivel de batería, reduciendo los eventos que se disparan falsamente en los dispositivos que informan erróneamente de los niveles de forma ocasional."
                             }
                         }
@@ -124,9 +128,9 @@
                         "battery_increase_threshold": "Umbral de aumento de batería"
                     },
                     "data_description": {
-                        "name": "Dejar en blanco utilizará el nombre del dispositivo de serie",
-                        "battery_low_threshold": "0 usará el umbral global por defecto",
-                        "battery_increase_threshold": "El umbral es la diferencia de aumento entre el nivel anterior y el actual de la batería\n0 utilizará el umbral global por defecto"
+                        "name": "Dejar en blanco utilizará el nombre del dispositivo de serie.",
+                        "battery_low_threshold": "0 usará el umbral global por defecto.",
+                        "battery_increase_threshold": "El umbral es la diferencia de aumento entre el nivel anterior y el actual de la batería.\n0 utilizará el umbral global por defecto."
                     },
                     "sections": {
                         "advanced_settings": {
@@ -134,11 +138,13 @@
                             "data": {
                                 "battery_percentage_template": "Plantilla de porcentaje de batería",
                                 "battery_low_template": "Plantilla de batería baja",
+                                "retain_state": "Mantener estado",
                                 "filter_outliers": "Filtrar valores atípicos"
                             },
                             "data_description": {
-                                "battery_percentage_template": "Plantilla para crear un porcentaje de batería\nSolo necesario para dispositivos que no tienen un porcentaje de batería estándar",
-                                "battery_low_template": "Plantilla para determinar que una batería es baja, debe devolver verdadero si es baja\nSolo necesario para niveles de batería no estándar",
+                                "battery_percentage_template": "Plantilla para crear un porcentaje de batería.\nSolo necesario para dispositivos que no tienen un porcentaje de batería estándar.",
+                                "battery_low_template": "Plantilla para determinar que una batería es baja, debe devolver verdadero si es baja.\nSolo necesario para niveles de batería no estándar.",
+                                "retain_state": "Mantiene el último estado de la batería cuando la entidad de origen no está disponible.\nÚtil para dispositivos que entran en modo de suspensión y se vuelven no disponibles.",
                                 "filter_outliers": "Filtra las grandes caídas del nivel de batería, reduciendo los eventos que se disparan falsamente en los dispositivos que informan erróneamente de los niveles de forma ocasional."
                             }
                         }
@@ -287,7 +293,7 @@
                     "description": "Dispositivo al que le ha sido reemplazada la batería.",
                     "name": "Dispositivo"
                 },
-                "entity_id": {
+                "source_entity_id": {
                     "description": "Entidad cuya batería ha sido reemplazada.",
                     "name": "Entidad"
                 },
@@ -301,7 +307,7 @@
         "check_battery_last_replaced": {
             "description": "Obtenga una respuesta o genere eventos para dispositivos cuya batería no ha sido reemplazada.",
             "fields": {
-                "days_last_reported": {
+                "days_last_replaced": {
                     "description": "Número de días desde que un dispositivo tuvo su última batería reemplazada.",
                     "name": "Días"
                 },
@@ -375,6 +381,47 @@
         "deprecated_yaml": {
             "title": "La configuración YAML de {integration_title} se está eliminando",
             "description": "La configuración de {integration_title} usando YAML se está eliminando.\n\nSu configuración YAML existente ha sido importada a la interfaz de usuario automáticamente.\n\nElimine la configuración `{domain}` de su archivo configuration.yaml e reinicie Home Assistant para resolver este problema."
+        }
+    },
+    "selector": {
+        "battery_low_event_types": {
+            "options": {
+                "all": "Todos",
+                "low_state_transitions": "Transiciones a batería baja",
+                "reminders": "Recordatorios"
+            }
+        }
+    },
+    "triggers": {
+        "battery_has_increased": {
+            "name": "El nivel de batería ha aumentado",
+            "description": "Se activa cuando el nivel de una batería aumenta al menos el umbral de aumento configurado, o cuando un estado de batería baja determinado por un sensor binario o una plantilla vuelve a indicar un nivel adecuado."
+        },
+        "battery_was_not_reported": {
+            "name": "No se ha informado del nivel de batería",
+            "description": "Se activa a partir de los eventos generados por la acción «Comprobar última batería reportada» cuando una batería no ha informado de su nivel durante más días de los especificados o nunca ha informado de él. Programa o llama a esta acción con la opción «Generar eventos» activada para activar esta automatización.\nLas automatizaciones que utilicen este disparador deben usar el modo en cola (`mode: queued`), ya que una sola llamada a una acción puede generar eventos para varias notas de batería en rápida sucesión."
+        },
+        "battery_was_not_replaced": {
+            "name": "La batería no se ha reemplazado",
+            "description": "Se activa a partir de los eventos generados por la acción «Comprobar última batería reemplazada» cuando una batería no se ha reemplazado durante más días de los especificados. Programa o llama a esta acción con la opción «Generar eventos» activada para activar esta automatización.\nLas automatizaciones que utilicen este disparador deben usar el modo en cola (`mode: queued`), ya que una sola llamada a una acción puede generar eventos para varias notas de batería en rápida sucesión."
+        },
+        "battery_no_longer_low": {
+            "name": "La batería ya no está baja",
+            "description": "Se activa cuando el nivel de una batería deja de estar bajo."
+        },
+        "battery_became_low": {
+            "name": "La batería ha pasado a estar baja",
+            "description": "Se activa cuando el nivel de una batería pasa a estar bajo o se genera un recordatorio de batería baja.\nLas automatizaciones que utilicen este disparador deben usar el modo en cola (`mode: queued`), ya que una sola llamada a una acción puede generar eventos para varias notas de batería en rápida sucesión.",
+            "fields": {
+                "event_types": {
+                    "name": "Tipos de eventos",
+                    "description": "«Todos» activa la automatización cuando una batería pasa a estar baja y con los recordatorios generados por «Comprobar batería baja». Selecciona «Transiciones a batería baja» para reaccionar solo a las transiciones a batería baja, o «Recordatorios» para los recordatorios de la acción."
+                }
+            }
+        },
+        "battery_was_replaced": {
+            "name": "La batería se ha reemplazado",
+            "description": "Se activa cuando una batería se marca como reemplazada."
         }
     },
     "exceptions": {

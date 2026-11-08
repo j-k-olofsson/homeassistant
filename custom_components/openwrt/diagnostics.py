@@ -100,8 +100,24 @@ async def async_get_config_entry_diagnostics(
             diag["connected_devices_count"] = sum(
                 1 for d in data.all_connected_devices if d.connected
             )
-            diag["wireless_clients_count"] = sum(
-                1 for d in data.all_connected_devices if d.is_wireless and d.connected
+            diag["wireless_clients_count"] = (
+                wl_cnt
+                if (
+                    (
+                        wl_cnt := sum(
+                            1
+                            for d in data.all_connected_devices
+                            if d.is_wireless and d.connected
+                        )
+                    )
+                    > 0
+                    or any(d.is_wireless for d in data.all_connected_devices)
+                )
+                else sum(
+                    w.clients_count
+                    for w in data.wireless_interfaces
+                    if w.clients_count is not None
+                )
             )
             diag["firmware"] = {
                 "upgradable": data.firmware_upgradable,
@@ -157,7 +173,20 @@ async def async_get_config_entry_diagnostics(
                 "adblock": data.packages.adblock,
                 "simple_adblock": data.packages.simple_adblock,
                 "ban_ip": data.packages.ban_ip,
+                "tailscale": data.packages.tailscale,
             }
+            if data.tailscale is not None:
+                # Counts and states only: no IPs, hostnames or tailnet names.
+                diag["tailscale"] = {
+                    "backend_state": data.tailscale.backend_state,
+                    "version": data.tailscale.version,
+                    "daemon_running": data.tailscale.daemon_running,
+                    "needs_login": data.tailscale.needs_login,
+                    "peers_total": len(data.tailscale.peers),
+                    "peers_online": sum(1 for p in data.tailscale.peers if p.online),
+                    "health_count": len(data.tailscale.health),
+                    "exit_node_in_use": data.tailscale.exit_node_in_use,
+                }
             diag["top_processes"] = [
                 {
                     "pid": p.pid,
@@ -210,11 +239,7 @@ async def async_get_config_entry_diagnostics(
         dev_reg = dr.async_get(hass)
         ent_reg = er.async_get(hass)
 
-        for _dev in dev_reg.devices.values():
-            # Only include devices related to this config entry
-            if entry.entry_id not in _dev.config_entries:
-                continue
-
+        for _dev in dr.async_entries_for_config_entry(dev_reg, entry.entry_id):
             reg_devices.append(
                 {
                     "id": str(_dev.id),
@@ -223,7 +248,11 @@ async def async_get_config_entry_diagnostics(
                     "manufacturer": str(_dev.manufacturer or ""),
                     "sw_version": str(_dev.sw_version or ""),
                     "via_device_id": str(_dev.via_device_id or ""),
-                    "config_entries": list(_dev.config_entries),
+                    "config_entries": (
+                        [getattr(_dev, "config_entry_id", None)]
+                        if getattr(_dev, "config_entry_id", None)
+                        else [entry.entry_id]
+                    ),
                     "identifiers": [list(i) for i in _dev.identifiers],
                     "connections": [list(c) for c in _dev.connections],
                 }

@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "minor_version": 2,
+  "key": "core.label_registry",
+  "data": {
+    "labels": [
+      {
+        "color": "orange",
+        "description": null,
+        "icon": "mdi:monitor-dashboard",
+        "label_id": "system_monotoring",
+        "name": "System",
+        "created_at": "1970-01-01T00:00:00+00:00",
+        "modified_at": "2026-05-12T10:35:21.551040+00:00"
+      },
+      {
+        "color": "deep-purple",
+        "description": null,
+        "icon": "phu:ai",
+        "label_id": "anvander_lokal_llm",
+        "name": "Använder lokal LLM",
+        "created_at": "2025-09-03T11:29:28.624603+00:00",
+        "modified_at": "2026-05-12T10:35:02.229121+00:00"
+      },
+      {
+        "color": "green",
+        "description": "Matter over Threads",
+        "icon": "mdi:spider-thread",
+        "label_id": "matter",
+        "name": "Matter",
+        "created_at": "2026-01-29T09:20:26.145737+00:00",
+        "modified_at": "2026-05-12T10:35:12.443564+00:00"
+      },
+      {
+        "color": "accent",
+        "description": null,
+        "icon": null,
+        "label_id": "haghs_ignore",
+        "name": "haghs_ignore",
+        "created_at": "2026-06-12T05:10:04.870306+00:00",
+        "modified_at": "2026-06-24T08:33:25.822282+00:00"
+      },
+      {
+        "color": "yellow",
+        "description": "Anropas av Google Home",
+        "icon": "mdi:google",
+        "label_id": "google_home_automation",
+        "name": "Google Home Automation",
+        "created_at": "2026-09-08T08:10:53.252476+00:00",
+        "modified_at": "2026-09-08T08:10:53.252485+00:00"
+      }
+    ]
+  }
+}

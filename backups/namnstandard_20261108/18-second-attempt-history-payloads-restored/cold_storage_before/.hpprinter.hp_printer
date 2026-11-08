@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": ".hpprinter.hp_printer",
+  "data": {
+    "status": "Idle",
+    "IsOnline": true,
+    "Name": "HP Printer",
+    "Printer": {
+      "Total": "3726",
+      "Color": "1445",
+      "Monochrome": "0",
+      "Jams": "35",
+      "Cancelled": "7"
+    },
+    "Scanner": {
+      "Total": "56",
+      "ADF": "N/A",
+      "Duplex": "N/A",
+      "Flatbed": "56",
+      "Jams": "0",
+      "Mispick": "0"
+    },
+    "Cartridges": {
+      "Inkcartridge CyanMagentaYellow": {
+        "Color": "CyanMagentaYellow",
+        "Type": "Inkcartridge",
+        "Station": "0",
+        "Product Number": "N/A",
+        "Serial Number": "N/A",
+        "Manufactured By": "HP",
+        "Manufactured At": "2022-11-01",
+        "Warranty Expiration Date": "N/A",
+        "Installed At": "N/A",
+        "Remaining": "50"
+      },
+      "Inkcartridge Black": {
+        "Color": "Black",
+        "Type": "Inkcartridge",
+        "Station": "1",
+        "Product Number": "N/A",
+        "Serial Number": "N/A",
+        "Manufactured By": "HP",
+        "Manufactured At": "2024-01-01",
+        "Warranty Expiration Date": "N/A",
+        "Installed At": "N/A",
+        "Remaining": "100"
+      }
+    },
+    "model": "ENVY Photo 7100 All-in-One Printer series"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "sensor.plantsensor_3_signal_strength": "sensor.verandan_plantsensor_3_signalstyrka",
+  "sensor.plantsensor_4_signal_strength": "sensor.verandan_plantsensor_4_signalstyrka",
+  "sensor.plantsensor_1_signal_strength": "sensor.koket_plantsensor_1_signalstyrka",
+  "sensor.plantsensor_2_signal_strength": "sensor.verandan_plantsensor_2_signalstyrka",
+  "sensor.plant_sensor_78ff_signal_strength": "sensor.koket_plantsensor_5_signalstyrka",
+  "sensor.plant_sensor_ff62_signalstyrka": "sensor.kontoret_plantsensor_6_signalstyrka"
+}

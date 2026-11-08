@@ -1,0 +1,782 @@
+{
+  "button.chromecast_verkstadens_speaker_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.verkstaden_shelly_pro_3_koppla_fran_enhet_via_ap_kallaren": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.pixel_9_pro_xl_koppla_fran_enhet_via_ap_koket_mac_718fef_phy0_ap0": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:20.833228+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-07T15:27:39.855044+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.530141+00:00"
+    }
+  ],
+  "button.carolas_s25_koppla_fran_enhet_via_ap_kontoret_mac_3077c1_phy1_ap0": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.koket_roborock_max_koppla_fran_enhet_via_ap_kontoret": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.entren_gw_august_connect_koppla_fran_enhet_via_ap_kontoret": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-07T15:21:28.623070+00:00"
+    }
+  ],
+  "button.honshuset_vattenniva_koppla_fran_enhet_via_ap_poolen": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.ateljen_vattensensor_torkskap_koppla_fran_enhet_via_ap_kontoret": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.chromecast_vaxtskapets_speaker_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.530218+00:00"
+    }
+  ],
+  "button.chromecast_stereo_left_speaker_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.koket_2c_bc_bb_c1_87_2c_koppla_fran_enhet_via_ap_poolen": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.chromecast_toans_speaker_koppla_fran_enhet_via_ap_verkstaden": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.siemens_dishwasher_016050395510002818_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.chromecast_duschens_speaker_koppla_fran_enhet_via_ap_koket_mac_0b5577_phy0_ap0": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.home_assistant_voice_096460_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.chromecast_kokets_screen_koppla_fran_enhet_via_ap_koket_mac_97d9b5_phy0_ap0": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.koket_roborock_max_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.chromecast_stereo_right_speaker_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.galaxy_s9_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.verandan_vaggkontakt_x2_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.verandan_golvvarme_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.entren_golvvarme_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.ateljen_golvvarme_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.koket_golvvarme_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.duschen_golvvarme_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-07T10:54:34.610573+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.530307+00:00"
+    }
+  ],
+  "button.verandan_blomlampa_1_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.koket_blomlampa_2_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.utomhus_esp32_kamera_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.verandan_led_list_balkongdorrar_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.entren_led_list_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.koket_led_list_sydostra_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.koket_led_list_ostra_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.verandan_led_list_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.duschen_taklampor_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.koket_taklampor_esphome_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.chromecast_tv_soundbar_koppla_fran_enhet_via_ap_koket_mac_125c49_phy1_ap0": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.diegotab_koppla_fran_enhet_via_ap_koket_mac_8136be_phy1_ap0": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:20.833420+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-07T19:41:49.887316+00:00"
+    }
+  ],
+  "button.siemens_washerdryer_koppla_fran_enhet_via_ap_kontoret": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.chromecast_diegos_screen_koppla_fran_enhet_via_ap_kontoret": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.chromecast_mannis_screen_koppla_fran_enhet_via_ap_kontoret": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.sovrummet_sanglampor_manni_koppla_fran_enhet_via_ap_kontoret": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.sovrummet_sanglampor_diego_koppla_fran_enhet_via_ap_kontoret": [
+    {
+      "state": "2026-08-21T08:33:34.145438+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.kontoret_blomlampa_koppla_fran_enhet_via_ap_kontoret": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.sovrummet_a4_cf_12_d8_77_59_koppla_fran_enhet_via_ap_kontoret": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.kontoret_40_22_d8_61_53_f8_koppla_fran_enhet_via_ap_kontoret": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.sovrummet_led_list_norra_koppla_fran_enhet_via_ap_kontoret": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.sovrummet_led_list_ostra_koppla_fran_enhet_via_ap_kontoret": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.utomhus_markis_koppla_fran_enhet_via_ap_kontoret": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.kontoret_taklampor_koppla_fran_enhet_via_ap_kontoret": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.sovrummet_taklampor_koppla_fran_enhet_via_ap_kontoret": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.kontoret_termostat_koppla_fran_enhet_via_ap_kontoret": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.galaxy_s7_koppla_fran_enhet_via_ap_friggan": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.friggan_golvvarme_koppla_fran_enhet_via_ap_friggan": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.friggan_termostat_koppla_fran_enhet_via_ap_friggan": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.friggan_c8_2b_96_e6_99_4f_koppla_fran_enhet_via_ap_friggan": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.verkstaden_led_plafonder_koppla_fran_enhet_via_ap_verkstaden": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.utomhus_billaddare_koppla_fran_enhet_via_ap_verkstaden": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.verkstaden_salt_koppla_fran_enhet_via_ap_verkstaden": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.kontoret_rf_brygga_koppla_fran_enhet_via_ap_verkstaden": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.ateljen_taklampor_koppla_fran_enhet_via_ap_verkstaden": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.bion_taklampor_koppla_fran_enhet_via_ap_verkstaden": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.gamla_verkstaden_klimatsensor_koppla_fran_enhet_via_ap_verkstaden": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.bion_smarthomecontrolpanel_koppla_fran_enhet_via_ap_kallaren": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.bion_golvvarme_koppla_fran_enhet_via_ap_kallaren": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.utomhus_gasol_koppla_fran_enhet_via_ap_kallaren": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.bion_hemmabio_el_1_koppla_fran_enhet_via_ap_kallaren": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.bion_40_22_d8_76_6f_70_koppla_fran_enhet_via_ap_kallaren": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.utomhus_julbelysning_koppla_fran_enhet_via_ap_kallaren": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.koket_led_list_sodra_koppla_fran_enhet_via_ap_kallaren": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.bion_ventilflakt_koppla_fran_enhet_via_ap_kallaren": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.ap_honshuset_home_arpa_koppla_fran_enhet_via_ap_poolen": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.lenovol340_koppla_fran_enhet_via_ap_poolen": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.utomhus_elmatare_elstolpen_koppla_fran_enhet_via_ap_poolen": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.poolen_24_a1_60_10_5f_96_koppla_fran_enhet_via_ap_poolen": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.poolen_poolvarmepump_koppla_fran_enhet_via_ap_poolen": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.poolen_poolbelysning_och_temperatur_koppla_fran_enhet_via_ap_poolen": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.chromecast_vaxtskapets_speaker_koppla_fran_enhet_via_ap_kontoret": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-08T00:01:05.661984+00:00"
+    }
+  ],
+  "button.galaxy_a36_5g_koppla_fran_enhet_via_ap_verkstaden": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.utomhus_ljussensor_koppla_fran_enhet_via_ap_kontoret": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.chromecast_mannis_screen_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.utomhus_julbelysning_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.koket_led_list_sodra_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.koket_2c_bc_bb_c1_87_2c_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.ateljen_taklampor_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.chromecast_kokets_screen_koppla_fran_enhet_via_ap_koket_mac_97d9b5_phy1_ap0": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.chromecast_toans_speaker_koppla_fran_enhet_via_ap_koket_mac_1a8736_phy1_ap0": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.chromecast_duschens_speaker_koppla_fran_enhet_via_ap_koket_mac_0b5577_phy1_ap0": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.verkstaden_shelly_pro_3_koppla_fran_enhet_via_ap_verkstaden": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.chromecast_duschens_speaker_koppla_fran_enhet_via_ap_kallaren": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "device_tracker.diego_lenovo_e31_70": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.lenovol340_koppla_fran_enhet_via_ap_kontoret": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "device_tracker.c200c": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    },
+    {
+      "state": "home",
+      "last_changed": "2026-11-07T13:25:14.895811+00:00"
+    }
+  ]
+}

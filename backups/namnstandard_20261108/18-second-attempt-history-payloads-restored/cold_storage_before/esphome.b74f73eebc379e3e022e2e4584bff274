@@ -1,0 +1,233 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.b74f73eebc379e3e022e2e4584bff274",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "esphome30",
+      "friendly_name": "Hemmabio El #1",
+      "mac_address": "40:22:D8:76:66:C0",
+      "compilation_time": "2026-11-06 09:44:02 +0100",
+      "model": "nodemcu-32s",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2026.10.2",
+      "project_name": "",
+      "project_version": "",
+      "webserver_port": 80,
+      "legacy_voice_assistant_version": 0,
+      "voice_assistant_feature_flags": 0,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0,
+      "zwave_proxy_feature_flags": 0,
+      "zwave_home_id": 0,
+      "suggested_area": "",
+      "bluetooth_mac_address": "",
+      "api_encryption_supported": true,
+      "api_encryption_provisionable": false,
+      "api_outgoing_connection_supported": true,
+      "devices": [],
+      "areas": [],
+      "area": {
+        "area_id": 0,
+        "name": ""
+      },
+      "serial_proxies": []
+    },
+    "services": [],
+    "api_version": {
+      "major": 1,
+      "minor": 19
+    },
+    "device_capabilities": {
+      "bluetooth_proxy": {
+        "feature_flags": 0,
+        "mac_address": ""
+      },
+      "voice_assistant": {
+        "feature_flags": 0
+      },
+      "zwave_proxy": {
+        "feature_flags": 0,
+        "home_id": 0
+      },
+      "serial_proxies": [],
+      "wizard": {
+        "configured": false
+      },
+      "sendspin": {
+        "feature_flags": 0,
+        "client_id": ""
+      },
+      "store_yaml": {
+        "supported": false
+      }
+    },
+    "sensor": [
+      {
+        "object_id": "esphome30_voltage",
+        "key": 4005112796,
+        "name": "esphome30 Voltage",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "voltage",
+        "unit_of_measurement": "V",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome30_current",
+        "key": 3785789629,
+        "name": "esphome30 Current",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "current",
+        "unit_of_measurement": "A",
+        "accuracy_decimals": 2,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome30_power",
+        "key": 3193324261,
+        "name": "esphome30 Power",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "power",
+        "unit_of_measurement": "W",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome30_energy",
+        "key": 1943674786,
+        "name": "esphome30 Energy",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "energy",
+        "unit_of_measurement": "Wh",
+        "accuracy_decimals": 3,
+        "force_update": false,
+        "state_class": 2,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome30_apparent_power",
+        "key": 446655627,
+        "name": "esphome30 Apparent Power",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "apparent_power",
+        "unit_of_measurement": "VA",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome30_reactive_power",
+        "key": 2194168605,
+        "name": "esphome30 Reactive Power",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "reactive_power",
+        "unit_of_measurement": "var",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome30_power_factor",
+        "key": 554025905,
+        "name": "esphome30 Power Factor",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "power_factor",
+        "unit_of_measurement": "",
+        "accuracy_decimals": 2,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome30_total_daily_energy",
+        "key": 2589654781,
+        "name": "esphome30 Total Daily Energy",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "energy",
+        "unit_of_measurement": "kWh",
+        "accuracy_decimals": 3,
+        "force_update": false,
+        "state_class": 2,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome30_power_factor_template",
+        "key": 3272813162,
+        "name": "esphome30 Power Factor Template",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "power_factor",
+        "unit_of_measurement": "",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 0,
+        "legacy_last_reset_type": 0
+      }
+    ],
+    "text_sensor": [],
+    "update": [],
+    "switch": [
+      {
+        "object_id": "esphome30_relay_state",
+        "key": 4262671503,
+        "name": "esphome30 Relay State",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "assumed_state": false,
+        "device_class": ""
+      }
+    ],
+    "binary_sensor": [
+      {
+        "object_id": "status",
+        "key": 939730931,
+        "name": "Status",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_id": 0,
+        "device_class": "connectivity",
+        "is_status_binary_sensor": true
+      }
+    ]
+  }
+}

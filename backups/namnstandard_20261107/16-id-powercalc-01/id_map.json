@@ -1,0 +1,6 @@
+{
+  "sensor.all_standby_energy": "sensor.beraknad_standbyenergi_totalt",
+  "sensor.poolpump_energy_daily": "sensor.poolen_poolpump_utomhus_beraknad_energi_idag",
+  "sensor.poolpump_energy_weekly": "sensor.poolen_poolpump_utomhus_beraknad_energi_denna_vecka",
+  "sensor.poolpump_energy_monthly": "sensor.poolen_poolpump_utomhus_beraknad_energi_denna_manad"
+}

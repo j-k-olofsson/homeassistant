@@ -1,0 +1,215 @@
+{
+  "type": "form",
+  "flow_id": "01M6TBEBBMYXXQJ7T9C9S7PB53",
+  "handler": "waste_collection_schedule",
+  "data_schema": [
+    {
+      "type": "string",
+      "name": "name",
+      "required": false,
+      "optional": true
+    },
+    {
+      "selector": {
+        "select": {
+          "options": [
+            {
+              "label": "upcoming",
+              "value": "upcoming"
+            },
+            {
+              "label": "appointment_types",
+              "value": "appointment_types"
+            },
+            {
+              "label": "generic",
+              "value": "generic"
+            },
+            {
+              "label": "hidden",
+              "value": "hidden"
+            }
+          ],
+          "translation_key": "details_format",
+          "multiple": false,
+          "custom_value": false,
+          "sort": false
+        }
+      },
+      "name": "details_format",
+      "required": false,
+      "optional": true,
+      "default": "upcoming"
+    },
+    {
+      "type": "integer",
+      "valueMin": 1,
+      "name": "count",
+      "required": false,
+      "optional": true
+    },
+    {
+      "type": "integer",
+      "name": "leadtime",
+      "required": false,
+      "optional": true
+    },
+    {
+      "selector": {
+        "select": {
+          "options": [
+            {
+              "label": ": ",
+              "value": ""
+            },
+            {
+              "label": "in .. days: in {{value.daysTo}} days",
+              "value": "in {{value.daysTo}} days"
+            },
+            {
+              "label": ".. in .. days: {{value.types|join(\", \")}} in {{value.daysTo}} days",
+              "value": "{{value.types|join(\", \")}} in {{value.daysTo}} days"
+            },
+            {
+              "label": "numeric daysTo: {{value.daysTo}}",
+              "value": "{{value.daysTo}}"
+            },
+            {
+              "label": "in .. days / Tomorrow / Today: {% if value.daysTo == 0 %}Today{% elif value.daysTo == 1 %}Tomorrow{% else %}in {{value.daysTo}} days{% endif %}",
+              "value": "{% if value.daysTo == 0 %}Today{% elif value.daysTo == 1 %}Tomorrow{% else %}in {{value.daysTo}} days{% endif %}"
+            },
+            {
+              "label": "on Weekday, dd.mm.yyyy: on {{value.date.strftime(\"%a\")}}, {{value.date.strftime(\"%d.%m.%Y\")}}",
+              "value": "on {{value.date.strftime(\"%a\")}}, {{value.date.strftime(\"%d.%m.%Y\")}}"
+            },
+            {
+              "label": "on Weekday, yyyy-mm-dd: on {{value.date.strftime(\"%a\")}}, {{value.date.strftime(\"%Y-%m-%d\")}}",
+              "value": "on {{value.date.strftime(\"%a\")}}, {{value.date.strftime(\"%Y-%m-%d\")}}"
+            },
+            {
+              "label": "next collections: {{value.types|join(\", \")}}",
+              "value": "{{value.types|join(\", \")}}"
+            }
+          ],
+          "mode": "dropdown",
+          "custom_value": false,
+          "multiple": false,
+          "sort": false
+        }
+      },
+      "name": "value_template_preset",
+      "required": false,
+      "optional": true
+    },
+    {
+      "selector": {
+        "template": {}
+      },
+      "name": "value_template",
+      "required": false,
+      "optional": true
+    },
+    {
+      "selector": {
+        "select": {
+          "options": [
+            {
+              "label": ": ",
+              "value": ""
+            },
+            {
+              "label": "20.03.2020: {{value.date.strftime(\"%d.%m.%Y\")}}",
+              "value": "{{value.date.strftime(\"%d.%m.%Y\")}}"
+            },
+            {
+              "label": "Fri, 20.03.2020: {{value.date.strftime(\"%a, %d.%m.%Y\")}}",
+              "value": "{{value.date.strftime(\"%a, %d.%m.%Y\")}}"
+            },
+            {
+              "label": "03/20/2020: {{value.date.strftime(\"%m/%d/%Y\")}}",
+              "value": "{{value.date.strftime(\"%m/%d/%Y\")}}"
+            },
+            {
+              "label": "Fri, 03/20/2020: {{value.date.strftime(\"%a, %m/%d/%Y\")}}",
+              "value": "{{value.date.strftime(\"%a, %m/%d/%Y\")}}"
+            },
+            {
+              "label": "2020-03-20: {{value.date.strftime(\"%Y-%m-%d\")}}",
+              "value": "{{value.date.strftime(\"%Y-%m-%d\")}}"
+            },
+            {
+              "label": "Fri, 2020-03-20: {{value.date.strftime(\"%a, %Y-%m-%d\")}}",
+              "value": "{{value.date.strftime(\"%a, %Y-%m-%d\")}}"
+            }
+          ],
+          "mode": "dropdown",
+          "custom_value": true,
+          "multiple": false,
+          "sort": false
+        }
+      },
+      "name": "date_template",
+      "required": false,
+      "optional": true
+    },
+    {
+      "selector": {
+        "template": {}
+      },
+      "name": "date_template_preset",
+      "required": false,
+      "optional": true
+    },
+    {
+      "type": "boolean",
+      "name": "add_days_to",
+      "required": false,
+      "optional": true
+    },
+    {
+      "type": "integer",
+      "name": "event_index",
+      "required": false,
+      "optional": true
+    },
+    {
+      "selector": {
+        "select": {
+          "options": [
+            "Matavfall",
+            "Restavfall",
+            "Slam"
+          ],
+          "mode": "dropdown",
+          "custom_value": true,
+          "multiple": true,
+          "sort": false
+        }
+      },
+      "name": "types",
+      "required": false,
+      "optional": true
+    },
+    {
+      "type": "boolean",
+      "name": "skip",
+      "required": false,
+      "optional": true,
+      "default": false
+    },
+    {
+      "type": "boolean",
+      "name": "additional",
+      "required": false,
+      "optional": true,
+      "default": false
+    }
+  ],
+  "errors": {},
+  "description_placeholders": {
+    "sensor_number": "1"
+  },
+  "last_step": null,
+  "preview": null,
+  "step_id": "sensor"
+}

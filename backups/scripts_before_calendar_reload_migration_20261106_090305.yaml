@@ -1,0 +1,1233 @@
+godnatt_slack_belysning:
+  alias: Godnatt – släck och kontrollera belysningen
+  description: >-
+    Släcker Godnatt-gruppens enskilda lampor och de två befintliga verkstadsbrytarna.
+    Gör högst tre försök och loggar enheter vars släckning inte kunde bekräftas.
+  mode: single
+  sequence:
+  - variables:
+      _targets: >-
+        {{ (expand('light.grupp_godnatt') | map(attribute='entity_id') | list
+            + ['switch.shelly_pro_3_verkstaden_switch_1',
+               'switch.shelly_pro_3_verkstaden_switch_2']) | unique | list }}
+      _pending: '{{ _targets }}'
+  - repeat:
+      sequence:
+      - repeat:
+          for_each: '{{ _pending }}'
+          sequence:
+          - action: homeassistant.turn_off
+            continue_on_error: true
+            target:
+              entity_id: '{{ repeat.item }}'
+      - delay: '00:00:03'
+      - variables:
+          _pending: >-
+            {% set remaining = namespace(entities=[]) %}
+            {% for entity_id in _targets %}
+              {% if not is_state(entity_id, 'off') %}
+                {% set remaining.entities = remaining.entities + [entity_id] %}
+              {% endif %}
+            {% endfor %}
+            {{ remaining.entities }}
+      until:
+      - condition: template
+        value_template: '{{ _pending | length == 0 or repeat.index >= 3 }}'
+  - if:
+    - condition: template
+      value_template: '{{ _pending | length > 0 }}'
+    then:
+    - action: system_log.write
+      data:
+        level: warning
+        logger: godnatt.belysning
+        message: >-
+          Godnatt kunde inte bekräfta släckning efter tre försök:
+          {{ _pending | join(', ') }}.
+  - variables:
+      _godnatt_result:
+        targets: '{{ _targets }}'
+        unconfirmed: '{{ _pending }}'
+  - stop: Släckning klar; se resultatet för eventuell kvarvarande belysning.
+    response_variable: _godnatt_result
+ange_starttid_for_bilvarmen:
+  alias: Ange starttid för bilvärmen
+  sequence:
+  - service: input_datetime.set_datetime
+    metadata: {}
+    data:
+      datetime: '{{ starttid }}'
+    target:
+      entity_id: input_datetime.starta_bilvarmen
+  mode: single
+  icon: mdi:clock-time-five-outline
+  fields:
+    starttid:
+      selector:
+        datetime: {}
+      name: starttid
+      required: true
+rescan_wifi_on_esphome_nodes:
+  alias: Rescan wifi on all esphome nodes
+  description: ''
+  sequence:
+  - repeat:
+      for_each: '{{ integration_entities(''esphome'') | select(''search'', ''_wifi_bssid$'')
+        | list | sort }}'
+      sequence:
+      - variables:
+          _esphome_node: "{% set dev = device_id(repeat.item) %}\n            {% set
+            ns = namespace(node='') %}\n            {% if 'esphome' in repeat.item
+            %}\n              {% set matches = repeat.item | regex_findall('esphome\\\\d{2}')
+            %}\n              {% if matches %}\n                {% set ns.node = matches[0]
+            %}\n              {% endif %}\n            {% endif %}\n            {%
+            if dev and ns.node == '' %}\n              {% for ent in device_entities(dev)
+            %}\n                {% set matches = ent | regex_findall('esphome\\\\d{2}')
+            %}\n                {% if matches %}\n                  {% set ns.node
+            = matches[0] %}\n                  {% break %}\n                {% endif
+            %}\n              {% endfor %}\n            {% endif %}\n            {{
+            ns.node }}\n"
+      - if:
+        - condition: template
+          value_template: '{{ _esphome_node | length > 0 }}'
+        then:
+        - action: esphome.{{ _esphome_node }}_scan_wifi
+          continue_on_error: true
+        - action: notify.send_message
+          continue_on_error: true
+          data:
+            message: 'Rescan wifi: {{ _esphome_node }}'
+          target:
+            entity_id: notify.file
+granny_broadcast:
+  alias: Granny Broadcast (kanalneutral)
+  description: 'Grannifiera en uppgift och (valfritt) skicka till valda kanaler. Returnerar
+    alltid final_message.
+
+    '
+  mode: parallel
+  max: 50
+  fields:
+    task:
+      name: task
+      description: Kort instruktion till Granny (obligatorisk)
+      required: true
+      selector:
+        text: {}
+    severity:
+      name: severity
+      selector:
+        select:
+          options:
+          - info
+          - warn
+          - crit
+      default: info
+    humor_level:
+      name: humor_level
+      selector:
+        number:
+          min: 0
+          max: 3
+          step: 1
+      default: 2
+    recipient:
+      name: recipient
+      description: Namn att tilltala (t.ex. Diego)
+      selector:
+        text: {}
+    channels:
+      name: Kanaler
+      description: Välj en eller flera kanaler (lämna tom för att inte skicka något)
+      selector:
+        select:
+          multiple: true
+          options:
+          - label: TTS (högtalare/grupp)
+            value: tts
+          - label: Mobil (notify.mobile_app_pixel_9_pro_xl)
+            value: mobile
+          - label: TV
+            value: tv
+          - label: HA-notis (persistent_notification)
+            value: ha
+          - label: Slack (notify.flocken)
+            value: slack
+    tts_media_player:
+      name: tts_media_player
+      description: 'Music Assistant-spelare för TTS (standard: Grannys synkroniserade Chromecast-grupp)
+
+        '
+      selector:
+        entity:
+          domain: media_player
+          integration: music_assistant
+    prompt_override:
+      name: Egen fullständig AI-prompt
+      description: Ersätter hela Granny-prompten för detta anrop. Tomt använder standardprompten.
+      selector:
+        text:
+          multiline: true
+    tts_ignore_quiet_hours:
+      name: Tillåt tal under tyst period
+      description: Används för uttryckligen begärda utrop, exempelvis Godnatt.
+      default: false
+      selector:
+        boolean: {}
+    message:
+      name: Färdigt meddelande
+      description: Läs upp och visa exakt denna text utan AI-omskrivning.
+      selector:
+        text:
+          multiline: true
+    fallback_message:
+      name: fallback_message
+      description: 'Eget fallbackmeddelande om AI inte svarar. Lämna tomt för neutral
+        standardfras.
+
+        '
+      selector:
+        text: {}
+    slack_channel:
+      name: Slack-kanal
+      description: 'Valfri Slack-kanal eller användare, t.ex. #allmant eller @diego.
+        Lämna tomt för integrationens standardmål.
+
+        '
+      selector:
+        text: {}
+  sequence:
+  - variables:
+      _ai_entity: ai_task.ollama_ai_task
+      _severity: '{{ severity | default(''info'') }}'
+      _humor: '{{ humor_level | default(2) | int(2) }}'
+      _recipient: '{{ (recipient | default('''', true)) | trim }}'
+      _tts_player: "{{ tts_media_player\n   if tts_media_player is defined and tts_media_player|length
+        > 0\n   else 'media_player.grannys_hogtalare' }}\n"
+      _tts_engine: >-
+        {{ 'tts.piper' if states.tts.piper is defined and
+           states('tts.piper') != 'unavailable' else 'tts.home_assistant_cloud' }}
+      _message_input: '{{ message | default("", true) | trim }}'
+      _fallback_input: '{{ (fallback_message | default('''', true)) | trim }}'
+      _fallback_default: Jag har glömt bort vad jag skulle säga, och även vad jag
+        heter…
+      _fallback_final: '{{ _fallback_input if _fallback_input|length > 0 else _fallback_default
+        }}
+
+        '
+      _channels: '{{ channels if channels is defined else [] }}
+
+        '
+      _tts_quiet_start_ts: '{{ as_timestamp(today_at(''21:30:00'')) | float(0) }}'
+      _tts_quiet_end_ts: '{{ as_timestamp(today_at(''06:00:00'')) | float(0) }}'
+      _tts_in_quiet_hours: '{{ (as_timestamp(now()) | float(0)) >= (_tts_quiet_start_ts
+        | float(0)) or (as_timestamp(now()) | float(0)) < (_tts_quiet_end_ts | float(0))
+        }}'
+      _slack_channel: '{{ (slack_channel | default('''', true)) | trim }}'
+      _base_task: '{{ task }}'
+      _prompt: 'Du är "Granny": varm, saklig, kvick och surmulen. Svara alltid på
+        svenska. Humor-nivå: {{ _humor }} (0=ingen, 3=lekfull men kort). Allvar: {{
+        _severity }}. {{ ''Tilltala '' ~ _recipient ~ ''.'' if _recipient|length >
+        0 else '''' }} Uppdrag: {{ _base_task }} Krav: Max 40 ord. Kort, tydligt,
+        vänligt. Ingen emoji. Alltid nya unika meddelanden, aldrig upprepningar.'
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ _message_input | length == 0 and states(_ai_entity) not in [''unknown'',''unavailable'','''']
+          }}
+
+          '
+      sequence:
+      - action: ai_task.generate_data
+        continue_on_error: true
+        data:
+          entity_id: '{{ _ai_entity }}'
+          instructions: >-
+            {{ (prompt_override | default('', true) | trim) or _prompt }}
+          task_name: granny_broadcast
+        response_variable: ai_out
+      - variables:
+          ai_text: "{{ (ai_out.data if ai_out is defined and 'data' in ai_out\n    else
+            '') | string | trim }}\n"
+    default:
+    - variables:
+        ai_text: ''
+  - variables:
+      final_message: '{{ _message_input if _message_input | length > 0 else (ai_text if (ai_text | length) > 0 else _fallback_final) }}
+
+        '
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: >-
+          {{ 'tts' in _channels and
+             (not _tts_in_quiet_hours or
+              (tts_ignore_quiet_hours | default(false) | bool(false))) }}
+      sequence:
+      - action: script.granny_announce
+        continue_on_error: true
+        data:
+          media_player: '{{ _tts_player }}'
+          tts_engine: '{{ _tts_engine }}'
+          message: '{{ final_message }}'
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ ''mobile'' in _channels }}'
+      sequence:
+      - action: notify.mobile_app_pixel_9_pro_xl
+        data:
+          title: Granny ({{ _severity }})
+          message: '{{ final_message }}'
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ ''tv'' in _channels }}'
+      sequence:
+      - action: notify.send_message
+        target:
+          entity_id: notify.android_tv_fire_tv
+        data:
+          title: Granny
+          message: '{{ final_message }}'
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ ''ha'' in _channels }}'
+      sequence:
+      - action: persistent_notification.create
+        data:
+          title: Granny ({{ _severity }})
+          message: '{{ final_message }}'
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ ''slack'' in _channels }}'
+      sequence:
+      - action: notify.flocken
+        data:
+          title: Granny ({{ _severity }})
+          message: '{{ final_message }}'
+          target: '{{ [_slack_channel] if _slack_channel|length > 0 else [] }}
+
+            '
+  - variables:
+      broadcast_response:
+        final_message: '{{ final_message }}'
+  - stop: '{{ final_message }}'
+    response_variable: broadcast_response
+granny_car_charge_plan:
+  alias: Granny Bil-laddningsplan
+  description: Planerar bilens laddning via en lokal prisoptimering och uppdaterar
+    kalendern.
+  mode: restart
+  fields:
+    notify_user:
+      name: Skicka statusnotis
+      description: Skicka informativa Granny-notiser när planen är klar.
+      selector:
+        boolean: {}
+      default: true
+  sequence:
+  - variables:
+      log_prefix: '[Granny Laddning]'
+      status_notification_id: granny_plan_status
+      notify_user_bool: '{{ (notify_user | default(true)) not in [false, False, ''false'',
+        ''False'', 0, ''0'', ''off'', ''no''] }}'
+      slot_minutes: 15
+      now_dt: '{{ now() }}'
+      now_iso: '{{ now().isoformat() }}'
+      deadline_iso: '{% set base = today_at(''05:30:00'') %} {{ (base if now() < base
+        else (base + timedelta(days=1))).isoformat() }}'
+      deadline_local_iso: '{{ as_local(as_datetime(deadline_iso)).isoformat() }}'
+      cleanup_end_iso: '{{ (today_at(''23:59:59'') + timedelta(days=1)).isoformat()
+        }}'
+      car_soc: '{{ states("sensor.sef_42h_battery_level") | float(0) }}'
+      car_target: '{{ states("input_number.car_target_soc") | float(100) }}'
+      car_capacity_kwh: '{{ states("input_number.car_bat_capacity") | float(0) }}'
+      car_charger_kw: '{{ states("input_number.car_charger_capacity") | float(0) }}'
+      car_efficiency: '{{ states("input_number.car_charger_efficiency") | float(1)
+        }}'
+      energy_needed_kwh: "{% set diff = (car_target | float(0)) - (car_soc | float(0))
+        %} {% if diff <= 0 or (car_capacity_kwh | float(0)) <= 0 %}\n  {{ 0.0 }}\n{%
+        else %}\n  {{ ((diff / 100) * (car_capacity_kwh | float(0))) | float(0) }}\n{%
+        endif %}"
+      slot_energy_kwh: "{% set kw = car_charger_kw | float(0) %} {% set eff = car_efficiency
+        | float(1) %} {% set minutes = slot_minutes | float(0) %} {% set duration
+        = minutes / 60 %} {% if kw <= 0 or duration <= 0 or eff <= 0 %}\n  {{ 0.0
+        }}\n{% else %}\n  {{ (kw * duration * eff) | float(0) }}\n{% endif %}"
+      min_slots_required: "{% set needed = energy_needed_kwh | float(0) %} {% set
+        per_slot = slot_energy_kwh | float(0) %} {% if needed <= 0 or per_slot <=
+        0 %}\n  0\n{% else %}\n  {{ (needed / per_slot) | round(0, 'ceil') | int }}\n{%
+        endif %}"
+      price_payload: "{% set sensor = 'sensor.nordpool' %} {% set raw_today = state_attr(sensor,
+        'raw_today') or [] %} {% set raw_tomorrow = state_attr(sensor, 'raw_tomorrow')
+        or [] %} {% set window_start = as_datetime(now_iso) %} {% set window_end =
+        as_datetime(deadline_iso) %} {% set today_ns = namespace(items=[]) %} {% for
+        item in raw_today %}\n  {% if item is mapping %}\n    {% set start = item.get('start')
+        %}\n    {% set end = item.get('end') %}\n    {% set value = item.get('value')
+        %}\n  {% else %}\n    {% set start = item[0] %}\n    {% set end = item[1]
+        %}\n    {% set value = item[2] %}\n  {% endif %}\n  {% set start_dt = as_datetime(start)
+        if start is not none else none %}\n  {% set end_dt = as_datetime(end) if end
+        is not none else none %}\n  {% if start_dt is none or end_dt is none %}\n
+        \   {% continue %}\n  {% endif %}\n  {% if end_dt <= window_start or start_dt
+        >= window_end %}\n    {% continue %}\n  {% endif %}\n  {% set today_ns.items
+        = today_ns.items + [{\n    \"start\": start_dt.isoformat(),\n    \"end\":
+        end_dt.isoformat(),\n    \"value\": value | float(0),\n    \"source\": \"nordpool.today\"\n
+        \ }] %}\n{% endfor %} {% set tomorrow_ns = namespace(items=[]) %} {% for item
+        in raw_tomorrow %}\n  {% if item is mapping %}\n    {% set start = item.get('start')
+        %}\n    {% set end = item.get('end') %}\n    {% set value = item.get('value')
+        %}\n  {% else %}\n    {% set start = item[0] %}\n    {% set end = item[1]
+        %}\n    {% set value = item[2] %}\n  {% endif %}\n  {% set start_dt = as_datetime(start)
+        if start is not none else none %}\n  {% set end_dt = as_datetime(end) if end
+        is not none else none %}\n  {% if start_dt is none or end_dt is none %}\n
+        \   {% continue %}\n  {% endif %}\n  {% if end_dt <= window_start or start_dt
+        >= window_end %}\n    {% continue %}\n  {% endif %}\n  {% set tomorrow_ns.items
+        = tomorrow_ns.items + [{\n    \"start\": start_dt.isoformat(),\n    \"end\":
+        end_dt.isoformat(),\n    \"value\": value | float(0),\n    \"source\": \"nordpool.tomorrow\"\n
+        \ }] %}\n{% endfor %} {{\n  {\n    \"currency\": state_attr(sensor, \"currency\"),\n
+        \   \"vat\": state_attr(sensor, \"vat\"),\n    \"today\": today_ns.items,\n
+        \   \"tomorrow\": tomorrow_ns.items\n  } | tojson\n}}"
+      price_currency_attr: '{{ state_attr(''sensor.nordpool'', ''currency'') | default(''SEK'')
+        }}'
+      price_currency: "{% set attr = price_currency_attr | string | upper %} {% if
+        'SEK' in attr %}\n  SEK\n{% else %}\n  SEK\n{% endif %}"
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ car_capacity_kwh | float(0) <= 0 }}'
+      sequence:
+      - action: logbook.log
+        data:
+          name: '{{ log_prefix }}'
+          message: 'Planeringen stoppad: sätt ett värde på input_number.car_bat_capacity.'
+      - action: persistent_notification.create
+        data:
+          title: Laddningsplan saknar batterikapacitet
+          message: Ange bilens batterikapacitet i input_number.car_bat_capacity för
+            att kunna planera laddningen.
+          notification_id: granny_car_charge_plan_config_error
+      - stop: Saknar batterikapacitet.
+    - conditions:
+      - condition: template
+        value_template: '{{ car_charger_kw | float(0) <= 0 }}'
+      sequence:
+      - action: logbook.log
+        data:
+          name: '{{ log_prefix }}'
+          message: 'Planeringen stoppad: sätt ett värde på input_number.car_charger_capacity.'
+      - action: persistent_notification.create
+        data:
+          title: Laddningsplan saknar laddareffekt
+          message: Ange laddarens effekt i input_number.car_charger_capacity för att
+            kunna planera laddningen.
+          notification_id: granny_car_charge_plan_config_error
+      - stop: Saknar laddareffekt.
+  - action: logbook.log
+    data:
+      name: '{{ log_prefix }}'
+      message: Startar prisoptimerad planering av bilens laddning.
+  - variables:
+      planner_candidates: "{% set price_obj = price_payload | from_json %} {% set
+        today_list = price_obj.get('today', []) if price_obj is mapping else [] %}
+        {% set tomorrow_list = price_obj.get('tomorrow', []) if price_obj is mapping
+        else [] %} {% set buckets = today_list + tomorrow_list %} {% set now_dt =
+        as_datetime(now_iso) %} {% set slot_len = slot_minutes | int(15) %} {% set
+        slot_secs = slot_len * 60 %} {% set start_ts = as_timestamp(now_dt) %} {%
+        set remainder = start_ts % slot_secs %} {% if remainder == 0 %}\n  {% set
+        window_start_dt = now_dt %}\n{% else %}\n  {% set window_start_dt = as_datetime(start_ts
+        - remainder + slot_secs) %}\n{% endif %} {% set window_end_dt = as_datetime(deadline_iso)
+        %} {% set total_slots = (((as_timestamp(window_end_dt) - as_timestamp(window_start_dt))
+        / 60) // slot_len) | int(0) + 2 %} {% set slots = namespace(items=[]) %} {%
+        for idx in range(0, total_slots) %}\n  {% set slot_start_dt = window_start_dt
+        + timedelta(minutes=slot_len * idx) %}\n  {% set slot_end_dt = slot_start_dt
+        + timedelta(minutes=slot_len) %}\n  {% if slot_start_dt >= window_end_dt or
+        slot_end_dt > window_end_dt %}\n    {% break %}\n  {% endif %}\n  {% set found
+        = namespace(price=None, source='nordpool.unknown') %}\n  {% for bucket in
+        buckets %}\n    {% set bucket_start = as_datetime(bucket.get('start')) %}\n
+        \   {% set bucket_end = as_datetime(bucket.get('end')) %}\n    {% if slot_start_dt
+        >= bucket_start and slot_end_dt <= bucket_end %}\n      {% set found.price
+        = bucket.get('value') | float(0) %}\n      {% set found.source = bucket.get('source',
+        'nordpool.today' if bucket in today_list else 'nordpool.tomorrow') %}\n      {%
+        break %}\n    {% endif %}\n  {% endfor %}\n  {% if found.price is not none
+        %}\n    {% set energy = slot_energy_kwh | float(0) %}\n    {% set slot_dict
+        = {\n      'start': slot_start_dt.isoformat(),\n      'end': slot_end_dt.isoformat(),\n
+        \     'energy_kwh': energy,\n      'price_sek_kwh': found.price,\n      'cost_sek':
+        (found.price | float(0)) * energy,\n      'source': found.source,\n      'currency':
+        price_currency\n    } %}\n    {% set slots.items = slots.items + [slot_dict]
+        %}\n  {% endif %}\n{% endfor %} {{ slots.items | tojson | from_json }}"
+      planner_candidate_count: '{{ planner_candidates | length }}'
+      planner_needed_slots: '{{ min_slots_required | int(0) }}'
+      planner_selected_slots: "{% if energy_needed_kwh | float(0) <= 0 or planner_needed_slots
+        | int(0) <= 0 %}\n  {{ [] }}\n{% else %}\n  {% set sorted = planner_candidates
+        | sort(attribute='start') | sort(attribute='price_sek_kwh') %}\n  {% set picked
+        = namespace(items=[]) %}\n  {% for slot in sorted %}\n    {% if picked.items
+        | length < (planner_needed_slots | int(0)) %}\n      {% set picked.items =
+        picked.items + [slot] %}\n    {% else %}\n      {% break %}\n    {% endif
+        %}\n  {% endfor %}\n  {{ picked.items | sort(attribute='start') }}\n{% endif
+        %}"
+      planner_selected_count: '{{ planner_selected_slots | length }}'
+      planner_deadline_ok: "{% if planner_selected_slots | length == 0 %}\n  true\n{%
+        else %}\n  {% set last_end_dt = as_datetime(planner_selected_slots[-1].end)
+        %}\n  {% set deadline_dt = as_datetime(deadline_iso) %}\n  {{ last_end_dt
+        <= deadline_dt }}\n{% endif %}"
+      planner_total_energy_kwh: "{% set total = namespace(value=0.0) %} {% for slot
+        in planner_selected_slots %}\n  {% set total.value = total.value + (slot.energy_kwh
+        | float(0)) %}\n{% endfor %} {{ total.value }}"
+      planner_total_cost_sek: "{% set total = namespace(value=0.0) %} {% for slot
+        in planner_selected_slots %}\n  {% set total.value = total.value + (slot.cost_sek
+        | float(0)) %}\n{% endfor %} {{ total.value }}"
+      plan_data: "{% set need = energy_needed_kwh | float(0) %} {% set slots = planner_selected_slots
+        %} {% if need <= 0 %}\n  {% set status = 'klar' %}\n  {% set summary = 'Batteriet
+        är redan över målet. Ingen laddning planeras.' %}\n{% elif slots | length
+        == 0 %}\n  {% set status = 'saknar_slotar' %}\n  {% set summary = 'Inga slotar
+        kunde tas fram – saknar prisdata i tidsfönstret.' %}\n{% else %}\n  {% set
+        status = 'planerad' %}\n  {% set summary = 'Planerade ' ~ (slots | length)
+        ~ ' slotar med lägsta timpriser i nuvarande fönster.' %}\n{% endif %} {{ {\n
+        \ 'status': status,\n  'summary': summary,\n  'notes': 'Automatisk prisplan
+        framräknad lokalt.',\n  'deadline_met': planner_deadline_ok,\n  'slots_planned':
+        slots | length,\n  'currency': price_currency,\n  'schedule': slots,\n  'total_energy_kwh':
+        planner_total_energy_kwh | float(0),\n  'total_cost_sek': planner_total_cost_sek
+        | float(0)\n} | tojson | from_json }}"
+      plan_schedule_raw: '{{ plan_data.get(''schedule'', []) }}'
+      plan_currency: "{% if plan_data is mapping %}\n  {{ plan_data.get('currency',
+        price_currency) | default(price_currency) }}\n{% else %}\n  {{ price_currency
+        }}\n{% endif %}"
+  - action: system_log.write
+    data:
+      level: info
+      logger: granny_car_charge_plan
+      message: 'Planner debug: price_currency={{ price_currency }}, attr={{ price_currency_attr
+        }}, candidates={{ planner_candidate_count }}, needed={{ planner_needed_slots
+        }}, selected={{ planner_selected_count }}, total_energy={{ planner_total_energy_kwh
+        | float(0) }}, total_cost={{ planner_total_cost_sek | float(0) }}'
+  - action: system_log.write
+    data:
+      level: info
+      logger: granny_car_charge_plan
+      message: 'Plan data (auto): {{ plan_data }}'
+  - action: system_log.write
+    data:
+      level: info
+      logger: granny_car_charge_plan
+      message: 'Plan raw schedule (auto): {{ plan_schedule_raw }}'
+  - variables:
+      plan_schedule_initial: "{% set raw = plan_schedule_raw %} {% if raw is string
+        %}\n  {% set raw = raw | from_json(default=[]) %}\n{% endif %} {% if raw is
+        mapping %}\n  {% set raw = raw.get('time', raw.get('slots', raw.get('schedule',
+        raw.get('planned_schedule', raw.get('chargeSessions', raw.get('sessions',
+        raw.get('windows', []))))))) %}\n{% endif %} {% if raw is string %}\n  {%
+        set raw = raw | from_json(default=[]) %}\n{% endif %} {% if raw is mapping
+        %}\n  {% set raw = raw.get('time', raw.get('slots', raw.get('schedule', raw.get('planned_schedule',
+        raw.get('chargeSessions', raw.get('sessions', raw.get('windows', [])))))))
+        %}\n{% endif %} {% if raw is iterable %}\n  {% set raw_list = raw | list %}\n{%
+        else %}\n  {% set raw_list = [] %}\n{% endif %} {% set normalized = namespace(items=[])
+        %} {% for slot in raw_list %}\n  {% set item = slot %}\n  {% if item is string
+        %}\n    {% set item = item | from_json(default={}) %}\n  {% endif %}\n  {%
+        if item is mapping %}\n    {% set interval = item.get('time_interval') %}\n
+        \   {% set start = item.get('start') %}\n    {% set end = item.get('end')
+        %}\n    {% if interval %}\n      {% set start = start or interval.get('start')
+        %}\n      {% set end = end or interval.get('end') %}\n    {% endif %}\n    {%
+        set start = start or item.get('startTime') or item.get('start_time') or item.get('timeStart')
+        or item.get('time_start') or item.get('slot_start_time') or item.get('slot_start')
+        %}\n    {% set end = end or item.get('endTime') or item.get('end_time') or
+        item.get('timeEnd') or item.get('time_end') or item.get('timeStop') or item.get('slot_end_time')
+        or item.get('slot_end') %}\n    {% if start %}\n      {% if start | string
+        | length == 15 and 'T' not in start %}\n        {% set start = start | replace('
+        ', 'T') %}\n      {% endif %}\n    {% endif %}\n    {% if end %}\n      {%
+        if end | string | length == 15 and 'T' not in end %}\n        {% set end =
+        end | replace(' ', 'T') %}\n      {% endif %}\n    {% endif %}\n    {% set
+        energy = item.get('energy_kwh') %}\n    {% if energy is none %}\n      {%
+        set energy = item.get('energy') %}\n    {% endif %}\n    {% if energy is none
+        %}\n      {% set energy = item.get('kwh', item.get('kWh')) %}\n    {% endif
+        %}\n    {% if energy is none %}\n      {% set energy = item.get('consumption_kwh',
+        item.get('consumption_KWh', item.get('consumption'))) %}\n    {% endif %}\n
+        \   {% set price = item.get('price_sek_kwh') %}\n    {% for key in [\n      'price_SEK_per_kWh',
+        'price_SEK_per_kwh', 'price_sek_per_kwh', 'price_per_kwh', 'price_per_kWh',\n
+        \     'price_per_kw', 'price_perKWh', 'price_per_unit', 'price_per_unit_sek',
+        'price_per_kW',\n      'price_per', 'price', 'price_per_hour', 'price_kwh',
+        'price_SEK'\n    ] %}\n      {% if price is none and item.get(key) is not
+        none %}\n        {% set price = item.get(key) %}\n      {% endif %}\n    {%
+        endfor %}\n    {% set cost = item.get('cost_sek') %}\n    {% if cost is none
+        %}\n      {% set cost = item.get('cost_SEK') %}\n    {% endif %}\n    {% if
+        cost is none %}\n      {% set cost = item.get('cost') %}\n    {% endif %}\n
+        \   {% if cost is none %}\n      {% set cost = item.get('price_total', item.get('total_cost'))
+        %}\n    {% endif %}\n    {% if cost is none and price is not none and energy
+        is not none %}\n      {% set cost = (price | float(0)) * (energy | float(0))
+        %}\n    {% endif %}\n    {% set norm = {\n      \"start\": start,\n      \"end\":
+        end,\n      \"energy_kwh\": energy,\n      \"price_sek_kwh\": price,\n      \"cost_sek\":
+        cost,\n      \"source\": item.get('source'),\n      \"currency\": item.get('currency',
+        plan_currency)\n    } %}\n    {% set normalized.items = normalized.items +
+        [norm] %}\n  {% endif %}\n{% endfor %} {{ normalized.items | tojson | from_json
+        }}"
+      plan_schedule_initial_len: '{{ plan_schedule_initial | length }}'
+      plan_schedule: '{{ plan_schedule_initial | selectattr("start", "defined") |
+        list }}'
+      plan_status: "{% if plan_data is mapping %}\n  {{ plan_data.get('status', '')
+        }}\n{% else %}\n  ''\n{% endif %}"
+      plan_summary: "{% if plan_data is mapping %}\n  {{ plan_data.get('summary',
+        '') }}\n{% else %}\n  ''\n{% endif %}"
+      plan_notes: "{% if plan_data is mapping %}\n  {{ plan_data.get('notes', plan_data.get('summary',
+        '')) }}\n{% else %}\n  ''\n{% endif %}"
+      plan_summary_clean: '{{ plan_summary | replace("€", plan_currency) | replace("EUR",
+        plan_currency) }}'
+      plan_notes_clean: '{{ plan_notes | replace("€", plan_currency) | replace("EUR",
+        plan_currency) }}'
+      plan_deadline_met: "{% if plan_data is mapping %}\n  {% set raw = plan_data.get('deadline_met',
+        plan_data.get('deadline_ok', None)) %}\n{% else %}\n  {% set raw = None %}\n{%
+        endif %} {{ raw in [True, 'True', 'true', 1, '1'] }}"
+      plan_slots_planned: "{% if plan_data is mapping %}\n  {% set raw = plan_data.get('slots_planned')
+        %}\n{% else %}\n  {% set raw = None %}\n{% endif %} {% if raw is number %}\n
+        \ {{ raw | int }}\n{% elif raw in [None, ''] %}\n  {{ plan_schedule_initial_len
+        }}\n{% else %}\n  {{ (raw | int(0)) if raw is not none else plan_schedule_initial_len
+        }}\n{% endif %}"
+      plan_schedule_filtered_json: "{% set window_start_dt = as_datetime(now_iso)
+        %} {% set window_end_dt = as_datetime(deadline_iso) %} {% set window_start_ts
+        = as_timestamp(window_start_dt) %} {% set window_end_ts = as_timestamp(window_end_dt)
+        %} {% set kept = namespace(items=[]) %} {% for slot in plan_schedule %}\n
+        \ {% set start_val = slot.get('start') %}\n  {% set end_val = slot.get('end')
+        %}\n  {% set start_dt = as_datetime(start_val) if start_val else None %}\n
+        \ {% set end_dt = as_datetime(end_val) if end_val else None %}\n  {% set start_ts
+        = as_timestamp(start_dt) if start_dt else None %}\n  {% set end_ts = as_timestamp(end_dt)
+        if end_dt else None %}\n  {% if start_ts is not none and end_ts is not none
+        and start_ts >= window_start_ts and end_ts <= window_end_ts %}\n    {% set
+        kept.items = kept.items + [slot] %}\n  {% endif %}\n{% endfor %} {{ kept.items
+        | tojson }}"
+      plan_schedule_filter_debug: "{% set window_start_dt = as_datetime(now_iso) %}
+        {% set window_end_dt = as_datetime(deadline_iso) %} {% set window_start_ts
+        = as_timestamp(window_start_dt) %} {% set window_end_ts = as_timestamp(window_end_dt)
+        %} {% set ns = namespace(lines=[]) %} {% for slot in plan_schedule %}\n  {%
+        set start_val = slot.get('start') %}\n  {% set end_val = slot.get('end') %}\n
+        \ {% set start_dt = as_datetime(start_val) if start_val else None %}\n  {%
+        set end_dt = as_datetime(end_val) if end_val else None %}\n  {% set start_ts
+        = as_timestamp(start_dt) if start_dt else None %}\n  {% set end_ts = as_timestamp(end_dt)
+        if end_dt else None %}\n  {% set keep = (start_ts is not none and end_ts is
+        not none and start_ts >= window_start_ts and end_ts <= window_end_ts) %}\n
+        \ {% set ns.lines = ns.lines + ['slot=' ~ (slot | tojson) ~ ', start_ts='
+        ~ (start_ts|string if start_ts is not none else 'none') ~ ', end_ts=' ~ (end_ts|string
+        if end_ts is not none else 'none') ~ ', keep=' ~ keep|string] %}\n{% endfor
+        %} {{ ns.lines | join(' | ') }}"
+      plan_schedule_candidate_valid: "{% set window_start_dt = as_datetime(now_iso)
+        %} {% set window_end_dt = as_datetime(deadline_iso) %} {% set window_start_ts
+        = as_timestamp(window_start_dt) %} {% set window_end_ts = as_timestamp(window_end_dt)
+        %} {% set ns = namespace(valid=true) %} {% for slot in plan_schedule %}\n
+        \ {% set start_val = slot.get('start') %}\n  {% set end_val = slot.get('end')
+        %}\n  {% set start_dt = as_datetime(start_val) if start_val else None %}\n
+        \ {% set end_dt = as_datetime(end_val) if end_val else None %}\n  {% set start_ts
+        = as_timestamp(start_dt) if start_dt else None %}\n  {% set end_ts = as_timestamp(end_dt)
+        if end_dt else None %}\n  {% if start_ts is none or end_ts is none or start_ts
+        < window_start_ts or end_ts > window_end_ts %}\n    {% set ns.valid = false
+        %}\n  {% endif %}\n{% endfor %} {{ ns.valid }}"
+  - variables:
+      plan_schedule_effective_raw: '{{ plan_schedule_filtered_json | from_json(default=[])
+        }}'
+      plan_schedule_effective: '{% set filtered = plan_schedule_filtered_json | from_json(default=[])
+        %} {% set fallback_ok = (plan_schedule_initial_len > 0) and (filtered | length
+        == 0) and (plan_schedule_candidate_valid in [True, ''True'', ''true'', 1,
+        ''1'']) %} {% set chosen = plan_schedule if fallback_ok else filtered %} {{
+        chosen | tojson | from_json }}'
+      schedule_removed_count: '{{ plan_schedule_initial_len - (plan_schedule_effective
+        | length) }}'
+      schedule_fallback_used: '{{ (plan_schedule_effective_raw | length == 0) and
+        (plan_schedule_effective | length > 0) }}'
+      schedule_start_failed: '{{ (plan_schedule_initial_len > 0) and (plan_schedule_effective
+        | length == 0) }}'
+      plan_energy_total: "{% set total = namespace(value=0.0) %} {% for slot in plan_schedule_effective
+        %}\n  {% set slot_obj = slot %}\n  {% if slot_obj is string %}\n    {% set
+        slot_obj = slot_obj | from_json(default={}) %}\n  {% endif %}\n  {% if slot_obj
+        is mapping %}\n    {% if 'energy_kwh' in slot_obj %}\n      {% set energy
+        = slot_obj['energy_kwh'] %}\n    {% elif 'energy' in slot_obj %}\n      {%
+        set energy = slot_obj['energy'] %}\n    {% else %}\n      {% set energy =
+        None %}\n    {% endif %}\n    {% if energy is not none %}\n      {% set total.value
+        = total.value + (energy | float(0)) %}\n    {% endif %}\n  {% endif %}\n{%
+        endfor %} {{ total.value }}"
+      energy_goal_met: "{% set needed = energy_needed_kwh | float(0) %} {% set total
+        = plan_energy_total | float(0) %} {% if needed <= 0 %}\n  true\n{% else %}\n
+        \ {{ (total + 0.001) >= needed }}\n{% endif %}"
+      schedule_deadline_ok: "{% set deadline_dt = as_datetime(deadline_iso) %} {%
+        set deadline_ts = as_timestamp(deadline_dt) %} {% set ns = namespace(ok=true)
+        %} {% for slot in plan_schedule_effective %}\n  {% set start = slot.start
+        if slot.start is defined else slot.get('start') %}\n  {% set end = slot.end
+        if slot.end is defined else slot.get('end') %}\n  {% if start in [None, '']
+        or end in [None, ''] %}\n    {% set ns.ok = false %}\n  {% else %}\n    {%
+        set start_dt = as_datetime(start) %}\n    {% set end_dt = as_datetime(end)
+        %}\n    {% set start_ts = as_timestamp(start_dt) if start_dt else None %}\n
+        \   {% set end_ts = as_timestamp(end_dt) if end_dt else None %}\n    {% if
+        start_ts is none or end_ts is none or start_ts >= end_ts or end_ts > deadline_ts
+        %}\n      {% set ns.ok = false %}\n    {% endif %}\n  {% endif %}\n{% endfor
+        %} {{ ns.ok }}"
+      deadline_check_failed: '{% set meets = plan_deadline_met in [True, ''True'',
+        ''true'', 1, ''1''] %} {% set ok = schedule_deadline_ok in [True, ''True'',
+        ''true'', 1, ''1''] %} {{ not (meets and ok) }}'
+      energy_check_failed: '{% set met = energy_goal_met in [True, ''True'', ''true'',
+        1, ''1''] %} {{ not met }}'
+      plan_json: "{% if plan_data is mapping %}\n  {% set base = {\n    \"status\":
+        plan_status,\n    \"summary\": plan_summary_clean,\n    \"notes\": plan_notes_clean,\n
+        \   \"deadline_met\": plan_deadline_met,\n    \"slots_planned\": plan_slots_planned,\n
+        \   \"currency\": plan_currency,\n    \"schedule\": plan_schedule_effective\n
+        \ } %}\n  {{ base | tojson }}\n{% else %}\n  {{ {\n    \"status\": plan_status,\n
+        \   \"summary\": plan_summary_clean,\n    \"notes\": plan_notes_clean,\n    \"deadline_met\":
+        plan_deadline_met,\n    \"slots_planned\": plan_slots_planned,\n    \"currency\":
+        plan_currency,\n    \"schedule\": plan_schedule_effective\n  } | tojson }}\n{%
+        endif %}"
+      calendar_entity: calendar.billaddning
+  - action: system_log.write
+    data:
+      level: info
+      logger: granny_car_charge_plan
+      message: 'Planeringsstatistik: initial={{ plan_schedule_initial_len }}, filtered={{
+        plan_schedule_effective | length }}, removed={{ schedule_removed_count }},
+        start_failed={{ schedule_start_failed }}, fallback={{ schedule_fallback_used
+        }}, initial_slots={{ plan_schedule_initial }}, first={{ plan_schedule_effective[0].start
+        if plan_schedule_effective | length > 0 else ''none'' }}–{{ plan_schedule_effective[0].end
+        if plan_schedule_effective | length > 0 else ''none'' }}, window={{ now_iso
+        }}–{{ deadline_iso }}, filtered={{ plan_schedule_effective | tojson }}, plan_schedule={{
+        plan_schedule | tojson }}, per_slot={{ plan_schedule_filter_debug }}'
+  - action: system_log.write
+    data:
+      level: info
+      logger: granny_car_charge_plan
+      message: 'Plan energikontroll: needed={{ energy_needed_kwh | float(0) | round(3)
+        }} kWh, per_slot={{ slot_energy_kwh | float(0) | round(3) }} kWh, slots={{
+        plan_schedule_effective | length }}, total={{ plan_energy_total | float(0)
+        | round(3) }} kWh, goal_met={{ energy_goal_met }}'
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ schedule_fallback_used in [True, "True", "true", 1, "1"]
+          }}'
+      sequence:
+      - action: logbook.log
+        data:
+          name: '{{ log_prefix }}'
+          message: Planens tider låg redan inom fönstret {{ as_local(as_datetime(now_iso)).strftime('%d
+            %b %H:%M') }} – {{ as_local(as_datetime(deadline_iso)).strftime('%d %b
+            %H:%M') }}, så hela planen behölls ofiltrerad.
+    - conditions:
+      - condition: template
+        value_template: '{{ schedule_start_failed in [True, "True", "true", 1, "1"]
+          }}'
+      sequence:
+      - action: logbook.log
+        data:
+          name: '{{ log_prefix }}'
+          message: 'Planen filtrerades bort eftersom alla slotar låg före nuvarande
+            tidsfönster. Status: {{ plan_status }}.'
+      - action: persistent_notification.create
+        data:
+          title: Laddningsplan ogiltig (tidsfönster)
+          message: Planen innehöll endast slotar utanför fönstret {{ as_local(as_datetime(now_iso)).strftime('%d
+            %b %H:%M') }} – {{ as_local(as_datetime(deadline_iso)).strftime('%d %b
+            %H:%M') }}. Planeringen stoppades.
+          notification_id: granny_car_charge_plan_time_error
+      - stop: Planen låg utanför tidsfönstret.
+    - conditions:
+      - condition: template
+        value_template: '{{ schedule_removed_count | int(0) > 0 }}'
+      sequence:
+      - action: logbook.log
+        data:
+          name: '{{ log_prefix }}'
+          message: '{{ schedule_removed_count }} slot(ar) togs bort eftersom de låg
+            utanför tidsfönstret. Fortsätter med {{ plan_schedule_effective | length
+            }} slot(ar).'
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ deadline_check_failed in [True, "True", "true", 1, "1"]
+          }}'
+      sequence:
+      - action: logbook.log
+        data:
+          name: '{{ log_prefix }}'
+          message: 'Planen bryter mot deadlinen eller saknar tider inom fönstret.
+            Status: {{ plan_status }}.'
+      - action: persistent_notification.create
+        data:
+          title: Laddningsplan ogiltig (deadline)
+          message: Planen passer inte deadlinetiden {{ as_local(as_datetime(deadline_iso)).strftime('%d
+            %b %H:%M') }}. Kontrollera prisdata och inställningarna.
+          notification_id: granny_car_charge_plan_deadline_error
+      - stop: Planen uppfyllde inte deadlinetiden.
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ energy_check_failed in [True, "True", "true", 1, "1"]
+          }}'
+      sequence:
+      - action: logbook.log
+        data:
+          name: '{{ log_prefix }}'
+          message: Planens energi {{ plan_energy_total | float(0) | round(2) }} kWh
+            räcker inte för behovet {{ energy_needed_kwh | float(0) | round(2) }}
+            kWh.
+      - action: persistent_notification.create
+        data:
+          title: Laddningsplan ogiltig (energi)
+          message: Planen levererar endast {{ plan_energy_total | float(0) | round(2)
+            }} kWh. Behovet är {{ energy_needed_kwh | float(0) | round(2) }} kWh.
+            Planen stoppades.
+          notification_id: granny_car_charge_plan_energy_error
+      - stop: Planen levererade för lite energi.
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ plan_schedule_effective | length == 0 }}'
+      sequence:
+      - action: logbook.log
+        data:
+          name: '{{ log_prefix }}'
+          message: 'Planen saknar slotar (status: {{ plan_status | default("ok") }}).
+            Kalendern töms i det aktuella fönstret.'
+  - action: shell_command.granny_update_charge_calendar
+    data:
+      calendar_entity: '{{ calendar_entity }}'
+      window_start: '{{ now_iso }}'
+      window_end: '{{ cleanup_end_iso }}'
+      plan_json: '{{ plan_json }}'
+  - action: homeassistant.reload_config_entry
+    target:
+      entity_id: '{{ calendar_entity }}'
+  - action: homeassistant.update_entity
+    target:
+      entity_id: '{{ calendar_entity }}'
+  - wait_template: '{{ states(calendar_entity) not in [''unavailable'', ''unknown'',
+      None] }}'
+    timeout: 00:00:20
+    continue_on_timeout: true
+  - action: calendar.get_events
+    target:
+      entity_id: '{{ calendar_entity }}'
+    data:
+      start_date_time: '{{ now_iso }}'
+      end_date_time: '{{ cleanup_end_iso }}'
+    response_variable: calendar_window
+  - variables:
+      updated_events: '{{ calendar_window.events | default([]) }}'
+      updated_event_count: '{{ updated_events | length }}'
+      total_energy_kwh: "{% set total = namespace(value=0.0) %} {% for slot in plan_schedule_effective
+        %}\n  {% set slot_obj = slot %}\n  {% if slot_obj is string %}\n    {% set
+        slot_obj = slot_obj | from_json(default={}) %}\n  {% endif %}\n  {% if slot_obj
+        is mapping %}\n    {% if 'energy_kwh' in slot_obj %}\n      {% set energy
+        = slot_obj['energy_kwh'] %}\n    {% elif 'energy' in slot_obj %}\n      {%
+        set energy = slot_obj['energy'] %}\n    {% else %}\n      {% set energy =
+        None %}\n    {% endif %}\n    {% if energy is not none %}\n      {% set total.value
+        = total.value + (energy | float(0)) %}\n    {% endif %}\n  {% endif %}\n{%
+        endfor %} {{ total.value }}"
+      total_cost_value: "{% set total = namespace(value=0.0) %} {% for slot in plan_schedule_effective
+        %}\n  {% set slot_obj = slot %}\n  {% if slot_obj is string %}\n    {% set
+        slot_obj = slot_obj | from_json(default={}) %}\n  {% endif %}\n  {% if slot_obj
+        is mapping %}\n    {% if 'cost_sek' in slot_obj %}\n      {% set cost = slot_obj['cost_sek']
+        %}\n    {% elif 'cost' in slot_obj %}\n      {% set cost = slot_obj['cost']
+        %}\n    {% else %}\n      {% set cost = None %}\n    {% endif %}\n    {% if
+        'price_sek_kwh' in slot_obj %}\n      {% set price = slot_obj['price_sek_kwh']
+        %}\n    {% elif 'price' in slot_obj %}\n      {% set price = slot_obj['price']
+        %}\n    {% else %}\n      {% set price = None %}\n    {% endif %}\n    {%
+        if 'energy_kwh' in slot_obj %}\n      {% set energy = slot_obj['energy_kwh']
+        %}\n    {% elif 'energy' in slot_obj %}\n      {% set energy = slot_obj['energy']
+        %}\n    {% else %}\n      {% set energy = None %}\n    {% endif %}\n    {%
+        if cost is not none %}\n      {% set total.value = total.value + (cost | float(0))
+        %}\n    {% elif price is not none and energy is not none %}\n      {% set
+        total.value = total.value + ((price | float(0)) * (energy | float(0))) %}\n
+        \   {% endif %}\n  {% endif %}\n{% endfor %} {% set summed = total.value %}
+        {% if (summed | float(0)) <= 0 and plan_data is mapping %}\n  {% if plan_data.get('total_cost_sek')
+        is not none %}\n    {{ plan_data.get('total_cost_sek') | float(0) }}\n  {%
+        elif plan_data.get('total_cost') is not none %}\n    {{ plan_data.get('total_cost')
+        | float(0) }}\n  {% elif plan_data.get('total_cost_eur') is not none %}\n
+        \   {{ plan_data.get('total_cost_eur') | float(0) }}\n  {% else %}\n    {{
+        summed }}\n  {% endif %}\n{% else %}\n  {{ summed }}\n{% endif %}"
+  - action: logbook.log
+    data:
+      name: '{{ log_prefix }}'
+      message: 'Kalender uppdaterad. {{ updated_event_count }} slotar aktiva. Status:
+        {{ plan_status }}.'
+  - action: input_datetime.set_datetime
+    data:
+      datetime: '{{ now_iso }}'
+    target:
+      entity_id: input_datetime.granny_charger_trigger
+  - variables:
+      schedule_lines: "{% if plan_schedule_effective | length == 0 %} - Inga laddningsslotar
+        behövs just nu. {% else %} {%- for slot in plan_schedule_effective %} {% set
+        slot_obj = slot %} {% if slot_obj is string %}\n  {% set slot_obj = slot_obj
+        | from_json(default={}) %}\n{% endif %} {% set slot_start = slot_obj.get('start')
+        %} {% set slot_end = slot_obj.get('end') %} {% set slot_energy = slot_obj.get('energy_kwh',
+        slot_obj.get('energy')) %} - {{ as_local(as_datetime(slot_start)).strftime('%d
+        %b %H:%M') if slot_start else 'okänd' }}–{{ as_local(as_datetime(slot_end)).strftime('%H:%M')
+        if slot_end else 'okänd' }} (≈{{ slot_energy | float(0) | round(2) }} kWh)
+        {%- endfor %} {% endif %}"
+      granny_task: 'SYSTEM Du är "Granny", familjens hjärtliga rådgivare. Tala svenska,
+        max 60 ord, varm men rak.
+
+        DATA Status: {{ plan_status if plan_status | length > 0 else ''ok'' }} Sammanfattning:
+        {{ plan_summary_clean if plan_summary_clean | length > 0 else ''Ingen sammanfattning
+        tillgänglig.'' }} Total energi: {{ total_energy_kwh | float(0) | round(2)
+        }} kWh Total kostnad: {{ total_cost_value | float(0) | round(2) }} {{ plan_currency
+        }} Tidsluckor: {{ schedule_lines }}
+
+        UPPDRAG Förklara planen kort, peppa familjen och påminn om tidsluckorna.'
+      broadcast_fallback: "{% if plan_notes_clean | length > 0 %}\n  {{ plan_notes_clean
+        }}\n{% elif plan_summary_clean | length > 0 %}\n  {{ plan_summary_clean }}\n{%
+        else %}\n  Laddningsplanen är uppdaterad men ingen text genererades.\n{% endif
+        %}"
+      status_notification_body: "{% set ns = namespace(parts=[]) %} {% if plan_schedule_effective
+        | length == 0 %}\n  {% set ns.parts = ns.parts + ['Ingen laddning planerad
+        just nu.'] %}\n{% else %}\n  {% set ns.parts = ns.parts + ['Plan klar: ' ~
+        (plan_schedule_effective | length) ~ ' slotar, energi ≈ ' ~ (total_energy_kwh
+        | float(0) | round(2)) ~ ' kWh, kostnad ≈ ' ~ (total_cost_value | float(0)
+        | round(2)) ~ ' ' ~ plan_currency ~ '.'] %}\n{% endif %} {% set ns.parts =
+        ns.parts + ['Total energi ≈ ' ~ (total_energy_kwh | float(0) | round(2)) ~
+        ' kWh, total kostnad ≈ ' ~ (total_cost_value | float(0) | round(2)) ~ ' '
+        ~ plan_currency ~ '.'] %} {% for slot in plan_schedule_effective %}\n  {%
+        set slot_obj = slot %}\n  {% if slot_obj is string %}\n    {% set slot_obj
+        = slot_obj | from_json(default={}) %}\n  {% endif %}\n  {% set slot_start
+        = slot_obj.get('start') %}\n  {% set slot_end = slot_obj.get('end') %}\n  {%
+        set slot_energy = slot_obj.get('energy_kwh', slot_obj.get('energy')) %}\n
+        \ {% set ns.parts = ns.parts + ['- ' ~ (as_local(as_datetime(slot_start)).strftime('%d
+        %b %H:%M') if slot_start else 'okänd') ~ '–' ~ (as_local(as_datetime(slot_end)).strftime('%H:%M')
+        if slot_end else 'okänd') ~ ' (≈' ~ (slot_energy | float(0) | round(2)) ~
+        ' kWh)'] %}\n{% endfor %} {{ ns.parts | join('\\n') }}"
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ notify_user_bool in [True, "True", "true", 1, "1"] }}'
+      sequence:
+      - action: persistent_notification.create
+        data:
+          title: Granny-plan klar
+          message: '{{ status_notification_body }}'
+          notification_id: '{{ status_notification_id }}'
+  - action: logbook.log
+    data:
+      name: '{{ log_prefix }}'
+      message: 'Laddningsplan klar: {{ updated_event_count }} slotar, energi ≈ {{
+        total_energy_kwh | float(0) | round(2) }} kWh, kostnad ≈ {{ total_cost_value
+        | float(0) | round(2) }} {{ plan_currency }}.'
+thread_uppdatera_natverksdiagnostik:
+  alias: Thread - Uppdatera nätverksdiagnostik
+  mode: single
+  sequence:
+  - action: rest_command.thread_get_devices
+    response_variable: devices_response
+  - variables:
+      thread_routers: "{{ devices_response.content\n   | selectattr('role', 'eq',
+        'router')\n   | map(attribute='extAddress')\n   | list }}"
+  - repeat:
+      for_each: '{{ thread_routers }}'
+      sequence:
+      - action: rest_command.thread_get_diagnostics
+        data:
+          destination: '{{ repeat.item }}'
+      - delay:
+          seconds: 1
+  - delay:
+      seconds: 35
+  - action: rest_command.thread_get_diagnostics_result
+    response_variable: diagnostics_response
+
+hissmusik_starta:
+  alias: Hissmusik - Starta lokal musik
+  description: >-
+    Spelar angiven lokal MA-spellista (standard Hissmusik) på
+    Dassens högtalare med 15 % volym, shuffle och repeat all. Högst tre
+    startförsök; avbryter direkt när gruppen spelar och meddelar vid fel.
+  mode: restart
+  fields:
+    spellista:
+      name: Spellista
+      description: Lokal MA-lista att spela. Hissmusik används om inget val anges.
+      default: hissmusik
+      selector:
+        select:
+          options:
+          - label: Hissmusik
+            value: hissmusik
+          - label: Motown & Soul (60s, 70s & 80s)
+            value: motown
+  trace:
+    stored_traces: 10
+  sequence:
+  - variables:
+      hissmusik_player: media_player.dassens_hogtalare_ma
+      # Verifierade lokala MA-listor, inte namnsökning bland streaminglistor.
+      hissmusik_playlists:
+        hissmusik:
+          name: Hissmusik
+          uri: library://playlist/58
+        motown:
+          name: Motown & Soul (60s, 70s & 80s)
+          uri: library://playlist/59
+  - variables:
+      hissmusik_playlist: "{{ hissmusik_playlists[spellista | default('hissmusik')] }}"
+  - repeat:
+      sequence:
+      - alias: Vänta på att MA-gruppen är tillgänglig
+        wait_template: "{{ states(hissmusik_player) not in ['unknown', 'unavailable'] }}"
+        timeout: '00:00:20'
+        continue_on_timeout: true
+      - if:
+        - condition: template
+          value_template: '{{ wait.completed }}'
+        then:
+        - alias: Stoppa föregående kö före ett nytt startförsök
+          action: media_player.media_stop
+          continue_on_error: true
+          target:
+            entity_id: '{{ hissmusik_player }}'
+        - wait_template: "{{ not is_state(hissmusik_player, 'playing') }}"
+          timeout: '00:00:10'
+          continue_on_timeout: true
+        - if:
+          - condition: template
+            value_template: '{{ wait.completed }}'
+          then:
+          - action: media_player.volume_set
+            continue_on_error: true
+            target:
+              entity_id: '{{ hissmusik_player }}'
+            data:
+              volume_level: 0.15
+          - action: media_player.volume_mute
+            continue_on_error: true
+            target:
+              entity_id: '{{ hissmusik_player }}'
+            data:
+              is_volume_muted: false
+          - action: media_player.shuffle_set
+            continue_on_error: true
+            target:
+              entity_id: '{{ hissmusik_player }}'
+            data:
+              shuffle: true
+          - action: media_player.repeat_set
+            continue_on_error: true
+            target:
+              entity_id: '{{ hissmusik_player }}'
+            data:
+              repeat: all
+          - alias: Starta den valda lokala spellistan på gruppen
+            action: music_assistant.play_media
+            continue_on_error: true
+            target:
+              entity_id: '{{ hissmusik_player }}'
+            data:
+              media_id: '{{ hissmusik_playlist.uri }}'
+              media_type: playlist
+              enqueue: replace
+              radio_mode: false
+          - wait_template: "{{ is_state(hissmusik_player, 'playing') }}"
+            timeout: '00:00:30'
+            continue_on_timeout: true
+          - if:
+            - condition: template
+              value_template: '{{ wait.completed }}'
+            then:
+            - action: persistent_notification.dismiss
+              data:
+                notification_id: hissmusik_startfel
+            - action: logbook.log
+              data:
+                name: Hissmusik
+                message: >-
+                  Spelar {{ hissmusik_playlist.name }} från lokala filer på
+                  Dassens högtalare (försök {{ repeat.index }}).
+                entity_id: '{{ hissmusik_player }}'
+            - stop: Dassens högtalare spelar den lokala spellistan.
+      until:
+      - condition: template
+        value_template: '{{ repeat.index >= 3 }}'
+  - action: persistent_notification.create
+    data:
+      notification_id: hissmusik_startfel
+      title: Hissmusik kunde inte starta
+      message: >-
+        Kunde inte starta {{ hissmusik_playlist.name }} på Dassens högtalare
+        efter tre försök. Gruppens status är {{ states(hissmusik_player) }}.
+        Kontrollera Music Assistant, högtalargruppen och de lokala musikfilerna.
+  - stop: Hissmusik kunde inte starta efter tre försök.
+    error: true
+
+hissmusik_stoppa:
+  alias: Hissmusik - Stoppa
+  description: Avbryter pågående startförsök och stoppar gruppen Dassens högtalare.
+  mode: restart
+  sequence:
+  - action: script.turn_off
+    target:
+      entity_id: script.hissmusik_starta
+  - action: media_player.media_stop
+    target:
+      entity_id: media_player.dassens_hogtalare_ma
+
+# Serialize announcements, retry transient errors and report exhausted attempts.
+granny_announce:
+  alias: Granny – synkroniserat tal via vanlig Chromecast
+  description: Ett enda utrop till en riktig Chromecast-grupp. Inga separata flerrumsutrop.
+  mode: queued
+  max: 50
+  fields:
+    media_player:
+      default: media_player.grannys_hogtalare
+      selector:
+        entity:
+          domain: media_player
+          integration: music_assistant
+    tts_engine:
+      default: tts.piper
+      selector:
+        entity:
+          domain: tts
+    message:
+      required: true
+      selector:
+        text:
+          multiline: true
+  sequence:
+  - variables:
+      requested: '{{ media_player | default("media_player.grannys_hogtalare", true) | trim }}'
+      is_granny_group: '{{ requested in ["media_player.grannys_hogtalare", "media_player.grupp_grannys_hogtalare"] }}'
+      native_group_override: ''
+      native_group_candidates: >-
+        {% set ns = namespace(entities=[]) %}
+        {% for s in states.media_player %}
+          {% if s.attributes.mass_player_type | default('') == 'group'
+                and s.attributes.friendly_name | default('') in ['Granny utrop', 'Grannys högtalare']
+                and s.attributes.active_queue | default('') | regex_match('^[0-9a-f]{8}-[0-9a-f-]{27}$') %}
+            {% set ns.entities = ns.entities + [s.entity_id] %}
+          {% endif %}
+        {% endfor %}
+        {{ ns.entities }}
+      player: >-
+        {% if is_granny_group %}
+          {{ native_group_override or (native_group_candidates[0] if native_group_candidates | length == 1 else '') }}
+        {% elif requested == 'media_player.kokets_skarm' %}
+          media_player.kokets_skarm_ma
+        {% else %}
+          {{ requested }}
+        {% endif %}
+  - if: '{{ is_granny_group and player | length == 0 }}'
+    then:
+    - action: persistent_notification.create
+      data:
+        notification_id: granny_speech_failed_group
+        title: Granny saknar en synkroniserad Chromecast-grupp
+        message: >-
+          Skapa högtalargruppen Granny utrop i Google Home med de önskade högtalarna.
+          Den ska vara en vanlig Chromecast-grupp, inte en Music Assistant-synkgrupp.
+          Meddelande: {{ message }}
+    - stop: Ingen entydig vanlig Chromecast-grupp för Granny finns ännu.
+      error: true
+  - action: persistent_notification.dismiss
+    data:
+      notification_id: granny_speech_failed_group
+  - action: script.granny_announce_player
+    data:
+      media_player: '{{ player | trim }}'
+      tts_engine: '{{ tts_engine | default("tts.piper", true) }}'
+      message: '{{ message }}'
+
+granny_announce_player:
+  alias: Granny – tal till ett Chromecast-mål
+  description: Köat utrop med två försök, reservröst och synlig felnotis.
+  mode: parallel
+  max: 50
+  fields:
+    media_player:
+      default: media_player.grannys_hogtalare
+      selector:
+        entity:
+          domain: media_player
+          integration: music_assistant
+    tts_engine:
+      default: tts.piper
+      selector:
+        entity:
+          domain: tts
+    message:
+      required: true
+      selector:
+        text:
+          multiline: true
+  sequence:
+  - variables:
+      requested: "{{ media_player | default('media_player.grannys_hogtalare', true) | trim }}"
+      player: >-
+        {{ 'media_player.kokets_skarm_ma' if requested == 'media_player.kokets_skarm'
+           else requested }}
+      primary_engine: "{{ tts_engine | default('tts.piper', true) | trim }}"
+      notification_id: '{{ "granny_speech_failed_" ~ player | replace(".", "_") }}'
+      announcement_result: {}
+  - repeat:
+      count: 2
+      sequence:
+      - variables:
+          announcement_result: {}
+          engine: >-
+            {{ 'tts.home_assistant_cloud' if
+               (repeat.index == 2 or states(primary_engine) == 'unavailable') and
+               states.tts.home_assistant_cloud is defined and
+               states('tts.home_assistant_cloud') != 'unavailable'
+               else primary_engine }}
+      - action: script.granny_speak_attempt
+        continue_on_error: true
+        data:
+          player: '{{ player }}'
+          engine: '{{ engine }}'
+          message: '{{ message }}'
+        response_variable: announcement_result
+      - if: '{{ announcement_result.get("success", false) }}'
+        then:
+        - action: persistent_notification.dismiss
+          data:
+            notification_id: '{{ notification_id }}'
+        - stop: Meddelandet har skickats till Music Assistant.
+      - if: '{{ repeat.index < 2 }}'
+        then:
+        - delay:
+            seconds: 3
+  - action: persistent_notification.create
+    data:
+      notification_id: '{{ notification_id }}'
+      title: Granny kunde inte läsa upp meddelandet
+      message: >-
+        Två talförsök misslyckades på {{ player }}. Meddelande: {{ message }}.
+        Kontrollera högtalarens anslutning, Music Assistant och TTS.
+        Övriga valda meddelandekanaler fortsätter.
+  - action: system_log.write
+    data:
+      level: error
+      logger: granny_broadcast
+      message: 'Två talförsök misslyckades på {{ player }}.'
+  - stop: Granny kunde inte skicka tal efter två försök.
+    error: true
+
+granny_speak_attempt:
+  alias: Granny – ett talförsök
+  description: Intern hjälpfunktion. Fel returneras till det köade utropsskriptet.
+  mode: parallel
+  max: 50
+  sequence:
+  - wait_template: '{{ states(player) not in ["unknown", "unavailable"] }}'
+    timeout:
+      seconds: 15
+    continue_on_timeout: false
+  - if: '{{ message | default("", true) | trim | length == 0 }}'
+    then:
+    - stop: Talmeddelandet är tomt.
+      error: true
+  - if: '{{ states[engine] is none or states(engine) == "unavailable" }}'
+    then:
+    - stop: 'TTS-motorn {{ engine }} saknas eller är otillgänglig.'
+      error: true
+  - action: tts.speak
+    target:
+      entity_id: '{{ engine }}'
+    data:
+      media_player_entity_id: '{{ player }}'
+      message: '{{ message }}'
+      cache: true
+  - variables:
+      result:
+        success: true
+  - stop: Talsteget slutfördes.
+    response_variable: result

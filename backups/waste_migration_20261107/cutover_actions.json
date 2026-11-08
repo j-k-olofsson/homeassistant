@@ -1,0 +1,24 @@
+[
+  {
+    "delete_domain": "template",
+    "entry_id": "00aa2b5819a44ae77a63ee083c87520c",
+    "result": {
+      "require_restart": false
+    }
+  },
+  {
+    "delete_domain": "local_calendar",
+    "entry_id": "e68032cdcc5d02f1799bcc2a08b61370",
+    "result": {
+      "require_restart": false
+    }
+  },
+  {
+    "renamed": "sensor.waste_collection_schedule_soptomning",
+    "to": "sensor.soptomning"
+  },
+  {
+    "renamed": "calendar.waste_collection_schedule_sophamtning_nvaa",
+    "to": "calendar.sophamtning"
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.183f176e2429752580bd7f1ec6c3af99",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "esphome91",
+      "friendly_name": "Hippo kamera",
+      "mac_address": "F0:08:D1:F2:B0:88",
+      "compilation_time": "Mar 12 2023, 18:33:52",
+      "model": "esp32dev",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2023.2.4",
+      "project_name": "",
+      "project_version": "",
+      "webserver_port": 80,
+      "bluetooth_proxy_version": 0
+    },
+    "services": [],
+    "api_version": {
+      "major": 1,
+      "minor": 7
+    },
+    "camera": [
+      {
+        "object_id": "esphome91_camera",
+        "key": 2269162278,
+        "name": "esphome91 Camera",
+        "unique_id": "esphome91cameraesphome91_camera",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0
+      }
+    ]
+  }
+}

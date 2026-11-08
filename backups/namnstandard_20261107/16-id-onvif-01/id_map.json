@@ -1,0 +1,7 @@
+{
+  "camera.c200c_minorstream": "camera.honshuset_tapo_c200c_videostrom_lag_upplosning",
+  "button.honshuset_tapo_c200c_reboot": "button.honshuset_tapo_c200c_starta_om",
+  "button.honshuset_tapo_c200c_set_system_date_and_time": "button.honshuset_tapo_c200c_synkronisera_datum_och_tid",
+  "binary_sensor.honshuset_tapo_c200c_c200c_cell_motion_detection": "binary_sensor.honshuset_tapo_c200c_rorelsedetektering",
+  "binary_sensor.honshuset_tapo_c200c_c200c_person_detection": "binary_sensor.honshuset_tapo_c200c_persondetektering"
+}

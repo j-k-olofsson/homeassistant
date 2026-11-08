@@ -1,6 +1,6 @@
 class ThreadNetworkMap extends HTMLElement {
   setConfig(config) {
-    this.config = { entity: "sensor.thread_matter_topology", ...config };
+    this.config = { entity: "sensor.thread_matter_topologi", ...config };
     this._zoom = 1;
     this._filter = "all";
     this._selected = null;
@@ -15,6 +15,14 @@ class ThreadNetworkMap extends HTMLElement {
   getCardSize() { return 8; }
   getGridOptions() { return { columns: "full", rows: 8, min_rows: 5 }; }
 
+  deviceDisplayName(device) {
+    if (!device) return "";
+    const name = String(device.name_by_user || device.name || "").trim();
+    const area = this._hass.areas?.[device.area_id]?.name || "";
+    if (!area || !name || name.toLocaleLowerCase().includes(area.toLocaleLowerCase())) return name;
+    return `${area} ${name}`;
+  }
+
   nameFor(node) {
     const hass = this._hass;
     const addr = (node.ext_address || "").toLowerCase();
@@ -25,13 +33,14 @@ class ThreadNetworkMap extends HTMLElement {
       if (String(state.state).toLowerCase() !== addr) continue;
       const reg = hass.entities?.[entityId];
       const dev = reg?.device_id && hass.devices?.[reg.device_id];
-      return dev?.name_by_user || dev?.name || state.attributes.friendly_name || addr.slice(0, 8);
+      return this.deviceDisplayName(dev) || hass.formatEntityName?.(state)
+        || reg?.name || reg?.original_name || addr.slice(0, 8);
     }
     if (node.kind === "matter" && node.node_id != null) {
       const needle = `DEVICEID_${Number(node.node_id).toString(16).toUpperCase()}-`;
       for (const dev of Object.values(hass.devices || {})) {
         if ((dev.identifiers || []).some(i => i[0] === "matter" && String(i[1]).toUpperCase().startsWith(needle)))
-          return dev.name_by_user || dev.name;
+          return this.deviceDisplayName(dev);
       }
     }
     return addr ? `${addr.slice(0, 8)}…` : String(node.id);

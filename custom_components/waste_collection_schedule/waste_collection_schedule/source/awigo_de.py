@@ -1,0 +1,132 @@
+import re
+import urllib.parse
+
+import requests
+from bs4 import BeautifulSoup
+from waste_collection_schedule import Collection, Icons  # type: ignore[attr-defined]
+from waste_collection_schedule.exceptions import (
+    SourceArgumentNotFoundWithSuggestions,
+)
+from waste_collection_schedule.service.ICS import ICS
+
+TITLE = "AWIGO Abfallwirtschaft Landkreis Osnabrück GmbH"
+DESCRIPTION = "Source for AWIGO Abfallwirtschaft Landkreis Osnabrück GmbH."
+URL = "https://www.awigo.de/"
+TEST_CASES = {
+    "Bippen Am Bad 4": {"ort": "Bippen", "strasse": "Am Bad", "hnr": 4},
+    "fürstenau, Am Gültum, 9": {"ort": "Fürstenau", "strasse": "Am Gültum", "hnr": 9},
+    "Melle, Allee, 78-80": {"ort": "Melle", "strasse": "Allee", "hnr": "78-80"},
+    "Berge": {"ort": "Berge", "strasse": "Poststr.", "hnr": 3},
+}
+
+
+ICON_MAP = {
+    "Restmülltonne": Icons.GENERAL_WASTE,
+    "Glass": Icons.GLASS,
+    "Bio-Tonne": Icons.ORGANIC,
+    "Papiermülltonne": Icons.PAPER,
+    "Gelbe Tonne/Gelben Sack": Icons.PLASTIC_PACKAGING,
+}
+
+
+API_URL = "https://www.awigo.de/index.php"
+
+
+def compare_cities(a: str, b: str) -> bool:
+    return (
+        re.sub(r"\([0-9]+\)", "", a.lower()).strip()
+        == re.sub(r"\([0-9]+\)", "", b.lower()).strip()
+    )
+
+
+class Source:
+    def __init__(self, ort: str, strasse: str, hnr: str | int):
+        self._ort: str = str(ort)
+        self._strasse: str = strasse
+        self._hnr: str = str(hnr)
+        self._ics = ICS()
+
+    def fetch(self):
+        entries = []
+        waste_types = ["rest", "paper", "yellow", "brown", "mobile"]
+
+        # Note: the AWIGO API has a bug where requesting getICSfile with only
+        # a single waste type enabled (e.g. only "rest" or only "paper")
+        # returns an ICS file containing only headers and no events. As soon
+        # as at least two waste types are requested together, it works fine.
+        # We therefore always request all waste types together in a single
+        # call; each ICS event already carries its own waste-type name, so no
+        # server-side filtering is lost by doing this. See GitHub issue #4562.
+        s = requests.Session()
+        args = {
+            "legacy_eID": "awigoCalendar",
+            "calendar[method]": "getCities",
+        }
+
+        for wt in waste_types:
+            args[f"calendar[{wt}]"] = "1"
+
+        r = s.post(API_URL, params=urllib.parse.urlencode(args, safe="[]"))
+
+        r.raise_for_status()
+
+        soup = BeautifulSoup(r.text, features="html.parser")
+        for option in soup.find_all("option"):
+            if compare_cities(self._ort, option.text):
+                args["calendar[cityID]"] = str(option.get("value"))
+                break
+        if "calendar[cityID]" not in args:
+            raise SourceArgumentNotFoundWithSuggestions(
+                "ort", self._ort, [option.text for option in soup.find_all("option")]
+            )
+
+        args["calendar[method]"] = "getStreets"
+
+        r = s.post(API_URL, params=urllib.parse.urlencode(args, safe="[]"))
+        r.raise_for_status()
+
+        soup = BeautifulSoup(r.text, features="html.parser")
+        for option in soup.find_all("option"):
+            if option.text.lower().strip() == self._strasse.lower().strip():
+                value = option.get("value")
+                if value:
+                    args["calendar[streetID]"] = str(value)
+                break
+        if "calendar[streetID]" not in args:
+            raise SourceArgumentNotFoundWithSuggestions(
+                "strasse",
+                self._strasse,
+                [option.text for option in soup.find_all("option")],
+            )
+
+        args["calendar[method]"] = "getNumbers"
+        r = s.post(API_URL, params=urllib.parse.urlencode(args, safe="[]"))
+        r.raise_for_status()
+        soup = BeautifulSoup(r.text, features="html.parser")
+        for option in soup.find_all("option"):
+            if option.text.lower().strip().replace(
+                " ", ""
+            ) == self._hnr.lower().strip().replace(" ", ""):
+                value = option.get("value")
+                if value:
+                    args["calendar[locationID]"] = str(value)
+                break
+        if "calendar[locationID]" not in args:
+            raise SourceArgumentNotFoundWithSuggestions(
+                "hnr", self._hnr, [option.text for option in soup.find_all("option")]
+            )
+
+        args["calendar[method]"] = "getICSfile"
+        r = s.post(API_URL, params=urllib.parse.urlencode(args, safe="[]"))
+        r.raise_for_status()
+        ics_url = r.text.strip()
+        r = s.get(ics_url)
+        r.raise_for_status()
+        r.encoding = "utf-8"
+
+        dates = self._ics.convert(r.text)
+        for d in dates:
+            bin_type = d[1].replace("wird abgeholt.", "").strip()
+            entries.append(Collection(d[0], bin_type, ICON_MAP.get(bin_type)))
+
+        return entries

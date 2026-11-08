@@ -3,10 +3,9 @@ from functools import wraps
 import logging
 import os.path
 import re
-from typing import Any, NamedTuple, TypeVar, cast
+from typing import TYPE_CHECKING, Any, NamedTuple, TypeVar, cast
 import uuid
 
-from homeassistant.components.binary_sensor import BinarySensorDeviceClass
 from homeassistant.components.sensor import SensorDeviceClass
 from homeassistant.const import CONF_UNIQUE_ID
 from homeassistant.core import HomeAssistant
@@ -14,12 +13,21 @@ from homeassistant.helpers import entity_registry
 from homeassistant.helpers.entity_registry import RegistryEntry
 from homeassistant.helpers.typing import ConfigType
 
+# Older supported HA releases do not have a binary_sensor.const module.
+if TYPE_CHECKING:
+    from homeassistant.components.binary_sensor.const import BinarySensorDeviceClass
+else:
+    from homeassistant.components.binary_sensor import BinarySensorDeviceClass
+
 from custom_components.powercalc.common import SourceEntity
 from custom_components.powercalc.const import (
     PLACEHOLDER_ENTITY_BY_DEVICE_CLASS,
     PLACEHOLDER_ENTITY_BY_TRANSLATION_KEY,
+    PLACEHOLDER_ENTITY_BY_UNIQUE_ID_SUFFIX,
+    PLACEHOLDER_OPTIONAL_PREFIX,
     CalculationStrategy,
 )
+from custom_components.powercalc.device_binding import get_profile_related_devices
 from custom_components.powercalc.power_profile.power_profile import PowerProfile
 
 _LOGGER = logging.getLogger(__name__)
@@ -157,9 +165,11 @@ def replace_placeholders(
     return data
 
 
-def iter_related_entity_placeholders(placeholders: Iterable[str]) -> Iterator[str]:
-    """Yield placeholders that need lookup against entities on the same device."""
+def iter_related_entity_placeholders(placeholders: Iterable[str], *, include_optional: bool = True) -> Iterator[str]:
+    """Yield placeholders that need lookup against related entities."""
     for placeholder in placeholders:
+        if not include_optional and placeholder.startswith(PLACEHOLDER_OPTIONAL_PREFIX):
+            continue
         if parse_related_entity_placeholder(placeholder):
             yield placeholder
 
@@ -191,6 +201,7 @@ def build_related_entity_placeholder_not_found_message(placeholder: str, source_
 
 
 def parse_related_entity_placeholder(placeholder: str) -> tuple[RelatedEntityPlaceholderDefinition, str] | None:
+    placeholder = placeholder.removeprefix(PLACEHOLDER_OPTIONAL_PREFIX)
     for definition in RELATED_ENTITY_PLACEHOLDER_DEFINITIONS:
         if placeholder.startswith(definition.prefix):
             return definition, placeholder.removeprefix(definition.prefix)
@@ -223,6 +234,11 @@ RELATED_ENTITY_PLACEHOLDER_DEFINITIONS = (
             translation_key,
         ),
     ),
+    RelatedEntityPlaceholderDefinition(
+        PLACEHOLDER_ENTITY_BY_UNIQUE_ID_SUFFIX,
+        "unique ID suffix",
+        lambda hass, source_entity, suffix: get_related_entity_by_unique_id_suffix(hass, source_entity, suffix),
+    ),
 )
 
 
@@ -241,7 +257,7 @@ def get_related_entity_by_device_class(
     source_entity: SourceEntity,
     device_class: SensorDeviceClass | BinarySensorDeviceClass,
 ) -> str | None:
-    """Get related entity from same device by device class."""
+    """Find an entity by device class, preferring the source device."""
     return _get_related_entity_for_device(
         hass,
         source_entity=source_entity,
@@ -256,7 +272,7 @@ def get_related_entity_by_translation_key(
     source_entity: SourceEntity,
     translation_key: str,
 ) -> str | None:
-    """Get related entity from same device by translation key."""
+    """Find an entity by translation key, preferring the source device."""
     return _get_related_entity_for_device(
         hass,
         source_entity=source_entity,
@@ -266,6 +282,28 @@ def get_related_entity_by_translation_key(
     )
 
 
+def get_related_entity_by_unique_id_suffix(
+    hass: HomeAssistant,
+    source_entity: SourceEntity,
+    suffix: str,
+) -> str | None:
+    """Require one suffix match on the source device and integration."""
+    entity_reg = entity_registry.async_get(hass)
+    source_entry = entity_reg.async_get(source_entity.entity_id)
+    if not re.fullmatch(r"[A-Za-z_]\w*", suffix) or not source_entity.device_id or source_entry is None:
+        return None
+    matches = [
+        entry
+        for entry in entity_registry.async_entries_for_device(
+            entity_reg, source_entity.device_id, include_disabled_entities=True
+        )
+        if entry.platform == source_entry.platform and entry.unique_id.endswith(suffix)
+    ]
+    if len(matches) != 1 or matches[0].disabled_by is not None:
+        return None
+    return matches[0].entity_id
+
+
 def _get_related_entity_for_device(
     hass: HomeAssistant,
     source_entity: SourceEntity,
@@ -273,18 +311,23 @@ def _get_related_entity_for_device(
     match_value: SensorDeviceClass | BinarySensorDeviceClass | str,
     matcher: Callable[[RegistryEntry], bool],
 ) -> str | None:
-    """Get the first related entity on the same device matching the given predicate."""
+    """Prefer a source-device match, otherwise require one unambiguous linked-device match."""
     entity_reg = entity_registry.async_get(hass)
     device_id = source_entity.device_id
     if not device_id:
         _LOGGER.debug("No device_id available, cannot find related entity")
         return None
 
-    related_entities = [
-        entity_entry.entity_id
-        for entity_entry in entity_registry.async_entries_for_device(entity_reg, device_id)
-        if matcher(entity_entry)
-    ]
+    for entity_entry in entity_registry.async_entries_for_device(entity_reg, device_id):
+        if matcher(entity_entry):
+            return entity_entry.entity_id
+
+    related_entities: set[str] = set()
+    for device in get_profile_related_devices(hass, device_id):
+        for entity_entry in entity_registry.async_entries_for_device(entity_reg, device.id):
+            if matcher(entity_entry):
+                related_entities.add(entity_entry.entity_id)
+
     if not related_entities:
         _LOGGER.debug(
             "No related entities found for device %s with %s %s",
@@ -294,4 +337,14 @@ def _get_related_entity_for_device(
         )
         return None
 
-    return related_entities[0]
+    if len(related_entities) > 1:
+        _LOGGER.warning(
+            "Ambiguous related entities for %s with %s %s: %s",
+            source_entity.entity_id,
+            match_label,
+            match_value,
+            ", ".join(sorted(related_entities)),
+        )
+        return None
+
+    return next(iter(related_entities))

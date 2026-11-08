@@ -1,0 +1,35 @@
+{
+  "status": "verified",
+  "source_edits": {
+    "configuration.yaml": 1,
+    "automations.yaml": 36,
+    "scripts.yaml": 6,
+    "packages/aqara_taklampor_monitor.yaml": 16,
+    "packages/db_optimize.yaml": 2,
+    "packages/granny.yaml": 1,
+    "packages/ha_health_counter.yaml": 1,
+    "packages/ir_lights.yaml": 3,
+    "packages/presence_simulation.yaml": 20
+  },
+  "dashboard_changes": {
+    "ha-admin": {
+      "labels": 6
+    },
+    "lovelace": {
+      "templates": 1,
+      "context_names": 10,
+      "labels": 4
+    }
+  },
+  "targeted_automation_reloads": [
+    "automation.vaxter_torr_blomma",
+    "automation.batteri_varna_om_for_lag_niva"
+  ],
+  "configuration_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  },
+  "references_unchanged": true,
+  "custom_template_evaluation": "passed"
+}

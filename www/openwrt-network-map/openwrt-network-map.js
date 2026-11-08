@@ -15,6 +15,7 @@ class OpenWrtNetworkMapCard extends HTMLElement {
     this._registryNames = new Map();
     this._entityRegistry = new Map();
     this._deviceEntities = new Map();
+    this._areaRegistry = new Map();
     this._registryLoading = false;
     this._selected = undefined;
     this._filterAp = "all";
@@ -230,10 +231,12 @@ class OpenWrtNetworkMapCard extends HTMLElement {
     if (!this._hass?.callWS) return;
     this._registryLoading = true;
     try {
-      const [devices, entities] = await Promise.all([
+      const [devices, entities, areas] = await Promise.all([
         this._hass.callWS({ type: "config/device_registry/list" }),
         this._hass.callWS({ type: "config/entity_registry/list" }),
+        this._hass.callWS({ type: "config/area_registry/list" }),
       ]);
+      this._areaRegistry = new Map((areas || []).map((area) => [area.area_id, area]));
       this._entityRegistry = new Map((entities || []).map((entity) => [entity.entity_id, entity]));
       this._deviceEntities = new Map();
       for (const entity of entities || []) {
@@ -248,8 +251,9 @@ class OpenWrtNetworkMapCard extends HTMLElement {
           .map((connection) => this._normalizeMac(connection[1]))
           .filter(Boolean);
         if (!macs.length) continue;
-        const name = String(device.name_by_user || device.name || "").trim();
-        if (!this._usefulName(name)) continue;
+        const rawName = String(device.name_by_user || device.name || "").trim();
+        if (!this._usefulName(rawName)) continue;
+        const name = this._deviceDisplayName(device);
         let score = device.name_by_user ? 100 : 20;
         if (device.model && !/tracked device|unknown/i.test(device.model)) score += 25;
         if (!/openwrt|tracked device/i.test(`${device.manufacturer || ""} ${device.model || ""}`)) score += 15;
@@ -267,6 +271,14 @@ class OpenWrtNetworkMapCard extends HTMLElement {
     } finally {
       this._registryLoading = false;
     }
+  }
+
+  _deviceDisplayName(device) {
+    const name = String(device.name_by_user || device.name || "").trim();
+    const area = this._hass?.areas?.[device.area_id]?.name
+      || this._areaRegistry.get(device.area_id)?.name || "";
+    if (!area || !name || name.toLocaleLowerCase().includes(area.toLocaleLowerCase())) return name;
+    return `${area} ${name}`;
   }
 
   _collectClients() {
@@ -291,8 +303,12 @@ class OpenWrtNetworkMapCard extends HTMLElement {
       const disconnectMeta = related
         .filter((entity) => entity.entity_id.startsWith("button.") && /disconnect device/i.test(entity.original_name || ""))
         .sort((a, b) => Number(b.config_entry_id === entityMeta?.config_entry_id) - Number(a.config_entry_id === entityMeta?.config_entry_id))[0];
-      const fallbackName = this._cleanFriendlyName(attr.friendly_name || attr.host_name || mac, mac);
-      const name = registry?.name || fallbackName || mac;
+      const displayName = this._hass.formatEntityName?.(state)
+        || entityMeta?.name || entityMeta?.original_name || attr.host_name || mac;
+      const fallbackName = this._cleanFriendlyName(displayName, mac);
+      const registeredDevice = this._hass.devices?.[registry?.deviceId];
+      const name = (registeredDevice && this._deviceDisplayName(registeredDevice))
+        || registry?.name || fallbackName || mac;
       const client = {
         id: `client:${mac}`,
         entityId: state.entity_id,

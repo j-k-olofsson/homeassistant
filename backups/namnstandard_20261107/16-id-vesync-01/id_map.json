@@ -1,0 +1,10 @@
+{
+  "binary_sensor.levoit_luftfukare_300s_lagt_vatten": "binary_sensor.verandan_levoit_luftfukare_300s_lagt_vatten",
+  "binary_sensor.levoit_luftfukare_300s_vattentanken_lyft": "binary_sensor.verandan_levoit_luftfukare_300s_vattentanken_lyft",
+  "number.levoit_luftfukare_300s_dimniva": "number.verandan_levoit_luftfukare_300s_dimniva",
+  "select.levoit_luftfukare_300s_niva_for_nattljus": "select.verandan_levoit_luftfukare_300s_niva_for_nattljus",
+  "switch.levoit_luftfukare_300s_visa": "switch.verandan_levoit_luftfukare_300s_visa",
+  "sensor.levoit_luftfukare_300s_luftfuktighet": "sensor.verandan_levoit_luftfukare_300s_luftfuktighet",
+  "update.levoit_luftfukare_300s_firmware": "update.verandan_levoit_luftfukare_300s_firmware",
+  "switch.levoit_luftfukare_300s_automatisk_avstangning": "switch.verandan_levoit_luftfukare_300s_automatisk_avstangning"
+}

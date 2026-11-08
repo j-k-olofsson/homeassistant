@@ -1,0 +1,16 @@
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_total_rx_gb_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Totalt mottagna data", "aliases": [null, "SM-G930F Total Rx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_total_rx_gb_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_total_tx_gb_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Totalt skickade data", "aliases": [null, "SM-G930F Total Tx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_total_tx_gb_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_last_notification", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senaste avisering", "aliases": [null, "Nothing mobil Last notification"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_last_notification"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_last_removed_notification", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senast borttagna avisering", "aliases": [null, "Nothing mobil Last removed notification"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_last_removed_notification"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_active_notification_count", "before": {"name": null, "aliases": [null]}, "after": {"name": "Antal aktiva aviseringar", "aliases": [null, "Nothing mobil Active notification count"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_active_notification_count"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.nothing_mobil_high_accuracy_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Platsläge med hög precision", "aliases": [null, "Nothing mobil High accuracy mode"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.nothing_mobil_high_accuracy_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_high_accuracy_update_interval", "before": {"name": null, "aliases": [null]}, "after": {"name": "Uppdateringsintervall för hög precision", "aliases": [null, "Nothing mobil High accuracy update interval"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_high_accuracy_update_interval"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nothing_mobil_last_update_trigger", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senaste uppdateringsorsak", "aliases": [null, "Nothing mobil Last update trigger"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nothing_mobil_last_update_trigger"}

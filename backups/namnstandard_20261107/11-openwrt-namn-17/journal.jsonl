@@ -1,0 +1,500 @@
+{"status": "intent", "operation": {"kind": "entity", "id": "button.roborock_max_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "roborock-max Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.roborock_max_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.carolas_s25_disconnect_device_5", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Carolas-S25 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.carolas_s25_disconnect_device_5"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.pixel_9_pro_xl_home_arpa_disconnect_device_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Pixel-9-Pro-XL Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.pixel_9_pro_xl_home_arpa_disconnect_device_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.carolas_s25_disconnect_device_7", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Carolas-S25 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.carolas_s25_disconnect_device_7"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.entren_78_9c_85_2a_70_af_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "gw-august-connect Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.entren_78_9c_85_2a_70_af_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.honshuset_c4_4f_33_72_73_e1_disconnect_device", "before": {"name": null, "aliases": [null, "c4:4f:33:72:73:e1 Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "c4:4f:33:72:73:e1 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.honshuset_c4_4f_33_72_73_e1_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.galaxy_a36_5g_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Galaxy-A36-5G Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.galaxy_a36_5g_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.galaxy_a36_5g_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Galaxy-A36-5G Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.galaxy_a36_5g_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.ateljen_vattensensor_torkskap_disconnect_device_2", "before": {"name": null, "aliases": [null, "Vattensensor (torkskåp) Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Vattensensor (torkskåp) Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.ateljen_vattensensor_torkskap_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.34_e6_ad_56_bd_cd_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "192.168.10.53 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.34_e6_ad_56_bd_cd_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.80_c5_f2_67_aa_69_disconnect_device_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "chromecast-vaxtskapets-speaker Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.80_c5_f2_67_aa_69_disconnect_device_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.54_60_09_d6_4f_22_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "chromecast-stereo-left-speaker Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.54_60_09_d6_4f_22_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_2c_bc_bb_c1_87_2c_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "2c:bc:bb:c1:87:2c Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_2c_bc_bb_c1_87_2c_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.6c_47_60_1a_87_36_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "chromecast-toans-speaker Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.6c_47_60_1a_87_36_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.broadlink_remote_ea_14_9d_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "BroadLink-Remote-ea-14-9d Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.broadlink_remote_ea_14_9d_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.48_26_4c_9a_d6_4c_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "siemens-dishwasher-016050395510002818 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.48_26_4c_9a_d6_4c_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.6c_47_60_0b_55_77_disconnect_device_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "chromecast-duschens-speaker Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.6c_47_60_0b_55_77_disconnect_device_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.20_f8_3b_09_64_60_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "home-assistant-voice-096460 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.20_f8_3b_09_64_60_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.00_f4_8d_97_d9_b5_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "chromecast-kokets-screen Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.00_f4_8d_97_d9_b5_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_b0_4a_39_24_a4_cb_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "roborock-max Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_b0_4a_39_24_a4_cb_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.54_60_09_e8_fc_56_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "chromecast-stereo-right-speaker Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.54_60_09_e8_fc_56_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.galaxy_s9_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Galaxy-S9 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.galaxy_s9_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.verandan_vaggkontakt_x2_verandan_disconnect_device", "before": {"name": null, "aliases": [null, "Väggkontakt x2 (verandan) Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Väggkontakt x2 (verandan) Disconnect device", "Väggkontakt x2 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.verandan_vaggkontakt_x2_verandan_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.verandan_golvvarme_verandan_disconnect_device", "before": {"name": null, "aliases": [null, "Golvvärme (verandan ) Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Golvvärme (verandan ) Disconnect device", "Golvvärme Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.verandan_golvvarme_verandan_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.entren_golvvarme_entren_disconnect_device", "before": {"name": null, "aliases": [null, "Golvvärme (entrén) Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Golvvärme (entrén) Disconnect device", "Golvvärme Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.entren_golvvarme_entren_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.ateljen_golvvarme_ateljen_disconnect_device", "before": {"name": null, "aliases": [null, "Golvvärme (ateljén) Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Golvvärme (ateljén) Disconnect device", "Golvvärme Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.ateljen_golvvarme_ateljen_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_golvvarme_koket_disconnect_device", "before": {"name": null, "aliases": [null, "Golvvärme (köket) Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Golvvärme (köket) Disconnect device", "Golvvärme Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_golvvarme_koket_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.duschen_golvvarme_duschen_disconnect_device", "before": {"name": null, "aliases": [null, "Golvvärme (duschen) Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Golvvärme (duschen) Disconnect device", "Golvvärme Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.duschen_golvvarme_duschen_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_8c_ce_4e_0c_ca_58_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "8c:ce:4e:0c:ca:58 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_8c_ce_4e_0c_ca_58_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.verandan_blomlampa_1_verandan_disconnect_device", "before": {"name": null, "aliases": [null, "Blomlampa 1 (Verandan) Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Blomlampa 1 (Verandan) Disconnect device", "Blomlampa 1 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.verandan_blomlampa_1_verandan_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_blomlampa_2_verandan_disconnect_device", "before": {"name": null, "aliases": [null, "Blomlampa 2 (verandan) Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Blomlampa 2 (verandan) Disconnect device", "Blomlampa 2 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_blomlampa_2_verandan_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.utomhus_f0_08_d1_f2_b8_08_disconnect_device", "before": {"name": null, "aliases": [null, "f0:08:d1:f2:b8:08 Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "f0:08:d1:f2:b8:08 Disconnect device", "ESP32-kamera Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.utomhus_f0_08_d1_f2_b8_08_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.192_168_30_196_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "192.168.30.196 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.192_168_30_196_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_dc_06_75_9d_65_c0_disconnect_device", "before": {"name": null, "aliases": [null, "dc:06:75:9d:65:c0 Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "dc:06:75:9d:65:c0 Disconnect device", "LED-list (balkongdörrar) Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_dc_06_75_9d_65_c0_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.ha_servern_7c_9e_bd_06_e7_bc_disconnect_device", "before": {"name": null, "aliases": [null, "7c:9e:bd:06:e7:bc Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "7c:9e:bd:06:e7:bc Disconnect device", "LED-list Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.ha_servern_7c_9e_bd_06_e7_bc_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.ha_servern_7c_9e_bd_47_e2_88_disconnect_device", "before": {"name": null, "aliases": [null, "7c:9e:bd:47:e2:88 Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "7c:9e:bd:47:e2:88 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.ha_servern_7c_9e_bd_47_e2_88_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.ha_servern_7c_9e_bd_46_f5_80_disconnect_device", "before": {"name": null, "aliases": [null, "7c:9e:bd:46:f5:80 Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "7c:9e:bd:46:f5:80 Disconnect device", "LED-list östra Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.ha_servern_7c_9e_bd_46_f5_80_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.ha_servern_7c_9e_bd_06_c3_b4_disconnect_device", "before": {"name": null, "aliases": [null, "7c:9e:bd:06:c3:b4 Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "7c:9e:bd:06:c3:b4 Disconnect device", "LED-list Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.ha_servern_7c_9e_bd_06_c3_b4_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.duschen_48_e7_29_67_de_7f_disconnect_device_2", "before": {"name": null, "aliases": [null, "48:e7:29:67:de:7f Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "48:e7:29:67:de:7f Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.duschen_48_e7_29_67_de_7f_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.entren_08_f9_e0_46_ed_b4_disconnect_device", "before": {"name": null, "aliases": [null, "08:f9:e0:46:ed:b4 Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "08:f9:e0:46:ed:b4 Disconnect device", "Taklampor ESPHome Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.entren_08_f9_e0_46_ed_b4_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.e8_db_84_d3_1d_ce_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Termostat Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.e8_db_84_d3_1d_ce_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.2c_fd_b3_12_5c_49_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "chromecast-tv-soundbar Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.2c_fd_b3_12_5c_49_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.diegotab_disconnect_device_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "DiegoTab Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.diegotab_disconnect_device_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.carolas_s25_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Carolas-S25 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.carolas_s25_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.pixel_9_pro_xl_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Pixel-9-Pro-XL Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.pixel_9_pro_xl_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.galaxy_a36_5g_disconnect_device_5", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Galaxy-A36-5G Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.galaxy_a36_5g_disconnect_device_5"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.94_27_70_89_d1_ad_disconnect_device_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "siemens-washerdryer Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.94_27_70_89_d1_ad_disconnect_device_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.192_168_10_82_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "192.168.10.82 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.192_168_10_82_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.d8_eb_46_81_a7_f3_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "chromecast-diegos-screen Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.d8_eb_46_81_a7_f3_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sm_r875f_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "SM-R875F Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sm_r875f_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.d8_eb_46_96_63_e4_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "chromecast-mannis-screen Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.d8_eb_46_96_63_e4_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_sanglampor_manni_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Sänglampor Manni Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_sanglampor_manni_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_sanglampor_diego_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Sänglampor Diego Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_sanglampor_diego_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.kontoret_c8_2b_96_5c_71_55_disconnect_device", "before": {"name": null, "aliases": [null, "c8:2b:96:5c:71:55 Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "c8:2b:96:5c:71:55 Disconnect device", "Blomlampa Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.kontoret_c8_2b_96_5c_71_55_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.c8_2b_96_5c_72_08_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Blomlampor Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.c8_2b_96_5c_72_08_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_a4_cf_12_d8_77_59_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "a4:cf:12:d8:77:59 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_a4_cf_12_d8_77_59_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.kontoret_40_22_d8_61_53_f8_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "40:22:d8:61:53:f8 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.kontoret_40_22_d8_61_53_f8_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.ha_servern_c4_4f_33_7a_51_d5_disconnect_device", "before": {"name": null, "aliases": [null, "c4:4f:33:7a:51:d5 Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "c4:4f:33:7a:51:d5 Disconnect device", "LED-list norra Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.ha_servern_c4_4f_33_7a_51_d5_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.ha_servern_c4_4f_33_7a_51_11_disconnect_device", "before": {"name": null, "aliases": [null, "c4:4f:33:7a:51:11 Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "c4:4f:33:7a:51:11 Disconnect device", "LED-list östra Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.ha_servern_c4_4f_33_7a_51_11_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.utomhus_08_b6_1f_34_55_50_disconnect_device", "before": {"name": null, "aliases": [null, "08:b6:1f:34:55:50 Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "08:b6:1f:34:55:50 Disconnect device", "Markis Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.utomhus_08_b6_1f_34_55_50_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.kontoret_taklampor_kontoret_disconnect_device", "before": {"name": null, "aliases": [null, "Taklampor (kontoret) Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Taklampor (kontoret) Disconnect device", "Taklampor Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.kontoret_taklampor_kontoret_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.sovrummet_34_94_54_70_7c_a2_disconnect_device", "before": {"name": null, "aliases": [null, "34:94:54:70:7c:a2 Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "34:94:54:70:7c:a2 Disconnect device", "Taklampor Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.sovrummet_34_94_54_70_7c_a2_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.kontoret_a4_cf_12_d8_0a_dd_disconnect_device", "before": {"name": null, "aliases": [null, "a4:cf:12:d8:0a:dd Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "a4:cf:12:d8:0a:dd Disconnect device", "Termostat Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.kontoret_a4_cf_12_d8_0a_dd_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.canon_g3070_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "canon-g3070 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.canon_g3070_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.8c_f5_a3_7f_d3_b4_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "192.168.10.74 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.8c_f5_a3_7f_d3_b4_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.friggan_c8_2b_96_07_7d_6e_disconnect_device", "before": {"name": null, "aliases": [null, "c8:2b:96:07:7d:6e Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "c8:2b:96:07:7d:6e Disconnect device", "Golvvärme Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.friggan_c8_2b_96_07_7d_6e_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.friggan_98_f4_ab_e2_71_12_disconnect_device", "before": {"name": null, "aliases": [null, "98:f4:ab:e2:71:12 Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "98:f4:ab:e2:71:12 Disconnect device", "Termostat Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.friggan_98_f4_ab_e2_71_12_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.friggan_c8_2b_96_e6_99_4f_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "c8:2b:96:e6:99:4f Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.friggan_c8_2b_96_e6_99_4f_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.verkstaden_08_3a_8d_c3_44_dd_disconnect_device", "before": {"name": null, "aliases": [null, "shellyplug-s-shop-roof-lamps Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "shellyplug-s-shop-roof-lamps Disconnect device", "LED-plafonder Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.verkstaden_08_3a_8d_c3_44_dd_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.utomhus_billaddare_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Billaddare Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.utomhus_billaddare_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.cc_50_e3_fe_16_ed_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "IR-gateway Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.cc_50_e3_fe_16_ed_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.verkstaden_08_b6_1f_38_0b_64_disconnect_device", "before": {"name": null, "aliases": [null, "08:b6:1f:38:0b:64 Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "08:b6:1f:38:0b:64 Disconnect device", "Salt Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.verkstaden_08_b6_1f_38_0b_64_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.kontoret_80_64_6f_91_e9_d5_disconnect_device", "before": {"name": null, "aliases": [null, "80:64:6f:91:e9:d5 Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "80:64:6f:91:e9:d5 Disconnect device", "RF-brygga Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.kontoret_80_64_6f_91_e9_d5_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.ateljen_taklampor_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Taklampor Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.ateljen_taklampor_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_94_b9_7e_16_d2_02_disconnect_device", "before": {"name": null, "aliases": [null, "94:b9:7e:16:d2:02 Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "94:b9:7e:16:d2:02 Disconnect device", "Taklampor Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_94_b9_7e_16_d2_02_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.gamla_verkstaden_08_b6_1f_38_26_78_disconnect_device", "before": {"name": null, "aliases": [null, "08:b6:1f:38:26:78 Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "08:b6:1f:38:26:78 Disconnect device", "Klimatsensor Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.gamla_verkstaden_08_b6_1f_38_26_78_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_88_12_ac_7f_8c_0d_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "SmartHomeControlPanel Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_88_12_ac_7f_8c_0d_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_golvvarme_bion_disconnect_device", "before": {"name": null, "aliases": [null, "Golvvärme (bion) Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Golvvärme (bion) Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_golvvarme_bion_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.utomhus_c4_4f_33_7a_2e_79_disconnect_device", "before": {"name": null, "aliases": [null, "c4:4f:33:7a:2e:79 Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "c4:4f:33:7a:2e:79 Disconnect device", "Gasol Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.utomhus_c4_4f_33_7a_2e_79_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_hemmabio_el_1_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Hemmabio El #1 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_hemmabio_el_1_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_40_22_d8_76_6f_70_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "40:22:d8:76:6f:70 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_40_22_d8_76_6f_70_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.utomhus_24_62_ab_57_80_ad_disconnect_device", "before": {"name": null, "aliases": [null, "24:62:ab:57:80:ad Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "24:62:ab:57:80:ad Disconnect device", "Julbelysning Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.utomhus_24_62_ab_57_80_ad_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.ha_servern_c4_4f_33_7a_51_6d_disconnect_device", "before": {"name": null, "aliases": [null, "c4:4f:33:7a:51:6d Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "c4:4f:33:7a:51:6d Disconnect device", "LED-list södra Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.ha_servern_c4_4f_33_7a_51_6d_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.bion_ventilflakt_bion_disconnect_device", "before": {"name": null, "aliases": [null, "Ventilfläkt (bion) Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Ventilfläkt (bion) Disconnect device", "Ventilfläkt Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.bion_ventilflakt_bion_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.cc_ba_bd_a5_eb_19_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "ap-honshuset.home.arpa Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.cc_ba_bd_a5_eb_19_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.28_39_26_d3_14_5f_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "192.168.30.45 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.28_39_26_d3_14_5f_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.utomhus_elmatare_elstolpen_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Elmätare (elstolpen) Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.utomhus_elmatare_elstolpen_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.dc_06_75_9d_82_74_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "dc:06:75:9d:82:74 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.dc_06_75_9d_82_74_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.poolen_24_a1_60_10_5f_96_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "24:a1:60:10:5f:96 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.poolen_24_a1_60_10_5f_96_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.poolen_24_a1_60_10_eb_a9_disconnect_device", "before": {"name": null, "aliases": [null, "24:a1:60:10:eb:a9 Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "24:a1:60:10:eb:a9 Disconnect device", "Poolvärmepump Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.poolen_24_a1_60_10_eb_a9_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.poolen_c8_2b_96_07_35_26_disconnect_device", "before": {"name": null, "aliases": [null, "c8:2b:96:07:35:26 Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "c8:2b:96:07:35:26 Disconnect device", "Poolbelysning och temperatur Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.poolen_c8_2b_96_07_35_26_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.pixel_9_pro_xl_home_arpa_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Pixel-9-Pro-XL Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.pixel_9_pro_xl_home_arpa_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.pixel_9_pro_xl_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Pixel-9-Pro-XL Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.pixel_9_pro_xl_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.carolas_s25_disconnect_device_8", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Carolas-S25 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.carolas_s25_disconnect_device_8"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.carolas_s25_disconnect_device_6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Carolas-S25 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.carolas_s25_disconnect_device_6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.pixel_9_pro_xl_home_arpa_disconnect_device_5", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Pixel-9-Pro-XL Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.pixel_9_pro_xl_home_arpa_disconnect_device_5"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.pixel_9_pro_xl_home_arpa_disconnect_device_6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Pixel-9-Pro-XL Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.pixel_9_pro_xl_home_arpa_disconnect_device_6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.diegotab_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "DiegoTab Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.diegotab_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.80_c5_f2_67_aa_69_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "chromecast-vaxtskapets-speaker Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.80_c5_f2_67_aa_69_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.carolas_s25_disconnect_device_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Carolas-S25 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.carolas_s25_disconnect_device_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.galaxy_a36_5g_disconnect_device_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Galaxy-A36-5G Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.galaxy_a36_5g_disconnect_device_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.galaxy_s9_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "TV-Galaxy-S9 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.galaxy_s9_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.shellyplug_s_shop_roof_lamps_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "LED-plafonder Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.shellyplug_s_shop_roof_lamps_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.80_64_6f_91_e9_d5_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "RF-brygga Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.80_64_6f_91_e9_d5_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.e8_db_84_d3_1d_ce_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Termostat Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.e8_db_84_d3_1d_ce_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.utomhus_ljussensor_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Ljussensor Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.utomhus_ljussensor_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.08_b6_1f_38_26_78_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Klimatsensor Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.08_b6_1f_38_26_78_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.shelly_1pm_shower_floor_heating_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Golvvärme Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.shelly_1pm_shower_floor_heating_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.shelly_1pm_studio_floor_heating_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Golvvärme Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.shelly_1pm_studio_floor_heating_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplug_s_shop_roof_lamps_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "LED-plafonder Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplug_s_shop_roof_lamps_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplug_s_shop_roof_lamps_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "LED-plafonder RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplug_s_shop_roof_lamps_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplug_s_shop_roof_lamps_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "LED-plafonder TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplug_s_shop_roof_lamps_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shellyplug_s_shop_roof_lamps_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "LED-plafonder Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shellyplug_s_shop_roof_lamps_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_64_6f_91_e9_d5_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "RF-brygga Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_64_6f_91_e9_d5_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_64_6f_91_e9_d5_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "RF-brygga RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_64_6f_91_e9_d5_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_64_6f_91_e9_d5_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "RF-brygga TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_64_6f_91_e9_d5_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_64_6f_91_e9_d5_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "RF-brygga Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_64_6f_91_e9_d5_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.08_b6_1f_38_26_78_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Klimatsensor Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.08_b6_1f_38_26_78_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.08_b6_1f_38_26_78_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Klimatsensor RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.08_b6_1f_38_26_78_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.08_b6_1f_38_26_78_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Klimatsensor TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.08_b6_1f_38_26_78_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.08_b6_1f_38_26_78_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Klimatsensor Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.08_b6_1f_38_26_78_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.e4_65_b8_f1_c1_b8_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Golvvärme Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.e4_65_b8_f1_c1_b8_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.e4_65_b8_f1_c1_b8_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Golvvärme RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.e4_65_b8_f1_c1_b8_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.e4_65_b8_f1_c1_b8_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Golvvärme TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.e4_65_b8_f1_c1_b8_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.e4_65_b8_f1_c1_b8_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Golvvärme Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.e4_65_b8_f1_c1_b8_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shelly_1pm_studio_floor_heating_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Golvvärme Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shelly_1pm_studio_floor_heating_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shelly_1pm_studio_floor_heating_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Golvvärme RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shelly_1pm_studio_floor_heating_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shelly_1pm_studio_floor_heating_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Golvvärme TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shelly_1pm_studio_floor_heating_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shelly_1pm_studio_floor_heating_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Golvvärme Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shelly_1pm_studio_floor_heating_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.shellyplug_s_shop_roof_lamps_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "LED-plafonder Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.shellyplug_s_shop_roof_lamps_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.80_64_6f_91_e9_d5_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "RF-brygga Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.80_64_6f_91_e9_d5_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.08_b6_1f_38_26_78_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Klimatsensor Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.08_b6_1f_38_26_78_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.shelly_1pm_studio_floor_heating_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Golvvärme Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.shelly_1pm_studio_floor_heating_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.gw_august_connect_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "gw-august-connect Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.gw_august_connect_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.canon_g3070_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "canon-g3070 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.canon_g3070_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.d8_eb_46_96_63_e4_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "chromecast-mannis-screen Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.d8_eb_46_96_63_e4_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.smarthomecontrolpanel_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "SmartHomeControlPanel Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.smarthomecontrolpanel_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.00_e0_4c_50_00_fa_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "192.168.10.82 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.00_e0_4c_50_00_fa_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.40_22_d8_76_6f_70_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "40:22:d8:76:6f:70 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.40_22_d8_76_6f_70_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.08_b6_1f_38_0b_64_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Salt Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.08_b6_1f_38_0b_64_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.c4_4f_33_7a_2e_79_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Gasol Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.c4_4f_33_7a_2e_79_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.f4_cf_a2_15_d8_ac_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Ventilfläkt Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.f4_cf_a2_15_d8_ac_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.24_62_ab_57_80_ad_disconnect_device", "before": {"name": null, "aliases": [null, "24:62:ab:57:80:ad Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "24:62:ab:57:80:ad Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.24_62_ab_57_80_ad_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.e0_98_06_d5_c4_ca_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "e0:98:06:d5:c4:ca Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.e0_98_06_d5_c4_ca_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.40_22_d8_76_66_c0_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "40:22:d8:76:66:c0 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.40_22_d8_76_66_c0_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.ha_servern_c4_4f_33_7a_51_6d_disconnect_device_2", "before": {"name": null, "aliases": [null, "c4:4f:33:7a:51:6d Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "c4:4f:33:7a:51:6d Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.ha_servern_c4_4f_33_7a_51_6d_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.koket_2c_bc_bb_c1_87_2c_disconnect_device_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "2c:bc:bb:c1:87:2c Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.koket_2c_bc_bb_c1_87_2c_disconnect_device_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.ateljen_taklampor_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Taklampor Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.ateljen_taklampor_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.cc_50_e3_fe_16_ed_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "IR-gateway Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.cc_50_e3_fe_16_ed_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.00_f4_8d_97_d9_b5_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "chromecast-kokets-screen Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.00_f4_8d_97_d9_b5_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.6c_47_60_1a_87_36_disconnect_device_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "chromecast-toans-speaker Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.6c_47_60_1a_87_36_disconnect_device_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.6c_47_60_0b_55_77_disconnect_device_6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "chromecast-duschens-speaker Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.6c_47_60_0b_55_77_disconnect_device_6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.smarthomecontrolpanel_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "SmartHomeControlPanel Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.smarthomecontrolpanel_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.smarthomecontrolpanel_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "SmartHomeControlPanel RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.smarthomecontrolpanel_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.smarthomecontrolpanel_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "SmartHomeControlPanel TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.smarthomecontrolpanel_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.smarthomecontrolpanel_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "SmartHomeControlPanel Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.smarthomecontrolpanel_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.40_22_d8_76_6f_70_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "40:22:d8:76:6f:70 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.40_22_d8_76_6f_70_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.40_22_d8_76_6f_70_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "40:22:d8:76:6f:70 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.40_22_d8_76_6f_70_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.40_22_d8_76_6f_70_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "40:22:d8:76:6f:70 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.40_22_d8_76_6f_70_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.40_22_d8_76_6f_70_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "40:22:d8:76:6f:70 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.40_22_d8_76_6f_70_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.08_b6_1f_38_0b_64_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Salt Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.08_b6_1f_38_0b_64_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.08_b6_1f_38_0b_64_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Salt RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.08_b6_1f_38_0b_64_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.08_b6_1f_38_0b_64_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Salt TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.08_b6_1f_38_0b_64_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.08_b6_1f_38_0b_64_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Salt Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.08_b6_1f_38_0b_64_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.f4_cf_a2_15_d8_ac_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Ventilfläkt Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.f4_cf_a2_15_d8_ac_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.f4_cf_a2_15_d8_ac_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Ventilfläkt RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.f4_cf_a2_15_d8_ac_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.f4_cf_a2_15_d8_ac_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Ventilfläkt TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.f4_cf_a2_15_d8_ac_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.f4_cf_a2_15_d8_ac_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Ventilfläkt Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.f4_cf_a2_15_d8_ac_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.e0_98_06_d5_c4_ca_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "e0:98:06:d5:c4:ca Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.e0_98_06_d5_c4_ca_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.e0_98_06_d5_c4_ca_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "e0:98:06:d5:c4:ca RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.e0_98_06_d5_c4_ca_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.e0_98_06_d5_c4_ca_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "e0:98:06:d5:c4:ca TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.e0_98_06_d5_c4_ca_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.e0_98_06_d5_c4_ca_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "e0:98:06:d5:c4:ca Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.e0_98_06_d5_c4_ca_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.40_22_d8_76_66_c0_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "40:22:d8:76:66:c0 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.40_22_d8_76_66_c0_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.40_22_d8_76_66_c0_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "40:22:d8:76:66:c0 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.40_22_d8_76_66_c0_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.40_22_d8_76_66_c0_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "40:22:d8:76:66:c0 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.40_22_d8_76_66_c0_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.40_22_d8_76_66_c0_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "40:22:d8:76:66:c0 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.40_22_d8_76_66_c0_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ateljen_taklampor_signal_strength_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Taklampor Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ateljen_taklampor_signal_strength_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ateljen_taklampor_rx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Taklampor RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ateljen_taklampor_rx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ateljen_taklampor_tx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Taklampor TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ateljen_taklampor_tx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ateljen_taklampor_noise_level_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Taklampor Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ateljen_taklampor_noise_level_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.smarthomecontrolpanel_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "SmartHomeControlPanel Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.smarthomecontrolpanel_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.40_22_d8_76_6f_70_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "40:22:d8:76:6f:70 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.40_22_d8_76_6f_70_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.08_b6_1f_38_0b_64_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Salt Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.08_b6_1f_38_0b_64_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.f4_cf_a2_15_d8_ac_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Ventilfläkt Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.f4_cf_a2_15_d8_ac_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.e0_98_06_d5_c4_ca_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "e0:98:06:d5:c4:ca Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.e0_98_06_d5_c4_ca_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.40_22_d8_76_66_c0_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "40:22:d8:76:66:c0 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.40_22_d8_76_66_c0_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.verkstaden_shelly_pro_3_verkstaden_disconnect_device", "before": {"name": null, "aliases": [null, "Shelly Pro 3 - Verkstaden Disconnect device"]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Shelly Pro 3 - Verkstaden Disconnect device", "Shelly Pro 3 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.verkstaden_shelly_pro_3_verkstaden_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.08_b6_1f_38_0b_64_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Salt Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.08_b6_1f_38_0b_64_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.08_b6_1f_38_0b_64_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Salt Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.08_b6_1f_38_0b_64_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.08_b6_1f_38_0b_64_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Salt RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.08_b6_1f_38_0b_64_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.08_b6_1f_38_0b_64_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Salt TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.08_b6_1f_38_0b_64_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.08_b6_1f_38_0b_64_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Salt Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.08_b6_1f_38_0b_64_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.08_b6_1f_38_0b_64_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Salt Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.08_b6_1f_38_0b_64_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.chromecast_toans_speaker_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "chromecast-toans-speaker Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.chromecast_toans_speaker_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.6c_47_60_0b_55_77_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "chromecast-duschens-speaker Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.6c_47_60_0b_55_77_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.galaxy_a36_5g_disconnect_device_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Galaxy-A36-5G Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.galaxy_a36_5g_disconnect_device_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.shelly_1pm_shower_floor_heating_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Golvvärme Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.shelly_1pm_shower_floor_heating_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.diego_lenovo_e31_70_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "diego-Lenovo-E31-70 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.diego_lenovo_e31_70_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.diego_lenovo_e31_70_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "diego-Lenovo-E31-70 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.diego_lenovo_e31_70_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.diego_lenovo_e31_70_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "diego-Lenovo-E31-70 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.diego_lenovo_e31_70_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.diego_lenovo_e31_70_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "diego-Lenovo-E31-70 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.diego_lenovo_e31_70_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.diego_lenovo_e31_70_traffic_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "diego-Lenovo-E31-70 Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.diego_lenovo_e31_70_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.diego_lenovo_e31_70_traffic_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd", "aliases": [null, "diego-Lenovo-E31-70 Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.diego_lenovo_e31_70_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.diego_lenovo_e31_70_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "diego-Lenovo-E31-70 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.diego_lenovo_e31_70_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.28_39_26_d3_14_5f_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "LenovoL340 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.28_39_26_d3_14_5f_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.diego_lenovo_e31_70_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "diego-Lenovo-E31-70 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.diego_lenovo_e31_70_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.diego_lenovo_e31_70_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "diego-Lenovo-E31-70 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.diego_lenovo_e31_70_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.diego_lenovo_e31_70_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "diego-Lenovo-E31-70 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.diego_lenovo_e31_70_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.diego_lenovo_e31_70_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "diego-Lenovo-E31-70 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.diego_lenovo_e31_70_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.diego_lenovo_e31_70_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "diego-Lenovo-E31-70 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.diego_lenovo_e31_70_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.diego_lenovo_e31_70_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "diego-Lenovo-E31-70 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.diego_lenovo_e31_70_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.diegotab_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "DiegoTab Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.diegotab_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.dc_62_79_8c_a5_37_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "C200C Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.dc_62_79_8c_a5_37_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.dc_62_79_8c_a5_37_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "C200C Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.dc_62_79_8c_a5_37_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.dc_62_79_8c_a5_37_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "C200C RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.dc_62_79_8c_a5_37_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.dc_62_79_8c_a5_37_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "C200C TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.dc_62_79_8c_a5_37_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.dc_62_79_8c_a5_37_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "C200C Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.dc_62_79_8c_a5_37_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.dc_62_79_8c_a5_37_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "C200C Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.dc_62_79_8c_a5_37_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c200c_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "C200C Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c200c_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c200c_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "C200C RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c200c_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c200c_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "C200C TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c200c_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c200c_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "C200C Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c200c_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c200c_traffic_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "C200C Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c200c_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.c200c_traffic_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd", "aliases": [null, "C200C Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.c200c_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.c200c_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "C200C Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.c200c_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.c200c_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "C200C Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.c200c_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.192_168_30_83_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "Pixel-9-Pro-XL Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.192_168_30_83_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_30_83_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Pixel-9-Pro-XL Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_30_83_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_30_83_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Pixel-9-Pro-XL RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_30_83_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_30_83_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Pixel-9-Pro-XL TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_30_83_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_30_83_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Pixel-9-Pro-XL Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_30_83_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.192_168_30_83_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Pixel-9-Pro-XL Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.192_168_30_83_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.14_5d_34_95_70_d1_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "buddy3dcam Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.14_5d_34_95_70_d1_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.0c_b8_15_22_91_d4_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "prusa-xl Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.0c_b8_15_22_91_d4_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.6c_47_60_1a_87_36_disconnect_device_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "chromecast-toans-speaker Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.6c_47_60_1a_87_36_disconnect_device_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.00_e0_4c_13_94_de_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "192.168.10.91 Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.00_e0_4c_13_94_de_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.00_e0_4c_13_94_de_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "192.168.10.91 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.00_e0_4c_13_94_de_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.00_e0_4c_13_94_de_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "192.168.10.91 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.00_e0_4c_13_94_de_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.00_e0_4c_13_94_de_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "192.168.10.91 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.00_e0_4c_13_94_de_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.00_e0_4c_13_94_de_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "192.168.10.91 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.00_e0_4c_13_94_de_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.00_e0_4c_13_94_de_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "192.168.10.91 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.00_e0_4c_13_94_de_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_91_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "192.168.10.91 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_91_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_91_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "192.168.10.91 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_91_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_91_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "192.168.10.91 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_91_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_91_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "192.168.10.91 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_91_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_91_traffic_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "192.168.10.91 Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_91_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_91_traffic_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd", "aliases": [null, "192.168.10.91 Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_91_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.192_168_10_91_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "192.168.10.91 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.192_168_10_91_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.14_5d_34_95_70_d1_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "buddy3dcam Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.14_5d_34_95_70_d1_disconnect_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.prusa_xl_disconnect_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Koppla från enhet", "aliases": [null, "prusa-xl Disconnect device"]}}}
+{"status": "applied", "kind": "entity", "id": "button.prusa_xl_disconnect_device"}

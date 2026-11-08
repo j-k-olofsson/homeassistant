@@ -22,7 +22,7 @@ class FeedbackControlCard extends HTMLElement {
  details(){this.dispatchEvent(new CustomEvent('hass-more-info',{bubbles:true,composed:true,detail:{entityId:this.config.entity}}));}
  robotStatus(){
   if(this.config.kind!=='map')return null;
-  const h=this._hass?.states||{},v=h['vacuum.max']?.state,s=h['sensor.max_status']?.state,r=h['binary_sensor.max_stadar']?.state;
+  const h=this._hass?.states||{},v=h['vacuum.koket_max_s6_maxv']?.state,s=h['sensor.koket_max_s6_maxv_status']?.state,r=h['binary_sensor.koket_max_s6_maxv_stadar']?.state;
   if(!v||!s||!r||['unknown','unavailable'].includes(v)||['unknown','unavailable','device_offline'].includes(s)||['unknown','unavailable'].includes(r))return{blocked:true,label:'Status saknas',moving:false};
   if(v==='paused'||s==='paused')return{blocked:true,label:'Pausad',moving:false};
   if(v==='returning'||['returning_home','docking'].includes(s))return{blocked:true,label:'Återvänder',moving:true};
@@ -49,7 +49,7 @@ class FeedbackControlCard extends HTMLElement {
   if(!this.config)return;
   const e=this._hass?.states[this.config.entity],robot=this.robotStatus(),active=e?.state==='on'||e?.state==='heat_cool';
   const available=e&&!['unknown','unavailable'].includes(e.state);const b=this.shadowRoot.querySelector('button');
-  const spinning=this.config.kind==='climate'&&active,charging=this.config.kind==='charging'&&active&&this._hass?.states['sensor.sef_42h_charging_status']?.state==='charging';
+  const spinning=this.config.kind==='climate'&&active,charging=this.config.kind==='charging'&&active&&this._hass?.states['sensor.utomhus_sef_42h_laddningsstatus']?.state==='charging';
   b.className=[active?'active':'',this.config.kind==='presence'?'presence':'',this.config.kind==='led'?'led':'',this.pending?'pending':robot?.moving?'working':spinning?'fan':charging?'charging':'',this.error?'error':''].join(' ');
   b.setAttribute('aria-disabled',String(!!this.pending||!!robot?.blocked||!available));b.setAttribute('aria-busy',String(!!this.pending));
   const base=this.config.kind==='map'?e?.state:this.config.kind==='climate'?(active?'Värme/Kyla':'Av'):(active?'På':'Av');

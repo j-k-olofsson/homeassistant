@@ -1,0 +1,31 @@
+{
+  "path": "/backup/namnstandard_fore_slutforande_20261108_d1a7d04b.tar",
+  "bytes": 6282137600,
+  "sha256": "bec9fce53e0d5a7737a39b4c9bb639b39ec400f9b62ce7d1a32daa3c1e2d703e",
+  "restore_read_test": [
+    "data/configuration.yaml",
+    "data/backups/granny-native-20260920/configuration.yaml",
+    "data/backups/granny_sync_20260906T124722Z/configuration.yaml",
+    "data/backups/recorder_cleanup_20261029/configuration.yaml",
+    "data/backups/namnstandard_20261107/05-kort-och-namnmallar/after_files/configuration.yaml",
+    "data/backups/namnstandard_20261107/05-kort-och-namnmallar/before_files/configuration.yaml",
+    "data/backups/namnstandard_20261107/restore_read_test/configuration.yaml",
+    "data/backups/namnstandard_20261107/restore_read_test/.storage/core.config_entries",
+    "data/backups/namnstandard_20261107/restore_read_test/.storage/core.entity_registry",
+    "data/backups/namnstandard_20261107/baseline/configuration.yaml",
+    "data/backups/namnstandard_20261107/baseline/.storage/core.config_entries",
+    "data/backups/namnstandard_20261107/baseline/.storage/core.entity_registry",
+    "data/backups/namnstandard_20261107/05-variable-reference-preflight/after_files/configuration.yaml",
+    "data/backups/namnstandard_20261107/05-variable-reference-preflight/before_files/configuration.yaml",
+    "data/backups/granny-sync-correction-20260920/configuration.yaml",
+    "data/backups/frontend_resources_before_cleanup_20261106_090423/configuration.yaml",
+    "data/backups/marketplace_trials_20261107/configuration.yaml",
+    "data/backups/namnstandard_20261108/baseline/configuration.yaml",
+    "data/backups/namnstandard_20261108/baseline/.storage/core.config_entries",
+    "data/backups/namnstandard_20261108/baseline/.storage/core.entity_registry",
+    "data/.storage/core.config_entries",
+    "data/.storage/core.entity_registry"
+  ],
+  "full_restore_tested": false,
+  "slug": "d1a7d04b"
+}

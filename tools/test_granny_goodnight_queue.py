@@ -26,7 +26,7 @@ class QueueTests(unittest.IsolatedAsyncioTestCase):
         async def executor(fn,*args):
             return await asyncio.to_thread(fn,*args)
         self.hass = NS(config=NS(path=lambda *args:str(self.root)),
-            states=NS(get=lambda entity: NS(state={'binary_sensor.shelly_blu_door_window_2a6d_window':'off', 'cover.honsluckan_esphome75_cover':'closed', 'lock.ytterdorren':'locked'}.get(entity, 'on'))),
+            states=NS(get=lambda entity: NS(state={'binary_sensor.verandan_balkongdorr_oppning':'off', 'cover.honshuset_lucka':'closed', 'lock.entren_ytterdorren':'locked'}.get(entity, 'on'))),
             async_add_executor_job=executor,
             async_create_background_task=Mock(),
             services=NS(async_call=AsyncMock(),async_register=lambda domain,name,fn,**kwargs:self.handlers.update({name:fn})))

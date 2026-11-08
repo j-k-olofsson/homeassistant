@@ -1,0 +1,489 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "core.restore_state",
+  "data": [
+    {
+      "state": {"entity_id":"person.diego","state":"unknown","attributes":{"editable":true,"id":"diego","device_trackers":["device_tracker.galaxy_tab_2_entren","device_tracker.sm_g965f","device_tracker.pixel_9_pro_xl_2","device_tracker.mt_1011qr","device_tracker.sm_t835_2"],"user_id":"1e38893527ee4e1b9e5081503f031176","entity_picture":"/api/image/serve/8e6a22f00d60c3b5553693e5e59e3d5d/512x512","friendly_name":"Diego"},"last_changed":"2025-03-04T09:01:53.679860+00:00","last_reported":"2025-03-04T09:02:15.417037+00:00","last_updated":"2025-03-04T09:02:15.417037+00:00","context":{"id":"01JNG68DVSEA3FQ7JCH3QSD8CA","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"person.kenneth","state":"Kontoret","attributes":{"editable":true,"id":"kenneth","device_trackers":["device_tracker.diegos_mobil","device_tracker.sm_t835","device_tracker.pixel_9_pro_xl_2"],"latitude":59.3613949,"longitude":17.9750418,"gps_accuracy":195,"source":"device_tracker.diegos_mobil","user_id":"29b553be96084edfb7a9484fd8467ad6","entity_picture":"/api/image/serve/b9592aa8504d616d2a3dcd06566961a6/512x512","friendly_name":"Kenneth"},"last_changed":"2025-03-04T09:01:53.680178+00:00","last_reported":"2025-03-04T09:02:15.417333+00:00","last_updated":"2025-03-04T09:02:15.417333+00:00","context":{"id":"01JNG68DVSCJAPS5SCY39V7EMR","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"person.carola","state":"unknown","attributes":{"editable":true,"id":"carola","device_trackers":["device_tracker.sm_g986b"],"user_id":"31929f46f3c34feabe9c0f73baefcd30","friendly_name":"Carola"},"last_changed":"2025-03-04T09:01:53.680379+00:00","last_reported":"2025-03-04T09:02:15.417588+00:00","last_updated":"2025-03-04T09:02:15.417588+00:00","context":{"id":"01JNG68DVSFC57DK3NSWT2XZ69","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"update.home_assistant_supervisor_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"2025.03.0","in_progress":false,"latest_version":"2025.03.0","release_summary":null,"release_url":"https://github.com/home-assistant/supervisor/releases/tag/2025.03.0","skipped_version":null,"title":"Home Assistant Supervisor","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/hassio/icon.png","friendly_name":"Home Assistant Supervisor Update","supported_features":1},"last_changed":"2025-03-04T09:01:53.854339+00:00","last_reported":"2025-03-04T09:01:53.854339+00:00","last_updated":"2025-03-04T09:01:53.854339+00:00","context":{"id":"01JNG67RSYWG5TK07MSPCGV8CH","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"update.home_assistant_core_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2025.2.5","in_progress":false,"latest_version":"2025.2.5","release_summary":null,"release_url":"https://www.home-assistant.io/latest-release-notes/","skipped_version":null,"title":"Home Assistant Core","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/homeassistant/icon.png","friendly_name":"Home Assistant Core Update","supported_features":11},"last_changed":"2025-03-04T09:01:53.854636+00:00","last_reported":"2025-03-04T09:01:53.854636+00:00","last_updated":"2025-03-04T09:01:53.854636+00:00","context":{"id":"01JNG67RSYR55HSKVX8J9PHSS5","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"update.matter_server_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"7.0.0","in_progress":false,"latest_version":"7.0.0","release_summary":"# Changelog\n\n## 7.0.0\n\n- Bump Python Matter Server to [7.0.1](https://github.com/home-assistant-libs/python-matter-server/releases/tag/7.0.1)\n  - This updates Matter to 1.4\n- Update base image components to what is being used in Home Assistant Debian\n  ba","release_url":null,"skipped_version":null,"title":"Matter Server","update_percentage":null,"entity_picture":"/api/hassio/addons/core_matter_server/icon","friendly_name":"Matter Server Update","supported_features":25},"last_changed":"2025-03-04T09:01:53.854834+00:00","last_reported":"2025-03-04T09:01:53.854834+00:00","last_updated":"2025-03-04T09:01:53.854834+00:00","context":{"id":"01JNG67RSY8A1TV9G3VQSZ781W","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"update.ssh_web_terminal_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"20.0.2","in_progress":false,"latest_version":"20.0.2","release_summary":"## What’s changed\n\n## ⬆️ Dependency updates\n\n- ⬆️ Update alpine_3_21/bind-tools to v9.18.34-r0 @[renovate[bot]](https://github.com/apps/renovate) ([#858](https://github.com/hassio-addons/addon-ssh/pull/858))\n- ⬆️ Update alpine_3_21/mariadb-client to v11.4","release_url":null,"skipped_version":null,"title":"Advanced SSH & Web Terminal","update_percentage":null,"entity_picture":"/api/hassio/addons/a0d7b954_ssh/icon","friendly_name":"Advanced SSH & Web Terminal Update","supported_features":25},"last_changed":"2025-03-04T09:01:53.854989+00:00","last_reported":"2025-03-04T09:01:53.854989+00:00","last_updated":"2025-03-04T09:01:53.854989+00:00","context":{"id":"01JNG67RSY1JHE4TRK8VMH2XH2","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"update.esphome_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"2025.2.2","in_progress":false,"latest_version":"2025.2.2","release_summary":"## 2025.2.2\n\n- Fix ``end_of_scan_`` not being called while disconnecting [esphome#8328](https://github.com/esphome/esphome/pull/8328) by [@bdraco](https://github.com/bdraco)\n- [audio] Determine http timeout based on duration since last successful read [es","release_url":null,"skipped_version":null,"title":"ESPHome Device Builder","update_percentage":null,"entity_picture":"/api/hassio/addons/5c53de3b_esphome/icon","friendly_name":"ESPHome Device Builder Update","supported_features":25},"last_changed":"2025-03-04T09:01:53.855134+00:00","last_reported":"2025-03-04T09:01:53.855134+00:00","last_updated":"2025-03-04T09:01:53.855134+00:00","context":{"id":"01JNG67RSZ8RYPAZVP0M6XXATX","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"update.file_editor_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"5.8.0","in_progress":false,"latest_version":"5.8.0","release_summary":"# Changelog\n\n## 5.8.0\n\n- Update base image to Alpine 3.19\n\n## 5.7.0\n\n- Use new location for accessing the Home Assistant configuration folder using `/homeassistant`\n- Add access to the new public configuration folders of add-ons\n- Upgrade to Alpine 3.18\n-","release_url":null,"skipped_version":null,"title":"File editor","update_percentage":null,"entity_picture":"/api/hassio/addons/core_configurator/icon","friendly_name":"File editor Update","supported_features":25},"last_changed":"2025-03-04T09:01:53.855278+00:00","last_reported":"2025-03-04T09:01:53.855278+00:00","last_updated":"2025-03-04T09:01:53.855278+00:00","context":{"id":"01JNG67RSZFWN19Z6H253SE2EB","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"update.hassos_ssh_port_22222_configurator_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"0.9.3","in_progress":false,"latest_version":"0.9.3","release_summary":"| Version | Change                                                    |\n|---------|-----------------------------------------------------------|\n| 0.9.3   | Check if running in 'protection mode'                     |\n| 0.9.2b  | Add skip/success messages a","release_url":null,"skipped_version":null,"title":"HassOS SSH port 22222 Configurator","update_percentage":null,"entity_picture":"/api/hassio/addons/1f3d020e_hassos_ssh_configurator_addon/icon","friendly_name":"HassOS SSH port 22222 Configurator Update","supported_features":25},"last_changed":"2025-03-04T09:01:53.855455+00:00","last_reported":"2025-03-04T09:01:53.855455+00:00","last_updated":"2025-03-04T09:01:53.855455+00:00","context":{"id":"01JNG67RSZETTH9DY48ZX3P316","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"update.home_assistant_google_drive_backup_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"0.112.1","in_progress":false,"latest_version":"0.112.1","release_summary":"## v0.112.1 [2023-11-03]\n\n- Added warnings about using the \"Stop Addons\" feature.  I plan on removing this in the near future.  If you'd like to keep the feature around, please give your feedback in [this GitHub issue](https://github.com/sabeechen/hassio-","release_url":null,"skipped_version":null,"title":"Home Assistant Google Drive Backup","update_percentage":null,"entity_picture":"/api/hassio/addons/cebe7a76_hassio_google_drive_backup/icon","friendly_name":"Home Assistant Google Drive Backup Update","supported_features":25},"last_changed":"2025-03-04T09:01:53.855591+00:00","last_reported":"2025-03-04T09:01:53.855591+00:00","last_updated":"2025-03-04T09:01:53.855591+00:00","context":{"id":"01JNG67RSZRP5GEBR03S1AHXX3","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"update.log_viewer_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"0.17.1","in_progress":false,"latest_version":"0.17.1","release_summary":"## What’s changed\n\n## ⬆️ Dependency updates\n\n- ⬆️ Update ghcr.io/hassio-addons/base-nodejs Docker tag to v0.1.1 @renovate ([#197](https://github.com/hassio-addons/addon-log-viewer/pull/197))\n- ⬆️ Update ghcr.io/hassio-addons/base-nodejs Docker tag to v0.1","release_url":null,"skipped_version":null,"title":"Log Viewer","update_percentage":null,"entity_picture":"/api/hassio/addons/a0d7b954_logviewer/icon","friendly_name":"Log Viewer Update","supported_features":25},"last_changed":"2025-03-04T09:01:53.855725+00:00","last_reported":"2025-03-04T09:01:53.855725+00:00","last_updated":"2025-03-04T09:01:53.855725+00:00","context":{"id":"01JNG67RSZ3F420W00P2KMH99R","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"update.mariadb_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"2.7.2","in_progress":false,"latest_version":"2.7.2","release_summary":"# Changelog\n\n## 2.7.2\n\n- Add option to configure MariaDB server parameters (see also [home-assistant/addons#3754](https://github.com/home-assistant/addons/issues/3754))\n\n## 2.7.1\n\n**Note:** Restart the add-on before upgrade if the current version is lower","release_url":null,"skipped_version":null,"title":"MariaDB","update_percentage":null,"entity_picture":"/api/hassio/addons/core_mariadb/icon","friendly_name":"MariaDB Update","supported_features":25},"last_changed":"2025-03-04T09:01:53.855863+00:00","last_reported":"2025-03-04T09:01:53.855863+00:00","last_updated":"2025-03-04T09:01:53.855863+00:00","context":{"id":"01JNG67RSZ84EZXGC7851G87KV","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"update.piper_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"1.5.2","in_progress":false,"latest_version":"1.5.2","release_summary":"# Changelog\n\n## 1.5.2\n\n- Add missing voices supported by Piper (gwryw_gogleddol, bryce, john, norman and paola)\n\n## 1.5.1\n\n- Add voice for English: cori\n\n## 1.5.0\n\n- Add voices for Persian: amir, gyro\n- Add voice for Slovenian: artur\n- Add voice for Turki","release_url":null,"skipped_version":null,"title":"Piper","update_percentage":null,"entity_picture":"/api/hassio/addons/core_piper/icon","friendly_name":"Piper Update","supported_features":25},"last_changed":"2025-03-04T09:01:53.855996+00:00","last_reported":"2025-03-04T09:01:53.855996+00:00","last_updated":"2025-03-04T09:01:53.855996+00:00","context":{"id":"01JNG67RSZN2R58WHJNESBYND8","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"update.samba_nas_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"12.3.2-nas1","in_progress":false,"latest_version":"12.3.2-nas1","release_summary":"# Changelog\n\n## 12.3.2-nas1\n\n### 🩹 BugFix\n\n- Build for armv7 arch Fix: [#288](https://github.com/dianlight/hassio-addons/issues/288)]\n\n### 🏗 Chore\n\n- c018288 ⬆️ Update ha-mqtt-discoverable to v0.16.4\n- 9989ae7 ⬆️ Update humanize to v4.12.1\n- 93e576d ⬆️ Up","release_url":null,"skipped_version":null,"title":"Samba NAS","update_percentage":null,"entity_picture":"/api/hassio/addons/1a32f091_sambanas/icon","friendly_name":"Samba NAS Update","supported_features":25},"last_changed":"2025-03-04T09:01:53.856188+00:00","last_reported":"2025-03-04T09:01:53.856188+00:00","last_updated":"2025-03-04T09:01:53.856188+00:00","context":{"id":"01JNG67RT03Z6VZJ6CSFYH3GW2","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"update.silicon_labs_multiprotocol_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2.4.5","in_progress":false,"latest_version":"2.4.5","release_summary":"# Changelog\n\n## 2.4.5\n- Support Home Assistant Connect ZBT-1.\n\n## 2.4.4\n- Revert back to Silicon Labs Gecko SDK 4.3.1 while 4.4.0 instability is investigated.\n- Backport firmware modifications for improved stability.\n- Bump universal SiLabs flasher to 0.0","release_url":null,"skipped_version":null,"title":"Silicon Labs Multiprotocol","update_percentage":null,"entity_picture":"/api/hassio/addons/core_silabs_multiprotocol/icon","friendly_name":"Silicon Labs Multiprotocol Update","supported_features":25},"last_changed":"2025-03-04T09:01:53.856334+00:00","last_reported":"2025-03-04T09:01:53.856334+00:00","last_updated":"2025-03-04T09:01:53.856334+00:00","context":{"id":"01JNG67RT06MFSD2FS87T52G3F","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"update.spotify_connect_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"0.14.0","in_progress":false,"latest_version":"0.14.0","release_summary":"## What’s changed\n\n## ✨ New features\n\n- Add librespot autoplay option @itsfolf ([#254](https://github.com/hassio-addons/addon-spotify-connect/pull/254))\n- Add librespot initial-volume option @spoetnik ([#276](https://github.com/hassio-addons/addon-spotify","release_url":null,"skipped_version":null,"title":"Spotify Connect","update_percentage":null,"entity_picture":"/api/hassio/addons/a0d7b954_spotify/icon","friendly_name":"Spotify Connect Update","supported_features":25},"last_changed":"2025-03-04T09:01:53.856507+00:00","last_reported":"2025-03-04T09:01:53.856507+00:00","last_updated":"2025-03-04T09:01:53.856507+00:00","context":{"id":"01JNG67RT0ANYRK8S47W1NVM9A","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"update.studio_code_server_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"5.18.3","in_progress":false,"latest_version":"5.18.3","release_summary":"## What’s changed\n\n## ⬆️ Dependency updates\n\n- ⬆️ Update debian_12/openssh to v1:9.2p1-2+deb12u5 @[renovate[bot]](https://github.com/apps/renovate) ([#925](https://github.com/hassio-addons/addon-vscode/pull/925))\n- ⬆️ Update cdr/code-server to v4.97.2 @[r","release_url":null,"skipped_version":null,"title":"Studio Code Server","update_percentage":null,"entity_picture":"/api/hassio/addons/a0d7b954_vscode/icon","friendly_name":"Studio Code Server Update","supported_features":25},"last_changed":"2025-03-04T09:01:53.856638+00:00","last_reported":"2025-03-04T09:01:53.856638+00:00","last_updated":"2025-03-04T09:01:53.856638+00:00","context":{"id":"01JNG67RT02ZCYW8QDKMN3FRA6","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"update.tailscale_update_2","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"1.80.2.0","in_progress":false,"latest_version":"1.80.2.0","release_summary":"# Changelog\n\n## 1.80.2.0\n\n- Tailscale package updated to version `1.80.2`\n\n## 1.80.0.0\n\n- Tailscale package updated to version `1.80.0`\n\n## 1.78.1.0\n\n- Tailscale package updated to version `1.78.1`\n\n## 1.78.0.0\n\n- Tailscale package updated to version `1.7","release_url":null,"skipped_version":null,"title":"Tailscale","update_percentage":null,"entity_picture":"/api/hassio/addons/948e3081_tailscale/icon","friendly_name":"Tailscale Update","supported_features":25},"last_changed":"2025-03-04T09:01:53.856774+00:00","last_reported":"2025-03-04T09:01:53.856774+00:00","last_updated":"2025-03-04T09:01:53.856774+00:00","context":{"id":"01JNG67RT0HS2NAJYQF3PXBGTF","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"update.whisper_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"2.4.0","in_progress":false,"latest_version":"2.4.0","release_summary":"# Changelog\n\n## 2.4.0\n\n- Add \"auto\" for model and beam size (0) to select values based on CPU\n\n## 2.3.1\n\n- Move `turbo` down the list closer to `large` to avoid confusion\n\n## 2.3.0\n\n- Bump `wyoming-whisper` to 2.3.0 (`faster-whisper` to 1.1.0)\n- Supports ","release_url":null,"skipped_version":null,"title":"Whisper","update_percentage":null,"entity_picture":"/api/hassio/addons/core_whisper/icon","friendly_name":"Whisper Update","supported_features":25},"last_changed":"2025-03-04T09:01:53.856903+00:00","last_reported":"2025-03-04T09:01:53.856903+00:00","last_updated":"2025-03-04T09:01:53.856903+00:00","context":{"id":"01JNG67RT02V90MCASXR4HMTMH","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"update.ewelink_smart_home_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"1.4.3","in_progress":false,"latest_version":"1.4.3","release_summary":"# Changelogs\n\n## v1.4.3\n\n-   Fix multi-channel device state bug\n\n## v1.4.2\n\n-   Fix redirect URL bug\n\n-   Fix device controlling bug\n\n## v1.4.1\n\n-   Fix color temperature bug\n\n## v1.4.0\n\n-   Support new devices\n\n-   Update Web UI\n\n## v1.3.3\n\n-   Update sy","release_url":null,"skipped_version":null,"title":"eWeLink Smart Home","update_percentage":null,"entity_picture":"/api/hassio/addons/f4f71350_ewelink_smart_home_slug/icon","friendly_name":"eWeLink Smart Home Update","supported_features":25},"last_changed":"2025-03-04T09:01:53.857031+00:00","last_reported":"2025-03-04T09:01:53.857031+00:00","last_updated":"2025-03-04T09:01:53.857031+00:00","context":{"id":"01JNG67RT137JQP3KN14HM2DDN","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"update.openwakeword_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"1.10.0","in_progress":false,"latest_version":"1.10.0","release_summary":"# Changelog\n\n## 1.10.0\n\n- Upgrade to wyoming 1.5.3\n- Add wake word phrase\n\n## 1.8.2\n\n- Add `armv7` image to `build.yaml`\n\n## 1.8.1\n\n- Remove batching from wake word processing since not all models support it\n\n## 1.8.0\n\n- Include fix for potential deadlock","release_url":null,"skipped_version":null,"title":"openWakeWord","update_percentage":null,"friendly_name":"openWakeWord Update","supported_features":25},"last_changed":"2025-03-04T09:01:53.857162+00:00","last_reported":"2025-03-04T09:01:53.857162+00:00","last_updated":"2025-03-04T09:01:53.857162+00:00","context":{"id":"01JNG67RT183CDC4YJKR5Z53FS","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"update.phpmyadmin_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"0.11.1","in_progress":false,"latest_version":"0.11.1","release_summary":"## What’s changed\n\n## 🧰 Maintenance\n\n- 🎆 Updates maintenance/license year to 2025 @frenck ([#234](https://github.com/hassio-addons/addon-phpmyadmin/pull/234))\n\n## ⬆️ Dependency updates\n\n- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v17.0.1 @[renova","release_url":null,"skipped_version":null,"title":"phpMyAdmin","update_percentage":null,"entity_picture":"/api/hassio/addons/a0d7b954_phpmyadmin/icon","friendly_name":"phpMyAdmin Update","supported_features":25},"last_changed":"2025-03-04T09:01:53.857290+00:00","last_reported":"2025-03-04T09:01:53.857290+00:00","last_updated":"2025-03-04T09:01:53.857290+00:00","context":{"id":"01JNG67RT19SJA6SJFQZDJ664M","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"update.home_assistant_operating_system_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"14.2","in_progress":false,"latest_version":"14.2","release_summary":null,"release_url":"https://github.com/home-assistant/operating-system/releases/tag/14.2","skipped_version":null,"title":"Home Assistant Operating System","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/homeassistant/icon.png","friendly_name":"Home Assistant Operating System Update","supported_features":3},"last_changed":"2025-03-04T09:01:53.857795+00:00","last_reported":"2025-03-04T09:01:53.857795+00:00","last_updated":"2025-03-04T09:01:53.857795+00:00","context":{"id":"01JNG67RT1741N7H7QG49FEGER","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"stt.home_assistant_cloud","state":"unknown","attributes":{"friendly_name":"Home Assistant Cloud"},"last_changed":"2025-03-04T09:01:56.602087+00:00","last_reported":"2025-03-04T09:01:56.602087+00:00","last_updated":"2025-03-04T09:01:56.602087+00:00","context":{"id":"01JNG67VFT7NB81X6Q6F9WQTCW","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"tts.home_assistant_cloud","state":"2025-03-03T15:35:39.798984+00:00","attributes":{"friendly_name":"Home Assistant Cloud"},"last_changed":"2025-03-04T09:01:56.602563+00:00","last_reported":"2025-03-04T09:01:56.602563+00:00","last_updated":"2025-03-04T09:01:56.602563+00:00","context":{"id":"01JNG67VFT8B1A1SCJR1YCSPPH","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"conversation.home_assistant","state":"2025-01-02T16:32:42.918822+00:00","attributes":{"friendly_name":"Home Assistant","supported_features":1},"last_changed":"2025-03-04T09:01:56.608409+00:00","last_reported":"2025-03-04T09:01:56.608409+00:00","last_updated":"2025-03-04T09:01:56.608409+00:00","context":{"id":"01JNG67VG03NV6V4BSWBJAM4AJ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"script.notifera_enheter","state":"off","attributes":{"last_triggered":"2025-02-25T09:38:26.685264+00:00","mode":"single","current":0,"icon":"mdi:message-badge-outline","friendly_name":"Notifiera enheter"},"last_changed":"2025-03-04T09:01:56.636576+00:00","last_reported":"2025-03-04T09:01:56.636576+00:00","last_updated":"2025-03-04T09:01:56.636576+00:00","context":{"id":"01JNG67VGWHRWKBASS16MZN8KS","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"script.meddelande_via_hogtalare","state":"off","attributes":{"last_triggered":"2025-03-04T12:22:53.208969+00:00","mode":"single","current":0,"icon":"mdi:account-voice","friendly_name":"Meddelande via högtalare"},"last_changed":"2025-03-04T12:22:53.211183+00:00","last_reported":"2025-03-04T12:22:53.211183+00:00","last_updated":"2025-03-04T12:22:53.211183+00:00","context":{"id":"01JNGHQSGPWAFDN8FNHK11QS65","parent_id":"01JNGHQSGMJ8RXEXWZ5J5HNMRY","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"script.persistent_varning","state":"off","attributes":{"last_triggered":"2025-02-08T08:19:36.266191+00:00","mode":"single","current":0,"icon":"mdi:home-alert-outline","friendly_name":"Persistent varning"},"last_changed":"2025-03-04T09:01:56.636966+00:00","last_reported":"2025-03-04T09:01:56.636966+00:00","last_updated":"2025-03-04T09:01:56.636966+00:00","context":{"id":"01JNG67VGWSRTPT5K1XM0G491X","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"script.logga_arbetsuppgift","state":"off","attributes":{"last_triggered":"2025-03-05T05:00:00.209231+00:00","mode":"queued","current":0,"max":50,"icon":"mdi:math-log","friendly_name":"Logga arbetsuppgift"},"last_changed":"2025-03-05T05:00:00.248026+00:00","last_reported":"2025-03-05T05:00:00.248026+00:00","last_updated":"2025-03-05T05:00:00.248026+00:00","context":{"id":"01JNJASJAE9YNPQ5Q3YXN0G3NQ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"script.ange_starttid_for_bilvarmen","state":"off","attributes":{"last_triggered":"2024-03-07T14:57:43.106177+00:00","mode":"single","current":0,"icon":"mdi:clock-time-five-outline","friendly_name":"Ange starttid för bilvärmen"},"last_changed":"2025-03-04T09:01:56.637300+00:00","last_reported":"2025-03-04T09:01:56.637300+00:00","last_updated":"2025-03-04T09:01:56.637300+00:00","context":{"id":"01JNG67VGXMMADKGWE4A5BMH51","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"script.backup_all_openwrt_devices","state":"off","attributes":{"last_triggered":"2025-02-10T10:41:35.361621+00:00","mode":"single","current":0,"friendly_name":"OpenWRT backup - Backup av alla OpenWRT enheter i Tailscale-natverket"},"last_changed":"2025-03-04T09:01:56.637499+00:00","last_reported":"2025-03-04T09:01:56.637499+00:00","last_updated":"2025-03-04T09:01:56.637499+00:00","context":{"id":"01JNG67VGX7XACQ25ZHDP6F7RG","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_boolean.winter_equipment","state":"off","attributes":{"editable":true,"icon":"mdi:snowflake","friendly_name":"TILLSTÅND - Vinterprylar"},"last_changed":"2025-03-04T09:01:56.650529+00:00","last_reported":"2025-03-04T09:01:56.650529+00:00","last_updated":"2025-03-04T09:01:56.650529+00:00","context":{"id":"01JNG67VHAEWMFDVG5TKYEFD51","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_boolean.pool_equipment","state":"off","attributes":{"editable":true,"icon":"mdi:pool","friendly_name":"TILLSTÅND - Poolprylar"},"last_changed":"2025-03-04T09:01:56.650679+00:00","last_reported":"2025-03-04T09:01:56.650679+00:00","last_updated":"2025-03-04T09:01:56.650679+00:00","context":{"id":"01JNG67VHA5R2W6CPTSCNXZNJX","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_boolean.default_dashboard","state":"on","attributes":{"editable":true,"friendly_name":"Default Dashboard"},"last_changed":"2025-03-04T09:01:56.650812+00:00","last_reported":"2025-03-04T09:01:56.650812+00:00","last_updated":"2025-03-04T09:01:56.650812+00:00","context":{"id":"01JNG67VHAN1TZH3KEV6K0KB3R","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_boolean.tillstand_hydrofoniprylar","state":"on","attributes":{"editable":true,"icon":"mdi:sprout-outline","friendly_name":"TILLSTÅND - Hydrofoniprylar"},"last_changed":"2025-03-04T09:01:56.650941+00:00","last_reported":"2025-03-04T09:01:56.650941+00:00","last_updated":"2025-03-04T09:01:56.650941+00:00","context":{"id":"01JNG67VHAXKQ1Z01XW493XMZY","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_boolean.default_dashboard_2","state":"on","attributes":{"editable":true,"friendly_name":"Default Dashboard"},"last_changed":"2025-03-04T09:01:56.651063+00:00","last_reported":"2025-03-04T09:01:56.651063+00:00","last_updated":"2025-03-04T09:01:56.651063+00:00","context":{"id":"01JNG67VHBQETRSJW1FN47845V","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_boolean.automatisk_bilvarme","state":"off","attributes":{"editable":true,"icon":"mdi:car-seat-heater","friendly_name":"Automatisk bilvärme"},"last_changed":"2025-03-04T09:01:56.651189+00:00","last_reported":"2025-03-04T09:01:56.651189+00:00","last_updated":"2025-03-04T09:01:56.651189+00:00","context":{"id":"01JNG67VHB52WVZM1YXDG68H81","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_boolean.guest_mode","state":"off","attributes":{"editable":true,"icon":"mdi:bed-outline","friendly_name":"TILLSTÅND - Gästläge"},"last_changed":"2025-03-04T09:01:56.652224+00:00","last_reported":"2025-03-04T09:01:56.652224+00:00","last_updated":"2025-03-04T09:01:56.652224+00:00","context":{"id":"01JNG67VHCHJZP0MR3VAGMJ5GB","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_boolean.default_dashboard_3","state":"on","attributes":{"editable":true,"friendly_name":"Default Dashboard"},"last_changed":"2025-03-04T09:01:56.652567+00:00","last_reported":"2025-03-04T09:01:56.652567+00:00","last_updated":"2025-03-04T09:01:56.652567+00:00","context":{"id":"01JNG67VHCER1HG243KSQVZ2WQ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_select.sun_phase","state":"SUNPHASE_DAYLIGHT","attributes":{"options":["SUNPHASE_DAYLIGHT"],"editable":true,"icon":"mdi:theme-light-dark","friendly_name":"TILLSTÅND - Solens dygnsfas"},"last_changed":"2025-03-05T05:32:58.519641+00:00","last_reported":"2025-03-05T05:32:58.519641+00:00","last_updated":"2025-03-05T05:32:58.519641+00:00","context":{"id":"01JNJCNY8P6CTBCNTAR808F8NQ","parent_id":"01JNJCNY8NSGVTAEAERDN0EP3R","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_select.default_dashboard","state":"lovelace","attributes":{"options":["lovelace","lovelace-friggan","lovelace-allt","ha-admin","refresh"],"editable":true,"friendly_name":"Default Dashboard"},"last_changed":"2025-03-04T09:01:56.653411+00:00","last_reported":"2025-03-04T09:01:56.653411+00:00","last_updated":"2025-03-04T09:01:56.653411+00:00","context":{"id":"01JNG67VHDQPAYKS23C44XJCGH","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_select.light_scene","state":"DAY","attributes":{"options":["DAY","NIGHT","DUSK","DAWN","XMAS","ALARM","PARTY"],"editable":true,"icon":"mdi:lamps-outline","friendly_name":"TILLSTÅND - Lampornas Scen"},"last_changed":"2025-03-05T05:32:58.522489+00:00","last_reported":"2025-03-05T05:32:58.522489+00:00","last_updated":"2025-03-05T05:32:58.522489+00:00","context":{"id":"01JNJCNY8S66QGA9TNG5W6ZXPR","parent_id":"01JNJCNY8P6CTBCNTAR808F8NQ","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_select.growlight_scene","state":"ON","attributes":{"options":["ON","LATE_ON","OFF"],"editable":true,"icon":"mdi:wall-sconce-round","friendly_name":"TILLSTÅND - Växtlampornas Scen"},"last_changed":"2025-03-05T05:30:00.358045+00:00","last_reported":"2025-03-05T05:30:00.358045+00:00","last_updated":"2025-03-05T05:30:00.358045+00:00","context":{"id":"01JNJCGG936PG71HWTYHKXWEJF","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_select.default_dashboard_2","state":"lovelace","attributes":{"options":["lovelace","lovelace-friggan","ha-admin","elforbrukning-och-pris","dashboard-standard","refresh"],"editable":true,"friendly_name":"Default Dashboard"},"last_changed":"2025-03-04T09:01:56.653903+00:00","last_reported":"2025-03-04T09:01:56.653903+00:00","last_updated":"2025-03-04T09:01:56.653903+00:00","context":{"id":"01JNG67VHDT1FNGKQR8H087PYQ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_select.default_dashboard_3","state":"lovelace","attributes":{"options":["lovelace","lovelace-friggan","ha-admin","elforbrukning-och-pris","dashboard-elpris","dashboard-nestgen2","dashboard-absolut","dashboard-aggklackning","refresh"],"editable":true,"friendly_name":"Default Dashboard"},"last_changed":"2025-03-04T09:01:56.654052+00:00","last_reported":"2025-03-04T09:01:56.654052+00:00","last_updated":"2025-03-04T09:01:56.654052+00:00","context":{"id":"01JNG67VHEESTMMEBRAA8EAYAD","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_select.default_dashboard_4","state":"lovelace","attributes":{"options":["lovelace","lovelace-friggan","ha-admin","elforbrukning-och-pris","dashboard-elpris","dashboard-nestgen2","dashboard-absolut","dashboard-aggklackning","refresh"],"editable":true,"friendly_name":"Default Dashboard"},"last_changed":"2025-03-04T09:01:56.654197+00:00","last_reported":"2025-03-04T09:01:56.654197+00:00","last_updated":"2025-03-04T09:01:56.654197+00:00","context":{"id":"01JNG67VHED1MKFXJZTTKZ8CRX","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_select.default_dashboard_5","state":"lovelace","attributes":{"options":["lovelace","lovelace-friggan","ha-admin","elforbrukning-och-pris","dashboard-elpris","dashboard-nestgen2","dashboard-absolut","dashboard-aggklackning","refresh"],"editable":true,"friendly_name":"Default Dashboard"},"last_changed":"2025-03-04T09:01:56.654338+00:00","last_reported":"2025-03-04T09:01:56.654338+00:00","last_updated":"2025-03-04T09:01:56.654338+00:00","context":{"id":"01JNG67VHEYQYGEW4GJRSVXB9E","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_select.default_dashboard_6","state":"lovelace","attributes":{"options":["lovelace","lovelace-friggan","ha-admin","elforbrukning-och-pris","dashboard-elpris","dashboard-nestgen2","dashboard-absolut","dashboard-aggklackning","refresh"],"editable":true,"friendly_name":"Default Dashboard"},"last_changed":"2025-03-04T09:01:56.654496+00:00","last_reported":"2025-03-04T09:01:56.654496+00:00","last_updated":"2025-03-04T09:01:56.654496+00:00","context":{"id":"01JNG67VHETGMAQR7JA56HTP0P","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_button.spela_hissmusik","state":"2024-12-20T12:41:18.679667+00:00","attributes":{"editable":true,"icon":"mdi:robot","friendly_name":"Spela hissmusik"},"last_changed":"2025-03-04T09:01:56.654829+00:00","last_reported":"2025-03-04T09:01:56.654829+00:00","last_updated":"2025-03-04T09:01:56.654829+00:00","context":{"id":"01JNG67VHES7145QXRPASE6TKG","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_button.godnatt","state":"2025-02-27T21:45:27.442715+00:00","attributes":{"editable":true,"icon":"mdi:bed","friendly_name":"Godnatt"},"last_changed":"2025-03-04T09:01:56.654997+00:00","last_reported":"2025-03-04T09:01:56.654997+00:00","last_updated":"2025-03-04T09:01:56.654997+00:00","context":{"id":"01JNG67VHED417XC4YJTG8QJWB","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_button.mysbelysning","state":"2025-03-04T17:40:16.481308+00:00","attributes":{"editable":true,"icon":"mdi:ceiling-light-multiple-outline","friendly_name":"Mysbelysning"},"last_changed":"2025-03-04T17:40:16.481421+00:00","last_reported":"2025-03-04T17:40:16.481421+00:00","last_updated":"2025-03-04T17:40:16.481421+00:00","context":{"id":"01JNH3WYF019QQQCD8VE25WZ05","parent_id":null,"user_id":"7cd0e491364940c0a6c79888f8f8a4c8"}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_button.partybelysning","state":"2024-02-17T22:44:55.496196+00:00","attributes":{"editable":true,"icon":"mdi:lightbulb-group-outline","friendly_name":"Partybelysning"},"last_changed":"2025-03-04T09:01:56.655286+00:00","last_reported":"2025-03-04T09:01:56.655286+00:00","last_updated":"2025-03-04T09:01:56.655286+00:00","context":{"id":"01JNG67VHF86ECWST8KYMJKHTD","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_button.julbelysning","state":"2024-02-03T16:32:26.486745+00:00","attributes":{"editable":true,"icon":"mdi:string-lights","friendly_name":"Julbelysning"},"last_changed":"2025-03-04T09:01:56.655436+00:00","last_reported":"2025-03-04T09:01:56.655436+00:00","last_updated":"2025-03-04T09:01:56.655436+00:00","context":{"id":"01JNG67VHFPQ236CDJ6X7C6E60","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_button.alarm","state":"2023-11-15T19:07:26.663457+00:00","attributes":{"editable":true,"icon":"mdi:alarm-light-outline","friendly_name":"Alarm"},"last_changed":"2025-03-04T09:01:56.655587+00:00","last_reported":"2025-03-04T09:01:56.655587+00:00","last_updated":"2025-03-04T09:01:56.655587+00:00","context":{"id":"01JNG67VHFMFVN2K47D9ASA32P","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_button.matbelysning","state":"2024-01-01T11:40:36.654118+00:00","attributes":{"editable":true,"icon":"mdi:ceiling-light-multiple-outline","friendly_name":"Matbelysning"},"last_changed":"2025-03-04T09:01:56.655791+00:00","last_reported":"2025-03-04T09:01:56.655791+00:00","last_updated":"2025-03-04T09:01:56.655791+00:00","context":{"id":"01JNG67VHFE2KKRRK2Q78AJ4WK","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_button.aterstall_ljudvolymer","state":"2024-12-31T15:56:00.667033+00:00","attributes":{"editable":true,"icon":"mdi:home-sound-out","friendly_name":"Återställ ljudvolymer"},"last_changed":"2025-03-04T09:01:56.656024+00:00","last_reported":"2025-03-04T09:01:56.656024+00:00","last_updated":"2025-03-04T09:01:56.656024+00:00","context":{"id":"01JNG67VHGMJHS79XEGRC06QVM","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_button.uppgradera_esphome_enheter","state":"2025-02-21T06:05:40.083922+00:00","attributes":{"editable":true,"icon":"mdi:update","friendly_name":"Uppgradera ESPHome-enheter"},"last_changed":"2025-03-04T09:01:56.656232+00:00","last_reported":"2025-03-04T09:01:56.656232+00:00","last_updated":"2025-03-04T09:01:56.656232+00:00","context":{"id":"01JNG67VHGRRNRZWNH189GDHBT","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.slider","state":"87.0","attributes":{"initial":null,"editable":true,"min":0.0,"max":100.0,"step":1.0,"mode":"slider","friendly_name":"Slider"},"last_changed":"2025-03-04T09:01:56.656678+00:00","last_reported":"2025-03-04T09:01:56.656678+00:00","last_updated":"2025-03-04T09:01:56.656678+00:00","context":{"id":"01JNG67VHG20DA0PE9VCFJRE14","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.nordpool_trade_fee","state":"0.0354","attributes":{"initial":null,"editable":true,"min":0.0,"max":10.0,"step":0.0001,"mode":"box","unit_of_measurement":"kr/kWh","friendly_name":"Nordpool_trade_fee"},"last_changed":"2025-03-04T09:01:56.656995+00:00","last_reported":"2025-03-04T09:01:56.656995+00:00","last_updated":"2025-03-04T09:01:56.656995+00:00","context":{"id":"01JNG67VHG39K2M79B787Y0G1A","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.nordpool_spot_fee","state":"0.07","attributes":{"initial":null,"editable":true,"min":0.0,"max":10.0,"step":0.0001,"mode":"box","unit_of_measurement":"kr/kWh","friendly_name":"Nordpool_spot_fee"},"last_changed":"2025-03-04T09:01:56.657282+00:00","last_reported":"2025-03-04T09:01:56.657282+00:00","last_updated":"2025-03-04T09:01:56.657282+00:00","context":{"id":"01JNG67VHHYCMH0C3VQKXVGTAJ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.nordpool_certificate_fee","state":"0.014","attributes":{"initial":null,"editable":true,"min":0.0,"max":1.0,"step":0.0001,"mode":"box","unit_of_measurement":"kr/kWh","friendly_name":"Nordpool_certificate_fee"},"last_changed":"2025-03-04T09:01:56.659971+00:00","last_reported":"2025-03-04T09:01:56.659971+00:00","last_updated":"2025-03-04T09:01:56.659971+00:00","context":{"id":"01JNG67VHKSRYBCWK0MAWWWWW5","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.nordpool_energy_transfer_fee","state":"0.312","attributes":{"initial":null,"editable":true,"min":0.0,"max":10.0,"step":0.0001,"mode":"box","unit_of_measurement":"kr/kWh","friendly_name":"Nordpool_energy_transfer_fee"},"last_changed":"2025-03-04T09:01:56.660343+00:00","last_reported":"2025-03-04T09:01:56.660343+00:00","last_updated":"2025-03-04T09:01:56.660343+00:00","context":{"id":"01JNG67VHMTRFVKB5TWZR050SG","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.nordpool_energy_tax","state":"0.439","attributes":{"initial":null,"editable":true,"min":0.0,"max":10.0,"step":0.0001,"mode":"box","unit_of_measurement":"kr/kWh","friendly_name":"Nordpool_energy_tax"},"last_changed":"2025-03-04T09:01:56.660672+00:00","last_reported":"2025-03-04T09:01:56.660672+00:00","last_updated":"2025-03-04T09:01:56.660672+00:00","context":{"id":"01JNG67VHMGW129NV7WY8MMG1E","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.nordpool_vat","state":"25.0","attributes":{"initial":null,"editable":true,"min":0.0,"max":100.0,"step":0.01,"mode":"box","unit_of_measurement":"%","friendly_name":"Nordpool_vat"},"last_changed":"2025-03-04T09:01:56.660993+00:00","last_reported":"2025-03-04T09:01:56.660993+00:00","last_updated":"2025-03-04T09:01:56.660993+00:00","context":{"id":"01JNG67VHMW34BP3R20RJ09CVZ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.utskrifter_manad","state":"6","attributes":{"state_class":"total_increasing","status":"collecting","last_period":"65","last_valid_state":"4152","last_reset":"2025-02-28T23:00:00.013644+00:00","next_reset":"2025-04-01T00:00:00+02:00","unit_of_measurement":"pages","friendly_name":"Utskrifter/månad"},"last_changed":"2025-03-04T14:18:41.145614+00:00","last_reported":"2025-03-04T14:18:41.145614+00:00","last_updated":"2025-03-04T14:18:41.145614+00:00","context":{"id":"01JNGRBTKSX17F2H54RHXE9FHM","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": {
+          "__type": "<class 'decimal.Decimal'>",
+          "decimal_str": "6"
+        },
+        "native_unit_of_measurement": "pages",
+        "last_period": "65",
+        "last_reset": "2025-02-28T23:00:00.013644+00:00",
+        "last_valid_state": "4152",
+        "status": "collecting",
+        "input_device_class": "None"
+      },
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.utskrifter_dag","state":"0","attributes":{"state_class":"total_increasing","status":"collecting","last_period":"2","last_valid_state":"4152","last_reset":"2025-03-04T23:00:00.004298+00:00","next_reset":"2025-03-06T00:00:00+01:00","unit_of_measurement":"pages","friendly_name":"Utskrifter/dag"},"last_changed":"2025-03-04T23:00:00.004428+00:00","last_reported":"2025-03-04T23:00:00.004428+00:00","last_updated":"2025-03-04T23:00:00.004428+00:00","context":{"id":"01JNHP6CC471EGJ12ZM7E7X3CC","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "pages",
+        "last_period": "2",
+        "last_reset": "2025-03-04T23:00:00.004298+00:00",
+        "last_valid_state": "4152",
+        "status": "collecting",
+        "input_device_class": "None"
+      },
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.utskrifter_ar","state":"113","attributes":{"state_class":"total_increasing","status":"collecting","last_period":"685","last_valid_state":"4152","last_reset":"2024-12-31T23:00:00.004294+00:00","next_reset":"2026-01-01T00:00:00+01:00","unit_of_measurement":"pages","friendly_name":"Utskrifter/år"},"last_changed":"2025-03-04T14:18:41.146487+00:00","last_reported":"2025-03-04T14:18:41.146487+00:00","last_updated":"2025-03-04T14:18:41.146487+00:00","context":{"id":"01JNGRBTKTSZH3KH7YW3DF1CGH","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": {
+          "__type": "<class 'decimal.Decimal'>",
+          "decimal_str": "113"
+        },
+        "native_unit_of_measurement": "pages",
+        "last_period": "685",
+        "last_reset": "2024-12-31T23:00:00.004294+00:00",
+        "last_valid_state": "4152",
+        "status": "collecting",
+        "input_device_class": "None"
+      },
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.energiforbrukning_per_timme","state":"1.114","attributes":{"state_class":"total_increasing","status":"collecting","last_period":"4.000","last_valid_state":"53736.723","last_reset":"2025-03-05T06:00:00.001252+00:00","next_reset":"2025-03-05T08:00:00+01:00","unit_of_measurement":"kWh","device_class":"energy","friendly_name":"Energiförbrukning per timme"},"last_changed":"2025-03-05T06:17:11.042627+00:00","last_reported":"2025-03-05T06:17:11.042627+00:00","last_updated":"2025-03-05T06:17:11.042627+00:00","context":{"id":"01JNJF6WM2S10JTWPWYP2RM86W","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": {
+          "__type": "<class 'decimal.Decimal'>",
+          "decimal_str": "1.114"
+        },
+        "native_unit_of_measurement": "kWh",
+        "last_period": "4.000",
+        "last_reset": "2025-03-05T06:00:00.001252+00:00",
+        "last_valid_state": "53736.723",
+        "status": "collecting",
+        "input_device_class": "energy"
+      },
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.blomlampa_ateljen_energy","state":"47.4757","attributes":{"state_class":"total_increasing","source_entity":"light.blomlampa_ateljen_esphome09_light","source_domain":"light","source":"sensor.blomlampa_ateljen_energy_power","unit_of_measurement":"kWh","device_class":"energy","icon":"mdi:lightning-bolt","friendly_name":"Blomlampa (ateljén) - energy energy"},"last_changed":"2025-03-04T18:30:00.138461+00:00","last_reported":"2025-03-04T18:30:00.138461+00:00","last_updated":"2025-03-04T18:30:00.138461+00:00","context":{"id":"01JNH6R06ANBAX6N18AMN4BS76","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": {
+          "__type": "<class 'decimal.Decimal'>",
+          "decimal_str": "47.4757"
+        },
+        "native_unit_of_measurement": "kWh",
+        "source_entity": "sensor.blomlampa_ateljen_energy_power",
+        "last_valid_state": "47.47574788852333333445917179"
+      },
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.blomlampa_verandan_energy","state":"unavailable","attributes":{"state_class":"total_increasing","unit_of_measurement":"kWh","device_class":"energy","icon":"mdi:lightning-bolt","friendly_name":"Blomlampa (verandan) - energy energy"},"last_changed":"2025-03-04T09:02:15.460595+00:00","last_reported":"2025-03-04T09:02:15.460595+00:00","last_updated":"2025-03-04T09:02:15.460595+00:00","context":{"id":"01JNG68DX4TT2TB0SD6207SCA4","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": {
+          "__type": "<class 'decimal.Decimal'>",
+          "decimal_str": "27.6999"
+        },
+        "native_unit_of_measurement": "kWh",
+        "source_entity": "sensor.blomlampa_verandan_energy_power",
+        "last_valid_state": "27.69990000000000000000000000"
+      },
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.blomlampa_vaxtskapet_energy","state":"50.9833","attributes":{"state_class":"total_increasing","source_entity":"light.blomlampa_2_verandan_esphome03_light","source_domain":"light","source":"sensor.blomlampa_vaxtskapet_energy_power","unit_of_measurement":"kWh","device_class":"energy","icon":"mdi:lightning-bolt","friendly_name":"Blomlampa (växtskåpet) - energy energy"},"last_changed":"2025-03-05T06:10:00.397146+00:00","last_reported":"2025-03-05T06:10:00.397146+00:00","last_updated":"2025-03-05T06:10:00.397146+00:00","context":{"id":"01JNJESR2D26FE4QEFQH90ZGPV","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": {
+          "__type": "<class 'decimal.Decimal'>",
+          "decimal_str": "50.9833"
+        },
+        "native_unit_of_measurement": "kWh",
+        "source_entity": "sensor.blomlampa_vaxtskapet_energy_power",
+        "last_valid_state": "50.98327117222333333447004118"
+      },
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.blomlampa_trappan_energy","state":"50.7403","attributes":{"state_class":"total_increasing","source_entity":"light.blomlampa_trappan_esphome02_light","source_domain":"light","source":"sensor.blomlampa_trappan_energy_power","unit_of_measurement":"kWh","device_class":"energy","icon":"mdi:lightning-bolt","friendly_name":"Blomlampa (trappan) - energy energy"},"last_changed":"2025-03-05T06:10:00.394198+00:00","last_reported":"2025-03-05T06:10:00.394198+00:00","last_updated":"2025-03-05T06:10:00.394198+00:00","context":{"id":"01JNJESR2AXH71Y5644JHZW9AH","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": {
+          "__type": "<class 'decimal.Decimal'>",
+          "decimal_str": "50.7403"
+        },
+        "native_unit_of_measurement": "kWh",
+        "source_entity": "sensor.blomlampa_trappan_energy_power",
+        "last_valid_state": "50.74031455947999999984846888"
+      },
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.sanglampor_manni_device_energy","state":"4.6094","attributes":{"state_class":"total_increasing","source_entity":"switch.sanglampor_manni","source_domain":"switch","source":"sensor.sanglampor_manni_device_power","unit_of_measurement":"kWh","device_class":"energy","icon":"mdi:lightning-bolt","friendly_name":"Sänglampor Manni Device Energy"},"last_changed":"2025-03-05T06:16:00.898312+00:00","last_reported":"2025-03-05T06:16:00.898312+00:00","last_updated":"2025-03-05T06:16:00.898312+00:00","context":{"id":"01JNJF4R42XK7JZMFN8T6MT37G","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": {
+          "__type": "<class 'decimal.Decimal'>",
+          "decimal_str": "4.6094"
+        },
+        "native_unit_of_measurement": "kWh",
+        "source_entity": "sensor.sanglampor_manni_device_power",
+        "last_valid_state": "4.609365001307749999993775463"
+      },
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.sanglampor_diego_device_energy","state":"4.5946","attributes":{"state_class":"total_increasing","source_entity":"switch.sanglampor_diego","source_domain":"switch","source":"sensor.sanglampor_diego_device_power","unit_of_measurement":"kWh","device_class":"energy","icon":"mdi:lightning-bolt","friendly_name":"Sänglampor Diego Device Energy"},"last_changed":"2025-03-05T06:16:00.803198+00:00","last_reported":"2025-03-05T06:16:00.803198+00:00","last_updated":"2025-03-05T06:16:00.803198+00:00","context":{"id":"01JNJF4R13NP9M0F1MN31Q53DX","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": {
+          "__type": "<class 'decimal.Decimal'>",
+          "decimal_str": "4.5946"
+        },
+        "native_unit_of_measurement": "kWh",
+        "source_entity": "sensor.sanglampor_diego_device_power",
+        "last_valid_state": "4.594564981629291666760302644"
+      },
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.bordslampa_kallaren_device_energy","state":"unavailable","attributes":{"state_class":"total_increasing","unit_of_measurement":"kWh","device_class":"energy","icon":"mdi:lightning-bolt","friendly_name":"Bordslampa (källaren) Device Energy"},"last_changed":"2025-03-04T09:02:15.461318+00:00","last_reported":"2025-03-04T09:02:15.461318+00:00","last_updated":"2025-03-04T09:02:15.461318+00:00","context":{"id":"01JNG68DX53VYE0FFFV04YTJBJ","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": {
+          "__type": "<class 'decimal.Decimal'>",
+          "decimal_str": "0.4698"
+        },
+        "native_unit_of_measurement": "kWh",
+        "source_entity": "sensor.bordslampa_kallaren_device_power",
+        "last_valid_state": "0.4697852212191999999870656917"
+      },
+      "last_seen": "2025-03-05T06:17:15.484571+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.led_plafonder_device_energy","state":"3.8735","attributes":{"state_class":"total_increasing","source_entity":"switch.shellyplug_s_083a8dc344dd","source_domain":

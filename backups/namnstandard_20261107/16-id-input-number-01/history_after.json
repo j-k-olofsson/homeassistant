@@ -1,0 +1,18 @@
+{
+  "input_number.bilens_batterikapacitet": [
+    {
+      "state": "18.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:09.396543+00:00",
+      "last_updated": "2026-11-07T07:51:09.396543+00:00"
+    }
+  ],
+  "input_number.laddeffekt": [
+    {
+      "state": "3.6",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:09.396543+00:00",
+      "last_updated": "2026-11-07T07:51:09.396543+00:00"
+    }
+  ]
+}

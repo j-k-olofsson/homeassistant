@@ -1,0 +1,31 @@
+{
+  "players": [
+    {
+      "player_id": "upb2965530",
+      "name": "K\u00f6kets sk\u00e4rm",
+      "available": true,
+      "state": "idle"
+    },
+    {
+      "player_id": "upf3ea6c7e",
+      "name": "Kontorets h\u00f6gtalare",
+      "available": false,
+      "state": "idle"
+    },
+    {
+      "player_id": "up0ba23cfe",
+      "name": "Atelj\u00e9ns h\u00f6gtalare",
+      "available": false,
+      "state": "idle"
+    },
+    {
+      "player_id": "aea84eaf-2bc6-4267-8f3d-2fbeec03a194",
+      "name": "Dassens h\u00f6gtalare",
+      "available": true,
+      "state": "idle"
+    }
+  ],
+  "resumed": [
+    "aea84eaf-2bc6-4267-8f3d-2fbeec03a194"
+  ]
+}

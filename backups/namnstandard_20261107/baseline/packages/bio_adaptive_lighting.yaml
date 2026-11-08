@@ -1,0 +1,119 @@
+script:
+  bio_adaptivt_ljus_synkronisera:
+    alias: Bio – synkronisera adaptivt ljus
+    description: Anpassar endast färgtemperaturen i dag-, grynings- och skymningsläge när bion är av.
+    mode: restart
+    sequence:
+      - choose:
+          - conditions:
+              - condition: state
+                entity_id: switch.grupp_hemmabio
+                state: 'off'
+              - condition: template
+                value_template: "{{ states('input_select.light_scene') in ['DAY', 'DAWN', 'DUSK'] }}"
+            sequence:
+              - action: switch.turn_off
+                target:
+                  entity_id:
+                    - switch.adaptive_lighting_bio_adapt_brightness
+                    - switch.adaptive_lighting_bio_sleep_mode
+              - action: switch.turn_on
+                target:
+                  entity_id:
+                    - switch.adaptive_lighting_bio_adapt_color
+                    - switch.adaptive_lighting_bio
+              - action: adaptive_lighting.set_manual_control
+                data:
+                  entity_id: switch.adaptive_lighting_bio
+                  lights:
+                    - light.bordslampa_vanster
+                    - light.bordslampa_hoger
+                  manual_control: false
+              - action: adaptive_lighting.apply
+                data:
+                  entity_id: switch.adaptive_lighting_bio
+                  lights:
+                    - light.bordslampa_vanster
+                    - light.bordslampa_hoger
+                  adapt_brightness: false
+                  adapt_color: true
+                  turn_on_lights: false
+                  transition: 30
+        default:
+          - action: switch.turn_off
+            target:
+              entity_id: switch.adaptive_lighting_bio
+
+automation:
+  - id: bio_adaptivt_ljus_skydda_natt_och_bio
+    alias: Bio – skydda nattljus och bioläge
+    description: Stoppar adaptivt ljus i andra lägen och skyddar rött nattljus även vid manuell aktivering av profilen.
+    mode: restart
+    triggers:
+      - trigger: template
+        value_template: >-
+          {{ states('input_select.light_scene') not in ['DAY', 'DAWN', 'DUSK']
+             or not is_state('switch.grupp_hemmabio', 'off') }}
+        id: block
+      - trigger: state
+        entity_id: switch.adaptive_lighting_bio
+        to: 'on'
+        id: profile_on
+      - trigger: homeassistant
+        event: start
+        id: startup
+    actions:
+      - choose:
+          - conditions:
+              - condition: template
+                value_template: >-
+                  {{ states('input_select.light_scene') not in ['DAY', 'DAWN', 'DUSK']
+                     or not is_state('switch.grupp_hemmabio', 'off') }}
+            sequence:
+              - action: switch.turn_off
+                continue_on_error: true
+                target:
+                  entity_id: switch.adaptive_lighting_bio
+              - choose:
+                  - conditions:
+                      - condition: state
+                        entity_id: switch.grupp_hemmabio
+                        state: 'on'
+                    sequence:
+                      - action: light.turn_off
+                        target:
+                          entity_id:
+                            - light.bordslampa_vanster
+                            - light.bordslampa_hoger
+                  - conditions:
+                      - condition: state
+                        entity_id: switch.grupp_hemmabio
+                        state: 'off'
+                      - condition: state
+                        entity_id: input_select.light_scene
+                        state: NIGHT
+                    sequence:
+                      - action: switch.turn_on
+                        continue_on_error: true
+                        target:
+                          entity_id: switch.adaptive_lighting_bio_sleep_mode
+                      - variables:
+                          _lit: >-
+                            {{ expand('light.bordslampa_vanster', 'light.bordslampa_hoger')
+                               | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}
+                      - if:
+                          - condition: template
+                            value_template: '{{ _lit | count > 0 }}'
+                        then:
+                          - action: light.turn_on
+                            target:
+                              entity_id: '{{ _lit }}'
+                            data:
+                              rgb_color: [255, 0, 0]
+                              brightness_pct: 15
+                              transition: 1
+          - conditions:
+              - condition: template
+                value_template: "{{ trigger.id | default('sync') == 'startup' }}"
+            sequence:
+              - action: script.bio_adaptivt_ljus_synkronisera

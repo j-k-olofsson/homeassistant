@@ -1,0 +1,26 @@
+{
+  "remaining_target_entries": [],
+  "remaining_target_entities": [],
+  "remaining_target_services": [],
+  "remaining_ai_panel": false,
+  "directories_remaining": [],
+  "marketplace_installed": {
+    "watchman": false,
+    "ai_agent_ha": false,
+    "spotifyplus": false
+  },
+  "remaining_target_components": [],
+  "repairs": {
+    "issues": []
+  },
+  "other_entry_state_changes": [
+    {
+      "domain": "prusalink",
+      "title": "PrusaLink",
+      "before": "loaded",
+      "after": "setup_retry"
+    }
+  ],
+  "installed_count": 29,
+  "ha_state": "RUNNING"
+}

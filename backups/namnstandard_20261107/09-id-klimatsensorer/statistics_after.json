@@ -1,0 +1,6792 @@
+{
+  "metadata": [
+    {
+      "statistic_id": "sensor.bion_klimatsensor_batteriniva",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.bion_klimatsensor_spanning",
+      "display_unit_of_measurement": "V",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "V",
+      "unit_class": "voltage"
+    },
+    {
+      "statistic_id": "sensor.utomhus_klimatsensor_batteriniva",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.utomhus_klimatsensor_spanning",
+      "display_unit_of_measurement": "V",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "V",
+      "unit_class": "voltage"
+    },
+    {
+      "statistic_id": "sensor.verandan_klimatsensor_temperatur",
+      "display_unit_of_measurement": "°C",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "°C",
+      "unit_class": "temperature"
+    },
+    {
+      "statistic_id": "sensor.verandan_klimatsensor_luftfuktighet",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.honshuset_klimatsensor_temperatur",
+      "display_unit_of_measurement": "°C",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "°C",
+      "unit_class": "temperature"
+    },
+    {
+      "statistic_id": "sensor.honshuset_klimatsensor_luftfuktighet",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.verkstaden_klimatsensor_batteriniva",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.verkstaden_klimatsensor_spanning",
+      "display_unit_of_measurement": "V",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "V",
+      "unit_class": "voltage"
+    },
+    {
+      "statistic_id": "sensor.sovrummet_klimatsensor_batteriniva",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.sovrummet_klimatsensor_spanning",
+      "display_unit_of_measurement": "V",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "V",
+      "unit_class": "voltage"
+    },
+    {
+      "statistic_id": "sensor.verandan_klimatsensor_batteriniva",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.verandan_klimatsensor_spanning",
+      "display_unit_of_measurement": "V",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "V",
+      "unit_class": "voltage"
+    },
+    {
+      "statistic_id": "sensor.sovrummet_klimatsensor_temperatur",
+      "display_unit_of_measurement": "°C",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "°C",
+      "unit_class": "temperature"
+    },
+    {
+      "statistic_id": "sensor.sovrummet_klimatsensor_luftfuktighet",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.bion_klimatsensor_luftfuktighet",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.bion_klimatsensor_temperatur",
+      "display_unit_of_measurement": "°C",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "°C",
+      "unit_class": "temperature"
+    },
+    {
+      "statistic_id": "sensor.verkstaden_klimatsensor_luftfuktighet",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.verkstaden_klimatsensor_temperatur",
+      "display_unit_of_measurement": "°C",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "°C",
+      "unit_class": "temperature"
+    },
+    {
+      "statistic_id": "sensor.ateljen_klimatsensor_batteriniva",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.ateljen_klimatsensor_temperatur",
+      "display_unit_of_measurement": "°C",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "°C",
+      "unit_class": "temperature"
+    },
+    {
+      "statistic_id": "sensor.ateljen_klimatsensor_luftfuktighet",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.utomhus_klimatsensor_luftfuktighet",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.utomhus_klimatsensor_temperatur",
+      "display_unit_of_measurement": "°C",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "°C",
+      "unit_class": "temperature"
+    },
+    {
+      "statistic_id": "sensor.honshuset_klimatsensor_batteriniva",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.honshuset_klimatsensor_spanning",
+      "display_unit_of_measurement": "V",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "V",
+      "unit_class": "voltage"
+    },
+    {
+      "statistic_id": "sensor.koket_klimatsensor_temperatur",
+      "display_unit_of_measurement": "°C",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "°C",
+      "unit_class": "temperature"
+    },
+    {
+      "statistic_id": "sensor.koket_klimatsensor_luftfuktighet",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.koket_klimatsensor_batteriniva",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.koket_klimatsensor_spanning",
+      "display_unit_of_measurement": "V",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "V",
+      "unit_class": "voltage"
+    },
+    {
+      "statistic_id": "sensor.entren_klimatsensor_temperatur",
+      "display_unit_of_measurement": "°C",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "°C",
+      "unit_class": "temperature"
+    },
+    {
+      "statistic_id": "sensor.entren_klimatsensor_luftfuktighet",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.entren_klimatsensor_batteriniva",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.entren_klimatsensor_spanning",
+      "display_unit_of_measurement": "V",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "V",
+      "unit_class": "voltage"
+    },
+    {
+      "statistic_id": "sensor.duschen_klimatsensor_temperatur",
+      "display_unit_of_measurement": "°C",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "°C",
+      "unit_class": "temperature"
+    },
+    {
+      "statistic_id": "sensor.duschen_klimatsensor_luftfuktighet",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.duschen_klimatsensor_batteriniva",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.duschen_klimatsensor_spanning",
+      "display_unit_of_measurement": "V",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "V",
+      "unit_class": "voltage"
+    }
+  ],
+  "series": {
+    "sensor.koket_klimatsensor_batteriniva": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 67.07440840666666,
+        "min": 57.0,
+        "max": 69.0
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 59.920186208055554,
+        "min": 57.0,
+        "max": 61.0
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 61.18596372666667,
+        "min": 59.0,
+        "max": 63.0
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 62.23082242277778,
+        "min": 59.0,
+        "max": 63.0
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 61.71721978888888,
+        "min": 60.0,
+        "max": 63.0
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 62.30654454444444,
+        "min": 60.0,
+        "max": 64.0
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 65.13759781277777,
+        "min": 64.0,
+        "max": 66.0
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 64.24922900638889,
+        "min": 63.0,
+        "max": 65.0
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 64.74311257972222,
+        "min": 63.0,
+        "max": 65.0
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 64.87622551805556,
+        "min": 64.0,
+        "max": 66.0
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 65.12799391555556,
+        "min": 65.0,
+        "max": 66.0
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 64.7352172661111,
+        "min": 64.0,
+        "max": 65.0
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 65.80923557222222,
+        "min": 65.0,
+        "max": 67.0
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 67.0,
+        "min": 67.0,
+        "max": 67.0
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 67.95834149583334,
+        "min": 67.0,
+        "max": 68.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 68.0,
+        "min": 68.0,
+        "max": 68.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 68.0,
+        "min": 68.0,
+        "max": 68.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 68.0,
+        "min": 68.0,
+        "max": 68.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 68.17595230361111,
+        "min": 68.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 68.45871500027778,
+        "min": 68.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 68.0,
+        "min": 68.0,
+        "max": 68.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 67.84749853805555,
+        "min": 67.0,
+        "max": 68.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 67.14706455638888,
+        "min": 67.0,
+        "max": 68.0
+      }
+    ],
+    "sensor.ateljen_klimatsensor_luftfuktighet": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 49.69879777638889,
+        "min": 47.0,
+        "max": 55.0
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 48.81223849,
+        "min": 48.0,
+        "max": 50.0
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 47.412373523333336,
+        "min": 47.0,
+        "max": 48.0
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 47.0,
+        "min": 47.0,
+        "max": 47.0
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 46.05120611277778,
+        "min": 46.0,
+        "max": 47.0
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 46.0,
+        "min": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 46.0,
+        "min": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 46.0,
+        "min": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 46.0,
+        "min": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 46.0,
+        "min": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 46.0,
+        "min": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 46.640837954999995,
+        "min": 46.0,
+        "max": 48.0
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 47.8894784,
+        "min": 47.0,
+        "max": 49.0
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 47.24468735222222,
+        "min": 47.0,
+        "max": 48.0
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 47.24185557361111,
+        "min": 47.0,
+        "max": 48.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 48.617975427777786,
+        "min": 48.0,
+        "max": 49.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 48.49516649527778,
+        "min": 48.0,
+        "max": 49.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 49.477254625,
+        "min": 49.0,
+        "max": 50.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 48.68226103333333,
+        "min": 48.0,
+        "max": 50.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 48.0,
+        "min": 48.0,
+        "max": 48.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 48.0,
+        "min": 48.0,
+        "max": 48.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 48.06969144333333,
+        "min": 48.0,
+        "max": 49.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 49.24114569472223,
+        "min": 48.0,
+        "max": 51.0
+      }
+    ],
+    "sensor.verandan_klimatsensor_spanning": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 2.884,
+        "min": 2.884,
+        "max": 2.884
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 2.884,
+        "min": 2.884,
+        "max": 2.884
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 2.884,
+        "min": 2.884,
+        "max": 2.884
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 2.884,
+        "min": 2.884,
+        "max": 2.884
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 2.8813882003700004,
+        "min": 2.875,
+        "max": 2.884
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 2.876133394445,
+        "min": 2.875,
+        "max": 2.884
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 2.875,
+        "min": 2.875,
+        "max": 2.875
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 2.8726062597725,
+        "min": 2.866,
+        "max": 2.875
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 2.8671190026799995,
+        "min": 2.866,
+        "max": 2.875
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 2.866,
+        "min": 2.866,
+        "max": 2.866
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 2.8660177512650002,
+        "min": 2.857,
+        "max": 2.875
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 2.8694235733124995,
+        "min": 2.866,
+        "max": 2.875
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 2.87033369181,
+        "min": 2.866,
+        "max": 2.875
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 2.875,
+        "min": 2.875,
+        "max": 2.875
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 2.882637420415,
+        "min": 2.875,
+        "max": 2.884
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 2.884,
+        "min": 2.884,
+        "max": 2.884
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 2.885114079265,
+        "min": 2.884,
+        "max": 2.893
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 2.884,
+        "min": 2.884,
+        "max": 2.884
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 2.884,
+        "min": 2.884,
+        "max": 2.884
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 2.8880367136175003,
+        "min": 2.875,
+        "max": 2.893
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 2.8833540221475005,
+        "min": 2.875,
+        "max": 2.884
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 2.884,
+        "min": 2.884,
+        "max": 2.884
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 2.8854391454724997,
+        "min": 2.884,
+        "max": 2.893
+      }
+    ],
+    "sensor.koket_klimatsensor_temperatur": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 24.039659816222215,
+        "min": 23.9,
+        "max": 24.1
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 23.505019098861116,
+        "min": 23.1,
+        "max": 23.9
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 22.659213665166664,
+        "min": 22.3,
+        "max": 23.1
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 22.02036798386111,
+        "min": 21.7,
+        "max": 22.3
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 21.27855126177778,
+        "min": 21.0,
+        "max": 21.7
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 20.699481919388887,
+        "min": 20.5,
+        "max": 21.0
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 20.29661934533333,
+        "min": 20.1,
+        "max": 20.5
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 19.91786332547223,
+        "min": 19.8,
+        "max": 20.1
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 19.61418405583333,
+        "min": 19.4,
+        "max": 19.8
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 19.297841614305554,
+        "min": 19.1,
+        "max": 19.4
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 18.986964221888893,
+        "min": 18.8,
+        "max": 19.1
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 18.692282526277776,
+        "min": 18.6,
+        "max": 18.8
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 19.933148923916665,
+        "min": 18.6,
+        "max": 21.8
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 22.003447848555556,
+        "min": 21.8,
+        "max": 22.5
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 23.24502669886111,
+        "min": 22.5,
+        "max": 23.6
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 23.344654961555552,
+        "min": 23.0,
+        "max": 23.6
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 22.697998526833334,
+        "min": 22.5,
+        "max": 23.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 22.412740859055557,
+        "min": 22.3,
+        "max": 22.5
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 23.466216251972224,
+        "min": 22.4,
+        "max": 24.3
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 24.55769614291667,
+        "min": 24.3,
+        "max": 24.6
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 24.362858914722224,
+        "min": 24.1,
+        "max": 24.6
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 23.769024146666666,
+        "min": 23.5,
+        "max": 24.1
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 23.377246404638893,
+        "min": 23.3,
+        "max": 23.5
+      }
+    ],
+    "sensor.verkstaden_klimatsensor_luftfuktighet": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 66.0,
+        "min": 66.0,
+        "max": 66.0
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 66.0,
+        "min": 66.0,
+        "max": 66.0
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 66.0,
+        "min": 66.0,
+        "max": 66.0
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 66.0,
+        "min": 66.0,
+        "max": 66.0
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 66.0,
+        "min": 66.0,
+        "max": 66.0
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 66.0,
+        "min": 66.0,
+        "max": 66.0
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 66.0,
+        "min": 66.0,
+        "max": 66.0
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 66.0,
+        "min": 66.0,
+        "max": 66.0
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 65.02368111111112,
+        "min": 65.0,
+        "max": 66.0
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 65.0,
+        "min": 65.0,
+        "max": 65.0
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 65.0,
+        "min": 65.0,
+        "max": 65.0
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 65.0,
+        "min": 65.0,
+        "max": 65.0
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 65.0,
+        "min": 65.0,
+        "max": 65.0
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 65.0,
+        "min": 65.0,
+        "max": 65.0
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 63.84679123194445,
+        "min": 63.0,
+        "max": 65.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 62.702873787222224,
+        "min": 62.0,
+        "max": 63.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 61.72812430916667,
+        "min": 61.0,
+        "max": 62.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 61.0,
+        "min": 61.0,
+        "max": 61.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 61.0,
+        "min": 61.0,
+        "max": 61.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 61.45537362444444,
+        "min": 61.0,
+        "max": 62.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 62.0,
+        "min": 62.0,
+        "max": 62.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 62.0,
+        "min": 62.0,
+        "max": 62.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 62.0,
+        "min": 62.0,
+        "max": 62.0
+      }
+    ],
+    "sensor.honshuset_klimatsensor_temperatur": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 5.157657360583333,
+        "min": 5.0,
+        "max": 5.4
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 4.678217671,
+        "min": 4.4,
+        "max": 5.0
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 4.2563185563333334,
+        "min": 4.2,
+        "max": 4.4
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 4.392520753777778,
+        "min": 4.2,
+        "max": 4.5
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 4.218768645861112,
+        "min": 4.0,
+        "max": 4.4
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 3.9428267035833326,
+        "min": 3.9,
+        "max": 4.0
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 3.944025009194444,
+        "min": 3.9,
+        "max": 4.0
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 3.95675665936111,
+        "min": 3.9,
+        "max": 4.1
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 3.7219161115833335,
+        "min": 3.6,
+        "max": 3.9
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 3.507726037111111,
+        "min": 3.2,
+        "max": 3.6
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 3.158717009944445,
+        "min": 3.1,
+        "max": 3.4
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 2.857658657083333,
+        "min": 2.5,
+        "max": 3.1
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 2.462190242694444,
+        "min": 2.3,
+        "max": 2.6
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 2.410414762916666,
+        "min": 2.4,
+        "max": 2.5
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 2.772236009861111,
+        "min": 2.4,
+        "max": 3.3
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 4.006805586472222,
+        "min": 3.3,
+        "max": 4.9
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 5.510704364694445,
+        "min": 4.9,
+        "max": 6.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 6.137316122750001,
+        "min": 6.0,
+        "max": 6.3
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 6.3295173749722204,
+        "min": 6.1,
+        "max": 6.6
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 6.599999999999999,
+        "min": 6.6,
+        "max": 6.6
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 6.603247523444445,
+        "min": 6.5,
+        "max": 6.7
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 6.352181687388888,
+        "min": 6.1,
+        "max": 6.6
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 5.754763599472223,
+        "min": 5.4,
+        "max": 6.1
+      }
+    ],
+    "sensor.koket_klimatsensor_spanning": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 2.8036696911700005,
+        "min": 2.713,
+        "max": 2.821
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 2.7392816542725,
+        "min": 2.713,
+        "max": 2.749
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 2.7506736530474996,
+        "min": 2.731,
+        "max": 2.767
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 2.760077389935,
+        "min": 2.731,
+        "max": 2.767
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 2.7554549946624998,
+        "min": 2.74,
+        "max": 2.767
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 2.7607588703225,
+        "min": 2.74,
+        "max": 2.776
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 2.7862383699599995,
+        "min": 2.776,
+        "max": 2.794
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 2.7782430720375006,
+        "min": 2.767,
+        "max": 2.785
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 2.7826880022,
+        "min": 2.767,
+        "max": 2.785
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 2.78388602688,
+        "min": 2.776,
+        "max": 2.794
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 2.786151946755,
+        "min": 2.785,
+        "max": 2.794
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 2.7826169539225005,
+        "min": 2.776,
+        "max": 2.785
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 2.7922831082425,
+        "min": 2.785,
+        "max": 2.803
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 2.8030000000000004,
+        "min": 2.803,
+        "max": 2.803
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 2.8116250639275004,
+        "min": 2.803,
+        "max": 2.812
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 2.8120000000000007,
+        "min": 2.812,
+        "max": 2.812
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 2.8120000000000007,
+        "min": 2.812,
+        "max": 2.812
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 2.8120000000000007,
+        "min": 2.812,
+        "max": 2.812
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 2.8135835681775005,
+        "min": 2.812,
+        "max": 2.821
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 2.8161284413250005,
+        "min": 2.812,
+        "max": 2.821
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 2.8120000000000007,
+        "min": 2.812,
+        "max": 2.812
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 2.8106274894500003,
+        "min": 2.803,
+        "max": 2.812
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 2.8043235719875006,
+        "min": 2.803,
+        "max": 2.812
+      }
+    ],
+    "sensor.koket_klimatsensor_luftfuktighet": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 42.71653520750001,
+        "min": 42.0,
+        "max": 44.0
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 44.0,
+        "min": 44.0,
+        "max": 44.0
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 43.02609993861111,
+        "min": 43.0,
+        "max": 44.0
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 43.0,
+        "min": 43.0,
+        "max": 43.0
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 43.0,
+        "min": 43.0,
+        "max": 43.0
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 43.0,
+        "min": 43.0,
+        "max": 43.0
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 43.0,
+        "min": 43.0,
+        "max": 43.0
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 43.0,
+        "min": 43.0,
+        "max": 43.0
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 43.0,
+        "min": 43.0,
+        "max": 43.0
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 43.30070040722222,
+        "min": 43.0,
+        "max": 44.0
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 44.0,
+        "min": 44.0,
+        "max": 44.0
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 44.0,
+        "min": 44.0,
+        "max": 44.0
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 44.101431195277776,
+        "min": 43.0,
+        "max": 45.0
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 42.09834841722222,
+        "min": 42.0,
+        "max": 43.0
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 41.74453273777778,
+        "min": 41.0,
+        "max": 42.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 43.271130822777785,
+        "min": 42.0,
+        "max": 44.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 44.00067389583334,
+        "min": 43.0,
+        "max": 45.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 45.497160056666665,
+        "min": 45.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 43.52906359916667,
+        "min": 43.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 43.0,
+        "min": 43.0,
+        "max": 43.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 43.22184253277778,
+        "min": 43.0,
+        "max": 44.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 44.342908173055555,
+        "min": 44.0,
+        "max": 45.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 45.6235502825,
+        "min": 45.0,
+        "max": 48.0
+      }
+    ],
+    "sensor.ateljen_klimatsensor_temperatur": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 22.26618494327778,
+        "min": 22.0,
+        "max": 22.4
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 22.212516278194443,
+        "min": 22.0,
+        "max": 22.4
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 21.745542045666664,
+        "min": 21.5,
+        "max": 22.0
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 21.24076666608333,
+        "min": 20.9,
+        "max": 21.5
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 20.594722384083337,
+        "min": 20.3,
+        "max": 20.9
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 20.03077646886111,
+        "min": 19.8,
+        "max": 20.3
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 19.564567958694447,
+        "min": 19.4,
+        "max": 19.8
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 19.142716777055558,
+        "min": 19.0,
+        "max": 19.4
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 18.783406763,
+        "min": 18.6,
+        "max": 19.0
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 18.45189388716667,
+        "min": 18.3,
+        "max": 18.6
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 18.142256055055554,
+        "min": 18.0,
+        "max": 18.3
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 17.87065983638889,
+        "min": 17.7,
+        "max": 18.0
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 18.22867900175,
+        "min": 17.8,
+        "max": 19.3
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 19.52764668633333,
+        "min": 19.3,
+        "max": 20.0
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 20.499140977861114,
+        "min": 20.0,
+        "max": 20.9
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 21.035126673916665,
+        "min": 20.9,
+        "max": 21.2
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 21.013276005805555,
+        "min": 20.9,
+        "max": 21.1
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 20.927088745555558,
+        "min": 20.9,
+        "max": 21.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 21.246483795166665,
+        "min": 20.9,
+        "max": 21.8
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 22.504443464833333,
+        "min": 21.8,
+        "max": 23.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 22.863989528500003,
+        "min": 22.7,
+        "max": 23.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 22.610700078888886,
+        "min": 22.5,
+        "max": 22.7
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 22.48117115738889,
+        "min": 22.4,
+        "max": 22.6
+      }
+    ],
+    "sensor.bion_klimatsensor_luftfuktighet": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 47.0,
+        "min": 47.0,
+        "max": 47.0
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 47.0,
+        "min": 47.0,
+        "max": 47.0
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 47.0,
+        "min": 47.0,
+        "max": 47.0
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 47.0,
+        "min": 47.0,
+        "max": 47.0
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 47.0,
+        "min": 47.0,
+        "max": 47.0
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 47.0,
+        "min": 47.0,
+        "max": 47.0
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 46.769351100555554,
+        "min": 46.0,
+        "max": 47.0
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 46.0,
+        "min": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 46.0,
+        "min": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 45.58599709666667,
+        "min": 45.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 45.0,
+        "min": 45.0,
+        "max": 45.0
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 45.0,
+        "min": 45.0,
+        "max": 45.0
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 45.0,
+        "min": 45.0,
+        "max": 45.0
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 45.70510289,
+        "min": 44.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 44.0,
+        "min": 44.0,
+        "max": 44.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 44.78164651555556,
+        "min": 44.0,
+        "max": 45.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 45.0,
+        "min": 45.0,
+        "max": 45.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 45.0,
+        "min": 45.0,
+        "max": 45.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 45.964197973611114,
+        "min": 45.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 46.0,
+        "min": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 45.33808156138889,
+        "min": 45.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 45.0,
+        "min": 45.0,
+        "max": 45.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 45.0,
+        "min": 45.0,
+        "max": 45.0
+      }
+    ],
+    "sensor.ateljen_klimatsensor_batteriniva": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 75.0,
+        "min": 75.0,
+        "max": 75.0
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 75.0,
+        "min": 75.0,
+        "max": 75.0
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 74.97970023472222,
+        "min": 74.0,
+        "max": 75.0
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 74.12331366916666,
+        "min": 74.0,
+        "max": 75.0
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 74.0,
+        "min": 74.0,
+        "max": 74.0
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 73.62064423722222,
+        "min": 73.0,
+        "max": 74.0
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 73.0,
+        "min": 73.0,
+        "max": 73.0
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 73.0,
+        "min": 73.0,
+        "max": 73.0
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 72.74929391944444,
+        "min": 72.0,
+        "max": 73.0
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 72.02362356444445,
+        "min": 72.0,
+        "max": 73.0
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 72.0,
+        "min": 72.0,
+        "max": 72.0
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 71.62053033861112,
+        "min": 71.0,
+        "max": 72.0
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 72.00168392249999,
+        "min": 71.0,
+        "max": 73.0
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 72.94672258,
+        "min": 72.0,
+        "max": 73.0
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 73.56134100083334,
+        "min": 73.0,
+        "max": 74.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 74.0,
+        "min": 74.0,
+        "max": 74.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 74.0,
+        "min": 74.0,
+        "max": 74.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 74.0,
+        "min": 74.0,
+        "max": 74.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 74.15431020805556,
+        "min": 74.0,
+        "max": 75.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 74.87768377416667,
+        "min": 74.0,
+        "max": 75.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 75.0,
+        "min": 75.0,
+        "max": 75.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 75.0,
+        "min": 75.0,
+        "max": 75.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 75.0,
+        "min": 75.0,
+        "max": 75.0
+      }
+    ],
+    "sensor.entren_klimatsensor_temperatur": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 21.05282056936111,
+        "min": 20.9,
+        "max": 21.2
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 20.987329218833334,
+        "min": 20.7,
+        "max": 21.1
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 20.51412765297222,
+        "min": 20.3,
+        "max": 20.7
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 20.006970053944446,
+        "min": 19.7,
+        "max": 20.3
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 19.384175988805556,
+        "min": 19.2,
+        "max": 19.7
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 19.010481012166668,
+        "min": 18.8,
+        "max": 19.2
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 18.681595608694444,
+        "min": 18.6,
+        "max": 18.8
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 18.366549362277784,
+        "min": 18.2,
+        "max": 18.6
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 18.097734078583333,
+        "min": 18.0,
+        "max": 18.2
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 17.785167282111107,
+        "min": 17.6,
+        "max": 18.0
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 17.525323254222222,
+        "min": 17.4,
+        "max": 17.6
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 17.225751408694443,
+        "min": 17.1,
+        "max": 17.4
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 17.662935506583334,
+        "min": 17.1,
+        "max": 18.6
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 18.87573362727778,
+        "min": 18.6,
+        "max": 19.3
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 19.832011702194446,
+        "min": 19.3,
+        "max": 20.3
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 20.560338308138885,
+        "min": 20.3,
+        "max": 20.7
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 21.045983329694447,
+        "min": 20.7,
+        "max": 21.3
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 21.24845357497222,
+        "min": 20.9,
+        "max": 21.4
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 20.848838651166666,
+        "min": 20.7,
+        "max": 21.1
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 21.55885277338889,
+        "min": 21.1,
+        "max": 21.8
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 21.765696700027785,
+        "min": 21.6,
+        "max": 21.8
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 21.50649726727778,
+        "min": 21.3,
+        "max": 21.6
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 21.30616817602778,
+        "min": 21.2,
+        "max": 21.5
+      }
+    ],
+    "sensor.bion_klimatsensor_temperatur": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 19.622996649055555,
+        "min": 19.6,
+        "max": 19.7
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 19.699999999999996,
+        "min": 19.7,
+        "max": 19.7
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 19.790441922583337,
+        "min": 19.7,
+        "max": 19.9
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 19.955441809972225,
+        "min": 19.9,
+        "max": 20.0
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 20.05321015322222,
+        "min": 20.0,
+        "max": 20.1
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 20.15089369397222,
+        "min": 20.1,
+        "max": 20.2
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 20.199999999999996,
+        "min": 20.2,
+        "max": 20.2
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 20.220507695111113,
+        "min": 20.2,
+        "max": 20.3
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 20.20503715605555,
+        "min": 20.2,
+        "max": 20.3
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 20.226233140666668,
+        "min": 20.2,
+        "max": 20.3
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 20.199999999999996,
+        "min": 20.2,
+        "max": 20.2
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 20.199999999999996,
+        "min": 20.2,
+        "max": 20.2
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 20.208089882083332,
+        "min": 20.2,
+        "max": 20.3
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 20.307237362444447,
+        "min": 20.0,
+        "max": 20.4
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 19.535577569694446,
+        "min": 19.2,
+        "max": 20.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 19.199999999999996,
+        "min": 19.2,
+        "max": 19.2
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 19.149911088222222,
+        "min": 19.1,
+        "max": 19.2
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 19.099999999999998,
+        "min": 19.1,
+        "max": 19.1
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 19.28072531577778,
+        "min": 19.1,
+        "max": 19.5
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 19.817270971861113,
+        "min": 19.5,
+        "max": 20.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 20.13237573291666,
+        "min": 20.0,
+        "max": 20.2
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 20.327267334333335,
+        "min": 20.2,
+        "max": 20.4
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 20.30297221991666,
+        "min": 20.2,
+        "max": 20.4
+      }
+    ],
+    "sensor.entren_klimatsensor_luftfuktighet": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 46.74767802444444,
+        "min": 46.0,
+        "max": 47.0
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 47.63444806861111,
+        "min": 47.0,
+        "max": 48.0
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 47.0,
+        "min": 47.0,
+        "max": 47.0
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 46.510787685000004,
+        "min": 46.0,
+        "max": 47.0
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 46.0,
+        "min": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 46.0,
+        "min": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 45.28258267277778,
+        "min": 45.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 45.0,
+        "min": 45.0,
+        "max": 45.0
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 45.0,
+        "min": 45.0,
+        "max": 45.0
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 45.0,
+        "min": 45.0,
+        "max": 45.0
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 45.0,
+        "min": 45.0,
+        "max": 45.0
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 45.04878188138889,
+        "min": 45.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 46.62976776555556,
+        "min": 46.0,
+        "max": 47.0
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 46.0,
+        "min": 46.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 46.15233093305556,
+        "min": 46.0,
+        "max": 47.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 47.0,
+        "min": 47.0,
+        "max": 47.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 45.470951284444446,
+        "min": 44.0,
+        "max": 47.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 46.25848498833333,
+        "min": 46.0,
+        "max": 47.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 46.24116739555556,
+        "min": 46.0,
+        "max": 47.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 47.0,
+        "min": 47.0,
+        "max": 47.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 47.0,
+        "min": 47.0,
+        "max": 47.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 47.73184743361111,
+        "min": 47.0,
+        "max": 48.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 48.43749379277778,
+        "min": 48.0,
+        "max": 50.0
+      }
+    ],
+    "sensor.verandan_klimatsensor_temperatur": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 22.258195508472216,
+        "min": 22.0,
+        "max": 22.7
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 22.699941340583333,
+        "min": 22.5,
+        "max": 22.8
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 22.425128091444446,
+        "min": 22.4,
+        "max": 22.5
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 22.10894538561111,
+        "min": 21.6,
+        "max": 22.4
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 21.16380594136111,
+        "min": 20.8,
+        "max": 21.6
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 20.512388403972224,
+        "min": 20.3,
+        "max": 20.8
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 20.08786809,
+        "min": 19.9,
+        "max": 20.3
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 19.711750425416664,
+        "min": 19.6,
+        "max": 19.9
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 19.401321060833336,
+        "min": 19.3,
+        "max": 19.6
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 19.103764014194443,
+        "min": 19.0,
+        "max": 19.3
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 18.818502121583332,
+        "min": 18.7,
+        "max": 19.0
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 18.533614474083333,
+        "min": 18.4,
+        "max": 18.7
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 19.040716003083332,
+        "min": 18.4,
+        "max": 19.8
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 20.233378653166664,
+        "min": 19.8,
+        "max": 20.6
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 21.220383315166668,
+        "min": 20.6,
+        "max": 21.6
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 21.536976107138887,
+        "min": 21.5,
+        "max": 21.6
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 21.68980541913888,
+        "min": 21.6,
+        "max": 21.7
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 21.547484690999998,
+        "min": 21.5,
+        "max": 21.7
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 21.776640102305553,
+        "min": 21.5,
+        "max": 22.3
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 22.909361475500003,
+        "min": 22.3,
+        "max": 23.3
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 23.399172123333333,
+        "min": 23.3,
+        "max": 23.4
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 23.19471388608333,
+        "min": 23.0,
+        "max": 23.4
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 22.901622902972225,
+        "min": 22.8,
+        "max": 23.0
+      }
+    ],
+    "sensor.verkstaden_klimatsensor_batteriniva": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 71.0,
+        "min": 71.0,
+        "max": 71.0
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 70.74287563944443,
+        "min": 70.0,
+        "max": 71.0
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 71.0,
+        "min": 71.0,
+        "max": 71.0
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 70.79695317583334,
+        "min": 70.0,
+        "max": 71.0
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 70.68411718583334,
+        "min": 70.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 70.336175,
+        "min": 70.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 70.38506621,
+        "min": 70.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 70.12651019166667,
+        "min": 70.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 70.59319972777777,
+        "min": 70.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 70.23290358972223,
+        "min": 70.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 70.4562639525,
+        "min": 70.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 70.25485476583333,
+        "min": 70.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 70.0,
+        "min": 70.0,
+        "max": 70.0
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 70.21678383472222,
+        "min": 70.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 71.0,
+        "min": 71.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 71.0,
+        "min": 71.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 71.91039356,
+        "min": 71.0,
+        "max": 72.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 72.0,
+        "min": 72.0,
+        "max": 72.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 72.5127152161111,
+        "min": 72.0,
+        "max": 73.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 72.0,
+        "min": 72.0,
+        "max": 72.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 71.74595173666667,
+        "min": 71.0,
+        "max": 72.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 71.21024030611112,
+        "min": 71.0,
+        "max": 72.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 71.0,
+        "min": 71.0,
+        "max": 71.0
+      }
+    ],
+    "sensor.utomhus_klimatsensor_spanning": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 2.686,
+        "min": 2.686,
+        "max": 2.686
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 2.686,
+        "min": 2.686,
+        "max": 2.686
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 2.686,
+        "min": 2.686,
+        "max": 2.686
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 2.686,
+        "min": 2.686,
+        "max": 2.686
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 2.686,
+        "min": 2.686,
+        "max": 2.686
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 2.686,
+        "min": 2.686,
+        "max": 2.686
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 2.686,
+        "min": 2.686,
+        "max": 2.686
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 2.686,
+        "min": 2.686,
+        "max": 2.686
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 2.684029925815,
+        "min": 2.677,
+        "max": 2.686
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 2.6833586834525,
+        "min": 2.677,
+        "max": 2.686
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 2.6775384110625,
+        "min": 2.677,
+        "max": 2.686
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 2.677,
+        "min": 2.677,
+        "max": 2.677
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 2.677,
+        "min": 2.677,
+        "max": 2.677
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 2.6723955961549994,
+        "min": 2.668,
+        "max": 2.677
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 2.6746929247049995,
+        "min": 2.668,
+        "max": 2.677
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 2.682118363285,
+        "min": 2.677,
+        "max": 2.686
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 2.686300185875,
+        "min": 2.686,
+        "max": 2.695
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 2.695,
+        "min": 2.695,
+        "max": 2.695
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 2.6972984401199995,
+        "min": 2.695,
+        "max": 2.704
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 2.6992489484125,
+        "min": 2.695,
+        "max": 2.704
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 2.6999481759,
+        "min": 2.695,
+        "max": 2.704
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 2.695,
+        "min": 2.695,
+        "max": 2.695
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 2.691371295715,
+        "min": 2.686,
+        "max": 2.695
+      }
+    ],
+    "sensor.bion_klimatsensor_batteriniva": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 69.0,
+        "min": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 69.0,
+        "min": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 69.0,
+        "min": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 69.0,
+        "min": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 69.0,
+        "min": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 69.0,
+        "min": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 69.0,
+        "min": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 69.0,
+        "min": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 69.0,
+        "min": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 69.0,
+        "min": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 69.0,
+        "min": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 69.0,
+        "min": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 69.0,
+        "min": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 69.25914002611111,
+        "min": 69.0,
+        "max": 70.0
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 69.0,
+        "min": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 69.0,
+        "min": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 68.74186934777778,
+        "min": 68.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 68.74300729444444,
+        "min": 68.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 69.0,
+        "min": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 69.0,
+        "min": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 69.0,
+        "min": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 69.0,
+        "min": 69.0,
+        "max": 69.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 69.0,
+        "min": 69.0,
+        "max": 69.0
+      }
+    ],
+    "sensor.honshuset_klimatsensor_batteriniva": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 54.0,
+        "min": 54.0,
+        "max": 54.0
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 53.338183734722215,
+        "min": 53.0,
+        "max": 54.0
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 53.0,
+        "min": 53.0,
+        "max": 53.0
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 53.0,
+        "min": 53.0,
+        "max": 53.0
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 53.0,
+        "min": 53.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 52.875169785555556,
+        "min": 52.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 53.0,
+        "min": 53.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 52.88160182611111,
+        "min": 52.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 52.37810124611111,
+        "min": 52.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 52.376884860555556,
+        "min": 52.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 52.0,
+        "min": 52.0,
+        "max": 52.0
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 52.0,
+        "min": 52.0,
+        "max": 52.0
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 51.66381628138888,
+        "min": 51.0,
+        "max": 52.0
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 51.62932322805556,
+        "min": 51.0,
+        "max": 52.0
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 51.82558119111112,
+        "min": 51.0,
+        "max": 52.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 52.69301695055555,
+        "min": 52.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 53.938397610277775,
+        "min": 53.0,
+        "max": 54.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 54.37756557777777,
+        "min": 54.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 54.673232390277775,
+        "min": 54.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 54.74786741083333,
+        "min": 54.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 54.74883330944445,
+        "min": 54.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 54.47309309055555,
+        "min": 54.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 53.983643866111116,
+        "min": 53.0,
+        "max": 54.0
+      }
+    ],
+    "sensor.honshuset_klimatsensor_luftfuktighet": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 70.102778805,
+        "min": 70.0,
+        "max": 71.0
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 70.14895050666667,
+        "min": 70.0,
+        "max": 71.0
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 70.71831189027777,
+        "min": 70.0,
+        "max": 71.0
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 71.96307236944445,
+        "min": 71.0,
+        "max": 72.0
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 72.0,
+        "min": 72.0,
+        "max": 72.0
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 72.0,
+        "min": 72.0,
+        "max": 72.0
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 72.12583536527778,
+        "min": 72.0,
+        "max": 73.0
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 72.12644324472222,
+        "min": 72.0,
+        "max": 73.0
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 72.0,
+        "min": 72.0,
+        "max": 72.0
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 71.70636763611111,
+        "min": 71.0,
+        "max": 72.0
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 71.7555884775,
+        "min": 71.0,
+        "max": 72.0
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 71.0,
+        "min": 71.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 71.0,
+        "min": 71.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 71.50346426111112,
+        "min": 71.0,
+        "max": 72.0
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 71.88905250666666,
+        "min": 71.0,
+        "max": 72.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 72.75643413444445,
+        "min": 72.0,
+        "max": 73.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 72.50203790388889,
+        "min": 72.0,
+        "max": 73.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 71.50872737222222,
+        "min": 71.0,
+        "max": 72.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 71.0,
+        "min": 71.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 71.0,
+        "min": 71.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 71.0,
+        "min": 71.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 70.78780292,
+        "min": 70.0,
+        "max": 71.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 70.58357169972221,
+        "min": 70.0,
+        "max": 71.0
+      }
+    ],
+    "sensor.verkstaden_klimatsensor_temperatur": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 13.174025596222222,
+        "min": 13.1,
+        "max": 13.2
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 13.162122763694443,
+        "min": 13.1,
+        "max": 13.2
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 13.099999999999996,
+        "min": 13.1,
+        "max": 13.1
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 13.067075034444441,
+        "min": 13.0,
+        "max": 13.1
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 13.025712122527777,
+        "min": 13.0,
+        "max": 13.1
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 13.0,
+        "min": 13.0,
+        "max": 13.0
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 12.97430552427778,
+        "min": 12.9,
+        "max": 13.0
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 12.900000000000004,
+        "min": 12.9,
+        "max": 12.9
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 12.900000000000004,
+        "min": 12.9,
+        "max": 12.9
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 12.804804153972222,
+        "min": 12.8,
+        "max": 12.9
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 12.799999999999999,
+        "min": 12.8,
+        "max": 12.8
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 12.709530585805554,
+        "min": 12.7,
+        "max": 12.8
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 12.688597834361111,
+        "min": 12.6,
+        "max": 12.7
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 12.643323514027776,
+        "min": 12.6,
+        "max": 13.1
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 13.798523082472222,
+        "min": 13.1,
+        "max": 14.4
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 14.735151849638887,
+        "min": 14.4,
+        "max": 15.1
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 15.261260721388888,
+        "min": 15.1,
+        "max": 15.6
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 15.75102464816667,
+        "min": 15.6,
+        "max": 15.9
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 16.02463793177778,
+        "min": 15.9,
+        "max": 16.1
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 15.436980643333333,
+        "min": 15.1,
+        "max": 16.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 14.876638114138887,
+        "min": 14.7,
+        "max": 15.1
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 14.486505841333335,
+        "min": 14.3,
+        "max": 14.7
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 14.134111773916665,
+        "min": 14.0,
+        "max": 14.3
+      }
+    ],
+    "sensor.honshuset_klimatsensor_spanning": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 2.686,
+        "min": 2.686,
+        "max": 2.686
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 2.6800436624475004,
+        "min": 2.677,
+        "max": 2.686
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 2.677,
+        "min": 2.677,
+        "max": 2.677
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 2.677,
+        "min": 2.677,
+        "max": 2.677
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 2.677,
+        "min": 2.677,
+        "max": 2.677
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 2.6758765281274997,
+        "min": 2.668,
+        "max": 2.677
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 2.677,
+        "min": 2.677,
+        "max": 2.677
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 2.6759344250375,
+        "min": 2.668,
+        "max": 2.677
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 2.6714029198774996,
+        "min": 2.668,
+        "max": 2.677
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 2.6713919663325,
+        "min": 2.668,
+        "max": 2.677
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 2.6679999999999997,
+        "min": 2.668,
+        "max": 2.668
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 2.6679999999999997,
+        "min": 2.668,
+        "max": 2.668
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 2.6649743544124997,
+        "min": 2.659,
+        "max": 2.668
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 2.6646639096725,
+        "min": 2.659,
+        "max": 2.668
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 2.666430221865,
+        "min": 2.659,
+        "max": 2.668
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 2.6742371468674997,
+        "min": 2.668,
+        "max": 2.677
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 2.6854455697025,
+        "min": 2.677,
+        "max": 2.686
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 2.689398092,
+        "min": 2.686,
+        "max": 2.695
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 2.6920590856625,
+        "min": 2.686,
+        "max": 2.695
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 2.6927308065699997,
+        "min": 2.686,
+        "max": 2.695
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 2.6927394990274998,
+        "min": 2.686,
+        "max": 2.695
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 2.6902578460775,
+        "min": 2.686,
+        "max": 2.695
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 2.685852804325,
+        "min": 2.677,
+        "max": 2.686
+      }
+    ],
+    "sensor.sovrummet_klimatsensor_spanning": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 2.983,
+        "min": 2.983,
+        "max": 2.983
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 2.983,
+        "min": 2.983,
+        "max": 2.983
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 2.983,
+        "min": 2.983,
+        "max": 2.983
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 2.983,
+        "min": 2.983,
+        "max": 2.983
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 2.983,
+        "min": 2.983,
+        "max": 2.983
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 2.983,
+        "min": 2.983,
+        "max": 2.983
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 2.983,
+        "min": 2.983,
+        "max": 2.983
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 2.983,
+        "min": 2.983,
+        "max": 2.983
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 2.9819603088475,
+        "min": 2.974,
+        "max": 2.983
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 2.9796653198550005,
+        "min": 2.974,
+        "max": 2.983
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 2.9751335319025003,
+        "min": 2.974,
+        "max": 2.983
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 2.974,
+        "min": 2.974,
+        "max": 2.974
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 2.974,
+        "min": 2.974,
+        "max": 2.974
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 2.97623596246,
+        "min": 2.974,
+        "max": 2.983
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 2.9791615599425003,
+        "min": 2.974,
+        "max": 2.983
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 2.983,
+        "min": 2.983,
+        "max": 2.983
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 2.983,
+        "min": 2.983,
+        "max": 2.983
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 2.983,
+        "min": 2.983,
+        "max": 2.983
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 2.983,
+        "min": 2.983,
+        "max": 2.983
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 2.983,
+        "min": 2.983,
+        "max": 2.983
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 2.983,
+        "min": 2.983,
+        "max": 2.983
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 2.983,
+        "min": 2.983,
+        "max": 2.983
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 2.983,
+        "min": 2.983,
+        "max": 2.983
+      }
+    ],
+    "sensor.entren_klimatsensor_spanning": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 2.91212431431,
+        "min": 2.911,
+        "max": 2.92
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 2.911000000000001,
+        "min": 2.911,
+        "max": 2.911
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 2.911000000000001,
+        "min": 2.911,
+        "max": 2.911
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 2.911000000000001,
+        "min": 2.911,
+        "max": 2.911
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 2.911000000000001,
+        "min": 2.911,
+        "max": 2.911
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 2.911000000000001,
+        "min": 2.911,
+        "max": 2.911
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 2.911000000000001,
+        "min": 2.911,
+        "max": 2.911
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 2.911000000000001,
+        "min": 2.911,
+        "max": 2.911
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 2.911000000000001,
+        "min": 2.911,
+        "max": 2.911
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 2.9098148033225004,
+        "min": 2.902,
+        "max": 2.911
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 2.9087182738125006,
+        "min": 2.902,
+        "max": 2.911
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 2.9020705414550005,
+        "min": 2.902,
+        "max": 2.911
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 2.9031285281275,
+        "min": 2.902,
+        "max": 2.911
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 2.9053333187375006,
+        "min": 2.902,
+        "max": 2.911
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 2.9020000000000006,
+        "min": 2.902,
+        "max": 2.902
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 2.898605282575,
+        "min": 2.893,
+        "max": 2.902
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 2.9049562000950004,
+        "min": 2.902,
+        "max": 2.911
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 2.9172985172075006,
+        "min": 2.911,
+        "max": 2.92
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 2.9200000000000004,
+        "min": 2.92,
+        "max": 2.92
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 2.9200000000000004,
+        "min": 2.92,
+        "max": 2.92
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 2.9200000000000004,
+        "min": 2.92,
+        "max": 2.92
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 2.9200000000000004,
+        "min": 2.92,
+        "max": 2.92
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 2.9211339937500003,
+        "min": 2.92,
+        "max": 2.929
+      }
+    ],
+    "sensor.duschen_klimatsensor_spanning": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 2.9319520895575,
+        "min": 2.929,
+        "max": 2.938
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 2.9312431386999998,
+        "min": 2.929,
+        "max": 2.938
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 2.929,
+        "min": 2.929,
+        "max": 2.929
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 2.929,
+        "min": 2.929,
+        "max": 2.929
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 2.929,
+        "min": 2.929,
+        "max": 2.929
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 2.9324108230549997,
+        "min": 2.929,
+        "max": 2.938
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 2.932936004185,
+        "min": 2.929,
+        "max": 2.938
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 2.938,
+        "min": 2.938,
+        "max": 2.938
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 2.938,
+        "min": 2.938,
+        "max": 2.938
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 2.938,
+        "min": 2.938,
+        "max": 2.938
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 2.938,
+        "min": 2.938,
+        "max": 2.938
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 2.938,
+        "min": 2.938,
+        "max": 2.938
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 2.9391145921275004,
+        "min": 2.938,
+        "max": 2.947
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 2.938,
+        "min": 2.938,
+        "max": 2.938
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 2.9391056080175004,
+        "min": 2.938,
+        "max": 2.947
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 2.938,
+        "min": 2.938,
+        "max": 2.938
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 2.938,
+        "min": 2.938,
+        "max": 2.938
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 2.938,
+        "min": 2.938,
+        "max": 2.938
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 2.938,
+        "min": 2.938,
+        "max": 2.938
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 2.938,
+        "min": 2.938,
+        "max": 2.938
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 2.938,
+        "min": 2.938,
+        "max": 2.938
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 2.938,
+        "min": 2.938,
+        "max": 2.938
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 2.938,
+        "min": 2.938,
+        "max": 2.938
+      }
+    ],
+    "sensor.duschen_klimatsensor_luftfuktighet": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 47.58712281222222,
+        "min": 45.0,
+        "max": 50.0
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 47.964427171388884,
+        "min": 47.0,
+        "max": 49.0
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 45.81540807555555,
+        "min": 45.0,
+        "max": 47.0
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 46.10875060305555,
+        "min": 44.0,
+        "max": 50.0
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 51.537925595,
+        "min": 50.0,
+        "max": 52.0
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 52.75895342555555,
+        "min": 52.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 53.0,
+        "min": 53.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 53.0,
+        "min": 53.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 50.91613489722223,
+        "min": 50.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 48.91726156500001,
+        "min": 48.0,
+        "max": 50.0
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 47.060738691388885,
+        "min": 46.0,
+        "max": 48.0
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 45.19350382000001,
+        "min": 41.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 43.525665058333324,
+        "min": 41.0,
+        "max": 44.0
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 42.46178583166667,
+        "min": 41.0,
+        "max": 44.0
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 44.62335663416667,
+        "min": 42.0,
+        "max": 48.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 46.939822808611105,
+        "min": 46.0,
+        "max": 48.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 47.40860895888889,
+        "min": 45.0,
+        "max": 50.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 46.466945745833335,
+        "min": 45.0,
+        "max": 48.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 47.53275096194444,
+        "min": 47.0,
+        "max": 48.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 48.0,
+        "min": 48.0,
+        "max": 48.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 50.81600860166666,
+        "min": 48.0,
+        "max": 52.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 50.986019535,
+        "min": 49.0,
+        "max": 51.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 50.25887329027778,
+        "min": 49.0,
+        "max": 51.0
+      }
+    ],
+    "sensor.duschen_klimatsensor_temperatur": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 23.88124825708333,
+        "min": 23.8,
+        "max": 24.0
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 23.65681687791667,
+        "min": 23.3,
+        "max": 23.8
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 23.09990434447222,
+        "min": 22.9,
+        "max": 23.3
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 22.86805311894444,
+        "min": 22.7,
+        "max": 23.2
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 23.47177500047222,
+        "min": 23.2,
+        "max": 23.8
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 23.927532126388886,
+        "min": 23.8,
+        "max": 24.2
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 24.325050153250004,
+        "min": 24.2,
+        "max": 24.5
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 24.73497335819445,
+        "min": 24.5,
+        "max": 24.9
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 25.009428115694448,
+        "min": 24.9,
+        "max": 25.1
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 25.26843397394445,
+        "min": 25.1,
+        "max": 25.4
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 25.493926190638888,
+        "min": 25.4,
+        "max": 25.6
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 25.636773034249998,
+        "min": 25.3,
+        "max": 25.7
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 25.547366989888886,
+        "min": 25.3,
+        "max": 25.7
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 25.545333502694444,
+        "min": 25.4,
+        "max": 25.7
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 25.361221881111117,
+        "min": 25.3,
+        "max": 25.6
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 25.18321949486111,
+        "min": 25.0,
+        "max": 25.3
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 24.888240421000003,
+        "min": 24.5,
+        "max": 25.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 24.22015254741667,
+        "min": 24.0,
+        "max": 24.5
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 24.099999999999998,
+        "min": 24.1,
+        "max": 24.1
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 24.190483189416664,
+        "min": 24.1,
+        "max": 24.2
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 24.30390131263889,
+        "min": 24.2,
+        "max": 24.4
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 24.502600491722223,
+        "min": 24.4,
+        "max": 24.6
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 24.688299151555555,
+        "min": 24.6,
+        "max": 24.8
+      }
+    ],
+    "sensor.verandan_klimatsensor_batteriniva": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 76.0,
+        "min": 76.0,
+        "max": 76.0
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 76.0,
+        "min": 76.0,
+        "max": 76.0
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 76.0,
+        "min": 76.0,
+        "max": 76.0
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 76.0,
+        "min": 76.0,
+        "max": 76.0
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 75.70979920472222,
+        "min": 75.0,
+        "max": 76.0
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 75.1259322175,
+        "min": 75.0,
+        "max": 76.0
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 75.0,
+        "min": 75.0,
+        "max": 75.0
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 74.73402860638889,
+        "min": 74.0,
+        "max": 75.0
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 74.12433351555556,
+        "min": 74.0,
+        "max": 75.0
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 74.0,
+        "min": 74.0,
+        "max": 74.0
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 74.00197254222222,
+        "min": 73.0,
+        "max": 75.0
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 74.38039717361112,
+        "min": 74.0,
+        "max": 75.0
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 74.48152186333333,
+        "min": 74.0,
+        "max": 75.0
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 75.0,
+        "min": 75.0,
+        "max": 75.0
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 75.84860306527777,
+        "min": 75.0,
+        "max": 76.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 76.0,
+        "min": 76.0,
+        "max": 76.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 76.12378621250001,
+        "min": 76.0,
+        "max": 77.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 76.0,
+        "min": 76.0,
+        "max": 76.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 76.0,
+        "min": 76.0,
+        "max": 76.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 76.44852295,
+        "min": 75.0,
+        "max": 77.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 75.92822526305555,
+        "min": 75.0,
+        "max": 76.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 76.0,
+        "min": 76.0,
+        "max": 76.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 76.1599059411111,
+        "min": 76.0,
+        "max": 77.0
+      }
+    ],
+    "sensor.sovrummet_klimatsensor_batteriniva": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 87.0,
+        "min": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 87.0,
+        "min": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 87.0,
+        "min": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 87.0,
+        "min": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 87.0,
+        "min": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 87.0,
+        "min": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 87.0,
+        "min": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 87.0,
+        "min": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 86.8844779575,
+        "min": 86.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 86.62948076277779,
+        "min": 86.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 86.12594793916666,
+        "min": 86.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 86.0,
+        "min": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 86.0,
+        "min": 86.0,
+        "max": 86.0
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 86.24843985,
+        "min": 86.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 86.57350796944445,
+        "min": 86.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 87.0,
+        "min": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 87.0,
+        "min": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 87.0,
+        "min": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 87.0,
+        "min": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 87.0,
+        "min": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 87.0,
+        "min": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 87.0,
+        "min": 87.0,
+        "max": 87.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 87.0,
+        "min": 87.0,
+        "max": 87.0
+      }
+    ],
+    "sensor.verkstaden_klimatsensor_spanning": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 2.838999999999999,
+        "min": 2.839,
+        "max": 2.839
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 2.8366858801849992,
+        "min": 2.83,
+        "max": 2.839
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 2.838999999999999,
+        "min": 2.839,
+        "max": 2.839
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 2.8371725858174996,
+        "min": 2.83,
+        "max": 2.839
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 2.8361570454674996,
+        "min": 2.83,
+        "max": 2.839
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 2.8330255854324995,
+        "min": 2.83,
+        "max": 2.839
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 2.833465584674999,
+        "min": 2.83,
+        "max": 2.839
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 2.831138600079999,
+        "min": 2.83,
+        "max": 2.839
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 2.8353387892999997,
+        "min": 2.83,
+        "max": 2.839
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 2.8320961335324992,
+        "min": 2.83,
+        "max": 2.839
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 2.8341063781224993,
+        "min": 2.83,
+        "max": 2.839
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 2.8322936839049997,
+        "min": 2.83,
+        "max": 2.839
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 2.8299999999999996,
+        "min": 2.83,
+        "max": 2.83
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 2.8319510484425,
+        "min": 2.83,
+        "max": 2.839
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 2.838999999999999,
+        "min": 2.839,
+        "max": 2.839
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 2.838999999999999,
+        "min": 2.839,
+        "max": 2.839
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 2.847193535452499,
+        "min": 2.839,
+        "max": 2.848
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 2.8479999999999994,
+        "min": 2.848,
+        "max": 2.848
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 2.8526144340474997,
+        "min": 2.848,
+        "max": 2.857
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 2.8479999999999994,
+        "min": 2.848,
+        "max": 2.848
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 2.8457135706699996,
+        "min": 2.839,
+        "max": 2.848
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 2.8408921710574995,
+        "min": 2.839,
+        "max": 2.848
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 2.838999999999999,
+        "min": 2.839,
+        "max": 2.839
+      }
+    ],
+    "sensor.utomhus_klimatsensor_batteriniva": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 54.0,
+        "min": 54.0,
+        "max": 54.0
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 54.0,
+        "min": 54.0,
+        "max": 54.0
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 54.0,
+        "min": 54.0,
+        "max": 54.0
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 54.0,
+        "min": 54.0,
+        "max": 54.0
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 54.0,
+        "min": 54.0,
+        "max": 54.0
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 54.0,
+        "min": 54.0,
+        "max": 54.0
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 54.0,
+        "min": 54.0,
+        "max": 54.0
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 54.0,
+        "min": 54.0,
+        "max": 54.0
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 53.78110218805555,
+        "min": 53.0,
+        "max": 54.0
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 53.70652135583333,
+        "min": 53.0,
+        "max": 54.0
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 53.05982263388889,
+        "min": 53.0,
+        "max": 54.0
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 53.0,
+        "min": 53.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 53.0,
+        "min": 53.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 52.48839888055556,
+        "min": 52.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 52.743658060277774,
+        "min": 52.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 53.56870792888889,
+        "min": 53.0,
+        "max": 54.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 54.033354870277776,
+        "min": 54.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 55.0,
+        "min": 55.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 55.2553826125,
+        "min": 55.0,
+        "max": 56.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 55.47210545666667,
+        "min": 55.0,
+        "max": 56.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 55.549796461666666,
+        "min": 55.0,
+        "max": 56.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 55.0,
+        "min": 55.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 54.59680963444445,
+        "min": 54.0,
+        "max": 55.0
+      }
+    ],
+    "sensor.utomhus_klimatsensor_luftfuktighet": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 95.02470656027778,
+        "min": 95.0,
+        "max": 96.0
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 96.25714260083333,
+        "min": 96.0,
+        "max": 97.0
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 97.23371238888889,
+        "min": 97.0,
+        "max": 98.0
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 98.0,
+        "min": 98.0,
+        "max": 98.0
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 98.0,
+        "min": 98.0,
+        "max": 98.0
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 98.0,
+        "min": 98.0,
+        "max": 98.0
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 97.86475126416667,
+        "min": 97.0,
+        "max": 98.0
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 97.0,
+        "min": 97.0,
+        "max": 97.0
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 97.0,
+        "min": 97.0,
+        "max": 97.0
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 97.0,
+        "min": 97.0,
+        "max": 97.0
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 97.30162461027778,
+        "min": 97.0,
+        "max": 98.0
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 98.0,
+        "min": 98.0,
+        "max": 98.0
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 98.0,
+        "min": 98.0,
+        "max": 98.0
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 98.0,
+        "min": 98.0,
+        "max": 98.0
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 98.51333576777778,
+        "min": 98.0,
+        "max": 99.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 97.81507700055556,
+        "min": 97.0,
+        "max": 98.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 95.74984088500001,
+        "min": 94.0,
+        "max": 97.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 92.70161500722223,
+        "min": 92.0,
+        "max": 94.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 90.74881614638889,
+        "min": 90.0,
+        "max": 92.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 89.65623114888888,
+        "min": 89.0,
+        "max": 90.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 89.3144072261111,
+        "min": 89.0,
+        "max": 90.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 90.85346116472222,
+        "min": 90.0,
+        "max": 92.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 92.27522976888889,
+        "min": 92.0,
+        "max": 93.0
+      }
+    ],
+    "sensor.entren_klimatsensor_batteriniva": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 79.12492370944445,
+        "min": 79.0,
+        "max": 80.0
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 79.0,
+        "min": 79.0,
+        "max": 79.0
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 79.0,
+        "min": 79.0,
+        "max": 79.0
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 79.0,
+        "min": 79.0,
+        "max": 79.0
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 79.0,
+        "min": 79.0,
+        "max": 79.0
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 79.0,
+        "min": 79.0,
+        "max": 79.0
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 79.0,
+        "min": 79.0,
+        "max": 79.0
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 79.0,
+        "min": 79.0,
+        "max": 79.0
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 79.0,
+        "min": 79.0,
+        "max": 79.0
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 78.86831209500001,
+        "min": 78.0,
+        "max": 79.0
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 78.74647505888889,
+        "min": 78.0,
+        "max": 79.0
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 78.00783704194444,
+        "min": 78.0,
+        "max": 79.0
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 78.12539161805556,
+        "min": 78.0,
+        "max": 79.0
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 78.37036900444444,
+        "min": 78.0,
+        "max": 79.0
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 78.0,
+        "min": 78.0,
+        "max": 78.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 77.62280885777778,
+        "min": 77.0,
+        "max": 78.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 78.32846753944445,
+        "min": 78.0,
+        "max": 79.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 79.6998362272222,
+        "min": 79.0,
+        "max": 80.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 80.0,
+        "min": 80.0,
+        "max": 80.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 80.0,
+        "min": 80.0,
+        "max": 80.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 80.0,
+        "min": 80.0,
+        "max": 80.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 80.0,
+        "min": 80.0,
+        "max": 80.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 80.1259987411111,
+        "min": 80.0,
+        "max": 81.0
+      }
+    ],
+    "sensor.sovrummet_klimatsensor_luftfuktighet": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 55.11746730777778,
+        "min": 53.0,
+        "max": 57.0
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 55.51285964527778,
+        "min": 55.0,
+        "max": 56.0
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 54.266845315000005,
+        "min": 54.0,
+        "max": 55.0
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 53.52806549277778,
+        "min": 53.0,
+        "max": 54.0
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 53.0,
+        "min": 53.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 52.16507361027777,
+        "min": 52.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 52.0,
+        "min": 52.0,
+        "max": 52.0
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 52.0,
+        "min": 52.0,
+        "max": 52.0
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 52.0,
+        "min": 52.0,
+        "max": 52.0
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 52.0,
+        "min": 52.0,
+        "max": 52.0
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 52.0,
+        "min": 52.0,
+        "max": 52.0
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 52.28254104472222,
+        "min": 52.0,
+        "max": 53.0
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 53.02248117527778,
+        "min": 53.0,
+        "max": 54.0
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 53.3677686111111,
+        "min": 53.0,
+        "max": 54.0
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 54.0,
+        "min": 54.0,
+        "max": 54.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 54.750553445,
+        "min": 54.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 54.74636429833333,
+        "min": 54.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 55.737115415000005,
+        "min": 55.0,
+        "max": 56.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 55.01784118222221,
+        "min": 54.0,
+        "max": 56.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 55.0,
+        "min": 55.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 55.0,
+        "min": 55.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 55.0,
+        "min": 55.0,
+        "max": 55.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 55.25589195972222,
+        "min": 55.0,
+        "max": 57.0
+      }
+    ],
+    "sensor.bion_klimatsensor_spanning": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 2.821,
+        "min": 2.821,
+        "max": 2.821
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 2.821000000000001,
+        "min": 2.821,
+        "max": 2.821
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 2.821000000000001,
+        "min": 2.821,
+        "max": 2.821
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 2.821000000000001,
+        "min": 2.821,
+        "max": 2.821
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 2.821000000000001,
+        "min": 2.821,
+        "max": 2.821
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 2.821000000000001,
+        "min": 2.821,
+        "max": 2.821
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 2.821000000000001,
+        "min": 2.821,
+        "max": 2.821
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 2.821000000000001,
+        "min": 2.821,
+        "max": 2.821
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 2.821000000000001,
+        "min": 2.821,
+        "max": 2.821
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 2.821000000000001,
+        "min": 2.821,
+        "max": 2.821
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 2.821000000000001,
+        "min": 2.821,
+        "max": 2.821
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 2.821000000000001,
+        "min": 2.821,
+        "max": 2.821
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 2.821000000000001,
+        "min": 2.821,
+        "max": 2.821
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 2.823332259945,
+        "min": 2.821,
+        "max": 2.83
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 2.821000000000001,
+        "min": 2.821,
+        "max": 2.821
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 2.821000000000001,
+        "min": 2.821,
+        "max": 2.821
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 2.8186768217800005,
+        "min": 2.812,
+        "max": 2.821
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 2.8186870677075007,
+        "min": 2.812,
+        "max": 2.821
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 2.821000000000001,
+        "min": 2.821,
+        "max": 2.821
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 2.821000000000001,
+        "min": 2.821,
+        "max": 2.821
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 2.821000000000001,
+        "min": 2.821,
+        "max": 2.821
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 2.821000000000001,
+        "min": 2.821,
+        "max": 2.821
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 2.821000000000001,
+        "min": 2.821,
+        "max": 2.821
+      }
+    ],
+    "sensor.verandan_klimatsensor_luftfuktighet": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 46.64754659472222,
+        "min": 46.0,
+        "max": 48.0
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 47.3691958125,
+        "min": 47.0,
+        "max": 48.0
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 46.25128126027778,
+        "min": 46.0,
+        "max": 47.0
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 45.133038818888885,
+        "min": 45.0,
+        "max": 46.0
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 45.12331843500001,
+        "min": 45.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 45.0,
+        "min": 45.0,
+        "max": 45.0
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 45.0,
+        "min": 45.0,
+        "max": 45.0
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 45.0,
+        "min": 45.0,
+        "max": 45.0
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 45.0,
+        "min": 45.0,
+        "max": 45.0
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 45.0,
+        "min": 45.0,
+        "max": 45.0
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 45.0,
+        "min": 45.0,
+        "max": 45.0
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 45.0,
+        "min": 45.0,
+        "max": 45.0
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 45.80165407861111,
+        "min": 45.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 45.370306166111114,
+        "min": 45.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 45.62857380777778,
+        "min": 45.0,
+        "max": 46.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 46.52407506083333,
+        "min": 46.0,
+        "max": 47.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 46.876981318611115,
+        "min": 46.0,
+        "max": 48.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 47.26308634166667,
+        "min": 47.0,
+        "max": 48.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 46.60899400861111,
+        "min": 46.0,
+        "max": 48.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 47.0,
+        "min": 47.0,
+        "max": 47.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 47.0,
+        "min": 47.0,
+        "max": 47.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 47.0,
+        "min": 47.0,
+        "max": 47.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 47.3457227325,
+        "min": 47.0,
+        "max": 49.0
+      }
+    ],
+    "sensor.utomhus_klimatsensor_temperatur": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 2.836929654888889,
+        "min": 2.6,
+        "max": 3.0
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 2.318685484638889,
+        "min": 1.8,
+        "max": 2.6
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 2.042135573361111,
+        "min": 1.8,
+        "max": 2.4
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 2.676037273361112,
+        "min": 2.4,
+        "max": 2.8
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 2.1694783328611114,
+        "min": 2.0,
+        "max": 2.5
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 2.0486060625833336,
+        "min": 2.0,
+        "max": 2.1
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 2.1000000000000005,
+        "min": 2.1,
+        "max": 2.1
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 1.8128883035277783,
+        "min": 1.6,
+        "max": 2.1
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 1.505374382972222,
+        "min": 1.4,
+        "max": 1.6
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 1.14302607425,
+        "min": 1.0,
+        "max": 1.4
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 0.7222890661388887,
+        "min": 0.5,
+        "max": 1.0
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 0.33641725113888893,
+        "min": 0.0,
+        "max": 0.5
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": -0.1277689159722222,
+        "min": -0.2,
+        "max": 0.0
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": -0.2722513500833333,
+        "min": -0.4,
+        "max": -0.2
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": -0.12727719708333332,
+        "min": -0.5,
+        "max": 0.3
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 1.0001718227777776,
+        "min": 0.3,
+        "max": 1.6
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 2.4296269721944443,
+        "min": 1.6,
+        "max": 3.1
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 3.7508060525833335,
+        "min": 3.1,
+        "max": 4.3
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 4.786261929166668,
+        "min": 4.3,
+        "max": 5.2
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 5.406031219083334,
+        "min": 5.2,
+        "max": 5.5
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 5.321483494333333,
+        "min": 5.1,
+        "max": 5.5
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 4.507231706222222,
+        "min": 3.8,
+        "max": 5.1
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 3.4778459661388887,
+        "min": 3.0,
+        "max": 3.8
+      }
+    ],
+    "sensor.duschen_klimatsensor_batteriniva": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 81.32800897472222,
+        "min": 81.0,
+        "max": 82.0
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 81.24923798277779,
+        "min": 81.0,
+        "max": 82.0
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 81.0,
+        "min": 81.0,
+        "max": 81.0
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 81.0,
+        "min": 81.0,
+        "max": 81.0
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 81.0,
+        "min": 81.0,
+        "max": 81.0
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 81.37898021083333,
+        "min": 81.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 81.43733451583334,
+        "min": 81.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 82.0,
+        "min": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 82.0,
+        "min": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 82.0,
+        "min": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 82.0,
+        "min": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 82.0,
+        "min": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 82.12384364583333,
+        "min": 82.0,
+        "max": 83.0
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 82.0,
+        "min": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 82.12284546472222,
+        "min": 82.0,
+        "max": 83.0
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 82.0,
+        "min": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 82.0,
+        "min": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 82.0,
+        "min": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 82.0,
+        "min": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 82.0,
+        "min": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 82.0,
+        "min": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 82.0,
+        "min": 82.0,
+        "max": 82.0
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 82.0,
+        "min": 82.0,
+        "max": 82.0
+      }
+    ],
+    "sensor.sovrummet_klimatsensor_temperatur": [
+      {
+        "start": 1793984400000,
+        "end": 1793988000000,
+        "mean": 20.136314458861115,
+        "min": 19.9,
+        "max": 20.3
+      },
+      {
+        "start": 1793988000000,
+        "end": 1793991600000,
+        "mean": 20.25259886486111,
+        "min": 20.1,
+        "max": 20.3
+      },
+      {
+        "start": 1793991600000,
+        "end": 1793995200000,
+        "mean": 19.834369260055556,
+        "min": 19.6,
+        "max": 20.1
+      },
+      {
+        "start": 1793995200000,
+        "end": 1793998800000,
+        "mean": 19.42392238486111,
+        "min": 19.2,
+        "max": 19.6
+      },
+      {
+        "start": 1793998800000,
+        "end": 1794002400000,
+        "mean": 18.967894900222223,
+        "min": 18.7,
+        "max": 19.2
+      },
+      {
+        "start": 1794002400000,
+        "end": 1794006000000,
+        "mean": 18.52529199766667,
+        "min": 18.4,
+        "max": 18.7
+      },
+      {
+        "start": 1794006000000,
+        "end": 1794009600000,
+        "mean": 18.145385596166665,
+        "min": 18.0,
+        "max": 18.4
+      },
+      {
+        "start": 1794009600000,
+        "end": 1794013200000,
+        "mean": 17.830127148666662,
+        "min": 17.7,
+        "max": 18.0
+      },
+      {
+        "start": 1794013200000,
+        "end": 1794016800000,
+        "mean": 17.494713978472223,
+        "min": 17.4,
+        "max": 17.7
+      },
+      {
+        "start": 1794016800000,
+        "end": 1794020400000,
+        "mean": 17.167415979055555,
+        "min": 17.0,
+        "max": 17.4
+      },
+      {
+        "start": 1794020400000,
+        "end": 1794024000000,
+        "mean": 16.875215088888893,
+        "min": 16.7,
+        "max": 17.0
+      },
+      {
+        "start": 1794024000000,
+        "end": 1794027600000,
+        "mean": 16.59315638025,
+        "min": 16.5,
+        "max": 16.7
+      },
+      {
+        "start": 1794027600000,
+        "end": 1794031200000,
+        "mean": 16.704432723,
+        "min": 16.5,
+        "max": 17.2
+      },
+      {
+        "start": 1794031200000,
+        "end": 1794034800000,
+        "mean": 17.499145478944445,
+        "min": 17.2,
+        "max": 17.9
+      },
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "mean": 18.32060807072222,
+        "min": 17.9,
+        "max": 18.7
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "mean": 18.950453345777778,
+        "min": 18.7,
+        "max": 19.1
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "mean": 18.974799220916665,
+        "min": 18.8,
+        "max": 19.1
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "mean": 19.0,
+        "min": 19.0,
+        "max": 19.0
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "mean": 19.273942470666665,
+        "min": 19.0,
+        "max": 19.6
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "mean": 19.965510814027777,
+        "min": 19.6,
+        "max": 20.3
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "mean": 20.37133888269445,
+        "min": 20.3,
+        "max": 20.4
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "mean": 20.400000000000002,
+        "min": 20.4,
+        "max": 20.4
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "mean": 20.336939394750004,
+        "min": 20.3,
+        "max": 20.4
+      }
+    ]
+  }
+}

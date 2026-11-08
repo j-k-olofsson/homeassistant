@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace_resources",
+  "data": {
+    "items": [
+      {
+        "url": "/local/community/lovelace-auto-entities/auto-entities.js?v=1677445841161",
+        "type": "module",
+        "id": "fbcb676986a4467c87d4711ae733b7fa"
+      },
+      {
+        "url": "/local/community/battery-state-card/battery-state-card.js?v=256292682420",
+        "type": "module",
+        "id": "ce0e5b6624874e18834e7d85e6c4681b"
+      },
+      {
+        "url": "/local/community/lovelace-card-mod/card-mod.js?v=190927524421",
+        "type": "module",
+        "id": "b483c486777344dbaac81d10765dc2de"
+      },
+      {
+        "url": "/local/community/apexcharts-card/apexcharts-card.js?v=331701152223",
+        "type": "module",
+        "id": "0fb2167e8ebf4a83a80dfde8704af8ca"
+      },
+      {
+        "id": "cc3f96fefe634a94a1fee6ac7a2d411e",
+        "url": "/local/community/pollenprognos-card/pollenprognos-card.js?v=632590573-v4.4.1",
+        "type": "module"
+      },
+      {
+        "id": "bf42c34d259a4d71b4716c39ac6384a5",
+        "url": "/local/community/custom-brand-icons/custom-brand-icons.js?v=3668620312026111",
+        "type": "module"
+      },
+      {
+        "id": "5e54cb9b41f74a5e9161dab6a9cec53a",
+        "url": "/local/community/kiosk-mode/kiosk-mode.js?v=4973191281500",
+        "type": "module"
+      },
+      {
+        "id": "8eb0fea361f34230bdfff6d785e5c5ae",
+        "url": "/local/community/flex-table-card/flex-table-card.js?v=15629205815",
+        "type": "module"
+      },
+      {
+        "id": "d6251001e5cd4755a0a6510267802844",
+        "url": "/local/community/mini-graph-card/mini-graph-card-bundle.js?v=1512800620130",
+        "type": "module"
+      },
+      {
+        "id": "2fd7f0ca2f394f17ae8f79833223d8b9",
+        "url": "/local/community/config-template-card/config-template-card.js?v=172177543136",
+        "type": "module"
+      },
+      {
+        "id": "895eae8024f340fb81142aad9f33f1e2",
+        "url": "/local/community/gauge-card-pro/gauge-card-pro.js?v=963750120250",
+        "type": "module"
+      },
+      {
+        "id": "103d1714d1b9474c8cb159d64bc1e11f",
+        "url": "/local/community/lovelace-meteogram-card/meteogram-card.js?v=1032497636-v2026.11.2",
+        "type": "module"
+      },
+      {
+        "id": "c8c5c805634f4fec825354b37edb53aa",
+        "url": "/local/community/ha-weather-forecast-card/weather-forecast-card.js?v=20261106-fonts1",
+        "type": "module"
+      },
+      {
+        "id": "c62ac7f2f43f4801a554d93b8ef93b9a",
+        "url": "/local/openwrt-network-map/openwrt-network-map.js?v=20261107-naming2",
+        "type": "module"
+      },
+      {
+        "id": "threadnetworkmap20260824",
+        "url": "/local/thread-network-map/thread-network-map.js?v=20261108-naming3",
+        "type": "module"
+      },
+      {
+        "id": "ea7ac340274e4b1e84dbd728062de48a",
+        "url": "/local/power-flow-card-plus/power-flow-card-plus-v0.3.7.js",
+        "type": "module"
+      },
+      {
+        "id": "16d842b3c1f94790a986678295942e14",
+        "url": "/local/mini-media-player/mini-media-player-v1.16.12-ha202611.js?v=20261106-compat1",
+        "type": "module"
+      },
+      {
+        "id": "d9614f9eea90439d8f1103ae21370f9d",
+        "url": "/local/compact-levels-card/compact-levels-card-v6.js",
+        "type": "module"
+      },
+      {
+        "id": "7c1cfde4bf9e4e0a85f6bd58edce0235",
+        "url": "/local/house-flows-card/house-flows-card-v9.js",
+        "type": "module"
+      },
+      {
+        "id": "04029c3cedfb450491b3eb2dd3340b42",
+        "url": "/local/home-status-strip/home-status-strip-v2.js",
+        "type": "module"
+      },
+      {
+        "id": "eaa97778ded94c1e883531695efe6466",
+        "url": "/local/robot-map-card/robot-map-card-v1.js",
+        "type": "module"
+      },
+      {
+        "id": "1c614dc9bbdf4fee9e5bb9627325ca61",
+        "url": "/local/feedback-control-card/feedback-control-card-v4.js?v=20261108-naming3",
+        "type": "module"
+      },
+      {
+        "id": "96fe2292266546fa87680148f63833b4",
+        "url": "/local/community/advanced-camera-card/advanced-camera-card.js?v=394082552810",
+        "type": "module"
+      },
+      {
+        "id": "19b0390505464ba5a0c8fc80ee6919ab",
+        "url": "/local/bio-panel/bio-panel-v1.js?v=20261012-3",
+        "type": "module"
+      },
+      {
+        "id": "5eab03e6f3f14d02bac5f6aa13901819",
+        "url": "/local/kuma-status/kuma-status-v5.js?v=20261106-names1",
+        "type": "module"
+      },
+      {
+        "id": "988bc2e50e5c42fd97b189c615a4452d",
+        "url": "/plant/flower-card.js?v=2026.11.2",
+        "type": "module"
+      },
+      {
+        "id": "32aec0c8e7434e08b98e0cb6f0cbbf50",
+        "url": "/local/community/scheduler-card/scheduler-card.js?v=286270157-v4.0.20",
+        "type": "module"
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "light.tor_ai_asus_tuf_gaming_b650_e_wifi": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:52:36.103071+00:00",
+      "last_updated": "2026-11-07T07:52:36.103071+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T06:35:43.828785+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T06:36:31.233650+00:00"
+    }
+  ],
+  "light.tor_ai_amd_wraith_prism": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:52:36.103071+00:00",
+      "last_updated": "2026-11-07T07:52:36.103071+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T06:35:43.829088+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T06:36:31.234577+00:00"
+    }
+  ],
+  "select.tor_ai_tor_profil": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:52:36.103071+00:00",
+      "last_updated": "2026-11-07T07:52:36.103071+00:00"
+    }
+  ]
+}

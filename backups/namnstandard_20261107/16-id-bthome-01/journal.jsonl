@@ -1,0 +1,10 @@
+{"status": "rename_intent", "old": "sensor.shelly_blu_door_window_2a6d_packet_id", "new": "sensor.verandan_balkongdorr_paket_id"}
+{"status": "renamed", "old": "sensor.shelly_blu_door_window_2a6d_packet_id", "new": "sensor.verandan_balkongdorr_paket_id"}
+{"status": "rename_intent", "old": "sensor.shelly_blu_door_window_2a6d_battery", "new": "sensor.verandan_balkongdorr_batteriniva"}
+{"status": "renamed", "old": "sensor.shelly_blu_door_window_2a6d_battery", "new": "sensor.verandan_balkongdorr_batteriniva"}
+{"status": "rename_intent", "old": "sensor.shelly_blu_door_window_2a6d_illuminance", "new": "sensor.verandan_balkongdorr_belysningsstyrka"}
+{"status": "renamed", "old": "sensor.shelly_blu_door_window_2a6d_illuminance", "new": "sensor.verandan_balkongdorr_belysningsstyrka"}
+{"status": "rename_intent", "old": "sensor.shelly_blu_door_window_2a6d_rotation", "new": "sensor.verandan_balkongdorr_vinkel"}
+{"status": "renamed", "old": "sensor.shelly_blu_door_window_2a6d_rotation", "new": "sensor.verandan_balkongdorr_vinkel"}
+{"status": "rename_intent", "old": "sensor.shelly_blu_door_window_2a6d_signal_strength", "new": "sensor.verandan_balkongdorr_signalstyrka"}
+{"status": "renamed", "old": "sensor.shelly_blu_door_window_2a6d_signal_strength", "new": "sensor.verandan_balkongdorr_signalstyrka"}

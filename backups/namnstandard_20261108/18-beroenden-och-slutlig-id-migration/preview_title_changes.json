@@ -1,0 +1,832 @@
+[
+  {
+    "domain": "group",
+    "before": "Fönsterlampor (Sovrum)",
+    "after": "Sovrummet LED-lister"
+  },
+  {
+    "domain": "xiaomi_ble",
+    "before": "Temperature/Humidity Sensor E81B (veranda)",
+    "after": "Verandan Klimatsensor"
+  },
+  {
+    "domain": "xiaomi_ble",
+    "before": "Temperature/Humidity Sensor BBBB (sovrum)",
+    "after": "Sovrummet Klimatsensor"
+  },
+  {
+    "domain": "xiaomi_ble",
+    "before": "Temperature/Humidity Sensor 2654 (hemmabion)",
+    "after": "Bion Klimatsensor"
+  },
+  {
+    "domain": "xiaomi_ble",
+    "before": "Temperature/Humidity Sensor 28DD (verkstaden)",
+    "after": "Verkstaden Klimatsensor"
+  },
+  {
+    "domain": "xiaomi_ble",
+    "before": "Temperature/Humidity Sensor 99BA (ateljén)",
+    "after": "Ateljén Klimatsensor"
+  },
+  {
+    "domain": "xiaomi_ble",
+    "before": "Temperature/Humidity Sensor F254 (utomhus)",
+    "after": "Utomhus Klimatsensor"
+  },
+  {
+    "domain": "moon",
+    "before": "Moon",
+    "after": "Heimdal (HA) Månen Fas"
+  },
+  {
+    "domain": "xiaomi_ble",
+    "before": "Temperature/Humidity Sensor C969 (hönshus)",
+    "after": "Hönshuset Klimatsensor"
+  },
+  {
+    "domain": "sun",
+    "before": "Sun",
+    "after": "Heimdal (HA) Solen Stiger"
+  },
+  {
+    "domain": "mobile_app",
+    "before": "Surfplatta (köket)",
+    "after": "Heimdal (HA) SM-G930F"
+  },
+  {
+    "domain": "esphome",
+    "before": "Utomhusbelysning (friggan)",
+    "after": "Friggan Utomhuslampa"
+  },
+  {
+    "domain": "esphome",
+    "before": "Termostat (friggan)",
+    "after": "Friggan Termostat"
+  },
+  {
+    "domain": "esphome",
+    "before": "Vattenvärmare (hönshuset)",
+    "after": "Hönshuset Vattenvärmare"
+  },
+  {
+    "domain": "esphome",
+    "before": "Ledstrip (sovrum östra)",
+    "after": "Sovrummet LED-list östra"
+  },
+  {
+    "domain": "esphome",
+    "before": "Blomlampa 2 (verandan)",
+    "after": "Köket Blomlampa 2"
+  },
+  {
+    "domain": "esphome",
+    "before": "Ledstrip (ateljé norra)",
+    "after": "Ateljén LED-list norra"
+  },
+  {
+    "domain": "esphome",
+    "before": "Ledstrip (sovrum norra)",
+    "after": "Sovrummet LED-list norra"
+  },
+  {
+    "domain": "esphome",
+    "before": "Ledstrip (ateljé södra)",
+    "after": "Ateljén LED-list södra"
+  },
+  {
+    "domain": "esphome",
+    "before": "Ledstrip (kök södra)",
+    "after": "Köket LED-list södra"
+  },
+  {
+    "domain": "esphome",
+    "before": "Gasol (utomhus)",
+    "after": "Utomhus Gasol"
+  },
+  {
+    "domain": "esphome",
+    "before": "Termostat (toaletten)",
+    "after": "Toaletten Termostat"
+  },
+  {
+    "domain": "esphome",
+    "before": "Golvvärme (sovrum/kontor)",
+    "after": "Sovrummet Golvvärme (sovrum och kontor)"
+  },
+  {
+    "domain": "esphome",
+    "before": "Golvvärme (friggan)",
+    "after": "Friggan Golvvärme"
+  },
+  {
+    "domain": "esphome",
+    "before": "Julbelysning (utomhus)",
+    "after": "Utomhus Julbelysning"
+  },
+  {
+    "domain": "esphome",
+    "before": "Termostat (kontoret)",
+    "after": "Kontoret Termostat"
+  },
+  {
+    "domain": "esphome",
+    "before": "Taklampor (sovrum)",
+    "after": "Sovrummet Taklampor"
+  },
+  {
+    "domain": "esphome",
+    "before": "Poolpump (utomhus)",
+    "after": "Poolen Poolpump (utomhus)"
+  },
+  {
+    "domain": "esphome",
+    "before": "Ledstrip (kök sydöstra)",
+    "after": "Köket LED-list sydöstra"
+  },
+  {
+    "domain": "esphome",
+    "before": "Ledstrip (verandan)",
+    "after": "Verandan LED-list"
+  },
+  {
+    "domain": "esphome",
+    "before": "Ledstrip (kök småfönster)",
+    "after": "Köket LED-list småfönster"
+  },
+  {
+    "domain": "esphome",
+    "before": "Ledstrip (kök östra)",
+    "after": "Köket LED-list östra"
+  },
+  {
+    "domain": "esphome",
+    "before": "Ledstrip (entrén)",
+    "after": "Entrén LED-list"
+  },
+  {
+    "domain": "esphome",
+    "before": "Poolbelysning & temp",
+    "after": "Poolen Poolbelysning och temperatur"
+  },
+  {
+    "domain": "group",
+    "before": "GRUPP - Taklampor kök",
+    "after": "Köket Taklampor"
+  },
+  {
+    "domain": "group",
+    "before": "GRUPP - Lampor som släcks med godnatt",
+    "after": "Sovrummet Belysning för godnatt"
+  },
+  {
+    "domain": "mobile_app",
+    "before": "Galaxy Tab 2 hallen",
+    "after": "Entrén Galaxy Tab 2 hallen"
+  },
+  {
+    "domain": "esphome",
+    "before": "Temp/Hyg (gamla verkstan)",
+    "after": "Gamla verkstaden Klimatsensor"
+  },
+  {
+    "domain": "group",
+    "before": "GRUPP - Lampor vid TVn",
+    "after": "Verandan TV-belysning"
+  },
+  {
+    "domain": "esphome",
+    "before": "RF bridge (kontoret)",
+    "after": "Kontoret RF-brygga"
+  },
+  {
+    "domain": "esphome",
+    "before": "Lampa (redet)",
+    "after": "Hönshuset Lampa i redet"
+  },
+  {
+    "domain": "esphome",
+    "before": "Vattennivå (hönshuset)",
+    "after": "Hönshuset Vattennivå"
+  },
+  {
+    "domain": "bthome",
+    "before": "Shelly BLU Door/Window 2A6D",
+    "after": "Verandan Balkongdörr"
+  },
+  {
+    "domain": "template",
+    "before": "TEMPLATE - Postudelning",
+    "after": "Postutdelning"
+  },
+  {
+    "domain": "shelly",
+    "before": "Vattensensor (torkskåp) [SHFL]",
+    "after": "Ateljén Vattensensor torkskåp"
+  },
+  {
+    "domain": "esphome",
+    "before": "Julgranen (verandan)",
+    "after": "Verandan Julgranen"
+  },
+  {
+    "domain": "esphome",
+    "before": "IR gateway",
+    "after": "Bion IR-gateway"
+  },
+  {
+    "domain": "esphome",
+    "before": "Hemmabio El #1",
+    "after": "Bion Elstyrning 1"
+  },
+  {
+    "domain": "esphome",
+    "before": "Hemmabio El #2",
+    "after": "Bion Elstyrning 2"
+  },
+  {
+    "domain": "group",
+    "before": "GRUPP - Hemmabio",
+    "after": "Bion Bioutrustning"
+  },
+  {
+    "domain": "esphome",
+    "before": "Esp32 kamera",
+    "after": "Utomhus ESP32-kamera"
+  },
+  {
+    "domain": "mobile_app",
+    "before": "SM-T835",
+    "after": "Heimdal (HA) SM-T835 – app d2e6f5"
+  },
+  {
+    "domain": "powercalc",
+    "before": "Blomlampa (växtskåpet)",
+    "after": "Köket Blomlampa 2 – Beräknad förbrukning belysning"
+  },
+  {
+    "domain": "powercalc",
+    "before": "Blomlampa (trappan)",
+    "after": "Bion Blomlampor – Beräknad förbrukning belysning"
+  },
+  {
+    "domain": "powercalc",
+    "before": "Diegos väckarklocka",
+    "after": "Sovrummet Diegos väckarklocka – Beräknad förbrukning"
+  },
+  {
+    "domain": "mobile_app",
+    "before": "nspanelpro",
+    "after": "Heimdal (HA) nspanelpro"
+  },
+  {
+    "domain": "shelly",
+    "before": "Sänglampor Diego [SHPLS]",
+    "after": "Sovrummet Sänglampor Diego"
+  },
+  {
+    "domain": "switch_as_x",
+    "before": "Sänglampor Diego",
+    "after": "Sovrummet Sänglampor Diego"
+  },
+  {
+    "domain": "group",
+    "before": "GRUPP - Sänglampor",
+    "after": "Sovrummet Sänglampor"
+  },
+  {
+    "domain": "group",
+    "before": "GRUPP - Lampor som tänds vid skymning",
+    "after": "Skymningsbelysning"
+  },
+  {
+    "domain": "shelly",
+    "before": "Sänglampor Manni [SHPLS]",
+    "after": "Sovrummet Sänglampor Manni"
+  },
+  {
+    "domain": "switch_as_x",
+    "before": "Sänglampor Manni",
+    "after": "Sovrummet Sänglampor Manni"
+  },
+  {
+    "domain": "powercalc",
+    "before": "Sänglampor Manni",
+    "after": "Sovrummet Sänglampor Manni – Beräknad förbrukning brytare"
+  },
+  {
+    "domain": "powercalc",
+    "before": "Sänglampor Diego",
+    "after": "Sovrummet Sänglampor Diego – Beräknad förbrukning brytare"
+  },
+  {
+    "domain": "powercalc",
+    "before": "Bordslampa (källaren)",
+    "after": "Bordslampa (källaren) – Beräknad förbrukning brytare"
+  },
+  {
+    "domain": "smhi",
+    "before": "Home",
+    "after": "Heimdal (HA) Väderprognos SMHI"
+  },
+  {
+    "domain": "xiaomi_ble",
+    "before": "Temperature/Humidity Sensor 7E12 (köket)",
+    "after": "Köket Klimatsensor"
+  },
+  {
+    "domain": "esphome",
+    "before": "Blomlampa 1 (verandan)",
+    "after": "Verandan Blomlampa 1"
+  },
+  {
+    "domain": "shelly",
+    "before": "LED-plafonder (verkstaden) [SHPLS]",
+    "after": "Verkstaden LED-plafonder"
+  },
+  {
+    "domain": "switch_as_x",
+    "before": "LED-plafonder",
+    "after": "Verkstaden LED-plafonder"
+  },
+  {
+    "domain": "powercalc",
+    "before": "LED-plafonder",
+    "after": "Verkstaden LED-plafonder – Beräknad förbrukning brytare"
+  },
+  {
+    "domain": "esphome",
+    "before": "Billaddare",
+    "after": "Utomhus Billaddare"
+  },
+  {
+    "domain": "powercalc",
+    "before": "Poolpump",
+    "after": "Poolen Poolpump (utomhus) – Beräknad förbrukning brytare"
+  },
+  {
+    "domain": "esphome",
+    "before": "Markis (utomhus)",
+    "after": "Utomhus Markis"
+  },
+  {
+    "domain": "mobile_app",
+    "before": "SM-G965F",
+    "after": "Heimdal (HA) SM-G965F"
+  },
+  {
+    "domain": "template",
+    "before": "template.nordpool_additional_cost_current_hour_2",
+    "after": "Heimdal (HA) nordpool_kwh_se3_sek_3_10_025 Påslag"
+  },
+  {
+    "domain": "template",
+    "before": "sensor.template_nordpool_base_cost_current_hour_2",
+    "after": "Heimdal (HA) nordpool_kwh_se3_sek_3_10_025 Inköpspris"
+  },
+  {
+    "domain": "esphome",
+    "before": "Elmätare (elstolpen)",
+    "after": "Utomhus Elmätare (elstolpen)"
+  },
+  {
+    "domain": "shelly",
+    "before": "Golvvärme (källaren) [SHP1PM]",
+    "after": "Bion Golvvärme"
+  },
+  {
+    "domain": "generic_thermostat",
+    "before": "Golvvärme Termostat (bion)",
+    "after": "Bion Golvvärme"
+  },
+  {
+    "domain": "powercalc",
+    "before": "Max",
+    "after": "Köket Max S6 MaxV – Beräknad förbrukning"
+  },
+  {
+    "domain": "esphome",
+    "before": "Ledstrip (toalett)",
+    "after": "Toaletten LED-list"
+  },
+  {
+    "domain": "esphome",
+    "before": "Ventilfläkt (källaren)",
+    "after": "Bion Ventilfläkt"
+  },
+  {
+    "domain": "esphome",
+    "before": "Taklampor (källaren)",
+    "after": "Bion Taklampor"
+  },
+  {
+    "domain": "shelly",
+    "before": "Golvvärme (verandan) [SHP1PM]",
+    "after": "Verandan Golvvärme"
+  },
+  {
+    "domain": "shelly",
+    "before": "Golvvärme (entrén) [SHP1PM]",
+    "after": "Entrén Golvvärme"
+  },
+  {
+    "domain": "generic_thermostat",
+    "before": "Golvvärme Termostat (entrén)",
+    "after": "Entrén Golvvärme"
+  },
+  {
+    "domain": "powercalc",
+    "before": "LED-plafonder",
+    "after": "Verkstaden LED-plafonder – Beräknad förbrukning belysning"
+  },
+  {
+    "domain": "powercalc",
+    "before": "Sänglampor Diego",
+    "after": "Sovrummet Sänglampor Diego – Beräknad förbrukning belysning"
+  },
+  {
+    "domain": "powercalc",
+    "before": "Sänglampor Manni",
+    "after": "Sovrummet Sänglampor Manni – Beräknad förbrukning belysning"
+  },
+  {
+    "domain": "xiaomi_ble",
+    "before": "Temperature/Humidity Sensor C2BC (entrén)",
+    "after": "Entrén Klimatsensor"
+  },
+  {
+    "domain": "shelly",
+    "before": "Golvvärme (ateljén) [SHP1PM]",
+    "after": "Ateljén Golvvärme"
+  },
+  {
+    "domain": "generic_thermostat",
+    "before": "Golvvärme Termostat (verandan)",
+    "after": "Verandan Golvvärme"
+  },
+  {
+    "domain": "generic_thermostat",
+    "before": "Golvvärme Termostat (ateljén)",
+    "after": "Ateljén Golvvärme"
+  },
+  {
+    "domain": "esphome",
+    "before": "Taklampor (ateljén)",
+    "after": "Ateljén Taklampor"
+  },
+  {
+    "domain": "esphome",
+    "before": "Taklampor (entrén)",
+    "after": "Köket Taklampor ESPHome"
+  },
+  {
+    "domain": "mobile_app",
+    "before": "MT-1011QR",
+    "after": "Heimdal (HA) MT-1011QR"
+  },
+  {
+    "domain": "esphome",
+    "before": "Taklampor (kontoret)",
+    "after": "Kontoret Taklampor"
+  },
+  {
+    "domain": "generic_thermostat",
+    "before": "Golvvärme Termostat (köket)",
+    "after": "Köket Golvvärme"
+  },
+  {
+    "domain": "xiaomi_ble",
+    "before": "Temperature/Humidity Sensor 1F35 (duschen)",
+    "after": "Duschen Klimatsensor"
+  },
+  {
+    "domain": "shelly",
+    "before": "Golvvärme (köket) [SHP1PM]",
+    "after": "Köket Golvvärme"
+  },
+  {
+    "domain": "powercalc",
+    "before": "Bordslampa (köket)",
+    "after": "Bordslampa (köket) – Beräknad förbrukning brytare"
+  },
+  {
+    "domain": "xiaomi_ble",
+    "before": "Plant Sensor 3 Meyer Citron",
+    "after": "Verandan Plantsensor 3"
+  },
+  {
+    "domain": "xiaomi_ble",
+    "before": "Plant Sensor 4 Fredskalla",
+    "after": "Verandan Plantsensor 4"
+  },
+  {
+    "domain": "plant",
+    "before": "Meyer Citron",
+    "after": "Verandan Meyer Citron"
+  },
+  {
+    "domain": "xiaomi_ble",
+    "before": "Plant Sensor 1 Paraplyaralia",
+    "after": "Köket Plantsensor 1"
+  },
+  {
+    "domain": "xiaomi_ble",
+    "before": "Plant Sensor 2 Doftpelargon",
+    "after": "Verandan Plantsensor 2"
+  },
+  {
+    "domain": "plant",
+    "before": "Paraplyaralia",
+    "after": "Köket Paraplyaralia"
+  },
+  {
+    "domain": "mobile_app",
+    "before": "SM-T835",
+    "after": "Heimdal (HA) SM-T835 – app 6s0bm6"
+  },
+  {
+    "domain": "plant",
+    "before": "Fredskalla",
+    "after": "Verandan Fredskalla"
+  },
+  {
+    "domain": "esphome",
+    "before": "Ledstrip (balkongdörrar)",
+    "after": "Verandan LED-list (balkongdörrar)"
+  },
+  {
+    "domain": "esphome",
+    "before": "Lucka (Hönshuset)",
+    "after": "Hönshuset Lucka"
+  },
+  {
+    "domain": "esphome",
+    "before": "Home Assistant Voice 096460",
+    "after": "Kontoret HA Voice PE 096460"
+  },
+  {
+    "domain": "powercalc",
+    "before": "shellyplug-s-D81AB8",
+    "after": "shellyplug-s-D81AB8 – Beräknad förbrukning brytare"
+  },
+  {
+    "domain": "generic_hygrostat",
+    "before": "Bions hygrostat",
+    "after": "Bion Ventilfläkt Fuktreglering"
+  },
+  {
+    "domain": "xiaomi_ble",
+    "before": "Plant Sensor 5 Fredskallor (Trappan)",
+    "after": "Köket Plantsensor 5"
+  },
+  {
+    "domain": "plant",
+    "before": "Fredskallor (Trappan)",
+    "after": "Köket Fredskallor (Trappan)"
+  },
+  {
+    "domain": "mobile_app",
+    "before": "SM-G986B",
+    "after": "Heimdal (HA) SM-G986B"
+  },
+  {
+    "domain": "shelly",
+    "before": "Ledstjärnor (utomhus) [SHPLS]",
+    "after": "Utomhus LED-stjärnor"
+  },
+  {
+    "domain": "powercalc",
+    "before": "shellyplusplugs-08f9e0fd4304 Switch 0",
+    "after": "Utomhus LED-stjärnor – Beräknad förbrukning brytare"
+  },
+  {
+    "domain": "mobile_app",
+    "before": "Garmin Device",
+    "after": "Heimdal (HA) Garmin Device"
+  },
+  {
+    "domain": "xiaomi_ble",
+    "before": "Temperature/Humidity Sensor 1121 (toaletten)",
+    "after": "Toaletten Klimatsensor"
+  },
+  {
+    "domain": "powercalc",
+    "before": "Golvvärme (ateljén) Relä",
+    "after": "Ateljén Golvvärme – Beräknad förbrukning brytare"
+  },
+  {
+    "domain": "powercalc",
+    "before": "Golvvärme (bion) Relä",
+    "after": "Bion Golvvärme – Beräknad förbrukning brytare"
+  },
+  {
+    "domain": "powercalc",
+    "before": "Golvvärme (verandan ) Relä",
+    "after": "Verandan Golvvärme – Beräknad förbrukning brytare"
+  },
+  {
+    "domain": "powercalc",
+    "before": "Golvvärme (entrén) Relä",
+    "after": "Entrén Golvvärme – Beräknad förbrukning brytare"
+  },
+  {
+    "domain": "powercalc",
+    "before": "Golvvärme (köket) Relä",
+    "after": "Köket Golvvärme – Beräknad förbrukning brytare"
+  },
+  {
+    "domain": "shelly",
+    "before": "Shelly Pro 3 - Verkstaden",
+    "after": "Verkstaden Shelly Pro 3"
+  },
+  {
+    "domain": "switch_as_x",
+    "before": "shellypro3-ec626089edbc Switch 0",
+    "after": "Verkstaden Taklampor"
+  },
+  {
+    "domain": "file",
+    "before": "Notify [/config/file_notifications/scripts.log]",
+    "after": "Skriptlogg – skriv meddelande"
+  },
+  {
+    "domain": "file",
+    "before": "Sensor [/config/file_notifications/scripts.log]",
+    "after": "Skriptlogg – senaste meddelande"
+  },
+  {
+    "domain": "esphome",
+    "before": "Poolvärmepump (poolen)",
+    "after": "Poolen Poolvärmepump"
+  },
+  {
+    "domain": "powercalc",
+    "before": "Bordslampa (hemmabion)",
+    "after": "Bordslampa (hemmabion) – Beräknad förbrukning belysning"
+  },
+  {
+    "domain": "group",
+    "before": "Kritiska entiteter (styrning & larm)",
+    "after": "Kritiska entiteter för styrning och larm"
+  },
+  {
+    "domain": "template",
+    "before": "HA - Antal otillgängliga kritiska enheter",
+    "after": "HA – Antal otillgängliga kritiska enheter"
+  },
+  {
+    "domain": "template",
+    "before": "HA - Antal enheter",
+    "after": "HA – Antal enheter"
+  },
+  {
+    "domain": "plant",
+    "before": "Doftpelargon",
+    "after": "Verandan Doftpelargon"
+  },
+  {
+    "domain": "group",
+    "before": "GRUPP - Grannys högtalare",
+    "after": "Grannys högtalare – HA-grupp"
+  },
+  {
+    "domain": "esphome",
+    "before": "Blomlampor (bion)",
+    "after": "Bion Blomlampor"
+  },
+  {
+    "domain": "esphome",
+    "before": "Ljussensor",
+    "after": "Utomhus Ljussensor"
+  },
+  {
+    "domain": "esphome",
+    "before": "Taklampor (duschen)",
+    "after": "Duschen Taklampor"
+  },
+  {
+    "domain": "shelly",
+    "before": "Golvvärme (duschen) [SHP1PM]",
+    "after": "Duschen Golvvärme"
+  },
+  {
+    "domain": "generic_thermostat",
+    "before": "Golvvärme termostat (duschen)",
+    "after": "Duschen Golvvärme"
+  },
+  {
+    "domain": "powercalc",
+    "before": "Golvvärme (duschen)",
+    "after": "Duschen Golvvärme – Beräknad förbrukning brytare"
+  },
+  {
+    "domain": "shelly",
+    "before": "Väggkontakt x2 (verandan)",
+    "after": "Verandan Taklampor"
+  },
+  {
+    "domain": "switch_as_x",
+    "before": "taklampor_verandan",
+    "after": "Verandan Taklampor"
+  },
+  {
+    "domain": "switch_as_x",
+    "before": "julstjarnor_verandan",
+    "after": "Verandan Julstjärnor"
+  },
+  {
+    "domain": "esphome",
+    "before": "Blomlampa (kontoret)",
+    "after": "Kontoret Blomlampa"
+  },
+  {
+    "domain": "powercalc",
+    "before": "IKEA of Sweden TRADFRI bulb E14 CWS globe 806lm",
+    "after": "Bion Bordslampa höger – Beräknad förbrukning belysning"
+  },
+  {
+    "domain": "powercalc",
+    "before": "Plus2PM-porch Switch 0",
+    "after": "Plus2PM-porch Switch 0 – Beräknad förbrukning"
+  },
+  {
+    "domain": "powercalc",
+    "before": "Plus2PM-porch Switch 1",
+    "after": "Plus2PM-porch Switch 1 – Beräknad förbrukning"
+  },
+  {
+    "domain": "xiaomi_ble",
+    "before": "Plant Sensor 6 Monstera",
+    "after": "Kontoret Plantsensor 6"
+  },
+  {
+    "domain": "plant",
+    "before": "Monstera",
+    "after": "Kontoret Monstera"
+  },
+  {
+    "domain": "esphome",
+    "before": "Blomlampa (trappan - Shelly Plus RGBW PM)",
+    "after": "Köket Blomlampa (Shelly Plus RGBW PM)"
+  },
+  {
+    "domain": "esphome",
+    "before": "Huvudströmbrytaren Prusa XL",
+    "after": "Kontoret Huvudströmbrytaren Prusa XL"
+  },
+  {
+    "domain": "group",
+    "before": "Bordslampor Bion",
+    "after": "Bion Bordslampor"
+  },
+  {
+    "domain": "powercalc",
+    "before": "Bordslampa",
+    "after": "Ateljén Bordslampa ateljen – Beräknad förbrukning belysning"
+  },
+  {
+    "domain": "mobile_app",
+    "before": "Pixel 9 Pro XL",
+    "after": "Heimdal (HA) Pixel 9 Pro XL"
+  },
+  {
+    "domain": "haghs",
+    "before": "Global Health Score",
+    "after": "Heimdal (HA) HA – samlad hälsa"
+  },
+  {
+    "domain": "esphome",
+    "before": "Ledstrip (vitrinskåp)",
+    "after": "Köket LED-list (vitrinskåp)"
+  },
+  {
+    "domain": "esphome",
+    "before": "Salt (verkstan)",
+    "after": "Verkstaden Salt"
+  },
+  {
+    "domain": "esphome",
+    "before": "Ledstrip (korridoren)",
+    "after": "Kontoret LED-list (korridoren)"
+  },
+  {
+    "domain": "powercalc",
+    "before": "Plus2PM-porch",
+    "after": "Plus2PM-porch – Beräknad förbrukning"
+  },
+  {
+    "domain": "powercalc",
+    "before": "Bordslampa vänster",
+    "after": "Bion Bordslampa vänster – Beräknad förbrukning belysning"
+  },
+  {
+    "domain": "esphome",
+    "before": "Hönsbelysning",
+    "after": "Hönshuset Hönsbelysning"
+  },
+  {
+    "domain": "switch_as_x",
+    "before": "utomhus_led_stjarnor_utomhus_shpls",
+    "after": "Utomhus LED-stjärnor"
+  }
+]

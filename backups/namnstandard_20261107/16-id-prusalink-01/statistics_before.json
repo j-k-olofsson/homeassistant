@@ -1,0 +1,18 @@
+{
+  "metadata": [
+    {
+      "statistic_id": "sensor.prusaxl_munstycke_maltemperatur",
+      "display_unit_of_measurement": "°C",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "°C",
+      "unit_class": "temperature"
+    }
+  ],
+  "series": {},
+  "start": "2026-11-07T07:00:00+00:00",
+  "end": "2026-11-08T06:00:00+00:00"
+}

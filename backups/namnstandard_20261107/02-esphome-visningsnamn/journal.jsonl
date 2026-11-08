@@ -1,0 +1,692 @@
+{"status": "intent", "operation": {"kind": "entity", "id": "update.termostat_friggan_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Termostat (friggan) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.termostat_friggan_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.termostat_friggan_esphome21_relay_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "", "aliases": [null, "Termostat (friggan) esphome21 Relay State"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.termostat_friggan_esphome21_relay_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.termostat_friggan_esphome21_temperature", "before": {"name": "Friggan Temp"}, "after": {"name": "Temperatur"}}}
+{"status": "applied", "kind": "entity", "id": "sensor.termostat_friggan_esphome21_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.termostat_friggan_esphome21_humidity", "before": {"name": "Friggan Fukt"}, "after": {"name": "Luftfuktighet"}}}
+{"status": "applied", "kind": "entity", "id": "sensor.termostat_friggan_esphome21_humidity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "climate.termostat_friggan_esphome21_thermostat", "before": {"name": "Element Termostat (friggan)"}, "after": {"name": ""}}}
+{"status": "applied", "kind": "entity", "id": "climate.termostat_friggan_esphome21_thermostat"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.vattenvarmare_honshuset_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Vattenvärmare (hönshuset) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.vattenvarmare_honshuset_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.vattenvarmare_honshuset_esphome25_relay_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "", "aliases": [null, "Vattenvärmare (hönshuset) esphome25 Relay State"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.vattenvarmare_honshuset_esphome25_relay_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.ledstrip_sovrum_ostra_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Ledstrip (sovrum östra) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.ledstrip_sovrum_ostra_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.ledstrip_sovrum_ostra_esphome40_light", "before": {"name": null, "aliases": [null]}, "after": {"name": "", "aliases": [null, "Ledstrip (sovrum östra) esphome40 Light"]}}}
+{"status": "applied", "kind": "entity", "id": "light.ledstrip_sovrum_ostra_esphome40_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.ledstrip_atelje_norra_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Ledstrip (ateljé norra) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.ledstrip_atelje_norra_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.ledstrip_atelje_norra_esphome46_light", "before": {"name": null, "aliases": [null]}, "after": {"name": "", "aliases": [null, "Ledstrip (ateljé norra) esphome46 Light"]}}}
+{"status": "applied", "kind": "entity", "id": "light.ledstrip_atelje_norra_esphome46_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.ledstrip_sovrum_norra_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Ledstrip (sovrum norra) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.ledstrip_sovrum_norra_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.ledstrip_sovrum_norra_esphome44_light", "before": {"name": null, "aliases": [null]}, "after": {"name": "", "aliases": [null, "Ledstrip (sovrum norra) esphome44 Light"]}}}
+{"status": "applied", "kind": "entity", "id": "light.ledstrip_sovrum_norra_esphome44_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.ledstrip_atelje_sodra_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Ledstrip (ateljé södra) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.ledstrip_atelje_sodra_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.ledstrip_atelje_sodra_esphome47_light", "before": {"name": null, "aliases": [null]}, "after": {"name": "", "aliases": [null, "Ledstrip (ateljé södra) esphome47 Light"]}}}
+{"status": "applied", "kind": "entity", "id": "light.ledstrip_atelje_sodra_esphome47_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.ledstrip_kok_sodra_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Ledstrip (kök södra) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.ledstrip_kok_sodra_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.ledstrip_kok_sodra_esphome50_light", "before": {"name": "FönsterLED (Södra)"}, "after": {"name": ""}}}
+{"status": "applied", "kind": "entity", "id": "light.ledstrip_kok_sodra_esphome50_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.gasol_utomhus_esphome73_lpg_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Gasolnivå", "aliases": [null, "Gasol (utomhus) esphome73 LPG level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.gasol_utomhus_esphome73_lpg_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.termostat_toaletten_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Termostat (toaletten) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.termostat_toaletten_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.termostat_toaletten_esphome83_temperature", "before": {"name": "Toaletten Temp"}, "after": {"name": "Temperatur"}}}
+{"status": "applied", "kind": "entity", "id": "sensor.termostat_toaletten_esphome83_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "climate.termostat_toaletten_esphome83_thermostat", "before": {"name": "Golvvärme Termostat (toaletten)"}, "after": {"name": ""}}}
+{"status": "applied", "kind": "entity", "id": "climate.termostat_toaletten_esphome83_thermostat"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.golvvarme_sovrum_kontor_esphome81_relay_state", "before": {"name": "Golvvärme (sovrum/kontor)"}, "after": {"name": ""}}}
+{"status": "applied", "kind": "entity", "id": "switch.golvvarme_sovrum_kontor_esphome81_relay_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.golvvarme_sovrum_kontor_esphome81_voltage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Spänning", "aliases": [null, "Golvvärme (sovrum och kontor) esphome81 Voltage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.golvvarme_sovrum_kontor_esphome81_voltage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.golvvarme_sovrum_kontor_esphome81_current", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ström", "aliases": [null, "Golvvärme (sovrum och kontor) esphome81 Current"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.golvvarme_sovrum_kontor_esphome81_current"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.golvvarme_sovrum_kontor_esphome81_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effekt", "aliases": [null, "Golvvärme (sovrum och kontor) esphome81 Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.golvvarme_sovrum_kontor_esphome81_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.golvvarme_sovrum_kontor_esphome81_energy", "before": {"name": "Golvvärme Sovrum energy", "aliases": [null]}, "after": {"name": "Energi", "aliases": [null, "Golvvärme Sovrum energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.golvvarme_sovrum_kontor_esphome81_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.golvvarme_friggan_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Golvvärme (friggan) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.golvvarme_friggan_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.golvvarme_friggan_esphome80_relay_state", "before": {"aliases": [null]}, "after": {"aliases": [null, "Golvvärme (friggan)"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.golvvarme_friggan_esphome80_relay_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.golvvarme_friggan_esphome80_voltage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Spänning", "aliases": [null, "Golvvärme (friggan) esphome80 Voltage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.golvvarme_friggan_esphome80_voltage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.golvvarme_friggan_esphome80_current", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ström", "aliases": [null, "Golvvärme (friggan) esphome80 Current"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.golvvarme_friggan_esphome80_current"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.golvvarme_friggan_esphome80_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effekt", "aliases": [null, "Golvvärme (friggan) esphome80 Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.golvvarme_friggan_esphome80_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.golvvarme_friggan_esphome80_energy", "before": {"name": "Golvvärmer Friggan energy", "aliases": [null]}, "after": {"name": "Energi", "aliases": [null, "Golvvärmer Friggan energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.golvvarme_friggan_esphome80_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.julbelysning_utomhus_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Julbelysning (utomhus) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.julbelysning_utomhus_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.julbelysning_utomhus_esphome23_light", "before": {"aliases": [null]}, "after": {"aliases": [null, "Julbelysning (utomhus)"]}}}
+{"status": "applied", "kind": "entity", "id": "light.julbelysning_utomhus_esphome23_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.termostat_kontoret_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Termostat (kontoret) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.termostat_kontoret_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.termostat_kontoret_esphome20_relay_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "", "aliases": [null, "Termostat (kontoret) esphome20 Relay State"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.termostat_kontoret_esphome20_relay_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.termostat_kontoret_esphome20_temperature", "before": {"name": "Kontoret Temp"}, "after": {"name": "Temperatur"}}}
+{"status": "applied", "kind": "entity", "id": "sensor.termostat_kontoret_esphome20_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.termostat_kontoret_esphome20_humidity", "before": {"name": "Kontoret Fukt"}, "after": {"name": "Luftfuktighet"}}}
+{"status": "applied", "kind": "entity", "id": "sensor.termostat_kontoret_esphome20_humidity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "climate.termostat_kontoret_esphome20_thermostat", "before": {"name": null, "aliases": [null]}, "after": {"name": "", "aliases": [null, "Termostat (kontoret) esphome20 Thermostat"]}}}
+{"status": "applied", "kind": "entity", "id": "climate.termostat_kontoret_esphome20_thermostat"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.taklampor_sovrum_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Taklampor (sovrum) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.taklampor_sovrum_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.taklampor_sovrum_esphome54_light", "before": {"name": "Taklampor"}, "after": {"name": ""}}}
+{"status": "applied", "kind": "entity", "id": "light.taklampor_sovrum_esphome54_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.taklampor_sovrum_esphome54_light_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effekt belysning", "aliases": [null, "Taklampor (sovrum) esphome54 Light Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.taklampor_sovrum_esphome54_light_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.taklampor_sovrum_esphome54_light_voltage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Spänning belysning", "aliases": [null, "Taklampor (sovrum) esphome54 Light Voltage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.taklampor_sovrum_esphome54_light_voltage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.taklampor_sovrum_esphome54_light_current", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ström belysning", "aliases": [null, "Taklampor (sovrum) esphome54 Light Current"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.taklampor_sovrum_esphome54_light_current"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.ledstrip_kok_sydostra_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Ledstrip (kök sydöstra) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.ledstrip_kok_sydostra_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.ledstrip_kok_sydostra_esphome51_light", "before": {"name": "FönsterLED (Sydöstra)"}, "after": {"name": ""}}}
+{"status": "applied", "kind": "entity", "id": "light.ledstrip_kok_sydostra_esphome51_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.ledstrip_verandan_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Ledstrip (verandan) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.ledstrip_verandan_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.ledstrip_verandan_esphome48_light", "before": {"name": null, "aliases": [null]}, "after": {"name": "", "aliases": [null, "Ledstrip (verandan) esphome48 Light"]}}}
+{"status": "applied", "kind": "entity", "id": "light.ledstrip_verandan_esphome48_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.ledstrip_kok_smafonster_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Ledstrip (kök småfönster) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.ledstrip_kok_smafonster_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.ledstrip_kok_smafonster_esphome49_light", "before": {"name": "FönsterLED (Småfönstren)"}, "after": {"name": ""}}}
+{"status": "applied", "kind": "entity", "id": "light.ledstrip_kok_smafonster_esphome49_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.ledstrip_kok_ostra_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Ledstrip (kök östra) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.ledstrip_kok_ostra_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.ledstrip_kok_ostra_esphome52_light", "before": {"name": "FönsterLED (Östra)"}, "after": {"name": ""}}}
+{"status": "applied", "kind": "entity", "id": "light.ledstrip_kok_ostra_esphome52_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.ledstrip_entren_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Ledstrip (entrén) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.ledstrip_entren_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.ledstrip_entren_esphome41_light", "before": {"name": null, "aliases": [null]}, "after": {"name": "", "aliases": [null, "Ledstrip (entrén) esphome41 Light"]}}}
+{"status": "applied", "kind": "entity", "id": "light.ledstrip_entren_esphome41_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.blomlampa_ateljen_esphome09_light", "before": {"name": null, "aliases": [null]}, "after": {"name": "", "aliases": [null, "Blomlampa (ateljén) esphome09 Light"]}}}
+{"status": "applied", "kind": "entity", "id": "light.blomlampa_ateljen_esphome09_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.poolbelysning_temp_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Poolbelysning & temp Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.poolbelysning_temp_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.poolbelysning_temp_esphome29_light", "before": {"name": null, "aliases": [null]}, "after": {"name": "", "aliases": [null, "Poolbelysning & temp esphome29 Light"]}}}
+{"status": "applied", "kind": "entity", "id": "light.poolbelysning_temp_esphome29_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolbelysning_temp_esphome29_temperature", "before": {"name": "Poolen"}, "after": {"name": "Temperatur"}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolbelysning_temp_esphome29_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.poolpump_utomhus_esphome27_relay_state", "before": {"name": "Poolpump"}, "after": {"name": ""}}}
+{"status": "applied", "kind": "entity", "id": "switch.poolpump_utomhus_esphome27_relay_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.temp_hyg_gamla_verkstan_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "TempHyg (gamla verkstan) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.temp_hyg_gamla_verkstan_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.temp_hyg_gamla_verkstan_esphome71_room_temperature", "before": {"name": "G:a verkstan Temp"}, "after": {"name": "Temperatur rum"}}}
+{"status": "applied", "kind": "entity", "id": "sensor.temp_hyg_gamla_verkstan_esphome71_room_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.temp_hyg_gamla_verkstan_esphome71_room_humidity", "before": {"name": "G:a verkstan Fukt"}, "after": {"name": "Luftfuktighet rum"}}}
+{"status": "applied", "kind": "entity", "id": "sensor.temp_hyg_gamla_verkstan_esphome71_room_humidity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature", "before": {"name": "Frysboxen Temp"}, "after": {"name": "Temperatur frysbox"}}}
+{"status": "applied", "kind": "entity", "id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_humidity", "before": {"name": "Frysboxen Fukt"}, "after": {"name": "Luftfuktighet frysbox"}}}
+{"status": "applied", "kind": "entity", "id": "sensor.temp_hyg_gamla_verkstan_esphome71_box_humidity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.rf_bridge_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "RF bridge Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.rf_bridge_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.rf_bridge_rfremoter1c1", "before": {"name": null, "aliases": [null]}, "after": {"name": "RF-fjärrkontroll rad 1 knapp 1", "aliases": [null, "RF bridge RfRemoteR1C1"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.rf_bridge_rfremoter1c1"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.rf_bridge_rfremoter1c2", "before": {"name": null, "aliases": [null]}, "after": {"name": "RF-fjärrkontroll rad 1 knapp 2", "aliases": [null, "RF bridge RfRemoteR1C2"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.rf_bridge_rfremoter1c2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.rf_bridge_rfremoter2c1", "before": {"name": null, "aliases": [null]}, "after": {"name": "RF-fjärrkontroll rad 2 knapp 1", "aliases": [null, "RF bridge RfRemoteR2C1"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.rf_bridge_rfremoter2c1"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.rf_bridge_rfremoter2c2", "before": {"name": null, "aliases": [null]}, "after": {"name": "RF-fjärrkontroll rad 2 knapp 2", "aliases": [null, "RF bridge RfRemoteR2C2"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.rf_bridge_rfremoter2c2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.rf_bridge_rfremoter3c1", "before": {"name": null, "aliases": [null]}, "after": {"name": "RF-fjärrkontroll rad 3 knapp 1", "aliases": [null, "RF bridge RfRemoteR3C1"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.rf_bridge_rfremoter3c1"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.rf_bridge_rfremoter3c2", "before": {"name": null, "aliases": [null]}, "after": {"name": "RF-fjärrkontroll rad 3 knapp 2", "aliases": [null, "RF bridge RfRemoteR3C2"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.rf_bridge_rfremoter3c2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.rf_bridge_rfremoter4c1", "before": {"name": null, "aliases": [null]}, "after": {"name": "RF-fjärrkontroll rad 4 knapp 1", "aliases": [null, "RF bridge RfRemoteR4C1"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.rf_bridge_rfremoter4c1"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.rf_bridge_rfremoter4c2", "before": {"name": null, "aliases": [null]}, "after": {"name": "RF-fjärrkontroll rad 4 knapp 2", "aliases": [null, "RF bridge RfRemoteR4C2"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.rf_bridge_rfremoter4c2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.lampa_i_redet_esphome01_light", "before": {"name": null, "aliases": [null]}, "after": {"name": "", "aliases": [null, "Lampa i redet (Hönshuset) esphome01 Light"]}}}
+{"status": "applied", "kind": "entity", "id": "light.lampa_i_redet_esphome01_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.vattenniva_honshuset_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Vattennivå (hönshuset) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.vattenniva_honshuset_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.vattenniva_honshuset_esphome74_water_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Vattennivå", "aliases": [null, "Vattennivå (hönshuset) esphome74 Water level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.vattenniva_honshuset_esphome74_water_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome80_esphome80_daily_energy", "before": {"name": null, "aliases": [null]}, "after": {"name": "Energi idag", "aliases": [null, "Golvvärme (friggan) esphome80 Daily Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome80_esphome80_daily_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome81_esphome81_daily_energy", "before": {"name": null, "aliases": [null]}, "after": {"name": "Energi idag", "aliases": [null, "Golvvärme (sovrum och kontor) esphome81 Daily Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome81_esphome81_daily_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.esphome53_led_light", "before": {"name": "", "aliases": [null, "Julgran"]}, "after": {"name": "Belysning", "aliases": [null, "Julgran", "Julgranen"]}}}
+{"status": "applied", "kind": "entity", "id": "light.esphome53_led_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.esphome53_esphome53_light", "before": {"name": "Julgran", "aliases": ["Julgran", "Julgranen"]}, "after": {"name": "Julgransbelysning", "aliases": ["Julgran", "Julgranen", "Julgranen Julgran"]}}}
+{"status": "applied", "kind": "entity", "id": "light.esphome53_esphome53_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.ir_gateway_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "IR gateway Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.ir_gateway_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome30_esphome30_total_daily_energy", "before": {"name": "Energy", "aliases": [null]}, "after": {"name": "Energi idag", "aliases": [null, "Hemmabio El #1 Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome30_esphome30_total_daily_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome30_esphome30_power_factor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effektfaktor", "aliases": [null, "Hemmabio El #1 esphome30 Power Factor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome30_esphome30_power_factor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome30_esphome30_voltage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Spänning", "aliases": [null, "Hemmabio El #1 esphome30 Voltage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome30_esphome30_voltage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome30_esphome30_current", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ström", "aliases": [null, "Hemmabio El #1 esphome30 Current"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome30_esphome30_current"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome30_esphome30_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effekt", "aliases": [null, "Hemmabio El #1 esphome30 Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome30_esphome30_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome30_esphome30_energy", "before": {"name": null, "aliases": [null]}, "after": {"name": "Energi", "aliases": [null, "Hemmabio El #1 esphome30 Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome30_esphome30_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.esphome30_esphome30_relay_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "", "aliases": [null, "Hemmabio El #1 esphome30 Relay State"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.esphome30_esphome30_relay_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome31_esphome31_total_daily_energy", "before": {"name": "Energy", "aliases": [null]}, "after": {"name": "Energi idag", "aliases": [null, "Hemmabio El #2 Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome31_esphome31_total_daily_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome31_esphome31_power_factor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effektfaktor", "aliases": [null, "Hemmabio El #2 esphome31 Power Factor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome31_esphome31_power_factor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome31_esphome31_voltage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Spänning", "aliases": [null, "Hemmabio El #2 esphome31 Voltage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome31_esphome31_voltage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome31_esphome31_current", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ström", "aliases": [null, "Hemmabio El #2 esphome31 Current"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome31_esphome31_current"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome31_esphome31_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effekt", "aliases": [null, "Hemmabio El #2 esphome31 Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome31_esphome31_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome31_esphome31_energy", "before": {"name": null, "aliases": [null]}, "after": {"name": "Energi", "aliases": [null, "Hemmabio El #2 esphome31 Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome31_esphome31_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.esphome76_lexicon_volume_up", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lexicon höj volym", "aliases": [null, "IR gateway Lexicon - Volume UP"]}}}
+{"status": "applied", "kind": "entity", "id": "button.esphome76_lexicon_volume_up"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.esphome76_lexicon_volume_down", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lexicon sänk volym", "aliases": [null, "IR gateway Lexicon - Volume DOWN"]}}}
+{"status": "applied", "kind": "entity", "id": "button.esphome76_lexicon_volume_down"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.esphome76_lexicon_dvd1", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lexicon DVD 1", "aliases": [null, "IR gateway Lexicon - DVD1"]}}}
+{"status": "applied", "kind": "entity", "id": "button.esphome76_lexicon_dvd1"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.esphome76_lexicon_dvd2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lexicon DVD 2", "aliases": [null, "IR gateway Lexicon - DVD2"]}}}
+{"status": "applied", "kind": "entity", "id": "button.esphome76_lexicon_dvd2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.esphome76_lexicon_playstation", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lexicon PlayStation", "aliases": [null, "IR gateway Lexicon - Playstation"]}}}
+{"status": "applied", "kind": "entity", "id": "button.esphome76_lexicon_playstation"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.esphome76_benq_on", "before": {"name": null, "aliases": [null]}, "after": {"name": "BenQ slå på", "aliases": [null, "IR gateway Benq ON"]}}}
+{"status": "applied", "kind": "entity", "id": "button.esphome76_benq_on"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.esphome76_benq_off", "before": {"name": null, "aliases": [null]}, "after": {"name": "BenQ stäng av", "aliases": [null, "IR gateway Benq OFF"]}}}
+{"status": "applied", "kind": "entity", "id": "button.esphome76_benq_off"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.esp32_kamera_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Esp32 kamera Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.esp32_kamera_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "camera.esphome89_esphome89_camera", "before": {"name": null, "aliases": [null]}, "after": {"name": "", "aliases": [null, "Esp32 kamera esphome89 Camera"]}}}
+{"status": "applied", "kind": "entity", "id": "camera.esphome89_esphome89_camera"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.esphome76_benq_mute", "before": {"name": null, "aliases": [null]}, "after": {"name": "BenQ ljud av", "aliases": [null, "IR gateway Benq Mute"]}}}
+{"status": "applied", "kind": "entity", "id": "button.esphome76_benq_mute"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.markis_utomhus_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Markis (utomhus) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.markis_utomhus_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "cover.esphome93_esphome93_markis", "before": {"name": "Markisen"}, "after": {"name": ""}}}
+{"status": "applied", "kind": "entity", "id": "cover.esphome93_esphome93_markis"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.esphome93_esphome93_led", "before": {"name": "Markisens belysning"}, "after": {"name": "Belysning"}}}
+{"status": "applied", "kind": "entity", "id": "light.esphome93_esphome93_led"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.gasol_utomhus_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Gasol (utomhus) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.gasol_utomhus_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome30_esphome30_apparent_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skenbar effekt", "aliases": [null, "Hemmabio El #1 esphome30 Apparent Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome30_esphome30_apparent_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome30_esphome30_reactive_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Reaktiv effekt", "aliases": [null, "Hemmabio El #1 esphome30 Reactive Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome30_esphome30_reactive_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome31_esphome31_apparent_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skenbar effekt", "aliases": [null, "Hemmabio El #2 esphome31 Apparent Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome31_esphome31_apparent_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome31_esphome31_reactive_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Reaktiv effekt", "aliases": [null, "Hemmabio El #2 esphome31 Reactive Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome31_esphome31_reactive_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome80_esphome80_apparent_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skenbar effekt", "aliases": [null, "Golvvärme (friggan) esphome80 Apparent Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome80_esphome80_apparent_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome80_esphome80_reactive_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Reaktiv effekt", "aliases": [null, "Golvvärme (friggan) esphome80 Reactive Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome80_esphome80_reactive_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome80_esphome80_power_factor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effektfaktor", "aliases": [null, "Golvvärme (friggan) esphome80 Power Factor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome80_esphome80_power_factor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome81_esphome81_apparent_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skenbar effekt", "aliases": [null, "Golvvärme (sovrum och kontor) esphome81 Apparent Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome81_esphome81_apparent_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome81_esphome81_reactive_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Reaktiv effekt", "aliases": [null, "Golvvärme (sovrum och kontor) esphome81 Reactive Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome81_esphome81_reactive_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome81_esphome81_power_factor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effektfaktor", "aliases": [null, "Golvvärme (sovrum och kontor) esphome81 Power Factor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome81_esphome81_power_factor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.elmatare_elstolpen_current_phase_1", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ström fas 1", "aliases": [null, "Elmätare (elstolpen) Current Phase 1"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.elmatare_elstolpen_current_phase_1"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.elmatare_elstolpen_current_phase_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ström fas 2", "aliases": [null, "Elmätare (elstolpen) Current Phase 2"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.elmatare_elstolpen_current_phase_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.elmatare_elstolpen_current_phase_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ström fas 3", "aliases": [null, "Elmätare (elstolpen) Current Phase 3"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.elmatare_elstolpen_current_phase_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.elmatare_elstolpen_dsmr_identification", "before": {"name": null, "aliases": [null]}, "after": {"name": "DSMR-identifikation", "aliases": [null, "Elmätare (elstolpen) DSMR Identification"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.elmatare_elstolpen_dsmr_identification"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.elmatare_elstolpen_electricity_failures", "before": {"name": null, "aliases": [null]}, "after": {"name": "Strömavbrott", "aliases": [null, "Elmätare (elstolpen) Electricity Failures"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.elmatare_elstolpen_electricity_failures"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.elmatare_elstolpen_esphome_version", "before": {"name": null, "aliases": [null]}, "after": {"name": "ESPHome-version", "aliases": [null, "Elmätare (elstolpen) ESPHome Version"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.elmatare_elstolpen_esphome_version"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.elmatare_elstolpen_long_electricity_failures", "before": {"name": null, "aliases": [null]}, "after": {"name": "Långa strömavbrott", "aliases": [null, "Elmätare (elstolpen) Long Electricity Failures"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.elmatare_elstolpen_long_electricity_failures"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.elmatare_elstolpen_power_consumed_phase_1", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effekt fas 1", "aliases": [null, "Elmätare (elstolpen) Power Consumed Phase 1"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.elmatare_elstolpen_power_consumed_phase_1"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.elmatare_elstolpen_power_consumed_phase_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effekt fas 2", "aliases": [null, "Elmätare (elstolpen) Power Consumed Phase 2"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.elmatare_elstolpen_power_consumed_phase_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.elmatare_elstolpen_power_consumed_phase_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effekt fas 3", "aliases": [null, "Elmätare (elstolpen) Power Consumed Phase 3"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.elmatare_elstolpen_power_consumed_phase_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.elmatare_elstolpen_slimmelezer_uptime", "before": {"name": null, "aliases": [null]}, "after": {"name": "Upptid", "aliases": [null, "Elmätare (elstolpen) SlimmeLezer Uptime"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.elmatare_elstolpen_slimmelezer_uptime"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.elmatare_elstolpen_voltage_phase_1", "before": {"name": null, "aliases": [null]}, "after": {"name": "Spänning fas 1", "aliases": [null, "Elmätare (elstolpen) Voltage Phase 1"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.elmatare_elstolpen_voltage_phase_1"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.elmatare_elstolpen_voltage_phase_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Spänning fas 2", "aliases": [null, "Elmätare (elstolpen) Voltage Phase 2"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.elmatare_elstolpen_voltage_phase_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.elmatare_elstolpen_voltage_phase_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Spänning fas 3", "aliases": [null, "Elmätare (elstolpen) Voltage Phase 3"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.elmatare_elstolpen_voltage_phase_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.power_consumed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Förbrukad effekt", "aliases": [null, "Elmätare (elstolpen) Power Consumed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.power_consumed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.ledstrip_toalett_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Ledstrip (toalett) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.ledstrip_toalett_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.esphome45_esphome45_light", "before": {"name": null, "aliases": [null]}, "after": {"name": "", "aliases": [null, "Ledstrip (toalett) esphome45 Light"]}}}
+{"status": "applied", "kind": "entity", "id": "light.esphome45_esphome45_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "fan.ventilflakt_hemmabion_esphome08_fan", "before": {"name": null, "aliases": [null, "Fläkten", "Fläkt", "Ventilfläkten"]}, "after": {"name": "", "aliases": [null, "Fläkten", "Fläkt", "Ventilfläkten", "Ventilfläkt (bion) esphome08 Fan"]}}}
+{"status": "applied", "kind": "entity", "id": "fan.ventilflakt_hemmabion_esphome08_fan"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome01_wifi_rssi", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-signalstyrka", "aliases": [null, "Lampa i redet (Hönshuset) Wifi RSSI"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome01_wifi_rssi"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome01_wifi_bssid", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi BSSID", "aliases": [null, "Lampa i redet (Hönshuset) Wifi BSSID"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome01_wifi_bssid"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome53_wifi_rssi", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-signalstyrka", "aliases": [null, "Julgranen Wifi RSSI"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome53_wifi_rssi"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome53_wifi_bssid", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi BSSID", "aliases": [null, "Julgranen Wifi BSSID"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome53_wifi_bssid"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.esphome57_esphome57_light", "before": {"name": "Taklampor"}, "after": {"name": ""}}}
+{"status": "applied", "kind": "entity", "id": "light.esphome57_esphome57_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome57_esphome57_light_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effekt belysning", "aliases": [null, "Taklampor (källaren) esphome57 Light Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome57_esphome57_light_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome57_esphome57_light_voltage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Spänning belysning", "aliases": [null, "Taklampor (källaren) esphome57 Light Voltage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome57_esphome57_light_voltage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome57_esphome57_light_current", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ström belysning", "aliases": [null, "Taklampor (källaren) esphome57 Light Current"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome57_esphome57_light_current"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.taklampor_kallaren_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Taklampor (källaren) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.taklampor_kallaren_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.ventilflakt_bion_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Ventilfläkt (bion) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.ventilflakt_bion_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome59_esphome59_light_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effekt belysning", "aliases": [null, "Taklampor esphome59 Light Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome59_esphome59_light_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome59_esphome59_light_voltage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Spänning belysning", "aliases": [null, "Taklampor esphome59 Light Voltage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome59_esphome59_light_voltage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome59_esphome59_light_current", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ström belysning", "aliases": [null, "Taklampor esphome59 Light Current"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome59_esphome59_light_current"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.esphome60_esphome60_light", "before": {"name": "Taklampor"}, "after": {"name": ""}}}
+{"status": "applied", "kind": "entity", "id": "light.esphome60_esphome60_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome60_esphome60_light_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effekt belysning", "aliases": [null, "Taklampor (köket) esphome60 Light Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome60_esphome60_light_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome60_esphome60_light_voltage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Spänning belysning", "aliases": [null, "Taklampor (köket) esphome60 Light Voltage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome60_esphome60_light_voltage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome60_esphome60_light_current", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ström belysning", "aliases": [null, "Taklampor (köket) esphome60 Light Current"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome60_esphome60_light_current"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.blomlampa_2_verandan_esphome03_light", "before": {"name": null, "aliases": [null]}, "after": {"name": "", "aliases": [null, "Blomlampa 2 (verandan) esphome03 Light"]}}}
+{"status": "applied", "kind": "entity", "id": "light.blomlampa_2_verandan_esphome03_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.ledstrip_balkongdorrar_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Ledstrip (balkongdörrar) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.ledstrip_balkongdorrar_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.lucka_honshuset_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Lucka (Hönshuset) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.lucka_honshuset_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "cover.honsluckan_esphome75_cover", "before": {"name": null, "aliases": [null]}, "after": {"name": "", "aliases": [null, "Lucka (Hönshuset) esphome75 Cover"]}}}
+{"status": "applied", "kind": "entity", "id": "cover.honsluckan_esphome75_cover"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.home_assistant_voice_096460_mute", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mikrofon avstängd", "aliases": [null, "HA Voice PE 096460 Mute"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.home_assistant_voice_096460_mute"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.home_assistant_voice_096460_wake_sound", "before": {"name": null, "aliases": [null]}, "after": {"name": "Väckningsljud", "aliases": [null, "HA Voice PE 096460 Wake sound"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.home_assistant_voice_096460_wake_sound"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.home_assistant_voice_096460_restart", "before": {"name": null, "aliases": [null]}, "after": {"name": "Starta om", "aliases": [null, "HA Voice PE 096460 Restart"]}}}
+{"status": "applied", "kind": "entity", "id": "button.home_assistant_voice_096460_restart"}
+{"status": "intent", "operation": {"kind": "entity", "id": "media_player.home_assistant_voice_096460_media_player", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mediaspelare", "aliases": [null, "HA Voice PE 096460 Media Player"]}}}
+{"status": "applied", "kind": "entity", "id": "media_player.home_assistant_voice_096460_media_player"}
+{"status": "intent", "operation": {"kind": "entity", "id": "event.home_assistant_voice_096460_button_press", "before": {"name": null, "aliases": [null]}, "after": {"name": "Knapptryckning", "aliases": [null, "HA Voice PE 096460 Button press"]}}}
+{"status": "applied", "kind": "entity", "id": "event.home_assistant_voice_096460_button_press"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.esphome43_light", "before": {"name": null, "aliases": [null]}, "after": {"name": "", "aliases": [null, "Ledstrip (balkongdörrar) esphome43 Light"]}}}
+{"status": "applied", "kind": "entity", "id": "light.esphome43_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.esphome94_rfwallswitch1", "before": {"name": null, "aliases": [null]}, "after": {"name": "RF-väggknapp 1", "aliases": [null, "RF bridge RfWallSwitch1"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.esphome94_rfwallswitch1"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.esphome94_rfwallswitch2", "before": {"name": null, "aliases": [null]}, "after": {"name": "RF-väggknapp 2", "aliases": [null, "RF bridge RfWallSwitch2"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.esphome94_rfwallswitch2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.esphome94_rfwallswitch3", "before": {"name": null, "aliases": [null]}, "after": {"name": "RF-väggknapp 3", "aliases": [null, "RF bridge RfWallSwitch3"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.esphome94_rfwallswitch3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.poolvarmepump_poolen_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Poolvärmepump (poolen) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.poolvarmepump_poolen_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.poolvarmepump_esphome28_relay_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "", "aliases": [null, "Poolvärmepump (poolen) esphome28 Relay State"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.poolvarmepump_esphome28_relay_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "select.home_assistant_voice_096460_wake_word_sensitivity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Väckordskänslighet", "aliases": [null, "HA Voice PE 096460 Wake word sensitivity"]}}}
+{"status": "applied", "kind": "entity", "id": "select.home_assistant_voice_096460_wake_word_sensitivity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome30_esphome30_power_factor_template", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effektfaktor beräknad", "aliases": [null, "Hemmabio El #1 esphome30 Power Factor Template"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome30_esphome30_power_factor_template"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome31_esphome31_power_factor_template", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effektfaktor beräknad", "aliases": [null, "Hemmabio El #2 esphome31 Power Factor Template"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome31_esphome31_power_factor_template"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.taklampa_esphome61_light_current", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ström belysning", "aliases": [null, "Taklampor (kontoret) esphome61 Light Current"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.taklampa_esphome61_light_current"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.taklampa_esphome61_light_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effekt belysning", "aliases": [null, "Taklampor (kontoret) esphome61 Light Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.taklampa_esphome61_light_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.taklampa_esphome61_light_voltage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Spänning belysning", "aliases": [null, "Taklampor (kontoret) esphome61 Light Voltage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.taklampa_esphome61_light_voltage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.taklampa_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Taklampor (kontoret) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.taklampa_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.taklampa_kontoret", "before": {"name": "Taklampor"}, "after": {"name": ""}}}
+{"status": "applied", "kind": "entity", "id": "light.taklampa_kontoret"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.blomlampa_1_verandan_esphome07_apply_scene", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aktivera scen", "aliases": [null, "Blomlampa 1 (Verandan) esphome07 Apply Scene"]}}}
+{"status": "applied", "kind": "entity", "id": "button.blomlampa_1_verandan_esphome07_apply_scene"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.blomlampa_1_verandan_esphome07_light", "before": {"name": null, "aliases": [null]}, "after": {"name": "", "aliases": [null, "Blomlampa 1 (Verandan) esphome07 Light"]}}}
+{"status": "applied", "kind": "entity", "id": "light.blomlampa_1_verandan_esphome07_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.blomlampa_1_verandan_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Blomlampa 1 (Verandan) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.blomlampa_1_verandan_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.blomlampa_2_verandan_esphome03_apply_scene", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aktivera scen", "aliases": [null, "Blomlampa 2 (verandan) esphome03 Apply Scene"]}}}
+{"status": "applied", "kind": "entity", "id": "button.blomlampa_2_verandan_esphome03_apply_scene"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.blomlampa_ateljen_esphome09_apply_scene", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aktivera scen", "aliases": [null, "Blomlampa (ateljén) esphome09 Apply Scene"]}}}
+{"status": "applied", "kind": "entity", "id": "button.blomlampa_ateljen_esphome09_apply_scene"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.esphome02_esphome02_apply_scene", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aktivera scen", "aliases": [null, "Blomlampor (bion) esphome02 Apply Scene"]}}}
+{"status": "applied", "kind": "entity", "id": "button.esphome02_esphome02_apply_scene"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.blomlampor_bion_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Blomlampor (bion) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.blomlampor_bion_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.blomlampor_bion", "before": {"aliases": [null]}, "after": {"aliases": [null, "Blomlampor (bion)"]}}}
+{"status": "applied", "kind": "entity", "id": "light.blomlampor_bion"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.taklampor_duschen_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Taklampor (duschen) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.taklampor_duschen_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome63_esphome63_light_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effekt belysning", "aliases": [null, "Taklampor (duschen) esphome63 Light Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome63_esphome63_light_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome63_esphome63_light_voltage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Spänning belysning", "aliases": [null, "Taklampor (duschen) esphome63 Light Voltage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome63_esphome63_light_voltage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome63_esphome63_light_current", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ström belysning", "aliases": [null, "Taklampor (duschen) esphome63 Light Current"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome63_esphome63_light_current"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.esphome63_light", "before": {"name": "Taklampor"}, "after": {"name": ""}}}
+{"status": "applied", "kind": "entity", "id": "light.esphome63_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome98_esphome98_uv_ambient", "before": {"name": "UV Ambient", "aliases": [null]}, "after": {"name": "Omgivningsljus råvärde", "aliases": [null, "UV Ambient"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome98_esphome98_uv_ambient"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome98_esphome98_uv_index", "before": {"name": "UV Index", "aliases": [null]}, "after": {"name": "UV-index", "aliases": [null, "UV Index"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome98_esphome98_uv_index"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome98_illuminance", "before": {"name": "Ljusstyrka", "aliases": [null]}, "after": {"name": "Belysningsstyrka", "aliases": [null, "Ljusstyrka"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome98_illuminance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome98_infrared", "before": {"name": "Infraröd ljusstyrka", "aliases": [null]}, "after": {"name": "Infrarött råvärde", "aliases": [null, "Infraröd ljusstyrka"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome98_infrared"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.blomlampa_kontoret_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Blomlampa (kontoret) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.blomlampa_kontoret_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.esphome05_light", "before": {"name": "Blomlampa"}, "after": {"name": ""}}}
+{"status": "applied", "kind": "entity", "id": "light.esphome05_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.esphome05_esphome05_apply_scene", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aktivera scen", "aliases": [null, "Blomlampa (kontoret) esphome05 Apply Scene"]}}}
+{"status": "applied", "kind": "entity", "id": "button.esphome05_esphome05_apply_scene"}
+{"status": "intent", "operation": {"kind": "entity", "id": "button.blomlampa_shelly_plus_rgbw_pm_esphome32_apply_growlight_scene", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aktivera växtbelysningsscen", "aliases": [null, "Blomlampa (Shelly Plus RGBW PM) esphome32 Apply Growlight Scene"]}}}
+{"status": "applied", "kind": "entity", "id": "button.blomlampa_shelly_plus_rgbw_pm_esphome32_apply_growlight_scene"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_input_1", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ingång 1", "aliases": [null, "Blomlampa (Shelly Plus RGBW PM) esphome32 Input 1"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_input_1"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_input_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ingång 2", "aliases": [null, "Blomlampa (Shelly Plus RGBW PM) esphome32 Input 2"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_input_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_input_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ingång 3", "aliases": [null, "Blomlampa (Shelly Plus RGBW PM) esphome32 Input 3"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_input_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_input_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ingång 4", "aliases": [null, "Blomlampa (Shelly Plus RGBW PM) esphome32 Input 4"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_input_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Temperatur", "aliases": [null, "Blomlampa (Shelly Plus RGBW PM) esphome32 Temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_voltage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Spänning", "aliases": [null, "Blomlampa (Shelly Plus RGBW PM) esphome32 Voltage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_voltage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_current", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ström", "aliases": [null, "Blomlampa (Shelly Plus RGBW PM) esphome32 Current"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_current"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effekt", "aliases": [null, "Blomlampa (Shelly Plus RGBW PM) esphome32 Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_energy", "before": {"name": null, "aliases": [null]}, "after": {"name": "Energi", "aliases": [null, "Blomlampa (Shelly Plus RGBW PM) esphome32 Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.blomlampa_shelly_plus_rgbw_pm_esphome32_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.blomlampa_shelly_plus_rgbw_pm_esphome32_growlight", "before": {"name": null, "aliases": [null]}, "after": {"name": "Växtbelysning", "aliases": [null, "Blomlampa (Shelly Plus RGBW PM) esphome32 Growlight"]}}}
+{"status": "applied", "kind": "entity", "id": "light.blomlampa_shelly_plus_rgbw_pm_esphome32_growlight"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.huvudstrombrytaren_prusa_xl_esphome84_relay_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "", "aliases": [null, "Huvudströmbrytaren Prusa XL esphome84 Relay State"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.huvudstrombrytaren_prusa_xl_esphome84_relay_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.huvudstrombrytaren_prusa_xl_esphome84_daily_energy", "before": {"name": null, "aliases": [null]}, "after": {"name": "Energi idag", "aliases": [null, "Huvudströmbrytaren Prusa XL esphome84 Daily Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.huvudstrombrytaren_prusa_xl_esphome84_daily_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.huvudstrombrytaren_prusa_xl_esphome84_power_factor_template", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effektfaktor beräknad", "aliases": [null, "Huvudströmbrytaren Prusa XL esphome84 Power Factor Template"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.huvudstrombrytaren_prusa_xl_esphome84_power_factor_template"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.huvudstrombrytaren_prusa_xl_esphome84_esp32_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Enhetstemperatur", "aliases": [null, "Huvudströmbrytaren Prusa XL esphome84 ESP32 Temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.huvudstrombrytaren_prusa_xl_esphome84_esp32_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.huvudstrombrytaren_prusa_xl_esphome84_voltage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Spänning", "aliases": [null, "Huvudströmbrytaren Prusa XL esphome84 Voltage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.huvudstrombrytaren_prusa_xl_esphome84_voltage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.huvudstrombrytaren_prusa_xl_esphome84_current", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ström", "aliases": [null, "Huvudströmbrytaren Prusa XL esphome84 Current"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.huvudstrombrytaren_prusa_xl_esphome84_current"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.huvudstrombrytaren_prusa_xl_esphome84_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effekt", "aliases": [null, "Huvudströmbrytaren Prusa XL esphome84 Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.huvudstrombrytaren_prusa_xl_esphome84_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.huvudstrombrytaren_prusa_xl_esphome84_energy", "before": {"name": null, "aliases": [null]}, "after": {"name": "Energi", "aliases": [null, "Huvudströmbrytaren Prusa XL esphome84 Energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.huvudstrombrytaren_prusa_xl_esphome84_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.huvudstrombrytaren_prusa_xl_esphome84_apparent_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skenbar effekt", "aliases": [null, "Huvudströmbrytaren Prusa XL esphome84 Apparent Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.huvudstrombrytaren_prusa_xl_esphome84_apparent_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.huvudstrombrytaren_prusa_xl_esphome84_reactive_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Reaktiv effekt", "aliases": [null, "Huvudströmbrytaren Prusa XL esphome84 Reactive Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.huvudstrombrytaren_prusa_xl_esphome84_reactive_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.huvudstrombrytaren_prusa_xl_esphome84_power_factor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effektfaktor", "aliases": [null, "Huvudströmbrytaren Prusa XL esphome84 Power Factor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.huvudstrombrytaren_prusa_xl_esphome84_power_factor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.billaddare_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Billaddare Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.billaddare_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.blomlampa_ateljen_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Blomlampa (ateljén) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.blomlampa_ateljen_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.blomlampa_kontoret_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Blomlampa (kontoret) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.blomlampa_kontoret_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.blomlampa_1_verandan_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Blomlampa 1 (Verandan) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.blomlampa_1_verandan_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.blomlampa_2_verandan_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Blomlampa 2 (verandan) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.blomlampa_2_verandan_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.blomlampor_bion_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Blomlampor (bion) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.blomlampor_bion_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.elmatare_elstolpen_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Elmätare (elstolpen) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.elmatare_elstolpen_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.esp32_kamera_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Esp32 kamera Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.esp32_kamera_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.gasol_utomhus_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Gasol (utomhus) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.gasol_utomhus_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.golvvarme_friggan_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Golvvärme (friggan) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.golvvarme_friggan_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.golvvarme_sovrum_och_kontor_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Golvvärme (sovrum och kontor) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.golvvarme_sovrum_och_kontor_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.hemmabio_el_1_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Hemmabio El #1 Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.hemmabio_el_1_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.hemmabio_el_2_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Hemmabio El #2 Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.hemmabio_el_2_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.ir_gateway_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "IR gateway Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.ir_gateway_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.julbelysning_utomhus_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Julbelysning (utomhus) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.julbelysning_utomhus_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.ledstrip_balkongdorrar_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Ledstrip (balkongdörrar) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.ledstrip_balkongdorrar_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.ledstrip_entren_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Ledstrip (entrén) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.ledstrip_entren_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.ledstrip_kok_sydostra_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Ledstrip (kök sydöstra) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.ledstrip_kok_sydostra_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.ledstrip_kok_sodra_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Ledstrip (kök södra) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.ledstrip_kok_sodra_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.ledstrip_kok_ostra_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Ledstrip (kök östra) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.ledstrip_kok_ostra_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.ledstrip_sovrum_norra_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Ledstrip (sovrum norra) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.ledstrip_sovrum_norra_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.ledstrip_sovrum_ostra_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Ledstrip (sovrum östra) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.ledstrip_sovrum_ostra_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.ledstrip_verandan_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Ledstrip (verandan) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.ledstrip_verandan_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.lucka_honshuset_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Lucka (Hönshuset) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.lucka_honshuset_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.markis_utomhus_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Markis (utomhus) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.markis_utomhus_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.poolbelysning_temp_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Poolbelysning & temp Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.poolbelysning_temp_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.poolpump_utomhus_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Poolpump (utomhus) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.poolpump_utomhus_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.poolvarmepump_poolen_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Poolvärmepump (poolen) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.poolvarmepump_poolen_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.rf_bridge_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "RF bridge Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.rf_bridge_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.taklampor_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Taklampor Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.taklampor_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.taklampor_kontoret_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Taklampor (kontoret) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.taklampor_kontoret_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.taklampor_kallaren_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Taklampor (källaren) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.taklampor_kallaren_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.taklampor_koket_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Taklampor (köket) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.taklampor_koket_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.taklampor_sovrum_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Taklampor (sovrum) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.taklampor_sovrum_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.temphyg_gamla_verkstan_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "TempHyg (gamla verkstan) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.temphyg_gamla_verkstan_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.termostat_friggan_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Termostat (friggan) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.termostat_friggan_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.termostat_kontoret_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Termostat (kontoret) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.termostat_kontoret_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.termostat_toaletten_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Termostat (toaletten) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.termostat_toaletten_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.vattenniva_honshuset_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Vattennivå (hönshuset) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.vattenniva_honshuset_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.vattenvarmare_honshuset_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Vattenvärmare (hönshuset) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.vattenvarmare_honshuset_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.ventilflakt_bion_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Ventilfläkt (bion) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.ventilflakt_bion_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.blomlampa_shelly_plus_rgbw_pm_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Blomlampa (Shelly Plus RGBW PM) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.blomlampa_shelly_plus_rgbw_pm_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.huvudstrombrytaren_prusa_xl_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Huvudströmbrytaren Prusa XL Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.huvudstrombrytaren_prusa_xl_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.ljussensor_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Ljussensor Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.ljussensor_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.taklampor_duschen_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Taklampor (duschen) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.taklampor_duschen_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.kontoret_ha_voice_pe_096460_disable_physical_controls", "before": {"name": null, "aliases": [null]}, "after": {"name": "Inaktivera fysiska reglage", "aliases": [null, "HA Voice PE 096460 Disable physical controls"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.kontoret_ha_voice_pe_096460_disable_physical_controls"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.ledstrip_vitrinskap_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Ledstrip (vitrinskåp) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.ledstrip_vitrinskap_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.ledstrip_vitrinskap_esphome42_led_strip_107_st", "before": {"name": null, "aliases": [null]}, "after": {"name": "LED-list (107 st)", "aliases": [null, "Ledstrip (vitrinskåp) esphome42 LED strip (107 st)"]}}}
+{"status": "applied", "kind": "entity", "id": "light.ledstrip_vitrinskap_esphome42_led_strip_107_st"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.salt_verkstan_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Salt (verkstan) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.salt_verkstan_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.salt_verkstan_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Salt (verkstan) Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.salt_verkstan_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.esphome90_esphome90_salt_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Saltnivå", "aliases": [null, "Salt (verkstan) esphome90 Salt level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.esphome90_esphome90_salt_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "update.thread_test_esp32_c6_zero_firmware", "before": {"aliases": [null]}, "after": {"aliases": [null, "Ledstrip (korridoren) Firmware"]}}}
+{"status": "applied", "kind": "entity", "id": "update.thread_test_esp32_c6_zero_firmware"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.kontoret_ledstrip_korridoren_esphome58_led_strip_46_st", "before": {"name": null, "aliases": [null]}, "after": {"name": "LED-list (46 st)", "aliases": [null, "Ledstrip (korridoren) esphome58 LED strip (46 st)"]}}}
+{"status": "applied", "kind": "entity", "id": "light.kontoret_ledstrip_korridoren_esphome58_led_strip_46_st"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_ledstrip_atelje_norra_thread_device_role", "before": {"name": null, "aliases": [null]}, "after": {"name": "Thread-enhetsroll", "aliases": [null, "Ledstrip (ateljé norra) Thread Device Role"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_ledstrip_atelje_norra_thread_device_role"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_ledstrip_atelje_norra_thread_rloc16", "before": {"aliases": [null]}, "after": {"aliases": [null, "Ledstrip (ateljé norra) Thread RLOC16"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_ledstrip_atelje_norra_thread_rloc16"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_ledstrip_atelje_norra_thread_extended_address", "before": {"name": null, "aliases": [null]}, "after": {"name": "Thread-adress", "aliases": [null, "Ledstrip (ateljé norra) Thread Extended Address"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_ledstrip_atelje_norra_thread_extended_address"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_ledstrip_vitrinskap_thread_device_role", "before": {"name": null, "aliases": [null]}, "after": {"name": "Thread-enhetsroll", "aliases": [null, "Ledstrip (vitrinskåp) Thread Device Role"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_ledstrip_vitrinskap_thread_device_role"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_ledstrip_vitrinskap_thread_rloc16", "before": {"aliases": [null]}, "after": {"aliases": [null, "Ledstrip (vitrinskåp) Thread RLOC16"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_ledstrip_vitrinskap_thread_rloc16"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_ledstrip_vitrinskap_thread_extended_address", "before": {"name": null, "aliases": [null]}, "after": {"name": "Thread-adress", "aliases": [null, "Ledstrip (vitrinskåp) Thread Extended Address"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_ledstrip_vitrinskap_thread_extended_address"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_ledstrip_atelje_sodra_thread_device_role", "before": {"name": null, "aliases": [null]}, "after": {"name": "Thread-enhetsroll", "aliases": [null, "Ledstrip (ateljé södra) Thread Device Role"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_ledstrip_atelje_sodra_thread_device_role"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_ledstrip_atelje_sodra_thread_rloc16", "before": {"aliases": [null]}, "after": {"aliases": [null, "Ledstrip (ateljé södra) Thread RLOC16"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_ledstrip_atelje_sodra_thread_rloc16"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_ledstrip_atelje_sodra_thread_extended_address", "before": {"name": null, "aliases": [null]}, "after": {"name": "Thread-adress", "aliases": [null, "Ledstrip (ateljé södra) Thread Extended Address"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_ledstrip_atelje_sodra_thread_extended_address"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kontoret_ledstrip_korridoren_thread_device_role", "before": {"name": null, "aliases": [null]}, "after": {"name": "Thread-enhetsroll", "aliases": [null, "Ledstrip (korridoren) Thread Device Role"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kontoret_ledstrip_korridoren_thread_device_role"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kontoret_ledstrip_korridoren_thread_rloc16", "before": {"aliases": [null]}, "after": {"aliases": [null, "Ledstrip (korridoren) Thread RLOC16"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kontoret_ledstrip_korridoren_thread_rloc16"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kontoret_ledstrip_korridoren_thread_extended_address", "before": {"name": null, "aliases": [null]}, "after": {"name": "Thread-adress", "aliases": [null, "Ledstrip (korridoren) Thread Extended Address"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kontoret_ledstrip_korridoren_thread_extended_address"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_ledstrip_toalett_thread_device_role", "before": {"name": null, "aliases": [null]}, "after": {"name": "Thread-enhetsroll", "aliases": [null, "Ledstrip (toalett) Thread Device Role"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_ledstrip_toalett_thread_device_role"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_ledstrip_toalett_thread_rloc16", "before": {"aliases": [null]}, "after": {"aliases": [null, "Ledstrip (toalett) Thread RLOC16"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_ledstrip_toalett_thread_rloc16"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_ledstrip_toalett_thread_extended_address", "before": {"name": null, "aliases": [null]}, "after": {"name": "Thread-adress", "aliases": [null, "Ledstrip (toalett) Thread Extended Address"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_ledstrip_toalett_thread_extended_address"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_ledstrip_kok_smafonster_thread_device_role", "before": {"name": null, "aliases": [null]}, "after": {"name": "Thread-enhetsroll", "aliases": [null, "Ledstrip (kök småfönster) Thread Device Role"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_ledstrip_kok_smafonster_thread_device_role"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_ledstrip_kok_smafonster_thread_rloc16", "before": {"aliases": [null]}, "after": {"aliases": [null, "Ledstrip (kök småfönster) Thread RLOC16"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_ledstrip_kok_smafonster_thread_rloc16"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_ledstrip_kok_smafonster_thread_extended_address", "before": {"name": null, "aliases": [null]}, "after": {"name": "Thread-adress", "aliases": [null, "Ledstrip (kök småfönster) Thread Extended Address"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_ledstrip_kok_smafonster_thread_extended_address"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.utomhus_ljussensor_esphome98_uv_counts", "before": {"name": null, "aliases": [null]}, "after": {"name": "UV-råvärde", "aliases": [null, "Ljussensor esphome98 UV Counts"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.utomhus_ljussensor_esphome98_uv_counts"}
+{"status": "intent", "operation": {"kind": "entity", "id": "infrared.ir_proxy_1_esphome96_ir_transmitter", "before": {"name": null, "aliases": [null]}, "after": {"name": "IR-sändare", "aliases": [null, "IR-proxy 1 esphome96 IR Transmitter"]}}}
+{"status": "applied", "kind": "entity", "id": "infrared.ir_proxy_1_esphome96_ir_transmitter"}
+{"status": "intent", "operation": {"kind": "entity", "id": "infrared.ir_proxy_1_esphome96_ir_receiver", "before": {"name": null, "aliases": [null]}, "after": {"name": "IR-mottagare", "aliases": [null, "IR-proxy 1 esphome96 IR Receiver"]}}}
+{"status": "applied", "kind": "entity", "id": "infrared.ir_proxy_1_esphome96_ir_receiver"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.ir_proxy_1_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "IR-proxy 1 Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.ir_proxy_1_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "infrared.ir_proxy_2_esphome97_ir_transmitter", "before": {"name": null, "aliases": [null]}, "after": {"name": "IR-sändare", "aliases": [null, "IR-proxy 2 esphome97 IR Transmitter"]}}}
+{"status": "applied", "kind": "entity", "id": "infrared.ir_proxy_2_esphome97_ir_transmitter"}
+{"status": "intent", "operation": {"kind": "entity", "id": "infrared.ir_proxy_2_esphome97_ir_receiver", "before": {"name": null, "aliases": [null]}, "after": {"name": "IR-mottagare", "aliases": [null, "IR-proxy 2 esphome97 IR Receiver"]}}}
+{"status": "applied", "kind": "entity", "id": "infrared.ir_proxy_2_esphome97_ir_receiver"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.ir_proxy_2_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "IR-proxy 2 Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.ir_proxy_2_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "infrared.bion_ir_gateway_esphome76_ir_transmitter", "before": {"name": null, "aliases": [null]}, "after": {"name": "IR-sändare", "aliases": [null, "IR gateway esphome76 IR Transmitter"]}}}
+{"status": "applied", "kind": "entity", "id": "infrared.bion_ir_gateway_esphome76_ir_transmitter"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.friggan_utomhuslampa_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Utomhuslampa Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.friggan_utomhuslampa_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "light.honsbelysning_esphome56_light", "before": {"name": null, "aliases": [null]}, "after": {"name": "", "aliases": [null, "Hönsbelysning esphome56 Light"]}}}
+{"status": "applied", "kind": "entity", "id": "light.honsbelysning_esphome56_light"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.honsbelysning_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Anslutning", "aliases": [null, "Hönsbelysning Status"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.honsbelysning_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.honsbelysning_esphome56_light_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Effekt belysning", "aliases": [null, "Hönsbelysning esphome56 Light Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.honsbelysning_esphome56_light_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.honsbelysning_esphome56_light_voltage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Spänning belysning", "aliases": [null, "Hönsbelysning esphome56 Light Voltage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.honsbelysning_esphome56_light_voltage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.honsbelysning_esphome56_light_current", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ström belysning", "aliases": [null, "Hönsbelysning esphome56 Light Current"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.honsbelysning_esphome56_light_current"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.blomlampa_trappan_energy_power", "before": {"aliases": [null]}, "after": {"aliases": [null, "Blomlampor (bion) Blomlampa (trappan) - energy power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.blomlampa_trappan_energy_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.blomlampa_trappan_energy", "before": {"aliases": [null]}, "after": {"aliases": [null, "Blomlampor (bion) Blomlampa (trappan) - energy energy"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.blomlampa_trappan_energy"}
+{"status": "intent", "operation": {"kind": "entity", "id": "humidifier.bions_hygrostat", "before": {"aliases": [null]}, "after": {"aliases": [null, "Ventilfläkt (bion) Bions hygrostat"]}}}
+{"status": "applied", "kind": "entity", "id": "humidifier.bions_hygrostat"}
+{"status": "intent", "operation": {"kind": "device", "id": "2737556325ca43e4294ee8864a7827d0", "before": {"name_by_user": null}, "after": {"name_by_user": "Termostat"}}}
+{"status": "applied", "kind": "device", "id": "2737556325ca43e4294ee8864a7827d0"}
+{"status": "intent", "operation": {"kind": "device", "id": "b30097662be090ad664001266b7f9d36", "before": {"name_by_user": null}, "after": {"name_by_user": "Vattenvärmare"}}}
+{"status": "applied", "kind": "device", "id": "b30097662be090ad664001266b7f9d36"}
+{"status": "intent", "operation": {"kind": "device", "id": "01bf206d70319793afffd5b58d6edeaa", "before": {"name_by_user": null}, "after": {"name_by_user": "Lampa i redet"}}}
+{"status": "applied", "kind": "device", "id": "01bf206d70319793afffd5b58d6edeaa"}
+{"status": "intent", "operation": {"kind": "device", "id": "2bb9cb602ec800b2f183ceedd0f6b5fe", "before": {"name_by_user": null}, "after": {"name_by_user": "LED-list (sovrum östra)"}}}
+{"status": "applied", "kind": "device", "id": "2bb9cb602ec800b2f183ceedd0f6b5fe"}
+{"status": "intent", "operation": {"kind": "device", "id": "8216579edd54afdbe31c2df3c6cc6d93", "before": {"name_by_user": null}, "after": {"name_by_user": "LED-list (ateljé norra)"}}}
+{"status": "applied", "kind": "device", "id": "8216579edd54afdbe31c2df3c6cc6d93"}
+{"status": "intent", "operation": {"kind": "device", "id": "fe8b77b3639c88eb3818dbd419b1f29f", "before": {"name_by_user": null}, "after": {"name_by_user": "LED-list (sovrum norra)"}}}
+{"status": "applied", "kind": "device", "id": "fe8b77b3639c88eb3818dbd419b1f29f"}
+{"status": "intent", "operation": {"kind": "device", "id": "d1d1228b50ea9c694ca0aa3c4e7898a0", "before": {"name_by_user": null}, "after": {"name_by_user": "LED-list (ateljé södra)"}}}
+{"status": "applied", "kind": "device", "id": "d1d1228b50ea9c694ca0aa3c4e7898a0"}
+{"status": "intent", "operation": {"kind": "device", "id": "1145e3c5163aab633f8bd77c378632d2", "before": {"name_by_user": null}, "after": {"name_by_user": "LED-list (kök södra)"}}}
+{"status": "applied", "kind": "device", "id": "1145e3c5163aab633f8bd77c378632d2"}
+{"status": "intent", "operation": {"kind": "device", "id": "fa552c8b3991002f03b8dd83b8560272", "before": {"name_by_user": null}, "after": {"name_by_user": "Gasol"}}}
+{"status": "applied", "kind": "device", "id": "fa552c8b3991002f03b8dd83b8560272"}
+{"status": "intent", "operation": {"kind": "device", "id": "ca0c5b1f099e3b0d2420449f48fb19e9", "before": {"name_by_user": null}, "after": {"name_by_user": "Klimatsensor"}}}
+{"status": "applied", "kind": "device", "id": "ca0c5b1f099e3b0d2420449f48fb19e9"}
+{"status": "intent", "operation": {"kind": "device", "id": "b57bd1138f4e6903698022a609218f5c", "before": {"name_by_user": null}, "after": {"name_by_user": "Termostat"}}}
+{"status": "applied", "kind": "device", "id": "b57bd1138f4e6903698022a609218f5c"}
+{"status": "intent", "operation": {"kind": "device", "id": "f8336537ea686bd7d38c033f7f493b2e", "before": {"name_by_user": null}, "after": {"name_by_user": "Golvvärme"}}}
+{"status": "applied", "kind": "device", "id": "f8336537ea686bd7d38c033f7f493b2e"}
+{"status": "intent", "operation": {"kind": "device", "id": "5f1aeb937f3491bda0e10d3d11ee552f", "before": {"name_by_user": "Blomlampor (bion)"}, "after": {"name_by_user": "Blomlampor"}}}
+{"status": "applied", "kind": "device", "id": "5f1aeb937f3491bda0e10d3d11ee552f"}
+{"status": "intent", "operation": {"kind": "device", "id": "d6c904ad5a953fe297c345a0ca1b0af6", "before": {"name_by_user": null}, "after": {"name_by_user": "Julbelysning"}}}
+{"status": "applied", "kind": "device", "id": "d6c904ad5a953fe297c345a0ca1b0af6"}
+{"status": "intent", "operation": {"kind": "device", "id": "dd531a8c3152176a74062250f06b1a46", "before": {"name_by_user": null}, "after": {"name_by_user": "Termostat"}}}
+{"status": "applied", "kind": "device", "id": "dd531a8c3152176a74062250f06b1a46"}
+{"status": "intent", "operation": {"kind": "device", "id": "5c1163d94b0ab19bffc29d0039a7ab3c", "before": {"name_by_user": null}, "after": {"name_by_user": "Taklampor"}}}
+{"status": "applied", "kind": "device", "id": "5c1163d94b0ab19bffc29d0039a7ab3c"}
+{"status": "intent", "operation": {"kind": "device", "id": "28cddc7b74b05ab7d1ba90ee889e8f2d", "before": {"name_by_user": null}, "after": {"name_by_user": "LED-list (kök sydöstra)"}}}
+{"status": "applied", "kind": "device", "id": "28cddc7b74b05ab7d1ba90ee889e8f2d"}
+{"status": "intent", "operation": {"kind": "device", "id": "2acf2d15a36735c6da6b9d67d07360f5", "before": {"name_by_user": null}, "after": {"name_by_user": "LED-list (verandan)"}}}
+{"status": "applied", "kind": "device", "id": "2acf2d15a36735c6da6b9d67d07360f5"}
+{"status": "intent", "operation": {"kind": "device", "id": "7883ed542e732c9bf362ac20b3edac3c", "before": {"name_by_user": null}, "after": {"name_by_user": "LED-list (kök småfönster)"}}}
+{"status": "applied", "kind": "device", "id": "7883ed542e732c9bf362ac20b3edac3c"}
+{"status": "intent", "operation": {"kind": "device", "id": "92c0ad7e857b0256a132e4f8f7c32a40", "before": {"name_by_user": null}, "after": {"name_by_user": "LED-list (kök östra)"}}}
+{"status": "applied", "kind": "device", "id": "92c0ad7e857b0256a132e4f8f7c32a40"}
+{"status": "intent", "operation": {"kind": "device", "id": "7acdb0b707a3474aaf4096052549d2ac", "before": {"name_by_user": null}, "after": {"name_by_user": "LED-list (entrén)"}}}
+{"status": "applied", "kind": "device", "id": "7acdb0b707a3474aaf4096052549d2ac"}
+{"status": "intent", "operation": {"kind": "device", "id": "6916747ff6217f2179c9ec5d3c8a3686", "before": {"name_by_user": null}, "after": {"name_by_user": "Poolbelysning och temperatur"}}}
+{"status": "applied", "kind": "device", "id": "6916747ff6217f2179c9ec5d3c8a3686"}
+{"status": "intent", "operation": {"kind": "device", "id": "fab7f92027dd24a4e836bb64eb965cf6", "before": {"name_by_user": null}, "after": {"name_by_user": "RF-brygga"}}}
+{"status": "applied", "kind": "device", "id": "fab7f92027dd24a4e836bb64eb965cf6"}
+{"status": "intent", "operation": {"kind": "device", "id": "40d435c9d77b165fbb9076cda6cf1a38", "before": {"name_by_user": null}, "after": {"name_by_user": "Vattennivå"}}}
+{"status": "applied", "kind": "device", "id": "40d435c9d77b165fbb9076cda6cf1a38"}
+{"status": "intent", "operation": {"kind": "device", "id": "4273d143d2b8204107a7ceb723589fe4", "before": {"name_by_user": null}, "after": {"name_by_user": "IR-gateway"}}}
+{"status": "applied", "kind": "device", "id": "4273d143d2b8204107a7ceb723589fe4"}
+{"status": "intent", "operation": {"kind": "device", "id": "d54ca7e13530a8fd651018c728d59b20", "before": {"name_by_user": null}, "after": {"name_by_user": "ESP32-kamera"}}}
+{"status": "applied", "kind": "device", "id": "d54ca7e13530a8fd651018c728d59b20"}
+{"status": "intent", "operation": {"kind": "device", "id": "cae4a1d23dae74e6a0903e70ac732261", "before": {"name_by_user": "Blomlampa 1 (Verandan)"}, "after": {"name_by_user": "Blomlampa 1"}}}
+{"status": "applied", "kind": "device", "id": "cae4a1d23dae74e6a0903e70ac732261"}
+{"status": "intent", "operation": {"kind": "device", "id": "f699c6b183561246a9cf6429086d4c5a", "before": {"name_by_user": null}, "after": {"name_by_user": "Markis"}}}
+{"status": "applied", "kind": "device", "id": "f699c6b183561246a9cf6429086d4c5a"}
+{"status": "intent", "operation": {"kind": "device", "id": "b94bb0dbd4e4f1699c1e9a3eaf677742", "before": {"name_by_user": null}, "after": {"name_by_user": "LED-list (toalett)"}}}
+{"status": "applied", "kind": "device", "id": "b94bb0dbd4e4f1699c1e9a3eaf677742"}
+{"status": "intent", "operation": {"kind": "device", "id": "d0e4a415ca636e5057ade2251e7ae1dc", "before": {"name_by_user": "Ventilfläkt (bion)"}, "after": {"name_by_user": "Ventilfläkt"}}}
+{"status": "applied", "kind": "device", "id": "d0e4a415ca636e5057ade2251e7ae1dc"}
+{"status": "intent", "operation": {"kind": "device", "id": "7041af69244dc7adcde3447c2f07838a", "before": {"name_by_user": null}, "after": {"name_by_user": "Taklampor"}}}
+{"status": "applied", "kind": "device", "id": "7041af69244dc7adcde3447c2f07838a"}
+{"status": "intent", "operation": {"kind": "device", "id": "fa2820c3346bb1ba7043bc75d6d7274b", "before": {"name_by_user": "Taklampor (kontoret)"}, "after": {"name_by_user": "Taklampor"}}}
+{"status": "applied", "kind": "device", "id": "fa2820c3346bb1ba7043bc75d6d7274b"}
+{"status": "intent", "operation": {"kind": "device", "id": "cf48d69d30577ea7b00c28cb4dab73d8", "before": {"name_by_user": null}, "after": {"name_by_user": "LED-list (balkongdörrar)"}}}
+{"status": "applied", "kind": "device", "id": "cf48d69d30577ea7b00c28cb4dab73d8"}
+{"status": "intent", "operation": {"kind": "device", "id": "0b40c33d7df27449b86c184c63606853", "before": {"name_by_user": null}, "after": {"name_by_user": "Lucka"}}}
+{"status": "applied", "kind": "device", "id": "0b40c33d7df27449b86c184c63606853"}
+{"status": "intent", "operation": {"kind": "device", "id": "325649f034e84bcb586e17a015c92616", "before": {"name_by_user": null}, "after": {"name_by_user": "Salt"}}}
+{"status": "applied", "kind": "device", "id": "325649f034e84bcb586e17a015c92616"}
+{"status": "intent", "operation": {"kind": "device", "id": "39335e0af4dfd4bdb6fae7d4d12fc8f2", "before": {"name_by_user": null}, "after": {"name_by_user": "Poolvärmepump"}}}
+{"status": "applied", "kind": "device", "id": "39335e0af4dfd4bdb6fae7d4d12fc8f2"}
+{"status": "intent", "operation": {"kind": "device", "id": "d8567446a81800fbc861d84803bbfbf2", "before": {"name_by_user": null}, "after": {"name_by_user": "Taklampor"}}}
+{"status": "applied", "kind": "device", "id": "d8567446a81800fbc861d84803bbfbf2"}
+{"status": "intent", "operation": {"kind": "device", "id": "5c5f069f32db0ac291f95a926d8fca34", "before": {"name_by_user": null}, "after": {"name_by_user": "Blomlampa"}}}
+{"status": "applied", "kind": "device", "id": "5c5f069f32db0ac291f95a926d8fca34"}
+{"status": "intent", "operation": {"kind": "device", "id": "1846d6f5db0b4ff839f6902b8446488d", "before": {"name_by_user": null}, "after": {"name_by_user": "LED-list (vitrinskåp)"}}}
+{"status": "applied", "kind": "device", "id": "1846d6f5db0b4ff839f6902b8446488d"}
+{"status": "intent", "operation": {"kind": "device", "id": "2d6e1f6507f75836fc49f46673fa0c91", "before": {"name_by_user": null}, "after": {"name_by_user": "LED-list (korridoren)"}}}
+{"status": "applied", "kind": "device", "id": "2d6e1f6507f75836fc49f46673fa0c91"}

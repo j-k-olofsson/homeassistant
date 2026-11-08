@@ -1,0 +1,114 @@
+{
+  "switch.kontoret_natverksswitch_wps": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "update.kontoret_natverksswitch": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "binary_sensor.sovrummet_router_anslutning": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "binary_sensor.sovrummet_router_omstart_kravs": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "button.sovrummet_router_starta_om_router": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "button.sovrummet_router_starta_wps": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "button.sovrummet_router_avbryt_wps": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "button.sovrummet_router_skapa_sakerhetskopia": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "button.sovrummet_router_ateranslut_wan": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "light.sovrummet_router_led_amber_lan": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "light.sovrummet_router_led_green_lan": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "light.sovrummet_router_led_green_status": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "light.sovrummet_router_led_mdio_bus_0f_amber_wan": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "light.sovrummet_router_led_mdio_bus_0f_green_wan": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{"status": "rename_intent", "old": "binary_sensor.poolvarmepump_frost_protection", "new": "binary_sensor.poolen_poolvarmepump_frostskydd"}
+{"status": "renamed", "old": "binary_sensor.poolvarmepump_frost_protection", "new": "binary_sensor.poolen_poolvarmepump_frostskydd"}
+{"status": "rename_intent", "old": "sensor.alsavopro_poolvarmepump_power_mode", "new": "sensor.poolen_poolvarmepump_effektlage"}
+{"status": "renamed", "old": "sensor.alsavopro_poolvarmepump_power_mode", "new": "sensor.poolen_poolvarmepump_effektlage"}
+{"status": "rename_intent", "old": "sensor.alsavopro_poolvarmepump_device_type", "new": "sensor.poolen_poolvarmepump_enhetstyp"}
+{"status": "renamed", "old": "sensor.alsavopro_poolvarmepump_device_type", "new": "sensor.poolen_poolvarmepump_enhetstyp"}
+{"status": "rename_intent", "old": "sensor.alsavopro_poolvarmepump_main_board_hw_revision", "new": "sensor.poolen_poolvarmepump_moderkortets_hardvaruversion"}
+{"status": "renamed", "old": "sensor.alsavopro_poolvarmepump_main_board_hw_revision", "new": "sensor.poolen_poolvarmepump_moderkortets_hardvaruversion"}
+{"status": "rename_intent", "old": "sensor.alsavopro_poolvarmepump_main_board_sw_revision", "new": "sensor.poolen_poolvarmepump_moderkortets_programvaruversion"}
+{"status": "renamed", "old": "sensor.alsavopro_poolvarmepump_main_board_sw_revision", "new": "sensor.poolen_poolvarmepump_moderkortets_programvaruversion"}
+{"status": "rename_intent", "old": "sensor.alsavopro_poolvarmepump_manual_hw_code", "new": "sensor.poolen_poolvarmepump_manuell_hardvarukod"}
+{"status": "renamed", "old": "sensor.alsavopro_poolvarmepump_manual_hw_code", "new": "sensor.poolen_poolvarmepump_manuell_hardvarukod"}
+{"status": "rename_intent", "old": "sensor.alsavopro_poolvarmepump_manual_sw_code", "new": "sensor.poolen_poolvarmepump_manuell_programvarukod"}
+{"status": "renamed", "old": "sensor.alsavopro_poolvarmepump_manual_sw_code", "new": "sensor.poolen_poolvarmepump_manuell_programvarukod"}
+{"status": "rename_intent", "old": "number.poolvarmepump_water_temperature_calibration", "new": "number.poolen_poolvarmepump_kalibrering_av_vattentemperatur"}
+{"status": "renamed", "old": "number.poolvarmepump_water_temperature_calibration", "new": "number.poolen_poolvarmepump_kalibrering_av_vattentemperatur"}

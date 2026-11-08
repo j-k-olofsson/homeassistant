@@ -1,0 +1,26 @@
+{
+  "type": "form",
+  "flow_id": "01M6TBEBBMYXXQJ7T9C9S7PB53",
+  "handler": "waste_collection_schedule",
+  "data_schema": [
+    {
+      "type": "boolean",
+      "name": "show_customize_config",
+      "required": false,
+      "optional": true,
+      "default": false
+    },
+    {
+      "type": "boolean",
+      "name": "show_sensor_config",
+      "required": false,
+      "optional": true,
+      "default": false
+    }
+  ],
+  "errors": null,
+  "description_placeholders": null,
+  "last_step": null,
+  "preview": null,
+  "step_id": "flow_type"
+}

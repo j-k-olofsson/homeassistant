@@ -1,0 +1,91 @@
+﻿gammalt_id,nytt_id,status,lokala_referenser
+sensor.temp_hum_toalett_battery,sensor.toaletten_klimatsensor_batteriniva,Migrerat och verifierat,
+sensor.temp_hum_toalett_humidity,sensor.toaletten_klimatsensor_luftfuktighet,Migrerat och verifierat,
+sensor.temp_hum_toalett_signal_strength,sensor.toaletten_klimatsensor_signalstyrka,Migrerat och verifierat,
+sensor.temp_hum_toalett_temperature,sensor.toaletten_klimatsensor_temperatur,Migrerat och verifierat,
+sensor.temp_hum_toalett_voltage,sensor.toaletten_klimatsensor_spanning,Migrerat och verifierat,
+sensor.temp_hum_sovrum_voltage,sensor.sovrummet_klimatsensor_spanning,Migrerat och verifierat,
+sensor.temp_hum_sovrum_signal_strength,sensor.sovrummet_klimatsensor_signalstyrka,Migrerat och verifierat,
+sensor.temp_hum_sovrum_humidity,sensor.sovrummet_klimatsensor_luftfuktighet,Migrerat och verifierat,.storage/core.area_registry:data.data.areas[5].humidity_entity_id
+sensor.temp_hum_utomhus_humidity,sensor.utomhus_klimatsensor_luftfuktighet,Migrerat och verifierat,.storage/core.area_registry:data.data.areas[17].humidity_entity_id | dashboard/lovelace:config.views[4].sections[0].cards[0].badges[2].entity
+sensor.temp_hum_utomhus_signal_strength,sensor.utomhus_klimatsensor_signalstyrka,Migrerat och verifierat,
+sensor.temp_hum_utomhus_voltage,sensor.utomhus_klimatsensor_spanning,Migrerat och verifierat,
+sensor.dusch_fukt,sensor.duschen_klimatsensor_luftfuktighet,Migrerat och verifierat,.storage/core.area_registry:data.data.areas[1].humidity_entity_id
+sensor.dusch_temp,sensor.duschen_klimatsensor_temperatur,Migrerat och verifierat,.storage/core.area_registry:data.data.areas[1].temperature_entity_id | .storage/core.config_entries:data.data.entries[207].options.target_sensor
+sensor.koket_temp,sensor.koket_klimatsensor_temperatur,Migrerat och verifierat,.storage/core.area_registry:data.data.areas[4].temperature_entity_id | .storage/core.config_entries:data.data.entries[124].options.target_sensor | .storage/frontend.system_data:data.data.home.favorite_entities[1]
+sensor.verkstan_batteriniva,sensor.verkstaden_klimatsensor_batteriniva,Migrerat och verifierat,
+sensor.verkstan_hum,sensor.verkstaden_klimatsensor_luftfuktighet,Migrerat och verifierat,dashboard/lovelace:config.views[8].sections[0].cards[3].entity
+sensor.verkstan_temp,sensor.verkstaden_klimatsensor_temperatur,Migrerat och verifierat,dashboard/lovelace:config.views[8].sections[0].cards[4].entity
+sensor.ateljen_batteriniva,sensor.ateljen_klimatsensor_batteriniva,Migrerat och verifierat,
+sensor.ateljen_temp,sensor.ateljen_klimatsensor_temperatur,Migrerat och verifierat,.storage/core.area_registry:data.data.areas[0].temperature_entity_id | .storage/core.config_entries:data.data.entries[119].options.target_sensor
+sensor.temp_hum_atelje_humidity,sensor.ateljen_klimatsensor_luftfuktighet,Migrerat och verifierat,.storage/core.area_registry:data.data.areas[0].humidity_entity_id
+sensor.temp_hum_atelje_signal_strength,sensor.ateljen_klimatsensor_signalstyrka,Migrerat och verifierat,
+sensor.temp_hum_atelje_voltage,sensor.ateljen_klimatsensor_spanning,Migrerat och verifierat,
+sensor.bio_temp,sensor.bion_klimatsensor_temperatur,Migrerat och verifierat,.storage/core.area_registry:data.data.areas[9].temperature_entity_id | .storage/core.config_entries:data.data.entries[103].options.target_sensor
+sensor.temp_hum_hemmabio_humidity,sensor.bion_klimatsensor_luftfuktighet,Migrerat och verifierat,.storage/core.area_registry:data.data.areas[9].humidity_entity_id | .storage/core.config_entries:data.data.entries[142].options.target_sensor
+sensor.kallaren_batteriniva,sensor.bion_klimatsensor_batteriniva,Migrerat och verifierat,
+sensor.temp_hum_hemmabio_signal_strength,sensor.bion_klimatsensor_signalstyrka,Migrerat och verifierat,
+sensor.temp_hum_hemmabio_voltage,sensor.bion_klimatsensor_spanning,Migrerat och verifierat,
+sensor.sovrum_batteriniva,sensor.sovrummet_klimatsensor_batteriniva,Migrerat och verifierat,
+sensor.sovrummet_temp,sensor.sovrummet_klimatsensor_temperatur,Migrerat och verifierat,.storage/core.area_registry:data.data.areas[5].temperature_entity_id
+sensor.temp_hum_entre_battery,sensor.entren_klimatsensor_batteriniva,Migrerat och verifierat,
+sensor.fuktighet_entren,sensor.entren_klimatsensor_luftfuktighet,Migrerat och verifierat,.storage/core.area_registry:data.data.areas[2].humidity_entity_id
+sensor.temp_hum_entre_signal_strength,sensor.entren_klimatsensor_signalstyrka,Migrerat och verifierat,
+sensor.temperatur_entren,sensor.entren_klimatsensor_temperatur,Migrerat och verifierat,.storage/core.area_registry:data.data.areas[2].temperature_entity_id | .storage/core.config_entries:data.data.entries[112].options.target_sensor
+sensor.temp_hum_entre_voltage,sensor.entren_klimatsensor_spanning,Migrerat och verifierat,
+sensor.honshuset_batteriniva,sensor.honshuset_klimatsensor_batteriniva,Migrerat och verifierat,
+sensor.honshuset_temp,sensor.honshuset_klimatsensor_temperatur,Migrerat och verifierat,automations.yaml:443 | automations.yaml:448 | automations.yaml:498 | dashboard/lovelace:config.views[4].sections[0].cards[2].badges[0].entity
+sensor.temp_hum_honshuset_humidity,sensor.honshuset_klimatsensor_luftfuktighet,Migrerat och verifierat,dashboard/lovelace:config.views[4].sections[0].cards[2].badges[1].entity
+sensor.temp_hum_veranda_humidity,sensor.verandan_klimatsensor_luftfuktighet,Migrerat och verifierat,.storage/core.area_registry:data.data.areas[7].humidity_entity_id
+sensor.temp_hum_veranda_signal_strength,sensor.verandan_klimatsensor_signalstyrka,Migrerat och verifierat,
+sensor.verandan_batteriniva,sensor.verandan_klimatsensor_batteriniva,Migrerat och verifierat,
+sensor.verandan_temp,sensor.verandan_klimatsensor_temperatur,Migrerat och verifierat,.storage/core.area_registry:data.data.areas[7].temperature_entity_id | .storage/core.config_entries:data.data.entries[118].options.target_sensor
+sensor.temp_hum_veranda_voltage,sensor.verandan_klimatsensor_spanning,Migrerat och verifierat,
+sensor.utomhus_batteriniva,sensor.utomhus_klimatsensor_batteriniva,Migrerat och verifierat,
+sensor.utomhus_temp,sensor.utomhus_klimatsensor_temperatur,Migrerat och verifierat,.storage/core.area_registry:data.data.areas[17].temperature_entity_id | .storage/frontend.system_data:data.data.home.favorite_entities[0] | dashboard/lovelace-friggan:config.views[0].cards[0].cards[1].entity | dashboard/lovelace:config.views[0].sections[0].cards[1].current.temperature_entity | dashboard/lovelace:config.views[4].sections[0].cards[0].badges[0].entity
+sensor.temp_hum_verkstad_signal_strength,sensor.verkstaden_klimatsensor_signalstyrka,Migrerat och verifierat,
+sensor.temp_hum_verkstad_voltage,sensor.verkstaden_klimatsensor_spanning,Migrerat och verifierat,
+sensor.temp_hum_kok_battery,sensor.koket_klimatsensor_batteriniva,Migrerat och verifierat,
+sensor.temp_hum_kok_humidity,sensor.koket_klimatsensor_luftfuktighet,Migrerat och verifierat,.storage/core.area_registry:data.data.areas[4].humidity_entity_id
+sensor.temp_hum_kok_signal_strength,sensor.koket_klimatsensor_signalstyrka,Migrerat och verifierat,
+sensor.temp_hum_kok_voltage,sensor.koket_klimatsensor_spanning,Migrerat och verifierat,
+sensor.temp_hum_dusch_battery,sensor.duschen_klimatsensor_batteriniva,Migrerat och verifierat,
+sensor.temp_hum_dusch_signal_strength,sensor.duschen_klimatsensor_signalstyrka,Migrerat och verifierat,
+sensor.temp_hum_dusch_voltage,sensor.duschen_klimatsensor_spanning,Migrerat och verifierat,
+sensor.temp_hum_honshus_signal_strength,sensor.honshuset_klimatsensor_signalstyrka,Migrerat och verifierat,
+sensor.temp_hum_honshus_voltage,sensor.honshuset_klimatsensor_spanning,Migrerat och verifierat,
+update.termostat_friggan_firmware,update.friggan_termostat_firmware,Migrerat och verifierat,
+update.vattenvarmare_honshuset_firmware,update.honshuset_vattenvarmare_firmware,Migrerat och verifierat,
+update.ledstrip_sovrum_ostra_firmware,update.sovrummet_led_list_ostra_firmware,Migrerat och verifierat,
+update.ledstrip_atelje_norra_firmware,update.ateljen_led_list_norra_firmware,Migrerat och verifierat,
+update.ledstrip_sovrum_norra_firmware,update.sovrummet_led_list_norra_firmware,Migrerat och verifierat,
+update.ledstrip_atelje_sodra_firmware,update.ateljen_led_list_sodra_firmware,Migrerat och verifierat,
+update.ledstrip_kok_sodra_firmware,update.koket_led_list_sodra_firmware,Migrerat och verifierat,
+update.termostat_toaletten_firmware,update.toaletten_termostat_firmware,Migrerat och verifierat,
+update.golvvarme_friggan_firmware,update.friggan_golvvarme_firmware,Migrerat och verifierat,
+update.julbelysning_utomhus_firmware,update.utomhus_julbelysning_firmware,Migrerat och verifierat,
+update.termostat_kontoret_firmware,update.kontoret_termostat_firmware,Migrerat och verifierat,
+update.taklampor_sovrum_firmware,update.sovrummet_taklampor_firmware,Migrerat och verifierat,
+update.ledstrip_kok_sydostra_firmware,update.koket_led_list_sydostra_firmware,Migrerat och verifierat,
+update.ledstrip_verandan_firmware,update.verandan_led_list_firmware,Migrerat och verifierat,
+update.ledstrip_kok_smafonster_firmware,update.koket_led_list_smafonster_firmware,Migrerat och verifierat,
+update.ledstrip_kok_ostra_firmware,update.koket_led_list_ostra_firmware,Migrerat och verifierat,
+update.ledstrip_entren_firmware,update.entren_led_list_firmware,Migrerat och verifierat,
+update.poolbelysning_temp_firmware,update.poolen_poolbelysning_och_temperatur_firmware,Migrerat och verifierat,
+update.temp_hyg_gamla_verkstan_firmware,update.gamla_verkstaden_klimatsensor_firmware,Migrerat och verifierat,
+update.ir_gateway_firmware,update.bion_ir_gateway_firmware,Migrerat och verifierat,
+update.esp32_kamera_firmware,update.utomhus_esp32_kamera_firmware,Migrerat och verifierat,
+update.taklampor_kallaren_firmware,update.bion_taklampor_firmware,Migrerat och verifierat,
+update.ventilflakt_bion_firmware,update.bion_ventilflakt_firmware,Migrerat och verifierat,
+update.taklampor_ateljen_firmware,update.ateljen_taklampor_firmware,Migrerat och verifierat,
+update.taklampor_koket_firmware,update.koket_taklampor_esphome_firmware,Migrerat och verifierat,
+update.lucka_honshuset_firmware,update.honshuset_lucka_firmware,Migrerat och verifierat,
+update.taklampa_firmware,update.kontoret_taklampor_firmware,Migrerat och verifierat,
+update.blomlampa_1_verandan_firmware,update.verandan_blomlampa_1_firmware,Migrerat och verifierat,
+update.blomlampa_2_verandan_firmware,update.koket_blomlampa_2_firmware,Migrerat och verifierat,
+update.blomlampor_bion_firmware,update.bion_blomlampor_firmware,Migrerat och verifierat,
+update.lux_uv_labbet_firmware,update.utomhus_ljussensor_firmware,Migrerat och verifierat,
+update.taklampor_duschen_firmware,update.duschen_taklampor_firmware,Migrerat och verifierat,
+update.blomlampa_kontoret_firmware,update.kontoret_blomlampa_firmware,Migrerat och verifierat,
+update.huvudstrombrytaren_prusa_xl_firmware_2,update.kontoret_huvudstrombrytaren_prusa_xl_firmware,Migrerat och verifierat,
+update.honsbelysning_firmware,update.honshuset_honsbelysning_firmware,Migrerat och verifierat,

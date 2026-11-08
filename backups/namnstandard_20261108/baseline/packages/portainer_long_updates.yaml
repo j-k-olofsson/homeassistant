@@ -1,0 +1,4 @@
+# Keep the native Portainer update entities/buttons. Values are seconds.
+portainer_long_updates:
+  pull_timeout: 1800
+  restart_timeout: 120

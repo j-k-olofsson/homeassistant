@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "minor_version": 2,
+  "key": "input_select",
+  "data": {
+    "items": [
+      {
+        "id": "sun_phase",
+        "name": "Solens dygnsfas",
+        "icon": "mdi:theme-light-dark",
+        "options": [
+          "SUNPHASE_SUNRISE",
+          "SUNPHASE_DAYLIGHT",
+          "SUNPHASE_SUNSET",
+          "SUNPHASE_NIGHT"
+        ]
+      },
+      {
+        "id": "scen_vaxtlampor",
+        "name": "Växtbelysningsscen äldre hjälpare",
+        "icon": "mdi:flower",
+        "options": [
+          "GROWLIGHT_SCENE_ON",
+          "GROWLIGHT_SCENE_LATE_ON",
+          "GROWLIGHT_SCENE_OFF"
+        ]
+      },
+      {
+        "name": "Standardkontrollpanel",
+        "options": [
+          "lovelace",
+          "lovelace-friggan",
+          "lovelace-allt",
+          "ha-admin",
+          "refresh"
+        ],
+        "initial": "lovelace",
+        "id": "default_dashboard"
+      },
+      {
+        "id": "light_scene",
+        "name": "Belysningsscen",
+        "icon": "mdi:lamps-outline",
+        "options": [
+          "DAY",
+          "NIGHT",
+          "DUSK",
+          "DAWN",
+          "XMAS",
+          "ALARM",
+          "PARTY"
+        ]
+      },
+      {
+        "id": "growlight_scene",
+        "name": "Växtbelysningsscen",
+        "icon": "mdi:wall-sconce-round",
+        "options": [
+          "ON",
+          "LATE_ON",
+          "OFF"
+        ]
+      },
+      {
+        "id": "default_dashboard_2",
+        "name": "Standardkontrollpanel 2",
+        "options": [
+          "lovelace",
+          "lovelace-friggan",
+          "ha-admin",
+          "elforbrukning-och-pris",
+          "dashboard-standard",
+          "refresh"
+        ],
+        "initial": "lovelace"
+      },
+      {
+        "id": "default_dashboard_3",
+        "name": "Standardkontrollpanel 3",
+        "options": [
+          "lovelace",
+          "lovelace-friggan",
+          "ha-admin",
+          "elforbrukning-och-pris",
+          "dashboard-elpris",
+          "dashboard-nestgen2",
+          "dashboard-absolut",
+          "dashboard-aggklackning",
+          "refresh"
+        ],
+        "initial": "lovelace"
+      },
+      {
+        "id": "default_dashboard_4",
+        "name": "Standardkontrollpanel 4",
+        "options": [
+          "lovelace",
+          "lovelace-friggan",
+          "ha-admin",
+          "elforbrukning-och-pris",
+          "dashboard-elpris",
+          "dashboard-nestgen2",
+          "dashboard-absolut",
+          "dashboard-aggklackning",
+          "refresh"
+        ],
+        "initial": "lovelace"
+      },
+      {
+        "id": "default_dashboard_5",
+        "name": "Standardkontrollpanel 5",
+        "options": [
+          "lovelace",
+          "lovelace-friggan",
+          "ha-admin",
+          "elforbrukning-och-pris",
+          "dashboard-elpris",
+          "dashboard-nestgen2",
+          "dashboard-absolut",
+          "dashboard-aggklackning",
+          "refresh"
+        ],
+        "initial": "lovelace"
+      },
+      {
+        "id": "default_dashboard_6",
+        "name": "Standardkontrollpanel 6",
+        "options": [
+          "lovelace",
+          "lovelace-friggan",
+          "ha-admin",
+          "elforbrukning-och-pris",
+          "dashboard-elpris",
+          "dashboard-nestgen2",
+          "dashboard-absolut",
+          "dashboard-aggklackning",
+          "refresh"
+        ],
+        "initial": "lovelace"
+      },
+      {
+        "id": "default_dashboard_7",
+        "name": "Standardkontrollpanel 7",
+        "options": [
+          "lovelace",
+          "lovelace-friggan",
+          "ha-admin",
+          "dashboard-elpris",
+          "dashboard-nestgen2",
+          "dashboard-absolut",
+          "dashboard-aggklackning",
+          "dashboard-omraden",
+          "refresh"
+        ],
+        "initial": "lovelace"
+      }
+    ]
+  }
+}

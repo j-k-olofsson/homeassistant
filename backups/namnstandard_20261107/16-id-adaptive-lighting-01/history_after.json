@@ -1,0 +1,26 @@
+{
+  "switch.adaptive_lighting_ateljen_test_vilolage": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:02.956907+00:00",
+      "last_updated": "2026-11-07T07:44:02.956907+00:00"
+    }
+  ],
+  "switch.adaptive_lighting_ateljen_test_anpassa_farg": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:02.956907+00:00",
+      "last_updated": "2026-11-07T07:44:02.956907+00:00"
+    }
+  ],
+  "switch.adaptive_lighting_ateljen_test_anpassa_ljusstyrka": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:02.956907+00:00",
+      "last_updated": "2026-11-07T07:44:02.956907+00:00"
+    }
+  ]
+}

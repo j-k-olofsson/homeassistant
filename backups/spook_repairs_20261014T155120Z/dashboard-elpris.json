@@ -1,0 +1,213 @@
+{
+  "title": "Elpris",
+  "views": [
+    {
+      "theme": "Backend-selected",
+      "layout": {},
+      "icon": "mdi:home-lightning-bolt-outline",
+      "title": "Elförbrukning & Elpris",
+      "type": "sections",
+      "badges": [],
+      "cards": [],
+      "sections": [
+        {
+          "type": "grid",
+          "cards": [
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:apexcharts-card",
+                  "graph_span": "47h",
+                  "header": {
+                    "title": "Elpriset idag & imorgon (kr/kWh)",
+                    "show": true,
+                    "floating": true,
+                    "standard_format": true
+                  },
+                  "span": {
+                    "start": "day"
+                  },
+                  "now": {
+                    "show": true,
+                    "label": "Now"
+                  },
+                  "yaxis": [
+                    {
+                      "id": "first",
+                      "min": 0,
+                      "decimals": 0,
+                      "max": 10,
+                      "apex_config": {
+                        "title": {
+                          "text": "SEK/kWh",
+                          "rotate": 0,
+                          "offsetY": -265,
+                          "offsetX": 20
+                        }
+                      }
+                    },
+                    {
+                      "id": "second",
+                      "min": 0,
+                      "max": 10,
+                      "decimals": 0,
+                      "opposite": true,
+                      "apex_config": {
+                        "title": {
+                          "text": "kW/h",
+                          "rotate": 0,
+                          "offsetY": -265,
+                          "offsetX": -20
+                        }
+                      }
+                    }
+                  ],
+                  "apex_config": {
+                    "chart": {
+                      "height": "563px"
+                    }
+                  },
+                  "experimental": {
+                    "color_threshold": true
+                  },
+                  "series": [
+                    {
+                      "entity": "sensor.nordpool",
+                      "type": "column",
+                      "yaxis_id": "first",
+                      "opacity": 1,
+                      "show": {
+                        "legend_value": false
+                      },
+                      "data_generator": "return (entity.attributes.raw_today.map((start, index) => {\n  return [new Date(start[\"start\"]).getTime(), entity.attributes.raw_today[index][\"value\"]];\n})).concat(entity.attributes.raw_tomorrow.map((start, index) => {\n  return [new Date(start[\"start\"]).getTime(), entity.attributes.raw_tomorrow[index][\"value\"]];\n}));\n",
+                      "float_precision": 2,
+                      "color_threshold": [
+                        {
+                          "value": 0,
+                          "color": "darkgreen"
+                        },
+                        {
+                          "value": 1,
+                          "color": "green"
+                        },
+                        {
+                          "value": 1.25,
+                          "color": "lightgreen"
+                        },
+                        {
+                          "value": 1.65,
+                          "color": "yellow"
+                        },
+                        {
+                          "value": 2,
+                          "color": "orange"
+                        },
+                        {
+                          "value": 3,
+                          "color": "red"
+                        },
+                        {
+                          "value": 4,
+                          "color": "darkred"
+                        }
+                      ]
+                    },
+                    {
+                      "entity": "sensor.energiforbrukning_per_timme",
+                      "type": "area",
+                      "opacity": 0.7,
+                      "extend_to": "now",
+                      "show": {
+                        "legend_value": false
+                      },
+                      "yaxis_id": "second",
+                      "group_by": {
+                        "duration": "1h",
+                        "func": "last"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "grid_options": {
+                "columns": 24,
+                "rows": 11
+              }
+            }
+          ],
+          "column_span": 2
+        },
+        {
+          "type": "grid",
+          "cards": [
+            {
+              "type": "gauge",
+              "name": "Elpris (inkl allt)",
+              "needle": true,
+              "min": 0,
+              "severity": {
+                "green": 0.8,
+                "yellow": 1.65,
+                "red": 3
+              },
+              "entity": "sensor.nordpool",
+              "grid_options": {
+                "columns": 6,
+                "rows": 4
+              },
+              "max": 6
+            },
+            {
+              "type": "gauge",
+              "entity": "sensor.power_consumed",
+              "name": "Elförbrukning",
+              "min": 0,
+              "max": 12,
+              "needle": true,
+              "severity": {
+                "green": 0,
+                "yellow": 3,
+                "red": 8
+              },
+              "grid_options": {
+                "columns": 6,
+                "rows": 4
+              }
+            },
+            {
+              "type": "custom:config-template-card",
+              "entities": [
+                "sensor.gagna_timmar_denna_manad"
+              ],
+              "card": {
+                "type": "custom:mini-graph-card",
+                "entities": [
+                  "sensor.kvartbaserad_elkostnadsprognos"
+                ],
+                "unit": "SEK",
+                "hours_to_show": "${ states['sensor.gagna_timmar_denna_manad'].state }",
+                "animate": true,
+                "smoothing": true
+              },
+              "grid_options": {
+                "columns": 6,
+                "rows": 3
+              }
+            }
+          ]
+        }
+      ],
+      "dense_section_placement": true,
+      "background": {
+        "opacity": 100,
+        "alignment": "center",
+        "size": "cover",
+        "repeat": "no-repeat",
+        "attachment": "scroll",
+        "image": "/api/image/serve/70141d86ad98f15476319ebaeac881a8/original"
+      },
+      "max_columns": 3
+    }
+  ]
+}

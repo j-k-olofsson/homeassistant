@@ -1,0 +1,642 @@
+# HELP monitor_cert_days_remaining The number of days remaining until the certificate expires
+# TYPE monitor_cert_days_remaining gauge
+monitor_cert_days_remaining{critical="",fulla="",monitor_id="5",monitor_name="Open WebUI",monitor_type="http",monitor_url="https://openwebui.home.arpa",monitor_hostname="null",monitor_port="null"} 0
+monitor_cert_days_remaining{critical="",frigg="",monitor_id="18",monitor_name="Caddy Reverse Proxy",monitor_type="http",monitor_url="https://caddy.home.arpa",monitor_hostname="null",monitor_port="null"} 0
+monitor_cert_days_remaining{critical="",frigg="",monitor_id="19",monitor_name="Docker API",monitor_type="http",monitor_url="https://uptime:UptimeDocker-2025%21@docker-api.home.arpa/_ping",monitor_hostname="null",monitor_port="null"} 0
+monitor_cert_days_remaining{frigg="",monitor_id="23",monitor_name="Uptime proxy",monitor_type="http",monitor_url="https://uptime.home.arpa/dashboard",monitor_hostname="null",monitor_port="null"} 0
+
+# HELP monitor_cert_is_valid Is the certificate still valid? (1 = Yes, 0= No)
+# TYPE monitor_cert_is_valid gauge
+monitor_cert_is_valid{critical="",fulla="",monitor_id="5",monitor_name="Open WebUI",monitor_type="http",monitor_url="https://openwebui.home.arpa",monitor_hostname="null",monitor_port="null"} 1
+monitor_cert_is_valid{critical="",frigg="",monitor_id="18",monitor_name="Caddy Reverse Proxy",monitor_type="http",monitor_url="https://caddy.home.arpa",monitor_hostname="null",monitor_port="null"} 1
+monitor_cert_is_valid{critical="",frigg="",monitor_id="19",monitor_name="Docker API",monitor_type="http",monitor_url="https://uptime:UptimeDocker-2025%21@docker-api.home.arpa/_ping",monitor_hostname="null",monitor_port="null"} 1
+monitor_cert_is_valid{frigg="",monitor_id="23",monitor_name="Uptime proxy",monitor_type="http",monitor_url="https://uptime.home.arpa/dashboard",monitor_hostname="null",monitor_port="null"} 1
+
+# HELP monitor_uptime_ratio Uptime ratio calculated over sliding window specified by the 'window' label. (0.0 - 1.0)
+# TYPE monitor_uptime_ratio gauge
+monitor_uptime_ratio{critical="",fulla="",monitor_id="4",monitor_name="Portainer",monitor_type="http",monitor_url="http://192.168.10.200:9000",monitor_hostname="null",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{critical="",fulla="",monitor_id="4",monitor_name="Portainer",monitor_type="http",monitor_url="http://192.168.10.200:9000",monitor_hostname="null",monitor_port="null",window="30d"} 0.9672740179839091
+monitor_uptime_ratio{critical="",fulla="",monitor_id="4",monitor_name="Portainer",monitor_type="http",monitor_url="http://192.168.10.200:9000",monitor_hostname="null",monitor_port="null",window="365d"} 0.9944869035284583
+monitor_uptime_ratio{critical="",fulla="",monitor_id="5",monitor_name="Open WebUI",monitor_type="http",monitor_url="https://openwebui.home.arpa",monitor_hostname="null",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{critical="",fulla="",monitor_id="5",monitor_name="Open WebUI",monitor_type="http",monitor_url="https://openwebui.home.arpa",monitor_hostname="null",monitor_port="null",window="30d"} 0.9997588734567902
+monitor_uptime_ratio{critical="",fulla="",monitor_id="5",monitor_name="Open WebUI",monitor_type="http",monitor_url="https://openwebui.home.arpa",monitor_hostname="null",monitor_port="null",window="365d"} 0.9957553879804825
+monitor_uptime_ratio{critical="",fulla="",monitor_id="6",monitor_name="Wyoming Whisper",monitor_type="port",monitor_url="http://192.168.10.200:10300",monitor_hostname="192.168.10.200",monitor_port="10300",window="1d"} 1
+monitor_uptime_ratio{critical="",fulla="",monitor_id="6",monitor_name="Wyoming Whisper",monitor_type="port",monitor_url="http://192.168.10.200:10300",monitor_hostname="192.168.10.200",monitor_port="10300",window="30d"} 0.9998343587316612
+monitor_uptime_ratio{critical="",fulla="",monitor_id="6",monitor_name="Wyoming Whisper",monitor_type="port",monitor_url="http://192.168.10.200:10300",monitor_hostname="192.168.10.200",monitor_port="10300",window="365d"} 0.9971787921417924
+monitor_uptime_ratio{fulla="",monitor_id="8",monitor_name="Uptime Kuma – direkt",monitor_type="http",monitor_url="http://192.168.10.200:3001",monitor_hostname="null",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{fulla="",monitor_id="8",monitor_name="Uptime Kuma – direkt",monitor_type="http",monitor_url="http://192.168.10.200:3001",monitor_hostname="null",monitor_port="null",window="30d"} 1
+monitor_uptime_ratio{fulla="",monitor_id="8",monitor_name="Uptime Kuma – direkt",monitor_type="http",monitor_url="http://192.168.10.200:3001",monitor_hostname="null",monitor_port="null",window="365d"} 0.9999809422168013
+monitor_uptime_ratio{monitor_id="9",monitor_name="Heimdal",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 0.9986111111111111
+monitor_uptime_ratio{monitor_id="9",monitor_name="Heimdal",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0.998651206814955
+monitor_uptime_ratio{monitor_id="9",monitor_name="Heimdal",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0.9927715804161679
+monitor_uptime_ratio{critical="",eir="",monitor_id="10",monitor_name="Ping",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.2",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{critical="",eir="",monitor_id="10",monitor_name="Ping",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.2",monitor_port="null",window="30d"} 0.9998580217699953
+monitor_uptime_ratio{critical="",eir="",monitor_id="10",monitor_name="Ping",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.2",monitor_port="null",window="365d"} 0.9976734606700434
+monitor_uptime_ratio{critical="",eir="",monitor_id="11",monitor_name="Home Assistant UI",monitor_type="keyword",monitor_url="http://192.168.10.2",monitor_hostname="null",monitor_port="null",window="1d"} 0.9993055555555556
+monitor_uptime_ratio{critical="",eir="",monitor_id="11",monitor_name="Home Assistant UI",monitor_type="keyword",monitor_url="http://192.168.10.2",monitor_hostname="null",monitor_port="null",window="30d"} 0.9993610979649787
+monitor_uptime_ratio{critical="",eir="",monitor_id="11",monitor_name="Home Assistant UI",monitor_type="keyword",monitor_url="http://192.168.10.2",monitor_hostname="null",monitor_port="null",window="365d"} 0.9941235914351632
+monitor_uptime_ratio{critical="",eir="",monitor_id="12",monitor_name="Supervisor Health",monitor_type="http",monitor_url="http://192.168.10.2:4357/health",monitor_hostname="null",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{critical="",eir="",monitor_id="12",monitor_name="Supervisor Health",monitor_type="http",monitor_url="http://192.168.10.2:4357/health",monitor_hostname="null",monitor_port="null",window="30d"} 0.9998107136096914
+monitor_uptime_ratio{critical="",eir="",monitor_id="12",monitor_name="Supervisor Health",monitor_type="http",monitor_url="http://192.168.10.2:4357/health",monitor_hostname="null",monitor_port="null",window="365d"} 0.9969498246149153
+monitor_uptime_ratio{critical="",eir="",monitor_id="13",monitor_name="Core API Wake-up",monitor_type="keyword",monitor_url="http://192.168.10.2/api/",monitor_hostname="null",monitor_port="null",window="1d"} 0.9986111111111111
+monitor_uptime_ratio{critical="",eir="",monitor_id="13",monitor_name="Core API Wake-up",monitor_type="keyword",monitor_url="http://192.168.10.2/api/",monitor_hostname="null",monitor_port="null",window="30d"} 0.9994321408290744
+monitor_uptime_ratio{critical="",eir="",monitor_id="13",monitor_name="Core API Wake-up",monitor_type="keyword",monitor_url="http://192.168.10.2/api/",monitor_hostname="null",monitor_port="null",window="365d"} 0.9945400195217179
+monitor_uptime_ratio{monitor_id="14",monitor_name="Tor",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 0.9996525364836693
+monitor_uptime_ratio{monitor_id="14",monitor_name="Tor",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0.9099510912686665
+monitor_uptime_ratio{monitor_id="14",monitor_name="Tor",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0.9552154205830431
+monitor_uptime_ratio{critical="",frigg="",monitor_id="15",monitor_name="Ping",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.200",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{critical="",frigg="",monitor_id="15",monitor_name="Ping",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.200",monitor_port="null",window="30d"} 1
+monitor_uptime_ratio{critical="",frigg="",monitor_id="15",monitor_name="Ping",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.200",monitor_port="null",window="365d"} 0.999498637934617
+monitor_uptime_ratio{critical="",frigg="",monitor_id="16",monitor_name="SSH",monitor_type="port",monitor_url="https://",monitor_hostname="192.168.10.200",monitor_port="22",window="1d"} 1
+monitor_uptime_ratio{critical="",frigg="",monitor_id="16",monitor_name="SSH",monitor_type="port",monitor_url="https://",monitor_hostname="192.168.10.200",monitor_port="22",window="30d"} 1
+monitor_uptime_ratio{critical="",frigg="",monitor_id="16",monitor_name="SSH",monitor_type="port",monitor_url="https://",monitor_hostname="192.168.10.200",monitor_port="22",window="365d"} 0.9994929373415429
+monitor_uptime_ratio{critical="",frigg="",monitor_id="18",monitor_name="Caddy Reverse Proxy",monitor_type="http",monitor_url="https://caddy.home.arpa",monitor_hostname="null",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{critical="",frigg="",monitor_id="18",monitor_name="Caddy Reverse Proxy",monitor_type="http",monitor_url="https://caddy.home.arpa",monitor_hostname="null",monitor_port="null",window="30d"} 0.9999053478466635
+monitor_uptime_ratio{critical="",frigg="",monitor_id="18",monitor_name="Caddy Reverse Proxy",monitor_type="http",monitor_url="https://caddy.home.arpa",monitor_hostname="null",monitor_port="null",window="365d"} 0.9974268952346099
+monitor_uptime_ratio{frigg="",monitor_id="21",monitor_name="Glances UI",monitor_type="http",monitor_url="http://192.168.10.200:61208",monitor_hostname="null",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{frigg="",monitor_id="21",monitor_name="Glances UI",monitor_type="http",monitor_url="http://192.168.10.200:61208",monitor_hostname="null",monitor_port="null",window="30d"} 1
+monitor_uptime_ratio{frigg="",monitor_id="21",monitor_name="Glances UI",monitor_type="http",monitor_url="http://192.168.10.200:61208",monitor_hostname="null",monitor_port="null",window="365d"} 0.9994853103769054
+monitor_uptime_ratio{critical="",frigg="",monitor_id="19",monitor_name="Docker API",monitor_type="http",monitor_url="https://uptime:UptimeDocker-2025%21@docker-api.home.arpa/_ping",monitor_hostname="null",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{critical="",frigg="",monitor_id="19",monitor_name="Docker API",monitor_type="http",monitor_url="https://uptime:UptimeDocker-2025%21@docker-api.home.arpa/_ping",monitor_hostname="null",monitor_port="null",window="30d"} 0.9999645012424565
+monitor_uptime_ratio{critical="",frigg="",monitor_id="19",monitor_name="Docker API",monitor_type="http",monitor_url="https://uptime:UptimeDocker-2025%21@docker-api.home.arpa/_ping",monitor_hostname="null",monitor_port="null",window="365d"} 0.9975313019475073
+monitor_uptime_ratio{ai="",frigg="",monitor_id="22",monitor_name="Ollama API",monitor_type="http",monitor_url="http://192.168.10.200:11434",monitor_hostname="null",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{ai="",frigg="",monitor_id="22",monitor_name="Ollama API",monitor_type="http",monitor_url="http://192.168.10.200:11434",monitor_hostname="null",monitor_port="null",window="30d"} 1
+monitor_uptime_ratio{ai="",frigg="",monitor_id="22",monitor_name="Ollama API",monitor_type="http",monitor_url="http://192.168.10.200:11434",monitor_hostname="null",monitor_port="null",window="365d"} 0.9994853084146356
+monitor_uptime_ratio{frigg="",monitor_id="23",monitor_name="Uptime proxy",monitor_type="http",monitor_url="https://uptime.home.arpa/dashboard",monitor_hostname="null",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{frigg="",monitor_id="23",monitor_name="Uptime proxy",monitor_type="http",monitor_url="https://uptime.home.arpa/dashboard",monitor_hostname="null",monitor_port="null",window="30d"} 0.9998107046519332
+monitor_uptime_ratio{frigg="",monitor_id="23",monitor_name="Uptime proxy",monitor_type="http",monitor_url="https://uptime.home.arpa/dashboard",monitor_hostname="null",monitor_port="null",window="365d"} 0.9974228572735659
+monitor_uptime_ratio{ai="",Container="",frigg="",monitor_id="24",monitor_name="Ollama Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{ai="",Container="",frigg="",monitor_id="24",monitor_name="Ollama Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 1
+monitor_uptime_ratio{ai="",Container="",frigg="",monitor_id="24",monitor_name="Ollama Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0.9976514634509
+monitor_uptime_ratio{Container="",frigg="",monitor_id="25",monitor_name="Caddy Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{Container="",frigg="",monitor_id="25",monitor_name="Caddy Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 1
+monitor_uptime_ratio{Container="",frigg="",monitor_id="25",monitor_name="Caddy Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0.9976437664659928
+monitor_uptime_ratio{Container="",frigg="",monitor_id="26",monitor_name="HA (Test) Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{Container="",frigg="",monitor_id="26",monitor_name="HA (Test) Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 1
+monitor_uptime_ratio{Container="",frigg="",monitor_id="26",monitor_name="HA (Test) Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0.9976247664798505
+monitor_uptime_ratio{Container="",frigg="",monitor_id="27",monitor_name="ESPHome (Test) Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{Container="",frigg="",monitor_id="27",monitor_name="ESPHome (Test) Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 1
+monitor_uptime_ratio{Container="",frigg="",monitor_id="27",monitor_name="ESPHome (Test) Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0.9709098395656682
+monitor_uptime_ratio{Container="",frigg="",monitor_id="28",monitor_name="Glances Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{Container="",frigg="",monitor_id="28",monitor_name="Glances Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 1
+monitor_uptime_ratio{Container="",frigg="",monitor_id="28",monitor_name="Glances Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0.9976476239858476
+monitor_uptime_ratio{Container="",critical="",frigg="",monitor_id="29",monitor_name="Portainer Agent Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{Container="",critical="",frigg="",monitor_id="29",monitor_name="Portainer Agent Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 1
+monitor_uptime_ratio{Container="",critical="",frigg="",monitor_id="29",monitor_name="Portainer Agent Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0.9976438203660848
+monitor_uptime_ratio{Container="",critical="",frigg="",monitor_id="30",monitor_name="Docker Socket Proxy Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{Container="",critical="",frigg="",monitor_id="30",monitor_name="Docker Socket Proxy Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 1
+monitor_uptime_ratio{Container="",critical="",frigg="",monitor_id="30",monitor_name="Docker Socket Proxy Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0.9976438023996614
+monitor_uptime_ratio{Container="",fulla="",monitor_id="32",monitor_name="Open webUI Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 0.9993055555555556
+monitor_uptime_ratio{Container="",fulla="",monitor_id="32",monitor_name="Open webUI Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0.9999053411269139
+monitor_uptime_ratio{Container="",fulla="",monitor_id="32",monitor_name="Open webUI Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0.9959433904715427
+monitor_uptime_ratio{Container="",fulla="",monitor_id="33",monitor_name="OpenWRT Backup Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{Container="",fulla="",monitor_id="33",monitor_name="OpenWRT Backup Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 1
+monitor_uptime_ratio{Container="",fulla="",monitor_id="33",monitor_name="OpenWRT Backup Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 1
+monitor_uptime_ratio{Container="",fulla="",monitor_id="34",monitor_name="Portainer Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{Container="",fulla="",monitor_id="34",monitor_name="Portainer Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0.9673426887852901
+monitor_uptime_ratio{Container="",fulla="",monitor_id="34",monitor_name="Portainer Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0.9945250813040677
+monitor_uptime_ratio{Container="",critical="",fulla="",monitor_id="35",monitor_name="Uptime-kuma Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{Container="",critical="",fulla="",monitor_id="35",monitor_name="Uptime-kuma Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 1
+monitor_uptime_ratio{Container="",critical="",fulla="",monitor_id="35",monitor_name="Uptime-kuma Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 1
+monitor_uptime_ratio{monitor_id="37",monitor_name="Home",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{monitor_id="37",monitor_name="Home",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0.9997633528172847
+monitor_uptime_ratio{monitor_id="37",monitor_name="Home",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0.9934003591485663
+monitor_uptime_ratio{home="",monitor_id="38",monitor_name="gw.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.1",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{home="",monitor_id="38",monitor_name="gw.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.1",monitor_port="null",window="30d"} 0.999929004165089
+monitor_uptime_ratio{home="",monitor_id="38",monitor_name="gw.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.1",monitor_port="null",window="365d"} 0.9994395409573555
+monitor_uptime_ratio{home="",monitor_id="39",monitor_name="ap_kontoret.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.4",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{home="",monitor_id="39",monitor_name="ap_kontoret.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.4",monitor_port="null",window="30d"} 0.9999763347216963
+monitor_uptime_ratio{home="",monitor_id="39",monitor_name="ap_kontoret.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.4",monitor_port="null",window="365d"} 0.9973845244676592
+monitor_uptime_ratio{home="",monitor_id="40",monitor_name="ap_koket.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.5",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{home="",monitor_id="40",monitor_name="ap_koket.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.5",monitor_port="null",window="30d"} 0.999929002484913
+monitor_uptime_ratio{home="",monitor_id="40",monitor_name="ap_koket.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.5",monitor_port="null",window="365d"} 0.9979373503530524
+monitor_uptime_ratio{home="",monitor_id="41",monitor_name="ap_kallaren.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.6",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{home="",monitor_id="41",monitor_name="ap_kallaren.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.6",monitor_port="null",window="30d"} 0.9999053366465507
+monitor_uptime_ratio{home="",monitor_id="41",monitor_name="ap_kallaren.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.6",monitor_port="null",window="365d"} 0.9999733112706504
+monitor_uptime_ratio{home="",monitor_id="42",monitor_name="ap_verkstaden.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.7",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{home="",monitor_id="42",monitor_name="ap_verkstaden.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.7",monitor_port="null",window="30d"} 0.9999053366465507
+monitor_uptime_ratio{home="",monitor_id="42",monitor_name="ap_verkstaden.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.7",monitor_port="null",window="365d"} 0.9997559887602323
+monitor_uptime_ratio{home="",monitor_id="43",monitor_name="ap_friggan.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.8",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{home="",monitor_id="43",monitor_name="ap_friggan.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.8",monitor_port="null",window="30d"} 0.999929002484913
+monitor_uptime_ratio{home="",monitor_id="43",monitor_name="ap_friggan.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.8",monitor_port="null",window="365d"} 0.999557729627921
+monitor_uptime_ratio{home="",monitor_id="44",monitor_name="ap_honshuset.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.30.9",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{home="",monitor_id="44",monitor_name="ap_honshuset.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.30.9",monitor_port="null",window="30d"} 0.9998343352108676
+monitor_uptime_ratio{home="",monitor_id="44",monitor_name="ap_honshuset.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.30.9",monitor_port="null",window="365d"} 0.9990545684750648
+monitor_uptime_ratio{home="",monitor_id="45",monitor_name="ap_poolen.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.10",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{home="",monitor_id="45",monitor_name="ap_poolen.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.10",monitor_port="null",window="30d"} 0.9998816680077626
+monitor_uptime_ratio{home="",monitor_id="45",monitor_name="ap_poolen.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.10",monitor_port="null",window="365d"} 0.9996987974775242
+monitor_uptime_ratio{monitor_id="48",monitor_name="Buck",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 0.9972222222222222
+monitor_uptime_ratio{monitor_id="48",monitor_name="Buck",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0.9996923368201827
+monitor_uptime_ratio{monitor_id="48",monitor_name="Buck",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0.7942024233458643
+monitor_uptime_ratio{buck="",monitor_id="46",monitor_name="gw_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.1",monitor_port="null",window="1d"} 0.9972222222222222
+monitor_uptime_ratio{buck="",monitor_id="46",monitor_name="gw_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.1",monitor_port="null",window="30d"} 0.9996923368201827
+monitor_uptime_ratio{buck="",monitor_id="46",monitor_name="gw_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.1",monitor_port="null",window="365d"} 0.7942214867966539
+monitor_uptime_ratio{buck="",monitor_id="47",monitor_name="ap_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.3",monitor_port="null",window="1d"} 0.9972222222222222
+monitor_uptime_ratio{buck="",monitor_id="47",monitor_name="ap_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.3",monitor_port="null",window="30d"} 0.9996923368201827
+monitor_uptime_ratio{buck="",monitor_id="47",monitor_name="ap_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.3",monitor_port="null",window="365d"} 0.7942138614163381
+monitor_uptime_ratio{monitor_id="50",monitor_name="Kiwi",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{monitor_id="50",monitor_name="Kiwi",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0.8964831731907038
+monitor_uptime_ratio{monitor_id="50",monitor_name="Kiwi",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0.6478675623946745
+monitor_uptime_ratio{buck="",monitor_id="49",monitor_name="ha_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.2",monitor_port="null",window="1d"} 0.9972222222222222
+monitor_uptime_ratio{buck="",monitor_id="49",monitor_name="ha_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.2",monitor_port="null",window="30d"} 0.9996923368201827
+monitor_uptime_ratio{buck="",monitor_id="49",monitor_name="ha_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.2",monitor_port="null",window="365d"} 0.7942245149286452
+monitor_uptime_ratio{kiwi="",monitor_id="51",monitor_name="gw_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.1",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{kiwi="",monitor_id="51",monitor_name="gw_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.1",monitor_port="null",window="30d"} 0.8965092888415572
+monitor_uptime_ratio{kiwi="",monitor_id="51",monitor_name="gw_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.1",monitor_port="null",window="365d"} 0.6501652807485102
+monitor_uptime_ratio{monitor_id="54",monitor_name="Sippan",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{monitor_id="54",monitor_name="Sippan",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0.9996686625801718
+monitor_uptime_ratio{monitor_id="54",monitor_name="Sippan",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0.8175461339026994
+monitor_uptime_ratio{kiwi="",monitor_id="52",monitor_name="ap_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.3",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{kiwi="",monitor_id="52",monitor_name="ap_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.3",monitor_port="null",window="30d"} 0.8964856230031949
+monitor_uptime_ratio{kiwi="",monitor_id="52",monitor_name="ap_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.3",monitor_port="null",window="365d"} 0.647980600958514
+monitor_uptime_ratio{kiwi="",monitor_id="53",monitor_name="ha_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.2",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{kiwi="",monitor_id="53",monitor_name="ha_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.2",monitor_port="null",window="30d"} 0.8965092888415572
+monitor_uptime_ratio{kiwi="",monitor_id="53",monitor_name="ha_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.2",monitor_port="null",window="365d"} 0.6500966520640077
+monitor_uptime_ratio{critical="",eir="",monitor_id="58",monitor_name="AdGuard DNS",monitor_type="dns",monitor_url="https://",monitor_hostname="google.com",monitor_port="53",window="1d"} 1
+monitor_uptime_ratio{critical="",eir="",monitor_id="58",monitor_name="AdGuard DNS",monitor_type="dns",monitor_url="https://",monitor_hostname="google.com",monitor_port="53",window="30d"} 0.9992902767920511
+monitor_uptime_ratio{critical="",eir="",monitor_id="58",monitor_name="AdGuard DNS",monitor_type="dns",monitor_url="https://",monitor_hostname="google.com",monitor_port="53",window="365d"} 0.9952732193569291
+monitor_uptime_ratio{sippan="",monitor_id="55",monitor_name="gw_sippan",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.13.1",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{sippan="",monitor_id="55",monitor_name="gw_sippan",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.13.1",monitor_port="null",window="30d"} 0.9996686704217352
+monitor_uptime_ratio{sippan="",monitor_id="55",monitor_name="gw_sippan",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.13.1",monitor_port="null",window="365d"} 0.8175537593411621
+monitor_uptime_ratio{sippan="",monitor_id="56",monitor_name="ha_sippan",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.13.2",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{sippan="",monitor_id="56",monitor_name="ha_sippan",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.13.2",monitor_port="null",window="30d"} 0.9996686704217352
+monitor_uptime_ratio{sippan="",monitor_id="56",monitor_name="ha_sippan",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.13.2",monitor_port="null",window="365d"} 0.8175873783261336
+monitor_uptime_ratio{monitor_id="63",monitor_name="Mimer",monitor_type="group",monitor_url="null",monitor_hostname="null",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{monitor_id="63",monitor_name="Mimer",monitor_type="group",monitor_url="null",monitor_hostname="null",monitor_port="null",window="30d"} 0.9742410303587856
+monitor_uptime_ratio{monitor_id="63",monitor_name="Mimer",monitor_type="group",monitor_url="null",monitor_hostname="null",monitor_port="null",window="365d"} 0.9742410303587856
+monitor_uptime_ratio{critical="",home="",monitor_id="60",monitor_name="sw_vinden",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.3",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{critical="",home="",monitor_id="60",monitor_name="sw_vinden",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.3",monitor_port="null",window="30d"} 0.999952667203105
+monitor_uptime_ratio{critical="",home="",monitor_id="60",monitor_name="sw_vinden",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.3",monitor_port="null",window="365d"} 0.9999787484991127
+monitor_uptime_ratio{monitor_id="64",monitor_name="SSH / Borg-åtkomst",monitor_type="port",monitor_url="null",monitor_hostname="192.168.10.220",monitor_port="22",window="1d"} 1
+monitor_uptime_ratio{monitor_id="64",monitor_name="SSH / Borg-åtkomst",monitor_type="port",monitor_url="null",monitor_hostname="192.168.10.220",monitor_port="22",window="30d"} 1
+monitor_uptime_ratio{monitor_id="64",monitor_name="SSH / Borg-åtkomst",monitor_type="port",monitor_url="null",monitor_hostname="192.168.10.220",monitor_port="22",window="365d"} 1
+monitor_uptime_ratio{critical="",home="",monitor_id="61",monitor_name="sw_kontoret",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.12",monitor_port="null",window="1d"} 1
+monitor_uptime_ratio{critical="",home="",monitor_id="61",monitor_name="sw_kontoret",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.12",monitor_port="null",window="30d"} 0.9999763336015525
+monitor_uptime_ratio{critical="",home="",monitor_id="61",monitor_name="sw_kontoret",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.12",monitor_port="null",window="365d"} 0.9971416731306648
+
+# HELP monitor_response_time_seconds Average response time in seconds calculated over sliding window specified by the 'window' label
+# TYPE monitor_response_time_seconds gauge
+monitor_response_time_seconds{critical="",fulla="",monitor_id="4",monitor_name="Portainer",monitor_type="http",monitor_url="http://192.168.10.200:9000",monitor_hostname="null",monitor_port="null",window="1d"} 0.0008784722222222222
+monitor_response_time_seconds{critical="",fulla="",monitor_id="4",monitor_name="Portainer",monitor_type="http",monitor_url="http://192.168.10.200:9000",monitor_hostname="null",monitor_port="null",window="30d"} 0.0008551752819433911
+monitor_response_time_seconds{critical="",fulla="",monitor_id="4",monitor_name="Portainer",monitor_type="http",monitor_url="http://192.168.10.200:9000",monitor_hostname="null",monitor_port="null",window="365d"} 0.0029889280592963934
+monitor_response_time_seconds{critical="",fulla="",monitor_id="5",monitor_name="Open WebUI",monitor_type="http",monitor_url="https://openwebui.home.arpa",monitor_hostname="null",monitor_port="null",window="1d"} 0.004778472222222222
+monitor_response_time_seconds{critical="",fulla="",monitor_id="5",monitor_name="Open WebUI",monitor_type="http",monitor_url="https://openwebui.home.arpa",monitor_hostname="null",monitor_port="null",window="30d"} 0.004843832907240364
+monitor_response_time_seconds{critical="",fulla="",monitor_id="5",monitor_name="Open WebUI",monitor_type="http",monitor_url="https://openwebui.home.arpa",monitor_hostname="null",monitor_port="null",window="365d"} 0.012405394818700607
+monitor_response_time_seconds{critical="",fulla="",monitor_id="6",monitor_name="Wyoming Whisper",monitor_type="port",monitor_url="http://192.168.10.200:10300",monitor_hostname="192.168.10.200",monitor_port="10300",window="1d"} 0.00000625
+monitor_response_time_seconds{critical="",fulla="",monitor_id="6",monitor_name="Wyoming Whisper",monitor_type="port",monitor_url="http://192.168.10.200:10300",monitor_hostname="192.168.10.200",monitor_port="10300",window="30d"} 0.000011620476652545381
+monitor_response_time_seconds{critical="",fulla="",monitor_id="6",monitor_name="Wyoming Whisper",monitor_type="port",monitor_url="http://192.168.10.200:10300",monitor_hostname="192.168.10.200",monitor_port="10300",window="365d"} 0.00004068680488914547
+monitor_response_time_seconds{fulla="",monitor_id="8",monitor_name="Uptime Kuma – direkt",monitor_type="http",monitor_url="http://192.168.10.200:3001",monitor_hostname="null",monitor_port="null",window="1d"} 0.0017465277777777776
+monitor_response_time_seconds{fulla="",monitor_id="8",monitor_name="Uptime Kuma – direkt",monitor_type="http",monitor_url="http://192.168.10.200:3001",monitor_hostname="null",monitor_port="null",window="30d"} 0.0018077105014191106
+monitor_response_time_seconds{fulla="",monitor_id="8",monitor_name="Uptime Kuma – direkt",monitor_type="http",monitor_url="http://192.168.10.200:3001",monitor_hostname="null",monitor_port="null",window="365d"} 0.006382801928684416
+monitor_response_time_seconds{monitor_id="9",monitor_name="Heimdal",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 0.0011995827538247566
+monitor_response_time_seconds{monitor_id="9",monitor_name="Heimdal",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0.001226832215719262
+monitor_response_time_seconds{monitor_id="9",monitor_name="Heimdal",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0.0051770262901206605
+monitor_response_time_seconds{critical="",eir="",monitor_id="10",monitor_name="Ping",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.2",monitor_port="null",window="1d"} 0.0003071
+monitor_response_time_seconds{critical="",eir="",monitor_id="10",monitor_name="Ping",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.2",monitor_port="null",window="30d"} 0.0003069425379845696
+monitor_response_time_seconds{critical="",eir="",monitor_id="10",monitor_name="Ping",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.2",monitor_port="null",window="365d"} 0.01107981762124306
+monitor_response_time_seconds{critical="",eir="",monitor_id="11",monitor_name="Home Assistant UI",monitor_type="keyword",monitor_url="http://192.168.10.2",monitor_hostname="null",monitor_port="null",window="1d"} 0.003810284920083391
+monitor_response_time_seconds{critical="",eir="",monitor_id="11",monitor_name="Home Assistant UI",monitor_type="keyword",monitor_url="http://192.168.10.2",monitor_hostname="null",monitor_port="null",window="30d"} 0.004527762650060381
+monitor_response_time_seconds{critical="",eir="",monitor_id="11",monitor_name="Home Assistant UI",monitor_type="keyword",monitor_url="http://192.168.10.2",monitor_hostname="null",monitor_port="null",window="365d"} 0.009079671952557405
+monitor_response_time_seconds{critical="",eir="",monitor_id="12",monitor_name="Supervisor Health",monitor_type="http",monitor_url="http://192.168.10.2:4357/health",monitor_hostname="null",monitor_port="null",window="1d"} 0.009341666666666667
+monitor_response_time_seconds{critical="",eir="",monitor_id="12",monitor_name="Supervisor Health",monitor_type="http",monitor_url="http://192.168.10.2:4357/health",monitor_hostname="null",monitor_port="null",window="30d"} 0.009949119651647104
+monitor_response_time_seconds{critical="",eir="",monitor_id="12",monitor_name="Supervisor Health",monitor_type="http",monitor_url="http://192.168.10.2:4357/health",monitor_hostname="null",monitor_port="null",window="365d"} 0.038731436438733356
+monitor_response_time_seconds{critical="",eir="",monitor_id="13",monitor_name="Core API Wake-up",monitor_type="keyword",monitor_url="http://192.168.10.2/api/",monitor_hostname="null",monitor_port="null",window="1d"} 0.003905424200278164
+monitor_response_time_seconds{critical="",eir="",monitor_id="13",monitor_name="Core API Wake-up",monitor_type="keyword",monitor_url="http://192.168.10.2/api/",monitor_hostname="null",monitor_port="null",window="30d"} 0.004886742424242426
+monitor_response_time_seconds{critical="",eir="",monitor_id="13",monitor_name="Core API Wake-up",monitor_type="keyword",monitor_url="http://192.168.10.2/api/",monitor_hostname="null",monitor_port="null",window="365d"} 0.023128469559883444
+monitor_response_time_seconds{monitor_id="14",monitor_name="Tor",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 0.003963503649635037
+monitor_response_time_seconds{monitor_id="14",monitor_name="Tor",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0.004143221541144472
+monitor_response_time_seconds{monitor_id="14",monitor_name="Tor",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0.014454457362405072
+monitor_response_time_seconds{critical="",frigg="",monitor_id="15",monitor_name="Ping",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.200",monitor_port="null",window="1d"} 0.000022762764848905713
+monitor_response_time_seconds{critical="",frigg="",monitor_id="15",monitor_name="Ping",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.200",monitor_port="null",window="30d"} 0.000022270914684652962
+monitor_response_time_seconds{critical="",frigg="",monitor_id="15",monitor_name="Ping",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.200",monitor_port="null",window="365d"} 0.0001950424273518622
+monitor_response_time_seconds{critical="",frigg="",monitor_id="16",monitor_name="SSH",monitor_type="port",monitor_url="https://",monitor_hostname="192.168.10.200",monitor_port="22",window="1d"} 0.00000625
+monitor_response_time_seconds{critical="",frigg="",monitor_id="16",monitor_name="SSH",monitor_type="port",monitor_url="https://",monitor_hostname="192.168.10.200",monitor_port="22",window="30d"} 0.000010956505277107289
+monitor_response_time_seconds{critical="",frigg="",monitor_id="16",monitor_name="SSH",monitor_type="port",monitor_url="https://",monitor_hostname="192.168.10.200",monitor_port="22",window="365d"} 0.0003617038319817518
+monitor_response_time_seconds{critical="",frigg="",monitor_id="18",monitor_name="Caddy Reverse Proxy",monitor_type="http",monitor_url="https://caddy.home.arpa",monitor_hostname="null",monitor_port="null",window="1d"} 0.0034125
+monitor_response_time_seconds{critical="",frigg="",monitor_id="18",monitor_name="Caddy Reverse Proxy",monitor_type="http",monitor_url="https://caddy.home.arpa",monitor_hostname="null",monitor_port="null",window="30d"} 0.00353665751609239
+monitor_response_time_seconds{critical="",frigg="",monitor_id="18",monitor_name="Caddy Reverse Proxy",monitor_type="http",monitor_url="https://caddy.home.arpa",monitor_hostname="null",monitor_port="null",window="365d"} 0.011713507150664618
+monitor_response_time_seconds{frigg="",monitor_id="21",monitor_name="Glances UI",monitor_type="http",monitor_url="http://192.168.10.200:61208",monitor_hostname="null",monitor_port="null",window="1d"} 0.0013215277777777778
+monitor_response_time_seconds{frigg="",monitor_id="21",monitor_name="Glances UI",monitor_type="http",monitor_url="http://192.168.10.200:61208",monitor_hostname="null",monitor_port="null",window="30d"} 0.0013816172468466765
+monitor_response_time_seconds{frigg="",monitor_id="21",monitor_name="Glances UI",monitor_type="http",monitor_url="http://192.168.10.200:61208",monitor_hostname="null",monitor_port="null",window="365d"} 0.0031400409675044535
+monitor_response_time_seconds{critical="",frigg="",monitor_id="19",monitor_name="Docker API",monitor_type="http",monitor_url="https://uptime:UptimeDocker-2025%21@docker-api.home.arpa/_ping",monitor_hostname="null",monitor_port="null",window="1d"} 0.0034032650225772837
+monitor_response_time_seconds{critical="",frigg="",monitor_id="19",monitor_name="Docker API",monitor_type="http",monitor_url="https://uptime:UptimeDocker-2025%21@docker-api.home.arpa/_ping",monitor_hostname="null",monitor_port="null",window="30d"} 0.0034666003999668667
+monitor_response_time_seconds{critical="",frigg="",monitor_id="19",monitor_name="Docker API",monitor_type="http",monitor_url="https://uptime:UptimeDocker-2025%21@docker-api.home.arpa/_ping",monitor_hostname="null",monitor_port="null",window="365d"} 0.011005922338817404
+monitor_response_time_seconds{ai="",frigg="",monitor_id="22",monitor_name="Ollama API",monitor_type="http",monitor_url="http://192.168.10.200:11434",monitor_hostname="null",monitor_port="null",window="1d"} 0.0006333333333333333
+monitor_response_time_seconds{ai="",frigg="",monitor_id="22",monitor_name="Ollama API",monitor_type="http",monitor_url="http://192.168.10.200:11434",monitor_hostname="null",monitor_port="null",window="30d"} 0.0007355941027522063
+monitor_response_time_seconds{ai="",frigg="",monitor_id="22",monitor_name="Ollama API",monitor_type="http",monitor_url="http://192.168.10.200:11434",monitor_hostname="null",monitor_port="null",window="365d"} 0.002559040731162124
+monitor_response_time_seconds{frigg="",monitor_id="23",monitor_name="Uptime proxy",monitor_type="http",monitor_url="https://uptime.home.arpa/dashboard",monitor_hostname="null",monitor_port="null",window="1d"} 0.0036361111111111112
+monitor_response_time_seconds{frigg="",monitor_id="23",monitor_name="Uptime proxy",monitor_type="http",monitor_url="https://uptime.home.arpa/dashboard",monitor_hostname="null",monitor_port="null",window="30d"} 0.003664978463577413
+monitor_response_time_seconds{frigg="",monitor_id="23",monitor_name="Uptime proxy",monitor_type="http",monitor_url="https://uptime.home.arpa/dashboard",monitor_hostname="null",monitor_port="null",window="365d"} 0.014039964835836869
+monitor_response_time_seconds{ai="",Container="",frigg="",monitor_id="24",monitor_name="Ollama Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 0
+monitor_response_time_seconds{ai="",Container="",frigg="",monitor_id="24",monitor_name="Ollama Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0
+monitor_response_time_seconds{ai="",Container="",frigg="",monitor_id="24",monitor_name="Ollama Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0
+monitor_response_time_seconds{Container="",frigg="",monitor_id="25",monitor_name="Caddy Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 0
+monitor_response_time_seconds{Container="",frigg="",monitor_id="25",monitor_name="Caddy Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0
+monitor_response_time_seconds{Container="",frigg="",monitor_id="25",monitor_name="Caddy Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0
+monitor_response_time_seconds{Container="",frigg="",monitor_id="26",monitor_name="HA (Test) Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 0
+monitor_response_time_seconds{Container="",frigg="",monitor_id="26",monitor_name="HA (Test) Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0
+monitor_response_time_seconds{Container="",frigg="",monitor_id="26",monitor_name="HA (Test) Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0
+monitor_response_time_seconds{Container="",frigg="",monitor_id="27",monitor_name="ESPHome (Test) Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 0
+monitor_response_time_seconds{Container="",frigg="",monitor_id="27",monitor_name="ESPHome (Test) Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0
+monitor_response_time_seconds{Container="",frigg="",monitor_id="27",monitor_name="ESPHome (Test) Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0
+monitor_response_time_seconds{Container="",frigg="",monitor_id="28",monitor_name="Glances Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 0
+monitor_response_time_seconds{Container="",frigg="",monitor_id="28",monitor_name="Glances Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0
+monitor_response_time_seconds{Container="",frigg="",monitor_id="28",monitor_name="Glances Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0
+monitor_response_time_seconds{Container="",critical="",frigg="",monitor_id="29",monitor_name="Portainer Agent Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 0
+monitor_response_time_seconds{Container="",critical="",frigg="",monitor_id="29",monitor_name="Portainer Agent Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0
+monitor_response_time_seconds{Container="",critical="",frigg="",monitor_id="29",monitor_name="Portainer Agent Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0
+monitor_response_time_seconds{Container="",critical="",frigg="",monitor_id="30",monitor_name="Docker Socket Proxy Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 0
+monitor_response_time_seconds{Container="",critical="",frigg="",monitor_id="30",monitor_name="Docker Socket Proxy Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0
+monitor_response_time_seconds{Container="",critical="",frigg="",monitor_id="30",monitor_name="Docker Socket Proxy Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0
+monitor_response_time_seconds{Container="",fulla="",monitor_id="32",monitor_name="Open webUI Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 0
+monitor_response_time_seconds{Container="",fulla="",monitor_id="32",monitor_name="Open webUI Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0
+monitor_response_time_seconds{Container="",fulla="",monitor_id="32",monitor_name="Open webUI Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0
+monitor_response_time_seconds{Container="",fulla="",monitor_id="33",monitor_name="OpenWRT Backup Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 0
+monitor_response_time_seconds{Container="",fulla="",monitor_id="33",monitor_name="OpenWRT Backup Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0
+monitor_response_time_seconds{Container="",fulla="",monitor_id="33",monitor_name="OpenWRT Backup Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0
+monitor_response_time_seconds{Container="",fulla="",monitor_id="34",monitor_name="Portainer Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 0
+monitor_response_time_seconds{Container="",fulla="",monitor_id="34",monitor_name="Portainer Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0
+monitor_response_time_seconds{Container="",fulla="",monitor_id="34",monitor_name="Portainer Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0
+monitor_response_time_seconds{Container="",critical="",fulla="",monitor_id="35",monitor_name="Uptime-kuma Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 0
+monitor_response_time_seconds{Container="",critical="",fulla="",monitor_id="35",monitor_name="Uptime-kuma Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0
+monitor_response_time_seconds{Container="",critical="",fulla="",monitor_id="35",monitor_name="Uptime-kuma Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0
+monitor_response_time_seconds{monitor_id="37",monitor_name="Home",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 0.002009027777777778
+monitor_response_time_seconds{monitor_id="37",monitor_name="Home",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0.002002272350699459
+monitor_response_time_seconds{monitor_id="37",monitor_name="Home",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0.009716483212821812
+monitor_response_time_seconds{home="",monitor_id="38",monitor_name="gw.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.1",monitor_port="null",window="1d"} 0.0002761270833333339
+monitor_response_time_seconds{home="",monitor_id="38",monitor_name="gw.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.1",monitor_port="null",window="30d"} 0.0003103658911793245
+monitor_response_time_seconds{home="",monitor_id="38",monitor_name="gw.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.1",monitor_port="null",window="365d"} 0.00045163035118906834
+monitor_response_time_seconds{home="",monitor_id="39",monitor_name="ap_kontoret.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.4",monitor_port="null",window="1d"} 0.0002648888888888888
+monitor_response_time_seconds{home="",monitor_id="39",monitor_name="ap_kontoret.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.4",monitor_port="null",window="30d"} 0.0002714536031238907
+monitor_response_time_seconds{home="",monitor_id="39",monitor_name="ap_kontoret.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.4",monitor_port="null",window="365d"} 0.0003973479256419176
+monitor_response_time_seconds{home="",monitor_id="40",monitor_name="ap_koket.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.5",monitor_port="null",window="1d"} 0.00029875763888888843
+monitor_response_time_seconds{home="",monitor_id="40",monitor_name="ap_koket.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.5",monitor_port="null",window="30d"} 0.00038824228438890475
+monitor_response_time_seconds{home="",monitor_id="40",monitor_name="ap_koket.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.5",monitor_port="null",window="365d"} 0.0005408878671062836
+monitor_response_time_seconds{home="",monitor_id="41",monitor_name="ap_kallaren.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.6",monitor_port="null",window="1d"} 0.0003507597222222224
+monitor_response_time_seconds{home="",monitor_id="41",monitor_name="ap_kallaren.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.6",monitor_port="null",window="30d"} 0.0003449364275401767
+monitor_response_time_seconds{home="",monitor_id="41",monitor_name="ap_kallaren.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.6",monitor_port="null",window="365d"} 0.00043260088227668574
+monitor_response_time_seconds{home="",monitor_id="42",monitor_name="ap_verkstaden.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.7",monitor_port="null",window="1d"} 0.0003425812500000002
+monitor_response_time_seconds{home="",monitor_id="42",monitor_name="ap_verkstaden.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.7",monitor_port="null",window="30d"} 0.000358916499017775
+monitor_response_time_seconds{home="",monitor_id="42",monitor_name="ap_verkstaden.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.7",monitor_port="null",window="365d"} 0.0004295269869841619
+monitor_response_time_seconds{home="",monitor_id="43",monitor_name="ap_friggan.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.8",monitor_port="null",window="1d"} 0.0003172937499999999
+monitor_response_time_seconds{home="",monitor_id="43",monitor_name="ap_friggan.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.8",monitor_port="null",window="30d"} 0.00032030412761526085
+monitor_response_time_seconds{home="",monitor_id="43",monitor_name="ap_friggan.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.8",monitor_port="null",window="365d"} 0.00044551348567897574
+monitor_response_time_seconds{home="",monitor_id="44",monitor_name="ap_honshuset.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.30.9",monitor_port="null",window="1d"} 0.0032282083333333334
+monitor_response_time_seconds{home="",monitor_id="44",monitor_name="ap_honshuset.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.30.9",monitor_port="null",window="30d"} 0.003202629062418632
+monitor_response_time_seconds{home="",monitor_id="44",monitor_name="ap_honshuset.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.30.9",monitor_port="null",window="365d"} 0.006281227222511728
+monitor_response_time_seconds{home="",monitor_id="45",monitor_name="ap_poolen.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.10",monitor_port="null",window="1d"} 0.0002929472222222214
+monitor_response_time_seconds{home="",monitor_id="45",monitor_name="ap_poolen.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.10",monitor_port="null",window="30d"} 0.00030238557125612396
+monitor_response_time_seconds{home="",monitor_id="45",monitor_name="ap_poolen.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.10",monitor_port="null",window="365d"} 0.00038955621026456563
+monitor_response_time_seconds{monitor_id="48",monitor_name="Buck",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 0.0010396935933147634
+monitor_response_time_seconds{monitor_id="48",monitor_name="Buck",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0.000960370256385976
+monitor_response_time_seconds{monitor_id="48",monitor_name="Buck",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0.003684131441876095
+monitor_response_time_seconds{buck="",monitor_id="46",monitor_name="gw_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.1",monitor_port="null",window="1d"} 0.01626232590529248
+monitor_response_time_seconds{buck="",monitor_id="46",monitor_name="gw_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.1",monitor_port="null",window="30d"} 0.015221467294808355
+monitor_response_time_seconds{buck="",monitor_id="46",monitor_name="gw_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.1",monitor_port="null",window="365d"} 0.015578365896980471
+monitor_response_time_seconds{buck="",monitor_id="47",monitor_name="ap_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.3",monitor_port="null",window="1d"} 0.015455153203342627
+monitor_response_time_seconds{buck="",monitor_id="47",monitor_name="ap_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.3",monitor_port="null",window="30d"} 0.014412168272531419
+monitor_response_time_seconds{buck="",monitor_id="47",monitor_name="ap_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.3",monitor_port="null",window="365d"} 0.014836642375712885
+monitor_response_time_seconds{monitor_id="50",monitor_name="Kiwi",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 0.0010118055555555557
+monitor_response_time_seconds{monitor_id="50",monitor_name="Kiwi",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0.0010062565997888066
+monitor_response_time_seconds{monitor_id="50",monitor_name="Kiwi",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0.0036775323085614744
+monitor_response_time_seconds{buck="",monitor_id="49",monitor_name="ha_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.2",monitor_port="null",window="1d"} 0.01486107242339832
+monitor_response_time_seconds{buck="",monitor_id="49",monitor_name="ha_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.2",monitor_port="null",window="30d"} 0.013795700859354656
+monitor_response_time_seconds{buck="",monitor_id="49",monitor_name="ha_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.2",monitor_port="null",window="365d"} 0.014241746435600786
+monitor_response_time_seconds{kiwi="",monitor_id="51",monitor_name="gw_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.1",monitor_port="null",window="1d"} 0.022935555555555587
+monitor_response_time_seconds{kiwi="",monitor_id="51",monitor_name="gw_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.1",monitor_port="null",window="30d"} 0.022884375164985996
+monitor_response_time_seconds{kiwi="",monitor_id="51",monitor_name="gw_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.1",monitor_port="null",window="365d"} 0.02428919343677798
+monitor_response_time_seconds{monitor_id="54",monitor_name="Sippan",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="1d"} 0.0007631944444444444
+monitor_response_time_seconds{monitor_id="54",monitor_name="Sippan",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="30d"} 0.0008656454935012666
+monitor_response_time_seconds{monitor_id="54",monitor_name="Sippan",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null",window="365d"} 0.002944409726432429
+monitor_response_time_seconds{kiwi="",monitor_id="52",monitor_name="ap_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.3",monitor_port="null",window="1d"} 0.022003958333333296
+monitor_response_time_seconds{kiwi="",monitor_id="52",monitor_name="ap_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.3",monitor_port="null",window="30d"} 0.022009780628811263
+monitor_response_time_seconds{kiwi="",monitor_id="52",monitor_name="ap_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.3",monitor_port="null",window="365d"} 0.023317558383788455
+monitor_response_time_seconds{kiwi="",monitor_id="53",monitor_name="ha_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.2",monitor_port="null",window="1d"} 0.021343541666666636
+monitor_response_time_seconds{kiwi="",monitor_id="53",monitor_name="ha_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.2",monitor_port="null",window="30d"} 0.021434747373422738
+monitor_response_time_seconds{kiwi="",monitor_id="53",monitor_name="ha_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.2",monitor_port="null",window="365d"} 0.022645916907124593
+monitor_response_time_seconds{critical="",eir="",monitor_id="58",monitor_name="AdGuard DNS",monitor_type="dns",monitor_url="https://",monitor_hostname="google.com",monitor_port="53",window="1d"} 0.010211805555555556
+monitor_response_time_seconds{critical="",eir="",monitor_id="58",monitor_name="AdGuard DNS",monitor_type="dns",monitor_url="https://",monitor_hostname="google.com",monitor_port="53",window="30d"} 0.013937855113636363
+monitor_response_time_seconds{critical="",eir="",monitor_id="58",monitor_name="AdGuard DNS",monitor_type="dns",monitor_url="https://",monitor_hostname="google.com",monitor_port="53",window="365d"} 0.01951182519772497
+monitor_response_time_seconds{sippan="",monitor_id="55",monitor_name="gw_sippan",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.13.1",monitor_port="null",window="1d"} 0.01968618055555552
+monitor_response_time_seconds{sippan="",monitor_id="55",monitor_name="gw_sippan",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.13.1",monitor_port="null",window="30d"} 0.019555430871212108
+monitor_response_time_seconds{sippan="",monitor_id="55",monitor_name="gw_sippan",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.13.1",monitor_port="null",window="365d"} 0.021840517563004834
+monitor_response_time_seconds{sippan="",monitor_id="56",monitor_name="ha_sippan",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.13.2",monitor_port="null",window="1d"} 0.018233749999999983
+monitor_response_time_seconds{sippan="",monitor_id="56",monitor_name="ha_sippan",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.13.2",monitor_port="null",window="30d"} 0.018212490530303025
+monitor_response_time_seconds{sippan="",monitor_id="56",monitor_name="ha_sippan",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.13.2",monitor_port="null",window="365d"} 0.019597736853886473
+monitor_response_time_seconds{monitor_id="63",monitor_name="Mimer",monitor_type="group",monitor_url="null",monitor_hostname="null",monitor_port="null",window="1d"} 0.001063888888888889
+monitor_response_time_seconds{monitor_id="63",monitor_name="Mimer",monitor_type="group",monitor_url="null",monitor_hostname="null",monitor_port="null",window="30d"} 0.0009778092540132194
+monitor_response_time_seconds{monitor_id="63",monitor_name="Mimer",monitor_type="group",monitor_url="null",monitor_hostname="null",monitor_port="null",window="365d"} 0.0009778092540132194
+monitor_response_time_seconds{critical="",home="",monitor_id="60",monitor_name="sw_vinden",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.3",monitor_port="null",window="1d"} 0.0004930541666666681
+monitor_response_time_seconds{critical="",home="",monitor_id="60",monitor_name="sw_vinden",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.3",monitor_port="null",window="30d"} 0.0005018946558742788
+monitor_response_time_seconds{critical="",home="",monitor_id="60",monitor_name="sw_vinden",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.3",monitor_port="null",window="365d"} 0.0006067426601068974
+monitor_response_time_seconds{monitor_id="64",monitor_name="SSH / Borg-åtkomst",monitor_type="port",monitor_url="null",monitor_hostname="192.168.10.220",monitor_port="22",window="1d"} 0.000003472222222222222
+monitor_response_time_seconds{monitor_id="64",monitor_name="SSH / Borg-åtkomst",monitor_type="port",monitor_url="null",monitor_hostname="192.168.10.220",monitor_port="22",window="30d"} 0.00001287948482060717
+monitor_response_time_seconds{monitor_id="64",monitor_name="SSH / Borg-åtkomst",monitor_type="port",monitor_url="null",monitor_hostname="192.168.10.220",monitor_port="22",window="365d"} 0.00001287948482060717
+monitor_response_time_seconds{critical="",home="",monitor_id="61",monitor_name="sw_kontoret",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.12",monitor_port="null",window="1d"} 0.0006943770833333329
+monitor_response_time_seconds{critical="",home="",monitor_id="61",monitor_name="sw_kontoret",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.12",monitor_port="null",window="30d"} 0.000698820320450619
+monitor_response_time_seconds{critical="",home="",monitor_id="61",monitor_name="sw_kontoret",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.12",monitor_port="null",window="365d"} 0.000832189067794804
+
+# HELP monitor_response_time Monitor Response Time (ms)
+# TYPE monitor_response_time gauge
+monitor_response_time{critical="",fulla="",monitor_id="4",monitor_name="Portainer",monitor_type="http",monitor_url="http://192.168.10.200:9000",monitor_hostname="null",monitor_port="null"} 0
+monitor_response_time{critical="",fulla="",monitor_id="5",monitor_name="Open WebUI",monitor_type="http",monitor_url="https://openwebui.home.arpa",monitor_hostname="null",monitor_port="null"} 4
+monitor_response_time{critical="",fulla="",monitor_id="6",monitor_name="Wyoming Whisper",monitor_type="port",monitor_url="http://192.168.10.200:10300",monitor_hostname="192.168.10.200",monitor_port="10300"} 0
+monitor_response_time{fulla="",monitor_id="8",monitor_name="Uptime Kuma – direkt",monitor_type="http",monitor_url="http://192.168.10.200:3001",monitor_hostname="null",monitor_port="null"} 2
+monitor_response_time{monitor_id="9",monitor_name="Heimdal",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null"} 1
+monitor_response_time{critical="",eir="",monitor_id="10",monitor_name="Ping",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.2",monitor_port="null"} 0.145
+monitor_response_time{critical="",eir="",monitor_id="11",monitor_name="Home Assistant UI",monitor_type="keyword",monitor_url="http://192.168.10.2",monitor_hostname="null",monitor_port="null"} 2
+monitor_response_time{critical="",eir="",monitor_id="12",monitor_name="Supervisor Health",monitor_type="http",monitor_url="http://192.168.10.2:4357/health",monitor_hostname="null",monitor_port="null"} 9
+monitor_response_time{critical="",eir="",monitor_id="13",monitor_name="Core API Wake-up",monitor_type="keyword",monitor_url="http://192.168.10.2/api/",monitor_hostname="null",monitor_port="null"} 2
+monitor_response_time{monitor_id="14",monitor_name="Tor",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null"} 4
+monitor_response_time{critical="",frigg="",monitor_id="15",monitor_name="Ping",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.200",monitor_port="null"} 0.021
+monitor_response_time{critical="",frigg="",monitor_id="16",monitor_name="SSH",monitor_type="port",monitor_url="https://",monitor_hostname="192.168.10.200",monitor_port="22"} 0
+monitor_response_time{critical="",frigg="",monitor_id="18",monitor_name="Caddy Reverse Proxy",monitor_type="http",monitor_url="https://caddy.home.arpa",monitor_hostname="null",monitor_port="null"} 3
+monitor_response_time{frigg="",monitor_id="21",monitor_name="Glances UI",monitor_type="http",monitor_url="http://192.168.10.200:61208",monitor_hostname="null",monitor_port="null"} 1
+monitor_response_time{critical="",frigg="",monitor_id="19",monitor_name="Docker API",monitor_type="http",monitor_url="https://uptime:UptimeDocker-2025%21@docker-api.home.arpa/_ping",monitor_hostname="null",monitor_port="null"} 4
+monitor_response_time{ai="",frigg="",monitor_id="22",monitor_name="Ollama API",monitor_type="http",monitor_url="http://192.168.10.200:11434",monitor_hostname="null",monitor_port="null"} 0
+monitor_response_time{frigg="",monitor_id="23",monitor_name="Uptime proxy",monitor_type="http",monitor_url="https://uptime.home.arpa/dashboard",monitor_hostname="null",monitor_port="null"} 3
+monitor_response_time{ai="",Container="",frigg="",monitor_id="24",monitor_name="Ollama Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null"} -1
+monitor_response_time{Container="",frigg="",monitor_id="25",monitor_name="Caddy Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null"} -1
+monitor_response_time{Container="",frigg="",monitor_id="26",monitor_name="HA (Test) Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null"} -1
+monitor_response_time{Container="",frigg="",monitor_id="27",monitor_name="ESPHome (Test) Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null"} -1
+monitor_response_time{Container="",frigg="",monitor_id="28",monitor_name="Glances Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null"} -1
+monitor_response_time{Container="",critical="",frigg="",monitor_id="29",monitor_name="Portainer Agent Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null"} -1
+monitor_response_time{Container="",critical="",frigg="",monitor_id="30",monitor_name="Docker Socket Proxy Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null"} -1
+monitor_response_time{Container="",fulla="",monitor_id="32",monitor_name="Open webUI Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null"} -1
+monitor_response_time{Container="",fulla="",monitor_id="33",monitor_name="OpenWRT Backup Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null"} -1
+monitor_response_time{Container="",fulla="",monitor_id="34",monitor_name="Portainer Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null"} -1
+monitor_response_time{Container="",critical="",fulla="",monitor_id="35",monitor_name="Uptime-kuma Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null"} -1
+monitor_response_time{monitor_id="37",monitor_name="Home",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null"} 2
+monitor_response_time{home="",monitor_id="38",monitor_name="gw.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.1",monitor_port="null"} 0.24
+monitor_response_time{home="",monitor_id="39",monitor_name="ap_kontoret.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.4",monitor_port="null"} 0.207
+monitor_response_time{home="",monitor_id="40",monitor_name="ap_koket.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.5",monitor_port="null"} 0.183
+monitor_response_time{home="",monitor_id="41",monitor_name="ap_kallaren.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.6",monitor_port="null"} 0.355
+monitor_response_time{home="",monitor_id="42",monitor_name="ap_verkstaden.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.7",monitor_port="null"} 0.341
+monitor_response_time{home="",monitor_id="43",monitor_name="ap_friggan.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.8",monitor_port="null"} 0.412
+monitor_response_time{home="",monitor_id="44",monitor_name="ap_honshuset.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.30.9",monitor_port="null"} 3.89
+monitor_response_time{home="",monitor_id="45",monitor_name="ap_poolen.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.10",monitor_port="null"} 0.293
+monitor_response_time{monitor_id="48",monitor_name="Buck",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null"} 1
+monitor_response_time{buck="",monitor_id="46",monitor_name="gw_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.1",monitor_port="null"} 14.2
+monitor_response_time{buck="",monitor_id="47",monitor_name="ap_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.3",monitor_port="null"} 14.2
+monitor_response_time{monitor_id="50",monitor_name="Kiwi",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null"} 1
+monitor_response_time{buck="",monitor_id="49",monitor_name="ha_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.2",monitor_port="null"} 13.4
+monitor_response_time{kiwi="",monitor_id="51",monitor_name="gw_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.1",monitor_port="null"} 32.9
+monitor_response_time{monitor_id="54",monitor_name="Sippan",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null"} 1
+monitor_response_time{kiwi="",monitor_id="52",monitor_name="ap_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.3",monitor_port="null"} 21.7
+monitor_response_time{kiwi="",monitor_id="53",monitor_name="ha_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.2",monitor_port="null"} 20.8
+monitor_response_time{critical="",eir="",monitor_id="58",monitor_name="AdGuard DNS",monitor_type="dns",monitor_url="https://",monitor_hostname="google.com",monitor_port="53"} 5
+monitor_response_time{sippan="",monitor_id="55",monitor_name="gw_sippan",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.13.1",monitor_port="null"} 20.1
+monitor_response_time{sippan="",monitor_id="56",monitor_name="ha_sippan",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.13.2",monitor_port="null"} 18.3
+monitor_response_time{monitor_id="63",monitor_name="Mimer",monitor_type="group",monitor_url="null",monitor_hostname="null",monitor_port="null"} 1
+monitor_response_time{critical="",home="",monitor_id="60",monitor_name="sw_vinden",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.3",monitor_port="null"} 0.462
+monitor_response_time{monitor_id="64",monitor_name="SSH / Borg-åtkomst",monitor_type="port",monitor_url="null",monitor_hostname="192.168.10.220",monitor_port="22"} 0
+monitor_response_time{critical="",home="",monitor_id="61",monitor_name="sw_kontoret",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.12",monitor_port="null"} 0.728
+monitor_response_time{monitor_id="65",monitor_name="Verifierade säkerhetskopior",monitor_type="push",monitor_url="null",monitor_hostname="null",monitor_port="null"} -1
+monitor_response_time{monitor_id="66",monitor_name="Diskhälsa och lagring",monitor_type="push",monitor_url="null",monitor_hostname="null",monitor_port="null"} -1
+
+# HELP monitor_status Monitor Status (1 = UP, 0= DOWN, 2= PENDING, 3= MAINTENANCE)
+# TYPE monitor_status gauge
+monitor_status{critical="",fulla="",monitor_id="4",monitor_name="Portainer",monitor_type="http",monitor_url="http://192.168.10.200:9000",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{critical="",fulla="",monitor_id="5",monitor_name="Open WebUI",monitor_type="http",monitor_url="https://openwebui.home.arpa",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{critical="",fulla="",monitor_id="6",monitor_name="Wyoming Whisper",monitor_type="port",monitor_url="http://192.168.10.200:10300",monitor_hostname="192.168.10.200",monitor_port="10300"} 1
+monitor_status{fulla="",monitor_id="8",monitor_name="Uptime Kuma – direkt",monitor_type="http",monitor_url="http://192.168.10.200:3001",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{monitor_id="9",monitor_name="Heimdal",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{critical="",eir="",monitor_id="10",monitor_name="Ping",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.2",monitor_port="null"} 1
+monitor_status{critical="",eir="",monitor_id="11",monitor_name="Home Assistant UI",monitor_type="keyword",monitor_url="http://192.168.10.2",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{critical="",eir="",monitor_id="12",monitor_name="Supervisor Health",monitor_type="http",monitor_url="http://192.168.10.2:4357/health",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{critical="",eir="",monitor_id="13",monitor_name="Core API Wake-up",monitor_type="keyword",monitor_url="http://192.168.10.2/api/",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{monitor_id="14",monitor_name="Tor",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{critical="",frigg="",monitor_id="15",monitor_name="Ping",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.200",monitor_port="null"} 1
+monitor_status{critical="",frigg="",monitor_id="16",monitor_name="SSH",monitor_type="port",monitor_url="https://",monitor_hostname="192.168.10.200",monitor_port="22"} 1
+monitor_status{critical="",frigg="",monitor_id="18",monitor_name="Caddy Reverse Proxy",monitor_type="http",monitor_url="https://caddy.home.arpa",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{frigg="",monitor_id="21",monitor_name="Glances UI",monitor_type="http",monitor_url="http://192.168.10.200:61208",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{critical="",frigg="",monitor_id="19",monitor_name="Docker API",monitor_type="http",monitor_url="https://uptime:UptimeDocker-2025%21@docker-api.home.arpa/_ping",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{ai="",frigg="",monitor_id="22",monitor_name="Ollama API",monitor_type="http",monitor_url="http://192.168.10.200:11434",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{frigg="",monitor_id="23",monitor_name="Uptime proxy",monitor_type="http",monitor_url="https://uptime.home.arpa/dashboard",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{ai="",Container="",frigg="",monitor_id="24",monitor_name="Ollama Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{Container="",frigg="",monitor_id="25",monitor_name="Caddy Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{Container="",frigg="",monitor_id="26",monitor_name="HA (Test) Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{Container="",frigg="",monitor_id="27",monitor_name="ESPHome (Test) Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{Container="",frigg="",monitor_id="28",monitor_name="Glances Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{Container="",critical="",frigg="",monitor_id="29",monitor_name="Portainer Agent Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{Container="",critical="",frigg="",monitor_id="30",monitor_name="Docker Socket Proxy Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{Container="",fulla="",monitor_id="32",monitor_name="Open webUI Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{Container="",fulla="",monitor_id="33",monitor_name="OpenWRT Backup Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{Container="",fulla="",monitor_id="34",monitor_name="Portainer Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{Container="",critical="",fulla="",monitor_id="35",monitor_name="Uptime-kuma Container",monitor_type="docker",monitor_url="https://",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{monitor_id="37",monitor_name="Home",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{home="",monitor_id="38",monitor_name="gw.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.1",monitor_port="null"} 1
+monitor_status{home="",monitor_id="39",monitor_name="ap_kontoret.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.4",monitor_port="null"} 1
+monitor_status{home="",monitor_id="40",monitor_name="ap_koket.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.5",monitor_port="null"} 1
+monitor_status{home="",monitor_id="41",monitor_name="ap_kallaren.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.6",monitor_port="null"} 1
+monitor_status{home="",monitor_id="42",monitor_name="ap_verkstaden.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.7",monitor_port="null"} 1
+monitor_status{home="",monitor_id="43",monitor_name="ap_friggan.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.8",monitor_port="null"} 1
+monitor_status{home="",monitor_id="44",monitor_name="ap_honshuset.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.30.9",monitor_port="null"} 1
+monitor_status{home="",monitor_id="45",monitor_name="ap_poolen.home.arpa",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.10",monitor_port="null"} 1
+monitor_status{monitor_id="48",monitor_name="Buck",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{buck="",monitor_id="46",monitor_name="gw_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.1",monitor_port="null"} 1
+monitor_status{buck="",monitor_id="47",monitor_name="ap_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.3",monitor_port="null"} 1
+monitor_status{monitor_id="50",monitor_name="Kiwi",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{buck="",monitor_id="49",monitor_name="ha_buck",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.11.2",monitor_port="null"} 1
+monitor_status{kiwi="",monitor_id="51",monitor_name="gw_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.1",monitor_port="null"} 1
+monitor_status{monitor_id="54",monitor_name="Sippan",monitor_type="group",monitor_url="https://",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{kiwi="",monitor_id="52",monitor_name="ap_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.3",monitor_port="null"} 1
+monitor_status{kiwi="",monitor_id="53",monitor_name="ha_kiwi",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.12.2",monitor_port="null"} 1
+monitor_status{critical="",eir="",monitor_id="58",monitor_name="AdGuard DNS",monitor_type="dns",monitor_url="https://",monitor_hostname="google.com",monitor_port="53"} 1
+monitor_status{sippan="",monitor_id="55",monitor_name="gw_sippan",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.13.1",monitor_port="null"} 1
+monitor_status{sippan="",monitor_id="56",monitor_name="ha_sippan",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.13.2",monitor_port="null"} 1
+monitor_status{monitor_id="63",monitor_name="Mimer",monitor_type="group",monitor_url="null",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{critical="",home="",monitor_id="60",monitor_name="sw_vinden",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.3",monitor_port="null"} 1
+monitor_status{monitor_id="64",monitor_name="SSH / Borg-åtkomst",monitor_type="port",monitor_url="null",monitor_hostname="192.168.10.220",monitor_port="22"} 1
+monitor_status{critical="",home="",monitor_id="61",monitor_name="sw_kontoret",monitor_type="ping",monitor_url="https://",monitor_hostname="192.168.10.12",monitor_port="null"} 1
+monitor_status{monitor_id="65",monitor_name="Verifierade säkerhetskopior",monitor_type="push",monitor_url="null",monitor_hostname="null",monitor_port="null"} 1
+monitor_status{monitor_id="66",monitor_name="Diskhälsa och lagring",monitor_type="push",monitor_url="null",monitor_hostname="null",monitor_port="null"} 1
+
+# HELP process_cpu_user_seconds_total Total user CPU time spent in seconds.
+# TYPE process_cpu_user_seconds_total counter
+process_cpu_user_seconds_total 761.5928890000005
+
+# HELP process_cpu_system_seconds_total Total system CPU time spent in seconds.
+# TYPE process_cpu_system_seconds_total counter
+process_cpu_system_seconds_total 397.29407399999934
+
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 1158.8869630000002
+
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1792855477
+
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 245174272
+
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes 33713958912
+
+# HELP process_heap_bytes Process heap size in bytes.
+# TYPE process_heap_bytes gauge
+process_heap_bytes 313200640
+
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds 23
+
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds 524288
+
+# HELP nodejs_eventloop_lag_seconds Lag of event loop in seconds.
+# TYPE nodejs_eventloop_lag_seconds gauge
+nodejs_eventloop_lag_seconds 0.002050449
+
+# HELP nodejs_eventloop_lag_min_seconds The minimum recorded event loop delay.
+# TYPE nodejs_eventloop_lag_min_seconds gauge
+nodejs_eventloop_lag_min_seconds 0.008065024
+
+# HELP nodejs_eventloop_lag_max_seconds The maximum recorded event loop delay.
+# TYPE nodejs_eventloop_lag_max_seconds gauge
+nodejs_eventloop_lag_max_seconds 0.086048767
+
+# HELP nodejs_eventloop_lag_mean_seconds The mean of the recorded event loop delays.
+# TYPE nodejs_eventloop_lag_mean_seconds gauge
+nodejs_eventloop_lag_mean_seconds 0.010099504748505319
+
+# HELP nodejs_eventloop_lag_stddev_seconds The standard deviation of the recorded event loop delays.
+# TYPE nodejs_eventloop_lag_stddev_seconds gauge
+nodejs_eventloop_lag_stddev_seconds 0.0009486342286301453
+
+# HELP nodejs_eventloop_lag_p50_seconds The 50th percentile of the recorded event loop delays.
+# TYPE nodejs_eventloop_lag_p50_seconds gauge
+nodejs_eventloop_lag_p50_seconds 0.010084351
+
+# HELP nodejs_eventloop_lag_p90_seconds The 90th percentile of the recorded event loop delays.
+# TYPE nodejs_eventloop_lag_p90_seconds gauge
+nodejs_eventloop_lag_p90_seconds 0.010092543
+
+# HELP nodejs_eventloop_lag_p99_seconds The 99th percentile of the recorded event loop delays.
+# TYPE nodejs_eventloop_lag_p99_seconds gauge
+nodejs_eventloop_lag_p99_seconds 0.010428415
+
+# HELP nodejs_active_handles Number of active libuv handles grouped by handle type. Every handle type is C++ class name.
+# TYPE nodejs_active_handles gauge
+nodejs_active_handles{type="Socket"} 3
+nodejs_active_handles{type="Server"} 1
+
+# HELP nodejs_active_handles_total Total number of active handles.
+# TYPE nodejs_active_handles_total gauge
+nodejs_active_handles_total 4
+
+# HELP nodejs_active_requests Number of active libuv requests grouped by request type. Every request type is C++ class name.
+# TYPE nodejs_active_requests gauge
+
+# HELP nodejs_active_requests_total Total number of active requests.
+# TYPE nodejs_active_requests_total gauge
+nodejs_active_requests_total 0
+
+# HELP nodejs_heap_size_total_bytes Process heap size from Node.js in bytes.
+# TYPE nodejs_heap_size_total_bytes gauge
+nodejs_heap_size_total_bytes 130801664
+
+# HELP nodejs_heap_size_used_bytes Process heap size used from Node.js in bytes.
+# TYPE nodejs_heap_size_used_bytes gauge
+nodejs_heap_size_used_bytes 119425048
+
+# HELP nodejs_external_memory_bytes Node.js external memory size in bytes.
+# TYPE nodejs_external_memory_bytes gauge
+nodejs_external_memory_bytes 41087934
+
+# HELP nodejs_heap_space_size_total_bytes Process heap space size total from Node.js in bytes.
+# TYPE nodejs_heap_space_size_total_bytes gauge
+nodejs_heap_space_size_total_bytes{space="read_only"} 0
+nodejs_heap_space_size_total_bytes{space="new"} 2097152
+nodejs_heap_space_size_total_bytes{space="old"} 103071744
+nodejs_heap_space_size_total_bytes{space="code"} 6029312
+nodejs_heap_space_size_total_bytes{space="shared"} 0
+nodejs_heap_space_size_total_bytes{space="trusted"} 3194880
+nodejs_heap_space_size_total_bytes{space="new_large_object"} 0
+nodejs_heap_space_size_total_bytes{space="large_object"} 16093184
+nodejs_heap_space_size_total_bytes{space="code_large_object"} 315392
+nodejs_heap_space_size_total_bytes{space="shared_large_object"} 0
+nodejs_heap_space_size_total_bytes{space="trusted_large_object"} 0
+
+# HELP nodejs_heap_space_size_used_bytes Process heap space size used from Node.js in bytes.
+# TYPE nodejs_heap_space_size_used_bytes gauge
+nodejs_heap_space_size_used_bytes{space="read_only"} 0
+nodejs_heap_space_size_used_bytes{space="new"} 815064
+nodejs_heap_space_size_used_bytes{space="old"} 95138024
+nodejs_heap_space_size_used_bytes{space="code"} 4847232
+nodejs_heap_space_size_used_bytes{space="shared"} 0
+nodejs_heap_space_size_used_bytes{space="trusted"} 2576192
+nodejs_heap_space_size_used_bytes{space="new_large_object"} 0
+nodejs_heap_space_size_used_bytes{space="large_object"} 15772232
+nodejs_heap_space_size_used_bytes{space="code_large_object"} 279808
+nodejs_heap_space_size_used_bytes{space="shared_large_object"} 0
+nodejs_heap_space_size_used_bytes{space="trusted_large_object"} 0
+
+# HELP nodejs_heap_space_size_available_bytes Process heap space size available from Node.js in bytes.
+# TYPE nodejs_heap_space_size_available_bytes gauge
+nodejs_heap_space_size_available_bytes{space="read_only"} 0
+nodejs_heap_space_size_available_bytes{space="new"} 215848
+nodejs_heap_space_size_available_bytes{space="old"} 5853264
+nodejs_heap_space_size_available_bytes{space="code"} 804512
+nodejs_heap_space_size_available_bytes{space="shared"} 0
+nodejs_heap_space_size_available_bytes{space="trusted"} 559680
+nodejs_heap_space_size_available_bytes{space="new_large_object"} 1048576
+nodejs_heap_space_size_available_bytes{space="large_object"} 0
+nodejs_heap_space_size_available_bytes{space="code_large_object"} 0
+nodejs_heap_space_size_available_bytes{space="shared_large_object"} 0
+nodejs_heap_space_size_available_bytes{space="trusted_large_object"} 0
+
+# HELP nodejs_version_info Node.js version info.
+# TYPE nodejs_version_info gauge
+nodejs_version_info{version="v22.23.4",major="22",minor="23",patch="4"} 1
+
+# HELP nodejs_gc_duration_seconds Garbage collection duration by kind, one of major, minor, incremental or weakcb.
+# TYPE nodejs_gc_duration_seconds histogram
+nodejs_gc_duration_seconds_bucket{le="0.001",kind="minor"} 89046
+nodejs_gc_duration_seconds_bucket{le="0.01",kind="minor"} 89168
+nodejs_gc_duration_seconds_bucket{le="0.1",kind="minor"} 89168
+nodejs_gc_duration_seconds_bucket{le="1",kind="minor"} 89168
+nodejs_gc_duration_seconds_bucket{le="2",kind="minor"} 89168
+nodejs_gc_duration_seconds_bucket{le="5",kind="minor"} 89168
+nodejs_gc_duration_seconds_bucket{le="+Inf",kind="minor"} 89168
+nodejs_gc_duration_seconds_sum{kind="minor"} 32.01798912809088
+nodejs_gc_duration_seconds_count{kind="minor"} 89168
+nodejs_gc_duration_seconds_bucket{le="0.001",kind="incremental"} 457
+nodejs_gc_duration_seconds_bucket{le="0.01",kind="incremental"} 459
+nodejs_gc_duration_seconds_bucket{le="0.1",kind="incremental"} 459
+nodejs_gc_duration_seconds_bucket{le="1",kind="incremental"} 459
+nodejs_gc_duration_seconds_bucket{le="2",kind="incremental"} 459
+nodejs_gc_duration_seconds_bucket{le="5",kind="incremental"} 459
+nodejs_gc_duration_seconds_bucket{le="+Inf",kind="incremental"} 459
+nodejs_gc_duration_seconds_sum{kind="incremental"} 0.14105705799802662
+nodejs_gc_duration_seconds_count{kind="incremental"} 459
+nodejs_gc_duration_seconds_bucket{le="0.001",kind="major"} 0
+nodejs_gc_duration_seconds_bucket{le="0.01",kind="major"} 498
+nodejs_gc_duration_seconds_bucket{le="0.1",kind="major"} 500
+nodejs_gc_duration_seconds_bucket{le="1",kind="major"} 500
+nodejs_gc_duration_seconds_bucket{le="2",kind="major"} 500
+nodejs_gc_duration_seconds_bucket{le="5",kind="major"} 500
+nodejs_gc_duration_seconds_bucket{le="+Inf",kind="major"} 500
+nodejs_gc_duration_seconds_sum{kind="major"} 1.782047062149664
+nodejs_gc_duration_seconds_count{kind="major"} 500
+
+# HELP app_version The service version by package.json
+# TYPE app_version gauge
+app_version{version="2.5.7",major="2",minor="5",patch="7"} 1
+
+# HELP http_request_duration_seconds Duration of HTTP requests in seconds
+# TYPE http_request_duration_seconds histogram
+
+# HELP http_request_size_bytes Size of HTTP requests in bytes
+# TYPE http_request_size_bytes histogram
+
+# HELP http_response_size_bytes Size of HTTP response in bytes
+# TYPE http_response_size_bytes histogram
+
+# HELP expressjs_number_of_open_connections Number of open connections to the Express.js server
+# TYPE expressjs_number_of_open_connections gauge
+expressjs_number_of_open_connections 0

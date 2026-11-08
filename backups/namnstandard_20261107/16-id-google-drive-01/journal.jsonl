@@ -1,0 +1,6 @@
+{"status": "rename_intent", "old": "sensor.j_k_olofsson_gmail_com_used_storage_in_drive", "new": "sensor.j_k_olofsson_gmail_com_anvand_lagringsutrymme_i_drive"}
+{"status": "renamed", "old": "sensor.j_k_olofsson_gmail_com_used_storage_in_drive", "new": "sensor.j_k_olofsson_gmail_com_anvand_lagringsutrymme_i_drive"}
+{"status": "rename_intent", "old": "sensor.j_k_olofsson_gmail_com_used_storage_in_drive_trash", "new": "sensor.j_k_olofsson_gmail_com_anvand_lagringsutrymme_i_drive_papperskorgen"}
+{"status": "renamed", "old": "sensor.j_k_olofsson_gmail_com_used_storage_in_drive_trash", "new": "sensor.j_k_olofsson_gmail_com_anvand_lagringsutrymme_i_drive_papperskorgen"}
+{"status": "rename_intent", "old": "sensor.j_k_olofsson_gmail_com_total_size_of_backups", "new": "sensor.j_k_olofsson_gmail_com_total_storlek_pa_sakerhetskopior"}
+{"status": "renamed", "old": "sensor.j_k_olofsson_gmail_com_total_size_of_backups", "new": "sensor.j_k_olofsson_gmail_com_total_storlek_pa_sakerhetskopior"}

@@ -1,0 +1,5948 @@
+{
+  "metadata": [
+    {
+      "statistic_id": "sensor.4ea82b29fda0462f70ede4096e441965dc22b1218240c5e2e3de1d03dbf8021e_volymstorlek",
+      "display_unit_of_measurement": "GiB",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "GiB",
+      "unit_class": "information"
+    },
+    {
+      "statistic_id": "sensor.frigg_caddy_ui_restart_count",
+      "display_unit_of_measurement": null,
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.wyoming_whisper_frigg_minnesgrans",
+      "display_unit_of_measurement": "MB",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "MB",
+      "unit_class": "information"
+    },
+    {
+      "statistic_id": "sensor.978c39c7e1070486a26ac92e063b6023493d38c1596509af8484d0996248f5dd_volymstorlek",
+      "display_unit_of_measurement": "GiB",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "GiB",
+      "unit_class": "information"
+    },
+    {
+      "statistic_id": "sensor.59a9bfe12dadc95bdc3fb42dcf90e5c71129dc8607fe31ada701e2fa7c2b698d_volymstorlek",
+      "display_unit_of_measurement": "GiB",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "GiB",
+      "unit_class": "information"
+    },
+    {
+      "statistic_id": "sensor.wyoming_whisper_frigg_minnesanvandning",
+      "display_unit_of_measurement": "MB",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "MB",
+      "unit_class": "information"
+    },
+    {
+      "statistic_id": "sensor.frigg_ollama_restart_count",
+      "display_unit_of_measurement": null,
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.fd01a204689744c7fbb3ce0e3bb34343edc6d568b32b0c68853e5776af71eade_volymstorlek",
+      "display_unit_of_measurement": "GiB",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "GiB",
+      "unit_class": "information"
+    },
+    {
+      "statistic_id": "sensor.b7dd2fc85426ff34678c52ac030e56d992ac0aad808741b9d7129bf1d0739663_volymstorlek",
+      "display_unit_of_measurement": "GiB",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "GiB",
+      "unit_class": "information"
+    },
+    {
+      "statistic_id": "sensor.wyoming_whisper_frigg_restart_count",
+      "display_unit_of_measurement": null,
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.frigg_netlogs_analyzer_restart_count",
+      "display_unit_of_measurement": null,
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.frigg_docker_socket_proxy_restart_count",
+      "display_unit_of_measurement": null,
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.portainer_restart_count",
+      "display_unit_of_measurement": null,
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.frigg_portainer_agent_restart_count",
+      "display_unit_of_measurement": null,
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.frigg_ha_restart_count",
+      "display_unit_of_measurement": null,
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.frigg_netlogs_syslogng_restart_count",
+      "display_unit_of_measurement": null,
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.frigg_esphome_restart_count",
+      "display_unit_of_measurement": null,
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.f7f13a0b9033690e83009958990cee4180b2654865a3e5c495c3ef5684697e7b_volymstorlek",
+      "display_unit_of_measurement": "GiB",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "GiB",
+      "unit_class": "information"
+    },
+    {
+      "statistic_id": "sensor.glances_restart_count",
+      "display_unit_of_measurement": null,
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.frigg_caddy_restart_count",
+      "display_unit_of_measurement": null,
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.frigg_searxng_restart_count",
+      "display_unit_of_measurement": null,
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.frigg_netlogs_reports_http_restart_count",
+      "display_unit_of_measurement": null,
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.wyoming_whisper_frigg_minnesanvandning_i_procent",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.523a75b1eee9bf3f6847e7539d9cb79737cfb1df917bb41f701bca80545f138a_volymstorlek",
+      "display_unit_of_measurement": "GiB",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "GiB",
+      "unit_class": "information"
+    },
+    {
+      "statistic_id": "sensor.wyoming_whisper_frigg_cpu_anvandning_totalt",
+      "display_unit_of_measurement": "%",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "%",
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.frigg_netlogs_api_restart_count",
+      "display_unit_of_measurement": null,
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    },
+    {
+      "statistic_id": "sensor.frigg_openwebui_restart_count",
+      "display_unit_of_measurement": null,
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": null,
+      "unit_class": "unitless"
+    }
+  ],
+  "series": {
+    "sensor.wyoming_whisper_frigg_restart_count": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      }
+    ],
+    "sensor.4ea82b29fda0462f70ede4096e441965dc22b1218240c5e2e3de1d03dbf8021e_volymstorlek": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      }
+    ],
+    "sensor.frigg_caddy_restart_count": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      }
+    ],
+    "sensor.frigg_searxng_restart_count": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      }
+    ],
+    "sensor.frigg_caddy_ui_restart_count": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      }
+    ],
+    "sensor.wyoming_whisper_frigg_minnesgrans": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 6442.450944,
+        "state": null,
+        "mean": 6442.450943999999,
+        "sum": null,
+        "max": 6442.450944
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 6442.450944,
+        "state": null,
+        "mean": 6442.450943999999,
+        "sum": null,
+        "max": 6442.450944
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 6442.450944,
+        "state": null,
+        "mean": 6442.450943999999,
+        "sum": null,
+        "max": 6442.450944
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 6442.450944,
+        "state": null,
+        "mean": 6442.450943999999,
+        "sum": null,
+        "max": 6442.450944
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 6442.450944,
+        "state": null,
+        "mean": 6442.450943999999,
+        "sum": null,
+        "max": 6442.450944
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 6442.450944,
+        "state": null,
+        "mean": 6442.450943999999,
+        "sum": null,
+        "max": 6442.450944
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 6442.450944,
+        "state": null,
+        "mean": 6442.450943999999,
+        "sum": null,
+        "max": 6442.450944
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 6442.450944,
+        "state": null,
+        "mean": 6442.450943999999,
+        "sum": null,
+        "max": 6442.450944
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 6442.450944,
+        "state": null,
+        "mean": 6442.450943999999,
+        "sum": null,
+        "max": 6442.450944
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 6442.450944,
+        "state": null,
+        "mean": 6442.450943999999,
+        "sum": null,
+        "max": 6442.450944
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 6442.450944,
+        "state": null,
+        "mean": 6442.450943999999,
+        "sum": null,
+        "max": 6442.450944
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 6442.450944,
+        "state": null,
+        "mean": 6442.450943999999,
+        "sum": null,
+        "max": 6442.450944
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 6442.450944,
+        "state": null,
+        "mean": 6442.450943999999,
+        "sum": null,
+        "max": 6442.450944
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 6442.450944,
+        "state": null,
+        "mean": 6442.450943999999,
+        "sum": null,
+        "max": 6442.450944
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 6442.450944,
+        "state": null,
+        "mean": 6442.450943999999,
+        "sum": null,
+        "max": 6442.450944
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 6442.450944,
+        "state": null,
+        "mean": 6442.450943999999,
+        "sum": null,
+        "max": 6442.450944
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 6442.450944,
+        "state": null,
+        "mean": 6442.450943999999,
+        "sum": null,
+        "max": 6442.450944
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 6442.450944,
+        "state": null,
+        "mean": 6442.450943999999,
+        "sum": null,
+        "max": 6442.450944
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 6442.450944,
+        "state": null,
+        "mean": 6442.450943999999,
+        "sum": null,
+        "max": 6442.450944
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 6442.450944,
+        "state": null,
+        "mean": 6442.450943999999,
+        "sum": null,
+        "max": 6442.450944
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 6442.450944,
+        "state": null,
+        "mean": 6442.450943999999,
+        "sum": null,
+        "max": 6442.450944
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 6442.450944,
+        "state": null,
+        "mean": 6442.450943999999,
+        "sum": null,
+        "max": 6442.450944
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 6442.450944,
+        "state": null,
+        "mean": 6442.450943999999,
+        "sum": null,
+        "max": 6442.450944
+      }
+    ],
+    "sensor.978c39c7e1070486a26ac92e063b6023493d38c1596509af8484d0996248f5dd_volymstorlek": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 1.59880146384239e-05,
+        "state": null,
+        "mean": 1.5988014638423896e-05,
+        "sum": null,
+        "max": 1.59880146384239e-05
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 1.59880146384239e-05,
+        "state": null,
+        "mean": 1.5988014638423896e-05,
+        "sum": null,
+        "max": 1.59880146384239e-05
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 1.59880146384239e-05,
+        "state": null,
+        "mean": 1.5988014638423896e-05,
+        "sum": null,
+        "max": 1.59880146384239e-05
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 1.59880146384239e-05,
+        "state": null,
+        "mean": 1.5988014638423896e-05,
+        "sum": null,
+        "max": 1.59880146384239e-05
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 1.59880146384239e-05,
+        "state": null,
+        "mean": 1.5988014638423896e-05,
+        "sum": null,
+        "max": 1.59880146384239e-05
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 1.59880146384239e-05,
+        "state": null,
+        "mean": 1.5988014638423896e-05,
+        "sum": null,
+        "max": 1.59880146384239e-05
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 1.59880146384239e-05,
+        "state": null,
+        "mean": 1.5988014638423896e-05,
+        "sum": null,
+        "max": 1.59880146384239e-05
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 1.59880146384239e-05,
+        "state": null,
+        "mean": 1.5988014638423896e-05,
+        "sum": null,
+        "max": 1.59880146384239e-05
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 1.59880146384239e-05,
+        "state": null,
+        "mean": 1.5988014638423896e-05,
+        "sum": null,
+        "max": 1.59880146384239e-05
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 1.59880146384239e-05,
+        "state": null,
+        "mean": 1.5988014638423896e-05,
+        "sum": null,
+        "max": 1.59880146384239e-05
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 1.59880146384239e-05,
+        "state": null,
+        "mean": 1.5988014638423896e-05,
+        "sum": null,
+        "max": 1.59880146384239e-05
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 1.59880146384239e-05,
+        "state": null,
+        "mean": 1.5988014638423896e-05,
+        "sum": null,
+        "max": 1.59880146384239e-05
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 1.59880146384239e-05,
+        "state": null,
+        "mean": 1.5988014638423896e-05,
+        "sum": null,
+        "max": 1.59880146384239e-05
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 1.59880146384239e-05,
+        "state": null,
+        "mean": 1.5988014638423896e-05,
+        "sum": null,
+        "max": 1.59880146384239e-05
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 1.59880146384239e-05,
+        "state": null,
+        "mean": 1.5988014638423896e-05,
+        "sum": null,
+        "max": 1.59880146384239e-05
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 1.59880146384239e-05,
+        "state": null,
+        "mean": 1.5988014638423896e-05,
+        "sum": null,
+        "max": 1.59880146384239e-05
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 1.59880146384239e-05,
+        "state": null,
+        "mean": 1.5988014638423896e-05,
+        "sum": null,
+        "max": 1.59880146384239e-05
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 1.59880146384239e-05,
+        "state": null,
+        "mean": 1.5988014638423896e-05,
+        "sum": null,
+        "max": 1.59880146384239e-05
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 1.59880146384239e-05,
+        "state": null,
+        "mean": 1.5988014638423896e-05,
+        "sum": null,
+        "max": 1.59880146384239e-05
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 1.59880146384239e-05,
+        "state": null,
+        "mean": 1.5988014638423896e-05,
+        "sum": null,
+        "max": 1.59880146384239e-05
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 1.59880146384239e-05,
+        "state": null,
+        "mean": 1.5988014638423896e-05,
+        "sum": null,
+        "max": 1.59880146384239e-05
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 1.59880146384239e-05,
+        "state": null,
+        "mean": 1.5988014638423896e-05,
+        "sum": null,
+        "max": 1.59880146384239e-05
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 1.59880146384239e-05,
+        "state": null,
+        "mean": 1.5988014638423896e-05,
+        "sum": null,
+        "max": 1.59880146384239e-05
+      }
+    ],
+    "sensor.59a9bfe12dadc95bdc3fb42dcf90e5c71129dc8607fe31ada701e2fa7c2b698d_volymstorlek": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      }
+    ],
+    "sensor.frigg_netlogs_analyzer_restart_count": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      }
+    ],
+    "sensor.frigg_portainer_agent_restart_count": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      }
+    ],
+    "sensor.frigg_netlogs_reports_http_restart_count": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      }
+    ],
+    "sensor.wyoming_whisper_frigg_minnesanvandning": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 117.653504,
+        "state": null,
+        "mean": 117.65684182282924,
+        "sum": null,
+        "max": 117.665792
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 117.653504,
+        "state": null,
+        "mean": 117.65807792546362,
+        "sum": null,
+        "max": 117.673984
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 117.653504,
+        "state": null,
+        "mean": 117.65507413426064,
+        "sum": null,
+        "max": 117.661696
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 117.653504,
+        "state": null,
+        "mean": 117.65951873187613,
+        "sum": null,
+        "max": 117.669888
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 117.6576,
+        "state": null,
+        "mean": 117.65951153973701,
+        "sum": null,
+        "max": 117.665792
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 117.6576,
+        "state": null,
+        "mean": 117.66321950860628,
+        "sum": null,
+        "max": 117.714944
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 117.6576,
+        "state": null,
+        "mean": 117.66795212246016,
+        "sum": null,
+        "max": 117.768192
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 117.6576,
+        "state": null,
+        "mean": 117.65794136530262,
+        "sum": null,
+        "max": 117.661696
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 117.6576,
+        "state": null,
+        "mean": 117.65800961483323,
+        "sum": null,
+        "max": 117.665792
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 117.6576,
+        "state": null,
+        "mean": 117.6604884201347,
+        "sum": null,
+        "max": 117.706752
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 117.6576,
+        "state": null,
+        "mean": 117.66805169495723,
+        "sum": null,
+        "max": 117.755904
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 117.6576,
+        "state": null,
+        "mean": 117.72633938586507,
+        "sum": null,
+        "max": 120.836096
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 117.6576,
+        "state": null,
+        "mean": 117.65882874709335,
+        "sum": null,
+        "max": 117.673984
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 117.6576,
+        "state": null,
+        "mean": 117.65855567553761,
+        "sum": null,
+        "max": 117.669888
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 117.6576,
+        "state": null,
+        "mean": 117.66299666810994,
+        "sum": null,
+        "max": 117.702656
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 117.6576,
+        "state": null,
+        "mean": 117.67401166807154,
+        "sum": null,
+        "max": 117.73952
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 117.6576,
+        "state": null,
+        "mean": 117.67915443316167,
+        "sum": null,
+        "max": 117.788672
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 117.6576,
+        "state": null,
+        "mean": 117.66749662309262,
+        "sum": null,
+        "max": 117.71904
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 117.6576,
+        "state": null,
+        "mean": 117.65855582318363,
+        "sum": null,
+        "max": 117.661696
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 117.6576,
+        "state": null,
+        "mean": 117.6606028376849,
+        "sum": null,
+        "max": 117.669888
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 117.6576,
+        "state": null,
+        "mean": 117.66081383328883,
+        "sum": null,
+        "max": 117.669888
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 117.6576,
+        "state": null,
+        "mean": 117.66052681316353,
+        "sum": null,
+        "max": 117.669888
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 117.6576,
+        "state": null,
+        "mean": 121.83970411234077,
+        "sum": null,
+        "max": 122.949632
+      }
+    ],
+    "sensor.frigg_ha_restart_count": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      }
+    ],
+    "sensor.wyoming_whisper_frigg_minnesanvandning_i_procent": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 1.82622273763021,
+        "state": null,
+        "mean": 1.8262745474613877,
+        "sum": null,
+        "max": 1.82641347249349
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 1.82622273763021,
+        "state": null,
+        "mean": 1.8262937342977892,
+        "sum": null,
+        "max": 1.82654062906901
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 1.82622273763021,
+        "state": null,
+        "mean": 1.8262471093213486,
+        "sum": null,
+        "max": 1.82634989420573
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 1.82622273763021,
+        "state": null,
+        "mean": 1.8263160985566607,
+        "sum": null,
+        "max": 1.82647705078125
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 1.82628631591797,
+        "state": null,
+        "mean": 1.8263159869187684,
+        "sum": null,
+        "max": 1.82641347249349
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 1.82628631591797,
+        "state": null,
+        "mean": 1.8263735421695362,
+        "sum": null,
+        "max": 1.82717641194661
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 1.82628631591797,
+        "state": null,
+        "mean": 1.826447002020483,
+        "sum": null,
+        "max": 1.8280029296875
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 1.82628631591797,
+        "state": null,
+        "mean": 1.8262916146046333,
+        "sum": null,
+        "max": 1.82634989420573
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 1.82628631591797,
+        "state": null,
+        "mean": 1.8262926739773233,
+        "sum": null,
+        "max": 1.82641347249349
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 1.82628631591797,
+        "state": null,
+        "mean": 1.8263311500882409,
+        "sum": null,
+        "max": 1.82704925537109
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 1.82628631591797,
+        "state": null,
+        "mean": 1.826448547580578,
+        "sum": null,
+        "max": 1.82781219482422
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 1.82628631591797,
+        "state": null,
+        "mean": 1.8273532916467987,
+        "sum": null,
+        "max": 1.87562306722005
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 1.82628631591797,
+        "state": null,
+        "mean": 1.8263053885833962,
+        "sum": null,
+        "max": 1.82654062906901
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 1.82628631591797,
+        "state": null,
+        "mean": 1.8263011499545498,
+        "sum": null,
+        "max": 1.82647705078125
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 1.82628631591797,
+        "state": null,
+        "mean": 1.8263700832309906,
+        "sum": null,
+        "max": 1.82698567708333
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 1.82628631591797,
+        "state": null,
+        "mean": 1.8265410585254565,
+        "sum": null,
+        "max": 1.82755788167318
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 1.82628631591797,
+        "state": null,
+        "mean": 1.8266208847531562,
+        "sum": null,
+        "max": 1.8283208211263
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 1.82628631591797,
+        "state": null,
+        "mean": 1.826439931732496,
+        "sum": null,
+        "max": 1.82723999023438
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 1.82628631591797,
+        "state": null,
+        "mean": 1.8263011522463881,
+        "sum": null,
+        "max": 1.82634989420573
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 1.82628631591797,
+        "state": null,
+        "mean": 1.8263329260907712,
+        "sum": null,
+        "max": 1.82647705078125
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 1.82628631591797,
+        "state": null,
+        "mean": 1.8263362011775446,
+        "sum": null,
+        "max": 1.82647705078125
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 1.82628631591797,
+        "state": null,
+        "mean": 1.8263317460357005,
+        "sum": null,
+        "max": 1.82647705078125
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 1.82628631591797,
+        "state": null,
+        "mean": 1.89120111412511,
+        "sum": null,
+        "max": 1.90842946370443
+      }
+    ],
+    "sensor.frigg_ollama_restart_count": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      }
+    ],
+    "sensor.523a75b1eee9bf3f6847e7539d9cb79737cfb1df917bb41f701bca80545f138a_volymstorlek": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 1.55651941895485e-05,
+        "state": null,
+        "mean": 1.5565194189548496e-05,
+        "sum": null,
+        "max": 1.55651941895485e-05
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 1.55651941895485e-05,
+        "state": null,
+        "mean": 1.5565194189548496e-05,
+        "sum": null,
+        "max": 1.55651941895485e-05
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 1.55651941895485e-05,
+        "state": null,
+        "mean": 1.5565194189548496e-05,
+        "sum": null,
+        "max": 1.55651941895485e-05
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 1.55651941895485e-05,
+        "state": null,
+        "mean": 1.5565194189548496e-05,
+        "sum": null,
+        "max": 1.55651941895485e-05
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 1.55651941895485e-05,
+        "state": null,
+        "mean": 1.5565194189548496e-05,
+        "sum": null,
+        "max": 1.55651941895485e-05
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 1.55651941895485e-05,
+        "state": null,
+        "mean": 1.5565194189548496e-05,
+        "sum": null,
+        "max": 1.55651941895485e-05
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 1.55651941895485e-05,
+        "state": null,
+        "mean": 1.5565194189548496e-05,
+        "sum": null,
+        "max": 1.55651941895485e-05
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 1.55651941895485e-05,
+        "state": null,
+        "mean": 1.5565194189548496e-05,
+        "sum": null,
+        "max": 1.55651941895485e-05
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 1.55651941895485e-05,
+        "state": null,
+        "mean": 1.5565194189548496e-05,
+        "sum": null,
+        "max": 1.55651941895485e-05
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 1.55651941895485e-05,
+        "state": null,
+        "mean": 1.5565194189548496e-05,
+        "sum": null,
+        "max": 1.55651941895485e-05
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 1.55651941895485e-05,
+        "state": null,
+        "mean": 1.5565194189548496e-05,
+        "sum": null,
+        "max": 1.55651941895485e-05
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 1.55651941895485e-05,
+        "state": null,
+        "mean": 1.5565194189548496e-05,
+        "sum": null,
+        "max": 1.55651941895485e-05
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 1.55651941895485e-05,
+        "state": null,
+        "mean": 1.5565194189548496e-05,
+        "sum": null,
+        "max": 1.55651941895485e-05
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 1.55651941895485e-05,
+        "state": null,
+        "mean": 1.5565194189548496e-05,
+        "sum": null,
+        "max": 1.55651941895485e-05
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 1.55651941895485e-05,
+        "state": null,
+        "mean": 1.5565194189548496e-05,
+        "sum": null,
+        "max": 1.55651941895485e-05
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 1.55651941895485e-05,
+        "state": null,
+        "mean": 1.5565194189548496e-05,
+        "sum": null,
+        "max": 1.55651941895485e-05
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 1.55651941895485e-05,
+        "state": null,
+        "mean": 1.5565194189548496e-05,
+        "sum": null,
+        "max": 1.55651941895485e-05
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 1.55651941895485e-05,
+        "state": null,
+        "mean": 1.5565194189548496e-05,
+        "sum": null,
+        "max": 1.55651941895485e-05
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 1.55651941895485e-05,
+        "state": null,
+        "mean": 1.5565194189548496e-05,
+        "sum": null,
+        "max": 1.55651941895485e-05
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 1.55651941895485e-05,
+        "state": null,
+        "mean": 1.5565194189548496e-05,
+        "sum": null,
+        "max": 1.55651941895485e-05
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 1.55651941895485e-05,
+        "state": null,
+        "mean": 1.5565194189548496e-05,
+        "sum": null,
+        "max": 1.55651941895485e-05
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 1.55651941895485e-05,
+        "state": null,
+        "mean": 1.5565194189548496e-05,
+        "sum": null,
+        "max": 1.55651941895485e-05
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 1.55651941895485e-05,
+        "state": null,
+        "mean": 1.5565194189548496e-05,
+        "sum": null,
+        "max": 1.55651941895485e-05
+      }
+    ],
+    "sensor.frigg_netlogs_syslogng_restart_count": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      }
+    ],
+    "sensor.frigg_docker_socket_proxy_restart_count": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      }
+    ],
+    "sensor.wyoming_whisper_frigg_cpu_anvandning_totalt": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 0.108963059878073,
+        "state": null,
+        "mean": 0.11559566485161106,
+        "sum": null,
+        "max": 0.118482598317246
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 0.0713973162399183,
+        "state": null,
+        "mean": 0.11523642481348362,
+        "sum": null,
+        "max": 0.15682787640434
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 0.109790680843957,
+        "state": null,
+        "mean": 0.1153359674794117,
+        "sum": null,
+        "max": 0.119557538969142
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 0.109112314050737,
+        "state": null,
+        "mean": 0.11461729011851468,
+        "sum": null,
+        "max": 0.119094579168639
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 0.106470874799916,
+        "state": null,
+        "mean": 0.11439396965809644,
+        "sum": null,
+        "max": 0.122336794632666
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 0.109199607562084,
+        "state": null,
+        "mean": 0.11536238744083906,
+        "sum": null,
+        "max": 0.120182887365601
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 0.0,
+        "state": null,
+        "mean": 0.11277094515456021,
+        "sum": null,
+        "max": 0.121144733820859
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 0.108092265943012,
+        "state": null,
+        "mean": 0.11516499701232867,
+        "sum": null,
+        "max": 0.121251148417272
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 0.107491824039412,
+        "state": null,
+        "mean": 0.11464838874067684,
+        "sum": null,
+        "max": 0.121020246295137
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 0.0962211038130171,
+        "state": null,
+        "mean": 0.11473978671068576,
+        "sum": null,
+        "max": 0.119527453872485
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 0.110801722398837,
+        "state": null,
+        "mean": 0.11735266359505216,
+        "sum": null,
+        "max": 0.13141336157641
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 0.088451111915166,
+        "state": null,
+        "mean": 0.11518994357491474,
+        "sum": null,
+        "max": 0.123743839621328
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 0.106719186042466,
+        "state": null,
+        "mean": 0.1160045156781379,
+        "sum": null,
+        "max": 0.120588722416685
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 0.106550327725128,
+        "state": null,
+        "mean": 0.11495938431074681,
+        "sum": null,
+        "max": 0.119084249848697
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 0.107127380513363,
+        "state": null,
+        "mean": 0.11493739865214377,
+        "sum": null,
+        "max": 0.118132646669914
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 0.110011339682628,
+        "state": null,
+        "mean": 0.11490623392352355,
+        "sum": null,
+        "max": 0.120066795619321
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 0.109503277616178,
+        "state": null,
+        "mean": 0.11477341669005592,
+        "sum": null,
+        "max": 0.12
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 0.0702508262306488,
+        "state": null,
+        "mean": 0.11391781320686899,
+        "sum": null,
+        "max": 0.119517368069472
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 0.104948229792919,
+        "state": null,
+        "mean": 0.11499180043405606,
+        "sum": null,
+        "max": 0.127184369786613
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 0.109523511364348,
+        "state": null,
+        "mean": 0.11461813482781054,
+        "sum": null,
+        "max": 0.119260207631718
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 0.109715790267617,
+        "state": null,
+        "mean": 0.11657600505181677,
+        "sum": null,
+        "max": 0.129455581390477
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 0.110741477944963,
+        "state": null,
+        "mean": 0.11574785314554277,
+        "sum": null,
+        "max": 0.119619238476954
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 0.0710921879239455,
+        "state": null,
+        "mean": 0.18738494208876277,
+        "sum": null,
+        "max": 4.51640463827832
+      }
+    ],
+    "sensor.frigg_netlogs_api_restart_count": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      }
+    ],
+    "sensor.frigg_esphome_restart_count": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      }
+    ],
+    "sensor.portainer_restart_count": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      }
+    ],
+    "sensor.fd01a204689744c7fbb3ce0e3bb34343edc6d568b32b0c68853e5776af71eade_volymstorlek": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 1.57766044139862e-05,
+        "state": null,
+        "mean": 1.5776604413986203e-05,
+        "sum": null,
+        "max": 1.57766044139862e-05
+      }
+    ],
+    "sensor.b7dd2fc85426ff34678c52ac030e56d992ac0aad808741b9d7129bf1d0739663_volymstorlek": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 1.56927853822708e-05,
+        "state": null,
+        "mean": 1.5692785382270803e-05,
+        "sum": null,
+        "max": 1.56927853822708e-05
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 1.56927853822708e-05,
+        "state": null,
+        "mean": 1.5692785382270803e-05,
+        "sum": null,
+        "max": 1.56927853822708e-05
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 1.56927853822708e-05,
+        "state": null,
+        "mean": 1.5692785382270803e-05,
+        "sum": null,
+        "max": 1.56927853822708e-05
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 1.56927853822708e-05,
+        "state": null,
+        "mean": 1.5692785382270803e-05,
+        "sum": null,
+        "max": 1.56927853822708e-05
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 1.56927853822708e-05,
+        "state": null,
+        "mean": 1.5692785382270803e-05,
+        "sum": null,
+        "max": 1.56927853822708e-05
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 1.56927853822708e-05,
+        "state": null,
+        "mean": 1.5692785382270803e-05,
+        "sum": null,
+        "max": 1.56927853822708e-05
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 1.56927853822708e-05,
+        "state": null,
+        "mean": 1.5692785382270803e-05,
+        "sum": null,
+        "max": 1.56927853822708e-05
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 1.56927853822708e-05,
+        "state": null,
+        "mean": 1.5692785382270803e-05,
+        "sum": null,
+        "max": 1.56927853822708e-05
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 1.56927853822708e-05,
+        "state": null,
+        "mean": 1.5692785382270803e-05,
+        "sum": null,
+        "max": 1.56927853822708e-05
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 1.56927853822708e-05,
+        "state": null,
+        "mean": 1.5692785382270803e-05,
+        "sum": null,
+        "max": 1.56927853822708e-05
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 1.56927853822708e-05,
+        "state": null,
+        "mean": 1.5692785382270803e-05,
+        "sum": null,
+        "max": 1.56927853822708e-05
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 1.56927853822708e-05,
+        "state": null,
+        "mean": 1.5692785382270803e-05,
+        "sum": null,
+        "max": 1.56927853822708e-05
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 1.56927853822708e-05,
+        "state": null,
+        "mean": 1.5692785382270803e-05,
+        "sum": null,
+        "max": 1.56927853822708e-05
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 1.56927853822708e-05,
+        "state": null,
+        "mean": 1.5692785382270803e-05,
+        "sum": null,
+        "max": 1.56927853822708e-05
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 1.56927853822708e-05,
+        "state": null,
+        "mean": 1.5692785382270803e-05,
+        "sum": null,
+        "max": 1.56927853822708e-05
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 1.56927853822708e-05,
+        "state": null,
+        "mean": 1.5692785382270803e-05,
+        "sum": null,
+        "max": 1.56927853822708e-05
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 1.56927853822708e-05,
+        "state": null,
+        "mean": 1.5692785382270803e-05,
+        "sum": null,
+        "max": 1.56927853822708e-05
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 1.56927853822708e-05,
+        "state": null,
+        "mean": 1.5692785382270803e-05,
+        "sum": null,
+        "max": 1.56927853822708e-05
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 1.56927853822708e-05,
+        "state": null,
+        "mean": 1.5692785382270803e-05,
+        "sum": null,
+        "max": 1.56927853822708e-05
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 1.56927853822708e-05,
+        "state": null,
+        "mean": 1.5692785382270803e-05,
+        "sum": null,
+        "max": 1.56927853822708e-05
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 1.56927853822708e-05,
+        "state": null,
+        "mean": 1.5692785382270803e-05,
+        "sum": null,
+        "max": 1.56927853822708e-05
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 1.56927853822708e-05,
+        "state": null,
+        "mean": 1.5692785382270803e-05,
+        "sum": null,
+        "max": 1.56927853822708e-05
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 1.56927853822708e-05,
+        "state": null,
+        "mean": 1.5692785382270803e-05,
+        "sum": null,
+        "max": 1.56927853822708e-05
+      }
+    ],
+    "sensor.f7f13a0b9033690e83009958990cee4180b2654865a3e5c495c3ef5684697e7b_volymstorlek": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": 1.54739245772362e-05,
+        "state": null,
+        "mean": 1.54739245772362e-05,
+        "sum": null,
+        "max": 1.54739245772362e-05
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": 1.54739245772362e-05,
+        "state": null,
+        "mean": 1.54739245772362e-05,
+        "sum": null,
+        "max": 1.54739245772362e-05
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": 1.54739245772362e-05,
+        "state": null,
+        "mean": 1.54739245772362e-05,
+        "sum": null,
+        "max": 1.54739245772362e-05
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": 1.54739245772362e-05,
+        "state": null,
+        "mean": 1.54739245772362e-05,
+        "sum": null,
+        "max": 1.54739245772362e-05
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": 1.54739245772362e-05,
+        "state": null,
+        "mean": 1.54739245772362e-05,
+        "sum": null,
+        "max": 1.54739245772362e-05
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": 1.54739245772362e-05,
+        "state": null,
+        "mean": 1.54739245772362e-05,
+        "sum": null,
+        "max": 1.54739245772362e-05
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": 1.54739245772362e-05,
+        "state": null,
+        "mean": 1.54739245772362e-05,
+        "sum": null,
+        "max": 1.54739245772362e-05
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": 1.54739245772362e-05,
+        "state": null,
+        "mean": 1.54739245772362e-05,
+        "sum": null,
+        "max": 1.54739245772362e-05
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": 1.54739245772362e-05,
+        "state": null,
+        "mean": 1.54739245772362e-05,
+        "sum": null,
+        "max": 1.54739245772362e-05
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": 1.54739245772362e-05,
+        "state": null,
+        "mean": 1.54739245772362e-05,
+        "sum": null,
+        "max": 1.54739245772362e-05
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": 1.54739245772362e-05,
+        "state": null,
+        "mean": 1.54739245772362e-05,
+        "sum": null,
+        "max": 1.54739245772362e-05
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": 1.54739245772362e-05,
+        "state": null,
+        "mean": 1.54739245772362e-05,
+        "sum": null,
+        "max": 1.54739245772362e-05
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": 1.54739245772362e-05,
+        "state": null,
+        "mean": 1.54739245772362e-05,
+        "sum": null,
+        "max": 1.54739245772362e-05
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": 1.54739245772362e-05,
+        "state": null,
+        "mean": 1.54739245772362e-05,
+        "sum": null,
+        "max": 1.54739245772362e-05
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": 1.54739245772362e-05,
+        "state": null,
+        "mean": 1.54739245772362e-05,
+        "sum": null,
+        "max": 1.54739245772362e-05
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": 1.54739245772362e-05,
+        "state": null,
+        "mean": 1.54739245772362e-05,
+        "sum": null,
+        "max": 1.54739245772362e-05
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": 1.54739245772362e-05,
+        "state": null,
+        "mean": 1.54739245772362e-05,
+        "sum": null,
+        "max": 1.54739245772362e-05
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": 1.54739245772362e-05,
+        "state": null,
+        "mean": 1.54739245772362e-05,
+        "sum": null,
+        "max": 1.54739245772362e-05
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": 1.54739245772362e-05,
+        "state": null,
+        "mean": 1.54739245772362e-05,
+        "sum": null,
+        "max": 1.54739245772362e-05
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": 1.54739245772362e-05,
+        "state": null,
+        "mean": 1.54739245772362e-05,
+        "sum": null,
+        "max": 1.54739245772362e-05
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": 1.54739245772362e-05,
+        "state": null,
+        "mean": 1.54739245772362e-05,
+        "sum": null,
+        "max": 1.54739245772362e-05
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": 1.54739245772362e-05,
+        "state": null,
+        "mean": 1.54739245772362e-05,
+        "sum": null,
+        "max": 1.54739245772362e-05
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": 1.54739245772362e-05,
+        "state": null,
+        "mean": 1.54739245772362e-05,
+        "sum": null,
+        "max": 1.54739245772362e-05
+      }
+    ],
+    "sensor.glances_restart_count": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      }
+    ],
+    "sensor.frigg_openwebui_restart_count": [
+      {
+        "start": 1794034800000,
+        "end": 1794038400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794038400000,
+        "end": 1794042000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794042000000,
+        "end": 1794045600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794045600000,
+        "end": 1794049200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "min": null,
+        "state": 0.0,
+        "mean": null,
+        "sum": 0.0,
+        "max": null
+      }
+    ]
+  },
+  "start": "2026-11-07T07:00:00+00:00",
+  "end": "2026-11-08T06:00:00+00:00"
+}

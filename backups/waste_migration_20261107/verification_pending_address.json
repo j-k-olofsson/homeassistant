@@ -1,0 +1,51 @@
+{
+  "version": "2.36.0",
+  "installed": true,
+  "repairs": {
+    "issues": []
+  },
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  },
+  "current_waste_states": [
+    {
+      "entity_id": "calendar.sophamtning",
+      "state": "off",
+      "attributes": {
+        "message": "Sophämtning",
+        "all_day": true,
+        "start_time": "2026-11-09 00:00:00",
+        "end_time": "2026-11-10 00:00:00",
+        "location": "",
+        "description": "",
+        "friendly_name": "Sophämtning",
+        "supported_features": 7
+      },
+      "last_changed": "2026-11-07T04:58:34.773778+00:00",
+      "last_reported": "2026-11-07T04:58:34.773778+00:00",
+      "last_updated": "2026-11-07T04:58:34.773778+00:00",
+      "context": {
+        "id": "01M6T5YTWNZBGBGK4KDTZS0H1C",
+        "parent_id": null,
+        "user_id": null
+      }
+    },
+    {
+      "entity_id": "sensor.soptomning",
+      "state": "I övermorgon",
+      "attributes": {
+        "friendly_name": "Sopor"
+      },
+      "last_changed": "2026-11-07T04:58:36.201790+00:00",
+      "last_reported": "2026-11-07T04:58:36.201706+00:00",
+      "last_updated": "2026-11-07T04:58:36.201790+00:00",
+      "context": {
+        "id": "01M6T5YW99ADTM8APFD2KFHP0R",
+        "parent_id": null,
+        "user_id": null
+      }
+    }
+  ]
+}

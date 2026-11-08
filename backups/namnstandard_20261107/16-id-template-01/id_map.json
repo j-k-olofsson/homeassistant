@@ -1,0 +1,4 @@
+{
+  "binary_sensor.aqara_taklampor_flash_senaste_24h": "binary_sensor.aqara_taklampor_blinkningar_senaste_dygnet",
+  "binary_sensor.aqara_banklampor_flash_senaste_24h": "binary_sensor.aqara_banklampor_blinkningar_senaste_dygnet"
+}

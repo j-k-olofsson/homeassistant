@@ -1,0 +1,4526 @@
+{
+  "stage": "17-sista-namnpreciseringar-01",
+  "operations": [
+    {
+      "kind": "entity",
+      "id": "sensor.sensor_cost",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Elkostnad",
+        "aliases": [
+          "sensor Cost"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "humidifier.bions_hygrostat",
+      "before": {
+        "name": null,
+        "aliases": [
+          null,
+          "Ventilfläkt (bion) Bions hygrostat"
+        ]
+      },
+      "after": {
+        "name": "Fuktreglering",
+        "aliases": [
+          "Ventilfläkt (bion) Bions hygrostat",
+          "Ventilfläkt Bions hygrostat"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "notify.file",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skriptlogg – skriv meddelande",
+        "aliases": [
+          "File"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.file",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skriptlogg – senaste meddelande",
+        "aliases": [
+          "File"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.system_ha_global_health_score",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "HA – samlad hälsa",
+        "aliases": [
+          "System: HA - Global Health Score"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.heimdal_ha_sm_t835_app_8356c624",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "App 8356c624",
+        "aliases": [
+          "device_tracker.heimdal_ha_sm_t835_app_8356c624"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_identifierad_aktivitet_app_8356c624",
+      "before": {
+        "name": "Identifierad aktivitet",
+        "aliases": [
+          null,
+          "SM-T835 Detected activity"
+        ]
+      },
+      "after": {
+        "name": "Identifierad aktivitet – App 8356c624",
+        "aliases": [
+          "Identifierad aktivitet",
+          "SM-T835 Detected activity"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_sakerhet_i_somndetektering_app_8356c624",
+      "before": {
+        "name": "Säkerhet i sömndetektering",
+        "aliases": [
+          null,
+          "SM-T835 Sleep confidence"
+        ]
+      },
+      "after": {
+        "name": "Säkerhet i sömndetektering – App 8356c624",
+        "aliases": [
+          "SM-T835 Sleep confidence",
+          "Säkerhet i sömndetektering"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_somnperiod_app_8356c624",
+      "before": {
+        "name": "Sömnperiod",
+        "aliases": [
+          null,
+          "SM-T835 Sleep segment"
+        ]
+      },
+      "after": {
+        "name": "Sömnperiod – App 8356c624",
+        "aliases": [
+          "SM-T835 Sleep segment",
+          "Sömnperiod"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_android_auto_app_8356c624",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Android Auto – App 8356c624",
+        "aliases": [
+          "Android Auto"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_operativsystemsversion_app_8356c624",
+      "before": {
+        "name": "Operativsystemsversion",
+        "aliases": [
+          null,
+          "SM-T835 OS version"
+        ]
+      },
+      "after": {
+        "name": "Operativsystemsversion – App 8356c624",
+        "aliases": [
+          "Operativsystemsversion",
+          "SM-T835 OS version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_sakerhetsuppdatering_app_8356c624",
+      "before": {
+        "name": "Säkerhetsuppdatering",
+        "aliases": [
+          null,
+          "SM-T835 Security patch"
+        ]
+      },
+      "after": {
+        "name": "Säkerhetsuppdatering – App 8356c624",
+        "aliases": [
+          "SM-T835 Security patch",
+          "Säkerhetsuppdatering"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_appversion_app_8356c624",
+      "before": {
+        "name": "Appversion",
+        "aliases": [
+          null,
+          "SM-T835 Current version"
+        ]
+      },
+      "after": {
+        "name": "Appversion – App 8356c624",
+        "aliases": [
+          "Appversion",
+          "SM-T835 Current version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_appens_mottagna_data_app_8356c624",
+      "before": {
+        "name": "Appens mottagna data",
+        "aliases": [
+          null,
+          "SM-T835 App Rx GB"
+        ]
+      },
+      "after": {
+        "name": "Appens mottagna data – App 8356c624",
+        "aliases": [
+          "Appens mottagna data",
+          "SM-T835 App Rx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_appens_skickade_data_app_8356c624",
+      "before": {
+        "name": "Appens skickade data",
+        "aliases": [
+          null,
+          "SM-T835 App Tx GB"
+        ]
+      },
+      "after": {
+        "name": "Appens skickade data – App 8356c624",
+        "aliases": [
+          "Appens skickade data",
+          "SM-T835 App Tx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_appens_minnesanvandning_app_8356c624",
+      "before": {
+        "name": "Appens minnesanvändning",
+        "aliases": [
+          null,
+          "SM-T835 App memory"
+        ]
+      },
+      "after": {
+        "name": "Appens minnesanvändning – App 8356c624",
+        "aliases": [
+          "Appens minnesanvändning",
+          "SM-T835 App memory"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_appen_inaktiv_app_8356c624",
+      "before": {
+        "name": "Appen inaktiv",
+        "aliases": [
+          null,
+          "SM-T835 App inactive"
+        ]
+      },
+      "after": {
+        "name": "Appen inaktiv – App 8356c624",
+        "aliases": [
+          "Appen inaktiv",
+          "SM-T835 App inactive"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_appens_energisparklass_app_8356c624",
+      "before": {
+        "name": "Appens energisparklass",
+        "aliases": [
+          null,
+          "SM-T835 App standby bucket"
+        ]
+      },
+      "after": {
+        "name": "Appens energisparklass – App 8356c624",
+        "aliases": [
+          "Appens energisparklass",
+          "SM-T835 App standby bucket"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_appens_prioritet_app_8356c624",
+      "before": {
+        "name": "Appens prioritet",
+        "aliases": [
+          null,
+          "SM-T835 App importance"
+        ]
+      },
+      "after": {
+        "name": "Appens prioritet – App 8356c624",
+        "aliases": [
+          "Appens prioritet",
+          "SM-T835 App importance"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_ringsignallage_app_8356c624",
+      "before": {
+        "name": "Ringsignalläge",
+        "aliases": [
+          null,
+          "SM-T835 Ringer mode"
+        ]
+      },
+      "after": {
+        "name": "Ringsignalläge – App 8356c624",
+        "aliases": [
+          "Ringsignalläge",
+          "SM-T835 Ringer mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_ljudlage_app_8356c624",
+      "before": {
+        "name": "Ljudläge",
+        "aliases": [
+          null,
+          "SM-T835 Audio mode"
+        ]
+      },
+      "after": {
+        "name": "Ljudläge – App 8356c624",
+        "aliases": [
+          "Ljudläge",
+          "SM-T835 Audio mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_horlurar_app_8356c624",
+      "before": {
+        "name": "Hörlurar",
+        "aliases": [
+          null,
+          "SM-T835 Headphones"
+        ]
+      },
+      "after": {
+        "name": "Hörlurar – App 8356c624",
+        "aliases": [
+          "Hörlurar",
+          "SM-T835 Headphones"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_mikrofon_avstangd_app_8356c624",
+      "before": {
+        "name": "Mikrofon avstängd",
+        "aliases": [
+          null,
+          "SM-T835 Mic muted"
+        ]
+      },
+      "after": {
+        "name": "Mikrofon avstängd – App 8356c624",
+        "aliases": [
+          "Mikrofon avstängd",
+          "SM-T835 Mic muted"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_hogtalartelefon_app_8356c624",
+      "before": {
+        "name": "Högtalartelefon",
+        "aliases": [
+          null,
+          "SM-T835 Speakerphone"
+        ]
+      },
+      "after": {
+        "name": "Högtalartelefon – App 8356c624",
+        "aliases": [
+          "Högtalartelefon",
+          "SM-T835 Speakerphone"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_musik_aktiv_app_8356c624",
+      "before": {
+        "name": "Musik aktiv",
+        "aliases": [
+          null,
+          "SM-T835 Music active"
+        ]
+      },
+      "after": {
+        "name": "Musik aktiv – App 8356c624",
+        "aliases": [
+          "Musik aktiv",
+          "SM-T835 Music active"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_alarmvolym_app_8356c624",
+      "before": {
+        "name": "Alarmvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level alarm"
+        ]
+      },
+      "after": {
+        "name": "Alarmvolym – App 8356c624",
+        "aliases": [
+          "Alarmvolym",
+          "SM-T835 Volume level alarm"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_samtalsvolym_app_8356c624",
+      "before": {
+        "name": "Samtalsvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level call"
+        ]
+      },
+      "after": {
+        "name": "Samtalsvolym – App 8356c624",
+        "aliases": [
+          "SM-T835 Volume level call",
+          "Samtalsvolym"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_musikvolym_app_8356c624",
+      "before": {
+        "name": "Musikvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level music"
+        ]
+      },
+      "after": {
+        "name": "Musikvolym – App 8356c624",
+        "aliases": [
+          "Musikvolym",
+          "SM-T835 Volume level music"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_ringsignalvolym_app_8356c624",
+      "before": {
+        "name": "Ringsignalvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level ringer"
+        ]
+      },
+      "after": {
+        "name": "Ringsignalvolym – App 8356c624",
+        "aliases": [
+          "Ringsignalvolym",
+          "SM-T835 Volume level ringer"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_aviseringsvolym_app_8356c624",
+      "before": {
+        "name": "Aviseringsvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level notification"
+        ]
+      },
+      "after": {
+        "name": "Aviseringsvolym – App 8356c624",
+        "aliases": [
+          "Aviseringsvolym",
+          "SM-T835 Volume level notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_systemvolym_app_8356c624",
+      "before": {
+        "name": "Systemvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level system"
+        ]
+      },
+      "after": {
+        "name": "Systemvolym – App 8356c624",
+        "aliases": [
+          "SM-T835 Volume level system",
+          "Systemvolym"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_knappvalsvolym_app_8356c624",
+      "before": {
+        "name": "Knappvalsvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level DTMF"
+        ]
+      },
+      "after": {
+        "name": "Knappvalsvolym – App 8356c624",
+        "aliases": [
+          "Knappvalsvolym",
+          "SM-T835 Volume level DTMF"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_tillganglighetsvolym_app_8356c624",
+      "before": {
+        "name": "Tillgänglighetsvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level accessibility"
+        ]
+      },
+      "after": {
+        "name": "Tillgänglighetsvolym – App 8356c624",
+        "aliases": [
+          "SM-T835 Volume level accessibility",
+          "Tillgänglighetsvolym"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_batteriniva_app_8356c624",
+      "before": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "SM-T835 Battery level"
+        ]
+      },
+      "after": {
+        "name": "Batterinivå – App 8356c624",
+        "aliases": [
+          "Batterinivå",
+          "SM-T835 Battery level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_batteristatus_app_8356c624",
+      "before": {
+        "name": "Batteristatus",
+        "aliases": [
+          null,
+          "SM-T835 Battery state"
+        ]
+      },
+      "after": {
+        "name": "Batteristatus – App 8356c624",
+        "aliases": [
+          "SM-T835 Batteristatus",
+          "SM-T835 Battery state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_laddar_app_8356c624",
+      "before": {
+        "name": "Laddar",
+        "aliases": [
+          null,
+          "SM-T835 Is charging"
+        ]
+      },
+      "after": {
+        "name": "Laddar – App 8356c624",
+        "aliases": [
+          "Laddar",
+          "SM-T835 Is charging"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_laddartyp_app_8356c624",
+      "before": {
+        "name": "Laddartyp",
+        "aliases": [
+          null,
+          "SM-T835 Charger type"
+        ]
+      },
+      "after": {
+        "name": "Laddartyp – App 8356c624",
+        "aliases": [
+          "SM-T835 Charger type",
+          "SM-T835 Laddartyp"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_batterihalsa_app_8356c624",
+      "before": {
+        "name": "Batterihälsa",
+        "aliases": [
+          null,
+          "SM-T835 Battery health"
+        ]
+      },
+      "after": {
+        "name": "Batterihälsa – App 8356c624",
+        "aliases": [
+          "Batterihälsa",
+          "SM-T835 Battery health"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_batteritemperatur_app_8356c624",
+      "before": {
+        "name": "Batteritemperatur",
+        "aliases": [
+          null,
+          "SM-T835 Battery temperature"
+        ]
+      },
+      "after": {
+        "name": "Batteritemperatur – App 8356c624",
+        "aliases": [
+          "Batteritemperatur",
+          "SM-T835 Battery temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_batterieffekt_app_8356c624",
+      "before": {
+        "name": "Batterieffekt",
+        "aliases": [
+          null,
+          "SM-T835 Battery power"
+        ]
+      },
+      "after": {
+        "name": "Batterieffekt – App 8356c624",
+        "aliases": [
+          "Batterieffekt",
+          "SM-T835 Battery power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_bluetooth_anslutning_app_8356c624",
+      "before": {
+        "name": "Bluetooth-anslutning",
+        "aliases": [
+          null,
+          "SM-T835 Bluetooth connection"
+        ]
+      },
+      "after": {
+        "name": "Bluetooth-anslutning – App 8356c624",
+        "aliases": [
+          "Bluetooth-anslutning",
+          "SM-T835 Bluetooth connection"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_bluetooth_status_app_8356c624",
+      "before": {
+        "name": "Bluetooth-status",
+        "aliases": [
+          null,
+          "SM-T835 Bluetooth state"
+        ]
+      },
+      "after": {
+        "name": "Bluetooth-status – App 8356c624",
+        "aliases": [
+          "Bluetooth-status",
+          "SM-T835 Bluetooth state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_ble_sandare_app_8356c624",
+      "before": {
+        "name": "BLE-sändare",
+        "aliases": [
+          null,
+          "SM-T835 BLE transmitter"
+        ]
+      },
+      "after": {
+        "name": "BLE-sändare – App 8356c624",
+        "aliases": [
+          "BLE-sändare",
+          "SM-T835 BLE transmitter"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_overvakning_av_bluetooth_sandare_app_8356c624",
+      "before": {
+        "name": "Övervakning av Bluetooth-sändare",
+        "aliases": [
+          null,
+          "SM-T835 Beacon monitor"
+        ]
+      },
+      "after": {
+        "name": "Övervakning av Bluetooth-sändare – App 8356c624",
+        "aliases": [
+          "SM-T835 Beacon monitor",
+          "Övervakning av Bluetooth-sändare"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_bilens_batteriniva_app_8356c624",
+      "before": {
+        "name": "Bilens batterinivå",
+        "aliases": [
+          null,
+          "SM-T835 Car battery"
+        ]
+      },
+      "after": {
+        "name": "Bilens batterinivå – App 8356c624",
+        "aliases": [
+          "Bilens batterinivå",
+          "SM-T835 Car battery"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_bilens_namn_app_8356c624",
+      "before": {
+        "name": "Bilens namn",
+        "aliases": [
+          null,
+          "SM-T835 Car name"
+        ]
+      },
+      "after": {
+        "name": "Bilens namn – App 8356c624",
+        "aliases": [
+          "Bilens namn",
+          "SM-T835 Car name"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_bilens_laddningsstatus_app_8356c624",
+      "before": {
+        "name": "Bilens laddningsstatus",
+        "aliases": [
+          null,
+          "SM-T835 Car charging status"
+        ]
+      },
+      "after": {
+        "name": "Bilens laddningsstatus – App 8356c624",
+        "aliases": [
+          "Bilens laddningsstatus",
+          "SM-T835 Car charging status"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_bilens_laddkontakt_app_8356c624",
+      "before": {
+        "name": "Bilens laddkontakt",
+        "aliases": [
+          null,
+          "SM-T835 Car EV connector type"
+        ]
+      },
+      "after": {
+        "name": "Bilens laddkontakt – App 8356c624",
+        "aliases": [
+          "Bilens laddkontakt",
+          "SM-T835 Car EV connector type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_bilens_bransleniva_app_8356c624",
+      "before": {
+        "name": "Bilens bränslenivå",
+        "aliases": [
+          null,
+          "SM-T835 Car fuel"
+        ]
+      },
+      "after": {
+        "name": "Bilens bränslenivå – App 8356c624",
+        "aliases": [
+          "Bilens bränslenivå",
+          "SM-T835 Car fuel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_bilens_bransletyp_app_8356c624",
+      "before": {
+        "name": "Bilens bränsletyp",
+        "aliases": [
+          null,
+          "SM-T835 Car fuel type"
+        ]
+      },
+      "after": {
+        "name": "Bilens bränsletyp – App 8356c624",
+        "aliases": [
+          "Bilens bränsletyp",
+          "SM-T835 Car fuel type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_bilens_vagmatare_app_8356c624",
+      "before": {
+        "name": "Bilens vägmätare",
+        "aliases": [
+          null,
+          "SM-T835 Car odometer"
+        ]
+      },
+      "after": {
+        "name": "Bilens vägmätare – App 8356c624",
+        "aliases": [
+          "Bilens vägmätare",
+          "SM-T835 Car odometer"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_skarmljusstyrka_app_8356c624",
+      "before": {
+        "name": "Skärmljusstyrka",
+        "aliases": [
+          null,
+          "SM-T835 Screen brightness"
+        ]
+      },
+      "after": {
+        "name": "Skärmljusstyrka – App 8356c624",
+        "aliases": [
+          "SM-T835 Screen brightness",
+          "Skärmljusstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_tid_till_skarmavstangning_app_8356c624",
+      "before": {
+        "name": "Tid till skärmavstängning",
+        "aliases": [
+          null,
+          "SM-T835 Screen off timeout"
+        ]
+      },
+      "after": {
+        "name": "Tid till skärmavstängning – App 8356c624",
+        "aliases": [
+          "SM-T835 Screen off timeout",
+          "Tid till skärmavstängning"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_stor_ej_lage_app_8356c624",
+      "before": {
+        "name": "Stör ej-läge",
+        "aliases": [
+          null,
+          "SM-T835 Do Not Disturb sensor"
+        ]
+      },
+      "after": {
+        "name": "Stör ej-läge – App 8356c624",
+        "aliases": [
+          "SM-T835 Do Not Disturb sensor",
+          "Stör ej-läge"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_arbetsprofil_app_8356c624",
+      "before": {
+        "name": "Arbetsprofil",
+        "aliases": [
+          null,
+          "SM-T835 Work profile"
+        ]
+      },
+      "after": {
+        "name": "Arbetsprofil – App 8356c624",
+        "aliases": [
+          "Arbetsprofil",
+          "SM-T835 Work profile"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_platsadress_app_8356c624",
+      "before": {
+        "name": "Platsadress",
+        "aliases": [
+          null,
+          "SM-T835 Geocoded location"
+        ]
+      },
+      "after": {
+        "name": "Platsadress – App 8356c624",
+        "aliases": [
+          "Platsadress",
+          "SM-T835 Geocoded location"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_enheten_last_app_8356c624",
+      "before": {
+        "name": "Enheten låst",
+        "aliases": [
+          null,
+          "SM-T835 Device locked"
+        ]
+      },
+      "after": {
+        "name": "Enheten låst – App 8356c624",
+        "aliases": [
+          "Enheten låst",
+          "SM-T835 Device locked"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_enheten_skyddad_app_8356c624",
+      "before": {
+        "name": "Enheten skyddad",
+        "aliases": [
+          null,
+          "SM-T835 Device secure"
+        ]
+      },
+      "after": {
+        "name": "Enheten skyddad – App 8356c624",
+        "aliases": [
+          "Enheten skyddad",
+          "SM-T835 Device secure"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_skarmlaset_last_app_8356c624",
+      "before": {
+        "name": "Skärmlåset låst",
+        "aliases": [
+          null,
+          "SM-T835 Keyguard locked"
+        ]
+      },
+      "after": {
+        "name": "Skärmlåset låst – App 8356c624",
+        "aliases": [
+          "SM-T835 Keyguard locked",
+          "Skärmlåset låst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_skarmlaset_skyddat_app_8356c624",
+      "before": {
+        "name": "Skärmlåset skyddat",
+        "aliases": [
+          null,
+          "SM-T835 Keyguard secure"
+        ]
+      },
+      "after": {
+        "name": "Skärmlåset skyddat – App 8356c624",
+        "aliases": [
+          "SM-T835 Keyguard secure",
+          "Skärmlåset skyddat"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_senast_anvanda_app_app_8356c624",
+      "before": {
+        "name": "Senast använda app",
+        "aliases": [
+          null,
+          "SM-T835 Last used app"
+        ]
+      },
+      "after": {
+        "name": "Senast använda app – App 8356c624",
+        "aliases": [
+          "SM-T835 Last used app",
+          "Senast använda app"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_senaste_omstart_app_8356c624",
+      "before": {
+        "name": "Senaste omstart",
+        "aliases": [
+          null,
+          "SM-T835 Last reboot"
+        ]
+      },
+      "after": {
+        "name": "Senaste omstart – App 8356c624",
+        "aliases": [
+          "SM-T835 Last reboot",
+          "Senaste omstart"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_senaste_uppdateringsorsak_app_8356c624",
+      "before": {
+        "name": "Senaste uppdateringsorsak",
+        "aliases": [
+          null,
+          "SM-T835 Last update trigger"
+        ]
+      },
+      "after": {
+        "name": "Senaste uppdateringsorsak – App 8356c624",
+        "aliases": [
+          "SM-T835 Last update trigger",
+          "Senaste uppdateringsorsak"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_belysningsstyrka_app_8356c624",
+      "before": {
+        "name": "Belysningsstyrka",
+        "aliases": [
+          null,
+          "SM-T835 Light sensor"
+        ]
+      },
+      "after": {
+        "name": "Belysningsstyrka – App 8356c624",
+        "aliases": [
+          "Belysningsstyrka",
+          "SM-T835 Light sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_platslage_med_hog_precision_app_8356c624",
+      "before": {
+        "name": "Platsläge med hög precision",
+        "aliases": [
+          null,
+          "SM-T835 High accuracy mode"
+        ]
+      },
+      "after": {
+        "name": "Platsläge med hög precision – App 8356c624",
+        "aliases": [
+          "Platsläge med hög precision",
+          "SM-T835 High accuracy mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_uppdateringsintervall_for_hog_precision_app_8356c624",
+      "before": {
+        "name": "Uppdateringsintervall för hög precision",
+        "aliases": [
+          null,
+          "SM-T835 High accuracy update interval"
+        ]
+      },
+      "after": {
+        "name": "Uppdateringsintervall för hög precision – App 8356c624",
+        "aliases": [
+          "SM-T835 High accuracy update interval",
+          "Uppdateringsintervall för hög precision"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_mobildata_app_8356c624",
+      "before": {
+        "name": "Mobildata",
+        "aliases": [
+          null,
+          "SM-T835 Mobile data"
+        ]
+      },
+      "after": {
+        "name": "Mobildata – App 8356c624",
+        "aliases": [
+          "Mobildata",
+          "SM-T835 Mobile data"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_dataroaming_app_8356c624",
+      "before": {
+        "name": "Dataroaming",
+        "aliases": [
+          null,
+          "SM-T835 Mobile data roaming"
+        ]
+      },
+      "after": {
+        "name": "Dataroaming – App 8356c624",
+        "aliases": [
+          "Dataroaming",
+          "SM-T835 Mobile data roaming"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_wi_fi_anslutning_app_8356c624",
+      "before": {
+        "name": "Wi-Fi-anslutning",
+        "aliases": [
+          null,
+          "SM-T835 Wi-Fi connection"
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-anslutning – App 8356c624",
+        "aliases": [
+          "SM-T835 Wi-Fi connection",
+          "Wi-Fi-anslutning"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_wi_fi_bssid_app_8356c624",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi BSSID – App 8356c624",
+        "aliases": [
+          "Wi-Fi BSSID"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_wi_fi_ip_adress_app_8356c624",
+      "before": {
+        "name": "Wi-Fi IP-adress",
+        "aliases": [
+          null,
+          "SM-T835 Wi-Fi IP address"
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi IP-adress – App 8356c624",
+        "aliases": [
+          "SM-T835 Wi-Fi IP address",
+          "Wi-Fi IP-adress"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_wi_fi_lankhastighet_app_8356c624",
+      "before": {
+        "name": "Wi-Fi-länkhastighet",
+        "aliases": [
+          null,
+          "SM-T835 Wi-Fi link speed"
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-länkhastighet – App 8356c624",
+        "aliases": [
+          "SM-T835 Wi-Fi link speed",
+          "Wi-Fi-länkhastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_wi_fi_status_app_8356c624",
+      "before": {
+        "name": "Wi-Fi-status",
+        "aliases": [
+          null,
+          "SM-T835 Wi-Fi state"
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-status – App 8356c624",
+        "aliases": [
+          "SM-T835 Wi-Fi state",
+          "Wi-Fi-status"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_wi_fi_frekvens_app_8356c624",
+      "before": {
+        "name": "Wi-Fi-frekvens",
+        "aliases": [
+          null,
+          "SM-T835 Wi-Fi frequency"
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-frekvens – App 8356c624",
+        "aliases": [
+          "SM-T835 Wi-Fi frequency",
+          "Wi-Fi-frekvens"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_wi_fi_signalstyrka_app_8356c624",
+      "before": {
+        "name": "Wi-Fi-signalstyrka",
+        "aliases": [
+          null,
+          "SM-T835 Wi-Fi signal strength"
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-signalstyrka – App 8356c624",
+        "aliases": [
+          "SM-T835 Wi-Fi signal strength",
+          "Wi-Fi-signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_publik_ip_adress_app_8356c624",
+      "before": {
+        "name": "Publik IP-adress",
+        "aliases": [
+          null,
+          "SM-T835 Public IP address"
+        ]
+      },
+      "after": {
+        "name": "Publik IP-adress – App 8356c624",
+        "aliases": [
+          "Publik IP-adress",
+          "SM-T835 Public IP address"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_internetdelningsstatus_app_8356c624",
+      "before": {
+        "name": "Internetdelningsstatus",
+        "aliases": [
+          null,
+          "SM-T835 Hotspot state"
+        ]
+      },
+      "after": {
+        "name": "Internetdelningsstatus – App 8356c624",
+        "aliases": [
+          "Internetdelningsstatus",
+          "SM-T835 Hotspot state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_natverkstyp_app_8356c624",
+      "before": {
+        "name": "Nätverkstyp",
+        "aliases": [
+          null,
+          "SM-T835 Network type"
+        ]
+      },
+      "after": {
+        "name": "Nätverkstyp – App 8356c624",
+        "aliases": [
+          "Nätverkstyp",
+          "SM-T835 Network type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_nasta_alarm_app_8356c624",
+      "before": {
+        "name": "Nästa alarm",
+        "aliases": [
+          null,
+          "SM-T835 Next alarm"
+        ]
+      },
+      "after": {
+        "name": "Nästa alarm – App 8356c624",
+        "aliases": [
+          "Nästa alarm",
+          "SM-T835 Next alarm"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_senaste_avisering_app_8356c624",
+      "before": {
+        "name": "Senaste avisering",
+        "aliases": [
+          null,
+          "SM-T835 Last notification"
+        ]
+      },
+      "after": {
+        "name": "Senaste avisering – App 8356c624",
+        "aliases": [
+          "SM-T835 Last notification",
+          "Senaste avisering"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_senast_borttagna_avisering_app_8356c624",
+      "before": {
+        "name": "Senast borttagna avisering",
+        "aliases": [
+          null,
+          "SM-T835 Last removed notification"
+        ]
+      },
+      "after": {
+        "name": "Senast borttagna avisering – App 8356c624",
+        "aliases": [
+          "SM-T835 Last removed notification",
+          "Senast borttagna avisering"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_antal_aktiva_aviseringar_app_8356c624",
+      "before": {
+        "name": "Antal aktiva aviseringar",
+        "aliases": [
+          null,
+          "SM-T835 Active notification count"
+        ]
+      },
+      "after": {
+        "name": "Antal aktiva aviseringar – App 8356c624",
+        "aliases": [
+          "Antal aktiva aviseringar",
+          "SM-T835 Active notification count"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_mediasession_app_8356c624",
+      "before": {
+        "name": "Mediasession",
+        "aliases": [
+          null,
+          "SM-T835 Media session"
+        ]
+      },
+      "after": {
+        "name": "Mediasession – App 8356c624",
+        "aliases": [
+          "Mediasession",
+          "SM-T835 Media session"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_telefonstatus_app_8356c624",
+      "before": {
+        "name": "Telefonstatus",
+        "aliases": [
+          null,
+          "SM-T835 Phone state"
+        ]
+      },
+      "after": {
+        "name": "Telefonstatus – App 8356c624",
+        "aliases": [
+          "SM-T835 Phone state",
+          "Telefonstatus"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_sim_1_app_8356c624",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "SIM 1 – App 8356c624",
+        "aliases": [
+          "SIM 1"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_sim_2_app_8356c624",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "SIM 2 – App 8356c624",
+        "aliases": [
+          "SIM 2"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_skarmen_interaktiv_app_8356c624",
+      "before": {
+        "name": "Skärmen interaktiv",
+        "aliases": [
+          null,
+          "SM-T835 Interactive"
+        ]
+      },
+      "after": {
+        "name": "Skärmen interaktiv – App 8356c624",
+        "aliases": [
+          "SM-T835 Interactive",
+          "Skärmen interaktiv"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_vilolage_app_8356c624",
+      "before": {
+        "name": "Viloläge",
+        "aliases": [
+          null,
+          "SM-T835 Doze mode"
+        ]
+      },
+      "after": {
+        "name": "Viloläge – App 8356c624",
+        "aliases": [
+          "SM-T835 Doze mode",
+          "Viloläge"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_energisparlage_app_8356c624",
+      "before": {
+        "name": "Energisparläge",
+        "aliases": [
+          null,
+          "SM-T835 Power save"
+        ]
+      },
+      "after": {
+        "name": "Energisparläge – App 8356c624",
+        "aliases": [
+          "Energisparläge",
+          "SM-T835 Power save"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_narhetssensor_app_8356c624",
+      "before": {
+        "name": "Närhetssensor",
+        "aliases": [
+          null,
+          "SM-T835 Proximity sensor"
+        ]
+      },
+      "after": {
+        "name": "Närhetssensor – App 8356c624",
+        "aliases": [
+          "Närhetssensor",
+          "SM-T835 Proximity sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_steg_app_8356c624",
+      "before": {
+        "name": "Steg",
+        "aliases": [
+          null,
+          "SM-T835 Steps sensor"
+        ]
+      },
+      "after": {
+        "name": "Steg – App 8356c624",
+        "aliases": [
+          "SM-T835 Steps sensor",
+          "Steg"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_intern_lagring_app_8356c624",
+      "before": {
+        "name": "Intern lagring",
+        "aliases": [
+          null,
+          "SM-T835 Internal storage"
+        ]
+      },
+      "after": {
+        "name": "Intern lagring – App 8356c624",
+        "aliases": [
+          "Intern lagring",
+          "SM-T835 Internal storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_extern_lagring_app_8356c624",
+      "before": {
+        "name": "Extern lagring",
+        "aliases": [
+          null,
+          "SM-T835 External storage"
+        ]
+      },
+      "after": {
+        "name": "Extern lagring – App 8356c624",
+        "aliases": [
+          "Extern lagring",
+          "SM-T835 External storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_aktuell_tidszon_app_8356c624",
+      "before": {
+        "name": "Aktuell tidszon",
+        "aliases": [
+          null,
+          "SM-T835 Current time zone"
+        ]
+      },
+      "after": {
+        "name": "Aktuell tidszon – App 8356c624",
+        "aliases": [
+          "Aktuell tidszon",
+          "SM-T835 Current time zone"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_totalt_mottagna_data_app_8356c624",
+      "before": {
+        "name": "Totalt mottagna data",
+        "aliases": [
+          null,
+          "SM-T835 Total Rx GB"
+        ]
+      },
+      "after": {
+        "name": "Totalt mottagna data – App 8356c624",
+        "aliases": [
+          "SM-T835 Total Rx GB",
+          "Totalt mottagna data"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_totalt_skickade_data_app_8356c624",
+      "before": {
+        "name": "Totalt skickade data",
+        "aliases": [
+          null,
+          "SM-T835 Total Tx GB"
+        ]
+      },
+      "after": {
+        "name": "Totalt skickade data – App 8356c624",
+        "aliases": [
+          "SM-T835 Total Tx GB",
+          "Totalt skickade data"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_ipv6_adresser_app_8356c624",
+      "before": {
+        "name": "IPv6-adresser",
+        "aliases": [
+          null,
+          "SM-T835 IPv6 addresses"
+        ]
+      },
+      "after": {
+        "name": "IPv6-adresser – App 8356c624",
+        "aliases": [
+          "IPv6-adresser",
+          "SM-T835 IPv6 addresses"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.ateljen_vattensensor_torkskap_batteri_bytt_batteripost_6053a7c9",
+      "before": {
+        "name": "Batteri bytt",
+        "aliases": [
+          null,
+          "Vattensensor (torkskåp) Battery replaced"
+        ]
+      },
+      "after": {
+        "name": "Batteri bytt – batteripost 6053a7c9",
+        "aliases": [
+          "Vattensensor (torkskåp) Battery replaced",
+          "Vattensensor torkskåp Batteri bytt"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ateljen_vattensensor_torkskap_batterityp_batteripost_6053a7c9",
+      "before": {
+        "name": "Batterityp",
+        "aliases": [
+          null,
+          "Vattensensor (torkskåp) Battery type"
+        ]
+      },
+      "after": {
+        "name": "Batterityp – batteripost 6053a7c9",
+        "aliases": [
+          "Vattensensor (torkskåp) Battery type",
+          "Vattensensor torkskåp Batterityp"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ateljen_vattensensor_torkskap_senaste_batteribyte_batteripost_6053a7c9",
+      "before": {
+        "name": "Senaste batteribyte",
+        "aliases": [
+          null,
+          "Vattensensor (torkskåp) Battery last replaced"
+        ]
+      },
+      "after": {
+        "name": "Senaste batteribyte – batteripost 6053a7c9",
+        "aliases": [
+          "Vattensensor (torkskåp) Battery last replaced",
+          "Vattensensor torkskåp Senaste batteribyte"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_aterstaende_laddningstid_app_8356c624",
+      "before": {
+        "name": "Återstående laddningstid",
+        "aliases": [
+          null,
+          "SM-T835 Remaining charge time"
+        ]
+      },
+      "after": {
+        "name": "Återstående laddningstid – App 8356c624",
+        "aliases": [
+          "SM-T835 Remaining charge time",
+          "Återstående laddningstid"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_skarmriktning_app_8356c624",
+      "before": {
+        "name": "Skärmriktning",
+        "aliases": [
+          null,
+          "SM-T835 Screen orientation"
+        ]
+      },
+      "after": {
+        "name": "Skärmriktning – App 8356c624",
+        "aliases": [
+          "SM-T835 Screen orientation",
+          "Skärmriktning"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_skarmrotation_app_8356c624",
+      "before": {
+        "name": "Skärmrotation",
+        "aliases": [
+          null,
+          "SM-T835 Screen rotation"
+        ]
+      },
+      "after": {
+        "name": "Skärmrotation – App 8356c624",
+        "aliases": [
+          "SM-T835 Screen rotation",
+          "Skärmrotation"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_bilens_hastighet_app_8356c624",
+      "before": {
+        "name": "Bilens hastighet",
+        "aliases": [
+          null,
+          "SM-T835 Car speed"
+        ]
+      },
+      "after": {
+        "name": "Bilens hastighet – App 8356c624",
+        "aliases": [
+          "Bilens hastighet",
+          "SM-T835 Car speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_bilens_aterstaende_rackvidd_app_8356c624",
+      "before": {
+        "name": "Bilens återstående räckvidd",
+        "aliases": [
+          null,
+          "SM-T835 Car range remaining"
+        ]
+      },
+      "after": {
+        "name": "Bilens återstående räckvidd – App 8356c624",
+        "aliases": [
+          "Bilens återstående räckvidd",
+          "SM-T835 Car range remaining"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.heimdal_ha_sm_t835_app_f09d1761",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "App f09d1761",
+        "aliases": [
+          "device_tracker.heimdal_ha_sm_t835_app_f09d1761"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_identifierad_aktivitet_app_f09d1761",
+      "before": {
+        "name": "Identifierad aktivitet",
+        "aliases": [
+          null,
+          "SM-T835 Detected activity"
+        ]
+      },
+      "after": {
+        "name": "Identifierad aktivitet – App f09d1761",
+        "aliases": [
+          "Identifierad aktivitet",
+          "SM-T835 Detected activity"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_sakerhet_i_somndetektering_app_f09d1761",
+      "before": {
+        "name": "Säkerhet i sömndetektering",
+        "aliases": [
+          null,
+          "SM-T835 Sleep confidence"
+        ]
+      },
+      "after": {
+        "name": "Säkerhet i sömndetektering – App f09d1761",
+        "aliases": [
+          "SM-T835 Sleep confidence",
+          "Säkerhet i sömndetektering"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_somnperiod_app_f09d1761",
+      "before": {
+        "name": "Sömnperiod",
+        "aliases": [
+          null,
+          "SM-T835 Sleep segment"
+        ]
+      },
+      "after": {
+        "name": "Sömnperiod – App f09d1761",
+        "aliases": [
+          "SM-T835 Sleep segment",
+          "Sömnperiod"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_android_auto_app_f09d1761",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Android Auto – App f09d1761",
+        "aliases": [
+          "Android Auto"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_operativsystemsversion_app_f09d1761",
+      "before": {
+        "name": "Operativsystemsversion",
+        "aliases": [
+          null,
+          "SM-T835 OS version"
+        ]
+      },
+      "after": {
+        "name": "Operativsystemsversion – App f09d1761",
+        "aliases": [
+          "Operativsystemsversion",
+          "SM-T835 OS version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_sakerhetsuppdatering_app_f09d1761",
+      "before": {
+        "name": "Säkerhetsuppdatering",
+        "aliases": [
+          null,
+          "SM-T835 Security patch"
+        ]
+      },
+      "after": {
+        "name": "Säkerhetsuppdatering – App f09d1761",
+        "aliases": [
+          "SM-T835 Security patch",
+          "Säkerhetsuppdatering"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_appversion_app_f09d1761",
+      "before": {
+        "name": "Appversion",
+        "aliases": [
+          null,
+          "SM-T835 Current version"
+        ]
+      },
+      "after": {
+        "name": "Appversion – App f09d1761",
+        "aliases": [
+          "Appversion",
+          "SM-T835 Current version"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_appens_mottagna_data_app_f09d1761",
+      "before": {
+        "name": "Appens mottagna data",
+        "aliases": [
+          null,
+          "SM-T835 App Rx GB"
+        ]
+      },
+      "after": {
+        "name": "Appens mottagna data – App f09d1761",
+        "aliases": [
+          "Appens mottagna data",
+          "SM-T835 App Rx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_appens_skickade_data_app_f09d1761",
+      "before": {
+        "name": "Appens skickade data",
+        "aliases": [
+          null,
+          "SM-T835 App Tx GB"
+        ]
+      },
+      "after": {
+        "name": "Appens skickade data – App f09d1761",
+        "aliases": [
+          "Appens skickade data",
+          "SM-T835 App Tx GB"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_appens_minnesanvandning_app_f09d1761",
+      "before": {
+        "name": "Appens minnesanvändning",
+        "aliases": [
+          null,
+          "SM-T835 App memory"
+        ]
+      },
+      "after": {
+        "name": "Appens minnesanvändning – App f09d1761",
+        "aliases": [
+          "Appens minnesanvändning",
+          "SM-T835 App memory"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_appen_inaktiv_app_f09d1761",
+      "before": {
+        "name": "Appen inaktiv",
+        "aliases": [
+          null,
+          "SM-T835 App inactive"
+        ]
+      },
+      "after": {
+        "name": "Appen inaktiv – App f09d1761",
+        "aliases": [
+          "Appen inaktiv",
+          "SM-T835 App inactive"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_appens_energisparklass_app_f09d1761",
+      "before": {
+        "name": "Appens energisparklass",
+        "aliases": [
+          null,
+          "SM-T835 App standby bucket"
+        ]
+      },
+      "after": {
+        "name": "Appens energisparklass – App f09d1761",
+        "aliases": [
+          "Appens energisparklass",
+          "SM-T835 App standby bucket"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_appens_prioritet_app_f09d1761",
+      "before": {
+        "name": "Appens prioritet",
+        "aliases": [
+          null,
+          "SM-T835 App importance"
+        ]
+      },
+      "after": {
+        "name": "Appens prioritet – App f09d1761",
+        "aliases": [
+          "Appens prioritet",
+          "SM-T835 App importance"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_ringsignallage_app_f09d1761",
+      "before": {
+        "name": "Ringsignalläge",
+        "aliases": [
+          null,
+          "SM-T835 Ringer mode"
+        ]
+      },
+      "after": {
+        "name": "Ringsignalläge – App f09d1761",
+        "aliases": [
+          "Ringsignalläge",
+          "SM-T835 Ringer mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_ljudlage_app_f09d1761",
+      "before": {
+        "name": "Ljudläge",
+        "aliases": [
+          null,
+          "SM-T835 Audio mode"
+        ]
+      },
+      "after": {
+        "name": "Ljudläge – App f09d1761",
+        "aliases": [
+          "Ljudläge",
+          "SM-T835 Audio mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_horlurar_app_f09d1761",
+      "before": {
+        "name": "Hörlurar",
+        "aliases": [
+          null,
+          "SM-T835 Headphones"
+        ]
+      },
+      "after": {
+        "name": "Hörlurar – App f09d1761",
+        "aliases": [
+          "Hörlurar",
+          "SM-T835 Headphones"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_mikrofon_avstangd_app_f09d1761",
+      "before": {
+        "name": "Mikrofon avstängd",
+        "aliases": [
+          null,
+          "SM-T835 Mic muted"
+        ]
+      },
+      "after": {
+        "name": "Mikrofon avstängd – App f09d1761",
+        "aliases": [
+          "Mikrofon avstängd",
+          "SM-T835 Mic muted"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_hogtalartelefon_app_f09d1761",
+      "before": {
+        "name": "Högtalartelefon",
+        "aliases": [
+          null,
+          "SM-T835 Speakerphone"
+        ]
+      },
+      "after": {
+        "name": "Högtalartelefon – App f09d1761",
+        "aliases": [
+          "Högtalartelefon",
+          "SM-T835 Speakerphone"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_musik_aktiv_app_f09d1761",
+      "before": {
+        "name": "Musik aktiv",
+        "aliases": [
+          null,
+          "SM-T835 Music active"
+        ]
+      },
+      "after": {
+        "name": "Musik aktiv – App f09d1761",
+        "aliases": [
+          "Musik aktiv",
+          "SM-T835 Music active"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_alarmvolym_app_f09d1761",
+      "before": {
+        "name": "Alarmvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level alarm"
+        ]
+      },
+      "after": {
+        "name": "Alarmvolym – App f09d1761",
+        "aliases": [
+          "Alarmvolym",
+          "SM-T835 Volume level alarm"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_samtalsvolym_app_f09d1761",
+      "before": {
+        "name": "Samtalsvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level call"
+        ]
+      },
+      "after": {
+        "name": "Samtalsvolym – App f09d1761",
+        "aliases": [
+          "SM-T835 Volume level call",
+          "Samtalsvolym"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_musikvolym_app_f09d1761",
+      "before": {
+        "name": "Musikvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level music"
+        ]
+      },
+      "after": {
+        "name": "Musikvolym – App f09d1761",
+        "aliases": [
+          "Musikvolym",
+          "SM-T835 Volume level music"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_ringsignalvolym_app_f09d1761",
+      "before": {
+        "name": "Ringsignalvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level ringer"
+        ]
+      },
+      "after": {
+        "name": "Ringsignalvolym – App f09d1761",
+        "aliases": [
+          "Ringsignalvolym",
+          "SM-T835 Volume level ringer"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_aviseringsvolym_app_f09d1761",
+      "before": {
+        "name": "Aviseringsvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level notification"
+        ]
+      },
+      "after": {
+        "name": "Aviseringsvolym – App f09d1761",
+        "aliases": [
+          "Aviseringsvolym",
+          "SM-T835 Volume level notification"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_systemvolym_app_f09d1761",
+      "before": {
+        "name": "Systemvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level system"
+        ]
+      },
+      "after": {
+        "name": "Systemvolym – App f09d1761",
+        "aliases": [
+          "SM-T835 Volume level system",
+          "Systemvolym"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_knappvalsvolym_app_f09d1761",
+      "before": {
+        "name": "Knappvalsvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level DTMF"
+        ]
+      },
+      "after": {
+        "name": "Knappvalsvolym – App f09d1761",
+        "aliases": [
+          "Knappvalsvolym",
+          "SM-T835 Volume level DTMF"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_tillganglighetsvolym_app_f09d1761",
+      "before": {
+        "name": "Tillgänglighetsvolym",
+        "aliases": [
+          null,
+          "SM-T835 Volume level accessibility"
+        ]
+      },
+      "after": {
+        "name": "Tillgänglighetsvolym – App f09d1761",
+        "aliases": [
+          "SM-T835 Volume level accessibility",
+          "Tillgänglighetsvolym"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_batteriniva_app_f09d1761",
+      "before": {
+        "name": "Batterinivå",
+        "aliases": [
+          null,
+          "SM-T835 Battery level"
+        ]
+      },
+      "after": {
+        "name": "Batterinivå – App f09d1761",
+        "aliases": [
+          "SM-T835 Batterinivå",
+          "SM-T835 Battery level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_batteristatus_app_f09d1761",
+      "before": {
+        "name": "Batteristatus",
+        "aliases": [
+          null,
+          "SM-T835 Battery state"
+        ]
+      },
+      "after": {
+        "name": "Batteristatus – App f09d1761",
+        "aliases": [
+          "SM-T835 Batteristatus",
+          "SM-T835 Battery state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_laddar_app_f09d1761",
+      "before": {
+        "name": "Laddar",
+        "aliases": [
+          null,
+          "SM-T835 Is charging"
+        ]
+      },
+      "after": {
+        "name": "Laddar – App f09d1761",
+        "aliases": [
+          "Laddar",
+          "SM-T835 Is charging"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_laddartyp_app_f09d1761",
+      "before": {
+        "name": "Laddartyp",
+        "aliases": [
+          null,
+          "SM-T835 Charger type"
+        ]
+      },
+      "after": {
+        "name": "Laddartyp – App f09d1761",
+        "aliases": [
+          "SM-T835 Charger type",
+          "SM-T835 Laddartyp"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_batterihalsa_app_f09d1761",
+      "before": {
+        "name": "Batterihälsa",
+        "aliases": [
+          null,
+          "SM-T835 Battery health"
+        ]
+      },
+      "after": {
+        "name": "Batterihälsa – App f09d1761",
+        "aliases": [
+          "Batterihälsa",
+          "SM-T835 Battery health"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_batteritemperatur_app_f09d1761",
+      "before": {
+        "name": "Batteritemperatur",
+        "aliases": [
+          null,
+          "SM-T835 Battery temperature"
+        ]
+      },
+      "after": {
+        "name": "Batteritemperatur – App f09d1761",
+        "aliases": [
+          "Batteritemperatur",
+          "SM-T835 Battery temperature"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_batterieffekt_app_f09d1761",
+      "before": {
+        "name": "Batterieffekt",
+        "aliases": [
+          null,
+          "SM-T835 Battery power"
+        ]
+      },
+      "after": {
+        "name": "Batterieffekt – App f09d1761",
+        "aliases": [
+          "Batterieffekt",
+          "SM-T835 Battery power"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_aterstaende_laddningstid_app_f09d1761",
+      "before": {
+        "name": "Återstående laddningstid",
+        "aliases": [
+          null,
+          "SM-T835 Remaining charge time"
+        ]
+      },
+      "after": {
+        "name": "Återstående laddningstid – App f09d1761",
+        "aliases": [
+          "SM-T835 Remaining charge time",
+          "Återstående laddningstid"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_bluetooth_anslutning_app_f09d1761",
+      "before": {
+        "name": "Bluetooth-anslutning",
+        "aliases": [
+          null,
+          "SM-T835 Bluetooth connection"
+        ]
+      },
+      "after": {
+        "name": "Bluetooth-anslutning – App f09d1761",
+        "aliases": [
+          "Bluetooth-anslutning",
+          "SM-T835 Bluetooth connection"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_bluetooth_status_app_f09d1761",
+      "before": {
+        "name": "Bluetooth-status",
+        "aliases": [
+          null,
+          "SM-T835 Bluetooth state"
+        ]
+      },
+      "after": {
+        "name": "Bluetooth-status – App f09d1761",
+        "aliases": [
+          "Bluetooth-status",
+          "SM-T835 Bluetooth state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_ble_sandare_app_f09d1761",
+      "before": {
+        "name": "BLE-sändare",
+        "aliases": [
+          null,
+          "SM-T835 BLE transmitter"
+        ]
+      },
+      "after": {
+        "name": "BLE-sändare – App f09d1761",
+        "aliases": [
+          "BLE-sändare",
+          "SM-T835 BLE transmitter"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_overvakning_av_bluetooth_sandare_app_f09d1761",
+      "before": {
+        "name": "Övervakning av Bluetooth-sändare",
+        "aliases": [
+          null,
+          "SM-T835 Beacon monitor"
+        ]
+      },
+      "after": {
+        "name": "Övervakning av Bluetooth-sändare – App f09d1761",
+        "aliases": [
+          "SM-T835 Beacon monitor",
+          "Övervakning av Bluetooth-sändare"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_bilens_batteriniva_app_f09d1761",
+      "before": {
+        "name": "Bilens batterinivå",
+        "aliases": [
+          null,
+          "SM-T835 Car battery"
+        ]
+      },
+      "after": {
+        "name": "Bilens batterinivå – App f09d1761",
+        "aliases": [
+          "Bilens batterinivå",
+          "SM-T835 Car battery"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_bilens_namn_app_f09d1761",
+      "before": {
+        "name": "Bilens namn",
+        "aliases": [
+          null,
+          "SM-T835 Car name"
+        ]
+      },
+      "after": {
+        "name": "Bilens namn – App f09d1761",
+        "aliases": [
+          "Bilens namn",
+          "SM-T835 Car name"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_bilens_laddningsstatus_app_f09d1761",
+      "before": {
+        "name": "Bilens laddningsstatus",
+        "aliases": [
+          null,
+          "SM-T835 Car charging status"
+        ]
+      },
+      "after": {
+        "name": "Bilens laddningsstatus – App f09d1761",
+        "aliases": [
+          "Bilens laddningsstatus",
+          "SM-T835 Car charging status"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_bilens_laddkontakt_app_f09d1761",
+      "before": {
+        "name": "Bilens laddkontakt",
+        "aliases": [
+          null,
+          "SM-T835 Car EV connector type"
+        ]
+      },
+      "after": {
+        "name": "Bilens laddkontakt – App f09d1761",
+        "aliases": [
+          "Bilens laddkontakt",
+          "SM-T835 Car EV connector type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_bilens_bransleniva_app_f09d1761",
+      "before": {
+        "name": "Bilens bränslenivå",
+        "aliases": [
+          null,
+          "SM-T835 Car fuel"
+        ]
+      },
+      "after": {
+        "name": "Bilens bränslenivå – App f09d1761",
+        "aliases": [
+          "Bilens bränslenivå",
+          "SM-T835 Car fuel"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_bilens_bransletyp_app_f09d1761",
+      "before": {
+        "name": "Bilens bränsletyp",
+        "aliases": [
+          null,
+          "SM-T835 Car fuel type"
+        ]
+      },
+      "after": {
+        "name": "Bilens bränsletyp – App f09d1761",
+        "aliases": [
+          "Bilens bränsletyp",
+          "SM-T835 Car fuel type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_bilens_vagmatare_app_f09d1761",
+      "before": {
+        "name": "Bilens vägmätare",
+        "aliases": [
+          null,
+          "SM-T835 Car odometer"
+        ]
+      },
+      "after": {
+        "name": "Bilens vägmätare – App f09d1761",
+        "aliases": [
+          "Bilens vägmätare",
+          "SM-T835 Car odometer"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_bilens_hastighet_app_f09d1761",
+      "before": {
+        "name": "Bilens hastighet",
+        "aliases": [
+          null,
+          "SM-T835 Car speed"
+        ]
+      },
+      "after": {
+        "name": "Bilens hastighet – App f09d1761",
+        "aliases": [
+          "Bilens hastighet",
+          "SM-T835 Car speed"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_bilens_aterstaende_rackvidd_app_f09d1761",
+      "before": {
+        "name": "Bilens återstående räckvidd",
+        "aliases": [
+          null,
+          "SM-T835 Car range remaining"
+        ]
+      },
+      "after": {
+        "name": "Bilens återstående räckvidd – App f09d1761",
+        "aliases": [
+          "Bilens återstående räckvidd",
+          "SM-T835 Car range remaining"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_skarmljusstyrka_app_f09d1761",
+      "before": {
+        "name": "Skärmljusstyrka",
+        "aliases": [
+          null,
+          "SM-T835 Screen brightness"
+        ]
+      },
+      "after": {
+        "name": "Skärmljusstyrka – App f09d1761",
+        "aliases": [
+          "SM-T835 Screen brightness",
+          "Skärmljusstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_tid_till_skarmavstangning_app_f09d1761",
+      "before": {
+        "name": "Tid till skärmavstängning",
+        "aliases": [
+          null,
+          "SM-T835 Screen off timeout"
+        ]
+      },
+      "after": {
+        "name": "Tid till skärmavstängning – App f09d1761",
+        "aliases": [
+          "SM-T835 Screen off timeout",
+          "Tid till skärmavstängning"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_skarmriktning_app_f09d1761",
+      "before": {
+        "name": "Skärmriktning",
+        "aliases": [
+          null,
+          "SM-T835 Screen orientation"
+        ]
+      },
+      "after": {
+        "name": "Skärmriktning – App f09d1761",
+        "aliases": [
+          "SM-T835 Screen orientation",
+          "Skärmriktning"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_skarmrotation_app_f09d1761",
+      "before": {
+        "name": "Skärmrotation",
+        "aliases": [
+          null,
+          "SM-T835 Screen rotation"
+        ]
+      },
+      "after": {
+        "name": "Skärmrotation – App f09d1761",
+        "aliases": [
+          "SM-T835 Screen rotation",
+          "Skärmrotation"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_stor_ej_lage_app_f09d1761",
+      "before": {
+        "name": "Stör ej-läge",
+        "aliases": [
+          null,
+          "SM-T835 Do Not Disturb sensor"
+        ]
+      },
+      "after": {
+        "name": "Stör ej-läge – App f09d1761",
+        "aliases": [
+          "SM-T835 Do Not Disturb sensor",
+          "Stör ej-läge"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_arbetsprofil_app_f09d1761",
+      "before": {
+        "name": "Arbetsprofil",
+        "aliases": [
+          null,
+          "SM-T835 Work profile"
+        ]
+      },
+      "after": {
+        "name": "Arbetsprofil – App f09d1761",
+        "aliases": [
+          "Arbetsprofil",
+          "SM-T835 Work profile"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_platsadress_app_f09d1761",
+      "before": {
+        "name": "Platsadress",
+        "aliases": [
+          null,
+          "SM-T835 Geocoded location"
+        ]
+      },
+      "after": {
+        "name": "Platsadress – App f09d1761",
+        "aliases": [
+          "Platsadress",
+          "SM-T835 Geocoded location"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_enheten_last_app_f09d1761",
+      "before": {
+        "name": "Enheten låst",
+        "aliases": [
+          null,
+          "SM-T835 Device locked"
+        ]
+      },
+      "after": {
+        "name": "Enheten låst – App f09d1761",
+        "aliases": [
+          "Enheten låst",
+          "SM-T835 Device locked"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_enheten_skyddad_app_f09d1761",
+      "before": {
+        "name": "Enheten skyddad",
+        "aliases": [
+          null,
+          "SM-T835 Device secure"
+        ]
+      },
+      "after": {
+        "name": "Enheten skyddad – App f09d1761",
+        "aliases": [
+          "Enheten skyddad",
+          "SM-T835 Device secure"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_skarmlaset_last_app_f09d1761",
+      "before": {
+        "name": "Skärmlåset låst",
+        "aliases": [
+          null,
+          "SM-T835 Keyguard locked"
+        ]
+      },
+      "after": {
+        "name": "Skärmlåset låst – App f09d1761",
+        "aliases": [
+          "SM-T835 Keyguard locked",
+          "Skärmlåset låst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_skarmlaset_skyddat_app_f09d1761",
+      "before": {
+        "name": "Skärmlåset skyddat",
+        "aliases": [
+          null,
+          "SM-T835 Keyguard secure"
+        ]
+      },
+      "after": {
+        "name": "Skärmlåset skyddat – App f09d1761",
+        "aliases": [
+          "SM-T835 Keyguard secure",
+          "Skärmlåset skyddat"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_senast_anvanda_app_app_f09d1761",
+      "before": {
+        "name": "Senast använda app",
+        "aliases": [
+          null,
+          "SM-T835 Last used app"
+        ]
+      },
+      "after": {
+        "name": "Senast använda app – App f09d1761",
+        "aliases": [
+          "SM-T835 Last used app",
+          "Senast använda app"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_senaste_omstart_app_f09d1761",
+      "before": {
+        "name": "Senaste omstart",
+        "aliases": [
+          null,
+          "SM-T835 Last reboot"
+        ]
+      },
+      "after": {
+        "name": "Senaste omstart – App f09d1761",
+        "aliases": [
+          "SM-T835 Last reboot",
+          "Senaste omstart"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_senaste_uppdateringsorsak_app_f09d1761",
+      "before": {
+        "name": "Senaste uppdateringsorsak",
+        "aliases": [
+          null,
+          "SM-T835 Last update trigger"
+        ]
+      },
+      "after": {
+        "name": "Senaste uppdateringsorsak – App f09d1761",
+        "aliases": [
+          "SM-T835 Last update trigger",
+          "Senaste uppdateringsorsak"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_belysningsstyrka_app_f09d1761",
+      "before": {
+        "name": "Belysningsstyrka",
+        "aliases": [
+          null,
+          "SM-T835 Light sensor"
+        ]
+      },
+      "after": {
+        "name": "Belysningsstyrka – App f09d1761",
+        "aliases": [
+          "Belysningsstyrka",
+          "SM-T835 Light sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_platslage_med_hog_precision_app_f09d1761",
+      "before": {
+        "name": "Platsläge med hög precision",
+        "aliases": [
+          null,
+          "SM-T835 High accuracy mode"
+        ]
+      },
+      "after": {
+        "name": "Platsläge med hög precision – App f09d1761",
+        "aliases": [
+          "Platsläge med hög precision",
+          "SM-T835 High accuracy mode"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_uppdateringsintervall_for_hog_precision_app_f09d1761",
+      "before": {
+        "name": "Uppdateringsintervall för hög precision",
+        "aliases": [
+          null,
+          "SM-T835 High accuracy update interval"
+        ]
+      },
+      "after": {
+        "name": "Uppdateringsintervall för hög precision – App f09d1761",
+        "aliases": [
+          "SM-T835 High accuracy update interval",
+          "Uppdateringsintervall för hög precision"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_mobildata_app_f09d1761",
+      "before": {
+        "name": "Mobildata",
+        "aliases": [
+          null,
+          "SM-T835 Mobile data"
+        ]
+      },
+      "after": {
+        "name": "Mobildata – App f09d1761",
+        "aliases": [
+          "Mobildata",
+          "SM-T835 Mobile data"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_dataroaming_app_f09d1761",
+      "before": {
+        "name": "Dataroaming",
+        "aliases": [
+          null,
+          "SM-T835 Mobile data roaming"
+        ]
+      },
+      "after": {
+        "name": "Dataroaming – App f09d1761",
+        "aliases": [
+          "Dataroaming",
+          "SM-T835 Mobile data roaming"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_wi_fi_anslutning_app_f09d1761",
+      "before": {
+        "name": "Wi-Fi-anslutning",
+        "aliases": [
+          null,
+          "SM-T835 Wi-Fi connection"
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-anslutning – App f09d1761",
+        "aliases": [
+          "SM-T835 Wi-Fi connection",
+          "Wi-Fi-anslutning"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_wi_fi_bssid_app_f09d1761",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi BSSID – App f09d1761",
+        "aliases": [
+          "Wi-Fi BSSID"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_wi_fi_ip_adress_app_f09d1761",
+      "before": {
+        "name": "Wi-Fi IP-adress",
+        "aliases": [
+          null,
+          "SM-T835 Wi-Fi IP address"
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi IP-adress – App f09d1761",
+        "aliases": [
+          "SM-T835 Wi-Fi IP address",
+          "Wi-Fi IP-adress"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_wi_fi_lankhastighet_app_f09d1761",
+      "before": {
+        "name": "Wi-Fi-länkhastighet",
+        "aliases": [
+          null,
+          "SM-T835 Wi-Fi link speed"
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-länkhastighet – App f09d1761",
+        "aliases": [
+          "SM-T835 Wi-Fi link speed",
+          "Wi-Fi-länkhastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_wi_fi_status_app_f09d1761",
+      "before": {
+        "name": "Wi-Fi-status",
+        "aliases": [
+          null,
+          "SM-T835 Wi-Fi state"
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-status – App f09d1761",
+        "aliases": [
+          "SM-T835 Wi-Fi state",
+          "Wi-Fi-status"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_wi_fi_frekvens_app_f09d1761",
+      "before": {
+        "name": "Wi-Fi-frekvens",
+        "aliases": [
+          null,
+          "SM-T835 Wi-Fi frequency"
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-frekvens – App f09d1761",
+        "aliases": [
+          "SM-T835 Wi-Fi frequency",
+          "Wi-Fi-frekvens"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_wi_fi_signalstyrka_app_f09d1761",
+      "before": {
+        "name": "Wi-Fi-signalstyrka",
+        "aliases": [
+          null,
+          "SM-T835 Wi-Fi signal strength"
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi-signalstyrka – App f09d1761",
+        "aliases": [
+          "SM-T835 Wi-Fi signal strength",
+          "Wi-Fi-signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_publik_ip_adress_app_f09d1761",
+      "before": {
+        "name": "Publik IP-adress",
+        "aliases": [
+          null,
+          "SM-T835 Public IP address"
+        ]
+      },
+      "after": {
+        "name": "Publik IP-adress – App f09d1761",
+        "aliases": [
+          "Publik IP-adress",
+          "SM-T835 Public IP address"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_internetdelningsstatus_app_f09d1761",
+      "before": {
+        "name": "Internetdelningsstatus",
+        "aliases": [
+          null,
+          "SM-T835 Hotspot state"
+        ]
+      },
+      "after": {
+        "name": "Internetdelningsstatus – App f09d1761",
+        "aliases": [
+          "Internetdelningsstatus",
+          "SM-T835 Hotspot state"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_natverkstyp_app_f09d1761",
+      "before": {
+        "name": "Nätverkstyp",
+        "aliases": [
+          null,
+          "SM-T835 Network type"
+        ]
+      },
+      "after": {
+        "name": "Nätverkstyp – App f09d1761",
+        "aliases": [
+          "Nätverkstyp",
+          "SM-T835 Network type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_ipv6_adresser_app_f09d1761",
+      "before": {
+        "name": "IPv6-adresser",
+        "aliases": [
+          null,
+          "SM-T835 IPv6 addresses"
+        ]
+      },
+      "after": {
+        "name": "IPv6-adresser – App f09d1761",
+        "aliases": [
+          "IPv6-adresser",
+          "SM-T835 IPv6 addresses"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_nasta_alarm_app_f09d1761",
+      "before": {
+        "name": "Nästa alarm",
+        "aliases": [
+          null,
+          "SM-T835 Next alarm"
+        ]
+      },
+      "after": {
+        "name": "Nästa alarm – App f09d1761",
+        "aliases": [
+          "Nästa alarm",
+          "SM-T835 Next alarm"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_senaste_avisering_app_f09d1761",
+      "before": {
+        "name": "Senaste avisering",
+        "aliases": [
+          null,
+          "SM-T835 Last notification"
+        ]
+      },
+      "after": {
+        "name": "Senaste avisering – App f09d1761",
+        "aliases": [
+          "SM-T835 Last notification",
+          "Senaste avisering"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_senast_borttagna_avisering_app_f09d1761",
+      "before": {
+        "name": "Senast borttagna avisering",
+        "aliases": [
+          null,
+          "SM-T835 Last removed notification"
+        ]
+      },
+      "after": {
+        "name": "Senast borttagna avisering – App f09d1761",
+        "aliases": [
+          "SM-T835 Last removed notification",
+          "Senast borttagna avisering"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_antal_aktiva_aviseringar_app_f09d1761",
+      "before": {
+        "name": "Antal aktiva aviseringar",
+        "aliases": [
+          null,
+          "SM-T835 Active notification count"
+        ]
+      },
+      "after": {
+        "name": "Antal aktiva aviseringar – App f09d1761",
+        "aliases": [
+          "Antal aktiva aviseringar",
+          "SM-T835 Active notification count"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_mediasession_app_f09d1761",
+      "before": {
+        "name": "Mediasession",
+        "aliases": [
+          null,
+          "SM-T835 Media session"
+        ]
+      },
+      "after": {
+        "name": "Mediasession – App f09d1761",
+        "aliases": [
+          "Mediasession",
+          "SM-T835 Media session"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_telefonstatus_app_f09d1761",
+      "before": {
+        "name": "Telefonstatus",
+        "aliases": [
+          null,
+          "SM-T835 Phone state"
+        ]
+      },
+      "after": {
+        "name": "Telefonstatus – App f09d1761",
+        "aliases": [
+          "SM-T835 Phone state",
+          "Telefonstatus"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_sim_1_app_f09d1761",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "SIM 1 – App f09d1761",
+        "aliases": [
+          "SIM 1"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_sim_2_app_f09d1761",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "SIM 2 – App f09d1761",
+        "aliases": [
+          "SIM 2"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_skarmen_interaktiv_app_f09d1761",
+      "before": {
+        "name": "Skärmen interaktiv",
+        "aliases": [
+          null,
+          "SM-T835 Interactive"
+        ]
+      },
+      "after": {
+        "name": "Skärmen interaktiv – App f09d1761",
+        "aliases": [
+          "SM-T835 Interactive",
+          "Skärmen interaktiv"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_vilolage_app_f09d1761",
+      "before": {
+        "name": "Viloläge",
+        "aliases": [
+          null,
+          "SM-T835 Doze mode"
+        ]
+      },
+      "after": {
+        "name": "Viloläge – App f09d1761",
+        "aliases": [
+          "SM-T835 Doze mode",
+          "Viloläge"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.heimdal_ha_sm_t835_energisparlage_app_f09d1761",
+      "before": {
+        "name": "Energisparläge",
+        "aliases": [
+          null,
+          "SM-T835 Power save"
+        ]
+      },
+      "after": {
+        "name": "Energisparläge – App f09d1761",
+        "aliases": [
+          "Energisparläge",
+          "SM-T835 Power save"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_narhetssensor_app_f09d1761",
+      "before": {
+        "name": "Närhetssensor",
+        "aliases": [
+          null,
+          "SM-T835 Proximity sensor"
+        ]
+      },
+      "after": {
+        "name": "Närhetssensor – App f09d1761",
+        "aliases": [
+          "Närhetssensor",
+          "SM-T835 Proximity sensor"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_steg_app_f09d1761",
+      "before": {
+        "name": "Steg",
+        "aliases": [
+          null,
+          "SM-T835 Steps sensor"
+        ]
+      },
+      "after": {
+        "name": "Steg – App f09d1761",
+        "aliases": [
+          "SM-T835 Steps sensor",
+          "Steg"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_intern_lagring_app_f09d1761",
+      "before": {
+        "name": "Intern lagring",
+        "aliases": [
+          null,
+          "SM-T835 Internal storage"
+        ]
+      },
+      "after": {
+        "name": "Intern lagring – App f09d1761",
+        "aliases": [
+          "Intern lagring",
+          "SM-T835 Internal storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_extern_lagring_app_f09d1761",
+      "before": {
+        "name": "Extern lagring",
+        "aliases": [
+          null,
+          "SM-T835 External storage"
+        ]
+      },
+      "after": {
+        "name": "Extern lagring – App f09d1761",
+        "aliases": [
+          "Extern lagring",
+          "SM-T835 External storage"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_aktuell_tidszon_app_f09d1761",
+      "before": {
+        "name": "Aktuell tidszon",
+        "aliases": [
+          null,
+          "SM-T835 Current time zone"
+        ]
+      },
+      "after": {
+        "name": "Aktuell tidszon – App f09d1761",
+        "aliases": [
+          "Aktuell tidszon",
+          "SM-T835 Current time zone"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_totalt_mottagna_data_app_f09d1761",
+      "before": {
+        "name": "Totalt mottagna data",
+        "aliases": [
+          null,
+          "SM-T835 Total Rx GB"
+        ]
+      },
+      "after": {
+        "name": "Totalt mottagna data – App f09d1761",
+        "aliases": [
+          "SM-T835 Total Rx GB",
+          "Totalt mottagna data"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.heimdal_ha_sm_t835_totalt_skickade_data_app_f09d1761",
+      "before": {
+        "name": "Totalt skickade data",
+        "aliases": [
+          null,
+          "SM-T835 Total Tx GB"
+        ]
+      },
+      "after": {
+        "name": "Totalt skickade data – App f09d1761",
+        "aliases": [
+          "SM-T835 Total Tx GB",
+          "Totalt skickade data"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "media_player.grupp_grannys_hogtalare",
+      "before": {
+        "name": "Grannys högtalare",
+        "aliases": [
+          null,
+          "GRUPP - Grannys högtalare"
+        ]
+      },
+      "after": {
+        "name": "Grannys högtalare – HA-grupp",
+        "aliases": [
+          "GRUPP - Grannys högtalare",
+          "Grannys högtalare"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.koket_max_s6_maxv_lag_batteriniva_batteripost_89682651",
+      "before": {
+        "name": "Låg batterinivå",
+        "aliases": [
+          null,
+          "Max S6 MaxV Battery low"
+        ]
+      },
+      "after": {
+        "name": "Låg batterinivå – batteripost 89682651",
+        "aliases": [
+          "Max S6 MaxV Battery low",
+          "Max S6 MaxV Låg batterinivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.koket_max_s6_maxv_batteri_bytt_batteripost_89682651",
+      "before": {
+        "name": "Batteri bytt",
+        "aliases": [
+          null,
+          "Max S6 MaxV Battery replaced"
+        ]
+      },
+      "after": {
+        "name": "Batteri bytt – batteripost 89682651",
+        "aliases": [
+          "Max S6 MaxV Batteri bytt",
+          "Max S6 MaxV Battery replaced"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_max_s6_maxv_batterityp_batteripost_89682651",
+      "before": {
+        "name": "Batterityp",
+        "aliases": [
+          null,
+          "Max S6 MaxV Battery type"
+        ]
+      },
+      "after": {
+        "name": "Batterityp – batteripost 89682651",
+        "aliases": [
+          "Max S6 MaxV Batterityp",
+          "Max S6 MaxV Battery type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_max_s6_maxv_senaste_batteribyte_batteripost_89682651",
+      "before": {
+        "name": "Senaste batteribyte",
+        "aliases": [
+          null,
+          "Max S6 MaxV Battery last replaced"
+        ]
+      },
+      "after": {
+        "name": "Senaste batteribyte – batteripost 89682651",
+        "aliases": [
+          "Max S6 MaxV Battery last replaced",
+          "Max S6 MaxV Senaste batteribyte"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_max_s6_maxv_batteriinformation_batteripost_89682651",
+      "before": {
+        "name": "Batteriinformation",
+        "aliases": [
+          null,
+          "Max S6 MaxV Battery+"
+        ]
+      },
+      "after": {
+        "name": "Batteriinformation – batteripost 89682651",
+        "aliases": [
+          "Max S6 MaxV Batteriinformation",
+          "Max S6 MaxV Battery+"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolvarmepump_poolen_status",
+      "before": {
+        "name": "Anslutning",
+        "aliases": [
+          null,
+          "Poolvärmepump (poolen) Status"
+        ]
+      },
+      "after": {
+        "name": "Anslutning – ESPHome",
+        "aliases": [
+          "Poolvärmepump (poolen) Status",
+          "Poolvärmepump Anslutning"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "media_player.alla_hogtalare_cast",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Google Cast",
+        "aliases": [
+          "Alla högtalare"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "media_player.diegos_vackarklocka",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Google Cast",
+        "aliases": [
+          "Diegos väckarklocka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "media_player.stereo_hoger",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Google Cast",
+        "aliases": [
+          "Verandans högtalare höger"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "notify.heimdal_ha_sm_t835_app_8356c624",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "App 8356c624",
+        "aliases": [
+          "SM-T835"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "notify.heimdal_ha_sm_t835_app_f09d1761",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "App f09d1761",
+        "aliases": [
+          "SM-T835"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.poolvarmepump_connectivity",
+      "before": {
+        "name": "Anslutning",
+        "aliases": [
+          "Connectivity"
+        ]
+      },
+      "after": {
+        "name": "Anslutning – Alsavo Pro",
+        "aliases": [
+          "Anslutning",
+          "Connectivity"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_natverksswitch_tradlosa_klienter_via_sw_vinden",
+      "before": {
+        "name": "Trådlösa klienter",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Wireless Clients",
+          "Zyxel GS1900-24E A1 - Switch Vinden Trådlösa klienter"
+        ]
+      },
+      "after": {
+        "name": "Trådlösa klienter via sw_vinden",
+        "aliases": [
+          "Trådlösa klienter",
+          "Zyxel GS1900-24E A1 - Switch Vinden Trådlösa klienter",
+          "Zyxel GS1900-24E A1 - Switch Vinden Wireless Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_natverksswitch_totalt_diskutrymme_rotfilsystem",
+      "before": {
+        "name": "Totalt diskutrymme /",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden / Total Storage",
+          "Zyxel GS1900-24E A1 - Switch Vinden Totalt diskutrymme /"
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme – rotfilsystem",
+        "aliases": [
+          "Totalt diskutrymme /",
+          "Zyxel GS1900-24E A1 - Switch Vinden / Total Storage",
+          "Zyxel GS1900-24E A1 - Switch Vinden Totalt diskutrymme /"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_natverksswitch_anvant_diskutrymme_rotfilsystem",
+      "before": {
+        "name": "Använt diskutrymme /",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden / Used Storage",
+          "Zyxel GS1900-24E A1 - Switch Vinden Använt diskutrymme /"
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme – rotfilsystem",
+        "aliases": [
+          "Använt diskutrymme /",
+          "Zyxel GS1900-24E A1 - Switch Vinden / Used Storage",
+          "Zyxel GS1900-24E A1 - Switch Vinden Använt diskutrymme /"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_natverksswitch_ledigt_diskutrymme_rotfilsystem",
+      "before": {
+        "name": "Ledigt diskutrymme /",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden / Free Storage",
+          "Zyxel GS1900-24E A1 - Switch Vinden Ledigt diskutrymme /"
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme – rotfilsystem",
+        "aliases": [
+          "Ledigt diskutrymme /",
+          "Zyxel GS1900-24E A1 - Switch Vinden / Free Storage",
+          "Zyxel GS1900-24E A1 - Switch Vinden Ledigt diskutrymme /"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_natverksswitch_diskanvandning_rotfilsystem",
+      "before": {
+        "name": "Diskanvändning /",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden / Storage Usage",
+          "Zyxel GS1900-24E A1 - Switch Vinden Diskanvändning /"
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning – rotfilsystem",
+        "aliases": [
+          "Diskanvändning /",
+          "Zyxel GS1900-24E A1 - Switch Vinden / Storage Usage",
+          "Zyxel GS1900-24E A1 - Switch Vinden Diskanvändning /"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_accesspunkt_tradlosa_klienter_via_ap_kallaren",
+      "before": {
+        "name": "Trådlösa klienter",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Källaren Wireless Clients",
+          "ASUS Lyra MAP-AC2200 - AP Källaren Trådlösa klienter"
+        ]
+      },
+      "after": {
+        "name": "Trådlösa klienter via ap_kallaren",
+        "aliases": [
+          "ASUS Lyra MAP-AC2200 - AP Källaren Trådlösa klienter",
+          "ASUS Lyra MAP-AC2200 - AP Källaren Wireless Clients",
+          "Trådlösa klienter"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_accesspunkt_totalt_diskutrymme_rotfilsystem",
+      "before": {
+        "name": "Totalt diskutrymme /",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Källaren / Total Storage",
+          "ASUS Lyra MAP-AC2200 - AP Källaren Totalt diskutrymme /"
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme – rotfilsystem",
+        "aliases": [
+          "ASUS Lyra MAP-AC2200 - AP Källaren / Total Storage",
+          "ASUS Lyra MAP-AC2200 - AP Källaren Totalt diskutrymme /",
+          "Totalt diskutrymme /"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_accesspunkt_anvant_diskutrymme_rotfilsystem",
+      "before": {
+        "name": "Använt diskutrymme /",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Källaren / Used Storage",
+          "ASUS Lyra MAP-AC2200 - AP Källaren Använt diskutrymme /"
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme – rotfilsystem",
+        "aliases": [
+          "ASUS Lyra MAP-AC2200 - AP Källaren / Used Storage",
+          "ASUS Lyra MAP-AC2200 - AP Källaren Använt diskutrymme /",
+          "Använt diskutrymme /"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_accesspunkt_ledigt_diskutrymme_rotfilsystem",
+      "before": {
+        "name": "Ledigt diskutrymme /",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Källaren / Free Storage",
+          "ASUS Lyra MAP-AC2200 - AP Källaren Ledigt diskutrymme /"
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme – rotfilsystem",
+        "aliases": [
+          "ASUS Lyra MAP-AC2200 - AP Källaren / Free Storage",
+          "ASUS Lyra MAP-AC2200 - AP Källaren Ledigt diskutrymme /",
+          "Ledigt diskutrymme /"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_accesspunkt_diskanvandning_rotfilsystem",
+      "before": {
+        "name": "Diskanvändning /",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Källaren / Storage Usage",
+          "ASUS Lyra MAP-AC2200 - AP Källaren Diskanvändning /"
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning – rotfilsystem",
+        "aliases": [
+          "ASUS Lyra MAP-AC2200 - AP Källaren / Storage Usage",
+          "ASUS Lyra MAP-AC2200 - AP Källaren Diskanvändning /",
+          "Diskanvändning /"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "image.bion_accesspunkt_wi_fi_qr_kod_olofsson_wifi_via_ap_kallaren",
+      "before": {
+        "name": "Wi-Fi QR-kod (OLOFSSON_WIFI)",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Källaren Wi-Fi QR Code (OLOFSSON_WIFI)",
+          "ASUS Lyra MAP-AC2200 - AP Källaren Wi-Fi QR-kod (OLOFSSON_WIFI)"
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi QR-kod (OLOFSSON_WIFI) via ap_kallaren",
+        "aliases": [
+          "ASUS Lyra MAP-AC2200 - AP Källaren Wi-Fi QR Code (OLOFSSON_WIFI)",
+          "ASUS Lyra MAP-AC2200 - AP Källaren Wi-Fi QR-kod (OLOFSSON_WIFI)",
+          "Accesspunkt Wi-Fi QR-kod (OLOFSSON_WIFI)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "image.bion_accesspunkt_wi_fi_qr_kod_olofsson_guest_via_ap_kallaren",
+      "before": {
+        "name": "Wi-Fi QR-kod (OLOFSSON_GUEST)",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Källaren Wi-Fi QR Code (OLOFSSON_GUEST)",
+          "ASUS Lyra MAP-AC2200 - AP Källaren Wi-Fi QR-kod (OLOFSSON_GUEST)"
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi QR-kod (OLOFSSON_GUEST) via ap_kallaren",
+        "aliases": [
+          "ASUS Lyra MAP-AC2200 - AP Källaren Wi-Fi QR Code (OLOFSSON_GUEST)",
+          "ASUS Lyra MAP-AC2200 - AP Källaren Wi-Fi QR-kod (OLOFSSON_GUEST)",
+          "Accesspunkt Wi-Fi QR-kod (OLOFSSON_GUEST)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "image.bion_accesspunkt_wi_fi_qr_kod_olofsson_iot_via_ap_kallaren",
+      "before": {
+        "name": "Wi-Fi QR-kod (OLOFSSON_IOT)",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Källaren Wi-Fi QR Code (OLOFSSON_IOT)",
+          "ASUS Lyra MAP-AC2200 - AP Källaren Wi-Fi QR-kod (OLOFSSON_IOT)"
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi QR-kod (OLOFSSON_IOT) via ap_kallaren",
+        "aliases": [
+          "ASUS Lyra MAP-AC2200 - AP Källaren Wi-Fi QR Code (OLOFSSON_IOT)",
+          "ASUS Lyra MAP-AC2200 - AP Källaren Wi-Fi QR-kod (OLOFSSON_IOT)",
+          "Accesspunkt Wi-Fi QR-kod (OLOFSSON_IOT)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_accesspunkt_tradlosa_klienter_via_ap_verkstaden",
+      "before": {
+        "name": "Trådlösa klienter",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Wireless Clients",
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Trådlösa klienter"
+        ]
+      },
+      "after": {
+        "name": "Trådlösa klienter via ap_verkstaden",
+        "aliases": [
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Trådlösa klienter",
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Wireless Clients",
+          "Trådlösa klienter"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_accesspunkt_totalt_diskutrymme_rotfilsystem",
+      "before": {
+        "name": "Totalt diskutrymme /",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden / Total Storage",
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Totalt diskutrymme /"
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme – rotfilsystem",
+        "aliases": [
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden / Total Storage",
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Totalt diskutrymme /",
+          "Totalt diskutrymme /"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_accesspunkt_anvant_diskutrymme_rotfilsystem",
+      "before": {
+        "name": "Använt diskutrymme /",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden / Used Storage",
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Använt diskutrymme /"
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme – rotfilsystem",
+        "aliases": [
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden / Used Storage",
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Använt diskutrymme /",
+          "Använt diskutrymme /"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_accesspunkt_ledigt_diskutrymme_rotfilsystem",
+      "before": {
+        "name": "Ledigt diskutrymme /",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden / Free Storage",
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Ledigt diskutrymme /"
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme – rotfilsystem",
+        "aliases": [
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden / Free Storage",
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Ledigt diskutrymme /",
+          "Ledigt diskutrymme /"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_accesspunkt_diskanvandning_rotfilsystem",
+      "before": {
+        "name": "Diskanvändning /",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden / Storage Usage",
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Diskanvändning /"
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning – rotfilsystem",
+        "aliases": [
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden / Storage Usage",
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Diskanvändning /",
+          "Diskanvändning /"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "image.verkstaden_accesspunkt_wi_fi_qr_kod_olofsson_wifi_via_ap_verkstaden",
+      "before": {
+        "name": "Wi-Fi QR-kod (OLOFSSON_WIFI)",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Wi-Fi QR Code (OLOFSSON_WIFI)",
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Wi-Fi QR-kod (OLOFSSON_WIFI)"
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi QR-kod (OLOFSSON_WIFI) via ap_verkstaden",
+        "aliases": [
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Wi-Fi QR Code (OLOFSSON_WIFI)",
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Wi-Fi QR-kod (OLOFSSON_WIFI)",
+          "Accesspunkt Wi-Fi QR-kod (OLOFSSON_WIFI)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "image.verkstaden_accesspunkt_wi_fi_qr_kod_olofsson_guest_via_ap_verkstaden",
+      "before": {
+        "name": "Wi-Fi QR-kod (OLOFSSON_GUEST)",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Wi-Fi QR Code (OLOFSSON_GUEST)",
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Wi-Fi QR-kod (OLOFSSON_GUEST)"
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi QR-kod (OLOFSSON_GUEST) via ap_verkstaden",
+        "aliases": [
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Wi-Fi QR Code (OLOFSSON_GUEST)",
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Wi-Fi QR-kod (OLOFSSON_GUEST)",
+          "Accesspunkt Wi-Fi QR-kod (OLOFSSON_GUEST)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "image.verkstaden_accesspunkt_wi_fi_qr_kod_olofsson_iot_via_ap_verkstaden",
+      "before": {
+        "name": "Wi-Fi QR-kod (OLOFSSON_IOT)",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Wi-Fi QR Code (OLOFSSON_IOT)",
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Wi-Fi QR-kod (OLOFSSON_IOT)"
+        ]
+      },
+      "after": {
+        "name": "Wi-Fi QR-kod (OLOFSSON_IOT) via ap_verkstaden",
+        "aliases": [
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Wi-Fi QR Code (OLOFSSON_IOT)",
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Wi-Fi QR-kod (OLOFSSON_IOT)",
+          "Accesspunkt Wi-Fi QR-kod (OLOFSSON_IOT)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_natverksswitch_tradlosa_klienter_via_sw_kontoret",
+      "before": {
+        "name": "Trådlösa klienter",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Wireless Clients",
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Trådlösa klienter"
+        ]
+      },
+      "after": {
+        "name": "Trådlösa klienter via sw_kontoret",
+        "aliases": [
+          "Trådlösa klienter",
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Trådlösa klienter",
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Wireless Clients"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_natverksswitch_totalt_diskutrymme_rotfilsystem",
+      "before": {
+        "name": "Totalt diskutrymme /",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret / Total Storage",
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Totalt diskutrymme /"
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme – rotfilsystem",
+        "aliases": [
+          "Totalt diskutrymme /",
+          "Zyxel GS1900-8HP B1 - Switch Kontoret / Total Storage",
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Totalt diskutrymme /"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_natverksswitch_anvant_diskutrymme_rotfilsystem",
+      "before": {
+        "name": "Använt diskutrymme /",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret / Used Storage",
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Använt diskutrymme /"
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme – rotfilsystem",
+        "aliases": [
+          "Använt diskutrymme /",
+          "Zyxel GS1900-8HP B1 - Switch Kontoret / Used Storage",
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Använt diskutrymme /"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_natverksswitch_ledigt_diskutrymme_rotfilsystem",
+      "before": {
+        "name": "Ledigt diskutrymme /",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret / Free Storage",
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Ledigt diskutrymme /"
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme – rotfilsystem",
+        "aliases": [
+          "Ledigt diskutrymme /",
+          "Zyxel GS1900-8HP B1 - Switch Kontoret / Free Storage",
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Ledigt diskutrymme /"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_natverksswitch_diskanvandning_rotfilsystem",
+      "before": {
+        "name": "Diskanvändning /",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret / Storage Usage",
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Diskanvändning /"
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning – rotfilsystem",
+        "aliases": [
+          "Diskanvändning /",
+          "Zyxel GS1900-8HP B1 - Switch Kontoret / Storage Usage",
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Diskanvändning /"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sovrummet_router_tradlosa_klienter_via_gw",
+      "before": {
+        "name": "Trådlösa klienter",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum Wireless Clients",
+          "OpenWrt One - Router Sovrum Trådlösa klienter"
+        ]
+      },
+      "after": {
+        "name": "Trådlösa klienter via gw",
+        "aliases": [
+          "OpenWrt One - Router Sovrum Trådlösa klienter",
+          "OpenWrt One - Router Sovrum Wireless Clients",
+          "Trådlösa klienter"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sovrummet_router_totalt_diskutrymme_rotfilsystem",
+      "before": {
+        "name": "Totalt diskutrymme /",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum / Total Storage",
+          "OpenWrt One - Router Sovrum Totalt diskutrymme /"
+        ]
+      },
+      "after": {
+        "name": "Totalt diskutrymme – rotfilsystem",
+        "aliases": [
+          "OpenWrt One - Router Sovrum / Total Storage",
+          "OpenWrt One - Router Sovrum Totalt diskutrymme /",
+          "Totalt diskutrymme /"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sovrummet_router_anvant_diskutrymme_rotfilsystem",
+      "before": {
+        "name": "Använt diskutrymme /",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum / Used Storage",
+          "OpenWrt One - Router Sovrum Använt diskutrymme /"
+        ]
+      },
+      "after": {
+        "name": "Använt diskutrymme – rotfilsystem",
+        "aliases": [
+          "Använt diskutrymme /",
+          "OpenWrt One - Router Sovrum / Used Storage",
+          "OpenWrt One - Router Sovrum Använt diskutrymme /"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sovrummet_router_ledigt_diskutrymme_rotfilsystem",
+      "before": {
+        "name": "Ledigt diskutrymme /",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum / Free Storage",
+          "OpenWrt One - Router Sovrum Ledigt diskutrymme /"
+        ]
+      },
+      "after": {
+        "name": "Ledigt diskutrymme – rotfilsystem",
+        "aliases": [
+          "Ledigt diskutrymme /",
+          "OpenWrt One - Router Sovrum / Free Storage",
+          "OpenWrt One - Router Sovrum Ledigt diskutrymme /"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sovrummet_router_diskanvandning_rotfilsystem",
+      "before": {
+        "name": "Diskanvändning /",
+        "aliases": [
+          null,
+          "OpenWrt One - Router Sovrum / Storage Usage",
+          "OpenWrt One - Router Sovrum Diskanvändning /"
+        ]
+      },
+      "after": {
+        "name": "Diskanvändning – rotfilsystem",
+        "aliases": [
+          "Diskanvändning /",
+          "OpenWrt One - Router Sovrum / Storage Usage",
+          "OpenWrt One - Router Sovrum Diskanvändning /"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_bilresa_dual_button_batterityp_matter",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Batterityp – Matter",
+        "aliases": [
+          "BILRESA dual button Batterityp"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.poolen_bilresa_dual_button_batterityp_battery_notes",
+      "before": {
+        "name": "Batterityp",
+        "aliases": [
+          null,
+          "BILRESA dual button Battery type"
+        ]
+      },
+      "after": {
+        "name": "Batterityp – Battery Notes",
+        "aliases": [
+          "BILRESA dual button Batterityp",
+          "BILRESA dual button Battery type"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.ateljen_vattensensor_torkskap_batteri_bytt_batteripost_076c2eba",
+      "before": {
+        "name": "Batteri bytt",
+        "aliases": [
+          null,
+          "Vattensensor (torkskåp) Battery replaced"
+        ]
+      },
+      "after": {
+        "name": "Batteri bytt – batteripost 076c2eba",
+        "aliases": [
+          "Vattensensor (torkskåp) Battery replaced",
+          "Vattensensor torkskåp Batteri bytt"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ateljen_vattensensor_torkskap_batterityp_batteripost_076c2eba",
+      "before": {
+        "name": "Batterityp",
+        "aliases": [
+          null,
+          "Vattensensor (torkskåp) Battery type"
+        ]
+      },
+      "after": {
+        "name": "Batterityp – batteripost 076c2eba",
+        "aliases": [
+          "Vattensensor (torkskåp) Battery type",
+          "Vattensensor torkskåp Batterityp"
+        ]
+      }
+    }
+  ]
+}

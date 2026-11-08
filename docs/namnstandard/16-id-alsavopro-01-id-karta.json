@@ -1,0 +1,10 @@
+{
+  "binary_sensor.poolvarmepump_frost_protection": "binary_sensor.poolen_poolvarmepump_frostskydd",
+  "sensor.alsavopro_poolvarmepump_power_mode": "sensor.poolen_poolvarmepump_effektlage",
+  "sensor.alsavopro_poolvarmepump_device_type": "sensor.poolen_poolvarmepump_enhetstyp",
+  "sensor.alsavopro_poolvarmepump_main_board_hw_revision": "sensor.poolen_poolvarmepump_moderkortets_hardvaruversion",
+  "sensor.alsavopro_poolvarmepump_main_board_sw_revision": "sensor.poolen_poolvarmepump_moderkortets_programvaruversion",
+  "sensor.alsavopro_poolvarmepump_manual_hw_code": "sensor.poolen_poolvarmepump_manuell_hardvarukod",
+  "sensor.alsavopro_poolvarmepump_manual_sw_code": "sensor.poolen_poolvarmepump_manuell_programvarukod",
+  "number.poolvarmepump_water_temperature_calibration": "number.poolen_poolvarmepump_kalibrering_av_vattentemperatur"
+}

@@ -49,7 +49,8 @@ sensor:
       name: ${node_name} Energy
       id: wh_sensor
       filters:
-        - throttle_average: 60s
+        # Cumulative energy must not be averaged: float rounding can make it fall.
+        - throttle: 60s
     apparent_power:
       name: ${node_name} Apparent Power
       id: ap_sensor

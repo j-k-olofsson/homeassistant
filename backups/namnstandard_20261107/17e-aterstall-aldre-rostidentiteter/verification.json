@@ -1,0 +1,34 @@
+{
+  "status": "verified",
+  "stage": "17e-aterstall-aldre-rostidentiteter",
+  "renamed_entities": 7,
+  "same_unique_ids_and_settings": true,
+  "statistics_series_verified": 161,
+  "history_records_verified": 540,
+  "statistics_metadata_moved": 7,
+  "new_statistics_metadata_created": 0,
+  "source_files_updated": [
+    "automations.yaml"
+  ],
+  "dashboards_updated": [
+    "lovelace-friggan",
+    "lovelace"
+  ],
+  "frontend_favorites_updated": true,
+  "helper_config_entries_auto_updated": [
+    "01JCB5GMYV2TT2EYFXTN65B9Z5",
+    "01JHJEPVEW4JG1G2NQG1RGH69D",
+    "01JHJER99149TSQTVQA3MCNQK8"
+  ],
+  "automation_consumers_reloaded": [
+    "automation.varma_honsens_vatten",
+    "automation.automatisk_honslucka"
+  ],
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  },
+  "legacy_false_cleanup_pending": true,
+  "equivalent_explicit_google_false_additions": []
+}

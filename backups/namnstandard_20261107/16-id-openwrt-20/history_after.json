@@ -1,0 +1,198 @@
+{
+  "button.buddy3dcam_koppla_fran_enhet_via_ap_kontoret": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.prusa_xl_koppla_fran_enhet_via_ap_kontoret": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.chromecast_toans_speaker_koppla_fran_enhet_via_ap_koket_mac_1a8736_phy0_ap0": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "device_tracker.192_168_10_91": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.buddy3dcam_koppla_fran_enhet_via_ap_koket": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.chromecast_tv_soundbar_koppla_fran_enhet_via_ap_koket_mac_125c49_phy0_ap0": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "device_tracker.192_168_30_156": [
+    {
+      "state": "home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "switch.sovrummet_router_port_forward_tapo_local_ntp": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.galaxy_s7_koppla_fran_enhet_via_ap_poolen": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.chromecast_vaxtskapets_speaker_koppla_fran_enhet_via_ap_poolen": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.192_168_10_17_koppla_fran_enhet_via_ap_poolen": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.kontoret_termostat_koppla_fran_enhet_via_ap_poolen": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.verandan_vaggkontakt_x2_koppla_fran_enhet_via_ap_verkstaden": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.duschen_taklampor_koppla_fran_enhet_via_ap_verkstaden": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.koket_taklampor_esphome_koppla_fran_enhet_via_ap_verkstaden": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.chromecast_kokets_screen_koppla_fran_enhet_via_ap_kallaren": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.koket_roborock_max_koppla_fran_enhet_via_ap_kallaren": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.koket_led_list_sydostra_koppla_fran_enhet_via_ap_kallaren": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.koket_golvvarme_koppla_fran_enhet_via_ap_kallaren": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.ateljen_golvvarme_koppla_fran_enhet_via_ap_kallaren": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.chromecast_stereo_left_speaker_koppla_fran_enhet_via_ap_poolen": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.chromecast_duschens_speaker_koppla_fran_enhet_via_ap_verkstaden": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.bion_golvvarme_koppla_fran_enhet_via_ap_verkstaden": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.entren_gw_august_connect_koppla_fran_enhet_via_ap_verkstaden": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.530991+00:00"
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.dashboard_hemmabio",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "type": "panel",
+          "title": "Bio",
+          "path": "bio",
+          "theme": "Bio Panel",
+          "cards": [
+            {
+              "type": "custom:bio-panel-card",
+              "cards": [
+                {
+                  "type": "tile",
+                  "entity": "switch.grupp_hemmabio",
+                  "name": "Bio",
+                  "show_entity_picture": false,
+                  "hide_state": false,
+                  "vertical": true,
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "features_position": "bottom",
+                  "hold_action": {
+                    "action": "none"
+                  },
+                  "double_tap_action": {
+                    "action": "none"
+                  },
+                  "icon_tap_action": {
+                    "action": "toggle"
+                  },
+                  "icon": "mdi:power",
+                  "color": "green"
+                },
+                {
+                  "type": "tile",
+                  "entity": "button.bion_ir_gateway_lexicon_sank_volym",
+                  "name": "Volym −",
+                  "icon": "mdi:volume-minus",
+                  "show_entity_picture": false,
+                  "hide_state": true,
+                  "vertical": true,
+                  "tap_action": {
+                    "action": "perform-action",
+                    "perform_action": "button.press",
+                    "target": {
+                      "entity_id": "button.bion_ir_gateway_lexicon_sank_volym"
+                    }
+                  },
+                  "features_position": "bottom",
+                  "hold_action": {
+                    "action": "none"
+                  },
+                  "double_tap_action": {
+                    "action": "none"
+                  },
+                  "icon_tap_action": {
+                    "action": "perform-action",
+                    "perform_action": "button.press",
+                    "target": {
+                      "entity_id": "button.bion_ir_gateway_lexicon_sank_volym"
+                    }
+                  },
+                  "color": "disabled"
+                },
+                {
+                  "type": "tile",
+                  "entity": "button.bion_ir_gateway_lexicon_hoj_volym",
+                  "name": "Volym +",
+                  "icon": "mdi:volume-plus",
+                  "hide_state": true,
+                  "vertical": true,
+                  "tap_action": {
+                    "action": "perform-action",
+                    "perform_action": "button.press",
+                    "target": {
+                      "entity_id": "button.bion_ir_gateway_lexicon_hoj_volym"
+                    }
+                  },
+                  "features_position": "bottom",
+                  "hold_action": {
+                    "action": "none"
+                  },
+                  "double_tap_action": {
+                    "action": "none"
+                  },
+                  "icon_tap_action": {
+                    "action": "perform-action",
+                    "perform_action": "button.press",
+                    "target": {
+                      "entity_id": "button.bion_ir_gateway_lexicon_hoj_volym"
+                    }
+                  },
+                  "color": "disabled"
+                },
+                {
+                  "type": "tile",
+                  "entity": "light.esphome57_esphome57_light",
+                  "icon": "mdi:ceiling-light-multiple-outline",
+                  "vertical": false,
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "features": [
+                    {
+                      "type": "light-brightness"
+                    }
+                  ],
+                  "features_position": "bottom",
+                  "hold_action": {
+                    "action": "none"
+                  },
+                  "double_tap_action": {
+                    "action": "none"
+                  },
+                  "icon_tap_action": {
+                    "action": "toggle"
+                  },
+                  "name": "Taklampor",
+                  "color": "amber",
+                  "state_content": [
+                    "state",
+                    "brightness"
+                  ]
+                },
+                {
+                  "type": "tile",
+                  "entity": "light.bion_bordslampor",
+                  "name": "Bordslampor",
+                  "icon": "mdi:lightbulb-on",
+                  "vertical": false,
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "features": [
+                    {
+                      "type": "light-brightness"
+                    }
+                  ],
+                  "features_position": "bottom",
+                  "hold_action": {
+                    "action": "none"
+                  },
+                  "double_tap_action": {
+                    "action": "none"
+                  },
+                  "icon_tap_action": {
+                    "action": "toggle"
+                  },
+                  "color": "amber",
+                  "state_content": [
+                    "state",
+                    "brightness"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "kiosk_mode": {
+        "kiosk": true
+      }
+    }
+  }
+}

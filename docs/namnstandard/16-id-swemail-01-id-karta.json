@@ -1,0 +1,6 @@
+{
+  "binary_sensor.utomhus_postnord_76017_mail_delivery_today_76017": "binary_sensor.utomhus_postnord_76017_postutdelning_idag",
+  "binary_sensor.utomhus_postnord_76017_mail_delivery_tomorrow_76017": "binary_sensor.utomhus_postnord_76017_postutdelning_imorgon",
+  "binary_sensor.utomhus_postnord_76017_postnord_delivery_today_76017": "binary_sensor.utomhus_postnord_76017_postnord_utdelning_idag",
+  "calendar.utomhus_postnord_76017_mail_delivery_calendar_76017": "calendar.utomhus_postnord_76017_postutdelningskalender"
+}

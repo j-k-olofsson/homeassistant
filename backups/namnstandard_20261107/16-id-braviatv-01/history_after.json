@@ -1,0 +1,18 @@
+{
+  "button.verandan_sony_kd_55xh9005_starta_om": [
+    {
+      "state": "2024-11-09T19:57:28.122248+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:32.046901+00:00",
+      "last_updated": "2026-11-07T07:44:32.046901+00:00"
+    }
+  ],
+  "button.verandan_sony_kd_55xh9005_avsluta_appar": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:44:32.046901+00:00",
+      "last_updated": "2026-11-07T07:44:32.046901+00:00"
+    }
+  ]
+}

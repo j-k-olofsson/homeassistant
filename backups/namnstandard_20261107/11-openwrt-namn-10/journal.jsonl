@@ -1,0 +1,500 @@
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_cc_50_e3_fe_16_ed_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "IR-gateway RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_cc_50_e3_fe_16_ed_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_cc_50_e3_fe_16_ed_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "IR-gateway TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_cc_50_e3_fe_16_ed_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_cc_50_e3_fe_16_ed_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "IR-gateway Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_cc_50_e3_fe_16_ed_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.utomhus_24_62_ab_57_80_ad_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Julbelysning Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.utomhus_24_62_ab_57_80_ad_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.utomhus_24_62_ab_57_80_ad_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Julbelysning RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.utomhus_24_62_ab_57_80_ad_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.utomhus_24_62_ab_57_80_ad_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Julbelysning TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.utomhus_24_62_ab_57_80_ad_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.utomhus_24_62_ab_57_80_ad_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Julbelysning Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.utomhus_24_62_ab_57_80_ad_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_c4_4f_33_7a_51_6d_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "LED-list södra Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_c4_4f_33_7a_51_6d_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_c4_4f_33_7a_51_6d_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "LED-list södra RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_c4_4f_33_7a_51_6d_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_c4_4f_33_7a_51_6d_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "LED-list södra TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_c4_4f_33_7a_51_6d_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ha_servern_c4_4f_33_7a_51_6d_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "LED-list södra Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ha_servern_c4_4f_33_7a_51_6d_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ventilflakt_bion_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Ventilfläkt Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ventilflakt_bion_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ventilflakt_bion_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Ventilfläkt RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ventilflakt_bion_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ventilflakt_bion_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Ventilfläkt TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ventilflakt_bion_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_ventilflakt_bion_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Ventilfläkt Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_ventilflakt_bion_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.pixel_9_pro_xl_home_arpa_signal_strength_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Pixel-9-Pro-XL Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.pixel_9_pro_xl_home_arpa_signal_strength_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.pixel_9_pro_xl_home_arpa_rx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Pixel-9-Pro-XL RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.pixel_9_pro_xl_home_arpa_rx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.pixel_9_pro_xl_home_arpa_tx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Pixel-9-Pro-XL TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.pixel_9_pro_xl_home_arpa_tx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.pixel_9_pro_xl_home_arpa_noise_level_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Pixel-9-Pro-XL Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.pixel_9_pro_xl_home_arpa_noise_level_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.bion_88_12_ac_7f_8c_0d_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "SmartHomeControlPanel Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.bion_88_12_ac_7f_8c_0d_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.a0_dd_6c_29_b1_34_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Golvvärme Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.a0_dd_6c_29_b1_34_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.koket_vaxtlampa_frosadd_bion_shpls_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "LED-stjärnor Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.koket_vaxtlampa_frosadd_bion_shpls_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.bion_blomlampor_bion_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Blomlampor Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.bion_blomlampor_bion_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.utomhus_c4_4f_33_7a_2e_79_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Gasol Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.utomhus_c4_4f_33_7a_2e_79_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.bion_hemmabio_el_1_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Hemmabio El #1 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.bion_hemmabio_el_1_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.bion_40_22_d8_76_6f_70_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "40:22:d8:76:6f:70 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.bion_40_22_d8_76_6f_70_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.bion_cc_50_e3_fe_16_ed_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "IR-gateway Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.bion_cc_50_e3_fe_16_ed_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.utomhus_24_62_ab_57_80_ad_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Julbelysning Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.utomhus_24_62_ab_57_80_ad_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.ha_servern_c4_4f_33_7a_51_6d_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "LED-list södra Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.ha_servern_c4_4f_33_7a_51_6d_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.bion_ventilflakt_bion_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Ventilfläkt Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.bion_ventilflakt_bion_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "event.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_new_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ny enhet", "aliases": [null, "ASUS Lyra MAP-AC2200 - AP Verkstaden New Device"]}}}
+{"status": "applied", "kind": "entity", "id": "event.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_new_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.94_27_70_89_d1_ad_signal_strength_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "siemens-washerdryer Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.94_27_70_89_d1_ad_signal_strength_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.94_27_70_89_d1_ad_rx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "siemens-washerdryer RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.94_27_70_89_d1_ad_rx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.94_27_70_89_d1_ad_tx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "siemens-washerdryer TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.94_27_70_89_d1_ad_tx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.94_27_70_89_d1_ad_noise_level_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "siemens-washerdryer Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.94_27_70_89_d1_ad_noise_level_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_c5_f2_67_aa_69_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "chromecast-vaxtskapets-speaker Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_c5_f2_67_aa_69_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_c5_f2_67_aa_69_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "chromecast-vaxtskapets-speaker RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_c5_f2_67_aa_69_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_c5_f2_67_aa_69_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "chromecast-vaxtskapets-speaker TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_c5_f2_67_aa_69_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_c5_f2_67_aa_69_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "chromecast-vaxtskapets-speaker Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_c5_f2_67_aa_69_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_08_3a_8d_c3_44_dd_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "LED-plafonder Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_08_3a_8d_c3_44_dd_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_08_3a_8d_c3_44_dd_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "LED-plafonder RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_08_3a_8d_c3_44_dd_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_08_3a_8d_c3_44_dd_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "LED-plafonder TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_08_3a_8d_c3_44_dd_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_08_3a_8d_c3_44_dd_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "LED-plafonder Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_08_3a_8d_c3_44_dd_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shelly_1pm_studio_floor_heating_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Golvvärme Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shelly_1pm_studio_floor_heating_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shelly_1pm_studio_floor_heating_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Golvvärme RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shelly_1pm_studio_floor_heating_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shelly_1pm_studio_floor_heating_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Golvvärme TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shelly_1pm_studio_floor_heating_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.shelly_1pm_studio_floor_heating_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Golvvärme Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.shelly_1pm_studio_floor_heating_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_shelly_pro_3_verkstaden_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Shelly Pro 3 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_shelly_pro_3_verkstaden_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_shelly_pro_3_verkstaden_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Shelly Pro 3 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_shelly_pro_3_verkstaden_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_shelly_pro_3_verkstaden_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Shelly Pro 3 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_shelly_pro_3_verkstaden_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_shelly_pro_3_verkstaden_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Shelly Pro 3 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_shelly_pro_3_verkstaden_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_64_6f_e3_be_f0_signal_strength_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Golvvärme Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_64_6f_e3_be_f0_signal_strength_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_64_6f_e3_be_f0_rx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Golvvärme RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_64_6f_e3_be_f0_rx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_64_6f_e3_be_f0_tx_rate_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Golvvärme TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_64_6f_e3_be_f0_tx_rate_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.80_64_6f_e3_be_f0_noise_level_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Golvvärme Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.80_64_6f_e3_be_f0_noise_level_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.utomhus_billaddare_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Billaddare Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.utomhus_billaddare_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.utomhus_billaddare_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Billaddare RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.utomhus_billaddare_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.utomhus_billaddare_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Billaddare TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.utomhus_billaddare_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.utomhus_billaddare_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Billaddare Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.utomhus_billaddare_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_08_b6_1f_38_0b_64_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Salt Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_08_b6_1f_38_0b_64_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_08_b6_1f_38_0b_64_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Salt RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_08_b6_1f_38_0b_64_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_08_b6_1f_38_0b_64_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Salt TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_08_b6_1f_38_0b_64_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_08_b6_1f_38_0b_64_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Salt Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_08_b6_1f_38_0b_64_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kontoret_80_64_6f_91_e9_d5_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "RF-brygga Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kontoret_80_64_6f_91_e9_d5_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kontoret_80_64_6f_91_e9_d5_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "RF-brygga RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kontoret_80_64_6f_91_e9_d5_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kontoret_80_64_6f_91_e9_d5_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "RF-brygga TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kontoret_80_64_6f_91_e9_d5_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kontoret_80_64_6f_91_e9_d5_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "RF-brygga Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kontoret_80_64_6f_91_e9_d5_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ateljen_taklampor_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Taklampor Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ateljen_taklampor_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ateljen_taklampor_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Taklampor RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ateljen_taklampor_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ateljen_taklampor_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Taklampor TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ateljen_taklampor_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ateljen_taklampor_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Taklampor Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ateljen_taklampor_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_94_b9_7e_16_d2_02_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Taklampor Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_94_b9_7e_16_d2_02_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_94_b9_7e_16_d2_02_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Taklampor RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_94_b9_7e_16_d2_02_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_94_b9_7e_16_d2_02_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Taklampor TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_94_b9_7e_16_d2_02_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_94_b9_7e_16_d2_02_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Taklampor Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_94_b9_7e_16_d2_02_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.gamla_verkstaden_08_b6_1f_38_26_78_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Klimatsensor Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.gamla_verkstaden_08_b6_1f_38_26_78_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.gamla_verkstaden_08_b6_1f_38_26_78_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Klimatsensor RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.gamla_verkstaden_08_b6_1f_38_26_78_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.gamla_verkstaden_08_b6_1f_38_26_78_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Klimatsensor TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.gamla_verkstaden_08_b6_1f_38_26_78_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.gamla_verkstaden_08_b6_1f_38_26_78_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Klimatsensor Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.gamla_verkstaden_08_b6_1f_38_26_78_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.toaletten_e8_db_84_d3_1d_ce_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Termostat Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.toaletten_e8_db_84_d3_1d_ce_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.toaletten_e8_db_84_d3_1d_ce_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Termostat RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.toaletten_e8_db_84_d3_1d_ce_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.toaletten_e8_db_84_d3_1d_ce_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Termostat TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.toaletten_e8_db_84_d3_1d_ce_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.toaletten_e8_db_84_d3_1d_ce_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Termostat Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.toaletten_e8_db_84_d3_1d_ce_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.94_27_70_89_d1_ad_internet_access_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "siemens-washerdryer Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.94_27_70_89_d1_ad_internet_access_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.80_c5_f2_67_aa_69_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "chromecast-vaxtskapets-speaker Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.80_c5_f2_67_aa_69_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.verkstaden_08_3a_8d_c3_44_dd_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "LED-plafonder Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.verkstaden_08_3a_8d_c3_44_dd_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.shelly_1pm_studio_floor_heating_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Golvvärme Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.shelly_1pm_studio_floor_heating_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.verkstaden_shelly_pro_3_verkstaden_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Shelly Pro 3 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.verkstaden_shelly_pro_3_verkstaden_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.80_64_6f_e3_be_f0_internet_access_3", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Golvvärme Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.80_64_6f_e3_be_f0_internet_access_3"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.utomhus_billaddare_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Billaddare Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.utomhus_billaddare_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.verkstaden_08_b6_1f_38_0b_64_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Salt Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.verkstaden_08_b6_1f_38_0b_64_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.kontoret_80_64_6f_91_e9_d5_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "RF-brygga Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.kontoret_80_64_6f_91_e9_d5_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.ateljen_taklampor_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Taklampor Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.ateljen_taklampor_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.bion_94_b9_7e_16_d2_02_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Taklampor Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.bion_94_b9_7e_16_d2_02_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.gamla_verkstaden_08_b6_1f_38_26_78_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Klimatsensor Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.gamla_verkstaden_08_b6_1f_38_26_78_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.toaletten_e8_db_84_d3_1d_ce_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Termostat Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.toaletten_e8_db_84_d3_1d_ce_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "event.poolen_tp_link_eap225_outdoor_v3_ap_poolen_new_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ny enhet", "aliases": [null, "TP-Link EAP225-Outdoor v3 - AP Poolen New Device"]}}}
+{"status": "applied", "kind": "entity", "id": "event.poolen_tp_link_eap225_outdoor_v3_ap_poolen_new_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.cc_ba_bd_a5_eb_19_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "ap-honshuset.home.arpa Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.cc_ba_bd_a5_eb_19_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.cc_ba_bd_a5_eb_19_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "ap-honshuset.home.arpa RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.cc_ba_bd_a5_eb_19_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.cc_ba_bd_a5_eb_19_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "ap-honshuset.home.arpa TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.cc_ba_bd_a5_eb_19_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.cc_ba_bd_a5_eb_19_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "ap-honshuset.home.arpa Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.cc_ba_bd_a5_eb_19_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.28_39_26_d3_14_5f_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "192.168.30.45 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.28_39_26_d3_14_5f_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.28_39_26_d3_14_5f_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "192.168.30.45 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.28_39_26_d3_14_5f_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.28_39_26_d3_14_5f_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "192.168.30.45 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.28_39_26_d3_14_5f_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.28_39_26_d3_14_5f_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "192.168.30.45 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.28_39_26_d3_14_5f_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "2c:bc:bb:c1:87:2c Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "2c:bc:bb:c1:87:2c RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "2c:bc:bb:c1:87:2c TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "2c:bc:bb:c1:87:2c Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_2c_bc_bb_c1_87_2c_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.utomhus_elmatare_elstolpen_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Elmätare (elstolpen) Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.utomhus_elmatare_elstolpen_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.utomhus_elmatare_elstolpen_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Elmätare (elstolpen) RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.utomhus_elmatare_elstolpen_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.utomhus_elmatare_elstolpen_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Elmätare (elstolpen) TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.utomhus_elmatare_elstolpen_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.utomhus_elmatare_elstolpen_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Elmätare (elstolpen) Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.utomhus_elmatare_elstolpen_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_24_a1_60_10_5f_96_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "24:a1:60:10:5f:96 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_24_a1_60_10_5f_96_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_24_a1_60_10_5f_96_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "24:a1:60:10:5f:96 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_24_a1_60_10_5f_96_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_24_a1_60_10_5f_96_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "24:a1:60:10:5f:96 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_24_a1_60_10_5f_96_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_24_a1_60_10_5f_96_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "24:a1:60:10:5f:96 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_24_a1_60_10_5f_96_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_24_a1_60_10_eb_a9_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Poolvärmepump Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_24_a1_60_10_eb_a9_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_24_a1_60_10_eb_a9_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Poolvärmepump RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_24_a1_60_10_eb_a9_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_24_a1_60_10_eb_a9_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Poolvärmepump TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_24_a1_60_10_eb_a9_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_24_a1_60_10_eb_a9_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Poolvärmepump Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_24_a1_60_10_eb_a9_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_c8_2b_96_07_35_26_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Poolbelysning och temperatur Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_c8_2b_96_07_35_26_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_c8_2b_96_07_35_26_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Poolbelysning och temperatur RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_c8_2b_96_07_35_26_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_c8_2b_96_07_35_26_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Poolbelysning och temperatur TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_c8_2b_96_07_35_26_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.poolen_c8_2b_96_07_35_26_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Poolbelysning och temperatur Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.poolen_c8_2b_96_07_35_26_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.honshuset_c4_4f_33_72_73_e1_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Vattennivå Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.honshuset_c4_4f_33_72_73_e1_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.honshuset_c4_4f_33_72_73_e1_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Vattennivå RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.honshuset_c4_4f_33_72_73_e1_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.honshuset_c4_4f_33_72_73_e1_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Vattennivå TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.honshuset_c4_4f_33_72_73_e1_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.honshuset_c4_4f_33_72_73_e1_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Vattennivå Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.honshuset_c4_4f_33_72_73_e1_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.pixel_9_pro_xl_home_arpa_signal_strength_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Pixel-9-Pro-XL Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.pixel_9_pro_xl_home_arpa_signal_strength_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.pixel_9_pro_xl_home_arpa_rx_rate_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Pixel-9-Pro-XL RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.pixel_9_pro_xl_home_arpa_rx_rate_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.pixel_9_pro_xl_home_arpa_tx_rate_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Pixel-9-Pro-XL TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.pixel_9_pro_xl_home_arpa_tx_rate_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.pixel_9_pro_xl_home_arpa_noise_level_4", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Pixel-9-Pro-XL Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.pixel_9_pro_xl_home_arpa_noise_level_4"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.cc_ba_bd_a5_eb_19_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "ap-honshuset.home.arpa Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.cc_ba_bd_a5_eb_19_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.28_39_26_d3_14_5f_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "192.168.30.45 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.28_39_26_d3_14_5f_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.koket_2c_bc_bb_c1_87_2c_internet_access_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "2c:bc:bb:c1:87:2c Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.koket_2c_bc_bb_c1_87_2c_internet_access_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.utomhus_elmatare_elstolpen_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Elmätare (elstolpen) Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.utomhus_elmatare_elstolpen_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.poolen_24_a1_60_10_5f_96_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "24:a1:60:10:5f:96 Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.poolen_24_a1_60_10_5f_96_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.poolen_24_a1_60_10_eb_a9_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Poolvärmepump Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.poolen_24_a1_60_10_eb_a9_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.poolen_c8_2b_96_07_35_26_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Poolbelysning och temperatur Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.poolen_c8_2b_96_07_35_26_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "switch.honshuset_c4_4f_33_72_73_e1_internet_access", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetåtkomst", "aliases": [null, "Vattennivå Internet Access"]}}}
+{"status": "applied", "kind": "entity", "id": "switch.honshuset_c4_4f_33_72_73_e1_internet_access"}
+{"status": "intent", "operation": {"kind": "entity", "id": "event.sovrummet_openwrt_one_router_sovrum_new_device", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ny enhet", "aliases": [null, "OpenWrt One - Router Sovrum New Device"]}}}
+{"status": "applied", "kind": "entity", "id": "event.sovrummet_openwrt_one_router_sovrum_new_device"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.siemens_washerdryer_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "siemens-washerdryer Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.siemens_washerdryer_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.siemens_washerdryer_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "siemens-washerdryer RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.siemens_washerdryer_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.siemens_washerdryer_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "siemens-washerdryer TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.siemens_washerdryer_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.siemens_washerdryer_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "siemens-washerdryer Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.siemens_washerdryer_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.siemens_washerdryer_traffic_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "siemens-washerdryer Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.siemens_washerdryer_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.siemens_washerdryer_traffic_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd", "aliases": [null, "siemens-washerdryer Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.siemens_washerdryer_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.lenovol340_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "192.168.30.45 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.lenovol340_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.lenovol340_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "192.168.30.45 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.lenovol340_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.lenovol340_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "192.168.30.45 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.lenovol340_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.lenovol340_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "192.168.30.45 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.lenovol340_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.lenovol340_traffic_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "192.168.30.45 Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.lenovol340_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.lenovol340_traffic_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd", "aliases": [null, "192.168.30.45 Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.lenovol340_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_r875f_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "SM-R875F Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_r875f_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_r875f_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "SM-R875F RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_r875f_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_r875f_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "SM-R875F TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_r875f_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_r875f_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "SM-R875F Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_r875f_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_90_traffic_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "SM-R875F Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_90_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.192_168_10_90_traffic_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd", "aliases": [null, "SM-R875F Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.192_168_10_90_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.carolas_s25_signal_strength_6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Carolas-S25 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.carolas_s25_signal_strength_6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.carolas_s25_rx_rate_6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Carolas-S25 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.carolas_s25_rx_rate_6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.carolas_s25_tx_rate_6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Carolas-S25 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.carolas_s25_tx_rate_6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.carolas_s25_noise_level_6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Carolas-S25 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.carolas_s25_noise_level_6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.carolas_s25_traffic_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "Carolas-S25 Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.carolas_s25_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.carolas_s25_traffic_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd", "aliases": [null, "Carolas-S25 Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.carolas_s25_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.pixel_9_pro_xl_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Pixel-9-Pro-XL Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.pixel_9_pro_xl_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.pixel_9_pro_xl_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Pixel-9-Pro-XL RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.pixel_9_pro_xl_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.pixel_9_pro_xl_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Pixel-9-Pro-XL TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.pixel_9_pro_xl_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.pixel_9_pro_xl_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Pixel-9-Pro-XL Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.pixel_9_pro_xl_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.pixel_9_pro_xl_traffic_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "Pixel-9-Pro-XL Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.pixel_9_pro_xl_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.pixel_9_pro_xl_traffic_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd", "aliases": [null, "Pixel-9-Pro-XL Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.pixel_9_pro_xl_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_golvvarme_bion_signal_strength", "before": {"name": null, "aliases": [null, "Golvvärme (bion) Signal Strength"]}, "after": {"name": "Signalstyrka", "aliases": [null, "Golvvärme (bion) Signal Strength", "Golvvärme Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_golvvarme_bion_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_golvvarme_bion_rx_rate", "before": {"name": null, "aliases": [null, "Golvvärme (bion) RX Rate"]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Golvvärme (bion) RX Rate", "Golvvärme RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_golvvarme_bion_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_golvvarme_bion_tx_rate", "before": {"name": null, "aliases": [null, "Golvvärme (bion) TX Rate"]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Golvvärme (bion) TX Rate", "Golvvärme TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_golvvarme_bion_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_golvvarme_bion_noise_level", "before": {"name": null, "aliases": [null, "Golvvärme (bion) Noise Level"]}, "after": {"name": "Brusnivå", "aliases": [null, "Golvvärme (bion) Noise Level", "Golvvärme Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_golvvarme_bion_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_golvvarme_bion_traffic_rx", "before": {"name": null, "aliases": [null, "Golvvärme (bion) Traffic Rx"]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "Golvvärme (bion) Traffic Rx", "Golvvärme Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_golvvarme_bion_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.bion_golvvarme_bion_traffic_tx", "before": {"name": null, "aliases": [null, "Golvvärme (bion) Traffic Tx"]}, "after": {"name": "Skickad datamängd", "aliases": [null, "Golvvärme (bion) Traffic Tx", "Golvvärme Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.bion_golvvarme_bion_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.playstation4_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "playstation4 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.playstation4_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.playstation4_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "playstation4 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.playstation4_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.playstation4_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "playstation4 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.playstation4_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.playstation4_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "playstation4 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.playstation4_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.playstation4_traffic_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "playstation4 Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.playstation4_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.playstation4_traffic_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd", "aliases": [null, "playstation4 Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.playstation4_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_roborock_max_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "roborock-max Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_roborock_max_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_roborock_max_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "roborock-max RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_roborock_max_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_roborock_max_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "roborock-max TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_roborock_max_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_roborock_max_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "roborock-max Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_roborock_max_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_roborock_max_traffic_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "roborock-max Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_roborock_max_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_roborock_max_traffic_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd", "aliases": [null, "roborock-max Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_roborock_max_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_a36_5g_signal_strength_6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Galaxy-A36-5G Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_a36_5g_signal_strength_6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_a36_5g_rx_rate_6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Galaxy-A36-5G RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_a36_5g_rx_rate_6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_a36_5g_tx_rate_6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Galaxy-A36-5G TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_a36_5g_tx_rate_6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_a36_5g_noise_level_6", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Galaxy-A36-5G Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_a36_5g_noise_level_6"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_a36_5g_traffic_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "Galaxy-A36-5G Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_a36_5g_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_a36_5g_traffic_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd", "aliases": [null, "Galaxy-A36-5G Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_a36_5g_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ateljen_golvvarme_ateljen_signal_strength", "before": {"name": null, "aliases": [null, "Golvvärme (ateljén) Signal Strength"]}, "after": {"name": "Signalstyrka", "aliases": [null, "Golvvärme (ateljén) Signal Strength", "Golvvärme Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ateljen_golvvarme_ateljen_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ateljen_golvvarme_ateljen_rx_rate", "before": {"name": null, "aliases": [null, "Golvvärme (ateljén) RX Rate"]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Golvvärme (ateljén) RX Rate", "Golvvärme RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ateljen_golvvarme_ateljen_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ateljen_golvvarme_ateljen_tx_rate", "before": {"name": null, "aliases": [null, "Golvvärme (ateljén) TX Rate"]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Golvvärme (ateljén) TX Rate", "Golvvärme TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ateljen_golvvarme_ateljen_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ateljen_golvvarme_ateljen_noise_level", "before": {"name": null, "aliases": [null, "Golvvärme (ateljén) Noise Level"]}, "after": {"name": "Brusnivå", "aliases": [null, "Golvvärme (ateljén) Noise Level", "Golvvärme Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ateljen_golvvarme_ateljen_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ateljen_golvvarme_ateljen_traffic_rx", "before": {"name": null, "aliases": [null, "Golvvärme (ateljén) Traffic Rx"]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "Golvvärme (ateljén) Traffic Rx", "Golvvärme Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ateljen_golvvarme_ateljen_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.ateljen_golvvarme_ateljen_traffic_tx", "before": {"name": null, "aliases": [null, "Golvvärme (ateljén) Traffic Tx"]}, "after": {"name": "Skickad datamängd", "aliases": [null, "Golvvärme (ateljén) Traffic Tx", "Golvvärme Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.ateljen_golvvarme_ateljen_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kontoret_00_2b_67_01_db_4e_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "LenovoL340 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kontoret_00_2b_67_01_db_4e_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kontoret_00_2b_67_01_db_4e_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "LenovoL340 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kontoret_00_2b_67_01_db_4e_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kontoret_00_2b_67_01_db_4e_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "LenovoL340 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kontoret_00_2b_67_01_db_4e_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kontoret_00_2b_67_01_db_4e_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "LenovoL340 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kontoret_00_2b_67_01_db_4e_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kontoret_00_2b_67_01_db_4e_traffic_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "LenovoL340 Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kontoret_00_2b_67_01_db_4e_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.kontoret_00_2b_67_01_db_4e_traffic_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd", "aliases": [null, "LenovoL340 Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.kontoret_00_2b_67_01_db_4e_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verandan_golvvarme_verandan_signal_strength", "before": {"name": null, "aliases": [null, "Golvvärme (verandan ) Signal Strength"]}, "after": {"name": "Signalstyrka", "aliases": [null, "Golvvärme (verandan ) Signal Strength", "Golvvärme Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verandan_golvvarme_verandan_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verandan_golvvarme_verandan_rx_rate", "before": {"name": null, "aliases": [null, "Golvvärme (verandan ) RX Rate"]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Golvvärme (verandan ) RX Rate", "Golvvärme RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verandan_golvvarme_verandan_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verandan_golvvarme_verandan_tx_rate", "before": {"name": null, "aliases": [null, "Golvvärme (verandan ) TX Rate"]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Golvvärme (verandan ) TX Rate", "Golvvärme TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verandan_golvvarme_verandan_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verandan_golvvarme_verandan_noise_level", "before": {"name": null, "aliases": [null, "Golvvärme (verandan ) Noise Level"]}, "after": {"name": "Brusnivå", "aliases": [null, "Golvvärme (verandan ) Noise Level", "Golvvärme Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verandan_golvvarme_verandan_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verandan_golvvarme_verandan_traffic_rx", "before": {"name": null, "aliases": [null, "Golvvärme (verandan ) Traffic Rx"]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "Golvvärme (verandan ) Traffic Rx", "Golvvärme Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verandan_golvvarme_verandan_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verandan_golvvarme_verandan_traffic_tx", "before": {"name": null, "aliases": [null, "Golvvärme (verandan ) Traffic Tx"]}, "after": {"name": "Skickad datamängd", "aliases": [null, "Golvvärme (verandan ) Traffic Tx", "Golvvärme Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verandan_golvvarme_verandan_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verandan_vaggkontakt_x2_verandan_signal_strength", "before": {"name": null, "aliases": [null, "Väggkontakt x2 (verandan) Signal Strength"]}, "after": {"name": "Signalstyrka", "aliases": [null, "Väggkontakt x2 (verandan) Signal Strength", "Väggkontakt x2 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verandan_vaggkontakt_x2_verandan_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verandan_vaggkontakt_x2_verandan_rx_rate", "before": {"name": null, "aliases": [null, "Väggkontakt x2 (verandan) RX Rate"]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Väggkontakt x2 (verandan) RX Rate", "Väggkontakt x2 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verandan_vaggkontakt_x2_verandan_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verandan_vaggkontakt_x2_verandan_tx_rate", "before": {"name": null, "aliases": [null, "Väggkontakt x2 (verandan) TX Rate"]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Väggkontakt x2 (verandan) TX Rate", "Väggkontakt x2 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verandan_vaggkontakt_x2_verandan_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verandan_vaggkontakt_x2_verandan_noise_level", "before": {"name": null, "aliases": [null, "Väggkontakt x2 (verandan) Noise Level"]}, "after": {"name": "Brusnivå", "aliases": [null, "Väggkontakt x2 (verandan) Noise Level", "Väggkontakt x2 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verandan_vaggkontakt_x2_verandan_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verandan_vaggkontakt_x2_verandan_traffic_rx", "before": {"name": null, "aliases": [null, "Väggkontakt x2 (verandan) Traffic Rx"]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "Väggkontakt x2 (verandan) Traffic Rx", "Väggkontakt x2 Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verandan_vaggkontakt_x2_verandan_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verandan_vaggkontakt_x2_verandan_traffic_tx", "before": {"name": null, "aliases": [null, "Väggkontakt x2 (verandan) Traffic Tx"]}, "after": {"name": "Skickad datamängd", "aliases": [null, "Väggkontakt x2 (verandan) Traffic Tx", "Väggkontakt x2 Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verandan_vaggkontakt_x2_verandan_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_shelly_pro_3_verkstaden_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "Shelly Pro 3 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_shelly_pro_3_verkstaden_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_shelly_pro_3_verkstaden_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Shelly Pro 3 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_shelly_pro_3_verkstaden_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_shelly_pro_3_verkstaden_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Shelly Pro 3 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_shelly_pro_3_verkstaden_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_shelly_pro_3_verkstaden_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "Shelly Pro 3 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_shelly_pro_3_verkstaden_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_shelly_pro_3_verkstaden_traffic_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "Shelly Pro 3 Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_shelly_pro_3_verkstaden_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_shelly_pro_3_verkstaden_traffic_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd", "aliases": [null, "Shelly Pro 3 Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_shelly_pro_3_verkstaden_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_golvvarme_koket_signal_strength", "before": {"name": null, "aliases": [null, "Golvvärme (köket) Signal Strength"]}, "after": {"name": "Signalstyrka", "aliases": [null, "Golvvärme (köket) Signal Strength", "Golvvärme Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_golvvarme_koket_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_golvvarme_koket_rx_rate", "before": {"name": null, "aliases": [null, "Golvvärme (köket) RX Rate"]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "Golvvärme (köket) RX Rate", "Golvvärme RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_golvvarme_koket_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_golvvarme_koket_tx_rate", "before": {"name": null, "aliases": [null, "Golvvärme (köket) TX Rate"]}, "after": {"name": "Sändningshastighet", "aliases": [null, "Golvvärme (köket) TX Rate", "Golvvärme TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_golvvarme_koket_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_golvvarme_koket_noise_level", "before": {"name": null, "aliases": [null, "Golvvärme (köket) Noise Level"]}, "after": {"name": "Brusnivå", "aliases": [null, "Golvvärme (köket) Noise Level", "Golvvärme Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_golvvarme_koket_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_golvvarme_koket_traffic_rx", "before": {"name": null, "aliases": [null, "Golvvärme (köket) Traffic Rx"]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "Golvvärme (köket) Traffic Rx", "Golvvärme Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_golvvarme_koket_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.koket_golvvarme_koket_traffic_tx", "before": {"name": null, "aliases": [null, "Golvvärme (köket) Traffic Tx"]}, "after": {"name": "Skickad datamängd", "aliases": [null, "Golvvärme (köket) Traffic Tx", "Golvvärme Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.koket_golvvarme_koket_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_toans_speaker_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "chromecast-toans-speaker Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_toans_speaker_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_toans_speaker_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "chromecast-toans-speaker RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_toans_speaker_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_toans_speaker_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "chromecast-toans-speaker TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_toans_speaker_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_toans_speaker_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "chromecast-toans-speaker Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_toans_speaker_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_toans_speaker_traffic_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "chromecast-toans-speaker Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_toans_speaker_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.chromecast_toans_speaker_traffic_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd", "aliases": [null, "chromecast-toans-speaker Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.chromecast_toans_speaker_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s9_signal_strength_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "TV-Galaxy-S9 Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s9_signal_strength_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s9_rx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "TV-Galaxy-S9 RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s9_rx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s9_tx_rate_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "TV-Galaxy-S9 TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s9_tx_rate_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s9_noise_level_2", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "TV-Galaxy-S9 Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s9_noise_level_2"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s9_traffic_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "TV-Galaxy-S9 Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s9_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_s9_traffic_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd", "aliases": [null, "TV-Galaxy-S9 Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_s9_traffic_tx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_shellyplug_s_shop_roof_lamps_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Signalstyrka", "aliases": [null, "LED-plafonder Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_shellyplug_s_shop_roof_lamps_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_shellyplug_s_shop_roof_lamps_rx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagningshastighet", "aliases": [null, "LED-plafonder RX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_shellyplug_s_shop_roof_lamps_rx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_shellyplug_s_shop_roof_lamps_tx_rate", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sändningshastighet", "aliases": [null, "LED-plafonder TX Rate"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_shellyplug_s_shop_roof_lamps_tx_rate"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_shellyplug_s_shop_roof_lamps_noise_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Brusnivå", "aliases": [null, "LED-plafonder Noise Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_shellyplug_s_shop_roof_lamps_noise_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_shellyplug_s_shop_roof_lamps_traffic_rx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mottagen datamängd", "aliases": [null, "LED-plafonder Traffic Rx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_shellyplug_s_shop_roof_lamps_traffic_rx"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.verkstaden_shellyplug_s_shop_roof_lamps_traffic_tx", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skickad datamängd", "aliases": [null, "LED-plafonder Traffic Tx"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.verkstaden_shellyplug_s_shop_roof_lamps_traffic_tx"}

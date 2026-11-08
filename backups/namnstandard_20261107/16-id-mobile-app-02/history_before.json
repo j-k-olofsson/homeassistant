@@ -1,0 +1,66 @@
+{
+  "sensor.nspanelpro_battery_level": [
+    {
+      "state": "100",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:44.622596+00:00",
+      "last_updated": "2026-11-07T07:51:44.622596+00:00"
+    }
+  ],
+  "sensor.nspanelpro_battery_state": [
+    {
+      "state": "charging",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:44.622596+00:00",
+      "last_updated": "2026-11-07T07:51:44.622596+00:00"
+    }
+  ],
+  "sensor.nspanelpro_charger_type": [
+    {
+      "state": "ac",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:44.622596+00:00",
+      "last_updated": "2026-11-07T07:51:44.622596+00:00"
+    }
+  ],
+  "sensor.sm_g965f_battery_level": [
+    {
+      "state": "100",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:44.622596+00:00",
+      "last_updated": "2026-11-07T07:51:44.622596+00:00"
+    }
+  ],
+  "sensor.sm_g965f_battery_state": [
+    {
+      "state": "full",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:44.622596+00:00",
+      "last_updated": "2026-11-07T07:51:44.622596+00:00"
+    }
+  ],
+  "sensor.sm_g965f_charger_type": [
+    {
+      "state": "usb",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:44.622596+00:00",
+      "last_updated": "2026-11-07T07:51:44.622596+00:00"
+    }
+  ],
+  "sensor.mt_1011qr_battery_state": [
+    {
+      "state": "charging",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:44.622596+00:00",
+      "last_updated": "2026-11-07T07:51:44.622596+00:00"
+    }
+  ],
+  "sensor.mt_1011qr_charger_type": [
+    {
+      "state": "usb",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:44.622596+00:00",
+      "last_updated": "2026-11-07T07:51:44.622596+00:00"
+    }
+  ]
+}

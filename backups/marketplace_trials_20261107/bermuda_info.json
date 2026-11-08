@@ -1,0 +1,44 @@
+{
+  "type": "menu",
+  "flow_id": "76f9d996ec378417fd217649e9c4c00e",
+  "handler": "01M6TBMXNTPZD08C9SCZC3PZ3Y",
+  "data_schema": [
+    {
+      "type": "select",
+      "options": [
+        [
+          "globalopts",
+          "Global Options"
+        ],
+        [
+          "selectdevices",
+          "Select Devices"
+        ],
+        [
+          "calibration1_global",
+          "Calibration 1: Global"
+        ],
+        [
+          "calibration2_scanners",
+          "Calibration 2: Scanner RSSI Offsets"
+        ]
+      ],
+      "name": "next_step_id",
+      "required": false
+    }
+  ],
+  "menu_options": {
+    "globalopts": "Global Options",
+    "selectdevices": "Select Devices",
+    "calibration1_global": "Calibration 1: Global",
+    "calibration2_scanners": "Calibration 2: Scanner RSSI Offsets"
+  },
+  "description_placeholders": {
+    "device_counter_active": "50",
+    "device_counter_devices": "58",
+    "scanner_counter_active": "11",
+    "scanner_counter_scanners": "11",
+    "status": "You have at least some active devices, this is good.\n\nStatus of scanners:\n\n|Scanner|Address|Last advertisement|\n|---|---|---:|\n| Shelly Pro 3 - Verkstaden| [ec:::::be]| <ha-icon icon=\"mdi:check-circle-outline\"></ha-icon> 1.96 seconds ago.|\n| c4:4f:33:72:73:e1| [c4:::::e3]| <ha-icon icon=\"mdi:alert-outline\"></ha-icon> 2.15 seconds ago.|\n| shellyplusplugs-08f9e0fd4304| [08:::::06]| <ha-icon icon=\"mdi:check-circle-outline\"></ha-icon> 0.45 seconds ago.|\n| Väggkontakt x2 (verandan)| [30:::::6a]| <ha-icon icon=\"mdi:check-circle-outline\"></ha-icon> 0.67 seconds ago.|\n| hci0 (54:E4:ED:A9:CD:05)| [54:::::05]| <ha-icon icon=\"mdi:check-circle-outline\"></ha-icon> 0.42 seconds ago.|\n| shelly-1pm-shower-floor-heating| [e4:::::ba]| <ha-icon icon=\"mdi:check-circle-outline\"></ha-icon> 0.58 seconds ago.|\n| Golvvärme (verandan )| [c4:::::82]| <ha-icon icon=\"mdi:check-circle-outline\"></ha-icon> 0.62 seconds ago.|\n| shelly-1pm-celler-floor-heating| [80:::::f2]| <ha-icon icon=\"mdi:check-circle-outline\"></ha-icon> 1.57 seconds ago.|\n| Golvvärme (köket)| [a0:::::36]| <ha-icon icon=\"mdi:check-circle-outline\"></ha-icon> 0.78 seconds ago.|\n| Golvvärme (entrén)| [c4:::::a6]| <ha-icon icon=\"mdi:check-circle-outline\"></ha-icon> 0.68 seconds ago.|\n| Golvvärme (ateljén)| [a0:::::4e]| <ha-icon icon=\"mdi:check-circle-outline\"></ha-icon> 0.43 seconds ago.|\n"
+  },
+  "step_id": "init"
+}

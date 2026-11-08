@@ -1,0 +1,65 @@
+[
+  {
+    "show_in_sidebar": false,
+    "icon": "mdi:home-outline",
+    "title": "Friggan",
+    "require_admin": false,
+    "mode": "storage",
+    "url_path": "lovelace-friggan",
+    "id": "lovelace_friggan"
+  },
+  {
+    "show_in_sidebar": true,
+    "icon": "mdi:home-assistant",
+    "title": "HA - Admin",
+    "require_admin": false,
+    "mode": "storage",
+    "url_path": "ha-admin",
+    "id": "ha_admin"
+  },
+  {
+    "id": "dashboard_elpris",
+    "show_in_sidebar": false,
+    "icon": "mdi:transmission-tower",
+    "title": "Elpris",
+    "require_admin": false,
+    "mode": "storage",
+    "url_path": "dashboard-elpris"
+  },
+  {
+    "id": "dashboard_ai",
+    "show_in_sidebar": false,
+    "icon": "mdi:chat-outline",
+    "title": "AI",
+    "require_admin": false,
+    "mode": "storage",
+    "url_path": "dashboard-ai"
+  },
+  {
+    "id": "dashboard_hemmabio",
+    "show_in_sidebar": true,
+    "icon": "mdi:filmstrip",
+    "title": "Bio",
+    "require_admin": false,
+    "mode": "storage",
+    "url_path": "dashboard-hemmabio"
+  },
+  {
+    "id": "lovelace",
+    "icon": "mdi:view-dashboard",
+    "title": "Hem",
+    "url_path": "lovelace",
+    "require_admin": false,
+    "mode": "storage",
+    "show_in_sidebar": true
+  },
+  {
+    "id": "kuma_status",
+    "url_path": "kuma-status",
+    "title": "Driftstatus",
+    "icon": "mdi:shield-check-outline",
+    "show_in_sidebar": true,
+    "require_admin": false,
+    "mode": "storage"
+  }
+]

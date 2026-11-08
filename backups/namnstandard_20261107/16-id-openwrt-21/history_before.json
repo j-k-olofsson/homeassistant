@@ -1,0 +1,394 @@
+{
+  "binary_sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_eth0_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "binary_sensor.kontoret_openwrt_one_ap_kontoret_br_lan_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "binary_sensor.kontoret_openwrt_one_ap_kontoret_eth0_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "binary_sensor.kontoret_openwrt_one_ap_kontoret_eth1_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "number.2_4_ghz_transmit_power_2": [
+    {
+      "state": "20",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "number.5_ghz_transmit_power_2": [
+    {
+      "state": "13",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "binary_sensor.koket_openwrt_one_ap_koket_br_lan_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "binary_sensor.koket_openwrt_one_ap_koket_eth0_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "binary_sensor.koket_openwrt_one_ap_koket_eth1_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "button.utomhus_08_b6_1f_34_55_50_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "number.2_4_ghz_transmit_power": [
+    {
+      "state": "20",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "number.5_ghz_transmit_power": [
+    {
+      "state": "13",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_br_lan_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_eth0_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "binary_sensor.bion_asus_lyra_map_ac2200_ap_kallaren_wan_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "button.bion_94_b9_7e_16_d2_02_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "number.2_4_ghz_transmit_power_5": [
+    {
+      "state": "20",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "number.5_ghz_transmit_power_5": [
+    {
+      "state": "13",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "binary_sensor.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_br_lan_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "binary_sensor.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_eth0_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "binary_sensor.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_wan_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "number.2_4_ghz_transmit_power_4": [
+    {
+      "state": "20",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "number.5_ghz_transmit_power_4": [
+    {
+      "state": "13",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_br_lan_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "binary_sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_eth0_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "number.5_ghz_transmit_power_6": [
+    {
+      "state": "23",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "number.2_4_ghz_transmit_power_6": [
+    {
+      "state": "18",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "binary_sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_eth0_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "binary_sensor.sovrummet_openwrt_one_router_sovrum_br_lan_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "binary_sensor.sovrummet_openwrt_one_router_sovrum_eth1_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "binary_sensor.friggan_asus_lyra_map_ac2200_ap_friggan_br_lan_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "binary_sensor.friggan_asus_lyra_map_ac2200_ap_friggan_eth0_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "binary_sensor.friggan_asus_lyra_map_ac2200_ap_friggan_wan_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "number.2_4_ghz_transmit_power_3": [
+    {
+      "state": "7",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "number.5_ghz_transmit_power_3": [
+    {
+      "state": "7",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "device_tracker.192_168_10_48_192_168_10_48": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "device_tracker.00_e0_4c_d9_ea_b9_00_e0_4c_d9_ea_b9": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    },
+    {
+      "state": "home",
+      "last_changed": "2026-11-07T13:25:14.910461+00:00"
+    }
+  ],
+  "button.toaletten_e8_db_84_d3_1d_ce_disconnect_device": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "device_tracker.00_e0_4c_81_05_82_00_e0_4c_81_05_82": [
+    {
+      "state": "home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "button.94_27_70_89_d1_ad_disconnect_device": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "button.94_27_70_89_d1_ad_disconnect_device_3": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "device_tracker.carolas_galaxy_s9_carolas_galaxy_s9": [
+    {
+      "state": "home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "button.80_c5_f2_67_aa_69_disconnect_device": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "button.f0_fe_6b_c1_a0_06_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.531162+00:00"
+    }
+  ],
+  "button.sovrummet_sanglampor_diego_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "button.koket_2c_bc_bb_c1_87_2c_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "button.honshuset_24_62_ab_58_40_b4_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ],
+  "button.1c_69_20_5b_b6_00_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:51.903140+00:00",
+      "last_updated": "2026-11-07T07:43:51.903140+00:00"
+    }
+  ]
+}

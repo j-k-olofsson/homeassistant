@@ -2,7 +2,7 @@ from dataclasses import replace
 import logging
 from typing import cast
 
-from homeassistant.config_entries import ConfigEntry
+from homeassistant.config_entries import SOURCE_INTEGRATION_DISCOVERY, ConfigEntry
 from homeassistant.const import CONF_DEVICE
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers import device_registry
@@ -60,6 +60,7 @@ def get_related_device_ids(hass: HomeAssistant, device_id: str) -> set[str]:
     Devices are related when they were split off from the same legacy composite device, or when they
     share any identifier or connection. Both happen when a single physical device is provided by more
     than one config entry.
+    Channel and scanner entries also include their physical discovery source.
     `device_id` may be the ID of a registered device, or of a legacy composite device.
     """
     device_reg = device_registry.async_get(hass)
@@ -82,7 +83,66 @@ def get_related_device_ids(hass: HomeAssistant, device_id: str) -> set[str]:
             for linked_device in get_devices(identifiers=device.identifiers, connections=device.connections)
         )
 
+    for related_id in related.copy():
+        related_device = device_reg.async_get(related_id)
+        if isinstance(related_device, DeviceEntry):
+            related.add(resolve_device_discovery_source(hass, related_device).id)
+
     return related
+
+
+def resolve_device_discovery_source(hass: HomeAssistant, device: DeviceEntry) -> DeviceEntry:
+    """Resolve channel and scanner representations to the physical device used for discovery."""
+    visited = {device.id}
+    while (parent := _get_device_discovery_parent(hass, device)) is not None:
+        if parent.id in visited:
+            break
+        visited.add(parent.id)
+        device = parent
+    return device
+
+
+def _get_device_discovery_parent(hass: HomeAssistant, device: DeviceEntry) -> DeviceEntry | None:
+    """Follow explicit scanner ownership or Shelly's channel identifier convention."""
+    device_reg = device_registry.async_get(hass)
+    for entry_id in get_config_entry_ids(device):
+        entry = hass.config_entries.async_get_entry(entry_id)
+        if entry is None:
+            continue
+
+        if (
+            entry.domain == "bluetooth"
+            and entry.source == SOURCE_INTEGRATION_DISCOVERY
+            and (source_device := _get_bluetooth_source_device(hass, entry)) is not None
+        ):
+            return source_device
+
+        if entry.domain == "shelly" and device.via_device_id:
+            parent = device_reg.async_get(device.via_device_id)
+            if not isinstance(parent, DeviceEntry) or entry_id not in get_config_entry_ids(parent):
+                continue
+            for domain, identifier in parent.identifiers:
+                if domain == "shelly" and any(
+                    child_domain == domain and child_identifier.startswith(f"{identifier}-")
+                    for child_domain, child_identifier in device.identifiers
+                ):
+                    return parent
+
+    return None
+
+
+def _get_bluetooth_source_device(hass: HomeAssistant, entry: ConfigEntry) -> DeviceEntry | None:
+    source_device_id = entry.data.get("source_device_id")
+    if not source_device_id:
+        return None
+    device_reg = device_registry.async_get(hass)
+    source_device = device_reg.async_get(source_device_id)
+    if source_device is None or entry.data.get("source_config_entry_id") not in get_config_entry_ids(source_device):
+        return None
+    # A remote scanner can belong to a structural child device in newer HA versions.
+    if parent_id := getattr(source_device, "parent_device_id", None):
+        source_device = device_reg.async_get(parent_id)
+    return source_device if isinstance(source_device, DeviceEntry) else None
 
 
 def _get_composite_split_devices(
@@ -134,6 +194,47 @@ def get_related_devices(hass: HomeAssistant, device_id: str) -> list[DeviceEntry
     for config_entry_id in get_config_entry_ids(device):
         devices.update({related.id: related for related in get_devices_for_config_entry(hass, config_entry_id)})
     return list(devices.values())
+
+
+def get_profile_related_devices(hass: HomeAssistant, device_id: str) -> list[AnyDeviceEntry]:
+    """Return the immediate parent, children, and known docks a profile may reference."""
+    device_reg = device_registry.async_get(hass)
+    device = device_reg.async_get(device_id)
+    if device is None:
+        return []
+
+    related: dict[str, AnyDeviceEntry] = {}
+    if parent_device_id := getattr(device, "parent_device_id", None):
+        parent = device_reg.async_get(parent_device_id)
+        if parent is not None:
+            related[parent.id] = parent
+    if _HAS_CHILD_DEVICES:
+        for child in device_registry.async_entries_for_parent_device(device_reg, device_id):
+            related[child.id] = child
+
+    for dock in _get_roborock_docks(hass, device):
+        related[dock.id] = dock
+
+    related.pop(device_id, None)
+    return list(related.values())
+
+
+def _get_roborock_docks(hass: HomeAssistant, device: AnyDeviceEntry) -> list[AnyDeviceEntry]:
+    """Match Roborock's dock identifier convention within the source's config entries."""
+    dock_identifiers = {
+        (domain, f"{identifier}_dock") for domain, identifier in device.identifiers if domain == "roborock"
+    }
+    if not dock_identifiers:
+        return []
+
+    device_reg = device_registry.async_get(hass)
+    docks: list[AnyDeviceEntry] = []
+    for config_entry_id in get_config_entry_ids(device):
+        candidates: list[AnyDeviceEntry] = list(get_devices_for_config_entry(hass, config_entry_id))
+        if _HAS_CHILD_DEVICES:
+            candidates.extend(device_registry.async_child_entries_for_config_entry(device_reg, config_entry_id))
+        docks.extend(candidate for candidate in candidates if candidate.identifiers & dock_identifiers)
+    return docks
 
 
 def resolve_source_device(

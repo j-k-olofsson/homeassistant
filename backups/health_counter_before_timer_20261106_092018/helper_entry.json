@@ -1,0 +1,23 @@
+{
+  "created_at": "2025-08-09T10:36:02.739997+00:00",
+  "data": {},
+  "disabled_by": null,
+  "discovery_keys": {},
+  "domain": "template",
+  "entry_id": "01K276DQ9KHYAR396NT0QBWFGN",
+  "minor_version": 1,
+  "modified_at": "2026-08-06T15:52:12.817930+00:00",
+  "options": {
+    "name": "HA - Antal otillgängliga enheter",
+    "state": "{{ states\n  | rejectattr('entity_id','eq','sensor.ha_antal_otillgangliga_enheter')\n  | selectattr('state','in',['unavailable','unknown'])\n  | list\n  | length }}",
+    "template_type": "sensor",
+    "unit_of_measurement": "enheter"
+  },
+  "pref_disable_new_entities": false,
+  "pref_disable_polling": false,
+  "source": "user",
+  "subentries": [],
+  "title": "HA - Antal otillgängliga enheter",
+  "unique_id": null,
+  "version": 2
+}

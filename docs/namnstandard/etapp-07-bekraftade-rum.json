@@ -1,0 +1,1103 @@
+{
+  "stage": "07-bekraftade-rum",
+  "description": "Områden enligt användarens besked: kökslampor och LED-lister. Frösåddslampans driftstatus ändras inte.",
+  "operations": [
+    {
+      "kind": "device",
+      "id": "2bb9cb602ec800b2f183ceedd0f6b5fe",
+      "before": {
+        "name_by_user": "LED-list (sovrum östra)",
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list östra",
+        "area_id": "sovrummet"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "ede71cbfb18b5ffd44b8c45b58834617",
+      "before": {
+        "name_by_user": "Blomlampa 2 (verandan)",
+        "area_id": "kok"
+      },
+      "after": {
+        "name_by_user": "Blomlampa 2",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "8216579edd54afdbe31c2df3c6cc6d93",
+      "before": {
+        "name_by_user": "LED-list (ateljé norra)",
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list norra",
+        "area_id": "ateljen"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "fe8b77b3639c88eb3818dbd419b1f29f",
+      "before": {
+        "name_by_user": "LED-list (sovrum norra)",
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list norra",
+        "area_id": "sovrummet"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "d1d1228b50ea9c694ca0aa3c4e7898a0",
+      "before": {
+        "name_by_user": "LED-list (ateljé södra)",
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list södra",
+        "area_id": "ateljen"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "1145e3c5163aab633f8bd77c378632d2",
+      "before": {
+        "name_by_user": "LED-list (kök södra)",
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list södra",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "28cddc7b74b05ab7d1ba90ee889e8f2d",
+      "before": {
+        "name_by_user": "LED-list (kök sydöstra)",
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list sydöstra",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "2acf2d15a36735c6da6b9d67d07360f5",
+      "before": {
+        "name_by_user": "LED-list (verandan)",
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list",
+        "area_id": "verndan"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "7883ed542e732c9bf362ac20b3edac3c",
+      "before": {
+        "name_by_user": "LED-list (kök småfönster)",
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list småfönster",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "92c0ad7e857b0256a132e4f8f7c32a40",
+      "before": {
+        "name_by_user": "LED-list (kök östra)",
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list östra",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "7acdb0b707a3474aaf4096052549d2ac",
+      "before": {
+        "name_by_user": "LED-list (entrén)",
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list",
+        "area_id": "entren"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "b94bb0dbd4e4f1699c1e9a3eaf677742",
+      "before": {
+        "name_by_user": "LED-list (toalett)",
+        "area_id": "ha_admin"
+      },
+      "after": {
+        "name_by_user": "LED-list",
+        "area_id": "toaletten"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "9f570b631ca6c7964eb8bbab2c118fc2",
+      "before": {
+        "name_by_user": null,
+        "area_id": "entren"
+      },
+      "after": {
+        "name_by_user": "Taklampor ESPHome",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "13605732e6a6b76e0810802004ff35de",
+      "before": {
+        "name_by_user": "Blomlampa 2 (verandan)",
+        "area_id": "kok"
+      },
+      "after": {
+        "name_by_user": "Blomlampa 2",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "e90c2b59f7e655c437f7b0212c5719b2",
+      "before": {
+        "name_by_user": "Blomlampa 2 (verandan)",
+        "area_id": "kok"
+      },
+      "after": {
+        "name_by_user": "Blomlampa 2",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "update.ledstrip_sovrum_ostra_firmware",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (sovrum östra) Firmware"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (sovrum östra) Firmware",
+          "LED-list (sovrum östra) Firmware"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "light.ledstrip_sovrum_ostra_esphome40_light",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (sovrum östra) esphome40 Light"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (sovrum östra) esphome40 Light",
+          "LED-list (sovrum östra)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "update.ledstrip_atelje_norra_firmware",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (ateljé norra) Firmware"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (ateljé norra) Firmware",
+          "LED-list (ateljé norra) Firmware"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "light.ledstrip_atelje_norra_esphome46_light",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (ateljé norra) esphome46 Light"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (ateljé norra) esphome46 Light",
+          "LED-list (ateljé norra)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "update.ledstrip_sovrum_norra_firmware",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (sovrum norra) Firmware"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (sovrum norra) Firmware",
+          "LED-list (sovrum norra) Firmware"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "light.ledstrip_sovrum_norra_esphome44_light",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (sovrum norra) esphome44 Light"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (sovrum norra) esphome44 Light",
+          "LED-list (sovrum norra)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "update.ledstrip_atelje_sodra_firmware",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (ateljé södra) Firmware"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (ateljé södra) Firmware",
+          "LED-list (ateljé södra) Firmware"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "light.ledstrip_atelje_sodra_esphome47_light",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (ateljé södra) esphome47 Light"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (ateljé södra) esphome47 Light",
+          "LED-list (ateljé södra)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "update.ledstrip_kok_sodra_firmware",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (kök södra) Firmware"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (kök södra) Firmware",
+          "LED-list (kök södra) Firmware"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "light.ledstrip_kok_sodra_esphome50_light",
+      "before": {
+        "aliases": [
+          "FönsterLED (Södra)"
+        ]
+      },
+      "after": {
+        "aliases": [
+          "FönsterLED (Södra)",
+          "LED-list (kök södra)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "update.ledstrip_kok_sydostra_firmware",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (kök sydöstra) Firmware"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (kök sydöstra) Firmware",
+          "LED-list (kök sydöstra) Firmware"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "light.ledstrip_kok_sydostra_esphome51_light",
+      "before": {
+        "aliases": [
+          "FönsterLED (Sydöstra)"
+        ]
+      },
+      "after": {
+        "aliases": [
+          "FönsterLED (Sydöstra)",
+          "LED-list (kök sydöstra)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "update.ledstrip_verandan_firmware",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (verandan) Firmware"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (verandan) Firmware",
+          "LED-list (verandan) Firmware"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "light.ledstrip_verandan_esphome48_light",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (verandan) esphome48 Light"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (verandan) esphome48 Light",
+          "LED-list (verandan)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "update.ledstrip_kok_smafonster_firmware",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (kök småfönster) Firmware"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (kök småfönster) Firmware",
+          "LED-list (kök småfönster) Firmware"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "light.ledstrip_kok_smafonster_esphome49_light",
+      "before": {
+        "aliases": [
+          "FönsterLED (Småfönstren)"
+        ]
+      },
+      "after": {
+        "aliases": [
+          "FönsterLED (Småfönstren)",
+          "LED-list (kök småfönster)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "update.ledstrip_kok_ostra_firmware",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (kök östra) Firmware"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (kök östra) Firmware",
+          "LED-list (kök östra) Firmware"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "light.ledstrip_kok_ostra_esphome52_light",
+      "before": {
+        "aliases": [
+          "FönsterLED (Östra)"
+        ]
+      },
+      "after": {
+        "aliases": [
+          "FönsterLED (Östra)",
+          "LED-list (kök östra)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "update.ledstrip_entren_firmware",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (entrén) Firmware"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (entrén) Firmware",
+          "LED-list (entrén) Firmware"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "light.ledstrip_entren_esphome41_light",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (entrén) esphome41 Light"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (entrén) esphome41 Light",
+          "LED-list (entrén)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.blomlampa_vaxtskapet_energy_power",
+      "before": {
+        "aliases": [
+          null,
+          "Blomlampa 2 (verandan) Blomlampa (växtskåpet) - energy power"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Blomlampa 2 (verandan) Blomlampa (växtskåpet) - energy power",
+          "Blomlampa 2 (verandan) Beräknad effekt"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "update.ledstrip_toalett_firmware",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (toalett) Firmware"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (toalett) Firmware",
+          "LED-list (toalett) Firmware"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "light.esphome45_esphome45_light",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (toalett) esphome45 Light"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (toalett) esphome45 Light",
+          "LED-list (toalett)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "light.esphome60_esphome60_light",
+      "before": {
+        "aliases": [
+          "Taklampor"
+        ]
+      },
+      "after": {
+        "aliases": [
+          "Taklampor",
+          "Taklampor (köket)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.esphome60_esphome60_light_power",
+      "before": {
+        "aliases": [
+          null,
+          "Taklampor (köket) esphome60 Light Power"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Taklampor (köket) esphome60 Light Power",
+          "Taklampor (köket) Effekt belysning"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.esphome60_esphome60_light_voltage",
+      "before": {
+        "aliases": [
+          null,
+          "Taklampor (köket) esphome60 Light Voltage"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Taklampor (köket) esphome60 Light Voltage",
+          "Taklampor (köket) Spänning belysning"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.esphome60_esphome60_light_current",
+      "before": {
+        "aliases": [
+          null,
+          "Taklampor (köket) esphome60 Light Current"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Taklampor (köket) esphome60 Light Current",
+          "Taklampor (köket) Ström belysning"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "update.taklampor_koket_firmware",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Taklampor (köket) Firmware"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "light.blomlampa_2_verandan_esphome03_light",
+      "before": {
+        "aliases": [
+          null,
+          "Blomlampa 2 (verandan) esphome03 Light"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Blomlampa 2 (verandan) esphome03 Light",
+          "Blomlampa 2 (verandan)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.blomlampa_vaxtskapet_energy_energy",
+      "before": {
+        "aliases": [
+          null,
+          "Blomlampa 2 (verandan) Blomlampa (växtskåpet) - energy energy"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Blomlampa 2 (verandan) Blomlampa (växtskåpet) - energy energy",
+          "Blomlampa 2 (verandan) Beräknad energi"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.blomlampa_2_verandan_esphome03_apply_scene",
+      "before": {
+        "aliases": [
+          null,
+          "Blomlampa 2 (verandan) esphome03 Apply Scene"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Blomlampa 2 (verandan) esphome03 Apply Scene",
+          "Blomlampa 2 (verandan) Aktivera scen"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "update.blomlampa_2_verandan_firmware",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Blomlampa 2 (verandan) Firmware"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.blomlampa_2_verandan_status",
+      "before": {
+        "aliases": [
+          null,
+          "Blomlampa 2 (verandan) Status"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Blomlampa 2 (verandan) Status",
+          "Blomlampa 2 (verandan) Anslutning"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.ledstrip_entren_status",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (entrén) Status"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (entrén) Status",
+          "LED-list (entrén) Anslutning"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.ledstrip_kok_sydostra_status",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (kök sydöstra) Status"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (kök sydöstra) Status",
+          "LED-list (kök sydöstra) Anslutning"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.ledstrip_kok_sodra_status",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (kök södra) Status"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (kök södra) Status",
+          "LED-list (kök södra) Anslutning"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.ledstrip_kok_ostra_status",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (kök östra) Status"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (kök östra) Status",
+          "LED-list (kök östra) Anslutning"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.ledstrip_sovrum_norra_status",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (sovrum norra) Status"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (sovrum norra) Status",
+          "LED-list (sovrum norra) Anslutning"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.ledstrip_sovrum_ostra_status",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (sovrum östra) Status"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (sovrum östra) Status",
+          "LED-list (sovrum östra) Anslutning"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.ledstrip_verandan_status",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (verandan) Status"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (verandan) Status",
+          "LED-list (verandan) Anslutning"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "binary_sensor.taklampor_koket_status",
+      "before": {
+        "aliases": [
+          null,
+          "Taklampor (köket) Status"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Taklampor (köket) Status",
+          "Taklampor (köket) Anslutning"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_ledstrip_atelje_norra_thread_device_role",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (ateljé norra) Thread Device Role"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (ateljé norra) Thread Device Role",
+          "LED-list (ateljé norra) Thread-enhetsroll"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_ledstrip_atelje_norra_thread_rloc16",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (ateljé norra) Thread RLOC16"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (ateljé norra) Thread RLOC16",
+          "LED-list (ateljé norra) Thread RLOC16"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_ledstrip_atelje_norra_thread_extended_address",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (ateljé norra) Thread Extended Address"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (ateljé norra) Thread Extended Address",
+          "LED-list (ateljé norra) Thread-adress"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_ledstrip_atelje_sodra_thread_device_role",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (ateljé södra) Thread Device Role"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (ateljé södra) Thread Device Role",
+          "LED-list (ateljé södra) Thread-enhetsroll"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_ledstrip_atelje_sodra_thread_rloc16",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (ateljé södra) Thread RLOC16"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (ateljé södra) Thread RLOC16",
+          "LED-list (ateljé södra) Thread RLOC16"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_ledstrip_atelje_sodra_thread_extended_address",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (ateljé södra) Thread Extended Address"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (ateljé södra) Thread Extended Address",
+          "LED-list (ateljé södra) Thread-adress"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_ledstrip_toalett_thread_device_role",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (toalett) Thread Device Role"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (toalett) Thread Device Role",
+          "LED-list (toalett) Thread-enhetsroll"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_ledstrip_toalett_thread_rloc16",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (toalett) Thread RLOC16"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (toalett) Thread RLOC16",
+          "LED-list (toalett) Thread RLOC16"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_ledstrip_toalett_thread_extended_address",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (toalett) Thread Extended Address"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (toalett) Thread Extended Address",
+          "LED-list (toalett) Thread-adress"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_ledstrip_kok_smafonster_thread_device_role",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (kök småfönster) Thread Device Role"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (kök småfönster) Thread Device Role",
+          "LED-list (kök småfönster) Thread-enhetsroll"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_ledstrip_kok_smafonster_thread_rloc16",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (kök småfönster) Thread RLOC16"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (kök småfönster) Thread RLOC16",
+          "LED-list (kök småfönster) Thread RLOC16"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ha_servern_ledstrip_kok_smafonster_thread_extended_address",
+      "before": {
+        "aliases": [
+          null,
+          "Ledstrip (kök småfönster) Thread Extended Address"
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Ledstrip (kök småfönster) Thread Extended Address",
+          "LED-list (kök småfönster) Thread-adress"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.blomlampa_2_verandan_f4_cf_a2_15_d0_e3",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Blomlampa 2 (verandan) f4:cf:a2:15:d0:e3"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.koket_blomlampa_2_verandan_disconnect_device",
+      "before": {
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "aliases": [
+          null,
+          "Blomlampa 2 (verandan) Disconnect device"
+        ]
+      }
+    }
+  ]
+}

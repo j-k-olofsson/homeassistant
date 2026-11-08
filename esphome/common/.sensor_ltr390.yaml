@@ -21,6 +21,5 @@ sensor:
       accuracy_decimals: 0
     ambient_light:
       name: ${node_name} UV Ambient
-      device_class: illuminance
       state_class: measurement
       accuracy_decimals: 1

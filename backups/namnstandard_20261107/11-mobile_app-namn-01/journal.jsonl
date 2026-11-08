@@ -1,0 +1,500 @@
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_detected_activity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Identifierad aktivitet", "aliases": [null, "SM-G930F Detected activity"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_detected_activity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_sleep_confidence", "before": {"name": null, "aliases": [null]}, "after": {"name": "Säkerhet i sömndetektering", "aliases": [null, "SM-G930F Sleep confidence"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_sleep_confidence"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_sleep_segment", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sömnperiod", "aliases": [null, "SM-G930F Sleep segment"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_sleep_segment"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_current_version", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appversion", "aliases": [null, "SM-G930F Current version"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_current_version"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_app_rx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens mottagna data", "aliases": [null, "SM-G930F App Rx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_app_rx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_app_tx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens skickade data", "aliases": [null, "SM-G930F App Tx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_app_tx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_app_memory", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens minnesanvändning", "aliases": [null, "SM-G930F App memory"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_app_memory"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_app_inactive", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appen inaktiv", "aliases": [null, "SM-G930F App inactive"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_app_inactive"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_app_importance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens prioritet", "aliases": [null, "SM-G930F App importance"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_app_importance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_ringer_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ringsignalläge", "aliases": [null, "SM-G930F Ringer mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_ringer_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_audio_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ljudläge", "aliases": [null, "SM-G930F Audio mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_audio_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_headphones", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hörlurar", "aliases": [null, "SM-G930F Headphones"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_headphones"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_mic_muted", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mikrofon avstängd", "aliases": [null, "SM-G930F Mic muted"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_mic_muted"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_speakerphone", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högtalartelefon", "aliases": [null, "SM-G930F Speakerphone"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_speakerphone"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_music_active", "before": {"name": null, "aliases": [null]}, "after": {"name": "Musik aktiv", "aliases": [null, "SM-G930F Music active"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_music_active"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_volume_level_alarm", "before": {"name": null, "aliases": [null]}, "after": {"name": "Alarmvolym", "aliases": [null, "SM-G930F Volume level alarm"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_volume_level_alarm"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_volume_level_call", "before": {"name": null, "aliases": [null]}, "after": {"name": "Samtalsvolym", "aliases": [null, "SM-G930F Volume level call"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_volume_level_call"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_volume_level_music", "before": {"name": null, "aliases": [null]}, "after": {"name": "Musikvolym", "aliases": [null, "SM-G930F Volume level music"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_volume_level_music"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_volume_level_ringer", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ringsignalvolym", "aliases": [null, "SM-G930F Volume level ringer"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_volume_level_ringer"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_volume_level_notification", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aviseringsvolym", "aliases": [null, "SM-G930F Volume level notification"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_volume_level_notification"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_volume_level_system", "before": {"name": null, "aliases": [null]}, "after": {"name": "Systemvolym", "aliases": [null, "SM-G930F Volume level system"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_volume_level_system"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_volume_level_dtmf", "before": {"name": null, "aliases": [null]}, "after": {"name": "Knappvalsvolym", "aliases": [null, "SM-G930F Volume level DTMF"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_volume_level_dtmf"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_volume_level_accessibility", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tillgänglighetsvolym", "aliases": [null, "SM-G930F Volume level accessibility"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_volume_level_accessibility"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_battery_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterinivå", "aliases": [null, "SM-G930F Battery level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_battery_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_battery_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batteristatus", "aliases": [null, "SM-G930F Battery state"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_battery_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_is_charging", "before": {"name": null, "aliases": [null]}, "after": {"name": "Laddar", "aliases": [null, "SM-G930F Is charging"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_is_charging"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_charger_type", "before": {"name": null, "aliases": [null]}, "after": {"name": "Laddartyp", "aliases": [null, "SM-G930F Charger type"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_charger_type"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_battery_health", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterihälsa", "aliases": [null, "SM-G930F Battery health"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_battery_health"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_battery_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batteritemperatur", "aliases": [null, "SM-G930F Battery temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_battery_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_battery_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterieffekt", "aliases": [null, "SM-G930F Battery power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_battery_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_bluetooth_connection", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bluetooth-anslutning", "aliases": [null, "SM-G930F Bluetooth connection"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_bluetooth_connection"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_bluetooth_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bluetooth-status", "aliases": [null, "SM-G930F Bluetooth state"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_bluetooth_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_ble_transmitter", "before": {"name": null, "aliases": [null]}, "after": {"name": "BLE-sändare", "aliases": [null, "SM-G930F BLE transmitter"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_ble_transmitter"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_beacon_monitor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Övervakning av Bluetooth-sändare", "aliases": [null, "SM-G930F Beacon monitor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_beacon_monitor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_screen_brightness", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmljusstyrka", "aliases": [null, "SM-G930F Screen brightness"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_screen_brightness"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_screen_off_timeout", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tid till skärmavstängning", "aliases": [null, "SM-G930F Screen off timeout"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_screen_off_timeout"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_do_not_disturb_sensor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stör ej-läge", "aliases": [null, "SM-G930F Do Not Disturb sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_do_not_disturb_sensor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_work_profile", "before": {"name": null, "aliases": [null]}, "after": {"name": "Arbetsprofil", "aliases": [null, "SM-G930F Work profile"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_work_profile"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_geocoded_location", "before": {"name": null, "aliases": [null]}, "after": {"name": "Platsadress", "aliases": [null, "SM-G930F Geocoded location"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_geocoded_location"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_device_locked", "before": {"name": null, "aliases": [null]}, "after": {"name": "Enheten låst", "aliases": [null, "SM-G930F Device locked"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_device_locked"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_device_secure", "before": {"name": null, "aliases": [null]}, "after": {"name": "Enheten skyddad", "aliases": [null, "SM-G930F Device secure"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_device_secure"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_keyguard_locked", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmlåset låst", "aliases": [null, "SM-G930F Keyguard locked"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_keyguard_locked"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_keyguard_secure", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmlåset skyddat", "aliases": [null, "SM-G930F Keyguard secure"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_keyguard_secure"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_last_used_app", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senast använda app", "aliases": [null, "SM-G930F Last used app"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_last_used_app"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_last_reboot", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senaste omstart", "aliases": [null, "SM-G930F Last reboot"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_last_reboot"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_last_update_trigger", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senaste uppdateringsorsak", "aliases": [null, "SM-G930F Last update trigger"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_last_update_trigger"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_light_sensor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysningsstyrka", "aliases": [null, "SM-G930F Light sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_light_sensor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_high_accuracy_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Platsläge med hög precision", "aliases": [null, "SM-G930F High accuracy mode"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_high_accuracy_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_high_accuracy_update_interval", "before": {"name": null, "aliases": [null]}, "after": {"name": "Uppdateringsintervall för hög precision", "aliases": [null, "SM-G930F High accuracy update interval"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_high_accuracy_update_interval"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_mobile_data", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mobildata", "aliases": [null, "SM-G930F Mobile data"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_mobile_data"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_mobile_data_roaming", "before": {"name": null, "aliases": [null]}, "after": {"name": "Dataroaming", "aliases": [null, "SM-G930F Mobile data roaming"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_mobile_data_roaming"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_wifi_connection", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-anslutning", "aliases": [null, "SM-G930F WiFi connection"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_wifi_connection"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_wifi_bssid", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi BSSID", "aliases": [null, "SM-G930F WiFi BSSID"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_wifi_bssid"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_wifi_ip_address", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi IP-adress", "aliases": [null, "SM-G930F WiFi IP address"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_wifi_ip_address"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_wifi_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-länkhastighet", "aliases": [null, "SM-G930F WiFi link speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_wifi_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_wifi_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-status", "aliases": [null, "SM-G930F WiFi state"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_wifi_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_wifi_frequency", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-frekvens", "aliases": [null, "SM-G930F WiFi frequency"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_wifi_frequency"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_wifi_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-signalstyrka", "aliases": [null, "SM-G930F WiFi signal strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_wifi_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_public_ip_address", "before": {"name": null, "aliases": [null]}, "after": {"name": "Publik IP-adress", "aliases": [null, "SM-G930F Public IP address"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_public_ip_address"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_network_type", "before": {"name": null, "aliases": [null]}, "after": {"name": "Nätverkstyp", "aliases": [null, "SM-G930F Network type"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_network_type"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_next_alarm", "before": {"name": null, "aliases": [null]}, "after": {"name": "Nästa alarm", "aliases": [null, "SM-G930F Next alarm"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_next_alarm"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_last_notification", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senaste avisering", "aliases": [null, "SM-G930F Last notification"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_last_notification"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_last_removed_notification", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senast borttagna avisering", "aliases": [null, "SM-G930F Last removed notification"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_last_removed_notification"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_active_notification_count", "before": {"name": null, "aliases": [null]}, "after": {"name": "Antal aktiva aviseringar", "aliases": [null, "SM-G930F Active notification count"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_active_notification_count"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_media_session", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mediasession", "aliases": [null, "SM-G930F Media session"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_media_session"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_phone_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "Telefonstatus", "aliases": [null, "SM-G930F Phone state"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_phone_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_interactive", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmen interaktiv", "aliases": [null, "SM-G930F Interactive"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_interactive"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_doze_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Viloläge", "aliases": [null, "SM-G930F Doze mode"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_doze_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_power_save", "before": {"name": null, "aliases": [null]}, "after": {"name": "Energisparläge", "aliases": [null, "SM-G930F Power save"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_power_save"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_pressure_sensor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Lufttryck", "aliases": [null, "SM-G930F Pressure sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_pressure_sensor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_proximity_sensor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närhetssensor", "aliases": [null, "SM-G930F Proximity sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_proximity_sensor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_steps_sensor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Steg", "aliases": [null, "SM-G930F Steps sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_steps_sensor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_internal_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Intern lagring", "aliases": [null, "SM-G930F Internal storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_internal_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_external_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Extern lagring", "aliases": [null, "SM-G930F External storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_external_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_current_time_zone", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aktuell tidszon", "aliases": [null, "SM-G930F Current time zone"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_current_time_zone"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_total_rx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Totalt mottagna data", "aliases": [null, "SM-G930F Total Rx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_total_rx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_total_tx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Totalt skickade data", "aliases": [null, "SM-G930F Total Tx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_total_tx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_os_version", "before": {"name": null, "aliases": [null]}, "after": {"name": "Operativsystemsversion", "aliases": [null, "SM-G930F OS version"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_os_version"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_security_patch", "before": {"name": null, "aliases": [null]}, "after": {"name": "Säkerhetsuppdatering", "aliases": [null, "SM-G930F Security patch"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_security_patch"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_os_version", "before": {"name": null, "aliases": [null]}, "after": {"name": "Operativsystemsversion", "aliases": [null, "Galaxy Tab 2 hallen OS Version"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_os_version"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_security_patch", "before": {"name": null, "aliases": [null]}, "after": {"name": "Säkerhetsuppdatering", "aliases": [null, "Galaxy Tab 2 hallen Security Patch"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_security_patch"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_current_version", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appversion", "aliases": [null, "Galaxy Tab 2 hallen Current Version"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_current_version"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_app_rx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens mottagna data", "aliases": [null, "Galaxy Tab 2 hallen App Rx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_app_rx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_app_tx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens skickade data", "aliases": [null, "Galaxy Tab 2 hallen App Tx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_app_tx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_app_memory", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens minnesanvändning", "aliases": [null, "Galaxy Tab 2 hallen App Memory"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_app_memory"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_app_inactive", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appen inaktiv", "aliases": [null, "Galaxy Tab 2 hallen App Inactive"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_app_inactive"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_app_importance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens prioritet", "aliases": [null, "Galaxy Tab 2 hallen App Importance"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_app_importance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_ringer_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ringsignalläge", "aliases": [null, "Galaxy Tab 2 hallen Ringer Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_ringer_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_audio_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ljudläge", "aliases": [null, "Galaxy Tab 2 hallen Audio Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_audio_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_headphones", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hörlurar", "aliases": [null, "Galaxy Tab 2 hallen Headphones"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_headphones"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_mic_muted", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mikrofon avstängd", "aliases": [null, "Galaxy Tab 2 hallen Mic Muted"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_mic_muted"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_speakerphone", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högtalartelefon", "aliases": [null, "Galaxy Tab 2 hallen Speakerphone"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_speakerphone"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_music_active", "before": {"name": null, "aliases": [null]}, "after": {"name": "Musik aktiv", "aliases": [null, "Galaxy Tab 2 hallen Music Active"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_music_active"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_volume_level_alarm", "before": {"name": null, "aliases": [null]}, "after": {"name": "Alarmvolym", "aliases": [null, "Galaxy Tab 2 hallen Volume Level Alarm"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_volume_level_alarm"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_volume_level_call", "before": {"name": null, "aliases": [null]}, "after": {"name": "Samtalsvolym", "aliases": [null, "Galaxy Tab 2 hallen Volume Level Call"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_volume_level_call"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_volume_level_music", "before": {"name": null, "aliases": [null]}, "after": {"name": "Musikvolym", "aliases": [null, "Galaxy Tab 2 hallen Volume Level Music"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_volume_level_music"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_volume_level_ringer", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ringsignalvolym", "aliases": [null, "Galaxy Tab 2 hallen Volume Level Ringer"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_volume_level_ringer"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_volume_level_notification", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aviseringsvolym", "aliases": [null, "Galaxy Tab 2 hallen Volume Level Notification"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_volume_level_notification"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_volume_level_system", "before": {"name": null, "aliases": [null]}, "after": {"name": "Systemvolym", "aliases": [null, "Galaxy Tab 2 hallen Volume Level System"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_volume_level_system"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_volume_level_dtmf", "before": {"name": null, "aliases": [null]}, "after": {"name": "Knappvalsvolym", "aliases": [null, "Galaxy Tab 2 hallen Volume Level DTMF"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_volume_level_dtmf"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_battery_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterinivå", "aliases": [null, "Galaxy Tab 2 hallen Battery Level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_battery_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_battery_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batteristatus", "aliases": [null, "Galaxy Tab 2 hallen Battery State"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_battery_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_is_charging", "before": {"name": null, "aliases": [null]}, "after": {"name": "Laddar", "aliases": [null, "Galaxy Tab 2 hallen Is Charging"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_is_charging"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_charger_type", "before": {"name": null, "aliases": [null]}, "after": {"name": "Laddartyp", "aliases": [null, "Galaxy Tab 2 hallen Charger Type"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_charger_type"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_battery_health", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterihälsa", "aliases": [null, "Galaxy Tab 2 hallen Battery Health"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_battery_health"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_battery_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batteritemperatur", "aliases": [null, "Galaxy Tab 2 hallen Battery Temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_battery_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_battery_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterieffekt", "aliases": [null, "Galaxy Tab 2 hallen Battery Power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_battery_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_bluetooth_connection", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bluetooth-anslutning", "aliases": [null, "Galaxy Tab 2 hallen Bluetooth Connection"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_bluetooth_connection"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_bluetooth_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bluetooth-status", "aliases": [null, "Galaxy Tab 2 hallen Bluetooth State"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_bluetooth_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_ble_transmitter", "before": {"name": null, "aliases": [null]}, "after": {"name": "BLE-sändare", "aliases": [null, "Galaxy Tab 2 hallen BLE Transmitter"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_ble_transmitter"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_beacon_monitor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Övervakning av Bluetooth-sändare", "aliases": [null, "Galaxy Tab 2 hallen Beacon Monitor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_beacon_monitor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_screen_brightness", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmljusstyrka", "aliases": [null, "Galaxy Tab 2 hallen Screen Brightness"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_screen_brightness"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_screen_off_timeout", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tid till skärmavstängning", "aliases": [null, "Galaxy Tab 2 hallen Screen Off Timeout"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_screen_off_timeout"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_do_not_disturb_sensor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stör ej-läge", "aliases": [null, "Galaxy Tab 2 hallen Do Not Disturb Sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_do_not_disturb_sensor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_work_profile", "before": {"name": null, "aliases": [null]}, "after": {"name": "Arbetsprofil", "aliases": [null, "Galaxy Tab 2 hallen Work Profile"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_work_profile"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_device_locked", "before": {"name": null, "aliases": [null]}, "after": {"name": "Enheten låst", "aliases": [null, "Galaxy Tab 2 hallen Device Locked"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_device_locked"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_device_secure", "before": {"name": null, "aliases": [null]}, "after": {"name": "Enheten skyddad", "aliases": [null, "Galaxy Tab 2 hallen Device Secure"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_device_secure"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_keyguard_locked", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmlåset låst", "aliases": [null, "Galaxy Tab 2 hallen Keyguard Locked"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_keyguard_locked"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_keyguard_secure", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmlåset skyddat", "aliases": [null, "Galaxy Tab 2 hallen Keyguard Secure"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_keyguard_secure"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_last_used_app", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senast använda app", "aliases": [null, "Galaxy Tab 2 hallen Last Used App"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_last_used_app"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_last_reboot", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senaste omstart", "aliases": [null, "Galaxy Tab 2 hallen Last Reboot"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_last_reboot"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_last_update_trigger", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senaste uppdateringsorsak", "aliases": [null, "Galaxy Tab 2 hallen Last Update Trigger"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_last_update_trigger"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_light_sensor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysningsstyrka", "aliases": [null, "Galaxy Tab 2 hallen Light Sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_light_sensor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_wifi_connection", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-anslutning", "aliases": [null, "Galaxy Tab 2 hallen WiFi Connection"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_wifi_connection"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_wifi_bssid", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi BSSID", "aliases": [null, "Galaxy Tab 2 hallen WiFi BSSID"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_wifi_bssid"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_wifi_ip_address", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi IP-adress", "aliases": [null, "Galaxy Tab 2 hallen WiFi IP Address"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_wifi_ip_address"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_wifi_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-länkhastighet", "aliases": [null, "Galaxy Tab 2 hallen WiFi Link Speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_wifi_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_wifi_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-status", "aliases": [null, "Galaxy Tab 2 hallen WiFi State"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_wifi_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_wifi_frequency", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-frekvens", "aliases": [null, "Galaxy Tab 2 hallen WiFi Frequency"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_wifi_frequency"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_wifi_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-signalstyrka", "aliases": [null, "Galaxy Tab 2 hallen WiFi Signal Strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_wifi_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_public_ip_address", "before": {"name": null, "aliases": [null]}, "after": {"name": "Publik IP-adress", "aliases": [null, "Galaxy Tab 2 hallen Public IP Address"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_public_ip_address"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_network_type", "before": {"name": null, "aliases": [null]}, "after": {"name": "Nätverkstyp", "aliases": [null, "Galaxy Tab 2 hallen Network Type"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_network_type"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_next_alarm", "before": {"name": null, "aliases": [null]}, "after": {"name": "Nästa alarm", "aliases": [null, "Galaxy Tab 2 hallen Next Alarm"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_next_alarm"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_last_notification", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senaste avisering", "aliases": [null, "Galaxy Tab 2 hallen Last Notification"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_last_notification"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_last_removed_notification", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senast borttagna avisering", "aliases": [null, "Galaxy Tab 2 hallen Last Removed Notification"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_last_removed_notification"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_active_notification_count", "before": {"name": null, "aliases": [null]}, "after": {"name": "Antal aktiva aviseringar", "aliases": [null, "Galaxy Tab 2 hallen Active Notification Count"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_active_notification_count"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_media_session", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mediasession", "aliases": [null, "Galaxy Tab 2 hallen Media Session"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_media_session"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_interactive", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmen interaktiv", "aliases": [null, "Galaxy Tab 2 hallen Interactive"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_interactive"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_doze_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Viloläge", "aliases": [null, "Galaxy Tab 2 hallen Doze Mode"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_doze_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_power_save", "before": {"name": null, "aliases": [null]}, "after": {"name": "Energisparläge", "aliases": [null, "Galaxy Tab 2 hallen Power Save"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.galaxy_tab_2_hallen_power_save"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_proximity_sensor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närhetssensor", "aliases": [null, "Galaxy Tab 2 hallen Proximity Sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_proximity_sensor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_internal_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Intern lagring", "aliases": [null, "Galaxy Tab 2 hallen Internal Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_internal_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_external_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Extern lagring", "aliases": [null, "Galaxy Tab 2 hallen External Storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_external_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_current_time_zone", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aktuell tidszon", "aliases": [null, "Galaxy Tab 2 hallen Current Time Zone"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_current_time_zone"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_total_rx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Totalt mottagna data", "aliases": [null, "Galaxy Tab 2 hallen Total Rx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_total_rx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.galaxy_tab_2_hallen_total_tx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Totalt skickade data", "aliases": [null, "Galaxy Tab 2 hallen Total Tx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.galaxy_tab_2_hallen_total_tx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_car_battery", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens batterinivå", "aliases": [null, "SM-G930F Car battery"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_car_battery"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_car_name", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens namn", "aliases": [null, "SM-G930F Car name"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_car_name"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_car_charging_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens laddningsstatus", "aliases": [null, "SM-G930F Car charging status"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_car_charging_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_car_ev_connector_type", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens laddkontakt", "aliases": [null, "SM-G930F Car EV connector type"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_car_ev_connector_type"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_car_fuel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens bränslenivå", "aliases": [null, "SM-G930F Car fuel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_car_fuel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_car_fuel_type", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens bränsletyp", "aliases": [null, "SM-G930F Car fuel type"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_car_fuel_type"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_g930f_car_odometer", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens vägmätare", "aliases": [null, "SM-G930F Car odometer"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_g930f_car_odometer"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_g930f_nfc_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "NFC-status", "aliases": [null, "SM-G930F NFC state"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_g930f_nfc_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_detected_activity", "before": {"name": null, "aliases": [null]}, "after": {"name": "Identifierad aktivitet", "aliases": [null, "SM-T835 Detected activity"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_detected_activity"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_sleep_confidence", "before": {"name": null, "aliases": [null]}, "after": {"name": "Säkerhet i sömndetektering", "aliases": [null, "SM-T835 Sleep confidence"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_sleep_confidence"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_sleep_segment", "before": {"name": null, "aliases": [null]}, "after": {"name": "Sömnperiod", "aliases": [null, "SM-T835 Sleep segment"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_sleep_segment"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_os_version", "before": {"name": null, "aliases": [null]}, "after": {"name": "Operativsystemsversion", "aliases": [null, "SM-T835 OS version"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_os_version"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_security_patch", "before": {"name": null, "aliases": [null]}, "after": {"name": "Säkerhetsuppdatering", "aliases": [null, "SM-T835 Security patch"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_security_patch"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_current_version", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appversion", "aliases": [null, "SM-T835 Current version"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_current_version"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_app_rx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens mottagna data", "aliases": [null, "SM-T835 App Rx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_app_rx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_app_tx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens skickade data", "aliases": [null, "SM-T835 App Tx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_app_tx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_app_memory", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens minnesanvändning", "aliases": [null, "SM-T835 App memory"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_app_memory"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_t835_app_inactive", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appen inaktiv", "aliases": [null, "SM-T835 App inactive"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_t835_app_inactive"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_app_standby_bucket", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens energisparklass", "aliases": [null, "SM-T835 App standby bucket"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_app_standby_bucket"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_app_importance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens prioritet", "aliases": [null, "SM-T835 App importance"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_app_importance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_ringer_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ringsignalläge", "aliases": [null, "SM-T835 Ringer mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_ringer_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_audio_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ljudläge", "aliases": [null, "SM-T835 Audio mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_audio_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_t835_headphones", "before": {"name": null, "aliases": [null]}, "after": {"name": "Hörlurar", "aliases": [null, "SM-T835 Headphones"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_t835_headphones"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_t835_mic_muted", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mikrofon avstängd", "aliases": [null, "SM-T835 Mic muted"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_t835_mic_muted"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_t835_speakerphone", "before": {"name": null, "aliases": [null]}, "after": {"name": "Högtalartelefon", "aliases": [null, "SM-T835 Speakerphone"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_t835_speakerphone"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_t835_music_active", "before": {"name": null, "aliases": [null]}, "after": {"name": "Musik aktiv", "aliases": [null, "SM-T835 Music active"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_t835_music_active"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_volume_level_alarm", "before": {"name": null, "aliases": [null]}, "after": {"name": "Alarmvolym", "aliases": [null, "SM-T835 Volume level alarm"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_volume_level_alarm"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_volume_level_call", "before": {"name": null, "aliases": [null]}, "after": {"name": "Samtalsvolym", "aliases": [null, "SM-T835 Volume level call"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_volume_level_call"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_volume_level_music", "before": {"name": null, "aliases": [null]}, "after": {"name": "Musikvolym", "aliases": [null, "SM-T835 Volume level music"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_volume_level_music"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_volume_level_ringer", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ringsignalvolym", "aliases": [null, "SM-T835 Volume level ringer"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_volume_level_ringer"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_volume_level_notification", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aviseringsvolym", "aliases": [null, "SM-T835 Volume level notification"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_volume_level_notification"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_volume_level_system", "before": {"name": null, "aliases": [null]}, "after": {"name": "Systemvolym", "aliases": [null, "SM-T835 Volume level system"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_volume_level_system"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_volume_level_dtmf", "before": {"name": null, "aliases": [null]}, "after": {"name": "Knappvalsvolym", "aliases": [null, "SM-T835 Volume level DTMF"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_volume_level_dtmf"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_volume_level_accessibility", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tillgänglighetsvolym", "aliases": [null, "SM-T835 Volume level accessibility"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_volume_level_accessibility"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_battery_level", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterinivå", "aliases": [null, "SM-T835 Battery level"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_battery_level"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_battery_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batteristatus", "aliases": [null, "SM-T835 Battery state"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_battery_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_t835_is_charging", "before": {"name": null, "aliases": [null]}, "after": {"name": "Laddar", "aliases": [null, "SM-T835 Is charging"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_t835_is_charging"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_charger_type", "before": {"name": null, "aliases": [null]}, "after": {"name": "Laddartyp", "aliases": [null, "SM-T835 Charger type"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_charger_type"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_battery_health", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterihälsa", "aliases": [null, "SM-T835 Battery health"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_battery_health"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_battery_temperature", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batteritemperatur", "aliases": [null, "SM-T835 Battery temperature"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_battery_temperature"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_battery_power", "before": {"name": null, "aliases": [null]}, "after": {"name": "Batterieffekt", "aliases": [null, "SM-T835 Battery power"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_battery_power"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_bluetooth_connection", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bluetooth-anslutning", "aliases": [null, "SM-T835 Bluetooth connection"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_bluetooth_connection"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_t835_bluetooth_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bluetooth-status", "aliases": [null, "SM-T835 Bluetooth state"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_t835_bluetooth_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_ble_transmitter", "before": {"name": null, "aliases": [null]}, "after": {"name": "BLE-sändare", "aliases": [null, "SM-T835 BLE transmitter"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_ble_transmitter"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_beacon_monitor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Övervakning av Bluetooth-sändare", "aliases": [null, "SM-T835 Beacon monitor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_beacon_monitor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_car_battery", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens batterinivå", "aliases": [null, "SM-T835 Car battery"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_car_battery"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_car_name", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens namn", "aliases": [null, "SM-T835 Car name"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_car_name"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_car_charging_status", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens laddningsstatus", "aliases": [null, "SM-T835 Car charging status"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_car_charging_status"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_car_ev_connector_type", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens laddkontakt", "aliases": [null, "SM-T835 Car EV connector type"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_car_ev_connector_type"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_car_fuel", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens bränslenivå", "aliases": [null, "SM-T835 Car fuel"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_car_fuel"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_car_fuel_type", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens bränsletyp", "aliases": [null, "SM-T835 Car fuel type"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_car_fuel_type"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_car_odometer", "before": {"name": null, "aliases": [null]}, "after": {"name": "Bilens vägmätare", "aliases": [null, "SM-T835 Car odometer"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_car_odometer"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_screen_brightness", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmljusstyrka", "aliases": [null, "SM-T835 Screen brightness"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_screen_brightness"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_screen_off_timeout", "before": {"name": null, "aliases": [null]}, "after": {"name": "Tid till skärmavstängning", "aliases": [null, "SM-T835 Screen off timeout"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_screen_off_timeout"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_do_not_disturb_sensor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Stör ej-läge", "aliases": [null, "SM-T835 Do Not Disturb sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_do_not_disturb_sensor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_t835_work_profile", "before": {"name": null, "aliases": [null]}, "after": {"name": "Arbetsprofil", "aliases": [null, "SM-T835 Work profile"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_t835_work_profile"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_geocoded_location", "before": {"name": null, "aliases": [null]}, "after": {"name": "Platsadress", "aliases": [null, "SM-T835 Geocoded location"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_geocoded_location"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_t835_device_locked", "before": {"name": null, "aliases": [null]}, "after": {"name": "Enheten låst", "aliases": [null, "SM-T835 Device locked"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_t835_device_locked"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_t835_device_secure", "before": {"name": null, "aliases": [null]}, "after": {"name": "Enheten skyddad", "aliases": [null, "SM-T835 Device secure"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_t835_device_secure"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_t835_keyguard_locked", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmlåset låst", "aliases": [null, "SM-T835 Keyguard locked"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_t835_keyguard_locked"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_t835_keyguard_secure", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmlåset skyddat", "aliases": [null, "SM-T835 Keyguard secure"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_t835_keyguard_secure"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_last_used_app", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senast använda app", "aliases": [null, "SM-T835 Last used app"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_last_used_app"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_last_reboot", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senaste omstart", "aliases": [null, "SM-T835 Last reboot"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_last_reboot"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_last_update_trigger", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senaste uppdateringsorsak", "aliases": [null, "SM-T835 Last update trigger"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_last_update_trigger"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_light_sensor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Belysningsstyrka", "aliases": [null, "SM-T835 Light sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_light_sensor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_t835_high_accuracy_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Platsläge med hög precision", "aliases": [null, "SM-T835 High accuracy mode"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_t835_high_accuracy_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_high_accuracy_update_interval", "before": {"name": null, "aliases": [null]}, "after": {"name": "Uppdateringsintervall för hög precision", "aliases": [null, "SM-T835 High accuracy update interval"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_high_accuracy_update_interval"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_t835_mobile_data", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mobildata", "aliases": [null, "SM-T835 Mobile data"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_t835_mobile_data"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_t835_mobile_data_roaming", "before": {"name": null, "aliases": [null]}, "after": {"name": "Dataroaming", "aliases": [null, "SM-T835 Mobile data roaming"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_t835_mobile_data_roaming"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_wifi_connection", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-anslutning", "aliases": [null, "SM-T835 Wi-Fi connection"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_wifi_connection"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_wifi_ip_address", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi IP-adress", "aliases": [null, "SM-T835 Wi-Fi IP address"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_wifi_ip_address"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_wifi_link_speed", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-länkhastighet", "aliases": [null, "SM-T835 Wi-Fi link speed"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_wifi_link_speed"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_t835_wifi_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-status", "aliases": [null, "SM-T835 Wi-Fi state"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_t835_wifi_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_wifi_frequency", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-frekvens", "aliases": [null, "SM-T835 Wi-Fi frequency"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_wifi_frequency"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_wifi_signal_strength", "before": {"name": null, "aliases": [null]}, "after": {"name": "Wi-Fi-signalstyrka", "aliases": [null, "SM-T835 Wi-Fi signal strength"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_wifi_signal_strength"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_public_ip_address", "before": {"name": null, "aliases": [null]}, "after": {"name": "Publik IP-adress", "aliases": [null, "SM-T835 Public IP address"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_public_ip_address"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_t835_hotspot_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "Internetdelningsstatus", "aliases": [null, "SM-T835 Hotspot state"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_t835_hotspot_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_network_type", "before": {"name": null, "aliases": [null]}, "after": {"name": "Nätverkstyp", "aliases": [null, "SM-T835 Network type"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_network_type"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_next_alarm", "before": {"name": null, "aliases": [null]}, "after": {"name": "Nästa alarm", "aliases": [null, "SM-T835 Next alarm"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_next_alarm"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_last_notification", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senaste avisering", "aliases": [null, "SM-T835 Last notification"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_last_notification"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_last_removed_notification", "before": {"name": null, "aliases": [null]}, "after": {"name": "Senast borttagna avisering", "aliases": [null, "SM-T835 Last removed notification"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_last_removed_notification"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_active_notification_count", "before": {"name": null, "aliases": [null]}, "after": {"name": "Antal aktiva aviseringar", "aliases": [null, "SM-T835 Active notification count"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_active_notification_count"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_media_session", "before": {"name": null, "aliases": [null]}, "after": {"name": "Mediasession", "aliases": [null, "SM-T835 Media session"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_media_session"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_phone_state", "before": {"name": null, "aliases": [null]}, "after": {"name": "Telefonstatus", "aliases": [null, "SM-T835 Phone state"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_phone_state"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_t835_interactive", "before": {"name": null, "aliases": [null]}, "after": {"name": "Skärmen interaktiv", "aliases": [null, "SM-T835 Interactive"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_t835_interactive"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_t835_doze_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Viloläge", "aliases": [null, "SM-T835 Doze mode"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_t835_doze_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.sm_t835_power_save", "before": {"name": null, "aliases": [null]}, "after": {"name": "Energisparläge", "aliases": [null, "SM-T835 Power save"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.sm_t835_power_save"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_proximity_sensor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Närhetssensor", "aliases": [null, "SM-T835 Proximity sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_proximity_sensor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_steps_sensor", "before": {"name": null, "aliases": [null]}, "after": {"name": "Steg", "aliases": [null, "SM-T835 Steps sensor"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_steps_sensor"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_internal_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Intern lagring", "aliases": [null, "SM-T835 Internal storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_internal_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_external_storage", "before": {"name": null, "aliases": [null]}, "after": {"name": "Extern lagring", "aliases": [null, "SM-T835 External storage"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_external_storage"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_current_time_zone", "before": {"name": null, "aliases": [null]}, "after": {"name": "Aktuell tidszon", "aliases": [null, "SM-T835 Current time zone"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_current_time_zone"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_total_rx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Totalt mottagna data", "aliases": [null, "SM-T835 Total Rx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_total_rx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.sm_t835_total_tx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Totalt skickade data", "aliases": [null, "SM-T835 Total Tx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.sm_t835_total_tx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nspanelpro_os_version", "before": {"name": null, "aliases": [null]}, "after": {"name": "Operativsystemsversion", "aliases": [null, "nspanelpro OS version"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nspanelpro_os_version"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nspanelpro_security_patch", "before": {"name": null, "aliases": [null]}, "after": {"name": "Säkerhetsuppdatering", "aliases": [null, "nspanelpro Security patch"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nspanelpro_security_patch"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nspanelpro_current_version", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appversion", "aliases": [null, "nspanelpro Current version"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nspanelpro_current_version"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nspanelpro_app_rx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens mottagna data", "aliases": [null, "nspanelpro App Rx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nspanelpro_app_rx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nspanelpro_app_tx_gb", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens skickade data", "aliases": [null, "nspanelpro App Tx GB"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nspanelpro_app_tx_gb"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nspanelpro_app_memory", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens minnesanvändning", "aliases": [null, "nspanelpro App memory"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nspanelpro_app_memory"}
+{"status": "intent", "operation": {"kind": "entity", "id": "binary_sensor.nspanelpro_app_inactive", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appen inaktiv", "aliases": [null, "nspanelpro App inactive"]}}}
+{"status": "applied", "kind": "entity", "id": "binary_sensor.nspanelpro_app_inactive"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nspanelpro_app_importance", "before": {"name": null, "aliases": [null]}, "after": {"name": "Appens prioritet", "aliases": [null, "nspanelpro App importance"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nspanelpro_app_importance"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nspanelpro_ringer_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ringsignalläge", "aliases": [null, "nspanelpro Ringer mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nspanelpro_ringer_mode"}
+{"status": "intent", "operation": {"kind": "entity", "id": "sensor.nspanelpro_audio_mode", "before": {"name": null, "aliases": [null]}, "after": {"name": "Ljudläge", "aliases": [null, "nspanelpro Audio mode"]}}}
+{"status": "applied", "kind": "entity", "id": "sensor.nspanelpro_audio_mode"}

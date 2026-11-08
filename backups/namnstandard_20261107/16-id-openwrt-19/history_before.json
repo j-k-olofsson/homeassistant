@@ -1,0 +1,782 @@
+{
+  "button.80_c5_f2_3e_08_43_disconnect_device": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.ec_62_60_89_ed_bc_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.pixel_9_pro_xl_home_arpa_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:20.833228+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-07T15:27:39.855044+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.530141+00:00"
+    }
+  ],
+  "button.carolas_s25_disconnect_device": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.koket_b0_4a_39_24_a4_cb_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.entren_78_9c_85_2a_70_af_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-07T15:21:28.623070+00:00"
+    }
+  ],
+  "button.honshuset_c4_4f_33_72_73_e1_disconnect_device": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.ateljen_vattensensor_torkskap_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.80_c5_f2_67_aa_69_disconnect_device_4": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.530218+00:00"
+    }
+  ],
+  "button.54_60_09_d6_4f_22_disconnect_device": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.koket_2c_bc_bb_c1_87_2c_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.6c_47_60_1a_87_36_disconnect_device": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.48_26_4c_9a_d6_4c_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.6c_47_60_0b_55_77_disconnect_device_3": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.20_f8_3b_09_64_60_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.00_f4_8d_97_d9_b5_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.koket_b0_4a_39_24_a4_cb_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.54_60_09_e8_fc_56_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.galaxy_s9_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.verandan_vaggkontakt_x2_verandan_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.verandan_golvvarme_verandan_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.entren_golvvarme_entren_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.ateljen_golvvarme_ateljen_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.koket_golvvarme_koket_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.duschen_golvvarme_duschen_disconnect_device": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-07T10:54:34.610573+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.530307+00:00"
+    }
+  ],
+  "button.verandan_blomlampa_1_verandan_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.koket_blomlampa_2_verandan_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.utomhus_f0_08_d1_f2_b8_08_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.bion_dc_06_75_9d_65_c0_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.ha_servern_7c_9e_bd_06_e7_bc_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.ha_servern_7c_9e_bd_47_e2_88_disconnect_device": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.ha_servern_7c_9e_bd_46_f5_80_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.ha_servern_7c_9e_bd_06_c3_b4_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.duschen_48_e7_29_67_de_7f_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.entren_08_f9_e0_46_ed_b4_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.2c_fd_b3_12_5c_49_disconnect_device": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.diegotab_disconnect_device_3": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-07T13:25:20.833420+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-07T19:41:49.887316+00:00"
+    }
+  ],
+  "button.94_27_70_89_d1_ad_disconnect_device_4": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.d8_eb_46_81_a7_f3_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.d8_eb_46_96_63_e4_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.sovrummet_sanglampor_manni_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.sovrummet_sanglampor_diego_disconnect_device": [
+    {
+      "state": "2026-08-21T08:33:34.145438+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.kontoret_c8_2b_96_5c_71_55_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.sovrummet_a4_cf_12_d8_77_59_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.kontoret_40_22_d8_61_53_f8_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.ha_servern_c4_4f_33_7a_51_d5_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.ha_servern_c4_4f_33_7a_51_11_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.utomhus_08_b6_1f_34_55_50_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.kontoret_taklampor_kontoret_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.sovrummet_34_94_54_70_7c_a2_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.kontoret_a4_cf_12_d8_0a_dd_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.8c_f5_a3_7f_d3_b4_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.friggan_c8_2b_96_07_7d_6e_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.friggan_98_f4_ab_e2_71_12_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.friggan_c8_2b_96_e6_99_4f_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.verkstaden_08_3a_8d_c3_44_dd_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.utomhus_billaddare_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.verkstaden_08_b6_1f_38_0b_64_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.kontoret_80_64_6f_91_e9_d5_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.ateljen_taklampor_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.bion_94_b9_7e_16_d2_02_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.gamla_verkstaden_08_b6_1f_38_26_78_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.bion_88_12_ac_7f_8c_0d_disconnect_device": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.bion_golvvarme_bion_disconnect_device": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.utomhus_c4_4f_33_7a_2e_79_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.bion_hemmabio_el_1_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.bion_40_22_d8_76_6f_70_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.utomhus_24_62_ab_57_80_ad_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.ha_servern_c4_4f_33_7a_51_6d_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.bion_ventilflakt_bion_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.cc_ba_bd_a5_eb_19_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.28_39_26_d3_14_5f_disconnect_device_2": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.utomhus_elmatare_elstolpen_disconnect_device": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.poolen_24_a1_60_10_5f_96_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.poolen_24_a1_60_10_eb_a9_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.poolen_c8_2b_96_07_35_26_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.80_c5_f2_67_aa_69_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    },
+    {
+      "state": "unknown",
+      "last_changed": "2026-11-08T00:01:05.661984+00:00"
+    }
+  ],
+  "button.galaxy_a36_5g_disconnect_device_3": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.utomhus_ljussensor_disconnect_device": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.d8_eb_46_96_63_e4_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.24_62_ab_57_80_ad_disconnect_device": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.ha_servern_c4_4f_33_7a_51_6d_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.koket_2c_bc_bb_c1_87_2c_disconnect_device_3": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.ateljen_taklampor_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.00_f4_8d_97_d9_b5_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.6c_47_60_1a_87_36_disconnect_device_3": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.6c_47_60_0b_55_77_disconnect_device_6": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.verkstaden_shelly_pro_3_verkstaden_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.6c_47_60_0b_55_77_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "device_tracker.diego_lenovo_e31_70_diego_lenovo_e31_70": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "button.28_39_26_d3_14_5f_disconnect_device": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    }
+  ],
+  "device_tracker.dc_62_79_8c_a5_37_dc_62_79_8c_a5_37": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:38.974623+00:00",
+      "last_updated": "2026-11-07T07:43:38.974623+00:00"
+    },
+    {
+      "state": "home",
+      "last_changed": "2026-11-07T13:25:14.895811+00:00"
+    }
+  ]
+}

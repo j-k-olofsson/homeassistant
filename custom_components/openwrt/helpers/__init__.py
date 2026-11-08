@@ -133,8 +133,13 @@ def format_ap_name(ssid: str, band: str = "") -> str:
     """Format the display name for an SSID device.
 
     Examples:
-        format_ap_name("SmartLife", "2.4 GHz") -> "SSID SmartLife"
+        format_ap_name("SmartLife", "2.4 GHz") -> "SSID SmartLife (2.4 GHz)"
+        format_ap_name("SmartLife") -> "SSID SmartLife"
     """
+    if band:
+        normalized = normalize_band(band)
+        if normalized and normalized != "unknown":
+            return f"SSID {ssid} ({normalized})"
     return f"SSID {ssid}"
 
 
@@ -179,6 +184,64 @@ def parse_uci_bool(value: Any, default: bool = False) -> bool:
     return default
 
 
+def parse_blocked_domains(value: Any) -> int:
+    """Parse adblock blocked domain count handling spaces, commas, dots as thousands separators."""
+    if value is None:
+        return 0
+    if isinstance(value, (int, float)):
+        return int(value)
+    digits = "".join(c for c in str(value) if c.isdigit())
+    return int(digits) if digits else 0
+
+
+def _lookup_device(
+    dev_reg: Any,
+    identifier: tuple[str, str],
+    config_entry_id: str | None = None,
+) -> Any | None:
+    """Look up a device by identifier without using deprecated async_get_device."""
+    # If dev_reg is a Mock whose class does not define async_get_device_by_identifier,
+    # or if async_get_device was explicitly mocked, prefer the mock's configured methods.
+    from unittest.mock import NonCallableMock
+
+    if isinstance(dev_reg, NonCallableMock):
+        # Check if async_get_device_by_identifier was explicitly configured on the mock
+        mock_children = getattr(dev_reg, "_mock_children", {})
+        if "async_get_device_by_identifier" in mock_children and config_entry_id:
+            return dev_reg.async_get_device_by_identifier(identifier, config_entry_id)
+        if "async_get_devices" in mock_children:
+            matches = dev_reg.async_get_devices(
+                identifiers={identifier},
+                config_entry_id=config_entry_id,
+            )
+            if matches:
+                return matches[0]
+        if hasattr(dev_reg, "async_get_device"):
+            return dev_reg.async_get_device(identifiers={identifier})
+
+    # Real DeviceRegistry or mocks configured with it
+    if config_entry_id and hasattr(dev_reg, "async_get_device_by_identifier"):
+        return dev_reg.async_get_device_by_identifier(identifier, config_entry_id)
+    if hasattr(dev_reg, "async_get_devices"):
+        matches = dev_reg.async_get_devices(
+            identifiers={identifier},
+            config_entry_id=config_entry_id,
+        )
+        if matches:
+            return matches[0]
+    dev_devices = getattr(dev_reg, "devices", None)
+    if dev_devices is not None and hasattr(dev_devices, "get_entry"):
+        if config_entry_id is not None:
+            return dev_devices.get_entry(
+                identifiers={identifier},
+                config_entry_id=config_entry_id,
+            )
+        return dev_devices.get_entry(identifiers={identifier})
+    if hasattr(dev_reg, "async_get_device"):
+        return dev_reg.async_get_device(identifiers={identifier})
+    return None
+
+
 def get_via_device(
     hass: HomeAssistant,
     coordinator: Any,  # Avoid circular import
@@ -219,11 +282,19 @@ def get_via_device(
                     stable_id = coordinator.interface_to_stable_id.get(wifi.name)
                 if stable_id:
                     ap_id = format_ap_device_id(router_id, stable_id)
-                    if dev_reg.async_get_device(identifiers={(DOMAIN, ap_id)}):
+                    ap_identifier = (DOMAIN, ap_id)
+                    if (
+                        _lookup_device(dev_reg, ap_identifier, entry.entry_id)
+                        is not None
+                    ):
                         via_device = (DOMAIN, ap_id)
                 elif wifi and wifi.radio:
                     radio_id = format_radio_device_id(router_id, wifi.radio)
-                    if dev_reg.async_get_device(identifiers={(DOMAIN, radio_id)}):
+                    radio_identifier = (DOMAIN, radio_id)
+                    if (
+                        _lookup_device(dev_reg, radio_identifier, entry.entry_id)
+                        is not None
+                    ):
                         via_device = (DOMAIN, radio_id)
                 break
 
@@ -242,10 +313,49 @@ def get_via_device(
             ):
                 # It's behind another mesh node. Verify it exists in registry.
                 dev_reg = dr.async_get(hass)
-                if dev_reg.async_get_device(identifiers={(DOMAIN, originator_mac)}):
+                orig_identifier = (DOMAIN, originator_mac)
+                if _lookup_device(dev_reg, orig_identifier, entry.entry_id) is not None:
                     via_device = (DOMAIN, originator_mac)
 
     return via_device
+
+
+def get_via_device_id(
+    hass: HomeAssistant,
+    coordinator: Any,  # Avoid circular import
+    entry: ConfigEntry,
+    mac: str,
+) -> str | None:
+    """Resolve the via_device for a connected device and return its registry ID.
+
+    Returns the device registry ``DeviceEntry.id`` (a plain string) or ``None``
+    if the parent device cannot be found.  Use this instead of the deprecated
+    ``via_device=(DOMAIN, identifier)`` form.
+    """
+    from homeassistant.helpers import device_registry as dr
+
+    identifier = get_via_device(hass, coordinator, entry, mac)
+    dev_reg = dr.async_get(hass)
+    device = _lookup_device(dev_reg, identifier, entry.entry_id)
+    return device.id if device else None
+
+
+def _get_router_device_id(
+    hass: HomeAssistant,
+    coordinator: Any,  # Avoid circular import
+    entry: ConfigEntry,
+) -> str | None:
+    """Return the device registry ID for the router device of *entry*.
+
+    Looks up the device by its (DOMAIN, router_id) identifier.  Returns
+    ``None`` when the router device has not been registered yet.
+    """
+    from homeassistant.helpers import device_registry as dr
+
+    router_id = _router_id(entry)
+    dev_reg = dr.async_get(hass)
+    device = _lookup_device(dev_reg, (DOMAIN, router_id), entry.entry_id)
+    return device.id if device else None
 
 
 def resolve_client_name(

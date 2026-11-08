@@ -1,0 +1,198 @@
+{
+  "button.14_5d_34_95_70_d1_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.0c_b8_15_22_91_d4_disconnect_device": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.6c_47_60_1a_87_36_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "device_tracker.00_e0_4c_13_94_de_00_e0_4c_13_94_de": [
+    {
+      "state": "not_home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.14_5d_34_95_70_d1_disconnect_device": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.2c_fd_b3_12_5c_49_disconnect_device_3": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "device_tracker.3c_61_05_fe_29_08_3c_61_05_fe_29_08": [
+    {
+      "state": "home",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "switch.sovrummet_openwrt_one_router_sovrum_port_forward_tapo_local_ntp": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.8c_f5_a3_7f_d3_b4_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.80_c5_f2_67_aa_69_disconnect_device_3": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.94_27_70_89_d1_ad_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.kontoret_a4_cf_12_d8_0a_dd_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.30_c9_22_86_74_68_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.duschen_48_e7_29_67_de_7f_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.entren_08_f9_e0_46_ed_b4_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.00_f4_8d_97_d9_b5_disconnect_device_3": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.koket_b0_4a_39_24_a4_cb_disconnect_device_3": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.ha_servern_7c_9e_bd_47_e2_88_disconnect_device_2": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.a0_dd_6c_29_b1_34_disconnect_device": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.a0_dd_6c_2b_31_4c_disconnect_device_2": [
+    {
+      "state": "unavailable",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.54_60_09_d6_4f_22_disconnect_device_2": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.6c_47_60_0b_55_77_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.80_64_6f_e3_be_f0_disconnect_device_2": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    }
+  ],
+  "button.entren_78_9c_85_2a_70_af_disconnect_device": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:43:45.490565+00:00",
+      "last_updated": "2026-11-07T07:43:45.490565+00:00"
+    },
+    {
+      "state": "unavailable",
+      "last_changed": "2026-11-08T07:03:42.530991+00:00"
+    }
+  ]
+}

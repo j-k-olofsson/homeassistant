@@ -1,0 +1,6 @@
+# Shared OTA for Wi-Fi and Thread devices.
+# Inherit the encryption key from api.encryption in the base package.
+# Requires ESPHome 2026.9.0+; see ../README.md for older device firmware.
+ota:
+  - platform: esphome
+    encryption:

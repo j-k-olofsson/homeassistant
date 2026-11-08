@@ -1,0 +1,65 @@
+{
+  "result": "ok",
+  "data": {
+    "name": "backup_manager_partial_backup",
+    "reference": "d59ec955",
+    "uuid": "e99db4ce17bd498d80e50024fbb2eec0",
+    "progress": 100,
+    "stage": "finishing_file",
+    "done": true,
+    "errors": [],
+    "created": "2026-11-07T17:55:42.209123+00:00",
+    "extra": null,
+    "child_jobs": [
+      {
+        "name": "backup_store_homeassistant",
+        "reference": "d59ec955",
+        "uuid": "47e886305d5649ed9649cbeaf209a658",
+        "progress": 100,
+        "stage": null,
+        "done": true,
+        "errors": [],
+        "created": "2026-11-07T17:55:42.213744+00:00",
+        "extra": null,
+        "child_jobs": []
+      },
+      {
+        "name": "backup_store_apps",
+        "reference": "d59ec955",
+        "uuid": "cb61ffa6a63a491db3159a0e458662da",
+        "progress": 100,
+        "stage": null,
+        "done": true,
+        "errors": [],
+        "created": "2026-11-07T17:57:46.365074+00:00",
+        "extra": null,
+        "child_jobs": [
+          {
+            "name": "backup_app_save",
+            "reference": "core_mariadb",
+            "uuid": "eee64b6dab9844d5b17eae89a982c818",
+            "progress": 100,
+            "stage": null,
+            "done": true,
+            "errors": [],
+            "created": "2026-11-07T17:57:46.365160+00:00",
+            "extra": null,
+            "child_jobs": []
+          }
+        ]
+      },
+      {
+        "name": "backup_store_supervisor_config",
+        "reference": "d59ec955",
+        "uuid": "118d423e599845c0877212b9447e8476",
+        "progress": 100,
+        "stage": null,
+        "done": true,
+        "errors": [],
+        "created": "2026-11-07T17:57:58.843554+00:00",
+        "extra": null,
+        "child_jobs": []
+      }
+    ]
+  }
+}

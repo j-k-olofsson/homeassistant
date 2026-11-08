@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "minor_version": 1,
+  "key": "person",
+  "data": {
+    "items": [
+      {
+        "name": "Diego",
+        "user_id": "1e38893527ee4e1b9e5081503f031176",
+        "device_trackers": [],
+        "id": "diego",
+        "picture": "/api/image/serve/8e6a22f00d60c3b5553693e5e59e3d5d/512x512"
+      },
+      {
+        "name": "Kenneth",
+        "device_trackers": [
+          "device_tracker.heimdal_ha_pixel_9_pro_xl",
+          "device_tracker.heimdal_ha_garmin_device"
+        ],
+        "user_id": "29b553be96084edfb7a9484fd8467ad6",
+        "picture": "/api/image/serve/b9592aa8504d616d2a3dcd06566961a6/512x512",
+        "id": "kenneth"
+      },
+      {
+        "name": "Carola",
+        "device_trackers": [
+          "device_tracker.heimdal_ha_sm_g986b",
+          "device_tracker.sm_s936b"
+        ],
+        "user_id": "31929f46f3c34feabe9c0f73baefcd30",
+        "picture": null,
+        "id": "carola"
+      },
+      {
+        "id": "buck",
+        "name": "Buck",
+        "device_trackers": [
+          "device_tracker.nothing_mobil"
+        ],
+        "user_id": "7a2eb82593f34528bd69a04f5b005397",
+        "picture": null
+      }
+    ]
+  }
+}

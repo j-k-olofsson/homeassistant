@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "smartthings",
+  "data": {
+    "instance_id": "bb874e81-138c-478b-acd6-e5a075b192a7",
+    "webhook_id": "640fe7d678ac8d187b587988f255919d53a59eb129bb80afe8b9d7eb3b2081e2",
+    "cloudhook_url": "https://hooks.nabu.casa/gAAAAABnugAd-t4fyIbrELpEsSip6RPtNSdL4KRNyh8i0gm5z0AUWg-5Rw_WxCyfNhailqkNJVxS7scQn2Dw39JbpnHLBRIbkEARH8psjbMICoRsc3C0pkmbOLvgvCnLwnSXJfNZolkmM7ZTn1kCMW1BlGOcEkErDDsZWwQpOmeXtNE_sv3kHlk="
+  }
+}

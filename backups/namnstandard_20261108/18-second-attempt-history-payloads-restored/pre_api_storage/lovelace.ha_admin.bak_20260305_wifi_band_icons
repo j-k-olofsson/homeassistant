@@ -1,0 +1,1586 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.ha_admin",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "title": "Admin",
+          "path": "admin",
+          "type": "sections",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Tider"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.lights_on",
+                  "name": "Lampor tänds",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.lights_off",
+                  "name": "Lampor släcks",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.growlights_on",
+                  "name": "Växtlampor tänds",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.growlights_late_on",
+                  "name": "Växtlampor senare tändning",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.growlights_off",
+                  "name": "Växtlampor släcks",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.oppna_honsluckan",
+                  "name": "Hönsluckan öppnas",
+                  "vertical": true
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Manuella tillstånd"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_boolean.tillstand_hydrofoniprylar",
+                  "name": "Hydrofoniprylar",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_boolean.pool_equipment",
+                  "name": "Poolprylar",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_boolean.winter_equipment",
+                  "name": "Vinterprylar",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_boolean.guest_mode",
+                  "vertical": true
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "icon": "mdi:devices",
+                  "heading_style": "title",
+                  "heading": "ESPHome"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_button.uppgradera_esphome_enheter",
+                  "vertical": true,
+                  "layout_options": {
+                    "grid_columns": 4,
+                    "grid_rows": 2
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Automatiska tillstånd"
+                },
+                {
+                  "features": [
+                    {
+                      "type": "select-options"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "input_select.light_scene",
+                  "vertical": true,
+                  "hide_state": true,
+                  "name": "Lampornas scen",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 3
+                  }
+                },
+                {
+                  "features": [
+                    {
+                      "type": "select-options"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "input_select.sun_phase",
+                  "vertical": true,
+                  "hide_state": true,
+                  "name": "Solens dygnsfas",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 3
+                  }
+                },
+                {
+                  "features": [
+                    {
+                      "type": "select-options"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "input_select.growlight_scene",
+                  "vertical": true,
+                  "hide_state": true,
+                  "name": "Växtlampors scen",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 3
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Batterier"
+                },
+                {
+                  "type": "custom:battery-state-card",
+                  "secondary_info": "{attributes.battery_type_and_quantity}",
+                  "round": 0,
+                  "filter": {
+                    "include": [
+                      {
+                        "name": "entity_id",
+                        "value": "*_battery_plus"
+                      }
+                    ]
+                  },
+                  "bulk_rename": [
+                    {
+                      "from": "Batteri+"
+                    }
+                  ],
+                  "sort": [
+                    "state"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Luftfuktighet",
+                  "heading_style": "title",
+                  "icon": "mdi:cloud-percent-outline"
+                }
+              ]
+            }
+          ],
+          "cards": [],
+          "max_columns": 4,
+          "icon": "mdi:state-machine"
+        },
+        {
+          "title": "Server",
+          "path": "system",
+          "type": "sections",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "icon": "mdi:home-percent-outline",
+                  "heading": "Belastning",
+                  "heading_style": "subtitle"
+                },
+                {
+                  "type": "gauge",
+                  "entity": "sensor.processor_use",
+                  "name": "CPU",
+                  "min": 0,
+                  "max": 100,
+                  "needle": true,
+                  "severity": {
+                    "green": 0,
+                    "yellow": 75,
+                    "red": 90
+                  },
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 3
+                  }
+                },
+                {
+                  "type": "gauge",
+                  "name": "Minne",
+                  "min": 0,
+                  "max": 100,
+                  "needle": true,
+                  "severity": {
+                    "green": 0,
+                    "yellow": 75,
+                    "red": 90
+                  },
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 3
+                  },
+                  "entity": "sensor.memory_use_percent"
+                },
+                {
+                  "type": "gauge",
+                  "name": "Disk",
+                  "min": 0,
+                  "max": 100,
+                  "needle": true,
+                  "severity": {
+                    "green": 0,
+                    "yellow": 75,
+                    "red": 90
+                  },
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 3
+                  },
+                  "entity": "sensor.system_monitor_disk_use_percent"
+                },
+                {
+                  "type": "gauge",
+                  "name": "Swap",
+                  "min": 0,
+                  "max": 100,
+                  "needle": true,
+                  "severity": {
+                    "green": 0,
+                    "yellow": 75,
+                    "red": 90
+                  },
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 3
+                  },
+                  "entity": "sensor.swap_use_percent"
+                },
+                {
+                  "type": "heading",
+                  "icon": "mdi:fridge",
+                  "heading": "Info",
+                  "heading_style": "subtitle"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.disk_free",
+                  "name": "Fri disk",
+                  "icon": "mdi:harddisk",
+                  "vertical": false
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.processor_temperature",
+                  "name": "CPU Temp"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.last_boot",
+                  "name": "OS reboot"
+                }
+              ],
+              "column_span": 4
+            }
+          ],
+          "max_columns": 4,
+          "dense_section_placement": true,
+          "cards": [],
+          "icon": "mdi:server-network"
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "Hälsokontroll",
+          "path": "health2",
+          "icon": "mdi:medical-bag",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "tile",
+                  "entity": "sensor.ha_db_size_mb",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.ha_states_rows_24h",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.ha_antal_enheter",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.ha_antal_otillgangliga_enheter",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.ha_antal_otillgangliga_kritiska_enheter",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                }
+              ],
+              "column_span": 1
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "history-graph",
+                  "entities": [
+                    {
+                      "entity": "sensor.ha_db_size_mb"
+                    },
+                    {
+                      "entity": "sensor.ha_states_rows_24h"
+                    }
+                  ],
+                  "hours_to_show": 168
+                }
+              ],
+              "column_span": 1
+            }
+          ]
+        },
+        {
+          "title": "Energipris",
+          "path": "energipris",
+          "icon": "mdi:transmission-tower",
+          "type": "sections",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Avgifter och skatter",
+                  "heading_style": "title",
+                  "icon": "mdi:cash-multiple"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.nordpool_certificate_fee",
+                  "name": "Certifikatsavgift",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  },
+                  "show_entity_picture": false,
+                  "vertical": false,
+                  "hide_state": false
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.nordpool_energy_tax",
+                  "name": "Energiskatt",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.nordpool_energy_transfer_fee",
+                  "name": "Transferavgift",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.nordpool_spot_fee",
+                  "name": "Spot påslag",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.nordpool_trade_fee",
+                  "name": "Handelsavgift",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.nordpool_vat",
+                  "name": "Moms",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.nordpool_monthly_fee"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Priser just nu",
+                  "heading_style": "title",
+                  "icon": "mdi:cash-multiple"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.nordpool",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.template_nordpool_base_cost_current_hour",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.template_nordpool_additional_costs_current_hour",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Progonos (inkl. fasta avgifter) - baserat på kvartar",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "tile",
+                  "layout_options": {
+                    "grid_columns": 4,
+                    "grid_rows": 1
+                  },
+                  "entity": "sensor.kvartbaserad_elkostnadsprognos",
+                  "vertical": true,
+                  "features_position": "bottom"
+                }
+              ]
+            }
+          ],
+          "max_columns": 3,
+          "cards": []
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "WiFi",
+          "path": "wifi",
+          "header": {
+            "card": {
+              "type": "markdown",
+              "text_only": true,
+              "content": "### Accespunkter och Gateway - Totalt antal WIFI klienter: {{\n  states('sensor.all_wi_fi_clients') + \" st\"}}\n"
+            }
+          },
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "icon": "mdi:router-network-wireless",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "binary_sensor.openwrt_ap_koket",
+                      "color": "state"
+                    },
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.ap_koket_wi_fi_clients",
+                      "state_content": "state",
+                      "icon": "mdi:wifi"
+                    }
+                  ],
+                  "heading": "AP Köket"
+                },
+                {
+                  "type": "custom:flex-table-card",
+                  "entities": [
+                    "sensor.ap_koket_wi_fi_clients"
+                  ],
+                  "sort_by": "rssi_raw",
+                  "sort_desc": false,
+                  "columns": [
+                    {
+                      "name": "Name",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ const n=(x.hostname || '-'); const t=n + (x.band ? (' (' + x.band + ')') : ''); const badge=(x.band_short==='2G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#c9a227;color:#161616;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">2G<\\/span>' : (x.band_short==='5G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#2f8f66;color:#eaf7ef;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">5G<\\/span>' : (x.band_short==='6G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#4b63c6;color:#eef2ff;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">6G<\\/span>' : ''; const bg=(Number(x.rssi)<=-75) ? 'rgba(204,52,62,.36)' : ((Number(x.rssi)<=-67) ? 'rgba(149,113,34,.20)' : 'rgba(44,104,54,.18)'); return '<span title=\"'+t+'\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:'+bg+';\">'+badge+n+'<\\/span>'; })() : ''"
+                    },
+                    {
+                      "name": "IP",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((Number(x.rssi) <= -75) ? `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(204,52,62,.36);\">${x.ip || '-'}<\\/span>` : (Number(x.rssi) <= -67) ? `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(149,113,34,.20);\">${x.ip || '-'}<\\/span>` : `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(44,104,54,.18);\">${x.ip || '-'}<\\/span>`) : ''"
+                    },
+                    {
+                      "name": "RSSI",
+                      "attr_as_list": "clients",
+                      "sort_unmodified": true,
+                      "modify": "(x && typeof x === 'object') ? ((Number(x.rssi) <= -75) ? `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(204,52,62,.36);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>` : (Number(x.rssi) <= -67) ? `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(149,113,34,.20);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>` : `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(44,104,54,.18);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>`) : ''"
+                    },
+                    {
+                      "name": "",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? ((Number(x.rssi) <= -75) ? `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(204,52,62,.36);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>` : (Number(x.rssi) <= -67) ? `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(149,113,34,.20);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>` : `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(44,104,54,.18);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>`) : ''",
+                      "tap_action": {
+                        "action": "perform-action",
+                        "perform_action": "openwrt_wifi_clients.disconnect_client",
+                        "data": {
+                          "client_mac": "col[5]",
+                          "ap_ip": "col[6]",
+                          "reason": 5,
+                          "deauth": true,
+                          "ban_time": 30000
+                        },
+                        "confirmation": {
+                          "text": "Koppla från denna klient från AP?"
+                        }
+                      }
+                    },
+                    {
+                      "name": "rssi_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999",
+                      "hidden": true
+                    },
+                    {
+                      "name": "mac_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? x.mac : ''",
+                      "hidden": true
+                    },
+                    {
+                      "name": "ap_ip_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.ap_ip) ? x.ap_ip : ''",
+                      "hidden": true
+                    }
+                  ],
+                  "css": {
+                    "table+": "border-collapse: separate !important; border-spacing: 0 3px !important; width: 100% !important; table-layout: auto !important; padding: 0 !important;",
+                    "th+": "padding: 0 1px !important; margin: 0 !important; font-size: 11px !important; line-height: 22px !important; height: 22px !important;",
+                    "th:nth-child(1)+": "width: auto !important; text-align: left !important;",
+                    "th:nth-child(2)+": "width: 104px !important; text-align: right !important;",
+                    "th:nth-child(3)+": "width: 30px !important; text-align: right !important;",
+                    "th:nth-child(4)+": "width: 12px !important; text-align: center !important;",
+                    "tbody tr td+": "padding: 0 !important; margin: 0 !important; border: 0 !important; line-height: 18px !important; height: 18px !important; min-height: 18px !important; max-height: 18px !important; vertical-align: middle !important;",
+                    "tbody tr td:nth-child(1)+": "width: auto !important;",
+                    "tbody tr td:nth-child(2)+": "width: 104px !important; text-align: right !important; white-space: nowrap !important;",
+                    "tbody tr td:nth-child(3)+": "width: 30px !important; text-align: right !important; white-space: nowrap !important;",
+                    "tbody tr td:nth-child(4)+": "width: 12px !important; text-align: center !important;",
+                    "tbody tr+": "height: 18px !important;"
+                  }
+                }
+              ],
+              "column_span": 1
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "Router & AP Sovrummet",
+                  "icon": "mdi:router-network-wireless",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "binary_sensor.openwrt_gw_local_192_168_10_1",
+                      "icon": "",
+                      "color": "state"
+                    },
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.router_wi_fi_clients",
+                      "state_content": "state",
+                      "icon": "mdi:wifi",
+                      "color": "state"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:flex-table-card",
+                  "entities": [
+                    "sensor.router_wi_fi_clients"
+                  ],
+                  "sort_by": "rssi_raw",
+                  "sort_desc": false,
+                  "columns": [
+                    {
+                      "name": "Name",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ const n=(x.hostname || '-'); const t=n + (x.band ? (' (' + x.band + ')') : ''); const badge=(x.band_short==='2G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#c9a227;color:#161616;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">2G<\\/span>' : (x.band_short==='5G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#2f8f66;color:#eaf7ef;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">5G<\\/span>' : (x.band_short==='6G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#4b63c6;color:#eef2ff;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">6G<\\/span>' : ''; const bg=(Number(x.rssi)<=-75) ? 'rgba(204,52,62,.36)' : ((Number(x.rssi)<=-67) ? 'rgba(149,113,34,.20)' : 'rgba(44,104,54,.18)'); return '<span title=\"'+t+'\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:'+bg+';\">'+badge+n+'<\\/span>'; })() : ''"
+                    },
+                    {
+                      "name": "IP",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((Number(x.rssi) <= -75) ? `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(204,52,62,.36);\">${x.ip || '-'}<\\/span>` : (Number(x.rssi) <= -67) ? `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(149,113,34,.20);\">${x.ip || '-'}<\\/span>` : `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(44,104,54,.18);\">${x.ip || '-'}<\\/span>`) : ''"
+                    },
+                    {
+                      "name": "RSSI",
+                      "attr_as_list": "clients",
+                      "sort_unmodified": true,
+                      "modify": "(x && typeof x === 'object') ? ((Number(x.rssi) <= -75) ? `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(204,52,62,.36);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>` : (Number(x.rssi) <= -67) ? `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(149,113,34,.20);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>` : `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(44,104,54,.18);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>`) : ''"
+                    },
+                    {
+                      "name": "",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? ((Number(x.rssi) <= -75) ? `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(204,52,62,.36);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>` : (Number(x.rssi) <= -67) ? `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(149,113,34,.20);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>` : `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(44,104,54,.18);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>`) : ''",
+                      "tap_action": {
+                        "action": "perform-action",
+                        "perform_action": "openwrt_wifi_clients.disconnect_client",
+                        "data": {
+                          "client_mac": "col[5]",
+                          "ap_ip": "col[6]",
+                          "reason": 5,
+                          "deauth": true,
+                          "ban_time": 30000
+                        },
+                        "confirmation": {
+                          "text": "Koppla från denna klient från AP?"
+                        }
+                      }
+                    },
+                    {
+                      "name": "rssi_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999",
+                      "hidden": true
+                    },
+                    {
+                      "name": "mac_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? x.mac : ''",
+                      "hidden": true
+                    },
+                    {
+                      "name": "ap_ip_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.ap_ip) ? x.ap_ip : ''",
+                      "hidden": true
+                    }
+                  ],
+                  "css": {
+                    "table+": "border-collapse: separate !important; border-spacing: 0 3px !important; width: 100% !important; table-layout: auto !important; padding: 0 !important;",
+                    "th+": "padding: 0 1px !important; margin: 0 !important; font-size: 11px !important; line-height: 22px !important; height: 22px !important;",
+                    "th:nth-child(1)+": "width: auto !important; text-align: left !important;",
+                    "th:nth-child(2)+": "width: 104px !important; text-align: right !important;",
+                    "th:nth-child(3)+": "width: 30px !important; text-align: right !important;",
+                    "th:nth-child(4)+": "width: 12px !important; text-align: center !important;",
+                    "tbody tr td+": "padding: 0 !important; margin: 0 !important; border: 0 !important; line-height: 18px !important; height: 18px !important; min-height: 18px !important; max-height: 18px !important; vertical-align: middle !important;",
+                    "tbody tr td:nth-child(1)+": "width: auto !important;",
+                    "tbody tr td:nth-child(2)+": "width: 104px !important; text-align: right !important; white-space: nowrap !important;",
+                    "tbody tr td:nth-child(3)+": "width: 30px !important; text-align: right !important; white-space: nowrap !important;",
+                    "tbody tr td:nth-child(4)+": "width: 12px !important; text-align: center !important;",
+                    "tbody tr+": "height: 18px !important;"
+                  }
+                },
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "AP Kontoret",
+                  "icon": "mdi:router-network-wireless",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "binary_sensor.openwrt_ap_kontoret",
+                      "color": "state"
+                    },
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.ap_kontoret_wi_fi_clients",
+                      "state_content": "state",
+                      "icon": "mdi:wifi"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:flex-table-card",
+                  "entities": [
+                    "sensor.ap_kontoret_wi_fi_clients"
+                  ],
+                  "sort_by": "rssi_raw",
+                  "sort_desc": false,
+                  "columns": [
+                    {
+                      "name": "Name",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ const n=(x.hostname || '-'); const t=n + (x.band ? (' (' + x.band + ')') : ''); const badge=(x.band_short==='2G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#c9a227;color:#161616;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">2G<\\/span>' : (x.band_short==='5G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#2f8f66;color:#eaf7ef;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">5G<\\/span>' : (x.band_short==='6G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#4b63c6;color:#eef2ff;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">6G<\\/span>' : ''; const bg=(Number(x.rssi)<=-75) ? 'rgba(204,52,62,.36)' : ((Number(x.rssi)<=-67) ? 'rgba(149,113,34,.20)' : 'rgba(44,104,54,.18)'); return '<span title=\"'+t+'\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:'+bg+';\">'+badge+n+'<\\/span>'; })() : ''"
+                    },
+                    {
+                      "name": "IP",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((Number(x.rssi) <= -75) ? `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(204,52,62,.36);\">${x.ip || '-'}<\\/span>` : (Number(x.rssi) <= -67) ? `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(149,113,34,.20);\">${x.ip || '-'}<\\/span>` : `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(44,104,54,.18);\">${x.ip || '-'}<\\/span>`) : ''"
+                    },
+                    {
+                      "name": "RSSI",
+                      "attr_as_list": "clients",
+                      "sort_unmodified": true,
+                      "modify": "(x && typeof x === 'object') ? ((Number(x.rssi) <= -75) ? `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(204,52,62,.36);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>` : (Number(x.rssi) <= -67) ? `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(149,113,34,.20);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>` : `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(44,104,54,.18);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>`) : ''"
+                    },
+                    {
+                      "name": "",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? ((Number(x.rssi) <= -75) ? `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(204,52,62,.36);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>` : (Number(x.rssi) <= -67) ? `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(149,113,34,.20);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>` : `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(44,104,54,.18);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>`) : ''",
+                      "tap_action": {
+                        "action": "perform-action",
+                        "perform_action": "openwrt_wifi_clients.disconnect_client",
+                        "data": {
+                          "client_mac": "col[5]",
+                          "ap_ip": "col[6]",
+                          "reason": 5,
+                          "deauth": true,
+                          "ban_time": 30000
+                        },
+                        "confirmation": {
+                          "text": "Koppla från denna klient från AP?"
+                        }
+                      }
+                    },
+                    {
+                      "name": "rssi_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999",
+                      "hidden": true
+                    },
+                    {
+                      "name": "mac_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? x.mac : ''",
+                      "hidden": true
+                    },
+                    {
+                      "name": "ap_ip_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.ap_ip) ? x.ap_ip : ''",
+                      "hidden": true
+                    }
+                  ],
+                  "css": {
+                    "table+": "border-collapse: separate !important; border-spacing: 0 3px !important; width: 100% !important; table-layout: auto !important; padding: 0 !important;",
+                    "th+": "padding: 0 1px !important; margin: 0 !important; font-size: 11px !important; line-height: 22px !important; height: 22px !important;",
+                    "th:nth-child(1)+": "width: auto !important; text-align: left !important;",
+                    "th:nth-child(2)+": "width: 104px !important; text-align: right !important;",
+                    "th:nth-child(3)+": "width: 30px !important; text-align: right !important;",
+                    "th:nth-child(4)+": "width: 12px !important; text-align: center !important;",
+                    "tbody tr td+": "padding: 0 !important; margin: 0 !important; border: 0 !important; line-height: 18px !important; height: 18px !important; min-height: 18px !important; max-height: 18px !important; vertical-align: middle !important;",
+                    "tbody tr td:nth-child(1)+": "width: auto !important;",
+                    "tbody tr td:nth-child(2)+": "width: 104px !important; text-align: right !important; white-space: nowrap !important;",
+                    "tbody tr td:nth-child(3)+": "width: 30px !important; text-align: right !important; white-space: nowrap !important;",
+                    "tbody tr td:nth-child(4)+": "width: 12px !important; text-align: center !important;",
+                    "tbody tr+": "height: 18px !important;"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "AP Källaren",
+                  "icon": "mdi:router-network-wireless",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "binary_sensor.openwrt_ap_kallaren_192_168_10_6",
+                      "color": "state"
+                    },
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.ap_kallaren_wi_fi_clients",
+                      "state_content": "state",
+                      "color": "state",
+                      "icon": "mdi:wifi"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:flex-table-card",
+                  "entities": [
+                    "sensor.ap_kallaren_wi_fi_clients"
+                  ],
+                  "sort_by": "rssi_raw",
+                  "sort_desc": false,
+                  "columns": [
+                    {
+                      "name": "Name",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ const n=(x.hostname || '-'); const t=n + (x.band ? (' (' + x.band + ')') : ''); const badge=(x.band_short==='2G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#c9a227;color:#161616;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">2G<\\/span>' : (x.band_short==='5G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#2f8f66;color:#eaf7ef;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">5G<\\/span>' : (x.band_short==='6G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#4b63c6;color:#eef2ff;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">6G<\\/span>' : ''; const bg=(Number(x.rssi)<=-75) ? 'rgba(204,52,62,.36)' : ((Number(x.rssi)<=-67) ? 'rgba(149,113,34,.20)' : 'rgba(44,104,54,.18)'); return '<span title=\"'+t+'\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:'+bg+';\">'+badge+n+'<\\/span>'; })() : ''"
+                    },
+                    {
+                      "name": "IP",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((Number(x.rssi) <= -75) ? `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(204,52,62,.36);\">${x.ip || '-'}<\\/span>` : (Number(x.rssi) <= -67) ? `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(149,113,34,.20);\">${x.ip || '-'}<\\/span>` : `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(44,104,54,.18);\">${x.ip || '-'}<\\/span>`) : ''"
+                    },
+                    {
+                      "name": "RSSI",
+                      "attr_as_list": "clients",
+                      "sort_unmodified": true,
+                      "modify": "(x && typeof x === 'object') ? ((Number(x.rssi) <= -75) ? `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(204,52,62,.36);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>` : (Number(x.rssi) <= -67) ? `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(149,113,34,.20);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>` : `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(44,104,54,.18);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>`) : ''"
+                    },
+                    {
+                      "name": "",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? ((Number(x.rssi) <= -75) ? `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(204,52,62,.36);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>` : (Number(x.rssi) <= -67) ? `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(149,113,34,.20);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>` : `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(44,104,54,.18);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>`) : ''",
+                      "tap_action": {
+                        "action": "perform-action",
+                        "perform_action": "openwrt_wifi_clients.disconnect_client",
+                        "data": {
+                          "client_mac": "col[5]",
+                          "ap_ip": "col[6]",
+                          "reason": 5,
+                          "deauth": true,
+                          "ban_time": 30000
+                        },
+                        "confirmation": {
+                          "text": "Koppla från denna klient från AP?"
+                        }
+                      }
+                    },
+                    {
+                      "name": "rssi_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999",
+                      "hidden": true
+                    },
+                    {
+                      "name": "mac_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? x.mac : ''",
+                      "hidden": true
+                    },
+                    {
+                      "name": "ap_ip_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.ap_ip) ? x.ap_ip : ''",
+                      "hidden": true
+                    }
+                  ],
+                  "css": {
+                    "table+": "border-collapse: separate !important; border-spacing: 0 3px !important; width: 100% !important; table-layout: auto !important; padding: 0 !important;",
+                    "th+": "padding: 0 1px !important; margin: 0 !important; font-size: 11px !important; line-height: 22px !important; height: 22px !important;",
+                    "th:nth-child(1)+": "width: auto !important; text-align: left !important;",
+                    "th:nth-child(2)+": "width: 104px !important; text-align: right !important;",
+                    "th:nth-child(3)+": "width: 30px !important; text-align: right !important;",
+                    "th:nth-child(4)+": "width: 12px !important; text-align: center !important;",
+                    "tbody tr td+": "padding: 0 !important; margin: 0 !important; border: 0 !important; line-height: 18px !important; height: 18px !important; min-height: 18px !important; max-height: 18px !important; vertical-align: middle !important;",
+                    "tbody tr td:nth-child(1)+": "width: auto !important;",
+                    "tbody tr td:nth-child(2)+": "width: 104px !important; text-align: right !important; white-space: nowrap !important;",
+                    "tbody tr td:nth-child(3)+": "width: 30px !important; text-align: right !important; white-space: nowrap !important;",
+                    "tbody tr td:nth-child(4)+": "width: 12px !important; text-align: center !important;",
+                    "tbody tr+": "height: 18px !important;"
+                  }
+                },
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "AP Verkstaden",
+                  "icon": "mdi:router-network-wireless",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "binary_sensor.openwrt_ap_verkstaden",
+                      "color": "state"
+                    },
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.ap_verkstaden_wi_fi_clients",
+                      "state_content": "state",
+                      "icon": "mdi:wifi",
+                      "color": "state"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:flex-table-card",
+                  "entities": [
+                    "sensor.ap_verkstaden_wi_fi_clients"
+                  ],
+                  "sort_by": "rssi_raw",
+                  "sort_desc": false,
+                  "columns": [
+                    {
+                      "name": "Name",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ const n=(x.hostname || '-'); const t=n + (x.band ? (' (' + x.band + ')') : ''); const badge=(x.band_short==='2G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#c9a227;color:#161616;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">2G<\\/span>' : (x.band_short==='5G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#2f8f66;color:#eaf7ef;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">5G<\\/span>' : (x.band_short==='6G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#4b63c6;color:#eef2ff;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">6G<\\/span>' : ''; const bg=(Number(x.rssi)<=-75) ? 'rgba(204,52,62,.36)' : ((Number(x.rssi)<=-67) ? 'rgba(149,113,34,.20)' : 'rgba(44,104,54,.18)'); return '<span title=\"'+t+'\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:'+bg+';\">'+badge+n+'<\\/span>'; })() : ''"
+                    },
+                    {
+                      "name": "IP",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((Number(x.rssi) <= -75) ? `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(204,52,62,.36);\">${x.ip || '-'}<\\/span>` : (Number(x.rssi) <= -67) ? `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(149,113,34,.20);\">${x.ip || '-'}<\\/span>` : `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(44,104,54,.18);\">${x.ip || '-'}<\\/span>`) : ''"
+                    },
+                    {
+                      "name": "RSSI",
+                      "attr_as_list": "clients",
+                      "sort_unmodified": true,
+                      "modify": "(x && typeof x === 'object') ? ((Number(x.rssi) <= -75) ? `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(204,52,62,.36);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>` : (Number(x.rssi) <= -67) ? `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(149,113,34,.20);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>` : `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(44,104,54,.18);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>`) : ''"
+                    },
+                    {
+                      "name": "",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? ((Number(x.rssi) <= -75) ? `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(204,52,62,.36);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>` : (Number(x.rssi) <= -67) ? `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(149,113,34,.20);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>` : `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(44,104,54,.18);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>`) : ''",
+                      "tap_action": {
+                        "action": "perform-action",
+                        "perform_action": "openwrt_wifi_clients.disconnect_client",
+                        "data": {
+                          "client_mac": "col[5]",
+                          "ap_ip": "col[6]",
+                          "reason": 5,
+                          "deauth": true,
+                          "ban_time": 30000
+                        },
+                        "confirmation": {
+                          "text": "Koppla från denna klient från AP?"
+                        }
+                      }
+                    },
+                    {
+                      "name": "rssi_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999",
+                      "hidden": true
+                    },
+                    {
+                      "name": "mac_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? x.mac : ''",
+                      "hidden": true
+                    },
+                    {
+                      "name": "ap_ip_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.ap_ip) ? x.ap_ip : ''",
+                      "hidden": true
+                    }
+                  ],
+                  "css": {
+                    "table+": "border-collapse: separate !important; border-spacing: 0 3px !important; width: 100% !important; table-layout: auto !important; padding: 0 !important;",
+                    "th+": "padding: 0 1px !important; margin: 0 !important; font-size: 11px !important; line-height: 22px !important; height: 22px !important;",
+                    "th:nth-child(1)+": "width: auto !important; text-align: left !important;",
+                    "th:nth-child(2)+": "width: 104px !important; text-align: right !important;",
+                    "th:nth-child(3)+": "width: 30px !important; text-align: right !important;",
+                    "th:nth-child(4)+": "width: 12px !important; text-align: center !important;",
+                    "tbody tr td+": "padding: 0 !important; margin: 0 !important; border: 0 !important; line-height: 18px !important; height: 18px !important; min-height: 18px !important; max-height: 18px !important; vertical-align: middle !important;",
+                    "tbody tr td:nth-child(1)+": "width: auto !important;",
+                    "tbody tr td:nth-child(2)+": "width: 104px !important; text-align: right !important; white-space: nowrap !important;",
+                    "tbody tr td:nth-child(3)+": "width: 30px !important; text-align: right !important; white-space: nowrap !important;",
+                    "tbody tr td:nth-child(4)+": "width: 12px !important; text-align: center !important;",
+                    "tbody tr+": "height: 18px !important;"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "AP Friggan",
+                  "icon": "mdi:router-network-wireless",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "binary_sensor.openwrt_ap_friggan",
+                      "color": "state"
+                    },
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.ap_friggan_wi_fi_clients",
+                      "state_content": "state",
+                      "icon": "mdi:wifi",
+                      "color": "state"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:flex-table-card",
+                  "entities": [
+                    "sensor.ap_friggan_wi_fi_clients"
+                  ],
+                  "sort_desc": false,
+                  "columns": [
+                    {
+                      "name": "Name",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ const n=(x.hostname || '-'); const t=n + (x.band ? (' (' + x.band + ')') : ''); const badge=(x.band_short==='2G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#c9a227;color:#161616;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">2G<\\/span>' : (x.band_short==='5G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#2f8f66;color:#eaf7ef;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">5G<\\/span>' : (x.band_short==='6G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#4b63c6;color:#eef2ff;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">6G<\\/span>' : ''; const bg=(Number(x.rssi)<=-75) ? 'rgba(204,52,62,.36)' : ((Number(x.rssi)<=-67) ? 'rgba(149,113,34,.20)' : 'rgba(44,104,54,.18)'); return '<span title=\"'+t+'\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:'+bg+';\">'+badge+n+'<\\/span>'; })() : ''"
+                    },
+                    {
+                      "name": "IP",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((Number(x.rssi) <= -75) ? `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(204,52,62,.36);\">${x.ip || '-'}<\\/span>` : (Number(x.rssi) <= -67) ? `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(149,113,34,.20);\">${x.ip || '-'}<\\/span>` : `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(44,104,54,.18);\">${x.ip || '-'}<\\/span>`) : ''"
+                    },
+                    {
+                      "name": "RSSI",
+                      "attr_as_list": "clients",
+                      "sort_unmodified": true,
+                      "modify": "(x && typeof x === 'object') ? ((Number(x.rssi) <= -75) ? `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(204,52,62,.36);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>` : (Number(x.rssi) <= -67) ? `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(149,113,34,.20);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>` : `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(44,104,54,.18);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>`) : ''"
+                    },
+                    {
+                      "name": "",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? ((Number(x.rssi) <= -75) ? `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(204,52,62,.36);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>` : (Number(x.rssi) <= -67) ? `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(149,113,34,.20);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>` : `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(44,104,54,.18);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>`) : ''",
+                      "tap_action": {
+                        "action": "perform-action",
+                        "perform_action": "openwrt_wifi_clients.disconnect_client",
+                        "data": {
+                          "client_mac": "col[5]",
+                          "ap_ip": "col[6]",
+                          "reason": 5,
+                          "deauth": true,
+                          "ban_time": 30000
+                        },
+                        "confirmation": {
+                          "text": "Koppla från denna klient från AP?"
+                        }
+                      }
+                    },
+                    {
+                      "name": "rssi_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999",
+                      "hidden": true
+                    },
+                    {
+                      "name": "mac_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? x.mac : ''",
+                      "hidden": true
+                    },
+                    {
+                      "name": "ap_ip_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.ap_ip) ? x.ap_ip : ''",
+                      "hidden": true
+                    }
+                  ],
+                  "css": {
+                    "table+": "border-collapse: separate !important; border-spacing: 0 3px !important; width: 100% !important; table-layout: auto !important; padding: 0 !important;",
+                    "th+": "padding: 0 1px !important; margin: 0 !important; font-size: 11px !important; line-height: 22px !important; height: 22px !important;",
+                    "th:nth-child(1)+": "width: auto !important; text-align: left !important;",
+                    "th:nth-child(2)+": "width: 104px !important; text-align: right !important;",
+                    "th:nth-child(3)+": "width: 30px !important; text-align: right !important;",
+                    "th:nth-child(4)+": "width: 12px !important; text-align: center !important;",
+                    "tbody tr td+": "padding: 0 !important; margin: 0 !important; border: 0 !important; line-height: 18px !important; height: 18px !important; min-height: 18px !important; max-height: 18px !important; vertical-align: middle !important;",
+                    "tbody tr td:nth-child(1)+": "width: auto !important;",
+                    "tbody tr td:nth-child(2)+": "width: 104px !important; text-align: right !important; white-space: nowrap !important;",
+                    "tbody tr td:nth-child(3)+": "width: 30px !important; text-align: right !important; white-space: nowrap !important;",
+                    "tbody tr td:nth-child(4)+": "width: 12px !important; text-align: center !important;",
+                    "tbody tr+": "height: 18px !important;"
+                  },
+                  "sort_by": "rssi_raw"
+                },
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "AP Hönshuset",
+                  "icon": "mdi:router-network-wireless",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "binary_sensor.openwrt_ap_honshuset",
+                      "color": "state"
+                    },
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.ap_honshuset_wi_fi_clients",
+                      "state_content": "state",
+                      "icon": "mdi:wifi"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:flex-table-card",
+                  "entities": [
+                    "sensor.ap_honshuset_wi_fi_clients"
+                  ],
+                  "sort_by": "rssi_raw",
+                  "sort_desc": false,
+                  "columns": [
+                    {
+                      "name": "Name",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ const n=(x.hostname || '-'); const t=n + (x.band ? (' (' + x.band + ')') : ''); const badge=(x.band_short==='2G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#c9a227;color:#161616;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">2G<\\/span>' : (x.band_short==='5G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#2f8f66;color:#eaf7ef;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">5G<\\/span>' : (x.band_short==='6G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#4b63c6;color:#eef2ff;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">6G<\\/span>' : ''; const bg=(Number(x.rssi)<=-75) ? 'rgba(204,52,62,.36)' : ((Number(x.rssi)<=-67) ? 'rgba(149,113,34,.20)' : 'rgba(44,104,54,.18)'); return '<span title=\"'+t+'\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:'+bg+';\">'+badge+n+'<\\/span>'; })() : ''"
+                    },
+                    {
+                      "name": "IP",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((Number(x.rssi) <= -75) ? `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(204,52,62,.36);\">${x.ip || '-'}<\\/span>` : (Number(x.rssi) <= -67) ? `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(149,113,34,.20);\">${x.ip || '-'}<\\/span>` : `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(44,104,54,.18);\">${x.ip || '-'}<\\/span>`) : ''"
+                    },
+                    {
+                      "name": "RSSI",
+                      "attr_as_list": "clients",
+                      "sort_unmodified": true,
+                      "modify": "(x && typeof x === 'object') ? ((Number(x.rssi) <= -75) ? `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(204,52,62,.36);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>` : (Number(x.rssi) <= -67) ? `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(149,113,34,.20);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>` : `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(44,104,54,.18);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>`) : ''"
+                    },
+                    {
+                      "name": "",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? ((Number(x.rssi) <= -75) ? `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(204,52,62,.36);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>` : (Number(x.rssi) <= -67) ? `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(149,113,34,.20);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>` : `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(44,104,54,.18);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>`) : ''",
+                      "tap_action": {
+                        "action": "perform-action",
+                        "perform_action": "openwrt_wifi_clients.disconnect_client",
+                        "data": {
+                          "client_mac": "col[5]",
+                          "ap_ip": "col[6]",
+                          "reason": 5,
+                          "deauth": true,
+                          "ban_time": 30000
+                        },
+                        "confirmation": {
+                          "text": "Koppla från denna klient från AP?"
+                        }
+                      }
+                    },
+                    {
+                      "name": "rssi_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999",
+                      "hidden": true
+                    },
+                    {
+                      "name": "mac_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? x.mac : ''",
+                      "hidden": true
+                    },
+                    {
+                      "name": "ap_ip_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.ap_ip) ? x.ap_ip : ''",
+                      "hidden": true
+                    }
+                  ],
+                  "css": {
+                    "table+": "border-collapse: separate !important; border-spacing: 0 3px !important; width: 100% !important; table-layout: auto !important; padding: 0 !important;",
+                    "th+": "padding: 0 1px !important; margin: 0 !important; font-size: 11px !important; line-height: 22px !important; height: 22px !important;",
+                    "th:nth-child(1)+": "width: auto !important; text-align: left !important;",
+                    "th:nth-child(2)+": "width: 104px !important; text-align: right !important;",
+                    "th:nth-child(3)+": "width: 30px !important; text-align: right !important;",
+                    "th:nth-child(4)+": "width: 12px !important; text-align: center !important;",
+                    "tbody tr td+": "padding: 0 !important; margin: 0 !important; border: 0 !important; line-height: 18px !important; height: 18px !important; min-height: 18px !important; max-height: 18px !important; vertical-align: middle !important;",
+                    "tbody tr td:nth-child(1)+": "width: auto !important;",
+                    "tbody tr td:nth-child(2)+": "width: 104px !important; text-align: right !important; white-space: nowrap !important;",
+                    "tbody tr td:nth-child(3)+": "width: 30px !important; text-align: right !important; white-space: nowrap !important;",
+                    "tbody tr td:nth-child(4)+": "width: 12px !important; text-align: center !important;",
+                    "tbody tr+": "height: 18px !important;"
+                  }
+                },
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "AP Poolen",
+                  "icon": "mdi:router-network-wireless",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "binary_sensor.openwrt_ap_poolen",
+                      "color": "state"
+                    },
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.ap_poolen_wi_fi_clients",
+                      "state_content": "state",
+                      "icon": "mdi:wifi",
+                      "color": "state"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:flex-table-card",
+                  "entities": [
+                    "sensor.ap_poolen_wi_fi_clients"
+                  ],
+                  "sort_by": "rssi_raw",
+                  "sort_desc": false,
+                  "columns": [
+                    {
+                      "name": "Name",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (function(){ const n=(x.hostname || '-'); const t=n + (x.band ? (' (' + x.band + ')') : ''); const badge=(x.band_short==='2G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#c9a227;color:#161616;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">2G<\\/span>' : (x.band_short==='5G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#2f8f66;color:#eaf7ef;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">5G<\\/span>' : (x.band_short==='6G') ? '<span style=\"display:inline-block;min-width:0;height:10px;line-height:10px;margin-right:2px;padding:0 1px;border-radius:4px;background:#4b63c6;color:#eef2ff;font-size:7px;letter-spacing:-0.1px;font-weight:700;vertical-align:middle;\">6G<\\/span>' : ''; const bg=(Number(x.rssi)<=-75) ? 'rgba(204,52,62,.36)' : ((Number(x.rssi)<=-67) ? 'rgba(149,113,34,.20)' : 'rgba(44,104,54,.18)'); return '<span title=\"'+t+'\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:'+bg+';\">'+badge+n+'<\\/span>'; })() : ''"
+                    },
+                    {
+                      "name": "IP",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((Number(x.rssi) <= -75) ? `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(204,52,62,.36);\">${x.ip || '-'}<\\/span>` : (Number(x.rssi) <= -67) ? `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(149,113,34,.20);\">${x.ip || '-'}<\\/span>` : `<span title=\"MAC: ${x.mac || '-'}\" style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;white-space:nowrap;text-align:right;background:rgba(44,104,54,.18);\">${x.ip || '-'}<\\/span>`) : ''"
+                    },
+                    {
+                      "name": "RSSI",
+                      "attr_as_list": "clients",
+                      "sort_unmodified": true,
+                      "modify": "(x && typeof x === 'object') ? ((Number(x.rssi) <= -75) ? `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(204,52,62,.36);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>` : (Number(x.rssi) <= -67) ? `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(149,113,34,.20);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>` : `<span style=\"display:block;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0 2px;text-align:right;background:rgba(44,104,54,.18);\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}<\\/span>`) : ''"
+                    },
+                    {
+                      "name": "",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? ((Number(x.rssi) <= -75) ? `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(204,52,62,.36);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>` : (Number(x.rssi) <= -67) ? `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(149,113,34,.20);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>` : `<span title=\"Koppla från klient\" style=\"display:flex;align-items:center;justify-content:center;width:100%;height:18px;line-height:18px;box-sizing:border-box;margin:0;padding:0;background:rgba(44,104,54,.18);\"><span style=\"display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:rgba(188,66,66,.96);color:#fff;font-size:7px;letter-spacing:-0.1px;font-weight:700;line-height:1;\">×<\\/span><\\/span>`) : ''",
+                      "tap_action": {
+                        "action": "perform-action",
+                        "perform_action": "openwrt_wifi_clients.disconnect_client",
+                        "data": {
+                          "client_mac": "col[5]",
+                          "ap_ip": "col[6]",
+                          "reason": 5,
+                          "deauth": true,
+                          "ban_time": 30000
+                        },
+                        "confirmation": {
+                          "text": "Koppla från denna klient från AP?"
+                        }
+                      }
+                    },
+                    {
+                      "name": "rssi_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999",
+                      "hidden": true
+                    },
+                    {
+                      "name": "mac_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? x.mac : ''",
+                      "hidden": true
+                    },
+                    {
+                      "name": "ap_ip_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.ap_ip) ? x.ap_ip : ''",
+                      "hidden": true
+                    }
+                  ],
+                  "css": {
+                    "table+": "border-collapse: separate !important; border-spacing: 0 3px !important; width: 100% !important; table-layout: auto !important; padding: 0 !important;",
+                    "th+": "padding: 0 1px !important; margin: 0 !important; font-size: 11px !important; line-height: 22px !important; height: 22px !important;",
+                    "th:nth-child(1)+": "width: auto !important; text-align: left !important;",
+                    "th:nth-child(2)+": "width: 104px !important; text-align: right !important;",
+                    "th:nth-child(3)+": "width: 30px !important; text-align: right !important;",
+                    "th:nth-child(4)+": "width: 12px !important; text-align: center !important;",
+                    "tbody tr td+": "padding: 0 !important; margin: 0 !important; border: 0 !important; line-height: 18px !important; height: 18px !important; min-height: 18px !important; max-height: 18px !important; vertical-align: middle !important;",
+                    "tbody tr td:nth-child(1)+": "width: auto !important;",
+                    "tbody tr td:nth-child(2)+": "width: 104px !important; text-align: right !important; white-space: nowrap !important;",
+                    "tbody tr td:nth-child(3)+": "width: 30px !important; text-align: right !important; white-space: nowrap !important;",
+                    "tbody tr td:nth-child(4)+": "width: 12px !important; text-align: center !important;",
+                    "tbody tr+": "height: 18px !important;"
+                  }
+                }
+              ]
+            }
+          ],
+          "icon": "mdi:wifi",
+          "cards": [],
+          "show_icon_and_title": false,
+          "dense_section_placement": true
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "Utomhusljus",
+          "path": "utomhusljus",
+          "icon": "mdi:sun-wireless-outline",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Ljussensor"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.esphome98_illuminance"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.esphome98_infrared"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.esphome98_esphome98_uv_ambient"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.esphome98_esphome98_uv_index"
+                }
+              ]
+            }
+          ],
+          "badges": []
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "Uptime",
+          "path": "uptime",
+          "icon": "mdi:monitor",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Ny sektion"
+                },
+                {
+                  "type": "custom:auto-entities",
+                  "card": {
+                    "type": "entities"
+                  },
+                  "filter": {
+                    "include": [
+                      {
+                        "options": {},
+                        "integration": "01K82W0B7G9PBEKNFWZAKR0QWR",
+                        "sort": {
+                          "ignore_case": true,
+                          "ip": false
+                        }
+                      }
+                    ],
+                    "exclude": []
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "Aqara",
+          "path": "aqara",
+          "icon": "phu:aqara-h2-dimmer-switch",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "tile",
+                  "entity": "counter.aqara_taklampor_flash_count",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "binary_sensor.aqara_taklampor_flash_senaste_24h",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "automation.aqara_taklampor_monitor_flash_detector",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "automation.aqara_taklampor_monitor_knapp_event",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "automation.aqara_taklampor_monitor_service_calls",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.aqara_taklampor_senaste_analys",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.aqara_taklampor_senaste_flash_tid",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_text.aqara_taklampor_senaste_handelserapport",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.aqara_taklampor_senaste_knapp_tid",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_text.aqara_taklampor_senaste_kommando",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.aqara_taklampor_senaste_kommando_tid",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_text.aqara_taklampor_senaste_orsak",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                }
+              ],
+              "column_span": 4
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

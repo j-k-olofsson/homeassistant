@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "ai_agent_ha_history_1e38893527ee4e1b9e5081503f031176",
+  "data": {
+    "history": [
+      "Är min ytterdörr låst eller upplåst?",
+      "Varför visar inte HA i Matter-appen och dess thread-nätverks-graph information om mina esphome-enheter som kör threads?",
+      "Men vore det inte korrekt att alla enheter som kör på HA:s thread-nätverk visas i graphen?",
+      "Men kommer d¨mina esphome-enheter som kör threads att ändå fungera som fullvärdiga nopder i thread-nätverket och t.ex. vidareförmedlas av andra enheter?"
+    ]
+  }
+}

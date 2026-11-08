@@ -1,0 +1,27 @@
+{
+  "type": "form",
+  "flow_id": "01M6TBEBBMYXXQJ7T9C9S7PB53",
+  "handler": "waste_collection_schedule",
+  "data_schema": [
+    {
+      "type": "string",
+      "name": "calendar_title",
+      "required": false,
+      "optional": true,
+      "default": "Norrtalje Vatten & Avfall"
+    },
+    {
+      "type": "string",
+      "name": "street_address",
+      "required": true
+    }
+  ],
+  "errors": {},
+  "description_placeholders": {
+    "docs_url": "https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/nvaa_se.md",
+    "howto": ""
+  },
+  "last_step": null,
+  "preview": null,
+  "step_id": "args_nvaa_se"
+}

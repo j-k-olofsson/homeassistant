@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "input_number",
+  "data": {
+    "items": [
+      {
+        "id": "slider",
+        "min": 0.0,
+        "max": 100.0,
+        "name": "Slider",
+        "mode": "slider",
+        "step": 1.0
+      },
+      {
+        "id": "nordpool_trade_fee",
+        "min": 0.0,
+        "max": 10.0,
+        "name": "Elpris handelsavgift",
+        "mode": "box",
+        "step": 0.0001,
+        "unit_of_measurement": "kr/kWh"
+      },
+      {
+        "id": "nordpool_spot_fee",
+        "min": 0.0,
+        "max": 10.0,
+        "name": "Elpris spotpåslag",
+        "mode": "box",
+        "step": 0.0001,
+        "unit_of_measurement": "kr/kWh"
+      },
+      {
+        "id": "nordpool_certificate_fee",
+        "min": 0.0,
+        "max": 1.0,
+        "name": "Elpris certifikatsavgift",
+        "mode": "box",
+        "step": 0.0001,
+        "unit_of_measurement": "kr/kWh"
+      },
+      {
+        "id": "nordpool_energy_transfer_fee",
+        "min": 0.0,
+        "max": 10.0,
+        "name": "Elpris överföringsavgift",
+        "mode": "box",
+        "step": 0.0001,
+        "unit_of_measurement": "kr/kWh"
+      },
+      {
+        "id": "nordpool_energy_tax",
+        "min": 0.0,
+        "max": 10.0,
+        "name": "Elpris energiskatt",
+        "mode": "box",
+        "step": 0.0001,
+        "unit_of_measurement": "kr/kWh"
+      },
+      {
+        "id": "nordpool_vat",
+        "min": 0.0,
+        "max": 100.0,
+        "name": "Elpris moms",
+        "unit_of_measurement": "%",
+        "step": 0.01,
+        "mode": "box"
+      },
+      {
+        "id": "elladdningen_kapacitet",
+        "min": 0.0,
+        "max": 100.0,
+        "name": "Laddeffekt",
+        "icon": "phu:generic-car-charger",
+        "mode": "box",
+        "step": 1.0,
+        "unit_of_measurement": "kW"
+      },
+      {
+        "id": "batteriets_kapacitet",
+        "min": 0.0,
+        "max": 100.0,
+        "name": "Bilbatteriets kapacitet",
+        "icon": "mdi:battery-outline",
+        "mode": "box",
+        "step": 1.0,
+        "unit_of_measurement": "kWh"
+      },
+      {
+        "id": "nordpool_monthly_fee",
+        "min": 0.0,
+        "max": 10000.0,
+        "name": "Månadsavgifter elhandel + nät",
+        "icon": "mdi:cash-multiple",
+        "mode": "box",
+        "step": 10.0,
+        "unit_of_measurement": ":-"
+      }
+    ]
+  }
+}

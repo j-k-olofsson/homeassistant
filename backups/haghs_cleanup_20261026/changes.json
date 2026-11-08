@@ -1,0 +1,78 @@
+[
+  {
+    "entity_id": "sensor.tor_mimer_verifierad_backup_svarstid",
+    "action": "disabled"
+  },
+  {
+    "entity_id": "sensor.diskhalsa_och_lagring_svarstid",
+    "action": "disabled"
+  },
+  {
+    "entity_id": "sensor.tor_mimer_verifierad_backup_upptid_1_dag",
+    "action": "disabled"
+  },
+  {
+    "entity_id": "sensor.diskhalsa_och_lagring_upptid_1_dag",
+    "action": "disabled"
+  },
+  {
+    "entity_id": "sensor.tor_mimer_verifierad_backup_upptid_30_dagar",
+    "action": "disabled"
+  },
+  {
+    "entity_id": "sensor.diskhalsa_och_lagring_upptid_30_dagar",
+    "action": "disabled"
+  },
+  {
+    "entity_id": "sensor.tor_mimer_verifierad_backup_upptid_365_dagar",
+    "action": "disabled"
+  },
+  {
+    "entity_id": "sensor.diskhalsa_och_lagring_upptid_365_dagar",
+    "action": "disabled"
+  },
+  {
+    "entity_id": "sensor.tor_mimer_verifierad_backup_svarstid_o_1_dag",
+    "action": "disabled"
+  },
+  {
+    "entity_id": "sensor.diskhalsa_och_lagring_svarstid_o_1_dag",
+    "action": "disabled"
+  },
+  {
+    "entity_id": "sensor.tor_mimer_verifierad_backup_svarstid_o_30_dagar",
+    "action": "disabled"
+  },
+  {
+    "entity_id": "sensor.diskhalsa_och_lagring_svarstid_o_30_dagar",
+    "action": "disabled"
+  },
+  {
+    "entity_id": "sensor.tor_mimer_verifierad_backup_svarstid_o_365_dagar",
+    "action": "disabled"
+  },
+  {
+    "entity_id": "sensor.diskhalsa_och_lagring_svarstid_o_365_dagar",
+    "action": "disabled"
+  },
+  {
+    "entity_id": "sensor.google_home_ateljens_hogtalare_ateljens_hogtalare_alarms_2",
+    "action": "haghs_ignore"
+  },
+  {
+    "entity_id": "sensor.google_home_ateljens_hogtalare_ateljens_hogtalare_timers_2",
+    "action": "haghs_ignore"
+  },
+  {
+    "entity_id": "sensor.ef4abfd89188cf4c457ab1d11945269ec83484ac5766f0d59171fc4e647ace49_volymdrivrutin_2",
+    "action": "removed"
+  },
+  {
+    "entity_id": "sensor.6733e369c5ba97b5d5633e88d4a71b8db760f05943cb6d19d41fce5eeb813487_volymdrivrutin_2",
+    "action": "removed"
+  },
+  {
+    "entity_id": "media_player.pwa_chrome_on_samsung_sm_t835",
+    "action": "removed"
+  }
+]

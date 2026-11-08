@@ -1,0 +1,1358 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.ha_admin",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "title": "Admin",
+          "path": "admin",
+          "type": "sections",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Tider"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.heimdal_ha_lampor_tands",
+                  "name": "Lampor tänds",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.heimdal_ha_lampor_slacks",
+                  "name": "Lampor släcks",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.heimdal_ha_vaxtlampor_tands",
+                  "name": "Växtlampor tänds",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.heimdal_ha_vaxtlampor_tands_senare",
+                  "name": "Växtlampor senare tändning",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.heimdal_ha_vaxtlampor_slacks",
+                  "name": "Växtlampor släcks",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.heimdal_ha_honsluckan_oppnas",
+                  "name": "Hönsluckan öppnas",
+                  "vertical": true
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Manuella tillstånd"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_boolean.tillstand_hydrofoniprylar",
+                  "name": "Hydrofoniprylar",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_boolean.heimdal_ha_poolutrustning",
+                  "name": "Poolprylar",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_boolean.winter_equipment",
+                  "name": "Vinterprylar",
+                  "vertical": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_boolean.guest_mode",
+                  "vertical": true
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "icon": "mdi:devices",
+                  "heading_style": "title",
+                  "heading": "ESPHome"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_button.uppgradera_esphome_enheter",
+                  "vertical": true,
+                  "layout_options": {
+                    "grid_columns": 4,
+                    "grid_rows": 2
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Automatiska tillstånd"
+                },
+                {
+                  "features": [
+                    {
+                      "type": "select-options"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "input_select.light_scene",
+                  "vertical": true,
+                  "hide_state": true,
+                  "name": "Lampornas scen",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 3
+                  }
+                },
+                {
+                  "features": [
+                    {
+                      "type": "select-options"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "input_select.heimdal_ha_solens_dygnsfas",
+                  "vertical": true,
+                  "hide_state": true,
+                  "name": "Solens dygnsfas",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 3
+                  }
+                },
+                {
+                  "features": [
+                    {
+                      "type": "select-options"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "input_select.growlight_scene",
+                  "vertical": true,
+                  "hide_state": true,
+                  "name": "Växtlampors scen",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 3
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Batterier"
+                },
+                {
+                  "type": "custom:battery-state-card",
+                  "secondary_info": "{attributes.battery_type_and_quantity}",
+                  "round": 0,
+                  "filter": {
+                    "include": [
+                      {
+                        "name": "entity_id",
+                        "value": "*_battery_plus"
+                      }
+                    ]
+                  },
+                  "bulk_rename": [
+                    {
+                      "from": "Batteri+"
+                    }
+                  ],
+                  "sort": [
+                    "state"
+                  ]
+                }
+              ]
+            }
+          ],
+          "cards": [],
+          "max_columns": 4,
+          "icon": "mdi:state-machine"
+        },
+        {
+          "title": "Server",
+          "path": "system",
+          "type": "sections",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "icon": "mdi:home-percent-outline",
+                  "heading": "Belastning",
+                  "heading_style": "subtitle"
+                },
+                {
+                  "type": "gauge",
+                  "entity": "sensor.heimdal_ha_system_monitor_processoranvandning",
+                  "name": "CPU",
+                  "min": 0,
+                  "max": 100,
+                  "needle": true,
+                  "severity": {
+                    "green": 0,
+                    "yellow": 75,
+                    "red": 90
+                  },
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 3
+                  }
+                },
+                {
+                  "type": "gauge",
+                  "name": "Minne",
+                  "min": 0,
+                  "max": 100,
+                  "needle": true,
+                  "severity": {
+                    "green": 0,
+                    "yellow": 75,
+                    "red": 90
+                  },
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 3
+                  },
+                  "entity": "sensor.heimdal_ha_system_monitor_minnesanvandning"
+                },
+                {
+                  "type": "gauge",
+                  "name": "Disk",
+                  "min": 0,
+                  "max": 100,
+                  "needle": true,
+                  "severity": {
+                    "green": 0,
+                    "yellow": 75,
+                    "red": 90
+                  },
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 3
+                  },
+                  "entity": "sensor.heimdal_ha_system_monitor_diskanvandning"
+                },
+                {
+                  "type": "gauge",
+                  "name": "Swap",
+                  "min": 0,
+                  "max": 100,
+                  "needle": true,
+                  "severity": {
+                    "green": 0,
+                    "yellow": 75,
+                    "red": 90
+                  },
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 3
+                  },
+                  "entity": "sensor.heimdal_ha_system_monitor_virtuell_minnesanvandning"
+                },
+                {
+                  "type": "heading",
+                  "icon": "mdi:fridge",
+                  "heading": "Info",
+                  "heading_style": "subtitle"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.heimdal_ha_system_monitor_ledigt_diskutrymme",
+                  "name": "Fri disk",
+                  "icon": "mdi:harddisk",
+                  "vertical": false
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.heimdal_ha_system_monitor_processortemperatur",
+                  "name": "CPU Temp"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.heimdal_ha_system_monitor_upptid",
+                  "name": "OS reboot"
+                }
+              ],
+              "column_span": 4
+            }
+          ],
+          "max_columns": 4,
+          "dense_section_placement": true,
+          "cards": [],
+          "icon": "mdi:server-network"
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "Hälsokontroll",
+          "path": "health2",
+          "icon": "mdi:medical-bag",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "tile",
+                  "entity": "sensor.ha_db_size_mb",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.ha_states_rows_24h",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.ha_antal_enheter",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.ha_antal_otillgangliga_enheter",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.ha_antal_otillgangliga_kritiska_enheter",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "grid_options": {
+                    "columns": "full"
+                  }
+                }
+              ],
+              "column_span": 1
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "history-graph",
+                  "entities": [
+                    {
+                      "entity": "sensor.ha_db_size_mb"
+                    },
+                    {
+                      "entity": "sensor.ha_states_rows_24h"
+                    }
+                  ],
+                  "hours_to_show": 168
+                }
+              ],
+              "column_span": 1
+            }
+          ]
+        },
+        {
+          "title": "Energipris",
+          "path": "energipris",
+          "icon": "mdi:transmission-tower",
+          "type": "sections",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Avgifter och skatter",
+                  "heading_style": "title",
+                  "icon": "mdi:cash-multiple"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.elpris_certifikatsavgift",
+                  "name": "Certifikatsavgift",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  },
+                  "show_entity_picture": false,
+                  "vertical": false,
+                  "hide_state": false
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.elpris_energiskatt",
+                  "name": "Energiskatt",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.elpris_overforingsavgift",
+                  "name": "Transferavgift",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.elpris_spotpaslag",
+                  "name": "Spot påslag",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.elpris_handelsavgift",
+                  "name": "Handelsavgift",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.elpris_moms",
+                  "name": "Moms",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.manadsavgifter_elhandel_nat"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Priser just nu",
+                  "heading_style": "title",
+                  "icon": "mdi:cash-multiple"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.nordpool",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.heimdal_ha_nordpool_kwh_se3_sek_3_10_025_inkopspris",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.heimdal_ha_nordpool_kwh_se3_sek_3_10_025_paslag",
+                  "layout_options": {
+                    "grid_columns": 2,
+                    "grid_rows": 1
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Progonos (inkl. fasta avgifter) - baserat på kvartar",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "tile",
+                  "layout_options": {
+                    "grid_columns": 4,
+                    "grid_rows": 1
+                  },
+                  "entity": "sensor.kvartbaserad_elkostnadsprognos",
+                  "vertical": true,
+                  "features_position": "bottom"
+                }
+              ]
+            }
+          ],
+          "max_columns": 3,
+          "cards": []
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "WiFi",
+          "path": "wifi",
+          "header": {
+            "card": {
+              "type": "markdown",
+              "text_only": true,
+              "content": "### Accespunkter och Gateway - Totalt antal WIFI klienter: {{\n  states('sensor.wi_fi_klienter_alla_accesspunkter') + \" st\"}}\n"
+            }
+          },
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "icon": "mdi:router-network-wireless",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "binary_sensor.openwrt_ap_koket",
+                      "color": "state"
+                    },
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.wi_fi_klienter_ap_koket",
+                      "state_content": "state",
+                      "icon": "mdi:wifi"
+                    }
+                  ],
+                  "heading": "AP Köket"
+                },
+                {
+                  "type": "custom:flex-table-card",
+                  "entities": [
+                    "sensor.wi_fi_klienter_ap_koket"
+                  ],
+                  "sort_by": "rssi_raw",
+                  "sort_desc": false,
+                  "columns": [
+                    {
+                      "name": "Name",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad\">${x.hostname || \"-\"}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn\">${x.hostname || \"-\"}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe\">${x.hostname || \"-\"}</span>` : `<span class=\"rssi-ok\">${x.hostname || \"-\"}</span>`) : ''"
+                    },
+                    {
+                      "name": "IP",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : `<span class=\"rssi-ok ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>`) : ''"
+                    },
+                    {
+                      "name": "RSSI",
+                      "attr_as_list": "clients",
+                      "sort_unmodified": true,
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : `<span class=\"rssi-ok rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>`) : ''"
+                    },
+                    {
+                      "name": "",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (x.mac ? `<span title=\"Koppla från klient\" style=\"display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:rgba(180,52,52,.55);color:#fff;font-weight:700;font-size:12px;line-height:1;\">×</span><span style=\"display:inline-block;width:0;overflow:hidden;font-size:0;line-height:0;\">${x.mac}</span>` : '') : ''",
+                      "tap_action": {
+                        "action": "perform-action",
+                        "perform_action": "openwrt_wifi_clients.disconnect_client",
+                        "data": {
+                          "client_mac": "col[3]",
+                          "reason": 5,
+                          "deauth": true,
+                          "ban_time": 30000
+                        },
+                        "confirmation": {
+                          "text": "Koppla från denna klient från AP?"
+                        }
+                      }
+                    },
+                    {
+                      "name": "rssi_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999",
+                      "hidden": true
+                    },
+                    {
+                      "name": "mac_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? x.mac : ''",
+                      "hidden": true
+                    }
+                  ],
+                  "css": {
+                    "table+": "width:100%; border-collapse:separate; border-spacing:0 2px;",
+                    "th+": "text-align:left; font-size:13px; font-weight:600; padding:2px 8px 4px 8px;",
+                    "td+": "padding:2px 6px; font-size:13px; line-height:1.25;",
+                    "td:nth-child(2)+": "text-align:right; width:110px;",
+                    "td:nth-child(3)+": "text-align:right; width:54px;",
+                    "td:nth-child(4)+": "text-align:center; width:26px; padding:0 2px;",
+                    ".rssi-ok": "display:block;border-radius:4px;padding:2px 6px;",
+                    ".rssi-right": "text-align:right;",
+                    ".ip-cell": "display:block;border-radius:4px;padding:2px 6px;",
+                    ".rssi-bad": "display:block;background:rgba(118,61,29,.38);border-radius:4px;padding:2px 6px;",
+                    ".rssi-warn": "display:block;background:rgba(151,114,26,.30);border-radius:4px;padding:2px 6px;",
+                    ".rssi-safe": "display:block;background:rgba(45,106,49,.24);border-radius:4px;padding:2px 6px;"
+                  }
+                }
+              ],
+              "column_span": 1
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "Router & AP Sovrummet",
+                  "icon": "mdi:router-network-wireless",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "binary_sensor.openwrt_gw_local_192_168_10_1",
+                      "icon": "",
+                      "color": "state"
+                    },
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.router_wi_fi_clients",
+                      "state_content": "state",
+                      "icon": "mdi:wifi",
+                      "color": "state"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:flex-table-card",
+                  "entities": [
+                    "sensor.router_wi_fi_clients"
+                  ],
+                  "sort_by": "rssi_raw",
+                  "sort_desc": false,
+                  "columns": [
+                    {
+                      "name": "Name",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad\">${x.hostname || \"-\"}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn\">${x.hostname || \"-\"}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe\">${x.hostname || \"-\"}</span>` : `<span class=\"rssi-ok\">${x.hostname || \"-\"}</span>`) : ''"
+                    },
+                    {
+                      "name": "IP",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : `<span class=\"rssi-ok ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>`) : ''"
+                    },
+                    {
+                      "name": "RSSI",
+                      "attr_as_list": "clients",
+                      "sort_unmodified": true,
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : `<span class=\"rssi-ok rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>`) : ''"
+                    },
+                    {
+                      "name": "",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (x.mac ? `<span title=\"Koppla från klient\" style=\"display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:rgba(180,52,52,.55);color:#fff;font-weight:700;font-size:12px;line-height:1;\">×</span><span style=\"display:inline-block;width:0;overflow:hidden;font-size:0;line-height:0;\">${x.mac}</span>` : '') : ''",
+                      "tap_action": {
+                        "action": "perform-action",
+                        "perform_action": "openwrt_wifi_clients.disconnect_client",
+                        "data": {
+                          "client_mac": "col[3]",
+                          "reason": 5,
+                          "deauth": true,
+                          "ban_time": 30000
+                        },
+                        "confirmation": {
+                          "text": "Koppla från denna klient från AP?"
+                        }
+                      }
+                    },
+                    {
+                      "name": "rssi_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999",
+                      "hidden": true
+                    },
+                    {
+                      "name": "mac_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? x.mac : ''",
+                      "hidden": true
+                    }
+                  ],
+                  "css": {
+                    "table+": "width:100%; border-collapse:separate; border-spacing:0 2px;",
+                    "th+": "text-align:left; font-size:13px; font-weight:600; padding:2px 8px 4px 8px;",
+                    "td+": "padding:2px 6px; font-size:13px; line-height:1.25;",
+                    "td:nth-child(2)+": "text-align:right; width:110px;",
+                    "td:nth-child(3)+": "text-align:right; width:54px;",
+                    "td:nth-child(4)+": "text-align:center; width:26px; padding:0 2px;",
+                    ".rssi-ok": "display:block;border-radius:4px;padding:2px 6px;",
+                    ".rssi-right": "text-align:right;",
+                    ".ip-cell": "display:block;border-radius:4px;padding:2px 6px;",
+                    ".rssi-bad": "display:block;background:rgba(118,61,29,.38);border-radius:4px;padding:2px 6px;",
+                    ".rssi-warn": "display:block;background:rgba(151,114,26,.30);border-radius:4px;padding:2px 6px;",
+                    ".rssi-safe": "display:block;background:rgba(45,106,49,.24);border-radius:4px;padding:2px 6px;"
+                  }
+                },
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "AP Kontoret",
+                  "icon": "mdi:router-network-wireless",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "binary_sensor.openwrt_ap_kontoret",
+                      "color": "state"
+                    },
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.wi_fi_klienter_ap_kontoret",
+                      "state_content": "state",
+                      "icon": "mdi:wifi"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:flex-table-card",
+                  "entities": [
+                    "sensor.wi_fi_klienter_ap_kontoret"
+                  ],
+                  "sort_by": "rssi_raw",
+                  "sort_desc": false,
+                  "columns": [
+                    {
+                      "name": "Name",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad\">${x.hostname || \"-\"}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn\">${x.hostname || \"-\"}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe\">${x.hostname || \"-\"}</span>` : `<span class=\"rssi-ok\">${x.hostname || \"-\"}</span>`) : ''"
+                    },
+                    {
+                      "name": "IP",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : `<span class=\"rssi-ok ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>`) : ''"
+                    },
+                    {
+                      "name": "RSSI",
+                      "attr_as_list": "clients",
+                      "sort_unmodified": true,
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : `<span class=\"rssi-ok rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>`) : ''"
+                    },
+                    {
+                      "name": "",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (x.mac ? `<span title=\"Koppla från klient\" style=\"display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:rgba(180,52,52,.55);color:#fff;font-weight:700;font-size:12px;line-height:1;\">×</span><span style=\"display:inline-block;width:0;overflow:hidden;font-size:0;line-height:0;\">${x.mac}</span>` : '') : ''",
+                      "tap_action": {
+                        "action": "perform-action",
+                        "perform_action": "openwrt_wifi_clients.disconnect_client",
+                        "data": {
+                          "client_mac": "col[3]",
+                          "reason": 5,
+                          "deauth": true,
+                          "ban_time": 30000
+                        },
+                        "confirmation": {
+                          "text": "Koppla från denna klient från AP?"
+                        }
+                      }
+                    },
+                    {
+                      "name": "rssi_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999",
+                      "hidden": true
+                    },
+                    {
+                      "name": "mac_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? x.mac : ''",
+                      "hidden": true
+                    }
+                  ],
+                  "css": {
+                    "table+": "width:100%; border-collapse:separate; border-spacing:0 2px;",
+                    "th+": "text-align:left; font-size:13px; font-weight:600; padding:2px 8px 4px 8px;",
+                    "td+": "padding:2px 6px; font-size:13px; line-height:1.25;",
+                    "td:nth-child(2)+": "text-align:right; width:110px;",
+                    "td:nth-child(3)+": "text-align:right; width:54px;",
+                    "td:nth-child(4)+": "text-align:center; width:26px; padding:0 2px;",
+                    ".rssi-ok": "display:block;border-radius:4px;padding:2px 6px;",
+                    ".rssi-right": "text-align:right;",
+                    ".ip-cell": "display:block;border-radius:4px;padding:2px 6px;",
+                    ".rssi-bad": "display:block;background:rgba(118,61,29,.38);border-radius:4px;padding:2px 6px;",
+                    ".rssi-warn": "display:block;background:rgba(151,114,26,.30);border-radius:4px;padding:2px 6px;",
+                    ".rssi-safe": "display:block;background:rgba(45,106,49,.24);border-radius:4px;padding:2px 6px;"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "AP Källaren",
+                  "icon": "mdi:router-network-wireless",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "binary_sensor.openwrt_ap_kallaren_192_168_10_6",
+                      "color": "state"
+                    },
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.wi_fi_klienter_ap_kallaren",
+                      "state_content": "state",
+                      "color": "state",
+                      "icon": "mdi:wifi"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:flex-table-card",
+                  "entities": [
+                    "sensor.wi_fi_klienter_ap_kallaren"
+                  ],
+                  "sort_by": "rssi_raw",
+                  "sort_desc": false,
+                  "columns": [
+                    {
+                      "name": "Name",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad\">${x.hostname || \"-\"}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn\">${x.hostname || \"-\"}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe\">${x.hostname || \"-\"}</span>` : `<span class=\"rssi-ok\">${x.hostname || \"-\"}</span>`) : ''"
+                    },
+                    {
+                      "name": "IP",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : `<span class=\"rssi-ok ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>`) : ''"
+                    },
+                    {
+                      "name": "RSSI",
+                      "attr_as_list": "clients",
+                      "sort_unmodified": true,
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : `<span class=\"rssi-ok rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>`) : ''"
+                    },
+                    {
+                      "name": "",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (x.mac ? `<span title=\"Koppla från klient\" style=\"display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:rgba(180,52,52,.55);color:#fff;font-weight:700;font-size:12px;line-height:1;\">×</span><span style=\"display:inline-block;width:0;overflow:hidden;font-size:0;line-height:0;\">${x.mac}</span>` : '') : ''",
+                      "tap_action": {
+                        "action": "perform-action",
+                        "perform_action": "openwrt_wifi_clients.disconnect_client",
+                        "data": {
+                          "client_mac": "col[3]",
+                          "reason": 5,
+                          "deauth": true,
+                          "ban_time": 30000
+                        },
+                        "confirmation": {
+                          "text": "Koppla från denna klient från AP?"
+                        }
+                      }
+                    },
+                    {
+                      "name": "rssi_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999",
+                      "hidden": true
+                    },
+                    {
+                      "name": "mac_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? x.mac : ''",
+                      "hidden": true
+                    }
+                  ],
+                  "css": {
+                    "table+": "width:100%; border-collapse:separate; border-spacing:0 2px;",
+                    "th+": "text-align:left; font-size:13px; font-weight:600; padding:2px 8px 4px 8px;",
+                    "td+": "padding:2px 6px; font-size:13px; line-height:1.25;",
+                    "td:nth-child(2)+": "text-align:right; width:110px;",
+                    "td:nth-child(3)+": "text-align:right; width:54px;",
+                    "td:nth-child(4)+": "text-align:center; width:26px; padding:0 2px;",
+                    ".rssi-ok": "display:block;border-radius:4px;padding:2px 6px;",
+                    ".rssi-right": "text-align:right;",
+                    ".ip-cell": "display:block;border-radius:4px;padding:2px 6px;",
+                    ".rssi-bad": "display:block;background:rgba(118,61,29,.38);border-radius:4px;padding:2px 6px;",
+                    ".rssi-warn": "display:block;background:rgba(151,114,26,.30);border-radius:4px;padding:2px 6px;",
+                    ".rssi-safe": "display:block;background:rgba(45,106,49,.24);border-radius:4px;padding:2px 6px;"
+                  }
+                },
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "AP Verkstaden",
+                  "icon": "mdi:router-network-wireless",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "binary_sensor.openwrt_ap_verkstaden",
+                      "color": "state"
+                    },
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.wi_fi_klienter_ap_verkstaden",
+                      "state_content": "state",
+                      "icon": "mdi:wifi",
+                      "color": "state"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:flex-table-card",
+                  "entities": [
+                    "sensor.wi_fi_klienter_ap_verkstaden"
+                  ],
+                  "sort_by": "rssi_raw",
+                  "sort_desc": false,
+                  "columns": [
+                    {
+                      "name": "Name",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad\">${x.hostname || \"-\"}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn\">${x.hostname || \"-\"}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe\">${x.hostname || \"-\"}</span>` : `<span class=\"rssi-ok\">${x.hostname || \"-\"}</span>`) : ''"
+                    },
+                    {
+                      "name": "IP",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : `<span class=\"rssi-ok ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>`) : ''"
+                    },
+                    {
+                      "name": "RSSI",
+                      "attr_as_list": "clients",
+                      "sort_unmodified": true,
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : `<span class=\"rssi-ok rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>`) : ''"
+                    },
+                    {
+                      "name": "",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (x.mac ? `<span title=\"Koppla från klient\" style=\"display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:rgba(180,52,52,.55);color:#fff;font-weight:700;font-size:12px;line-height:1;\">×</span><span style=\"display:inline-block;width:0;overflow:hidden;font-size:0;line-height:0;\">${x.mac}</span>` : '') : ''",
+                      "tap_action": {
+                        "action": "perform-action",
+                        "perform_action": "openwrt_wifi_clients.disconnect_client",
+                        "data": {
+                          "client_mac": "col[3]",
+                          "reason": 5,
+                          "deauth": true,
+                          "ban_time": 30000
+                        },
+                        "confirmation": {
+                          "text": "Koppla från denna klient från AP?"
+                        }
+                      }
+                    },
+                    {
+                      "name": "rssi_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999",
+                      "hidden": true
+                    },
+                    {
+                      "name": "mac_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? x.mac : ''",
+                      "hidden": true
+                    }
+                  ],
+                  "css": {
+                    "table+": "width:100%; border-collapse:separate; border-spacing:0 2px;",
+                    "th+": "text-align:left; font-size:13px; font-weight:600; padding:2px 8px 4px 8px;",
+                    "td+": "padding:2px 6px; font-size:13px; line-height:1.25;",
+                    "td:nth-child(2)+": "text-align:right; width:110px;",
+                    "td:nth-child(3)+": "text-align:right; width:54px;",
+                    "td:nth-child(4)+": "text-align:center; width:26px; padding:0 2px;",
+                    ".rssi-ok": "display:block;border-radius:4px;padding:2px 6px;",
+                    ".rssi-right": "text-align:right;",
+                    ".ip-cell": "display:block;border-radius:4px;padding:2px 6px;",
+                    ".rssi-bad": "display:block;background:rgba(118,61,29,.38);border-radius:4px;padding:2px 6px;",
+                    ".rssi-warn": "display:block;background:rgba(151,114,26,.30);border-radius:4px;padding:2px 6px;",
+                    ".rssi-safe": "display:block;background:rgba(45,106,49,.24);border-radius:4px;padding:2px 6px;"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "AP Friggan",
+                  "icon": "mdi:router-network-wireless",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "binary_sensor.openwrt_ap_friggan",
+                      "color": "state"
+                    },
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.wi_fi_klienter_ap_friggan",
+                      "state_content": "state",
+                      "icon": "mdi:wifi",
+                      "color": "state"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:flex-table-card",
+                  "entities": [
+                    "sensor.wi_fi_klienter_ap_friggan"
+                  ],
+                  "sort_desc": false,
+                  "columns": [
+                    {
+                      "name": "Name",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad\">${x.hostname || \"-\"}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn\">${x.hostname || \"-\"}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe\">${x.hostname || \"-\"}</span>` : `<span class=\"rssi-ok\">${x.hostname || \"-\"}</span>`) : ''"
+                    },
+                    {
+                      "name": "IP",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : `<span class=\"rssi-ok ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>`) : ''"
+                    },
+                    {
+                      "name": "RSSI",
+                      "attr_as_list": "clients",
+                      "sort_unmodified": true,
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : `<span class=\"rssi-ok rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>`) : ''"
+                    },
+                    {
+                      "name": "",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (x.mac ? `<span title=\"Koppla från klient\" style=\"display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:rgba(180,52,52,.55);color:#fff;font-weight:700;font-size:12px;line-height:1;\">×</span><span style=\"display:inline-block;width:0;overflow:hidden;font-size:0;line-height:0;\">${x.mac}</span>` : '') : ''",
+                      "tap_action": {
+                        "action": "perform-action",
+                        "perform_action": "openwrt_wifi_clients.disconnect_client",
+                        "data": {
+                          "client_mac": "col[3]",
+                          "reason": 5,
+                          "deauth": true,
+                          "ban_time": 30000
+                        },
+                        "confirmation": {
+                          "text": "Koppla från denna klient från AP?"
+                        }
+                      }
+                    },
+                    {
+                      "name": "rssi_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999",
+                      "hidden": true
+                    },
+                    {
+                      "name": "mac_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? x.mac : ''",
+                      "hidden": true
+                    }
+                  ],
+                  "css": {
+                    "table+": "width:100%; border-collapse:separate; border-spacing:0 2px;",
+                    "th+": "text-align:left; font-size:13px; font-weight:600; padding:2px 8px 4px 8px;",
+                    "td+": "padding:2px 6px; font-size:13px; line-height:1.25;",
+                    "td:nth-child(2)+": "text-align:right; width:110px;",
+                    "td:nth-child(3)+": "text-align:right; width:54px;",
+                    "td:nth-child(4)+": "text-align:center; width:26px; padding:0 2px;",
+                    ".rssi-ok": "display:block;border-radius:4px;padding:2px 6px;",
+                    ".rssi-right": "text-align:right;",
+                    ".ip-cell": "display:block;border-radius:4px;padding:2px 6px;",
+                    ".rssi-bad": "display:block;background:rgba(118,61,29,.38);border-radius:4px;padding:2px 6px;",
+                    ".rssi-warn": "display:block;background:rgba(151,114,26,.30);border-radius:4px;padding:2px 6px;",
+                    ".rssi-safe": "display:block;background:rgba(45,106,49,.24);border-radius:4px;padding:2px 6px;"
+                  },
+                  "sort_by": "rssi_raw"
+                },
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "AP Hönshuset",
+                  "icon": "mdi:router-network-wireless",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "binary_sensor.openwrt_ap_honshuset",
+                      "color": "state"
+                    },
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.ap_honshuset_wi_fi_clients",
+                      "state_content": "state",
+                      "icon": "mdi:wifi"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:flex-table-card",
+                  "entities": [
+                    "sensor.ap_honshuset_wi_fi_clients"
+                  ],
+                  "sort_by": "rssi_raw",
+                  "sort_desc": false,
+                  "columns": [
+                    {
+                      "name": "Name",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad\">${x.hostname || \"-\"}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn\">${x.hostname || \"-\"}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe\">${x.hostname || \"-\"}</span>` : `<span class=\"rssi-ok\">${x.hostname || \"-\"}</span>`) : ''"
+                    },
+                    {
+                      "name": "IP",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : `<span class=\"rssi-ok ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>`) : ''"
+                    },
+                    {
+                      "name": "RSSI",
+                      "attr_as_list": "clients",
+                      "sort_unmodified": true,
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : `<span class=\"rssi-ok rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>`) : ''"
+                    },
+                    {
+                      "name": "",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (x.mac ? `<span title=\"Koppla från klient\" style=\"display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:rgba(180,52,52,.55);color:#fff;font-weight:700;font-size:12px;line-height:1;\">×</span><span style=\"display:inline-block;width:0;overflow:hidden;font-size:0;line-height:0;\">${x.mac}</span>` : '') : ''",
+                      "tap_action": {
+                        "action": "perform-action",
+                        "perform_action": "openwrt_wifi_clients.disconnect_client",
+                        "data": {
+                          "client_mac": "col[3]",
+                          "reason": 5,
+                          "deauth": true,
+                          "ban_time": 30000
+                        },
+                        "confirmation": {
+                          "text": "Koppla från denna klient från AP?"
+                        }
+                      }
+                    },
+                    {
+                      "name": "rssi_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999",
+                      "hidden": true
+                    },
+                    {
+                      "name": "mac_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? x.mac : ''",
+                      "hidden": true
+                    }
+                  ],
+                  "css": {
+                    "table+": "width:100%; border-collapse:separate; border-spacing:0 2px;",
+                    "th+": "text-align:left; font-size:13px; font-weight:600; padding:2px 8px 4px 8px;",
+                    "td+": "padding:2px 6px; font-size:13px; line-height:1.25;",
+                    "td:nth-child(2)+": "text-align:right; width:110px;",
+                    "td:nth-child(3)+": "text-align:right; width:54px;",
+                    "td:nth-child(4)+": "text-align:center; width:26px; padding:0 2px;",
+                    ".rssi-ok": "display:block;border-radius:4px;padding:2px 6px;",
+                    ".rssi-right": "text-align:right;",
+                    ".ip-cell": "display:block;border-radius:4px;padding:2px 6px;",
+                    ".rssi-bad": "display:block;background:rgba(118,61,29,.38);border-radius:4px;padding:2px 6px;",
+                    ".rssi-warn": "display:block;background:rgba(151,114,26,.30);border-radius:4px;padding:2px 6px;",
+                    ".rssi-safe": "display:block;background:rgba(45,106,49,.24);border-radius:4px;padding:2px 6px;"
+                  }
+                },
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "AP Poolen",
+                  "icon": "mdi:router-network-wireless",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "binary_sensor.openwrt_ap_poolen",
+                      "color": "state"
+                    },
+                    {
+                      "type": "entity",
+                      "show_state": true,
+                      "show_icon": true,
+                      "entity": "sensor.wi_fi_klienter_ap_poolen",
+                      "state_content": "state",
+                      "icon": "mdi:wifi",
+                      "color": "state"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:flex-table-card",
+                  "entities": [
+                    "sensor.wi_fi_klienter_ap_poolen"
+                  ],
+                  "sort_by": "rssi_raw",
+                  "sort_desc": false,
+                  "columns": [
+                    {
+                      "name": "Name",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad\">${x.hostname || \"-\"}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn\">${x.hostname || \"-\"}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe\">${x.hostname || \"-\"}</span>` : `<span class=\"rssi-ok\">${x.hostname || \"-\"}</span>`) : ''"
+                    },
+                    {
+                      "name": "IP",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>` : `<span class=\"rssi-ok ip-cell\" title=\"MAC: ${x.mac || '-'}\">${x.ip || '-'}</span>`) : ''"
+                    },
+                    {
+                      "name": "RSSI",
+                      "attr_as_list": "clients",
+                      "sort_unmodified": true,
+                      "modify": "(x && typeof x === 'object') ? ((x.rssi_level === 'bad') ? `<span class=\"rssi-bad rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : (x.rssi_level === 'warn') ? `<span class=\"rssi-warn rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : (x.rssi_level === 'ok' || x.rssi_level === 'good') ? `<span class=\"rssi-safe rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>` : `<span class=\"rssi-ok rssi-right\">${(x.rssi === undefined || x.rssi === null) ? '-' : x.rssi}</span>`) : ''"
+                    },
+                    {
+                      "name": "",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object') ? (x.mac ? `<span title=\"Koppla från klient\" style=\"display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:rgba(180,52,52,.55);color:#fff;font-weight:700;font-size:12px;line-height:1;\">×</span><span style=\"display:inline-block;width:0;overflow:hidden;font-size:0;line-height:0;\">${x.mac}</span>` : '') : ''",
+                      "tap_action": {
+                        "action": "perform-action",
+                        "perform_action": "openwrt_wifi_clients.disconnect_client",
+                        "data": {
+                          "client_mac": "col[3]",
+                          "reason": 5,
+                          "deauth": true,
+                          "ban_time": 30000
+                        },
+                        "confirmation": {
+                          "text": "Koppla från denna klient från AP?"
+                        }
+                      }
+                    },
+                    {
+                      "name": "rssi_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.rssi !== undefined && x.rssi !== null) ? x.rssi : -999",
+                      "hidden": true
+                    },
+                    {
+                      "name": "mac_raw",
+                      "attr_as_list": "clients",
+                      "modify": "(x && typeof x === 'object' && x.mac) ? x.mac : ''",
+                      "hidden": true
+                    }
+                  ],
+                  "css": {
+                    "table+": "width:100%; border-collapse:separate; border-spacing:0 2px;",
+                    "th+": "text-align:left; font-size:13px; font-weight:600; padding:2px 8px 4px 8px;",
+                    "td+": "padding:2px 6px; font-size:13px; line-height:1.25;",
+                    "td:nth-child(2)+": "text-align:right; width:110px;",
+                    "td:nth-child(3)+": "text-align:right; width:54px;",
+                    "td:nth-child(4)+": "text-align:center; width:26px; padding:0 2px;",
+                    ".rssi-ok": "display:block;border-radius:4px;padding:2px 6px;",
+                    ".rssi-right": "text-align:right;",
+                    ".ip-cell": "display:block;border-radius:4px;padding:2px 6px;",
+                    ".rssi-bad": "display:block;background:rgba(118,61,29,.38);border-radius:4px;padding:2px 6px;",
+                    ".rssi-warn": "display:block;background:rgba(151,114,26,.30);border-radius:4px;padding:2px 6px;",
+                    ".rssi-safe": "display:block;background:rgba(45,106,49,.24);border-radius:4px;padding:2px 6px;"
+                  }
+                }
+              ]
+            }
+          ],
+          "icon": "mdi:wifi",
+          "cards": [],
+          "show_icon_and_title": false,
+          "dense_section_placement": true
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "Utomhusljus",
+          "path": "utomhusljus",
+          "icon": "mdi:sun-wireless-outline",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Ljussensor"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.utomhus_ljussensor_belysningsstyrka"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.utomhus_ljussensor_infrarott_ravarde"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.utomhus_ljussensor_omgivningsljus_ravarde"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.utomhus_ljussensor_uv_index"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

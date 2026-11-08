@@ -1,0 +1,37 @@
+{
+  "schedule_id": "db23ff",
+  "weekdays": [
+    "daily"
+  ],
+  "start_date": "2098-12-31",
+  "end_date": "2098-12-31",
+  "timeslots": [
+    {
+      "start": "23:59",
+      "stop": null,
+      "conditions": [],
+      "condition_type": null,
+      "track_conditions": false,
+      "actions": [
+        {
+          "service": "script.turn_on",
+          "entity_id": "script.bilvarme_starta_en_gang",
+          "service_data": {}
+        }
+      ]
+    }
+  ],
+  "repeat_type": "single",
+  "name": "Bilvärme 01/01 00:00",
+  "enabled": true,
+  "next_entries": [
+    0
+  ],
+  "timestamps": [
+    "2098-12-31T23:59:00+01:00"
+  ],
+  "entity_id": "switch.schedule_bilvarme_01_01_00_00",
+  "tags": [
+    "bilvarme_ad_hoc"
+  ]
+}

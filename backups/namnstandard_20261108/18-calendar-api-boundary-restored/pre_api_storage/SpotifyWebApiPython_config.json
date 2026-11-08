@@ -1,0 +1,145 @@
+{
+    "mammaochpapppa/PlayerLastPlayedInfo": {
+        "context": {
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/37i9dQZF1EIV492Cwe5M2p"
+            },
+            "href": "https://api.spotify.com/v1/playlists/37i9dQZF1EIV492Cwe5M2p",
+            "type": "playlist",
+            "uri": "spotify:playlist:37i9dQZF1EIV492Cwe5M2p"
+        },
+        "device": {
+            "id": "8dede23989d3e49bd316714ff6500bde9201437c",
+            "is_active": true,
+            "is_muted": false,
+            "is_private_session": false,
+            "is_restricted": false,
+            "name": "Pixel 9 Pro XL",
+            "select_item_name_and_id": "Pixel 9 Pro XL (8dede23989d3e49bd316714ff6500bde9201437c)",
+            "supports_volume": false,
+            "type": "Smartphone",
+            "volume_percent": 100
+        },
+        "device_music_source": null,
+        "is_advertisement": false,
+        "is_device_state": false,
+        "is_empty": false,
+        "is_muted": false,
+        "is_repeat_enabled": false,
+        "is_shuffle_enabled": true,
+        "item": {
+            "album": {
+                "album_type": "album",
+                "artists": [
+                    {
+                        "external_urls": {
+                            "spotify": "https://open.spotify.com/artist/3vDYGs9p4Y6GpfvxJDDhjx"
+                        },
+                        "href": "https://api.spotify.com/v1/artists/3vDYGs9p4Y6GpfvxJDDhjx",
+                        "id": "3vDYGs9p4Y6GpfvxJDDhjx",
+                        "name": "Ragal Ironbull",
+                        "type": "artist",
+                        "uri": "spotify:artist:3vDYGs9p4Y6GpfvxJDDhjx"
+                    }
+                ],
+                "available_markets": [],
+                "copyrights": [],
+                "external_ids": {
+                    "ean": null,
+                    "isrc": null,
+                    "upc": null
+                },
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/album/23Xrn8RrFDm3gLM1Vgtogj"
+                },
+                "genres": [],
+                "href": "https://api.spotify.com/v1/albums/23Xrn8RrFDm3gLM1Vgtogj",
+                "id": "23Xrn8RrFDm3gLM1Vgtogj",
+                "image_url": "https://i.scdn.co/image/ab67616d0000b2737d246286caf5c2d3d7907cfe",
+                "images": [
+                    {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b2737d246286caf5c2d3d7907cfe",
+                        "width": 640
+                    },
+                    {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e027d246286caf5c2d3d7907cfe",
+                        "width": 300
+                    },
+                    {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d000048517d246286caf5c2d3d7907cfe",
+                        "width": 64
+                    }
+                ],
+                "label": null,
+                "name": "ASHES & ECHOES",
+                "popularity": null,
+                "release_date": "2026-05-04",
+                "release_date_precision": "day",
+                "restrictions": {
+                    "market": null,
+                    "reason": null
+                },
+                "total_tracks": 16,
+                "type": "album",
+                "uri": "spotify:album:23Xrn8RrFDm3gLM1Vgtogj"
+            },
+            "artists": [
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/3vDYGs9p4Y6GpfvxJDDhjx"
+                    },
+                    "href": "https://api.spotify.com/v1/artists/3vDYGs9p4Y6GpfvxJDDhjx",
+                    "id": "3vDYGs9p4Y6GpfvxJDDhjx",
+                    "name": "Ragal Ironbull",
+                    "type": "artist",
+                    "uri": "spotify:artist:3vDYGs9p4Y6GpfvxJDDhjx"
+                }
+            ],
+            "available_markets": [],
+            "disc_number": 1,
+            "duration_ms": 174000,
+            "explicit": false,
+            "external_ids": {
+                "ean": null,
+                "isrc": "SE6QE2604958",
+                "upc": null
+            },
+            "external_urls": {
+                "spotify": "https://open.spotify.com/track/1TatD225oevJUuja1LDgPs"
+            },
+            "href": "https://api.spotify.com/v1/tracks/1TatD225oevJUuja1LDgPs",
+            "id": "1TatD225oevJUuja1LDgPs",
+            "id_origin": "1TatD225oevJUuja1LDgPs",
+            "image_url": "https://i.scdn.co/image/ab67616d0000b2737d246286caf5c2d3d7907cfe",
+            "is_linked_from": false,
+            "is_local": false,
+            "is_playable": true,
+            "linked_from": {
+                "external_urls": {},
+                "href": null,
+                "id": null,
+                "type": null,
+                "uri": null
+            },
+            "name": "Smoke in the Valley",
+            "popularity": 60,
+            "preview_url": null,
+            "restrictions": {
+                "market": null,
+                "reason": null
+            },
+            "track_number": 2,
+            "type": "track",
+            "uri": "spotify:track:1TatD225oevJUuja1LDgPs",
+            "uri_origin": "spotify:track:1TatD225oevJUuja1LDgPs"
+        },
+        "item_type": "track",
+        "progress_ms": 85785,
+        "repeat_state": "off",
+        "shuffle_state": true,
+        "timestamp": 1793975009836
+    }
+}

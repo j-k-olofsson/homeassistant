@@ -1,0 +1,16 @@
+{
+  "stage": "17d-primara-alias",
+  "status": "verified",
+  "operations": 3316,
+  "devices": 0,
+  "entities": 3316,
+  "entity_ids_unchanged": 10150,
+  "invariants_unchanged": true,
+  "missing_target_states": [],
+  "new_unavailable_targets": [],
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  }
+}

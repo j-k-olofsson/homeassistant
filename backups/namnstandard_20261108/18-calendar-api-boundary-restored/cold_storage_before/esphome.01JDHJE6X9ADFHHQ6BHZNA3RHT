@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.01JDHJE6X9ADFHHQ6BHZNA3RHT",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "esphome45",
+      "friendly_name": "Ledstrip (toalett)",
+      "mac_address": "B0:A6:04:99:2F:44",
+      "compilation_time": "2026-11-04 06:49:11 +0100",
+      "model": "esp32-c6-devkitc-1",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2026.10.2",
+      "project_name": "",
+      "project_version": "",
+      "webserver_port": 80,
+      "legacy_voice_assistant_version": 0,
+      "voice_assistant_feature_flags": 0,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0,
+      "zwave_proxy_feature_flags": 0,
+      "zwave_home_id": 0,
+      "suggested_area": "",
+      "bluetooth_mac_address": "",
+      "api_encryption_supported": true,
+      "api_encryption_provisionable": false,
+      "api_outgoing_connection_supported": true,
+      "devices": [],
+      "areas": [],
+      "area": {
+        "area_id": 0,
+        "name": ""
+      },
+      "serial_proxies": []
+    },
+    "services": [],
+    "api_version": {
+      "major": 1,
+      "minor": 19
+    },
+    "device_capabilities": {
+      "bluetooth_proxy": {
+        "feature_flags": 0,
+        "mac_address": ""
+      },
+      "voice_assistant": {
+        "feature_flags": 0
+      },
+      "zwave_proxy": {
+        "feature_flags": 0,
+        "home_id": 0
+      },
+      "serial_proxies": [],
+      "wizard": {
+        "configured": false
+      },
+      "sendspin": {
+        "feature_flags": 0,
+        "client_id": ""
+      },
+      "store_yaml": {
+        "supported": false
+      }
+    },
+    "light": [
+      {
+        "object_id": "esphome45_light",
+        "key": 1833755514,
+        "name": "esphome45 Light",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "supported_color_modes": [
+          35
+        ],
+        "min_mireds": 0.0,
+        "max_mireds": 0.0,
+        "effects": [
+          "None",
+          "xmas",
+          "party",
+          "alarm"
+        ],
+        "legacy_supports_brightness": false,
+        "legacy_supports_rgb": false,
+        "legacy_supports_white_value": false,
+        "legacy_supports_color_temperature": false
+      }
+    ],
+    "sensor": [],
+    "text_sensor": [
+      {
+        "object_id": "thread_device_role",
+        "key": 291004713,
+        "name": "Thread Device Role",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_id": 0,
+        "device_class": ""
+      },
+      {
+        "object_id": "thread_rloc16",
+        "key": 2352674261,
+        "name": "Thread RLOC16",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_id": 0,
+        "device_class": ""
+      },
+      {
+        "object_id": "thread_extended_address",
+        "key": 3761824326,
+        "name": "Thread Extended Address",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_id": 0,
+        "device_class": ""
+      }
+    ],
+    "update": []
+  }
+}

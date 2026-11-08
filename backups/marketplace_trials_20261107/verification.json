@@ -1,0 +1,101 @@
+{
+  "entries": {
+    "bermuda": [
+      {
+        "state": "loaded",
+        "entry_id": "01M6TBMXNTPZD08C9SCZC3PZ3Y"
+      }
+    ],
+    "adaptive_lighting": [
+      {
+        "state": "loaded",
+        "entry_id": "01M6TBMYHV84JKCMHQ8JD71F70"
+      }
+    ],
+    "scheduler": [
+      {
+        "state": "loaded",
+        "entry_id": "01M6TBMYDVEASKAF4N4YN0JT4R"
+      }
+    ],
+    "waste_collection_schedule": [
+      {
+        "state": "loaded",
+        "entry_id": "01M6TBGE7XWDFYRFKGP21V2328"
+      }
+    ]
+  },
+  "repairs": {
+    "issues": []
+  },
+  "check_config": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  },
+  "pending_schedules": [],
+  "timezone": "Europe/Stockholm",
+  "existing_entry_state_changes": [],
+  "waste_sensor": {
+    "entity_id": "sensor.soptomning",
+    "state": "I övermorgon",
+    "attributes": {
+      "2026-11-09": "Restavfall, Matavfall",
+      "attribution": "Last update: 11/07/26 07:35:36",
+      "icon": "mdi:numeric-2-box-multiple",
+      "friendly_name": "Waste Collection Schedule Sopor"
+    },
+    "last_changed": "2026-11-07T06:36:28.077764+00:00",
+    "last_reported": "2026-11-07T06:36:28.079450+00:00",
+    "last_updated": "2026-11-07T06:36:28.077764+00:00",
+    "context": {
+      "id": "01M6TBJ2HDTRT533AYF9RPXFRF",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  "light": {
+    "entity_id": "light.bordslampa_ateljen",
+    "state": "on",
+    "attributes": {
+      "min_color_temp_kelvin": 2202,
+      "max_color_temp_kelvin": 6535,
+      "supported_color_modes": [
+        "color_temp",
+        "xy"
+      ],
+      "color_mode": "color_temp",
+      "brightness": 128,
+      "color_temp_kelvin": 2551,
+      "hs_color": [
+        28.743,
+        70.706
+      ],
+      "rgb_color": [
+        255,
+        161,
+        75
+      ],
+      "xy_color": [
+        0.541,
+        0.389
+      ],
+      "friendly_name": "Bordslampa ateljen",
+      "supported_features": 32
+    },
+    "last_changed": "2026-11-07T04:58:31.281349+00:00",
+    "last_reported": "2026-11-07T06:43:48.672949+00:00",
+    "last_updated": "2026-11-07T06:43:48.672949+00:00",
+    "context": {
+      "id": "01M6TBZGT0Z64GCT1K85AX0AZE",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  "car_state": "off",
+  "bermuda_proxy_count": "11",
+  "bermuda_sample_rooms": {
+    "sensor.atc_b999ba_area": "Köket",
+    "sensor.atc_bfe81b_area": "Verandan"
+  }
+}

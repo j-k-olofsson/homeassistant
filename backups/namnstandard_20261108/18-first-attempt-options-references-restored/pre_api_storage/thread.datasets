@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "minor_version": 4,
+  "key": "thread.datasets",
+  "data": {
+    "datasets": [
+      {
+        "created": "2026-02-13T13:57:45.669082+00:00",
+        "id": "01KHBMP6J5AT2FNN3JNNBH3YMW",
+        "preferred_border_agent_id": "923991a16d4f16b422b4e9ab3ce431a5",
+        "preferred_extended_address": "4680256a41cebb3f",
+        "source": "otbr",
+        "tlv": "0e080000000000010000000300000f4a0300001135060004001fffe00208b802559b4caef87a0708fd817465a625c4020510a26ba4aec4dba3ee51da8e79cfa335d2030e68612d7468726561642d3361633701023ac70410c5a12b8b5e2761fe9896eca3c4372d900c0402a0f7f8"
+      }
+    ],
+    "preferred_dataset": "01KHBMP6J5AT2FNN3JNNBH3YMW"
+  }
+}

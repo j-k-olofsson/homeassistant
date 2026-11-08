@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "openwrt_01KWEBQHEKT4TYHASCZAJDZ71Y_history",
+  "data": {
+    "devices": {
+      "cc:ba:bd:a5:eb:19": {
+        "initially_seen": 1782893508,
+        "last_seen": 1782893720,
+        "is_wireless": true
+      },
+      "50:03:cf:84:6f:51": {
+        "initially_seen": 1782893508,
+        "last_seen": 1782893720,
+        "is_wireless": true
+      },
+      "28:39:26:d3:14:5f": {
+        "initially_seen": 1782893508,
+        "last_seen": 1782893720,
+        "is_wireless": true
+      },
+      "00:11:f8:1e:af:0f": {
+        "initially_seen": 1782893508,
+        "last_seen": 1782893720,
+        "is_wireless": true
+      },
+      "24:a1:60:10:eb:a9": {
+        "initially_seen": 1782893508,
+        "last_seen": 1782893720,
+        "is_wireless": true
+      },
+      "c8:2b:96:07:35:26": {
+        "initially_seen": 1782893508,
+        "last_seen": 1782893720,
+        "is_wireless": true
+      },
+      "24:a1:60:10:5f:96": {
+        "initially_seen": 1782893508,
+        "last_seen": 1782893720,
+        "is_wireless": true
+      },
+      "e8:ff:1e:db:ea:f8": {
+        "initially_seen": 1782893508,
+        "last_seen": 1782893720,
+        "is_wireless": false
+      },
+      "ac:16:2d:04:99:b2": {
+        "initially_seen": 1782893508,
+        "last_seen": 1782893720,
+        "is_wireless": false
+      },
+      "20:05:b6:01:99:b1": {
+        "initially_seen": 1782893508,
+        "last_seen": 1782893720,
+        "is_wireless": false
+      }
+    },
+    "last_version": "25.12.5"
+  }
+}

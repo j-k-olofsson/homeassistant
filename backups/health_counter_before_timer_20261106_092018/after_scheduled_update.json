@@ -1,0 +1,17 @@
+{
+  "entity_id": "sensor.ha_antal_otillgangliga_enheter",
+  "state": "461",
+  "attributes": {
+    "last_counted_at": "2026-11-06T09:24:00.130321+01:00",
+    "unit_of_measurement": "enheter",
+    "friendly_name": "HA - Antal otillgängliga enheter"
+  },
+  "last_changed": "2026-11-06T08:23:00.873680+00:00",
+  "last_reported": "2026-11-06T08:24:00.130461+00:00",
+  "last_updated": "2026-11-06T08:24:00.130461+00:00",
+  "context": {
+    "id": "01M6QZA8C2MRH9FANS2RHG00KQ",
+    "parent_id": null,
+    "user_id": null
+  }
+}

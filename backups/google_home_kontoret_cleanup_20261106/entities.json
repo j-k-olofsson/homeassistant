@@ -1,0 +1,62 @@
+[
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01JXEYE9TVC38423EDERCQTWZ5",
+    "config_subentry_id": null,
+    "created_at": 1788505464.036205,
+    "device_id": "b6d17885ad0abd16a949bbad0a6f7ecb",
+    "disabled_by": "user",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.google_home_kontorets_hogtalare_kontorets_hogtalare_device",
+    "hidden_by": null,
+    "icon": null,
+    "id": "8a6d58324d8a2f15dc018c4ef1d3db3d",
+    "labels": [],
+    "modified_at": 1793248208.639344,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "conversation": {
+        "should_expose": false
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Device",
+    "platform": "google_home",
+    "translation_key": null,
+    "unique_id": "a6dd13cb-e23f-476f-bf23-135fc5f85968/device"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01JXEYE9TVC38423EDERCQTWZ5",
+    "config_subentry_id": null,
+    "created_at": 1793080537.238836,
+    "device_id": "b6d17885ad0abd16a949bbad0a6f7ecb",
+    "disabled_by": null,
+    "entity_category": "config",
+    "entity_id": "button.kontorets_hogtalare_reboot",
+    "hidden_by": null,
+    "icon": null,
+    "id": "3534185b1753ed96f666ab5f9256d566",
+    "labels": [],
+    "modified_at": 1793248208.652313,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "conversation": {
+        "should_expose": false
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Reboot",
+    "platform": "google_home",
+    "translation_key": null,
+    "unique_id": "a6dd13cb-e23f-476f-bf23-135fc5f85968/reboot"
+  }
+]

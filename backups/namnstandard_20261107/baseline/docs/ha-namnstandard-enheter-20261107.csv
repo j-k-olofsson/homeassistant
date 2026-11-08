@@ -1,0 +1,142 @@
+﻿device_id,enhetsnamn,område,aktiverade_entiteter,synliga_aktiverade,i_tillstånd,composite_device_id,orsak,egen_områdesdubblering,annan_områdesreferens
+cf61f1423e655523f6d921f46f3f1daf,Temp/Hum (Veranda),Verandan,9,9,9,,Området upprepas i enhetsnamnet,True,False
+2f5421e7f9e52c0299c95b9f10d88901,Temp/Hum (Sovrum),Sovrummet,9,9,9,,Området upprepas i enhetsnamnet,True,False
+42865fcfc600bba2e28060108d65f52d,Temp/Hum (Hemmabio),Bion,9,9,9,,Området upprepas i enhetsnamnet,True,False
+889b90b31932ce33eed47460a645c3aa,Temp/Hum (Verkstad),Verkstaden,9,9,9,,Området upprepas i enhetsnamnet,True,False
+aaa3151216f3c1ff7bbe37bbbc2a3826,Temp/Hum (Ateljé),Ateljén,8,8,8,,Området upprepas i enhetsnamnet,True,False
+79a20aa4a5899b2a2e9a0da4fed17acd,Temp/Hum (Utomhus),Utomhus,9,9,9,,Området upprepas i enhetsnamnet,True,False
+3768dc19fb5e0da38a61a8dd68d9f796,Temp/Hum (Hönshus),Hönshuset,9,9,9,,Området upprepas i enhetsnamnet,True,False
+2737556325ca43e4294ee8864a7827d0,Termostat (friggan),Friggan,6,6,6,1087cd5314e84ef46e435f73676c6d3b,Området upprepas i enhetsnamnet,True,False
+b30097662be090ad664001266b7f9d36,Vattenvärmare (hönshuset),Hönshuset,3,3,3,1ee67733da4db42035644c9e5fa89074,Området upprepas i enhetsnamnet,True,False
+01bf206d70319793afffd5b58d6edeaa,Lampa i redet (Hönshuset),Hönshuset,0,0,0,,Området upprepas i enhetsnamnet,True,False
+2bb9cb602ec800b2f183ceedd0f6b5fe,Ledstrip (sovrum östra),Heimdal (HA),3,3,3,56cebe6978a5895e36d91825f34027f9,Annat område nämns: Sovrummet,False,True
+ede71cbfb18b5ffd44b8c45b58834617,Blomlampa 2 (verandan),Köket,6,5,6,b9e7356f5adc899931e4737fc571c273,Annat område nämns: Verandan,False,True
+8216579edd54afdbe31c2df3c6cc6d93,Ledstrip (ateljé norra),Heimdal (HA),5,5,5,145700963b00afa8080dd410d2cea652,Annat område nämns: Ateljén,False,True
+fe8b77b3639c88eb3818dbd419b1f29f,Ledstrip (sovrum norra),Heimdal (HA),3,3,3,04993c6ec682794538caca007c8b6f96,Annat område nämns: Sovrummet,False,True
+d1d1228b50ea9c694ca0aa3c4e7898a0,Ledstrip (ateljé södra),Heimdal (HA),5,5,5,063e269191f15dec85ef1c951f02c2c6,Annat område nämns: Ateljén,False,True
+1145e3c5163aab633f8bd77c378632d2,Ledstrip (kök södra),Heimdal (HA),3,3,3,471b2d4ab4eece17bb34d01232f88608,Annat område nämns: Köket,False,True
+fa552c8b3991002f03b8dd83b8560272,Gasol (utomhus),Utomhus,3,3,3,7c78e98284478798bb1128a93f2af5fa,Området upprepas i enhetsnamnet,True,False
+ca0c5b1f099e3b0d2420449f48fb19e9,TempHyg (gamla verkstan),Gamla verkstaden,6,6,6,fc3d22fa0212c673d58e5cb4d0a45b8c,Området upprepas i enhetsnamnet,True,False
+b57bd1138f4e6903698022a609218f5c,Termostat (toaletten),Toaletten,4,4,4,4af3ce27b6f6fe3b1a471a21eadd4499,Området upprepas i enhetsnamnet,True,False
+49323d5133aae02a8a4c7b89bbc90f30,Golvvärme (sovrum och kontor),Sovrummet,11,11,11,23877dea4c211dd0c498d5172ca17134,Området upprepas i enhetsnamnet; Annat område nämns: Kontoret,True,True
+f8336537ea686bd7d38c033f7f493b2e,Golvvärme (friggan),Friggan,10,10,10,08ce13060196f42873c895f5aaa5dd76,Området upprepas i enhetsnamnet,True,False
+5f1aeb937f3491bda0e10d3d11ee552f,Blomlampor (bion),Bion,6,5,6,59dfa01985c8b3965287d04661f4dd58,Området upprepas i enhetsnamnet,True,False
+d6c904ad5a953fe297c345a0ca1b0af6,Julbelysning (utomhus),Utomhus,3,3,3,396209e0d4a1b9b58a94f02173b7de1e,Området upprepas i enhetsnamnet,True,False
+dd531a8c3152176a74062250f06b1a46,Termostat (kontoret),Kontoret,6,6,6,3e49e02bf16262119b5372ef50a0fb3a,Området upprepas i enhetsnamnet,True,False
+5c1163d94b0ab19bffc29d0039a7ab3c,Taklampor (sovrum),Sovrummet,6,6,6,c93f8b2bcab0549591022c440c6f4d6f,Området upprepas i enhetsnamnet,True,False
+82bda88411a24769b8fa12d172e54abd,Poolpump (utomhus),Poolen,8,8,8,7513532280eefa77d57e78f477e10014,Annat område nämns: Utomhus,False,True
+28cddc7b74b05ab7d1ba90ee889e8f2d,Ledstrip (kök sydöstra),Heimdal (HA),3,3,3,ea7184df48570c8f91d13d702533fe93,Annat område nämns: Köket,False,True
+2acf2d15a36735c6da6b9d67d07360f5,Ledstrip (verandan),Heimdal (HA),3,3,3,004fb6ab1cc1867b0008fe8e6593e3e1,Annat område nämns: Verandan,False,True
+7883ed542e732c9bf362ac20b3edac3c,Ledstrip (kök småfönster),Heimdal (HA),5,5,5,25f319828eea621e0ab6cb7cdabfd411,Annat område nämns: Köket,False,True
+92c0ad7e857b0256a132e4f8f7c32a40,Ledstrip (kök östra),Heimdal (HA),3,3,3,d0247dcbdc04e79c6a37cac04ae281ee,Annat område nämns: Köket,False,True
+7acdb0b707a3474aaf4096052549d2ac,Ledstrip (entrén),Heimdal (HA),3,3,3,7aac276958b6f9010b6598d266a3d7d6,Annat område nämns: Entrén,False,True
+0cc979ea34852945574729129825a6b2,Blomlampa (ateljén),Köket,6,5,6,a18a14f4449708ee9639186c386887ce,Annat område nämns: Ateljén,False,True
+40d435c9d77b165fbb9076cda6cf1a38,Vattennivå (hönshuset),Hönshuset,3,3,3,c9f3b9178b1d337141bf338367a426bf,Området upprepas i enhetsnamnet,True,False
+297fa3e3c581e1c6f6b0a410e70cf483,Hemmabio El #1,Bion,11,10,11,b7f2c75086e6f32f459cd56451fd4a98,Området upprepas i enhetsnamnet,True,False
+06cfed5eda78f075a697b5d0a65b5132,Hemmabio El #2,Bion,11,10,11,9ee74d8854d13ac4da0a69ae85f62c29,Området upprepas i enhetsnamnet,True,False
+42b814b5ee4b8bde1951fbd5a46bbbc4,Temp/Hum (Kök),Köket,9,9,9,,Området upprepas i enhetsnamnet,True,False
+cae4a1d23dae74e6a0903e70ac732261,Blomlampa 1 (Verandan),Verandan,4,3,4,776f52c73a012c787b1956fd89125491,Området upprepas i enhetsnamnet,True,False
+f699c6b183561246a9cf6429086d4c5a,Markis (utomhus),Utomhus,4,4,4,d0dbf9e694a08f8e2ddbcfa39f26d608,Området upprepas i enhetsnamnet,True,False
+c46922f1cb8b776d007e9257415b04ae,Golvvärme (bion),Bion,16,16,16,856d131eceffbee61c7d08376a17c8be,Området upprepas i enhetsnamnet,True,False
+b94bb0dbd4e4f1699c1e9a3eaf677742,Ledstrip (toalett),Heimdal (HA),5,5,5,ea1aabf894b1c0c0cc606e9ab7414a44,Annat område nämns: Toaletten,False,True
+d0e4a415ca636e5057ade2251e7ae1dc,Ventilfläkt (bion),Bion,4,4,4,7ba599234c2c109d3fe7d9aa2c9254c2,Området upprepas i enhetsnamnet,True,False
+1325e9177fd4277c2f62b0bfd415f3b5,Golvvärme (verandan ),Verandan,16,16,16,670963df47598eb518e59a0f36aad2b4,Området upprepas i enhetsnamnet,True,False
+5fe3bfea068773839c43571c319eb9da,Golvvärme (entrén),Entrén,16,16,16,bcb363d07881c5582f9280802f6f7f3a,Området upprepas i enhetsnamnet,True,False
+4daabf598d80be9b00151a9b176cf120,Temp/Hum (Entré),Entrén,9,9,9,,Området upprepas i enhetsnamnet,True,False
+d7f403eee26699ae37255d1dccecfefa,Golvvärme (ateljén),Ateljén,16,16,16,41a2f54e1551476f6c9020ab4fab4d8e,Området upprepas i enhetsnamnet,True,False
+9f570b631ca6c7964eb8bbab2c118fc2,Taklampor (köket),Entrén,6,6,6,43076916057072c8315a5ec72bc784c1,Annat område nämns: Köket,False,True
+fa2820c3346bb1ba7043bc75d6d7274b,Taklampor (kontoret),Kontoret,6,6,6,5dda07e5359a21cf2b42ad81468ce341,Området upprepas i enhetsnamnet,True,False
+a59458ed8ab7710312a1894f85790afb,Golvvärme (köket),Köket,15,15,15,465b32f8caa9062f54e64d884aa6c26b,Området upprepas i enhetsnamnet,True,False
+3477478c12505c16e52e6958bfd13c06,Temp/Hum (Dusch),Duschen,9,9,9,,Området upprepas i enhetsnamnet,True,False
+dc6a115590f250fb022c03d067d4036a,Vattennivå (hönshuset) (C4:4F:33:72:73:E3),Hönshuset,0,0,0,,Området upprepas i enhetsnamnet,True,False
+0b40c33d7df27449b86c184c63606853,Lucka (Hönshuset),Hönshuset,3,3,3,3d74a99687ecaf1f2dc34e7ec08f9852,Området upprepas i enhetsnamnet,True,False
+726bee2f9efa222cf68c48c9019dc7fa,Led-stjärnor (utomhus) [SHPLS],Utomhus,9,8,9,a292f276e5e3fb382bbd423260f25c5f,Området upprepas i enhetsnamnet,True,False
+c9360f9d0be75ed3cc336e32cad66c57,Temp/Hum (Toalett),Toaletten,9,9,9,,Området upprepas i enhetsnamnet,True,False
+325649f034e84bcb586e17a015c92616,Salt (verkstan),Verkstaden,3,3,3,5d9c8908e321df4d620e1bfd57ae3e8c,Området upprepas i enhetsnamnet,True,False
+57e88ba04471e052a1fc0bbefa6ec9bf,Shelly Pro 3 - Verkstaden,Verkstaden,2,2,2,729cf1c0d534488f8fbbe60601af82af,Området upprepas i enhetsnamnet,True,False
+39335e0af4dfd4bdb6fae7d4d12fc8f2,Poolvärmepump (poolen),Poolen,3,3,3,4938c3c651314f938239ed9b238d1e0d,Området upprepas i enhetsnamnet,True,False
+d8567446a81800fbc861d84803bbfbf2,Taklampor (duschen),Duschen,6,6,6,0fa5a047724e3c6c6c9a887a5409ccc3,Området upprepas i enhetsnamnet,True,False
+0a01914167f1350d816bdf756f0624c6,Golvvärme (duschen),Duschen,16,16,16,43289569e23ad7b6af25d174edff006f,Området upprepas i enhetsnamnet,True,False
+7a213c407ce4fd9813d1057550e1213f,Golvvärme (entrén) [SHP1PM] (C4:D8:D5:54:F8:A6),Entrén,0,0,0,,Området upprepas i enhetsnamnet,True,False
+7d4de02b78d441eedb24f259ca71c133,Golvvärme (verandan) [SHP1PM] (C4:D8:D5:54:CC:82),Verandan,0,0,0,,Området upprepas i enhetsnamnet,True,False
+21b65aa4266b491dad9f50165d5ba674,Golvvärme (ateljén) [SHP1PM] (A0:DD:6C:2B:31:4E),Ateljén,0,0,0,,Området upprepas i enhetsnamnet,True,False
+81e82c562490af40f6643ac2b53c9c40,Golvvärme (köket) [SHP1PM] (A0:DD:6C:29:B1:36),Köket,0,0,0,,Området upprepas i enhetsnamnet,True,False
+76eafd04d515e40a3d804ac946a453a9,Golvvärme (duschen) [SHP1PM] (E4:65:B8:F1:C1:BA),Duschen,0,0,0,,Området upprepas i enhetsnamnet,True,False
+c3ee3a9a8bd57c967a8cbe0ed6f2c614,Shelly Pro 3 - Verkstaden (EC:62:60:89:ED:BE),Verkstaden,0,0,0,,Området upprepas i enhetsnamnet,True,False
+b100a107089943dc555e95a019738bc8,Ledstjärnor (utomhus) [SHPLS] (08:F9:E0:FD:43:06),Köket,0,0,0,,Annat område nämns: Utomhus,False,True
+66b1ff7607471ae6bbb410d8f0d82c6d,Väggkontakt x2 (verandan),Verandan,4,4,4,82d956a58aa358bc56eb942ed58a3571,Området upprepas i enhetsnamnet,True,False
+7713eaa96eaf9b7293f776e78bf40a22,Taklampor (verandan),Verandan,12,11,12,,Området upprepas i enhetsnamnet,True,False
+78ee6b1f8ec0bd42eda986ad6250e1c8,Julstjärnor (verandan),Verandan,12,11,12,,Området upprepas i enhetsnamnet,True,False
+e2c79f2f807ca9f7637964a6504a5c7c,Väggkontakt x2 (verandan) (30:C9:22:86:74:6A),Verandan,0,0,0,,Området upprepas i enhetsnamnet,True,False
+5c5f069f32db0ac291f95a926d8fca34,Blomlampa (kontoret),Kontoret,4,4,4,b77cb3c3613ed699bc2a70ab42a8b296,Området upprepas i enhetsnamnet,True,False
+2d8b26e1c47f7b92d725cede4a56ceff,Bordslampa ateljen,Ateljén,10,10,10,,Området upprepas i enhetsnamnet,True,False
+59c163f3ea03948847bb3734b5bcc057,Zyxel GS1900-24E A1 - Switch Vinden,Vinden,17,17,17,82e89920230ddf99dca0cc643306b8b1,Området upprepas i enhetsnamnet,True,False
+de9fcd66ef68eee8a15f89ba208cf1b8,ASUS Lyra MAP-AC2200 - AP Verkstaden,Verkstaden,24,24,24,a5c92bcc1b0925fca8eb9f13ce55341a,Området upprepas i enhetsnamnet,True,False
+f4a0867f437a2bdd2334d2dfa09c5a10,Zyxel GS1900-8HP B1 - Switch Kontoret,Kontoret,17,17,17,a1e61da59c71600fe71b20eaa78e8f9a,Området upprepas i enhetsnamnet,True,False
+9b92f72be8052dee025c353a0acb3f4f,OpenWrt One - Router Sovrum,Sovrummet,35,35,35,eb19818e16c1db8190dc8486dd4112dd,Området upprepas i enhetsnamnet,True,False
+8a1e9043f71dc45229190247390e0d69,OpenWrt One - AP Kontoret,Kontoret,29,29,29,,Området upprepas i enhetsnamnet,True,False
+7e3365ff7aa3b8275a662a8823f1b9b8,OpenWrt One - AP Köket,Köket,28,28,28,,Området upprepas i enhetsnamnet,True,False
+9d41bc4604451d12213ca26190d146da,TP-Link EAP225-Outdoor v3 - AP Poolen,Poolen,24,24,24,,Området upprepas i enhetsnamnet,True,False
+d0feb355293a7b1561f1b965602b3016,ASUS Lyra MAP-AC2200 - AP Friggan,Friggan,25,25,25,,Området upprepas i enhetsnamnet,True,False
+26fc399a9899fb446dc9af75ba820a3d,Taklampor (kontoret),Kontoret,1,1,1,,Området upprepas i enhetsnamnet,True,False
+7b7f1dfdfd50a7fedbc5f9a6e9fe62d4,levoit-humidifier-verandan,,1,1,1,,Annat område nämns: Verandan; Område i namnet men saknad områdestilldelning,False,True
+a3c339f55e11adeaf0e89553f2cb6d96,Golvvärme (entrén),Entrén,1,1,1,,Området upprepas i enhetsnamnet,True,False
+0bae2ea0758d575940f6d18b1be1d52c,Golvvärme (duschen),Duschen,1,1,1,,Området upprepas i enhetsnamnet,True,False
+bad4b202f352dbe1edec05d8ad9adf56,Golvvärme (verandan ),Verandan,1,1,1,,Området upprepas i enhetsnamnet,True,False
+5878a68e425b533cb907c951cd0d95c8,Väggkontakt x2 (verandan),Verandan,1,1,1,,Området upprepas i enhetsnamnet,True,False
+83b5fb3672cd5614741a3f02820229a2,Blomlampa 1 (Verandan),Verandan,1,1,1,,Området upprepas i enhetsnamnet,True,False
+13605732e6a6b76e0810802004ff35de,Blomlampa 2 (verandan),Köket,1,1,1,,Annat område nämns: Verandan,False,True
+1d0e6afaa61887b35a155b9ddbb4060c,Växtlampa frösådd (bion) [SHPLS],Köket,0,0,0,,Annat område nämns: Bion,False,True
+93115a11cfad9ed0b7d2a951030b2e8c,Blomlampor (bion),Bion,0,0,0,,Området upprepas i enhetsnamnet,True,False
+0855a55f5e531fa9d5e929d115eb8ccc,Hemmabio El #1,Bion,1,1,1,,Området upprepas i enhetsnamnet,True,False
+835f0eb53e964c20301c5c528d3ed358,Ventilfläkt (bion),Bion,1,1,1,,Området upprepas i enhetsnamnet,True,False
+1bdc70d21dcc8437ee658f4f8b1efc89,Shelly Pro 3 - Verkstaden,Verkstaden,1,1,1,,Området upprepas i enhetsnamnet,True,False
+16fa21b50b01ffc03b1a5a418fa034fc,ap-honshuset.home.arpa,,1,1,1,,Annat område nämns: Hönshuset; Område i namnet men saknad områdestilldelning,False,True
+ba1419a0198f8022275644713589222a,ap-honshuset,Hönshuset,1,1,1,,Området upprepas i enhetsnamnet,True,False
+371c387a7e06d994d8ee3f18a183e4e6,Zyxel GS1900-8HP B1 - Switch Kontoret,Kontoret,1,1,1,,Området upprepas i enhetsnamnet,True,False
+f3b91432bcfa515b2d3df632835f7379,ap_poolen.home.arpa,,1,1,1,,Annat område nämns: Poolen; Område i namnet men saknad områdestilldelning,False,True
+2786c76654e4105833fd7a80611a57d4,ASUS Lyra MAP-AC2200 - AP Friggan,Friggan,1,1,1,,Området upprepas i enhetsnamnet,True,False
+37ce4b42e683e78fe5d82ebabffbed75,ap_kontoret.home.arpa,,1,1,1,,Annat område nämns: Kontoret; Område i namnet men saknad områdestilldelning,False,True
+f61546e0e3a708266eb4ca78ccce751a,ASUS Lyra MAP-AC2200 - AP Verkstaden,Verkstaden,1,1,1,,Området upprepas i enhetsnamnet,True,False
+a69e4ce232fd68a007094078d290f3b8,ap_koket.home.arpa,,1,1,1,,Annat område nämns: Köket; Område i namnet men saknad områdestilldelning,False,True
+7f3083d2c6bed5b5ea98b800fbf91625,Zyxel GS1900-24E A1 - Switch Vinden,Vinden,1,1,1,,Området upprepas i enhetsnamnet,True,False
+45fd5743822eb8016687597cc2fc1059,Golvvärme (bion),Bion,1,1,1,,Området upprepas i enhetsnamnet,True,False
+3e24b5f201b0c73fdc659540de9330ed,Golvvärme (ateljén),Ateljén,1,1,1,,Området upprepas i enhetsnamnet,True,False
+85406075626f0fb6009cc3bdd606367c,Golvvärme (verandan ),Verandan,1,1,1,,Området upprepas i enhetsnamnet,True,False
+702c2d43ed63a4ef28e93807c2d62b51,Väggkontakt x2 (verandan),Verandan,1,1,1,,Området upprepas i enhetsnamnet,True,False
+e03ce9189b88abe8f912563dee3343ac,Shelly Pro 3 - Verkstaden,Verkstaden,1,1,1,,Området upprepas i enhetsnamnet,True,False
+8d0f0c2e33a803891f3081da7125e864,Golvvärme (köket),Köket,1,1,1,,Området upprepas i enhetsnamnet,True,False
+6011535d3ed07ed7013d2d624eab4d41,levoit-humidifier-verandan,,1,1,1,,Annat område nämns: Verandan; Område i namnet men saknad områdestilldelning,False,True
+1067a1433a55c6c554e9f35aa8958710,Golvvärme (entrén),Entrén,1,1,1,,Området upprepas i enhetsnamnet,True,False
+5f9530504312c9bd37328294bd9ec31c,Växtlampa frösådd (bion) [SHPLS],Köket,1,1,1,,Annat område nämns: Bion,False,True
+7f57dc6d4714015432c5d15bdc80fd26,Golvvärme (duschen),Duschen,1,1,1,,Området upprepas i enhetsnamnet,True,False
+a14ac4105ab2c56916eb8c59686639f2,ap-honshuset.home.arpa,,1,1,1,,Annat område nämns: Hönshuset; Område i namnet men saknad områdestilldelning,False,True
+e90c2b59f7e655c437f7b0212c5719b2,Blomlampa 2 (verandan),Köket,1,1,1,,Annat område nämns: Verandan,False,True
+dea6075e458488efb7e948cd287a3c63,Hemmabio El #1,Bion,1,1,1,,Området upprepas i enhetsnamnet,True,False
+8e39cb75d39dd6a988ef3a9a5124de8d,Taklampor (kontoret),Kontoret,1,1,1,,Området upprepas i enhetsnamnet,True,False
+821a5e8641ccbf676f1f06a89f3f9fcc,Blomlampor (bion),Bion,1,1,1,,Området upprepas i enhetsnamnet,True,False
+485d66614120bab8ca5956b51cd4b434,Ventilfläkt (bion),Bion,1,1,1,,Området upprepas i enhetsnamnet,True,False
+c3d296c6fe124342b568c0f1a646f6a2,Blomlampa 1 (Verandan),Verandan,1,1,1,,Området upprepas i enhetsnamnet,True,False
+85a2d17d616be5930bfb53ae35916205,Galaxy-S7-Friggan,,1,1,1,,Annat område nämns: Friggan; Område i namnet men saknad områdestilldelning,False,True
+021da4d8cdb42a022ec0c8b3741b4cc8,Golvvärme (köket),Köket,1,1,1,,Området upprepas i enhetsnamnet,True,False
+c6d6261f130c4db96379a8eb09cae3f5,Golvvärme (ateljén),Ateljén,1,1,1,,Området upprepas i enhetsnamnet,True,False
+6c0b43166574454e63b8444585344c73,Shelly Pro 3 - Verkstaden,Verkstaden,0,0,0,,Området upprepas i enhetsnamnet,True,False
+b6ecb8a29e9b808c5657990a649a59d5,Växtlampa frösådd (bion) [SHPLS],Köket,0,0,0,,Annat område nämns: Bion,False,True
+9c515ec8a0a57fe5e1a1c9cc2071595e,Galaxy-S7-Friggan,,0,0,0,,Annat område nämns: Friggan; Område i namnet men saknad områdestilldelning,False,True
+2f50d41e1fb1e7ee14edee02c572a45f,Galaxy-S7-Friggan,,0,0,0,,Annat område nämns: Friggan; Område i namnet men saknad områdestilldelning,False,True
+f841139137ec359f2176b7be49b8cfa0,Golvvärme (bion),Bion,1,1,1,,Området upprepas i enhetsnamnet,True,False
+d9796e7ff7a0e2b1a77a964188f38049,Galaxy-S7-Friggan,,0,0,0,,Annat område nämns: Friggan; Område i namnet men saknad områdestilldelning,False,True
+51701210a4b99360e90a9bb1761463a8,Galaxy-S7-Friggan,,0,0,0,,Annat område nämns: Friggan; Område i namnet men saknad områdestilldelning,False,True
+8a504b901d6e7818b65cc36079e57c10,levoit-humidifier-verandan,,0,0,0,,Annat område nämns: Verandan; Område i namnet men saknad områdestilldelning,False,True
+2b8d14b72cea3e7380f38c26d0dcfa05,levoit-humidifier-verandan,,0,0,0,,Annat område nämns: Verandan; Område i namnet men saknad områdestilldelning,False,True
+ae94f660867c6e5814ca6b32d52a1687,Broadlink RM4 mini (köket),Köket,2,2,2,,Området upprepas i enhetsnamnet,True,False
+d86a2e4a0afe3152ec6ba91f68982360,ap_kontoret.home.arpa,Kontoret,10,10,10,,Området upprepas i enhetsnamnet,True,False
+2da15cf767954e9d79c339591f2f619a,ap_koket.home.arpa,Köket,10,10,10,,Området upprepas i enhetsnamnet,True,False
+bc07b114ca9e9fb1acc4548c2e022e28,ap_verkstaden.home.arpa,Verkstaden,10,10,10,,Området upprepas i enhetsnamnet,True,False
+6e144eb572ff568ae5136ddc20aadd9f,ap_friggan.home.arpa,Friggan,10,10,10,,Området upprepas i enhetsnamnet,True,False
+233a41930e82cf6db31abdc1d3f1614a,ap_honshuset.home.arpa,Hönshuset,10,10,10,,Området upprepas i enhetsnamnet,True,False
+84c3f81bd43db440de04766f9929607b,ap_poolen.home.arpa,Poolen,10,10,10,,Området upprepas i enhetsnamnet,True,False
+3367480864f293a5ed4ec6c676d6b865,sw_vinden,Vinden,10,10,10,,Området upprepas i enhetsnamnet,True,False
+5e37874255f8c3c53d80643364d55cf7,sw_kontoret,Kontoret,10,10,10,,Området upprepas i enhetsnamnet,True,False
+da28971722bce1834d1f9017a2d498d0,Adaptive Lighting: Ateljén – test,,4,4,4,,Annat område nämns: Ateljén; Område i namnet men saknad områdestilldelning,False,True
+10d2bd339f7d5a12f3101e8f99b497a1,Adaptive Lighting: Bio,,4,4,4,,Annat område nämns: Bion; Område i namnet men saknad områdestilldelning,False,True

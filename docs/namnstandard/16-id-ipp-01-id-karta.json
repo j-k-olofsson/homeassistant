@@ -1,0 +1,9 @@
+{
+  "sensor.canon_g3070_series_drifttid": "sensor.kontoret_canon_g3070_series_drifttid",
+  "sensor.canon_g3070_series_black_pgbk": "sensor.kontoret_canon_g3070_series_pigmentsvart_pgbk",
+  "sensor.canon_g3070_series_cyan": "sensor.kontoret_canon_g3070_series_cyan",
+  "sensor.canon_g3070_series_mc": "sensor.kontoret_canon_g3070_series_mc",
+  "sensor.canon_g3070_series_magenta": "sensor.kontoret_canon_g3070_series_magenta",
+  "sensor.canon_g3070_series_yellow": "sensor.kontoret_canon_g3070_series_gul",
+  "sensor.canon_g3070_series": "sensor.kontoret_canon_g3070_series"
+}

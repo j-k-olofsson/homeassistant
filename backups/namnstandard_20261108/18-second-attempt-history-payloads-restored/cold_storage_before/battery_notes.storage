@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "minor_version": 4,
+  "key": "battery_notes.storage",
+  "data": {
+    "devices": [
+      {
+        "device_id": "c625aacb05f0aaf9a190446f7fa560d4",
+        "battery_last_replaced": "2026-10-06T15:03:13.046984+00:00",
+        "battery_last_reported": "2026-11-08T08:52:29.612082+00:00",
+        "battery_last_reported_level": 82.0
+      },
+      {
+        "device_id": "3768dc19fb5e0da38a61a8dd68d9f796",
+        "battery_last_replaced": "2025-12-09T07:23:10.340918+00:00",
+        "battery_last_reported": "2026-11-08T08:58:18.455164+00:00",
+        "battery_last_reported_level": 54.0
+      },
+      {
+        "device_id": "aaa3151216f3c1ff7bbe37bbbc2a3826",
+        "battery_last_replaced": "2026-08-20T14:24:01.582068+00:00",
+        "battery_last_reported": "2026-11-08T08:52:30.374279+00:00",
+        "battery_last_reported_level": 73.0
+      },
+      {
+        "device_id": "42865fcfc600bba2e28060108d65f52d",
+        "battery_last_replaced": "2025-12-21T07:58:07.662269+00:00",
+        "battery_last_reported": "2026-11-08T08:52:30.360353+00:00",
+        "battery_last_reported_level": 69.0
+      },
+      {
+        "device_id": "2f5421e7f9e52c0299c95b9f10d88901",
+        "battery_last_replaced": "2026-09-07T14:42:45.536629+00:00",
+        "battery_last_reported": "2026-11-08T08:52:59.801372+00:00",
+        "battery_last_reported_level": 87.0
+      },
+      {
+        "device_id": "79a20aa4a5899b2a2e9a0da4fed17acd",
+        "battery_last_replaced": "2025-11-22T09:15:38.248613+00:00",
+        "battery_last_reported": "2026-11-08T08:52:30.377440+00:00",
+        "battery_last_reported_level": 54.0
+      },
+      {
+        "device_id": "cf61f1423e655523f6d921f46f3f1daf",
+        "battery_last_replaced": "2026-08-03T04:57:34.314440+00:00",
+        "battery_last_reported": "2026-11-08T08:52:30.352934+00:00",
+        "battery_last_reported_level": 76.0
+      },
+      {
+        "device_id": "889b90b31932ce33eed47460a645c3aa",
+        "battery_last_replaced": "2026-02-20T07:39:35.829955+00:00",
+        "battery_last_reported": "2026-11-08T08:52:30.365237+00:00",
+        "battery_last_reported_level": 70.0
+      },
+      {
+        "device_id": "7edc98a8492c32141a8ebef1222392de",
+        "battery_last_replaced": "2026-10-02T05:44:54.902795+00:00",
+        "battery_last_reported": "2026-11-08T08:58:11.156784+00:00",
+        "battery_last_reported_level": 43.0
+      },
+      {
+        "device_id": "666659ace8f39866608c5bd6fb811809",
+        "battery_last_replaced": "2026-10-02T05:44:58.893043+00:00",
+        "battery_last_reported": "2026-11-08T08:58:11.554566+00:00",
+        "battery_last_reported_level": 90.0
+      },
+      {
+        "device_id": "0dccdb8b626e0ac1a01cd946024dcfe2",
+        "battery_last_replaced": "2024-08-06T18:26:56.696035+00:00",
+        "battery_last_reported": "2026-02-09T14:53:03.376843+00:00",
+        "battery_last_reported_level": "30"
+      },
+      {
+        "device_id": "54d2a489a356e75349f383bef1be62af",
+        "battery_last_replaced": "2026-04-13T14:09:10.033777+00:00",
+        "battery_last_reported": "2026-11-08T08:52:28.906091+00:00",
+        "battery_last_reported_level": 55.0
+      },
+      {
+        "device_id": "42b814b5ee4b8bde1951fbd5a46bbbc4",
+        "battery_last_replaced": "2026-02-10T11:02:48.265984+00:00",
+        "battery_last_reported": "2026-11-08T08:52:30.395995+00:00",
+        "battery_last_reported_level": 66.0
+      },
+      {
+        "device_id": "076c2ebaa51875bb440a42739602d564",
+        "battery_last_replaced": "2025-01-17T03:56:57.894300+00:00",
+        "battery_last_reported": "2026-08-07T07:48:01.357039+00:00",
+        "battery_last_reported_level": null
+      },
+      {
+        "device_id": "8d7b0aeca4e1c58ab9609319b7f9352c",
+        "battery_last_replaced": "2026-11-02T23:03:24.309366+00:00",
+        "battery_last_reported": "2026-11-08T08:52:25.329473+00:00",
+        "battery_last_reported_level": 100.0
+      },
+      {
+        "device_id": "4daabf598d80be9b00151a9b176cf120",
+        "battery_last_replaced": "2026-05-19T05:42:02.130049+00:00",
+        "battery_last_reported": "2026-11-08T08:52:30.399086+00:00",
+        "battery_last_reported_level": 80.0
+      },
+      {
+        "device_id": "42f03f598c2703c7f633598e45ddff53",
+        "battery_last_replaced": "2024-09-11T11:54:33.763555+00:00",
+        "battery_last_reported": "2025-01-27T08:07:03.811179+00:00",
+        "battery_last_reported_level": null
+      },
+      {
+        "device_id": "3477478c12505c16e52e6958bfd13c06",
+        "battery_last_replaced": "2025-01-30T19:33:53.065131+00:00",
+        "battery_last_reported": "2026-11-08T08:52:30.402803+00:00",
+        "battery_last_reported_level": 79.0
+      },
+      {
+        "device_id": "86cdaf8a969caf72711a090622c37f33",
+        "battery_last_replaced": "2026-09-06T12:52:58.908389+00:00",
+        "battery_last_reported": "2026-11-08T08:58:10.755016+00:00",
+        "battery_last_reported_level": 30.0
+      },
+      {
+        "device_id": "c21cd3e68401f7ec3c6361beb8e06c9f",
+        "battery_last_replaced": "2026-09-06T12:52:55.932094+00:00",
+        "battery_last_reported": "2026-11-08T08:58:10.646191+00:00",
+        "battery_last_reported_level": 18.0
+      },
+      {
+        "device_id": "c733f1b8e6964460bd2bd4e5c7408419",
+        "battery_last_replaced": "2026-04-18T05:27:16.531406+00:00",
+        "battery_last_reported": "2026-11-08T08:58:12.313789+00:00",
+        "battery_last_reported_level": 27.0
+      },
+      {
+        "device_id": "c9360f9d0be75ed3cc336e32cad66c57",
+        "battery_last_replaced": "2026-08-28T14:54:33.343796+00:00",
+        "battery_last_reported": "2026-11-08T08:52:30.429845+00:00",
+        "battery_last_reported_level": 86.0
+      },
+      {
+        "device_id": "6a79c5943fdb824f90417117075d405c",
+        "battery_last_replaced": "2026-06-13T05:14:38.533970+00:00",
+        "battery_last_reported": "2026-11-08T08:52:25.340906+00:00",
+        "battery_last_reported_level": 95.0
+      },
+      {
+        "device_id": "bd5c7fa476445dd7ace3e809eb4f0275",
+        "battery_last_replaced": "2026-10-21T05:34:43.671241+00:00",
+        "battery_last_reported": "2026-11-08T08:58:13.366725+00:00",
+        "battery_last_reported_level": 54.0
+      },
+      {
+        "device_id": "f66541be41de7e575c08477f5859cc87",
+        "battery_last_replaced": "2026-06-28T09:03:08.337100+00:00",
+        "battery_last_reported": "2026-11-08T08:58:13.331156+00:00",
+        "battery_last_reported_level": 100.0
+      },
+      {
+        "device_id": "e011766e3d90d9123cb204344f014411",
+        "battery_last_replaced": "2026-07-28T08:38:03.066210+00:00",
+        "battery_last_reported": "2026-11-08T08:52:25.344552+00:00",
+        "battery_last_reported_level": 100.0
+      }
+    ],
+    "entities": [],
+    "hidden_entities": {}
+  }
+}

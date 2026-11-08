@@ -1,0 +1,34 @@
+{
+  "button.honshuset_tapo_c200c_reboot": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:52:27.526128+00:00",
+      "last_updated": "2026-11-07T07:52:27.526128+00:00"
+    }
+  ],
+  "button.honshuset_tapo_c200c_set_system_date_and_time": [
+    {
+      "state": "2026-10-11T16:55:53.726075+00:00",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:52:27.526128+00:00",
+      "last_updated": "2026-11-07T07:52:27.526128+00:00"
+    }
+  ],
+  "binary_sensor.honshuset_tapo_c200c_c200c_cell_motion_detection": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:52:27.526128+00:00",
+      "last_updated": "2026-11-07T07:52:27.526128+00:00"
+    }
+  ],
+  "binary_sensor.honshuset_tapo_c200c_c200c_person_detection": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:52:27.526128+00:00",
+      "last_updated": "2026-11-07T07:52:27.526128+00:00"
+    }
+  ]
+}

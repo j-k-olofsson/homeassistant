@@ -1,0 +1,20 @@
+# Update once per minute without subscribing to every entity's state changes.
+template:
+  - triggers:
+      - trigger: time_pattern
+        minutes: "/1"
+      - trigger: homeassistant
+        event: start
+    sensor:
+      - name: "HA – Antal otillgängliga enheter"
+        default_entity_id: sensor.ha_antal_otillgangliga_enheter
+        unique_id: 01K276DQ9KHYAR396NT0QBWFGN
+        unit_of_measurement: enheter
+        attributes:
+          last_counted_at: "{{ now().isoformat() }}"
+        state: |-
+          {{ states
+            | rejectattr('entity_id','eq','sensor.ha_antal_otillgangliga_enheter')
+            | selectattr('state','in',['unavailable','unknown'])
+            | list
+            | length }}

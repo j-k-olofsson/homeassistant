@@ -1,0 +1,75 @@
+{
+  "issues": [
+    {
+      "breaks_in_ha_version": null,
+      "created": "2026-10-21T11:13:22.057589+00:00",
+      "dismissed_version": null,
+      "ignored": false,
+      "domain": "spook",
+      "is_fixable": true,
+      "issue_domain": "group",
+      "issue_id": "group_unknown_members_light.grupp_lampor_som_tands_vid_skymning_a325457e",
+      "learn_more_url": "https://spook.boo/group#unknown-source-entity",
+      "severity": "warning",
+      "translation_key": "group_unknown_members",
+      "translation_placeholders": {
+        "entities": "- `light.levoit_luftfukare_300s_night_light`",
+        "group": "GRUPP - Lampor som t\u00e4nds vid skymning",
+        "entity_id": "light.grupp_lampor_som_tands_vid_skymning"
+      }
+    },
+    {
+      "breaks_in_ha_version": null,
+      "created": "2026-10-21T11:14:05.779274+00:00",
+      "dismissed_version": null,
+      "ignored": false,
+      "domain": "spook",
+      "is_fixable": false,
+      "issue_domain": "script",
+      "issue_id": "script_unknown_entity_references_script.granny_announce_aa4748dd",
+      "learn_more_url": "https://spook.boo/script#unknown-referenced-entities",
+      "severity": "warning",
+      "translation_key": "script_unknown_entity_references",
+      "translation_placeholders": {
+        "entities": "- `media_player.ateljens_hogtalare` (deleted on 2026-10-21, was provided by `music_assistant`)",
+        "script": "Granny \u2013 synkroniserat tal via vanlig Chromecast",
+        "edit": "/config/script/edit/granny_announce",
+        "entity_id": "script.granny_announce"
+      }
+    },
+    {
+      "breaks_in_ha_version": null,
+      "created": "2026-10-21T11:14:39.566511+00:00",
+      "dismissed_version": null,
+      "ignored": false,
+      "domain": "spook",
+      "is_fixable": true,
+      "issue_domain": "group",
+      "issue_id": "group_unknown_members_media_player.grupp_grannys_hogtalare_6f5c0ad4",
+      "learn_more_url": "https://spook.boo/group#unknown-source-entity",
+      "severity": "warning",
+      "translation_key": "group_unknown_members",
+      "translation_placeholders": {
+        "entities": "- `media_player.jbl_link_500` (deleted on 2026-10-21, was provided by `cast`)",
+        "group": "GRUPP - Grannys h\u00f6gtalare",
+        "entity_id": "media_player.grupp_grannys_hogtalare"
+      }
+    },
+    {
+      "breaks_in_ha_version": null,
+      "created": "2026-10-21T11:50:19.462382+00:00",
+      "dismissed_version": null,
+      "ignored": false,
+      "domain": "spook",
+      "is_fixable": true,
+      "issue_domain": "recorder",
+      "issue_id": "orphaned_statistics_orphaned_statistics_bc9aaca7",
+      "learn_more_url": "https://spook.boo/recorder#orphaned-long-term-statistics",
+      "severity": "warning",
+      "translation_key": "orphaned_statistics",
+      "translation_placeholders": {
+        "statistics": "- `sensor.diun_cpu_anvandning_totalt`\n- `sensor.diun_minnesanvandning`\n- `sensor.diun_minnesanvandning_i_procent`\n- `sensor.diun_minnesgrans`\n- `sensor.fulla_antal_avbildningar`\n- `sensor.fulla_antal_behallare`\n- `sensor.fulla_behallare_pausade`\n- `sensor.fulla_behallare_som_kors`\n- `sensor.fulla_behallare_stoppade`\n- `sensor.koket_taklampor_kokson_effekt`\n- `sensor.ssid_olofsson_iot_2_4_ghz_signal`\n- `sensor.ssid_olofsson_wifi_2_4_ghz_signal`\n- `sensor.whisper_analysis_cpu_cpu_anvandning_totalt`\n- `sensor.whisper_analysis_cpu_minnesanvandning`\n- `sensor.whisper_analysis_cpu_minnesanvandning_i_procent`\n- `sensor.whisper_analysis_cpu_minnesgrans`\n- `sensor.whisper_analysis_gpu_cpu_anvandning_totalt`\n- `sensor.whisper_analysis_gpu_minnesanvandning`\n- `sensor.whisper_analysis_gpu_minnesanvandning_i_procent`\n- `sensor.whisper_analysis_gpu_minnesgrans`\n- `sensor.whisper_analysis_offline_cpu_anvandning_totalt`\n- `sensor.whisper_analysis_offline_minnesanvandning`\n- `sensor.whisper_analysis_offline_minnesanvandning_i_procent`\n- `sensor.whisper_analysis_offline_minnesgrans`\n- `sensor.wyoming_whisper_container_svarstid_o_1_dag`\n- `sensor.wyoming_whisper_container_svarstid_o_30_dagar`\n- `sensor.wyoming_whisper_container_svarstid_o_365_dagar`\n- `sensor.wyoming_whisper_container_upptid_1_dag`\n- `sensor.wyoming_whisper_container_upptid_30_dagar`\n- `sensor.wyoming_whisper_container_upptid_365_dagar`\n- `sensor.wyoming_whisper_cpu_anvandning_totalt`\n- `sensor.wyoming_whisper_minnesanvandning`\n- `sensor.wyoming_whisper_minnesanvandning_i_procent`\n- `sensor.wyoming_whisper_minnesgrans`\n- `sensor.wyoming_whisper_old_cpu_anvandning_totalt`\n- `sensor.wyoming_whisper_old_minnesanvandning`\n- `sensor.wyoming_whisper_old_minnesanvandning_i_procent`\n- `sensor.wyoming_whisper_old_minnesgrans`\n- `sensor.wyoming_whisper_restart_count`"
+      }
+    }
+  ]
+}

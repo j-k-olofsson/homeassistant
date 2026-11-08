@@ -1,0 +1,14 @@
+{
+  "check_config": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  },
+  "repairs": {
+    "issues": []
+  },
+  "pending_schedules": [],
+  "charger_state": "off",
+  "car_climate_state": "off",
+  "new_worker_available": true
+}

@@ -1,0 +1,7 @@
+{
+  "Poängfördelning": "| Område | Poäng |\n| :--- | ---: |\n| Hårdvara | **100 / 100** |\n| Applikation | **100 / 100** |\n\nHårdvara väger 40 % och applikation 60 %.",
+  "Rekommendationer": "✅ Inga rekommenderade åtgärder.",
+  "Zombies": "✅ **Inga zombies upptäckta.**\n\n\n[Öppna entitetsregistret](/config/entities)",
+  "Uppdateringar": "✅ **Inga väntande uppdateringar enligt HAGHS.**\n\n[Öppna uppdateringar](/config/updates)",
+  "Databas och insamling": "| Inställning | Status |\n| :--- | :--- |\n| Databas | 4607.2 MB |\n| Historik | 10 dagar |\n| Entitetsfilter | Aktivt |\n| Mätkälla | PSI · CPU, RAM och I/O |"
+}

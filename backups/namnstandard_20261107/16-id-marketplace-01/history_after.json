@@ -1,0 +1,290 @@
+{
+  "update.heimdal_ha_apexcharts_card": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.heimdal_ha_home_assistant_plant": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-08T07:03:46.558913+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:36:50.217101+00:00"
+    }
+  ],
+  "update.heimdal_ha_card_mod": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.heimdal_ha_nordpool": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.heimdal_ha_spook_your_homie": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.heimdal_ha_pollenprognos_card": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.heimdal_ha_openplantbook": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T19:25:21.331706+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:00.734529+00:00"
+    }
+  ],
+  "update.heimdal_ha_svensk_postutdelning": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.heimdal_ha_custom_brand_icons": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.heimdal_ha_auto_entities": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.heimdal_ha_home_connect_alt": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.heimdal_ha_kiosk_mode": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.heimdal_ha_battery_state_card_entity_row": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.heimdal_ha_powercalc": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.heimdal_ha_battery_notes": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.heimdal_ha_flex_table_highly_customizable_data_visualization": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "switch.heimdal_ha_battery_state_card_entity_row_forhandsutgava": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.heimdal_ha_mini_graph_card": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.pollenprognos": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.config_template_card": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.gauge_card_pro": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.google_home": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.toyota_eu_community_integration": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "switch.toyota_eu_community_integration_forhandsutgava": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.meteogram_card": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T19:25:21.144519+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-08T07:03:01.695428+00:00"
+    }
+  ],
+  "update.weather_forecast_card": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.presence_simulation": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.openwrt": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    },
+    {
+      "state": "on",
+      "last_changed": "2026-11-07T10:58:42.417760+00:00"
+    },
+    {
+      "state": "off",
+      "last_changed": "2026-11-07T13:24:32.952435+00:00"
+    }
+  ],
+  "update.alsavopro": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "switch.alsavopro_forhandsutgava": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.haghs": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ],
+  "update.advanced_camera_card": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:51:27.303920+00:00",
+      "last_updated": "2026-11-07T07:51:27.303920+00:00"
+    }
+  ]
+}

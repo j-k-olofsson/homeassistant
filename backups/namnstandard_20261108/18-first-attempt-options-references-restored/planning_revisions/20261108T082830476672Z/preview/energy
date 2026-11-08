@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "minor_version": 3,
+  "key": "energy",
+  "data": {
+    "energy_sources": [
+      {
+        "type": "grid",
+        "cost_adjustment_day": 0.0,
+        "stat_energy_from": "sensor.utomhus_elmatare_elstolpen_forbrukad_energi",
+        "stat_cost": null,
+        "entity_energy_price": "sensor.nordpool",
+        "number_energy_price": null,
+        "stat_energy_to": null,
+        "stat_compensation": null,
+        "entity_energy_price_export": null,
+        "number_energy_price_export": null
+      }
+    ],
+    "device_consumption": [
+      {
+        "stat_consumption": "sensor.poolen_poolpump_utomhus_beraknad_energi",
+        "name": "Poolen Poolpump (utomhus)"
+      },
+      {
+        "stat_consumption": "sensor.entren_golvvarme_energi",
+        "name": "Entrén Golvvärme"
+      },
+      {
+        "stat_consumption": "sensor.ateljen_golvvarme_energi",
+        "name": "Ateljén Golvvärme"
+      },
+      {
+        "stat_consumption": "sensor.koket_golvvarme_energi",
+        "name": "Köket Golvvärme"
+      },
+      {
+        "stat_consumption": "sensor.verandan_golvvarme_energi",
+        "name": "Verandan Golvvärme"
+      },
+      {
+        "stat_consumption": "sensor.sovrummet_golvvarme_sovrum_och_kontor_energi",
+        "name": "Sovrummet Golvvärme (sovrum och kontor)"
+      },
+      {
+        "stat_consumption": "sensor.duschen_golvvarme_beraknad_energi",
+        "name": "Duschen Golvvärme"
+      },
+      {
+        "stat_consumption": "sensor.bion_golvvarme_energi",
+        "name": "Bion Golvvärme"
+      },
+      {
+        "stat_consumption": "sensor.friggan_golvvarme_energi",
+        "name": "Friggan Golvvärme"
+      },
+      {
+        "stat_consumption": "sensor.bion_elstyrning_1_energi_idag"
+      },
+      {
+        "stat_consumption": "sensor.bion_elstyrning_2_energi_idag"
+      }
+    ],
+    "device_consumption_water": []
+  }
+}

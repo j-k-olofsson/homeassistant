@@ -1,0 +1,128 @@
+{
+  "/caddy-ui": {
+    "id": "1ded609ec204e99fd2318ba8cad8c72dcc92e5f26dde2e053c892bc1acaba72e",
+    "image": "perteus/caddy-ui:3.3.1",
+    "running": true,
+    "started": "2026-11-06T09:21:42.430068039Z",
+    "restart_count": 0
+  },
+  "/portainer_agent": {
+    "id": "3ea495e2b4a24580d525fa5c7d982af240e4129df1a049449dee7350382defca",
+    "image": "portainer/agent:2.45.3",
+    "running": true,
+    "started": "2026-11-06T09:20:41.994808984Z",
+    "restart_count": 0
+  },
+  "/searxng": {
+    "id": "20bee1b702de0af2fae3afe1571aef34504015bc910c2fb57747414489946851",
+    "image": "searxng/searxng:latest",
+    "running": true,
+    "started": "2026-11-06T07:32:15.534228913Z",
+    "restart_count": 0
+  },
+  "/netlogs-reports-http": {
+    "id": "ca1310ae7c3e27eb0daed2fcd2f4b446be08b0924ec604bc420d1f3a166fac2f",
+    "image": "nginx:alpine",
+    "running": true,
+    "started": "2026-11-06T07:32:10.63614498Z",
+    "restart_count": 0
+  },
+  "/ollama": {
+    "id": "1ebb40135fd4075d40ccb7c404d10ba20703abc59ed49793641d8ebdbfb5e8bf",
+    "image": "ollama/ollama:latest",
+    "running": true,
+    "started": "2026-11-06T07:32:03.51072953Z",
+    "restart_count": 0
+  },
+  "/netlogs-syslogng": {
+    "id": "617e595c300616790a91aa6bbe7235124cd9fa46b3bd6f4d4d65e157bd2f852b",
+    "image": "lscr.io/linuxserver/syslog-ng:latest",
+    "running": true,
+    "started": "2026-11-06T07:30:13.764690665Z",
+    "restart_count": 0
+  },
+  "/ha": {
+    "id": "045732aeccb050ca76223269154e4090ff4893317ad5e958aace58cfc71793b4",
+    "image": "ghcr.io/home-assistant/home-assistant:stable",
+    "running": true,
+    "started": "2026-11-05T07:24:15.279382597Z",
+    "restart_count": 0
+  },
+  "/openwebui": {
+    "id": "35e5f74ea6a2dd349167e049f739dea85d9bad8b17323c0e38a9b972253277d7",
+    "image": "ghcr.io/open-webui/open-webui:main",
+    "running": true,
+    "started": "2026-11-04T05:39:05.990131433Z",
+    "restart_count": 0
+  },
+  "/esphome": {
+    "id": "eef4228596e7c2ffc898ad7d3461d0381da5ad256ef495bd838c0d1da6a79926",
+    "image": "ghcr.io/esphome/esphome:latest",
+    "running": true,
+    "started": "2026-11-04T05:37:59.984937096Z",
+    "restart_count": 0
+  },
+  "/uptime-kuma": {
+    "id": "e40ed84f1ca34841c400107496b354a1a5ee357f14d0120b6ee7a7ee2a16223b",
+    "image": "louislam/uptime-kuma:2",
+    "running": true,
+    "started": "2026-11-01T16:20:08.703499516Z",
+    "restart_count": 0
+  },
+  "/openwrt-backup": {
+    "id": "9dbd50a79f61b2524594e0a6c05ab6f77abdbb35ec4259bd571906a97d812ace",
+    "image": "tor/openwrt-backup:local",
+    "running": true,
+    "started": "2026-10-26T11:00:07.640882936Z",
+    "restart_count": 0
+  },
+  "/portainer": {
+    "id": "864c11a701e56cd0d90b0d8d316e96ce9a5bc75d527edf2351c8d1675e49f27d",
+    "image": "portainer/portainer-ee:latest",
+    "running": true,
+    "started": "2026-11-06T03:34:52.923662519Z",
+    "restart_count": 0
+  },
+  "/glances": {
+    "id": "ff18c4a6c4520b200e276c8162822fe2e62e697e7653891eec5bc1c255fc7500",
+    "image": "nicolargo/glances:ubuntu-latest-full",
+    "running": true,
+    "started": "2026-10-24T15:24:36.476150156Z",
+    "restart_count": 0
+  },
+  "/wyoming-whisper-frigg": {
+    "id": "5aa70010dacddb49c70ae6df06f1280f773fb52a41bf9b49d7a989e36a252e80",
+    "image": "lscr.io/linuxserver/faster-whisper@sha256:e3e1b6deef3d2f9d429dc863c43e2ae3b2f76691a1b513e9e5e16ffa20097111",
+    "running": true,
+    "started": "2026-10-24T15:24:36.459068199Z",
+    "restart_count": 0
+  },
+  "/netlogs-analyzer": {
+    "id": "458a469ca11214a8657215da712d25eba13f9aca7cceaa9d550c1f9d1443e5fb",
+    "image": "netlogs-analyzer:latest",
+    "running": true,
+    "started": "2026-10-24T15:24:36.440080525Z",
+    "restart_count": 0
+  },
+  "/netlogs-api": {
+    "id": "5810056ad36963a1bccb868a1b91fa57c9573b5b9dbf00ef38fc1ac01b25d415",
+    "image": "netlogs-api:latest",
+    "running": true,
+    "started": "2026-10-24T15:24:36.457724304Z",
+    "restart_count": 0
+  },
+  "/docker-socket-proxy": {
+    "id": "2299deec67a7c0dba8eba7445b6845f036f3d3ba39f6d8a875d1f63ff55c83cd",
+    "image": "tecnativa/docker-socket-proxy:0.1.1",
+    "running": true,
+    "started": "2026-10-24T15:24:36.442443237Z",
+    "restart_count": 0
+  },
+  "/caddy": {
+    "id": "97b22d49d890259c258e6d3bf40a3f0c306c8d76e8f669fec7bfe9fa2b39d119",
+    "image": "caddy:2.8.4",
+    "running": true,
+    "started": "2026-10-24T15:24:36.477366847Z",
+    "restart_count": 0
+  }
+}

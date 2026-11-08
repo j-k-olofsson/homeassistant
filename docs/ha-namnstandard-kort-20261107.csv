@@ -1,0 +1,283 @@
+﻿kontrollpanel,vy,sökväg,korttyp,entity_id,eget_kortnamn
+lovelace.dashboard_elpris,Elförbrukning & Elpris,views[0].sections[0].cards[0].cards[0].series[0],column,sensor.nordpool,
+lovelace.dashboard_elpris,Elförbrukning & Elpris,views[0].sections[0].cards[0].cards[0].series[1],area,sensor.energiforbrukning_per_timme,
+lovelace.dashboard_elpris,Elförbrukning & Elpris,views[0].sections[1].cards[0],gauge,sensor.nordpool,"""Elpris (inkl allt)"""
+lovelace.dashboard_elpris,Elförbrukning & Elpris,views[0].sections[1].cards[1],gauge,sensor.power_consumed,"""Elförbrukning"""
+lovelace.dashboard_hemmabio,Bio,views[0].cards[0].cards[0],tile,switch.grupp_hemmabio,"""Bio"""
+lovelace.dashboard_hemmabio,Bio,views[0].cards[0].cards[1],tile,button.esphome76_lexicon_volume_down,"""Volym −"""
+lovelace.dashboard_hemmabio,Bio,views[0].cards[0].cards[2],tile,button.esphome76_lexicon_volume_up,"""Volym +"""
+lovelace.dashboard_hemmabio,Bio,views[0].cards[0].cards[3],tile,light.esphome57_esphome57_light,"""Taklampor"""
+lovelace.dashboard_hemmabio,Bio,views[0].cards[0].cards[4],tile,light.grupp_bordslampor_bion,"""Bordslampor"""
+lovelace.ha_admin,Admin,views[0].sections[0].cards[1],tile,input_datetime.lights_on,"""Lampor tänds"""
+lovelace.ha_admin,Admin,views[0].sections[0].cards[2],tile,input_datetime.lights_off,"""Lampor släcks"""
+lovelace.ha_admin,Admin,views[0].sections[0].cards[3],tile,input_datetime.growlights_on,"""Växtlampor tänds"""
+lovelace.ha_admin,Admin,views[0].sections[0].cards[4],tile,input_datetime.growlights_late_on,"""Växtlampor senare tändning"""
+lovelace.ha_admin,Admin,views[0].sections[0].cards[5],tile,input_datetime.growlights_off,"""Växtlampor släcks"""
+lovelace.ha_admin,Admin,views[0].sections[0].cards[6],tile,input_datetime.oppna_honsluckan,"""Hönsluckan öppnas"""
+lovelace.ha_admin,Admin,views[0].sections[0].cards[7],tile,input_datetime.ir_lights_on,"""IR-ljus tänds"""
+lovelace.ha_admin,Admin,views[0].sections[0].cards[8],tile,input_datetime.ir_lights_off,"""IR-ljus släcks"""
+lovelace.ha_admin,Admin,views[0].sections[1].cards[1],tile,input_boolean.pool_equipment,"""Poolprylar"""
+lovelace.ha_admin,Admin,views[0].sections[1].cards[2],tile,input_boolean.winter_equipment,"""Vinterprylar"""
+lovelace.ha_admin,Admin,views[0].sections[1].cards[3],tile,input_boolean.guest_mode,"""Gästläge"""
+lovelace.ha_admin,Admin,views[0].sections[1].cards[4],tile,input_boolean.ir_lights_automation,"""Automatiska IR-ljus"""
+lovelace.ha_admin,Admin,views[0].sections[1].cards[6],tile,input_select.light_scene,"""Lampornas scen"""
+lovelace.ha_admin,Admin,views[0].sections[1].cards[7],tile,input_select.sun_phase,"""Solens dygnsfas"""
+lovelace.ha_admin,Admin,views[0].sections[1].cards[8],tile,input_select.growlight_scene,"""Växtlampors scen"""
+lovelace.ha_admin,Admin,views[0].sections[2].cards[1],tile,input_select.ir_lights_morning_start,"""Morgonstart"""
+lovelace.ha_admin,Admin,views[0].sections[2].cards[2],tile,input_number.ir_lights_before_diego_alarm,"""Före Diegos alarm"""
+lovelace.ha_admin,Admin,views[0].sections[2].cards[3],tile,script.ir_lights_on,"""Tänd alla"""
+lovelace.ha_admin,Admin,views[0].sections[2].cards[4],tile,script.ir_lights_off,"""Släck alla"""
+lovelace.ha_admin,Admin,views[0].sections[2].cards[5],tile,button.varmeljus_ljusstyrka_minska,"""Minska ljusstyrkan"""
+lovelace.ha_admin,Admin,views[0].sections[2].cards[6],tile,button.varmeljus_ljusstyrka_oka,"""Öka ljusstyrkan"""
+lovelace.ha_admin,Admin,views[0].sections[2].cards[7],tile,button.varmeljus_lage_sl,"""Slow Light"""
+lovelace.ha_admin,Admin,views[0].sections[2].cards[8],tile,button.varmeljus_lage_fl,"""Fast Light"""
+lovelace.ha_admin,Admin,views[0].sections[2].cards[9],tile,button.varmeljus_lage_bf,"""BF"""
+lovelace.ha_admin,Admin,views[0].sections[2].cards[10],tile,button.varmeljus_lage_light,"""Light"""
+lovelace.ha_admin,Admin,views[0].sections[2].cards[11],tile,button.varmeljus_timer_2h,"""2 tim timer"""
+lovelace.ha_admin,Admin,views[0].sections[2].cards[12],tile,button.varmeljus_timer_4h,"""4 tim timer"""
+lovelace.ha_admin,Admin,views[0].sections[2].cards[13],tile,button.varmeljus_timer_6h,"""6 tim timer"""
+lovelace.ha_admin,Admin,views[0].sections[2].cards[14],tile,button.varmeljus_timer_8h,"""8 tim timer"""
+lovelace.ha_admin,Admin,views[0].sections[4].cards[1],tile,input_boolean.narvarosimulering_aktiv,"""Närvarosimulering"""
+lovelace.ha_admin,Admin,views[0].sections[4].cards[2],tile,input_boolean.narvarosimulering_testlage,"""Simulering – testläge"""
+lovelace.ha_admin,Server,views[1].sections[0].cards[1],gauge,sensor.processor_use,"""CPU"""
+lovelace.ha_admin,Server,views[1].sections[0].cards[2],gauge,sensor.memory_use_percent,"""Minne"""
+lovelace.ha_admin,Server,views[1].sections[0].cards[3],gauge,sensor.system_monitor_disk_use_percent,"""Disk"""
+lovelace.ha_admin,Server,views[1].sections[0].cards[4],gauge,sensor.swap_use_percent,"""Swap"""
+lovelace.ha_admin,Server,views[1].sections[0].cards[6],tile,sensor.disk_free,"""Fri disk"""
+lovelace.ha_admin,Server,views[1].sections[0].cards[7],tile,sensor.processor_temperature,"""CPU Temp"""
+lovelace.ha_admin,Server,views[1].sections[0].cards[8],tile,sensor.last_boot,"""OS reboot"""
+lovelace.ha_admin,Server,views[1].sections[1].cards[1],gauge,sensor.system_ha_global_health_score,"""HAGHS · Total hälsa"""
+lovelace.ha_admin,Hälsokontroll,views[2].sections[0].cards[0],tile,sensor.ha_db_size_mb,"""Databasstorlek"""
+lovelace.ha_admin,Hälsokontroll,views[2].sections[0].cards[1],tile,sensor.ha_states_rows_24h,"""Rader senaste dygnet"""
+lovelace.ha_admin,Hälsokontroll,views[2].sections[0].cards[2],tile,sensor.ha_antal_enheter,"""Antal enheter"""
+lovelace.ha_admin,Hälsokontroll,views[2].sections[0].cards[3],tile,sensor.ha_antal_otillgangliga_enheter,"""Otillgängliga / okända"""
+lovelace.ha_admin,Hälsokontroll,views[2].sections[0].cards[4],tile,sensor.ha_antal_otillgangliga_kritiska_enheter,"""Kritiska otillgängliga"""
+lovelace.ha_admin,Hälsokontroll,views[2].sections[1].cards[0].entities[0],,sensor.ha_db_size_mb,
+lovelace.ha_admin,Hälsokontroll,views[2].sections[1].cards[0].entities[1],,sensor.ha_states_rows_24h,
+lovelace.ha_admin,Energipris,views[3].sections[0].cards[1],tile,input_number.nordpool_certificate_fee,"""Certifikatsavgift"""
+lovelace.ha_admin,Energipris,views[3].sections[0].cards[2],tile,input_number.nordpool_energy_tax,"""Energiskatt"""
+lovelace.ha_admin,Energipris,views[3].sections[0].cards[3],tile,input_number.nordpool_energy_transfer_fee,"""Transferavgift"""
+lovelace.ha_admin,Energipris,views[3].sections[0].cards[4],tile,input_number.nordpool_spot_fee,"""Spot påslag"""
+lovelace.ha_admin,Energipris,views[3].sections[0].cards[5],tile,input_number.nordpool_trade_fee,"""Handelsavgift"""
+lovelace.ha_admin,Energipris,views[3].sections[0].cards[6],tile,input_number.nordpool_vat,"""Moms"""
+lovelace.ha_admin,Energipris,views[3].sections[0].cards[7],tile,input_number.nordpool_monthly_fee,"""Fasta månadsavgifter"""
+lovelace.ha_admin,Energipris,views[3].sections[1].cards[1],tile,sensor.nordpool,"""Elpris"""
+lovelace.ha_admin,Energipris,views[3].sections[1].cards[2],tile,sensor.template_nordpool_base_cost_current_hour,"""Inköpspris"""
+lovelace.ha_admin,Energipris,views[3].sections[1].cards[3],tile,sensor.template_nordpool_additional_costs_current_hour,"""Påslag"""
+lovelace.ha_admin,Energipris,views[3].sections[2].cards[1],tile,sensor.kvartbaserad_elkostnadsprognos,"""Kostnadsprognos"""
+lovelace.ha_admin,Energipris,views[3].sections[3].cards[1],tile,sensor.elmatare_elstolpen_current_phase_1,"""Ström L1"""
+lovelace.ha_admin,Energipris,views[3].sections[3].cards[2],tile,sensor.elmatare_elstolpen_current_phase_2,"""Ström L2"""
+lovelace.ha_admin,Energipris,views[3].sections[3].cards[3],tile,sensor.elmatare_elstolpen_current_phase_3,"""Ström L3"""
+lovelace.ha_admin,WiFi,views[4].sections[0].cards[0].badges[0],entity,sensor.kontoret_openwrt_one_ap_kontoret_connected_clients,
+lovelace.ha_admin,WiFi,views[4].sections[1].cards[0].badges[0],entity,sensor.koket_openwrt_one_ap_koket_connected_clients,
+lovelace.ha_admin,WiFi,views[4].sections[2].cards[0].badges[0],entity,sensor.bion_asus_lyra_map_ac2200_ap_kallaren_connected_clients,
+lovelace.ha_admin,WiFi,views[4].sections[2].cards[2].badges[0],entity,sensor.friggan_asus_lyra_map_ac2200_ap_friggan_connected_clients,
+lovelace.ha_admin,WiFi,views[4].sections[3].cards[0].badges[0],entity,sensor.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_connected_clients,
+lovelace.ha_admin,WiFi,views[4].sections[3].cards[2].badges[0],entity,sensor.poolen_tp_link_eap225_outdoor_v3_ap_poolen_connected_clients,
+lovelace.ha_admin,Thread,views[6].sections[0].cards[0],custom:thread-network-map,sensor.thread_matter_topology,
+lovelace.ha_admin,Utomhusljus,views[7].sections[0].cards[1],tile,sensor.esphome98_illuminance,"""Ljusstyrka"""
+lovelace.ha_admin,Utomhusljus,views[7].sections[0].cards[2],tile,sensor.esphome98_infrared,"""Infrarött ljus"""
+lovelace.ha_admin,Utomhusljus,views[7].sections[0].cards[3],tile,sensor.esphome98_esphome98_uv_ambient,"""Ljus – råvärde"""
+lovelace.ha_admin,Utomhusljus,views[7].sections[0].cards[4],tile,sensor.esphome98_esphome98_uv_index,"""UV-index"""
+lovelace.ha_admin,Utomhusljus,views[7].sections[0].cards[5],tile,sensor.utomhus_ljussensor_esphome98_uv_counts,"""UV klick"""
+lovelace.ha_admin,Tester,views[8].sections[0].cards[2].entities[0],,switch.adaptive_lighting_ateljen_test,"""Anpassa färgtemperatur"""
+lovelace.ha_admin,Tester,views[8].sections[0].cards[2].entities[1],,light.bordslampa_ateljen,"""Bordslampan"""
+lovelace.ha_admin,Tester,views[8].sections[1].cards[2].entities[0],,sensor.bermuda_global_active_proxy_count,"""Aktiva mottagare"""
+lovelace.ha_admin,Tester,views[8].sections[1].cards[2].entities[1],,sensor.atc_b999ba_area,"""Ateljéns givare – uppskattat rum"""
+lovelace.ha_admin,Tester,views[8].sections[1].cards[2].entities[2],,sensor.atc_b999ba_distance,"""Ateljéns givare – uppskattat avstånd"""
+lovelace.ha_admin,Tester,views[8].sections[1].cards[2].entities[3],,sensor.atc_bfe81b_area,"""Verandans givare – uppskattat rum"""
+lovelace.ha_admin,Tester,views[8].sections[1].cards[2].entities[4],,sensor.atc_bfe81b_distance,"""Verandans givare – uppskattat avstånd"""
+lovelace.ha_admin,Tester,views[8].sections[2].cards[2].entities[0],,switch.adaptive_lighting_bio,"""Adaptiv färgtemperatur"""
+lovelace.ha_admin,Tester,views[8].sections[2].cards[2].entities[1],,input_select.light_scene,"""Aktuell ljusscen"""
+lovelace.ha_admin,Tester,views[8].sections[2].cards[2].entities[2],,switch.grupp_hemmabio,"""Hemmabio"""
+lovelace.ha_admin,Tester,views[8].sections[2].cards[2].entities[3],,light.bordslampa_vanster,"""Bordslampa vänster"""
+lovelace.ha_admin,Tester,views[8].sections[2].cards[2].entities[4],,light.bordslampa_hoger,"""Bordslampa höger"""
+lovelace.lovelace,0,views[0].sections[0].cards[0].entities[0],,sensor.template_postudelning,
+lovelace.lovelace,0,views[0].sections[0].cards[0].entities[1],,sensor.soptomning,
+lovelace.lovelace,0,views[0].sections[0].cards[0].entities[2],,lock.ytterdorren,
+lovelace.lovelace,0,views[0].sections[0].cards[0].entities[3],,sensor.verandadorrarna,
+lovelace.lovelace,0,views[0].sections[0].cards[0].entities[4],,cover.honsluckan_esphome75_cover,
+lovelace.lovelace,0,views[0].sections[0].cards[1],custom:weather-forecast-card,weather.forecast_met_no_home,"""Blidö"""
+lovelace.lovelace,0,views[0].sections[0].cards[1].current.show_attributes[0],,sensor.openuv_aktuellt_uv_index,
+lovelace.lovelace,0,views[0].sections[0].cards[1].current.show_attributes[1],,sensor.esphome98_esphome98_uv_index,
+lovelace.lovelace,0,views[0].sections[0].cards[1].current.show_attributes[2],,sensor.openuv_max_uv_index,
+lovelace.lovelace,0,views[0].sections[1].cards[0].series[0],column,sensor.nordpool,"""Elpris nu"""
+lovelace.lovelace,0,views[0].sections[1].cards[0].series[1],,sensor.template_nordpool_base_cost_current_hour,"""Inköpspris"""
+lovelace.lovelace,0,views[0].sections[1].cards[0].series[2],,sensor.kvartbaserad_elkostnadsprognos,"""Månadsprognos"""
+lovelace.lovelace,0,views[0].sections[2].cards[1].entities[0],,sensor.sef_42h_battery_level,"""Bilbatteri"""
+lovelace.lovelace,0,views[0].sections[2].cards[1].entities[1],,sensor.sef_42h_fuel_level,"""Bilbränsle"""
+lovelace.lovelace,0,views[0].sections[2].cards[1].entities[2],,sensor.gasol_utomhus_esphome73_lpg_level,"""Gasol"""
+lovelace.lovelace,0,views[0].sections[2].cards[1].entities[3],,sensor.esphome90_esphome90_salt_level,"""Salttabletter"""
+lovelace.lovelace,0,views[0].sections[2].cards[1].entities[4],,sensor.vattenniva_honshuset_esphome74_water_level,"""Hönsvatten"""
+lovelace.lovelace,0,views[0].sections[3].cards[0],custom:feedback-control-card,input_boolean.guest_mode,"""Gästläge"""
+lovelace.lovelace,0,views[0].sections[3].cards[1],custom:feedback-control-card,input_boolean.narvarosimulering_aktiv,"""Närvarosim."""
+lovelace.lovelace,0,views[0].sections[3].cards[2],custom:feedback-control-card,switch.poolpump_utomhus_esphome27_relay_state,"""Poolpump"""
+lovelace.lovelace,0,views[0].sections[3].cards[3],custom:feedback-control-card,cover.esphome93_esphome93_markis,"""Markisen"""
+lovelace.lovelace,0,views[0].sections[3].cards[4],custom:feedback-control-card,light.esphome93_esphome93_led,"""Markis-LED"""
+lovelace.lovelace,0,views[0].sections[3].cards[5],custom:feedback-control-card,switch.billaddare,"""Billaddning"""
+lovelace.lovelace,0,views[0].sections[3].cards[6],custom:feedback-control-card,climate.sef_42h_climate,"""Bilvärme"""
+lovelace.lovelace,0,views[0].sections[3].cards[7],custom:feedback-control-card,select.max_vald_karta,"""Robotkarta"""
+lovelace.lovelace,0,views[0].sections[4].cards[0].visibility[0].conditions[0],,sensor.prusaxl,
+lovelace.lovelace,0,views[0].sections[4].cards[0].visibility[0].conditions[1],,timer.dashboard_prusa_klar,
+lovelace.lovelace,0,views[0].sections[4].cards[0].cards[0].conditions[0],,sensor.prusaxl,
+lovelace.lovelace,0,views[0].sections[4].cards[0].cards[0].card.tap_action,,sensor.prusaxl,
+lovelace.lovelace,0,views[0].sections[4].cards[0].cards[1].conditions[0],,timer.dashboard_prusa_klar,
+lovelace.lovelace,0,views[0].sections[4].cards[0].cards[1].conditions[1],,sensor.prusaxl,
+lovelace.lovelace,0,views[0].sections[4].cards[1].visibility[0].conditions[0],,sensor.siemens_tvatt_tork_driftsstatus,
+lovelace.lovelace,0,views[0].sections[4].cards[1].visibility[0].conditions[1],,timer.dashboard_tvatt_klar,
+lovelace.lovelace,0,views[0].sections[4].cards[1].cards[0].conditions[0],,sensor.siemens_tvatt_tork_driftsstatus,
+lovelace.lovelace,0,views[0].sections[4].cards[1].cards[0].card.tap_action,,sensor.siemens_tvatt_tork_driftsstatus,
+lovelace.lovelace,0,views[0].sections[4].cards[1].cards[1].conditions[0],,timer.dashboard_tvatt_klar,
+lovelace.lovelace,0,views[0].sections[4].cards[1].cards[1].conditions[1],,sensor.siemens_tvatt_tork_driftsstatus,
+lovelace.lovelace,0,views[0].sections[4].cards[2].visibility[0].conditions[0],,sensor.siemens_016050395510002818_bsh_common_status_operationstate,
+lovelace.lovelace,0,views[0].sections[4].cards[2].visibility[0].conditions[1],,timer.dashboard_disk_klar,
+lovelace.lovelace,0,views[0].sections[4].cards[2].cards[0].conditions[0],,sensor.siemens_016050395510002818_bsh_common_status_operationstate,
+lovelace.lovelace,0,views[0].sections[4].cards[2].cards[0].card.tap_action,,sensor.siemens_016050395510002818_bsh_common_status_operationstate,
+lovelace.lovelace,0,views[0].sections[4].cards[2].cards[1].conditions[0],,timer.dashboard_disk_klar,
+lovelace.lovelace,0,views[0].sections[4].cards[2].cards[1].conditions[1],,sensor.siemens_016050395510002818_bsh_common_status_operationstate,
+lovelace.lovelace,Värme,views[1].sections[0].cards[0],thermostat,climate.sef_42h_climate,"{""type"": ""entity""}"
+lovelace.lovelace,Värme,views[1].sections[0].cards[1],thermostat,climate.golvvarme_termostat_koket,"""Köket"""
+lovelace.lovelace,Värme,views[1].sections[0].cards[2],thermostat,climate.golvvarme_termostat_verandan,"""Verandan"""
+lovelace.lovelace,Värme,views[1].sections[0].cards[3],thermostat,climate.golvvarme_termostat_ateljen,"""Ateljén"""
+lovelace.lovelace,Värme,views[1].sections[0].cards[4],thermostat,climate.termostat_kontoret_esphome20_thermostat,"""Kontoret"""
+lovelace.lovelace,Värme,views[1].sections[0].cards[5],thermostat,climate.golvvarme_termostat_entren,"""Entrén"""
+lovelace.lovelace,Värme,views[1].sections[0].cards[6],thermostat,climate.golvvarme_termostat_duschen,"""Duschen"""
+lovelace.lovelace,Värme,views[1].sections[0].cards[7],thermostat,climate.termostat_toaletten_esphome83_thermostat,"""Toaletten"""
+lovelace.lovelace,Värme,views[1].sections[0].cards[8],thermostat,climate.golvvarme_termostat_bion,"""Bion"""
+lovelace.lovelace,Värme,views[1].sections[0].cards[9],thermostat,climate.termostat_friggan_esphome21_thermostat,"""Friggan"""
+lovelace.lovelace,Värme,views[1].sections[0].cards[10],humidifier,humidifier.levoit_luftfukare_300s,"""Luftfuktare"""
+lovelace.lovelace,Värme,views[1].sections[0].cards[11],humidifier,humidifier.bions_hygrostat,"""Bions hygrostat"""
+lovelace.lovelace,Värme,views[1].sections[0].cards[12],tile,switch.golvvarme_sovrum_kontor_esphome81_relay_state,"""Sovrum/Kontor"""
+lovelace.lovelace,Värme,views[1].sections[0].cards[13],tile,switch.golvvarme_friggan_esphome80_relay_state,"""Friggan"""
+lovelace.lovelace,Värme,views[1].sections[1].cards[1],tile,sensor.golvvarme_ateljen_switch_0_power,"""Ateljén"""
+lovelace.lovelace,Värme,views[1].sections[1].cards[2],tile,sensor.golvvarme_bion_switch_0_power,"""Bion"""
+lovelace.lovelace,Värme,views[1].sections[1].cards[3],tile,sensor.golvvarme_entren_switch_0_power,"""Entrén"""
+lovelace.lovelace,Värme,views[1].sections[1].cards[4],tile,sensor.golvvarme_koket_switch_0_power,"""Köket"""
+lovelace.lovelace,Värme,views[1].sections[1].cards[5],tile,sensor.golvvarme_verandan_switch_0_power,"""Verandan"""
+lovelace.lovelace,Värme,views[1].badges[0],entity,input_button.hemmavarme,"""Hemma"""
+lovelace.lovelace,Värme,views[1].badges[1],entity,input_button.komfortvarme,"""Komfort"""
+lovelace.lovelace,Värme,views[1].badges[2],entity,input_button.bortavarme,"""Borta"""
+lovelace.lovelace,Värme,views[1].badges[3],entity,script.ange_starttid_for_bilvarmen,"""Boka bilvärme"""
+lovelace.lovelace,Pool,views[2].sections[0].cards[0],thermostat,climate.poolvarmepump,
+lovelace.lovelace,Pool,views[2].sections[1].cards[1],sensor,sensor.poolvarmepump_water_in_temperature,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[1].cards[2],tile,sensor.poolvarmepump_water_out_temperature,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[1].cards[3],tile,sensor.poolvarmepump_ambient_temperature,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[1].cards[4],tile,sensor.poolvarmepump_cold_pipe_temperature,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[1].cards[5],tile,sensor.alsavopro_poolvarmepump_exhaust_temperature,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[1].cards[6],tile,sensor.poolvarmepump_heating_pipe_temperature,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[1].cards[7],tile,sensor.poolvarmepump_ipm_temperature,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[2].cards[1],tile,sensor.poolvarmepump_compressor_current,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[2].cards[2],tile,sensor.alsavopro_poolvarmepump_compressor_running_frequency,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[2].cards[3],tile,sensor.alsavopro_poolvarmepump_fan_speed,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[2].cards[4],tile,sensor.poolvarmepump_exhaust_valve_opening,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[3].cards[1],tile,binary_sensor.poolvarmepump_connectivity,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[3].cards[2],tile,sensor.alsavopro_poolvarmepump_auto_mode_target,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[3].cards[3],tile,sensor.alsavopro_poolvarmepump_heating_mode_target,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[3].cards[4],tile,sensor.alsavopro_poolvarmepump_cooling_mode_target,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[4].cards[1],tile,binary_sensor.poolvarmepump_alarm,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[4].cards[2],tile,sensor.alsavopro_poolvarmepump_error_messages,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[4].cards[3],tile,sensor.poolvarmepump_device_status_code,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[4].cards[4],tile,sensor.alsavopro_poolvarmepump_alarm_code_1,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[4].cards[5],tile,sensor.alsavopro_poolvarmepump_alarm_code_2,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[4].cards[6],tile,sensor.alsavopro_poolvarmepump_alarm_code_3,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[4].cards[7],tile,sensor.alsavopro_poolvarmepump_alarm_code_4,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[4].cards[8],tile,sensor.alsavopro_poolvarmepump_system_running_code,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[4].cards[9],tile,sensor.alsavopro_poolvarmepump_system_status_code,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].sections[4].cards[10],tile,sensor.alsavopro_poolvarmepump_frequency_limit_code,"{""type"": ""entity""}"
+lovelace.lovelace,Pool,views[2].badges[0],entity,switch.poolpump_utomhus_esphome27_relay_state,"""Pump"""
+lovelace.lovelace,Pool,views[2].badges[1],entity,switch.poolvarmepump_esphome28_relay_state,"""Värme"""
+lovelace.lovelace,Pool,views[2].badges[2],entity,light.poolbelysning_temp_esphome29_light,"""Lampa"""
+lovelace.lovelace,Pool,views[2].badges[3],entity,sensor.poolbelysning_temp_esphome29_temperature,
+lovelace.lovelace,3D-printer,views[3].sections[0].cards[0],picture-entity,sensor.prusaxl,"""Prusa Buddy Cam"""
+lovelace.lovelace,3D-printer,views[3].sections[0].visibility[0],,sensor.prusaxl,
+lovelace.lovelace,3D-printer,views[3].sections[1].cards[0].series[0],line,sensor.prusaxl_munstycke_temperatur,"""Munstycke"""
+lovelace.lovelace,3D-printer,views[3].sections[1].cards[0].series[1],line,sensor.prusaxl_munstycke_temperatur,"""Munstycke Mål"""
+lovelace.lovelace,3D-printer,views[3].sections[1].cards[0].series[2],line,sensor.prusaxl_varmebadd_temperatur,"""Värmebädd"""
+lovelace.lovelace,3D-printer,views[3].sections[1].cards[0].series[3],line,sensor.prusaxl_varmebadd_maltemperatur,"""Värmebädd Mål"""
+lovelace.lovelace,3D-printer,views[3].sections[1].cards[2],tile,sensor.huvudstrombrytaren_prusa_xl_esphome84_voltage,"""Spänning"""
+lovelace.lovelace,3D-printer,views[3].sections[1].cards[3],tile,sensor.huvudstrombrytaren_prusa_xl_esphome84_power,"""Effekt"""
+lovelace.lovelace,3D-printer,views[3].sections[1].cards[4],tile,sensor.huvudstrombrytaren_prusa_xl_esphome84_current,"""Styrka"""
+lovelace.lovelace,3D-printer,views[3].sections[1].cards[5],tile,sensor.huvudstrombrytaren_prusa_xl_esphome84_daily_energy,"""Daglig energi"""
+lovelace.lovelace,3D-printer,views[3].sections[1].cards[6],tile,sensor.huvudstrombrytaren_prusa_xl_esphome84_energy,"""Total Energi"""
+lovelace.lovelace,3D-printer,views[3].sections[1].visibility[0],,sensor.prusaxl,
+lovelace.lovelace,3D-printer,views[3].sections[2].cards[0],tile,sensor.prusaxl_filnamn,"""Filnamn"""
+lovelace.lovelace,3D-printer,views[3].sections[2].cards[1],tile,sensor.prusaxl_material,"""Material"""
+lovelace.lovelace,3D-printer,views[3].sections[2].cards[2],tile,sensor.prusaxl_utskrift_startas,"""Startad"""
+lovelace.lovelace,3D-printer,views[3].sections[2].cards[3],tile,sensor.prusaxl_utskriften_ar_fardig,"""Beräknat klar"""
+lovelace.lovelace,3D-printer,views[3].sections[2].cards[4],tile,sensor.prusaxl_z_hojd,"""Z-höjd"""
+lovelace.lovelace,3D-printer,views[3].sections[2].cards[5],tile,sensor.prusaxl_hotend_fan,"""Munstycksfläkt"""
+lovelace.lovelace,3D-printer,views[3].sections[2].cards[6],tile,sensor.prusaxl_print_fan,"""Utskriftsfläkt"""
+lovelace.lovelace,3D-printer,views[3].sections[2].cards[7],tile,sensor.prusaxl_print_flow,"""Utskriftsflöde"""
+lovelace.lovelace,3D-printer,views[3].sections[2].cards[8],tile,sensor.prusaxl_skriv_hastighet,"""Utskriftshastighet"""
+lovelace.lovelace,3D-printer,views[3].sections[2].visibility[0],,sensor.prusaxl,
+lovelace.lovelace,3D-printer,views[3].badges[0],entity,sensor.prusaxl,
+lovelace.lovelace,3D-printer,views[3].badges[1],entity,button.prusaxl_pausa_arbetet,"""Pausa"""
+lovelace.lovelace,3D-printer,views[3].badges[2],entity,button.prusaxl_avbryt_arbetet,"""Avbryt"""
+lovelace.lovelace,3D-printer,views[3].badges[3],entity,button.prusaxl_ateruppta_arbetet,"""Återuppta"""
+lovelace.lovelace,3D-printer,views[3].badges[4],entity,switch.huvudstrombrytaren_prusa_xl_esphome84_relay_state,"{""type"": ""device""}"
+lovelace.lovelace,Kameror,views[4].sections[0].cards[0].badges[0],entity,sensor.utomhus_temp,
+lovelace.lovelace,Kameror,views[4].sections[0].cards[0].badges[1],entity,sensor.smhi_temp_inkl_vindfaktor,
+lovelace.lovelace,Kameror,views[4].sections[0].cards[0].badges[2],entity,sensor.temp_hum_utomhus_humidity,
+lovelace.lovelace,Kameror,views[4].sections[0].cards[2].badges[0],entity,sensor.honshuset_temp,
+lovelace.lovelace,Kameror,views[4].sections[0].cards[2].badges[1],entity,sensor.temp_hum_honshuset_humidity,
+lovelace.lovelace,Kameror,views[4].sections[0].cards[2].badges[2],entity,sensor.vattenniva_honshuset_esphome74_water_level,
+lovelace.lovelace,Kameror,views[4].sections[0].cards[4],tile,cover.honsluckan_esphome75_cover,"""Hönsluckan"""
+lovelace.lovelace,Kameror,views[4].sections[0].cards[5],tile,sensor.vattenniva_honshuset_esphome74_water_level,"""Vattennivå · hönshuset"""
+lovelace.lovelace,Kameror,views[4].sections[0].cards[6],tile,switch.vattenvarmare_honshuset_esphome25_relay_state,"""Vattenvärmare · hönshuset"""
+lovelace.lovelace,Växter,views[5].sections[0].cards[1],custom:flower-card,plant.paraplyaralia,
+lovelace.lovelace,Växter,views[5].sections[0].cards[2],custom:flower-card,plant.coffea_arabica,
+lovelace.lovelace,Växter,views[5].sections[0].cards[3],custom:flower-card,plant.meyer_citron,
+lovelace.lovelace,Växter,views[5].sections[0].cards[4],custom:flower-card,plant.citron,
+lovelace.lovelace,Växter,views[5].sections[0].cards[5],custom:flower-card,plant.koket_fredskallor_trappan_fredskalla,
+lovelace.lovelace,Växter,views[5].sections[0].cards[6],custom:flower-card,plant.monstera,
+lovelace.lovelace,Växter,views[5].badges[0],entity,light.alla_blomlampor,
+lovelace.lovelace,Bill,views[6].sections[0].cards[2],button,script.ange_starttid_for_bilvarmen,"""Välj starttid för bilvärmen"""
+lovelace.lovelace,Bill,views[6].sections[1].cards[1],custom:gauge-card-pro,sensor.sef_42h_battery_level,
+lovelace.lovelace,Bill,views[6].sections[1].cards[2],custom:gauge-card-pro,sensor.sef_42h_fuel_level,
+lovelace.lovelace,Bill,views[6].sections[1].cards[3],tile,sensor.sef_42h_battery_range_with_ac,"""Sträcka (el + AC)"""
+lovelace.lovelace,Bill,views[6].sections[1].cards[4],tile,sensor.sef_42h_battery_range,"""Körsträcka (el)"""
+lovelace.lovelace,Bill,views[6].sections[1].cards[5],tile,sensor.sef_42h_fuel_range,"""Körsträcka (bränsle)"""
+lovelace.lovelace,Bill,views[6].sections[1].cards[6],tile,sensor.sef_42h_total_range,"""Körsträcka (el+bränsle)"""
+lovelace.lovelace,Bill,views[6].sections[2].cards[1],tile,sensor.sef_42h_current_year_statistics,"""Km (år)"""
+lovelace.lovelace,Bill,views[6].sections[2].cards[2],tile,sensor.sef_42h_current_month_statistics,"""Km (månad)"""
+lovelace.lovelace,Bill,views[6].sections[2].cards[3],tile,sensor.sef_42h_current_week_statistics,"""Km (vecka)"""
+lovelace.lovelace,Bill,views[6].sections[2].cards[4],tile,sensor.sef_42h_current_day_statistics,"""Km (dag)"""
+lovelace.lovelace,Bill,views[6].sections[2].cards[5],tile,sensor.sef_42h_odometer,"""Odometer"""
+lovelace.lovelace,Bill,views[6].sections[2].cards[7],tile,device_tracker.sef_42h_parking_location,"""Parkeringsplats"""
+lovelace.lovelace,Bill,views[6].sections[2].cards[8],tile,sensor.sef_42h_vehicle_identify_number,"""Chassinummer"""
+lovelace.lovelace,Bill,views[6].sections[3].cards[1],tile,input_boolean.car_ai_planning_enabled,"""AI-planering"""
+lovelace.lovelace,Bill,views[6].sections[3].cards[2],tile,input_number.car_bat_capacity,"""Batterikapacitet"""
+lovelace.lovelace,Bill,views[6].sections[3].cards[3],tile,input_number.car_target_soc,"""Målladdning"""
+lovelace.lovelace,Bill,views[6].sections[3].cards[4],tile,input_number.car_charger_capacity,"""Laddeffekt"""
+lovelace.lovelace,Bill,views[6].sections[3].cards[5],tile,script.granny_car_charge_plan,"""Planera laddning"""
+lovelace.lovelace,Bill,views[6].sections[3].cards[6],tile,input_number.car_charger_efficiency,"""Laddverkningsgrad"""
+lovelace.lovelace,Bill,views[6].sections[3].cards[7],tile,input_boolean.car_man_override,"""Manuell styrning"""
+lovelace.lovelace,Bill,views[6].sections[4].cards[1],tile,switch.billaddare,"""Billaddare"""
+lovelace.lovelace,Bill,views[6].sections[5].cards[1],tile,binary_sensor.sef_42h_driverseat_door,"""Vänster framdörr"""
+lovelace.lovelace,Bill,views[6].sections[5].cards[2],tile,binary_sensor.sef_42h_driverseat_lock,"""Vänster framdörr"""
+lovelace.lovelace,Bill,views[6].sections[5].cards[3],tile,binary_sensor.sef_42h_passengerseat_door,"""Höger framdörr"""
+lovelace.lovelace,Bill,views[6].sections[5].cards[4],tile,binary_sensor.sef_42h_passengerseat_lock,"""Höger framdörr"""
+lovelace.lovelace,Bill,views[6].sections[5].cards[5],tile,binary_sensor.sef_42h_leftrearseat_door,"""Vänster bakdörr"""
+lovelace.lovelace,Bill,views[6].sections[5].cards[6],tile,binary_sensor.sef_42h_leftrearseat_lock,"""Vänster bakdörr"""
+lovelace.lovelace,Bill,views[6].sections[5].cards[7],tile,binary_sensor.sef_42h_rightrearseat_door,"""Höger bakdörr"""
+lovelace.lovelace,Bill,views[6].sections[5].cards[8],tile,binary_sensor.sef_42h_rightrearseat_lock,"""Höger bakdörr"""
+lovelace.lovelace,Bill,views[6].sections[5].cards[9],tile,binary_sensor.sef_42h_driverseat_window,"""Vänster framdörrs fönster"""
+lovelace.lovelace,Bill,views[6].sections[5].cards[10],tile,binary_sensor.sef_42h_passengerseat_window,"""Höger framdörrs fönster"""
+lovelace.lovelace,Bill,views[6].sections[5].cards[11],tile,binary_sensor.sef_42h_leftrearseat_window,"""Vänster bakdörrs fönster"""
+lovelace.lovelace,Bill,views[6].sections[5].cards[12],tile,binary_sensor.sef_42h_rightrearseat_window,"""Höger bakdörrs fönster"""
+lovelace.lovelace,Bill,views[6].sections[5].cards[13],tile,binary_sensor.sef_42h_hood,"""Motorhuv"""
+lovelace.lovelace,Bill,views[6].sections[5].cards[14],tile,binary_sensor.sef_42h_trunk,"""Bakluckan"""
+lovelace.lovelace,Bill,views[6].sections[5].cards[15],tile,binary_sensor.sef_42h_trunk_lock,"""Tanklock"""
+lovelace.lovelace,Verkstaden,views[8].sections[0].cards[0],tile,light.shellypro3_ec626089edbc_switch_0,"""Taklampor"""
+lovelace.lovelace,Verkstaden,views[8].sections[0].cards[1],tile,switch.shelly_pro_3_verkstaden_switch_1,"""Luftkompressor"""
+lovelace.lovelace,Verkstaden,views[8].sections[0].cards[2],tile,switch.shelly_pro_3_verkstaden_switch_2,"""Spånsug"""
+lovelace.lovelace,Verkstaden,views[8].sections[0].cards[3],tile,sensor.verkstan_hum,"""Luftfuktighet"""
+lovelace.lovelace,Verkstaden,views[8].sections[0].cards[4],tile,sensor.verkstan_temp,"""Temperatur"""
+lovelace.lovelace,Dammsugare,views[9].sections[0].cards[0],tile,vacuum.max,"""Max"""
+lovelace.lovelace,Dammsugare,views[9].sections[0].cards[1],tile,select.max_vald_karta,"""Vald karta"""
+lovelace.lovelace,Dammsugare,views[9].sections[0].cards[2],tile,sensor.max_batteri,"""Batteri"""
+lovelace.lovelace_friggan,Home,views[0].cards[0].cards[0],tile,sensor.termostat_friggan_esphome21_temperature,
+lovelace.lovelace_friggan,Home,views[0].cards[0].cards[1],tile,sensor.utomhus_temp,
+lovelace.lovelace_friggan,Home,views[0].cards[1],tile,climate.termostat_friggan_esphome21_thermostat,"""Termostat"""
+lovelace.lovelace_friggan,Home,views[0].cards[2],tile,switch.golvvarme_friggan_esphome80_relay_state,"""Golvvärme"""
+lovelace.lovelace_friggan,Home,views[0].cards[3],tile,light.utomhuslampa,"""Utomhusbelysning"""

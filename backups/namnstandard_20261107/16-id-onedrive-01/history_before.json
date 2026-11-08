@@ -1,0 +1,42 @@
+{
+  "sensor.onedrive_totalt_tillgangligt_lagringsutrymme": [
+    {
+      "state": "1029.0",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:52:23.264915+00:00",
+      "last_updated": "2026-11-07T07:52:23.264915+00:00"
+    }
+  ],
+  "sensor.onedrive_anvant_lagringsutrymme": [
+    {
+      "state": "87.2000000001863",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:52:23.264915+00:00",
+      "last_updated": "2026-11-07T07:52:23.264915+00:00"
+    },
+    {
+      "state": "87.9000000003725",
+      "last_changed": "2026-11-08T01:34:26.733037+00:00"
+    }
+  ],
+  "sensor.onedrive_aterstaende_lagringsutrymme": [
+    {
+      "state": "941.799999999814",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:52:23.264915+00:00",
+      "last_updated": "2026-11-07T07:52:23.264915+00:00"
+    },
+    {
+      "state": "941.099999999627",
+      "last_changed": "2026-11-08T01:34:26.733220+00:00"
+    }
+  ],
+  "sensor.onedrive_drive_status": [
+    {
+      "state": "normal",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:52:23.264915+00:00",
+      "last_updated": "2026-11-07T07:52:23.264915+00:00"
+    }
+  ]
+}

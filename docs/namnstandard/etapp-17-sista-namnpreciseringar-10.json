@@ -1,0 +1,4541 @@
+{
+  "stage": "17-sista-namnpreciseringar-10",
+  "operations": [
+    {
+      "kind": "entity",
+      "id": "button.kontoret_40_22_d8_61_53_f8_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "40:22:d8:61:53:f8 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "40:22:d8:61:53:f8 Disconnect device",
+          "40:22:d8:61:53:f8 Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.sovrummet_led_list_norra_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "c4:4f:33:7a:51:d5 Disconnect device",
+          "LED-list norra Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "LED-list norra Disconnect device",
+          "LED-list norra Koppla från enhet",
+          "c4:4f:33:7a:51:d5 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.sovrummet_led_list_ostra_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "c4:4f:33:7a:51:11 Disconnect device",
+          "LED-list östra Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "LED-list östra Disconnect device",
+          "LED-list östra Koppla från enhet",
+          "c4:4f:33:7a:51:11 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.utomhus_markis_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "08:b6:1f:34:55:50 Disconnect device",
+          "Markis Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "08:b6:1f:34:55:50 Disconnect device",
+          "Markis Disconnect device",
+          "Markis Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_taklampor_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Taklampor (kontoret) Disconnect device",
+          "Taklampor Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "Taklampor (kontoret) Disconnect device",
+          "Taklampor Disconnect device",
+          "Taklampor Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.sovrummet_taklampor_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "34:94:54:70:7c:a2 Disconnect device",
+          "Taklampor Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "34:94:54:70:7c:a2 Disconnect device",
+          "Taklampor Disconnect device",
+          "Taklampor Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_termostat_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "a4:cf:12:d8:0a:dd Disconnect device",
+          "Termostat Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "Termostat Disconnect device",
+          "Termostat Koppla från enhet",
+          "a4:cf:12:d8:0a:dd Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.canon_g3070_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "canon-g3070 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "Koppla från enhet",
+          "canon-g3070 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.galaxy_s7_koppla_fran_enhet_via_ap_friggan",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "192.168.10.74 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_friggan",
+        "aliases": [
+          "192.168.10.74 Disconnect device",
+          "Galaxy-S7 Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.friggan_golvvarme_koppla_fran_enhet_via_ap_friggan",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "c8:2b:96:07:7d:6e Disconnect device",
+          "Golvvärme Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_friggan",
+        "aliases": [
+          "Golvvärme Disconnect device",
+          "Golvvärme Koppla från enhet",
+          "c8:2b:96:07:7d:6e Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.friggan_termostat_koppla_fran_enhet_via_ap_friggan",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "98:f4:ab:e2:71:12 Disconnect device",
+          "Termostat Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_friggan",
+        "aliases": [
+          "98:f4:ab:e2:71:12 Disconnect device",
+          "Termostat Disconnect device",
+          "Termostat Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.friggan_c8_2b_96_e6_99_4f_koppla_fran_enhet_via_ap_friggan",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "c8:2b:96:e6:99:4f Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_friggan",
+        "aliases": [
+          "c8:2b:96:e6:99:4f Disconnect device",
+          "c8:2b:96:e6:99:4f Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.verkstaden_led_plafonder_koppla_fran_enhet_via_ap_verkstaden",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "shellyplug-s-shop-roof-lamps Disconnect device",
+          "LED-plafonder Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_verkstaden",
+        "aliases": [
+          "LED-plafonder Disconnect device",
+          "LED-plafonder Koppla från enhet",
+          "shellyplug-s-shop-roof-lamps Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.utomhus_billaddare_koppla_fran_enhet_via_ap_verkstaden",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Billaddare Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_verkstaden",
+        "aliases": [
+          "Billaddare Disconnect device",
+          "Billaddare Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.bion_ir_gateway_koppla_fran_enhet_via_ap_verkstaden",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "IR-gateway Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_verkstaden",
+        "aliases": [
+          "IR-gateway Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.verkstaden_salt_koppla_fran_enhet_via_ap_verkstaden",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "08:b6:1f:38:0b:64 Disconnect device",
+          "Salt Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_verkstaden",
+        "aliases": [
+          "08:b6:1f:38:0b:64 Disconnect device",
+          "Salt Disconnect device",
+          "Salt Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_rf_brygga_koppla_fran_enhet_via_ap_verkstaden",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "80:64:6f:91:e9:d5 Disconnect device",
+          "RF-brygga Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_verkstaden",
+        "aliases": [
+          "80:64:6f:91:e9:d5 Disconnect device",
+          "RF-brygga Disconnect device",
+          "RF-brygga Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.ateljen_taklampor_koppla_fran_enhet_via_ap_verkstaden",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Taklampor Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_verkstaden",
+        "aliases": [
+          "Taklampor Disconnect device",
+          "Taklampor Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.bion_taklampor_koppla_fran_enhet_via_ap_verkstaden",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "94:b9:7e:16:d2:02 Disconnect device",
+          "Taklampor Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_verkstaden",
+        "aliases": [
+          "94:b9:7e:16:d2:02 Disconnect device",
+          "Taklampor Disconnect device",
+          "Taklampor Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.gamla_verkstaden_klimatsensor_koppla_fran_enhet_via_ap_verkstaden",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "08:b6:1f:38:26:78 Disconnect device",
+          "Klimatsensor Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_verkstaden",
+        "aliases": [
+          "08:b6:1f:38:26:78 Disconnect device",
+          "Klimatsensor Disconnect device",
+          "Klimatsensor Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.bion_smarthomecontrolpanel_koppla_fran_enhet_via_ap_kallaren",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "SmartHomeControlPanel Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kallaren",
+        "aliases": [
+          "SmartHomeControlPanel Disconnect device",
+          "SmartHomeControlPanel Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.bion_golvvarme_koppla_fran_enhet_via_ap_kallaren",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Golvvärme (bion) Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kallaren",
+        "aliases": [
+          "Golvvärme (bion) Disconnect device",
+          "Golvvärme Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.utomhus_gasol_koppla_fran_enhet_via_ap_kallaren",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "c4:4f:33:7a:2e:79 Disconnect device",
+          "Gasol Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kallaren",
+        "aliases": [
+          "Gasol Disconnect device",
+          "Gasol Koppla från enhet",
+          "c4:4f:33:7a:2e:79 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.bion_hemmabio_el_1_koppla_fran_enhet_via_ap_kallaren",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Hemmabio El #1 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kallaren",
+        "aliases": [
+          "Hemmabio El #1 Disconnect device",
+          "Hemmabio El #1 Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.bion_40_22_d8_76_6f_70_koppla_fran_enhet_via_ap_kallaren",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "40:22:d8:76:6f:70 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kallaren",
+        "aliases": [
+          "40:22:d8:76:6f:70 Disconnect device",
+          "40:22:d8:76:6f:70 Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.utomhus_julbelysning_koppla_fran_enhet_via_ap_kallaren",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "24:62:ab:57:80:ad Disconnect device",
+          "Julbelysning Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kallaren",
+        "aliases": [
+          "24:62:ab:57:80:ad Disconnect device",
+          "Julbelysning Disconnect device",
+          "Julbelysning Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.koket_led_list_sodra_koppla_fran_enhet_via_ap_kallaren",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "c4:4f:33:7a:51:6d Disconnect device",
+          "LED-list södra Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kallaren",
+        "aliases": [
+          "LED-list södra Disconnect device",
+          "LED-list södra Koppla från enhet",
+          "c4:4f:33:7a:51:6d Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.bion_ventilflakt_koppla_fran_enhet_via_ap_kallaren",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Ventilfläkt (bion) Disconnect device",
+          "Ventilfläkt Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kallaren",
+        "aliases": [
+          "Ventilfläkt (bion) Disconnect device",
+          "Ventilfläkt Disconnect device",
+          "Ventilfläkt Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.ap_honshuset_home_arpa_koppla_fran_enhet_via_ap_poolen",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "ap-honshuset.home.arpa Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_poolen",
+        "aliases": [
+          "ap-honshuset.home.arpa Disconnect device",
+          "ap-honshuset.home.arpa Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.lenovol340_koppla_fran_enhet_via_ap_poolen",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "192.168.30.45 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_poolen",
+        "aliases": [
+          "192.168.30.45 Disconnect device",
+          "LenovoL340 Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.utomhus_elmatare_elstolpen_koppla_fran_enhet_via_ap_poolen",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Elmätare (elstolpen) Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_poolen",
+        "aliases": [
+          "Elmätare (elstolpen) Disconnect device",
+          "Elmätare (elstolpen) Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.dc_06_75_9d_82_74_koppla_fran_enhet_via_ap_poolen",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "dc:06:75:9d:82:74 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_poolen",
+        "aliases": [
+          "Koppla från enhet",
+          "dc:06:75:9d:82:74 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_24_a1_60_10_5f_96_koppla_fran_enhet_via_ap_poolen",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "24:a1:60:10:5f:96 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_poolen",
+        "aliases": [
+          "24:a1:60:10:5f:96 Disconnect device",
+          "24:a1:60:10:5f:96 Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_poolvarmepump_koppla_fran_enhet_via_ap_poolen",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "24:a1:60:10:eb:a9 Disconnect device",
+          "Poolvärmepump Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_poolen",
+        "aliases": [
+          "24:a1:60:10:eb:a9 Disconnect device",
+          "Poolvärmepump Disconnect device",
+          "Poolvärmepump Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.poolen_poolbelysning_och_temperatur_koppla_fran_enhet_via_ap_poolen",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "c8:2b:96:07:35:26 Disconnect device",
+          "Poolbelysning och temperatur Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_poolen",
+        "aliases": [
+          "Poolbelysning och temperatur Disconnect device",
+          "Poolbelysning och temperatur Koppla från enhet",
+          "c8:2b:96:07:35:26 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "media_player.granny_utrop",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Music Assistant",
+        "aliases": [
+          "Granny utrop"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "media_player.granny_utrop_cast",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Google Cast",
+        "aliases": [
+          "Granny utrop"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.pixel_9_pro_xl_koppla_fran_enhet_via_ap_kallaren_mac_718fef_phy2_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kallaren – MAC 718fef phy2_ap0",
+        "aliases": [
+          "Koppla från enhet",
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.pixel_9_pro_xl_koppla_fran_enhet_via_ap_verkstaden",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_verkstaden",
+        "aliases": [
+          "Koppla från enhet",
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.carolas_s25_koppla_fran_enhet_via_ap_kallaren_mac_3077c1_phy1_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Carolas-S25 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kallaren – MAC 3077c1 phy1_ap0",
+        "aliases": [
+          "Carolas-S25 Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.carolas_s25_koppla_fran_enhet_via_ap_verkstaden",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Carolas-S25 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_verkstaden",
+        "aliases": [
+          "Carolas-S25 Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.pixel_9_pro_xl_koppla_fran_enhet_via_ap_kallaren_mac_718fef_phy1_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kallaren – MAC 718fef phy1_ap0",
+        "aliases": [
+          "Koppla från enhet",
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.pixel_9_pro_xl_koppla_fran_enhet_via_ap_poolen_mac_718fef_phy1_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_poolen – MAC 718fef phy1_ap0",
+        "aliases": [
+          "Koppla från enhet",
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.diegotab_koppla_fran_enhet_via_ap_koket_mac_8136be_phy0_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "DiegoTab Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket – MAC 8136be phy0_ap0",
+        "aliases": [
+          "DiegoTab Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.chromecast_vaxtskapets_speaker_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "chromecast-vaxtskapets-speaker Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "chromecast-vaxtskapets-speaker Disconnect device",
+          "chromecast-vaxtskapets-speaker Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.carolas_s25_koppla_fran_enhet_via_ap_poolen",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Carolas-S25 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_poolen",
+        "aliases": [
+          "Carolas-S25 Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.galaxy_a36_5g_koppla_fran_enhet_via_ap_verkstaden",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Galaxy-A36-5G Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_verkstaden",
+        "aliases": [
+          "Galaxy-A36-5G Disconnect device",
+          "Galaxy-A36-5G Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.tv_galaxy_s9_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "TV-Galaxy-S9 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "Koppla från enhet",
+          "TV-Galaxy-S9 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.verkstaden_led_plafonder_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "LED-plafonder Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "Koppla från enhet",
+          "LED-plafonder Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.kontoret_rf_brygga_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "RF-brygga Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "Koppla från enhet",
+          "RF-brygga Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.toaletten_termostat_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Termostat Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "Koppla från enhet",
+          "Termostat Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.utomhus_ljussensor_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Ljussensor Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "Ljussensor Disconnect device",
+          "Ljussensor Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.gamla_verkstaden_klimatsensor_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Klimatsensor Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "Klimatsensor Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.duschen_golvvarme_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Golvvärme Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "Golvvärme Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.ateljen_golvvarme_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Golvvärme Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "Golvvärme Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_led_plafonder_signalstyrka_via_ap_kontoret",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "LED-plafonder Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_kontoret",
+        "aliases": [
+          "LED-plafonder Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_led_plafonder_mottagningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "LED-plafonder RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_kontoret",
+        "aliases": [
+          "LED-plafonder RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_led_plafonder_sandningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "LED-plafonder TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_kontoret",
+        "aliases": [
+          "LED-plafonder TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_led_plafonder_brusniva_via_ap_kontoret",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "LED-plafonder Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_kontoret",
+        "aliases": [
+          "Brusnivå",
+          "LED-plafonder Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_rf_brygga_signalstyrka_via_ap_kontoret",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "RF-brygga Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_kontoret",
+        "aliases": [
+          "RF-brygga Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_rf_brygga_mottagningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "RF-brygga RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_kontoret",
+        "aliases": [
+          "Mottagningshastighet",
+          "RF-brygga RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_rf_brygga_sandningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "RF-brygga TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_kontoret",
+        "aliases": [
+          "RF-brygga TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_rf_brygga_brusniva_via_ap_kontoret",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "RF-brygga Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_kontoret",
+        "aliases": [
+          "Brusnivå",
+          "RF-brygga Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.gamla_verkstaden_klimatsensor_signalstyrka_via_ap_kontoret",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Klimatsensor Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_kontoret",
+        "aliases": [
+          "Klimatsensor Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.gamla_verkstaden_klimatsensor_mottagningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Klimatsensor RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_kontoret",
+        "aliases": [
+          "Klimatsensor RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.gamla_verkstaden_klimatsensor_sandningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Klimatsensor TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_kontoret",
+        "aliases": [
+          "Klimatsensor TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.gamla_verkstaden_klimatsensor_brusniva_via_ap_kontoret",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Klimatsensor Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_kontoret",
+        "aliases": [
+          "Brusnivå",
+          "Klimatsensor Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.duschen_golvvarme_signalstyrka_via_ap_kontoret",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Golvvärme Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_kontoret",
+        "aliases": [
+          "Golvvärme Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.duschen_golvvarme_mottagningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Golvvärme RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_kontoret",
+        "aliases": [
+          "Golvvärme RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.duschen_golvvarme_sandningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Golvvärme TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_kontoret",
+        "aliases": [
+          "Golvvärme TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.duschen_golvvarme_brusniva_via_ap_kontoret",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Golvvärme Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_kontoret",
+        "aliases": [
+          "Brusnivå",
+          "Golvvärme Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ateljen_golvvarme_signalstyrka_via_ap_kontoret",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Golvvärme Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_kontoret",
+        "aliases": [
+          "Golvvärme Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ateljen_golvvarme_mottagningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Golvvärme RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_kontoret",
+        "aliases": [
+          "Golvvärme RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ateljen_golvvarme_sandningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Golvvärme TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_kontoret",
+        "aliases": [
+          "Golvvärme TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ateljen_golvvarme_brusniva_via_ap_kontoret",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Golvvärme Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_kontoret",
+        "aliases": [
+          "Brusnivå",
+          "Golvvärme Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.verkstaden_led_plafonder_internetatkomst_via_ap_kontoret",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "LED-plafonder Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_kontoret",
+        "aliases": [
+          "Internetåtkomst",
+          "LED-plafonder Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.kontoret_rf_brygga_internetatkomst_via_ap_kontoret",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "RF-brygga Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_kontoret",
+        "aliases": [
+          "Internetåtkomst",
+          "RF-brygga Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.gamla_verkstaden_klimatsensor_internetatkomst_via_ap_kontoret",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "Klimatsensor Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_kontoret",
+        "aliases": [
+          "Internetåtkomst",
+          "Klimatsensor Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.ateljen_golvvarme_internetatkomst_via_ap_kontoret",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "Golvvärme Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_kontoret",
+        "aliases": [
+          "Golvvärme Internet Access",
+          "Internetåtkomst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.gw_august_connect_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "gw-august-connect Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "Koppla från enhet",
+          "gw-august-connect Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.canon_g3070_koppla_fran_enhet_via_ap_koket_mac_846f51_phy0_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "canon-g3070 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket – MAC 846f51 phy0_ap0",
+        "aliases": [
+          "Koppla från enhet",
+          "canon-g3070 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.chromecast_mannis_screen_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "chromecast-mannis-screen Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "chromecast-mannis-screen Disconnect device",
+          "chromecast-mannis-screen Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.smarthomecontrolpanel_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "SmartHomeControlPanel Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "Koppla från enhet",
+          "SmartHomeControlPanel Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.192_168_10_82_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "192.168.10.82 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "192.168.10.82 Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.40_22_d8_76_6f_70_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "40:22:d8:76:6f:70 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "40:22:d8:76:6f:70 Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.verkstaden_salt_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Salt Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "Koppla från enhet",
+          "Salt Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.utomhus_gasol_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Gasol Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "Gasol Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.bion_ventilflakt_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Ventilfläkt Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "Koppla från enhet",
+          "Ventilfläkt Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.utomhus_julbelysning_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "24:62:ab:57:80:ad Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "24:62:ab:57:80:ad Disconnect device",
+          "Julbelysning Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.e0_98_06_d5_c4_ca_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "e0:98:06:d5:c4:ca Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "Koppla från enhet",
+          "e0:98:06:d5:c4:ca Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.40_22_d8_76_66_c0_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "40:22:d8:76:66:c0 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "40:22:d8:76:66:c0 Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.koket_led_list_sodra_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "c4:4f:33:7a:51:6d Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "LED-list södra Koppla från enhet",
+          "c4:4f:33:7a:51:6d Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.koket_2c_bc_bb_c1_87_2c_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "2c:bc:bb:c1:87:2c Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "2c:bc:bb:c1:87:2c Disconnect device",
+          "2c:bc:bb:c1:87:2c Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.ateljen_taklampor_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Taklampor Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "Taklampor Disconnect device",
+          "Taklampor Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.bion_ir_gateway_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "IR-gateway Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "IR-gateway Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.chromecast_kokets_screen_koppla_fran_enhet_via_ap_koket_mac_97d9b5_phy1_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "chromecast-kokets-screen Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket – MAC 97d9b5 phy1_ap0",
+        "aliases": [
+          "chromecast-kokets-screen Disconnect device",
+          "chromecast-kokets-screen Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.chromecast_toans_speaker_koppla_fran_enhet_via_ap_koket_mac_1a8736_phy1_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "chromecast-toans-speaker Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket – MAC 1a8736 phy1_ap0",
+        "aliases": [
+          "chromecast-toans-speaker Disconnect device",
+          "chromecast-toans-speaker Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.chromecast_duschens_speaker_koppla_fran_enhet_via_ap_koket_mac_0b5577_phy1_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "chromecast-duschens-speaker Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket – MAC 0b5577 phy1_ap0",
+        "aliases": [
+          "chromecast-duschens-speaker Disconnect device",
+          "chromecast-duschens-speaker Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.smarthomecontrolpanel_signalstyrka_via_ap_koket",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "SmartHomeControlPanel Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_koket",
+        "aliases": [
+          "Signalstyrka",
+          "SmartHomeControlPanel Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.smarthomecontrolpanel_mottagningshastighet_via_ap_koket",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "SmartHomeControlPanel RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_koket",
+        "aliases": [
+          "Mottagningshastighet",
+          "SmartHomeControlPanel RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.smarthomecontrolpanel_sandningshastighet_via_ap_koket",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "SmartHomeControlPanel TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_koket",
+        "aliases": [
+          "SmartHomeControlPanel TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.smarthomecontrolpanel_brusniva_via_ap_koket",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "SmartHomeControlPanel Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_koket",
+        "aliases": [
+          "Brusnivå",
+          "SmartHomeControlPanel Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.40_22_d8_76_6f_70_signalstyrka_via_ap_koket",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "40:22:d8:76:6f:70 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_koket",
+        "aliases": [
+          "40:22:d8:76:6f:70 Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.40_22_d8_76_6f_70_mottagningshastighet_via_ap_koket",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "40:22:d8:76:6f:70 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_koket",
+        "aliases": [
+          "40:22:d8:76:6f:70 RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.40_22_d8_76_6f_70_sandningshastighet_via_ap_koket",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "40:22:d8:76:6f:70 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_koket",
+        "aliases": [
+          "40:22:d8:76:6f:70 TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.40_22_d8_76_6f_70_brusniva_via_ap_koket",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "40:22:d8:76:6f:70 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_koket",
+        "aliases": [
+          "40:22:d8:76:6f:70 Noise Level",
+          "Brusnivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_salt_signalstyrka_via_ap_koket",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Salt Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_koket",
+        "aliases": [
+          "Salt Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_salt_mottagningshastighet_via_ap_koket",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Salt RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_koket",
+        "aliases": [
+          "Mottagningshastighet",
+          "Salt RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_salt_sandningshastighet_via_ap_koket",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Salt TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_koket",
+        "aliases": [
+          "Salt TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_salt_brusniva_via_ap_koket",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Salt Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_koket",
+        "aliases": [
+          "Brusnivå",
+          "Salt Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ventilflakt_signalstyrka_via_ap_koket",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Ventilfläkt Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_koket",
+        "aliases": [
+          "Signalstyrka",
+          "Ventilfläkt Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ventilflakt_mottagningshastighet_via_ap_koket",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Ventilfläkt RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_koket",
+        "aliases": [
+          "Mottagningshastighet",
+          "Ventilfläkt RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ventilflakt_sandningshastighet_via_ap_koket",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Ventilfläkt TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_koket",
+        "aliases": [
+          "Sändningshastighet",
+          "Ventilfläkt TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ventilflakt_brusniva_via_ap_koket",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Ventilfläkt Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_koket",
+        "aliases": [
+          "Brusnivå",
+          "Ventilfläkt Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.e0_98_06_d5_c4_ca_signalstyrka_via_ap_koket",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "e0:98:06:d5:c4:ca Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_koket",
+        "aliases": [
+          "Signalstyrka",
+          "e0:98:06:d5:c4:ca Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.e0_98_06_d5_c4_ca_mottagningshastighet_via_ap_koket",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "e0:98:06:d5:c4:ca RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_koket",
+        "aliases": [
+          "Mottagningshastighet",
+          "e0:98:06:d5:c4:ca RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.e0_98_06_d5_c4_ca_sandningshastighet_via_ap_koket",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "e0:98:06:d5:c4:ca TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_koket",
+        "aliases": [
+          "Sändningshastighet",
+          "e0:98:06:d5:c4:ca TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.e0_98_06_d5_c4_ca_brusniva_via_ap_koket",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "e0:98:06:d5:c4:ca Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_koket",
+        "aliases": [
+          "Brusnivå",
+          "e0:98:06:d5:c4:ca Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.40_22_d8_76_66_c0_signalstyrka_via_ap_koket",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "40:22:d8:76:66:c0 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_koket",
+        "aliases": [
+          "40:22:d8:76:66:c0 Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.40_22_d8_76_66_c0_mottagningshastighet_via_ap_koket",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "40:22:d8:76:66:c0 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_koket",
+        "aliases": [
+          "40:22:d8:76:66:c0 RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.40_22_d8_76_66_c0_sandningshastighet_via_ap_koket",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "40:22:d8:76:66:c0 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_koket",
+        "aliases": [
+          "40:22:d8:76:66:c0 TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.40_22_d8_76_66_c0_brusniva_via_ap_koket",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "40:22:d8:76:66:c0 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_koket",
+        "aliases": [
+          "40:22:d8:76:66:c0 Noise Level",
+          "Brusnivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ateljen_taklampor_signalstyrka_via_ap_koket",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Taklampor Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_koket",
+        "aliases": [
+          "Signalstyrka",
+          "Taklampor Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ateljen_taklampor_mottagningshastighet_via_ap_koket",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Taklampor RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_koket",
+        "aliases": [
+          "Mottagningshastighet",
+          "Taklampor RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ateljen_taklampor_sandningshastighet_via_ap_koket",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Taklampor TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_koket",
+        "aliases": [
+          "Sändningshastighet",
+          "Taklampor TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ateljen_taklampor_brusniva_via_ap_koket",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Taklampor Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_koket",
+        "aliases": [
+          "Brusnivå",
+          "Taklampor Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.smarthomecontrolpanel_internetatkomst_via_ap_koket",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "SmartHomeControlPanel Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_koket",
+        "aliases": [
+          "Internetåtkomst",
+          "SmartHomeControlPanel Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.40_22_d8_76_6f_70_internetatkomst_via_ap_koket",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "40:22:d8:76:6f:70 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_koket",
+        "aliases": [
+          "40:22:d8:76:6f:70 Internet Access",
+          "Internetåtkomst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.verkstaden_salt_internetatkomst_via_ap_koket",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "Salt Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_koket",
+        "aliases": [
+          "Internetåtkomst",
+          "Salt Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.bion_ventilflakt_internetatkomst_via_ap_koket",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "Ventilfläkt Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_koket",
+        "aliases": [
+          "Internetåtkomst",
+          "Ventilfläkt Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.e0_98_06_d5_c4_ca_internetatkomst_via_ap_koket",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "e0:98:06:d5:c4:ca Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_koket",
+        "aliases": [
+          "Internetåtkomst",
+          "e0:98:06:d5:c4:ca Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.40_22_d8_76_66_c0_internetatkomst_via_ap_koket",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "40:22:d8:76:66:c0 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_koket",
+        "aliases": [
+          "40:22:d8:76:66:c0 Internet Access",
+          "Internetåtkomst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.verkstaden_shelly_pro_3_koppla_fran_enhet_via_ap_verkstaden",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Shelly Pro 3 - Verkstaden Disconnect device",
+          "Shelly Pro 3 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_verkstaden",
+        "aliases": [
+          "Shelly Pro 3 - Verkstaden Disconnect device",
+          "Shelly Pro 3 Disconnect device",
+          "Shelly Pro 3 Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.verkstaden_salt_koppla_fran_enhet_via_ap_kallaren",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Salt Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kallaren",
+        "aliases": [
+          "Koppla från enhet",
+          "Salt Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_salt_signalstyrka_via_ap_kallaren",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Salt Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_kallaren",
+        "aliases": [
+          "Salt Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_salt_mottagningshastighet_via_ap_kallaren",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Salt RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_kallaren",
+        "aliases": [
+          "Mottagningshastighet",
+          "Salt RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_salt_sandningshastighet_via_ap_kallaren",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Salt TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_kallaren",
+        "aliases": [
+          "Salt TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_salt_brusniva_via_ap_kallaren",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Salt Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_kallaren",
+        "aliases": [
+          "Brusnivå",
+          "Salt Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.verkstaden_salt_internetatkomst_via_ap_kallaren",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "Salt Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_kallaren",
+        "aliases": [
+          "Internetåtkomst",
+          "Salt Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.chromecast_toans_speaker_koppla_fran_enhet_via_ap_poolen",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "chromecast-toans-speaker Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_poolen",
+        "aliases": [
+          "Koppla från enhet",
+          "chromecast-toans-speaker Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.chromecast_duschens_speaker_koppla_fran_enhet_via_ap_kallaren",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "chromecast-duschens-speaker Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kallaren",
+        "aliases": [
+          "chromecast-duschens-speaker Disconnect device",
+          "chromecast-duschens-speaker Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.galaxy_a36_5g_koppla_fran_enhet_via_ap_kontoret_mac_8ac630_phy0_ap1",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Galaxy-A36-5G Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret – MAC 8ac630 phy0_ap1",
+        "aliases": [
+          "Galaxy-A36-5G Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.duschen_golvvarme_koppla_fran_enhet_via_ap_verkstaden",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Golvvärme Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_verkstaden",
+        "aliases": [
+          "Golvvärme Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.diego_lenovo_e31_70_signalstyrka_via_gw",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "diego-Lenovo-E31-70 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via gw",
+        "aliases": [
+          "Signalstyrka",
+          "diego-Lenovo-E31-70 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.diego_lenovo_e31_70_mottagningshastighet_via_gw",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "diego-Lenovo-E31-70 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via gw",
+        "aliases": [
+          "Mottagningshastighet",
+          "diego-Lenovo-E31-70 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.diego_lenovo_e31_70_sandningshastighet_via_gw",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "diego-Lenovo-E31-70 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via gw",
+        "aliases": [
+          "Sändningshastighet",
+          "diego-Lenovo-E31-70 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.diego_lenovo_e31_70_brusniva_via_gw",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "diego-Lenovo-E31-70 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via gw",
+        "aliases": [
+          "Brusnivå",
+          "diego-Lenovo-E31-70 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.diego_lenovo_e31_70_internetatkomst_via_gw",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "diego-Lenovo-E31-70 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via gw",
+        "aliases": [
+          "Internetåtkomst",
+          "diego-Lenovo-E31-70 Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.lenovol340_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "LenovoL340 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "LenovoL340 Disconnect device",
+          "LenovoL340 Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.diego_lenovo_e31_70_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "diego-Lenovo-E31-70 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "Koppla från enhet",
+          "diego-Lenovo-E31-70 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.diego_lenovo_e31_70_signalstyrka_via_ap_kontoret",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "diego-Lenovo-E31-70 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_kontoret",
+        "aliases": [
+          "Signalstyrka",
+          "diego-Lenovo-E31-70 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.diego_lenovo_e31_70_mottagningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "diego-Lenovo-E31-70 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_kontoret",
+        "aliases": [
+          "Mottagningshastighet",
+          "diego-Lenovo-E31-70 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.diego_lenovo_e31_70_sandningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "diego-Lenovo-E31-70 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_kontoret",
+        "aliases": [
+          "Sändningshastighet",
+          "diego-Lenovo-E31-70 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.diego_lenovo_e31_70_brusniva_via_ap_kontoret",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "diego-Lenovo-E31-70 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_kontoret",
+        "aliases": [
+          "Brusnivå",
+          "diego-Lenovo-E31-70 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.diego_lenovo_e31_70_internetatkomst_via_ap_kontoret",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "diego-Lenovo-E31-70 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_kontoret",
+        "aliases": [
+          "Internetåtkomst",
+          "diego-Lenovo-E31-70 Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.diegotab_koppla_fran_enhet_via_ap_verkstaden",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "DiegoTab Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_verkstaden",
+        "aliases": [
+          "DiegoTab Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.c200c_koppla_fran_enhet_via_ap_koket_mac_8ca537_phy0_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "C200C Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket – MAC 8ca537 phy0_ap0",
+        "aliases": [
+          "C200C Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.c200c_signalstyrka_via_ap_koket",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "C200C Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_koket",
+        "aliases": [
+          "C200C Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.c200c_mottagningshastighet_via_ap_koket",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "C200C RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_koket",
+        "aliases": [
+          "C200C RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.c200c_sandningshastighet_via_ap_koket",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "C200C TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_koket",
+        "aliases": [
+          "C200C TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.c200c_brusniva_via_ap_koket",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "C200C Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_koket",
+        "aliases": [
+          "Brusnivå",
+          "C200C Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.c200c_internetatkomst_via_ap_koket",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "C200C Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_koket",
+        "aliases": [
+          "C200C Internet Access",
+          "Internetåtkomst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.c200c_signalstyrka_via_gw",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "C200C Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via gw",
+        "aliases": [
+          "C200C Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.c200c_mottagningshastighet_via_gw",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "C200C RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via gw",
+        "aliases": [
+          "C200C RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.c200c_sandningshastighet_via_gw",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "C200C TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via gw",
+        "aliases": [
+          "C200C TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.c200c_brusniva_via_gw",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "C200C Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via gw",
+        "aliases": [
+          "Brusnivå",
+          "C200C Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.c200c_internetatkomst_via_gw",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "C200C Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via gw",
+        "aliases": [
+          "C200C Internet Access",
+          "Internetåtkomst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.c200c_koppla_fran_enhet_via_ap_koket_mac_8ca537_phy0_ap2",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "C200C Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket – MAC 8ca537 phy0_ap2",
+        "aliases": [
+          "C200C Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.pixel_9_pro_xl_koppla_fran_enhet_via_ap_koket_mac_dbb3bc_phy1_ap2",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket – MAC dbb3bc phy1_ap2",
+        "aliases": [
+          "Koppla från enhet",
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.pixel_9_pro_xl_signalstyrka_via_ap_koket_mac_dbb3bc",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_koket – MAC dbb3bc",
+        "aliases": [
+          "Pixel-9-Pro-XL Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.pixel_9_pro_xl_mottagningshastighet_via_ap_koket_mac_dbb3bc",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_koket – MAC dbb3bc",
+        "aliases": [
+          "Mottagningshastighet",
+          "Pixel-9-Pro-XL RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.pixel_9_pro_xl_sandningshastighet_via_ap_koket_mac_dbb3bc",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_koket – MAC dbb3bc",
+        "aliases": [
+          "Pixel-9-Pro-XL TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.pixel_9_pro_xl_brusniva_via_ap_koket_mac_dbb3bc",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_koket – MAC dbb3bc",
+        "aliases": [
+          "Brusnivå",
+          "Pixel-9-Pro-XL Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.pixel_9_pro_xl_internetatkomst_via_ap_koket_access_f2_0d_b2_db_b3_bc",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_koket_access_f2_0d_b2_db_b3_bc",
+        "aliases": [
+          "Internetåtkomst",
+          "Pixel-9-Pro-XL Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.buddy3dcam_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "buddy3dcam Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "buddy3dcam Disconnect device",
+          "buddy3dcam Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.prusa_xl_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "prusa-xl Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "prusa-xl Disconnect device",
+          "prusa-xl Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.chromecast_toans_speaker_koppla_fran_enhet_via_ap_koket_mac_1a8736_phy0_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "chromecast-toans-speaker Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket – MAC 1a8736 phy0_ap0",
+        "aliases": [
+          "chromecast-toans-speaker Disconnect device",
+          "chromecast-toans-speaker Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.192_168_10_91_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "192.168.10.91 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "192.168.10.91 Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_91_signalstyrka_via_ap_kontoret",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.91 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_kontoret",
+        "aliases": [
+          "192.168.10.91 Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_91_mottagningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.91 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_kontoret",
+        "aliases": [
+          "192.168.10.91 RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_91_sandningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.91 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_kontoret",
+        "aliases": [
+          "192.168.10.91 TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_91_brusniva_via_ap_kontoret",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.91 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_kontoret",
+        "aliases": [
+          "192.168.10.91 Noise Level",
+          "Brusnivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.192_168_10_91_internetatkomst_via_ap_kontoret",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.10.91 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_kontoret",
+        "aliases": [
+          "192.168.10.91 Internet Access",
+          "Internetåtkomst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_91_signalstyrka_via_gw",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.91 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via gw",
+        "aliases": [
+          "192.168.10.91 Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_91_mottagningshastighet_via_gw",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.91 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via gw",
+        "aliases": [
+          "192.168.10.91 RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_91_sandningshastighet_via_gw",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.91 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via gw",
+        "aliases": [
+          "192.168.10.91 TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_10_91_brusniva_via_gw",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.91 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via gw",
+        "aliases": [
+          "192.168.10.91 Noise Level",
+          "Brusnivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.192_168_10_91_internetatkomst_via_gw",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.10.91 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via gw",
+        "aliases": [
+          "192.168.10.91 Internet Access",
+          "Internetåtkomst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.buddy3dcam_koppla_fran_enhet_via_ap_koket",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "buddy3dcam Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          "buddy3dcam Disconnect device",
+          "buddy3dcam Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.prusa_xl_koppla_fran_enhet_via_ap_verkstaden",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "prusa-xl Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_verkstaden",
+        "aliases": [
+          "Koppla från enhet",
+          "prusa-xl Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.prusa_xl_signalstyrka_via_ap_verkstaden",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "prusa-xl Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_verkstaden",
+        "aliases": [
+          "Signalstyrka",
+          "prusa-xl Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.prusa_xl_mottagningshastighet_via_ap_verkstaden",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "prusa-xl RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_verkstaden",
+        "aliases": [
+          "Mottagningshastighet",
+          "prusa-xl RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.prusa_xl_sandningshastighet_via_ap_verkstaden",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "prusa-xl TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_verkstaden",
+        "aliases": [
+          "Sändningshastighet",
+          "prusa-xl TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.prusa_xl_brusniva_via_ap_verkstaden",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "prusa-xl Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_verkstaden",
+        "aliases": [
+          "Brusnivå",
+          "prusa-xl Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.prusa_xl_internetatkomst_via_ap_verkstaden",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "prusa-xl Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_verkstaden",
+        "aliases": [
+          "Internetåtkomst",
+          "prusa-xl Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.buddy3dcam_koppla_fran_enhet_via_ap_poolen",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "buddy3dcam Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_poolen",
+        "aliases": [
+          "Koppla från enhet",
+          "buddy3dcam Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.chromecast_tv_soundbar_koppla_fran_enhet_via_ap_koket_mac_125c49_phy0_ap0",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "chromecast-tv-soundbar Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket – MAC 125c49 phy0_ap0",
+        "aliases": [
+          "chromecast-tv-soundbar Disconnect device",
+          "chromecast-tv-soundbar Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.192_168_30_83_koppla_fran_enhet_via_ap_verkstaden",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "192.168.30.83 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_verkstaden",
+        "aliases": [
+          "192.168.30.83 Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_83_signalstyrka_via_ap_verkstaden",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.30.83 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_verkstaden",
+        "aliases": [
+          "192.168.30.83 Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_83_mottagningshastighet_via_ap_verkstaden",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.30.83 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_verkstaden",
+        "aliases": [
+          "192.168.30.83 RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_83_sandningshastighet_via_ap_verkstaden",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.30.83 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_verkstaden",
+        "aliases": [
+          "192.168.30.83 TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_83_brusniva_via_ap_verkstaden",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.30.83 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_verkstaden",
+        "aliases": [
+          "192.168.30.83 Noise Level",
+          "Brusnivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.192_168_30_83_internetatkomst_via_ap_verkstaden",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.30.83 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_verkstaden",
+        "aliases": [
+          "192.168.30.83 Internet Access",
+          "Internetåtkomst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.pixel_9_pro_xl_koppla_fran_enhet_via_ap_koket_mac_dbb3bc_phy0_ap2",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket – MAC dbb3bc phy0_ap2",
+        "aliases": [
+          "Koppla från enhet",
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.diegotab_koppla_fran_enhet_via_ap_kallaren",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "DiegoTab Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kallaren",
+        "aliases": [
+          "DiegoTab Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.192_168_30_156_koppla_fran_enhet_via_ap_kontoret",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "192.168.30.156 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret",
+        "aliases": [
+          "192.168.30.156 Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_156_signalstyrka_via_ap_kontoret",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.30.156 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_kontoret",
+        "aliases": [
+          "192.168.30.156 Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_156_mottagningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.30.156 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_kontoret",
+        "aliases": [
+          "192.168.30.156 RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_156_sandningshastighet_via_ap_kontoret",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.30.156 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_kontoret",
+        "aliases": [
+          "192.168.30.156 TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_156_brusniva_via_ap_kontoret",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.30.156 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_kontoret",
+        "aliases": [
+          "192.168.30.156 Noise Level",
+          "Brusnivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.192_168_30_156_internetatkomst_via_ap_kontoret",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.30.156 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_kontoret",
+        "aliases": [
+          "192.168.30.156 Internet Access",
+          "Internetåtkomst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_156_signalstyrka_via_gw",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.30.156 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via gw",
+        "aliases": [
+          "192.168.30.156 Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_156_mottagningshastighet_via_gw",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.30.156 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via gw",
+        "aliases": [
+          "192.168.30.156 RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_156_sandningshastighet_via_gw",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.30.156 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via gw",
+        "aliases": [
+          "192.168.30.156 TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_156_brusniva_via_gw",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.30.156 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via gw",
+        "aliases": [
+          "192.168.30.156 Noise Level",
+          "Brusnivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.192_168_30_156_internetatkomst_via_gw",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.30.156 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via gw",
+        "aliases": [
+          "192.168.30.156 Internet Access",
+          "Internetåtkomst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.192_168_30_156_koppla_fran_enhet_via_ap_verkstaden",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "192.168.30.156 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_verkstaden",
+        "aliases": [
+          "192.168.30.156 Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_156_signalstyrka_via_ap_verkstaden",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.30.156 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_verkstaden",
+        "aliases": [
+          "192.168.30.156 Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_156_mottagningshastighet_via_ap_verkstaden",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.30.156 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_verkstaden",
+        "aliases": [
+          "192.168.30.156 RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_156_sandningshastighet_via_ap_verkstaden",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.30.156 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_verkstaden",
+        "aliases": [
+          "192.168.30.156 TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_156_brusniva_via_ap_verkstaden",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.30.156 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_verkstaden",
+        "aliases": [
+          "192.168.30.156 Noise Level",
+          "Brusnivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.192_168_30_156_internetatkomst_via_ap_verkstaden",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.30.156 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_verkstaden",
+        "aliases": [
+          "192.168.30.156 Internet Access",
+          "Internetåtkomst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.192_168_30_156_koppla_fran_enhet_via_ap_poolen",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "192.168.30.156 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_poolen",
+        "aliases": [
+          "192.168.30.156 Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_156_signalstyrka_via_ap_poolen",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.30.156 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_poolen",
+        "aliases": [
+          "192.168.30.156 Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_156_mottagningshastighet_via_ap_poolen",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.30.156 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_poolen",
+        "aliases": [
+          "192.168.30.156 RX Rate",
+          "Mottagningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_156_sandningshastighet_via_ap_poolen",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.30.156 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_poolen",
+        "aliases": [
+          "192.168.30.156 TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_156_brusniva_via_ap_poolen",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.30.156 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_poolen",
+        "aliases": [
+          "192.168.30.156 Noise Level",
+          "Brusnivå"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.192_168_30_156_internetatkomst_via_ap_poolen",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "192.168.30.156 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_poolen",
+        "aliases": [
+          "192.168.30.156 Internet Access",
+          "Internetåtkomst"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.pixel_9_pro_xl_koppla_fran_enhet_via_ap_kallaren_mac_dbb3bc_phy1_ap2",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kallaren – MAC dbb3bc phy1_ap2",
+        "aliases": [
+          "Koppla från enhet",
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.pixel_9_pro_xl_signalstyrka_via_ap_kallaren_mac_dbb3bc",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_kallaren – MAC dbb3bc",
+        "aliases": [
+          "Pixel-9-Pro-XL Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.pixel_9_pro_xl_mottagningshastighet_via_ap_kallaren_mac_dbb3bc",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_kallaren – MAC dbb3bc",
+        "aliases": [
+          "Mottagningshastighet",
+          "Pixel-9-Pro-XL RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.pixel_9_pro_xl_sandningshastighet_via_ap_kallaren_mac_dbb3bc",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_kallaren – MAC dbb3bc",
+        "aliases": [
+          "Pixel-9-Pro-XL TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.pixel_9_pro_xl_brusniva_via_ap_kallaren_mac_dbb3bc",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_kallaren – MAC dbb3bc",
+        "aliases": [
+          "Brusnivå",
+          "Pixel-9-Pro-XL Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.pixel_9_pro_xl_internetatkomst_via_ap_kallaren_access_f2_0d_b2_db_b3_bc",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_kallaren_access_f2_0d_b2_db_b3_bc",
+        "aliases": [
+          "Internetåtkomst",
+          "Pixel-9-Pro-XL Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.192_168_30_83_koppla_fran_enhet_via_ap_kontoret_mac_dbb3bc_phy0_ap2",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "192.168.30.83 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret – MAC dbb3bc phy0_ap2",
+        "aliases": [
+          "192.168.30.83 Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.pixel_9_pro_xl_koppla_fran_enhet_via_ap_poolen_mac_dbb3bc_phy1_ap2",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_poolen – MAC dbb3bc phy1_ap2",
+        "aliases": [
+          "Koppla från enhet",
+          "Pixel-9-Pro-XL Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.pixel_9_pro_xl_signalstyrka_via_ap_poolen_mac_dbb3bc",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_poolen – MAC dbb3bc",
+        "aliases": [
+          "Pixel-9-Pro-XL Signal Strength",
+          "Signalstyrka"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.pixel_9_pro_xl_mottagningshastighet_via_ap_poolen_mac_dbb3bc",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_poolen – MAC dbb3bc",
+        "aliases": [
+          "Mottagningshastighet",
+          "Pixel-9-Pro-XL RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.pixel_9_pro_xl_sandningshastighet_via_ap_poolen_mac_dbb3bc",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_poolen – MAC dbb3bc",
+        "aliases": [
+          "Pixel-9-Pro-XL TX Rate",
+          "Sändningshastighet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.pixel_9_pro_xl_brusniva_via_ap_poolen_mac_dbb3bc",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_poolen – MAC dbb3bc",
+        "aliases": [
+          "Brusnivå",
+          "Pixel-9-Pro-XL Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.pixel_9_pro_xl_internetatkomst_via_ap_poolen_access_f2_0d_b2_db_b3_bc",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "Pixel-9-Pro-XL Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_poolen_access_f2_0d_b2_db_b3_bc",
+        "aliases": [
+          "Internetåtkomst",
+          "Pixel-9-Pro-XL Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.toaletten_termostat_signalstyrka_via_gw",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Termostat Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via gw",
+        "aliases": [
+          "Signalstyrka",
+          "Termostat Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.toaletten_termostat_mottagningshastighet_via_gw",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Termostat RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via gw",
+        "aliases": [
+          "Mottagningshastighet",
+          "Termostat RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.toaletten_termostat_sandningshastighet_via_gw",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Termostat TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via gw",
+        "aliases": [
+          "Sändningshastighet",
+          "Termostat TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.toaletten_termostat_brusniva_via_gw",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Termostat Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via gw",
+        "aliases": [
+          "Brusnivå",
+          "Termostat Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.192_168_30_83_koppla_fran_enhet_via_ap_kontoret_mac_dbb3bc_phy1_ap2",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "192.168.30.83 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret – MAC dbb3bc phy1_ap2",
+        "aliases": [
+          "192.168.30.83 Disconnect device",
+          "Koppla från enhet"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.q28756_koppla_fran_enhet_via_ap_kontoret_mac_0fa802_phy0_ap1",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "Q28756 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_kontoret – MAC 0fa802 phy0_ap1",
+        "aliases": [
+          "Koppla från enhet",
+          "Q28756 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mimer_signalstyrka_via_gw",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "mimer Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via gw",
+        "aliases": [
+          "Signalstyrka",
+          "mimer Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mimer_mottagningshastighet_via_gw",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "mimer RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via gw",
+        "aliases": [
+          "Mottagningshastighet",
+          "mimer RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.mimer_sandningshastighet_via_gw",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "mimer TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via gw",
+        "aliases": [
+          "Sändningshastighet",
+          "mimer TX Rate"
+        ]
+      }
+    }
+  ]
+}

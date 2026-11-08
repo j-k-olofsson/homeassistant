@@ -31,7 +31,7 @@ if TYPE_CHECKING:
 
 from .const import DOMAIN
 from .entity import ToyotaBaseEntity
-from .utils import vehicle_has_climate_capability
+from .utils import command_failure_reason, vehicle_has_climate_capability
 
 _LOGGER = logging.getLogger(__name__)
 SCAN_INTERVAL = timedelta(seconds=120)
@@ -68,9 +68,25 @@ async def async_setup_entry(
 
 
 def _climate_command_ok(response: object) -> bool:
-    """Whether a V2 climate-control response reported command success."""
+    """Whether a V2 climate-control response reported command success.
+
+    ``payload.return_code`` is the documented success/failure signal
+    (``"000000"`` = accepted), but some vehicles (e.g. RAV4 PHEV, see
+    ha_toyota#442) omit it entirely on an otherwise-successful command -
+    the acceptance is only reflected in the envelope's
+    ``status.messages`` (e.g. ``CTP-GENERIC-20001``/``"Success"``).
+    Treating a missing return_code as an automatic rejection produced a
+    false "Toyota did not accept" error even though the car actually
+    started, and skipped the post-start status poll - hence the ~5 minute
+    delay before Home Assistant caught up on the next scheduled poll.
+    Fall back to the same envelope-based failure check every other
+    command entity (lock/switch/button) already uses.
+    """
     payload = getattr(response, "payload", None)
-    return payload is not None and payload.return_code == CLIMATE_COMMAND_OK
+    return_code = getattr(payload, "return_code", None)
+    if return_code is not None:
+        return return_code == CLIMATE_COMMAND_OK
+    return command_failure_reason(response) is None
 
 
 def _onoff(*, value: bool | None) -> str | None:
@@ -90,22 +106,113 @@ def _onoff(*, value: bool | None) -> str | None:
     return "on" if value else "off"
 
 
-async def async_apply_climate_settings(
+def _seat_write_value(value: str | None) -> str | None:
+    """Translate a read seat level into the wire's seat *mode*.
+
+    Toyota's seat control uses two value spaces: the climate-settings read
+    reports a seat *level* (``off``/``low``/``medium``/``high``), while the V2
+    climate-control write body only accepts a seat *mode*
+    (``off``/``heater``/``ventilation``) and rejects anything else with HTTP
+    400 ``CTP-REMOTE-40005``. A non-off level therefore means the seat heater
+    is on, so it maps to the ``heater`` mode; the level the car then applies is
+    not observable when the vehicle reports no seat read-back. Unknown values
+    return ``None`` so the caller omits the field instead of sending a value
+    the API will reject (requests use ``exclude_none=True``).
+    """
+    if value is None:
+        return None
+    if value == "off":
+        return "off"
+    if value in ("low", "medium", "high"):
+        return "heater"
+    if value in ("heater", "ventilation"):
+        return value
+    return None
+
+
+def _heating_value(override: str | None, *, read_value: bool | None) -> str | None:
+    """Return an explicit override, or the tri-state read value as a wire string."""
+    return override if override is not None else _onoff(value=read_value)
+
+
+def _build_seat_options(
+    read_seats: object, seat_overrides: dict[str, str] | None
+) -> SeatOptionsModel:
+    """Echo the vehicle's current seat levels as write modes, applying overrides.
+
+    Every echoed read and every override goes through :func:`_seat_write_value`
+    so a select handing over ``"high"`` sends ``"heater"`` (see
+    :func:`async_apply_climate_settings`).
+    """
+    seat_values = {
+        "driver_seat": _seat_write_value(getattr(read_seats, "driver_seat", None)),
+        "passenger_seat": _seat_write_value(
+            getattr(read_seats, "passenger_seat", None)
+        ),
+        "rear_driver_seat": _seat_write_value(
+            getattr(read_seats, "rear_driver_seat", None)
+        ),
+        "rear_passenger_seat": _seat_write_value(
+            getattr(read_seats, "rear_passenger_seat", None)
+        ),
+    }
+    if seat_overrides:
+        seat_values.update(
+            {field: _seat_write_value(value) for field, value in seat_overrides.items()}
+        )
+    return SeatOptionsModel(**seat_values)
+
+
+def _resolve_temperature(
+    override: float | None, read_temp: object
+) -> tuple[float, str]:
+    """Resolve the wire temperature value + unit from an override or the last read."""
+    value = (
+        override
+        if override is not None
+        else (
+            read_temp.value if read_temp is not None else DEFAULT_MIN_TEMP + 3  # type: ignore[attr-defined]
+        )
+    )
+    unit = (read_temp.unit if read_temp is not None else "C") or "C"  # type: ignore[attr-defined]
+    return value, unit
+
+
+async def async_apply_climate_settings(  # noqa: PLR0913
     vehicle: Vehicle,
     *,
     steering_heater: str | None = None,
     seat_overrides: dict[str, str] | None = None,
+    front_defroster: str | None = None,
+    rear_defogger: str | None = None,
+    temperature: float | None = None,
+    duration_minutes: int | None = None,
 ) -> None:
     """Send a V2 climate-control ``start``, echoing current settings + overrides.
 
     Toyota's remote API has no settings-only write: the only way to change a
     seat-heater level or the steering-wheel heater is a ``start`` command that
     carries the full desired body (this mirrors the MyToyota app, which also
-    starts climate control when these controls are touched). Front/rear
-    defrost and target temperature are echoed unchanged from the last
+    starts climate control when these controls are touched). Any of
+    front/rear defrost, steering heater, seat levels and target temperature
+    that isn't explicitly overridden here is echoed unchanged from the last
     climate-settings read so this can't clobber values the climate entity or
-    user has already set. Used by the seat-heater select entities and the
-    steering-heater switch.
+    user has already set. Used by the seat-heater select entities, the
+    steering-heater switch, and the ``toyota.start_climate`` service.
+
+    Toyota enforces a strict per-ignition-cycle quota on remote climate
+    starts (2 starts / 20 cumulative minutes between two READY-mode cycles -
+    see ha_toyota#424). Every call here is one ``start`` / one quota unit, so
+    callers wanting to change several settings at once (e.g. the
+    ``toyota.start_climate`` service) should pass them all in a single call
+    rather than calling this once per setting.
+
+    Seat values need translating before they go on the wire: the write body
+    can only express a seat *mode* (``off``/``heater``/``ventilation``), while
+    the read reports a seat *level* (``off``/``low``/``medium``/``high``).
+    Every read echo and every ``seat_overrides`` value goes through
+    :func:`_seat_write_value`, so a select handing over ``"high"`` sends
+    ``"heater"``.
 
     Raises:
         HomeAssistantError: if Toyota rejects the command.
@@ -117,29 +224,22 @@ async def async_apply_climate_settings(
     read_temp = getattr(settings, "temperature", None)
 
     heating = HeatingOptionsModel(
-        front_defroster=_onoff(value=getattr(read_heating, "front_defroster", None)),
-        rear_defogger=_onoff(value=getattr(read_heating, "rear_defogger", None)),
-        steering_heater=(
-            steering_heater
-            if steering_heater is not None
-            else _onoff(value=getattr(read_heating, "steering_heater", None))
+        front_defroster=_heating_value(
+            front_defroster, read_value=getattr(read_heating, "front_defroster", None)
+        ),
+        rear_defogger=_heating_value(
+            rear_defogger, read_value=getattr(read_heating, "rear_defogger", None)
+        ),
+        steering_heater=_heating_value(
+            steering_heater, read_value=getattr(read_heating, "steering_heater", None)
         ),
     )
-    seat_values = {
-        "driver_seat": getattr(read_seats, "driver_seat", None),
-        "passenger_seat": getattr(read_seats, "passenger_seat", None),
-        "rear_driver_seat": getattr(read_seats, "rear_driver_seat", None),
-        "rear_passenger_seat": getattr(read_seats, "rear_passenger_seat", None),
-    }
-    if seat_overrides:
-        seat_values.update(seat_overrides)
-    seats = SeatOptionsModel(**seat_values)
-
-    temp_value = read_temp.value if read_temp is not None else DEFAULT_MIN_TEMP + 3
-    temp_unit = (read_temp.unit if read_temp is not None else "C") or "C"
+    seats = _build_seat_options(read_seats, seat_overrides)
+    temp_value, temp_unit = _resolve_temperature(temperature, read_temp)
 
     request = V2RemoteClimateControlRequestModel(
         command="start",
+        duration=duration_minutes,
         temperature=UnitValueModel(unit=temp_unit, value=temp_value),
         heating_options=heating,
         seat_options=seats,
@@ -389,11 +489,14 @@ class ToyotaClimate(ToyotaBaseEntity, ClimateEntity):
         )
         seats = None
         if read_seats is not None:
+            # Seats read as a level (off/low/medium/high) but the write body only
+            # accepts a mode (off/heater/ventilation), so translate the echo -
+            # otherwise a car reporting a level 400s every start (issue #423).
             seats = SeatOptionsModel(
-                driver_seat=read_seats.driver_seat,
-                passenger_seat=read_seats.passenger_seat,
-                rear_driver_seat=read_seats.rear_driver_seat,
-                rear_passenger_seat=read_seats.rear_passenger_seat,
+                driver_seat=_seat_write_value(read_seats.driver_seat),
+                passenger_seat=_seat_write_value(read_seats.passenger_seat),
+                rear_driver_seat=_seat_write_value(read_seats.rear_driver_seat),
+                rear_passenger_seat=_seat_write_value(read_seats.rear_passenger_seat),
             )
 
         unit = (

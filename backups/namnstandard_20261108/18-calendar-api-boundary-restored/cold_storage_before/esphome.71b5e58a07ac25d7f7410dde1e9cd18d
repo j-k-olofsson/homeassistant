@@ -1,0 +1,218 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.71b5e58a07ac25d7f7410dde1e9cd18d",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "esphome81",
+      "friendly_name": "Golvvärme (sovrum och kontor)",
+      "mac_address": "A4:CF:12:D8:77:59",
+      "compilation_time": "2026-11-04 06:44:39 +0100",
+      "model": "esp8285",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2026.10.2",
+      "project_name": "",
+      "project_version": "",
+      "webserver_port": 80,
+      "legacy_voice_assistant_version": 0,
+      "voice_assistant_feature_flags": 0,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0,
+      "zwave_proxy_feature_flags": 0,
+      "zwave_home_id": 0,
+      "suggested_area": "",
+      "bluetooth_mac_address": "",
+      "api_encryption_supported": true,
+      "api_encryption_provisionable": false,
+      "api_outgoing_connection_supported": true,
+      "devices": [],
+      "areas": [],
+      "area": {
+        "area_id": 0,
+        "name": ""
+      },
+      "serial_proxies": []
+    },
+    "services": [],
+    "api_version": {
+      "major": 1,
+      "minor": 19
+    },
+    "device_capabilities": {
+      "bluetooth_proxy": {
+        "feature_flags": 0,
+        "mac_address": ""
+      },
+      "voice_assistant": {
+        "feature_flags": 0
+      },
+      "zwave_proxy": {
+        "feature_flags": 0,
+        "home_id": 0
+      },
+      "serial_proxies": [],
+      "wizard": {
+        "configured": false
+      },
+      "sendspin": {
+        "feature_flags": 0,
+        "client_id": ""
+      },
+      "store_yaml": {
+        "supported": false
+      }
+    },
+    "sensor": [
+      {
+        "object_id": "esphome81_voltage",
+        "key": 2797225376,
+        "name": "esphome81 Voltage",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "voltage",
+        "unit_of_measurement": "V",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome81_current",
+        "key": 2278987169,
+        "name": "esphome81 Current",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "current",
+        "unit_of_measurement": "A",
+        "accuracy_decimals": 2,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome81_power",
+        "key": 228678737,
+        "name": "esphome81 Power",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "power",
+        "unit_of_measurement": "W",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome81_energy",
+        "key": 1575376670,
+        "name": "esphome81 Energy",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "energy",
+        "unit_of_measurement": "Wh",
+        "accuracy_decimals": 3,
+        "force_update": false,
+        "state_class": 2,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome81_apparent_power",
+        "key": 11276223,
+        "name": "esphome81 Apparent Power",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "apparent_power",
+        "unit_of_measurement": "VA",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome81_reactive_power",
+        "key": 1269116105,
+        "name": "esphome81 Reactive Power",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "reactive_power",
+        "unit_of_measurement": "var",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome81_power_factor",
+        "key": 780876933,
+        "name": "esphome81 Power Factor",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "power_factor",
+        "unit_of_measurement": "",
+        "accuracy_decimals": 2,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esphome81_daily_energy",
+        "key": 1999450244,
+        "name": "esphome81 Daily Energy",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "energy",
+        "unit_of_measurement": "kWh",
+        "accuracy_decimals": 3,
+        "force_update": false,
+        "state_class": 2,
+        "legacy_last_reset_type": 0
+      }
+    ],
+    "text_sensor": [],
+    "switch": [
+      {
+        "object_id": "esphome81_relay_state",
+        "key": 2094135715,
+        "name": "esphome81 Relay State",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "assumed_state": false,
+        "device_class": ""
+      }
+    ],
+    "binary_sensor": [
+      {
+        "object_id": "status",
+        "key": 939730931,
+        "name": "Status",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_id": 0,
+        "device_class": "connectivity",
+        "is_status_binary_sensor": true
+      }
+    ],
+    "update": []
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "type": "menu",
+  "flow_id": "24d731e6cb1a62cb4df4efada46d8412",
+  "handler": "spook",
+  "data_schema": [
+    {
+      "type": "select",
+      "options": [
+        [
+          "remove",
+          "remove"
+        ],
+        [
+          "manage",
+          "manage"
+        ],
+        [
+          "ignore",
+          "ignore"
+        ]
+      ],
+      "name": "next_step_id",
+      "required": false
+    }
+  ],
+  "menu_options": [
+    "remove",
+    "manage",
+    "ignore"
+  ],
+  "description_placeholders": {
+    "statistics": "- `sensor.diun_cpu_anvandning_totalt`\n- `sensor.diun_minnesanvandning`\n- `sensor.diun_minnesanvandning_i_procent`\n- `sensor.diun_minnesgrans`\n- `sensor.fulla_antal_avbildningar`\n- `sensor.fulla_antal_behallare`\n- `sensor.fulla_behallare_pausade`\n- `sensor.fulla_behallare_som_kors`\n- `sensor.fulla_behallare_stoppade`\n- `sensor.koket_taklampor_kokson_effekt`\n- `sensor.ssid_olofsson_iot_2_4_ghz_signal`\n- `sensor.ssid_olofsson_wifi_2_4_ghz_signal`\n- `sensor.whisper_analysis_cpu_cpu_anvandning_totalt`\n- `sensor.whisper_analysis_cpu_minnesanvandning`\n- `sensor.whisper_analysis_cpu_minnesanvandning_i_procent`\n- `sensor.whisper_analysis_cpu_minnesgrans`\n- `sensor.whisper_analysis_gpu_cpu_anvandning_totalt`\n- `sensor.whisper_analysis_gpu_minnesanvandning`\n- `sensor.whisper_analysis_gpu_minnesanvandning_i_procent`\n- `sensor.whisper_analysis_gpu_minnesgrans`\n- `sensor.whisper_analysis_offline_cpu_anvandning_totalt`\n- `sensor.whisper_analysis_offline_minnesanvandning`\n- `sensor.whisper_analysis_offline_minnesanvandning_i_procent`\n- `sensor.whisper_analysis_offline_minnesgrans`\n- `sensor.wyoming_whisper_container_svarstid_o_1_dag`\n- `sensor.wyoming_whisper_container_svarstid_o_30_dagar`\n- `sensor.wyoming_whisper_container_svarstid_o_365_dagar`\n- `sensor.wyoming_whisper_container_upptid_1_dag`\n- `sensor.wyoming_whisper_container_upptid_30_dagar`\n- `sensor.wyoming_whisper_container_upptid_365_dagar`\n- `sensor.wyoming_whisper_cpu_anvandning_totalt`\n- `sensor.wyoming_whisper_minnesanvandning`\n- `sensor.wyoming_whisper_minnesanvandning_i_procent`\n- `sensor.wyoming_whisper_minnesgrans`\n- `sensor.wyoming_whisper_old_cpu_anvandning_totalt`\n- `sensor.wyoming_whisper_old_minnesanvandning`\n- `sensor.wyoming_whisper_old_minnesanvandning_i_procent`\n- `sensor.wyoming_whisper_old_minnesgrans`\n- `sensor.wyoming_whisper_restart_count`"
+  },
+  "step_id": "init"
+}

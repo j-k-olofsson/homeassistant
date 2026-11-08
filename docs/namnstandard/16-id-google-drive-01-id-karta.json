@@ -1,0 +1,5 @@
+{
+  "sensor.j_k_olofsson_gmail_com_used_storage_in_drive": "sensor.j_k_olofsson_gmail_com_anvand_lagringsutrymme_i_drive",
+  "sensor.j_k_olofsson_gmail_com_used_storage_in_drive_trash": "sensor.j_k_olofsson_gmail_com_anvand_lagringsutrymme_i_drive_papperskorgen",
+  "sensor.j_k_olofsson_gmail_com_total_size_of_backups": "sensor.j_k_olofsson_gmail_com_total_storlek_pa_sakerhetskopior"
+}

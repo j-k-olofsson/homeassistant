@@ -23,7 +23,7 @@ from homeassistant.const import (
     CONF_UNIQUE_ID,
     EVENT_HOMEASSISTANT_STOP,
     STATE_UNAVAILABLE,
-    STATE_UNKNOWN,
+    EntityCategory,
     UnitOfEnergy,
     UnitOfPower,
 )
@@ -59,6 +59,7 @@ from custom_components.powercalc.const import (
     CONF_CREATE_ENERGY_SENSOR,
     CONF_CREATE_GROUP,
     CONF_DISABLE_EXTENDED_ATTRIBUTES,
+    CONF_ENERGY_SENSOR_CATEGORY,
     CONF_ENERGY_SENSOR_PRECISION,
     CONF_ENERGY_SENSOR_UNIT_PREFIX,
     CONF_EXCLUDE_ENTITIES,
@@ -75,6 +76,7 @@ from custom_components.powercalc.const import (
     CONF_HIDE_MEMBERS,
     CONF_IGNORE_UNAVAILABLE_STATE,
     CONF_INCLUDE_NON_POWERCALC_SENSORS,
+    CONF_POWER_SENSOR_CATEGORY,
     CONF_POWER_SENSOR_PRECISION,
     CONF_SENSOR_TYPE,
     CONF_SUB_GROUPS,
@@ -428,6 +430,7 @@ def create_grouped_energy_sensor(
             name=name,
             unique_id=energy_unique_id,
             sensor_config=sensor_config,
+            entity_category=sensor_config.get(CONF_ENERGY_SENSOR_CATEGORY),
             unit_prefix=sensor_config.get(CONF_ENERGY_SENSOR_UNIT_PREFIX, UnitPrefix.NONE),
         )
 
@@ -484,6 +487,10 @@ class GroupedSensor(BaseEntity, SensorEntity):
                 sensor_config.get(CONF_GROUP_POWER_UPDATE_INTERVAL, DEFAULT_GROUP_POWER_UPDATE_INTERVAL),
             )
         self._attr_suggested_display_precision = self._rounding_digits
+        category_key = CONF_ENERGY_SENSOR_CATEGORY if self._is_energy_sensor else CONF_POWER_SENSOR_CATEGORY
+        entity_category = sensor_config.get(category_key)
+        if entity_category:
+            self._attr_entity_category = EntityCategory(entity_category)
         if unique_id:
             self._attr_unique_id = unique_id
         self._native_value_exact = Decimal(0)
@@ -914,16 +921,15 @@ class GroupedEnergySensor(GroupedSensor, RestoreSensor, EnergySensor):
     async def restore_last_state(self) -> None:
         """Restore the last known state of the group sensor."""
         last_state = await self.async_get_last_state()
-        if last_state and last_state.state in [None, STATE_UNKNOWN, STATE_UNAVAILABLE]:
-            return
-
         last_sensor_state = await self.async_get_last_sensor_data()
-        if last_sensor_state and last_sensor_state.native_value:
-            restored = parse_decimal(last_sensor_state.native_value)
-        elif last_state:
+
+        # Native sensor data retains the total even when the displayed state
+        # was unknown or unavailable when the entity was removed.
+        restored = parse_decimal(last_sensor_state.native_value) if last_sensor_state else None
+        if restored is None and last_state:
+            if last_state.state in UNAVAILABLE_STATES:
+                return
             restored = parse_decimal(last_state.state)
-        else:
-            restored = None
 
         if restored is None:
             _LOGGER.warning("%s: Could not restore last state", self.entity_id)
@@ -1029,7 +1035,7 @@ class PreviousStateStore:
 class PreviousStateStoreStore(Store[StoredStates]):
     """Store area registry data."""
 
-    async def _async_migrate_func(  # type: ignore
+    async def _async_migrate_func(
         self,
         old_major_version: int,
         old_minor_version: int,

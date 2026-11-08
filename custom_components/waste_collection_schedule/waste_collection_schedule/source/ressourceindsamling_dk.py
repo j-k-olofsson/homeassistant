@@ -1,0 +1,143 @@
+import datetime
+import json
+import logging
+import urllib.parse
+
+import requests
+from waste_collection_schedule import Collection, Icons
+from waste_collection_schedule.exceptions import (
+    SourceArgumentException,
+    SourceArgumentNotFound,
+)
+
+_LOGGER = logging.getLogger(__name__)
+
+TITLE = "RessourceIndsamling.dk"  # Title will show up in README.md and info.md
+DESCRIPTION = "Source for RessourceIndsamling.dk collection"  # Describe your source
+URL = "https://www.ressourceindsamling.dk/"  # Insert url to service homepage. URL will show up in README.md and info.md
+TEST_CASES = {  # Insert arguments for test cases to be used by test_sources.py script
+    "Home": {"streetName": "Kløvertoften", "number": "61"}
+}
+
+API_URL = (
+    "https://selfserviceapi.waste2x.dk/api/Services/Services/GetServicesForCustomer"
+)
+ICON_MAP = {
+    "Haveaffald": Icons.ORGANIC,
+    "Storskrald": Icons.RECYCLING,
+    "Mad/Rest affald": Icons.BIO_KITCHEN,
+    "Pap": Icons.PAPER,
+    "Papir/Plast & MDK": Icons.PLASTIC_PACKAGING,
+    "Metal/Glas affald": Icons.GLASS,
+    "Juletræer": Icons.CHRISTMAS_TREE,
+    "Farligt affald": Icons.HAZARDOUS,
+}
+
+ADDRESS_LOOKUP_URL = (
+    "https://selfserviceapi.waste2x.dk/api/Customer/Customer/SearchCustomer/"
+)
+
+TEST_DATE = [
+    {
+        "serviceBaseId": "O14wI_D9W_zG0",
+        "customerId": 47458,
+        "locationId": 49406,
+        "location": "Kløvertoften 61, 2740 Skovlunde",
+        "serviceTypeId": 71,
+        "serviceTypePublicName": "Mad/Rest",
+        "serviceTypeCategoryId": 2,
+        "binTypeId": 56,
+        "binTypePublicName": "240 L tokammer",
+        "startTime": "2026-04-15T22:00:00Z",
+        "stopTime": "2026-04-16T22:00:00Z",  # Use this for the date of the schedule
+        "originalStartTime": "2026-04-15T22:00:00Z",
+        "originalStopTime": "2026-04-16T22:00:00Z",
+        "coordinate": {"lat": 55.713405, "lon": 12.390497, "z": None, "srid": 4326},
+        "serviceSchemeId": 257318,
+        "schemeTypePublicName": "Enfamilie",
+        "frequencyTypeId": 1,
+        "serviceScheme_ServiceSchemeChangeBin_Mandatory": True,
+    }
+]
+
+
+class Source:
+    def __init__(self, streetName, number):
+        self._streetName = streetName
+        self._number = number
+
+    def fetch(self):
+        entries = []  # List that holds collection schedule
+
+        term = self._streetName + " " + self._number
+
+        _LOGGER.info("Fetching addressId from waste2x.dk: " + term)
+
+        headers = {"organizationid": "76fbcd50-996e-4b0e-8b5b-3e9e49cea6d6"}
+        query = urllib.parse.quote(term.lower() + "%")  # trailing % is important
+        url_encoded = ADDRESS_LOOKUP_URL + query
+        _LOGGER.info(f"Request URL: {url_encoded}")
+        address_response = requests.get(url_encoded, headers=headers, timeout=30)
+        _LOGGER.debug(f"Address lookup response status: {address_response.status_code}")
+        _LOGGER.debug(f"Address lookup response: {address_response.text}")
+        if address_response.status_code != 200:
+            raise SourceArgumentNotFound(
+                "streetName",
+                term,
+                f"Failed to lookup address: HTTP {address_response.status_code}",
+            )
+
+        try:
+            response_data = address_response.json()
+        except json.JSONDecodeError as e:
+            _LOGGER.error("Failed to parse address lookup JSON response: %s", e)
+            raise ValueError(f"Failed to parse address lookup response: {e}") from e
+
+        _LOGGER.debug(f"Address search response: {response_data}")
+
+        if "items" not in response_data or not response_data["items"]:
+            raise SourceArgumentException(
+                "streetName",
+                f"Address '{term}' not found in waste2x.dk database.",
+            )
+
+        customer_Id = response_data["items"][0]["customerId"]
+
+        _LOGGER.info("Fetching data from waste2x.dk")
+        # UTC time format with URL encoding for colon (%3A) and milliseconds (.000Z)
+
+        # Format example: 2026-09-28T22%3A00%3A00.000Z
+        dateTimeFormat = "%Y-%m-%dT%H%%3A%M%%3A%S.000%z"
+        now = datetime.datetime.now(datetime.timezone.utc)
+        start_date = now.strftime(dateTimeFormat)
+        end_date = (now + datetime.timedelta(days=31)).strftime(dateTimeFormat)
+
+        url = f"{API_URL}/{customer_Id}/{start_date}/{end_date}"
+        response = requests.get(url, headers=headers, timeout=30)
+        _LOGGER.debug(f"Services response status: {response.status_code}")
+        _LOGGER.debug(f"Services response: {response.text}")
+
+        if response.status_code != 200:
+            raise ValueError(f"Failed to fetch services: HTTP {response.status_code}")
+
+        try:
+            data = response.json()
+        except json.JSONDecodeError as exc:
+            _LOGGER.error("Failed to parse services JSON response: %s", exc)
+            raise ValueError(
+                "Failed to parse services response from waste2x.dk"
+            ) from exc
+
+        # Parse collection schedule data and create Collection objects
+        for item in data:
+            entries.append(
+                Collection(
+                    date=datetime.datetime.fromisoformat(item["stopTime"]).date(),
+                    t=item["serviceTypePublicName"],
+                    icon=ICON_MAP.get(
+                        item["serviceTypePublicName"], "mdi:trash-can-outline"
+                    ),
+                )
+            )
+
+        return entries

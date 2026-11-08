@@ -1,0 +1,2 @@
+{"status": "rename_intent", "old": "binary_sensor.remote_ui", "new": "binary_sensor.fjarratkomst"}
+{"status": "renamed", "old": "binary_sensor.remote_ui", "new": "binary_sensor.fjarratkomst"}

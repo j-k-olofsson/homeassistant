@@ -1,0 +1,114 @@
+{
+  "switch.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_wps": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "update.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "binary_sensor.sovrummet_openwrt_one_router_sovrum_connected": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "binary_sensor.sovrummet_openwrt_one_router_sovrum_reboot_required": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "button.sovrummet_openwrt_one_router_sovrum_reboot_router": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "button.sovrummet_openwrt_one_router_sovrum_start_wps": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "button.sovrummet_openwrt_one_router_sovrum_cancel_wps": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "button.sovrummet_openwrt_one_router_sovrum_create_backup": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "button.sovrummet_openwrt_one_router_sovrum_reconnect_wan": [
+    {
+      "state": "unknown",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "light.sovrummet_openwrt_one_router_sovrum_led_amber_lan": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "light.sovrummet_openwrt_one_router_sovrum_led_green_lan": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "light.sovrummet_openwrt_one_router_sovrum_led_green_status": [
+    {
+      "state": "on",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "light.sovrummet_openwrt_one_router_sovrum_led_mdio_bus_0f_amber_wan": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ],
+  "light.sovrummet_openwrt_one_router_sovrum_led_mdio_bus_0f_green_wan": [
+    {
+      "state": "off",
+      "attributes": {},
+      "last_changed": "2026-11-07T07:42:08.516572+00:00",
+      "last_updated": "2026-11-07T07:42:08.516572+00:00"
+    }
+  ]
+}

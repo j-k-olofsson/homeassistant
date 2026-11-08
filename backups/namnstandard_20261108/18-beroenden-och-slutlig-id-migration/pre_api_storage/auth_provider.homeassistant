@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "auth_provider.homeassistant",
+  "data": {
+    "users": [
+      {
+        "username": "diego",
+        "password": "JDJiJDEyJGE5ZmdlN20wVUlwQzRaSU54enUwLy5yUVU4YXdEc21XV1JvUzBuMWs1VG11ZHV6Q2d1Yll5"
+      },
+      {
+        "username": "flocken",
+        "password": "JDJiJDEyJC9ic3RTY28zZWUvMWxwdDdUdG5OMGVUSzJ2WGNRSnBxcFY5dXhPbXhzM0FWZHEzeklZaUNP"
+      },
+      {
+        "username": "kenneth",
+        "password": "JDJiJDEyJEI2QUZldTVnZEd2QTdqZmhtSFkuOC45NkRoaEsvNHM4Z2tYVXJudi8vTEhxcXFRR2Y3WkZl"
+      },
+      {
+        "username": "carola",
+        "password": "JDJiJDEyJDg5M1NvWU14aFJzTkZ5dGRCRzN5NE9ld2tnZGFNa0pGckFHR0FCOXV4UGQuSklYZDlUMEhx"
+      },
+      {
+        "username": "tabletkiosk",
+        "password": "JDJiJDEyJElUNDh6aWV5RnkzemgvMzZYcGpSci5vSWRER1A3VEJELkQ3cE8ybU11V1AwVnNWRVZNYnVx"
+      },
+      {
+        "username": "nspanelpro",
+        "password": "JDJiJDEyJEZJZkNTYXk0NFMvWXp6WXU4T0tsTi42TVZ5a2FQYW1GUzhaU09pbC9GWWNJTXd4L0xEa0dT"
+      },
+      {
+        "username": "buck",
+        "password": "JDJiJDEyJFEzUVdKVzVjQlJuYkdRT0lnaGlzVWVhc3JnbS95LnBrcTZFNWpPV28wb0VjMGthb3hiaE4u"
+      }
+    ]
+  }
+}

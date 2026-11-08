@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "minor_version": 2,
+  "key": "input_select",
+  "data": {
+    "items": [
+      {
+        "id": "sun_phase",
+        "name": "TILLSTÅND - Solens dygnsfas",
+        "icon": "mdi:theme-light-dark",
+        "options": [
+          "SUNPHASE_SUNRISE",
+          "SUNPHASE_DAYLIGHT",
+          "SUNPHASE_SUNSET",
+          "SUNPHASE_NIGHT"
+        ]
+      },
+      {
+        "id": "scen_vaxtlampor",
+        "name": "SCEN - Växtlampor",
+        "icon": "mdi:flower",
+        "options": [
+          "GROWLIGHT_SCENE_ON",
+          "GROWLIGHT_SCENE_LATE_ON",
+          "GROWLIGHT_SCENE_OFF"
+        ]
+      },
+      {
+        "name": "Default Dashboard",
+        "options": [
+          "lovelace",
+          "lovelace-friggan",
+          "lovelace-allt",
+          "ha-admin",
+          "refresh"
+        ],
+        "initial": "lovelace",
+        "id": "default_dashboard"
+      },
+      {
+        "id": "light_scene",
+        "name": "TILLSTÅND - Lampornas Scen",
+        "icon": "mdi:lamps-outline",
+        "options": [
+          "DAY",
+          "NIGHT",
+          "DUSK",
+          "DAWN",
+          "XMAS",
+          "ALARM",
+          "PARTY"
+        ]
+      },
+      {
+        "id": "growlight_scene",
+        "name": "TILLSTÅND - Växtlampornas Scen",
+        "icon": "mdi:wall-sconce-round",
+        "options": [
+          "ON",
+          "LATE_ON",
+          "OFF"
+        ]
+      },
+      {
+        "id": "default_dashboard_2",
+        "name": "Default Dashboard",
+        "options": [
+          "lovelace",
+          "lovelace-friggan",
+          "ha-admin",
+          "elforbrukning-och-pris",
+          "dashboard-standard",
+          "refresh"
+        ],
+        "initial": "lovelace"
+      },
+      {
+        "id": "default_dashboard_3",
+        "name": "Default Dashboard",
+        "options": [
+          "lovelace",
+          "lovelace-friggan",
+          "ha-admin",
+          "elforbrukning-och-pris",
+          "dashboard-elpris",
+          "dashboard-nestgen2",
+          "dashboard-absolut",
+          "dashboard-aggklackning",
+          "refresh"
+        ],
+        "initial": "lovelace"
+      },
+      {
+        "id": "default_dashboard_4",
+        "name": "Default Dashboard",
+        "options": [
+          "lovelace",
+          "lovelace-friggan",
+          "ha-admin",
+          "elforbrukning-och-pris",
+          "dashboard-elpris",
+          "dashboard-nestgen2",
+          "dashboard-absolut",
+          "dashboard-aggklackning",
+          "refresh"
+        ],
+        "initial": "lovelace"
+      },
+      {
+        "id": "default_dashboard_5",
+        "name": "Default Dashboard",
+        "options": [
+          "lovelace",
+          "lovelace-friggan",
+          "ha-admin",
+          "elforbrukning-och-pris",
+          "dashboard-elpris",
+          "dashboard-nestgen2",
+          "dashboard-absolut",
+          "dashboard-aggklackning",
+          "refresh"
+        ],
+        "initial": "lovelace"
+      },
+      {
+        "id": "default_dashboard_6",
+        "name": "Default Dashboard",
+        "options": [
+          "lovelace",
+          "lovelace-friggan",
+          "ha-admin",
+          "elforbrukning-och-pris",
+          "dashboard-elpris",
+          "dashboard-nestgen2",
+          "dashboard-absolut",
+          "dashboard-aggklackning",
+          "refresh"
+        ],
+        "initial": "lovelace"
+      },
+      {
+        "id": "default_dashboard_7",
+        "name": "Default Dashboard",
+        "options": [
+          "lovelace",
+          "lovelace-friggan",
+          "ha-admin",
+          "dashboard-elpris",
+          "dashboard-nestgen2",
+          "dashboard-absolut",
+          "dashboard-aggklackning",
+          "dashboard-omraden",
+          "refresh"
+        ],
+        "initial": "lovelace"
+      }
+    ]
+  }
+}

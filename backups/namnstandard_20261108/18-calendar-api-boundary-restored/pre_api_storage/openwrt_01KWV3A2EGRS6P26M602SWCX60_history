@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "openwrt_01KWV3A2EGRS6P26M602SWCX60_history",
+  "data": {
+    "devices": {
+      "e8:ff:1e:db:ea:f8": {
+        "initially_seen": 1783320884,
+        "last_seen": 1794128800,
+        "is_wireless": false,
+        "hostname": "heimdal.home.arpa"
+      },
+      "ac:16:2d:04:99:b2": {
+        "initially_seen": 1783320884,
+        "last_seen": 1791229191,
+        "is_wireless": false,
+        "hostname": "fulla.home.arpa"
+      },
+      "20:05:b6:01:99:b1": {
+        "initially_seen": 1783320884,
+        "last_seen": 1794128800,
+        "is_wireless": false,
+        "hostname": "gw.home.arpa"
+      },
+      "60:cf:84:cd:9c:e2": {
+        "initially_seen": 1787234239,
+        "last_seen": 1794128800,
+        "is_wireless": false,
+        "hostname": "tor.home.arpa"
+      },
+      "68:f7:28:79:0e:04": {
+        "initially_seen": 1787295696,
+        "last_seen": 1788605892,
+        "is_wireless": false,
+        "hostname": "192.168.10.50"
+      }
+    },
+    "last_version": "25.12.6",
+    "mqtt_cleanup_done": false,
+    "mqtt_presence_configured": false
+  }
+}

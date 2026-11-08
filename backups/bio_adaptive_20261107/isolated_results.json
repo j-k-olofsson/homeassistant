@@ -1,0 +1,80 @@
+[
+  {
+    "case": "scene_DAY",
+    "adaptive_apply_calls": 1,
+    "light_calls": 1,
+    "profile_state": "on"
+  },
+  {
+    "case": "scene_DAWN",
+    "adaptive_apply_calls": 1,
+    "light_calls": 1,
+    "profile_state": "on"
+  },
+  {
+    "case": "scene_DUSK",
+    "adaptive_apply_calls": 1,
+    "light_calls": 1,
+    "profile_state": "on"
+  },
+  {
+    "case": "night_red",
+    "adaptive_apply_calls": 0,
+    "light_calls": 1,
+    "profile_state": "off"
+  },
+  {
+    "case": "cinema_on",
+    "adaptive_apply_calls": 0,
+    "light_calls": 1,
+    "profile_state": "off"
+  },
+  {
+    "case": "cinema_off_at_night",
+    "adaptive_apply_calls": 0,
+    "light_calls": 1,
+    "profile_state": "off"
+  },
+  {
+    "case": "cinema_off_day",
+    "adaptive_apply_calls": 1,
+    "light_calls": 1,
+    "profile_state": "on"
+  },
+  {
+    "case": "morning_fade_before_adaptive",
+    "adaptive_apply_calls": 1,
+    "light_calls": 21,
+    "profile_state": "on"
+  },
+  {
+    "case": "guard_manual_enable_night",
+    "adaptive_apply_calls": 0,
+    "light_calls": 1,
+    "profile_state": "off"
+  },
+  {
+    "case": "guard_night_does_not_wake_lamps",
+    "adaptive_apply_calls": 0,
+    "light_calls": 0,
+    "profile_state": "off"
+  },
+  {
+    "case": "guard_manual_enable_cinema",
+    "adaptive_apply_calls": 0,
+    "light_calls": 1,
+    "profile_state": "off"
+  },
+  {
+    "case": "guard_party_keeps_colours",
+    "adaptive_apply_calls": 0,
+    "light_calls": 0,
+    "profile_state": "off"
+  },
+  {
+    "case": "startup_day",
+    "adaptive_apply_calls": 1,
+    "light_calls": 0,
+    "profile_state": "on"
+  }
+]

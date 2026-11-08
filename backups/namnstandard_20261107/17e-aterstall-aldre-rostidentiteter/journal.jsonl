@@ -1,0 +1,14 @@
+{"status": "rename_intent", "old": "sensor.verkstaden_klimatsensor_temperatur", "new": "sensor.verkstan_temp"}
+{"status": "renamed", "old": "sensor.verkstaden_klimatsensor_temperatur", "new": "sensor.verkstan_temp"}
+{"status": "rename_intent", "old": "sensor.ateljen_klimatsensor_temperatur", "new": "sensor.ateljen_temp"}
+{"status": "renamed", "old": "sensor.ateljen_klimatsensor_temperatur", "new": "sensor.ateljen_temp"}
+{"status": "rename_intent", "old": "sensor.bion_klimatsensor_temperatur", "new": "sensor.bio_temp"}
+{"status": "renamed", "old": "sensor.bion_klimatsensor_temperatur", "new": "sensor.bio_temp"}
+{"status": "rename_intent", "old": "sensor.sovrummet_klimatsensor_temperatur", "new": "sensor.sovrummet_temp"}
+{"status": "renamed", "old": "sensor.sovrummet_klimatsensor_temperatur", "new": "sensor.sovrummet_temp"}
+{"status": "rename_intent", "old": "sensor.honshuset_klimatsensor_temperatur", "new": "sensor.honshuset_temp"}
+{"status": "renamed", "old": "sensor.honshuset_klimatsensor_temperatur", "new": "sensor.honshuset_temp"}
+{"status": "rename_intent", "old": "sensor.verandan_klimatsensor_temperatur", "new": "sensor.verandan_temp"}
+{"status": "renamed", "old": "sensor.verandan_klimatsensor_temperatur", "new": "sensor.verandan_temp"}
+{"status": "rename_intent", "old": "sensor.utomhus_klimatsensor_temperatur", "new": "sensor.utomhus_temp"}
+{"status": "renamed", "old": "sensor.utomhus_klimatsensor_temperatur", "new": "sensor.utomhus_temp"}

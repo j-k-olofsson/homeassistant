@@ -1,0 +1,2497 @@
+{
+  "response": {
+    "changed_states": [
+      {
+        "entity_id": "script.granny_broadcast",
+        "state": "on",
+        "attributes": {
+          "last_triggered": "2026-10-04T07:32:25.580033+00:00",
+          "mode": "parallel",
+          "current": 1,
+          "max": 50,
+          "friendly_name": "Granny Broadcast (kanalneutral)"
+        },
+        "last_changed": "2026-10-04T07:32:25.580069+00:00",
+        "last_reported": "2026-10-04T07:32:25.580069+00:00",
+        "last_updated": "2026-10-04T07:32:25.580069+00:00",
+        "context": {
+          "id": "01M42X83BB2WEQ3TJGTRTZESZX",
+          "parent_id": null,
+          "user_id": "11c3c69645984f0c814370add793f07e"
+        }
+      },
+      {
+        "entity_id": "script.granny_announce",
+        "state": "on",
+        "attributes": {
+          "last_triggered": "2026-10-04T07:32:25.583076+00:00",
+          "mode": "queued",
+          "current": 1,
+          "max": 50,
+          "friendly_name": "Granny \u2013 synkroniserat tal via vanlig Chromecast"
+        },
+        "last_changed": "2026-10-04T07:32:25.583106+00:00",
+        "last_reported": "2026-10-04T07:32:25.583106+00:00",
+        "last_updated": "2026-10-04T07:32:25.583106+00:00",
+        "context": {
+          "id": "01M42X83BB2WEQ3TJGTRTZESZX",
+          "parent_id": null,
+          "user_id": "11c3c69645984f0c814370add793f07e"
+        }
+      },
+      {
+        "entity_id": "script.granny_announce_player",
+        "state": "on",
+        "attributes": {
+          "last_triggered": "2026-10-04T07:32:25.584674+00:00",
+          "mode": "parallel",
+          "current": 1,
+          "max": 50,
+          "friendly_name": "Granny \u2013 tal till ett Chromecast-m\u00e5l"
+        },
+        "last_changed": "2026-10-04T07:32:25.584696+00:00",
+        "last_reported": "2026-10-04T07:32:25.584696+00:00",
+        "last_updated": "2026-10-04T07:32:25.584696+00:00",
+        "context": {
+          "id": "01M42X83BB2WEQ3TJGTRTZESZX",
+          "parent_id": null,
+          "user_id": "11c3c69645984f0c814370add793f07e"
+        }
+      },
+      {
+        "entity_id": "script.granny_speak_attempt",
+        "state": "on",
+        "attributes": {
+          "last_triggered": "2026-10-04T07:32:25.587005+00:00",
+          "mode": "parallel",
+          "current": 1,
+          "max": 50,
+          "friendly_name": "Granny \u2013 ett talf\u00f6rs\u00f6k"
+        },
+        "last_changed": "2026-10-04T07:32:25.587025+00:00",
+        "last_reported": "2026-10-04T07:32:25.587025+00:00",
+        "last_updated": "2026-10-04T07:32:25.587025+00:00",
+        "context": {
+          "id": "01M42X83BB2WEQ3TJGTRTZESZX",
+          "parent_id": null,
+          "user_id": "11c3c69645984f0c814370add793f07e"
+        }
+      },
+      {
+        "entity_id": "script.granny_speak_attempt",
+        "state": "on",
+        "attributes": {
+          "last_triggered": "2026-10-04T07:32:25.587005+00:00",
+          "mode": "parallel",
+          "current": 1,
+          "max": 50,
+          "last_action": "wait template",
+          "friendly_name": "Granny \u2013 ett talf\u00f6rs\u00f6k"
+        },
+        "last_changed": "2026-10-04T07:32:25.587025+00:00",
+        "last_reported": "2026-10-04T07:32:25.587419+00:00",
+        "last_updated": "2026-10-04T07:32:25.587419+00:00",
+        "context": {
+          "id": "01M42X83BB2WEQ3TJGTRTZESZX",
+          "parent_id": null,
+          "user_id": "11c3c69645984f0c814370add793f07e"
+        }
+      },
+      {
+        "entity_id": "tts.piper",
+        "state": "2026-10-04T07:32:25.588817+00:00",
+        "attributes": {
+          "friendly_name": "piper"
+        },
+        "last_changed": "2026-10-04T07:32:25.588839+00:00",
+        "last_reported": "2026-10-04T07:32:25.588839+00:00",
+        "last_updated": "2026-10-04T07:32:25.588839+00:00",
+        "context": {
+          "id": "01M42X83BB2WEQ3TJGTRTZESZX",
+          "parent_id": null,
+          "user_id": "11c3c69645984f0c814370add793f07e"
+        }
+      },
+      {
+        "entity_id": "media_player.granny_utrop",
+        "state": "idle",
+        "attributes": {
+          "volume_level": 0.4,
+          "is_volume_muted": false,
+          "media_content_type": "music",
+          "app_id": "music_assistant",
+          "source": "Music Assistant Queue",
+          "shuffle": false,
+          "repeat": "off",
+          "entity_picture_local": null,
+          "mass_player_type": "group",
+          "active_queue": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "device_class": "speaker",
+          "icon": "mdi:speaker-multiple",
+          "friendly_name": "Granny utrop",
+          "supported_features": 7796671
+        },
+        "last_changed": "2026-10-04T07:32:27.575550+00:00",
+        "last_reported": "2026-10-04T07:32:27.575550+00:00",
+        "last_updated": "2026-10-04T07:32:27.575550+00:00",
+        "context": {
+          "id": "01M42X83BB2WEQ3TJGTRTZESZX",
+          "parent_id": null,
+          "user_id": "11c3c69645984f0c814370add793f07e"
+        }
+      },
+      {
+        "entity_id": "media_player.granny_utrop",
+        "state": "playing",
+        "attributes": {
+          "volume_level": 0.4,
+          "is_volume_muted": false,
+          "media_content_type": "music",
+          "app_id": "music_assistant",
+          "source": "Music Assistant Queue",
+          "shuffle": false,
+          "repeat": "off",
+          "entity_picture_local": null,
+          "mass_player_type": "group",
+          "active_queue": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "device_class": "speaker",
+          "icon": "mdi:speaker-multiple",
+          "friendly_name": "Granny utrop",
+          "supported_features": 7796671
+        },
+        "last_changed": "2026-10-04T07:32:28.244544+00:00",
+        "last_reported": "2026-10-04T07:32:28.244544+00:00",
+        "last_updated": "2026-10-04T07:32:28.244544+00:00",
+        "context": {
+          "id": "01M42X83BB2WEQ3TJGTRTZESZX",
+          "parent_id": null,
+          "user_id": "11c3c69645984f0c814370add793f07e"
+        }
+      }
+    ],
+    "service_response": {
+      "final_message": "Det h\u00e4r \u00e4r ett test av Granny. Samma meddelande ska nu h\u00f6ras samtidigt i k\u00f6ket och atelj\u00e9n."
+    }
+  },
+  "samples": [
+    {
+      "at": 1791099145.5761952,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 24,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "up1a2803a2",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "idle",
+          "volume_level": 37,
+          "volume_muted": false,
+          "elapsed_time": null,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099145.879418,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 24,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "up1a2803a2",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "idle",
+          "volume_level": 37,
+          "volume_muted": false,
+          "elapsed_time": null,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099146.1844866,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 50,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 24,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "up1a2803a2",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": null,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099146.4873543,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "up1a2803a2",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": null,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099146.7907522,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "up1a2803a2",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": null,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099147.0959947,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "up1a2803a2",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": null,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099147.3989227,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "up1a2803a2",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": null,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099147.7080991,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "up1a2803a2",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": null,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099148.01682,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "upb2965530",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "up1a2803a2",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099148.319857,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000694,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099148.6348927,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000152,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000484,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000694,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099148.9408925,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000152,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000484,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000694,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099149.2486312,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000152,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000484,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000694,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099149.5550723,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000152,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000484,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000694,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099149.862501,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000152,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000484,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000694,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099150.1683154,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000152,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000484,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000694,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099150.473586,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000152,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000484,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000694,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099150.7770665,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000152,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000484,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000694,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099151.0815866,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000152,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000484,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000694,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099151.389478,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000152,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000484,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000694,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099151.6925213,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000152,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000484,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000694,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099151.9967542,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000152,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000484,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000694,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099152.3007784,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000152,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000484,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000694,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099152.6083884,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000152,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000484,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000694,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099152.9139562,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000152,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000484,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000694,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099153.2212613,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000152,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000484,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000694,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099153.529372,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000152,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000484,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000694,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099153.8376372,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000152,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000484,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000694,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099154.142619,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000152,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000484,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000694,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099154.4500601,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000152,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000484,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000694,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099154.757147,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000152,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "playing",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.000484,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099155.0654392,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099155.3719227,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    },
+    {
+      "at": 1791099155.6745648,
+      "players": [
+        {
+          "player_id": "upb2965530",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        },
+        {
+          "player_id": "up1a2803a2",
+          "state": "idle",
+          "volume_level": 40,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "synced_to": null,
+          "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        {
+          "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "state": "idle",
+          "volume_level": 37,
+          "volume_muted": false,
+          "elapsed_time": 0.0,
+          "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "active_group": null,
+          "synced_to": null,
+          "active_output_protocol": null
+        }
+      ]
+    }
+  ],
+  "before": {
+    "upb2965530": {
+      "player_id": "upb2965530",
+      "provider": "universal_player",
+      "type": "player",
+      "name": "K\u00f6kets sk\u00e4rm",
+      "available": true,
+      "device_info": {
+        "model": "JBL Link View",
+        "manufacturer": "Harman International Corp",
+        "software_version": null,
+        "model_id": null,
+        "manufacturer_id": null,
+        "identifiers": {
+          "ip_address": "192.168.10.209",
+          "uuid": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+          "cast_uuid": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+          "mac_address": "00:F4:8D:97:D9:B5"
+        },
+        "mac_address": "00:F4:8D:97:D9:B5",
+        "ip_address": "192.168.10.209"
+      },
+      "supported_features": [
+        "volume_set",
+        "volume_mute",
+        "enqueue",
+        "pause",
+        "set_members"
+      ],
+      "playback_state": "idle",
+      "elapsed_time": 0.0,
+      "elapsed_time_last_updated": 1791031359.107863,
+      "powered": true,
+      "volume_level": 50,
+      "volume_muted": false,
+      "group_members": [],
+      "static_group_members": [],
+      "can_group_with": [
+        "up366fb600",
+        "up1a2803a2",
+        "media_player.home_assistant_voice_096460_media_player"
+      ],
+      "synced_to": null,
+      "active_sound_mode": null,
+      "sound_mode_list": [],
+      "options": [],
+      "active_source": "upb2965530",
+      "source_list": [
+        {
+          "id": "upb2965530",
+          "name": "Music Assistant Queue",
+          "passive": false,
+          "can_play_pause": true,
+          "can_seek": true,
+          "can_next_previous": true,
+          "can_shuffle": false,
+          "can_repeat": false,
+          "shuffle_enabled": null,
+          "repeat_mode": null,
+          "account_id": null
+        }
+      ],
+      "active_group": null,
+      "current_media": {
+        "uri": "library://radio/19",
+        "media_type": "radio",
+        "title": "Julkanalen",
+        "artist": null,
+        "album": null,
+        "album_artist": null,
+        "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+        "palette": {
+          "background_dark": null,
+          "background_light": null,
+          "primary": null,
+          "accent": null,
+          "on_dark": null,
+          "on_light": null
+        },
+        "duration": 0,
+        "stream_duration": null,
+        "source_id": "upb2965530",
+        "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+        "custom_data": null,
+        "elapsed_time": 0,
+        "elapsed_time_last_updated": 1791026922.28402
+      },
+      "enabled": true,
+      "hide_in_ui": false,
+      "private": false,
+      "expose_to_ha": true,
+      "icon": "speaker",
+      "group_volume": 50,
+      "group_volume_muted": false,
+      "extra_attributes": {},
+      "power_control": "none",
+      "volume_control": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+      "mute_control": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+      "output_protocols": [
+        {
+          "output_protocol_id": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+          "name": "Chromecast",
+          "protocol_domain": "chromecast",
+          "is_native": false,
+          "priority": 30,
+          "available": true,
+          "derived_from": null
+        },
+        {
+          "output_protocol_id": "spb_00f48d97d9b5",
+          "name": "Sendspin",
+          "protocol_domain": "sendspin",
+          "is_native": false,
+          "priority": 40,
+          "available": true,
+          "derived_from": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        }
+      ],
+      "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+      "needs_setup": false,
+      "setup_reason": null,
+      "has_setup_flow": false,
+      "sleep_timer_expires_at": null,
+      "active_source_audio": null,
+      "display_name": "K\u00f6kets sk\u00e4rm",
+      "state": "idle",
+      "group_childs": [],
+      "extra_data": {},
+      "hide_player_in_ui": [
+        "when_unavailable",
+        "when_synced",
+        "when_group_active"
+      ]
+    },
+    "up1a2803a2": {
+      "player_id": "up1a2803a2",
+      "provider": "universal_player",
+      "type": "player",
+      "name": "Atelj\u00e9n",
+      "available": true,
+      "device_info": {
+        "model": "JBL Link 500",
+        "manufacturer": "JBL",
+        "software_version": null,
+        "model_id": null,
+        "manufacturer_id": null,
+        "identifiers": {
+          "ip_address": "192.168.10.205",
+          "mac_address": "80:C5:F2:67:AA:69",
+          "uuid": "bb9d9db8-1113-1ba6-19b4-362bd919b660",
+          "cast_uuid": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        "mac_address": "80:C5:F2:67:AA:69",
+        "ip_address": "192.168.10.205"
+      },
+      "supported_features": [
+        "volume_set",
+        "volume_mute",
+        "enqueue",
+        "pause",
+        "set_members"
+      ],
+      "playback_state": "idle",
+      "elapsed_time": 0.0,
+      "elapsed_time_last_updated": 1791026944.3054864,
+      "powered": true,
+      "volume_level": 24,
+      "volume_muted": false,
+      "group_members": [],
+      "static_group_members": [],
+      "can_group_with": [
+        "up366fb600",
+        "upb2965530",
+        "media_player.home_assistant_voice_096460_media_player"
+      ],
+      "synced_to": null,
+      "active_sound_mode": null,
+      "sound_mode_list": [],
+      "options": [],
+      "active_source": "up1a2803a2",
+      "source_list": [
+        {
+          "id": "up1a2803a2",
+          "name": "Music Assistant Queue",
+          "passive": false,
+          "can_play_pause": false,
+          "can_seek": false,
+          "can_next_previous": false,
+          "can_shuffle": false,
+          "can_repeat": false,
+          "shuffle_enabled": null,
+          "repeat_mode": null,
+          "account_id": null
+        }
+      ],
+      "active_group": null,
+      "current_media": null,
+      "enabled": true,
+      "hide_in_ui": false,
+      "private": false,
+      "expose_to_ha": true,
+      "icon": "speaker",
+      "group_volume": 24,
+      "group_volume_muted": false,
+      "extra_attributes": {},
+      "power_control": "none",
+      "volume_control": "bb9d9db8-1113-1ba6-19b4-362bd919b660",
+      "mute_control": "bb9d9db8-1113-1ba6-19b4-362bd919b660",
+      "output_protocols": [
+        {
+          "output_protocol_id": "bb9d9db8-1113-1ba6-19b4-362bd919b660",
+          "name": "Chromecast",
+          "protocol_domain": "chromecast",
+          "is_native": false,
+          "priority": 30,
+          "available": true,
+          "derived_from": null
+        },
+        {
+          "output_protocol_id": "spb_80c5f267aa69",
+          "name": "Sendspin",
+          "protocol_domain": "sendspin",
+          "is_native": false,
+          "priority": 40,
+          "available": true,
+          "derived_from": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        }
+      ],
+      "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660",
+      "needs_setup": false,
+      "setup_reason": null,
+      "has_setup_flow": false,
+      "sleep_timer_expires_at": null,
+      "active_source_audio": null,
+      "display_name": "Atelj\u00e9n",
+      "state": "idle",
+      "group_childs": [],
+      "extra_data": {},
+      "hide_player_in_ui": [
+        "when_unavailable",
+        "when_synced",
+        "when_group_active"
+      ]
+    },
+    "56862e31-51ae-420f-a85e-02ce6410ded3": {
+      "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+      "provider": "chromecast",
+      "type": "group",
+      "name": "Granny utrop",
+      "available": true,
+      "device_info": {
+        "model": "Google Cast Group",
+        "manufacturer": "Google Inc.",
+        "software_version": null,
+        "model_id": null,
+        "manufacturer_id": null,
+        "identifiers": {
+          "uuid": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "cast_uuid": "56862e31-51ae-420f-a85e-02ce6410ded3"
+        },
+        "mac_address": null,
+        "ip_address": null
+      },
+      "supported_features": [
+        "volume_set",
+        "volume_mute",
+        "enqueue",
+        "power",
+        "play_media",
+        "pause"
+      ],
+      "playback_state": "idle",
+      "elapsed_time": null,
+      "elapsed_time_last_updated": null,
+      "powered": false,
+      "volume_level": 37,
+      "volume_muted": false,
+      "group_members": [
+        "up1a2803a2",
+        "upb2965530"
+      ],
+      "static_group_members": [
+        "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+        "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+      ],
+      "can_group_with": [],
+      "synced_to": null,
+      "active_sound_mode": null,
+      "sound_mode_list": [],
+      "options": [],
+      "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+      "source_list": [
+        {
+          "id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "name": "Music Assistant Queue",
+          "passive": false,
+          "can_play_pause": false,
+          "can_seek": false,
+          "can_next_previous": false,
+          "can_shuffle": false,
+          "can_repeat": false,
+          "shuffle_enabled": null,
+          "repeat_mode": null,
+          "account_id": null
+        }
+      ],
+      "active_group": null,
+      "current_media": null,
+      "enabled": true,
+      "hide_in_ui": false,
+      "private": false,
+      "expose_to_ha": true,
+      "icon": "speakers",
+      "group_volume": 50,
+      "group_volume_muted": false,
+      "extra_attributes": {},
+      "power_control": "native",
+      "volume_control": "native",
+      "mute_control": "native",
+      "output_protocols": [
+        {
+          "output_protocol_id": "native",
+          "name": "Chromecast",
+          "protocol_domain": "chromecast",
+          "is_native": true,
+          "priority": 0,
+          "available": true,
+          "derived_from": null
+        }
+      ],
+      "active_output_protocol": null,
+      "needs_setup": false,
+      "setup_reason": null,
+      "has_setup_flow": false,
+      "sleep_timer_expires_at": null,
+      "active_source_audio": null,
+      "display_name": "Granny utrop",
+      "state": "idle",
+      "group_childs": [
+        "up1a2803a2",
+        "upb2965530"
+      ],
+      "extra_data": {},
+      "hide_player_in_ui": [
+        "when_unavailable",
+        "when_synced",
+        "when_group_active"
+      ]
+    }
+  },
+  "after": {
+    "upb2965530": {
+      "player_id": "upb2965530",
+      "provider": "universal_player",
+      "type": "player",
+      "name": "K\u00f6kets sk\u00e4rm",
+      "available": true,
+      "device_info": {
+        "model": "JBL Link View",
+        "manufacturer": "Harman International Corp",
+        "software_version": null,
+        "model_id": null,
+        "manufacturer_id": null,
+        "identifiers": {
+          "ip_address": "192.168.10.209",
+          "uuid": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+          "cast_uuid": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+          "mac_address": "00:F4:8D:97:D9:B5"
+        },
+        "mac_address": "00:F4:8D:97:D9:B5",
+        "ip_address": "192.168.10.209"
+      },
+      "supported_features": [
+        "volume_set",
+        "volume_mute",
+        "enqueue",
+        "pause",
+        "set_members"
+      ],
+      "playback_state": "idle",
+      "elapsed_time": 0.0,
+      "elapsed_time_last_updated": 1791099154.6368272,
+      "powered": true,
+      "volume_level": 40,
+      "volume_muted": false,
+      "group_members": [],
+      "static_group_members": [],
+      "can_group_with": [
+        "up366fb600",
+        "up1a2803a2",
+        "media_player.home_assistant_voice_096460_media_player"
+      ],
+      "synced_to": null,
+      "active_sound_mode": null,
+      "sound_mode_list": [],
+      "options": [],
+      "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+      "source_list": [
+        {
+          "id": "upb2965530",
+          "name": "Music Assistant Queue",
+          "passive": false,
+          "can_play_pause": true,
+          "can_seek": true,
+          "can_next_previous": true,
+          "can_shuffle": false,
+          "can_repeat": false,
+          "shuffle_enabled": null,
+          "repeat_mode": null,
+          "account_id": null
+        }
+      ],
+      "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+      "current_media": null,
+      "enabled": true,
+      "hide_in_ui": false,
+      "private": false,
+      "expose_to_ha": true,
+      "icon": "speaker",
+      "group_volume": 40,
+      "group_volume_muted": false,
+      "extra_attributes": {},
+      "power_control": "none",
+      "volume_control": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+      "mute_control": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+      "output_protocols": [
+        {
+          "output_protocol_id": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+          "name": "Chromecast",
+          "protocol_domain": "chromecast",
+          "is_native": false,
+          "priority": 30,
+          "available": true,
+          "derived_from": null
+        },
+        {
+          "output_protocol_id": "spb_00f48d97d9b5",
+          "name": "Sendspin",
+          "protocol_domain": "sendspin",
+          "is_native": false,
+          "priority": 40,
+          "available": true,
+          "derived_from": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        }
+      ],
+      "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+      "needs_setup": false,
+      "setup_reason": null,
+      "has_setup_flow": false,
+      "sleep_timer_expires_at": null,
+      "active_source_audio": null,
+      "display_name": "K\u00f6kets sk\u00e4rm",
+      "state": "idle",
+      "group_childs": [],
+      "extra_data": {},
+      "hide_player_in_ui": [
+        "when_unavailable",
+        "when_synced",
+        "when_group_active"
+      ]
+    },
+    "up1a2803a2": {
+      "player_id": "up1a2803a2",
+      "provider": "universal_player",
+      "type": "player",
+      "name": "Atelj\u00e9n",
+      "available": true,
+      "device_info": {
+        "model": "JBL Link 500",
+        "manufacturer": "JBL",
+        "software_version": null,
+        "model_id": null,
+        "manufacturer_id": null,
+        "identifiers": {
+          "ip_address": "192.168.10.205",
+          "mac_address": "80:C5:F2:67:AA:69",
+          "uuid": "bb9d9db8-1113-1ba6-19b4-362bd919b660",
+          "cast_uuid": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        "mac_address": "80:C5:F2:67:AA:69",
+        "ip_address": "192.168.10.205"
+      },
+      "supported_features": [
+        "volume_set",
+        "volume_mute",
+        "enqueue",
+        "pause",
+        "set_members"
+      ],
+      "playback_state": "idle",
+      "elapsed_time": 0.0,
+      "elapsed_time_last_updated": 1791099154.6385152,
+      "powered": true,
+      "volume_level": 40,
+      "volume_muted": false,
+      "group_members": [],
+      "static_group_members": [],
+      "can_group_with": [
+        "up366fb600",
+        "upb2965530",
+        "media_player.home_assistant_voice_096460_media_player"
+      ],
+      "synced_to": null,
+      "active_sound_mode": null,
+      "sound_mode_list": [],
+      "options": [],
+      "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+      "source_list": [
+        {
+          "id": "up1a2803a2",
+          "name": "Music Assistant Queue",
+          "passive": false,
+          "can_play_pause": false,
+          "can_seek": false,
+          "can_next_previous": false,
+          "can_shuffle": false,
+          "can_repeat": false,
+          "shuffle_enabled": null,
+          "repeat_mode": null,
+          "account_id": null
+        }
+      ],
+      "active_group": "56862e31-51ae-420f-a85e-02ce6410ded3",
+      "current_media": null,
+      "enabled": true,
+      "hide_in_ui": false,
+      "private": false,
+      "expose_to_ha": true,
+      "icon": "speaker",
+      "group_volume": 40,
+      "group_volume_muted": false,
+      "extra_attributes": {},
+      "power_control": "none",
+      "volume_control": "bb9d9db8-1113-1ba6-19b4-362bd919b660",
+      "mute_control": "bb9d9db8-1113-1ba6-19b4-362bd919b660",
+      "output_protocols": [
+        {
+          "output_protocol_id": "bb9d9db8-1113-1ba6-19b4-362bd919b660",
+          "name": "Chromecast",
+          "protocol_domain": "chromecast",
+          "is_native": false,
+          "priority": 30,
+          "available": true,
+          "derived_from": null
+        },
+        {
+          "output_protocol_id": "spb_80c5f267aa69",
+          "name": "Sendspin",
+          "protocol_domain": "sendspin",
+          "is_native": false,
+          "priority": 40,
+          "available": true,
+          "derived_from": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        }
+      ],
+      "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660",
+      "needs_setup": false,
+      "setup_reason": null,
+      "has_setup_flow": false,
+      "sleep_timer_expires_at": null,
+      "active_source_audio": null,
+      "display_name": "Atelj\u00e9n",
+      "state": "idle",
+      "group_childs": [],
+      "extra_data": {},
+      "hide_player_in_ui": [
+        "when_unavailable",
+        "when_synced",
+        "when_group_active"
+      ]
+    },
+    "56862e31-51ae-420f-a85e-02ce6410ded3": {
+      "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+      "provider": "chromecast",
+      "type": "group",
+      "name": "Granny utrop",
+      "available": true,
+      "device_info": {
+        "model": "Google Cast Group",
+        "manufacturer": "Google Inc.",
+        "software_version": null,
+        "model_id": null,
+        "manufacturer_id": null,
+        "identifiers": {
+          "uuid": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "cast_uuid": "56862e31-51ae-420f-a85e-02ce6410ded3"
+        },
+        "mac_address": null,
+        "ip_address": null
+      },
+      "supported_features": [
+        "volume_set",
+        "volume_mute",
+        "enqueue",
+        "power",
+        "play_media",
+        "pause"
+      ],
+      "playback_state": "idle",
+      "elapsed_time": 0.0,
+      "elapsed_time_last_updated": 1791099155.7875845,
+      "powered": false,
+      "volume_level": 37,
+      "volume_muted": false,
+      "group_members": [
+        "up1a2803a2",
+        "upb2965530"
+      ],
+      "static_group_members": [
+        "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+        "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+      ],
+      "can_group_with": [],
+      "synced_to": null,
+      "active_sound_mode": null,
+      "sound_mode_list": [],
+      "options": [],
+      "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+      "source_list": [
+        {
+          "id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "name": "Music Assistant Queue",
+          "passive": false,
+          "can_play_pause": false,
+          "can_seek": false,
+          "can_next_previous": false,
+          "can_shuffle": false,
+          "can_repeat": false,
+          "shuffle_enabled": null,
+          "repeat_mode": null,
+          "account_id": null
+        }
+      ],
+      "active_group": null,
+      "current_media": null,
+      "enabled": true,
+      "hide_in_ui": false,
+      "private": false,
+      "expose_to_ha": true,
+      "icon": "speakers",
+      "group_volume": 40,
+      "group_volume_muted": false,
+      "extra_attributes": {},
+      "power_control": "native",
+      "volume_control": "native",
+      "mute_control": "native",
+      "output_protocols": [
+        {
+          "output_protocol_id": "native",
+          "name": "Chromecast",
+          "protocol_domain": "chromecast",
+          "is_native": true,
+          "priority": 0,
+          "available": true,
+          "derived_from": null
+        }
+      ],
+      "active_output_protocol": null,
+      "needs_setup": false,
+      "setup_reason": null,
+      "has_setup_flow": false,
+      "sleep_timer_expires_at": null,
+      "active_source_audio": null,
+      "display_name": "Granny utrop",
+      "state": "idle",
+      "group_childs": [
+        "up1a2803a2",
+        "upb2965530"
+      ],
+      "extra_data": {},
+      "hide_player_in_ui": [
+        "when_unavailable",
+        "when_synced",
+        "when_group_active"
+      ]
+    }
+  },
+  "settled_after": {
+    "upb2965530": {
+      "player_id": "upb2965530",
+      "provider": "universal_player",
+      "type": "player",
+      "name": "K\u00f6kets sk\u00e4rm",
+      "available": true,
+      "device_info": {
+        "model": "JBL Link View",
+        "manufacturer": "Harman International Corp",
+        "software_version": null,
+        "model_id": null,
+        "manufacturer_id": null,
+        "identifiers": {
+          "ip_address": "192.168.10.209",
+          "uuid": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+          "cast_uuid": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+          "mac_address": "00:F4:8D:97:D9:B5"
+        },
+        "mac_address": "00:F4:8D:97:D9:B5",
+        "ip_address": "192.168.10.209"
+      },
+      "supported_features": [
+        "volume_set",
+        "volume_mute",
+        "enqueue",
+        "pause",
+        "set_members"
+      ],
+      "playback_state": "idle",
+      "elapsed_time": 0.0,
+      "elapsed_time_last_updated": 1791099155.8791585,
+      "powered": true,
+      "volume_level": 50,
+      "volume_muted": false,
+      "group_members": [],
+      "static_group_members": [],
+      "can_group_with": [
+        "up366fb600",
+        "up1a2803a2",
+        "media_player.home_assistant_voice_096460_media_player"
+      ],
+      "synced_to": null,
+      "active_sound_mode": null,
+      "sound_mode_list": [],
+      "options": [],
+      "active_source": "upb2965530",
+      "source_list": [
+        {
+          "id": "upb2965530",
+          "name": "Music Assistant Queue",
+          "passive": false,
+          "can_play_pause": true,
+          "can_seek": true,
+          "can_next_previous": true,
+          "can_shuffle": false,
+          "can_repeat": false,
+          "shuffle_enabled": null,
+          "repeat_mode": null,
+          "account_id": null
+        }
+      ],
+      "active_group": null,
+      "current_media": {
+        "uri": "library://radio/19",
+        "media_type": "radio",
+        "title": "Julkanalen",
+        "artist": null,
+        "album": null,
+        "album_artist": null,
+        "image_url": "http://192.168.10.2:8095/imageproxy/dcb297fcb6f2ef2026b6b971de0a5bcc16b26cba5f31ca5a6fab8125c4e3edc9?size=512&fmt=png",
+        "palette": {
+          "background_dark": null,
+          "background_light": null,
+          "primary": null,
+          "accent": null,
+          "on_dark": null,
+          "on_light": null
+        },
+        "duration": 0,
+        "stream_duration": null,
+        "source_id": "upb2965530",
+        "queue_item_id": "d89c36fd6ef14071835813a0f772d1ed",
+        "custom_data": null,
+        "elapsed_time": 0,
+        "elapsed_time_last_updated": 1791031349.2816937
+      },
+      "enabled": true,
+      "hide_in_ui": false,
+      "private": false,
+      "expose_to_ha": true,
+      "icon": "speaker",
+      "group_volume": 50,
+      "group_volume_muted": false,
+      "extra_attributes": {},
+      "power_control": "none",
+      "volume_control": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+      "mute_control": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+      "output_protocols": [
+        {
+          "output_protocol_id": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+          "name": "Chromecast",
+          "protocol_domain": "chromecast",
+          "is_native": false,
+          "priority": 30,
+          "available": true,
+          "derived_from": null
+        },
+        {
+          "output_protocol_id": "spb_00f48d97d9b5",
+          "name": "Sendspin",
+          "protocol_domain": "sendspin",
+          "is_native": false,
+          "priority": 40,
+          "available": true,
+          "derived_from": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc"
+        }
+      ],
+      "active_output_protocol": "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+      "needs_setup": false,
+      "setup_reason": null,
+      "has_setup_flow": false,
+      "sleep_timer_expires_at": null,
+      "active_source_audio": null,
+      "display_name": "K\u00f6kets sk\u00e4rm",
+      "state": "idle",
+      "group_childs": [],
+      "extra_data": {},
+      "hide_player_in_ui": [
+        "when_unavailable",
+        "when_synced",
+        "when_group_active"
+      ]
+    },
+    "up1a2803a2": {
+      "player_id": "up1a2803a2",
+      "provider": "universal_player",
+      "type": "player",
+      "name": "Atelj\u00e9n",
+      "available": true,
+      "device_info": {
+        "model": "JBL Link 500",
+        "manufacturer": "JBL",
+        "software_version": null,
+        "model_id": null,
+        "manufacturer_id": null,
+        "identifiers": {
+          "ip_address": "192.168.10.205",
+          "mac_address": "80:C5:F2:67:AA:69",
+          "uuid": "bb9d9db8-1113-1ba6-19b4-362bd919b660",
+          "cast_uuid": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        },
+        "mac_address": "80:C5:F2:67:AA:69",
+        "ip_address": "192.168.10.205"
+      },
+      "supported_features": [
+        "volume_set",
+        "volume_mute",
+        "enqueue",
+        "pause",
+        "set_members"
+      ],
+      "playback_state": "idle",
+      "elapsed_time": 0.0,
+      "elapsed_time_last_updated": 1791099155.8225825,
+      "powered": true,
+      "volume_level": 24,
+      "volume_muted": false,
+      "group_members": [],
+      "static_group_members": [],
+      "can_group_with": [
+        "up366fb600",
+        "upb2965530",
+        "media_player.home_assistant_voice_096460_media_player"
+      ],
+      "synced_to": null,
+      "active_sound_mode": null,
+      "sound_mode_list": [],
+      "options": [],
+      "active_source": "up1a2803a2",
+      "source_list": [
+        {
+          "id": "up1a2803a2",
+          "name": "Music Assistant Queue",
+          "passive": false,
+          "can_play_pause": false,
+          "can_seek": false,
+          "can_next_previous": false,
+          "can_shuffle": false,
+          "can_repeat": false,
+          "shuffle_enabled": null,
+          "repeat_mode": null,
+          "account_id": null
+        }
+      ],
+      "active_group": null,
+      "current_media": null,
+      "enabled": true,
+      "hide_in_ui": false,
+      "private": false,
+      "expose_to_ha": true,
+      "icon": "speaker",
+      "group_volume": 24,
+      "group_volume_muted": false,
+      "extra_attributes": {},
+      "power_control": "none",
+      "volume_control": "bb9d9db8-1113-1ba6-19b4-362bd919b660",
+      "mute_control": "bb9d9db8-1113-1ba6-19b4-362bd919b660",
+      "output_protocols": [
+        {
+          "output_protocol_id": "bb9d9db8-1113-1ba6-19b4-362bd919b660",
+          "name": "Chromecast",
+          "protocol_domain": "chromecast",
+          "is_native": false,
+          "priority": 30,
+          "available": true,
+          "derived_from": null
+        },
+        {
+          "output_protocol_id": "spb_80c5f267aa69",
+          "name": "Sendspin",
+          "protocol_domain": "sendspin",
+          "is_native": false,
+          "priority": 40,
+          "available": true,
+          "derived_from": "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+        }
+      ],
+      "active_output_protocol": "bb9d9db8-1113-1ba6-19b4-362bd919b660",
+      "needs_setup": false,
+      "setup_reason": null,
+      "has_setup_flow": false,
+      "sleep_timer_expires_at": null,
+      "active_source_audio": null,
+      "display_name": "Atelj\u00e9n",
+      "state": "idle",
+      "group_childs": [],
+      "extra_data": {},
+      "hide_player_in_ui": [
+        "when_unavailable",
+        "when_synced",
+        "when_group_active"
+      ]
+    },
+    "56862e31-51ae-420f-a85e-02ce6410ded3": {
+      "player_id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+      "provider": "chromecast",
+      "type": "group",
+      "name": "Granny utrop",
+      "available": true,
+      "device_info": {
+        "model": "Google Cast Group",
+        "manufacturer": "Google Inc.",
+        "software_version": null,
+        "model_id": null,
+        "manufacturer_id": null,
+        "identifiers": {
+          "uuid": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "cast_uuid": "56862e31-51ae-420f-a85e-02ce6410ded3"
+        },
+        "mac_address": null,
+        "ip_address": null
+      },
+      "supported_features": [
+        "volume_set",
+        "volume_mute",
+        "enqueue",
+        "power",
+        "play_media",
+        "pause"
+      ],
+      "playback_state": "idle",
+      "elapsed_time": 0.0,
+      "elapsed_time_last_updated": 1791099155.7875845,
+      "powered": false,
+      "volume_level": 37,
+      "volume_muted": false,
+      "group_members": [
+        "up1a2803a2",
+        "upb2965530"
+      ],
+      "static_group_members": [
+        "0416fda2-3f4b-f8d8-8a46-572bce5e58bc",
+        "bb9d9db8-1113-1ba6-19b4-362bd919b660"
+      ],
+      "can_group_with": [],
+      "synced_to": null,
+      "active_sound_mode": null,
+      "sound_mode_list": [],
+      "options": [],
+      "active_source": "56862e31-51ae-420f-a85e-02ce6410ded3",
+      "source_list": [
+        {
+          "id": "56862e31-51ae-420f-a85e-02ce6410ded3",
+          "name": "Music Assistant Queue",
+          "passive": false,
+          "can_play_pause": false,
+          "can_seek": false,
+          "can_next_previous": false,
+          "can_shuffle": false,
+          "can_repeat": false,
+          "shuffle_enabled": null,
+          "repeat_mode": null,
+          "account_id": null
+        }
+      ],
+      "active_group": null,
+      "current_media": null,
+      "enabled": true,
+      "hide_in_ui": false,
+      "private": false,
+      "expose_to_ha": true,
+      "icon": "speakers",
+      "group_volume": 50,
+      "group_volume_muted": false,
+      "extra_attributes": {},
+      "power_control": "native",
+      "volume_control": "native",
+      "mute_control": "native",
+      "output_protocols": [
+        {
+          "output_protocol_id": "native",
+          "name": "Chromecast",
+          "protocol_domain": "chromecast",
+          "is_native": true,
+          "priority": 0,
+          "available": true,
+          "derived_from": null
+        }
+      ],
+      "active_output_protocol": null,
+      "needs_setup": false,
+      "setup_reason": null,
+      "has_setup_flow": false,
+      "sleep_timer_expires_at": null,
+      "active_source_audio": null,
+      "display_name": "Granny utrop",
+      "state": "idle",
+      "group_childs": [
+        "up1a2803a2",
+        "upb2965530"
+      ],
+      "extra_data": {},
+      "hide_player_in_ui": [
+        "when_unavailable",
+        "when_synced",
+        "when_group_active"
+      ]
+    }
+  }
+}

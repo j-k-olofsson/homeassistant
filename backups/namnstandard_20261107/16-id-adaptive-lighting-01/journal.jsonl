@@ -1,0 +1,6 @@
+{"status": "rename_intent", "old": "switch.adaptive_lighting_ateljen_test_sleep_mode", "new": "switch.adaptive_lighting_ateljen_test_vilolage"}
+{"status": "renamed", "old": "switch.adaptive_lighting_ateljen_test_sleep_mode", "new": "switch.adaptive_lighting_ateljen_test_vilolage"}
+{"status": "rename_intent", "old": "switch.adaptive_lighting_ateljen_test_adapt_color", "new": "switch.adaptive_lighting_ateljen_test_anpassa_farg"}
+{"status": "renamed", "old": "switch.adaptive_lighting_ateljen_test_adapt_color", "new": "switch.adaptive_lighting_ateljen_test_anpassa_farg"}
+{"status": "rename_intent", "old": "switch.adaptive_lighting_ateljen_test_adapt_brightness", "new": "switch.adaptive_lighting_ateljen_test_anpassa_ljusstyrka"}
+{"status": "renamed", "old": "switch.adaptive_lighting_ateljen_test_adapt_brightness", "new": "switch.adaptive_lighting_ateljen_test_anpassa_ljusstyrka"}

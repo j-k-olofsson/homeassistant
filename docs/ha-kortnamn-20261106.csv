@@ -1,0 +1,53 @@
+Kontrollpanel,Vy,Entitet,Kortnamn
+Hem,3D-printer,sensor.prusaxl_filnamn,Filnamn
+Hem,3D-printer,sensor.prusaxl_material,Material
+Hem,3D-printer,sensor.prusaxl_utskrift_startas,Startad
+Hem,3D-printer,sensor.prusaxl_utskriften_ar_fardig,Beräknat klar
+Hem,3D-printer,sensor.prusaxl_z_hojd,Z-höjd
+Hem,3D-printer,sensor.prusaxl_hotend_fan,Munstycksfläkt
+Hem,3D-printer,sensor.prusaxl_print_fan,Utskriftsfläkt
+Hem,3D-printer,sensor.prusaxl_print_flow,Utskriftsflöde
+Hem,3D-printer,sensor.prusaxl_skriv_hastighet,Utskriftshastighet
+Hem,Kameror,sensor.vattenniva_honshuset_esphome74_water_level,Vattennivå · hönshuset
+Hem,Kameror,switch.vattenvarmare_honshuset_esphome25_relay_state,Vattenvärmare · hönshuset
+Hem,Bill,device_tracker.sef_42h_parking_location,Parkeringsplats
+Hem,Bill,sensor.sef_42h_vehicle_identify_number,Chassinummer
+Hem,Bill,input_boolean.car_ai_planning_enabled,AI-planering
+Hem,Bill,input_number.car_bat_capacity,Batterikapacitet
+Hem,Bill,input_number.car_target_soc,Målladdning
+Hem,Bill,input_number.car_charger_capacity,Laddeffekt
+Hem,Bill,script.granny_car_charge_plan,Planera laddning
+Hem,Bill,input_number.car_charger_efficiency,Laddverkningsgrad
+Hem,Bill,input_boolean.car_man_override,Manuell styrning
+Hem,Bill,switch.billaddare,Billaddare
+Hem,Verkstaden,light.shellypro3_ec626089edbc_switch_0,Taklampor
+Hem,Verkstaden,switch.shelly_pro_3_verkstaden_switch_1,Luftkompressor
+Hem,Verkstaden,switch.shelly_pro_3_verkstaden_switch_2,Spånsug
+Hem,Verkstaden,sensor.verkstan_hum,Luftfuktighet
+Hem,Verkstaden,sensor.verkstan_temp,Temperatur
+Hem,Dammsugare,vacuum.max,Max
+Hem,Dammsugare,select.max_vald_karta,Vald karta
+Hem,Dammsugare,sensor.max_batteri,Batteri
+HA–Admin,Admin,input_datetime.ir_lights_on,IR-ljus tänds
+HA–Admin,Admin,input_datetime.ir_lights_off,IR-ljus släcks
+HA–Admin,Admin,input_boolean.guest_mode,Gästläge
+HA–Admin,Admin,input_boolean.ir_lights_automation,Automatiska IR-ljus
+HA–Admin,Admin,input_boolean.narvarosimulering_aktiv,Närvarosimulering
+HA–Admin,Admin,input_boolean.narvarosimulering_testlage,Simulering – testläge
+HA–Admin,Hälsokontroll,sensor.ha_db_size_mb,Databasstorlek
+HA–Admin,Hälsokontroll,sensor.ha_states_rows_24h,Rader senaste dygnet
+HA–Admin,Hälsokontroll,sensor.ha_antal_enheter,Antal enheter
+HA–Admin,Hälsokontroll,sensor.ha_antal_otillgangliga_enheter,Otillgängliga / okända
+HA–Admin,Hälsokontroll,sensor.ha_antal_otillgangliga_kritiska_enheter,Kritiska otillgängliga
+HA–Admin,Energipris,input_number.nordpool_monthly_fee,Fasta månadsavgifter
+HA–Admin,Energipris,sensor.nordpool,Elpris
+HA–Admin,Energipris,sensor.template_nordpool_base_cost_current_hour,Inköpspris
+HA–Admin,Energipris,sensor.template_nordpool_additional_costs_current_hour,Påslag
+HA–Admin,Energipris,sensor.kvartbaserad_elkostnadsprognos,Kostnadsprognos
+HA–Admin,Energipris,sensor.elmatare_elstolpen_current_phase_1,Ström L1
+HA–Admin,Energipris,sensor.elmatare_elstolpen_current_phase_2,Ström L2
+HA–Admin,Energipris,sensor.elmatare_elstolpen_current_phase_3,Ström L3
+HA–Admin,Utomhusljus,sensor.esphome98_illuminance,Ljusstyrka
+HA–Admin,Utomhusljus,sensor.esphome98_infrared,Infrarött ljus
+HA–Admin,Utomhusljus,sensor.esphome98_esphome98_uv_ambient,Ljus – råvärde
+HA–Admin,Utomhusljus,sensor.esphome98_esphome98_uv_index,UV-index

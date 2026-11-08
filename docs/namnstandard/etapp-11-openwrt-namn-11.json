@@ -1,0 +1,4280 @@
+{
+  "stage": "11-openwrt-namn-11",
+  "description": "Svenska funktionsnamn enligt granskad ordlista. Inga ID:n, inställningar eller värden ändras.",
+  "operations": [
+    {
+      "kind": "entity",
+      "id": "sensor.siemens_dishwasher_016050395510002818_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "siemens-dishwasher-016050395510002818 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.siemens_dishwasher_016050395510002818_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "siemens-dishwasher-016050395510002818 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.siemens_dishwasher_016050395510002818_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "siemens-dishwasher-016050395510002818 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.siemens_dishwasher_016050395510002818_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "siemens-dishwasher-016050395510002818 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.siemens_dishwasher_016050395510002818_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "siemens-dishwasher-016050395510002818 Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.siemens_dishwasher_016050395510002818_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "siemens-dishwasher-016050395510002818 Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_diegos_screen_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "chromecast-diegos-screen Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_diegos_screen_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "chromecast-diegos-screen RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_diegos_screen_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "chromecast-diegos-screen TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_diegos_screen_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "chromecast-diegos-screen Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_diegos_screen_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "chromecast-diegos-screen Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_diegos_screen_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "chromecast-diegos-screen Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_vaxtskapets_speaker_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "chromecast-vaxtskapets-speaker Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_vaxtskapets_speaker_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "chromecast-vaxtskapets-speaker RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_vaxtskapets_speaker_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "chromecast-vaxtskapets-speaker TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_vaxtskapets_speaker_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "chromecast-vaxtskapets-speaker Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_vaxtskapets_speaker_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "chromecast-vaxtskapets-speaker Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_vaxtskapets_speaker_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "chromecast-vaxtskapets-speaker Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_smarthomecontrolpanel_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "SmartHomeControlPanel Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_smarthomecontrolpanel_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "SmartHomeControlPanel RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_smarthomecontrolpanel_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "SmartHomeControlPanel TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_smarthomecontrolpanel_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "SmartHomeControlPanel Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_smarthomecontrolpanel_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "SmartHomeControlPanel Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_smarthomecontrolpanel_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "SmartHomeControlPanel Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.levoit_humidifier_verandan_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "levoit-humidifier-verandan Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.levoit_humidifier_verandan_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "levoit-humidifier-verandan RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.levoit_humidifier_verandan_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "levoit-humidifier-verandan TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.levoit_humidifier_verandan_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "levoit-humidifier-verandan Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.levoit_humidifier_verandan_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "levoit-humidifier-verandan Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.levoit_humidifier_verandan_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "levoit-humidifier-verandan Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sovrummet_sanglampor_manni_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Sänglampor Manni Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sovrummet_sanglampor_manni_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Sänglampor Manni RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sovrummet_sanglampor_manni_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Sänglampor Manni TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sovrummet_sanglampor_manni_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Sänglampor Manni Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sovrummet_sanglampor_manni_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "Sänglampor Manni Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sovrummet_sanglampor_manni_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "Sänglampor Manni Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sovrummet_sanglampor_diego_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Sänglampor Diego Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sovrummet_sanglampor_diego_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Sänglampor Diego RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sovrummet_sanglampor_diego_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Sänglampor Diego TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sovrummet_sanglampor_diego_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Sänglampor Diego Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sovrummet_sanglampor_diego_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "Sänglampor Diego Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.sovrummet_sanglampor_diego_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "Sänglampor Diego Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.entren_gw_august_connect_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "gw-august-connect Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.entren_gw_august_connect_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "gw-august-connect RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.entren_gw_august_connect_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "gw-august-connect TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.entren_gw_august_connect_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "gw-august-connect Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.entren_gw_august_connect_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "gw-august-connect Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.entren_gw_august_connect_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "gw-august-connect Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_hp_pavilion_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "hp-pavilion Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_hp_pavilion_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "hp-pavilion RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_hp_pavilion_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "hp-pavilion TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_hp_pavilion_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "hp-pavilion Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_hp_pavilion_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "hp-pavilion Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_hp_pavilion_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "hp-pavilion Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ateljen_vattensensor_torkskap_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Vattensensor torkskåp Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ateljen_vattensensor_torkskap_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Vattensensor torkskåp RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ateljen_vattensensor_torkskap_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Vattensensor torkskåp TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ateljen_vattensensor_torkskap_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Vattensensor torkskåp Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ateljen_vattensensor_torkskap_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "Vattensensor torkskåp Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ateljen_vattensensor_torkskap_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "Vattensensor torkskåp Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.galaxy_s7_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.74 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.galaxy_s7_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.74 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.galaxy_s7_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.74 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.galaxy_s7_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.74 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.galaxy_s7_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "192.168.10.74 Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.galaxy_s7_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "192.168.10.74 Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_duschens_speaker_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "chromecast-duschens-speaker Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_duschens_speaker_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "chromecast-duschens-speaker RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_duschens_speaker_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "chromecast-duschens-speaker TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_duschens_speaker_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "chromecast-duschens-speaker Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_duschens_speaker_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "chromecast-duschens-speaker Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_duschens_speaker_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "chromecast-duschens-speaker Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.honshuset_ap_honshuset_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "ap-honshuset Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.honshuset_ap_honshuset_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "ap-honshuset RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.honshuset_ap_honshuset_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "ap-honshuset TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.honshuset_ap_honshuset_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "ap-honshuset Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.honshuset_ap_honshuset_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "ap-honshuset Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.honshuset_ap_honshuset_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "ap-honshuset Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.canon_g3070_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "canon-g3070 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.canon_g3070_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "canon-g3070 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.canon_g3070_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "canon-g3070 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.canon_g3070_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "canon-g3070 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.canon_g3070_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "canon-g3070 Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.canon_g3070_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "canon-g3070 Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_mannis_screen_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "chromecast-mannis-screen Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_mannis_screen_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "chromecast-mannis-screen RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_mannis_screen_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "chromecast-mannis-screen TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_mannis_screen_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "chromecast-mannis-screen Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_mannis_screen_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "chromecast-mannis-screen Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_mannis_screen_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "chromecast-mannis-screen Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_e0_4c_8e_59_b7_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.10.46 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_e0_4c_8e_59_b7_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.46 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_e0_4c_8e_59_b7_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.10.46 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_e0_4c_8e_59_b7_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.10.46 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_e0_4c_8e_59_b7_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "192.168.10.46 Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_e0_4c_8e_59_b7_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "192.168.10.46 Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.diegotab_signal_strength_4",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "DiegoTab Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.diegotab_rx_rate_4",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "DiegoTab RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.diegotab_tx_rate_4",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "DiegoTab TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.diegotab_noise_level_4",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "DiegoTab Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.diegotab_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "DiegoTab Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.diegotab_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "DiegoTab Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verandan_sony_tv_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "sony-tv Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verandan_sony_tv_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "sony-tv RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verandan_sony_tv_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "sony-tv TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verandan_sony_tv_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "sony-tv Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verandan_sony_tv_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "sony-tv Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verandan_sony_tv_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "sony-tv Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_tv_soundbar_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "chromecast-tv-soundbar Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_tv_soundbar_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "chromecast-tv-soundbar RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_tv_soundbar_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "chromecast-tv-soundbar TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_tv_soundbar_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "chromecast-tv-soundbar Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_tv_soundbar_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "chromecast-tv-soundbar Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_tv_soundbar_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "chromecast-tv-soundbar Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_stereo_right_speaker_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "chromecast-stereo-right-speaker Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_stereo_right_speaker_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "chromecast-stereo-right-speaker RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_stereo_right_speaker_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "chromecast-stereo-right-speaker TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_stereo_right_speaker_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "chromecast-stereo-right-speaker Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_stereo_right_speaker_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "chromecast-stereo-right-speaker Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_stereo_right_speaker_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "chromecast-stereo-right-speaker Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ubuntu_desktop_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "172.17.0.1 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ubuntu_desktop_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "172.17.0.1 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ubuntu_desktop_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "172.17.0.1 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ubuntu_desktop_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "172.17.0.1 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ubuntu_desktop_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "172.17.0.1 Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_ubuntu_desktop_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "172.17.0.1 Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_kokets_screen_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "chromecast-kokets-screen Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_kokets_screen_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "chromecast-kokets-screen RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_kokets_screen_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "chromecast-kokets-screen TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_kokets_screen_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "chromecast-kokets-screen Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_kokets_screen_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "chromecast-kokets-screen Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_kokets_screen_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "chromecast-kokets-screen Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_home_assistant_voice_096460_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "home-assistant-voice-096460 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_home_assistant_voice_096460_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "home-assistant-voice-096460 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_home_assistant_voice_096460_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "home-assistant-voice-096460 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_home_assistant_voice_096460_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "home-assistant-voice-096460 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_home_assistant_voice_096460_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "home-assistant-voice-096460 Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_home_assistant_voice_096460_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "home-assistant-voice-096460 Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.entren_golvvarme_entren_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null,
+          "Golvvärme (entrén) Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Golvvärme (entrén) Signal Strength",
+          "Golvvärme Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.entren_golvvarme_entren_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null,
+          "Golvvärme (entrén) RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Golvvärme (entrén) RX Rate",
+          "Golvvärme RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.entren_golvvarme_entren_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null,
+          "Golvvärme (entrén) TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Golvvärme (entrén) TX Rate",
+          "Golvvärme TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.entren_golvvarme_entren_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null,
+          "Golvvärme (entrén) Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Golvvärme (entrén) Noise Level",
+          "Golvvärme Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.entren_golvvarme_entren_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null,
+          "Golvvärme (entrén) Traffic Rx"
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "Golvvärme (entrén) Traffic Rx",
+          "Golvvärme Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.entren_golvvarme_entren_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null,
+          "Golvvärme (entrén) Traffic Tx"
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "Golvvärme (entrén) Traffic Tx",
+          "Golvvärme Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_vaxtlampa_frosadd_bion_shpls_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "LED-stjärnor Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_vaxtlampa_frosadd_bion_shpls_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "LED-stjärnor RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_vaxtlampa_frosadd_bion_shpls_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "LED-stjärnor TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_vaxtlampa_frosadd_bion_shpls_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "LED-stjärnor Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_vaxtlampa_frosadd_bion_shpls_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "LED-stjärnor Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_vaxtlampa_frosadd_bion_shpls_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "LED-stjärnor Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.duschen_golvvarme_duschen_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null,
+          "Golvvärme (duschen) Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Golvvärme (duschen) Signal Strength",
+          "Golvvärme Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.duschen_golvvarme_duschen_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null,
+          "Golvvärme (duschen) RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Golvvärme (duschen) RX Rate",
+          "Golvvärme RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.duschen_golvvarme_duschen_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null,
+          "Golvvärme (duschen) TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Golvvärme (duschen) TX Rate",
+          "Golvvärme TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.duschen_golvvarme_duschen_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null,
+          "Golvvärme (duschen) Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Golvvärme (duschen) Noise Level",
+          "Golvvärme Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.duschen_golvvarme_duschen_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null,
+          "Golvvärme (duschen) Traffic Rx"
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "Golvvärme (duschen) Traffic Rx",
+          "Golvvärme Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.duschen_golvvarme_duschen_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null,
+          "Golvvärme (duschen) Traffic Tx"
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "Golvvärme (duschen) Traffic Tx",
+          "Golvvärme Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_stereo_left_speaker_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "chromecast-stereo-left-speaker Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_stereo_left_speaker_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "chromecast-stereo-left-speaker RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_stereo_left_speaker_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "chromecast-stereo-left-speaker TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_stereo_left_speaker_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "chromecast-stereo-left-speaker Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_stereo_left_speaker_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "chromecast-stereo-left-speaker Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.chromecast_stereo_left_speaker_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "chromecast-stereo-left-speaker Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_00_5e_00_01_6f_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "80-68-110-1.customers.ownit.se Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_00_5e_00_01_6f_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "80-68-110-1.customers.ownit.se RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_00_5e_00_01_6f_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "80-68-110-1.customers.ownit.se TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_00_5e_00_01_6f_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "80-68-110-1.customers.ownit.se Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_00_5e_00_01_6f_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "80-68-110-1.customers.ownit.se Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.00_00_5e_00_01_6f_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "80-68-110-1.customers.ownit.se Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.kontoret_zyxel_gs1900_8hp_b1_switch_kontoret_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-8HP B1 - Switch Kontoret Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_poolen_home_arpa_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "ap_poolen.home.arpa Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_poolen_home_arpa_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "ap_poolen.home.arpa RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_poolen_home_arpa_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "ap_poolen.home.arpa TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_poolen_home_arpa_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "ap_poolen.home.arpa Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_poolen_home_arpa_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "ap_poolen.home.arpa Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.ap_poolen_home_arpa_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "ap_poolen.home.arpa Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_asus_lyra_map_ac2200_ap_friggan_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Friggan Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_asus_lyra_map_ac2200_ap_friggan_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Friggan RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_asus_lyra_map_ac2200_ap_friggan_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Friggan TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_asus_lyra_map_ac2200_ap_friggan_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Friggan Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_asus_lyra_map_ac2200_ap_friggan_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Friggan Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.friggan_asus_lyra_map_ac2200_ap_friggan_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Friggan Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Källaren Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Källaren RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Källaren TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Källaren Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Källaren Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.bion_asus_lyra_map_ac2200_ap_kallaren_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Källaren Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.20_05_b6_ff_ea_40_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "ap_kontoret.home.arpa Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.20_05_b6_ff_ea_40_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "ap_kontoret.home.arpa RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.20_05_b6_ff_ea_40_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "ap_kontoret.home.arpa TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.20_05_b6_ff_ea_40_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "ap_kontoret.home.arpa Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.20_05_b6_ff_ea_40_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "ap_kontoret.home.arpa Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.20_05_b6_ff_ea_40_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "ap_kontoret.home.arpa Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.e8_ff_1e_db_ea_f8_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Heimdal.home.arpa Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.e8_ff_1e_db_ea_f8_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Heimdal.home.arpa RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.e8_ff_1e_db_ea_f8_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Heimdal.home.arpa TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.e8_ff_1e_db_ea_f8_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Heimdal.home.arpa Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.e8_ff_1e_db_ea_f8_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "Heimdal.home.arpa Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.e8_ff_1e_db_ea_f8_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "Heimdal.home.arpa Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_196_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.30.196 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_196_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.30.196 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_196_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.30.196 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_196_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.30.196 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_196_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "192.168.30.196 Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_196_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "192.168.30.196 Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.4c_0f_3e_0f_a8_02_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.20.62 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.4c_0f_3e_0f_a8_02_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.20.62 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.4c_0f_3e_0f_a8_02_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.20.62 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.4c_0f_3e_0f_a8_02_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.20.62 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.4c_0f_3e_0f_a8_02_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "192.168.20.62 Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.4c_0f_3e_0f_a8_02_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "192.168.20.62 Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.14_36_0e_f8_a9_e5_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "switch-2.home.arpa Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.14_36_0e_f8_a9_e5_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "switch-2.home.arpa RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.14_36_0e_f8_a9_e5_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "switch-2.home.arpa TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.14_36_0e_f8_a9_e5_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "switch-2.home.arpa Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.14_36_0e_f8_a9_e5_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "switch-2.home.arpa Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.14_36_0e_f8_a9_e5_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "switch-2.home.arpa Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.verkstaden_asus_lyra_map_ac2200_ap_verkstaden_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "ASUS Lyra MAP-AC2200 - AP Verkstaden Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.20_05_b7_00_78_f0_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "ap_koket.home.arpa Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.20_05_b7_00_78_f0_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "ap_koket.home.arpa RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.20_05_b7_00_78_f0_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "ap_koket.home.arpa TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.20_05_b7_00_78_f0_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "ap_koket.home.arpa Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.20_05_b7_00_78_f0_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "ap_koket.home.arpa Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.20_05_b7_00_78_f0_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "ap_koket.home.arpa Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.vinden_zyxel_gs1900_24e_a1_switch_vinden_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "Zyxel GS1900-24E A1 - Switch Vinden Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_197_signal_strength_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "192.168.30.197 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_197_rx_rate_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "192.168.30.197 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_197_tx_rate_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "192.168.30.197 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_197_noise_level_2",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "192.168.30.197 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_197_traffic_rx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagen datamängd",
+        "aliases": [
+          null,
+          "192.168.30.197 Traffic Rx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.192_168_30_197_traffic_tx",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Skickad datamängd",
+        "aliases": [
+          null,
+          "192.168.30.197 Traffic Tx"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.cc_ba_bd_a5_eb_19_signal_strength",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "ap-honshuset.home.arpa Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.cc_ba_bd_a5_eb_19_rx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "ap-honshuset.home.arpa RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.cc_ba_bd_a5_eb_19_tx_rate",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "ap-honshuset.home.arpa TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.cc_ba_bd_a5_eb_19_noise_level",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "ap-honshuset.home.arpa Noise Level"
+        ]
+      }
+    }
+  ]
+}
