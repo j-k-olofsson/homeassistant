@@ -1,0 +1,73 @@
+{
+  "definition": {
+    "id": "slider",
+    "min": 0.0,
+    "max": 100.0,
+    "name": "Slider",
+    "mode": "slider",
+    "step": 1.0
+  },
+  "entity": {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": null,
+    "config_subentry_id": null,
+    "created_at": 0.0,
+    "device_id": null,
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "input_number.slider",
+    "hidden_by": null,
+    "icon": null,
+    "id": "893e3959ab14c0f9b12affeb9fc6ffef",
+    "labels": [],
+    "modified_at": 1786031527.894503,
+    "name": null,
+    "next_name_part": null,
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Slider",
+    "platform": "input_number",
+    "translation_key": null,
+    "unique_id": "slider",
+    "aliases": [
+      null
+    ],
+    "capabilities": {
+      "min": 0.0,
+      "max": 100.0,
+      "step": 1.0,
+      "mode": "slider"
+    },
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  },
+  "state": {
+    "entity_id": "input_number.slider",
+    "state": "87.0",
+    "attributes": {
+      "min": 0.0,
+      "max": 100.0,
+      "step": 1.0,
+      "mode": "slider",
+      "initial": null,
+      "editable": true,
+      "friendly_name": "Slider"
+    },
+    "last_changed": "2026-11-08T11:37:20.898353+00:00",
+    "last_reported": "2026-11-08T11:37:20.898353+00:00",
+    "last_updated": "2026-11-08T11:37:20.898353+00:00",
+    "context": {
+      "id": "01M6XF5Q827A8JE9CBKQRZ9G75",
+      "parent_id": null,
+      "user_id": null
+    }
+  }
+}

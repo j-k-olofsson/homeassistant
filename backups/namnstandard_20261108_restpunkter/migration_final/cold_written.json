@@ -1,0 +1,12 @@
+[
+  "automations.yaml",
+  "recorder_excluded_entities.yaml",
+  "esphome/esphome09.yaml",
+  "esphome/archive/trash/esphome15.yaml",
+  ".storage/core.config_entries",
+  ".storage/powercalc_group",
+  ".storage/core.restore_state",
+  ".storage/homeassistant.exposed_entities",
+  ".storage/esphome.093df378c502bf0cde52459691675cb0",
+  ".storage/esphome.5c1dfaab0957271f2094674fa9069abd"
+]

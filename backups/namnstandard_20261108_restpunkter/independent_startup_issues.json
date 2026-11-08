@@ -1,0 +1,31 @@
+{
+  "rollback_verified": true,
+  "ids_restored": 29,
+  "availability_differences_after_rollback": [
+    "update.glances_avbildningsuppdatering_tillganglig",
+    "update.tor_ai_searxng_avbildningsuppdatering_tillganglig",
+    "update.tor_ai_netlogs_reports_http_avbildningsuppdatering_tillganglig",
+    "update.tor_ai_caddy_ui_avbildningsuppdatering_tillganglig",
+    "update.tor_ai_portainer_agent_avbildningsuppdatering_tillganglig",
+    "update.tor_ai_ollama_avbildningsuppdatering_tillganglig",
+    "update.tor_ai_netlogs_syslogng_avbildningsuppdatering_tillganglig",
+    "update.tor_ai_ha_avbildningsuppdatering_tillganglig",
+    "update.tor_ai_openwebui_avbildningsuppdatering_tillganglig",
+    "update.tor_ai_esphome_avbildningsuppdatering_tillganglig",
+    "update.uptime_kuma_avbildningsuppdatering_tillganglig",
+    "update.portainer_avbildningsuppdatering_tillganglig",
+    "update.wyoming_whisper_tor_avbildningsuppdatering_tillganglig",
+    "update.tor_ai_docker_socket_proxy_avbildningsuppdatering_tillganglig",
+    "update.tor_ai_caddy_avbildningsuppdatering_tillganglig",
+    "ai_task.molnet_openai_ai_task",
+    "conversation.molnet_openai_conversation",
+    "media_player.sovrummet_diegos_vackarklocka_cast",
+    "media_player.mannis_vackarklocka_cast",
+    "sensor.sovrummet_diegos_vackarklocka_beraknad_effekt",
+    "sensor.sovrummet_diegos_vackarklocka_beraknad_energi",
+    "media_player.ha_voice_pe_096460_mediaspelare"
+  ],
+  "openai_state_after_rollback": "setup_error",
+  "openai_configuration_unchanged": true,
+  "openai_authentication_error": true
+}

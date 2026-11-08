@@ -1,0 +1,198 @@
+{
+  "files_checked": 3669,
+  "hits": [
+    {
+      "file": "/homeassistant/.storage/core.entity_registry",
+      "path": "/data/entities/64/entity_id",
+      "needle": "input_number.slider"
+    },
+    {
+      "file": "/homeassistant/.storage/core.entity_registry",
+      "path": "/data/entities/64/id",
+      "needle": "893e3959ab14c0f9b12affeb9fc6ffef"
+    },
+    {
+      "file": "/homeassistant/.storage/core.entity_registry",
+      "path": "/data/entities/8236/entity_id",
+      "needle": "script.esphome_sok_efter_wi_fi_nat"
+    },
+    {
+      "file": "/homeassistant/.storage/core.entity_registry",
+      "path": "/data/entities/8236/suggested_object_id",
+      "needle": "scan_wifi"
+    },
+    {
+      "file": "/homeassistant/.storage/core.entity_registry",
+      "path": "/data/entities/8236/suggested_object_id",
+      "needle": "rescan_wifi_on_esphome_nodes"
+    },
+    {
+      "file": "/homeassistant/.storage/core.entity_registry",
+      "path": "/data/entities/8236/unique_id",
+      "needle": "scan_wifi"
+    },
+    {
+      "file": "/homeassistant/.storage/core.entity_registry",
+      "path": "/data/entities/8236/unique_id",
+      "needle": "rescan_wifi_on_esphome_nodes"
+    },
+    {
+      "file": "/homeassistant/.storage/esphome.093df378c502bf0cde52459691675cb0",
+      "path": "/data/services/0/name",
+      "needle": "scan_wifi"
+    },
+    {
+      "file": "/homeassistant/.storage/esphome.5c1dfaab0957271f2094674fa9069abd",
+      "path": "/data/services/0/name",
+      "needle": "scan_wifi"
+    },
+    {
+      "file": "/homeassistant/.storage/homeassistant.exposed_entities",
+      "path": "/data/exposed_entities/input_button.rescan_wifi_on_all_esphome_devices",
+      "needle": "scan_wifi",
+      "dictionary_key": true
+    },
+    {
+      "file": "/homeassistant/.storage/homeassistant.exposed_entities",
+      "path": "/data/exposed_entities/input_button.rescan_wifi_on_all_esphome_devices",
+      "needle": "rescan_wifi_on_all_esphome_devices",
+      "dictionary_key": true
+    },
+    {
+      "file": "/homeassistant/.storage/homeassistant.exposed_entities",
+      "path": "/data/exposed_entities/binary_sensor.rescan_wifi",
+      "needle": "scan_wifi",
+      "dictionary_key": true
+    },
+    {
+      "file": "/homeassistant/.storage/homeassistant.exposed_entities",
+      "path": "/data/exposed_entities/input_boolean.rescan_wifi_on_all_esphome_devices",
+      "needle": "scan_wifi",
+      "dictionary_key": true
+    },
+    {
+      "file": "/homeassistant/.storage/homeassistant.exposed_entities",
+      "path": "/data/exposed_entities/input_boolean.rescan_wifi_on_all_esphome_devices",
+      "needle": "rescan_wifi_on_all_esphome_devices",
+      "dictionary_key": true
+    },
+    {
+      "file": "/homeassistant/.storage/homeassistant.exposed_entities",
+      "path": "/data/exposed_entities/script.rescan_wifi_on_all_esphome_devices",
+      "needle": "scan_wifi",
+      "dictionary_key": true
+    },
+    {
+      "file": "/homeassistant/.storage/homeassistant.exposed_entities",
+      "path": "/data/exposed_entities/script.rescan_wifi_on_all_esphome_devices",
+      "needle": "rescan_wifi_on_all_esphome_devices",
+      "dictionary_key": true
+    },
+    {
+      "file": "/homeassistant/esphome/archive/trash/esphome15.yaml",
+      "line": 19,
+      "needle": "scan_wifi"
+    },
+    {
+      "file": "/homeassistant/scripts.yaml",
+      "line": 91,
+      "needle": "scan_wifi"
+    },
+    {
+      "file": "/homeassistant/scripts.yaml",
+      "line": 91,
+      "needle": "rescan_wifi_on_esphome_nodes"
+    },
+    {
+      "file": "/homeassistant/scripts.yaml",
+      "line": 136,
+      "needle": "scan_wifi"
+    }
+  ],
+  "errors": [
+    {
+      "file": "/share/Shared/diego/.config/google-chrome/FirstPartySetsPreloaded/2025.7.24.0/sets.json",
+      "error": "JSONDecodeError"
+    },
+    {
+      "file": "/share/Shared/diego/.vscode/argv.json",
+      "error": "JSONDecodeError"
+    },
+    {
+      "file": "/share/Shared/diego/.vscode/extensions/keesschollaart.vscode-home-assistant-2.0.0/syntaxes/jinja-language-configuration.json",
+      "error": "JSONDecodeError"
+    },
+    {
+      "file": "/share/Shared/diego/.vscode/extensions/ms-vscode.powershell-2025.0.0/examples/.vscode/settings.json",
+      "error": "JSONDecodeError"
+    },
+    {
+      "file": "/share/Shared/diego/.vscode/extensions/ms-vscode.powershell-2025.0.0/examples/.vscode/tasks.json",
+      "error": "JSONDecodeError"
+    },
+    {
+      "file": "/share/Shared/diego/.vscode/extensions/ms-vscode.powershell-2025.0.0/modules/PSScriptAnalyzer/1.23.0/Settings/desktop-2.0-windows.json",
+      "error": "JSONDecodeError"
+    },
+    {
+      "file": "/share/Shared/diego/.vscode/extensions/ms-vscode.powershell-2025.0.0/modules/PSScriptAnalyzer/1.23.0/Settings/desktop-3.0-windows.json",
+      "error": "JSONDecodeError"
+    },
+    {
+      "file": "/share/Shared/diego/.vscode/extensions/ms-vscode.powershell-2025.0.0/modules/PSScriptAnalyzer/1.23.0/Settings/desktop-4.0-windows.json",
+      "error": "JSONDecodeError"
+    },
+    {
+      "file": "/share/Shared/diego/.vscode/extensions/ms-vscode.powershell-2025.0.0/modules/PSScriptAnalyzer/1.23.0/compatibility_profiles/ubuntu_x64_18.04_6.2.4_x64_4.0.30319.42000_core.json",
+      "error": "JSONDecodeError"
+    },
+    {
+      "file": "/share/Shared/diego/.vscode/extensions/ms-vscode.powershell-2025.0.0/modules/PSScriptAnalyzer/1.23.0/compatibility_profiles/ubuntu_x64_18.04_7.0.0_x64_3.1.2_core.json",
+      "error": "JSONDecodeError"
+    },
+    {
+      "file": "/share/Shared/diego/.vscode/extensions/ms-vscode.powershell-2025.0.0/modules/PSScriptAnalyzer/1.23.0/compatibility_profiles/win-48_x64_10.0.17763.0_5.1.17763.316_x64_4.0.30319.42000_framework.json",
+      "error": "JSONDecodeError"
+    },
+    {
+      "file": "/share/Shared/diego/.vscode/extensions/ms-vscode.powershell-2025.0.0/modules/PSScriptAnalyzer/1.23.0/compatibility_profiles/win-4_x64_10.0.18362.0_6.2.4_x64_4.0.30319.42000_core.json",
+      "error": "JSONDecodeError"
+    },
+    {
+      "file": "/share/Shared/diego/.vscode/extensions/ms-vscode.powershell-2025.0.0/modules/PSScriptAnalyzer/1.23.0/compatibility_profiles/win-4_x64_10.0.18362.0_7.0.0_x64_3.1.2_core.json",
+      "error": "JSONDecodeError"
+    },
+    {
+      "file": "/share/Shared/diego/.vscode/extensions/ms-vscode.powershell-2025.0.0/modules/PSScriptAnalyzer/1.23.0/compatibility_profiles/win-8_x64_10.0.14393.0_5.1.14393.2791_x64_4.0.30319.42000_framework.json",
+      "error": "JSONDecodeError"
+    },
+    {
+      "file": "/share/Shared/diego/.vscode/extensions/ms-vscode.powershell-2025.0.0/modules/PSScriptAnalyzer/1.23.0/compatibility_profiles/win-8_x64_10.0.14393.0_6.2.4_x64_4.0.30319.42000_core.json",
+      "error": "JSONDecodeError"
+    },
+    {
+      "file": "/share/Shared/diego/.vscode/extensions/ms-vscode.powershell-2025.0.0/modules/PSScriptAnalyzer/1.23.0/compatibility_profiles/win-8_x64_10.0.14393.0_7.0.0_x64_3.1.2_core.json",
+      "error": "JSONDecodeError"
+    },
+    {
+      "file": "/share/Shared/diego/.vscode/extensions/ms-vscode.powershell-2025.0.0/modules/PSScriptAnalyzer/1.23.0/compatibility_profiles/win-8_x64_10.0.17763.0_5.1.17763.316_x64_4.0.30319.42000_framework.json",
+      "error": "JSONDecodeError"
+    },
+    {
+      "file": "/share/Shared/diego/.vscode/extensions/ms-vscode.powershell-2025.0.0/modules/PSScriptAnalyzer/1.23.0/compatibility_profiles/win-8_x64_10.0.17763.0_6.2.4_x64_4.0.30319.42000_core.json",
+      "error": "JSONDecodeError"
+    },
+    {
+      "file": "/share/Shared/diego/.vscode/extensions/ms-vscode.powershell-2025.0.0/modules/PSScriptAnalyzer/1.23.0/compatibility_profiles/win-8_x64_10.0.17763.0_7.0.0_x64_3.1.2_core.json",
+      "error": "JSONDecodeError"
+    },
+    {
+      "file": "/share/Shared/diego/.vscode/extensions/ms-vscode.powershell-2025.0.0/modules/PSScriptAnalyzer/1.23.0/compatibility_profiles/win-8_x64_6.2.9200.0_3.0_x64_4.0.30319.42000_framework.json",
+      "error": "JSONDecodeError"
+    },
+    {
+      "file": "/share/Shared/diego/.vscode/extensions/ms-vscode.powershell-2025.0.0/modules/PSScriptAnalyzer/1.23.0/compatibility_profiles/win-8_x64_6.3.9600.0_4.0_x64_4.0.30319.42000_framework.json",
+      "error": "JSONDecodeError"
+    }
+  ]
+}

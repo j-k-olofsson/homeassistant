@@ -1,0 +1,523 @@
+{
+  "stage": "22-restpunkter-blomlampa-koket",
+  "operations": [
+    {
+      "kind": "device",
+      "id": "0cc979ea34852945574729129825a6b2",
+      "before": {
+        "name_by_user": null,
+        "area_id": "kok"
+      },
+      "after": {
+        "name_by_user": "Blomlampa 3",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "7c98ea31c0db5d9db1de8cc6641c6606",
+      "before": {
+        "name_by_user": null,
+        "area_id": "kok"
+      },
+      "after": {
+        "name_by_user": "Blomlampa 3",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "72464832ea5d50edac5e918c2018497a",
+      "before": {
+        "name_by_user": null,
+        "area_id": "kok"
+      },
+      "after": {
+        "name_by_user": "Blomlampa 3",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "3f468b4d72344090ba3fc494f7562e9f",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Blomlampa 3",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "227724855ae674b89183ee9f92632aa2",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Blomlampa 3",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "7938b2ad630e3f5c590057a1fd59df79",
+      "before": {
+        "name_by_user": null,
+        "area_id": null
+      },
+      "after": {
+        "name_by_user": "Blomlampa 3",
+        "area_id": "kok"
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "update.blomlampa_ateljen_firmware",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "Firmware",
+        "aliases": [
+          null
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "device_tracker.8c_ce_4e_0c_ca_58_8c_ce_4e_0c_ca_58",
+      "before": {
+        "name": null,
+        "aliases": [
+          null
+        ]
+      },
+      "after": {
+        "name": "",
+        "aliases": [
+          null
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_8c_ce_4e_0c_ca_58_signal_strength",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_koket",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_8c_ce_4e_0c_ca_58_rx_rate",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_koket",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_8c_ce_4e_0c_ca_58_tx_rate",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_koket",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.koket_8c_ce_4e_0c_ca_58_noise_level",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_koket",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.koket_8c_ce_4e_0c_ca_58_internet_access",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_koket",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.koket_192_168_30_109_internet_access",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via gw",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.8c_ce_4e_0c_ca_58_signal_strength",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_verkstaden",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.8c_ce_4e_0c_ca_58_rx_rate",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_verkstaden",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.8c_ce_4e_0c_ca_58_tx_rate",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_verkstaden",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.8c_ce_4e_0c_ca_58_noise_level",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_verkstaden",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.8c_ce_4e_0c_ca_58_internet_access",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_verkstaden",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.8c_ce_4e_0c_ca_58_signal_strength_2",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_kontoret",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.8c_ce_4e_0c_ca_58_rx_rate_2",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_kontoret",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.8c_ce_4e_0c_ca_58_tx_rate_2",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_kontoret",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.8c_ce_4e_0c_ca_58_noise_level_2",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_kontoret",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.8c_ce_4e_0c_ca_58_internet_access_2",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_kontoret",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Internet Access"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.koket_8c_ce_4e_0c_ca_58_disconnect_device",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_koket",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "button.8c_ce_4e_0c_ca_58_disconnect_device",
+      "before": {
+        "name": "Koppla från enhet",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Disconnect device"
+        ]
+      },
+      "after": {
+        "name": "Koppla från enhet via ap_poolen",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Disconnect device"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.8c_ce_4e_0c_ca_58_signal_strength_3",
+      "before": {
+        "name": "Signalstyrka",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Signal Strength"
+        ]
+      },
+      "after": {
+        "name": "Signalstyrka via ap_poolen",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Signal Strength"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.8c_ce_4e_0c_ca_58_rx_rate_3",
+      "before": {
+        "name": "Mottagningshastighet",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 RX Rate"
+        ]
+      },
+      "after": {
+        "name": "Mottagningshastighet via ap_poolen",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 RX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.8c_ce_4e_0c_ca_58_tx_rate_3",
+      "before": {
+        "name": "Sändningshastighet",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 TX Rate"
+        ]
+      },
+      "after": {
+        "name": "Sändningshastighet via ap_poolen",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 TX Rate"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.8c_ce_4e_0c_ca_58_noise_level_3",
+      "before": {
+        "name": "Brusnivå",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Noise Level"
+        ]
+      },
+      "after": {
+        "name": "Brusnivå via ap_poolen",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Noise Level"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "switch.8c_ce_4e_0c_ca_58_internet_access_3",
+      "before": {
+        "name": "Internetåtkomst",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Internet Access"
+        ]
+      },
+      "after": {
+        "name": "Internetåtkomst via ap_poolen",
+        "aliases": [
+          null,
+          "8c:ce:4e:0c:ca:58 Internet Access"
+        ]
+      }
+    }
+  ]
+}

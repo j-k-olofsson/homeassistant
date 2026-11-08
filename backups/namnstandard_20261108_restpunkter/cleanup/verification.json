@@ -1,0 +1,13 @@
+{
+  "status": "verified",
+  "slider_unused_and_removed": true,
+  "rescan_script_unreferenced_and_removed": true,
+  "removed_registry_entries": 2,
+  "other_entities_preserved": 10156,
+  "no_scan_wifi_services": true,
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  }
+}

@@ -15,17 +15,6 @@ esphome:
 api:
   encryption:
     key: DbEjAKVlYo9YDz/ooW7Cm7h6ru+CYRZ6urQZ+j+80xg=
-  actions:
-    - action: scan_wifi
-      then:
-        - lambda: |-
-            for (auto &scan : wifi::global_wifi_component->get_scan_result()) {
-              if (wifi::global_wifi_component->has_sta_priority(scan.get_bssid())) {
-                wifi::global_wifi_component->set_sta_priority(scan.get_bssid(), 0);
-              }
-            }
-            wifi::global_wifi_component->start_scanning();
-
 # Enable logging, disableing consol log
 logger:
   level: ${log_level}

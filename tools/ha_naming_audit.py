@@ -8,9 +8,16 @@ IDENTITIES={'unique_id','previous_unique_id','entry_id','device_id','user_id','i
 def main():
  manifest=json.load(open(DOC/'granskningsmanifest.json'));services=set(manifest['service_ids']);obsolete=set(json.load(open(DOC/'foraldrade-entitets-id.json')))
  er=json.load(open(ROOT/'.storage/core.entity_registry'))['data']['entities'];current={e['entity_id']for e in er};obsolete-=current
- oldrefs=[]
+ oldrefs=[];inactive_exclusions=[]
  def inspect(obj,path,key=None):
   if key in IDENTITIES:return
+  if path=='.storage/homeassistant.exposed_entities'and key=='exposed_entities'and isinstance(obj,dict):
+   filtered={}
+   for eid,record in obj.items():
+    assistants=record.get('assistants',{})
+    if eid in obsolete and eid not in current and assistants and all(v.get('should_expose')is False for v in assistants.values()):inactive_exclusions.append(eid)
+    else:filtered[eid]=record
+   obj=filtered
   if isinstance(obj,str):
    if key in['action','service','perform_action','service_name']and obj in services:return
    for eid in set(REFERENCE.findall(obj))&obsolete:oldrefs.append({'file':path,'entity_id':eid})
@@ -39,7 +46,7 @@ def main():
  for ident,expected in review.items():
   actual=byid.get(ident)
   if actual and any(actual.get(k)!=expected.get(k)for k in['entity_id','name','original_name','device_id','area_id']):changed.append(actual['entity_id'])
- result={'read_only':True,'registered_entities':len(er),'duplicate_entity_ids':len(er)-len(current),'obsolete_active_references':oldrefs,'new_entities_to_review':new,'changed_entities_to_review':changed,'removed_since_review':len(set(review)-set(byid)),'compatibility_exceptions':len(manifest['compatibility_exceptions'])}
+ result={'read_only':True,'registered_entities':len(er),'duplicate_entity_ids':len(er)-len(current),'obsolete_active_references':oldrefs,'inactive_unregistered_exposure_exclusions':sorted(inactive_exclusions),'new_entities_to_review':new,'changed_entities_to_review':changed,'removed_since_review':len(set(review)-set(byid)),'compatibility_exceptions':len(manifest['compatibility_exceptions'])}
  print(json.dumps(result,ensure_ascii=False,indent=2))
  return 1 if oldrefs or result['duplicate_entity_ids']else 0
 if __name__=='__main__':sys.exit(main())

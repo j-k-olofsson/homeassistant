@@ -1,0 +1,450 @@
+{
+  "metadata": [
+    {
+      "statistic_id": "sensor.blomlampa_ateljen_energy_energy",
+      "display_unit_of_measurement": "kWh",
+      "has_mean": false,
+      "mean_type": 0,
+      "has_sum": true,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "kWh",
+      "unit_class": "energy"
+    },
+    {
+      "statistic_id": "sensor.blomlampa_ateljen_energy_power",
+      "display_unit_of_measurement": "W",
+      "has_mean": true,
+      "mean_type": 1,
+      "has_sum": false,
+      "name": null,
+      "source": "recorder",
+      "statistics_unit_of_measurement": "W",
+      "unit_class": "power"
+    }
+  ],
+  "series": {
+    "sensor.blomlampa_ateljen_energy_power": [
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "sum": null,
+        "min": 12.0,
+        "max": 12.0,
+        "mean": 12.0,
+        "state": null
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "sum": null,
+        "min": 12.0,
+        "max": 12.0,
+        "mean": 12.0,
+        "state": null
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "sum": null,
+        "min": 12.0,
+        "max": 12.0,
+        "mean": 12.0,
+        "state": null
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "sum": null,
+        "min": 12.0,
+        "max": 12.0,
+        "mean": 12.0,
+        "state": null
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "sum": null,
+        "min": 12.0,
+        "max": 12.0,
+        "mean": 12.0,
+        "state": null
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "sum": null,
+        "min": 12.0,
+        "max": 12.0,
+        "mean": 12.0,
+        "state": null
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "sum": null,
+        "min": 0.0,
+        "max": 12.0,
+        "mean": 0.0013406566666666665,
+        "state": null
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "sum": null,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "state": null
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "sum": null,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "state": null
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "sum": null,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "state": null
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "sum": null,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "state": null
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "sum": null,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "state": null
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "sum": null,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "state": null
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "sum": null,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "state": null
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "sum": null,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "state": null
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "sum": null,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "state": null
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "sum": null,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "state": null
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "sum": null,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "state": null
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "sum": null,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "state": null
+      },
+      {
+        "start": 1794117600000,
+        "end": 1794121200000,
+        "sum": null,
+        "min": 0.0,
+        "max": 12.0,
+        "mean": 5.99881001,
+        "state": null
+      },
+      {
+        "start": 1794121200000,
+        "end": 1794124800000,
+        "sum": null,
+        "min": 12.0,
+        "max": 12.0,
+        "mean": 12.0,
+        "state": null
+      },
+      {
+        "start": 1794124800000,
+        "end": 1794128400000,
+        "sum": null,
+        "min": 12.0,
+        "max": 12.0,
+        "mean": 12.0,
+        "state": null
+      },
+      {
+        "start": 1794128400000,
+        "end": 1794132000000,
+        "sum": null,
+        "min": 12.0,
+        "max": 12.0,
+        "mean": 12.0,
+        "state": null
+      }
+    ],
+    "sensor.blomlampa_ateljen_energy_energy": [
+      {
+        "start": 1794049200000,
+        "end": 1794052800000,
+        "sum": 125.5556,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "state": 125.5556
+      },
+      {
+        "start": 1794052800000,
+        "end": 1794056400000,
+        "sum": 125.5676,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "state": 125.5676
+      },
+      {
+        "start": 1794056400000,
+        "end": 1794060000000,
+        "sum": 125.5796,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "state": 125.5796
+      },
+      {
+        "start": 1794060000000,
+        "end": 1794063600000,
+        "sum": 125.5916,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "state": 125.5916
+      },
+      {
+        "start": 1794063600000,
+        "end": 1794067200000,
+        "sum": 125.6036,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "state": 125.6036
+      },
+      {
+        "start": 1794067200000,
+        "end": 1794070800000,
+        "sum": 125.6156,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "state": 125.6156
+      },
+      {
+        "start": 1794070800000,
+        "end": 1794074400000,
+        "sum": 125.6165,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "state": 125.6165
+      },
+      {
+        "start": 1794074400000,
+        "end": 1794078000000,
+        "sum": 125.6165,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "state": 125.6165
+      },
+      {
+        "start": 1794078000000,
+        "end": 1794081600000,
+        "sum": 125.6165,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "state": 125.6165
+      },
+      {
+        "start": 1794081600000,
+        "end": 1794085200000,
+        "sum": 125.6165,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "state": 125.6165
+      },
+      {
+        "start": 1794085200000,
+        "end": 1794088800000,
+        "sum": 125.6165,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "state": 125.6165
+      },
+      {
+        "start": 1794088800000,
+        "end": 1794092400000,
+        "sum": 125.6165,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "state": 125.6165
+      },
+      {
+        "start": 1794092400000,
+        "end": 1794096000000,
+        "sum": 125.6165,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "state": 125.6165
+      },
+      {
+        "start": 1794096000000,
+        "end": 1794099600000,
+        "sum": 125.6165,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "state": 125.6165
+      },
+      {
+        "start": 1794099600000,
+        "end": 1794103200000,
+        "sum": 125.6165,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "state": 125.6165
+      },
+      {
+        "start": 1794103200000,
+        "end": 1794106800000,
+        "sum": 125.6165,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "state": 125.6165
+      },
+      {
+        "start": 1794106800000,
+        "end": 1794110400000,
+        "sum": 125.6165,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "state": 125.6165
+      },
+      {
+        "start": 1794110400000,
+        "end": 1794114000000,
+        "sum": 125.6165,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "state": 125.6165
+      },
+      {
+        "start": 1794114000000,
+        "end": 1794117600000,
+        "sum": 125.6165,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "state": 125.6165
+      },
+      {
+        "start": 1794117600000,
+        "end": 1794121200000,
+        "sum": 125.6205,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "state": 125.6205
+      },
+      {
+        "start": 1794121200000,
+        "end": 1794124800000,
+        "sum": 125.6325,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "state": 125.6325
+      },
+      {
+        "start": 1794124800000,
+        "end": 1794128400000,
+        "sum": 125.6425,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "state": 125.6425
+      },
+      {
+        "start": 1794128400000,
+        "end": 1794132000000,
+        "sum": 125.6505,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "state": 125.6505
+      }
+    ]
+  },
+  "start": "2026-11-07T11:00:00+00:00",
+  "end": "2026-11-08T10:00:00+00:00",
+  "history_start": "2026-11-07T11:36:39.243272+00:00",
+  "history_end": "2026-11-08T11:34:39.243272+00:00"
+}

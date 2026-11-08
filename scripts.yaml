@@ -88,59 +88,6 @@ ange_starttid_for_bilvarmen:
       name: Datum och starttid för bilvärmen
       description: Laddningen aktiveras en minut tidigare. Välj minst två minuter framåt.
       required: true
-rescan_wifi_on_esphome_nodes:
-  alias: ESPHome – sök efter Wi-Fi-nät
-  description: ''
-  sequence:
-  - repeat:
-      for_each: '{{ integration_entities(''esphome'') | select(''search'', ''_(?:wifi|wi_fi)_bssid$'')
-        | list | sort }}'
-      sequence:
-      - variables:
-          _esphome_node: '{% set nodes = {"0249e80380345f05f61980d53923d55d": "esphome26",
-            "f45920512715a4c126f3b20f730689cc": "esphome21", "d7e410a0ce1697b5ffab766c93e0a0db":
-            "esphome25", "62443fd492a8098b6c871c19046cd74b": "esphome40", "3278b28828a082ad759604be25439883":
-            "esphome03", "61c8ce0db41fe07f62c70aec687f5f7a": "esphome46", "6597c0a3542beb368b8ebec821b973f2":
-            "esphome44", "95a7be79a7ac770811ea13372776e817": "esphome47", "f6d459f5eedf7c2022ada3f5e776825f":
-            "esphome50", "20d6df4ba61d5de9cdbf8d6d2f37aa5e": "esphome73", "5369acf45d06d0c1043a0acd753c0319":
-            "esphome83", "71b5e58a07ac25d7f7410dde1e9cd18d": "esphome81", "f0d1cdb104011b286fdf24cf73eefe8f":
-            "esphome80", "edf4247bda773861ca5dac0fdaa21a6d": "esphome23", "cda69fe8b334483c32d0de95ac2a5753":
-            "esphome20", "8ae17fb3f15256a4d3462f249b41b9e3": "esphome54", "24d346f265a46ef31a713136677f9f01":
-            "esphome27", "34864cbc2b4c06598d52c1011b0eecd3": "esphome51", "8cd70df280e7a39db4e75c2606d4ff2f":
-            "esphome48", "500843e37fe53aaa20e8506cb87e747f": "esphome49", "3f1f0cda20e56e993fccc3f1fe0b373e":
-            "esphome52", "e18f8c3bc28d9ea7e2ee46911726a053": "esphome41", "12e5d382fbafaab1bef78c6079431383":
-            "esphome09", "6f392bd6d870e50df054bc593b21d393": "esphome29", "305516721dd12e74b046ad2e14d553ee":
-            "esphome71", "28b4948962ebab67adfbd5d3b839cfd5": "esphome94", "5c1dfaab0957271f2094674fa9069abd":
-            "esphome01", "1044157cf3579e6de5f8599f1e5913f5": "esphome74", "093df378c502bf0cde52459691675cb0":
-            "esphome53", "02879362ee92b1b838f9ab8fa53005db": "esphome76", "b74f73eebc379e3e022e2e4584bff274":
-            "esphome30", "a9cf92165392d9f87846319ead4eab8f": "esphome31", "c73a6932ff128cb774f98ccb632cb171":
-            "esphome89", "7732da98abce27269f6932e6113ecad8": "esphome07", "d355741678ee5dcb0af19a393004b7e3":
-            "esphome24", "6e59259f9f34c8346dcd0f7dc0b8e554": "esphome93", "01JBHA57S62YS7QY9S1ZVTB8W2":
-            "esphome95", "01JDHJE6X9ADFHHQ6BHZNA3RHT": "esphome45", "01JFJPYESA9071F2SHAPH56VTG":
-            "esphome08", "01JGH8FK8E46A5FYP2X3NA4JWF": "esphome57", "01JHJVE441RWEVAH5NMD6CEZVC":
-            "esphome59", "01JHJVZB2735ZM1M7VSKCRZT04": "esphome60", "01JHMVY5408Z8Q1X16KC3B4JSX":
-            "esphome61", "01JMMMFSXV89KWRQ0VKZQTRHM0": "esphome43", "01JNG64NY6SS337MF5HPZBK0JF":
-            "esphome75", "01JNRCXSYQ4HHT9RZ0QD7PAFA7": "home-assistant-voice-096460",
-            "01JX2F3NAP9KZF8Q91T523N7BE": "esphome28", "01K9Y5V4WPK219WJKFDTSY2GBE":
-            "esphome02", "01KA1JV2ZCY810SXGZ7YFTSKY5": "esphome98", "01KAPJXMYERX56H75M9FFDAV7C":
-            "esphome63", "01KBAY8REAVQ8GGXTC84569FRD": "esphome05", "01KC72KW2XNR11WW7YQVV2RKJK":
-            "esphome32", "01KCP2M8N8K0ATTJWDBFAS7KNM": "esphome84", "01KYSQW4N181HCAK7GZBYHV8JS":
-            "esphome42", "01KYVYFZ6K3NPDRHQDWY4PP0M9": "esphome90", "01KYWEQ0XD3977EXMHXYHCBRFS":
-            "esphome58", "01M0YP3EP86ZSG7NM64ZZGR9KN": "esphome96", "01M0YRZP5SX6690MW0JFWH1R29":
-            "esphome97", "01M4NV08QGBA7BMVPXMS7V71W5": "esphome56"} %}{{ nodes.get(config_entry_id(repeat.item),
-            '''') }}'
-      - if:
-        - condition: template
-          value_template: '{{ _esphome_node | length > 0 }}'
-        then:
-        - action: esphome.{{ _esphome_node }}_scan_wifi
-          continue_on_error: true
-        - action: notify.send_message
-          continue_on_error: true
-          data:
-            message: 'Rescan wifi: {{ _esphome_node }}'
-          target:
-            entity_id: notify.skriptlogg_skriv_meddelande
 granny_broadcast:
   alias: "Granny – skicka meddelande"
   description: 'Grannifiera en uppgift och (valfritt) skicka till valda kanaler. Returnerar

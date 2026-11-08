@@ -1,0 +1,3 @@
+{
+  "error": "('Availability regression', ['media_player.mannis_vackarklocka_cast', 'sensor.sovrummet_diegos_vackarklocka_beraknad_effekt', 'sensor.sovrummet_diegos_vackarklocka_beraknad_energi', 'ai_task.molnet_openai_ai_task', 'conversation.molnet_openai_conversation', 'media_player.sovrummet_diegos_vackarklocka_cast'])"
+}

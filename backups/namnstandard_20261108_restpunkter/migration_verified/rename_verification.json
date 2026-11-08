@@ -1,0 +1,14 @@
+{
+  "status": "verified",
+  "renamed_entities": 29,
+  "device_names": 6,
+  "history_records_verified": 174,
+  "statistics_points_verified": 46,
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  },
+  "availability_regressions_vs_restored_baseline": [],
+  "native_openwrt_same_mac_tracker_reassociations": []
+}

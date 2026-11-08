@@ -1,0 +1,326 @@
+[
+  {
+    "entity_id": "automation.varning_frysboxen",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.kontrollera_gasolniva",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.kontrollera_vaxters_valmaende",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.kontrollera_honsvatten",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.kontrollera_laga_batterinivaer",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.belysning_dagsljus_och_nattbelysning",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.solens_dygnsfaser",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.belysning_vaxtlampor",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.kontrollera_saltniva",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.toaletten_tvatt_tork_fardig",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.varma_honsens_vatten",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.automatisk_honslucka",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.hissmusik",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.belysning_morgonljus_fore_vackarklockan",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.belysning_godnatt",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.starta_diskmaskinen_vid_lagsta_elpris",
+    "state": "off"
+  },
+  {
+    "entity_id": "automation.nya_elpriser_har_publicerats",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.diskmaskinen_fardig",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.varning_dorrklocka",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.varning_ytterdorren_kranglar",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.varning_balkongdorren",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.varning_vattenlacka_under_torkskapet",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.belysning_mysbelysning",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.belysning_julbelysning",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.belysning_festbelysning",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.belysning_alarm",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.hemmabio",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.belysning_matbelysning",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.roststyrning_pooltemperatur",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.aterstall_ljudvolymer",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.roststyrning_aterstall_ljudnivaer",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.batterier_kontrollera_uteblivna_rapporter",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.batterier_registrera_batteribyte",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.batterier_kontrollera_varningsgrans",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.elmatare_kontrollera_anslutning",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.kontrollera_honsluckans_stangning",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.kontrollera_luftfuktare",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.internetstatus",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.belysning_slack_koket",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.varmeinstallningar",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.roststyrning_hemmavarme",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.roststyrning_justera_varme",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.roststyrning_bortavarme",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.belysning_tv_och_belysning",
+    "state": "off"
+  },
+  {
+    "entity_id": "automation.billaddning_starta_planering",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.billaddning_automatisk_styrning",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.home_assistant_markera_systemet_redo",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.hemmabio_bordslampor_att_dag_bio_av_pa",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.ateljen_ateljen_bordslampa_kvall_natt_mjuk_morgonfade",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.kontoret_3d_skrivare_meddela_fardig_utskrift",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.uppdatera_uv_index_varje_timme",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.poolen_poolpump_styr_med_bilresa_knappar",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.kraftor_temperaturstatus",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.thread_automatisk_natverksdiagnostik",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.kontrollpanel_3d_utskrift_fardig",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.kontrollpanel_tvatt_fardig",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.kontrollpanel_disk_fardig",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.aqara_taklampor_overvakning_knapphandelser",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.aqara_taklampor_overvakning_atgardsanrop",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.aqara_taklampor_overvakning_blinkningsdetektor",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.aqara_banklampor_overvakning_knapphandelser",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.aqara_banklampor_overvakning_atgardsanrop",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.aqara_banklampor_overvakning_blinkningsdetektor",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.bio_skydda_nattljus_och_biolage",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.databas_optimera_mariadb_tabeller_natt",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.databas_notifiera_resultat_av_mariadb_optimering",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.godnatt_forbered_kvallens_korta_halsning",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.google_tand_ir_ljusen",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.google_slack_ir_ljusen",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.ir_ljus_solfas_tider_och_vackarklocka",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.narvarosimulering_starta_nar_hjalparen_slas_pa",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.narvarosimulering_stoppa_nar_hjalparen_slas_av",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.narvarosimulering_logga_testkorning",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.narvarosimulering_permanent_aktivitetslogg",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.narvarosimulering_sammanfatta_testkorning",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.narvarosimulering_stoppa_test_vid_bestandig_sluttid",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.narvarosimulering_aterstall_aktiv_korning_efter_omstart",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.narvarosimulering_synkronisera_hjalparen_efter_ovantat_stopp",
+    "state": "on"
+  },
+  {
+    "entity_id": "automation.narvarosimulering_stoppa_24_timmarstest",
+    "state": "unavailable"
+  },
+  {
+    "entity_id": "automation.narvarosimulering_starta_vid_solnedgang_om_aktiv",
+    "state": "unavailable"
+  },
+  {
+    "entity_id": "automation.narvarosimulering_stoppa_nar_nagon_kommer_hem",
+    "state": "unavailable"
+  }
+]

@@ -1,0 +1,1209 @@
+[
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "12e5d382fbafaab1bef78c6079431383",
+    "config_subentry_id": null,
+    "created_at": 0.0,
+    "device_id": "0cc979ea34852945574729129825a6b2",
+    "disabled_by": null,
+    "entity_category": "config",
+    "entity_id": "update.blomlampa_ateljen_firmware",
+    "hidden_by": null,
+    "icon": null,
+    "id": "8bc117a30b5cd45bafb94633a8096bdb",
+    "labels": [],
+    "modified_at": 1776840877.541535,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "conversation": {
+        "should_expose": false
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "cloud.alexa": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Firmware",
+    "platform": "esphome",
+    "translation_key": null,
+    "unique_id": "8C:CE:4E:0C:CA:58",
+    "aliases": [
+      null
+    ],
+    "capabilities": null,
+    "device_class": null,
+    "original_device_class": "firmware",
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "12e5d382fbafaab1bef78c6079431383",
+    "config_subentry_id": null,
+    "created_at": 0.0,
+    "device_id": "0cc979ea34852945574729129825a6b2",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "light.blomlampa_ateljen_esphome09_light",
+    "hidden_by": "integration",
+    "icon": null,
+    "id": "0ca0a3e0a939977db0f18400e10400b3",
+    "labels": [],
+    "modified_at": 1794072067.9681,
+    "name": "",
+    "next_name_part": "device",
+    "options": {
+      "conversation": {
+        "should_expose": true
+      },
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "cloud.alexa": {
+        "should_expose": true
+      }
+    },
+    "original_name": "esphome09 Light",
+    "platform": "esphome",
+    "translation_key": null,
+    "unique_id": "8C:CE:4E:0C:CA:58/0/light/esphome09 Light",
+    "aliases": [
+      null,
+      "Blomlampa (ateljén) esphome09 Light"
+    ],
+    "capabilities": {
+      "supported_color_modes": [
+        "onoff"
+      ]
+    },
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "438bf994c47c8713894d951ea9fde515",
+    "config_subentry_id": null,
+    "created_at": 0.0,
+    "device_id": "0cc979ea34852945574729129825a6b2",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.blomlampa_ateljen_energy_power",
+    "hidden_by": null,
+    "icon": null,
+    "id": "3a6ed34fa6c981a9c03bf73e72f1fbeb",
+    "labels": [],
+    "modified_at": 1794072520.212331,
+    "name": "Beräknad effekt",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      },
+      "sensor": {
+        "suggested_display_precision": 2
+      }
+    },
+    "original_name": "Energy power",
+    "platform": "powercalc",
+    "translation_key": null,
+    "unique_id": "blomlampa_ateljen",
+    "aliases": [
+      null,
+      "Blomlampa (ateljén) Energy power"
+    ],
+    "capabilities": {
+      "state_class": "measurement"
+    },
+    "device_class": null,
+    "original_device_class": "power",
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": null,
+    "config_subentry_id": null,
+    "created_at": 0.0,
+    "device_id": null,
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "input_number.slider",
+    "hidden_by": null,
+    "icon": null,
+    "id": "893e3959ab14c0f9b12affeb9fc6ffef",
+    "labels": [],
+    "modified_at": 1786031527.894503,
+    "name": null,
+    "next_name_part": null,
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Slider",
+    "platform": "input_number",
+    "translation_key": null,
+    "unique_id": "slider",
+    "aliases": [
+      null
+    ],
+    "capabilities": {
+      "min": 0.0,
+      "max": 100.0,
+      "step": 1.0,
+      "mode": "slider"
+    },
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "438bf994c47c8713894d951ea9fde515",
+    "config_subentry_id": null,
+    "created_at": 0.0,
+    "device_id": "0cc979ea34852945574729129825a6b2",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "sensor.blomlampa_ateljen_energy_energy",
+    "hidden_by": null,
+    "icon": null,
+    "id": "a9181c238f6d0e56850440374c8d560c",
+    "labels": [],
+    "modified_at": 1794072521.136699,
+    "name": "Beräknad energi",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      },
+      "sensor": {
+        "display_precision": null,
+        "suggested_display_precision": 4
+      }
+    },
+    "original_name": "Energy energy",
+    "platform": "powercalc",
+    "translation_key": null,
+    "unique_id": "blomlampa_ateljen_energy",
+    "aliases": [
+      null,
+      "Blomlampa (ateljén) Energy energy"
+    ],
+    "capabilities": {
+      "state_class": "total_increasing"
+    },
+    "device_class": null,
+    "original_device_class": "energy",
+    "original_icon": "mdi:lightning-bolt"
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "12e5d382fbafaab1bef78c6079431383",
+    "config_subentry_id": null,
+    "created_at": 0.0,
+    "device_id": "0cc979ea34852945574729129825a6b2",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "button.blomlampa_ateljen_esphome09_apply_scene",
+    "hidden_by": null,
+    "icon": null,
+    "id": "e2b64021359c7349e8ebf2240dbbb0e5",
+    "labels": [],
+    "modified_at": 1794072068.786917,
+    "name": "Aktivera scen",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "esphome09 Apply Scene",
+    "platform": "esphome",
+    "translation_key": null,
+    "unique_id": "8C:CE:4E:0C:CA:58/0/button/esphome09 Apply Scene",
+    "aliases": [
+      null,
+      "Blomlampa (ateljén) esphome09 Apply Scene"
+    ],
+    "capabilities": null,
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "12e5d382fbafaab1bef78c6079431383",
+    "config_subentry_id": null,
+    "created_at": 1775545807.377264,
+    "device_id": "0cc979ea34852945574729129825a6b2",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "binary_sensor.blomlampa_ateljen_status",
+    "hidden_by": null,
+    "icon": null,
+    "id": "6e9073ecd36876eafaabc179cceabd01",
+    "labels": [],
+    "modified_at": 1794072069.084701,
+    "name": "Anslutning",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Status",
+    "platform": "esphome",
+    "translation_key": null,
+    "unique_id": "8C:CE:4E:0C:CA:58/0/binary_sensor/Status",
+    "aliases": [
+      null,
+      "Blomlampa (ateljén) Status"
+    ],
+    "capabilities": null,
+    "device_class": null,
+    "original_device_class": "connectivity",
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KX7X4BTDX2EMV78PB4N2BA56",
+    "config_subentry_id": null,
+    "created_at": 1779432114.837463,
+    "device_id": "72464832ea5d50edac5e918c2018497a",
+    "disabled_by": null,
+    "entity_category": "diagnostic",
+    "entity_id": "device_tracker.8c_ce_4e_0c_ca_58_8c_ce_4e_0c_ca_58",
+    "hidden_by": null,
+    "icon": null,
+    "id": "8be5eace1100e3bac7bc0bc883aacee6",
+    "labels": [],
+    "modified_at": 1793274075.587781,
+    "name": null,
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "8c:ce:4e:0c:ca:58",
+    "platform": "openwrt",
+    "translation_key": null,
+    "unique_id": "8c:ce:4e:0c:ca:58",
+    "aliases": [
+      null
+    ],
+    "capabilities": {
+      "tracking_type": "connection"
+    },
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV2WFX49FPJBWGVVGYSQ1XH",
+    "config_subentry_id": null,
+    "created_at": 1783757220.345541,
+    "device_id": "7c98ea31c0db5d9db1de8cc6641c6606",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.koket_8c_ce_4e_0c_ca_58_signal_strength",
+    "hidden_by": null,
+    "icon": null,
+    "id": "d702dd32d5ea8bb566e6bc3bc58eb2ae",
+    "labels": [],
+    "modified_at": 1794073614.001251,
+    "name": "Signalstyrka",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Signal Strength",
+    "platform": "openwrt",
+    "translation_key": "device_signal",
+    "unique_id": "01KWV2WFX49FPJBWGVVGYSQ1XH_8c:ce:4e:0c:ca:58_device_signal",
+    "aliases": [
+      null,
+      "8c:ce:4e:0c:ca:58 Signal Strength"
+    ],
+    "capabilities": {
+      "state_class": "measurement"
+    },
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV2WFX49FPJBWGVVGYSQ1XH",
+    "config_subentry_id": null,
+    "created_at": 1783757220.346668,
+    "device_id": "7c98ea31c0db5d9db1de8cc6641c6606",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.koket_8c_ce_4e_0c_ca_58_rx_rate",
+    "hidden_by": null,
+    "icon": null,
+    "id": "d362dbe9e850a1ccca7274963f6f8037",
+    "labels": [],
+    "modified_at": 1794073614.007024,
+    "name": "Mottagningshastighet",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "RX Rate",
+    "platform": "openwrt",
+    "translation_key": "device_rx_rate",
+    "unique_id": "01KWV2WFX49FPJBWGVVGYSQ1XH_8c:ce:4e:0c:ca:58_device_rx_rate",
+    "aliases": [
+      null,
+      "8c:ce:4e:0c:ca:58 RX Rate"
+    ],
+    "capabilities": {
+      "state_class": "measurement"
+    },
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV2WFX49FPJBWGVVGYSQ1XH",
+    "config_subentry_id": null,
+    "created_at": 1783757220.347831,
+    "device_id": "7c98ea31c0db5d9db1de8cc6641c6606",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.koket_8c_ce_4e_0c_ca_58_tx_rate",
+    "hidden_by": null,
+    "icon": null,
+    "id": "844e8c2e85336f577fbfae7733e60081",
+    "labels": [],
+    "modified_at": 1794073614.01392,
+    "name": "Sändningshastighet",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "TX Rate",
+    "platform": "openwrt",
+    "translation_key": "device_tx_rate",
+    "unique_id": "01KWV2WFX49FPJBWGVVGYSQ1XH_8c:ce:4e:0c:ca:58_device_tx_rate",
+    "aliases": [
+      null,
+      "8c:ce:4e:0c:ca:58 TX Rate"
+    ],
+    "capabilities": {
+      "state_class": "measurement"
+    },
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV2WFX49FPJBWGVVGYSQ1XH",
+    "config_subentry_id": null,
+    "created_at": 1783757220.349716,
+    "device_id": "7c98ea31c0db5d9db1de8cc6641c6606",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.koket_8c_ce_4e_0c_ca_58_noise_level",
+    "hidden_by": null,
+    "icon": null,
+    "id": "f3ab3c99c90b833f65f21666c5be669f",
+    "labels": [],
+    "modified_at": 1794073614.030152,
+    "name": "Brusnivå",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Noise Level",
+    "platform": "openwrt",
+    "translation_key": "device_noise",
+    "unique_id": "01KWV2WFX49FPJBWGVVGYSQ1XH_8c:ce:4e:0c:ca:58_device_noise",
+    "aliases": [
+      null,
+      "8c:ce:4e:0c:ca:58 Noise Level"
+    ],
+    "capabilities": {
+      "state_class": "measurement"
+    },
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV2WFX49FPJBWGVVGYSQ1XH",
+    "config_subentry_id": null,
+    "created_at": 1783757220.482713,
+    "device_id": "7c98ea31c0db5d9db1de8cc6641c6606",
+    "disabled_by": "integration",
+    "entity_category": "config",
+    "entity_id": "switch.koket_8c_ce_4e_0c_ca_58_internet_access",
+    "hidden_by": null,
+    "icon": null,
+    "id": "712af67947fe914967bb8f3486fb5438",
+    "labels": [],
+    "modified_at": 1794073614.534981,
+    "name": "Internetåtkomst",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Internet Access",
+    "platform": "openwrt",
+    "translation_key": "device_access",
+    "unique_id": "01KWV2WFX49FPJBWGVVGYSQ1XH_access_8c_ce_4e_0c_ca_58",
+    "aliases": [
+      null,
+      "8c:ce:4e:0c:ca:58 Internet Access"
+    ],
+    "capabilities": null,
+    "device_class": null,
+    "original_device_class": "switch",
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KX7X4BTDX2EMV78PB4N2BA56",
+    "config_subentry_id": null,
+    "created_at": 1784462036.013949,
+    "device_id": "72464832ea5d50edac5e918c2018497a",
+    "disabled_by": "integration",
+    "entity_category": "config",
+    "entity_id": "switch.koket_192_168_30_109_internet_access",
+    "hidden_by": null,
+    "icon": null,
+    "id": "78f580c730596a767edcb0c63a342cd2",
+    "labels": [],
+    "modified_at": 1794073633.403219,
+    "name": "Internetåtkomst",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Internet Access",
+    "platform": "openwrt",
+    "translation_key": "device_access",
+    "unique_id": "01KX7X4BTDX2EMV78PB4N2BA56_access_8c_ce_4e_0c_ca_58",
+    "aliases": [
+      null,
+      "8c:ce:4e:0c:ca:58 Internet Access"
+    ],
+    "capabilities": null,
+    "device_class": null,
+    "original_device_class": "switch",
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV32QVYF02R3CMJPGECATQA",
+    "config_subentry_id": null,
+    "created_at": 1788447097.170554,
+    "device_id": "3f468b4d72344090ba3fc494f7562e9f",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.8c_ce_4e_0c_ca_58_signal_strength",
+    "hidden_by": null,
+    "icon": null,
+    "id": "e82043eddbe7678e41ab74495676b287",
+    "labels": [],
+    "modified_at": 1794073645.194938,
+    "name": "Signalstyrka",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Signal Strength",
+    "platform": "openwrt",
+    "translation_key": "device_signal",
+    "unique_id": "01KWV32QVYF02R3CMJPGECATQA_8c:ce:4e:0c:ca:58_device_signal",
+    "aliases": [
+      null,
+      "8c:ce:4e:0c:ca:58 Signal Strength"
+    ],
+    "capabilities": {
+      "state_class": "measurement"
+    },
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV32QVYF02R3CMJPGECATQA",
+    "config_subentry_id": null,
+    "created_at": 1788447097.171715,
+    "device_id": "3f468b4d72344090ba3fc494f7562e9f",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.8c_ce_4e_0c_ca_58_rx_rate",
+    "hidden_by": null,
+    "icon": null,
+    "id": "971ba01c0f2bf029b01858c69cd72725",
+    "labels": [],
+    "modified_at": 1794073645.202097,
+    "name": "Mottagningshastighet",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "RX Rate",
+    "platform": "openwrt",
+    "translation_key": "device_rx_rate",
+    "unique_id": "01KWV32QVYF02R3CMJPGECATQA_8c:ce:4e:0c:ca:58_device_rx_rate",
+    "aliases": [
+      null,
+      "8c:ce:4e:0c:ca:58 RX Rate"
+    ],
+    "capabilities": {
+      "state_class": "measurement"
+    },
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV32QVYF02R3CMJPGECATQA",
+    "config_subentry_id": null,
+    "created_at": 1788447097.172793,
+    "device_id": "3f468b4d72344090ba3fc494f7562e9f",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.8c_ce_4e_0c_ca_58_tx_rate",
+    "hidden_by": null,
+    "icon": null,
+    "id": "8231209e3155d494f17b7df2474198ca",
+    "labels": [],
+    "modified_at": 1794073645.208709,
+    "name": "Sändningshastighet",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "TX Rate",
+    "platform": "openwrt",
+    "translation_key": "device_tx_rate",
+    "unique_id": "01KWV32QVYF02R3CMJPGECATQA_8c:ce:4e:0c:ca:58_device_tx_rate",
+    "aliases": [
+      null,
+      "8c:ce:4e:0c:ca:58 TX Rate"
+    ],
+    "capabilities": {
+      "state_class": "measurement"
+    },
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV32QVYF02R3CMJPGECATQA",
+    "config_subentry_id": null,
+    "created_at": 1788447097.175092,
+    "device_id": "3f468b4d72344090ba3fc494f7562e9f",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.8c_ce_4e_0c_ca_58_noise_level",
+    "hidden_by": null,
+    "icon": null,
+    "id": "d83cf0e238fc3ef9b9c547602d119386",
+    "labels": [],
+    "modified_at": 1794073645.215494,
+    "name": "Brusnivå",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Noise Level",
+    "platform": "openwrt",
+    "translation_key": "device_noise",
+    "unique_id": "01KWV32QVYF02R3CMJPGECATQA_8c:ce:4e:0c:ca:58_device_noise",
+    "aliases": [
+      null,
+      "8c:ce:4e:0c:ca:58 Noise Level"
+    ],
+    "capabilities": {
+      "state_class": "measurement"
+    },
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV32QVYF02R3CMJPGECATQA",
+    "config_subentry_id": null,
+    "created_at": 1788447097.179535,
+    "device_id": "3f468b4d72344090ba3fc494f7562e9f",
+    "disabled_by": "integration",
+    "entity_category": "config",
+    "entity_id": "switch.8c_ce_4e_0c_ca_58_internet_access",
+    "hidden_by": null,
+    "icon": null,
+    "id": "6a58493dabf7661d03dce4847e5d69e5",
+    "labels": [],
+    "modified_at": 1794073645.250852,
+    "name": "Internetåtkomst",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Internet Access",
+    "platform": "openwrt",
+    "translation_key": "device_access",
+    "unique_id": "01KWV32QVYF02R3CMJPGECATQA_access_8c_ce_4e_0c_ca_58",
+    "aliases": [
+      null,
+      "8c:ce:4e:0c:ca:58 Internet Access"
+    ],
+    "capabilities": null,
+    "device_class": null,
+    "original_device_class": "switch",
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV2SPH2EV1C7PC398AHYHMG",
+    "config_subentry_id": null,
+    "created_at": 1788722413.97601,
+    "device_id": "227724855ae674b89183ee9f92632aa2",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.8c_ce_4e_0c_ca_58_signal_strength_2",
+    "hidden_by": null,
+    "icon": null,
+    "id": "f39d12b9b62e583f2a562bfe3a9c745d",
+    "labels": [],
+    "modified_at": 1794073651.424111,
+    "name": "Signalstyrka",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Signal Strength",
+    "platform": "openwrt",
+    "translation_key": "device_signal",
+    "unique_id": "01KWV2SPH2EV1C7PC398AHYHMG_8c:ce:4e:0c:ca:58_device_signal",
+    "aliases": [
+      null,
+      "8c:ce:4e:0c:ca:58 Signal Strength"
+    ],
+    "capabilities": {
+      "state_class": "measurement"
+    },
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV2SPH2EV1C7PC398AHYHMG",
+    "config_subentry_id": null,
+    "created_at": 1788722413.986955,
+    "device_id": "227724855ae674b89183ee9f92632aa2",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.8c_ce_4e_0c_ca_58_rx_rate_2",
+    "hidden_by": null,
+    "icon": null,
+    "id": "777d421f8c731a0be0fd6c448da71da0",
+    "labels": [],
+    "modified_at": 1794073651.429414,
+    "name": "Mottagningshastighet",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "RX Rate",
+    "platform": "openwrt",
+    "translation_key": "device_rx_rate",
+    "unique_id": "01KWV2SPH2EV1C7PC398AHYHMG_8c:ce:4e:0c:ca:58_device_rx_rate",
+    "aliases": [
+      null,
+      "8c:ce:4e:0c:ca:58 RX Rate"
+    ],
+    "capabilities": {
+      "state_class": "measurement"
+    },
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV2SPH2EV1C7PC398AHYHMG",
+    "config_subentry_id": null,
+    "created_at": 1788722413.99818,
+    "device_id": "227724855ae674b89183ee9f92632aa2",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.8c_ce_4e_0c_ca_58_tx_rate_2",
+    "hidden_by": null,
+    "icon": null,
+    "id": "a41edecb85a0ee75becd3042ffbbd7e2",
+    "labels": [],
+    "modified_at": 1794073651.43491,
+    "name": "Sändningshastighet",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "TX Rate",
+    "platform": "openwrt",
+    "translation_key": "device_tx_rate",
+    "unique_id": "01KWV2SPH2EV1C7PC398AHYHMG_8c:ce:4e:0c:ca:58_device_tx_rate",
+    "aliases": [
+      null,
+      "8c:ce:4e:0c:ca:58 TX Rate"
+    ],
+    "capabilities": {
+      "state_class": "measurement"
+    },
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV2SPH2EV1C7PC398AHYHMG",
+    "config_subentry_id": null,
+    "created_at": 1788722414.010483,
+    "device_id": "227724855ae674b89183ee9f92632aa2",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.8c_ce_4e_0c_ca_58_noise_level_2",
+    "hidden_by": null,
+    "icon": null,
+    "id": "c480edc24a89c1ec59aae8f037c8291e",
+    "labels": [],
+    "modified_at": 1794073651.439692,
+    "name": "Brusnivå",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Noise Level",
+    "platform": "openwrt",
+    "translation_key": "device_noise",
+    "unique_id": "01KWV2SPH2EV1C7PC398AHYHMG_8c:ce:4e:0c:ca:58_device_noise",
+    "aliases": [
+      null,
+      "8c:ce:4e:0c:ca:58 Noise Level"
+    ],
+    "capabilities": {
+      "state_class": "measurement"
+    },
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV2SPH2EV1C7PC398AHYHMG",
+    "config_subentry_id": null,
+    "created_at": 1788722414.063398,
+    "device_id": "227724855ae674b89183ee9f92632aa2",
+    "disabled_by": "integration",
+    "entity_category": "config",
+    "entity_id": "switch.8c_ce_4e_0c_ca_58_internet_access_2",
+    "hidden_by": null,
+    "icon": null,
+    "id": "0ef93f1e3356d813fd74668917450646",
+    "labels": [],
+    "modified_at": 1794073651.46214,
+    "name": "Internetåtkomst",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Internet Access",
+    "platform": "openwrt",
+    "translation_key": "device_access",
+    "unique_id": "01KWV2SPH2EV1C7PC398AHYHMG_access_8c_ce_4e_0c_ca_58",
+    "aliases": [
+      null,
+      "8c:ce:4e:0c:ca:58 Internet Access"
+    ],
+    "capabilities": null,
+    "device_class": null,
+    "original_device_class": "switch",
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV2WFX49FPJBWGVVGYSQ1XH",
+    "config_subentry_id": null,
+    "created_at": 1783757219.417785,
+    "device_id": "7c98ea31c0db5d9db1de8cc6641c6606",
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "button.koket_8c_ce_4e_0c_ca_58_disconnect_device",
+    "hidden_by": null,
+    "icon": null,
+    "id": "e441d67215c43acc4624fe4a14b15311",
+    "labels": [],
+    "modified_at": 1794073663.815512,
+    "name": "Koppla från enhet",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Disconnect device",
+    "platform": "openwrt",
+    "translation_key": "kick_device",
+    "unique_id": "01KWV2WFX49FPJBWGVVGYSQ1XH_8c:ce:4e:0c:ca:58_kick_phy0-ap2",
+    "aliases": [
+      null,
+      "8c:ce:4e:0c:ca:58 Disconnect device"
+    ],
+    "capabilities": null,
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV37NP1NFRTCQ76KJ6B0PRE",
+    "config_subentry_id": null,
+    "created_at": 1792419545.225009,
+    "device_id": "7938b2ad630e3f5c590057a1fd59df79",
+    "disabled_by": "integration",
+    "entity_category": null,
+    "entity_id": "button.8c_ce_4e_0c_ca_58_disconnect_device",
+    "hidden_by": null,
+    "icon": null,
+    "id": "085e57191147f9d1eb3d117f05c55468",
+    "labels": [],
+    "modified_at": 1794073671.034681,
+    "name": "Koppla från enhet",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Disconnect device",
+    "platform": "openwrt",
+    "translation_key": "kick_device",
+    "unique_id": "01KWV37NP1NFRTCQ76KJ6B0PRE_8c:ce:4e:0c:ca:58_kick_phy1-ap2",
+    "aliases": [
+      null,
+      "8c:ce:4e:0c:ca:58 Disconnect device"
+    ],
+    "capabilities": null,
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV37NP1NFRTCQ76KJ6B0PRE",
+    "config_subentry_id": null,
+    "created_at": 1792419545.260681,
+    "device_id": "7938b2ad630e3f5c590057a1fd59df79",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.8c_ce_4e_0c_ca_58_signal_strength_3",
+    "hidden_by": null,
+    "icon": null,
+    "id": "39b98944b4b3c7b5b83c6b2c092bc3f6",
+    "labels": [],
+    "modified_at": 1794073671.082358,
+    "name": "Signalstyrka",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Signal Strength",
+    "platform": "openwrt",
+    "translation_key": "device_signal",
+    "unique_id": "01KWV37NP1NFRTCQ76KJ6B0PRE_8c:ce:4e:0c:ca:58_device_signal",
+    "aliases": [
+      null,
+      "8c:ce:4e:0c:ca:58 Signal Strength"
+    ],
+    "capabilities": {
+      "state_class": "measurement"
+    },
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV37NP1NFRTCQ76KJ6B0PRE",
+    "config_subentry_id": null,
+    "created_at": 1792419545.265098,
+    "device_id": "7938b2ad630e3f5c590057a1fd59df79",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.8c_ce_4e_0c_ca_58_rx_rate_3",
+    "hidden_by": null,
+    "icon": null,
+    "id": "e8d568a069b51e9eb61e7e68913d6170",
+    "labels": [],
+    "modified_at": 1794073671.088116,
+    "name": "Mottagningshastighet",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "RX Rate",
+    "platform": "openwrt",
+    "translation_key": "device_rx_rate",
+    "unique_id": "01KWV37NP1NFRTCQ76KJ6B0PRE_8c:ce:4e:0c:ca:58_device_rx_rate",
+    "aliases": [
+      null,
+      "8c:ce:4e:0c:ca:58 RX Rate"
+    ],
+    "capabilities": {
+      "state_class": "measurement"
+    },
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV37NP1NFRTCQ76KJ6B0PRE",
+    "config_subentry_id": null,
+    "created_at": 1792419545.267947,
+    "device_id": "7938b2ad630e3f5c590057a1fd59df79",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.8c_ce_4e_0c_ca_58_tx_rate_3",
+    "hidden_by": null,
+    "icon": null,
+    "id": "f15e3ab1ab7c7058929247f7f17967df",
+    "labels": [],
+    "modified_at": 1794073671.093882,
+    "name": "Sändningshastighet",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "TX Rate",
+    "platform": "openwrt",
+    "translation_key": "device_tx_rate",
+    "unique_id": "01KWV37NP1NFRTCQ76KJ6B0PRE_8c:ce:4e:0c:ca:58_device_tx_rate",
+    "aliases": [
+      null,
+      "8c:ce:4e:0c:ca:58 TX Rate"
+    ],
+    "capabilities": {
+      "state_class": "measurement"
+    },
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV37NP1NFRTCQ76KJ6B0PRE",
+    "config_subentry_id": null,
+    "created_at": 1792419545.270048,
+    "device_id": "7938b2ad630e3f5c590057a1fd59df79",
+    "disabled_by": "integration",
+    "entity_category": "diagnostic",
+    "entity_id": "sensor.8c_ce_4e_0c_ca_58_noise_level_3",
+    "hidden_by": null,
+    "icon": null,
+    "id": "ce399d2ea00fe4c333790af4971bd7e4",
+    "labels": [],
+    "modified_at": 1794073671.100123,
+    "name": "Brusnivå",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Noise Level",
+    "platform": "openwrt",
+    "translation_key": "device_noise",
+    "unique_id": "01KWV37NP1NFRTCQ76KJ6B0PRE_8c:ce:4e:0c:ca:58_device_noise",
+    "aliases": [
+      null,
+      "8c:ce:4e:0c:ca:58 Noise Level"
+    ],
+    "capabilities": {
+      "state_class": "measurement"
+    },
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": "01KWV37NP1NFRTCQ76KJ6B0PRE",
+    "config_subentry_id": null,
+    "created_at": 1792419545.278783,
+    "device_id": "7938b2ad630e3f5c590057a1fd59df79",
+    "disabled_by": "integration",
+    "entity_category": "config",
+    "entity_id": "switch.8c_ce_4e_0c_ca_58_internet_access_3",
+    "hidden_by": null,
+    "icon": null,
+    "id": "e81628ce06300f1c1f3cba7c4e8d9be5",
+    "labels": [],
+    "modified_at": 1794073671.119836,
+    "name": "Internetåtkomst",
+    "next_name_part": "device",
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      }
+    },
+    "original_name": "Internet Access",
+    "platform": "openwrt",
+    "translation_key": "device_access",
+    "unique_id": "01KWV37NP1NFRTCQ76KJ6B0PRE_access_8c_ce_4e_0c_ca_58",
+    "aliases": [
+      null,
+      "8c:ce:4e:0c:ca:58 Internet Access"
+    ],
+    "capabilities": null,
+    "device_class": null,
+    "original_device_class": "switch",
+    "original_icon": null
+  },
+  {
+    "area_id": null,
+    "categories": {},
+    "config_entry_id": null,
+    "config_subentry_id": null,
+    "created_at": 1747985644.369763,
+    "device_id": null,
+    "disabled_by": null,
+    "entity_category": null,
+    "entity_id": "script.esphome_sok_efter_wi_fi_nat",
+    "hidden_by": null,
+    "icon": null,
+    "id": "6ce73c6d853cd50e6ea2028519c86fbf",
+    "labels": [],
+    "modified_at": 1794124540.786353,
+    "name": "ESPHome – sök efter Wi-Fi-nät",
+    "next_name_part": null,
+    "options": {
+      "cloud.google_assistant": {
+        "should_expose": false
+      },
+      "conversation": {
+        "should_expose": false
+      }
+    },
+    "original_name": "ESPHome – sök efter Wi-Fi-nät",
+    "platform": "script",
+    "translation_key": null,
+    "unique_id": "rescan_wifi_on_esphome_nodes",
+    "aliases": [
+      null,
+      "Rescan wifi on all esphome nodes"
+    ],
+    "capabilities": null,
+    "device_class": null,
+    "original_device_class": null,
+    "original_icon": null
+  }
+]

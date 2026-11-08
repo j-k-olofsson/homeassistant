@@ -1,0 +1,85 @@
+substitutions:
+  node_id: "15"
+  node_name: esphome15
+  friendly_name: Home Assistant Voice PE (Köket)
+  log_level: INFO
+
+packages:
+  Nabu Casa.Home Assistant Voice PE: github://esphome/home-assistant-voice-pe/home-assistant-voice.yaml
+
+esphome:
+  name: ${node_name}
+  name_add_mac_suffix: false
+  friendly_name: ${friendly_name}
+
+api:
+  encryption:
+    key: DbEjAKVlYo9YDz/ooW7Cm7h6ru+CYRZ6urQZ+j+80xg=
+  actions:
+    - action: scan_wifi
+      then:
+        - lambda: |-
+            for (auto &scan : wifi::global_wifi_component->get_scan_result()) {
+              if (wifi::global_wifi_component->has_sta_priority(scan.get_bssid())) {
+                wifi::global_wifi_component->set_sta_priority(scan.get_bssid(), 0);
+              }
+            }
+            wifi::global_wifi_component->start_scanning();
+
+# Enable logging, disableing consol log
+logger:
+  level: ${log_level}
+
+wifi:
+  ssid: !secret IOT_SSID
+  password: !secret IOT_PWD
+  fast_connect: false
+  domain: .local
+  power_save_mode: none
+  # manual_ip:
+  #   static_ip: 192.168.30.1${node_id}
+  #   gateway: 192.168.30.1
+  #   subnet: 255.255.255.0
+  # use_address: 192.168.30.1${node_id}  
+
+web_server:
+  port: 80
+  include_internal: true
+  version: 2
+
+# Enable generic sensors
+sensor:
+  - platform: wifi_signal
+    name: Wifi RSSI
+    internal: false
+    update_interval: 60s
+    unit_of_measurement: 'dBm'
+    device_class: signal_strength
+
+text_sensor:
+  - platform: version
+    internal: True
+    name: ESPHome version
+    hide_timestamp: True
+  - platform: wifi_info
+    ip_address:
+      name: ESP IP Address
+      internal: True
+      address_0:
+        name: ESP IP Address 0
+        internal: True
+    ssid:
+      name: ESP Connected SSID
+      internal: True
+    bssid:
+      name: Wifi BSSID
+      internal: False
+    mac_address:
+      name: Wifi mac-address
+      internal: True
+    scan_results:
+      name: ESP Latest Scan Results
+      internal: True
+    dns_address:
+      name: ESP DNS Address
+      internal: True

@@ -1,0 +1,43 @@
+{
+  "files_checked": 349,
+  "hits": [
+    {
+      "file": "/homeassistant/.storage/core.entity_registry",
+      "path": "/data/deleted_entities/2893/entity_id",
+      "needle": "script.esphome_sok_efter_wi_fi_nat"
+    },
+    {
+      "file": "/homeassistant/.storage/core.entity_registry",
+      "path": "/data/deleted_entities/2893/unique_id",
+      "needle": "scan_wifi"
+    },
+    {
+      "file": "/homeassistant/.storage/core.entity_registry",
+      "path": "/data/deleted_entities/2893/unique_id",
+      "needle": "rescan_wifi_on_esphome_nodes"
+    },
+    {
+      "file": "/homeassistant/.storage/core.entity_registry",
+      "path": "/data/deleted_entities/2894/entity_id",
+      "needle": "input_number.slider"
+    },
+    {
+      "file": "/homeassistant/.storage/core.entity_registry",
+      "path": "/data/deleted_entities/2894/id",
+      "needle": "893e3959ab14c0f9b12affeb9fc6ffef"
+    },
+    {
+      "file": "/homeassistant/.storage/homeassistant.exposed_entities",
+      "path": "/data/exposed_entities/script.esphome_sok_efter_wi_fi_nat",
+      "needle": "script.esphome_sok_efter_wi_fi_nat",
+      "dictionary_key": true
+    },
+    {
+      "file": "/homeassistant/.storage/homeassistant.exposed_entities",
+      "path": "/data/exposed_entities/input_number.slider",
+      "needle": "input_number.slider",
+      "dictionary_key": true
+    }
+  ],
+  "errors": []
+}

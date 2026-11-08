@@ -1588,7 +1588,7 @@
           entity_id:
           - button.verandan_blomlampa_1_aktivera_scen
           - button.koket_blomlampa_2_aktivera_scen
-          - button.blomlampa_ateljen_esphome09_apply_scene
+          - button.koket_blomlampa_3_aktivera_scen
   mode: queued
   max: 10
 - id: '1751524387243'

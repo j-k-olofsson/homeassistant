@@ -1,0 +1,19 @@
+{
+  "files_checked": 349,
+  "active_references_remaining": [
+    {
+      "file": "/homeassistant/.storage/homeassistant.exposed_entities",
+      "path": "/data/exposed_entities/script.esphome_sok_efter_wi_fi_nat",
+      "needle": "script.esphome_sok_efter_wi_fi_nat",
+      "dictionary_key": true
+    },
+    {
+      "file": "/homeassistant/.storage/homeassistant.exposed_entities",
+      "path": "/data/exposed_entities/input_number.slider",
+      "needle": "input_number.slider",
+      "dictionary_key": true
+    }
+  ],
+  "historical_registry_tombstone_matches": 5,
+  "read_errors": []
+}

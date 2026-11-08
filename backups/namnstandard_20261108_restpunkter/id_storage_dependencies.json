@@ -1,0 +1,62 @@
+{
+  "core.config_entries": [
+    "/data/entries/68/data/_energy_entity",
+    "/data/entries/68/data/_power_entity"
+  ],
+  "core.restore_state": [
+    "/data/632/state/entity_id",
+    "/data/668/state/entity_id",
+    "/data/721/state/entity_id",
+    "/data/841/state/entity_id",
+    "/data/841/state/attributes/source",
+    "/data/841/extra_data/source_entity"
+  ],
+  "powercalc_group": [
+    "/data/sensor.blomlampor_energy/sensor.blomlampa_ateljen_energy_energy",
+    "/data/sensor.blomlampor_energy/sensor.blomlampa_ateljen_energy_energy/entity_id",
+    "/data/sensor.blomlampor_energy/sensor.blomlampa_ateljen_energy_energy/attributes/source",
+    "/data/sensor.blomlampor_energy/sensor.blomlampa_ateljen_energy/attributes/source"
+  ],
+  "core.entity_registry": [
+    "/data/entities/31/entity_id",
+    "/data/entities/62/entity_id",
+    "/data/entities/102/entity_id",
+    "/data/entities/103/entity_id",
+    "/data/entities/150/entity_id",
+    "/data/entities/207/entity_id",
+    "/data/entities/208/entity_id",
+    "/data/entities/209/entity_id",
+    "/data/entities/210/entity_id",
+    "/data/entities/211/entity_id",
+    "/data/entities/212/entity_id",
+    "/data/entities/214/entity_id",
+    "/data/entities/217/entity_id",
+    "/data/entities/218/entity_id",
+    "/data/entities/219/entity_id",
+    "/data/entities/220/entity_id",
+    "/data/entities/221/entity_id",
+    "/data/entities/231/entity_id",
+    "/data/entities/231/entity_id",
+    "/data/entities/232/entity_id",
+    "/data/entities/232/entity_id",
+    "/data/entities/233/entity_id",
+    "/data/entities/233/entity_id",
+    "/data/entities/234/entity_id",
+    "/data/entities/234/entity_id",
+    "/data/entities/235/entity_id",
+    "/data/entities/235/entity_id",
+    "/data/entities/299/entity_id",
+    "/data/entities/305/entity_id",
+    "/data/entities/306/entity_id",
+    "/data/entities/306/entity_id",
+    "/data/entities/307/entity_id",
+    "/data/entities/307/entity_id",
+    "/data/entities/308/entity_id",
+    "/data/entities/308/entity_id",
+    "/data/entities/309/entity_id",
+    "/data/entities/309/entity_id",
+    "/data/entities/310/entity_id",
+    "/data/entities/310/entity_id",
+    "/data/deleted_entities/2414/entity_id"
+  ]
+}

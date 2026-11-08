@@ -1,0 +1,36 @@
+{
+  "status": "naming_and_cleanup_verified_with_separate_operational_issues",
+  "registered_entities": 10156,
+  "registered_devices": 1071,
+  "renamed_entity_ids": 29,
+  "renamed_device_records": 6,
+  "removed_helpers": 2,
+  "automation_on_off_states_preserved": 81,
+  "startup_ready_flag_restored": false,
+  "helper_value_differences": [],
+  "observed_availability_differences_vs_before_task": [
+    "media_player.sovrummet_diegos_vackarklocka_cast",
+    "media_player.mannis_vackarklocka_cast",
+    "sensor.sovrummet_diegos_vackarklocka_beraknad_effekt",
+    "sensor.sovrummet_diegos_vackarklocka_beraknad_energi"
+  ],
+  "integration_failures_observed_after_restart": [
+    {
+      "entry_id": "01KC1W19A1VHXPTMNJ7QFS2XM6",
+      "domain": "slack",
+      "state": "setup_retry"
+    }
+  ],
+  "openai_options_unchanged": true,
+  "openai_credential_unchanged_since_task_start": false,
+  "openai_credential_changed_separately_during_work": true,
+  "openai_final_state": "loaded",
+  "voice_exposures_preserved": true,
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  },
+  "firmware_uploaded": false,
+  "physical_actions_tested": false
+}
