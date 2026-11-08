@@ -1,0 +1,139 @@
+{
+  "unknown_entity_reference_candidates": [
+    {
+      "file": "scripts.yaml",
+      "path": "granny_broadcast/fields/channels/selector/select/options/4/label",
+      "entity_id": "notify.flocken"
+    },
+    {
+      "file": "configuration.yaml",
+      "path": "recorder/exclude/entity_globs/0",
+      "entity_id": "sensor.time"
+    },
+    {
+      "file": "configuration.yaml",
+      "path": "recorder/exclude/entity_globs/1",
+      "entity_id": "sensor.date"
+    },
+    {
+      "file": "configuration.yaml",
+      "path": "recorder/exclude/entity_globs/2",
+      "entity_id": "sensor.uptime"
+    },
+    {
+      "file": "configuration.yaml",
+      "path": "recorder/exclude/entity_globs/3",
+      "entity_id": "sensor.openwrt_"
+    },
+    {
+      "file": "configuration.yaml",
+      "path": "recorder/exclude/entity_globs/7",
+      "entity_id": "sensor.elmatare_"
+    },
+    {
+      "file": "configuration.yaml",
+      "path": "recorder/exclude/entity_globs/8",
+      "entity_id": "sensor.elmatare_"
+    },
+    {
+      "file": "configuration.yaml",
+      "path": "recorder/exclude/entity_globs/9",
+      "entity_id": "sensor.elmatare_"
+    },
+    {
+      "file": "configuration.yaml",
+      "path": "recorder/exclude/entity_globs/10",
+      "entity_id": "sensor.system_monitor_load_"
+    },
+    {
+      "file": "configuration.yaml",
+      "path": "recorder/exclude/entity_globs/11",
+      "entity_id": "sensor.system_monitor_packets_"
+    },
+    {
+      "file": "configuration.yaml",
+      "path": "recorder/exclude/entity_globs/12",
+      "entity_id": "sensor.processor_"
+    },
+    {
+      "file": "automations.yaml",
+      "path": "2/actions/0/data/task",
+      "entity_id": "plant.attributes"
+    },
+    {
+      "file": "automations.yaml",
+      "path": "2/actions/0/data/task",
+      "entity_id": "plant.entity_id"
+    },
+    {
+      "file": "automations.yaml",
+      "path": "2/actions/0/data/task",
+      "entity_id": "plant.state"
+    },
+    {
+      "file": "automations.yaml",
+      "path": "51/triggers/0/trigger",
+      "entity_id": "event.received"
+    },
+    {
+      "file": "automations.yaml",
+      "path": "51/triggers/1/trigger",
+      "entity_id": "event.received"
+    },
+    {
+      "file": "custom_components/plant/services.yaml",
+      "path": "replace_sensor/fields/meter_entity/example",
+      "entity_id": "plant.my_plant_current_temperature"
+    },
+    {
+      "file": "custom_components/plant/services.yaml",
+      "path": "replace_sensor/fields/new_sensor/example",
+      "entity_id": "sensor.new_temperature_outdoor"
+    },
+    {
+      "file": ".storage/core.config_entries",
+      "path": "data/entries/83/data/entity_id",
+      "entity_id": "switch.bordslampa_kallaren"
+    },
+    {
+      "file": ".storage/core.config_entries",
+      "path": "data/entries/129/data/entity_id",
+      "entity_id": "switch.bordslampa_koket"
+    },
+    {
+      "file": ".storage/core.config_entries",
+      "path": "data/entries/141/data/entity_id",
+      "entity_id": "switch.blomlampa_trappan"
+    },
+    {
+      "file": ".storage/core.config_entries",
+      "path": "data/entries/175/data/entity_id",
+      "entity_id": "light.bordslampa_vanster_old"
+    },
+    {
+      "file": ".storage/core.config_entries",
+      "path": "data/entries/223/data/entity_id",
+      "entity_id": "sensor.dummy"
+    },
+    {
+      "file": ".storage/core.config_entries",
+      "path": "data/entries/224/data/entity_id",
+      "entity_id": "sensor.dummy"
+    },
+    {
+      "file": ".storage/core.config_entries",
+      "path": "data/entries/268/data/entity_id",
+      "entity_id": "sensor.dummy"
+    }
+  ],
+  "unknown_services": [
+    {
+      "file": "scripts.yaml",
+      "path": "granny_broadcast/sequence/7/choose/0/sequence/0/action",
+      "service": "notify.flocken"
+    }
+  ],
+  "source_files_checked": 25,
+  "known_entities": 10265,
+  "registered_services": 554
+}

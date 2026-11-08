@@ -1,0 +1,361 @@
+{
+  "todo.ha_loggade_arbetsuppgifter": [],
+  "todo.heimdal_ha_3d_utskrifter": [
+    {
+      "summary": "Vägghållare för DVD-spelaren",
+      "uid": "4f3879b6-9cae-11f1-8e69-e8ff1edbeaf8",
+      "status": "needs_action"
+    },
+    {
+      "summary": "Bordssåg featherboard",
+      "uid": "a564848a-b714-11f1-86b7-e8ff1edbeaf8",
+      "status": "needs_action"
+    },
+    {
+      "summary": "Borrstativ till Buck och Diego",
+      "uid": "c5505486-aa91-11ef-bb46-ac162d0499b2",
+      "status": "needs_action"
+    },
+    {
+      "summary": "Ny låda till svarven (fler-färgs utskrift)",
+      "uid": "c2fffee0-8d21-11ee-93d4-ac162d0499b2",
+      "status": "needs_action",
+      "description": "Modifiera befintlig design för text/symboler i separat färg"
+    },
+    {
+      "summary": "Nya hållare för fräs bitar (French Cleat)",
+      "uid": "c7faae0c-04c4-11ef-99cc-ac162d0499b2",
+      "status": "needs_action"
+    }
+  ],
+  "todo.diegos_uppgifter": [
+    {
+      "summary": "Ny ställning till vedklyven",
+      "uid": "a522bffc-076d-11f1-80a6-e8ff1edbeaf8",
+      "status": "needs_action"
+    },
+    {
+      "summary": "Färdigställa sensorer för hönsfoder",
+      "uid": "9eff2350-7ac9-11ee-8f4e-ac162d0499b2",
+      "status": "needs_action"
+    },
+    {
+      "summary": "Dra eluttag till Gasollådan innefrån köket",
+      "uid": "1c02c3fc-0a1b-11f0-aee3-68f728790e04",
+      "status": "needs_action"
+    },
+    {
+      "summary": "Montera och svetsa fäste för koordinatorsbord på svarven",
+      "uid": "308a712e-3975-11f0-9032-e8ff1edbeaf8",
+      "status": "needs_action"
+    },
+    {
+      "summary": "Pulverlacka måltavlor",
+      "uid": "5d5c5020-2659-11f0-adf2-68f728790e04",
+      "status": "needs_action"
+    },
+    {
+      "summary": "Ordna upp var alla dokument lagras lokalt och i molnet, både för Manni och Diego",
+      "uid": "160332ae-dd4b-11ef-9c92-68f728790e04",
+      "status": "needs_action",
+      "description": "Fråga AI om plan för lagring av våra egna dokument och gemensamma dokument givet de alternativ som står till förfogande. Även lagring av foton, dvd:er mm"
+    },
+    {
+      "summary": "Slabb-släde (Storlek? 1200x800???)",
+      "uid": "369c9710-10f2-11ef-a739-ac162d0499b2",
+      "status": "needs_action",
+      "description": "SFC20 Guide Rails with slide blocks\nSBR16  Linear Rails with slide blocks\nAkrylskiva 10mm 300x300mm"
+    }
+  ],
+  "todo.inkopslogg": [
+    {
+      "summary": "Duschkabin Hafa Breeze Deluxe Rund 90x90",
+      "uid": "2d4fd84a-cc8c-11f1-9dfa-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2026-10-20",
+      "description": "Bygghemma.se"
+    },
+    {
+      "summary": "Paviljong tält 3x6 m",
+      "uid": "1422cde6-8fd3-11f1-af72-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2026-07-27",
+      "description": "Amazon.se"
+    },
+    {
+      "summary": "Tält 4 personer, 2 sovsäckar, 2 liggunderlag",
+      "uid": "2bae3770-8fd3-11f1-af72-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2026-07-20",
+      "description": "Amazon.se"
+    },
+    {
+      "summary": "Kärcher K5 Högtryckstvätt",
+      "uid": "ba62959c-838f-11f1-bcbc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2026-07-12",
+      "description": "proshop.se"
+    },
+    {
+      "summary": "Diskmaskin Siemens SN45ZW07CE/75",
+      "uid": "511662d2-8356-11f1-bcbc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2026-07-12",
+      "description": "vitvaruexperten.se"
+    },
+    {
+      "summary": "Dynbox Keter 870 L",
+      "uid": "87bc9a42-43b2-11f1-a94b-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2026-04-28"
+    },
+    {
+      "summary": "2 sommardäck, bromsbackar och bromskivor till Mazda CX-5",
+      "uid": "b52e7590-43b2-11f1-a94b-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2026-04-21"
+    },
+    {
+      "summary": "Soffa till glasverandan",
+      "uid": "2090f3ca-0994-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2026-04-20",
+      "description": "Köpt av Mio Möbler på nätet"
+    },
+    {
+      "summary": "Däck till släpet x 2 st",
+      "uid": "880d9600-3326-11f1-aa41-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2026-04-07",
+      "description": "Köpt på Jula"
+    },
+    {
+      "summary": "Vinterdäck till Toyota Rav4 x 4 st",
+      "uid": "71b1981c-098b-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2025-11-01",
+      "description": "Köpt från Alven & Ingvarsson"
+    },
+    {
+      "summary": "Snöslunga Ryobi + två 6Ah batterier",
+      "uid": "4afb217a-098b-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2025-11-01",
+      "description": "Köpt hos Proffsmagasinet"
+    },
+    {
+      "summary": "Tvätt- & torkmaskin Siemens",
+      "uid": "231c40bc-0986-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2025-09-10",
+      "description": "Köpt hos bygghemma.se"
+    },
+    {
+      "summary": "Tyota Rav 4 Laddhybrid SEF 42H",
+      "uid": "91e889b0-098b-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2025-07-01",
+      "description": "Köpt hos Biltrean i Norrtälje (Simon)"
+    },
+    {
+      "summary": "HA Server Beelink",
+      "uid": "e1458dce-0994-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2025-05-10",
+      "description": "Köpt av Amazon.se"
+    },
+    {
+      "summary": "Vattenpump i källaren",
+      "uid": "e01bd272-098b-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2025-05-01",
+      "description": "Köpt av Roslagens Pump"
+    },
+    {
+      "summary": "Spisinsats och murning av murstock",
+      "uid": "cd22bb5e-098b-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2025-05-01",
+      "description": "Köpt av Norrtälje Eldstäder"
+    },
+    {
+      "summary": "Glasögon till Carola",
+      "uid": "041bba92-098d-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2024-06-01",
+      "description": "Köpt av Specsavers"
+    },
+    {
+      "summary": "Sommardäck till Mazda CX-5 x 2st med fälg",
+      "uid": "6cec89d0-098c-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2024-05-01",
+      "description": "Köpt av Alven & Ingvarsson"
+    },
+    {
+      "summary": "Spikpistol + två batterier Ryobi",
+      "uid": "55d5aa4c-098c-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2024-05-01",
+      "description": "Köpt av computersalg.se"
+    },
+    {
+      "summary": "Matta till Bion/Källaren",
+      "uid": "970b7226-098c-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2024-04-01",
+      "description": "Köpt av rugvista.se"
+    },
+    {
+      "summary": "Entremattor till hall och källardörr (inomhus)",
+      "uid": "408c4e56-098d-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2023-10-01",
+      "description": "Köpt av Nylanders mattor"
+    },
+    {
+      "summary": "Poolvärmepump",
+      "uid": "84a2f3e2-098d-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2023-08-01",
+      "description": "Köpt av computersalg.se\nBörjades användas säsongen 2024"
+    },
+    {
+      "summary": "Yale smart lås till ytterdörr",
+      "uid": "6d664670-098d-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2023-08-01",
+      "description": "Köpt av Kjell & Company"
+    },
+    {
+      "summary": "Matberedare",
+      "uid": "c59b58f4-bef4-11f1-8e29-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2023-06-01"
+    },
+    {
+      "summary": "Airfryer Philips",
+      "uid": "e1a3d34a-098d-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2023-03-01",
+      "description": "Köpt av elgiganten.se"
+    },
+    {
+      "summary": "Separett toalett",
+      "uid": "2bdc1aee-098e-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2022-10-01",
+      "description": "Köpt av separett.se"
+    },
+    {
+      "summary": "Samasung galaxy watch till Carola",
+      "uid": "557c268c-098e-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2022-06-01",
+      "description": "Köpt av samsung.se"
+    },
+    {
+      "summary": "Markis med motor",
+      "uid": "ab5b0afa-098e-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2022-02-01",
+      "description": "Köpt av Vida XL"
+    },
+    {
+      "summary": "Woods AC",
+      "uid": "8a23fb9e-098e-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2022-02-01",
+      "description": "Köpt från Hylte Jakt och Landman"
+    },
+    {
+      "summary": "Reningsverk/pump till poolen",
+      "uid": "2825971c-098f-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2021-04-01",
+      "description": "Köpt av Folkpool.se"
+    },
+    {
+      "summary": "HP Dator till Carola",
+      "uid": "cbe29bca-098f-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2020-09-01",
+      "description": "Köpt av netonnet.se"
+    },
+    {
+      "summary": "Utegård till hönsen",
+      "uid": "269323b4-0990-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2020-07-01",
+      "description": "Köpt av energishop.se"
+    },
+    {
+      "summary": "Växthus",
+      "uid": "45ce4c68-0990-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2020-06-01",
+      "description": "Köpt av hobbyvaxthus.se"
+    },
+    {
+      "summary": "Diskmaskin Bosch",
+      "uid": "0d78b044-0993-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2019-11-01",
+      "description": "Köpt av elgiganten.se"
+    },
+    {
+      "summary": "Torkskåp",
+      "uid": "f35705d2-0990-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2019-07-01",
+      "description": "Köpt av ???"
+    },
+    {
+      "summary": "Microvågsugn Electrolux",
+      "uid": "cb3dfc1c-0991-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2017-08-01",
+      "description": "Köpt av bygghemma.se"
+    },
+    {
+      "summary": "Kyl & Frys Miele",
+      "uid": "eac23c42-0991-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2017-06-01",
+      "description": "Köpt av erlgiganten.se"
+    },
+    {
+      "summary": "Projektor Bio",
+      "uid": "cc5141da-0992-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2016-11-01",
+      "description": "Köpt av ???"
+    },
+    {
+      "summary": "Mazda CX-5 MLD 734",
+      "uid": "9b131410-0995-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2015-03-01",
+      "description": "Köpt av ???"
+    },
+    {
+      "summary": "Frysbox",
+      "uid": "5a08b740-0995-11f1-bffc-e8ff1edbeaf8",
+      "status": "needs_action",
+      "due": "2014-10-01",
+      "description": "Köpt av ???"
+    }
+  ],
+  "todo.it_hemma": [
+    {
+      "summary": "Byt ut gasolens esp32 till en esp32-c6-zero som kör threads",
+      "uid": "c62804f6-9bb9-11f1-be8a-e8ff1edbeaf8",
+      "status": "needs_action"
+    },
+    {
+      "summary": "Byt 4 Lolin32 till ESP32-C6-ZERO",
+      "uid": "67a58a9c-ab6e-11f1-ae24-e8ff1edbeaf8",
+      "status": "needs_action"
+    }
+  ]
+}

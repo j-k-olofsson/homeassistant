@@ -1,0 +1,18 @@
+{
+  "status": "verified",
+  "entity_ids_renamed": 16,
+  "device_names_updated": 15,
+  "entity_function_names_updated": 22,
+  "integration_titles_updated": 8,
+  "orphan_integration_entries_newly_archived": 3,
+  "history_records_verified": 238,
+  "statistics_points_verified": 46,
+  "robot_power_after": "2.53",
+  "native_same_mac_reassociations": 0,
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  },
+  "automation_states_preserved": 81
+}

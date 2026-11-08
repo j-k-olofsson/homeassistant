@@ -1,0 +1,69 @@
+{
+  "status": "review_completed",
+  "registered_entities": 10155,
+  "registered_devices": 1071,
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  },
+  "all_previously_loaded_active_powercalc_entries_loaded": true,
+  "powercalc_value_regressions": [],
+  "robot_native_battery_and_derived_values": {
+    "sensor.koket_max_s6_maxv_batteriniva": "100",
+    "sensor.koket_max_s6_maxv_beraknad_effekt": "2.53",
+    "sensor.koket_max_s6_maxv_beraknad_energi": "43.4001"
+  },
+  "automation_states_preserved": 81,
+  "helper_value_differences": [],
+  "outdoor_proxy_area": "utomhus",
+  "four_distance_references_correct": true,
+  "credentials_unchanged": {
+    "openai_conversation": true,
+    "slack": true
+  },
+  "unavailable_integrations": [
+    {
+      "entry_id": "289db7cc852820c5f42a0955713ad983",
+      "domain": "prusalink",
+      "title": "PrusaLink",
+      "state": "setup_retry"
+    },
+    {
+      "entry_id": "01KC1W19A1VHXPTMNJ7QFS2XM6",
+      "domain": "slack",
+      "title": "flocken",
+      "state": "setup_retry"
+    }
+  ],
+  "repairs": [
+    {
+      "domain": "spook",
+      "issue_id": "script_unknown_service_references_script.granny_skicka_meddelande_56b84d17",
+      "severity": "warning"
+    },
+    {
+      "domain": "automation",
+      "issue_id": "automation.nya_elpriser_har_publicerats_service_not_found_notify.flocken",
+      "severity": "error"
+    }
+  ],
+  "firmware_uploaded": false,
+  "test_messages_sent": false,
+  "physical_actions_tested": false,
+  "slack_guard": {
+    "status": "verified",
+    "changed_conditions": 1,
+    "unloaded_slack_condition": false,
+    "loaded_state_comparison_verified": true,
+    "other_actions_and_scripts_preserved": true,
+    "config_check": {
+      "result": "valid",
+      "errors": null,
+      "warnings": null
+    },
+    "messages_sent": false,
+    "authentication_changed": false
+  },
+  "new_powercalc_errors": 0
+}

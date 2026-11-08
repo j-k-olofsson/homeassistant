@@ -1,3 +1,3 @@
 ﻿register_id,entity_id_före,orsak
-893e3959ab14c0f9b12affeb9fc6ffef,input_number.slider,"Verifierat oanvänd, borttagen enligt användarens instruktion"
-6ce73c6d853cd50e6ea2028519c86fbf,script.rescan_wifi_on_esphome_nodes,"Verifierat oanvänd, borttagen enligt användarens instruktion"
+893e3959ab14c0f9b12affeb9fc6ffef,input_number.slider,Verifierat oanvänd och borttagen enligt användaren
+6ce73c6d853cd50e6ea2028519c86fbf,script.rescan_wifi_on_esphome_nodes,Verifierat oanvänd och borttagen enligt användaren

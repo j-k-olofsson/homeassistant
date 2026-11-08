@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Read-only naming/reference audit. Standard library only; no credentials printed."""
-import json,pathlib,re,sys
+import json,pathlib,re,sys,hashlib
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 DOC=ROOT/'docs/namnstandard'
 REFERENCE=re.compile(r'(?<![a-z0-9_.])(?:states\.)?([a-z_]+\.[a-z0-9_]+)(?![a-z0-9_])')
@@ -46,7 +46,8 @@ def main():
  for ident,expected in review.items():
   actual=byid.get(ident)
   if actual and any(actual.get(k)!=expected.get(k)for k in['entity_id','name','original_name','device_id','area_id']):changed.append(actual['entity_id'])
- result={'read_only':True,'registered_entities':len(er),'duplicate_entity_ids':len(er)-len(current),'obsolete_active_references':oldrefs,'inactive_unregistered_exposure_exclusions':sorted(inactive_exclusions),'new_entities_to_review':new,'changed_entities_to_review':changed,'removed_since_review':len(set(review)-set(byid)),'compatibility_exceptions':len(manifest['compatibility_exceptions'])}
+ code_changed=[relative for relative,digest in manifest.get('local_integration_code_sha256',{}).items()if not(ROOT/relative).is_file()or hashlib.sha256((ROOT/relative).read_bytes()).hexdigest()!=digest]
+ result={'read_only':True,'registered_entities':len(er),'duplicate_entity_ids':len(er)-len(current),'obsolete_active_references':oldrefs,'inactive_unregistered_exposure_exclusions':sorted(inactive_exclusions),'new_entities_to_review':new,'changed_entities_to_review':changed,'removed_since_review':len(set(review)-set(byid)),'compatibility_exceptions':len(manifest['compatibility_exceptions']),'local_integration_code_changes_to_review':code_changed}
  print(json.dumps(result,ensure_ascii=False,indent=2))
- return 1 if oldrefs or result['duplicate_entity_ids']else 0
+ return 1 if oldrefs or result['duplicate_entity_ids']or code_changed else 0
 if __name__=='__main__':sys.exit(main())

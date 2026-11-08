@@ -1,0 +1,642 @@
+[
+  {
+    "area": "Sovrummet",
+    "name": "diegos väckarklocka",
+    "distinct_identity_groups": 3,
+    "items": [
+      {
+        "id": "268182f5b46dd75c4ea3df8c631442ad",
+        "model": "Google Nest Hub",
+        "manufacturer": "Google Inc.",
+        "config_entries": [
+          "01KQ4K8CG0BFW03FAETZEVXE2J"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "badddb2538cc8831073e9736cbd2adb4",
+        "model": "Google Nest Hub",
+        "manufacturer": "Google Home",
+        "config_entries": [
+          "01JXEYE9TVC38423EDERCQTWZ5"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "dd7e3e94973b42caa19c4f05008d9f2c",
+        "model": "Google Nest Hub",
+        "manufacturer": "Google Inc.",
+        "config_entries": [
+          "01K8X85EBZKWKR6B4G11Y1K7PG"
+        ],
+        "name_by_user": null
+      }
+    ]
+  },
+  {
+    "area": "Heimdal (HA)",
+    "name": "sm-t835",
+    "distinct_identity_groups": 2,
+    "items": [
+      {
+        "id": "adf19c37afca0f7a0f6d338dc13752f9",
+        "model": "SM-T835",
+        "manufacturer": "samsung",
+        "config_entries": [
+          "ab46eb6e2a74c32c6fc8654cbfd2e6f5"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "fc7e5c643277419921c149cba0827ed4",
+        "model": "SM-T835",
+        "manufacturer": "samsung",
+        "config_entries": [
+          "01JM1J0SB1WPTZ1SBB446S0BM6"
+        ],
+        "name_by_user": null
+      }
+    ]
+  },
+  {
+    "area": null,
+    "name": "backup",
+    "distinct_identity_groups": 2,
+    "items": [
+      {
+        "id": "2bbe52874f8dbcc48985f34a1a38d653",
+        "model": "Home Assistant Backup",
+        "manufacturer": "Home Assistant",
+        "config_entries": [
+          "01JQWY4PHY61Q0A23DEPB3YNCD"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "050631f3581d8143f4cf04e4f53c9367",
+        "model": "Home Assistant Mount",
+        "manufacturer": "Home Assistant",
+        "config_entries": [
+          "ca8dfd420a7a66df0f50d002d2d5dcb8"
+        ],
+        "name_by_user": null
+      }
+    ]
+  },
+  {
+    "area": "Verandan",
+    "name": "nya tvn",
+    "distinct_identity_groups": 3,
+    "items": [
+      {
+        "id": "4d0dc5c37a858a0cd0305dad23b4c5fd",
+        "model": "KD-55XH9005",
+        "manufacturer": "Sony",
+        "config_entries": [
+          "01JVFG56DJP97J0P7DQZGCA0BZ"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "5afcd85d2bd9dd59ea6efa343234fb6e",
+        "model": "BRAVIA VH1",
+        "manufacturer": "Google Home",
+        "config_entries": [
+          "01JXEYE9TVC38423EDERCQTWZ5"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "e3a7c058dab8d9a0b9ee10a298adf0d2",
+        "model": "BRAVIA VH1",
+        "manufacturer": "Sony",
+        "config_entries": [
+          "01KQ4K8CG0BFW03FAETZEVXE2J"
+        ],
+        "name_by_user": null
+      }
+    ]
+  },
+  {
+    "area": "Poolen",
+    "name": "poolvärmepump",
+    "distinct_identity_groups": 2,
+    "items": [
+      {
+        "id": "39335e0af4dfd4bdb6fae7d4d12fc8f2",
+        "model": "esp8285",
+        "manufacturer": "Espressif",
+        "config_entries": [
+          "01JX2F3NAP9KZF8Q91T523N7BE"
+        ],
+        "name_by_user": "Poolvärmepump"
+      },
+      {
+        "id": "c3072cf779e08fb8c8bafeaf47844ab6",
+        "model": "Swim&Fun 1401/1402",
+        "manufacturer": "Alsavo/Zealux",
+        "config_entries": [
+          "01KSC4AE9TXE13PYRRD430QNPV"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "25dad0e161da819de3e5df52c98276dc",
+        "model": "Tracked device",
+        "manufacturer": "OpenWrt",
+        "config_entries": [
+          "01KWV37NP1NFRTCQ76KJ6B0PRE"
+        ],
+        "name_by_user": "Poolvärmepump"
+      },
+      {
+        "id": "f5989d560d6e5f25963c6b28870e9c48",
+        "model": "Tracked device",
+        "manufacturer": "OpenWrt",
+        "config_entries": [
+          "01KX7X4BTDX2EMV78PB4N2BA56"
+        ],
+        "name_by_user": "Poolvärmepump"
+      }
+    ]
+  },
+  {
+    "area": "Köket",
+    "name": "kökets skärm",
+    "distinct_identity_groups": 2,
+    "items": [
+      {
+        "id": "55b2f6dbae0f037d6ff0835745618388",
+        "model": "JBL Link View",
+        "manufacturer": "Google Home",
+        "config_entries": [
+          "01JXEYE9TVC38423EDERCQTWZ5"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "92855e43bdd9400ca2685079a1851e3d",
+        "model": "JBL Link View",
+        "manufacturer": "Harman International Corp",
+        "config_entries": [
+          "01KQ4K8CG0BFW03FAETZEVXE2J"
+        ],
+        "name_by_user": null
+      }
+    ]
+  },
+  {
+    "area": "Verandan",
+    "name": "tvs soundbar",
+    "distinct_identity_groups": 2,
+    "items": [
+      {
+        "id": "716bd96c354ad3079b55d749af177224",
+        "model": "JBL Bar 5.0",
+        "manufacturer": "Google Home",
+        "config_entries": [
+          "01JXEYE9TVC38423EDERCQTWZ5"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "de34dbf9194fd8aee8103321b028de03",
+        "model": "JBL Bar 5.0",
+        "manufacturer": "HARMAN International Industries",
+        "config_entries": [
+          "01KQ4K8CG0BFW03FAETZEVXE2J"
+        ],
+        "name_by_user": null
+      }
+    ]
+  },
+  {
+    "area": "Verandan",
+    "name": "verandans högtalare höger",
+    "distinct_identity_groups": 3,
+    "items": [
+      {
+        "id": "0b6023baa5ece40b3b5733825197a74e",
+        "model": "Chromecast Audio",
+        "manufacturer": "Google Home",
+        "config_entries": [
+          "01JXEYE9TVC38423EDERCQTWZ5"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "77a38dbce91f6984f3da44a72eeb4315",
+        "model": "Chromecast Audio",
+        "manufacturer": "Google Inc.",
+        "config_entries": [
+          "01K8X85EBZKWKR6B4G11Y1K7PG"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "035b3443031a52bdc806e7274021a170",
+        "model": "Chromecast Audio",
+        "manufacturer": "Google Inc.",
+        "config_entries": [
+          "01KQ4K8CG0BFW03FAETZEVXE2J"
+        ],
+        "name_by_user": null
+      }
+    ]
+  },
+  {
+    "area": null,
+    "name": "toalettens högtalare",
+    "distinct_identity_groups": 2,
+    "items": [
+      {
+        "id": "f0a73f08be1da225f94bdc82180f743b",
+        "model": "JBL Link Portable",
+        "manufacturer": "Google Home",
+        "config_entries": [
+          "01JXEYE9TVC38423EDERCQTWZ5"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "ba1dd341f1d83f92400fd649b3a20f46",
+        "model": "JBL Link Portable",
+        "manufacturer": "HARMAN International Industries",
+        "config_entries": [
+          "01K8X85EBZKWKR6B4G11Y1K7PG"
+        ],
+        "name_by_user": null
+      }
+    ]
+  },
+  {
+    "area": null,
+    "name": "duschens högtalare",
+    "distinct_identity_groups": 2,
+    "items": [
+      {
+        "id": "2a66d378f71e52f70a390a30484d1271",
+        "model": "JBL Link Portable",
+        "manufacturer": "Google Home",
+        "config_entries": [
+          "01JXEYE9TVC38423EDERCQTWZ5"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "526d60fb16dbc60fe090acbfb5e70cd4",
+        "model": "JBL Link Portable",
+        "manufacturer": "HARMAN International Industries",
+        "config_entries": [
+          "01K8X85EBZKWKR6B4G11Y1K7PG"
+        ],
+        "name_by_user": null
+      }
+    ]
+  },
+  {
+    "area": null,
+    "name": "verandans högtalare vänster",
+    "distinct_identity_groups": 2,
+    "items": [
+      {
+        "id": "554695b3382546aa1d6a852871e1e8fa",
+        "model": "Chromecast Audio",
+        "manufacturer": "Google Home",
+        "config_entries": [
+          "01JXEYE9TVC38423EDERCQTWZ5"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "cfe0e2ad2d4aab659d0fa7eced6a00c9",
+        "model": "Chromecast Audio",
+        "manufacturer": "Google Inc.",
+        "config_entries": [
+          "01KQ4K8CG0BFW03FAETZEVXE2J"
+        ],
+        "name_by_user": null
+      }
+    ]
+  },
+  {
+    "area": null,
+    "name": "alla högtalare",
+    "distinct_identity_groups": 2,
+    "items": [
+      {
+        "id": "d0c18089bb08cf088d198309286d725d",
+        "model": "Google Cast Group",
+        "manufacturer": "Google Inc.",
+        "config_entries": [
+          "01K8X85EBZKWKR6B4G11Y1K7PG"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "6c7e0e6db8f4113d94f51213539eb59d",
+        "model": "Google Cast Group",
+        "manufacturer": "Google Inc.",
+        "config_entries": [
+          "01KQ4K8CG0BFW03FAETZEVXE2J"
+        ],
+        "name_by_user": null
+      }
+    ]
+  },
+  {
+    "area": "Tor (AI)",
+    "name": "tor",
+    "distinct_identity_groups": 3,
+    "items": [
+      {
+        "id": "b608665a74feb592063b088cd4dfa725",
+        "model": "OpenRGB SDK Server",
+        "manufacturer": "OpenRGB",
+        "config_entries": [
+          "01KKY1K1EZHHXVJT5WHNF8W9H7"
+        ],
+        "name_by_user": "Tor"
+      },
+      {
+        "id": "e2c3ea51f2b26da47e831077e28ceab0",
+        "model": null,
+        "manufacturer": "Uptime Kuma",
+        "config_entries": [
+          "01M31J2AFQWF2F5QCJFMNC0HBV"
+        ],
+        "name_by_user": "Tor"
+      },
+      {
+        "id": "e2648d0572088ea2c604c27909f2e438",
+        "model": "Endpoint",
+        "manufacturer": "Portainer",
+        "config_entries": [
+          "01M37AX18H7MF9N0SVTAV2SMCW"
+        ],
+        "name_by_user": "Tor"
+      }
+    ]
+  },
+  {
+    "area": null,
+    "name": "verandans högtalare",
+    "distinct_identity_groups": 3,
+    "items": [
+      {
+        "id": "84b0af883265a7d2f721df59b4e6431c",
+        "model": "Google Cast Group",
+        "manufacturer": "Google Inc.",
+        "config_entries": [
+          "01KQ4K8CG0BFW03FAETZEVXE2J"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "992bb99ef211bc56277a2ab01d517e42",
+        "model": "Google Cast Group",
+        "manufacturer": "Google Inc.",
+        "config_entries": [
+          "01K8X85EBZKWKR6B4G11Y1K7PG"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "01115759bb205938c68b5d003ad2b59c",
+        "model": "Google Cast Group",
+        "manufacturer": "Google Inc.",
+        "config_entries": [
+          "01KQ4K8CG0BFW03FAETZEVXE2J"
+        ],
+        "name_by_user": null
+      }
+    ]
+  },
+  {
+    "area": null,
+    "name": "ateljéns högtalare",
+    "distinct_identity_groups": 4,
+    "items": [
+      {
+        "id": "bdc20713db3f898f57471e267d88c122",
+        "model": "JBL Link 500",
+        "manufacturer": "JBL",
+        "config_entries": [
+          "01KQ4K8CG0BFW03FAETZEVXE2J"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "ffb391f40bf71a6c5af13316172402e5",
+        "model": "JBL Link 500",
+        "manufacturer": "JBL",
+        "config_entries": [
+          "01KQ4K8CG0BFW03FAETZEVXE2J"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "b503dd2b6b60e0706ec5ed3def23e61d",
+        "model": "JBL Link 500",
+        "manufacturer": "JBL",
+        "config_entries": [
+          "01K8X85EBZKWKR6B4G11Y1K7PG"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "57605c32050b253bfd945574d2c053f6",
+        "model": "JBL Link 500",
+        "manufacturer": "Google Home",
+        "config_entries": [
+          "01JXEYE9TVC38423EDERCQTWZ5"
+        ],
+        "name_by_user": null
+      }
+    ]
+  },
+  {
+    "area": null,
+    "name": "mannis väckarklocka",
+    "distinct_identity_groups": 3,
+    "items": [
+      {
+        "id": "c4c4ac8c2c992049d0562fa71d36b1f3",
+        "model": "Google Nest Hub",
+        "manufacturer": "Google Inc.",
+        "config_entries": [
+          "01K8X85EBZKWKR6B4G11Y1K7PG"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "50ea1925dc2b044f348e7ee52c3d24f3",
+        "model": "Google Nest Hub",
+        "manufacturer": "Google Inc.",
+        "config_entries": [
+          "01KQ4K8CG0BFW03FAETZEVXE2J"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "6fdcc66ed824471871e000e0ec7d6ad8",
+        "model": "Dashboard display",
+        "manufacturer": "Music Assistant",
+        "config_entries": [
+          "01K8X85EBZKWKR6B4G11Y1K7PG"
+        ],
+        "name_by_user": null
+      }
+    ]
+  },
+  {
+    "area": null,
+    "name": "kökets skärm",
+    "distinct_identity_groups": 2,
+    "items": [
+      {
+        "id": "76a3b9c3203daebd93f04249396f26f7",
+        "model": "JBL Link View",
+        "manufacturer": "Harman International Corp",
+        "config_entries": [
+          "01K8X85EBZKWKR6B4G11Y1K7PG"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "2ffb355cb3ca28dcb5092ac96f79fe28",
+        "model": "Dashboard display",
+        "manufacturer": "Music Assistant",
+        "config_entries": [
+          "01K8X85EBZKWKR6B4G11Y1K7PG"
+        ],
+        "name_by_user": null
+      }
+    ]
+  },
+  {
+    "area": null,
+    "name": "nya tvn",
+    "distinct_identity_groups": 2,
+    "items": [
+      {
+        "id": "be49686a6b74d3f9911c80bd944e20d6",
+        "model": "BRAVIA VH1",
+        "manufacturer": "Sony",
+        "config_entries": [
+          "01K8X85EBZKWKR6B4G11Y1K7PG"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "98a86b235d280feb688a12221d76808d",
+        "model": "Dashboard display",
+        "manufacturer": "Music Assistant",
+        "config_entries": [
+          "01K8X85EBZKWKR6B4G11Y1K7PG"
+        ],
+        "name_by_user": null
+      }
+    ]
+  },
+  {
+    "area": "Tor (AI)",
+    "name": "ping",
+    "distinct_identity_groups": 2,
+    "items": [
+      {
+        "id": "bcec2925567abe42aa0b8a19d886e9f6",
+        "model": null,
+        "manufacturer": "Uptime Kuma",
+        "config_entries": [
+          "01M31J2AFQWF2F5QCJFMNC0HBV"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "4eff084ae659b4614c5bf983fd506b8e",
+        "model": null,
+        "manufacturer": "Uptime Kuma",
+        "config_entries": [
+          "01M31J2AFQWF2F5QCJFMNC0HBV"
+        ],
+        "name_by_user": null
+      }
+    ]
+  },
+  {
+    "area": null,
+    "name": "granny utrop",
+    "distinct_identity_groups": 2,
+    "items": [
+      {
+        "id": "4d1966fd9dddf87f981efb655bf6077a",
+        "model": "Google Cast Group",
+        "manufacturer": "Google Inc.",
+        "config_entries": [
+          "01K8X85EBZKWKR6B4G11Y1K7PG"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "6db3db9d6aede4cbe2bb826c77159859",
+        "model": "Google Cast Group",
+        "manufacturer": "Google Inc.",
+        "config_entries": [
+          "01KQ4K8CG0BFW03FAETZEVXE2J"
+        ],
+        "name_by_user": null
+      }
+    ]
+  },
+  {
+    "area": null,
+    "name": "gamla tvn",
+    "distinct_identity_groups": 2,
+    "items": [
+      {
+        "id": "afa74eadfecb72f45b4671b37e08cda0",
+        "model": "Chromecast",
+        "manufacturer": "Google Inc.",
+        "config_entries": [
+          "01KQ4K8CG0BFW03FAETZEVXE2J"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "8e9cae15d4f9a8d7ed91cc9d3c2a47c4",
+        "model": "Chromecast",
+        "manufacturer": "Google Inc.",
+        "config_entries": [
+          "01K8X85EBZKWKR6B4G11Y1K7PG"
+        ],
+        "name_by_user": null
+      }
+    ]
+  },
+  {
+    "area": null,
+    "name": "waste collection schedule",
+    "distinct_identity_groups": 2,
+    "items": [
+      {
+        "id": "e623471f90321aa2611ffd8fa7763347",
+        "model": "integration",
+        "manufacturer": "mampfes",
+        "config_entries": [
+          "0fae7cfff2a4607ba2bdf788d0f4b694"
+        ],
+        "name_by_user": null
+      },
+      {
+        "id": "a315fc9a0d9f9588c788eb3a21b603ff",
+        "model": "Waste Collection Schedule",
+        "manufacturer": "Norrtalje Vatten & Avfall",
+        "config_entries": [
+          "01M6TBGE7XWDFYRFKGP21V2328"
+        ],
+        "name_by_user": null
+      }
+    ]
+  }
+]

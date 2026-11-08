@@ -1,5 +1,5 @@
 {
-  "reviewed_at": "2026-11-08T11:45:09.321185+00:00",
+  "reviewed_at": "2026-11-08T13:40:44.102911+01:00",
   "service_ids": [
     "adaptive_lighting.apply",
     "adaptive_lighting.change_switch_settings",
@@ -1757,41 +1757,6 @@
       "device_id": "e3a40d2dda16a69a07f4cc29bfea306f",
       "area_id": null
     },
-    "7fc3f21e58d7ff8ffdb0fe95ce5b7785": {
-      "entity_id": "sensor.ateljen_bordslampa_ateljen_thread_kanal",
-      "name": null,
-      "original_name": "Thread-kanal",
-      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
-      "area_id": null
-    },
-    "d87961e756d7c800e9ae688d749152fe": {
-      "entity_id": "sensor.ateljen_bordslampa_ateljen_thread_natverksnamn",
-      "name": null,
-      "original_name": "Thread-nätverksnamn",
-      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
-      "area_id": null
-    },
-    "c45c66fb8ef6d644bf308cf1406c834b": {
-      "entity_id": "sensor.ateljen_bordslampa_ateljen_antal_omstarter",
-      "name": null,
-      "original_name": "Antal omstarter",
-      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
-      "area_id": null
-    },
-    "61f2a8d335fe4a8e1b7dfb5df1f323bf": {
-      "entity_id": "sensor.ateljen_bordslampa_ateljen_upptid",
-      "name": null,
-      "original_name": "Upptid",
-      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
-      "area_id": null
-    },
-    "f89a39dec0abedfe0db425c60c08a124": {
-      "entity_id": "sensor.ateljen_bordslampa_ateljen_startorsak",
-      "name": null,
-      "original_name": "Startorsak",
-      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
-      "area_id": null
-    },
     "3f5c00367d20c1f0101ac9a72cddbc79": {
       "entity_id": "binary_sensor.bion_bordslampa_hoger_hardvarufel",
       "name": null,
@@ -2777,13 +2742,6 @@
       "name": null,
       "original_name": "Storlek på senaste lyckade automatiska säkerhetskopian",
       "device_id": "2bbe52874f8dbcc48985f34a1a38d653",
-      "area_id": null
-    },
-    "53600658807c9060273661d460dd193c": {
-      "entity_id": "number.ateljen_bordslampa_ateljen_fargtemperatur_vid_paslagning",
-      "name": null,
-      "original_name": "Färgtemperatur vid påslagning",
-      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
       "area_id": null
     },
     "08f82d2ddb1a2e3cf6839fbd16c62fd1": {
@@ -42584,56 +42542,56 @@
     "3ebf0ca430f8cb8f34a69a54fb0c554c": {
       "entity_id": "sensor.atc_bfe81b_avstand_till_shelly_pro_3_verkstaden",
       "name": "Avstånd till Shelly Pro 3 – Verkstaden",
-      "original_name": "Distance to Shelly Pro 3",
+      "original_name": "Distance to Shelly Pro 3 – Bluetooth-proxy",
       "device_id": "8c7eff6a68b3d481cb0abca6f285121f",
       "area_id": null
     },
     "5f1dbbb06b288945f9a05e68f2d02986": {
       "entity_id": "sensor.atc_bfe81b_ofiltrerat_avstand_till_shelly_pro_3_verkstaden",
       "name": "Ofiltrerat avstånd till Shelly Pro 3 – Verkstaden",
-      "original_name": "Unfiltered Distance to Shelly Pro 3",
+      "original_name": "Unfiltered Distance to Shelly Pro 3 – Bluetooth-proxy",
       "device_id": "8c7eff6a68b3d481cb0abca6f285121f",
       "area_id": null
     },
     "760f96e5abd0bb466cb6a5ecaec146d8": {
       "entity_id": "sensor.atc_bfe81b_avstand_till_vattenniva_honshuset",
       "name": "Avstånd till Vattennivå – Hönshuset",
-      "original_name": "Distance to Vattennivå",
+      "original_name": "Distance to Vattennivå – Bluetooth-proxy",
       "device_id": "8c7eff6a68b3d481cb0abca6f285121f",
       "area_id": null
     },
     "c8f911e444fe25557b487f81f3e006f6": {
       "entity_id": "sensor.atc_bfe81b_ofiltrerat_avstand_till_vattenniva_honshuset",
       "name": "Ofiltrerat avstånd till Vattennivå – Hönshuset",
-      "original_name": "Unfiltered Distance to Vattennivå",
+      "original_name": "Unfiltered Distance to Vattennivå – Bluetooth-proxy",
       "device_id": "8c7eff6a68b3d481cb0abca6f285121f",
       "area_id": null
     },
     "43ffefd303e61b0e71e2df41ca93ab86": {
       "entity_id": "sensor.atc_bfe81b_avstand_till_led_stjarnor_utomhus",
       "name": "Avstånd till LED-stjärnor – Utomhus",
-      "original_name": "Distance to LED-stjärnor",
+      "original_name": "Distance to LED-stjärnor – Bluetooth-proxy",
       "device_id": "8c7eff6a68b3d481cb0abca6f285121f",
       "area_id": null
     },
     "9d71d5812915913fb3a65621d195b229": {
       "entity_id": "sensor.atc_bfe81b_ofiltrerat_avstand_till_led_stjarnor_utomhus",
       "name": "Ofiltrerat avstånd till LED-stjärnor – Utomhus",
-      "original_name": "Unfiltered Distance to LED-stjärnor",
+      "original_name": "Unfiltered Distance to LED-stjärnor – Bluetooth-proxy",
       "device_id": "8c7eff6a68b3d481cb0abca6f285121f",
       "area_id": null
     },
     "58e32cc1c1bf4d021c158e42879f9787": {
       "entity_id": "sensor.atc_bfe81b_avstand_till_vaggkontakt_x2_verandan",
       "name": "Avstånd till Väggkontakt x2 – Verandan",
-      "original_name": "Distance to Väggkontakt x2",
+      "original_name": "Distance to Väggkontakt x2 – Bluetooth-proxy",
       "device_id": "8c7eff6a68b3d481cb0abca6f285121f",
       "area_id": null
     },
     "ba90d63fea3c2ed9daa2c5eb61bbaf56": {
       "entity_id": "sensor.atc_bfe81b_ofiltrerat_avstand_till_vaggkontakt_x2_verandan",
       "name": "Ofiltrerat avstånd till Väggkontakt x2 – Verandan",
-      "original_name": "Unfiltered Distance to Väggkontakt x2",
+      "original_name": "Unfiltered Distance to Väggkontakt x2 – Bluetooth-proxy",
       "device_id": "8c7eff6a68b3d481cb0abca6f285121f",
       "area_id": null
     },
@@ -42654,84 +42612,84 @@
     "e2cba7f8dcc84f190d5644666c763564": {
       "entity_id": "sensor.atc_bfe81b_avstand_till_golvvarme_duschen",
       "name": "Avstånd till Golvvärme – Duschen",
-      "original_name": "Distance to Golvvärme",
+      "original_name": "Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "8c7eff6a68b3d481cb0abca6f285121f",
       "area_id": null
     },
     "280db7a60d206a2669af028deff78a03": {
       "entity_id": "sensor.atc_bfe81b_ofiltrerat_avstand_till_golvvarme_duschen",
       "name": "Ofiltrerat avstånd till Golvvärme – Duschen",
-      "original_name": "Unfiltered Distance to Golvvärme",
+      "original_name": "Unfiltered Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "8c7eff6a68b3d481cb0abca6f285121f",
       "area_id": null
     },
     "13f23fdcba4388229466104da0485973": {
       "entity_id": "sensor.atc_bfe81b_avstand_till_golvvarme_verandan",
       "name": "Avstånd till Golvvärme – Verandan",
-      "original_name": "Distance to Golvvärme",
+      "original_name": "Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "8c7eff6a68b3d481cb0abca6f285121f",
       "area_id": null
     },
     "fc2e17a7411860c8f6bc7c9399ad21c0": {
       "entity_id": "sensor.atc_bfe81b_ofiltrerat_avstand_till_golvvarme_verandan",
       "name": "Ofiltrerat avstånd till Golvvärme – Verandan",
-      "original_name": "Unfiltered Distance to Golvvärme",
+      "original_name": "Unfiltered Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "8c7eff6a68b3d481cb0abca6f285121f",
       "area_id": null
     },
     "5711fab99c8bc5c031cd60ca260878f3": {
       "entity_id": "sensor.atc_bfe81b_avstand_till_golvvarme_bion",
       "name": "Avstånd till Golvvärme – Bion",
-      "original_name": "Distance to Golvvärme",
+      "original_name": "Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "8c7eff6a68b3d481cb0abca6f285121f",
       "area_id": null
     },
     "c5c9bacf967ca438469fa96b78457475": {
       "entity_id": "sensor.atc_bfe81b_ofiltrerat_avstand_till_golvvarme_bion",
       "name": "Ofiltrerat avstånd till Golvvärme – Bion",
-      "original_name": "Unfiltered Distance to Golvvärme",
+      "original_name": "Unfiltered Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "8c7eff6a68b3d481cb0abca6f285121f",
       "area_id": null
     },
     "fe7490438348a445beca552b33940d0e": {
       "entity_id": "sensor.atc_bfe81b_avstand_till_golvvarme_koket",
       "name": "Avstånd till Golvvärme – Köket",
-      "original_name": "Distance to Golvvärme",
+      "original_name": "Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "8c7eff6a68b3d481cb0abca6f285121f",
       "area_id": null
     },
     "e38964f8bf1fcfc0d1254da4e7b4a2d9": {
       "entity_id": "sensor.atc_bfe81b_ofiltrerat_avstand_till_golvvarme_koket",
       "name": "Ofiltrerat avstånd till Golvvärme – Köket",
-      "original_name": "Unfiltered Distance to Golvvärme",
+      "original_name": "Unfiltered Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "8c7eff6a68b3d481cb0abca6f285121f",
       "area_id": null
     },
     "7fec4d364a07b2a547dc04a9b03114bb": {
       "entity_id": "sensor.atc_bfe81b_avstand_till_golvvarme_entren",
       "name": "Avstånd till Golvvärme – Entrén",
-      "original_name": "Distance to Golvvärme",
+      "original_name": "Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "8c7eff6a68b3d481cb0abca6f285121f",
       "area_id": null
     },
     "a66cb631314caae21574e078683e1ce6": {
       "entity_id": "sensor.atc_bfe81b_ofiltrerat_avstand_till_golvvarme_entren",
       "name": "Ofiltrerat avstånd till Golvvärme – Entrén",
-      "original_name": "Unfiltered Distance to Golvvärme",
+      "original_name": "Unfiltered Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "8c7eff6a68b3d481cb0abca6f285121f",
       "area_id": null
     },
     "953b45c3ddbd9a0634cefb2fd7f3bb07": {
       "entity_id": "sensor.atc_bfe81b_avstand_till_golvvarme_ateljen",
       "name": "Avstånd till Golvvärme – Ateljén",
-      "original_name": "Distance to Golvvärme",
+      "original_name": "Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "8c7eff6a68b3d481cb0abca6f285121f",
       "area_id": null
     },
     "dbf429ddffa8944e15329ed314b2b789": {
       "entity_id": "sensor.atc_bfe81b_ofiltrerat_avstand_till_golvvarme_ateljen",
       "name": "Ofiltrerat avstånd till Golvvärme – Ateljén",
-      "original_name": "Unfiltered Distance to Golvvärme",
+      "original_name": "Unfiltered Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "8c7eff6a68b3d481cb0abca6f285121f",
       "area_id": null
     },
@@ -42787,56 +42745,56 @@
     "3a4dd2ef0fe3e8fa7cb1a9d53aa5af5b": {
       "entity_id": "sensor.atc_b999ba_avstand_till_shelly_pro_3_verkstaden",
       "name": "Avstånd till Shelly Pro 3 – Verkstaden",
-      "original_name": "Distance to Shelly Pro 3",
+      "original_name": "Distance to Shelly Pro 3 – Bluetooth-proxy",
       "device_id": "46da8fa9d3cdb8c2e5724a5e0d896c89",
       "area_id": null
     },
     "3fc671b1fa6d5aa436e837f51ae4701f": {
       "entity_id": "sensor.atc_b999ba_ofiltrerat_avstand_till_shelly_pro_3_verkstaden",
       "name": "Ofiltrerat avstånd till Shelly Pro 3 – Verkstaden",
-      "original_name": "Unfiltered Distance to Shelly Pro 3",
+      "original_name": "Unfiltered Distance to Shelly Pro 3 – Bluetooth-proxy",
       "device_id": "46da8fa9d3cdb8c2e5724a5e0d896c89",
       "area_id": null
     },
     "9e71c479de27c0fe3aea0c73217492a6": {
       "entity_id": "sensor.atc_b999ba_avstand_till_vattenniva_honshuset",
       "name": "Avstånd till Vattennivå – Hönshuset",
-      "original_name": "Distance to Vattennivå",
+      "original_name": "Distance to Vattennivå – Bluetooth-proxy",
       "device_id": "46da8fa9d3cdb8c2e5724a5e0d896c89",
       "area_id": null
     },
     "2196311f599bbe33503bb9b4271ed47e": {
       "entity_id": "sensor.atc_b999ba_ofiltrerat_avstand_till_vattenniva_honshuset",
       "name": "Ofiltrerat avstånd till Vattennivå – Hönshuset",
-      "original_name": "Unfiltered Distance to Vattennivå",
+      "original_name": "Unfiltered Distance to Vattennivå – Bluetooth-proxy",
       "device_id": "46da8fa9d3cdb8c2e5724a5e0d896c89",
       "area_id": null
     },
     "25df5a06570e37f87b47a66fe51201a4": {
       "entity_id": "sensor.atc_b999ba_avstand_till_led_stjarnor_utomhus",
       "name": "Avstånd till LED-stjärnor – Utomhus",
-      "original_name": "Distance to LED-stjärnor",
+      "original_name": "Distance to LED-stjärnor – Bluetooth-proxy",
       "device_id": "46da8fa9d3cdb8c2e5724a5e0d896c89",
       "area_id": null
     },
     "aac88e4fafc91eaa1fea4b0e498a09b9": {
       "entity_id": "sensor.atc_b999ba_ofiltrerat_avstand_till_led_stjarnor_utomhus",
       "name": "Ofiltrerat avstånd till LED-stjärnor – Utomhus",
-      "original_name": "Unfiltered Distance to LED-stjärnor",
+      "original_name": "Unfiltered Distance to LED-stjärnor – Bluetooth-proxy",
       "device_id": "46da8fa9d3cdb8c2e5724a5e0d896c89",
       "area_id": null
     },
     "42b05ca92b34a25aae1e1ba470885328": {
       "entity_id": "sensor.atc_b999ba_avstand_till_vaggkontakt_x2_verandan",
       "name": "Avstånd till Väggkontakt x2 – Verandan",
-      "original_name": "Distance to Väggkontakt x2",
+      "original_name": "Distance to Väggkontakt x2 – Bluetooth-proxy",
       "device_id": "46da8fa9d3cdb8c2e5724a5e0d896c89",
       "area_id": null
     },
     "f924897f83a8b2cd306baaf331bc4ce2": {
       "entity_id": "sensor.atc_b999ba_ofiltrerat_avstand_till_vaggkontakt_x2_verandan",
       "name": "Ofiltrerat avstånd till Väggkontakt x2 – Verandan",
-      "original_name": "Unfiltered Distance to Väggkontakt x2",
+      "original_name": "Unfiltered Distance to Väggkontakt x2 – Bluetooth-proxy",
       "device_id": "46da8fa9d3cdb8c2e5724a5e0d896c89",
       "area_id": null
     },
@@ -42857,84 +42815,84 @@
     "e42b377ee2fa4ed8572716b57e9883b2": {
       "entity_id": "sensor.atc_b999ba_avstand_till_golvvarme_duschen",
       "name": "Avstånd till Golvvärme – Duschen",
-      "original_name": "Distance to Golvvärme",
+      "original_name": "Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "46da8fa9d3cdb8c2e5724a5e0d896c89",
       "area_id": null
     },
     "4d6f548bd8cd40e1246707dfcd6cf3a4": {
       "entity_id": "sensor.atc_b999ba_ofiltrerat_avstand_till_golvvarme_duschen",
       "name": "Ofiltrerat avstånd till Golvvärme – Duschen",
-      "original_name": "Unfiltered Distance to Golvvärme",
+      "original_name": "Unfiltered Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "46da8fa9d3cdb8c2e5724a5e0d896c89",
       "area_id": null
     },
     "d2b33ce2b2ebf15e2348f15e4a34354c": {
       "entity_id": "sensor.atc_b999ba_avstand_till_golvvarme_verandan",
       "name": "Avstånd till Golvvärme – Verandan",
-      "original_name": "Distance to Golvvärme",
+      "original_name": "Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "46da8fa9d3cdb8c2e5724a5e0d896c89",
       "area_id": null
     },
     "f9a5679044a53cf52d2b5be42f713c81": {
       "entity_id": "sensor.atc_b999ba_ofiltrerat_avstand_till_golvvarme_verandan",
       "name": "Ofiltrerat avstånd till Golvvärme – Verandan",
-      "original_name": "Unfiltered Distance to Golvvärme",
+      "original_name": "Unfiltered Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "46da8fa9d3cdb8c2e5724a5e0d896c89",
       "area_id": null
     },
     "d7dee3767524358201429c87b7ea593a": {
       "entity_id": "sensor.atc_b999ba_avstand_till_golvvarme_bion",
       "name": "Avstånd till Golvvärme – Bion",
-      "original_name": "Distance to Golvvärme",
+      "original_name": "Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "46da8fa9d3cdb8c2e5724a5e0d896c89",
       "area_id": null
     },
     "4d59be44e16fa370e2c51ad86ad2f67b": {
       "entity_id": "sensor.atc_b999ba_ofiltrerat_avstand_till_golvvarme_bion",
       "name": "Ofiltrerat avstånd till Golvvärme – Bion",
-      "original_name": "Unfiltered Distance to Golvvärme",
+      "original_name": "Unfiltered Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "46da8fa9d3cdb8c2e5724a5e0d896c89",
       "area_id": null
     },
     "925fe7ae9b1ced47d8d9d7563ba45d5e": {
       "entity_id": "sensor.atc_b999ba_avstand_till_golvvarme_koket",
       "name": "Avstånd till Golvvärme – Köket",
-      "original_name": "Distance to Golvvärme",
+      "original_name": "Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "46da8fa9d3cdb8c2e5724a5e0d896c89",
       "area_id": null
     },
     "ee6a1741256a54cfae8992942657b50d": {
       "entity_id": "sensor.atc_b999ba_ofiltrerat_avstand_till_golvvarme_koket",
       "name": "Ofiltrerat avstånd till Golvvärme – Köket",
-      "original_name": "Unfiltered Distance to Golvvärme",
+      "original_name": "Unfiltered Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "46da8fa9d3cdb8c2e5724a5e0d896c89",
       "area_id": null
     },
     "e2441eaf66b1c7715b56cfba40b89d65": {
       "entity_id": "sensor.atc_b999ba_avstand_till_golvvarme_entren",
       "name": "Avstånd till Golvvärme – Entrén",
-      "original_name": "Distance to Golvvärme",
+      "original_name": "Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "46da8fa9d3cdb8c2e5724a5e0d896c89",
       "area_id": null
     },
     "e4e22d6561a7c9e4aab45923a24a805e": {
       "entity_id": "sensor.atc_b999ba_ofiltrerat_avstand_till_golvvarme_entren",
       "name": "Ofiltrerat avstånd till Golvvärme – Entrén",
-      "original_name": "Unfiltered Distance to Golvvärme",
+      "original_name": "Unfiltered Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "46da8fa9d3cdb8c2e5724a5e0d896c89",
       "area_id": null
     },
     "cef65cfd3e3689d8963fa0cd6f84cca4": {
       "entity_id": "sensor.atc_b999ba_avstand_till_golvvarme_ateljen",
       "name": "Avstånd till Golvvärme – Ateljén",
-      "original_name": "Distance to Golvvärme",
+      "original_name": "Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "46da8fa9d3cdb8c2e5724a5e0d896c89",
       "area_id": null
     },
     "ee7b88bdc9e04b0b1392677b611ee24d": {
       "entity_id": "sensor.atc_b999ba_ofiltrerat_avstand_till_golvvarme_ateljen",
       "name": "Ofiltrerat avstånd till Golvvärme – Ateljén",
-      "original_name": "Unfiltered Distance to Golvvärme",
+      "original_name": "Unfiltered Distance to Golvvärme – Bluetooth-proxy",
       "device_id": "46da8fa9d3cdb8c2e5724a5e0d896c89",
       "area_id": null
     },
@@ -45332,41 +45290,6 @@
       "device_id": "e3a40d2dda16a69a07f4cc29bfea306f",
       "area_id": null
     },
-    "0909bc1ff17f059c009f23766737f5cd": {
-      "entity_id": "update.ateljen_bordslampa_ateljen_firmware",
-      "name": null,
-      "original_name": "Firmware",
-      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
-      "area_id": null
-    },
-    "03965b06fbeab5160dd91a3e7d8b6a92": {
-      "entity_id": "button.ateljen_bordslampa_ateljen_identifiera",
-      "name": null,
-      "original_name": "Identifiera",
-      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
-      "area_id": null
-    },
-    "5307ce4cdc5b2dcdc377877b9fd71b75": {
-      "entity_id": "number.ateljen_bordslampa_ateljen_niva_vid_paslagning",
-      "name": "Nivå vid påslagning",
-      "original_name": "På nivå",
-      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
-      "area_id": null
-    },
-    "da936fad0dd75c1f8953918a8c56d9b5": {
-      "entity_id": "number.ateljen_bordslampa_ateljen_overgangstid_pa_av",
-      "name": "Övergångstid på/av",
-      "original_name": "På/av övergångstid",
-      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
-      "area_id": null
-    },
-    "09c206bc158135d95ddce5ca98daacfb": {
-      "entity_id": "select.ateljen_bordslampa_ateljen_uppstartsbeteende",
-      "name": null,
-      "original_name": "Uppstartsbeteende",
-      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
-      "area_id": null
-    },
     "c546bb9aff70922ab49afa0047a04bb7": {
       "entity_id": "number.bion_bordslampa_hoger_overgangstid_vid_avslagning",
       "name": "Övergångstid vid avslagning",
@@ -45423,13 +45346,6 @@
       "device_id": "e3a40d2dda16a69a07f4cc29bfea306f",
       "area_id": null
     },
-    "ccd4e7b7de4a6ae6ac8eb5e0723b3140": {
-      "entity_id": "number.ateljen_bordslampa_ateljen_niva_vid_uppstart",
-      "name": "Nivå vid uppstart",
-      "original_name": "Power on-nivå",
-      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
-      "area_id": null
-    },
     "4cc55625404c46f501552dc438f973bd": {
       "entity_id": "number.bion_bordslampa_hoger_niva_vid_uppstart",
       "name": "Nivå vid uppstart",
@@ -45442,13 +45358,6 @@
       "name": "Thread-routingroll",
       "original_name": "Thread-routing roll",
       "device_id": "e3a40d2dda16a69a07f4cc29bfea306f",
-      "area_id": null
-    },
-    "db8b06bfaf25e89099e3d409d46cb93a": {
-      "entity_id": "sensor.ateljen_bordslampa_ateljen_thread_routingroll",
-      "name": "Thread-routingroll",
-      "original_name": "Thread-routing roll",
-      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
       "area_id": null
     },
     "c5269812e750cc14c0a170f10013f3fc": {
@@ -60748,7 +60657,7 @@
     },
     "0f05736238ff840dc605b557761e0eff": {
       "entity_id": "sensor.tor_ai_ping_svarstid_monitor_10",
-      "name": "Svarstid – monitor 10",
+      "name": "Svarstid",
       "original_name": "Svarstid",
       "device_id": "bcec2925567abe42aa0b8a19d886e9f6",
       "area_id": null
@@ -60783,7 +60692,7 @@
     },
     "6aa4373556abbcc0cecd891be12dfc16": {
       "entity_id": "sensor.tor_ai_ping_svarstid_monitor_15",
-      "name": "Svarstid – monitor 15",
+      "name": "Svarstid",
       "original_name": "Svarstid",
       "device_id": "4eff084ae659b4614c5bf983fd506b8e",
       "area_id": null
@@ -61105,7 +61014,7 @@
     },
     "38939f2e2cba72bb242fd2e12915e8f6": {
       "entity_id": "sensor.tor_ai_ping_monitortyp_monitor_10",
-      "name": "Monitortyp – monitor 10",
+      "name": "Monitortyp",
       "original_name": "Monitortyp",
       "device_id": "bcec2925567abe42aa0b8a19d886e9f6",
       "area_id": null
@@ -61140,7 +61049,7 @@
     },
     "624c4aef6897afba775e9c6551286d22": {
       "entity_id": "sensor.tor_ai_ping_monitortyp_monitor_15",
-      "name": "Monitortyp – monitor 15",
+      "name": "Monitortyp",
       "original_name": "Monitortyp",
       "device_id": "4eff084ae659b4614c5bf983fd506b8e",
       "area_id": null
@@ -61511,14 +61420,14 @@
     },
     "9a3de6e8ee841ddfe45dc981f8d8658c": {
       "entity_id": "sensor.tor_ai_ping_overvakat_vardnamn_monitor_10",
-      "name": "Övervakat värdnamn – monitor 10",
+      "name": "Övervakat värdnamn",
       "original_name": "Övervakat värdnamn",
       "device_id": "bcec2925567abe42aa0b8a19d886e9f6",
       "area_id": null
     },
     "f06655314c079ee9032ae87401b527a6": {
       "entity_id": "sensor.tor_ai_ping_overvakat_vardnamn_monitor_15",
-      "name": "Övervakat värdnamn – monitor 15",
+      "name": "Övervakat värdnamn",
       "original_name": "Övervakat värdnamn",
       "device_id": "4eff084ae659b4614c5bf983fd506b8e",
       "area_id": null
@@ -61714,7 +61623,7 @@
     },
     "0bfae6f1b76c1ef435612d6fc9b2d19f": {
       "entity_id": "sensor.tor_ai_ping_upptid_1_dag_monitor_10",
-      "name": "Upptid (1 dag) – monitor 10",
+      "name": "Upptid (1 dag)",
       "original_name": "Upptid (1 dag)",
       "device_id": "bcec2925567abe42aa0b8a19d886e9f6",
       "area_id": null
@@ -61749,7 +61658,7 @@
     },
     "8a92959a11589b68775474c15751a862": {
       "entity_id": "sensor.tor_ai_ping_upptid_1_dag_monitor_15",
-      "name": "Upptid (1 dag) – monitor 15",
+      "name": "Upptid (1 dag)",
       "original_name": "Upptid (1 dag)",
       "device_id": "4eff084ae659b4614c5bf983fd506b8e",
       "area_id": null
@@ -62071,7 +61980,7 @@
     },
     "dcceba5965df3200cadbdbf60ad71333": {
       "entity_id": "sensor.tor_ai_ping_upptid_30_dagar_monitor_10",
-      "name": "Upptid (30 dagar) – monitor 10",
+      "name": "Upptid (30 dagar)",
       "original_name": "Upptid (30 dagar)",
       "device_id": "bcec2925567abe42aa0b8a19d886e9f6",
       "area_id": null
@@ -62106,7 +62015,7 @@
     },
     "dbdfdc89384910ba990cdfbf7c1ceeae": {
       "entity_id": "sensor.tor_ai_ping_upptid_30_dagar_monitor_15",
-      "name": "Upptid (30 dagar) – monitor 15",
+      "name": "Upptid (30 dagar)",
       "original_name": "Upptid (30 dagar)",
       "device_id": "4eff084ae659b4614c5bf983fd506b8e",
       "area_id": null
@@ -62428,7 +62337,7 @@
     },
     "4f97db0fafdc38d8f0be7927d1050cc0": {
       "entity_id": "sensor.tor_ai_ping_upptid_365_dagar_monitor_10",
-      "name": "Upptid (365 dagar) – monitor 10",
+      "name": "Upptid (365 dagar)",
       "original_name": "Upptid (365 dagar)",
       "device_id": "bcec2925567abe42aa0b8a19d886e9f6",
       "area_id": null
@@ -62463,7 +62372,7 @@
     },
     "f0d7312a4c012ce2b2beac038d4024b6": {
       "entity_id": "sensor.tor_ai_ping_upptid_365_dagar_monitor_15",
-      "name": "Upptid (365 dagar) – monitor 15",
+      "name": "Upptid (365 dagar)",
       "original_name": "Upptid (365 dagar)",
       "device_id": "4eff084ae659b4614c5bf983fd506b8e",
       "area_id": null
@@ -62785,7 +62694,7 @@
     },
     "8ee804a8a23f660004f965aa7a3442b2": {
       "entity_id": "sensor.tor_ai_ping_genomsnittlig_svarstid_1_dag_monitor_10",
-      "name": "Genomsnittlig svarstid (1 dag) – monitor 10",
+      "name": "Genomsnittlig svarstid (1 dag)",
       "original_name": "Svarstid Ø (1 dag)",
       "device_id": "bcec2925567abe42aa0b8a19d886e9f6",
       "area_id": null
@@ -62820,7 +62729,7 @@
     },
     "6bac62e89ae31f8c8662c2522970dae1": {
       "entity_id": "sensor.tor_ai_ping_genomsnittlig_svarstid_1_dag_monitor_15",
-      "name": "Genomsnittlig svarstid (1 dag) – monitor 15",
+      "name": "Genomsnittlig svarstid (1 dag)",
       "original_name": "Svarstid Ø (1 dag)",
       "device_id": "4eff084ae659b4614c5bf983fd506b8e",
       "area_id": null
@@ -63142,7 +63051,7 @@
     },
     "54b048a5dafd8168ab71319883b9cc0f": {
       "entity_id": "sensor.tor_ai_ping_genomsnittlig_svarstid_30_dagar_monitor_10",
-      "name": "Genomsnittlig svarstid (30 dagar) – monitor 10",
+      "name": "Genomsnittlig svarstid (30 dagar)",
       "original_name": "Svarstid Ø (30 dagar)",
       "device_id": "bcec2925567abe42aa0b8a19d886e9f6",
       "area_id": null
@@ -63177,7 +63086,7 @@
     },
     "81477455b89b78464cd1562785253ef5": {
       "entity_id": "sensor.tor_ai_ping_genomsnittlig_svarstid_30_dagar_monitor_15",
-      "name": "Genomsnittlig svarstid (30 dagar) – monitor 15",
+      "name": "Genomsnittlig svarstid (30 dagar)",
       "original_name": "Svarstid Ø (30 dagar)",
       "device_id": "4eff084ae659b4614c5bf983fd506b8e",
       "area_id": null
@@ -63499,7 +63408,7 @@
     },
     "1a870b7a8c06a56d99ac4054971fca14": {
       "entity_id": "sensor.tor_ai_ping_genomsnittlig_svarstid_365_dagar_monitor_10",
-      "name": "Genomsnittlig svarstid (365 dagar) – monitor 10",
+      "name": "Genomsnittlig svarstid (365 dagar)",
       "original_name": "Svarstid Ø (365 dagar)",
       "device_id": "bcec2925567abe42aa0b8a19d886e9f6",
       "area_id": null
@@ -63534,7 +63443,7 @@
     },
     "ac0f3da2c8f55efb76701d2775df2760": {
       "entity_id": "sensor.tor_ai_ping_genomsnittlig_svarstid_365_dagar_monitor_15",
-      "name": "Genomsnittlig svarstid (365 dagar) – monitor 15",
+      "name": "Genomsnittlig svarstid (365 dagar)",
       "original_name": "Svarstid Ø (365 dagar)",
       "device_id": "4eff084ae659b4614c5bf983fd506b8e",
       "area_id": null
@@ -63863,7 +63772,7 @@
     },
     "32d5f4d5bb5808c8c6a2090b47a8a8af": {
       "entity_id": "sensor.tor_ai_ping_taggar_monitor_10",
-      "name": "Taggar – monitor 10",
+      "name": "Taggar",
       "original_name": "Taggar",
       "device_id": "bcec2925567abe42aa0b8a19d886e9f6",
       "area_id": null
@@ -63898,7 +63807,7 @@
     },
     "8542b120e42accd5cf247622492bd8f7": {
       "entity_id": "sensor.tor_ai_ping_taggar_monitor_15",
-      "name": "Taggar – monitor 15",
+      "name": "Taggar",
       "original_name": "Taggar",
       "device_id": "4eff084ae659b4614c5bf983fd506b8e",
       "area_id": null
@@ -67567,28 +67476,28 @@
     "96f197de85d3770f48bb283343546799": {
       "entity_id": "sensor.verandan_taklampor_beraknad_effekt",
       "name": "Beräknad effekt",
-      "original_name": "Plus2PM-porch Switch 0 – beräknad förbrukning Device Power",
+      "original_name": "Taklampor – beräknad förbrukning Device Power",
       "device_id": "7713eaa96eaf9b7293f776e78bf40a22",
       "area_id": null
     },
     "0d541c7d2f00bdeb6ca7a888029767f0": {
       "entity_id": "sensor.verandan_taklampor_beraknad_energi",
       "name": "Beräknad energi",
-      "original_name": "Plus2PM-porch Switch 0 – beräknad förbrukning Device Energy",
+      "original_name": "Taklampor – beräknad förbrukning Device Energy",
       "device_id": "7713eaa96eaf9b7293f776e78bf40a22",
       "area_id": null
     },
     "d108a99dfc1d774cd66196c52b471c88": {
       "entity_id": "sensor.verandan_julstjarnor_beraknad_effekt",
       "name": "Beräknad effekt",
-      "original_name": "Plus2PM-porch Switch 1 – beräknad förbrukning Device Power",
+      "original_name": "Julstjärnor – beräknad förbrukning Device Power",
       "device_id": "78ee6b1f8ec0bd42eda986ad6250e1c8",
       "area_id": null
     },
     "1101d023c34da30de7bc1cf2f6f6dbf3": {
       "entity_id": "sensor.verandan_julstjarnor_beraknad_energi",
       "name": "Beräknad energi",
-      "original_name": "Plus2PM-porch Switch 1 – beräknad förbrukning Device Energy",
+      "original_name": "Julstjärnor – beräknad förbrukning Device Energy",
       "device_id": "78ee6b1f8ec0bd42eda986ad6250e1c8",
       "area_id": null
     },
@@ -67865,20 +67774,6 @@
       "device_id": null,
       "area_id": null
     },
-    "ea232970141dc8ce12f13037aef96a81": {
-      "entity_id": "sensor.ateljen_bordslampa_ateljen_beraknad_effekt",
-      "name": "Beräknad effekt",
-      "original_name": "Bordslampa ateljen – beräknad förbrukning belysning power",
-      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
-      "area_id": null
-    },
-    "8dc3c5bef79924851ebb85bf577c066d": {
-      "entity_id": "sensor.ateljen_bordslampa_ateljen_beraknad_energi",
-      "name": "Beräknad energi",
-      "original_name": "Bordslampa ateljen – beräknad förbrukning belysning energy",
-      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
-      "area_id": null
-    },
     "e90b8f4caa1a41c1cebd6d85c99d2ca4": {
       "entity_id": "sensor.koket_banklampor_effekt",
       "name": null,
@@ -67898,13 +67793,6 @@
       "name": null,
       "original_name": "Knapp",
       "device_id": "e3a40d2dda16a69a07f4cc29bfea306f",
-      "area_id": null
-    },
-    "7498925c864a6a67d9b158b2a7a719b9": {
-      "entity_id": "light.ateljen_bordslampa_ateljen",
-      "name": null,
-      "original_name": null,
-      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
       "area_id": null
     },
     "6e600adb775b0109978ae7caa8d936a6": {
@@ -68799,14 +68687,14 @@
     "6c0aaf39ac0a232561aa992cbd728dcf": {
       "entity_id": "sensor.verandan_vaggkontakt_x2_beraknad_effekt",
       "name": "Beräknad effekt",
-      "original_name": "Plus2PM-porch – beräknad förbrukning Device Power",
+      "original_name": "Väggkontakt x2 – beräknad förbrukning Device Power",
       "device_id": "66b1ff7607471ae6bbb410d8f0d82c6d",
       "area_id": null
     },
     "71f5841f566a823509498d5cca738f1f": {
       "entity_id": "sensor.verandan_vaggkontakt_x2_beraknad_energi",
       "name": "Beräknad energi",
-      "original_name": "Plus2PM-porch – beräknad förbrukning Device Energy",
+      "original_name": "Väggkontakt x2 – beräknad förbrukning Device Energy",
       "device_id": "66b1ff7607471ae6bbb410d8f0d82c6d",
       "area_id": null
     },
@@ -69295,7 +69183,7 @@
     },
     "3ab6336114e2fa6a6b301bb4f910d992": {
       "entity_id": "sensor.tor_ai_ping_status_monitor_10",
-      "name": "Status – monitor 10",
+      "name": "Status",
       "original_name": "Status",
       "device_id": "bcec2925567abe42aa0b8a19d886e9f6",
       "area_id": null
@@ -69330,7 +69218,7 @@
     },
     "285f8ab9bab3cfc9cacba6885d704485": {
       "entity_id": "sensor.tor_ai_ping_status_monitor_15",
-      "name": "Status – monitor 15",
+      "name": "Status",
       "original_name": "Status",
       "device_id": "4eff084ae659b4614c5bf983fd506b8e",
       "area_id": null
@@ -71491,20 +71379,6 @@
       "device_id": "5a31e8b505386008c9510cc9952d662d",
       "area_id": null
     },
-    "f9a2a9840881253d88ad484c34b02c92": {
-      "entity_id": "switch.schedule_bilvarme_08_11_13_00",
-      "name": null,
-      "original_name": "Bilvärme 08/11 13:00",
-      "device_id": "68b68a42f51476563481c7d951b8ee25",
-      "area_id": null
-    },
-    "f9e6d316133e1762ad41111b042af05b": {
-      "entity_id": "switch.schedule_bilvarme_08_11_13_00_2",
-      "name": null,
-      "original_name": "Bilvärme 08/11 13:00",
-      "device_id": "68b68a42f51476563481c7d951b8ee25",
-      "area_id": null
-    },
     "7b4189374840ca87bb43a2f6058510bd": {
       "entity_id": "button.alicias_tab_a7_lite_disconnect_device",
       "name": null,
@@ -71749,6 +71623,125 @@
       "original_name": "Internet Access",
       "device_id": "7938b2ad630e3f5c590057a1fd59df79",
       "area_id": null
+    },
+    "7fc3f21e58d7ff8ffdb0fe95ce5b7785": {
+      "entity_id": "sensor.ateljen_bordslampa_thread_kanal",
+      "name": null,
+      "original_name": "Thread-kanal",
+      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
+      "area_id": null
+    },
+    "d87961e756d7c800e9ae688d749152fe": {
+      "entity_id": "sensor.ateljen_bordslampa_thread_natverksnamn",
+      "name": null,
+      "original_name": "Thread-nätverksnamn",
+      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
+      "area_id": null
+    },
+    "c45c66fb8ef6d644bf308cf1406c834b": {
+      "entity_id": "sensor.ateljen_bordslampa_antal_omstarter",
+      "name": null,
+      "original_name": "Antal omstarter",
+      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
+      "area_id": null
+    },
+    "61f2a8d335fe4a8e1b7dfb5df1f323bf": {
+      "entity_id": "sensor.ateljen_bordslampa_upptid",
+      "name": null,
+      "original_name": "Upptid",
+      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
+      "area_id": null
+    },
+    "f89a39dec0abedfe0db425c60c08a124": {
+      "entity_id": "sensor.ateljen_bordslampa_startorsak",
+      "name": null,
+      "original_name": "Startorsak",
+      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
+      "area_id": null
+    },
+    "53600658807c9060273661d460dd193c": {
+      "entity_id": "number.ateljen_bordslampa_fargtemperatur_vid_paslagning",
+      "name": null,
+      "original_name": "Färgtemperatur vid påslagning",
+      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
+      "area_id": null
+    },
+    "0909bc1ff17f059c009f23766737f5cd": {
+      "entity_id": "update.ateljen_bordslampa_firmware",
+      "name": null,
+      "original_name": "Firmware",
+      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
+      "area_id": null
+    },
+    "03965b06fbeab5160dd91a3e7d8b6a92": {
+      "entity_id": "button.ateljen_bordslampa_identifiera",
+      "name": null,
+      "original_name": "Identifiera",
+      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
+      "area_id": null
+    },
+    "5307ce4cdc5b2dcdc377877b9fd71b75": {
+      "entity_id": "number.ateljen_bordslampa_niva_vid_paslagning",
+      "name": "Nivå vid påslagning",
+      "original_name": "På nivå",
+      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
+      "area_id": null
+    },
+    "da936fad0dd75c1f8953918a8c56d9b5": {
+      "entity_id": "number.ateljen_bordslampa_overgangstid_pa_av",
+      "name": "Övergångstid på/av",
+      "original_name": "På/av övergångstid",
+      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
+      "area_id": null
+    },
+    "09c206bc158135d95ddce5ca98daacfb": {
+      "entity_id": "select.ateljen_bordslampa_uppstartsbeteende",
+      "name": null,
+      "original_name": "Uppstartsbeteende",
+      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
+      "area_id": null
+    },
+    "ccd4e7b7de4a6ae6ac8eb5e0723b3140": {
+      "entity_id": "number.ateljen_bordslampa_niva_vid_uppstart",
+      "name": "Nivå vid uppstart",
+      "original_name": "Power on-nivå",
+      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
+      "area_id": null
+    },
+    "db8b06bfaf25e89099e3d409d46cb93a": {
+      "entity_id": "sensor.ateljen_bordslampa_thread_routingroll",
+      "name": "Thread-routingroll",
+      "original_name": "Thread-routing roll",
+      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
+      "area_id": null
+    },
+    "ea232970141dc8ce12f13037aef96a81": {
+      "entity_id": "sensor.ateljen_bordslampa_beraknad_effekt",
+      "name": "Beräknad effekt",
+      "original_name": "Bordslampa – beräknad förbrukning belysning power",
+      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
+      "area_id": null
+    },
+    "8dc3c5bef79924851ebb85bf577c066d": {
+      "entity_id": "sensor.ateljen_bordslampa_beraknad_energi",
+      "name": "Beräknad energi",
+      "original_name": "Bordslampa – beräknad förbrukning belysning energy",
+      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
+      "area_id": null
+    },
+    "7498925c864a6a67d9b158b2a7a719b9": {
+      "entity_id": "light.ateljen_bordslampa",
+      "name": null,
+      "original_name": null,
+      "device_id": "2d8b26e1c47f7b92d725cede4a56ceff",
+      "area_id": null
+    },
+    "5c6e78bbd091e0a51923d4f655968aaf": {
+      "entity_id": "button.anova_sous_vide_disconnect_device",
+      "name": null,
+      "original_name": "Disconnect device",
+      "device_id": "a4a3a29001ac00afb2ffeca00891521c",
+      "area_id": null
     }
   },
   "compatibility_exceptions": {
@@ -71835,5 +71828,10 @@
     "sensor.verandan_temp": "Alexa: sparad exponering, stabil identitet bevaras även medan Alexa är avstängt",
     "sensor.utomhus_temp": "Google Assistant: externt enhets-ID bevaras; Alexa: sparad exponering, stabil identitet bevaras även medan Alexa är avstängt",
     "calendar.sophamtning": "Kalenderintegration: stabilt ID bevaras för oförändrad historikrepresentation och kalenderadress"
+  },
+  "local_integration_code_sha256": {
+    "custom_components/plant/sensor.py": "6c0b163f30bfab7842d7ef9183e7c040496003cd787eb0288fc5b4ddc94e3ef8",
+    "custom_components/plant/number.py": "e6d79a8b62a27b7d6da33cc6454ae50306148b206f835278bdd3801cdcf51c35",
+    "custom_components/powercalc/helpers.py": "0761f1c95f8149ed7524f51a17ef681a1b2023e02f3a5ae53e6d992b4bb20a3a"
   }
 }

@@ -1,6 +1,6 @@
 {
   "read_only": true,
-  "registered_entities": 10156,
+  "registered_entities": 10155,
   "duplicate_entity_ids": 0,
   "obsolete_active_references": [],
   "inactive_unregistered_exposure_exclusions": [
@@ -10,5 +10,6 @@
   "new_entities_to_review": [],
   "changed_entities_to_review": [],
   "removed_since_review": 0,
-  "compatibility_exceptions": 83
+  "compatibility_exceptions": 83,
+  "local_integration_code_changes_to_review": []
 }

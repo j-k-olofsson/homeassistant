@@ -1,0 +1,420 @@
+{
+  "sensor.ateljen_bordslampa_beraknad_effekt": [
+    {
+      "start": 1794052800000,
+      "end": 1794056400000,
+      "max": 0.76,
+      "min": 0.72,
+      "sum": null,
+      "mean": 0.7281724449777779,
+      "state": null
+    },
+    {
+      "start": 1794056400000,
+      "end": 1794060000000,
+      "max": 0.78,
+      "min": 0.73,
+      "sum": null,
+      "mean": 0.7519231381305556,
+      "state": null
+    },
+    {
+      "start": 1794060000000,
+      "end": 1794063600000,
+      "max": 0.77,
+      "min": 0.71,
+      "sum": null,
+      "mean": 0.7656336697944442,
+      "state": null
+    },
+    {
+      "start": 1794063600000,
+      "end": 1794067200000,
+      "max": 0.77,
+      "min": 0.77,
+      "sum": null,
+      "mean": 0.7699999999999999,
+      "state": null
+    },
+    {
+      "start": 1794067200000,
+      "end": 1794070800000,
+      "max": 0.77,
+      "min": 0.77,
+      "sum": null,
+      "mean": 0.7699999999999999,
+      "state": null
+    },
+    {
+      "start": 1794070800000,
+      "end": 1794074400000,
+      "max": 0.77,
+      "min": 0.77,
+      "sum": null,
+      "mean": 0.7699999999999999,
+      "state": null
+    },
+    {
+      "start": 1794074400000,
+      "end": 1794078000000,
+      "max": 0.77,
+      "min": 0.77,
+      "sum": null,
+      "mean": 0.7699999999999999,
+      "state": null
+    },
+    {
+      "start": 1794078000000,
+      "end": 1794081600000,
+      "max": 0.77,
+      "min": 0.77,
+      "sum": null,
+      "mean": 0.7699999999999999,
+      "state": null
+    },
+    {
+      "start": 1794081600000,
+      "end": 1794085200000,
+      "max": 0.78,
+      "min": 0.41,
+      "sum": null,
+      "mean": 0.410683019225,
+      "state": null
+    },
+    {
+      "start": 1794085200000,
+      "end": 1794088800000,
+      "max": 0.41,
+      "min": 0.41,
+      "sum": null,
+      "mean": 0.4100000000000001,
+      "state": null
+    },
+    {
+      "start": 1794088800000,
+      "end": 1794092400000,
+      "max": 0.41,
+      "min": 0.41,
+      "sum": null,
+      "mean": 0.4100000000000001,
+      "state": null
+    },
+    {
+      "start": 1794092400000,
+      "end": 1794096000000,
+      "max": 0.41,
+      "min": 0.41,
+      "sum": null,
+      "mean": 0.4100000000000001,
+      "state": null
+    },
+    {
+      "start": 1794096000000,
+      "end": 1794099600000,
+      "max": 0.41,
+      "min": 0.41,
+      "sum": null,
+      "mean": 0.4100000000000001,
+      "state": null
+    },
+    {
+      "start": 1794099600000,
+      "end": 1794103200000,
+      "max": 0.41,
+      "min": 0.41,
+      "sum": null,
+      "mean": 0.4100000000000001,
+      "state": null
+    },
+    {
+      "start": 1794103200000,
+      "end": 1794106800000,
+      "max": 0.41,
+      "min": 0.41,
+      "sum": null,
+      "mean": 0.4100000000000001,
+      "state": null
+    },
+    {
+      "start": 1794106800000,
+      "end": 1794110400000,
+      "max": 0.41,
+      "min": 0.41,
+      "sum": null,
+      "mean": 0.4100000000000001,
+      "state": null
+    },
+    {
+      "start": 1794110400000,
+      "end": 1794114000000,
+      "max": 0.41,
+      "min": 0.41,
+      "sum": null,
+      "mean": 0.4100000000000001,
+      "state": null
+    },
+    {
+      "start": 1794114000000,
+      "end": 1794117600000,
+      "max": 0.41,
+      "min": 0.41,
+      "sum": null,
+      "mean": 0.4100000000000001,
+      "state": null
+    },
+    {
+      "start": 1794117600000,
+      "end": 1794121200000,
+      "max": 0.77,
+      "min": 0.41,
+      "sum": null,
+      "mean": 0.62008595615,
+      "state": null
+    },
+    {
+      "start": 1794121200000,
+      "end": 1794124800000,
+      "max": 0.78,
+      "min": 0.73,
+      "sum": null,
+      "mean": 0.7532113474000001,
+      "state": null
+    },
+    {
+      "start": 1794124800000,
+      "end": 1794128400000,
+      "max": 0.74,
+      "min": 0.72,
+      "sum": null,
+      "mean": 0.7271880290916667,
+      "state": null
+    },
+    {
+      "start": 1794128400000,
+      "end": 1794132000000,
+      "max": 0.73,
+      "min": 0.72,
+      "sum": null,
+      "mean": 0.7265700244722225,
+      "state": null
+    },
+    {
+      "start": 1794132000000,
+      "end": 1794135600000,
+      "max": 0.73,
+      "min": 0.73,
+      "sum": null,
+      "mean": 0.7300000000000001,
+      "state": null
+    }
+  ],
+  "sensor.ateljen_bordslampa_beraknad_energi": [
+    {
+      "start": 1794052800000,
+      "end": 1794056400000,
+      "max": null,
+      "min": null,
+      "sum": 3.2337,
+      "mean": null,
+      "state": 3.2338
+    },
+    {
+      "start": 1794056400000,
+      "end": 1794060000000,
+      "max": null,
+      "min": null,
+      "sum": 3.2344,
+      "mean": null,
+      "state": 3.2345
+    },
+    {
+      "start": 1794060000000,
+      "end": 1794063600000,
+      "max": null,
+      "min": null,
+      "sum": 3.2350999999999996,
+      "mean": null,
+      "state": 3.2352
+    },
+    {
+      "start": 1794063600000,
+      "end": 1794067200000,
+      "max": null,
+      "min": null,
+      "sum": 3.2359,
+      "mean": null,
+      "state": 3.236
+    },
+    {
+      "start": 1794067200000,
+      "end": 1794070800000,
+      "max": null,
+      "min": null,
+      "sum": 3.2365999999999997,
+      "mean": null,
+      "state": 3.2367
+    },
+    {
+      "start": 1794070800000,
+      "end": 1794074400000,
+      "max": null,
+      "min": null,
+      "sum": 3.2375,
+      "mean": null,
+      "state": 3.2376
+    },
+    {
+      "start": 1794074400000,
+      "end": 1794078000000,
+      "max": null,
+      "min": null,
+      "sum": 3.2382999999999997,
+      "mean": null,
+      "state": 3.2384
+    },
+    {
+      "start": 1794078000000,
+      "end": 1794081600000,
+      "max": null,
+      "min": null,
+      "sum": 3.239,
+      "mean": null,
+      "state": 3.2391
+    },
+    {
+      "start": 1794081600000,
+      "end": 1794085200000,
+      "max": null,
+      "min": null,
+      "sum": 3.2394,
+      "mean": null,
+      "state": 3.2395
+    },
+    {
+      "start": 1794085200000,
+      "end": 1794088800000,
+      "max": null,
+      "min": null,
+      "sum": 3.2398,
+      "mean": null,
+      "state": 3.2399
+    },
+    {
+      "start": 1794088800000,
+      "end": 1794092400000,
+      "max": null,
+      "min": null,
+      "sum": 3.2401999999999997,
+      "mean": null,
+      "state": 3.2403
+    },
+    {
+      "start": 1794092400000,
+      "end": 1794096000000,
+      "max": null,
+      "min": null,
+      "sum": 3.2405999999999997,
+      "mean": null,
+      "state": 3.2407
+    },
+    {
+      "start": 1794096000000,
+      "end": 1794099600000,
+      "max": null,
+      "min": null,
+      "sum": 3.2409999999999997,
+      "mean": null,
+      "state": 3.2411
+    },
+    {
+      "start": 1794099600000,
+      "end": 1794103200000,
+      "max": null,
+      "min": null,
+      "sum": 3.2413999999999996,
+      "mean": null,
+      "state": 3.2415
+    },
+    {
+      "start": 1794103200000,
+      "end": 1794106800000,
+      "max": null,
+      "min": null,
+      "sum": 3.2419,
+      "mean": null,
+      "state": 3.242
+    },
+    {
+      "start": 1794106800000,
+      "end": 1794110400000,
+      "max": null,
+      "min": null,
+      "sum": 3.2422999999999997,
+      "mean": null,
+      "state": 3.2424
+    },
+    {
+      "start": 1794110400000,
+      "end": 1794114000000,
+      "max": null,
+      "min": null,
+      "sum": 3.2426999999999997,
+      "mean": null,
+      "state": 3.2428
+    },
+    {
+      "start": 1794114000000,
+      "end": 1794117600000,
+      "max": null,
+      "min": null,
+      "sum": 3.2430999999999996,
+      "mean": null,
+      "state": 3.2432
+    },
+    {
+      "start": 1794117600000,
+      "end": 1794121200000,
+      "max": null,
+      "min": null,
+      "sum": 3.2436999999999996,
+      "mean": null,
+      "state": 3.2438
+    },
+    {
+      "start": 1794121200000,
+      "end": 1794124800000,
+      "max": null,
+      "min": null,
+      "sum": 3.2443999999999997,
+      "mean": null,
+      "state": 3.2445
+    },
+    {
+      "start": 1794124800000,
+      "end": 1794128400000,
+      "max": null,
+      "min": null,
+      "sum": 3.2449,
+      "mean": null,
+      "state": 3.245
+    },
+    {
+      "start": 1794128400000,
+      "end": 1794132000000,
+      "max": null,
+      "min": null,
+      "sum": 3.2453,
+      "mean": null,
+      "state": 3.2454
+    },
+    {
+      "start": 1794132000000,
+      "end": 1794135600000,
+      "max": null,
+      "min": null,
+      "sum": 3.246,
+      "mean": null,
+      "state": 3.2461
+    }
+  ]
+}

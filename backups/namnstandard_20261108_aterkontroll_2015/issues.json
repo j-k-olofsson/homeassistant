@@ -1,0 +1,23 @@
+{
+  "issues": [
+    {
+      "breaks_in_ha_version": null,
+      "created": "2026-11-08T12:23:53.969547+00:00",
+      "dismissed_version": null,
+      "ignored": false,
+      "domain": "automation",
+      "is_fixable": true,
+      "issue_domain": null,
+      "issue_id": "automation.nya_elpriser_har_publicerats_service_not_found_notify.flocken",
+      "learn_more_url": null,
+      "severity": "error",
+      "translation_key": "service_not_found",
+      "translation_placeholders": {
+        "service": "notify.flocken",
+        "entity_id": "automation.nya_elpriser_har_publicerats",
+        "name": "Nya elpriser har publicerats",
+        "edit": "/config/automation/edit/1680086760563"
+      }
+    }
+  ]
+}

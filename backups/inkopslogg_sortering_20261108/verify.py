@@ -45,6 +45,14 @@ async def main():
             for state in states:
                 if state['entity_id'].startswith('todo.'):
                     lists[state['entity_id']] = (await call('todo/item/list', entity_id=state['entity_id']))['items']
+            if mode == 'live-test':
+                expected = lists['todo.inkopslogg']
+                await call('todo/item/move', entity_id='todo.inkopslogg', uid=expected[-1]['uid'])
+                await asyncio.sleep(2)
+                actual = (await call('todo/item/list', entity_id='todo.inkopslogg'))['items']
+                assert actual == expected, 'Automatic correction of list order failed'
+                print(json.dumps({'live_subscription_verified': True, 'order_automatically_restored': True, 'items': len(actual)}))
+                return
             (ROOT / (mode + '.json')).write_text(json.dumps(lists, ensure_ascii=False, indent=2))
             if mode == 'before':
                 print(json.dumps({'state': config['state'], 'counts': {k: len(v) for k, v in lists.items()}}))

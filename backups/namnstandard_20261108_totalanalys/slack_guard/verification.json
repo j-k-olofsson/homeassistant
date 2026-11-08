@@ -1,0 +1,14 @@
+{
+  "status": "verified",
+  "changed_conditions": 1,
+  "unloaded_slack_condition": false,
+  "loaded_state_comparison_verified": true,
+  "other_actions_and_scripts_preserved": true,
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  },
+  "messages_sent": false,
+  "authentication_changed": false
+}

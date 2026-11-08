@@ -291,7 +291,7 @@ granny_broadcast:
   - choose:
     - conditions:
       - condition: template
-        value_template: '{{ ''slack'' in _channels }}'
+        value_template: '{{ ''slack'' in _channels and config_entry_attr(''01KC1W19A1VHXPTMNJ7QFS2XM6'', ''state'') == ''loaded'' }}'
       sequence:
       - action: notify.flocken
         data:

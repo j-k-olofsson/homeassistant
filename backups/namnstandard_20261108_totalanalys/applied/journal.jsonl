@@ -1,0 +1,17 @@
+{"status": "rename_intent", "old": "sensor.ateljen_bordslampa_ateljen_thread_kanal", "new": "sensor.ateljen_bordslampa_thread_kanal"}
+{"status": "rename_intent", "old": "sensor.ateljen_bordslampa_ateljen_thread_natverksnamn", "new": "sensor.ateljen_bordslampa_thread_natverksnamn"}
+{"status": "rename_intent", "old": "sensor.ateljen_bordslampa_ateljen_antal_omstarter", "new": "sensor.ateljen_bordslampa_antal_omstarter"}
+{"status": "rename_intent", "old": "sensor.ateljen_bordslampa_ateljen_upptid", "new": "sensor.ateljen_bordslampa_upptid"}
+{"status": "rename_intent", "old": "sensor.ateljen_bordslampa_ateljen_startorsak", "new": "sensor.ateljen_bordslampa_startorsak"}
+{"status": "rename_intent", "old": "number.ateljen_bordslampa_ateljen_fargtemperatur_vid_paslagning", "new": "number.ateljen_bordslampa_fargtemperatur_vid_paslagning"}
+{"status": "rename_intent", "old": "update.ateljen_bordslampa_ateljen_firmware", "new": "update.ateljen_bordslampa_firmware"}
+{"status": "rename_intent", "old": "button.ateljen_bordslampa_ateljen_identifiera", "new": "button.ateljen_bordslampa_identifiera"}
+{"status": "rename_intent", "old": "number.ateljen_bordslampa_ateljen_niva_vid_paslagning", "new": "number.ateljen_bordslampa_niva_vid_paslagning"}
+{"status": "rename_intent", "old": "number.ateljen_bordslampa_ateljen_overgangstid_pa_av", "new": "number.ateljen_bordslampa_overgangstid_pa_av"}
+{"status": "rename_intent", "old": "select.ateljen_bordslampa_ateljen_uppstartsbeteende", "new": "select.ateljen_bordslampa_uppstartsbeteende"}
+{"status": "rename_intent", "old": "number.ateljen_bordslampa_ateljen_niva_vid_uppstart", "new": "number.ateljen_bordslampa_niva_vid_uppstart"}
+{"status": "rename_intent", "old": "sensor.ateljen_bordslampa_ateljen_thread_routingroll", "new": "sensor.ateljen_bordslampa_thread_routingroll"}
+{"status": "rename_intent", "old": "sensor.ateljen_bordslampa_ateljen_beraknad_effekt", "new": "sensor.ateljen_bordslampa_beraknad_effekt"}
+{"status": "rename_intent", "old": "sensor.ateljen_bordslampa_ateljen_beraknad_energi", "new": "sensor.ateljen_bordslampa_beraknad_energi"}
+{"status": "rename_intent", "old": "light.ateljen_bordslampa_ateljen", "new": "light.ateljen_bordslampa"}
+{"status": "core_stopped"}

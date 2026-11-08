@@ -257,13 +257,17 @@ def get_related_entity_by_device_class(
     source_entity: SourceEntity,
     device_class: SensorDeviceClass | BinarySensorDeviceClass,
 ) -> str | None:
-    """Find an entity by device class, preferring the source device."""
+    """Match the entity domain and prefer the native source integration."""
+    domain = "sensor" if isinstance(device_class, SensorDeviceClass) else "binary_sensor"
+    preferred_platform = source_entity.entity_entry.platform if source_entity.entity_entry else None
     return _get_related_entity_for_device(
         hass,
         source_entity=source_entity,
         match_label="device class",
         match_value=device_class,
-        matcher=lambda entity_entry: (entity_entry.device_class or entity_entry.original_device_class) == device_class,
+        matcher=lambda entity_entry: entity_entry.entity_id.startswith(f"{domain}.")
+        and (entity_entry.device_class or entity_entry.original_device_class) == device_class,
+        preferred_platform=preferred_platform,
     )
 
 
@@ -310,6 +314,7 @@ def _get_related_entity_for_device(
     match_label: str,
     match_value: SensorDeviceClass | BinarySensorDeviceClass | str,
     matcher: Callable[[RegistryEntry], bool],
+    preferred_platform: str | None = None,
 ) -> str | None:
     """Prefer a source-device match, otherwise require one unambiguous linked-device match."""
     entity_reg = entity_registry.async_get(hass)
@@ -318,9 +323,24 @@ def _get_related_entity_for_device(
         _LOGGER.debug("No device_id available, cannot find related entity")
         return None
 
-    for entity_entry in entity_registry.async_entries_for_device(entity_reg, device_id):
-        if matcher(entity_entry):
-            return entity_entry.entity_id
+    local_matches = [
+        entry for entry in entity_registry.async_entries_for_device(entity_reg, device_id)
+        if matcher(entry)
+    ]
+    if preferred_platform is None:
+        if local_matches:
+            return local_matches[0].entity_id
+    elif local_matches:
+        native_matches = [entry for entry in local_matches if entry.platform == preferred_platform]
+        candidates = native_matches or local_matches
+        if len(candidates) == 1:
+            return candidates[0].entity_id
+        _LOGGER.warning(
+            "Ambiguous local entities for %s with %s %s: %s",
+            source_entity.entity_id, match_label, match_value,
+            ", ".join(sorted(entry.entity_id for entry in candidates)),
+        )
+        return None
 
     related_entities: set[str] = set()
     for device in get_profile_related_devices(hass, device_id):

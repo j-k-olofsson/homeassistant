@@ -2030,9 +2030,9 @@
       sequence:
       - action: light.turn_on
         target:
-          entity_id: light.ateljen_bordslampa_ateljen
+          entity_id: light.ateljen_bordslampa
         data:
-          color_temp_kelvin: '{{ state_attr(''light.ateljen_bordslampa_ateljen'', ''min_color_temp_kelvin'')
+          color_temp_kelvin: '{{ state_attr(''light.ateljen_bordslampa'', ''min_color_temp_kelvin'')
             or 2000 }}'
           brightness_pct: 50
           transition: 1
@@ -2042,9 +2042,9 @@
       sequence:
       - action: light.turn_on
         target:
-          entity_id: light.ateljen_bordslampa_ateljen
+          entity_id: light.ateljen_bordslampa
         data:
-          color_temp_kelvin: '{{ state_attr(''light.ateljen_bordslampa_ateljen'', ''min_color_temp_kelvin'')
+          color_temp_kelvin: '{{ state_attr(''light.ateljen_bordslampa'', ''min_color_temp_kelvin'')
             or 2000 }}'
           brightness_pct: 5
           transition: 1
@@ -2072,27 +2072,27 @@
                     * t) | int }}'
               - action: light.turn_on
                 target:
-                  entity_id: light.ateljen_bordslampa_ateljen
+                  entity_id: light.ateljen_bordslampa
                 data:
-                  color_temp_kelvin: '{{ state_attr(''light.ateljen_bordslampa_ateljen'',
+                  color_temp_kelvin: '{{ state_attr(''light.ateljen_bordslampa'',
                     ''min_color_temp_kelvin'') or 2000 }}'
                   brightness_pct: '{{ bri }}'
                   transition: 30
               - delay: 00:00:30
           - action: light.turn_on
             target:
-              entity_id: light.ateljen_bordslampa_ateljen
+              entity_id: light.ateljen_bordslampa
             data:
-              color_temp_kelvin: '{{ state_attr(''light.ateljen_bordslampa_ateljen'', ''min_color_temp_kelvin'')
+              color_temp_kelvin: '{{ state_attr(''light.ateljen_bordslampa'', ''min_color_temp_kelvin'')
                 or 2000 }}'
               brightness_pct: 50
               transition: 30
         default:
         - action: light.turn_on
           target:
-            entity_id: light.ateljen_bordslampa_ateljen
+            entity_id: light.ateljen_bordslampa
           data:
-            color_temp_kelvin: '{{ state_attr(''light.ateljen_bordslampa_ateljen'', ''min_color_temp_kelvin'')
+            color_temp_kelvin: '{{ state_attr(''light.ateljen_bordslampa'', ''min_color_temp_kelvin'')
               or 2000 }}'
             brightness_pct: 50
             transition: 1

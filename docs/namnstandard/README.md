@@ -1,5 +1,9 @@
 # Namnstandardisering – aktuell slutrapport 8 november 2026
 
+> Senaste genomgång: **[Totalanalys 8 november 2026](TOTALANALYS.md)**. Ytterligare namn-/områdesjusteringar och en verifierad Powercalc-rättning är genomförda. Inventeringarna och statusfilen nedan är uppdaterade. Etappsiffrorna i den äldre redogörelsen beskriver tidigare omgångar.
+
+> Senaste genomgång: **[Totalanalys 8 november 2026](TOTALANALYS.md)**. Ytterligare namn-/områdesjusteringar och en verifierad Powercalc-rättning är genomförda. Inventeringarna och statusfilen nedan är uppdaterade. Etappsiffrorna i den äldre redogörelsen beskriver tidigare omgångar.
+
 Huvudmigrationen och de tre efterföljande restpunkterna är genomförda. Slider är borttagen efter användningskontroll. ESPHome09 heter **Blomlampa 3** och tillhör **Köket**, liksom dess fem länkade nätverksposter. Den oanvända WiFi-omskanningen är borttagen. Inga namnfrågor är uppskjutna.
 
 Omstarterna visade separata driftproblem med autentisering och Cast-anslutningar. OpenAI är nu anslutet efter en separat nyckeländring. Slack avvisar sin oförändrade token med `token_revoked`, vilket hindrar `notify.flocken` från att registreras. [Aktuell rest-, drift- och underhållslista](RESTPUNKTER.md). Detta innebär att den aktuella driftkontrollen har dokumenterade avvikelser; namnarbetet rapporteras inte som en felfri kontroll av hela installationens drift.
@@ -8,13 +12,13 @@ Omstarterna visade separata driftproblem med autentisering och Cast-anslutningar
 
 | Poster | Antal |
 |---|---:|
-| Granskade registerentiteter nu | 10 156 |
+| Granskade registerentiteter nu | 10 155 |
 | Granskade enhetsposter nu | 1 071 |
-| Entitets-ID:n ändrade netto bland kvarvarande entiteter | 9 747 |
+| Entitets-ID:n ändrade netto bland kvarvarande entiteter | 9 753 |
 | Ändrade egna entitetsnamn | 7 636 |
 | Ändrade aliaslistor | 8 220 |
-| Ändrade enhetsnamn | 293 |
-| Ändrade områdestilldelningar på enhetsposter | 106 |
+| Ändrade enhetsnamn | 301 |
+| Ändrade områdestilldelningar på enhetsposter | 107 |
 | Borttagna oanvända registerentiteter | 2 |
 
 Antalen jämför oföränderliga registeridentiteter, inte summan av etappoperationer. Det finns också 111 källstyrda tillståndsentiteter utan registerpost. Flera enhetsposter kan representera samma fysiska hårdvara genom olika integrationer.

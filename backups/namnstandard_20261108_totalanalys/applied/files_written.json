@@ -1,0 +1,5 @@
+[
+  "automations.yaml",
+  "custom_components/powercalc/helpers.py",
+  ".storage/core.config_entries"
+]

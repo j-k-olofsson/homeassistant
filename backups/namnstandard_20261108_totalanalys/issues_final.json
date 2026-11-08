@@ -1,0 +1,42 @@
+{
+  "issues": [
+    {
+      "breaks_in_ha_version": null,
+      "created": "2026-11-08T11:25:39.310124+00:00",
+      "dismissed_version": null,
+      "ignored": false,
+      "domain": "spook",
+      "is_fixable": false,
+      "issue_domain": "script",
+      "issue_id": "script_unknown_service_references_script.granny_skicka_meddelande_56b84d17",
+      "learn_more_url": "https://spook.boo/script#unknown-referenced-actions",
+      "severity": "warning",
+      "translation_key": "script_unknown_service_references",
+      "translation_placeholders": {
+        "services": "- `notify.flocken`",
+        "script": "Granny – skicka meddelande",
+        "edit": "/config/script/edit/granny_broadcast",
+        "entity_id": "script.granny_skicka_meddelande"
+      }
+    },
+    {
+      "breaks_in_ha_version": null,
+      "created": "2026-11-08T12:23:53.969547+00:00",
+      "dismissed_version": null,
+      "ignored": false,
+      "domain": "automation",
+      "is_fixable": true,
+      "issue_domain": null,
+      "issue_id": "automation.nya_elpriser_har_publicerats_service_not_found_notify.flocken",
+      "learn_more_url": null,
+      "severity": "error",
+      "translation_key": "service_not_found",
+      "translation_placeholders": {
+        "service": "notify.flocken",
+        "entity_id": "automation.nya_elpriser_har_publicerats",
+        "name": "Nya elpriser har publicerats",
+        "edit": "/config/automation/edit/1680086760563"
+      }
+    }
+  ]
+}

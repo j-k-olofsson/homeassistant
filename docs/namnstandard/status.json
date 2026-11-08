@@ -2,15 +2,15 @@
   "status": "completed_with_separate_operational_issues",
   "completed_date": "2026-11-08",
   "counts": {
-    "registered_entities": 10156,
+    "registered_entities": 10155,
     "registered_devices": 1071,
     "unregistered_state_entities": 111,
-    "net_entity_ids_changed_since_original": 9747,
+    "net_entity_ids_changed_since_original": 9753,
     "entity_display_name_overrides_changed": 7636,
     "entity_alias_lists_changed": 8220,
-    "device_names_changed": 293,
-    "device_areas_changed": 106,
-    "entities_added_since_original": 29,
+    "device_names_changed": 301,
+    "device_areas_changed": 107,
+    "entities_added_since_original": 28,
     "devices_added_since_original": 5,
     "documented_id_exceptions": 83,
     "entities_removed_since_original": 2
@@ -105,7 +105,7 @@
   "backup_after_completion": "8dc2d539",
   "reference_audit": {
     "read_only": true,
-    "registered_entities": 10156,
+    "registered_entities": 10155,
     "duplicate_entity_ids": 0,
     "obsolete_active_references": [],
     "inactive_unregistered_exposure_exclusions": [
@@ -115,7 +115,8 @@
     "new_entities_to_review": [],
     "changed_entities_to_review": [],
     "removed_since_review": 0,
-    "compatibility_exceptions": 83
+    "compatibility_exceptions": 83,
+    "local_integration_code_changes_to_review": []
   },
   "final_post_steps": {
     "physical_root_title": "verified",
@@ -183,7 +184,7 @@
   },
   "latest_followup_backup_before": "d381dcba",
   "latest_followup_backup_after": "d8d4fa67",
-  "updated_at": "2026-11-08T11:51:47.976060+00:00",
+  "updated_at": "2026-11-08T12:45:18.970860+00:00",
   "notify_flocken": {
     "status": "deferred_by_user_until_new_token",
     "action": "notify.flocken",
@@ -226,5 +227,136 @@
   },
   "deferred_operational_items": [
     "Slack / notify.flocken: ny giltig token införs av användaren i efterhand"
-  ]
+  ],
+  "latest_total_review": {
+    "performed_at": "2026-11-08T13:40:44.102911+01:00",
+    "verification": {
+      "status": "review_completed",
+      "registered_entities": 10155,
+      "registered_devices": 1071,
+      "config_check": {
+        "result": "valid",
+        "errors": null,
+        "warnings": null
+      },
+      "all_previously_loaded_active_powercalc_entries_loaded": true,
+      "powercalc_value_regressions": [],
+      "robot_native_battery_and_derived_values": {
+        "sensor.koket_max_s6_maxv_batteriniva": "100",
+        "sensor.koket_max_s6_maxv_beraknad_effekt": "2.53",
+        "sensor.koket_max_s6_maxv_beraknad_energi": "43.4001"
+      },
+      "automation_states_preserved": 81,
+      "helper_value_differences": [],
+      "outdoor_proxy_area": "utomhus",
+      "four_distance_references_correct": true,
+      "credentials_unchanged": {
+        "openai_conversation": true,
+        "slack": true
+      },
+      "unavailable_integrations": [
+        {
+          "entry_id": "289db7cc852820c5f42a0955713ad983",
+          "domain": "prusalink",
+          "title": "PrusaLink",
+          "state": "setup_retry"
+        },
+        {
+          "entry_id": "01KC1W19A1VHXPTMNJ7QFS2XM6",
+          "domain": "slack",
+          "title": "flocken",
+          "state": "setup_retry"
+        }
+      ],
+      "repairs": [
+        {
+          "domain": "spook",
+          "issue_id": "script_unknown_service_references_script.granny_skicka_meddelande_56b84d17",
+          "severity": "warning"
+        },
+        {
+          "domain": "automation",
+          "issue_id": "automation.nya_elpriser_har_publicerats_service_not_found_notify.flocken",
+          "severity": "error"
+        }
+      ],
+      "firmware_uploaded": false,
+      "test_messages_sent": false,
+      "physical_actions_tested": false,
+      "slack_guard": {
+        "status": "verified",
+        "changed_conditions": 1,
+        "unloaded_slack_condition": false,
+        "loaded_state_comparison_verified": true,
+        "other_actions_and_scripts_preserved": true,
+        "config_check": {
+          "result": "valid",
+          "errors": null,
+          "warnings": null
+        },
+        "messages_sent": false,
+        "authentication_changed": false
+      },
+      "new_powercalc_errors": 0
+    },
+    "changes": {
+      "status": "verified",
+      "entity_ids_renamed": 16,
+      "device_names_updated": 15,
+      "entity_function_names_updated": 22,
+      "integration_titles_updated": 8,
+      "orphan_integration_entries_newly_archived": 3,
+      "history_records_verified": 238,
+      "statistics_points_verified": 46,
+      "robot_power_after": "2.53",
+      "native_same_mac_reassociations": 0,
+      "config_check": {
+        "result": "valid",
+        "errors": null,
+        "warnings": null
+      },
+      "automation_states_preserved": 81
+    },
+    "reference_audit": {
+      "read_only": true,
+      "sources_and_stores_checked": 42,
+      "used_blueprints_resolved": [
+        "blueprints/automation/andrew-codechimp/battery_notes_battery_not_reported.yaml",
+        "blueprints/automation/andrew-codechimp/battery_notes_battery_replaced.yaml",
+        "blueprints/automation/andrew-codechimp/battery_notes_battery_threshold.yaml"
+      ],
+      "known_entity_ids": 10266,
+      "unknown_active_entity_references": [],
+      "unknown_active_actions": [],
+      "deferred_actions": [
+        {
+          "file": "scripts.yaml",
+          "path": "granny_broadcast/sequence/7/choose/0/sequence/0/action",
+          "service": "notify.flocken"
+        }
+      ],
+      "dynamic_actions_reviewed_separately": [],
+      "disabled_entries_excluded": 9,
+      "powercalc_dummy_sources_recognized": 3,
+      "read_errors": []
+    },
+    "backup_before": "59002a41",
+    "backup_after": "1d3fbbdc",
+    "encoded_reference_check": {
+      "active_files_checked": 99,
+      "encoded_or_regex_escaped_obsolete_reference_candidates": []
+    },
+    "backup_after_details": {
+      "status": "supervisor_completed_without_errors",
+      "type": "full",
+      "slug": "1d3fbbdc",
+      "bytes": 6762598400,
+      "locations": [
+        "Backup"
+      ],
+      "includes_ha_and_mariadb": true,
+      "archive_read_tested": false,
+      "full_restore_tested": false
+    }
+  }
 }

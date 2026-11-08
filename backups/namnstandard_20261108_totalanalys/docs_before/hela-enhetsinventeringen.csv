@@ -1,0 +1,1072 @@
+﻿register_id,namn_före,namn_nu,område_före,område_nu,granskning,namn_ändrat,område_ändrat
+0b3c031593323275b6a85fe09d302f54,Home Assistant Core,Home Assistant Core,Heimdal (HA),Heimdal (HA),Granskad,False,False
+8603e8938ceb533c9fd806bb4247d9e0,Home Assistant Supervisor,Home Assistant Supervisor,Heimdal (HA),Heimdal (HA),Granskad,False,False
+20ae9419e0e67b4acdb8848565af0ca9,Home Assistant Operating System,Home Assistant Operating System,Heimdal (HA),Heimdal (HA),Granskad,False,False
+5fab041c8f602cfc2fcc1cce20f7adca,SM-G930F,SM-G930F,Heimdal (HA),Heimdal (HA),Granskad,False,False
+cf61f1423e655523f6d921f46f3f1daf,Temp/Hum (Veranda),Klimatsensor,Verandan,Verandan,Granskad,True,False
+2f5421e7f9e52c0299c95b9f10d88901,Temp/Hum (Sovrum),Klimatsensor,Sovrummet,Sovrummet,Granskad,True,False
+42865fcfc600bba2e28060108d65f52d,Temp/Hum (Hemmabio),Klimatsensor,Bion,Bion,Granskad,True,False
+889b90b31932ce33eed47460a645c3aa,Temp/Hum (Verkstad),Klimatsensor,Verkstaden,Verkstaden,Granskad,True,False
+aaa3151216f3c1ff7bbe37bbbc2a3826,Temp/Hum (Ateljé),Klimatsensor,Ateljén,Ateljén,Granskad,True,False
+79a20aa4a5899b2a2e9a0da4fed17acd,Temp/Hum (Utomhus),Klimatsensor,Utomhus,Utomhus,Granskad,True,False
+7d96254eb7ea2efdd8d181a0b3cc568c,Moon,Månen,Heimdal (HA),Heimdal (HA),Granskad,True,False
+3768dc19fb5e0da38a61a8dd68d9f796,Temp/Hum (Hönshus),Klimatsensor,Hönshuset,Hönshuset,Granskad,True,False
+41436bbdced5864801ba96dbb19e0d4a,ESPHome Device Builder,ESPHome Device Builder,Heimdal (HA),Heimdal (HA),Granskad,False,False
+d7d7f12e0dcea98ea597c6ccedfbbcaf,Advanced SSH & Web Terminal,Advanced SSH & Web Terminal,Heimdal (HA),Heimdal (HA),Granskad,False,False
+0cafdcf831bae35e3088ea546cffedb6,MariaDB,MariaDB,Heimdal (HA),Heimdal (HA),Granskad,False,False
+e68b4a3a35208e9ff5df6519d6dd13b8,Spotify Connect,Spotify Connect,Heimdal (HA),Heimdal (HA),Granskad,False,False
+71e92af347d4e9fd031b66db161b5eb2,HassOS SSH port 22222 Configurator,HassOS SSH port 22222 Configurator,Heimdal (HA),Heimdal (HA),Granskad,False,False
+afe8d16147e31a9d35f4d78f2dfb11f3,Utomhuslampa,Utomhuslampa,Friggan,Friggan,Granskad,False,False
+2737556325ca43e4294ee8864a7827d0,Termostat (friggan),Termostat,Friggan,Friggan,Granskad,True,False
+b30097662be090ad664001266b7f9d36,Vattenvärmare (hönshuset),Vattenvärmare,Hönshuset,Hönshuset,Granskad,True,False
+01bf206d70319793afffd5b58d6edeaa,Lampa i redet (Hönshuset),Lampa i redet,Hönshuset,Hönshuset,Granskad,True,False
+2bb9cb602ec800b2f183ceedd0f6b5fe,Ledstrip (sovrum östra),LED-list östra,Heimdal (HA),Sovrummet,Granskad,True,True
+ede71cbfb18b5ffd44b8c45b58834617,Blomlampa 2 (verandan),Blomlampa 2,Köket,Köket,Granskad,True,False
+8216579edd54afdbe31c2df3c6cc6d93,Ledstrip (ateljé norra),LED-list norra,Heimdal (HA),Ateljén,Granskad,True,True
+fe8b77b3639c88eb3818dbd419b1f29f,Ledstrip (sovrum norra),LED-list norra,Heimdal (HA),Sovrummet,Granskad,True,True
+d1d1228b50ea9c694ca0aa3c4e7898a0,Ledstrip (ateljé södra),LED-list södra,Heimdal (HA),Ateljén,Granskad,True,True
+1145e3c5163aab633f8bd77c378632d2,Ledstrip (kök södra),LED-list södra,Heimdal (HA),Köket,Granskad,True,True
+fa552c8b3991002f03b8dd83b8560272,Gasol (utomhus),Gasol,Utomhus,Utomhus,Granskad,True,False
+ca0c5b1f099e3b0d2420449f48fb19e9,TempHyg (gamla verkstan),Klimatsensor,Gamla verkstaden,Gamla verkstaden,Granskad,True,False
+b57bd1138f4e6903698022a609218f5c,Termostat (toaletten),Termostat,Toaletten,Toaletten,Granskad,True,False
+49323d5133aae02a8a4c7b89bbc90f30,Golvvärme (sovrum och kontor),Golvvärme (sovrum och kontor),Sovrummet,Sovrummet,Granskad,False,False
+f8336537ea686bd7d38c033f7f493b2e,Golvvärme (friggan),Golvvärme,Friggan,Friggan,Granskad,True,False
+5f1aeb937f3491bda0e10d3d11ee552f,Blomlampor (bion),Blomlampor,Bion,Bion,Granskad,True,False
+d6c904ad5a953fe297c345a0ca1b0af6,Julbelysning (utomhus),Julbelysning,Utomhus,Utomhus,Granskad,True,False
+dd531a8c3152176a74062250f06b1a46,Termostat (kontoret),Termostat,Kontoret,Kontoret,Granskad,True,False
+5c1163d94b0ab19bffc29d0039a7ab3c,Taklampor (sovrum),Taklampor,Sovrummet,Sovrummet,Granskad,True,False
+82bda88411a24769b8fa12d172e54abd,Poolpump (utomhus),Poolpump (utomhus),Poolen,Poolen,Granskad,False,False
+28cddc7b74b05ab7d1ba90ee889e8f2d,Ledstrip (kök sydöstra),LED-list sydöstra,Heimdal (HA),Köket,Granskad,True,True
+2acf2d15a36735c6da6b9d67d07360f5,Ledstrip (verandan),LED-list,Heimdal (HA),Verandan,Granskad,True,True
+7883ed542e732c9bf362ac20b3edac3c,Ledstrip (kök småfönster),LED-list småfönster,Heimdal (HA),Köket,Granskad,True,True
+92c0ad7e857b0256a132e4f8f7c32a40,Ledstrip (kök östra),LED-list östra,Heimdal (HA),Köket,Granskad,True,True
+7acdb0b707a3474aaf4096052549d2ac,Ledstrip (entrén),LED-list,Heimdal (HA),Entrén,Granskad,True,True
+0cc979ea34852945574729129825a6b2,Blomlampa (ateljén),Blomlampa 3,Köket,Köket,Granskad,True,False
+6916747ff6217f2179c9ec5d3c8a3686,Poolbelysning & temp,Poolbelysning och temperatur,Poolen,Poolen,Granskad,True,False
+0dd72d0022418e746d84ccc7c0dc77d2,phpMyAdmin,phpMyAdmin,Heimdal (HA),Heimdal (HA),Granskad,False,False
+268182f5b46dd75c4ea3df8c631442ad,Diegos väckarklocka,Diegos väckarklocka,Sovrummet,Sovrummet,Granskad,False,False
+b7cece2b28cbe390c0b90b8024d42504,Galaxy Tab 2 hallen,Galaxy Tab 2 hallen,Entrén,Entrén,Granskad,False,False
+fb95d7e0dfe63adac0fec5cf1f0fc569,Home Assistant Host,Home Assistant Host,Heimdal (HA),Heimdal (HA),Granskad,False,False
+b0e6115878c4df246dc5d874c9accdf2,Sun,Solen,Heimdal (HA),Heimdal (HA),Granskad,True,False
+4b8b8881b3db4e7153cfbe00f84a97b9,Workday Sensor,Workday Sensor,Heimdal (HA),Heimdal (HA),Granskad,False,False
+f1bdfe9db3bab04df2b356eb9ba44212,Piper,Piper,Heimdal (HA),Heimdal (HA),Granskad,False,False
+fab7f92027dd24a4e836bb64eb965cf6,RF bridge,RF-brygga,Kontoret,Kontoret,Granskad,True,False
+54d2a489a356e75349f383bef1be62af,Ytterdörren,Ytterdörren,Entrén,Entrén,Granskad,False,False
+40d435c9d77b165fbb9076cda6cf1a38,Vattennivå (hönshuset),Vattennivå,Hönshuset,Hönshuset,Granskad,True,False
+08b962f7b33b8b9dc4d2854d269c19a1,Tailscale,Tailscale,Heimdal (HA),Heimdal (HA),Granskad,False,False
+c625aacb05f0aaf9a190446f7fa560d4,BTHome sensor 2A6D,Balkongdörr,Verandan,Verandan,Granskad,True,False
+076c2ebaa51875bb440a42739602d564,Vattensensor (torkskåp),Vattensensor torkskåp,Ateljén,Ateljén,Granskad,True,False
+adf19c37afca0f7a0f6d338dc13752f9,SM-T835,SM-T835,Heimdal (HA),Heimdal (HA),Granskad,False,False
+d63a0d19b3d081720d8da53aed1a5a73,Julgranen,Julgranen,Verandan,Verandan,Granskad,False,False
+4273d143d2b8204107a7ceb723589fe4,IR gateway,IR-gateway,Bion,Bion,Granskad,True,False
+297fa3e3c581e1c6f6b0a410e70cf483,Hemmabio El #1,Elstyrning 1,Bion,Bion,Granskad,True,False
+06cfed5eda78f075a697b5d0a65b5132,Hemmabio El #2,Elstyrning 2,Bion,Bion,Granskad,True,False
+d54ca7e13530a8fd651018c728d59b20,Esp32 kamera,ESP32-kamera,Utomhus,Utomhus,Granskad,True,False
+2c1eb120b56658da8d624242b43073f9,System Monitor,System Monitor,Heimdal (HA),Heimdal (HA),Granskad,False,False
+89008a50e2dedd275251d14e8367c64d,Matter Server,Matter Server,Heimdal (HA),Heimdal (HA),Granskad,False,False
+a4544520d6ae94064bde84cb294b7be4,Repairs,Repairs,Heimdal (HA),Heimdal (HA),Granskad,False,False
+436bdb35d04629c2ed196e60bba96a4b,Home Assistant,Home Assistant,Heimdal (HA),Heimdal (HA),Granskad,False,False
+71300ffd741c9ae8bda3c141f1b4906d,Home Assistant Cloud,Home Assistant Cloud,Heimdal (HA),Heimdal (HA),Granskad,False,False
+a6add1361e26f3628a1b6f401da2b2f9,apexcharts-card,apexcharts-card,Heimdal (HA),Heimdal (HA),Granskad,False,False
+cded81c1ef16232432ed2b0829162f11,Home Assistant Plant,Home Assistant Plant,Heimdal (HA),Heimdal (HA),Granskad,False,False
+12f0533a76e7d6e6801e19ac57b99380,card-mod,card-mod,Heimdal (HA),Heimdal (HA),Granskad,False,False
+573da8db22f6144f7c4d527d18b04b99,nordpool,nordpool,Heimdal (HA),Heimdal (HA),Granskad,False,False
+097c45db6545924df50a897f3b4e403b,Spook 👻 Your homie,Spook 👻 Your homie,Heimdal (HA),Heimdal (HA),Granskad,False,False
+15957d829dad0fdb04bbfe3a2bec831b,pollenprognos-card,pollenprognos-card,Heimdal (HA),Heimdal (HA),Granskad,False,False
+fb6666e03996880a8e5e8fce96b61ca1,OpenPlantbook,OpenPlantbook,Heimdal (HA),Heimdal (HA),Granskad,False,False
+b6a4d543a3783b73dda3994ff65f0d7e,Svensk Postutdelning,Svensk Postutdelning,Heimdal (HA),Heimdal (HA),Granskad,False,False
+280b8f5662ad5b7e77977526ea403ea8,Custom brand icons,Custom brand icons,Heimdal (HA),Heimdal (HA),Granskad,False,False
+2b4acc393cf177f4909fc0b8e092ba8f,auto-entities,auto-entities,Heimdal (HA),Heimdal (HA),Granskad,False,False
+e535070ea16d7a6f420e26c66ed07da1,Home Connect Alt,Home Connect Alt,Heimdal (HA),Heimdal (HA),Granskad,False,False
+d86e77bc3ebec7013e00326138d20be3,Kiosk Mode,Kiosk Mode,Heimdal (HA),Heimdal (HA),Granskad,False,False
+6eb317e1bcb8c5382398084a8a397ae8,Battery State Card / Entity Row,Battery State Card / Entity Row,Heimdal (HA),Heimdal (HA),Granskad,False,False
+1228abe98cacbc8790f04badb9f0ec23,PiXL,PiXL,Kontoret,Kontoret,Granskad,False,False
+c5f59e4c6a52fe8d67d033a25a4f50c8,Powercalc,Powercalc,Heimdal (HA),Heimdal (HA),Granskad,False,False
+62f017fe564167635288b004d9682fcb,Battery Notes,Battery Notes,Heimdal (HA),Heimdal (HA),Granskad,False,False
+172791358a7ca91d458895b148a0cd82,nspanelpro,nspanelpro,Heimdal (HA),Heimdal (HA),Granskad,False,False
+f981d117f70cd3cb5d3d6f012a68cb1b,PS4,PS4,Bion,Bion,Granskad,False,False
+a7dea894a249afd1b1578d7f30ba21ae,Sänglampor Diego,Sänglampor Diego,Sovrummet,Sovrummet,Granskad,False,False
+04970108bfdfcb59f1ca3405a6e7490e,Sänglampor Manni,Sänglampor Manni,Sovrummet,Sovrummet,Granskad,False,False
+0fd2bbfa263eea2631ef47e85ad4bd4d,Home,Väderprognos SMHI,Heimdal (HA),Heimdal (HA),Granskad,True,False
+93b1be59fb572a5839d0971c8322c93e,Elkostnad t.o.m. idag,Energisammanställning,Heimdal (HA),Heimdal (HA),Granskad,True,False
+42b814b5ee4b8bde1951fbd5a46bbbc4,Temp/Hum (Kök),Klimatsensor,Köket,Köket,Granskad,True,False
+cae4a1d23dae74e6a0903e70ac732261,Blomlampa 1 (Verandan),Blomlampa 1,Verandan,Verandan,Granskad,True,False
+d20e95d12fc062ba28934ae290341031,shellyplug-s-083A8DC344DD,LED-plafonder,Verkstaden,Verkstaden,Granskad,True,False
+4b1b09643004d61b8bd8e96326f68b79,Billaddare,Billaddare,Utomhus,Utomhus,Granskad,False,False
+19a09628fa21b66e7e8a64090e26eb80,Samba NAS,Samba NAS,Heimdal (HA),Heimdal (HA),Granskad,False,False
+f699c6b183561246a9cf6429086d4c5a,Markis (utomhus),Markis,Utomhus,Utomhus,Granskad,True,False
+d9d3f198d064983517a8c2e0ab3724e6,SM-G965F,SM-G965F,Heimdal (HA),Heimdal (HA),Granskad,False,False
+178e05fcb0085e044ed8e859df13a1fa,"Flex Table - Highly customizable, Data visualization","Flex Table - Highly customizable, Data visualization",Heimdal (HA),Heimdal (HA),Granskad,False,False
+aeb820199d9ee3cdc2087b2f05afb420,nordpool_kwh_se3_sek_3_10_025,nordpool_kwh_se3_sek_3_10_025,Heimdal (HA),Heimdal (HA),Granskad,False,False
+156c37fe0ffda38bb57d6399dc5093c7,Garmin Device,Garmin Device,Heimdal (HA),Heimdal (HA),Granskad,False,False
+8d7b0aeca4e1c58ab9609319b7f9352c,Pixel 9 Pro XL,Pixel 9 Pro XL,Heimdal (HA),Heimdal (HA),Granskad,False,False
+f66541be41de7e575c08477f5859cc87,Max S6 MaxV,Max S6 MaxV,Köket,Köket,Granskad,False,False
+4858b296b8669ca431964d03f41cae11,Elmätare (elstolpen),Elmätare (elstolpen),Utomhus,Utomhus,Granskad,False,False
+c46922f1cb8b776d007e9257415b04ae,Golvvärme (bion),Golvvärme,Bion,Bion,Granskad,True,False
+b94bb0dbd4e4f1699c1e9a3eaf677742,Ledstrip (toalett),LED-list,Heimdal (HA),Toaletten,Granskad,True,True
+962fcbfe939b3bdff9d4b0b2e7938b98,SM-G986B,SM-G986B,Heimdal (HA),Heimdal (HA),Granskad,False,False
+d0e4a415ca636e5057ade2251e7ae1dc,Ventilfläkt (bion),Ventilfläkt,Bion,Bion,Granskad,True,False
+ac8aca14069b710ea5f293b3806e88c9,mini-graph-card,mini-graph-card,Heimdal (HA),Heimdal (HA),Granskad,False,False
+7041af69244dc7adcde3447c2f07838a,Taklampor (källaren),Taklampor,Bion,Bion,Granskad,True,False
+1325e9177fd4277c2f62b0bfd415f3b5,Golvvärme (verandan ),Golvvärme,Verandan,Verandan,Granskad,True,False
+5fe3bfea068773839c43571c319eb9da,Golvvärme (entrén),Golvvärme,Entrén,Entrén,Granskad,True,False
+4daabf598d80be9b00151a9b176cf120,Temp/Hum (Entré),Klimatsensor,Entrén,Entrén,Granskad,True,False
+d7f403eee26699ae37255d1dccecfefa,Golvvärme (ateljén),Golvvärme,Ateljén,Ateljén,Granskad,True,False
+fd05bfaaf1a5ab73c86d4d3a9e8ce73b,Taklampor,Taklampor,Ateljén,Ateljén,Granskad,False,False
+9f570b631ca6c7964eb8bbab2c118fc2,Taklampor (köket),Taklampor ESPHome,Entrén,Köket,Granskad,True,True
+a01944bf26a43d2fd4f6675b47f7d1fd,MT-1011QR,MT-1011QR,Heimdal (HA),Heimdal (HA),Granskad,False,False
+fa2820c3346bb1ba7043bc75d6d7274b,Taklampor (kontoret),Taklampor,Kontoret,Kontoret,Granskad,True,False
+a59458ed8ab7710312a1894f85790afb,Golvvärme (köket),Golvvärme,Köket,Köket,Granskad,True,False
+3477478c12505c16e52e6958bfd13c06,Temp/Hum (Dusch),Klimatsensor,Duschen,Duschen,Granskad,True,False
+dc6a115590f250fb022c03d067d4036a,Vattennivå (hönshuset) (C4:4F:33:72:73:E3),Hönshuset Vattennivå (C4:4F:33:72:73:E3),Hönshuset,Hönshuset,Granskad,True,False
+86cdaf8a969caf72711a090622c37f33,Plantsensor 3,Plantsensor 3,Verandan,Verandan,Granskad,False,False
+c21cd3e68401f7ec3c6361beb8e06c9f,Plantsensor 4,Plantsensor 4,Verandan,Verandan,Granskad,False,False
+44218722743532fe93bc39c0897e0d72,Meyer Citron,Meyer Citron,Verandan,Verandan,Granskad,False,False
+666659ace8f39866608c5bd6fb811809,Plantsensor 1,Plantsensor 1,Köket,Köket,Granskad,False,False
+7edc98a8492c32141a8ebef1222392de,Plantsensor 2,Plantsensor 2,Verandan,Verandan,Granskad,False,False
+f0dbf2f08a0ce0ee718fc3ca88ff6d7c,Paraplyaralia,Paraplyaralia,Köket,Köket,Granskad,False,False
+fc7e5c643277419921c149cba0827ed4,SM-T835,SM-T835,Heimdal (HA),Heimdal (HA),Granskad,False,False
+2930b222b3d52feb6dabddda099269fa,Fredskalla,Fredskalla,Verandan,Verandan,Granskad,False,False
+cf48d69d30577ea7b00c28cb4dab73d8,Ledstrip (balkongdörrar),LED-list (balkongdörrar),Verandan,Verandan,Granskad,True,False
+0b40c33d7df27449b86c184c63606853,Lucka (Hönshuset),Lucka,Hönshuset,Hönshuset,Granskad,True,False
+50484a3ca37b3c9115399987502a6421,OneDrive,OneDrive,Heimdal (HA),Heimdal (HA),Granskad,False,False
+4318bbff9e13f4fdfba9ab6ac0f6c6bc,HA Voice PE 096460,HA Voice PE 096460,Kontoret,Kontoret,Granskad,False,False
+c733f1b8e6964460bd2bd4e5c7408419,Plantsensor 5,Plantsensor 5,Köket,Köket,Granskad,False,False
+0fa4a381688afeb4661caed2e344d564,Fredskallor (Trappan),Fredskallor (Trappan),Köket,Köket,Granskad,False,False
+2bbe52874f8dbcc48985f34a1a38d653,Backup,Backup,,,Granskad,False,False
+cae2da31f2a7c715db12438ee072b706,SM-G986B,SM-G986B,,,Granskad,False,False
+726bee2f9efa222cf68c48c9019dc7fa,Led-stjärnor (utomhus) [SHPLS],LED-stjärnor,Utomhus,Utomhus,Granskad,True,False
+c9360f9d0be75ed3cc336e32cad66c57,Temp/Hum (Toalett),Klimatsensor,Toaletten,Toaletten,Granskad,True,False
+325649f034e84bcb586e17a015c92616,Salt (verkstan),Salt,Verkstaden,Verkstaden,Granskad,True,False
+3444a4ee82fc030401377b8ad2a7e195,Pollenprognos,Pollenprognos,,,Granskad,False,False
+188af4b00b689fe013f3e453b190b53f,Sony KD-55XH9005,Sony KD-55XH9005,Verandan,Verandan,Granskad,False,False
+f53103218870510c77f6cc41a16a6f23,Sony KD-55XH9005,Sony KD-55XH9005,Verandan,Verandan,Granskad,False,False
+b299f8f5f0d139cfe14a77626a0d2705,sony-tv,sony-tv,Verandan,Verandan,Granskad,False,False
+4d0dc5c37a858a0cd0305dad23b4c5fd,Nya TVn,Nya TVn,Verandan,Verandan,Granskad,False,False
+57e88ba04471e052a1fc0bbefa6ec9bf,Shelly Pro 3 - Verkstaden,Shelly Pro 3,Verkstaden,Verkstaden,Granskad,True,False
+90667f8f918fe9b0c808c7ddd732e629,Config Template Card,Config Template Card,,,Granskad,False,False
+cfd4a3bcd8e7b475c5b7ef3759837609,Gauge Card Pro,Gauge Card Pro,,,Granskad,False,False
+3504fae119ecf1d0027a7eca4077c2dd,Google Home,Google Home,,,Granskad,False,False
+39335e0af4dfd4bdb6fae7d4d12fc8f2,Poolvärmepump (poolen),Poolvärmepump,Poolen,Poolen,Granskad,True,False
+55b2f6dbae0f037d6ff0835745618388,Kökets skärm,Kökets skärm,Köket,Köket,Granskad,False,False
+716bd96c354ad3079b55d749af177224,TVs soundbar,TVs soundbar,Verandan,Verandan,Granskad,False,False
+5afcd85d2bd9dd59ea6efa343234fb6e,Nya TVn,Nya TVn,Verandan,Verandan,Granskad,False,False
+0b6023baa5ece40b3b5733825197a74e,Verandans högtalare höger,Verandans högtalare höger,Verandan,Verandan,Granskad,False,False
+badddb2538cc8831073e9736cbd2adb4,Diegos väckarklocka,Diegos väckarklocka,Sovrummet,Sovrummet,Granskad,False,False
+71f3182e4acc54323071e4b8456782fe,shellypro3-ec626089edbc Output 0,Taklampor,Verkstaden,Verkstaden,Granskad,True,False
+0aaa0df0aa35b88522795c517f3c27f7,shellypro3-ec626089edbc Output 1,Luftkompressor,Verkstaden,Verkstaden,Granskad,True,False
+aad98607dbb4df7bf25d10bab95ef936,shellypro3-ec626089edbc Output 2,Spånsug,Verkstaden,Verkstaden,Granskad,True,False
+cb4859e1895848029726ebf30c1551bc,Lêvoit luftfukare 300S,Lêvoit luftfukare 300S,Verandan,Verandan,Granskad,False,False
+b5250af6cfe2aa94e0aa7c52b26a80e5,hci0 (54:E4:ED:A9:CD:05),hci0 (54:E4:ED:A9:CD:05),Heimdal (HA),Heimdal (HA),Granskad,False,False
+a4148304df054902239376b894fd1e7a,Toyota EU community integration,Toyota EU community integration,,,Granskad,False,False
+eb7b50dea238cc3f5288f57f44790eba,SEF 42H,SEF 42H,Utomhus,Utomhus,Granskad,False,False
+6cf0f4ece3efef9cb702e524a154484e,HA DB Size MB,HA DB Size MB,,,Granskad,False,False
+2ff2ab630184d8b52de82389763bcb6d,HA States Rows 24h,HA States Rows 24h,,,Granskad,False,False
+f0a73f08be1da225f94bdc82180f743b,Toalettens högtalare,Toalettens högtalare,,,Granskad,False,False
+2a66d378f71e52f70a390a30484d1271,Duschens högtalare,Duschens högtalare,,,Granskad,False,False
+1a5b8cdcbb40673ab474a244e40b4f76,Meteogram Card,Meteogram Card,,,Granskad,False,False
+554695b3382546aa1d6a852871e1e8fa,Verandans högtalare vänster,Verandans högtalare vänster,,,Granskad,False,False
+da68533d0558052de5e170b0ef9eb50e,OpenAI AI Task,OpenAI AI Task,Molnet,Molnet,Granskad,False,False
+0279a9c1709d8aca237047242941e69c,OpenAI Conversation,OpenAI Conversation,Molnet,Molnet,Granskad,False,False
+c86b6733f17710e5bfb1d97a756dc02a,Prusa Buddy Cam,Prusa Buddy Cam,Kontoret,Kontoret,Granskad,False,False
+e0f8063fbcae401634fdb1181445f54c,Doftpelargon,Doftpelargon,Verandan,Verandan,Granskad,False,False
+12b51581ca2682028b435a150799d8a7,Ollama Conversation,Ollama Conversation,,,Granskad,False,False
+792405a4058cc8551b138e09b32caaab,Ollama AI Task,Ollama AI Task,,,Granskad,False,False
+755910786013452879a025d070efe69a,AdGuard Home,AdGuard Home,,,Granskad,False,False
+7dc968d4f1e2be0088858403ccc44869,AdGuard Home,AdGuard Home,Heimdal (HA),Heimdal (HA),Granskad,False,False
+1648d5dd8d727c41e215ac3b7d84551a,Music Assistant,Music Assistant,,,Granskad,False,False
+24729d0ab38e10f4f362e240de17030d,Dassens högtalare,Dassens högtalare,,,Granskad,False,False
+dd7e3e94973b42caa19c4f05008d9f2c,Diegos väckarklocka,Diegos väckarklocka,Sovrummet,Sovrummet,Granskad,False,False
+77a38dbce91f6984f3da44a72eeb4315,Verandans högtalare höger,Verandans högtalare höger,Verandan,Verandan,Granskad,False,False
+6f641650efa37376a581bfbce307e9e7,Verandans högtalare vänster,Verandans högtalare vänster,Verandan,Verandan,Granskad,False,False
+8d98aa9a43718de10346abdca68db615,Ljussensor,Ljussensor,Utomhus,Utomhus,Granskad,False,False
+6a79c5943fdb824f90417117075d405c,SM-S936B,SM-S936B,,,Granskad,False,False
+d8567446a81800fbc861d84803bbfbf2,Taklampor (duschen),Taklampor,Duschen,Duschen,Granskad,True,False
+0a01914167f1350d816bdf756f0624c6,Golvvärme (duschen),Golvvärme,Duschen,Duschen,Granskad,True,False
+7a213c407ce4fd9813d1057550e1213f,Golvvärme (entrén) [SHP1PM] (C4:D8:D5:54:F8:A6),Golvvärme,Entrén,Entrén,Granskad,True,False
+460dfb99f0b8a415faaa1732ccd969da,Golvvärme (källaren) [SHP1PM] (80:64:6F:E3:BE:F2),Golvvärme,Bion,Bion,Granskad,True,False
+7d4de02b78d441eedb24f259ca71c133,Golvvärme (verandan) [SHP1PM] (C4:D8:D5:54:CC:82),Golvvärme,Verandan,Verandan,Granskad,True,False
+21b65aa4266b491dad9f50165d5ba674,Golvvärme (ateljén) [SHP1PM] (A0:DD:6C:2B:31:4E),Golvvärme,Ateljén,Ateljén,Granskad,True,False
+81e82c562490af40f6643ac2b53c9c40,Golvvärme (köket) [SHP1PM] (A0:DD:6C:29:B1:36),Golvvärme,Köket,Köket,Granskad,True,False
+76eafd04d515e40a3d804ac946a453a9,Golvvärme (duschen) [SHP1PM] (E4:65:B8:F1:C1:BA),Golvvärme,Duschen,Duschen,Granskad,True,False
+c3ee3a9a8bd57c967a8cbe0ed6f2c614,Shelly Pro 3 - Verkstaden (EC:62:60:89:ED:BE),Verkstaden Shelly Pro 3 (EC:62:60:89:ED:BE),Verkstaden,Verkstaden,Granskad,True,False
+b100a107089943dc555e95a019738bc8,Ledstjärnor (utomhus) [SHPLS] (08:F9:E0:FD:43:06),Utomhus LED-stjärnor (08:F9:E0:FD:43:06),Köket,Köket,Granskad,True,False
+66b1ff7607471ae6bbb410d8f0d82c6d,Väggkontakt x2 (verandan),Väggkontakt x2,Verandan,Verandan,Granskad,True,False
+7713eaa96eaf9b7293f776e78bf40a22,Taklampor (verandan),Taklampor,Verandan,Verandan,Granskad,True,False
+78ee6b1f8ec0bd42eda986ad6250e1c8,Julstjärnor (verandan),Julstjärnor,Verandan,Verandan,Granskad,True,False
+e2c79f2f807ca9f7637964a6504a5c7c,Väggkontakt x2 (verandan) (30:C9:22:86:74:6A),Verandan Väggkontakt x2 (30:C9:22:86:74:6A),Verandan,Verandan,Granskad,True,False
+5c5f069f32db0ac291f95a926d8fca34,Blomlampa (kontoret),Blomlampa,Kontoret,Kontoret,Granskad,True,False
+988a1ab970fe425f8bd300791f9e2a3d,Media,Media,,,Granskad,False,False
+36cb0d1686b18f29eabcbf1a7353ed58,Shared,Shared,,,Granskad,False,False
+6dc5af820ce9ad3f4b69051338b83852,flocken,flocken,,,Granskad,False,False
+bd5c7fa476445dd7ace3e809eb4f0275,Plantsensor 6,Plantsensor 6,Kontoret,Kontoret,Granskad,False,False
+4948ac7afc18716ab8c70d2df2c3b7c5,Monstera,Monstera,Kontoret,Kontoret,Granskad,False,False
+30e6b1b62636b665c215313830ec9aae,Blomlampa (Shelly Plus RGBW PM),Blomlampa (Shelly Plus RGBW PM),Köket,Köket,Granskad,False,False
+905247060d7c094bdf40a0b01a18c0dd,Canon G3070 series,Canon G3070 series,Kontoret,Kontoret,Granskad,False,False
+f5d6af50f99e3cbcc58a96d086622e94,Huvudströmbrytaren Prusa XL,Huvudströmbrytaren Prusa XL,Kontoret,Kontoret,Granskad,False,False
+24de70966c24bd3ef95b0cb97dc79bbc,Max S6 MaxV Dock,Max S6 MaxV Dock,,,Granskad,False,False
+477624c5ec2d136e5c987028c3882aa0,SM-G930F,SM-G930F,,,Granskad,False,False
+7afb54d3c1f616dd186d679d957a65bc,j.k.olofsson@gmail.com,j.k.olofsson@gmail.com,,,Granskad,False,False
+ff56e4bb6c3148c320c32195a0e62a76,OpenThread Border Router,OpenThread Border Router,,,Granskad,False,False
+5e2eb3bc565f5dca35b673d6aedb7e13,Duck DNS,Duck DNS,,,Granskad,False,False
+9c18573a0492ff7b3dd77aaf907dce68,Home Assistant Connect ZBT-2 (9C139EACA404),Home Assistant Connect ZBT-2 (9C139EACA404),,,Granskad,False,False
+e3a40d2dda16a69a07f4cc29bfea306f,Bänklampor,Bänklampor,Köket,Köket,Granskad,False,False
+2d8b26e1c47f7b92d725cede4a56ceff,Bordslampa ateljen,Bordslampa ateljen,Ateljén,Ateljén,Granskad,False,False
+69ee53461280fd55881e4182a17f7d6f,Bordslampa höger,Bordslampa höger,Bion,Bion,Granskad,False,False
+1ac9f5496bdee0052803cf7e6b71fa49,File editor,File editor,Heimdal (HA),Heimdal (HA),Granskad,False,False
+d0c18089bb08cf088d198309286d725d,Alla högtalare,Alla högtalare,,,Granskad,False,False
+4ffdc3bcd81fc590e8054e83ef09284c,OpenAI STT,OpenAI STT,,,Granskad,False,False
+631240322a6b018c673ef0e4ab0f06dc,OpenAI TTS,OpenAI TTS,,,Granskad,False,False
+ccda3b61cca59a847edae498aa2ff795,Weather Forecast Card,Weather Forecast Card,,,Granskad,False,False
+b608665a74feb592063b088cd4dfa725,Tor,Tor,Tor (AI),Tor (AI),Granskad,False,False
+49fa894e2b0eb7013efc5bc1430f633d,ASUS TUF GAMING B650-E WIFI,ASUS TUF GAMING B650-E WIFI,Tor (AI),Tor (AI),Granskad,False,False
+44a922c583a8f40e944b21cb514cc2fb,AMD Wraith Prism,AMD Wraith Prism,Tor (AI),Tor (AI),Granskad,False,False
+68aea72f06af893d21e145db4b142687,Gigabyte GeForce RTX 3090 Gaming OC,Gigabyte GeForce RTX 3090 Gaming OC,,,Granskad,False,False
+2215c99f85836c0829f0ed600667be95,Forecast Met.no,Väderprognos Met.no,Molnet,Molnet,Granskad,True,False
+758fdad816f2c35b0fcea020b792e912,AI Configuration Agent,AI Configuration Agent,,,Granskad,False,False
+912181ca7e1873ac9dc4cc2685781722,OpenUV,OpenUV,Molnet,Molnet,Granskad,False,False
+e3a7c058dab8d9a0b9ee10a298adf0d2,Nya TVn,Nya TVn,Verandan,Verandan,Granskad,False,False
+92855e43bdd9400ca2685079a1851e3d,Kökets skärm,Kökets skärm,Köket,Köket,Granskad,False,False
+6c7e0e6db8f4113d94f51213539eb59d,Alla högtalare,Alla högtalare,,,Granskad,False,False
+5537778af833a10f73836b9e492c5a85,Toalettens högtalare,Toalettens högtalare,Verkstaden,Verkstaden,Granskad,False,False
+035b3443031a52bdc806e7274021a170,Verandans högtalare höger,Verandans högtalare höger,Verandan,Verandan,Granskad,False,False
+de34dbf9194fd8aee8103321b028de03,TVs soundbar,TVs soundbar,Verandan,Verandan,Granskad,False,False
+cfe0e2ad2d4aab659d0fa7eced6a00c9,Verandans högtalare vänster,Verandans högtalare vänster,,,Granskad,False,False
+84b0af883265a7d2f721df59b4e6431c,Verandans högtalare,Verandans högtalare,,,Granskad,False,False
+f7686eb4a8bfe6af8dc58cad77cf99d9,Duschens högtalare,Duschens högtalare,Duschen,Duschen,Granskad,False,False
+65eaf1f0fb5a8474018937e426b43b13,Dassens högtalare,Dassens högtalare,Heimdal (HA),Heimdal (HA),Granskad,False,False
+68f44841d541ea9cc38831d3540a2719,Kontorets högtalare,Kontorets högtalare,Toaletten,Toaletten,Granskad,False,False
+ecd2e833c1487367d1d6fc93fbc06579,Presence Simulation,Presence Simulation,,,Granskad,False,False
+8a2c95d27fb54ce5b58c99c7dd0b35b0,OpenWrt,OpenWrt,,,Granskad,False,False
+8919be345677fd0959562d24dfd1484c,AlsavoPro,AlsavoPro,,,Granskad,False,False
+c3072cf779e08fb8c8bafeaf47844ab6,Poolvärmepump,Poolvärmepump,Poolen,Poolen,Granskad,False,False
+7da13d31301dcc76349059f26ca41e91,HAGHS,HAGHS,,,Granskad,False,False
+d0adc89a898f10b24034bb332e49b48e,Android TV / Fire TV,Android TV / Fire TV,,,Granskad,False,False
+f48c6ee2bc23d0901befb650a852a6f2,Nothing mobil,Nothing mobil,,,Granskad,False,False
+59c163f3ea03948847bb3734b5bcc057,Zyxel GS1900-24E A1 - Switch Vinden,Nätverksswitch,Vinden,Vinden,Granskad,True,False
+3cd734fb36ee1d8600e37b0907c1a4be,ASUS Lyra MAP-AC2200 - AP Källaren,Accesspunkt,Bion,Bion,Granskad,True,False
+de9fcd66ef68eee8a15f89ba208cf1b8,ASUS Lyra MAP-AC2200 - AP Verkstaden,Accesspunkt,Verkstaden,Verkstaden,Granskad,True,False
+f4a0867f437a2bdd2334d2dfa09c5a10,Zyxel GS1900-8HP B1 - Switch Kontoret,Nätverksswitch,Kontoret,Kontoret,Granskad,True,False
+9b92f72be8052dee025c353a0acb3f4f,OpenWrt One - Router Sovrum,Router,Sovrummet,Sovrummet,Granskad,True,False
+a6e2b3849e09d53babddd9c525a5745e,PostNord 76017,PostNord 76017,Utomhus,Utomhus,Granskad,False,False
+e011766e3d90d9123cb204344f014411,BILRESA dual button,BILRESA dual button,Poolen,Poolen,Granskad,False,False
+1846d6f5db0b4ff839f6902b8446488d,Ledstrip (vitrinskåp),LED-list (vitrinskåp),Köket,Köket,Granskad,True,False
+2d6e1f6507f75836fc49f46673fa0c91,Ledstrip (korridoren),LED-list (korridoren),Kontoret,Kontoret,Granskad,True,False
+9b9bee5406f01ce6829b8c68936750d4,Home Assistant Kräftor,Home Assistant Kräftor,,,Granskad,False,False
+bdc20713db3f898f57471e267d88c122,Ateljéns högtalare,Ateljéns högtalare,,,Granskad,False,False
+8a1e9043f71dc45229190247390e0d69,OpenWrt One - AP Kontoret,Accesspunkt,Kontoret,Kontoret,Granskad,True,False
+7e3365ff7aa3b8275a662a8823f1b9b8,OpenWrt One - AP Köket,Accesspunkt,Köket,Köket,Granskad,True,False
+9d41bc4604451d12213ca26190d146da,TP-Link EAP225-Outdoor v3 - AP Poolen,Accesspunkt,Poolen,Poolen,Granskad,True,False
+c4c4ac8c2c992049d0562fa71d36b1f3,Mannis väckarklocka,Mannis väckarklocka,,,Granskad,False,False
+e80cd70cfca9a3dc1015e3c62fee06ca,Taklampor,Taklampor,Köket,Köket,Granskad,False,False
+d0feb355293a7b1561f1b965602b3016,ASUS Lyra MAP-AC2200 - AP Friggan,Accesspunkt,Friggan,Friggan,Granskad,True,False
+8cee60d712546acf82f3e82405374c47,2.4 GHz,2.4 GHz,,,Granskad,False,False
+ec0296f380b7a2b3b5c2cc1d106aa03e,5 GHz,5 GHz,,,Granskad,False,False
+5fc9e44b08e613da78aba04b2dd0463c,2.4 GHz,2.4 GHz,,,Granskad,False,False
+054fe2e9bd384f856b42f7c8bb44e64a,5 GHz,5 GHz,,,Granskad,False,False
+2adeaf4adc195350e2f6c77f533107c6,2.4 GHz,2.4 GHz,,,Granskad,False,False
+723655a48bf65dfd0262fa464166e613,5 GHz,5 GHz,,,Granskad,False,False
+628059a5b1f42e8cc6b5ec3b42344b0d,2.4 GHz,2.4 GHz,,,Granskad,False,False
+43821eee168d2c2da233b10b7b47ec97,5 GHz,5 GHz,,,Granskad,False,False
+79532ae5d3aede0036bb39fa96e6fc1c,2.4 GHz,2.4 GHz,,,Granskad,False,False
+ed92c966f7a6311b6c424f29c20f0370,5 GHz,5 GHz,,,Granskad,False,False
+25df1ad0b3cc2ab20db678186be53030,5 GHz,5 GHz,,,Granskad,False,False
+9b28f014b547d0a9d6a82d20ce3fef54,2.4 GHz,2.4 GHz,,,Granskad,False,False
+7ee090c383629f5df0d14e2d2e3c983d,IR-proxy 1,IR-proxy 1,,,Granskad,False,False
+052a1be194d7fd16f2b47ef10bfb3b87,IR-proxy 2,IR-proxy 2,,,Granskad,False,False
+992bb99ef211bc56277a2ab01d517e42,Verandans högtalare,Verandans högtalare,,,Granskad,False,False
+01115759bb205938c68b5d003ad2b59c,Verandans högtalare,Verandans högtalare,,,Granskad,False,False
+8aaa3b8346b5021747d8e59ef816235f,192.168.10.46,192.168.10.46,,,Granskad,False,False
+5ba3105d2390fb1d95e4760ad4f90ebf,canon-g3070,canon-g3070,,,Granskad,False,False
+9781624962f5c9560b2311b3f6992c19,chromecast-diegos-screen,chromecast-diegos-screen,,,Granskad,False,False
+ec8f96585effc1fde18e2d5457db6918,home-assistant-voice-096460,home-assistant-voice-096460,Kontoret,Kontoret,Granskad,False,False
+256a4a3457db5ff7f5d6b7ff08c92660,Sänglampor Manni,Sänglampor Manni,Sovrummet,Sovrummet,Granskad,False,False
+f1ad928053cab48f1d5810f3517426b6,Sänglampor Diego,Sänglampor Diego,Sovrummet,Sovrummet,Granskad,False,False
+df6a4230c3d31643bcd09021fed15056,c8:2b:96:5c:71:55,Blomlampa,Kontoret,Kontoret,Granskad,True,False
+1b9136dcdffe0ee58610acecafcfda5a,a4:cf:12:d8:77:59,a4:cf:12:d8:77:59,Sovrummet,Sovrummet,Granskad,False,False
+875338cc8afeea1aeace00cd42e34255,40:22:d8:61:53:f8,40:22:d8:61:53:f8,Kontoret,Kontoret,Granskad,False,False
+b4066b07cd7434754d47daa8bb878d0b,c4:4f:33:7a:51:d5,LED-list norra,Heimdal (HA),Sovrummet,Granskad,True,True
+5c12f892464e092251c4c5469f1c3c87,c4:4f:33:7a:51:11,LED-list östra,Heimdal (HA),Sovrummet,Granskad,True,True
+35a75200e0ddb234f833d951094d87a7,Ljussensor,Ljussensor,Utomhus,Utomhus,Granskad,False,False
+26fc399a9899fb446dc9af75ba820a3d,Taklampor (kontoret),Taklampor,Kontoret,Kontoret,Granskad,True,False
+ee544a832ce0d937e8e9b469f8e89c1f,34:94:54:70:7c:a2,Taklampor,Sovrummet,Sovrummet,Granskad,True,False
+caaa6c5980803e219616cfd2c44c93fa,a4:cf:12:d8:0a:dd,Termostat,Kontoret,Kontoret,Granskad,True,False
+e1890cbf2ae8ee3e2bd9d754b8cbf8c8,chromecast-duschens-speaker,chromecast-duschens-speaker,,,Granskad,False,False
+32596e5e4dec2305f263b71951cd108e,siemens-dishwasher-016050395510002818,siemens-dishwasher-016050395510002818,,,Granskad,False,False
+6761b23189117896714cbb1749822a66,chromecast-tv-soundbar,chromecast-tv-soundbar,,,Granskad,False,False
+7b7f1dfdfd50a7fedbc5f9a6e9fe62d4,levoit-humidifier-verandan,levoit-humidifier-verandan,,,Granskad,False,False
+0d52c42e52a5aa9c415fe5239ab26d79,SM-R875F,SM-R875F,,,Granskad,False,False
+52cbf3f9881fb9bb56cc29dc0a037115,chromecast-toans-speaker,chromecast-toans-speaker,,,Granskad,False,False
+41493c01c546cda43b9d177a202884b1,chromecast-stereo-right-speaker,chromecast-stereo-right-speaker,,,Granskad,False,False
+93ac4adb91b82ef3696c0904cae622e0,chromecast-kokets-screen,chromecast-kokets-screen,,,Granskad,False,False
+3538eeea702fd0ac15784dba9b7349a5,chromecast-stereo-left-speaker,chromecast-stereo-left-speaker,,,Granskad,False,False
+5f803d36a7644f805a9d462868e51211,roborock-max,roborock-max,Köket,Köket,Granskad,False,False
+4d1b88d61df29812123dfa37f5158c99,chromecast-mannis-screen,chromecast-mannis-screen,,,Granskad,False,False
+e54c42c434b394f72526dfbfed3be0d0,gw-august-connect,gw-august-connect,,,Granskad,False,False
+72723682c8f91ef3bdb8e4a3a17cd7e1,Galaxy-S9,Galaxy-S9,,,Granskad,False,False
+dab8456af4172de367ec60ca3ba43771,Galaxy-A36-5G,Galaxy-A36-5G,,,Granskad,False,False
+a3c339f55e11adeaf0e89553f2cb6d96,Golvvärme (entrén),Golvvärme,Entrén,Entrén,Granskad,True,False
+0bae2ea0758d575940f6d18b1be1d52c,Golvvärme (duschen),Golvvärme,Duschen,Duschen,Granskad,True,False
+bad4b202f352dbe1edec05d8ad9adf56,Golvvärme (verandan ),Golvvärme,Verandan,Verandan,Granskad,True,False
+5878a68e425b533cb907c951cd0d95c8,Väggkontakt x2 (verandan),Väggkontakt x2,Verandan,Verandan,Granskad,True,False
+0409aa5a10fc74b9e9943e5ad4ef2b38,192.168.30.196,192.168.30.196,,,Granskad,False,False
+7c98ea31c0db5d9db1de8cc6641c6606,8c:ce:4e:0c:ca:58,Blomlampa 3,Köket,Köket,Granskad,True,False
+83b5fb3672cd5614741a3f02820229a2,Blomlampa 1 (Verandan),Blomlampa 1,Verandan,Verandan,Granskad,True,False
+13605732e6a6b76e0810802004ff35de,Blomlampa 2 (verandan),Blomlampa 2,Köket,Köket,Granskad,True,False
+934c2386aa6d6de7c59ad1ddc2843d82,f0:08:d1:f2:b8:08,ESP32-kamera,Utomhus,Utomhus,Granskad,True,False
+1fc9a277526069c7e3416ae855dfae66,192.168.30.197,192.168.30.197,,,Granskad,False,False
+c0dc31ad7a03572df2da086b5e2a4809,dc:06:75:9d:65:c0,LED-list (balkongdörrar),Bion,Verandan,Granskad,True,True
+65689fdeafed6337a71ea38677288977,7c:9e:bd:06:e7:bc,LED-list,Heimdal (HA),Entrén,Granskad,True,True
+94e422cc74539d53042265c327d6ad61,7c:9e:bd:47:e2:88,LED-list sydöstra,Heimdal (HA),Köket,Granskad,True,True
+15e0694a84565e784bc675254d1931cf,7c:9e:bd:46:f5:80,LED-list östra,Heimdal (HA),Köket,Granskad,True,True
+80ff1b9d79b4e259048ceab11e301618,7c:9e:bd:06:c3:b4,LED-list,Heimdal (HA),Verandan,Granskad,True,True
+604a0c26206ba37afb1cb05b8ddb51e3,08:b6:1f:34:55:50,Markis,Utomhus,Utomhus,Granskad,True,False
+d00846d01d2081bf328a72c0f0a208c9,48:e7:29:67:de:7f,Taklampor,Duschen,Duschen,Granskad,True,False
+133e4799c816f998010a700ae9a8df05,08:f9:e0:46:ed:b4,Taklampor ESPHome,Entrén,Köket,Granskad,True,True
+5a95e3e10f807031d6f123daf54b1dcb,Pixel-9-Pro-XL,Pixel-9-Pro-XL,,,Granskad,False,False
+d7786874cd7c6370e8ab224996c09601,DiegoTab,DiegoTab,,,Granskad,False,False
+28a0155bb1fb5f76d8cbf920cc5dbf30,Carolas-S25,Carolas-S25,,,Granskad,False,False
+46b63cd231b2f04af91f480e69a6b387,SmartHomeControlPanel,SmartHomeControlPanel,Bion,Bion,Granskad,False,False
+33da8c755856fce15c805852262dd9ec,shelly-1pm-kitchen-floor-heating,Golvvärme,,Köket,Granskad,True,True
+1d0e6afaa61887b35a155b9ddbb4060c,Växtlampa frösådd (bion) [SHPLS],LED-stjärnor,Köket,Utomhus,Granskad,True,True
+93115a11cfad9ed0b7d2a951030b2e8c,Blomlampor (bion),Blomlampor,Bion,Bion,Granskad,True,False
+7a17129969f318fe0c30f006beff7e40,c4:4f:33:7a:2e:79,Gasol,Utomhus,Utomhus,Granskad,True,False
+0855a55f5e531fa9d5e929d115eb8ccc,Hemmabio El #1,Elstyrning 1,Bion,Bion,Granskad,True,False
+db5ce46c86f65f2149a7130e9aae0f41,40:22:d8:76:6f:70,40:22:d8:76:6f:70,Bion,Bion,Granskad,False,False
+b574ce9c70dbfef8078dc807c916dfbc,cc:50:e3:fe:16:ed,IR-gateway,Bion,Bion,Granskad,True,False
+8b54afebfda989dd2203010fb9736fd6,24:62:ab:57:80:ad,Julbelysning,Utomhus,Utomhus,Granskad,True,False
+1191aa806aa59345c2395a230e15432f,c4:4f:33:7a:51:6d,LED-list södra,Heimdal (HA),Köket,Granskad,True,True
+835f0eb53e964c20301c5c528d3ed358,Ventilfläkt (bion),Ventilfläkt,Bion,Bion,Granskad,True,False
+0526e764563afaabfbf624c46159bb1d,Pixel-9-Pro-XL,Pixel-9-Pro-XL,,,Granskad,False,False
+866e67c86da47e9cde9240ff9a5b5978,siemens-washerdryer,siemens-washerdryer,,,Granskad,False,False
+0487da7eac6a9bfbe4daf63f1c9a1c52,chromecast-vaxtskapets-speaker,chromecast-vaxtskapets-speaker,,,Granskad,False,False
+b42931f4d10cd0d7ea3e14e2decc8a62,shellyplug-s-shop-roof-lamps,LED-plafonder,Verkstaden,Verkstaden,Granskad,True,False
+131c0d7f087e5dbc74cfb219e7958d36,shelly-1pm-studio-floor-heating,Golvvärme,,Ateljén,Granskad,True,True
+1bdc70d21dcc8437ee658f4f8b1efc89,Shelly Pro 3 - Verkstaden,Shelly Pro 3,Verkstaden,Verkstaden,Granskad,True,False
+86a258f34d8b965791f2d420abbee6c1,shelly-1pm-celler-floor-heating,Golvvärme,,Bion,Granskad,True,True
+9747ed0f8fc365d215e5588e164ba6b4,Billaddare,Billaddare,Utomhus,Utomhus,Granskad,False,False
+cbc8829cc18604f6ffe29b25ffd8eb75,08:b6:1f:38:0b:64,Salt,Verkstaden,Verkstaden,Granskad,True,False
+9724a34cf55d2376bbc4561cae121b69,80:64:6f:91:e9:d5,RF-brygga,Kontoret,Kontoret,Granskad,True,False
+e27ae31d7408f6a05b9133b94c32e5ea,Taklampor,Taklampor,Ateljén,Ateljén,Granskad,False,False
+c5eb70dd8c934252039447c490be88da,94:b9:7e:16:d2:02,Taklampor,Bion,Bion,Granskad,True,False
+8b8c87562b4abaf826c376d85cb6a099,08:b6:1f:38:26:78,Klimatsensor,Gamla verkstaden,Gamla verkstaden,Granskad,True,False
+dc1057019de4aa76e20b8725abda9851,192.168.30.183,Termostat,Toaletten,Toaletten,Granskad,True,False
+02e3ad6b5fb7b3563ac4d67fc23544ac,LenovoL340.home.arpa,LenovoL340.home.arpa,,,Granskad,False,False
+16fa21b50b01ffc03b1a5a418fa034fc,ap-honshuset.home.arpa,ap-honshuset.home.arpa,,,Granskad,False,False
+1a63b9f66e991ce1d8b4ad07f16eb020,192.168.30.45,192.168.30.45,,,Granskad,False,False
+6f73ec0c625e2fc172ce6398810702ab,2c:bc:bb:c1:87:2c,2c:bc:bb:c1:87:2c,Köket,Köket,Granskad,False,False
+254b9bc249c0ffd559c889e63cb172e5,Elmätare (elstolpen),Elmätare (elstolpen),Utomhus,Utomhus,Granskad,False,False
+a64f2f0eb0f746ffc7a9569b01ed2eba,24:a1:60:10:5f:96,24:a1:60:10:5f:96,Poolen,Poolen,Granskad,False,False
+25dad0e161da819de3e5df52c98276dc,24:a1:60:10:eb:a9,Poolvärmepump,Poolen,Poolen,Granskad,True,False
+8dd48c0f9d36855faa01a7a89cdacfe8,c8:2b:96:07:35:26,Poolbelysning och temperatur,Poolen,Poolen,Granskad,True,False
+307a8a14cd4ec794f562e06c898841a6,c4:4f:33:72:73:e1,Vattennivå,Hönshuset,Hönshuset,Granskad,True,False
+fbef3ea94c59b2ff03c253bb0a78edf9,Pixel-9-Pro-XL,Pixel-9-Pro-XL,,,Granskad,False,False
+23bfad28501a4f7b929b5cb76439e690,playstation4,playstation4,,,Granskad,False,False
+fd14f11ceb19556cf8d324cbcd0d36bf,LenovoL340,LenovoL340,Kontoret,Kontoret,Granskad,False,False
+472d29a174343b5c96d2a35c37481da9,fulla,fulla,,,Granskad,False,False
+26e6cb2cdc84211e7cd9fb4eaa087d8b,hp-pavilion,hp-pavilion,Kontoret,Kontoret,Granskad,False,False
+89e955ab9ead97b83c21235a8cf42776,Vattensensor (torkskåp),Vattensensor torkskåp,Ateljén,Ateljén,Granskad,True,False
+df32f66b9742e86c97067c0469a946f3,192.168.10.74,Galaxy-S7,,,Granskad,True,False
+ba1419a0198f8022275644713589222a,ap-honshuset,ap-honshuset,Hönshuset,Hönshuset,Granskad,False,False
+b9866d5c3ad980a0a8ef3a60b771ffb4,sony-tv,sony-tv,Verandan,Verandan,Granskad,False,False
+5b8650108ae57e1ede1b4bee6f9405e5,172.17.0.1,172.17.0.1,Bion,Bion,Granskad,False,False
+7e4911e97e2b6dfe564e1f169d5d36d5,80-68-110-1.customers.ownit.se,80-68-110-1.customers.ownit.se,,,Granskad,False,False
+371c387a7e06d994d8ee3f18a183e4e6,Zyxel GS1900-8HP B1 - Switch Kontoret,Nätverksswitch,Kontoret,Kontoret,Granskad,True,False
+f3b91432bcfa515b2d3df632835f7379,ap_poolen.home.arpa,ap_poolen.home.arpa,,,Granskad,False,False
+2786c76654e4105833fd7a80611a57d4,ASUS Lyra MAP-AC2200 - AP Friggan,Accesspunkt,Friggan,Friggan,Granskad,True,False
+6d51341b5a117dce951cfa504a04e77e,ASUS Lyra MAP-AC2200 - AP Källaren,Accesspunkt,Bion,Bion,Granskad,True,False
+37ce4b42e683e78fe5d82ebabffbed75,ap_kontoret.home.arpa,ap_kontoret.home.arpa,,,Granskad,False,False
+c929ee061081c657c3662d697e5e1bd1,Heimdal.home.arpa,Heimdal.home.arpa,,,Granskad,False,False
+4717481c975592756a52ac1e10c3b1bd,192.168.20.62,192.168.20.62,,,Granskad,False,False
+72c2ef7392a07d2fb7a7bee2f95d0696,switch-2.home.arpa,switch-2.home.arpa,,,Granskad,False,False
+f61546e0e3a708266eb4ca78ccce751a,ASUS Lyra MAP-AC2200 - AP Verkstaden,Accesspunkt,Verkstaden,Verkstaden,Granskad,True,False
+a69e4ce232fd68a007094078d290f3b8,ap_koket.home.arpa,ap_koket.home.arpa,,,Granskad,False,False
+7f3083d2c6bed5b5ea98b800fbf91625,Zyxel GS1900-24E A1 - Switch Vinden,Nätverksswitch,Vinden,Vinden,Granskad,True,False
+8ebf4ffab60c5aade323ba32c61587bd,192.168.10.30,192.168.10.30,Poolen,Poolen,Granskad,False,False
+f030f0999090a1cab4e21ec9c8bc422c,Tor.home.arpa,Tor.home.arpa,,,Granskad,False,False
+70808937791636cd55c195efa41c0050,siemens-washerdryer,siemens-washerdryer,,,Granskad,False,False
+604cddd234b5f4a9defd5fde8cf1b3d6,192.168.30.45,192.168.30.45,,,Granskad,False,False
+254cf9213b8a7cf42b8d2fe2fc7a5204,SM-R875F,SM-R875F,,,Granskad,False,False
+afbb471df09ff93762e409712283164b,Carolas-S25,Carolas-S25,,,Granskad,False,False
+752ed73377f218e6955eec7ebe50a7c2,Pixel-9-Pro-XL,Pixel-9-Pro-XL,,,Granskad,False,False
+45fd5743822eb8016687597cc2fc1059,Golvvärme (bion),Golvvärme,Bion,Bion,Granskad,True,False
+5f2d1d89a957d762b93c2952ecd10609,roborock-max,roborock-max,Köket,Köket,Granskad,False,False
+fa3c334dcb61d03aeada7225c6593497,Galaxy-A36-5G,Galaxy-A36-5G,,,Granskad,False,False
+3e24b5f201b0c73fdc659540de9330ed,Golvvärme (ateljén),Golvvärme,Ateljén,Ateljén,Granskad,True,False
+85406075626f0fb6009cc3bdd606367c,Golvvärme (verandan ),Golvvärme,Verandan,Verandan,Granskad,True,False
+702c2d43ed63a4ef28e93807c2d62b51,Väggkontakt x2 (verandan),Väggkontakt x2,Verandan,Verandan,Granskad,True,False
+e03ce9189b88abe8f912563dee3343ac,Shelly Pro 3 - Verkstaden,Shelly Pro 3,Verkstaden,Verkstaden,Granskad,True,False
+8d0f0c2e33a803891f3081da7125e864,Golvvärme (köket),Golvvärme,Köket,Köket,Granskad,True,False
+97fa4cfb9910e3b4454f5f18286f6b35,chromecast-toans-speaker,chromecast-toans-speaker,,,Granskad,False,False
+601494a14032e4865944c73ecd2681eb,TV-Galaxy-S9,TV-Galaxy-S9,,,Granskad,False,False
+1739eeb389835d312bbfb14475d81e65,shellyplug-s-shop-roof-lamps,LED-plafonder,Verkstaden,Verkstaden,Granskad,True,False
+5b702c821183bfa904acb3991c455374,siemens-dishwasher-016050395510002818,siemens-dishwasher-016050395510002818,,,Granskad,False,False
+e8b835e3348da58398ea9aa0e3531108,chromecast-diegos-screen,chromecast-diegos-screen,,,Granskad,False,False
+efbe225499abab8b1745729baeab2ccb,chromecast-vaxtskapets-speaker,chromecast-vaxtskapets-speaker,,,Granskad,False,False
+6695dd027ac89b76562d42f1ccb69672,SmartHomeControlPanel,SmartHomeControlPanel,Bion,Bion,Granskad,False,False
+6011535d3ed07ed7013d2d624eab4d41,levoit-humidifier-verandan,levoit-humidifier-verandan,,,Granskad,False,False
+3e670d42c7a63fe4075062633579b2dc,Sänglampor Manni,Sänglampor Manni,Sovrummet,Sovrummet,Granskad,False,False
+61c4237cd9a32ffbb2cfeff36c76a55e,Sänglampor Diego,Sänglampor Diego,Sovrummet,Sovrummet,Granskad,False,False
+a6e78b4e67a672aa938e4ee3988b6493,gw-august-connect,gw-august-connect,Entrén,Entrén,Granskad,False,False
+311b7e2e2a6ff51e77a0de1538fe82d2,chromecast-duschens-speaker,chromecast-duschens-speaker,,,Granskad,False,False
+871014304b5411a8d3d72434d4b74f61,canon-g3070,canon-g3070,,,Granskad,False,False
+946e1919b71f7cab509b341410bbd390,chromecast-mannis-screen,chromecast-mannis-screen,,,Granskad,False,False
+ab9cf0b19b33d44b4c5bf6ec7df4d917,192.168.10.46,192.168.10.46,,,Granskad,False,False
+282b8e0d2a3f7ee0f1393fa268c72b03,DiegoTab,DiegoTab,,,Granskad,False,False
+8ce580b3c345ef410658e0bcebd8176e,chromecast-tv-soundbar,chromecast-tv-soundbar,,,Granskad,False,False
+bb1fd4a47b544608f622d6ee9d038c74,chromecast-stereo-right-speaker,chromecast-stereo-right-speaker,,,Granskad,False,False
+09a2a4029ae17921ffcbc09186f17a73,chromecast-kokets-screen,chromecast-kokets-screen,,,Granskad,False,False
+d1f8bdaf4e5d98bf80d7c3b760058935,home-assistant-voice-096460,home-assistant-voice-096460,Kontoret,Kontoret,Granskad,False,False
+1067a1433a55c6c554e9f35aa8958710,Golvvärme (entrén),Golvvärme,Entrén,Entrén,Granskad,True,False
+5f9530504312c9bd37328294bd9ec31c,Växtlampa frösådd (bion) [SHPLS],LED-stjärnor,Köket,Utomhus,Granskad,True,True
+7f57dc6d4714015432c5d15bdc80fd26,Golvvärme (duschen),Golvvärme,Duschen,Duschen,Granskad,True,False
+3425536bbfa6889de61275b437991d36,chromecast-stereo-left-speaker,chromecast-stereo-left-speaker,,,Granskad,False,False
+8c6169efd58970c954e33f760f406237,192.168.30.196,192.168.30.196,,,Granskad,False,False
+71c9337766c171fd0d12dec20b6aa090,192.168.30.197,192.168.30.197,,,Granskad,False,False
+a14ac4105ab2c56916eb8c59686639f2,ap-honshuset.home.arpa,ap-honshuset.home.arpa,,,Granskad,False,False
+d14e24c45e1f31335d17d23fd56ce1de,192.168.10.74,Galaxy-S7,,,Granskad,True,False
+f2b7e9295135561e44b8f743f84d5cfe,c8:2b:96:07:7d:6e,Golvvärme,Friggan,Friggan,Granskad,True,False
+f2017908a1d13eb66eeb729164bd550a,98:f4:ab:e2:71:12,Termostat,Friggan,Friggan,Granskad,True,False
+71d1fb895ea2cd2f6759aa9ec19787eb,c8:2b:96:e6:99:4f,c8:2b:96:e6:99:4f,Friggan,Friggan,Granskad,False,False
+8ef86d0599b8166e15a9592616a37a77,Pixel-9-Pro-XL.home.arpa,Pixel-9-Pro-XL.home.arpa,,,Granskad,False,False
+918e7d80920a366a5ca1149f9bde6f97,68:a4:0e:0c:1a:5c,68:a4:0e:0c:1a:5c,,,Granskad,False,False
+b7b2775c7a9546e11b5512800350afd2,chromecast-verkstadens-speaker,chromecast-verkstadens-speaker,,,Granskad,False,False
+cc382e1f9e403eb6ba722950561a1d7c,buddy3dcam,buddy3dcam,,,Granskad,False,False
+fb2435e55b23906399820a4887a03d85,HF-LPT220,HF-LPT220,,,Granskad,False,False
+4a20377a903d296f6e17bc6098d61600,prusa-xl,prusa-xl,,,Granskad,False,False
+873b737ff4d2bf83d00a93f98ff29d61,prusa-xl.home.arpa,prusa-xl.home.arpa,,,Granskad,False,False
+687558898f069a7cf9b9ac7e4a1c5615,Q28756,Q28756,,,Granskad,False,False
+c24eeda9c70a607b2e71303e1388ce44,a0:cb:fd:3a:3a:d8,a0:cb:fd:3a:3a:d8,,,Granskad,False,False
+3a513d6d94a62045ff426b9955714dc0,58:cd:c9:33:8f:ab,58:cd:c9:33:8f:ab,,,Granskad,False,False
+c5bd384e5777e6dd713848056270dd71,7c:9e:bd:06:e4:54,7c:9e:bd:06:e4:54,Heimdal (HA),Heimdal (HA),Granskad,False,False
+f81382f57ed714b188578bfb940756e8,a4:cf:12:d8:0a:dd,Termostat,Kontoret,Kontoret,Granskad,True,False
+8b12f635e2adaa779a3db0e5f641aa1d,7c:9e:bd:47:e2:88,LED-list sydöstra,Heimdal (HA),Köket,Granskad,True,True
+f178476f344b4621215ba0e096fc3acc,24:a1:60:10:5f:96,24:a1:60:10:5f:96,Poolen,Poolen,Granskad,False,False
+ba4e3b93d8dc302363155d7483c52acc,34:94:54:70:7c:a2,Taklampor,Sovrummet,Sovrummet,Granskad,True,False
+e90c2b59f7e655c437f7b0212c5719b2,Blomlampa 2 (verandan),Blomlampa 2,Köket,Köket,Granskad,True,False
+dea6075e458488efb7e948cd287a3c63,Hemmabio El #1,Elstyrning 1,Bion,Bion,Granskad,True,False
+8e39cb75d39dd6a988ef3a9a5124de8d,Taklampor (kontoret),Taklampor,Kontoret,Kontoret,Granskad,True,False
+3b39a982f76cf5c2916efe43018d480d,c4:4f:33:7a:51:11,LED-list östra,Heimdal (HA),Sovrummet,Granskad,True,True
+8dd5292bbd3114fe1361fd46e4f2baf1,192.168.30.171,Klimatsensor,Gamla verkstaden,Gamla verkstaden,Granskad,True,False
+0a5ccce94980fd5f22a312cb1178efac,Ljussensor,Ljussensor,Utomhus,Utomhus,Granskad,False,False
+6d63e7d3e3cbad927fd02c69e05ca7f1,c4:4f:33:72:7c:01,c4:4f:33:72:7c:01,Heimdal (HA),Heimdal (HA),Granskad,False,False
+c009f14ea5110f178ebbfb0188aaefec,c4:4f:33:72:73:e1,Vattennivå,Hönshuset,Hönshuset,Granskad,True,False
+92d4c8a6813af15d7250b96417002d25,24:62:ab:57:80:ad,Julbelysning,Utomhus,Utomhus,Granskad,True,False
+0b19066afbc84f416b77517cbd425ccb,c4:4f:33:7a:51:6d,LED-list södra,Heimdal (HA),Köket,Granskad,True,True
+345bf1da520172aa8e599e7068191ce8,a4:cf:12:d8:77:59,a4:cf:12:d8:77:59,Sovrummet,Sovrummet,Granskad,False,False
+8654caa70bf9976f9468a80baa109a95,c8:2b:96:e6:99:4f,c8:2b:96:e6:99:4f,Friggan,Friggan,Granskad,False,False
+6b00e3547e2adbb55755bf6fe8be545c,94:b9:7e:16:d2:02,Taklampor,Bion,Bion,Granskad,True,False
+e080d442d8473b0261a76934277b2c85,40:22:d8:61:53:f8,40:22:d8:61:53:f8,Kontoret,Kontoret,Granskad,False,False
+821a5e8641ccbf676f1f06a89f3f9fcc,Blomlampor (bion),Blomlampor,Bion,Bion,Granskad,True,False
+57526effb07b7464600deeede5ed7fac,08:f9:e0:46:ed:b4,Taklampor ESPHome,Entrén,Köket,Granskad,True,True
+72464832ea5d50edac5e918c2018497a,8c:ce:4e:0c:ca:58,Blomlampa 3,Köket,Köket,Granskad,True,False
+3078be456859fccabe3ff5c5d2e7c17b,80:64:6f:91:e9:d5,RF-brygga,Kontoret,Kontoret,Granskad,True,False
+fb54db7f08567b6532302b4d8132b529,dc:06:75:9d:65:c0,LED-list (balkongdörrar),Bion,Verandan,Granskad,True,True
+8314d113be2ab99c4162fb8c5841bcce,192.168.30.146,192.168.30.146,Heimdal (HA),Heimdal (HA),Granskad,False,False
+ef88eb9dd542d018ea0977cb4bff9ecf,c8:2b:96:07:7d:6e,Golvvärme,Friggan,Friggan,Granskad,True,False
+8a23e108be2c679648a9dcfd7b0ffed8,192.168.30.129,Poolbelysning och temperatur,Poolen,Poolen,Granskad,True,False
+ad8fb2b615191013ff160833e718f6e7,c8:2b:96:5c:71:55,Blomlampa,Kontoret,Kontoret,Granskad,True,False
+4d8fbdcce79574e5a3ca78d5511b77ba,2c:bc:bb:c1:87:2c,2c:bc:bb:c1:87:2c,Köket,Köket,Granskad,False,False
+156738c4fdc135bd05b0ee6b2bfdbe1c,48:e7:29:67:de:7f,Taklampor,Duschen,Duschen,Granskad,True,False
+397ee9a5fadb5009740e7110532e4c1e,08:b6:1f:38:0b:64,Salt,Verkstaden,Verkstaden,Granskad,True,False
+485d66614120bab8ca5956b51cd4b434,Ventilfläkt (bion),Ventilfläkt,Bion,Bion,Granskad,True,False
+7f68b8f7969ae190e8d926969a53d451,192.168.30.142,192.168.30.142,Heimdal (HA),Heimdal (HA),Granskad,False,False
+6ee45b1222d6c4c7ad513c8d03f69f7d,c4:4f:33:7a:2e:79,Gasol,Utomhus,Utomhus,Granskad,True,False
+c35b9a5fc85e53e859695b64ad553691,7c:9e:bd:06:e4:88,7c:9e:bd:06:e4:88,Heimdal (HA),Heimdal (HA),Granskad,False,False
+ad0eb5049e5bd7a1dd432227c80c5c21,cc:50:e3:fe:16:ed,IR-gateway,Bion,Bion,Granskad,True,False
+a1fd37935a6546ad43c505fecee53e4f,7c:9e:bd:46:f5:80,LED-list östra,Heimdal (HA),Köket,Granskad,True,True
+93932bb2e41b6662b989dce906604122,192.168.30.183,Termostat,Toaletten,Toaletten,Granskad,True,False
+f5989d560d6e5f25963c6b28870e9c48,24:a1:60:10:eb:a9,Poolvärmepump,Poolen,Poolen,Granskad,True,False
+4e880de595cc25fcbe5c56daa9a75a99,Taklampor,Taklampor,Ateljén,Ateljén,Granskad,False,False
+f9cb7e351054f4fb0c0c5abd64606331,08:b6:1f:34:55:50,Markis,Utomhus,Utomhus,Granskad,True,False
+5ccf726682f4645c184954fbd3ccf53e,98:f4:ab:e2:71:12,Termostat,Friggan,Friggan,Granskad,True,False
+889114c7f25dfcb701ed80c7636e935d,7c:9e:bd:06:c3:b4,LED-list,Heimdal (HA),Verandan,Granskad,True,True
+b69420b1e6288ca354581aa2f5c15a0d,Billaddare,Billaddare,Utomhus,Utomhus,Granskad,False,False
+c3b4b7b543c9bc3d1602c4138c9066c9,40:22:d8:76:6f:70,40:22:d8:76:6f:70,Bion,Bion,Granskad,False,False
+7eb5d7025e295dc30d52cf1284a9ebbb,48:e7:29:89:81:90,48:e7:29:89:81:90,Heimdal (HA),Heimdal (HA),Granskad,False,False
+a8c5d5ffb35af1bd27601825fcf75d76,f0:08:d1:f2:b8:08,ESP32-kamera,Utomhus,Utomhus,Granskad,True,False
+c3d296c6fe124342b568c0f1a646f6a2,Blomlampa 1 (Verandan),Blomlampa 1,Verandan,Verandan,Granskad,True,False
+8e97557399b0c3707e04c1bfc135659f,7c:9e:bd:06:e7:bc,LED-list,Heimdal (HA),Entrén,Granskad,True,True
+2f8fc1557700187584df280c66034c24,c4:4f:33:7a:51:d5,LED-list norra,Heimdal (HA),Sovrummet,Granskad,True,True
+addd18521bcaba4bd5c35379936a01af,192.168.10.104,192.168.10.104,,,Granskad,False,False
+bc596503f909d8d49341c4deb54b7cc8,DESKTOP-VF5T4DK,DESKTOP-VF5T4DK,,,Granskad,False,False
+85a2d17d616be5930bfb53ae35916205,Galaxy-S7-Friggan,Galaxy-S7-Friggan,,,Granskad,False,False
+24984d40ddcc693579aba7519e9df5e7,Galaxy-S7,Galaxy-S7,,,Granskad,False,False
+bd18fd945cdd8a5bb0e2b5cb9a39c275,siemens-washerdryer,siemens-washerdryer,,,Granskad,False,False
+02faf5bc0d624c7129da0a291cf3ac22,chromecast-vaxtskapets-speaker,chromecast-vaxtskapets-speaker,,,Granskad,False,False
+91b59a8f60bb1c165c9cba27df9b3519,chromecast-verkstadens-speaker,chromecast-verkstadens-speaker,,,Granskad,False,False
+e672be2380c4191eb52891fe0dac15a1,c4:4f:33:72:7c:01,c4:4f:33:72:7c:01,Heimdal (HA),Heimdal (HA),Granskad,False,False
+8af1dc6ae3d854084a6329e631db9abd,7c:9e:bd:06:e4:88,7c:9e:bd:06:e4:88,Heimdal (HA),Heimdal (HA),Granskad,False,False
+c7dd4d4acbd2068b546001d5bab238f4,c4:4f:33:7a:51:6d,LED-list södra,Heimdal (HA),Köket,Granskad,True,True
+8c4e1c2078c36b16816f1a7d083c8c70,7c:9e:bd:06:5d:e8,7c:9e:bd:06:5d:e8,Heimdal (HA),Heimdal (HA),Granskad,False,False
+2bece33773fb99c1efa825bac0383891,Taklampor,Taklampor,Ateljén,Ateljén,Granskad,False,False
+f7be9a435c4e1ca4e4e975eb42201cf1,24:6f:28:c1:b9:60,24:6f:28:c1:b9:60,Heimdal (HA),Heimdal (HA),Granskad,False,False
+c2a973dfc5af097eb31c027cd80685e3,Q28756,Q28756,,,Granskad,False,False
+021da4d8cdb42a022ec0c8b3741b4cc8,Golvvärme (köket),Golvvärme,Köket,Köket,Granskad,True,False
+c6d6261f130c4db96379a8eb09cae3f5,Golvvärme (ateljén),Golvvärme,Ateljén,Ateljén,Granskad,True,False
+235201521613b40bac3a6f7c1c176d4d,HF-LPT220,HF-LPT220,,,Granskad,False,False
+cfe9210873b00ef7de82e89fd787aada,buddy3dcam,buddy3dcam,,,Granskad,False,False
+620a70f3830bf457dddd9cb5d9b99e6d,a0:cb:fd:3a:3a:d8,a0:cb:fd:3a:3a:d8,,,Granskad,False,False
+55b2891c396cf5563bac9ec10cfb2402,58:cd:c9:33:8f:ab,58:cd:c9:33:8f:ab,,,Granskad,False,False
+6c0b43166574454e63b8444585344c73,Shelly Pro 3 - Verkstaden,Shelly Pro 3,Verkstaden,Verkstaden,Granskad,True,False
+b6ecb8a29e9b808c5657990a649a59d5,Växtlampa frösådd (bion) [SHPLS],LED-stjärnor,Köket,Utomhus,Granskad,True,True
+83680e6a486b1add617ecdd9de4e0e65,7c:9e:bd:06:e4:54,7c:9e:bd:06:e4:54,Heimdal (HA),Heimdal (HA),Granskad,False,False
+cb419cb4e80e9eacdb731fb1993f71d7,192.168.10.55,192.168.10.55,,,Granskad,False,False
+b92b69c080c94d6f7487840e4e4d2151,2c:bc:bb:c1:87:2c,2c:bc:bb:c1:87:2c,Köket,Köket,Granskad,False,False
+6c1d67d27562d3315319ede23070bb7e,60:f2:62:30:7a:32,60:f2:62:30:7a:32,,,Granskad,False,False
+5ce7bdf14ecc39b53a33182c7a1660bb,home-assistant-voice-096460,home-assistant-voice-096460,,,Granskad,False,False
+d3d9e57098c5c3bd0e9e9c15597c2ecf,shelly-1pm-celler-floor-heating,Golvvärme,,Bion,Granskad,True,True
+f61eead36abc9bba52c8f34f021709a1,24:62:ab:57:80:ad,Julbelysning,,Utomhus,Granskad,True,True
+758c6b92fb50574f7ebe992855c5491d,Galaxy-S7,Galaxy-S7,,,Granskad,False,False
+9c515ec8a0a57fe5e1a1c9cc2071595e,Galaxy-S7-Friggan,Galaxy-S7-Friggan,,,Granskad,False,False
+7321ff5e1e99df32552b63f4bd7620c4,chromecast-mannis-screen,chromecast-mannis-screen,,,Granskad,False,False
+ac84d4a9ed8cc1b0d7769884cbc95b3a,gw-august-connect,gw-august-connect,Entrén,Entrén,Granskad,False,False
+74b5529ed23b20a924942c918776a031,08:b6:1f:34:55:50,Markis,Utomhus,Utomhus,Granskad,True,False
+eba4706180ed25b6bcd11627ef260694,48:e7:29:89:81:90,48:e7:29:89:81:90,Heimdal (HA),Heimdal (HA),Granskad,False,False
+dbfd27f0f58c34d347966ad5e2083c00,LenovoL340,192.168.30.45,,,Granskad,True,False
+eb2e088362c62d0c839f17045847f5df,Q28756,192.168.20.62,,,Granskad,True,False
+80337fccf57bc255a2b8247cd64ed4af,buddy3dcam,buddy3dcam,,,Granskad,False,False
+e43f6120935419beff04e2166feaa621,prusa-xl,prusa-xl,,,Granskad,False,False
+a8759f882a142dd7391938b5751e9130,chromecast-vaxtskapets-speaker,chromecast-vaxtskapets-speaker,,,Granskad,False,False
+74c24e8c514bfaa35365105ae82c2410,roborock-max,roborock-max,Köket,Köket,Granskad,False,False
+74053470c611b1052eb188eeb6474fab,a0:cb:fd:3a:3a:d8,a0:cb:fd:3a:3a:d8,,,Granskad,False,False
+85bf48131148ff9b2848a9e26e198b30,chromecast-verkstadens-speaker,chromecast-verkstadens-speaker,,,Granskad,False,False
+15c35380a7a7e9ca0a1f7c0b8c85e882,7c:9e:bd:06:5d:e8,7c:9e:bd:06:5d:e8,Heimdal (HA),Heimdal (HA),Granskad,False,False
+5ee897ff17093c0d83ea78216cb427bc,Vattensensor (torkskåp),Vattensensor torkskåp,Ateljén,Ateljén,Granskad,True,False
+3dd6bdbbf027218c2c6ea0c213df4b85,60:f2:62:30:7a:32,60:f2:62:30:7a:32,,,Granskad,False,False
+bcee60699371c89f05b76964c2d5d0c8,chromecast-toans-speaker,chromecast-toans-speaker,,,Granskad,False,False
+a41739686c9dccb9d2d0935e11f4e052,chromecast-duschens-speaker,chromecast-duschens-speaker,,,Granskad,False,False
+1c851f51fc781b180ac85b1357bb1deb,siemens-washerdryer,siemens-washerdryer,,,Granskad,False,False
+93c2c1b9a67e7fe71ed62e56380357ac,shelly-1pm-shower-floor-heating,Golvvärme,,Duschen,Granskad,True,True
+f9907305b94b0769630ddf9a2d14ac04,shelly-1pm-porch-floor-heating,Golvvärme,,Verandan,Granskad,True,True
+68ed12ff2915eb585b986ae6bded16c2,chromecast-stereo-left-speaker,chromecast-stereo-left-speaker,,,Granskad,False,False
+367b93944c83eb73f449a805c00c35c1,shellypro-3-shop-central,Shelly Pro 3,,Verkstaden,Granskad,True,True
+6294e6f9ed7d303d5493317348a28bbe,Carolas-S25,Carolas-S25,,,Granskad,False,False
+c3b8112ec5c3864d661d7bb0b61d3151,Pixel-9-Pro-XL,Pixel-9-Pro-XL,,,Granskad,False,False
+e2b6facfecd2ee352799d33a7196446f,Galaxy-A36-5G,Galaxy-A36-5G,,,Granskad,False,False
+40e1ca53e665e973293ebca46e4811f0,Galaxy-S7,Galaxy-S7,,,Granskad,False,False
+2f50d41e1fb1e7ee14edee02c572a45f,Galaxy-S7-Friggan,Galaxy-S7-Friggan,,,Granskad,False,False
+cb7a9bdba3ed8d03acf837983cd74610,68:a4:0e:0c:1a:5c,68:a4:0e:0c:1a:5c,,,Granskad,False,False
+f841139137ec359f2176b7be49b8cfa0,Golvvärme (bion),Golvvärme,Bion,Bion,Granskad,True,False
+e7d2dc93dd0cd8f69e461cd577317577,shelly-1pm-studio-floor-heating,Golvvärme,,Ateljén,Granskad,True,True
+979e2ed2479ecd8abce1dec4f9583e91,192.168.20.62,192.168.20.62,,,Granskad,False,False
+e0cff837534c501de5327d7e3782f9b6,a0:cb:fd:3a:3a:d8,a0:cb:fd:3a:3a:d8,,,Granskad,False,False
+7f1e88ae58a83762877b601d7f5ff6ce,chromecast-tv-soundbar,chromecast-tv-soundbar,,,Granskad,False,False
+21447b9b317a66bcf262e415af670503,roborock-max,roborock-max,Köket,Köket,Granskad,False,False
+6ead18e74c782b6c97416a74e103038d,192.168.10.55,192.168.10.55,,,Granskad,False,False
+fb357f4bfd36f57ee05df1c0f5ccd028,7c:9e:bd:47:e2:88,LED-list sydöstra,Heimdal (HA),Köket,Granskad,True,True
+41f1d6c49daacacf375ac5a6d365baca,94:b9:7e:16:d2:02,Taklampor,Bion,Bion,Granskad,True,False
+31a65455a83e04b3ef7f836022112170,chromecast-kokets-screen,chromecast-kokets-screen,,,Granskad,False,False
+42ce584507a23a79612ab6f19f0cdf7a,chromecast-duschens-speaker,chromecast-duschens-speaker,,,Granskad,False,False
+1444d41eb2c7979b444d3d50fc64b55b,shellypro-3-shop-central,Shelly Pro 3,,Verkstaden,Granskad,True,True
+dd6f34a2e92e74d9457b95dc1a457ec0,shellyplus2pm-porch-lamps-x2,Väggkontakt x2,,Verandan,Granskad,True,True
+e7da58312bb76c5c0ef13ad512f018c7,Galaxy-A36-5G,Galaxy-A36-5G,,,Granskad,False,False
+799eb3c5b67704037ebca08335123a08,Carolas-S25,Carolas-S25,,,Granskad,False,False
+d9796e7ff7a0e2b1a77a964188f38049,Galaxy-S7-Friggan,Galaxy-S7-Friggan,,,Granskad,False,False
+6481dcbd0abc8247603c1e0bd94817f8,192.168.30.196,192.168.30.196,,,Granskad,False,False
+b095dc98dc2f23935c6c45300be63208,192.168.30.197,192.168.30.197,,,Granskad,False,False
+7bc0fc0eb73e616da05654bc5d42615f,DiegoTab,DiegoTab,,,Granskad,False,False
+1f11c6d0708b5f9952b9b105a1ee8e0d,chromecast-duschens-speaker,chromecast-duschens-speaker,,,Granskad,False,False
+83ecded87cc5915e543f567cb5e9e882,chromecast-toans-speaker,chromecast-toans-speaker,,,Granskad,False,False
+0d4b0744e4770ad2d5cb0c21c6ed905b,48:e7:29:67:de:7f,Taklampor,Duschen,Duschen,Granskad,True,False
+945272d5693a70b3c51584e9cddeb738,08:b6:1f:34:55:50,Markis,,Utomhus,Granskad,True,True
+b57d68dd0f7bacb88554d272e211c87b,gw-august-connect,gw-august-connect,Entrén,Entrén,Granskad,False,False
+4cce9a9eeb3d25ed365149cdd8dba78f,2c:bc:bb:c1:87:2c,2c:bc:bb:c1:87:2c,Köket,Köket,Granskad,False,False
+bfdabad035113eb34a8e22c732aaac13,192.168.10.30,192.168.10.30,,,Granskad,False,False
+34b39f62a5b09c8a19cea4044a90a951,Vattensensor (torkskåp),Vattensensor torkskåp,Ateljén,Ateljén,Granskad,True,False
+ab8ef2a363586f08112033a561d7bb0e,24:6f:28:c1:b9:60,24:6f:28:c1:b9:60,Heimdal (HA),Heimdal (HA),Granskad,False,False
+4d645f86c40a176929933da5f926ffdf,a0:cb:fd:3a:3a:d8,a0:cb:fd:3a:3a:d8,,,Granskad,False,False
+486fa819a9ce457079cd4260c1970b23,08:f9:e0:46:ed:b4,Taklampor ESPHome,Entrén,Köket,Granskad,True,True
+662c464f29ce2b71758b50f3992a50fd,Sänglampor Diego,Sänglampor Diego,Sovrummet,Sovrummet,Granskad,False,False
+1d21b5ac216d7a52bbde98eede7e9c25,60:f2:62:30:7a:32,60:f2:62:30:7a:32,,,Granskad,False,False
+03c84816fa0ec5c5f284872684d852ae,shellyplus2pm-porch-lamps-x2,Väggkontakt x2,,Verandan,Granskad,True,True
+acf8be13b291d29cbdf5c69b7800d4ee,Galaxy-A36-5G,Galaxy-A36-5G,,,Granskad,False,False
+f2e7d65347492666d3e658b3c82bf42d,Pixel-9-Pro-XL,Pixel-9-Pro-XL,,,Granskad,False,False
+51701210a4b99360e90a9bb1761463a8,Galaxy-S7-Friggan,Galaxy-S7-Friggan,,,Granskad,False,False
+c8ef6a66e63a488c852a651433360b0d,Carolas-S25,Carolas-S25,,,Granskad,False,False
+4f54e2ffb49cfeb5850c9a0acd8dfe91,DiegoTab,DiegoTab,,,Granskad,False,False
+8bc9b6ad7bf32081ff214581710b8a93,ac:67:b2:2c:18:8c,Lucka,Hönshuset,Hönshuset,Granskad,True,False
+56d73e871264cec3a36afd3306996d98,24:62:ab:58:40:b4,Vattenvärmare,Hönshuset,Hönshuset,Granskad,True,False
+edb4f8db9378326c0cd9864b62f7f737,canon-g3070,canon-g3070,,,Granskad,False,False
+f8ca4a256d080dfd72ef59214dcc4010,192.168.10.30,192.168.10.30,Poolen,Poolen,Granskad,False,False
+7d8bb081fb2093b145a912411a9c6d85,48:e7:29:89:81:90,48:e7:29:89:81:90,,,Granskad,False,False
+27f23a7c74f8dc4a02f40b01bf96b29c,chromecast-vaxtskapets-speaker,chromecast-vaxtskapets-speaker,,,Granskad,False,False
+98781e8c9279ae8fca5c483e6c34ea67,chromecast-stereo-left-speaker,chromecast-stereo-left-speaker,,,Granskad,False,False
+c1931a81007ba8bfc199fd9ceaf0c89a,192.168.10.17,192.168.10.17,,,Granskad,False,False
+671fe4701c491bf2c125a308b8dc3ee4,a0:cb:fd:3a:3a:d8,a0:cb:fd:3a:3a:d8,,,Granskad,False,False
+fb6f821dd7b7fd022a21e54543696f02,chromecast-verkstadens-speaker,chromecast-verkstadens-speaker,,,Granskad,False,False
+c040200eef64dc3c4c9852d678ad0465,Galaxy-S7,Galaxy-S7,,,Granskad,False,False
+f7b9dfb5867a3fda88ce6e5f7c480d12,a4:cf:12:d8:0a:dd,Termostat,Kontoret,Kontoret,Granskad,True,False
+8134a1ad376d3eb2d6c0e5c74e0e758c,14:13:0b:d5:3c:71,14:13:0b:d5:3c:71,,,Granskad,False,False
+0f2949ea12cacf69edf3d05d391756b3,shelly-1pm-shower-floor-heating,Golvvärme,,Duschen,Granskad,True,True
+0f608b9f77a13635f92b6b2949680396,shelly-1pm-celler-floor-heating,Golvvärme,,Bion,Granskad,True,True
+a65bcbf012e5dea6c6befd0eb7f2ff2a,shelly-1pm-porch-floor-heating,Golvvärme,,Verandan,Granskad,True,True
+38f850a39c9a90ed663ad0ae3007a4e4,shellyplus2pm-porch-lamps-x2,Väggkontakt x2,,Verandan,Granskad,True,True
+60ac31374b3d2f47cf1fc882ad0371b3,shelly-1pm-studio-floor-heating,Golvvärme,,Ateljén,Granskad,True,True
+97061903cc5342db4f28c67715b2f458,shellyplug-s-diego-bed-lamp,shellyplug-s-diego-bed-lamp,,,Granskad,False,False
+2eda30dd3f645abff21769b4f26acd73,Carolas-S25,Carolas-S25,,,Granskad,False,False
+bf858b832bc810a302fc34d6dbcc0f21,Galaxy-A36-5G,Galaxy-A36-5G,,,Granskad,False,False
+a82735220cca8b3a560de71efa1470a5,buddy3dcam,buddy3dcam,,,Granskad,False,False
+07bc5a3b0478f97a8dc774f917e12ed6,SSID OLOFSSON_WIFI (2.4 GHz),SSID OLOFSSON_WIFI (2.4 GHz),,,Granskad,False,False
+08fdb9c4e289b0dce5b02475669d2958,SSID OLOFSSON_GUEST (2.4 GHz),SSID OLOFSSON_GUEST (2.4 GHz),,,Granskad,False,False
+1369139dda42714d6b56d0c98161d443,SSID OLOFSSON_IOT (2.4 GHz),SSID OLOFSSON_IOT (2.4 GHz),,,Granskad,False,False
+7775f7a4e49022cbafc626aa3878e1f3,SSID OLOFSSON_WIFI (5 GHz),SSID OLOFSSON_WIFI (5 GHz),,,Granskad,False,False
+e3c24f8fdb061c6619daf0d3dac0d916,SSID OLOFSSON_GUEST (5 GHz),SSID OLOFSSON_GUEST (5 GHz),,,Granskad,False,False
+1667308f03e2021a1bd60aa4c892f6cb,SSID OLOFSSON_IOT (5 GHz),SSID OLOFSSON_IOT (5 GHz),,,Granskad,False,False
+3149d6e906ec6b7a190bae061ba2f913,192.168.10.53,192.168.10.53,,,Granskad,False,False
+ac8db1b934274d5053256da62299c515,192.168.10.53,192.168.10.53,,,Granskad,False,False
+451c82bb3122d662dab862f231fe5d4e,cc:50:e3:fe:16:ed,IR-gateway,,Bion,Granskad,True,True
+a3cec764ea107664074a078c2a801997,cc:50:e3:fe:16:ed,IR-gateway,,Bion,Granskad,True,True
+2fec3a78f9c6b89069eea056c5181c51,chromecast-tv-soundbar,chromecast-tv-soundbar,,,Granskad,False,False
+2ec41200bb4e9db3978e7dcf52e0aa88,chromecast-stereo-right-speaker,chromecast-stereo-right-speaker,,,Granskad,False,False
+5c5bb33782f82c795021a2496170dd93,shelly-1pm-shower-floor-heating,Golvvärme,,Duschen,Granskad,True,True
+f3ba80e6c64abeb79624ebf64744ba27,shelly-1pm-entry-floor-heating,Golvvärme,,Entrén,Granskad,True,True
+8a504b901d6e7818b65cc36079e57c10,levoit-humidifier-verandan,levoit-humidifier-verandan,,,Granskad,False,False
+722556ff510e2da788aa729844b1dc5d,TV-Galaxy-S9,TV-Galaxy-S9,,,Granskad,False,False
+f3bb1ac6b62bbb74113c58c11b297687,24:a1:60:1b:1f:92,Blomlampa 1,,Verandan,Granskad,True,True
+ed7412238af2bfda62602d802ab0ac2b,7c:9e:bd:06:c3:b4,LED-list,,Verandan,Granskad,True,True
+31cba8194ce64072d7490f2e2f184c38,192.168.30.196,192.168.30.196,,,Granskad,False,False
+2241cafccd67256148bbab367ee55c44,dc:06:75:9d:65:c0,LED-list (balkongdörrar),,Verandan,Granskad,True,True
+d59021597d4ec3fa4f0e5f81050de3df,f0:08:d1:f2:b8:08,ESP32-kamera,,Utomhus,Granskad,True,True
+05ae2627f4b455f3b51cfc1b50c287c2,7c:9e:bd:06:e7:bc,LED-list,,Entrén,Granskad,True,True
+2263c8ff6cd33e85b1d00adc30dd154f,192.168.30.197,192.168.30.197,,,Granskad,False,False
+3f468b4d72344090ba3fc494f7562e9f,8c:ce:4e:0c:ca:58,Blomlampa 3,,Köket,Granskad,True,True
+374fb2f5fff8ba345a68fbfa4fc1c815,siemens-dishwasher-016050395510002818,siemens-dishwasher-016050395510002818,,,Granskad,False,False
+0d21d05941eb0c89d0f0cb466753785a,7c:9e:bd:46:f5:80,LED-list östra,,Köket,Granskad,True,True
+038d5f3a66f4cc8434b842de097f0070,f4:cf:a2:15:d0:e3,Blomlampa 2,,Köket,Granskad,True,True
+aab5fb81e0c71f4aa3c0fdc37eab0e92,2.4 GHz,2.4 GHz,,,Granskad,False,False
+f5b3f9aee322c3e2dfd97340489cb658,5 GHz,5 GHz,,,Granskad,False,False
+bd6d9e36046e917a5b400be0141d7a88,chromecast-stereo-right-speaker,chromecast-stereo-right-speaker,,,Granskad,False,False
+7326c17834f5563780248ddbd7cd7ea6,canon-g3070,canon-g3070,,,Granskad,False,False
+96a9a49139cd412416c248f47194dcf6,chromecast-diegos-screen,chromecast-diegos-screen,,,Granskad,False,False
+6a9a3152b4015b864b6b778c8f535e8f,192.168.10.46,192.168.10.46,,,Granskad,False,False
+7c340d67ffbdaebb2a09dfb7a0afe619,c4:4f:33:7a:51:d5,LED-list norra,,Sovrummet,Granskad,True,True
+4e310c40372591fa80ae02e3e4b4e4a8,34:94:54:70:7c:a2,Taklampor,,Sovrummet,Granskad,True,True
+da5bb78781668d7814271fe872d36429,c8:c9:a3:25:b7:f7,Taklampor,,Kontoret,Granskad,True,True
+09147886523170780169189ffb321f99,c8:2b:96:5c:71:55,Blomlampa,,Kontoret,Granskad,True,True
+2ba06058374f2cfc2641227cb990f6ff,shellyplug-s-manni-bed-lamp,shellyplug-s-manni-bed-lamp,,,Granskad,False,False
+2b8d14b72cea3e7380f38c26d0dcfa05,levoit-humidifier-verandan,levoit-humidifier-verandan,,,Granskad,False,False
+69707932608a9c3bf57ad780dd330bc0,c4:4f:33:7a:51:11,LED-list östra,,Sovrummet,Granskad,True,True
+9411bfbd2ee13bc615522bd1aadd8ca8,home-assistant-voice-096460,home-assistant-voice-096460,,,Granskad,False,False
+41dc4e86e295805aafda676bc4748c30,dc:06:75:9d:82:74,dc:06:75:9d:82:74,,,Granskad,False,False
+d375063246ce07ecb73a89745e5ad8d8,a4:cf:12:d8:77:59,a4:cf:12:d8:77:59,,,Granskad,False,False
+ad2e3b271e2fbf2ad48e9e6d6a458d66,40:22:d8:61:53:f8,40:22:d8:61:53:f8,,,Granskad,False,False
+bf6a2a975694aec8203d842fa2807a2e,SSID OLOFSSON_WIFI,SSID OLOFSSON_WIFI,,,Granskad,False,False
+cbf223a21864fc56663f16e6942d009d,SSID OLOFSSON_GUEST,SSID OLOFSSON_GUEST,,,Granskad,False,False
+cb4ce32d96de1df89d4c421da3e10bf6,SSID OLOFSSON_IOT,SSID OLOFSSON_IOT,,,Granskad,False,False
+aa1b7ae1e87135f82bce9c94ade541d8,SSID OLOFSSON_WIFI,SSID OLOFSSON_WIFI,,,Granskad,False,False
+5daa75d894c59e8f4aff1813614e7ae3,SSID OLOFSSON_GUEST,SSID OLOFSSON_GUEST,,,Granskad,False,False
+54ba7ad5288a6b760ad122deaf15cd7d,SSID OLOFSSON_IOT,SSID OLOFSSON_IOT,,,Granskad,False,False
+f379e2229bebaf7e6dcbb2be57184319,2.4 GHz,2.4 GHz,,,Granskad,False,False
+3ad76821ac11ccf3c3dd038d50f6c789,5 GHz,5 GHz,,,Granskad,False,False
+ef062d1c9d83143256ee247de874179f,TVs soundbar,TVs soundbar,,,Granskad,False,False
+ba1dd341f1d83f92400fd649b3a20f46,Toalettens högtalare,Toalettens högtalare,,,Granskad,False,False
+76a3b9c3203daebd93f04249396f26f7,Kökets skärm,Kökets skärm,,,Granskad,False,False
+be49686a6b74d3f9911c80bd944e20d6,Nya TVn,Nya TVn,,,Granskad,False,False
+526d60fb16dbc60fe090acbfb5e70cd4,Duschens högtalare,Duschens högtalare,,,Granskad,False,False
+db1430410eb27895a799b07db51b67d3,192.168.10.46,192.168.10.46,,,Granskad,False,False
+3a909c7e312d75cbaa84e9c22bdc3a9b,c8:2b:96:5c:71:55,Blomlampa,,Kontoret,Granskad,True,True
+8d3a8ae0b0058cbdb27b1ac3bb0d6459,a4:cf:12:d8:77:59,a4:cf:12:d8:77:59,,,Granskad,False,False
+89d9f50f187d74f125c1a7fbc669c742,shellyplug-s-diego-bed-lamp,shellyplug-s-diego-bed-lamp,,,Granskad,False,False
+4e5d01547d447a983023d01a58b71b2f,192.168.10.46,192.168.10.46,,,Granskad,False,False
+e6fc4f806b11121365eb3fb398fb7067,SSID OLOFSSON_WIFI,SSID OLOFSSON_WIFI,,,Granskad,False,False
+da8023933e6ec65417a5e10876a83c83,SSID OLOFSSON_GUEST,SSID OLOFSSON_GUEST,,,Granskad,False,False
+9e06f3d0c485325b65b7a00f2b4f14fb,SSID OLOFSSON_IOT,SSID OLOFSSON_IOT,,,Granskad,False,False
+dd00b500fa8a72909cc9836b4888eb77,SSID OLOFSSON_WIFI,SSID OLOFSSON_WIFI,,,Granskad,False,False
+664e04e81be81a029a3dbf3fa9c2a547,SSID OLOFSSON_GUEST,SSID OLOFSSON_GUEST,,,Granskad,False,False
+e50482b024460bb5e097e3c3b8fe3907,SSID OLOFSSON_IOT,SSID OLOFSSON_IOT,,,Granskad,False,False
+aa94456be1dafbd51575af69569bf3f6,2.4 GHz,2.4 GHz,,,Granskad,False,False
+d0feb692e5f7619bd38e94f12630383a,5 GHz,5 GHz,,,Granskad,False,False
+a1a1ab61695d2fa0e9b7c1bb59c09b3b,c4:4f:33:7a:51:11,LED-list östra,,Sovrummet,Granskad,True,True
+223de87261cdaff373820d33c37a8576,2.4 GHz,2.4 GHz,,,Granskad,False,False
+2bffde5c4f4932969d115c025686e096,5 GHz,5 GHz,,,Granskad,False,False
+3ccbdcd0d1acc61328460175d8376c78,c8:c9:a3:25:b7:f7,Taklampor,,Kontoret,Granskad,True,True
+24e5e9c7b4c485ba9c8c7caeaa7ed832,dc:06:75:9d:82:74,dc:06:75:9d:82:74,,,Granskad,False,False
+6513aa41265a51eb92c248b0460d15bd,shellyplug-s-manni-bed-lamp,shellyplug-s-manni-bed-lamp,,,Granskad,False,False
+cd05be681c70c8ae027d8831a09c2782,SSID OLOFSSON_WIFI,SSID OLOFSSON_WIFI,,,Granskad,False,False
+77746a9fd7ef1bc69522e7776477e756,SSID OLOFSSON_GUEST,SSID OLOFSSON_GUEST,,,Granskad,False,False
+47a058938a1462ebc4621893935a5673,SSID OLOFSSON_IOT,SSID OLOFSSON_IOT,,,Granskad,False,False
+9bc47956617abdc34804a1eff47b1c72,SSID OLOFSSON_WIFI,SSID OLOFSSON_WIFI,,,Granskad,False,False
+d26c1581a0d5bc0b0099102a461a3098,SSID OLOFSSON_GUEST,SSID OLOFSSON_GUEST,,,Granskad,False,False
+9976a57f71b62740d4480ccde1360743,SSID OLOFSSON_IOT,SSID OLOFSSON_IOT,,,Granskad,False,False
+ccf9050e2a32a174f9bc451844746c5e,2.4 GHz,2.4 GHz,,,Granskad,False,False
+4bafb4c61d2b0618775874189e07b56d,5 GHz,5 GHz,,,Granskad,False,False
+a61caa6e8b8a3fe13da402a3a481a7fe,chromecast-stereo-right-speaker,chromecast-stereo-right-speaker,,,Granskad,False,False
+af86c348ab35baf7dc2782f8fb640a3f,SM-R875F,SM-R875F,,,Granskad,False,False
+9b853b74e49b33da90ccb5616debf30c,dc:06:75:9d:65:c0,LED-list (balkongdörrar),,Verandan,Granskad,True,True
+2015427ab5a3971258931903a81dbfaf,shellyplus2pm-porch-lamps-x2,Väggkontakt x2,,Verandan,Granskad,True,True
+f0a515695e98eb62be3817f12efcbdb6,chromecast-kokets-screen,chromecast-kokets-screen,,,Granskad,False,False
+33008a3d30f54c3d49915346b6aa798b,chromecast-tv-soundbar,chromecast-tv-soundbar,,,Granskad,False,False
+d2876374fa17cc07bfd8722d2bb372ae,Galaxy-S9,Galaxy-S9,,,Granskad,False,False
+35f1076f38fd486ac712f8ae017fe7d6,shelly-1pm-porch-floor-heating,Golvvärme,,Verandan,Granskad,True,True
+7bcf103bdef6018c26f18bb58eb2a9c6,SSID OLOFSSON_WIFI,SSID OLOFSSON_WIFI,,,Granskad,False,False
+d351e89f3d43d5cbf6dfe9b8a5413095,SSID OLOFSSON_GUEST,SSID OLOFSSON_GUEST,,,Granskad,False,False
+b16927d0928e30a68947d48562f056e2,SSID OLOFSSON_IOT,SSID OLOFSSON_IOT,,,Granskad,False,False
+c07ad4c335f7c75cd31b2afdbc733107,SSID OLOFSSON_WIFI,SSID OLOFSSON_WIFI,,,Granskad,False,False
+e3732efcb8c67655896a0bc53fe44851,SSID OLOFSSON_GUEST,SSID OLOFSSON_GUEST,,,Granskad,False,False
+3dd821cc757ddd365374b6ef148ca7fa,SSID OLOFSSON_IOT,SSID OLOFSSON_IOT,,,Granskad,False,False
+854983767c454b2d275cb116ce5b5c6b,2.4 GHz,2.4 GHz,,,Granskad,False,False
+cbfd83082b73d15d894fea45c80d8cf1,5 GHz,5 GHz,,,Granskad,False,False
+8071ef43f753363acb6e653e21e49bee,SSID OLOFSSON_WIFI,SSID OLOFSSON_WIFI,,,Granskad,False,False
+236474a2747e8c7d55d37286bdb768a2,SSID OLOFSSON_GUEST,SSID OLOFSSON_GUEST,,,Granskad,False,False
+5aa677d499983cec79122d0d04c9b0d2,SSID OLOFSSON_IOT,SSID OLOFSSON_IOT,,,Granskad,False,False
+fb76dc95ee324bc507be0148fe287592,SSID OLOFSSON_WIFI,SSID OLOFSSON_WIFI,,,Granskad,False,False
+df0dcb62fe6da4316757314507faff03,SSID OLOFSSON_GUEST,SSID OLOFSSON_GUEST,,,Granskad,False,False
+dbabbba16b54dc3baa5e00752c0f45f1,SSID OLOFSSON_IOT,SSID OLOFSSON_IOT,,,Granskad,False,False
+227724855ae674b89183ee9f92632aa2,8c:ce:4e:0c:ca:58,Blomlampa 3,,Köket,Granskad,True,True
+012a3dbcc946329ab1054a7aae1e1036,f0:08:d1:f2:b8:08,ESP32-kamera,,Utomhus,Granskad,True,True
+fd97f3a29ff15ff8fa3b7b90103d6499,SSID OLOFSSON_WIFI,SSID OLOFSSON_WIFI,,,Granskad,False,False
+380f84ccd89681b41452eaf7bb1aa2aa,SSID OLOFSSON_IOT,SSID OLOFSSON_IOT,,,Granskad,False,False
+ac4e6b8fa12aab80b7970848f703fa5b,2.4 GHz,2.4 GHz,,,Granskad,False,False
+33565ef6aa2bf6db5cefe9a2cdc42789,5 GHz,5 GHz,,,Granskad,False,False
+ef12d1107be4ebab746874573cf87296,shelly-1pm-entry-floor-heating,Golvvärme,,Entrén,Granskad,True,True
+8220c2f8fe495ac1ff19f46eb42a5bd9,roborock-max,roborock-max,,,Granskad,False,False
+99afe2c5e412f2093ed2469cdc8f447a,SM-R875F,SM-R875F,,,Granskad,False,False
+0604958b47827b518d41911dd91b1dd2,Galaxy-S9,Galaxy-S9,,,Granskad,False,False
+68aaa7a89bf3f0a76aec7f85ab8c831b,SSID OLOFSSON_WIFI,SSID OLOFSSON_WIFI,,,Granskad,False,False
+f83e97867facc9cfc40241c5a6d72da5,SSID OLOFSSON_GUEST,SSID OLOFSSON_GUEST,,,Granskad,False,False
+b88c376ecaf9e8b171cc12be5a6e8410,SSID OLOFSSON_IOT,SSID OLOFSSON_IOT,,,Granskad,False,False
+08a9a192674dba64c8f348d098141551,SSID OLOFSSON_WIFI,SSID OLOFSSON_WIFI,,,Granskad,False,False
+c4f299cfbab7477975bad6e1bcf66c6c,SSID OLOFSSON_GUEST,SSID OLOFSSON_GUEST,,,Granskad,False,False
+bdc8caed91c26dc46503d6e1730f961b,SSID OLOFSSON_IOT,SSID OLOFSSON_IOT,,,Granskad,False,False
+ff1543ec4eb4ae1b30fd47b188f4f643,2.4 GHz,2.4 GHz,,,Granskad,False,False
+477d6bed08e94bfc02d7be40b7d3f9f6,5 GHz,5 GHz,,,Granskad,False,False
+c4f0ea69d0914c751a629ce5dc54ffcc,chromecast-toans-speaker,chromecast-toans-speaker,,,Granskad,False,False
+29943fcbe7b6ffd4afb38fd8bf0781ba,BroadLink-Remote-ea-14-9d,BroadLink-Remote-ea-14-9d,,,Granskad,False,False
+66667263a11370d90396dc7b4f19dfaf,BroadLink-Remote-ea-14-9d,BroadLink-Remote-ea-14-9d,,,Granskad,False,False
+5bc6860e3c3644111dd2618a788f74fd,BroadLink-Remote-ea-14-9d,BroadLink-Remote-ea-14-9d,,,Granskad,False,False
+a763f4c46f0ddf4b50144e6f28ed9e3f,BroadLink-Remote-ea-14-9d,BroadLink-Remote-ea-14-9d,,,Granskad,False,False
+8b56f114d5279ad2fd0cf74546dd27a0,192.168.30.83,192.168.30.83,,,Granskad,False,False
+723d6c18259cb6f22dc9dbdc3f60bca0,192.168.30.83,192.168.30.83,,,Granskad,False,False
+ae94f660867c6e5814ca6b32d52a1687,Broadlink RM4 mini (köket),IR-fjärrkontroll,Köket,Köket,Granskad,True,False
+f00d093b3abc908d8d51f5ff2df6e032,DiegoTab,DiegoTab,,,Granskad,False,False
+e50d50fe4e0f3a7149482d9f8c408993,192.168.30.196,192.168.30.196,,,Granskad,False,False
+4c3ff90ad1dc9ab15e6247f6472a84e9,f4:cf:a2:15:d0:e3,Blomlampa 2,,Köket,Granskad,True,True
+e0e7147c8dd08f4010e5220af4d8c0d3,BroadLink-Remote-ea-14-9d,BroadLink-Remote-ea-14-9d,,,Granskad,False,False
+02d17b1c57500fa3a6461a770fe0a667,24:a1:60:1b:1f:92,Blomlampa 1,,Verandan,Granskad,True,True
+60f5e8bfb659657c079482fb2e2185ae,SSID OLOFSSON_WIFI,SSID OLOFSSON_WIFI,,,Granskad,False,False
+c3ceaaad7026da76f1c0f7066ecbd65e,SSID OLOFSSON_GUEST,SSID OLOFSSON_GUEST,,,Granskad,False,False
+55cba096b6e188893c5b9e1b0141c3b5,SSID OLOFSSON_IOT,SSID OLOFSSON_IOT,,,Granskad,False,False
+939ca800a213819015ffbd10196d0895,SSID OLOFSSON_WIFI,SSID OLOFSSON_WIFI,,,Granskad,False,False
+d4704ecee1043636f61b1e73d996bc2b,SSID OLOFSSON_GUEST,SSID OLOFSSON_GUEST,,,Granskad,False,False
+169e3a23bb053fff9aed099289bada43,SSID OLOFSSON_IOT,SSID OLOFSSON_IOT,,,Granskad,False,False
+f0a18f2465b3d9d5211b885be95bb3d3,2.4 GHz,2.4 GHz,,,Granskad,False,False
+992ee4702dcd2cb743ad85f9bef4620f,5 GHz,5 GHz,,,Granskad,False,False
+8fe5e542b1f76b6cf687b4410a0fd2f8,SmartHomeControlPanel,SmartHomeControlPanel,,,Granskad,False,False
+331001cb0a3667ec017b5f27a73587bb,40:22:d8:76:66:c0,40:22:d8:76:66:c0,,,Granskad,False,False
+06c83f687fb2b90933f9596f6e1ecd74,40:22:d8:76:6f:70,40:22:d8:76:6f:70,,,Granskad,False,False
+4d5b8fcd5210a08a1ca0fc4a0a690721,shelly-1pm-kitchen-floor-heating,Golvvärme,,Köket,Granskad,True,True
+70e0f5a6fd2c82568a6f48210ef8da88,f4:cf:a2:15:d8:ac,Ventilfläkt,,Bion,Granskad,True,True
+d0764c866b6e89bde7e557009a21580d,c4:4f:33:7a:2e:79,Gasol,,Utomhus,Granskad,True,True
+91d057e4bac84528987dd56fab827c4d,HA Voice PE 096460 Media Player,HA Voice PE 096460 Mediaspelare,,,Granskad,True,False
+2ea8015e06cbcc02196006af9207c4d3,Grannys högtalare,Grannys högtalare,,,Granskad,False,False
+50ea1925dc2b044f348e7ee52c3d24f3,Mannis väckarklocka,Mannis väckarklocka,,,Granskad,False,False
+9207ca7e8e0630f04bf26c672e834e70,chromecast-toans-speaker,chromecast-toans-speaker,,,Granskad,False,False
+74ef98fe7243236d0d8dfe164c7f2405,SSID OLOFSSON_WIFI (2.4 GHz),SSID OLOFSSON_WIFI (2.4 GHz),,,Granskad,False,False
+ff54885fa32c4c0bc6473f8b3e42e947,SSID OLOFSSON_GUEST (2.4 GHz),SSID OLOFSSON_GUEST (2.4 GHz),,,Granskad,False,False
+fe33fdb818b8c8b56cfa3fea30e8d99c,SSID OLOFSSON_IOT (2.4 GHz),SSID OLOFSSON_IOT (2.4 GHz),,,Granskad,False,False
+506a3abd23849cdd1dc1b93f8a3cf99b,SSID OLOFSSON_WIFI (5 GHz),SSID OLOFSSON_WIFI (5 GHz),,,Granskad,False,False
+7a8c93c914bfd4f6528c7d845e1790ab,SSID OLOFSSON_GUEST (5 GHz),SSID OLOFSSON_GUEST (5 GHz),,,Granskad,False,False
+8e465c4dcd2e0490159de99b1f57bd2e,SSID OLOFSSON_IOT (5 GHz),SSID OLOFSSON_IOT (5 GHz),,,Granskad,False,False
+42c904618b35f04216bb7797261ffe56,SSID OLOFSSON_WIFI (2.4 GHz),SSID OLOFSSON_WIFI (2.4 GHz),,,Granskad,False,False
+dde9d3d73e2398256b60976c5381b13b,SSID OLOFSSON_GUEST (2.4 GHz),SSID OLOFSSON_GUEST (2.4 GHz),,,Granskad,False,False
+dd4376ba1720aedd18a0ff91a85e7eb4,SSID OLOFSSON_IOT (2.4 GHz),SSID OLOFSSON_IOT (2.4 GHz),,,Granskad,False,False
+531e895a27cdfce8ac9a4d16bd976b52,SSID OLOFSSON_WIFI (5 GHz),SSID OLOFSSON_WIFI (5 GHz),,,Granskad,False,False
+1ec285fc3ab7c6fa9c04937f6c03adf9,SSID OLOFSSON_GUEST (5 GHz),SSID OLOFSSON_GUEST (5 GHz),,,Granskad,False,False
+106a8fb1c85c1b8ff829dbff05453202,SSID OLOFSSON_IOT (5 GHz),SSID OLOFSSON_IOT (5 GHz),,,Granskad,False,False
+bbfc3305cea448b716db4b93e2422f2f,192.168.30.183,Termostat,,Toaletten,Granskad,True,True
+6ec92c9325ca507639b1152479a33bbd,SSID OLOFSSON_WIFI (2.4 GHz),SSID OLOFSSON_WIFI (2.4 GHz),,,Granskad,False,False
+d7b17cf45e80379e91b80705624c8999,SSID OLOFSSON_GUEST (2.4 GHz),SSID OLOFSSON_GUEST (2.4 GHz),,,Granskad,False,False
+eb52387eb245ac1fff226ab66291f401,SSID OLOFSSON_IOT (2.4 GHz),SSID OLOFSSON_IOT (2.4 GHz),,,Granskad,False,False
+0896d4887c5223c779de7160c6e5cc3b,SSID OLOFSSON_WIFI (5 GHz),SSID OLOFSSON_WIFI (5 GHz),,,Granskad,False,False
+f25399f697f9453a2da0c4e6ed32d3df,SSID OLOFSSON_GUEST (5 GHz),SSID OLOFSSON_GUEST (5 GHz),,,Granskad,False,False
+7a88fdd01a55910d5893e9d4590205cf,SSID OLOFSSON_IOT (5 GHz),SSID OLOFSSON_IOT (5 GHz),,,Granskad,False,False
+bea4f94b05574fda41220036094e489a,SSID OLOFSSON_WIFI (2.4 GHz),SSID OLOFSSON_WIFI (2.4 GHz),,,Granskad,False,False
+f3134065d5b1411893ee0b32bab49a0c,SSID OLOFSSON_WIFI (5 GHz),SSID OLOFSSON_WIFI (5 GHz),,,Granskad,False,False
+5523e4fd8e4fd74990aabc72cbbf83db,SSID OLOFSSON_GUEST (5 GHz),SSID OLOFSSON_GUEST (5 GHz),,,Granskad,False,False
+99f23b8817ccd4fd9ee4faedb880e4c7,SSID OLOFSSON_IOT (5 GHz),SSID OLOFSSON_IOT (5 GHz),,,Granskad,False,False
+52d817b7b2414dd23a17454a960f15e7,SSID OLOFSSON_GUEST (2.4 GHz),SSID OLOFSSON_GUEST (2.4 GHz),,,Granskad,False,False
+67226a416622e4598878e52ccc1ffd3c,SSID OLOFSSON_IOT (2.4 GHz),SSID OLOFSSON_IOT (2.4 GHz),,,Granskad,False,False
+65117e2e6f01dbe4225eba408d4c58b3,SSID REPEAT_IOT (5 GHz),SSID REPEAT_IOT (5 GHz),,,Granskad,False,False
+766a95aebffe8fe7110580b952095ee1,SSID OLOFSSON_WIFI (2.4 GHz),SSID OLOFSSON_WIFI (2.4 GHz),,,Granskad,False,False
+74b253e2d786fbd49c10de1ede877276,SSID OLOFSSON_GUEST (2.4 GHz),SSID OLOFSSON_GUEST (2.4 GHz),,,Granskad,False,False
+dd4e1386fd5a68b30670b8116d350f25,SSID OLOFSSON_IOT (2.4 GHz),SSID OLOFSSON_IOT (2.4 GHz),,,Granskad,False,False
+ffb391f40bf71a6c5af13316172402e5,Ateljéns högtalare,Ateljéns högtalare,,,Granskad,False,False
+b503dd2b6b60e0706ec5ed3def23e61d,Ateljéns högtalare,Ateljéns högtalare,,,Granskad,False,False
+57605c32050b253bfd945574d2c053f6,Ateljéns högtalare,Ateljéns högtalare,,,Granskad,False,False
+0b2e42e9692977cd037dcec570f145f7,Portainer,Portainer,Tor (AI),Tor (AI),Granskad,False,False
+9da9298f50677bf5b80bdcc58425e615,Open WebUI,Open WebUI,Tor (AI),Tor (AI),Granskad,False,False
+d553802bb828bad9717e088fde823b5d,Uptime Kuma – direkt,Uptime Kuma – direkt,Tor (AI),Tor (AI),Granskad,False,False
+9dedb642de38369f4e3b2705b54cae5d,Home Assistant UI,Home Assistant UI,Heimdal (HA),Heimdal (HA),Granskad,False,False
+8229ab5281d03d79145c35118e7f529a,Supervisor Health,Supervisor Health,Tor (AI),Tor (AI),Granskad,False,False
+11a1f97d9fd21a42b167792cd4431b0c,Core API Wake-up,Core API Wake-up,Tor (AI),Tor (AI),Granskad,False,False
+b28fb2ffd9737b5a2c24d3b92be261dd,Caddy Reverse Proxy,Caddy Reverse Proxy,Tor (AI),Tor (AI),Granskad,False,False
+0d8f979523ed002e594f9ac68fdcceb8,Docker API,Docker API,Tor (AI),Tor (AI),Granskad,False,False
+1b1731af7d839697214a3754a693ef26,Glances UI,Glances UI,Tor (AI),Tor (AI),Granskad,False,False
+5afc0a578d122ec468be48d47563d71a,Ollama API,Ollama API,Tor (AI),Tor (AI),Granskad,False,False
+6d4a70c36ba68a43c2a02cc9efc47215,Uptime proxy,Uptime proxy,Tor (AI),Tor (AI),Granskad,False,False
+2e8f80da63d7e0358173685240337a9e,Wyoming Whisper,Wyoming Whisper,Tor (AI),Tor (AI),Granskad,False,False
+2407ba03d6591a5fb8d0d49db72fb10e,OpenWRT-backup – Senaste körning,OpenWRT-backup – Senaste körning,Tor (AI),Tor (AI),Granskad,False,False
+8a25c309221a8b84d04cb1ecaab51f8d,Heimdal,Heimdal,Heimdal (HA),Heimdal (HA),Granskad,False,False
+bcec2925567abe42aa0b8a19d886e9f6,Ping,Ping,Tor (AI),Tor (AI),Granskad,False,False
+e2c3ea51f2b26da47e831077e28ceab0,Tor,Tor,Tor (AI),Tor (AI),Granskad,False,False
+4eff084ae659b4614c5bf983fd506b8e,Ping,Ping,Tor (AI),Tor (AI),Granskad,False,False
+6730ad8022d04976aed0c9b02fdaf169,SSH,SSH,Tor (AI),Tor (AI),Granskad,False,False
+6a17e0c198d50b0290b50f5a1274918d,Ollama Container,Ollama Container,Tor (AI),Tor (AI),Granskad,False,False
+c10aa0561fd3548d761e66267c38caea,Caddy Container,Caddy Container,Tor (AI),Tor (AI),Granskad,False,False
+827865fccf89662f9d06fe6a9c312c26,HA (Test) Container,HA (Test) Container,Tor (AI),Tor (AI),Granskad,False,False
+cadcef0a7a2075c8808cba1a265f5a1d,ESPHome (Test) Container,ESPHome (Test) Container,Tor (AI),Tor (AI),Granskad,False,False
+cae68a0213c0a78bc73cad35c18d571d,Glances Container,Glances Container,Tor (AI),Tor (AI),Granskad,False,False
+ea745d3ac7dc8df63dd97f9e2cbcc16b,Portainer Agent Container,Portainer Agent Container,Tor (AI),Tor (AI),Granskad,False,False
+134ee738a39555da026a20488aadbc8e,Docker Socket Proxy Container,Docker Socket Proxy Container,Tor (AI),Tor (AI),Granskad,False,False
+12007696b9c02f1d2b7fdcdc4b7d3676,Open webUI Container,Open webUI Container,Tor (AI),Tor (AI),Granskad,False,False
+fcce60594fe9031896e14ec3497ea07a,OpenWRT Backup Container,OpenWRT Backup Container,Tor (AI),Tor (AI),Granskad,False,False
+d53e2a397ab86e9d903ce4d54f020c14,Portainer Container,Portainer Container,Tor (AI),Tor (AI),Granskad,False,False
+9fc1d483732b525c9863e2ef1763181e,Uptime-kuma Container,Uptime-kuma Container,Tor (AI),Tor (AI),Granskad,False,False
+4b352c979969ff8191b9c53547318e69,Wyoming Whisper Container,Wyoming Whisper Container,Tor (AI),Tor (AI),Granskad,False,False
+6ae0ccef8d3d4f593a348227f51e7701,Home,Home,Tor (AI),Tor (AI),Granskad,False,False
+2e7116f7d4dcb4c8ddae822f6b8f9a32,gw.home.arpa,gw.home.arpa,Sovrummet,Sovrummet,Granskad,False,False
+d86a2e4a0afe3152ec6ba91f68982360,ap_kontoret.home.arpa,ap_kontoret.home.arpa,Kontoret,Kontoret,Granskad,False,False
+2da15cf767954e9d79c339591f2f619a,ap_koket.home.arpa,ap_koket.home.arpa,Köket,Köket,Granskad,False,False
+63ab8cc972399829a1938a73d4ae126b,ap_kallaren.home.arpa,ap_kallaren.home.arpa,Bion,Bion,Granskad,False,False
+bc07b114ca9e9fb1acc4548c2e022e28,ap_verkstaden.home.arpa,ap_verkstaden.home.arpa,Verkstaden,Verkstaden,Granskad,False,False
+6e144eb572ff568ae5136ddc20aadd9f,ap_friggan.home.arpa,ap_friggan.home.arpa,Friggan,Friggan,Granskad,False,False
+233a41930e82cf6db31abdc1d3f1614a,ap_honshuset.home.arpa,ap_honshuset.home.arpa,Hönshuset,Hönshuset,Granskad,False,False
+84c3f81bd43db440de04766f9929607b,ap_poolen.home.arpa,ap_poolen.home.arpa,Poolen,Poolen,Granskad,False,False
+8757064e2134bf6b0ee3f5ff8aefb3c8,gw_buck,gw_buck,Molnet,Molnet,Granskad,False,False
+7a9fafdb533db822152c059ba7f34b22,ap_buck,ap_buck,Molnet,Molnet,Granskad,False,False
+417ffddfc0adcf898559af63a7e56ae3,Buck,Buck,Molnet,Molnet,Granskad,False,False
+732f1e5256dcedbc998ef795af7d2130,ha_buck,ha_buck,Molnet,Molnet,Granskad,False,False
+b164e9b515b406a9803a77b2af5edfa5,Kiwi,Kiwi,Molnet,Molnet,Granskad,False,False
+4ebe2de3844c00c85ef4ad39340c950d,gw_kiwi,gw_kiwi,Molnet,Molnet,Granskad,False,False
+f81e8cffb88bc1d8f9b6c46993e1e3f1,ap_kiwi,ap_kiwi,Molnet,Molnet,Granskad,False,False
+12aa1f754ec76493876abcad9da3bd41,ha_kiwi,ha_kiwi,Molnet,Molnet,Granskad,False,False
+a6d6c139857f99fd0649b36da6338c62,Sippan,Sippan,Molnet,Molnet,Granskad,False,False
+b902dbb176fb60470539a9e11f4ec984,gw_sippan,gw_sippan,Molnet,Molnet,Granskad,False,False
+8a1eec643b8f51ba2fa1b7961f69372b,ha_sippan,ha_sippan,Molnet,Molnet,Granskad,False,False
+28dd85c48d305b6ad7b365ea9a4a84f0,AdGuard DNS,AdGuard DNS,Tor (AI),Tor (AI),Granskad,False,False
+3367480864f293a5ed4ec6c676d6b865,sw_vinden,sw_vinden,Vinden,Vinden,Granskad,False,False
+5e37874255f8c3c53d80643364d55cf7,sw_kontoret,sw_kontoret,Kontoret,Kontoret,Granskad,False,False
+5b22aca62a6fe5a5723065c9c5f9eae1,Uptime Kuma (Tor),Uptime Kuma (Tor),Tor (AI),Tor (AI),Granskad,False,False
+a0d6cf77cf51e661bbb8f107b5d21502,Home Connect Service,Home Connect,Molnet,Molnet,Granskad,True,False
+f16f2d8a7234951574cdd787c8fcebef,Tvätt/tork,Tvätt/tork,Toaletten,Toaletten,Granskad,False,False
+444edb1c05f7869597326dcc1621322a,Diskmaskin,Diskmaskin,Köket,Köket,Granskad,False,False
+e2648d0572088ea2c604c27909f2e438,Tor,Tor,Tor (AI),Tor (AI),Granskad,False,False
+8954b37461c209c5006b39aadbb5c7d8,netlogs-syslogng,netlogs-syslogng,Tor (AI),Tor (AI),Granskad,False,False
+2201cdc275f042ff3d83c9b2a180a98d,searxng,searxng,Tor (AI),Tor (AI),Granskad,False,False
+94b476601377579e986194ad72a15868,netlogs-analyzer,netlogs-analyzer,Tor (AI),Tor (AI),Granskad,False,False
+dd940753cd19c9a9f49c4b4c4ee8c0ac,netlogs-reports-http,netlogs-reports-http,Tor (AI),Tor (AI),Granskad,False,False
+5c9e2cdbca46aa3ce1058364a87155bf,netlogs-api,netlogs-api,Tor (AI),Tor (AI),Granskad,False,False
+d738dd0e4089bfe3b3db8e109ec6ad32,openwebui,openwebui,Tor (AI),Tor (AI),Granskad,False,False
+f6a8dcc6e295ff3de0c8d9cb1174d06d,ollama,ollama,Tor (AI),Tor (AI),Granskad,False,False
+7e2d146339ccc694e7c6a8c82d464b49,ha,ha,Tor (AI),Tor (AI),Granskad,False,False
+15462d94757b13e159f4fc0f55c3c8f2,esphome,esphome,Tor (AI),Tor (AI),Granskad,False,False
+247dec550443ff8c862e382fa347b5ec,docker-socket-proxy,docker-socket-proxy,Tor (AI),Tor (AI),Granskad,False,False
+80e597fadb148e1a3b3cc42a63573173,caddy,caddy,Tor (AI),Tor (AI),Granskad,False,False
+bd4a57924bd26d350deaa2a8c971d6f2,portainer_agent,portainer_agent,Tor (AI),Tor (AI),Granskad,False,False
+90377395d2503501f7eaac12bd6fa5e5,caddy-ui,caddy-ui,Tor (AI),Tor (AI),Granskad,False,False
+021af82f1d4c31f2854d031d818327c4,ha_esphome_config_share,ha_esphome_config_share,Tor (AI),Tor (AI),Granskad,False,False
+ea5503ed4d33725385af206895421979,2f8eb40be8a9642633587c5eae42e820aee5369cd9c7f0c60e19700a450d8629,Docker-volym 2f8eb40be8a9,Tor (AI),Tor (AI),Granskad,True,False
+cf7317f9d10170d7791809995928cf61,36b2ef5c23d067cad1de82cb0219f26f8e66b4055bcb47bc593c7aa65dfa0ba5,Docker-volym 36b2ef5c23d0,Tor (AI),Tor (AI),Granskad,True,False
+900be997608bc9930451738e5de4dd8f,bcfdb3c18423a96c2d0286fddd22a999ed8a02ea851b42a58a6500855ce276d9,Docker-volym bcfdb3c18423,Tor (AI),Tor (AI),Granskad,True,False
+2dea8d0e73731d15e9b9827403d56add,b7dd2fc85426ff34678c52ac030e56d992ac0aad808741b9d7129bf1d0739663,Docker-volym b7dd2fc85426,Tor (AI),Tor (AI),Granskad,True,False
+050631f3581d8143f4cf04e4f53c9367,Backup,Backup,,,Granskad,False,False
+deec1ad90723a4d9317c9d4b81152042,portainer,portainer,,,Granskad,False,False
+1b5dd5d5376bf018b0daf93452c6a7bd,glances,glances,,,Granskad,False,False
+9accd8fc112581f2439b120e737da5f1,192.168.10.99,192.168.10.99,,,Granskad,False,False
+4bc95649bedf82a77a27ada6cfba8748,978c39c7e1070486a26ac92e063b6023493d38c1596509af8484d0996248f5dd,Docker-volym 978c39c7e107,,,Granskad,True,False
+37aa6b25952ee4c2c2ed37c809418a96,192.168.10.99,192.168.10.99,,,Granskad,False,False
+339127dae1cbb9fc7fe421f0ddc0e95f,uptime-kuma,uptime-kuma,,,Granskad,False,False
+f765651b67d4a105a78e33a71b2f797e,openwrt-backup,openwrt-backup,,,Granskad,False,False
+79b0e1ce7b60429ca752efaf9303b381,192.168.10.99,192.168.10.99,,,Granskad,False,False
+c29917d44dfe1ae5725e1beb400a49f4,192.168.10.60,192.168.10.60,,,Granskad,False,False
+36a5f8fb1a9f776a11fd84de27600901,192.168.10.60,192.168.10.60,,,Granskad,False,False
+9f5d9db23b34d77dca9d20836dd727ec,192.168.10.60,192.168.10.60,,,Granskad,False,False
+c95429ca710de252ac635fa5df99ff64,c8:2b:96:5c:72:08,Blomlampor,,Bion,Granskad,True,True
+81d65dd9ae4facd4d260a6a567c129ba,192.168.10.200,192.168.10.200,,,Granskad,False,False
+fdb20c05d048e05eea2843e9e3bae147,Bordslampa vänster,Bordslampa vänster,Bion,Bion,Granskad,False,False
+ae5c6a867f37fdeef6a97bd0716d1ea6,192.168.10.82,192.168.10.82,,,Granskad,False,False
+c71566d732943aa198ca2bab2c7f2b25,192.168.10.82,192.168.10.82,,,Granskad,False,False
+53abb38a9085cb4738b87aaf858a985e,192.168.10.82,192.168.10.82,,,Granskad,False,False
+e05a49e95da9c06595cc95cad95030e8,192.168.30.183,Termostat,,Toaletten,Granskad,True,True
+f4ca14889d6b583868159d9aeb68fdfe,wyoming-whisper-Tor,wyoming-whisper-Tor,,,Granskad,False,False
+4d1966fd9dddf87f981efb655bf6077a,Granny utrop,Granny utrop,,,Granskad,False,False
+6db3db9d6aede4cbe2bb826c77159859,Granny utrop,Granny utrop,,,Granskad,False,False
+55bf3610f79fa25a5c889eb7fa935ede,Pollenprognos Stockholm,Pollenprognos Stockholm,Utomhus,Utomhus,Granskad,False,False
+e0886388fc776734af1af49564df3e5f,2.4 GHz,2.4 GHz,,,Granskad,False,False
+19ebdd00df235919d045b45696d904eb,5 GHz,5 GHz,,,Granskad,False,False
+963f5d1b206ea1ba79b4fc81faf4571a,SSID OLOFSSON_WIFI (2.4 GHz),SSID OLOFSSON_WIFI (2.4 GHz),,,Granskad,False,False
+ab761ff5bc968169fe312b3d523b0117,SSID OLOFSSON_GUEST (2.4 GHz),SSID OLOFSSON_GUEST (2.4 GHz),,,Granskad,False,False
+dc376204b398afa712092f7ef2f2d88d,SSID OLOFSSON_IOT (2.4 GHz),SSID OLOFSSON_IOT (2.4 GHz),,,Granskad,False,False
+3b957bfbbfd688d200261b64e97a78f3,SSID OLOFSSON_WIFI (5 GHz),SSID OLOFSSON_WIFI (5 GHz),,,Granskad,False,False
+08b72c5e7d9117e03ce54dc507d7708e,SSID OLOFSSON_GUEST (5 GHz),SSID OLOFSSON_GUEST (5 GHz),,,Granskad,False,False
+af889a1ee5920fcb7230a798396e45a6,SSID OLOFSSON_IOT (5 GHz),SSID OLOFSSON_IOT (5 GHz),,,Granskad,False,False
+00845577c9de6f8f16fdc24e2275f363,shellyplug-s-shop-roof-lamps,LED-plafonder,,Verkstaden,Granskad,True,True
+6fcd7c642e1873bbe69b38c1c1e0d772,80:64:6f:91:e9:d5,RF-brygga,,Kontoret,Granskad,True,True
+5a694c087021c22c2b6d98411d2f208c,08:b6:1f:38:26:78,Klimatsensor,,Gamla verkstaden,Granskad,True,True
+a551b0e58ab3a7c3d53d9a0201a7c14c,shelly-1pm-studio-floor-heating,Golvvärme,,Ateljén,Granskad,True,True
+e3ddeb92a6598fb45a5edf480be46a3f,2.4 GHz,2.4 GHz,,,Granskad,False,False
+b15047fc170ea23d387c5f2d18683040,5 GHz,5 GHz,,,Granskad,False,False
+8021549d26cd88664e42c7519247c024,SSID OLOFSSON_WIFI (2.4 GHz),SSID OLOFSSON_WIFI (2.4 GHz),,,Granskad,False,False
+81e3e534602dd4dd04933b0151adb187,SSID OLOFSSON_GUEST (2.4 GHz),SSID OLOFSSON_GUEST (2.4 GHz),,,Granskad,False,False
+187d14b7a6b8a3f04cb460dc9146d343,SSID OLOFSSON_IOT (2.4 GHz),SSID OLOFSSON_IOT (2.4 GHz),,,Granskad,False,False
+f7c0aeb1fb8f85431f056206eb549c5c,SSID OLOFSSON_WIFI (5 GHz),SSID OLOFSSON_WIFI (5 GHz),,,Granskad,False,False
+3e91ef9c38432b10f7580b29f85034b5,SSID OLOFSSON_GUEST (5 GHz),SSID OLOFSSON_GUEST (5 GHz),,,Granskad,False,False
+4ea2af10bf4675756e74745a74230bab,SSID OLOFSSON_IOT (5 GHz),SSID OLOFSSON_IOT (5 GHz),,,Granskad,False,False
+a5118da5b3e281c3946225eab71118e9,SmartHomeControlPanel,SmartHomeControlPanel,,,Granskad,False,False
+626c5ec843cc102927660eacea66b21a,40:22:d8:76:6f:70,40:22:d8:76:6f:70,,,Granskad,False,False
+f50aa4177d55a2835ce6c0539ae0fc60,08:b6:1f:38:0b:64,Salt,,Verkstaden,Granskad,True,True
+d03a7cff0ce57c2044dd02002290b676,f4:cf:a2:15:d8:ac,Ventilfläkt,,Bion,Granskad,True,True
+84d9fd5b92d3a070a31667c007f9e48d,e0:98:06:d5:c4:ca,e0:98:06:d5:c4:ca,,,Granskad,False,False
+f30098dd531c77c5c61770de278dda33,40:22:d8:76:66:c0,40:22:d8:76:66:c0,,,Granskad,False,False
+3506dc905addd276fde9aba73caf823c,5 GHz,5 GHz,,,Granskad,False,False
+dfdde5a189d22d474b7b453df354be25,2.4 GHz,2.4 GHz,,,Granskad,False,False
+5855f6f1fc591a0e2b18049fe99d0a6e,SSID REPEAT_IOT (5 GHz),SSID REPEAT_IOT (5 GHz),,,Granskad,False,False
+aec40dbf6f089d8f3a7905ca368720a2,SSID OLOFSSON_WIFI (2.4 GHz),SSID OLOFSSON_WIFI (2.4 GHz),,,Granskad,False,False
+1d66319394dea95dd34e5b9ed70de019,SSID OLOFSSON_GUEST (2.4 GHz),SSID OLOFSSON_GUEST (2.4 GHz),,,Granskad,False,False
+dd3aef1e9949945e8487545b65c7f218,SSID OLOFSSON_IOT (2.4 GHz),SSID OLOFSSON_IOT (2.4 GHz),,,Granskad,False,False
+a5dc06ab0c28cc973c4e57682d4d24ca,08:b6:1f:38:0b:64,Salt,,Verkstaden,Granskad,True,True
+66cd3fffad5fcac5ca3189fa5a488cec,diego-Lenovo-E31-70,diego-Lenovo-E31-70,,,Granskad,False,False
+b1beebb0ce128f0a38e3162a49b22bc3,diego-Lenovo-E31-70,diego-Lenovo-E31-70,,,Granskad,False,False
+8142e97d9829ab31c0abafb3841aaf0a,C200C,C200C,,,Granskad,False,False
+e85a2ef83f4e4d4d9b8607e605c68c15,C200C,C200C,,,Granskad,False,False
+ecdc8cf340a3ed6e2ad3c682ad8e31ed,Pixel-9-Pro-XL,Pixel-9-Pro-XL,,,Granskad,False,False
+3a910b7d9dadec467ae222daedb9da06,Tapo C200C,Tapo C200C,Hönshuset,Hönshuset,Granskad,False,False
+6c55e09634472938ed42514b94ac2522,Advanced Camera Card,Advanced Camera Card,,,Granskad,False,False
+40d8b58c9393066df0f02003281a937f,4ea82b29fda0462f70ede4096e441965dc22b1218240c5e2e3de1d03dbf8021e,Docker-volym 4ea82b29fda0,,,Granskad,True,False
+30ea53354cce3e0e369fe588d219bf0a,192.168.10.91,192.168.10.91,,,Granskad,False,False
+1df9152b2dc934ed7419db3ce2c93fdc,192.168.10.91,192.168.10.91,,,Granskad,False,False
+d515b02f33f41f4648fb10b7a0664f26,prusa-xl,prusa-xl,,,Granskad,False,False
+9c7c000d5b8c178fe5523da930e63e57,192.168.30.83,192.168.30.83,,,Granskad,False,False
+d4acf6282457385c76db066b31313b9b,192.168.30.156,192.168.30.156,,,Granskad,False,False
+633e08d5369a976c7b199826b14b5cbc,192.168.30.156,192.168.30.156,,,Granskad,False,False
+bbe6d9a592a066631a47f0101f5079d3,192.168.30.156,192.168.30.156,,,Granskad,False,False
+4f723d5710690a62126b41839d688e81,192.168.30.156,192.168.30.156,,,Granskad,False,False
+79a40f724be4d6cebc96fcd7c23c70d5,Pixel-9-Pro-XL,Pixel-9-Pro-XL,,,Granskad,False,False
+a30f40ea5305f11709190dbb6592715b,Pixel-9-Pro-XL,Pixel-9-Pro-XL,,,Granskad,False,False
+34eeed893c3bc2b2fbabe56fb9eaadcb,Hönsbelysning,Hönsbelysning,Hönshuset,Hönshuset,Granskad,False,False
+f19e88a8b8378cca95138417b92e136f,mimer,mimer,,,Granskad,False,False
+afa74eadfecb72f45b4671b37e08cda0,Gamla TVn,Gamla TVn,,,Granskad,False,False
+8e9cae15d4f9a8d7ed91cc9d3c2a47c4,Gamla TVn,Gamla TVn,,,Granskad,False,False
+2a293d126ffff4fceb78c2ebe2feb65f,chromecast-gamla-tv,chromecast-gamla-tv,,,Granskad,False,False
+26619ed993b5ae6256150479135acc6f,Huset,Huset,,,Granskad,False,False
+0bf58dbd9b34245cf43e8b25f542cb0b,Chromecast5575,Chromecast5575,,,Granskad,False,False
+5993218961905a98b3208b87986bc29c,chromecast-gamla-tv,chromecast-gamla-tv,,,Granskad,False,False
+9d18fe042790fd558072d886b3c35faa,59a9bfe12dadc95bdc3fb42dcf90e5c71129dc8607fe31ada701e2fa7c2b698d,Docker-volym 59a9bfe12dad,,,Granskad,True,False
+01cca45e17dae0e4c41629c6eede7177,c8:2b:96:07:7d:6e,Golvvärme,,Friggan,Granskad,True,True
+ed33c46075be9f0d4b01279949a5fbed,98:f4:ab:e2:71:12,Termostat,,Friggan,Granskad,True,True
+712371e79086577fa477d0dea4884fb7,c8:2b:96:e6:99:4f,c8:2b:96:e6:99:4f,,,Granskad,False,False
+1dc8f14a226aa8e9cdd20869ec137863,c4:4f:33:7a:51:d5,LED-list norra,,Sovrummet,Granskad,True,True
+48b941b8948bb46f61cd2879437040b1,c8:2b:96:5c:72:08,Blomlampor,,Bion,Granskad,True,True
+e4a844d4439bcf8f61d8dca153605e7d,34:94:54:70:7c:a2,Taklampor,,Sovrummet,Granskad,True,True
+2d876be25f1505c21a66aeb55f993afc,chromecast-mannis-screen,chromecast-mannis-screen,,,Granskad,False,False
+de6033ccff10c765f3274fef37982196,roborock-max,roborock-max,,,Granskad,False,False
+c544296765b210f396ec2298d154cd76,7c:9e:bd:06:e7:bc,LED-list,,Entrén,Granskad,True,True
+7938b2ad630e3f5c590057a1fd59df79,8c:ce:4e:0c:ca:58,Blomlampa 3,,Köket,Granskad,True,True
+7bfaade29cee086b3b49de48e6796d8f,BroadLink-Remote-ea-14-9d,BroadLink-Remote-ea-14-9d,,,Granskad,False,False
+3ae182f8711a0f7fdd7f0e116e603f15,home-assistant-voice-096460,home-assistant-voice-096460,,,Granskad,False,False
+6130328b0b32adc6e65923e94694d324,c8:c9:a3:25:a9:24,c8:c9:a3:25:a9:24,,,Granskad,False,False
+2462c130e72868e2050bd34374cd7663,2.4 GHz,2.4 GHz,,,Granskad,False,False
+43635b713eaadbae01f59f6e76986950,5 GHz,5 GHz,,,Granskad,False,False
+0270bc320dedebea80a5f65891fd10ee,SSID OLOFSSON_WIFI (2.4 GHz),SSID OLOFSSON_WIFI (2.4 GHz),,,Granskad,False,False
+453d266ac6723ac2d3f26171a4d6a298,SSID OLOFSSON_GUEST (2.4 GHz),SSID OLOFSSON_GUEST (2.4 GHz),,,Granskad,False,False
+10395ad5c1d3b9a2b866e5083b2d8861,SSID OLOFSSON_IOT (2.4 GHz),SSID OLOFSSON_IOT (2.4 GHz),,,Granskad,False,False
+a1236af309e33cee463ccb1e8df8ac37,SSID OLOFSSON_WIFI (5 GHz),SSID OLOFSSON_WIFI (5 GHz),,,Granskad,False,False
+1e121f7c7ef38412436dca1f21c12394,SSID OLOFSSON_GUEST (5 GHz),SSID OLOFSSON_GUEST (5 GHz),,,Granskad,False,False
+17c7a4cdb0f33309f381d8fb1bf2a8f0,SSID OLOFSSON_IOT (5 GHz),SSID OLOFSSON_IOT (5 GHz),,,Granskad,False,False
+1f1d458bf3a96b97c5ca82db6f9b2dbd,2.4 GHz,2.4 GHz,,,Granskad,False,False
+da082bfcdc069266fdb218756c8bbd8f,5 GHz,5 GHz,,,Granskad,False,False
+6b84f506df708c515d33b79f7d008c3e,SSID OLOFSSON_WIFI (2.4 GHz),SSID OLOFSSON_WIFI (2.4 GHz),,,Granskad,False,False
+5eb1c341721a634c9e6b57bbbe158306,SSID OLOFSSON_GUEST (2.4 GHz),SSID OLOFSSON_GUEST (2.4 GHz),,,Granskad,False,False
+9daba114ebd31b04b85aec8d1cd3aa51,SSID OLOFSSON_IOT (2.4 GHz),SSID OLOFSSON_IOT (2.4 GHz),,,Granskad,False,False
+8be62e572e9a5c2785d7cd4b0f8a9740,SSID OLOFSSON_WIFI (5 GHz),SSID OLOFSSON_WIFI (5 GHz),,,Granskad,False,False
+083c0390e47d0175c156531f98984dc2,SSID OLOFSSON_GUEST (5 GHz),SSID OLOFSSON_GUEST (5 GHz),,,Granskad,False,False
+77602d0595ace93c14b93bfbb6334956,SSID OLOFSSON_IOT (5 GHz),SSID OLOFSSON_IOT (5 GHz),,,Granskad,False,False
+c30a4cb4d3ede2ad808dd1a1d7616238,192.168.30.222,LED-plafonder,,Verkstaden,Granskad,True,True
+1ef124deba7040ac43e394f3ca654952,2c:bc:bb:c1:87:2c,2c:bc:bb:c1:87:2c,,,Granskad,False,False
+aba3cd8831248650096d9ac63363f153,5 GHz,5 GHz,,,Granskad,False,False
+4e8434e621df2aaac5a064f7f8e393cb,2.4 GHz,2.4 GHz,,,Granskad,False,False
+225d210209b98d5150837ac88756433a,SSID REPEAT_IOT (5 GHz),SSID REPEAT_IOT (5 GHz),,,Granskad,False,False
+b9ac7136c22a33aeebc7c7ac28dad87d,SSID OLOFSSON_WIFI (2.4 GHz),SSID OLOFSSON_WIFI (2.4 GHz),,,Granskad,False,False
+56bf2f2052261b84c11c3ceb8bfc1736,SSID OLOFSSON_GUEST (2.4 GHz),SSID OLOFSSON_GUEST (2.4 GHz),,,Granskad,False,False
+470ec0170cf44e9b9020ccf36397286c,SSID OLOFSSON_IOT (2.4 GHz),SSID OLOFSSON_IOT (2.4 GHz),,,Granskad,False,False
+73d9ca218b4dace5cf924fb5977e4c93,192.168.10.210,192.168.10.210,,,Granskad,False,False
+05156759cc5a3cc0d2d9610f450a11df,192.168.10.48,192.168.10.48,,,Granskad,False,False
+c69527df7e7d472177002aae3c4eeb72,192.168.10.48,192.168.10.48,,,Granskad,False,False
+4fed1aef00ac79a0ac5667b0b1e2e7a4,192.168.10.58,192.168.10.58,,,Granskad,False,False
+b89eb8e48fedb1b0345b3645bf573129,192.168.10.58,192.168.10.58,,,Granskad,False,False
+d29a5efcfdd1c31aa7e4123d651c9762,192.168.10.58,192.168.10.58,,,Granskad,False,False
+11f13dddbe4a7a8d4566e23485402a45,chromecast-vaxtskapets-speaker,chromecast-vaxtskapets-speaker,,,Granskad,False,False
+974b29ee4338fb4ac00ebe81a934d179,PWA (Chrome on Samsung SM-T835),PWA (Chrome on Samsung SM-T835),,,Granskad,False,False
+2d0a7de8233152f9568e80b850358c9d,2.4 GHz,2.4 GHz,,,Granskad,False,False
+6831f97da91a859b9fea1dac6c7e9711,5 GHz,5 GHz,,,Granskad,False,False
+e1b2488c439bd17720a85642b9bda8f1,SSID OLOFSSON_WIFI (2.4 GHz),SSID OLOFSSON_WIFI (2.4 GHz),,,Granskad,False,False
+3b9553495c43dfa4365cbfa84ed898ed,SSID OLOFSSON_GUEST (2.4 GHz),SSID OLOFSSON_GUEST (2.4 GHz),,,Granskad,False,False
+1e3ee9f774902bafbc1f069acff46263,SSID OLOFSSON_IOT (2.4 GHz),SSID OLOFSSON_IOT (2.4 GHz),,,Granskad,False,False
+2945333dcf64e5d5b2b743bc5e942a2c,SSID OLOFSSON_WIFI (5 GHz),SSID OLOFSSON_WIFI (5 GHz),,,Granskad,False,False
+8bba936cc20bd3127a41081de78c36e5,SSID OLOFSSON_GUEST (5 GHz),SSID OLOFSSON_GUEST (5 GHz),,,Granskad,False,False
+481b836abe44eebaedcaccd978b895c3,SSID OLOFSSON_IOT (5 GHz),SSID OLOFSSON_IOT (5 GHz),,,Granskad,False,False
+7a2e6ff45bfc0d28388b3595ce62d012,2.4 GHz,2.4 GHz,,,Granskad,False,False
+98328719df424fc5bf671c23c8d9da16,5 GHz,5 GHz,,,Granskad,False,False
+7b2cea6965b5534bf67675ad60801b27,SSID OLOFSSON_WIFI (2.4 GHz),SSID OLOFSSON_WIFI (2.4 GHz),,,Granskad,False,False
+0f83564a33ce53adf9fd73c07b52d54b,SSID OLOFSSON_GUEST (2.4 GHz),SSID OLOFSSON_GUEST (2.4 GHz),,,Granskad,False,False
+edbcfc86ddc65b21bb01a84ec4d4fd8c,SSID OLOFSSON_IOT (2.4 GHz),SSID OLOFSSON_IOT (2.4 GHz),,,Granskad,False,False
+7c023128a7d889ca32910d6aab32f192,SSID OLOFSSON_WIFI (5 GHz),SSID OLOFSSON_WIFI (5 GHz),,,Granskad,False,False
+e83cbe8e2d19670b57b4763163711a9a,SSID OLOFSSON_GUEST (5 GHz),SSID OLOFSSON_GUEST (5 GHz),,,Granskad,False,False
+88336f6b9bd48d0eafd40f64b8ce8a90,SSID OLOFSSON_IOT (5 GHz),SSID OLOFSSON_IOT (5 GHz),,,Granskad,False,False
+b13f8f24fe334e53a059df84caf21fec,5 GHz,5 GHz,,,Granskad,False,False
+de4aa53fdc3e8022cc7d13278641ead9,2.4 GHz,2.4 GHz,,,Granskad,False,False
+d54466ff1d91bf76a0642fd0de52c358,SSID REPEAT_IOT (5 GHz),SSID REPEAT_IOT (5 GHz),,,Granskad,False,False
+c601665b8125aacec183f6ed2e4d9a95,SSID OLOFSSON_WIFI (2.4 GHz),SSID OLOFSSON_WIFI (2.4 GHz),,,Granskad,False,False
+870597a0484740fba1e0467c4ffa2bca,SSID OLOFSSON_GUEST (2.4 GHz),SSID OLOFSSON_GUEST (2.4 GHz),,,Granskad,False,False
+1a2cc6ac7b963458323f32f14f462ad4,SSID OLOFSSON_IOT (2.4 GHz),SSID OLOFSSON_IOT (2.4 GHz),,,Granskad,False,False
+abf3d01af8d7aeda8e2336836898560f,94:b9:7e:16:d2:02,Taklampor,,Bion,Granskad,True,True
+b9b90e4dea4d37340cd6c079109249d4,80:64:6f:91:e9:d5,RF-brygga,,Kontoret,Granskad,True,True
+88a9a433d4549531480b1ed768ab2c10,c8:c9:a3:25:a9:24,c8:c9:a3:25:a9:24,,,Granskad,False,False
+71ddca18e19055a1feb4ee9dcc3acbd4,Mimer – tillgänglighet (SSH),Mimer – tillgänglighet (SSH),,,Granskad,False,False
+86ab64cdd4754be020da79f099e3a55f,Backupjobb – verifierade säkerhetskopior,Backupjobb – verifierade säkerhetskopior,Mimer (BCKP),Mimer (BCKP),Granskad,False,False
+2d35fd80e82d0c7242a37ab4d41e1edb,Mimer – samlad hälsa,Mimer – samlad hälsa,Mimer (BCKP),Mimer (BCKP),Granskad,False,False
+2c5cd20d2a12b403e6443d39fa7ee8c7,Diskhälsa och lagring,Diskhälsa och lagring,,,Granskad,False,False
+c09628d0e9df0f0c7f607005a6e0b938,192.168.10.42,192.168.10.42,,,Granskad,False,False
+0bcce165681dc2af0a3c8bf53d291531,192.168.10.42,192.168.10.42,,,Granskad,False,False
+d7b6146dbc4f6906187a6d174c1ce682,fd01a204689744c7fbb3ce0e3bb34343edc6d568b32b0c68853e5776af71eade,Docker-volym fd01a2046897,,,Granskad,True,False
+35fd4be5449ba8f4f93962cfd5668a9c,Glances HTTPS,Glances HTTPS,,,Granskad,False,False
+b6e2b75a585f258faa091d608ca78264,Duschens-Galaxy-S9,Duschens-Galaxy-S9,,,Granskad,False,False
+f15d2a3f1fb9ae2efc2edccf93a7c16b,Carolas-Galaxy-S9,Carolas-Galaxy-S9,,,Granskad,False,False
+fb52173c1cb8807edb0a68087dc085fb,Duschens-Galaxy-S9,Duschens-Galaxy-S9,,,Granskad,False,False
+0ac25d007f65955230ead0f4c7b88ebb,Duschens-Galaxy-S9,Duschens-Galaxy-S9,,,Granskad,False,False
+88eac5338f5d2caafa1845e5fe970c00,shellyplusplugs-08f9e0fd4304,LED-stjärnor,,Utomhus,Granskad,True,True
+77dad1a258c544fc963583d36f9fe4d3,523a75b1eee9bf3f6847e7539d9cb79737cfb1df917bb41f701bca80545f138a,Docker-volym 523a75b1eee9,,,Granskad,True,False
+8266c1c9f95c3dba4826e69f818ec090,Q28756,Q28756,,,Granskad,False,False
+b7f8e871e2437d78e16bd3b32e77e7f9,Portainer Tor,Portainer Tor,,,Granskad,False,False
+5a31e8b505386008c9510cc9952d662d,Diegos väckarklocka,Diegos väckarklocka,,,Granskad,False,False
+6fdcc66ed824471871e000e0ec7d6ad8,Mannis väckarklocka,Mannis väckarklocka,,,Granskad,False,False
+98a86b235d280feb688a12221d76808d,Nya TVn,Nya TVn,,,Granskad,False,False
+2ffb355cb3ca28dcb5092ac96f79fe28,Kökets skärm,Kökets skärm,,,Granskad,False,False
+82224fb8ab53f76e39b56ce4d738ae3e,Verandans högtalare höger,Verandans högtalare höger,,,Granskad,False,False
+9eab1214cb47ba2e403c50b66819ed68,OpenAI Evaluation,OpenAI Evaluation,,,Granskad,False,False
+98ddab4c0034750e1f0a183bedec3b80,f7f13a0b9033690e83009958990cee4180b2654865a3e5c495c3ef5684697e7b,Docker-volym f7f13a0b9033,,,Granskad,True,False
+9c517d1b0bc40e2389f3547e11c9a36d,Alicias-Tab-A7-Lite,Alicias-Tab-A7-Lite,,,Granskad,False,False
+a2a60c16c204791d5a9d8111723b706e,Alicias-Tab-A7-Lite,Alicias-Tab-A7-Lite,,,Granskad,False,False
+a4a3a29001ac00afb2ffeca00891521c,anova-sous-vide,anova-sous-vide,,,Granskad,False,False
+df6448c0a75420bd7f812113366f8f6b,anova-sous-vide,anova-sous-vide,,,Granskad,False,False
+e623471f90321aa2611ffd8fa7763347,Waste Collection Schedule,Waste Collection Schedule,,,Granskad,False,False
+a315fc9a0d9f9588c788eb3a21b603ff,Waste Collection Schedule,Waste Collection Schedule,,,Granskad,False,False
+6db4c7ec443819e0b21e83fb8a0dc5a2,Bermuda BLE Trilateration,Bermuda BLE Trilateration,,,Granskad,False,False
+0dac783f19c6b7bf5878e768f4d24ebf,Adaptive Lighting,Adaptive Lighting,,,Granskad,False,False
+5217aa61e457f726060cd24c13338964,Scheduler component,Scheduler component,,,Granskad,False,False
+75ed7305c316a9f97d039eb38cb10435,Scheduler Card,Scheduler Card,,,Granskad,False,False
+61c58f351aab04975eca6772b58c3bd3,Bermuda Global,Bermuda Global,,,Granskad,False,False
+68b68a42f51476563481c7d951b8ee25,Scheduler,Scheduler,,,Granskad,False,False
+da28971722bce1834d1f9017a2d498d0,Adaptive Lighting: Ateljén – test,Adaptive Lighting: Ateljén – test,,,Granskad,False,False
+8c7eff6a68b3d481cb0abca6f285121f,ATC_BFE81B,ATC_BFE81B,,,Granskad,False,False
+46da8fa9d3cdb8c2e5724a5e0d896c89,ATC_B999BA,ATC_B999BA,,,Granskad,False,False
+10d2bd339f7d5a12f3101e8f99b497a1,Adaptive Lighting: Bio,Adaptive Lighting: Bio,,,Granskad,False,False
+0737531c6af7a27d9340e2552b5377b3,Nothing-Phone-3a,Nothing-Phone-3a,,,Granskad,False,False
+3947a8b10e08dc886df48a9302ccf699,Nothing-Phone-3a,Nothing-Phone-3a,,,Granskad,False,False
+9011fb9cefb232d96242406d7a4322b6,Nothing-Phone-3a,Nothing-Phone-3a,,,Granskad,False,False
+891cedb35b0d5ccaf3eae54bcca45ded,,Nothing-Phone-3a,,,Granskad,True,False
+35b041377055e1a7a39767055131b0f9,,Nothing-Phone-3a,,,Granskad,True,False
+256e392ba575f7c302b1a8f6b26865d6,,Nothing-Phone-3a,,,Granskad,True,False
+e456f81e5c64b4e01861a9bcc2a53c8a,,OpenPlantbook,,,Granskad,True,False
+d5af8519d9580736388baf08e2880e22,,Alicias-Tab-A7-Lite,,,Granskad,True,False

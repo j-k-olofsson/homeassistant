@@ -38,3 +38,10 @@ Konfiguration, skript, entitetsregister, integrationsregister och båda ändrade
 Dessa två kopior är verifierade genom Supervisors slutförda jobb och innehållsmetadata. De har inte hämtats som extra lokala arkiv eller provåterställts. Den tidigare extra lokala kopian `8dc2d539` finns kvar och är arkivkontrollerad. Återställ alltid HA och MariaDB från samma kontrollpunkt.
 
 Den avslutande uppföljningskopian innehåller den aktuella, fungerande OpenAI-konfigurationen efter separat nyckeländring. Slack-tokenen avvisas fortfarande av Slack med `token_revoked` vid denna kontrollpunkt; en lokal återställning återaktiverar inte en token som tjänsten har återkallat.
+
+## Totalanalys 8 november 2026
+
+- **`59002a41`**: fullständig kopia före den nya totalanalysens justeringar.
+- **`1d3fbbdc`**: fullständig kopia efter verifierade namn-, områdes-, referens- och Powercalc-rättningar samt Slacks anslutningsvillkor. Innehåller HA och MariaDB; storlek 6762598400 byte. Supervisor rapporterar 100 % slutfört utan fel. Finns på Backup.
+
+Dessa kopior är kontrollerade via jobbresultat och innehållsmetadata. De har inte hämtats som extra lokala arkiv eller provåterställts. Återställ HA och MariaDB från samma kontrollpunkt. Den återkallade Slack-tokenen behöver fortfarande ersättas separat; den blir inte giltig genom lokal återställning.

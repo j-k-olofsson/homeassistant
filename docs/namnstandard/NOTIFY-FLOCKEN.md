@@ -19,3 +19,7 @@ En giltig ersättningstoken för samma Slack-arbetsyta behöver anges i HA. Beh�
 Ingen testnotis eller annan Slack-konversation har skickats. Varningen har inte dolts genom att ta bort Slack-kanalen eller ignorera Spook-ärendet. **Användaren har beslutat att ordna ny token i efterhand.** Felet är diagnostiserat; återställning av autentiseringen och kontroll av tjänsten/varningen är därför uppskjutna enligt detta besked.
 
 Rådiagnostik och jämförelser finns i den privata mappen `/homeassistant/backups/namnstandard_20261108_restpunkter/notify_flocken/`. Den innehåller känsligt underlag och ska inte publiceras.
+
+## Skydd för övriga flöden efter totalanalysen
+
+Granny-skriptet kontrollerar nu att den befintliga Slack-integrationsposten är `loaded` innan Slack-grenen körs. Den uppskjutna, frånkopplade anslutningen ska därmed inte avbryta skriptets övriga delar eller dess svar till anropande automationer. Villkoret har verifierats med HA:s egen mallmotor utan meddelandeleverans. Tokenen är fortfarande ogiltig och Spooks varning har inte dolts. Vid omauktorisering ska befintlig integrationspost behållas; om posten ersätts helt behöver även dess fasta konfigurations-ID i villkoret uppdateras.

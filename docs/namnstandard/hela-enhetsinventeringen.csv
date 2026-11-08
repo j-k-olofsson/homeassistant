@@ -118,7 +118,7 @@ a01944bf26a43d2fd4f6675b47f7d1fd,MT-1011QR,MT-1011QR,Heimdal (HA),Heimdal (HA),G
 fa2820c3346bb1ba7043bc75d6d7274b,Taklampor (kontoret),Taklampor,Kontoret,Kontoret,Granskad,True,False
 a59458ed8ab7710312a1894f85790afb,Golvvärme (köket),Golvvärme,Köket,Köket,Granskad,True,False
 3477478c12505c16e52e6958bfd13c06,Temp/Hum (Dusch),Klimatsensor,Duschen,Duschen,Granskad,True,False
-dc6a115590f250fb022c03d067d4036a,Vattennivå (hönshuset) (C4:4F:33:72:73:E3),Hönshuset Vattennivå (C4:4F:33:72:73:E3),Hönshuset,Hönshuset,Granskad,True,False
+dc6a115590f250fb022c03d067d4036a,Vattennivå (hönshuset) (C4:4F:33:72:73:E3),Vattennivå – Bluetooth-proxy,Hönshuset,Hönshuset,Granskad,True,False
 86cdaf8a969caf72711a090622c37f33,Plantsensor 3,Plantsensor 3,Verandan,Verandan,Granskad,False,False
 c21cd3e68401f7ec3c6361beb8e06c9f,Plantsensor 4,Plantsensor 4,Verandan,Verandan,Granskad,False,False
 44218722743532fe93bc39c0897e0d72,Meyer Citron,Meyer Citron,Verandan,Verandan,Granskad,False,False
@@ -133,7 +133,7 @@ cf48d69d30577ea7b00c28cb4dab73d8,Ledstrip (balkongdörrar),LED-list (balkongdör
 4318bbff9e13f4fdfba9ab6ac0f6c6bc,HA Voice PE 096460,HA Voice PE 096460,Kontoret,Kontoret,Granskad,False,False
 c733f1b8e6964460bd2bd4e5c7408419,Plantsensor 5,Plantsensor 5,Köket,Köket,Granskad,False,False
 0fa4a381688afeb4661caed2e344d564,Fredskallor (Trappan),Fredskallor (Trappan),Köket,Köket,Granskad,False,False
-2bbe52874f8dbcc48985f34a1a38d653,Backup,Backup,,,Granskad,False,False
+2bbe52874f8dbcc48985f34a1a38d653,Backup,Säkerhetskopiering,,,Granskad,True,False
 cae2da31f2a7c715db12438ee072b706,SM-G986B,SM-G986B,,,Granskad,False,False
 726bee2f9efa222cf68c48c9019dc7fa,Led-stjärnor (utomhus) [SHPLS],LED-stjärnor,Utomhus,Utomhus,Granskad,True,False
 c9360f9d0be75ed3cc336e32cad66c57,Temp/Hum (Toalett),Klimatsensor,Toaletten,Toaletten,Granskad,True,False
@@ -183,18 +183,18 @@ dd7e3e94973b42caa19c4f05008d9f2c,Diegos väckarklocka,Diegos väckarklocka,Sovru
 6a79c5943fdb824f90417117075d405c,SM-S936B,SM-S936B,,,Granskad,False,False
 d8567446a81800fbc861d84803bbfbf2,Taklampor (duschen),Taklampor,Duschen,Duschen,Granskad,True,False
 0a01914167f1350d816bdf756f0624c6,Golvvärme (duschen),Golvvärme,Duschen,Duschen,Granskad,True,False
-7a213c407ce4fd9813d1057550e1213f,Golvvärme (entrén) [SHP1PM] (C4:D8:D5:54:F8:A6),Golvvärme,Entrén,Entrén,Granskad,True,False
-460dfb99f0b8a415faaa1732ccd969da,Golvvärme (källaren) [SHP1PM] (80:64:6F:E3:BE:F2),Golvvärme,Bion,Bion,Granskad,True,False
-7d4de02b78d441eedb24f259ca71c133,Golvvärme (verandan) [SHP1PM] (C4:D8:D5:54:CC:82),Golvvärme,Verandan,Verandan,Granskad,True,False
-21b65aa4266b491dad9f50165d5ba674,Golvvärme (ateljén) [SHP1PM] (A0:DD:6C:2B:31:4E),Golvvärme,Ateljén,Ateljén,Granskad,True,False
-81e82c562490af40f6643ac2b53c9c40,Golvvärme (köket) [SHP1PM] (A0:DD:6C:29:B1:36),Golvvärme,Köket,Köket,Granskad,True,False
-76eafd04d515e40a3d804ac946a453a9,Golvvärme (duschen) [SHP1PM] (E4:65:B8:F1:C1:BA),Golvvärme,Duschen,Duschen,Granskad,True,False
-c3ee3a9a8bd57c967a8cbe0ed6f2c614,Shelly Pro 3 - Verkstaden (EC:62:60:89:ED:BE),Verkstaden Shelly Pro 3 (EC:62:60:89:ED:BE),Verkstaden,Verkstaden,Granskad,True,False
-b100a107089943dc555e95a019738bc8,Ledstjärnor (utomhus) [SHPLS] (08:F9:E0:FD:43:06),Utomhus LED-stjärnor (08:F9:E0:FD:43:06),Köket,Köket,Granskad,True,False
+7a213c407ce4fd9813d1057550e1213f,Golvvärme (entrén) [SHP1PM] (C4:D8:D5:54:F8:A6),Golvvärme – Bluetooth-proxy,Entrén,Entrén,Granskad,True,False
+460dfb99f0b8a415faaa1732ccd969da,Golvvärme (källaren) [SHP1PM] (80:64:6F:E3:BE:F2),Golvvärme – Bluetooth-proxy,Bion,Bion,Granskad,True,False
+7d4de02b78d441eedb24f259ca71c133,Golvvärme (verandan) [SHP1PM] (C4:D8:D5:54:CC:82),Golvvärme – Bluetooth-proxy,Verandan,Verandan,Granskad,True,False
+21b65aa4266b491dad9f50165d5ba674,Golvvärme (ateljén) [SHP1PM] (A0:DD:6C:2B:31:4E),Golvvärme – Bluetooth-proxy,Ateljén,Ateljén,Granskad,True,False
+81e82c562490af40f6643ac2b53c9c40,Golvvärme (köket) [SHP1PM] (A0:DD:6C:29:B1:36),Golvvärme – Bluetooth-proxy,Köket,Köket,Granskad,True,False
+76eafd04d515e40a3d804ac946a453a9,Golvvärme (duschen) [SHP1PM] (E4:65:B8:F1:C1:BA),Golvvärme – Bluetooth-proxy,Duschen,Duschen,Granskad,True,False
+c3ee3a9a8bd57c967a8cbe0ed6f2c614,Shelly Pro 3 - Verkstaden (EC:62:60:89:ED:BE),Shelly Pro 3 – Bluetooth-proxy,Verkstaden,Verkstaden,Granskad,True,False
+b100a107089943dc555e95a019738bc8,Ledstjärnor (utomhus) [SHPLS] (08:F9:E0:FD:43:06),LED-stjärnor – Bluetooth-proxy,Köket,Utomhus,Granskad,True,True
 66b1ff7607471ae6bbb410d8f0d82c6d,Väggkontakt x2 (verandan),Väggkontakt x2,Verandan,Verandan,Granskad,True,False
 7713eaa96eaf9b7293f776e78bf40a22,Taklampor (verandan),Taklampor,Verandan,Verandan,Granskad,True,False
 78ee6b1f8ec0bd42eda986ad6250e1c8,Julstjärnor (verandan),Julstjärnor,Verandan,Verandan,Granskad,True,False
-e2c79f2f807ca9f7637964a6504a5c7c,Väggkontakt x2 (verandan) (30:C9:22:86:74:6A),Verandan Väggkontakt x2 (30:C9:22:86:74:6A),Verandan,Verandan,Granskad,True,False
+e2c79f2f807ca9f7637964a6504a5c7c,Väggkontakt x2 (verandan) (30:C9:22:86:74:6A),Väggkontakt x2 – Bluetooth-proxy,Verandan,Verandan,Granskad,True,False
 5c5f069f32db0ac291f95a926d8fca34,Blomlampa (kontoret),Blomlampa,Kontoret,Kontoret,Granskad,True,False
 988a1ab970fe425f8bd300791f9e2a3d,Media,Media,,,Granskad,False,False
 36cb0d1686b18f29eabcbf1a7353ed58,Shared,Shared,,,Granskad,False,False
@@ -211,7 +211,7 @@ ff56e4bb6c3148c320c32195a0e62a76,OpenThread Border Router,OpenThread Border Rout
 5e2eb3bc565f5dca35b673d6aedb7e13,Duck DNS,Duck DNS,,,Granskad,False,False
 9c18573a0492ff7b3dd77aaf907dce68,Home Assistant Connect ZBT-2 (9C139EACA404),Home Assistant Connect ZBT-2 (9C139EACA404),,,Granskad,False,False
 e3a40d2dda16a69a07f4cc29bfea306f,Bänklampor,Bänklampor,Köket,Köket,Granskad,False,False
-2d8b26e1c47f7b92d725cede4a56ceff,Bordslampa ateljen,Bordslampa ateljen,Ateljén,Ateljén,Granskad,False,False
+2d8b26e1c47f7b92d725cede4a56ceff,Bordslampa ateljen,Bordslampa,Ateljén,Ateljén,Granskad,True,False
 69ee53461280fd55881e4182a17f7d6f,Bordslampa höger,Bordslampa höger,Bion,Bion,Granskad,False,False
 1ac9f5496bdee0052803cf7e6b71fa49,File editor,File editor,Heimdal (HA),Heimdal (HA),Granskad,False,False
 d0c18089bb08cf088d198309286d725d,Alla högtalare,Alla högtalare,,,Granskad,False,False
@@ -353,7 +353,7 @@ c5eb70dd8c934252039447c490be88da,94:b9:7e:16:d2:02,Taklampor,Bion,Bion,Granskad,
 dc1057019de4aa76e20b8725abda9851,192.168.30.183,Termostat,Toaletten,Toaletten,Granskad,True,False
 02e3ad6b5fb7b3563ac4d67fc23544ac,LenovoL340.home.arpa,LenovoL340.home.arpa,,,Granskad,False,False
 16fa21b50b01ffc03b1a5a418fa034fc,ap-honshuset.home.arpa,ap-honshuset.home.arpa,,,Granskad,False,False
-1a63b9f66e991ce1d8b4ad07f16eb020,192.168.30.45,192.168.30.45,,,Granskad,False,False
+1a63b9f66e991ce1d8b4ad07f16eb020,192.168.30.45,LenovoL340,,,Granskad,True,False
 6f73ec0c625e2fc172ce6398810702ab,2c:bc:bb:c1:87:2c,2c:bc:bb:c1:87:2c,Köket,Köket,Granskad,False,False
 254b9bc249c0ffd559c889e63cb172e5,Elmätare (elstolpen),Elmätare (elstolpen),Utomhus,Utomhus,Granskad,False,False
 a64f2f0eb0f746ffc7a9569b01ed2eba,24:a1:60:10:5f:96,24:a1:60:10:5f:96,Poolen,Poolen,Granskad,False,False
@@ -362,7 +362,7 @@ a64f2f0eb0f746ffc7a9569b01ed2eba,24:a1:60:10:5f:96,24:a1:60:10:5f:96,Poolen,Pool
 307a8a14cd4ec794f562e06c898841a6,c4:4f:33:72:73:e1,Vattennivå,Hönshuset,Hönshuset,Granskad,True,False
 fbef3ea94c59b2ff03c253bb0a78edf9,Pixel-9-Pro-XL,Pixel-9-Pro-XL,,,Granskad,False,False
 23bfad28501a4f7b929b5cb76439e690,playstation4,playstation4,,,Granskad,False,False
-fd14f11ceb19556cf8d324cbcd0d36bf,LenovoL340,LenovoL340,Kontoret,Kontoret,Granskad,False,False
+fd14f11ceb19556cf8d324cbcd0d36bf,LenovoL340,192.168.10.68,Kontoret,Kontoret,Granskad,True,False
 472d29a174343b5c96d2a35c37481da9,fulla,fulla,,,Granskad,False,False
 26e6cb2cdc84211e7cd9fb4eaa087d8b,hp-pavilion,hp-pavilion,Kontoret,Kontoret,Granskad,False,False
 89e955ab9ead97b83c21235a8cf42776,Vattensensor (torkskåp),Vattensensor torkskåp,Ateljén,Ateljén,Granskad,True,False
@@ -385,7 +385,7 @@ a69e4ce232fd68a007094078d290f3b8,ap_koket.home.arpa,ap_koket.home.arpa,,,Granska
 8ebf4ffab60c5aade323ba32c61587bd,192.168.10.30,192.168.10.30,Poolen,Poolen,Granskad,False,False
 f030f0999090a1cab4e21ec9c8bc422c,Tor.home.arpa,Tor.home.arpa,,,Granskad,False,False
 70808937791636cd55c195efa41c0050,siemens-washerdryer,siemens-washerdryer,,,Granskad,False,False
-604cddd234b5f4a9defd5fde8cf1b3d6,192.168.30.45,192.168.30.45,,,Granskad,False,False
+604cddd234b5f4a9defd5fde8cf1b3d6,192.168.30.45,LenovoL340,,,Granskad,True,False
 254cf9213b8a7cf42b8d2fe2fc7a5204,SM-R875F,SM-R875F,,,Granskad,False,False
 afbb471df09ff93762e409712283164b,Carolas-S25,Carolas-S25,,,Granskad,False,False
 752ed73377f218e6955eec7ebe50a7c2,Pixel-9-Pro-XL,Pixel-9-Pro-XL,,,Granskad,False,False
@@ -808,9 +808,9 @@ b28fb2ffd9737b5a2c24d3b92be261dd,Caddy Reverse Proxy,Caddy Reverse Proxy,Tor (AI
 2e8f80da63d7e0358173685240337a9e,Wyoming Whisper,Wyoming Whisper,Tor (AI),Tor (AI),Granskad,False,False
 2407ba03d6591a5fb8d0d49db72fb10e,OpenWRT-backup – Senaste körning,OpenWRT-backup – Senaste körning,Tor (AI),Tor (AI),Granskad,False,False
 8a25c309221a8b84d04cb1ecaab51f8d,Heimdal,Heimdal,Heimdal (HA),Heimdal (HA),Granskad,False,False
-bcec2925567abe42aa0b8a19d886e9f6,Ping,Ping,Tor (AI),Tor (AI),Granskad,False,False
+bcec2925567abe42aa0b8a19d886e9f6,Ping,Ping – 192.168.10.2,Tor (AI),Tor (AI),Granskad,True,False
 e2c3ea51f2b26da47e831077e28ceab0,Tor,Tor,Tor (AI),Tor (AI),Granskad,False,False
-4eff084ae659b4614c5bf983fd506b8e,Ping,Ping,Tor (AI),Tor (AI),Granskad,False,False
+4eff084ae659b4614c5bf983fd506b8e,Ping,Ping – 192.168.10.200,Tor (AI),Tor (AI),Granskad,True,False
 6730ad8022d04976aed0c9b02fdaf169,SSH,SSH,Tor (AI),Tor (AI),Granskad,False,False
 6a17e0c198d50b0290b50f5a1274918d,Ollama Container,Ollama Container,Tor (AI),Tor (AI),Granskad,False,False
 c10aa0561fd3548d761e66267c38caea,Caddy Container,Caddy Container,Tor (AI),Tor (AI),Granskad,False,False
@@ -870,7 +870,7 @@ ea5503ed4d33725385af206895421979,2f8eb40be8a9642633587c5eae42e820aee5369cd9c7f0c
 cf7317f9d10170d7791809995928cf61,36b2ef5c23d067cad1de82cb0219f26f8e66b4055bcb47bc593c7aa65dfa0ba5,Docker-volym 36b2ef5c23d0,Tor (AI),Tor (AI),Granskad,True,False
 900be997608bc9930451738e5de4dd8f,bcfdb3c18423a96c2d0286fddd22a999ed8a02ea851b42a58a6500855ce276d9,Docker-volym bcfdb3c18423,Tor (AI),Tor (AI),Granskad,True,False
 2dea8d0e73731d15e9b9827403d56add,b7dd2fc85426ff34678c52ac030e56d992ac0aad808741b9d7129bf1d0739663,Docker-volym b7dd2fc85426,Tor (AI),Tor (AI),Granskad,True,False
-050631f3581d8143f4cf04e4f53c9367,Backup,Backup,,,Granskad,False,False
+050631f3581d8143f4cf04e4f53c9367,Backup,Backup-lagring,,,Granskad,True,False
 deec1ad90723a4d9317c9d4b81152042,portainer,portainer,,,Granskad,False,False
 1b5dd5d5376bf018b0daf93452c6a7bd,glances,glances,,,Granskad,False,False
 9accd8fc112581f2439b120e737da5f1,192.168.10.99,192.168.10.99,,,Granskad,False,False

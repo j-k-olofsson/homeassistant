@@ -1,0 +1,643 @@
+{
+  "names": [
+    {
+      "kind": "device",
+      "id": "2d8b26e1c47f7b92d725cede4a56ceff",
+      "before": {
+        "name_by_user": "Bordslampa ateljen"
+      },
+      "after": {
+        "name_by_user": "Bordslampa"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "dc6a115590f250fb022c03d067d4036a",
+      "before": {
+        "name_by_user": null
+      },
+      "after": {
+        "name_by_user": "Vattennivå – Bluetooth-proxy"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "7a213c407ce4fd9813d1057550e1213f",
+      "before": {
+        "name_by_user": "Golvvärme"
+      },
+      "after": {
+        "name_by_user": "Golvvärme – Bluetooth-proxy"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "460dfb99f0b8a415faaa1732ccd969da",
+      "before": {
+        "name_by_user": "Golvvärme"
+      },
+      "after": {
+        "name_by_user": "Golvvärme – Bluetooth-proxy"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "7d4de02b78d441eedb24f259ca71c133",
+      "before": {
+        "name_by_user": "Golvvärme"
+      },
+      "after": {
+        "name_by_user": "Golvvärme – Bluetooth-proxy"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "21b65aa4266b491dad9f50165d5ba674",
+      "before": {
+        "name_by_user": "Golvvärme"
+      },
+      "after": {
+        "name_by_user": "Golvvärme – Bluetooth-proxy"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "81e82c562490af40f6643ac2b53c9c40",
+      "before": {
+        "name_by_user": "Golvvärme"
+      },
+      "after": {
+        "name_by_user": "Golvvärme – Bluetooth-proxy"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "76eafd04d515e40a3d804ac946a453a9",
+      "before": {
+        "name_by_user": "Golvvärme"
+      },
+      "after": {
+        "name_by_user": "Golvvärme – Bluetooth-proxy"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "c3ee3a9a8bd57c967a8cbe0ed6f2c614",
+      "before": {
+        "name_by_user": null
+      },
+      "after": {
+        "name_by_user": "Shelly Pro 3 – Bluetooth-proxy"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "b100a107089943dc555e95a019738bc8",
+      "before": {
+        "name_by_user": null,
+        "area_id": "kok"
+      },
+      "after": {
+        "name_by_user": "LED-stjärnor – Bluetooth-proxy",
+        "area_id": "utomhus"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "e2c79f2f807ca9f7637964a6504a5c7c",
+      "before": {
+        "name_by_user": null
+      },
+      "after": {
+        "name_by_user": "Väggkontakt x2 – Bluetooth-proxy"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "bcec2925567abe42aa0b8a19d886e9f6",
+      "before": {
+        "name_by_user": null
+      },
+      "after": {
+        "name_by_user": "Ping – 192.168.10.2"
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_svarstid_monitor_10",
+      "before": {
+        "name": "Svarstid – monitor 10",
+        "aliases": [
+          null,
+          "Ping Svarstid"
+        ]
+      },
+      "after": {
+        "name": "Svarstid",
+        "aliases": [
+          null,
+          "Ping Svarstid"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_monitortyp_monitor_10",
+      "before": {
+        "name": "Monitortyp – monitor 10",
+        "aliases": [
+          null,
+          "Ping Monitortyp"
+        ]
+      },
+      "after": {
+        "name": "Monitortyp",
+        "aliases": [
+          null,
+          "Ping Monitortyp"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_overvakat_vardnamn_monitor_10",
+      "before": {
+        "name": "Övervakat värdnamn – monitor 10",
+        "aliases": [
+          null,
+          "Ping Övervakat värdnamn"
+        ]
+      },
+      "after": {
+        "name": "Övervakat värdnamn",
+        "aliases": [
+          null,
+          "Ping Övervakat värdnamn"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_upptid_1_dag_monitor_10",
+      "before": {
+        "name": "Upptid (1 dag) – monitor 10",
+        "aliases": [
+          null,
+          "Ping Upptid (1 dag)"
+        ]
+      },
+      "after": {
+        "name": "Upptid (1 dag)",
+        "aliases": [
+          null,
+          "Ping Upptid (1 dag)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_upptid_30_dagar_monitor_10",
+      "before": {
+        "name": "Upptid (30 dagar) – monitor 10",
+        "aliases": [
+          null,
+          "Ping Upptid (30 dagar)"
+        ]
+      },
+      "after": {
+        "name": "Upptid (30 dagar)",
+        "aliases": [
+          null,
+          "Ping Upptid (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_upptid_365_dagar_monitor_10",
+      "before": {
+        "name": "Upptid (365 dagar) – monitor 10",
+        "aliases": [
+          null,
+          "Ping Upptid (365 dagar)"
+        ]
+      },
+      "after": {
+        "name": "Upptid (365 dagar)",
+        "aliases": [
+          null,
+          "Ping Upptid (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_genomsnittlig_svarstid_1_dag_monitor_10",
+      "before": {
+        "name": "Genomsnittlig svarstid (1 dag) – monitor 10",
+        "aliases": [
+          null,
+          "Ping Genomsnittlig svarstid (1 dag)",
+          "Ping Svarstid Ø (1 dag)"
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (1 dag)",
+        "aliases": [
+          null,
+          "Ping Genomsnittlig svarstid (1 dag)",
+          "Ping Svarstid Ø (1 dag)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_genomsnittlig_svarstid_30_dagar_monitor_10",
+      "before": {
+        "name": "Genomsnittlig svarstid (30 dagar) – monitor 10",
+        "aliases": [
+          null,
+          "Ping Genomsnittlig svarstid (30 dagar)",
+          "Ping Svarstid Ø (30 dagar)"
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          null,
+          "Ping Genomsnittlig svarstid (30 dagar)",
+          "Ping Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_genomsnittlig_svarstid_365_dagar_monitor_10",
+      "before": {
+        "name": "Genomsnittlig svarstid (365 dagar) – monitor 10",
+        "aliases": [
+          null,
+          "Ping Genomsnittlig svarstid (365 dagar)",
+          "Ping Svarstid Ø (365 dagar)"
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          null,
+          "Ping Genomsnittlig svarstid (365 dagar)",
+          "Ping Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_taggar_monitor_10",
+      "before": {
+        "name": "Taggar – monitor 10",
+        "aliases": [
+          null,
+          "Taggar"
+        ]
+      },
+      "after": {
+        "name": "Taggar",
+        "aliases": [
+          null,
+          "Taggar"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_status_monitor_10",
+      "before": {
+        "name": "Status – monitor 10",
+        "aliases": [
+          null,
+          "Ping Status"
+        ]
+      },
+      "after": {
+        "name": "Status",
+        "aliases": [
+          null,
+          "Ping Status"
+        ]
+      }
+    },
+    {
+      "kind": "device",
+      "id": "4eff084ae659b4614c5bf983fd506b8e",
+      "before": {
+        "name_by_user": null
+      },
+      "after": {
+        "name_by_user": "Ping – 192.168.10.200"
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_svarstid_monitor_15",
+      "before": {
+        "name": "Svarstid – monitor 15",
+        "aliases": [
+          null,
+          "Ping Svarstid"
+        ]
+      },
+      "after": {
+        "name": "Svarstid",
+        "aliases": [
+          null,
+          "Ping Svarstid"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_monitortyp_monitor_15",
+      "before": {
+        "name": "Monitortyp – monitor 15",
+        "aliases": [
+          null,
+          "Ping Monitortyp"
+        ]
+      },
+      "after": {
+        "name": "Monitortyp",
+        "aliases": [
+          null,
+          "Ping Monitortyp"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_overvakat_vardnamn_monitor_15",
+      "before": {
+        "name": "Övervakat värdnamn – monitor 15",
+        "aliases": [
+          null,
+          "Ping Övervakat värdnamn"
+        ]
+      },
+      "after": {
+        "name": "Övervakat värdnamn",
+        "aliases": [
+          null,
+          "Ping Övervakat värdnamn"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_upptid_1_dag_monitor_15",
+      "before": {
+        "name": "Upptid (1 dag) – monitor 15",
+        "aliases": [
+          null,
+          "Ping Upptid (1 dag)"
+        ]
+      },
+      "after": {
+        "name": "Upptid (1 dag)",
+        "aliases": [
+          null,
+          "Ping Upptid (1 dag)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_upptid_30_dagar_monitor_15",
+      "before": {
+        "name": "Upptid (30 dagar) – monitor 15",
+        "aliases": [
+          null,
+          "Ping Upptid (30 dagar)"
+        ]
+      },
+      "after": {
+        "name": "Upptid (30 dagar)",
+        "aliases": [
+          null,
+          "Ping Upptid (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_upptid_365_dagar_monitor_15",
+      "before": {
+        "name": "Upptid (365 dagar) – monitor 15",
+        "aliases": [
+          null,
+          "Ping Upptid (365 dagar)"
+        ]
+      },
+      "after": {
+        "name": "Upptid (365 dagar)",
+        "aliases": [
+          null,
+          "Ping Upptid (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_genomsnittlig_svarstid_1_dag_monitor_15",
+      "before": {
+        "name": "Genomsnittlig svarstid (1 dag) – monitor 15",
+        "aliases": [
+          null,
+          "Ping Genomsnittlig svarstid (1 dag)",
+          "Ping Svarstid Ø (1 dag)"
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (1 dag)",
+        "aliases": [
+          null,
+          "Ping Genomsnittlig svarstid (1 dag)",
+          "Ping Svarstid Ø (1 dag)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_genomsnittlig_svarstid_30_dagar_monitor_15",
+      "before": {
+        "name": "Genomsnittlig svarstid (30 dagar) – monitor 15",
+        "aliases": [
+          null,
+          "Ping Genomsnittlig svarstid (30 dagar)",
+          "Ping Svarstid Ø (30 dagar)"
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (30 dagar)",
+        "aliases": [
+          null,
+          "Ping Genomsnittlig svarstid (30 dagar)",
+          "Ping Svarstid Ø (30 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_genomsnittlig_svarstid_365_dagar_monitor_15",
+      "before": {
+        "name": "Genomsnittlig svarstid (365 dagar) – monitor 15",
+        "aliases": [
+          null,
+          "Ping Genomsnittlig svarstid (365 dagar)",
+          "Ping Svarstid Ø (365 dagar)"
+        ]
+      },
+      "after": {
+        "name": "Genomsnittlig svarstid (365 dagar)",
+        "aliases": [
+          null,
+          "Ping Genomsnittlig svarstid (365 dagar)",
+          "Ping Svarstid Ø (365 dagar)"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_taggar_monitor_15",
+      "before": {
+        "name": "Taggar – monitor 15",
+        "aliases": [
+          null,
+          "Taggar"
+        ]
+      },
+      "after": {
+        "name": "Taggar",
+        "aliases": [
+          null,
+          "Taggar"
+        ]
+      }
+    },
+    {
+      "kind": "entity",
+      "id": "sensor.tor_ai_ping_status_monitor_15",
+      "before": {
+        "name": "Status – monitor 15",
+        "aliases": [
+          null,
+          "Ping Status"
+        ]
+      },
+      "after": {
+        "name": "Status",
+        "aliases": [
+          null,
+          "Ping Status"
+        ]
+      }
+    },
+    {
+      "kind": "device",
+      "id": "2bbe52874f8dbcc48985f34a1a38d653",
+      "before": {
+        "name_by_user": null
+      },
+      "after": {
+        "name_by_user": "Säkerhetskopiering"
+      }
+    },
+    {
+      "kind": "device",
+      "id": "050631f3581d8143f4cf04e4f53c9367",
+      "before": {
+        "name_by_user": null
+      },
+      "after": {
+        "name_by_user": "Backup-lagring"
+      }
+    }
+  ],
+  "id_map": {
+    "sensor.ateljen_bordslampa_ateljen_thread_kanal": "sensor.ateljen_bordslampa_thread_kanal",
+    "sensor.ateljen_bordslampa_ateljen_thread_natverksnamn": "sensor.ateljen_bordslampa_thread_natverksnamn",
+    "sensor.ateljen_bordslampa_ateljen_antal_omstarter": "sensor.ateljen_bordslampa_antal_omstarter",
+    "sensor.ateljen_bordslampa_ateljen_upptid": "sensor.ateljen_bordslampa_upptid",
+    "sensor.ateljen_bordslampa_ateljen_startorsak": "sensor.ateljen_bordslampa_startorsak",
+    "number.ateljen_bordslampa_ateljen_fargtemperatur_vid_paslagning": "number.ateljen_bordslampa_fargtemperatur_vid_paslagning",
+    "update.ateljen_bordslampa_ateljen_firmware": "update.ateljen_bordslampa_firmware",
+    "button.ateljen_bordslampa_ateljen_identifiera": "button.ateljen_bordslampa_identifiera",
+    "number.ateljen_bordslampa_ateljen_niva_vid_paslagning": "number.ateljen_bordslampa_niva_vid_paslagning",
+    "number.ateljen_bordslampa_ateljen_overgangstid_pa_av": "number.ateljen_bordslampa_overgangstid_pa_av",
+    "select.ateljen_bordslampa_ateljen_uppstartsbeteende": "select.ateljen_bordslampa_uppstartsbeteende",
+    "number.ateljen_bordslampa_ateljen_niva_vid_uppstart": "number.ateljen_bordslampa_niva_vid_uppstart",
+    "sensor.ateljen_bordslampa_ateljen_thread_routingroll": "sensor.ateljen_bordslampa_thread_routingroll",
+    "sensor.ateljen_bordslampa_ateljen_beraknad_effekt": "sensor.ateljen_bordslampa_beraknad_effekt",
+    "sensor.ateljen_bordslampa_ateljen_beraknad_energi": "sensor.ateljen_bordslampa_beraknad_energi",
+    "light.ateljen_bordslampa_ateljen": "light.ateljen_bordslampa"
+  },
+  "config_entry_titles": {
+    "01KC1CZBTA2H6VNKVA8AMK6XHY": "Verandan Taklampor – Beräknad förbrukning",
+    "01KC1CZNV1CY067VVET382SYR7": "Verandan Julstjärnor – Beräknad förbrukning",
+    "01KG4P8D3QX6WGWVW1J5P5DB55": "Ateljén Bordslampa – Beräknad förbrukning belysning",
+    "01KZDK3X8GER9PQYGCK7QP3XQW": "Verandan Väggkontakt x2 – Beräknad förbrukning",
+    "9136db7eb892cd7ac4b36a7ce32b2c7c": "Arkiverad – Bordslampa (källaren) – Beräknad förbrukning brytare",
+    "01JKK0H0GJEWVAB7297VD8JGTD": "Arkiverad – Bordslampa (köket) – Beräknad förbrukning brytare",
+    "01JQ6G0J05T1FVABGQ60VS0RK2": "Arkiverad – shellyplug-s-D81AB8 – Beräknad förbrukning brytare",
+    "01K271KNYG87RP1E67XDMEETK8": "Arkiverad – Bordslampa (hemmabion) – Beräknad förbrukning belysning"
+  },
+  "config_entry_data_names": {
+    "01KC1CZBTA2H6VNKVA8AMK6XHY": "Taklampor – beräknad förbrukning",
+    "01KC1CZNV1CY067VVET382SYR7": "Julstjärnor – beräknad förbrukning",
+    "01KG4P8D3QX6WGWVW1J5P5DB55": "Bordslampa – beräknad förbrukning belysning",
+    "01KZDK3X8GER9PQYGCK7QP3XQW": "Väggkontakt x2 – beräknad förbrukning"
+  },
+  "archive_entries": [
+    {
+      "entry_id": "9136db7eb892cd7ac4b36a7ce32b2c7c",
+      "before_disabled_by": null,
+      "after_disabled_by": "user",
+      "source_missing": "switch.bordslampa_kallaren",
+      "generated_entities": [
+        "sensor.bordslampa_kallaren_beraknad_effekt",
+        "sensor.bordslampa_kallaren_beraknad_energi"
+      ]
+    },
+    {
+      "entry_id": "01JKK0H0GJEWVAB7297VD8JGTD",
+      "before_disabled_by": null,
+      "after_disabled_by": "user",
+      "source_missing": "switch.bordslampa_koket",
+      "generated_entities": [
+        "sensor.bordslampa_koket_beraknad_effekt",
+        "sensor.bordslampa_koket_beraknad_energi"
+      ]
+    },
+    {
+      "entry_id": "01JQ6G0J05T1FVABGQ60VS0RK2",
+      "before_disabled_by": null,
+      "after_disabled_by": "user",
+      "source_missing": "switch.blomlampa_trappan",
+      "generated_entities": [
+        "sensor.shellyplug_s_d81ab8_beraknad_effekt",
+        "sensor.shellyplug_s_d81ab8_beraknad_energi"
+      ]
+    },
+    {
+      "entry_id": "01K271KNYG87RP1E67XDMEETK8",
+      "before_disabled_by": "user",
+      "after_disabled_by": "user",
+      "source_missing": "light.bordslampa_vanster_old",
+      "generated_entities": [
+        "sensor.bordslampa_hemmabion_beraknad_effekt",
+        "sensor.bordslampa_hemmabion_beraknad_energi"
+      ]
+    }
+  ],
+  "code_patch": "custom_components/powercalc/helpers.py",
+  "user_confirmed_outdoor_proxy": true,
+  "distance_sensor_references_already_correct": 4
+}

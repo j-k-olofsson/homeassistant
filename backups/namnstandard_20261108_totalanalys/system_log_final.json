@@ -1,0 +1,212 @@
+[
+  {
+    "name": "custom_components.toyota.climate",
+    "message": [
+      "Error updating climate status"
+    ],
+    "level": "ERROR",
+    "source": [
+      "custom_components/toyota/climate.py",
+      559
+    ],
+    "timestamp": 1794141627.4594972,
+    "exception": "Traceback (most recent call last):\n  File \"/config/custom_components/toyota/climate.py\", line 559, in async_update\n    await self._poll_status()\n  File \"/config/custom_components/toyota/climate.py\", line 523, in _poll_status\n    if await self.vehicle.refresh_climate_status():\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.14/site-packages/pytoyoda/models/vehicle.py\", line 916, in refresh_climate_status\n    return await self._api.refresh_climate_status(self.vin)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.14/site-packages/pytoyoda/api.py\", line 366, in refresh_climate_status\n    return await self._request_and_parse(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        StatusModel, \"POST\", VEHICLE_CLIMATE_STATUS_REFRESH_ENDPOINT, vin=vin\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/usr/local/lib/python3.14/site-packages/pytoyoda/api.py\", line 106, in _request_and_parse\n    response = await self.controller.request_json(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        method=method, endpoint=endpoint, **kwargs\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/usr/local/lib/python3.14/site-packages/pytoyoda/controller.py\", line 571, in request_json\n    response = await self.request_raw(method, endpoint, vin, body, params, headers)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.14/site-packages/pytoyoda/controller.py\", line 478, in request_raw\n    raise ToyotaApiError(msg)\npytoyoda.exceptions.ToyotaApiError: Request Failed. 500, {\"status\":{\"messages\":[{\"description\":\"Remote command interrupted. Try again.\",\"detailedDescription\":\"Remote command invocation(Spec-B) failed\",\"responseCode\":\"ONE-GLOBAL-RS-40009\"}],\"serviceIdentifier\":null}}.",
+    "count": 6,
+    "first_occurred": 1794141050.368403
+  },
+  {
+    "name": "custom_components.toyota",
+    "message": [
+      "2026-11-08 13:38:03.666 | WARNING  | pytoyoda.controller:request_raw:467 - Toyota API 500 on /v1/remote/refresh-climate-status; retrying in 4s (attempt 3 of 4)\n",
+      "2026-11-08 13:38:11.780 | WARNING  | pytoyoda.controller:request_raw:467 - Toyota API 500 on /v1/remote/refresh-climate-status; retrying in 8s (attempt 4 of 4)\n",
+      "2026-11-08 13:39:42.127 | WARNING  | pytoyoda.controller:request_raw:467 - Toyota API 500 on /v1/remote/refresh-climate-status; retrying in 2s (attempt 2 of 4)\n",
+      "2026-11-08 13:39:49.932 | WARNING  | pytoyoda.controller:request_raw:467 - Toyota API 500 on /v1/remote/refresh-climate-status; retrying in 4s (attempt 3 of 4)\n",
+      "2026-11-08 13:40:07.888 | WARNING  | pytoyoda.controller:request_raw:467 - Toyota API 500 on /v1/remote/refresh-climate-status; retrying in 8s (attempt 4 of 4)\n"
+    ],
+    "level": "WARNING",
+    "source": [
+      "custom_components/toyota/__init__.py",
+      101
+    ],
+    "timestamp": 1794141607.888822,
+    "exception": "",
+    "count": 18,
+    "first_occurred": 1794141002.0862331
+  },
+  {
+    "name": "homeassistant.helpers.entity",
+    "message": [
+      "Update of climate.utomhus_sef_42h is taking over 10 seconds"
+    ],
+    "level": "WARNING",
+    "source": [
+      "helpers/entity.py",
+      1390
+    ],
+    "timestamp": 1794141588.7372694,
+    "exception": "",
+    "count": 6,
+    "first_occurred": 1794140988.733124
+  },
+  {
+    "name": "homeassistant.components.xiaomi_ble",
+    "message": [
+      "5C:85:7E:13:61:70: Bluetooth error whilst polling: 5C:85:7E:13:61:70 - 5C:85:7E:13:61:70: Failed to connect after 10 attempt(s): No backend with an available connection slot that can reach address 5C:85:7E:13:61:70 was found: in connectable history; seen by 7 scanner(s) but none with a connectable path; 11 scanner(s) registered, 11 scanning, 2 connectable; Köket Golvvärme (A0:DD:6C:29:B1:36) (connectable=False, rssi=-82, failures=0, in_progress=0); Entrén Golvvärme (C4:D8:D5:54:F8:A6) (connectable=False, rssi=-81, failures=0, in_progress=0); Ateljén Golvvärme (A0:DD:6C:2B:31:4E) (connectable=False, rssi=-76, failures=0, in_progress=0); Duschen Golvvärme (E4:65:B8:F1:C1:BA) (connectable=False, rssi=-87, failures=0, in_progress=0); Verandan Väggkontakt x2 (30:C9:22:86:74:6A) (connectable=False, rssi=-80, failures=0, in_progress=0); Utomhus LED-stjärnor (08:F9:E0:FD:43:06) (connectable=False, rssi=-99, failures=0, in_progress=0); Verandan Golvvärme (C4:D8:D5:54:CC:82) (connectable=False, rssi=-58, failures=0, in_progress=0); last advertisement 1s ago via Verandan Golvvärme (C4:D8:D5:54:CC:82): The proxy/adapter is out of connection slots or the device is no longer reachable; Add additional proxies (https://esphome.io/projects/?type=bluetooth) near this device"
+    ],
+    "level": "ERROR",
+    "source": [
+      "components/bluetooth/active_update_processor.py",
+      134
+    ],
+    "timestamp": 1794140929.302932,
+    "exception": "",
+    "count": 1,
+    "first_occurred": 1794140929.302932
+  },
+  {
+    "name": "homeassistant.components.ps4.media_player",
+    "message": [
+      "PS4 could not be reached"
+    ],
+    "level": "WARNING",
+    "source": [
+      "components/ps4/media_player.py",
+      234
+    ],
+    "timestamp": 1794140887.5223951,
+    "exception": "",
+    "count": 1,
+    "first_occurred": 1794140887.5223951
+  },
+  {
+    "name": "custom_components.bermuda",
+    "message": [
+      "Unexpectedly got 8 device registry matches for Verandan Väggkontakt x2 (30:C9:22:86:74:6A): ** Väggkontakt x2 – Bluetooth-proxy\n** Väggkontakt x2\n** Väggkontakt x2\n** Väggkontakt x2\n** Väggkontakt x2\n** Väggkontakt x2\n** Väggkontakt x2\n** Väggkontakt x2\n\n",
+      "Unexpectedly got 6 device registry matches for Utomhus LED-stjärnor (08:F9:E0:FD:43:06): ** LED-stjärnor\n** LED-stjärnor\n** LED-stjärnor\n** LED-stjärnor\n** LED-stjärnor\n** LED-stjärnor – Bluetooth-proxy\n\n",
+      "Unexpectedly got 7 device registry matches for Verandan Golvvärme (C4:D8:D5:54:CC:82): ** Golvvärme\n** Golvvärme\n** Golvvärme\n** Golvvärme\n** Golvvärme\n** Golvvärme\n** Golvvärme – Bluetooth-proxy\n\n",
+      "Unexpectedly got 7 device registry matches for Bion Golvvärme (80:64:6F:E3:BE:F2): ** Golvvärme\n** Golvvärme\n** Golvvärme\n** Golvvärme\n** Golvvärme\n** Golvvärme\n** Golvvärme – Bluetooth-proxy\n\n",
+      "Unexpectedly got 4 device registry matches for esphome74 (C4:4F:33:72:73:E3): ** Vattennivå\n** Vattennivå\n** Vattennivå\n** Vattennivå – Bluetooth-proxy\n\n"
+    ],
+    "level": "WARNING",
+    "source": [
+      "custom_components/bermuda/log_spam_less.py",
+      86
+    ],
+    "timestamp": 1794140859.0669572,
+    "exception": "",
+    "count": 10,
+    "first_occurred": 1794140859.0078933
+  },
+  {
+    "name": "homeassistant.helpers.frame",
+    "message": [
+      "Detected that custom integration 'toyota' reads the deprecated ToyotaClimate._attr_target_temperature, use _attr_native_target_temperature instead at custom_components/toyota/climate.py, line 318: self._attr_target_temperature,. This will stop working in Home Assistant 2027.11, please create a bug report at https://github.com/pytoyoda/ha_toyota/issues",
+      "Detected that custom integration 'toyota' writes the deprecated ToyotaClimate._attr_current_temperature, use _attr_native_current_temperature instead at custom_components/toyota/climate.py, line 379: self._attr_current_temperature = (. This will stop working in Home Assistant 2027.11, please create a bug report at https://github.com/pytoyoda/ha_toyota/issues",
+      "Detected that custom integration 'toyota' reads the deprecated ToyotaClimate._attr_current_temperature, use _attr_native_current_temperature instead at custom_components/toyota/climate.py, line 436: return self._attr_current_temperature. This will stop working in Home Assistant 2027.11, please create a bug report at https://github.com/pytoyoda/ha_toyota/issues",
+      "Detected that custom integration 'toyota' reads the deprecated ToyotaClimate._attr_target_temperature, use _attr_native_target_temperature instead at custom_components/toyota/climate.py, line 441: return self._attr_target_temperature. This will stop working in Home Assistant 2027.11, please create a bug report at https://github.com/pytoyoda/ha_toyota/issues",
+      "Detected that custom integration 'bermuda' uses `device_registry.devices` as a mapping or calls its lookup methods, which is deprecated; iterate it to get the device entries, or use `async_get`, `async_entries_for_config_entry` and similar helpers for lookups at custom_components/bermuda/bermuda_device.py, line 321: devreg_devices = self._coordinator.dr.devices.get_entries(None, connections=connlist). This will stop working in Home Assistant 2027.9.0, please create a bug report at https://github.com/agittins/bermuda/issues"
+    ],
+    "level": "WARNING",
+    "source": [
+      "helpers/frame.py",
+      348
+    ],
+    "timestamp": 1794140859.0077288,
+    "exception": "",
+    "count": 9,
+    "first_occurred": 1794140858.6548665
+  },
+  {
+    "name": "aioesphomeapi.reconnect_logic",
+    "message": [
+      "Can't connect to ESPHome API for esphome02 @ 192.168.30.102: Error connecting to [AddrInfo(family=<AddressFamily.AF_INET: 2>, type=<SocketKind.SOCK_STREAM: 1>, proto=6, sockaddr=IPv4Sockaddr(address='192.168.30.102', port=6053))]: [Errno 113] Connect call failed ('192.168.30.102', 6053) (SocketAPIError)"
+    ],
+    "level": "WARNING",
+    "source": [
+      "runner.py",
+      280
+    ],
+    "timestamp": 1794140858.73633,
+    "exception": "",
+    "count": 1,
+    "first_occurred": 1794140858.73633
+  },
+  {
+    "name": "custom_components.toyota.climate",
+    "message": [
+      "custom_components.toyota.climate::ToyotaClimate provides the deprecated _attr_temperature_unit, this will stop working in Home Assistant 2027.11, use _attr_native_temperature_unit instead, please report it to the custom integration author",
+      "custom_components.toyota.climate::ToyotaClimate provides the deprecated current_temperature, this will stop working in Home Assistant 2027.11, use native_current_temperature instead, please report it to the custom integration author",
+      "custom_components.toyota.climate::ToyotaClimate provides the deprecated target_temperature, this will stop working in Home Assistant 2027.11, use native_target_temperature instead, please report it to the custom integration author"
+    ],
+    "level": "WARNING",
+    "source": [
+      "helpers/deprecation.py",
+      706
+    ],
+    "timestamp": 1794140858.256541,
+    "exception": "",
+    "count": 3,
+    "first_occurred": 1794140858.2563615
+  },
+  {
+    "name": "homeassistant.components.openuv",
+    "message": [
+      "Skipping update due to missing data"
+    ],
+    "level": "WARNING",
+    "source": [
+      "components/openuv/binary_sensor.py",
+      61
+    ],
+    "timestamp": 1794140854.02023,
+    "exception": "",
+    "count": 1,
+    "first_occurred": 1794140854.02023
+  },
+  {
+    "name": "homeassistant.config_entries",
+    "message": [
+      "The deprecated constant CONN_CLASS_CLOUD_POLL was used from nordpool. It will be removed in HA Core 2027.5.0. Please report it to the author of the 'nordpool' custom integration",
+      "The deprecated constant CONN_CLASS_CLOUD_POLL was used from pollenprognos. It will be removed in HA Core 2027.5.0. Please report it to the author of the 'pollenprognos' custom integration"
+    ],
+    "level": "WARNING",
+    "source": [
+      "helpers/deprecation.py",
+      297
+    ],
+    "timestamp": 1794140852.0269294,
+    "exception": "",
+    "count": 2,
+    "first_occurred": 1794140842.1710832
+  },
+  {
+    "name": "homeassistant.components.openuv",
+    "message": [
+      "Skipping update due to missing data: from_time"
+    ],
+    "level": "WARNING",
+    "source": [
+      "components/openuv/coordinator.py",
+      90
+    ],
+    "timestamp": 1794140844.8418987,
+    "exception": "",
+    "count": 1,
+    "first_occurred": 1794140844.8418987
+  },
+  {
+    "name": "homeassistant.helpers.translation",
+    "message": [
+      "Validation of translation placeholders for localized (sv) string component.adaptive_lighting.options.step.init.description failed: (set() != {'docs_url', 'webapp_url'})"
+    ],
+    "level": "ERROR",
+    "source": [
+      "helpers/translation.py",
+      326
+    ],
+    "timestamp": 1794140838.31607,
+    "exception": "",
+    "count": 1,
+    "first_occurred": 1794140838.31607
+  }
+]

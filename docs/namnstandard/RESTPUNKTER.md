@@ -19,3 +19,9 @@ Historiska spår, registertombstones, säkerhetskopior och tidigare etappjournal
 ## Framtida underhåll
 
 Plants lokala register-ID-rättning behöver kontrolleras vid framtida integrationsuppdatering. Test: `python3 tools/test_ha_naming_plant.py`. Detta är underhåll, ingen kvarstående namnfråga.
+
+## Senaste totalanalysen
+
+Den tidigare felaktiga proxyplaceringen är korrigerad till Utomhus enligt användarens besked. Dubbel Ateljén-namngivning, generiska övervaknings-/backupnamn och Powercalcs felaktiga batterikälla är åtgärdade. Tre helt vilande Powercalc-poster är arkiverade. Slack har en anslutningskontroll i Granny medan tokenfrågan är uppskjuten. PrusaLink saknade anslutning vid den nya avstämningen.
+
+Powercalc har nu också en lokal rättning som behöver granskas vid integrationsuppdatering, tillsammans med Plants befintliga rättning. Läsverktyget bevakar dessa kodfiler. [Fullständig totalanalys](TOTALANALYS.md).
