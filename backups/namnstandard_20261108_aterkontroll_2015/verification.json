@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-11-08T20:21:14.144755+01:00",
+  "status": "naming_checks_passed_and_repair_resolved",
+  "entities": 10155,
+  "devices": 1071,
+  "config_check": {
+    "result": "valid",
+    "errors": null,
+    "warnings": null
+  },
+  "repair_issues_remaining": [],
+  "slack_loaded": true,
+  "notify_flocken_registered": true,
+  "dynamic_slack_guard_verified": true,
+  "automation_states_preserved_during_recheck": 81,
+  "robot_values": {
+    "sensor.koket_max_s6_maxv_batteriniva": "100",
+    "sensor.koket_max_s6_maxv_beraknad_effekt": "2.53",
+    "sensor.koket_max_s6_maxv_beraknad_energi": "43.4174"
+  },
+  "powercalc_loaded_entries_preserved": 25,
+  "powercalc_error_count": 0,
+  "outdoor_proxy_correct": true,
+  "double_ateljen_name_corrected": true,
+  "slider_and_rescan_absent": true,
+  "printer_power_state": "off",
+  "printer_power_watts": "0.0",
+  "other_connection_or_provider_log_sources": [
+    "aioesphomeapi.reconnect_logic",
+    "custom_components.bermuda",
+    "custom_components.google_home",
+    "custom_components.toyota",
+    "custom_components.toyota.climate",
+    "homeassistant.components.openuv",
+    "homeassistant.components.ps4.media_player",
+    "homeassistant.components.xiaomi_ble",
+    "homeassistant.config_entries",
+    "homeassistant.helpers.entity",
+    "homeassistant.helpers.frame",
+    "homeassistant.helpers.translation",
+    "pyportainer.listener"
+  ],
+  "test_messages_sent": false,
+  "physical_actions_tested": false
+}

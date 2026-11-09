@@ -1,5 +1,5 @@
 {
-  "reviewed_at": "2026-11-08T13:40:44.102911+01:00",
+  "reviewed_at": "2026-11-08T20:21:14.144755+01:00",
   "service_ids": [
     "adaptive_lighting.apply",
     "adaptive_lighting.change_switch_settings",
@@ -59504,7 +59504,7 @@
       "entity_id": "sensor.flocken",
       "name": null,
       "original_name": null,
-      "device_id": "6dc5af820ce9ad3f4b69051338b83852",
+      "device_id": "1c185a941fb0bbcf54b81bffe8c7c0f1",
       "area_id": null
     },
     "7dcf1e3a648fc1ce8ad565fbe2617363": {

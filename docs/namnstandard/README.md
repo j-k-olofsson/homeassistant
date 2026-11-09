@@ -1,12 +1,14 @@
 # Namnstandardisering – aktuell slutrapport 8 november 2026
 
+> **Senaste kontroll:** [Återkontroll 8 november 2026](ATERKONTROLL.md). Reparationslistan är tom. Slack är åter anslutet och det gamla interna ID:t i anslutningsvillkoret är ersatt av dynamisk uppslagning. Äldre driftuppgifter nedan är historiska; aktuell restlista är uppdaterad.
+
 > Senaste genomgång: **[Totalanalys 8 november 2026](TOTALANALYS.md)**. Ytterligare namn-/områdesjusteringar och en verifierad Powercalc-rättning är genomförda. Inventeringarna och statusfilen nedan är uppdaterade. Etappsiffrorna i den äldre redogörelsen beskriver tidigare omgångar.
 
 > Senaste genomgång: **[Totalanalys 8 november 2026](TOTALANALYS.md)**. Ytterligare namn-/områdesjusteringar och en verifierad Powercalc-rättning är genomförda. Inventeringarna och statusfilen nedan är uppdaterade. Etappsiffrorna i den äldre redogörelsen beskriver tidigare omgångar.
 
 Huvudmigrationen och de tre efterföljande restpunkterna är genomförda. Slider är borttagen efter användningskontroll. ESPHome09 heter **Blomlampa 3** och tillhör **Köket**, liksom dess fem länkade nätverksposter. Den oanvända WiFi-omskanningen är borttagen. Inga namnfrågor är uppskjutna.
 
-Omstarterna visade separata driftproblem med autentisering och Cast-anslutningar. OpenAI är nu anslutet efter en separat nyckeländring. Slack avvisar sin oförändrade token med `token_revoked`, vilket hindrar `notify.flocken` från att registreras. [Aktuell rest-, drift- och underhållslista](RESTPUNKTER.md). Detta innebär att den aktuella driftkontrollen har dokumenterade avvikelser; namnarbetet rapporteras inte som en felfri kontroll av hela installationens drift.
+Omstarterna visade separata driftproblem med autentisering och Cast-anslutningar. OpenAI är nu anslutet efter en separat nyckeländring. Slack är åter anslutet efter omauktorisering; `notify.flocken` är registrerad och det kvarliggande reparationsärendet är avslutat. [Aktuell rest-, drift- och underhållslista](RESTPUNKTER.md). Detta innebär att den aktuella driftkontrollen har dokumenterade avvikelser; namnarbetet rapporteras inte som en felfri kontroll av hela installationens drift.
 
 ## Omfattning sedan ursprunglig inventering
 

@@ -1,0 +1,16 @@
+{
+  "type": "form",
+  "flow_id": "469988aa6415e02ee7f7e57951eeff22",
+  "handler": "automation",
+  "data_schema": [],
+  "errors": null,
+  "description_placeholders": {
+    "service": "notify.flocken",
+    "entity_id": "automation.nya_elpriser_har_publicerats",
+    "name": "Nya elpriser har publicerats",
+    "edit": "/config/automation/edit/1680086760563"
+  },
+  "last_step": null,
+  "preview": null,
+  "step_id": "confirm"
+}

@@ -1,0 +1,283 @@
+{
+  "AppArmorProfile": "docker-default",
+  "Args": [],
+  "Config": {
+    "AttachStderr": true,
+    "AttachStdin": false,
+    "AttachStdout": true,
+    "Cmd": null,
+    "Domainname": "",
+    "Entrypoint": [
+      "/init"
+    ],
+    "Env": [
+      "TZ=Europe/Stockholm",
+      "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "LANG=C.UTF-8",
+      "S6_BEHAVIOUR_IF_STAGE2_FAILS=2",
+      "S6_CMD_WAIT_FOR_SERVICES_MAXTIME=0",
+      "S6_CMD_WAIT_FOR_SERVICES=1",
+      "S6_SERVICES_READYTIME=50",
+      "PIP_EXTRA_INDEX_URL=https://wheels.home-assistant.io/musllinux-index/",
+      "UV_EXTRA_INDEX_URL=https://wheels.home-assistant.io/musllinux-index/",
+      "S6_SERVICES_GRACETIME=240000",
+      "UV_SYSTEM_PYTHON=true",
+      "UV_NO_CACHE=true"
+    ],
+    "ExposedPorts": {
+      "8123/tcp": {}
+    },
+    "Hostname": "3213827e3707",
+    "Image": "ghcr.io/home-assistant/home-assistant:stable",
+    "Labels": {
+      "com.docker.compose.config-hash": "1755cd37cf4e579c7efbd94fcc32a6fad1f2debcb3b54a2b284f67e8e69afcc8",
+      "com.docker.compose.container-number": "1",
+      "com.docker.compose.depends_on": "",
+      "com.docker.compose.image": "sha256:5243c68ba6735aa1073690e93d3b6b11b55f890b4725472d658d18ff5687f19c",
+      "com.docker.compose.oneoff": "False",
+      "com.docker.compose.project": "ha",
+      "com.docker.compose.project.config_files": "/opt/ha/compose/docker-compose.yml",
+      "com.docker.compose.project.working_dir": "/opt/ha/compose",
+      "com.docker.compose.replace": "ha",
+      "com.docker.compose.service": "ha",
+      "com.docker.compose.version": "5.1.0",
+      "diun.enable": "true",
+      "io.hass.arch": "amd64",
+      "io.hass.base.arch": "amd64",
+      "io.hass.base.image": "ghcr.io/home-assistant/base:3.24",
+      "io.hass.base.name": "python",
+      "io.hass.base.version": "2026.06.1",
+      "io.hass.type": "core",
+      "io.hass.version": "2026.8.2",
+      "org.opencontainers.image.authors": "The Home Assistant Authors",
+      "org.opencontainers.image.created": "2026-08-14 16:44:03+00:00",
+      "org.opencontainers.image.description": "Open-source home automation platform running on Python 3",
+      "org.opencontainers.image.documentation": "https://www.home-assistant.io/docs/",
+      "org.opencontainers.image.licenses": "Apache-2.0",
+      "org.opencontainers.image.source": "https://github.com/home-assistant/core",
+      "org.opencontainers.image.title": "Home Assistant",
+      "org.opencontainers.image.url": "https://www.home-assistant.io/",
+      "org.opencontainers.image.version": "2026.8.2"
+    },
+    "OpenStdin": false,
+    "StdinOnce": false,
+    "Tty": false,
+    "User": "",
+    "Volumes": null,
+    "WorkingDir": "/config"
+  },
+  "Created": "2026-11-05T07:24:15.256314766Z",
+  "Driver": "overlay2",
+  "ExecIDs": null,
+  "GraphDriver": {
+    "Data": {
+      "ID": "045732aeccb050ca76223269154e4090ff4893317ad5e958aace58cfc71793b4",
+      "LowerDir": "/var/lib/docker/overlay2/a8d61bf1e2f8f14862ba1639016083bf98327c1cc2cc0b71f86d8c8b23b9744f-init/diff:/var/lib/docker/overlay2/b161d8320bb9dfda94eca3cb9bfc5d3fb7b54b718a570acb4a5c0f601cf59179/diff:/var/lib/docker/overlay2/998794f196d1492d631b62b6e3cfa54cdce0726ff16f590ad9975a652867cfa4/diff:/var/lib/docker/overlay2/b54b5f744bd38d54028fec3a1d02a57438b2f3e75e6f3347dc672dca62345207/diff:/var/lib/docker/overlay2/d7c1c69872cd03820d745bc8fe403da7e3817c17ad7ef6866a02766306e326e0/diff:/var/lib/docker/overlay2/74fd47c16de0da62057e40bd03547e71ff6af2d6bab9cb2d4f43f3b6bea7da58/diff:/var/lib/docker/overlay2/f525e55d7242fd0ee2bd32fe286bc15524f4f5d89676d43a40590a155e7a31a4/diff:/var/lib/docker/overlay2/957bd168adab49014548e133d549a8732ba942ec6462aae763710fce3f13b45d/diff:/var/lib/docker/overlay2/245d6ccf4be3040eae6e00914afdfa7825352d31d51dfa5a1eabd2d7da17cf1d/diff:/var/lib/docker/overlay2/355be6e4255a89f2ba17d784000867a01b82ff17a61782baba693c728f0a9ecd/diff:/var/lib/docker/overlay2/94d2db0ec37cfe8aacbb4ef71bfa5e2e5fa0752551e2cdcc41a35c65db075d86/diff:/var/lib/docker/overlay2/66c348cee372d9ca9c0aa5cf2cc6c824760e5261e7453ce2260f3e12b02f3259/diff:/var/lib/docker/overlay2/dce046154ff3c63aa5d861c096935aa86e8668be6fe4101d187e1f8dd0c99aa5/diff:/var/lib/docker/overlay2/7e09ad02835a97e1d11411cf9265f118aab2b484ebc4757da78e6a27ff3698f1/diff:/var/lib/docker/overlay2/cfbc16cbe6814d844d5330d86e95da9853c4809a055767b7440b9c5c465d3dcb/diff:/var/lib/docker/overlay2/6eea8ef9e4178286027d46c48955ce7b660bcce62ef7799ea9bc6d127be7b804/diff:/var/lib/docker/overlay2/3138f70f932566a1f7247e8c29a6b4fd668c23bac3a498b169f23ad6282a5134/diff:/var/lib/docker/overlay2/31255777cb7ca065a6ce426a55bcb6a96daf1321880df468ac337389abc022f9/diff:/var/lib/docker/overlay2/492fadd5a35c522bf2d76685b77bb4df64b777f083a865f4046ada630f760062/diff:/var/lib/docker/overlay2/a6c78b15b9c55a5251f71b67d76894284f62613dfb82f46faa3e76c86df0a98f/diff:/var/lib/docker/overlay2/d7f04d1d2ce36be4cde8e29d61a209e146cb79a76efc965b6f5b1e00a4355aff/diff:/var/lib/docker/overlay2/0a21a2ff1784ab98746ecd5ab409a0bcf8f1315242d378f1860e3edc52a5c83a/diff:/var/lib/docker/overlay2/b9becc2a8b509cf880aa79d80594b96e370a36c377765bf0f06264273cc22979/diff",
+      "MergedDir": "/var/lib/docker/overlay2/a8d61bf1e2f8f14862ba1639016083bf98327c1cc2cc0b71f86d8c8b23b9744f/merged",
+      "UpperDir": "/var/lib/docker/overlay2/a8d61bf1e2f8f14862ba1639016083bf98327c1cc2cc0b71f86d8c8b23b9744f/diff",
+      "WorkDir": "/var/lib/docker/overlay2/a8d61bf1e2f8f14862ba1639016083bf98327c1cc2cc0b71f86d8c8b23b9744f/work"
+    },
+    "Name": "overlay2"
+  },
+  "HostConfig": {
+    "AutoRemove": false,
+    "Binds": [
+      "/opt/ha/data/config:/config:rw",
+      "/etc/localtime:/etc/localtime:ro"
+    ],
+    "BlkioDeviceReadBps": null,
+    "BlkioDeviceReadIOps": null,
+    "BlkioDeviceWriteBps": null,
+    "BlkioDeviceWriteIOps": null,
+    "BlkioWeight": 0,
+    "BlkioWeightDevice": null,
+    "CapAdd": null,
+    "CapDrop": null,
+    "Cgroup": "",
+    "CgroupParent": "",
+    "CgroupnsMode": "private",
+    "ConsoleSize": [
+      0,
+      0
+    ],
+    "ContainerIDFile": "",
+    "CpuCount": 0,
+    "CpuPercent": 0,
+    "CpuPeriod": 0,
+    "CpuQuota": 0,
+    "CpuRealtimePeriod": 0,
+    "CpuRealtimeRuntime": 0,
+    "CpuShares": 0,
+    "CpusetCpus": "",
+    "CpusetMems": "",
+    "DeviceCgroupRules": null,
+    "DeviceRequests": null,
+    "Devices": null,
+    "Dns": [],
+    "DnsOptions": [],
+    "DnsSearch": [],
+    "ExtraHosts": [],
+    "GroupAdd": null,
+    "IOMaximumBandwidth": 0,
+    "IOMaximumIOps": 0,
+    "IpcMode": "private",
+    "Isolation": "",
+    "Links": null,
+    "LogConfig": {
+      "Config": {},
+      "Type": "json-file"
+    },
+    "MaskedPaths": [
+      "/proc/acpi",
+      "/proc/asound",
+      "/proc/interrupts",
+      "/proc/kcore",
+      "/proc/keys",
+      "/proc/latency_stats",
+      "/proc/sched_debug",
+      "/proc/scsi",
+      "/proc/timer_list",
+      "/proc/timer_stats",
+      "/sys/devices/virtual/powercap",
+      "/sys/firmware"
+    ],
+    "Memory": 0,
+    "MemoryReservation": 0,
+    "MemorySwap": 0,
+    "MemorySwappiness": null,
+    "NanoCpus": 0,
+    "NetworkMode": "ha_default",
+    "OomKillDisable": null,
+    "OomScoreAdj": 0,
+    "PidMode": "",
+    "PidsLimit": null,
+    "PortBindings": {
+      "8123/tcp": [
+        {
+          "HostIp": "",
+          "HostPort": "58123"
+        }
+      ]
+    },
+    "Privileged": false,
+    "PublishAllPorts": false,
+    "ReadonlyPaths": [
+      "/proc/bus",
+      "/proc/fs",
+      "/proc/irq",
+      "/proc/sys",
+      "/proc/sysrq-trigger"
+    ],
+    "ReadonlyRootfs": false,
+    "RestartPolicy": {
+      "MaximumRetryCount": 0,
+      "Name": "no"
+    },
+    "Runtime": "runc",
+    "SecurityOpt": null,
+    "ShmSize": 67108864,
+    "UTSMode": "",
+    "Ulimits": null,
+    "UsernsMode": "",
+    "VolumeDriver": "",
+    "VolumesFrom": null
+  },
+  "HostnamePath": "/var/lib/docker/containers/045732aeccb050ca76223269154e4090ff4893317ad5e958aace58cfc71793b4/hostname",
+  "HostsPath": "/var/lib/docker/containers/045732aeccb050ca76223269154e4090ff4893317ad5e958aace58cfc71793b4/hosts",
+  "Id": "045732aeccb050ca76223269154e4090ff4893317ad5e958aace58cfc71793b4",
+  "Image": "sha256:c0f062fa32399e6634896e396726287ed238589a7726ed247ac60ad4e76fdb2f",
+  "LogPath": "/var/lib/docker/containers/045732aeccb050ca76223269154e4090ff4893317ad5e958aace58cfc71793b4/045732aeccb050ca76223269154e4090ff4893317ad5e958aace58cfc71793b4-json.log",
+  "MountLabel": "",
+  "Mounts": [
+    {
+      "Destination": "/config",
+      "Mode": "rw",
+      "Propagation": "rprivate",
+      "RW": true,
+      "Source": "/opt/ha/data/config",
+      "Type": "bind"
+    },
+    {
+      "Destination": "/etc/localtime",
+      "Mode": "ro",
+      "Propagation": "rprivate",
+      "RW": false,
+      "Source": "/etc/localtime",
+      "Type": "bind"
+    }
+  ],
+  "Name": "/ha",
+  "NetworkSettings": {
+    "Networks": {
+      "edge": {
+        "Aliases": [
+          "ha",
+          "ha"
+        ],
+        "DNSNames": [
+          "ha",
+          "045732aeccb0",
+          "3213827e3707"
+        ],
+        "DriverOpts": null,
+        "EndpointID": "",
+        "Gateway": "",
+        "GlobalIPv6Address": "",
+        "GlobalIPv6PrefixLen": 0,
+        "GwPriority": 0,
+        "IPAMConfig": null,
+        "IPAddress": "",
+        "IPPrefixLen": 0,
+        "IPv6Gateway": "",
+        "Links": null,
+        "MacAddress": "",
+        "NetworkID": "a72940ce6d32bb7945b9cb49f78e65746a34b970535944d9e00517509140f73f"
+      },
+      "ha_default": {
+        "Aliases": [
+          "ha",
+          "ha"
+        ],
+        "DNSNames": [
+          "ha",
+          "045732aeccb0",
+          "3213827e3707"
+        ],
+        "DriverOpts": null,
+        "EndpointID": "",
+        "Gateway": "",
+        "GlobalIPv6Address": "",
+        "GlobalIPv6PrefixLen": 0,
+        "GwPriority": 0,
+        "IPAMConfig": null,
+        "IPAddress": "",
+        "IPPrefixLen": 0,
+        "IPv6Gateway": "",
+        "Links": null,
+        "MacAddress": "",
+        "NetworkID": "c54a04525df944e26f505f9ffe5364aafa66a3f52ed58ddf1be73e0d3acfbab5"
+      }
+    },
+    "Ports": {},
+    "SandboxID": "",
+    "SandboxKey": ""
+  },
+  "Path": "/init",
+  "Platform": "linux",
+  "ProcessLabel": "",
+  "ResolvConfPath": "/var/lib/docker/containers/045732aeccb050ca76223269154e4090ff4893317ad5e958aace58cfc71793b4/resolv.conf",
+  "RestartCount": 0,
+  "State": {
+    "Dead": false,
+    "Error": "",
+    "ExitCode": 0,
+    "FinishedAt": "2026-11-09T12:22:33.676852545Z",
+    "OOMKilled": false,
+    "Paused": false,
+    "Pid": 0,
+    "Restarting": false,
+    "Running": false,
+    "StartedAt": "2026-11-08T06:36:20.156024027Z",
+    "Status": "exited"
+  }
+}

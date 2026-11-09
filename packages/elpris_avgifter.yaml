@@ -1,0 +1,64 @@
+# Annual prices excluding VAT are editable UI helpers. The existing monthly
+# helper represents the whole current calendar month's fixed fee INCLUDING VAT.
+# Annual sources are not reset by initial values in YAML.
+automation:
+  - id: elpris_fasta_manadsavgifter_fran_arsavgifter
+    alias: "Elpris – uppdatera fasta månadsavgiften"
+    description: "Fördela årsavgifterna per kalenderdygn och lägg på moms en gång. Senast avstämt mot oktoberfakturan 2026."
+    triggers:
+      - trigger: homeassistant
+        event: start
+      - trigger: time
+        at: "00:00:10"
+      - trigger: state
+        entity_id:
+          - input_number.elpris_arsavgift_elnat
+          - input_number.elpris_arsavgift_elhandel
+          - input_number.elpris_moms
+    conditions:
+      - condition: template
+        value_template: >-
+          {{ is_number(states('input_number.elpris_arsavgift_elnat'))
+             and is_number(states('input_number.elpris_arsavgift_elhandel'))
+             and is_number(states('input_number.elpris_moms'))
+             and is_number(states('input_number.manadsavgifter_elhandel_nat')) }}
+    actions:
+      - variables:
+          fixed_month: >-
+            {% set y = now().year %}
+            {% set year_days = 366 if y % 4 == 0 and (y % 100 != 0 or y % 400 == 0) else 365 %}
+            {% set next_month = (now().replace(day=28) + timedelta(days=4)).replace(day=1) %}
+            {% set days = (next_month - timedelta(days=1)).day %}
+            {% set network = (states('input_number.elpris_arsavgift_elnat') | float * days / year_days) | round(2) %}
+            {% set trade = (states('input_number.elpris_arsavgift_elhandel') | float * days / year_days) | round(2) %}
+            {{ ((network + trade) * (1 + states('input_number.elpris_moms') | float / 100)) | round(2) }}
+      - condition: template
+        value_template: "{{ (states('input_number.manadsavgifter_elhandel_nat') | float - fixed_month | float) | abs > 0.004 }}"
+      - action: input_number.set_value
+        target:
+          entity_id: input_number.manadsavgifter_elhandel_nat
+        data:
+          value: "{{ fixed_month }}"
+    mode: restart
+
+  - id: elpris_nordpool_paslag_efter_start
+    alias: "Elpris – läs om påslag när hjälparna har startat"
+    description: "Nordpool kan hinna läsa tomma hjälpare tidigt under uppstart. Läs om prisintegrationen efter färdig HA-start."
+    triggers:
+      - trigger: homeassistant
+        event: start
+    actions:
+      - delay: "00:00:02"
+      - condition: template
+        value_template: >-
+          {{ config_entry_id('sensor.nordpool') is not none
+             and is_number(states('input_number.elpris_handelsavgift'))
+             and is_number(states('input_number.elpris_spotpaslag'))
+             and is_number(states('input_number.elpris_certifikatsavgift'))
+             and is_number(states('input_number.elpris_overforingsavgift'))
+             and is_number(states('input_number.elpris_energiskatt'))
+             and is_number(states('input_number.elpris_moms')) }}
+      - action: homeassistant.reload_config_entry
+        data:
+          entry_id: "{{ config_entry_id('sensor.nordpool') }}"
+    mode: single

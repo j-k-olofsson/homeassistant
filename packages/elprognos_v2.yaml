@@ -1,0 +1,7 @@
+# Parallel forecast. Existing SQL sensors and energy dashboard are preserved.
+# This platform uses the recorder statistics API, not engine-specific SQL.
+sensor:
+  - platform: elprognos
+    energy_entity: sensor.utomhus_elmatare_elstolpen_forbrukad_energi
+    legacy_entity: sensor.kvartbaserad_elkostnadsprognos
+    area: SE3

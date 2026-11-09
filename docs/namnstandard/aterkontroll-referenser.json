@@ -1,0 +1,18 @@
+{
+  "read_only": true,
+  "sources_and_stores_checked": 42,
+  "used_blueprints_resolved": [
+    "blueprints/automation/andrew-codechimp/battery_notes_battery_not_reported.yaml",
+    "blueprints/automation/andrew-codechimp/battery_notes_battery_replaced.yaml",
+    "blueprints/automation/andrew-codechimp/battery_notes_battery_threshold.yaml"
+  ],
+  "known_entity_ids": 10266,
+  "unknown_active_entity_references": [],
+  "unknown_active_actions": [],
+  "unknown_config_entry_references": [],
+  "deferred_actions": [],
+  "dynamic_actions_reviewed_separately": [],
+  "disabled_entries_excluded": 9,
+  "powercalc_dummy_sources_recognized": 3,
+  "read_errors": []
+}

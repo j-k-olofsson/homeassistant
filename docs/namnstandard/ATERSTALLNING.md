@@ -45,3 +45,7 @@ Den avslutande uppföljningskopian innehåller den aktuella, fungerande OpenAI-k
 - **`1d3fbbdc`**: fullständig kopia efter verifierade namn-, områdes-, referens- och Powercalc-rättningar samt Slacks anslutningsvillkor. Innehåller HA och MariaDB; storlek 6762598400 byte. Supervisor rapporterar 100 % slutfört utan fel. Finns på Backup.
 
 Dessa kopior är kontrollerade via jobbresultat och innehållsmetadata. De har inte hämtats som extra lokala arkiv eller provåterställts. Återställ HA och MariaDB från samma kontrollpunkt. Den återkallade Slack-tokenen behöver fortfarande ersättas separat; den blir inte giltig genom lokal återställning.
+
+## Återkontroll och fungerande Slack 8 november 2026
+
+**`43d06a4d`** är en fullständig kopia efter återställd Slack-tjänst, dynamisk integrationskoppling och avslutat reparationsärende. Innehåller HA och MariaDB och finns på Backup. Supervisor avslutade jobbet till 100 % utan fel. Storlek: 6788270080 byte. Arkivet har inte provåterställts. Återställ HA och MariaDB från samma kontrollpunkt. Tidigare kopiors gamla Slack-uppgifter kan vara återkallade; denna kontrollpunkt innehåller den aktuella anslutna konfigurationen.

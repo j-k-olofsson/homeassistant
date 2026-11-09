@@ -1,0 +1,2 @@
+# Separate invoice database; independent of recorder retention/database engine.
+elfaktura: {}

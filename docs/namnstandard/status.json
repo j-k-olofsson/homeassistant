@@ -184,19 +184,25 @@
   },
   "latest_followup_backup_before": "d381dcba",
   "latest_followup_backup_after": "d8d4fa67",
-  "updated_at": "2026-11-08T12:45:18.970860+00:00",
+  "updated_at": "2026-11-08T19:26:44.577914+00:00",
   "notify_flocken": {
-    "status": "deferred_by_user_until_new_token",
+    "status": "resolved",
     "action": "notify.flocken",
-    "integration_state": "setup_retry",
-    "upstream_error": "token_revoked",
-    "config_data_unchanged_vs_original_backup": true,
+    "integration_state": "loaded",
+    "upstream_error": null,
+    "config_data_unchanged_vs_original_backup": false,
     "options_unchanged_vs_original_backup": true,
     "service_name_unchanged": "flocken",
     "root_cause": "Slack avvisar den återkallade token och HA registrerar därför inte tjänsten",
     "repair_issue": "script_unknown_service_references_script.granny_skicka_meddelande_56b84d17",
     "messages_sent_for_testing": false,
-    "user_decision": "Användaren skaffar ny token i efterhand"
+    "user_decision": "Användaren skaffar ny token i efterhand",
+    "previous_upstream_error": "token_revoked",
+    "reauthentication_changed_entry_id": true,
+    "service_registered": true,
+    "repair_issue_resolved": true,
+    "dynamic_entry_resolution": "config_entry_id(sensor.flocken)",
+    "previous_diagnosis_config_data_unchanged": true
   },
   "followup_reference_audit": {
     "status": "verified",
@@ -225,9 +231,7 @@
     "archive_read_tested": false,
     "full_restore_tested": false
   },
-  "deferred_operational_items": [
-    "Slack / notify.flocken: ny giltig token införs av användaren i efterhand"
-  ],
+  "deferred_operational_items": [],
   "latest_total_review": {
     "performed_at": "2026-11-08T13:40:44.102911+01:00",
     "verification": {
@@ -355,6 +359,82 @@
         "Backup"
       ],
       "includes_ha_and_mariadb": true,
+      "archive_read_tested": false,
+      "full_restore_tested": false
+    }
+  },
+  "latest_recheck": {
+    "checked_at": "2026-11-08T20:21:14.144755+01:00",
+    "status": "naming_checks_passed_and_repair_resolved",
+    "entities": 10155,
+    "devices": 1071,
+    "config_check": {
+      "result": "valid",
+      "errors": null,
+      "warnings": null
+    },
+    "repair_issues_remaining": [],
+    "slack_loaded": true,
+    "notify_flocken_registered": true,
+    "dynamic_slack_guard_verified": true,
+    "automation_states_preserved_during_recheck": 81,
+    "robot_values": {
+      "sensor.koket_max_s6_maxv_batteriniva": "100",
+      "sensor.koket_max_s6_maxv_beraknad_effekt": "2.53",
+      "sensor.koket_max_s6_maxv_beraknad_energi": "43.4174"
+    },
+    "powercalc_loaded_entries_preserved": 25,
+    "powercalc_error_count": 0,
+    "outdoor_proxy_correct": true,
+    "double_ateljen_name_corrected": true,
+    "slider_and_rescan_absent": true,
+    "printer_power_state": "off",
+    "printer_power_watts": "0.0",
+    "other_connection_or_provider_log_sources": [
+      "aioesphomeapi.reconnect_logic",
+      "custom_components.bermuda",
+      "custom_components.google_home",
+      "custom_components.toyota",
+      "custom_components.toyota.climate",
+      "homeassistant.components.openuv",
+      "homeassistant.components.ps4.media_player",
+      "homeassistant.components.xiaomi_ble",
+      "homeassistant.config_entries",
+      "homeassistant.helpers.entity",
+      "homeassistant.helpers.frame",
+      "homeassistant.helpers.translation",
+      "pyportainer.listener"
+    ],
+    "test_messages_sent": false,
+    "physical_actions_tested": false,
+    "reference_audit": {
+      "read_only": true,
+      "sources_and_stores_checked": 42,
+      "used_blueprints_resolved": [
+        "blueprints/automation/andrew-codechimp/battery_notes_battery_not_reported.yaml",
+        "blueprints/automation/andrew-codechimp/battery_notes_battery_replaced.yaml",
+        "blueprints/automation/andrew-codechimp/battery_notes_battery_threshold.yaml"
+      ],
+      "known_entity_ids": 10266,
+      "unknown_active_entity_references": [],
+      "unknown_active_actions": [],
+      "unknown_config_entry_references": [],
+      "deferred_actions": [],
+      "dynamic_actions_reviewed_separately": [],
+      "disabled_entries_excluded": 9,
+      "powercalc_dummy_sources_recognized": 3,
+      "read_errors": []
+    },
+    "backup_after": "43d06a4d",
+    "backup_details": {
+      "slug": "43d06a4d",
+      "type": "full",
+      "bytes": 6788270080,
+      "locations": [
+        "Backup"
+      ],
+      "ha_and_mariadb_included": true,
+      "supervisor_completed_without_errors": true,
       "archive_read_tested": false,
       "full_restore_tested": false
     }

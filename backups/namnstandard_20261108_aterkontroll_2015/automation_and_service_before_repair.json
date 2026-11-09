@@ -1,0 +1,24 @@
+{
+  "automation": {
+    "entity_id": "automation.nya_elpriser_har_publicerats",
+    "state": "on",
+    "attributes": {
+      "id": "1680086760563",
+      "last_triggered": "2026-11-08T12:23:40.125013+00:00",
+      "mode": "queued",
+      "current": 0,
+      "max": 10,
+      "friendly_name": "Nya elpriser har publicerats"
+    },
+    "last_changed": "2026-11-08T12:28:00.128110+00:00",
+    "last_reported": "2026-11-08T12:28:00.128110+00:00",
+    "last_updated": "2026-11-08T12:28:00.128110+00:00",
+    "context": {
+      "id": "01M6XJ2F7Z8S7WC4DCP9FXD5RC",
+      "parent_id": null,
+      "user_id": "11c3c69645984f0c814370add793f07e"
+    }
+  },
+  "slack_state": "loaded",
+  "notify_flocken_exists": true
+}

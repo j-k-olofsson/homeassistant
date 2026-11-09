@@ -198,7 +198,6 @@ e2c79f2f807ca9f7637964a6504a5c7c,Väggkontakt x2 (verandan) (30:C9:22:86:74:6A),
 5c5f069f32db0ac291f95a926d8fca34,Blomlampa (kontoret),Blomlampa,Kontoret,Kontoret,Granskad,True,False
 988a1ab970fe425f8bd300791f9e2a3d,Media,Media,,,Granskad,False,False
 36cb0d1686b18f29eabcbf1a7353ed58,Shared,Shared,,,Granskad,False,False
-6dc5af820ce9ad3f4b69051338b83852,flocken,flocken,,,Granskad,False,False
 bd5c7fa476445dd7ace3e809eb4f0275,Plantsensor 6,Plantsensor 6,Kontoret,Kontoret,Granskad,False,False
 4948ac7afc18716ab8c70d2df2c3b7c5,Monstera,Monstera,Kontoret,Kontoret,Granskad,False,False
 30e6b1b62636b665c215313830ec9aae,Blomlampa (Shelly Plus RGBW PM),Blomlampa (Shelly Plus RGBW PM),Köket,Köket,Granskad,False,False
@@ -1070,3 +1069,4 @@ da28971722bce1834d1f9017a2d498d0,Adaptive Lighting: Ateljén – test,Adaptive L
 256e392ba575f7c302b1a8f6b26865d6,,Nothing-Phone-3a,,,Granskad,True,False
 e456f81e5c64b4e01861a9bcc2a53c8a,,OpenPlantbook,,,Granskad,True,False
 d5af8519d9580736388baf08e2880e22,,Alicias-Tab-A7-Lite,,,Granskad,True,False
+1c185a941fb0bbcf54b81bffe8c7c0f1,,flocken,,Molnet,Granskad efter omauktorisering,False,False

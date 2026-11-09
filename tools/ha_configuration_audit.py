@@ -5,17 +5,21 @@ Uses the installed local YAML parser. Never prints credentials or config values.
 import json,pathlib,re,sys,yaml
 ROOT=pathlib.Path(__file__).resolve().parents[1];DOC=ROOT/'docs/namnstandard'
 REF=re.compile(r'(?<![a-zA-Z0-9_.])(?P<prefix>states\.)?(?P<eid>[a-z_]+\.[a-z0-9_]+)(?(prefix)(?![a-z0-9_])|(?![a-z0-9_.]))')
+STATIC_ENTRY_REF=re.compile(r'''\b(?:config_entry_attr|config_entry_entities)\(\s*['"]([^'"]+)['"]''')
+def static_config_entry_refs(text):return STATIC_ENTRY_REF.findall(text)
 SKIP={'unique_id','previous_unique_id','device_id','entry_id','user_id','name','title','alias','aliases','description','default_channel','api_key','token','password','refresh_token','access_token','noise_psk','client_secret','host','hostname','identifiers','connections','url','resource','image','icon','example','translation_key'}
 class InputRef(str):pass
 class Loader(yaml.SafeLoader):pass
 Loader.add_multi_constructor('!',lambda loader,tag,node:loader.construct_scalar(node)if isinstance(node,yaml.ScalarNode)else loader.construct_sequence(node)if isinstance(node,yaml.SequenceNode)else loader.construct_mapping(node))
 Loader.add_constructor('!input',lambda loader,node:InputRef(loader.construct_scalar(node)))
 def audit(services,states=None):
- er=json.load(open(ROOT/'.storage/core.entity_registry'))['data']['entities'];known={e['entity_id']for e in er}|{s['entity_id']for s in(states or[])}|{'sun.sun','zone.home','conversation.home_assistant'};domains={e.split('.')[0]for e in known};svc={d+'.'+n for d,items in services.items()for n in items};deferred={'notify.flocken'};unknown=[];actions=[];pending=[];dynamic=[];archived=[];errors=[];sentinels=[];used_blueprints=set()
+ er=json.load(open(ROOT/'.storage/core.entity_registry'))['data']['entities'];known={e['entity_id']for e in er}|{s['entity_id']for s in(states or[])}|{'sun.sun','zone.home','conversation.home_assistant'};domains={e.split('.')[0]for e in known};svc={d+'.'+n for d,items in services.items()for n in items};deferred={'notify.flocken'};unknown=[];actions=[];pending=[];dynamic=[];archived=[];errors=[];sentinels=[];used_blueprints=set();unknown_entries=[];entry_ids={e['entry_id']for e in json.load(open(ROOT/'.storage/core.config_entries'))['data']['entries']}
  def walk(obj,file,path=(),key=None):
   if key in SKIP:return
   if len(path)>=2 and path[:2]==('recorder','exclude'):return
   if isinstance(obj,str):
+   for entry_id in static_config_entry_refs(obj):
+    if entry_id not in entry_ids:unknown_entries.append({'file':file,'path':'/'.join(map(str,path)),'config_entry_id':entry_id})
    if key in['action','service','perform_action','service_name']:
     if re.fullmatch(r'[a-z_]+\.[a-z0-9_]+',obj)and obj not in svc:
      item={'file':file,'path':'/'.join(map(str,path)),'service':obj};(pending if obj in deferred else actions).append(item)
@@ -79,8 +83,8 @@ def audit(services,states=None):
      walk(c,str(f.relative_to(ROOT)),('entries',e['entry_id']))
    else:walk(obj,str(f.relative_to(ROOT)))
   except (ValueError,OSError)as e:errors.append({'file':str(f.relative_to(ROOT)),'error':type(e).__name__})
- return {'read_only':True,'sources_and_stores_checked':count,'used_blueprints_resolved':sorted(used_blueprints),'known_entity_ids':len(known),'unknown_active_entity_references':unknown,'unknown_active_actions':actions,'deferred_actions':pending,'dynamic_actions_reviewed_separately':dynamic,'disabled_entries_excluded':len(archived),'powercalc_dummy_sources_recognized':len(sentinels),'read_errors':errors}
+ return {'read_only':True,'sources_and_stores_checked':count,'used_blueprints_resolved':sorted(used_blueprints),'known_entity_ids':len(known),'unknown_active_entity_references':unknown,'unknown_active_actions':actions,'unknown_config_entry_references':unknown_entries,'deferred_actions':pending,'dynamic_actions_reviewed_separately':dynamic,'disabled_entries_excluded':len(archived),'powercalc_dummy_sources_recognized':len(sentinels),'read_errors':errors}
 def main():
  if len(sys.argv)<2:raise SystemExit('Usage: ha_configuration_audit.py SERVICES_JSON [STATES_JSON]')
- result=audit(json.load(open(sys.argv[1])),json.load(open(sys.argv[2]))if len(sys.argv)>2 else[]);print(json.dumps(result,ensure_ascii=False,indent=2));return int(bool(result['unknown_active_entity_references']or result['unknown_active_actions']or result['read_errors']))
+ result=audit(json.load(open(sys.argv[1])),json.load(open(sys.argv[2]))if len(sys.argv)>2 else[]);print(json.dumps(result,ensure_ascii=False,indent=2));return int(bool(result['unknown_active_entity_references']or result['unknown_active_actions']or result['unknown_config_entry_references']or result['read_errors']))
 if __name__=='__main__':sys.exit(main())

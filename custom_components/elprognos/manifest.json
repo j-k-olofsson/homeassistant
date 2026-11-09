@@ -1,0 +1,9 @@
+{
+  "domain": "elprognos",
+  "name": "Elprognos – parallell jämförelse",
+  "version": "1.0.0",
+  "dependencies": ["recorder"],
+  "after_dependencies": ["nordpool"],
+  "iot_class": "local_polling",
+  "codeowners": []
+}

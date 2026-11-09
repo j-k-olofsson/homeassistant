@@ -1,0 +1,11 @@
+{
+  "status": "resolved",
+  "repair_issue": "automation.nya_elpriser_har_publicerats_service_not_found_notify.flocken",
+  "slack_integration_loaded": true,
+  "notify_flocken_registered": true,
+  "automation_on_off_state_preserved": "on",
+  "remaining_repairs": [],
+  "message_sent": false,
+  "repair_ignored": false,
+  "method": "Supported HA repair confirmation after checking restored service"
+}
